@@ -43,6 +43,11 @@ public class AbstractAWSkendra implements AWSkendra {
     }
 
     @Override
+    public BatchDeleteFeaturedResultsSetResult batchDeleteFeaturedResultsSet(BatchDeleteFeaturedResultsSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchGetDocumentStatusResult batchGetDocumentStatus(BatchGetDocumentStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -74,6 +79,11 @@ public class AbstractAWSkendra implements AWSkendra {
 
     @Override
     public CreateFaqResult createFaq(CreateFaqRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateFeaturedResultsSetResult createFeaturedResultsSet(CreateFeaturedResultsSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -149,6 +159,11 @@ public class AbstractAWSkendra implements AWSkendra {
 
     @Override
     public DescribeFaqResult describeFaq(DescribeFaqRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeFeaturedResultsSetResult describeFeaturedResultsSet(DescribeFeaturedResultsSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -233,6 +248,11 @@ public class AbstractAWSkendra implements AWSkendra {
     }
 
     @Override
+    public ListFeaturedResultsSetsResult listFeaturedResultsSets(ListFeaturedResultsSetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListGroupsOlderThanOrderingIdResult listGroupsOlderThanOrderingId(ListGroupsOlderThanOrderingIdRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -304,6 +324,11 @@ public class AbstractAWSkendra implements AWSkendra {
 
     @Override
     public UpdateExperienceResult updateExperience(UpdateExperienceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateFeaturedResultsSetResult updateFeaturedResultsSet(UpdateFeaturedResultsSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Image state shows the image status and the reason for that status.
+ * Image status and the reason for that status.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ImageState" target="_top">AWS API
@@ -36,7 +36,7 @@ public class ImageState implements Serializable, Cloneable, StructuredPojo {
     private String status;
     /**
      * <p>
-     * The reason for the image's status.
+     * The reason for the status of the image.
      * </p>
      */
     private String reason;
@@ -102,11 +102,11 @@ public class ImageState implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The reason for the image's status.
+     * The reason for the status of the image.
      * </p>
      * 
      * @param reason
-     *        The reason for the image's status.
+     *        The reason for the status of the image.
      */
 
     public void setReason(String reason) {
@@ -115,10 +115,10 @@ public class ImageState implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The reason for the image's status.
+     * The reason for the status of the image.
      * </p>
      * 
-     * @return The reason for the image's status.
+     * @return The reason for the status of the image.
      */
 
     public String getReason() {
@@ -127,11 +127,11 @@ public class ImageState implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The reason for the image's status.
+     * The reason for the status of the image.
      * </p>
      * 
      * @param reason
-     *        The reason for the image's status.
+     *        The reason for the status of the image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

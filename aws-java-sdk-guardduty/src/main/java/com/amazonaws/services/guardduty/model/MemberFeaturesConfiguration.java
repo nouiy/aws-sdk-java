@@ -40,6 +40,12 @@ public class MemberFeaturesConfiguration implements Serializable, Cloneable, Str
      * </p>
      */
     private String status;
+    /**
+     * <p>
+     * Additional configuration of the feature for the member account.
+     * </p>
+     */
+    private java.util.List<MemberAdditionalConfiguration> additionalConfiguration;
 
     /**
      * <p>
@@ -160,6 +166,76 @@ public class MemberFeaturesConfiguration implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * Additional configuration of the feature for the member account.
+     * </p>
+     * 
+     * @return Additional configuration of the feature for the member account.
+     */
+
+    public java.util.List<MemberAdditionalConfiguration> getAdditionalConfiguration() {
+        return additionalConfiguration;
+    }
+
+    /**
+     * <p>
+     * Additional configuration of the feature for the member account.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        Additional configuration of the feature for the member account.
+     */
+
+    public void setAdditionalConfiguration(java.util.Collection<MemberAdditionalConfiguration> additionalConfiguration) {
+        if (additionalConfiguration == null) {
+            this.additionalConfiguration = null;
+            return;
+        }
+
+        this.additionalConfiguration = new java.util.ArrayList<MemberAdditionalConfiguration>(additionalConfiguration);
+    }
+
+    /**
+     * <p>
+     * Additional configuration of the feature for the member account.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalConfiguration(java.util.Collection)} or
+     * {@link #withAdditionalConfiguration(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        Additional configuration of the feature for the member account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MemberFeaturesConfiguration withAdditionalConfiguration(MemberAdditionalConfiguration... additionalConfiguration) {
+        if (this.additionalConfiguration == null) {
+            setAdditionalConfiguration(new java.util.ArrayList<MemberAdditionalConfiguration>(additionalConfiguration.length));
+        }
+        for (MemberAdditionalConfiguration ele : additionalConfiguration) {
+            this.additionalConfiguration.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Additional configuration of the feature for the member account.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        Additional configuration of the feature for the member account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MemberFeaturesConfiguration withAdditionalConfiguration(java.util.Collection<MemberAdditionalConfiguration> additionalConfiguration) {
+        setAdditionalConfiguration(additionalConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -174,7 +250,9 @@ public class MemberFeaturesConfiguration implements Serializable, Cloneable, Str
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getStatus() != null)
-            sb.append("Status: ").append(getStatus());
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getAdditionalConfiguration() != null)
+            sb.append("AdditionalConfiguration: ").append(getAdditionalConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -197,6 +275,10 @@ public class MemberFeaturesConfiguration implements Serializable, Cloneable, Str
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getAdditionalConfiguration() == null ^ this.getAdditionalConfiguration() == null)
+            return false;
+        if (other.getAdditionalConfiguration() != null && other.getAdditionalConfiguration().equals(this.getAdditionalConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -207,6 +289,7 @@ public class MemberFeaturesConfiguration implements Serializable, Cloneable, Str
 
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalConfiguration() == null) ? 0 : getAdditionalConfiguration().hashCode());
         return hashCode;
     }
 

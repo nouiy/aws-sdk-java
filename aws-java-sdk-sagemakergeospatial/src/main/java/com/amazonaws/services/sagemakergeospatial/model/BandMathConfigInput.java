@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * Input structure for the BandMath operation type. Defines Predefined and CustomIndices to be computed using BandMath.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/BandMathConfigInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +28,27 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BandMathConfigInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * CustomIndices that are computed.
+     * </p>
+     */
     private CustomIndicesInput customIndices;
-    /** <p/> */
+    /**
+     * <p>
+     * One or many of the supported predefined indices to compute. Allowed values: <code>NDVI</code>, <code>EVI2</code>,
+     * <code>MSAVI</code>, <code>NDWI</code>, <code>NDMI</code>, <code>NDSI</code>, and <code>WDRVI</code>.
+     * </p>
+     */
     private java.util.List<String> predefinedIndices;
 
     /**
-     * <p/>
+     * <p>
+     * CustomIndices that are computed.
+     * </p>
      * 
      * @param customIndices
+     *        CustomIndices that are computed.
      */
 
     public void setCustomIndices(CustomIndicesInput customIndices) {
@@ -42,9 +56,11 @@ public class BandMathConfigInput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p/>
+     * <p>
+     * CustomIndices that are computed.
+     * </p>
      * 
-     * @return
+     * @return CustomIndices that are computed.
      */
 
     public CustomIndicesInput getCustomIndices() {
@@ -52,9 +68,12 @@ public class BandMathConfigInput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p/>
+     * <p>
+     * CustomIndices that are computed.
+     * </p>
      * 
      * @param customIndices
+     *        CustomIndices that are computed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,9 +83,14 @@ public class BandMathConfigInput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p/>
+     * <p>
+     * One or many of the supported predefined indices to compute. Allowed values: <code>NDVI</code>, <code>EVI2</code>,
+     * <code>MSAVI</code>, <code>NDWI</code>, <code>NDMI</code>, <code>NDSI</code>, and <code>WDRVI</code>.
+     * </p>
      * 
-     * @return
+     * @return One or many of the supported predefined indices to compute. Allowed values: <code>NDVI</code>,
+     *         <code>EVI2</code>, <code>MSAVI</code>, <code>NDWI</code>, <code>NDMI</code>, <code>NDSI</code>, and
+     *         <code>WDRVI</code>.
      */
 
     public java.util.List<String> getPredefinedIndices() {
@@ -74,9 +98,15 @@ public class BandMathConfigInput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p/>
+     * <p>
+     * One or many of the supported predefined indices to compute. Allowed values: <code>NDVI</code>, <code>EVI2</code>,
+     * <code>MSAVI</code>, <code>NDWI</code>, <code>NDMI</code>, <code>NDSI</code>, and <code>WDRVI</code>.
+     * </p>
      * 
      * @param predefinedIndices
+     *        One or many of the supported predefined indices to compute. Allowed values: <code>NDVI</code>,
+     *        <code>EVI2</code>, <code>MSAVI</code>, <code>NDWI</code>, <code>NDMI</code>, <code>NDSI</code>, and
+     *        <code>WDRVI</code>.
      */
 
     public void setPredefinedIndices(java.util.Collection<String> predefinedIndices) {
@@ -89,7 +119,10 @@ public class BandMathConfigInput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p/>
+     * <p>
+     * One or many of the supported predefined indices to compute. Allowed values: <code>NDVI</code>, <code>EVI2</code>,
+     * <code>MSAVI</code>, <code>NDWI</code>, <code>NDMI</code>, <code>NDSI</code>, and <code>WDRVI</code>.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPredefinedIndices(java.util.Collection)} or {@link #withPredefinedIndices(java.util.Collection)} if
@@ -97,6 +130,9 @@ public class BandMathConfigInput implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param predefinedIndices
+     *        One or many of the supported predefined indices to compute. Allowed values: <code>NDVI</code>,
+     *        <code>EVI2</code>, <code>MSAVI</code>, <code>NDWI</code>, <code>NDMI</code>, <code>NDSI</code>, and
+     *        <code>WDRVI</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,9 +147,15 @@ public class BandMathConfigInput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p/>
+     * <p>
+     * One or many of the supported predefined indices to compute. Allowed values: <code>NDVI</code>, <code>EVI2</code>,
+     * <code>MSAVI</code>, <code>NDWI</code>, <code>NDMI</code>, <code>NDSI</code>, and <code>WDRVI</code>.
+     * </p>
      * 
      * @param predefinedIndices
+     *        One or many of the supported predefined indices to compute. Allowed values: <code>NDVI</code>,
+     *        <code>EVI2</code>, <code>MSAVI</code>, <code>NDWI</code>, <code>NDMI</code>, <code>NDSI</code>, and
+     *        <code>WDRVI</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

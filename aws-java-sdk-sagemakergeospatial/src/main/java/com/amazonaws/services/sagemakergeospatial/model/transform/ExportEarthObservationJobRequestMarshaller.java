@@ -17,6 +17,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.sagemakergeospatial.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -29,6 +31,9 @@ public class ExportEarthObservationJobRequestMarshaller {
 
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Arn").build();
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<String> EXECUTIONROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecutionRoleArn").build();
     private static final MarshallingInfo<Boolean> EXPORTSOURCEIMAGES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
@@ -53,6 +58,7 @@ public class ExportEarthObservationJobRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(exportEarthObservationJobRequest.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(exportEarthObservationJobRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(exportEarthObservationJobRequest.getExecutionRoleArn(), EXECUTIONROLEARN_BINDING);
             protocolMarshaller.marshall(exportEarthObservationJobRequest.getExportSourceImages(), EXPORTSOURCEIMAGES_BINDING);
             protocolMarshaller.marshall(exportEarthObservationJobRequest.getOutputConfig(), OUTPUTCONFIG_BINDING);

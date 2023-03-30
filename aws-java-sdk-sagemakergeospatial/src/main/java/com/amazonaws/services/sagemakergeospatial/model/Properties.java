@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * Properties associated with the Item.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/Properties" target="_top">AWS
  *      API Documentation</a>
@@ -26,23 +28,55 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Properties implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * Estimate of cloud cover.
+     * </p>
+     */
     private Float eoCloudCover;
-    /** <p/> */
+    /**
+     * <p>
+     * Land cloud cover for Landsat Data Collection.
+     * </p>
+     */
     private Float landsatCloudCoverLand;
-    /** <p/> */
+    /**
+     * <p>
+     * Platform property. Platform refers to the unique name of the specific platform the instrument is attached to. For
+     * satellites it is the name of the satellite, eg. landsat-8 (Landsat-8), sentinel-2a.
+     * </p>
+     */
     private String platform;
-    /** <p/> */
+    /**
+     * <p>
+     * The angle from the sensor between nadir (straight down) and the scene center. Measured in degrees (0-90).
+     * </p>
+     */
     private Float viewOffNadir;
-    /** <p/> */
+    /**
+     * <p>
+     * The sun azimuth angle. From the scene center point on the ground, this is the angle between truth north and the
+     * sun. Measured clockwise in degrees (0-360).
+     * </p>
+     */
     private Float viewSunAzimuth;
-    /** <p/> */
+    /**
+     * <p>
+     * The sun elevation angle. The angle from the tangent of the scene center point to the sun. Measured from the
+     * horizon in degrees (-90-90). Negative values indicate the sun is below the horizon, e.g. sun elevation of -10°
+     * means the data was captured during <a
+     * href="https://www.timeanddate.com/astronomy/different-types-twilight.html">nautical twilight</a>.
+     * </p>
+     */
     private Float viewSunElevation;
 
     /**
-     * <p/>
+     * <p>
+     * Estimate of cloud cover.
+     * </p>
      * 
      * @param eoCloudCover
+     *        Estimate of cloud cover.
      */
 
     public void setEoCloudCover(Float eoCloudCover) {
@@ -50,9 +84,11 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Estimate of cloud cover.
+     * </p>
      * 
-     * @return
+     * @return Estimate of cloud cover.
      */
 
     public Float getEoCloudCover() {
@@ -60,9 +96,12 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Estimate of cloud cover.
+     * </p>
      * 
      * @param eoCloudCover
+     *        Estimate of cloud cover.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -72,9 +111,12 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Land cloud cover for Landsat Data Collection.
+     * </p>
      * 
      * @param landsatCloudCoverLand
+     *        Land cloud cover for Landsat Data Collection.
      */
 
     public void setLandsatCloudCoverLand(Float landsatCloudCoverLand) {
@@ -82,9 +124,11 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Land cloud cover for Landsat Data Collection.
+     * </p>
      * 
-     * @return
+     * @return Land cloud cover for Landsat Data Collection.
      */
 
     public Float getLandsatCloudCoverLand() {
@@ -92,9 +136,12 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Land cloud cover for Landsat Data Collection.
+     * </p>
      * 
      * @param landsatCloudCoverLand
+     *        Land cloud cover for Landsat Data Collection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,9 +151,14 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Platform property. Platform refers to the unique name of the specific platform the instrument is attached to. For
+     * satellites it is the name of the satellite, eg. landsat-8 (Landsat-8), sentinel-2a.
+     * </p>
      * 
      * @param platform
+     *        Platform property. Platform refers to the unique name of the specific platform the instrument is attached
+     *        to. For satellites it is the name of the satellite, eg. landsat-8 (Landsat-8), sentinel-2a.
      */
 
     public void setPlatform(String platform) {
@@ -114,9 +166,13 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Platform property. Platform refers to the unique name of the specific platform the instrument is attached to. For
+     * satellites it is the name of the satellite, eg. landsat-8 (Landsat-8), sentinel-2a.
+     * </p>
      * 
-     * @return
+     * @return Platform property. Platform refers to the unique name of the specific platform the instrument is attached
+     *         to. For satellites it is the name of the satellite, eg. landsat-8 (Landsat-8), sentinel-2a.
      */
 
     public String getPlatform() {
@@ -124,9 +180,14 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Platform property. Platform refers to the unique name of the specific platform the instrument is attached to. For
+     * satellites it is the name of the satellite, eg. landsat-8 (Landsat-8), sentinel-2a.
+     * </p>
      * 
      * @param platform
+     *        Platform property. Platform refers to the unique name of the specific platform the instrument is attached
+     *        to. For satellites it is the name of the satellite, eg. landsat-8 (Landsat-8), sentinel-2a.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,9 +197,12 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The angle from the sensor between nadir (straight down) and the scene center. Measured in degrees (0-90).
+     * </p>
      * 
      * @param viewOffNadir
+     *        The angle from the sensor between nadir (straight down) and the scene center. Measured in degrees (0-90).
      */
 
     public void setViewOffNadir(Float viewOffNadir) {
@@ -146,9 +210,11 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The angle from the sensor between nadir (straight down) and the scene center. Measured in degrees (0-90).
+     * </p>
      * 
-     * @return
+     * @return The angle from the sensor between nadir (straight down) and the scene center. Measured in degrees (0-90).
      */
 
     public Float getViewOffNadir() {
@@ -156,9 +222,12 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The angle from the sensor between nadir (straight down) and the scene center. Measured in degrees (0-90).
+     * </p>
      * 
      * @param viewOffNadir
+     *        The angle from the sensor between nadir (straight down) and the scene center. Measured in degrees (0-90).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,9 +237,14 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The sun azimuth angle. From the scene center point on the ground, this is the angle between truth north and the
+     * sun. Measured clockwise in degrees (0-360).
+     * </p>
      * 
      * @param viewSunAzimuth
+     *        The sun azimuth angle. From the scene center point on the ground, this is the angle between truth north
+     *        and the sun. Measured clockwise in degrees (0-360).
      */
 
     public void setViewSunAzimuth(Float viewSunAzimuth) {
@@ -178,9 +252,13 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The sun azimuth angle. From the scene center point on the ground, this is the angle between truth north and the
+     * sun. Measured clockwise in degrees (0-360).
+     * </p>
      * 
-     * @return
+     * @return The sun azimuth angle. From the scene center point on the ground, this is the angle between truth north
+     *         and the sun. Measured clockwise in degrees (0-360).
      */
 
     public Float getViewSunAzimuth() {
@@ -188,9 +266,14 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The sun azimuth angle. From the scene center point on the ground, this is the angle between truth north and the
+     * sun. Measured clockwise in degrees (0-360).
+     * </p>
      * 
      * @param viewSunAzimuth
+     *        The sun azimuth angle. From the scene center point on the ground, this is the angle between truth north
+     *        and the sun. Measured clockwise in degrees (0-360).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,9 +283,18 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The sun elevation angle. The angle from the tangent of the scene center point to the sun. Measured from the
+     * horizon in degrees (-90-90). Negative values indicate the sun is below the horizon, e.g. sun elevation of -10°
+     * means the data was captured during <a
+     * href="https://www.timeanddate.com/astronomy/different-types-twilight.html">nautical twilight</a>.
+     * </p>
      * 
      * @param viewSunElevation
+     *        The sun elevation angle. The angle from the tangent of the scene center point to the sun. Measured from
+     *        the horizon in degrees (-90-90). Negative values indicate the sun is below the horizon, e.g. sun elevation
+     *        of -10° means the data was captured during <a
+     *        href="https://www.timeanddate.com/astronomy/different-types-twilight.html">nautical twilight</a>.
      */
 
     public void setViewSunElevation(Float viewSunElevation) {
@@ -210,9 +302,17 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The sun elevation angle. The angle from the tangent of the scene center point to the sun. Measured from the
+     * horizon in degrees (-90-90). Negative values indicate the sun is below the horizon, e.g. sun elevation of -10°
+     * means the data was captured during <a
+     * href="https://www.timeanddate.com/astronomy/different-types-twilight.html">nautical twilight</a>.
+     * </p>
      * 
-     * @return
+     * @return The sun elevation angle. The angle from the tangent of the scene center point to the sun. Measured from
+     *         the horizon in degrees (-90-90). Negative values indicate the sun is below the horizon, e.g. sun
+     *         elevation of -10° means the data was captured during <a
+     *         href="https://www.timeanddate.com/astronomy/different-types-twilight.html">nautical twilight</a>.
      */
 
     public Float getViewSunElevation() {
@@ -220,9 +320,18 @@ public class Properties implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The sun elevation angle. The angle from the tangent of the scene center point to the sun. Measured from the
+     * horizon in degrees (-90-90). Negative values indicate the sun is below the horizon, e.g. sun elevation of -10°
+     * means the data was captured during <a
+     * href="https://www.timeanddate.com/astronomy/different-types-twilight.html">nautical twilight</a>.
+     * </p>
      * 
      * @param viewSunElevation
+     *        The sun elevation angle. The angle from the tangent of the scene center point to the sun. Measured from
+     *        the horizon in degrees (-90-90). Negative values indicate the sun is below the horizon, e.g. sun elevation
+     *        of -10° means the data was captured during <a
+     *        href="https://www.timeanddate.com/astronomy/different-types-twilight.html">nautical twilight</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

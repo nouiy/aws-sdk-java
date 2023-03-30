@@ -42,6 +42,8 @@ public class EksPodPropertiesDetailMarshaller {
             .marshallLocationName("podName").build();
     private static final MarshallingInfo<String> NODENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nodeName").build();
+    private static final MarshallingInfo<StructuredPojo> METADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metadata").build();
 
     private static final EksPodPropertiesDetailMarshaller instance = new EksPodPropertiesDetailMarshaller();
 
@@ -66,6 +68,7 @@ public class EksPodPropertiesDetailMarshaller {
             protocolMarshaller.marshall(eksPodPropertiesDetail.getVolumes(), VOLUMES_BINDING);
             protocolMarshaller.marshall(eksPodPropertiesDetail.getPodName(), PODNAME_BINDING);
             protocolMarshaller.marshall(eksPodPropertiesDetail.getNodeName(), NODENAME_BINDING);
+            protocolMarshaller.marshall(eksPodPropertiesDetail.getMetadata(), METADATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

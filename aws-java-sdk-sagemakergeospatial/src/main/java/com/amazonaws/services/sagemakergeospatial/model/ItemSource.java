@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Structure representing the items in the response for SearchRasterDataCollection.
+ * The structure representing the items in the response for SearchRasterDataCollection.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ItemSource" target="_top">AWS
@@ -28,11 +28,24 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ItemSource implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * This is a dictionary of Asset Objects data associated with the Item that can be downloaded or streamed, each with
+     * a unique key.
+     * </p>
+     */
     private java.util.Map<String, AssetValue> assets;
-    /** <p/> */
+    /**
+     * <p>
+     * The searchable date and time of the item, in UTC.
+     * </p>
+     */
     private java.util.Date dateTime;
-    /** <p/> */
+    /**
+     * <p>
+     * The item Geometry in GeoJson format.
+     * </p>
+     */
     private Geometry geometry;
     /**
      * <p>
@@ -40,13 +53,21 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String id;
-    /** <p/> */
+    /**
+     * <p>
+     * This field contains additional properties of the item.
+     * </p>
+     */
     private Properties properties;
 
     /**
-     * <p/>
+     * <p>
+     * This is a dictionary of Asset Objects data associated with the Item that can be downloaded or streamed, each with
+     * a unique key.
+     * </p>
      * 
-     * @return
+     * @return This is a dictionary of Asset Objects data associated with the Item that can be downloaded or streamed,
+     *         each with a unique key.
      */
 
     public java.util.Map<String, AssetValue> getAssets() {
@@ -54,9 +75,14 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * This is a dictionary of Asset Objects data associated with the Item that can be downloaded or streamed, each with
+     * a unique key.
+     * </p>
      * 
      * @param assets
+     *        This is a dictionary of Asset Objects data associated with the Item that can be downloaded or streamed,
+     *        each with a unique key.
      */
 
     public void setAssets(java.util.Map<String, AssetValue> assets) {
@@ -64,9 +90,14 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * This is a dictionary of Asset Objects data associated with the Item that can be downloaded or streamed, each with
+     * a unique key.
+     * </p>
      * 
      * @param assets
+     *        This is a dictionary of Asset Objects data associated with the Item that can be downloaded or streamed,
+     *        each with a unique key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,9 +135,12 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The searchable date and time of the item, in UTC.
+     * </p>
      * 
      * @param dateTime
+     *        The searchable date and time of the item, in UTC.
      */
 
     public void setDateTime(java.util.Date dateTime) {
@@ -114,9 +148,11 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The searchable date and time of the item, in UTC.
+     * </p>
      * 
-     * @return
+     * @return The searchable date and time of the item, in UTC.
      */
 
     public java.util.Date getDateTime() {
@@ -124,9 +160,12 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The searchable date and time of the item, in UTC.
+     * </p>
      * 
      * @param dateTime
+     *        The searchable date and time of the item, in UTC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,9 +175,12 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The item Geometry in GeoJson format.
+     * </p>
      * 
      * @param geometry
+     *        The item Geometry in GeoJson format.
      */
 
     public void setGeometry(Geometry geometry) {
@@ -146,9 +188,11 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The item Geometry in GeoJson format.
+     * </p>
      * 
-     * @return
+     * @return The item Geometry in GeoJson format.
      */
 
     public Geometry getGeometry() {
@@ -156,9 +200,12 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The item Geometry in GeoJson format.
+     * </p>
      * 
      * @param geometry
+     *        The item Geometry in GeoJson format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -208,9 +255,12 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * This field contains additional properties of the item.
+     * </p>
      * 
      * @param properties
+     *        This field contains additional properties of the item.
      */
 
     public void setProperties(Properties properties) {
@@ -218,9 +268,11 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * This field contains additional properties of the item.
+     * </p>
      * 
-     * @return
+     * @return This field contains additional properties of the item.
      */
 
     public Properties getProperties() {
@@ -228,9 +280,12 @@ public class ItemSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * This field contains additional properties of the item.
+     * </p>
      * 
      * @param properties
+     *        This field contains additional properties of the item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

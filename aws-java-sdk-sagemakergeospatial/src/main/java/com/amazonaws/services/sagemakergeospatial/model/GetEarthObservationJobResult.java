@@ -79,7 +79,7 @@ public class GetEarthObservationJobResult extends com.amazonaws.AmazonWebService
     private JobConfigInput jobConfig;
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      */
     private String kmsKeyId;
@@ -89,7 +89,11 @@ public class GetEarthObservationJobResult extends com.amazonaws.AmazonWebService
      * </p>
      */
     private String name;
-    /** <p/> */
+    /**
+     * <p>
+     * Bands available in the output of an operation.
+     * </p>
+     */
     private java.util.List<OutputBand> outputBands;
     /**
      * <p>
@@ -485,11 +489,11 @@ public class GetEarthObservationJobResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     *        The Key Management Service key ID for server-side encryption.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -498,10 +502,10 @@ public class GetEarthObservationJobResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
-     * @return The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * @return The Key Management Service key ID for server-side encryption.
      */
 
     public String getKmsKeyId() {
@@ -510,11 +514,11 @@ public class GetEarthObservationJobResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     *        The Key Management Service key ID for server-side encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -564,9 +568,11 @@ public class GetEarthObservationJobResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands available in the output of an operation.
+     * </p>
      * 
-     * @return
+     * @return Bands available in the output of an operation.
      */
 
     public java.util.List<OutputBand> getOutputBands() {
@@ -574,9 +580,12 @@ public class GetEarthObservationJobResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands available in the output of an operation.
+     * </p>
      * 
      * @param outputBands
+     *        Bands available in the output of an operation.
      */
 
     public void setOutputBands(java.util.Collection<OutputBand> outputBands) {
@@ -589,7 +598,9 @@ public class GetEarthObservationJobResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands available in the output of an operation.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setOutputBands(java.util.Collection)} or {@link #withOutputBands(java.util.Collection)} if you want to
@@ -597,6 +608,7 @@ public class GetEarthObservationJobResult extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param outputBands
+     *        Bands available in the output of an operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -611,9 +623,12 @@ public class GetEarthObservationJobResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands available in the output of an operation.
+     * </p>
      * 
      * @param outputBands
+     *        Bands available in the output of an operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -54,7 +54,7 @@ public class ListEarthObservationJobOutputConfigJsonUnmarshaller implements Unma
                 }
                 if (context.testExpression("CreationTime", targetDepth)) {
                     context.nextToken();
-                    listEarthObservationJobOutputConfig.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                    listEarthObservationJobOutputConfig.setCreationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("DurationInSeconds", targetDepth)) {
                     context.nextToken();

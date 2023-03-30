@@ -374,6 +374,32 @@ public class AbstractAWSimagebuilderAsync extends AbstractAWSimagebuilder implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetWorkflowExecutionResult> getWorkflowExecutionAsync(GetWorkflowExecutionRequest request) {
+
+        return getWorkflowExecutionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowExecutionResult> getWorkflowExecutionAsync(GetWorkflowExecutionRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetWorkflowExecutionRequest, GetWorkflowExecutionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowStepExecutionResult> getWorkflowStepExecutionAsync(GetWorkflowStepExecutionRequest request) {
+
+        return getWorkflowStepExecutionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowStepExecutionResult> getWorkflowStepExecutionAsync(GetWorkflowStepExecutionRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetWorkflowStepExecutionRequest, GetWorkflowStepExecutionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportComponentResult> importComponentAsync(ImportComponentRequest request) {
 
         return importComponentAsync(request, null);
@@ -517,6 +543,34 @@ public class AbstractAWSimagebuilderAsync extends AbstractAWSimagebuilder implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListImageScanFindingAggregationsResult> listImageScanFindingAggregationsAsync(
+            ListImageScanFindingAggregationsRequest request) {
+
+        return listImageScanFindingAggregationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListImageScanFindingAggregationsResult> listImageScanFindingAggregationsAsync(
+            ListImageScanFindingAggregationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListImageScanFindingAggregationsRequest, ListImageScanFindingAggregationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListImageScanFindingsResult> listImageScanFindingsAsync(ListImageScanFindingsRequest request) {
+
+        return listImageScanFindingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListImageScanFindingsResult> listImageScanFindingsAsync(ListImageScanFindingsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListImageScanFindingsRequest, ListImageScanFindingsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListImagesResult> listImagesAsync(ListImagesRequest request) {
 
         return listImagesAsync(request, null);
@@ -553,6 +607,32 @@ public class AbstractAWSimagebuilderAsync extends AbstractAWSimagebuilder implem
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowExecutionsResult> listWorkflowExecutionsAsync(ListWorkflowExecutionsRequest request) {
+
+        return listWorkflowExecutionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowExecutionsResult> listWorkflowExecutionsAsync(ListWorkflowExecutionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListWorkflowExecutionsRequest, ListWorkflowExecutionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowStepExecutionsResult> listWorkflowStepExecutionsAsync(ListWorkflowStepExecutionsRequest request) {
+
+        return listWorkflowStepExecutionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowStepExecutionsResult> listWorkflowStepExecutionsAsync(ListWorkflowStepExecutionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListWorkflowStepExecutionsRequest, ListWorkflowStepExecutionsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

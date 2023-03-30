@@ -33,7 +33,7 @@ public class ListImagePackagesRequest extends com.amazonaws.AmazonWebServiceRequ
     private String imageBuildVersionArn;
     /**
      * <p>
-     * The maxiumum number of results to return from the ListImagePackages request.
+     * The maximum items to return in a request.
      * </p>
      */
     private Integer maxResults;
@@ -86,11 +86,11 @@ public class ListImagePackagesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The maxiumum number of results to return from the ListImagePackages request.
+     * The maximum items to return in a request.
      * </p>
      * 
      * @param maxResults
-     *        The maxiumum number of results to return from the ListImagePackages request.
+     *        The maximum items to return in a request.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -99,10 +99,10 @@ public class ListImagePackagesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The maxiumum number of results to return from the ListImagePackages request.
+     * The maximum items to return in a request.
      * </p>
      * 
-     * @return The maxiumum number of results to return from the ListImagePackages request.
+     * @return The maximum items to return in a request.
      */
 
     public Integer getMaxResults() {
@@ -111,11 +111,11 @@ public class ListImagePackagesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The maxiumum number of results to return from the ListImagePackages request.
+     * The maximum items to return in a request.
      * </p>
      * 
      * @param maxResults
-     *        The maxiumum number of results to return from the ListImagePackages request.
+     *        The maximum items to return in a request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -271,6 +271,12 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * </p>
      */
     private VpnTunnelLogOptionsSpecification logOptions;
+    /**
+     * <p>
+     * Turn on or off tunnel endpoint lifecycle control feature.
+     * </p>
+     */
+    private Boolean enableTunnelLifecycleControl;
 
     /**
      * <p>
@@ -2059,6 +2065,58 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Turn on or off tunnel endpoint lifecycle control feature.
+     * </p>
+     * 
+     * @param enableTunnelLifecycleControl
+     *        Turn on or off tunnel endpoint lifecycle control feature.
+     */
+
+    public void setEnableTunnelLifecycleControl(Boolean enableTunnelLifecycleControl) {
+        this.enableTunnelLifecycleControl = enableTunnelLifecycleControl;
+    }
+
+    /**
+     * <p>
+     * Turn on or off tunnel endpoint lifecycle control feature.
+     * </p>
+     * 
+     * @return Turn on or off tunnel endpoint lifecycle control feature.
+     */
+
+    public Boolean getEnableTunnelLifecycleControl() {
+        return this.enableTunnelLifecycleControl;
+    }
+
+    /**
+     * <p>
+     * Turn on or off tunnel endpoint lifecycle control feature.
+     * </p>
+     * 
+     * @param enableTunnelLifecycleControl
+     *        Turn on or off tunnel endpoint lifecycle control feature.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VpnTunnelOptionsSpecification withEnableTunnelLifecycleControl(Boolean enableTunnelLifecycleControl) {
+        setEnableTunnelLifecycleControl(enableTunnelLifecycleControl);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Turn on or off tunnel endpoint lifecycle control feature.
+     * </p>
+     * 
+     * @return Turn on or off tunnel endpoint lifecycle control feature.
+     */
+
+    public Boolean isEnableTunnelLifecycleControl() {
+        return this.enableTunnelLifecycleControl;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2107,7 +2165,9 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
         if (getStartupAction() != null)
             sb.append("StartupAction: ").append(getStartupAction()).append(",");
         if (getLogOptions() != null)
-            sb.append("LogOptions: ").append(getLogOptions());
+            sb.append("LogOptions: ").append(getLogOptions()).append(",");
+        if (getEnableTunnelLifecycleControl() != null)
+            sb.append("EnableTunnelLifecycleControl: ").append(getEnableTunnelLifecycleControl());
         sb.append("}");
         return sb.toString();
     }
@@ -2198,6 +2258,10 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
             return false;
         if (other.getLogOptions() != null && other.getLogOptions().equals(this.getLogOptions()) == false)
             return false;
+        if (other.getEnableTunnelLifecycleControl() == null ^ this.getEnableTunnelLifecycleControl() == null)
+            return false;
+        if (other.getEnableTunnelLifecycleControl() != null && other.getEnableTunnelLifecycleControl().equals(this.getEnableTunnelLifecycleControl()) == false)
+            return false;
         return true;
     }
 
@@ -2225,6 +2289,7 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getIKEVersions() == null) ? 0 : getIKEVersions().hashCode());
         hashCode = prime * hashCode + ((getStartupAction() == null) ? 0 : getStartupAction().hashCode());
         hashCode = prime * hashCode + ((getLogOptions() == null) ? 0 : getLogOptions().hashCode());
+        hashCode = prime * hashCode + ((getEnableTunnelLifecycleControl() == null) ? 0 : getEnableTunnelLifecycleControl().hashCode());
         return hashCode;
     }
 

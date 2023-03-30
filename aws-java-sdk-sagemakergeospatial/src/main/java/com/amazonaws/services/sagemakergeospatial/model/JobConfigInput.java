@@ -28,7 +28,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class JobConfigInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * An object containing information about the job configuration for BandMath.
+     * </p>
+     */
     private BandMathConfigInput bandMathConfig;
     /**
      * <p>
@@ -60,7 +64,11 @@ public class JobConfigInput implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private ResamplingConfigInput resamplingConfig;
-    /** <p/> */
+    /**
+     * <p>
+     * An object containing information about the job configuration for a Stacking Earth Observation job.
+     * </p>
+     */
     private StackConfigInput stackConfig;
     /**
      * <p>
@@ -76,9 +84,12 @@ public class JobConfigInput implements Serializable, Cloneable, StructuredPojo {
     private ZonalStatisticsConfigInput zonalStatisticsConfig;
 
     /**
-     * <p/>
+     * <p>
+     * An object containing information about the job configuration for BandMath.
+     * </p>
      * 
      * @param bandMathConfig
+     *        An object containing information about the job configuration for BandMath.
      */
 
     public void setBandMathConfig(BandMathConfigInput bandMathConfig) {
@@ -86,9 +97,11 @@ public class JobConfigInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * An object containing information about the job configuration for BandMath.
+     * </p>
      * 
-     * @return
+     * @return An object containing information about the job configuration for BandMath.
      */
 
     public BandMathConfigInput getBandMathConfig() {
@@ -96,9 +109,12 @@ public class JobConfigInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * An object containing information about the job configuration for BandMath.
+     * </p>
      * 
      * @param bandMathConfig
+     *        An object containing information about the job configuration for BandMath.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -308,9 +324,12 @@ public class JobConfigInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * An object containing information about the job configuration for a Stacking Earth Observation job.
+     * </p>
      * 
      * @param stackConfig
+     *        An object containing information about the job configuration for a Stacking Earth Observation job.
      */
 
     public void setStackConfig(StackConfigInput stackConfig) {
@@ -318,9 +337,11 @@ public class JobConfigInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * An object containing information about the job configuration for a Stacking Earth Observation job.
+     * </p>
      * 
-     * @return
+     * @return An object containing information about the job configuration for a Stacking Earth Observation job.
      */
 
     public StackConfigInput getStackConfig() {
@@ -328,9 +349,12 @@ public class JobConfigInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * An object containing information about the job configuration for a Stacking Earth Observation job.
+     * </p>
      * 
      * @param stackConfig
+     *        An object containing information about the job configuration for a Stacking Earth Observation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

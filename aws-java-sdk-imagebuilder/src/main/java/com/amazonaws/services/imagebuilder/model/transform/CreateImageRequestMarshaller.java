@@ -48,6 +48,8 @@ public class CreateImageRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<StructuredPojo> IMAGESCANNINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("imageScanningConfiguration").build();
 
     private static final CreateImageRequestMarshaller instance = new CreateImageRequestMarshaller();
 
@@ -73,6 +75,7 @@ public class CreateImageRequestMarshaller {
             protocolMarshaller.marshall(createImageRequest.getEnhancedImageMetadataEnabled(), ENHANCEDIMAGEMETADATAENABLED_BINDING);
             protocolMarshaller.marshall(createImageRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createImageRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(createImageRequest.getImageScanningConfiguration(), IMAGESCANNINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

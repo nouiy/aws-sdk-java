@@ -37,7 +37,7 @@ public class CancelImageCreationResult extends com.amazonaws.AmazonWebServiceRes
     private String clientToken;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image whose creation has been cancelled.
+     * The ARN of the image whose creation this request canceled.
      * </p>
      */
     private String imageBuildVersionArn;
@@ -124,11 +124,11 @@ public class CancelImageCreationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image whose creation has been cancelled.
+     * The ARN of the image whose creation this request canceled.
      * </p>
      * 
      * @param imageBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the image whose creation has been cancelled.
+     *        The ARN of the image whose creation this request canceled.
      */
 
     public void setImageBuildVersionArn(String imageBuildVersionArn) {
@@ -137,10 +137,10 @@ public class CancelImageCreationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image whose creation has been cancelled.
+     * The ARN of the image whose creation this request canceled.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the image whose creation has been cancelled.
+     * @return The ARN of the image whose creation this request canceled.
      */
 
     public String getImageBuildVersionArn() {
@@ -149,11 +149,11 @@ public class CancelImageCreationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image whose creation has been cancelled.
+     * The ARN of the image whose creation this request canceled.
      * </p>
      * 
      * @param imageBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the image whose creation has been cancelled.
+     *        The ARN of the image whose creation this request canceled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

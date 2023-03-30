@@ -56,6 +56,8 @@ public class InstanceRecommendationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("effectiveRecommendationPreferences").build();
     private static final MarshallingInfo<List> INFERREDWORKLOADTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferredWorkloadTypes").build();
+    private static final MarshallingInfo<String> INSTANCESTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceState").build();
 
     private static final InstanceRecommendationMarshaller instance = new InstanceRecommendationMarshaller();
 
@@ -87,6 +89,7 @@ public class InstanceRecommendationMarshaller {
             protocolMarshaller.marshall(instanceRecommendation.getCurrentPerformanceRisk(), CURRENTPERFORMANCERISK_BINDING);
             protocolMarshaller.marshall(instanceRecommendation.getEffectiveRecommendationPreferences(), EFFECTIVERECOMMENDATIONPREFERENCES_BINDING);
             protocolMarshaller.marshall(instanceRecommendation.getInferredWorkloadTypes(), INFERREDWORKLOADTYPES_BINDING);
+            protocolMarshaller.marshall(instanceRecommendation.getInstanceState(), INSTANCESTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

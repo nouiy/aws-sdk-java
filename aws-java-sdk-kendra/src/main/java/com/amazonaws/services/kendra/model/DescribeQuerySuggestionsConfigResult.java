@@ -74,13 +74,13 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
     private Integer minimumQueryCount;
     /**
      * <p>
-     * The date-time query suggestions for an index was last updated.
+     * The Unix timestamp when query suggestions for an index was last updated.
      * </p>
      */
     private java.util.Date lastSuggestionsBuildTime;
     /**
      * <p>
-     * The date-time query suggestions for an index was last cleared.
+     * The Unix timestamp when query suggestions for an index was last cleared.
      * </p>
      * <p>
      * After you clear suggestions, Amazon Kendra learns new suggestions based on new queries added to the query log
@@ -484,11 +484,11 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The date-time query suggestions for an index was last updated.
+     * The Unix timestamp when query suggestions for an index was last updated.
      * </p>
      * 
      * @param lastSuggestionsBuildTime
-     *        The date-time query suggestions for an index was last updated.
+     *        The Unix timestamp when query suggestions for an index was last updated.
      */
 
     public void setLastSuggestionsBuildTime(java.util.Date lastSuggestionsBuildTime) {
@@ -497,10 +497,10 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The date-time query suggestions for an index was last updated.
+     * The Unix timestamp when query suggestions for an index was last updated.
      * </p>
      * 
-     * @return The date-time query suggestions for an index was last updated.
+     * @return The Unix timestamp when query suggestions for an index was last updated.
      */
 
     public java.util.Date getLastSuggestionsBuildTime() {
@@ -509,11 +509,11 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The date-time query suggestions for an index was last updated.
+     * The Unix timestamp when query suggestions for an index was last updated.
      * </p>
      * 
      * @param lastSuggestionsBuildTime
-     *        The date-time query suggestions for an index was last updated.
+     *        The Unix timestamp when query suggestions for an index was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -524,7 +524,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The date-time query suggestions for an index was last cleared.
+     * The Unix timestamp when query suggestions for an index was last cleared.
      * </p>
      * <p>
      * After you clear suggestions, Amazon Kendra learns new suggestions based on new queries added to the query log
@@ -533,7 +533,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param lastClearTime
-     *        The date-time query suggestions for an index was last cleared.</p>
+     *        The Unix timestamp when query suggestions for an index was last cleared.</p>
      *        <p>
      *        After you clear suggestions, Amazon Kendra learns new suggestions based on new queries added to the query
      *        log from the time you cleared suggestions. Amazon Kendra only considers re-occurences of a query from the
@@ -546,7 +546,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The date-time query suggestions for an index was last cleared.
+     * The Unix timestamp when query suggestions for an index was last cleared.
      * </p>
      * <p>
      * After you clear suggestions, Amazon Kendra learns new suggestions based on new queries added to the query log
@@ -554,7 +554,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      * cleared suggestions.
      * </p>
      * 
-     * @return The date-time query suggestions for an index was last cleared.</p>
+     * @return The Unix timestamp when query suggestions for an index was last cleared.</p>
      *         <p>
      *         After you clear suggestions, Amazon Kendra learns new suggestions based on new queries added to the query
      *         log from the time you cleared suggestions. Amazon Kendra only considers re-occurences of a query from the
@@ -567,7 +567,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The date-time query suggestions for an index was last cleared.
+     * The Unix timestamp when query suggestions for an index was last cleared.
      * </p>
      * <p>
      * After you clear suggestions, Amazon Kendra learns new suggestions based on new queries added to the query log
@@ -576,7 +576,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param lastClearTime
-     *        The date-time query suggestions for an index was last cleared.</p>
+     *        The Unix timestamp when query suggestions for an index was last cleared.</p>
      *        <p>
      *        After you clear suggestions, Amazon Kendra learns new suggestions based on new queries added to the query
      *        log from the time you cleared suggestions. Amazon Kendra only considers re-occurences of a query from the

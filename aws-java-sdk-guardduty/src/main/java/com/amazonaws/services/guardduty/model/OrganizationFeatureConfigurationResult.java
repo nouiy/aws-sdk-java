@@ -48,6 +48,12 @@ public class OrganizationFeatureConfigurationResult implements Serializable, Clo
      * </p>
      */
     private String autoEnable;
+    /**
+     * <p>
+     * The additional configuration that is configured for the member accounts within the organization.
+     * </p>
+     */
+    private java.util.List<OrganizationAdditionalConfigurationResult> additionalConfiguration;
 
     /**
      * <p>
@@ -232,6 +238,77 @@ public class OrganizationFeatureConfigurationResult implements Serializable, Clo
     }
 
     /**
+     * <p>
+     * The additional configuration that is configured for the member accounts within the organization.
+     * </p>
+     * 
+     * @return The additional configuration that is configured for the member accounts within the organization.
+     */
+
+    public java.util.List<OrganizationAdditionalConfigurationResult> getAdditionalConfiguration() {
+        return additionalConfiguration;
+    }
+
+    /**
+     * <p>
+     * The additional configuration that is configured for the member accounts within the organization.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        The additional configuration that is configured for the member accounts within the organization.
+     */
+
+    public void setAdditionalConfiguration(java.util.Collection<OrganizationAdditionalConfigurationResult> additionalConfiguration) {
+        if (additionalConfiguration == null) {
+            this.additionalConfiguration = null;
+            return;
+        }
+
+        this.additionalConfiguration = new java.util.ArrayList<OrganizationAdditionalConfigurationResult>(additionalConfiguration);
+    }
+
+    /**
+     * <p>
+     * The additional configuration that is configured for the member accounts within the organization.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalConfiguration(java.util.Collection)} or
+     * {@link #withAdditionalConfiguration(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        The additional configuration that is configured for the member accounts within the organization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OrganizationFeatureConfigurationResult withAdditionalConfiguration(OrganizationAdditionalConfigurationResult... additionalConfiguration) {
+        if (this.additionalConfiguration == null) {
+            setAdditionalConfiguration(new java.util.ArrayList<OrganizationAdditionalConfigurationResult>(additionalConfiguration.length));
+        }
+        for (OrganizationAdditionalConfigurationResult ele : additionalConfiguration) {
+            this.additionalConfiguration.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The additional configuration that is configured for the member accounts within the organization.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        The additional configuration that is configured for the member accounts within the organization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OrganizationFeatureConfigurationResult withAdditionalConfiguration(
+            java.util.Collection<OrganizationAdditionalConfigurationResult> additionalConfiguration) {
+        setAdditionalConfiguration(additionalConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -246,7 +323,9 @@ public class OrganizationFeatureConfigurationResult implements Serializable, Clo
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getAutoEnable() != null)
-            sb.append("AutoEnable: ").append(getAutoEnable());
+            sb.append("AutoEnable: ").append(getAutoEnable()).append(",");
+        if (getAdditionalConfiguration() != null)
+            sb.append("AdditionalConfiguration: ").append(getAdditionalConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -269,6 +348,10 @@ public class OrganizationFeatureConfigurationResult implements Serializable, Clo
             return false;
         if (other.getAutoEnable() != null && other.getAutoEnable().equals(this.getAutoEnable()) == false)
             return false;
+        if (other.getAdditionalConfiguration() == null ^ this.getAdditionalConfiguration() == null)
+            return false;
+        if (other.getAdditionalConfiguration() != null && other.getAdditionalConfiguration().equals(this.getAdditionalConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -279,6 +362,7 @@ public class OrganizationFeatureConfigurationResult implements Serializable, Clo
 
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getAutoEnable() == null) ? 0 : getAutoEnable().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalConfiguration() == null) ? 0 : getAdditionalConfiguration().hashCode());
         return hashCode;
     }
 

@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure representing a single PropertyFilter.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/PropertyFilter"
  *      target="_top">AWS API Documentation</a>
@@ -26,13 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PropertyFilter implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * Represents a single property to match with when searching a raster data collection.
+     * </p>
+     */
     private Property property;
 
     /**
-     * <p/>
+     * <p>
+     * Represents a single property to match with when searching a raster data collection.
+     * </p>
      * 
      * @param property
+     *        Represents a single property to match with when searching a raster data collection.
      */
 
     public void setProperty(Property property) {
@@ -40,9 +49,11 @@ public class PropertyFilter implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Represents a single property to match with when searching a raster data collection.
+     * </p>
      * 
-     * @return
+     * @return Represents a single property to match with when searching a raster data collection.
      */
 
     public Property getProperty() {
@@ -50,9 +61,12 @@ public class PropertyFilter implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Represents a single property to match with when searching a raster data collection.
+     * </p>
      * 
      * @param property
+     *        Represents a single property to match with when searching a raster data collection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

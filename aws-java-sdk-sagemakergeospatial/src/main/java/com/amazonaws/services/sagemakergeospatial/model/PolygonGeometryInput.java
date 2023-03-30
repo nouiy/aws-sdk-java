@@ -18,7 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure representing Polygon Geometry based on the <a
+ * href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/PolygonGeometryInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,13 +29,22 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PolygonGeometryInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * Coordinates representing a Polygon based on the <a
+     * href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
+     * </p>
+     */
     private java.util.List<java.util.List<java.util.List<Double>>> coordinates;
 
     /**
-     * <p/>
+     * <p>
+     * Coordinates representing a Polygon based on the <a
+     * href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
+     * </p>
      * 
-     * @return
+     * @return Coordinates representing a Polygon based on the <a
+     *         href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
      */
 
     public java.util.List<java.util.List<java.util.List<Double>>> getCoordinates() {
@@ -40,9 +52,14 @@ public class PolygonGeometryInput implements Serializable, Cloneable, Structured
     }
 
     /**
-     * <p/>
+     * <p>
+     * Coordinates representing a Polygon based on the <a
+     * href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
+     * </p>
      * 
      * @param coordinates
+     *        Coordinates representing a Polygon based on the <a
+     *        href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
      */
 
     public void setCoordinates(java.util.Collection<java.util.List<java.util.List<Double>>> coordinates) {
@@ -55,7 +72,10 @@ public class PolygonGeometryInput implements Serializable, Cloneable, Structured
     }
 
     /**
-     * <p/>
+     * <p>
+     * Coordinates representing a Polygon based on the <a
+     * href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCoordinates(java.util.Collection)} or {@link #withCoordinates(java.util.Collection)} if you want to
@@ -63,6 +83,8 @@ public class PolygonGeometryInput implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param coordinates
+     *        Coordinates representing a Polygon based on the <a
+     *        href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -77,9 +99,14 @@ public class PolygonGeometryInput implements Serializable, Cloneable, Structured
     }
 
     /**
-     * <p/>
+     * <p>
+     * Coordinates representing a Polygon based on the <a
+     * href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
+     * </p>
      * 
      * @param coordinates
+     *        Coordinates representing a Polygon based on the <a
+     *        href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

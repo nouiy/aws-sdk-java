@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The output structure contains the Raster Data Collection Query input along with some additional metadata.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/RasterDataCollectionQueryOutput"
  *      target="_top">AWS API Documentation</a>
@@ -26,11 +28,23 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RasterDataCollectionQueryOutput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The Area of Interest used in the search.
+     * </p>
+     */
     private AreaOfInterest areaOfInterest;
-    /** <p/> */
+    /**
+     * <p>
+     * Property filters used in the search.
+     * </p>
+     */
     private PropertyFilters propertyFilters;
-    /** <p/> */
+    /**
+     * <p>
+     * The ARN of the Raster Data Collection against which the search is done.
+     * </p>
+     */
     private String rasterDataCollectionArn;
     /**
      * <p>
@@ -38,13 +52,20 @@ public class RasterDataCollectionQueryOutput implements Serializable, Cloneable,
      * </p>
      */
     private String rasterDataCollectionName;
-    /** <p/> */
-    private TimeRangeFilterInput timeRangeFilter;
+    /**
+     * <p>
+     * The TimeRange filter used in the search.
+     * </p>
+     */
+    private TimeRangeFilterOutput timeRangeFilter;
 
     /**
-     * <p/>
+     * <p>
+     * The Area of Interest used in the search.
+     * </p>
      * 
      * @param areaOfInterest
+     *        The Area of Interest used in the search.
      */
 
     public void setAreaOfInterest(AreaOfInterest areaOfInterest) {
@@ -52,9 +73,11 @@ public class RasterDataCollectionQueryOutput implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Area of Interest used in the search.
+     * </p>
      * 
-     * @return
+     * @return The Area of Interest used in the search.
      */
 
     public AreaOfInterest getAreaOfInterest() {
@@ -62,9 +85,12 @@ public class RasterDataCollectionQueryOutput implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Area of Interest used in the search.
+     * </p>
      * 
      * @param areaOfInterest
+     *        The Area of Interest used in the search.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -74,9 +100,12 @@ public class RasterDataCollectionQueryOutput implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * Property filters used in the search.
+     * </p>
      * 
      * @param propertyFilters
+     *        Property filters used in the search.
      */
 
     public void setPropertyFilters(PropertyFilters propertyFilters) {
@@ -84,9 +113,11 @@ public class RasterDataCollectionQueryOutput implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * Property filters used in the search.
+     * </p>
      * 
-     * @return
+     * @return Property filters used in the search.
      */
 
     public PropertyFilters getPropertyFilters() {
@@ -94,9 +125,12 @@ public class RasterDataCollectionQueryOutput implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * Property filters used in the search.
+     * </p>
      * 
      * @param propertyFilters
+     *        Property filters used in the search.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -106,9 +140,12 @@ public class RasterDataCollectionQueryOutput implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ARN of the Raster Data Collection against which the search is done.
+     * </p>
      * 
      * @param rasterDataCollectionArn
+     *        The ARN of the Raster Data Collection against which the search is done.
      */
 
     public void setRasterDataCollectionArn(String rasterDataCollectionArn) {
@@ -116,9 +153,11 @@ public class RasterDataCollectionQueryOutput implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ARN of the Raster Data Collection against which the search is done.
+     * </p>
      * 
-     * @return
+     * @return The ARN of the Raster Data Collection against which the search is done.
      */
 
     public String getRasterDataCollectionArn() {
@@ -126,9 +165,12 @@ public class RasterDataCollectionQueryOutput implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ARN of the Raster Data Collection against which the search is done.
+     * </p>
      * 
      * @param rasterDataCollectionArn
+     *        The ARN of the Raster Data Collection against which the search is done.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -178,33 +220,41 @@ public class RasterDataCollectionQueryOutput implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * The TimeRange filter used in the search.
+     * </p>
      * 
      * @param timeRangeFilter
+     *        The TimeRange filter used in the search.
      */
 
-    public void setTimeRangeFilter(TimeRangeFilterInput timeRangeFilter) {
+    public void setTimeRangeFilter(TimeRangeFilterOutput timeRangeFilter) {
         this.timeRangeFilter = timeRangeFilter;
     }
 
     /**
-     * <p/>
+     * <p>
+     * The TimeRange filter used in the search.
+     * </p>
      * 
-     * @return
+     * @return The TimeRange filter used in the search.
      */
 
-    public TimeRangeFilterInput getTimeRangeFilter() {
+    public TimeRangeFilterOutput getTimeRangeFilter() {
         return this.timeRangeFilter;
     }
 
     /**
-     * <p/>
+     * <p>
+     * The TimeRange filter used in the search.
+     * </p>
      * 
      * @param timeRangeFilter
+     *        The TimeRange filter used in the search.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public RasterDataCollectionQueryOutput withTimeRangeFilter(TimeRangeFilterInput timeRangeFilter) {
+    public RasterDataCollectionQueryOutput withTimeRangeFilter(TimeRangeFilterOutput timeRangeFilter) {
         setTimeRangeFilter(timeRangeFilter);
         return this;
     }

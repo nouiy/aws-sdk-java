@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * Input object defining the custom BandMath indices to compute.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/CustomIndicesInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,13 +28,19 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CustomIndicesInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * A list of BandMath indices to compute.
+     * </p>
+     */
     private java.util.List<Operation> operations;
 
     /**
-     * <p/>
+     * <p>
+     * A list of BandMath indices to compute.
+     * </p>
      * 
-     * @return
+     * @return A list of BandMath indices to compute.
      */
 
     public java.util.List<Operation> getOperations() {
@@ -40,9 +48,12 @@ public class CustomIndicesInput implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * A list of BandMath indices to compute.
+     * </p>
      * 
      * @param operations
+     *        A list of BandMath indices to compute.
      */
 
     public void setOperations(java.util.Collection<Operation> operations) {
@@ -55,7 +66,9 @@ public class CustomIndicesInput implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * A list of BandMath indices to compute.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setOperations(java.util.Collection)} or {@link #withOperations(java.util.Collection)} if you want to
@@ -63,6 +76,7 @@ public class CustomIndicesInput implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param operations
+     *        A list of BandMath indices to compute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -77,9 +91,12 @@ public class CustomIndicesInput implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * A list of BandMath indices to compute.
+     * </p>
      * 
      * @param operations
+     *        A list of BandMath indices to compute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

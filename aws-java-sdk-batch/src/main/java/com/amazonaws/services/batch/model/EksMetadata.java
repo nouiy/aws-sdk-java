@@ -18,6 +18,12 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod runs in or
+ * the <code>jobID</code> for a job running in the pod. For more information, see <a
+ * href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding Kubernetes
+ * Objects</a> in the <i>Kubernetes documentation</i>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/EksMetadata" target="_top">AWS API
  *      Documentation</a>
@@ -25,10 +31,25 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class EksMetadata implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Key-value pairs used to identify, sort, and organize cube resources. Can contain up to 63 uppercase letters,
+     * lowercase letters, numbers, hyphens (-), and underscores (_). Labels can be added or modified at any time. Each
+     * resource can have multiple labels, but each key must be unique for a given object.
+     * </p>
+     */
     private java.util.Map<String, String> labels;
 
     /**
-     * @return
+     * <p>
+     * Key-value pairs used to identify, sort, and organize cube resources. Can contain up to 63 uppercase letters,
+     * lowercase letters, numbers, hyphens (-), and underscores (_). Labels can be added or modified at any time. Each
+     * resource can have multiple labels, but each key must be unique for a given object.
+     * </p>
+     * 
+     * @return Key-value pairs used to identify, sort, and organize cube resources. Can contain up to 63 uppercase
+     *         letters, lowercase letters, numbers, hyphens (-), and underscores (_). Labels can be added or modified at
+     *         any time. Each resource can have multiple labels, but each key must be unique for a given object.
      */
 
     public java.util.Map<String, String> getLabels() {
@@ -36,7 +57,16 @@ public class EksMetadata implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Key-value pairs used to identify, sort, and organize cube resources. Can contain up to 63 uppercase letters,
+     * lowercase letters, numbers, hyphens (-), and underscores (_). Labels can be added or modified at any time. Each
+     * resource can have multiple labels, but each key must be unique for a given object.
+     * </p>
+     * 
      * @param labels
+     *        Key-value pairs used to identify, sort, and organize cube resources. Can contain up to 63 uppercase
+     *        letters, lowercase letters, numbers, hyphens (-), and underscores (_). Labels can be added or modified at
+     *        any time. Each resource can have multiple labels, but each key must be unique for a given object.
      */
 
     public void setLabels(java.util.Map<String, String> labels) {
@@ -44,7 +74,16 @@ public class EksMetadata implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Key-value pairs used to identify, sort, and organize cube resources. Can contain up to 63 uppercase letters,
+     * lowercase letters, numbers, hyphens (-), and underscores (_). Labels can be added or modified at any time. Each
+     * resource can have multiple labels, but each key must be unique for a given object.
+     * </p>
+     * 
      * @param labels
+     *        Key-value pairs used to identify, sort, and organize cube resources. Can contain up to 63 uppercase
+     *        letters, lowercase letters, numbers, hyphens (-), and underscores (_). Labels can be added or modified at
+     *        any time. Each resource can have multiple labels, but each key must be unique for a given object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

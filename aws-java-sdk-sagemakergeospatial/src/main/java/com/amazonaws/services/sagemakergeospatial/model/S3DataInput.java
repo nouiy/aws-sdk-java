@@ -30,11 +30,15 @@ public class S3DataInput implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      */
     private String kmsKeyId;
-    /** <p/> */
+    /**
+     * <p>
+     * Metadata provider from whom the Amazon S3 data has been acquired.
+     * </p>
+     */
     private String metadataProvider;
     /**
      * <p>
@@ -45,11 +49,11 @@ public class S3DataInput implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     *        The Key Management Service key ID for server-side encryption.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -58,10 +62,10 @@ public class S3DataInput implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
-     * @return The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * @return The Key Management Service key ID for server-side encryption.
      */
 
     public String getKmsKeyId() {
@@ -70,11 +74,11 @@ public class S3DataInput implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     *        The Key Management Service key ID for server-side encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,9 +88,12 @@ public class S3DataInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Metadata provider from whom the Amazon S3 data has been acquired.
+     * </p>
      * 
      * @param metadataProvider
+     *        Metadata provider from whom the Amazon S3 data has been acquired.
      * @see MetadataProvider
      */
 
@@ -95,9 +102,11 @@ public class S3DataInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Metadata provider from whom the Amazon S3 data has been acquired.
+     * </p>
      * 
-     * @return
+     * @return Metadata provider from whom the Amazon S3 data has been acquired.
      * @see MetadataProvider
      */
 
@@ -106,9 +115,12 @@ public class S3DataInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Metadata provider from whom the Amazon S3 data has been acquired.
+     * </p>
      * 
      * @param metadataProvider
+     *        Metadata provider from whom the Amazon S3 data has been acquired.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetadataProvider
      */
@@ -119,9 +131,12 @@ public class S3DataInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Metadata provider from whom the Amazon S3 data has been acquired.
+     * </p>
      * 
      * @param metadataProvider
+     *        Metadata provider from whom the Amazon S3 data has been acquired.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetadataProvider
      */

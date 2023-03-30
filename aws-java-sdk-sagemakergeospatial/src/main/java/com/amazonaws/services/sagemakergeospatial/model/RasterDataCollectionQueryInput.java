@@ -18,7 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The input structure for Raster Data Collection Query containing the Area of Interest, TimeRange Filters, and Property
+ * Filters.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/RasterDataCollectionQueryInput"
  *      target="_top">AWS API Documentation</a>
@@ -32,7 +35,11 @@ public class RasterDataCollectionQueryInput implements Serializable, Cloneable, 
      * </p>
      */
     private AreaOfInterest areaOfInterest;
-    /** <p/> */
+    /**
+     * <p>
+     * The list of Property filters used in the Raster Data Collection Query.
+     * </p>
+     */
     private PropertyFilters propertyFilters;
     /**
      * <p>
@@ -40,7 +47,11 @@ public class RasterDataCollectionQueryInput implements Serializable, Cloneable, 
      * </p>
      */
     private String rasterDataCollectionArn;
-    /** <p/> */
+    /**
+     * <p>
+     * The TimeRange Filter used in the RasterDataCollection Query.
+     * </p>
+     */
     private TimeRangeFilterInput timeRangeFilter;
 
     /**
@@ -84,9 +95,12 @@ public class RasterDataCollectionQueryInput implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of Property filters used in the Raster Data Collection Query.
+     * </p>
      * 
      * @param propertyFilters
+     *        The list of Property filters used in the Raster Data Collection Query.
      */
 
     public void setPropertyFilters(PropertyFilters propertyFilters) {
@@ -94,9 +108,11 @@ public class RasterDataCollectionQueryInput implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of Property filters used in the Raster Data Collection Query.
+     * </p>
      * 
-     * @return
+     * @return The list of Property filters used in the Raster Data Collection Query.
      */
 
     public PropertyFilters getPropertyFilters() {
@@ -104,9 +120,12 @@ public class RasterDataCollectionQueryInput implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of Property filters used in the Raster Data Collection Query.
+     * </p>
      * 
      * @param propertyFilters
+     *        The list of Property filters used in the Raster Data Collection Query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -156,9 +175,12 @@ public class RasterDataCollectionQueryInput implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The TimeRange Filter used in the RasterDataCollection Query.
+     * </p>
      * 
      * @param timeRangeFilter
+     *        The TimeRange Filter used in the RasterDataCollection Query.
      */
 
     public void setTimeRangeFilter(TimeRangeFilterInput timeRangeFilter) {
@@ -166,9 +188,11 @@ public class RasterDataCollectionQueryInput implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The TimeRange Filter used in the RasterDataCollection Query.
+     * </p>
      * 
-     * @return
+     * @return The TimeRange Filter used in the RasterDataCollection Query.
      */
 
     public TimeRangeFilterInput getTimeRangeFilter() {
@@ -176,9 +200,12 @@ public class RasterDataCollectionQueryInput implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The TimeRange Filter used in the RasterDataCollection Query.
+     * </p>
      * 
      * @param timeRangeFilter
+     *        The TimeRange Filter used in the RasterDataCollection Query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

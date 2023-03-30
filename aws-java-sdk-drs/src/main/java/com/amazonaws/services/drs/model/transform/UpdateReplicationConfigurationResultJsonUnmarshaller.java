@@ -52,6 +52,10 @@ public class UpdateReplicationConfigurationResultJsonUnmarshaller implements Unm
                     context.nextToken();
                     updateReplicationConfigurationResult.setAssociateDefaultSecurityGroup(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("autoReplicateNewDisks", targetDepth)) {
+                    context.nextToken();
+                    updateReplicationConfigurationResult.setAutoReplicateNewDisks(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("bandwidthThrottling", targetDepth)) {
                     context.nextToken();
                     updateReplicationConfigurationResult.setBandwidthThrottling(context.getUnmarshaller(Long.class).unmarshall(context));

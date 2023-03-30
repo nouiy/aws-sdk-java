@@ -28,15 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VectorEnrichmentJobInputConfig implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The input structure for the data source that represents the storage type of the input data objects.
+     * </p>
+     */
     private VectorEnrichmentJobDataSourceConfigInput dataSourceConfig;
-    /** <p/> */
+    /**
+     * <p>
+     * The input structure that defines the data source file type.
+     * </p>
+     */
     private String documentType;
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for the data source that represents the storage type of the input data objects.
+     * </p>
      * 
      * @param dataSourceConfig
+     *        The input structure for the data source that represents the storage type of the input data objects.
      */
 
     public void setDataSourceConfig(VectorEnrichmentJobDataSourceConfigInput dataSourceConfig) {
@@ -44,9 +55,11 @@ public class VectorEnrichmentJobInputConfig implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for the data source that represents the storage type of the input data objects.
+     * </p>
      * 
-     * @return
+     * @return The input structure for the data source that represents the storage type of the input data objects.
      */
 
     public VectorEnrichmentJobDataSourceConfigInput getDataSourceConfig() {
@@ -54,9 +67,12 @@ public class VectorEnrichmentJobInputConfig implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for the data source that represents the storage type of the input data objects.
+     * </p>
      * 
      * @param dataSourceConfig
+     *        The input structure for the data source that represents the storage type of the input data objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,9 +82,12 @@ public class VectorEnrichmentJobInputConfig implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure that defines the data source file type.
+     * </p>
      * 
      * @param documentType
+     *        The input structure that defines the data source file type.
      * @see VectorEnrichmentJobDocumentType
      */
 
@@ -77,9 +96,11 @@ public class VectorEnrichmentJobInputConfig implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure that defines the data source file type.
+     * </p>
      * 
-     * @return
+     * @return The input structure that defines the data source file type.
      * @see VectorEnrichmentJobDocumentType
      */
 
@@ -88,9 +109,12 @@ public class VectorEnrichmentJobInputConfig implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure that defines the data source file type.
+     * </p>
      * 
      * @param documentType
+     *        The input structure that defines the data source file type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VectorEnrichmentJobDocumentType
      */
@@ -101,9 +125,12 @@ public class VectorEnrichmentJobInputConfig implements Serializable, Cloneable, 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure that defines the data source file type.
+     * </p>
      * 
      * @param documentType
+     *        The input structure that defines the data source file type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VectorEnrichmentJobDocumentType
      */

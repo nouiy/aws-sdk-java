@@ -56,6 +56,13 @@ public class DetectorFeatureConfigurationJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     detectorFeatureConfiguration.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("additionalConfiguration", targetDepth)) {
+                    context.nextToken();
+                    detectorFeatureConfiguration.setAdditionalConfiguration(new ListUnmarshaller<DetectorAdditionalConfiguration>(
+                            DetectorAdditionalConfigurationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

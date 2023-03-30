@@ -21054,6 +21054,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Get details of available tunnel endpoint maintenance.
+     * </p>
+     * 
+     * @param getVpnTunnelReplacementStatusRequest
+     * @return A Java Future containing the result of the GetVpnTunnelReplacementStatus operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.GetVpnTunnelReplacementStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetVpnTunnelReplacementStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVpnTunnelReplacementStatusResult> getVpnTunnelReplacementStatusAsync(
+            GetVpnTunnelReplacementStatusRequest getVpnTunnelReplacementStatusRequest);
+
+    /**
+     * <p>
+     * Get details of available tunnel endpoint maintenance.
+     * </p>
+     * 
+     * @param getVpnTunnelReplacementStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetVpnTunnelReplacementStatus operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.GetVpnTunnelReplacementStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetVpnTunnelReplacementStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVpnTunnelReplacementStatusResult> getVpnTunnelReplacementStatusAsync(
+            GetVpnTunnelReplacementStatusRequest getVpnTunnelReplacementStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<GetVpnTunnelReplacementStatusRequest, GetVpnTunnelReplacementStatusResult> asyncHandler);
+
+    /**
+     * <p>
      * Uploads a client certificate revocation list to the specified Client VPN endpoint. Uploading a client certificate
      * revocation list overwrites the existing client certificate revocation list.
      * </p>
@@ -26092,6 +26127,37 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<ReplaceTransitGatewayRouteResult> replaceTransitGatewayRouteAsync(
             ReplaceTransitGatewayRouteRequest replaceTransitGatewayRouteRequest,
             com.amazonaws.handlers.AsyncHandler<ReplaceTransitGatewayRouteRequest, ReplaceTransitGatewayRouteResult> asyncHandler);
+
+    /**
+     * <p>
+     * Trigger replacement of specified VPN tunnel.
+     * </p>
+     * 
+     * @param replaceVpnTunnelRequest
+     * @return A Java Future containing the result of the ReplaceVpnTunnel operation returned by the service.
+     * @sample AmazonEC2Async.ReplaceVpnTunnel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReplaceVpnTunnel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ReplaceVpnTunnelResult> replaceVpnTunnelAsync(ReplaceVpnTunnelRequest replaceVpnTunnelRequest);
+
+    /**
+     * <p>
+     * Trigger replacement of specified VPN tunnel.
+     * </p>
+     * 
+     * @param replaceVpnTunnelRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ReplaceVpnTunnel operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ReplaceVpnTunnel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReplaceVpnTunnel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ReplaceVpnTunnelResult> replaceVpnTunnelAsync(ReplaceVpnTunnelRequest replaceVpnTunnelRequest,
+            com.amazonaws.handlers.AsyncHandler<ReplaceVpnTunnelRequest, ReplaceVpnTunnelResult> asyncHandler);
 
     /**
      * <p>

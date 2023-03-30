@@ -734,6 +734,11 @@ public class CreateAutoScalingGroupRequestMarshaller implements Marshaller<Reque
                         request.addParameter("TrafficSources.member." + trafficSourcesListIndex + ".Identifier",
                                 StringUtils.fromString(trafficSourcesListValue.getIdentifier()));
                     }
+
+                    if (trafficSourcesListValue.getType() != null) {
+                        request.addParameter("TrafficSources.member." + trafficSourcesListIndex + ".Type",
+                                StringUtils.fromString(trafficSourcesListValue.getType()));
+                    }
                 }
                 trafficSourcesListIndex++;
             }

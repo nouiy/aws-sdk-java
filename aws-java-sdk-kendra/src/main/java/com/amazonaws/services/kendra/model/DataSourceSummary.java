@@ -48,13 +48,13 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
     private String type;
     /**
      * <p>
-     * The UNIX datetime that the data source was created.
+     * The Unix timestamp when the data source connector was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The UNIX datetime that the data source was lasted updated.
+     * The Unix timestamp when the data source connector was last updated.
      * </p>
      */
     private java.util.Date updatedAt;
@@ -215,11 +215,11 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the data source was created.
+     * The Unix timestamp when the data source connector was created.
      * </p>
      * 
      * @param createdAt
-     *        The UNIX datetime that the data source was created.
+     *        The Unix timestamp when the data source connector was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -228,10 +228,10 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the data source was created.
+     * The Unix timestamp when the data source connector was created.
      * </p>
      * 
-     * @return The UNIX datetime that the data source was created.
+     * @return The Unix timestamp when the data source connector was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -240,11 +240,11 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the data source was created.
+     * The Unix timestamp when the data source connector was created.
      * </p>
      * 
      * @param createdAt
-     *        The UNIX datetime that the data source was created.
+     *        The Unix timestamp when the data source connector was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -255,11 +255,11 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the data source was lasted updated.
+     * The Unix timestamp when the data source connector was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The UNIX datetime that the data source was lasted updated.
+     *        The Unix timestamp when the data source connector was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -268,10 +268,10 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the data source was lasted updated.
+     * The Unix timestamp when the data source connector was last updated.
      * </p>
      * 
-     * @return The UNIX datetime that the data source was lasted updated.
+     * @return The Unix timestamp when the data source connector was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -280,11 +280,11 @@ public class DataSourceSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the data source was lasted updated.
+     * The Unix timestamp when the data source connector was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The UNIX datetime that the data source was lasted updated.
+     *        The Unix timestamp when the data source connector was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

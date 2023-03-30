@@ -37,7 +37,7 @@ public class CreateImageResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String clientToken;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image that was created by this request.
+     * The Amazon Resource Name (ARN) of the image that this request created.
      * </p>
      */
     private String imageBuildVersionArn;
@@ -124,11 +124,11 @@ public class CreateImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image that was created by this request.
+     * The Amazon Resource Name (ARN) of the image that this request created.
      * </p>
      * 
      * @param imageBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the image that was created by this request.
+     *        The Amazon Resource Name (ARN) of the image that this request created.
      */
 
     public void setImageBuildVersionArn(String imageBuildVersionArn) {
@@ -137,10 +137,10 @@ public class CreateImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image that was created by this request.
+     * The Amazon Resource Name (ARN) of the image that this request created.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the image that was created by this request.
+     * @return The Amazon Resource Name (ARN) of the image that this request created.
      */
 
     public String getImageBuildVersionArn() {
@@ -149,11 +149,11 @@ public class CreateImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image that was created by this request.
+     * The Amazon Resource Name (ARN) of the image that this request created.
      * </p>
      * 
      * @param imageBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the image that was created by this request.
+     *        The Amazon Resource Name (ARN) of the image that this request created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

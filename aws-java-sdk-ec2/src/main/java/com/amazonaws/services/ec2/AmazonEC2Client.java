@@ -28724,6 +28724,62 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Get details of available tunnel endpoint maintenance.
+     * </p>
+     * 
+     * @param getVpnTunnelReplacementStatusRequest
+     * @return Result of the GetVpnTunnelReplacementStatus operation returned by the service.
+     * @sample AmazonEC2.GetVpnTunnelReplacementStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetVpnTunnelReplacementStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetVpnTunnelReplacementStatusResult getVpnTunnelReplacementStatus(GetVpnTunnelReplacementStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetVpnTunnelReplacementStatus(request);
+    }
+
+    @SdkInternalApi
+    final GetVpnTunnelReplacementStatusResult executeGetVpnTunnelReplacementStatus(GetVpnTunnelReplacementStatusRequest getVpnTunnelReplacementStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getVpnTunnelReplacementStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetVpnTunnelReplacementStatusRequest> request = null;
+        Response<GetVpnTunnelReplacementStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetVpnTunnelReplacementStatusRequestMarshaller().marshall(super.beforeMarshalling(getVpnTunnelReplacementStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetVpnTunnelReplacementStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetVpnTunnelReplacementStatusResult> responseHandler = new StaxResponseHandler<GetVpnTunnelReplacementStatusResult>(
+                    new GetVpnTunnelReplacementStatusResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Uploads a client certificate revocation list to the specified Client VPN endpoint. Uploading a client certificate
      * revocation list overwrites the existing client certificate revocation list.
      * </p>
@@ -35232,6 +35288,62 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<ReplaceTransitGatewayRouteResult> responseHandler = new StaxResponseHandler<ReplaceTransitGatewayRouteResult>(
                     new ReplaceTransitGatewayRouteResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Trigger replacement of specified VPN tunnel.
+     * </p>
+     * 
+     * @param replaceVpnTunnelRequest
+     * @return Result of the ReplaceVpnTunnel operation returned by the service.
+     * @sample AmazonEC2.ReplaceVpnTunnel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ReplaceVpnTunnel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ReplaceVpnTunnelResult replaceVpnTunnel(ReplaceVpnTunnelRequest request) {
+        request = beforeClientExecution(request);
+        return executeReplaceVpnTunnel(request);
+    }
+
+    @SdkInternalApi
+    final ReplaceVpnTunnelResult executeReplaceVpnTunnel(ReplaceVpnTunnelRequest replaceVpnTunnelRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(replaceVpnTunnelRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ReplaceVpnTunnelRequest> request = null;
+        Response<ReplaceVpnTunnelResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ReplaceVpnTunnelRequestMarshaller().marshall(super.beforeMarshalling(replaceVpnTunnelRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ReplaceVpnTunnel");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ReplaceVpnTunnelResult> responseHandler = new StaxResponseHandler<ReplaceVpnTunnelResult>(
+                    new ReplaceVpnTunnelResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

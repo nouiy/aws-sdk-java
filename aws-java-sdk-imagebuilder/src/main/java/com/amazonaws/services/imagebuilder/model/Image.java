@@ -217,6 +217,18 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String imageSource;
+    /**
+     * <p>
+     * Contains information about the current state of scans for this image.
+     * </p>
+     */
+    private ImageScanState scanState;
+    /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     */
+    private ImageScanningConfiguration imageScanningConfiguration;
 
     /**
      * <p>
@@ -1561,6 +1573,86 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains information about the current state of scans for this image.
+     * </p>
+     * 
+     * @param scanState
+     *        Contains information about the current state of scans for this image.
+     */
+
+    public void setScanState(ImageScanState scanState) {
+        this.scanState = scanState;
+    }
+
+    /**
+     * <p>
+     * Contains information about the current state of scans for this image.
+     * </p>
+     * 
+     * @return Contains information about the current state of scans for this image.
+     */
+
+    public ImageScanState getScanState() {
+        return this.scanState;
+    }
+
+    /**
+     * <p>
+     * Contains information about the current state of scans for this image.
+     * </p>
+     * 
+     * @param scanState
+     *        Contains information about the current state of scans for this image.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Image withScanState(ImageScanState scanState) {
+        setScanState(scanState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     * 
+     * @param imageScanningConfiguration
+     *        Contains settings for vulnerability scans.
+     */
+
+    public void setImageScanningConfiguration(ImageScanningConfiguration imageScanningConfiguration) {
+        this.imageScanningConfiguration = imageScanningConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     * 
+     * @return Contains settings for vulnerability scans.
+     */
+
+    public ImageScanningConfiguration getImageScanningConfiguration() {
+        return this.imageScanningConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     * 
+     * @param imageScanningConfiguration
+     *        Contains settings for vulnerability scans.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Image withImageScanningConfiguration(ImageScanningConfiguration imageScanningConfiguration) {
+        setImageScanningConfiguration(imageScanningConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1611,7 +1703,11 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
         if (getBuildType() != null)
             sb.append("BuildType: ").append(getBuildType()).append(",");
         if (getImageSource() != null)
-            sb.append("ImageSource: ").append(getImageSource());
+            sb.append("ImageSource: ").append(getImageSource()).append(",");
+        if (getScanState() != null)
+            sb.append("ScanState: ").append(getScanState()).append(",");
+        if (getImageScanningConfiguration() != null)
+            sb.append("ImageScanningConfiguration: ").append(getImageScanningConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1706,6 +1802,14 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getImageSource() != null && other.getImageSource().equals(this.getImageSource()) == false)
             return false;
+        if (other.getScanState() == null ^ this.getScanState() == null)
+            return false;
+        if (other.getScanState() != null && other.getScanState().equals(this.getScanState()) == false)
+            return false;
+        if (other.getImageScanningConfiguration() == null ^ this.getImageScanningConfiguration() == null)
+            return false;
+        if (other.getImageScanningConfiguration() != null && other.getImageScanningConfiguration().equals(this.getImageScanningConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1734,6 +1838,8 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getBuildType() == null) ? 0 : getBuildType().hashCode());
         hashCode = prime * hashCode + ((getImageSource() == null) ? 0 : getImageSource().hashCode());
+        hashCode = prime * hashCode + ((getScanState() == null) ? 0 : getScanState().hashCode());
+        hashCode = prime * hashCode + ((getImageScanningConfiguration() == null) ? 0 : getImageScanningConfiguration().hashCode());
         return hashCode;
     }
 

@@ -93,6 +93,11 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
     }
 
     @Override
+    public GetConsolidatedReportResult getConsolidatedReport(GetConsolidatedReportRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetLensResult getLens(GetLensRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

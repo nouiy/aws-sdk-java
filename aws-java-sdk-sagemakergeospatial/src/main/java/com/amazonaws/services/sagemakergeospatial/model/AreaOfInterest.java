@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The geographic extent of the Earth Observation job.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/AreaOfInterest"
  *      target="_top">AWS API Documentation</a>
@@ -26,13 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AreaOfInterest implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * A GeoJSON object representing the geographic extent in the coordinate space.
+     * </p>
+     */
     private AreaOfInterestGeometry areaOfInterestGeometry;
 
     /**
-     * <p/>
+     * <p>
+     * A GeoJSON object representing the geographic extent in the coordinate space.
+     * </p>
      * 
      * @param areaOfInterestGeometry
+     *        A GeoJSON object representing the geographic extent in the coordinate space.
      */
 
     public void setAreaOfInterestGeometry(AreaOfInterestGeometry areaOfInterestGeometry) {
@@ -40,9 +49,11 @@ public class AreaOfInterest implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * A GeoJSON object representing the geographic extent in the coordinate space.
+     * </p>
      * 
-     * @return
+     * @return A GeoJSON object representing the geographic extent in the coordinate space.
      */
 
     public AreaOfInterestGeometry getAreaOfInterestGeometry() {
@@ -50,9 +61,12 @@ public class AreaOfInterest implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * A GeoJSON object representing the geographic extent in the coordinate space.
+     * </p>
      * 
      * @param areaOfInterestGeometry
+     *        A GeoJSON object representing the geographic extent in the coordinate space.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

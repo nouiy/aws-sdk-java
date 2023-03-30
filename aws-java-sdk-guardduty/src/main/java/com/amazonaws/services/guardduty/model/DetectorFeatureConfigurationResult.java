@@ -46,6 +46,12 @@ public class DetectorFeatureConfigurationResult implements Serializable, Cloneab
      * </p>
      */
     private java.util.Date updatedAt;
+    /**
+     * <p>
+     * Additional configuration for a resource.
+     * </p>
+     */
+    private java.util.List<DetectorAdditionalConfigurationResult> additionalConfiguration;
 
     /**
      * <p>
@@ -206,6 +212,76 @@ public class DetectorFeatureConfigurationResult implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * Additional configuration for a resource.
+     * </p>
+     * 
+     * @return Additional configuration for a resource.
+     */
+
+    public java.util.List<DetectorAdditionalConfigurationResult> getAdditionalConfiguration() {
+        return additionalConfiguration;
+    }
+
+    /**
+     * <p>
+     * Additional configuration for a resource.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        Additional configuration for a resource.
+     */
+
+    public void setAdditionalConfiguration(java.util.Collection<DetectorAdditionalConfigurationResult> additionalConfiguration) {
+        if (additionalConfiguration == null) {
+            this.additionalConfiguration = null;
+            return;
+        }
+
+        this.additionalConfiguration = new java.util.ArrayList<DetectorAdditionalConfigurationResult>(additionalConfiguration);
+    }
+
+    /**
+     * <p>
+     * Additional configuration for a resource.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalConfiguration(java.util.Collection)} or
+     * {@link #withAdditionalConfiguration(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        Additional configuration for a resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DetectorFeatureConfigurationResult withAdditionalConfiguration(DetectorAdditionalConfigurationResult... additionalConfiguration) {
+        if (this.additionalConfiguration == null) {
+            setAdditionalConfiguration(new java.util.ArrayList<DetectorAdditionalConfigurationResult>(additionalConfiguration.length));
+        }
+        for (DetectorAdditionalConfigurationResult ele : additionalConfiguration) {
+            this.additionalConfiguration.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Additional configuration for a resource.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        Additional configuration for a resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DetectorFeatureConfigurationResult withAdditionalConfiguration(java.util.Collection<DetectorAdditionalConfigurationResult> additionalConfiguration) {
+        setAdditionalConfiguration(additionalConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -222,7 +298,9 @@ public class DetectorFeatureConfigurationResult implements Serializable, Cloneab
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getUpdatedAt() != null)
-            sb.append("UpdatedAt: ").append(getUpdatedAt());
+            sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
+        if (getAdditionalConfiguration() != null)
+            sb.append("AdditionalConfiguration: ").append(getAdditionalConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -249,6 +327,10 @@ public class DetectorFeatureConfigurationResult implements Serializable, Cloneab
             return false;
         if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
             return false;
+        if (other.getAdditionalConfiguration() == null ^ this.getAdditionalConfiguration() == null)
+            return false;
+        if (other.getAdditionalConfiguration() != null && other.getAdditionalConfiguration().equals(this.getAdditionalConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -260,6 +342,7 @@ public class DetectorFeatureConfigurationResult implements Serializable, Cloneab
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalConfiguration() == null) ? 0 : getAdditionalConfiguration().hashCode());
         return hashCode;
     }
 

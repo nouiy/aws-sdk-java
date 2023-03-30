@@ -144,7 +144,11 @@ public class InstanceRefresh implements Serializable, Cloneable {
      * </p>
      */
     private InstanceRefreshProgressDetails progressDetails;
-
+    /**
+     * <p>
+     * The preferences for an instance refresh.
+     * </p>
+     */
     private RefreshPreferences preferences;
     /**
      * <p>
@@ -1008,7 +1012,12 @@ public class InstanceRefresh implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The preferences for an instance refresh.
+     * </p>
+     * 
      * @param preferences
+     *        The preferences for an instance refresh.
      */
 
     public void setPreferences(RefreshPreferences preferences) {
@@ -1016,7 +1025,11 @@ public class InstanceRefresh implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * The preferences for an instance refresh.
+     * </p>
+     * 
+     * @return The preferences for an instance refresh.
      */
 
     public RefreshPreferences getPreferences() {
@@ -1024,7 +1037,12 @@ public class InstanceRefresh implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The preferences for an instance refresh.
+     * </p>
+     * 
      * @param preferences
+     *        The preferences for an instance refresh.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

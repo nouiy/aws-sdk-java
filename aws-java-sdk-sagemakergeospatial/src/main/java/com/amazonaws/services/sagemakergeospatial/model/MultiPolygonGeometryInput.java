@@ -18,7 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure representing Polygon Geometry based on the <a
+ * href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/MultiPolygonGeometryInput"
  *      target="_top">AWS API Documentation</a>

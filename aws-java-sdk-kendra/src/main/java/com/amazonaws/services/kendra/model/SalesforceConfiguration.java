@@ -62,7 +62,7 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
      * </li>
      * <li>
      * <p>
-     * securityToken - The token associated with the user account logging in to the Salesforce instance.
+     * securityToken - The token associated with the user logging in to the Salesforce instance.
      * </p>
      * </li>
      * <li>
@@ -198,7 +198,7 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
      * </li>
      * <li>
      * <p>
-     * securityToken - The token associated with the user account logging in to the Salesforce instance.
+     * securityToken - The token associated with the user logging in to the Salesforce instance.
      * </p>
      * </li>
      * <li>
@@ -234,7 +234,7 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
      *        </li>
      *        <li>
      *        <p>
-     *        securityToken - The token associated with the user account logging in to the Salesforce instance.
+     *        securityToken - The token associated with the user logging in to the Salesforce instance.
      *        </p>
      *        </li>
      *        <li>
@@ -276,7 +276,7 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
      * </li>
      * <li>
      * <p>
-     * securityToken - The token associated with the user account logging in to the Salesforce instance.
+     * securityToken - The token associated with the user logging in to the Salesforce instance.
      * </p>
      * </li>
      * <li>
@@ -312,7 +312,7 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
      *         </li>
      *         <li>
      *         <p>
-     *         securityToken - The token associated with the user account logging in to the Salesforce instance.
+     *         securityToken - The token associated with the user logging in to the Salesforce instance.
      *         </p>
      *         </li>
      *         <li>
@@ -354,7 +354,7 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
      * </li>
      * <li>
      * <p>
-     * securityToken - The token associated with the user account logging in to the Salesforce instance.
+     * securityToken - The token associated with the user logging in to the Salesforce instance.
      * </p>
      * </li>
      * <li>
@@ -390,7 +390,7 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
      *        </li>
      *        <li>
      *        <p>
-     *        securityToken - The token associated with the user account logging in to the Salesforce instance.
+     *        securityToken - The token associated with the user logging in to the Salesforce instance.
      *        </p>
      *        </li>
      *        <li>

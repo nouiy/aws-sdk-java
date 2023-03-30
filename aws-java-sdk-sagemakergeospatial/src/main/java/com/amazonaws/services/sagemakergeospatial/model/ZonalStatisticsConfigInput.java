@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure representing input configuration of ZonalStatistics operation.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ZonalStatisticsConfigInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,17 +28,65 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ZonalStatisticsConfigInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * List of zonal statistics to compute.
+     * </p>
+     */
     private java.util.List<String> statistics;
-    /** <p/> */
+    /**
+     * <p>
+     * Bands used in the operation. If no target bands are specified, it uses all bands available input.
+     * </p>
+     */
     private java.util.List<String> targetBands;
-    /** <p/> */
+    /**
+     * <p>
+     * The Amazon S3 path pointing to the GeoJSON containing the polygonal zones.
+     * </p>
+     */
     private String zoneS3Path;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) or an ID of a Amazon Web Services Key Management Service (Amazon Web Services KMS)
+     * key that Amazon SageMaker uses to decrypt your output artifacts with Amazon S3 server-side encryption. The
+     * SageMaker execution role must have <code>kms:GenerateDataKey</code> permission.
+     * </p>
+     * <p>
+     * The <code>KmsKeyId</code> can be any of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * // KMS Key ID
+     * </p>
+     * <p>
+     * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about key identifiers, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     * (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     * </p>
+     */
+    private String zoneS3PathKmsKeyId;
 
     /**
-     * <p/>
+     * <p>
+     * List of zonal statistics to compute.
+     * </p>
      * 
-     * @return
+     * @return List of zonal statistics to compute.
      * @see ZonalStatistics
      */
 
@@ -45,9 +95,12 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of zonal statistics to compute.
+     * </p>
      * 
      * @param statistics
+     *        List of zonal statistics to compute.
      * @see ZonalStatistics
      */
 
@@ -61,7 +114,9 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of zonal statistics to compute.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setStatistics(java.util.Collection)} or {@link #withStatistics(java.util.Collection)} if you want to
@@ -69,6 +124,7 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
      * </p>
      * 
      * @param statistics
+     *        List of zonal statistics to compute.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ZonalStatistics
      */
@@ -84,9 +140,12 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of zonal statistics to compute.
+     * </p>
      * 
      * @param statistics
+     *        List of zonal statistics to compute.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ZonalStatistics
      */
@@ -97,9 +156,12 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of zonal statistics to compute.
+     * </p>
      * 
      * @param statistics
+     *        List of zonal statistics to compute.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ZonalStatistics
      */
@@ -118,9 +180,11 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands used in the operation. If no target bands are specified, it uses all bands available input.
+     * </p>
      * 
-     * @return
+     * @return Bands used in the operation. If no target bands are specified, it uses all bands available input.
      */
 
     public java.util.List<String> getTargetBands() {
@@ -128,9 +192,12 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands used in the operation. If no target bands are specified, it uses all bands available input.
+     * </p>
      * 
      * @param targetBands
+     *        Bands used in the operation. If no target bands are specified, it uses all bands available input.
      */
 
     public void setTargetBands(java.util.Collection<String> targetBands) {
@@ -143,7 +210,9 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands used in the operation. If no target bands are specified, it uses all bands available input.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTargetBands(java.util.Collection)} or {@link #withTargetBands(java.util.Collection)} if you want to
@@ -151,6 +220,7 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
      * </p>
      * 
      * @param targetBands
+     *        Bands used in the operation. If no target bands are specified, it uses all bands available input.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,9 +235,12 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands used in the operation. If no target bands are specified, it uses all bands available input.
+     * </p>
      * 
      * @param targetBands
+     *        Bands used in the operation. If no target bands are specified, it uses all bands available input.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -177,9 +250,12 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon S3 path pointing to the GeoJSON containing the polygonal zones.
+     * </p>
      * 
      * @param zoneS3Path
+     *        The Amazon S3 path pointing to the GeoJSON containing the polygonal zones.
      */
 
     public void setZoneS3Path(String zoneS3Path) {
@@ -187,9 +263,11 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon S3 path pointing to the GeoJSON containing the polygonal zones.
+     * </p>
      * 
-     * @return
+     * @return The Amazon S3 path pointing to the GeoJSON containing the polygonal zones.
      */
 
     public String getZoneS3Path() {
@@ -197,14 +275,222 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon S3 path pointing to the GeoJSON containing the polygonal zones.
+     * </p>
      * 
      * @param zoneS3Path
+     *        The Amazon S3 path pointing to the GeoJSON containing the polygonal zones.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ZonalStatisticsConfigInput withZoneS3Path(String zoneS3Path) {
         setZoneS3Path(zoneS3Path);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) or an ID of a Amazon Web Services Key Management Service (Amazon Web Services KMS)
+     * key that Amazon SageMaker uses to decrypt your output artifacts with Amazon S3 server-side encryption. The
+     * SageMaker execution role must have <code>kms:GenerateDataKey</code> permission.
+     * </p>
+     * <p>
+     * The <code>KmsKeyId</code> can be any of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * // KMS Key ID
+     * </p>
+     * <p>
+     * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about key identifiers, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     * (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     * </p>
+     * 
+     * @param zoneS3PathKmsKeyId
+     *        The Amazon Resource Name (ARN) or an ID of a Amazon Web Services Key Management Service (Amazon Web
+     *        Services KMS) key that Amazon SageMaker uses to decrypt your output artifacts with Amazon S3 server-side
+     *        encryption. The SageMaker execution role must have <code>kms:GenerateDataKey</code> permission.</p>
+     *        <p>
+     *        The <code>KmsKeyId</code> can be any of the following formats:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        // KMS Key ID
+     *        </p>
+     *        <p>
+     *        <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        // Amazon Resource Name (ARN) of a KMS Key
+     *        </p>
+     *        <p>
+     *        <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about key identifiers, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     *        (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     */
+
+    public void setZoneS3PathKmsKeyId(String zoneS3PathKmsKeyId) {
+        this.zoneS3PathKmsKeyId = zoneS3PathKmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) or an ID of a Amazon Web Services Key Management Service (Amazon Web Services KMS)
+     * key that Amazon SageMaker uses to decrypt your output artifacts with Amazon S3 server-side encryption. The
+     * SageMaker execution role must have <code>kms:GenerateDataKey</code> permission.
+     * </p>
+     * <p>
+     * The <code>KmsKeyId</code> can be any of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * // KMS Key ID
+     * </p>
+     * <p>
+     * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about key identifiers, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     * (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) or an ID of a Amazon Web Services Key Management Service (Amazon Web
+     *         Services KMS) key that Amazon SageMaker uses to decrypt your output artifacts with Amazon S3 server-side
+     *         encryption. The SageMaker execution role must have <code>kms:GenerateDataKey</code> permission.</p>
+     *         <p>
+     *         The <code>KmsKeyId</code> can be any of the following formats:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         // KMS Key ID
+     *         </p>
+     *         <p>
+     *         <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         // Amazon Resource Name (ARN) of a KMS Key
+     *         </p>
+     *         <p>
+     *         <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For more information about key identifiers, see <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     *         (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     */
+
+    public String getZoneS3PathKmsKeyId() {
+        return this.zoneS3PathKmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) or an ID of a Amazon Web Services Key Management Service (Amazon Web Services KMS)
+     * key that Amazon SageMaker uses to decrypt your output artifacts with Amazon S3 server-side encryption. The
+     * SageMaker execution role must have <code>kms:GenerateDataKey</code> permission.
+     * </p>
+     * <p>
+     * The <code>KmsKeyId</code> can be any of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * // KMS Key ID
+     * </p>
+     * <p>
+     * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about key identifiers, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     * (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     * </p>
+     * 
+     * @param zoneS3PathKmsKeyId
+     *        The Amazon Resource Name (ARN) or an ID of a Amazon Web Services Key Management Service (Amazon Web
+     *        Services KMS) key that Amazon SageMaker uses to decrypt your output artifacts with Amazon S3 server-side
+     *        encryption. The SageMaker execution role must have <code>kms:GenerateDataKey</code> permission.</p>
+     *        <p>
+     *        The <code>KmsKeyId</code> can be any of the following formats:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        // KMS Key ID
+     *        </p>
+     *        <p>
+     *        <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        // Amazon Resource Name (ARN) of a KMS Key
+     *        </p>
+     *        <p>
+     *        <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about key identifiers, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     *        (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ZonalStatisticsConfigInput withZoneS3PathKmsKeyId(String zoneS3PathKmsKeyId) {
+        setZoneS3PathKmsKeyId(zoneS3PathKmsKeyId);
         return this;
     }
 
@@ -225,7 +511,9 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
         if (getTargetBands() != null)
             sb.append("TargetBands: ").append(getTargetBands()).append(",");
         if (getZoneS3Path() != null)
-            sb.append("ZoneS3Path: ").append(getZoneS3Path());
+            sb.append("ZoneS3Path: ").append(getZoneS3Path()).append(",");
+        if (getZoneS3PathKmsKeyId() != null)
+            sb.append("ZoneS3PathKmsKeyId: ").append(getZoneS3PathKmsKeyId());
         sb.append("}");
         return sb.toString();
     }
@@ -252,6 +540,10 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
             return false;
         if (other.getZoneS3Path() != null && other.getZoneS3Path().equals(this.getZoneS3Path()) == false)
             return false;
+        if (other.getZoneS3PathKmsKeyId() == null ^ this.getZoneS3PathKmsKeyId() == null)
+            return false;
+        if (other.getZoneS3PathKmsKeyId() != null && other.getZoneS3PathKmsKeyId().equals(this.getZoneS3PathKmsKeyId()) == false)
+            return false;
         return true;
     }
 
@@ -263,6 +555,7 @@ public class ZonalStatisticsConfigInput implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getStatistics() == null) ? 0 : getStatistics().hashCode());
         hashCode = prime * hashCode + ((getTargetBands() == null) ? 0 : getTargetBands().hashCode());
         hashCode = prime * hashCode + ((getZoneS3Path() == null) ? 0 : getZoneS3Path().hashCode());
+        hashCode = prime * hashCode + ((getZoneS3PathKmsKeyId() == null) ? 0 : getZoneS3PathKmsKeyId().hashCode());
         return hashCode;
     }
 

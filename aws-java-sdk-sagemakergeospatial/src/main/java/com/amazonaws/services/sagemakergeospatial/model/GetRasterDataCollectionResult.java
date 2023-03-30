@@ -41,7 +41,11 @@ public class GetRasterDataCollectionResult extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String descriptionPageUrl;
-    /** <p/> */
+    /**
+     * <p>
+     * The list of image source bands in the raster data collection.
+     * </p>
+     */
     private java.util.List<String> imageSourceBands;
     /**
      * <p>
@@ -189,9 +193,11 @@ public class GetRasterDataCollectionResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of image source bands in the raster data collection.
+     * </p>
      * 
-     * @return
+     * @return The list of image source bands in the raster data collection.
      */
 
     public java.util.List<String> getImageSourceBands() {
@@ -199,9 +205,12 @@ public class GetRasterDataCollectionResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of image source bands in the raster data collection.
+     * </p>
      * 
      * @param imageSourceBands
+     *        The list of image source bands in the raster data collection.
      */
 
     public void setImageSourceBands(java.util.Collection<String> imageSourceBands) {
@@ -214,7 +223,9 @@ public class GetRasterDataCollectionResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of image source bands in the raster data collection.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setImageSourceBands(java.util.Collection)} or {@link #withImageSourceBands(java.util.Collection)} if you
@@ -222,6 +233,7 @@ public class GetRasterDataCollectionResult extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param imageSourceBands
+     *        The list of image source bands in the raster data collection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,9 +248,12 @@ public class GetRasterDataCollectionResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of image source bands in the raster data collection.
+     * </p>
      * 
      * @param imageSourceBands
+     *        The list of image source bands in the raster data collection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

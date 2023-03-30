@@ -47,6 +47,11 @@ public class TrafficSourceIdentifierStaxUnmarshaller implements Unmarshaller<Tra
                     trafficSourceIdentifier.setIdentifier(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("Type", targetDepth)) {
+                    trafficSourceIdentifier.setType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return trafficSourceIdentifier;

@@ -36,12 +36,6 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
      * sources.
      * </p>
-     * <p>
-     * Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. When you
-     * detach a target group, it enters the <code>Removing</code> state while deregistering the instances in the group.
-     * When all instances are deregistered, then you can no longer describe the target group using the
-     * <a>DescribeTrafficSources</a> API call. The instances continue to run.
-     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TrafficSourceIdentifier> trafficSources;
 
@@ -90,20 +84,9 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
      * sources.
      * </p>
-     * <p>
-     * Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. When you
-     * detach a target group, it enters the <code>Removing</code> state while deregistering the instances in the group.
-     * When all instances are deregistered, then you can no longer describe the target group using the
-     * <a>DescribeTrafficSources</a> API call. The instances continue to run.
-     * </p>
      * 
      * @return The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     *         sources.</p>
-     *         <p>
-     *         Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. When
-     *         you detach a target group, it enters the <code>Removing</code> state while deregistering the instances in
-     *         the group. When all instances are deregistered, then you can no longer describe the target group using
-     *         the <a>DescribeTrafficSources</a> API call. The instances continue to run.
+     *         sources.
      */
 
     public java.util.List<TrafficSourceIdentifier> getTrafficSources() {
@@ -118,21 +101,10 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
      * sources.
      * </p>
-     * <p>
-     * Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. When you
-     * detach a target group, it enters the <code>Removing</code> state while deregistering the instances in the group.
-     * When all instances are deregistered, then you can no longer describe the target group using the
-     * <a>DescribeTrafficSources</a> API call. The instances continue to run.
-     * </p>
      * 
      * @param trafficSources
      *        The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     *        sources.</p>
-     *        <p>
-     *        Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. When
-     *        you detach a target group, it enters the <code>Removing</code> state while deregistering the instances in
-     *        the group. When all instances are deregistered, then you can no longer describe the target group using the
-     *        <a>DescribeTrafficSources</a> API call. The instances continue to run.
+     *        sources.
      */
 
     public void setTrafficSources(java.util.Collection<TrafficSourceIdentifier> trafficSources) {
@@ -150,12 +122,6 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * sources.
      * </p>
      * <p>
-     * Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. When you
-     * detach a target group, it enters the <code>Removing</code> state while deregistering the instances in the group.
-     * When all instances are deregistered, then you can no longer describe the target group using the
-     * <a>DescribeTrafficSources</a> API call. The instances continue to run.
-     * </p>
-     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTrafficSources(java.util.Collection)} or {@link #withTrafficSources(java.util.Collection)} if you want
      * to override the existing values.
@@ -163,12 +129,7 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param trafficSources
      *        The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     *        sources.</p>
-     *        <p>
-     *        Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. When
-     *        you detach a target group, it enters the <code>Removing</code> state while deregistering the instances in
-     *        the group. When all instances are deregistered, then you can no longer describe the target group using the
-     *        <a>DescribeTrafficSources</a> API call. The instances continue to run.
+     *        sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,21 +148,10 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
      * sources.
      * </p>
-     * <p>
-     * Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. When you
-     * detach a target group, it enters the <code>Removing</code> state while deregistering the instances in the group.
-     * When all instances are deregistered, then you can no longer describe the target group using the
-     * <a>DescribeTrafficSources</a> API call. The instances continue to run.
-     * </p>
      * 
      * @param trafficSources
      *        The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     *        sources.</p>
-     *        <p>
-     *        Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. When
-     *        you detach a target group, it enters the <code>Removing</code> state while deregistering the instances in
-     *        the group. When all instances are deregistered, then you can no longer describe the target group using the
-     *        <a>DescribeTrafficSources</a> API call. The instances continue to run.
+     *        sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

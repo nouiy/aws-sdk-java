@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure representing Land Cloud Cover property for Landsat data collection.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/LandsatCloudCoverLandInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +28,30 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class LandsatCloudCoverLandInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The minimum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover greater
+     * than or equal to this value.
+     * </p>
+     */
     private Float lowerBound;
-    /** <p/> */
+    /**
+     * <p>
+     * The maximum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover less than
+     * or equal to this value.
+     * </p>
+     */
     private Float upperBound;
 
     /**
-     * <p/>
+     * <p>
+     * The minimum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover greater
+     * than or equal to this value.
+     * </p>
      * 
      * @param lowerBound
+     *        The minimum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover
+     *        greater than or equal to this value.
      */
 
     public void setLowerBound(Float lowerBound) {
@@ -42,9 +59,13 @@ public class LandsatCloudCoverLandInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * The minimum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover greater
+     * than or equal to this value.
+     * </p>
      * 
-     * @return
+     * @return The minimum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover
+     *         greater than or equal to this value.
      */
 
     public Float getLowerBound() {
@@ -52,9 +73,14 @@ public class LandsatCloudCoverLandInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * The minimum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover greater
+     * than or equal to this value.
+     * </p>
      * 
      * @param lowerBound
+     *        The minimum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover
+     *        greater than or equal to this value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,9 +90,14 @@ public class LandsatCloudCoverLandInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover less than
+     * or equal to this value.
+     * </p>
      * 
      * @param upperBound
+     *        The maximum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover
+     *        less than or equal to this value.
      */
 
     public void setUpperBound(Float upperBound) {
@@ -74,9 +105,13 @@ public class LandsatCloudCoverLandInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover less than
+     * or equal to this value.
+     * </p>
      * 
-     * @return
+     * @return The maximum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover
+     *         less than or equal to this value.
      */
 
     public Float getUpperBound() {
@@ -84,9 +119,14 @@ public class LandsatCloudCoverLandInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover less than
+     * or equal to this value.
+     * </p>
      * 
      * @param upperBound
+     *        The maximum value for Land Cloud Cover property filter. This will filter items having Land Cloud Cover
+     *        less than or equal to this value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

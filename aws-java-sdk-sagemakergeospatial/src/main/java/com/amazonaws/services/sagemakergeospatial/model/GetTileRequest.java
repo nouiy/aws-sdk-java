@@ -33,6 +33,12 @@ public class GetTileRequest extends com.amazonaws.AmazonWebServiceRequest implem
     private String arn;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the IAM role that you specify.
+     * </p>
+     */
+    private String executionRoleArn;
+    /**
+     * <p>
      * The particular assets or bands to tile.
      * </p>
      */
@@ -129,6 +135,46 @@ public class GetTileRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     public GetTileRequest withArn(String arn) {
         setArn(arn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM role that you specify.
+     * </p>
+     * 
+     * @param executionRoleArn
+     *        The Amazon Resource Name (ARN) of the IAM role that you specify.
+     */
+
+    public void setExecutionRoleArn(String executionRoleArn) {
+        this.executionRoleArn = executionRoleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM role that you specify.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the IAM role that you specify.
+     */
+
+    public String getExecutionRoleArn() {
+        return this.executionRoleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM role that you specify.
+     * </p>
+     * 
+     * @param executionRoleArn
+     *        The Amazon Resource Name (ARN) of the IAM role that you specify.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetTileRequest withExecutionRoleArn(String executionRoleArn) {
+        setExecutionRoleArn(executionRoleArn);
         return this;
     }
 
@@ -626,6 +672,8 @@ public class GetTileRequest extends com.amazonaws.AmazonWebServiceRequest implem
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
+        if (getExecutionRoleArn() != null)
+            sb.append("ExecutionRoleArn: ").append(getExecutionRoleArn()).append(",");
         if (getImageAssets() != null)
             sb.append("ImageAssets: ").append(getImageAssets()).append(",");
         if (getImageMask() != null)
@@ -663,6 +711,10 @@ public class GetTileRequest extends com.amazonaws.AmazonWebServiceRequest implem
         if (other.getArn() == null ^ this.getArn() == null)
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
+            return false;
+        if (other.getExecutionRoleArn() == null ^ this.getExecutionRoleArn() == null)
+            return false;
+        if (other.getExecutionRoleArn() != null && other.getExecutionRoleArn().equals(this.getExecutionRoleArn()) == false)
             return false;
         if (other.getImageAssets() == null ^ this.getImageAssets() == null)
             return false;
@@ -713,6 +765,7 @@ public class GetTileRequest extends com.amazonaws.AmazonWebServiceRequest implem
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getExecutionRoleArn() == null) ? 0 : getExecutionRoleArn().hashCode());
         hashCode = prime * hashCode + ((getImageAssets() == null) ? 0 : getImageAssets().hashCode());
         hashCode = prime * hashCode + ((getImageMask() == null) ? 0 : getImageMask().hashCode());
         hashCode = prime * hashCode + ((getOutputDataType() == null) ? 0 : getOutputDataType().hashCode());

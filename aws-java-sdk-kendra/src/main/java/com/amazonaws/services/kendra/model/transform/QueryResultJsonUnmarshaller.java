@@ -80,6 +80,12 @@ public class QueryResultJsonUnmarshaller implements Unmarshaller<QueryResult, Js
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("FeaturedResultsItems", targetDepth)) {
+                    context.nextToken();
+                    queryResult.setFeaturedResultsItems(new ListUnmarshaller<FeaturedResultsItem>(FeaturedResultsItemJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -39,6 +39,8 @@ public class VolumeConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeBaselineThroughput").build();
     private static final MarshallingInfo<Integer> VOLUMEBURSTTHROUGHPUT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeBurstThroughput").build();
+    private static final MarshallingInfo<Boolean> ROOTVOLUME_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rootVolume").build();
 
     private static final VolumeConfigurationMarshaller instance = new VolumeConfigurationMarshaller();
 
@@ -62,6 +64,7 @@ public class VolumeConfigurationMarshaller {
             protocolMarshaller.marshall(volumeConfiguration.getVolumeBurstIOPS(), VOLUMEBURSTIOPS_BINDING);
             protocolMarshaller.marshall(volumeConfiguration.getVolumeBaselineThroughput(), VOLUMEBASELINETHROUGHPUT_BINDING);
             protocolMarshaller.marshall(volumeConfiguration.getVolumeBurstThroughput(), VOLUMEBURSTTHROUGHPUT_BINDING);
+            protocolMarshaller.marshall(volumeConfiguration.getRootVolume(), ROOTVOLUME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

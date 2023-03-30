@@ -51,7 +51,12 @@ public class RollbackDetails implements Serializable, Cloneable {
      * </p>
      */
     private Integer instancesToUpdateOnRollback;
-
+    /**
+     * <p>
+     * Reports progress on replacing instances in an Auto Scaling group that has a warm pool. This includes separate
+     * details for instances in the warm pool and instances in the Auto Scaling group (the live pool).
+     * </p>
+     */
     private InstanceRefreshProgressDetails progressDetailsOnRollback;
 
     /**
@@ -221,7 +226,14 @@ public class RollbackDetails implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Reports progress on replacing instances in an Auto Scaling group that has a warm pool. This includes separate
+     * details for instances in the warm pool and instances in the Auto Scaling group (the live pool).
+     * </p>
+     * 
      * @param progressDetailsOnRollback
+     *        Reports progress on replacing instances in an Auto Scaling group that has a warm pool. This includes
+     *        separate details for instances in the warm pool and instances in the Auto Scaling group (the live pool).
      */
 
     public void setProgressDetailsOnRollback(InstanceRefreshProgressDetails progressDetailsOnRollback) {
@@ -229,7 +241,13 @@ public class RollbackDetails implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * Reports progress on replacing instances in an Auto Scaling group that has a warm pool. This includes separate
+     * details for instances in the warm pool and instances in the Auto Scaling group (the live pool).
+     * </p>
+     * 
+     * @return Reports progress on replacing instances in an Auto Scaling group that has a warm pool. This includes
+     *         separate details for instances in the warm pool and instances in the Auto Scaling group (the live pool).
      */
 
     public InstanceRefreshProgressDetails getProgressDetailsOnRollback() {
@@ -237,7 +255,14 @@ public class RollbackDetails implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Reports progress on replacing instances in an Auto Scaling group that has a warm pool. This includes separate
+     * details for instances in the warm pool and instances in the Auto Scaling group (the live pool).
+     * </p>
+     * 
      * @param progressDetailsOnRollback
+     *        Reports progress on replacing instances in an Auto Scaling group that has a warm pool. This includes
+     *        separate details for instances in the warm pool and instances in the Auto Scaling group (the live pool).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

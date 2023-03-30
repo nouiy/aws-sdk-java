@@ -228,6 +228,14 @@ public class ModifyVpnTunnelOptionsRequestMarshaller implements Marshaller<Reque
                     }
                 }
             }
+
+            if (tunnelOptions.getEnableTunnelLifecycleControl() != null) {
+                request.addParameter("TunnelOptions.EnableTunnelLifecycleControl", StringUtils.fromBoolean(tunnelOptions.getEnableTunnelLifecycleControl()));
+            }
+        }
+
+        if (modifyVpnTunnelOptionsRequest.getSkipTunnelReplacement() != null) {
+            request.addParameter("SkipTunnelReplacement", StringUtils.fromBoolean(modifyVpnTunnelOptionsRequest.getSkipTunnelReplacement()));
         }
 
         return request;

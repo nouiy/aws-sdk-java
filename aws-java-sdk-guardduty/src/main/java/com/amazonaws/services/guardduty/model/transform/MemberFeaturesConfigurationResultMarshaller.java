@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.guardduty.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,8 @@ public class MemberFeaturesConfigurationResultMarshaller {
             .marshallLocationName("status").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<List> ADDITIONALCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("additionalConfiguration").build();
 
     private static final MemberFeaturesConfigurationResultMarshaller instance = new MemberFeaturesConfigurationResultMarshaller();
 
@@ -53,6 +56,7 @@ public class MemberFeaturesConfigurationResultMarshaller {
             protocolMarshaller.marshall(memberFeaturesConfigurationResult.getName(), NAME_BINDING);
             protocolMarshaller.marshall(memberFeaturesConfigurationResult.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(memberFeaturesConfigurationResult.getUpdatedAt(), UPDATEDAT_BINDING);
+            protocolMarshaller.marshall(memberFeaturesConfigurationResult.getAdditionalConfiguration(), ADDITIONALCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

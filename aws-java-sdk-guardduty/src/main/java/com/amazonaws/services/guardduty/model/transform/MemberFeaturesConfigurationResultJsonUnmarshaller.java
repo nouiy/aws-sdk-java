@@ -60,6 +60,13 @@ public class MemberFeaturesConfigurationResultJsonUnmarshaller implements Unmars
                     context.nextToken();
                     memberFeaturesConfigurationResult.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("additionalConfiguration", targetDepth)) {
+                    context.nextToken();
+                    memberFeaturesConfigurationResult.setAdditionalConfiguration(new ListUnmarshaller<MemberAdditionalConfigurationResult>(
+                            MemberAdditionalConfigurationResultJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

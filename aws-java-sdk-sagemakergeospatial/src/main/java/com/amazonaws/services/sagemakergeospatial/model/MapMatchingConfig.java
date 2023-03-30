@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The input structure for Map Matching operation type.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/MapMatchingConfig"
  *      target="_top">AWS API Documentation</a>
@@ -26,7 +28,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class MapMatchingConfig implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The field name for the data that describes the identifier representing a collection of GPS points belonging to an
+     * individual trace.
+     * </p>
+     */
     private String idAttributeName;
     /**
      * <p>
@@ -48,9 +55,14 @@ public class MapMatchingConfig implements Serializable, Cloneable, StructuredPoj
     private String yAttributeName;
 
     /**
-     * <p/>
+     * <p>
+     * The field name for the data that describes the identifier representing a collection of GPS points belonging to an
+     * individual trace.
+     * </p>
      * 
      * @param idAttributeName
+     *        The field name for the data that describes the identifier representing a collection of GPS points
+     *        belonging to an individual trace.
      */
 
     public void setIdAttributeName(String idAttributeName) {
@@ -58,9 +70,13 @@ public class MapMatchingConfig implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * The field name for the data that describes the identifier representing a collection of GPS points belonging to an
+     * individual trace.
+     * </p>
      * 
-     * @return
+     * @return The field name for the data that describes the identifier representing a collection of GPS points
+     *         belonging to an individual trace.
      */
 
     public String getIdAttributeName() {
@@ -68,9 +84,14 @@ public class MapMatchingConfig implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * The field name for the data that describes the identifier representing a collection of GPS points belonging to an
+     * individual trace.
+     * </p>
      * 
      * @param idAttributeName
+     *        The field name for the data that describes the identifier representing a collection of GPS points
+     *        belonging to an individual trace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

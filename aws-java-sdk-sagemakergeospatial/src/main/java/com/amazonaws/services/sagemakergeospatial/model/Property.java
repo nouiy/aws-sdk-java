@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * Represents a single searchable property to search on.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/Property" target="_top">AWS API
  *      Documentation</a>
@@ -26,23 +28,51 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Property implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing EoCloudCover property filter containing a lower bound and upper bound.
+     * </p>
+     */
     private EoCloudCoverInput eoCloudCover;
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing Land Cloud Cover property filter for Landsat collection containing a lower bound and
+     * upper bound.
+     * </p>
+     */
     private LandsatCloudCoverLandInput landsatCloudCoverLand;
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing Platform property filter consisting of value and comparison operator.
+     * </p>
+     */
     private PlatformInput platform;
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing ViewOffNadir property filter containing a lower bound and upper bound.
+     * </p>
+     */
     private ViewOffNadirInput viewOffNadir;
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing ViewSunAzimuth property filter containing a lower bound and upper bound.
+     * </p>
+     */
     private ViewSunAzimuthInput viewSunAzimuth;
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing ViewSunElevation property filter containing a lower bound and upper bound.
+     * </p>
+     */
     private ViewSunElevationInput viewSunElevation;
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing EoCloudCover property filter containing a lower bound and upper bound.
+     * </p>
      * 
      * @param eoCloudCover
+     *        The structure representing EoCloudCover property filter containing a lower bound and upper bound.
      */
 
     public void setEoCloudCover(EoCloudCoverInput eoCloudCover) {
@@ -50,9 +80,11 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing EoCloudCover property filter containing a lower bound and upper bound.
+     * </p>
      * 
-     * @return
+     * @return The structure representing EoCloudCover property filter containing a lower bound and upper bound.
      */
 
     public EoCloudCoverInput getEoCloudCover() {
@@ -60,9 +92,12 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing EoCloudCover property filter containing a lower bound and upper bound.
+     * </p>
      * 
      * @param eoCloudCover
+     *        The structure representing EoCloudCover property filter containing a lower bound and upper bound.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -72,9 +107,14 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing Land Cloud Cover property filter for Landsat collection containing a lower bound and
+     * upper bound.
+     * </p>
      * 
      * @param landsatCloudCoverLand
+     *        The structure representing Land Cloud Cover property filter for Landsat collection containing a lower
+     *        bound and upper bound.
      */
 
     public void setLandsatCloudCoverLand(LandsatCloudCoverLandInput landsatCloudCoverLand) {
@@ -82,9 +122,13 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing Land Cloud Cover property filter for Landsat collection containing a lower bound and
+     * upper bound.
+     * </p>
      * 
-     * @return
+     * @return The structure representing Land Cloud Cover property filter for Landsat collection containing a lower
+     *         bound and upper bound.
      */
 
     public LandsatCloudCoverLandInput getLandsatCloudCoverLand() {
@@ -92,9 +136,14 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing Land Cloud Cover property filter for Landsat collection containing a lower bound and
+     * upper bound.
+     * </p>
      * 
      * @param landsatCloudCoverLand
+     *        The structure representing Land Cloud Cover property filter for Landsat collection containing a lower
+     *        bound and upper bound.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,9 +153,12 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing Platform property filter consisting of value and comparison operator.
+     * </p>
      * 
      * @param platform
+     *        The structure representing Platform property filter consisting of value and comparison operator.
      */
 
     public void setPlatform(PlatformInput platform) {
@@ -114,9 +166,11 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing Platform property filter consisting of value and comparison operator.
+     * </p>
      * 
-     * @return
+     * @return The structure representing Platform property filter consisting of value and comparison operator.
      */
 
     public PlatformInput getPlatform() {
@@ -124,9 +178,12 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing Platform property filter consisting of value and comparison operator.
+     * </p>
      * 
      * @param platform
+     *        The structure representing Platform property filter consisting of value and comparison operator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,9 +193,12 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing ViewOffNadir property filter containing a lower bound and upper bound.
+     * </p>
      * 
      * @param viewOffNadir
+     *        The structure representing ViewOffNadir property filter containing a lower bound and upper bound.
      */
 
     public void setViewOffNadir(ViewOffNadirInput viewOffNadir) {
@@ -146,9 +206,11 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing ViewOffNadir property filter containing a lower bound and upper bound.
+     * </p>
      * 
-     * @return
+     * @return The structure representing ViewOffNadir property filter containing a lower bound and upper bound.
      */
 
     public ViewOffNadirInput getViewOffNadir() {
@@ -156,9 +218,12 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing ViewOffNadir property filter containing a lower bound and upper bound.
+     * </p>
      * 
      * @param viewOffNadir
+     *        The structure representing ViewOffNadir property filter containing a lower bound and upper bound.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,9 +233,12 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing ViewSunAzimuth property filter containing a lower bound and upper bound.
+     * </p>
      * 
      * @param viewSunAzimuth
+     *        The structure representing ViewSunAzimuth property filter containing a lower bound and upper bound.
      */
 
     public void setViewSunAzimuth(ViewSunAzimuthInput viewSunAzimuth) {
@@ -178,9 +246,11 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing ViewSunAzimuth property filter containing a lower bound and upper bound.
+     * </p>
      * 
-     * @return
+     * @return The structure representing ViewSunAzimuth property filter containing a lower bound and upper bound.
      */
 
     public ViewSunAzimuthInput getViewSunAzimuth() {
@@ -188,9 +258,12 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing ViewSunAzimuth property filter containing a lower bound and upper bound.
+     * </p>
      * 
      * @param viewSunAzimuth
+     *        The structure representing ViewSunAzimuth property filter containing a lower bound and upper bound.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,9 +273,12 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing ViewSunElevation property filter containing a lower bound and upper bound.
+     * </p>
      * 
      * @param viewSunElevation
+     *        The structure representing ViewSunElevation property filter containing a lower bound and upper bound.
      */
 
     public void setViewSunElevation(ViewSunElevationInput viewSunElevation) {
@@ -210,9 +286,11 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing ViewSunElevation property filter containing a lower bound and upper bound.
+     * </p>
      * 
-     * @return
+     * @return The structure representing ViewSunElevation property filter containing a lower bound and upper bound.
      */
 
     public ViewSunElevationInput getViewSunElevation() {
@@ -220,9 +298,12 @@ public class Property implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing ViewSunElevation property filter containing a lower bound and upper bound.
+     * </p>
      * 
      * @param viewSunElevation
+     *        The structure representing ViewSunElevation property filter containing a lower bound and upper bound.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -52,7 +52,11 @@ public class RasterDataCollectionMetadata implements Serializable, Cloneable, St
      * </p>
      */
     private String name;
-    /** <p/> */
+    /**
+     * <p>
+     * The list of filters supported by the raster data collection.
+     * </p>
+     */
     private java.util.List<Filter> supportedFilters;
     /**
      * <p>
@@ -228,9 +232,11 @@ public class RasterDataCollectionMetadata implements Serializable, Cloneable, St
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of filters supported by the raster data collection.
+     * </p>
      * 
-     * @return
+     * @return The list of filters supported by the raster data collection.
      */
 
     public java.util.List<Filter> getSupportedFilters() {
@@ -238,9 +244,12 @@ public class RasterDataCollectionMetadata implements Serializable, Cloneable, St
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of filters supported by the raster data collection.
+     * </p>
      * 
      * @param supportedFilters
+     *        The list of filters supported by the raster data collection.
      */
 
     public void setSupportedFilters(java.util.Collection<Filter> supportedFilters) {
@@ -253,7 +262,9 @@ public class RasterDataCollectionMetadata implements Serializable, Cloneable, St
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of filters supported by the raster data collection.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSupportedFilters(java.util.Collection)} or {@link #withSupportedFilters(java.util.Collection)} if you
@@ -261,6 +272,7 @@ public class RasterDataCollectionMetadata implements Serializable, Cloneable, St
      * </p>
      * 
      * @param supportedFilters
+     *        The list of filters supported by the raster data collection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -275,9 +287,12 @@ public class RasterDataCollectionMetadata implements Serializable, Cloneable, St
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of filters supported by the raster data collection.
+     * </p>
      * 
      * @param supportedFilters
+     *        The list of filters supported by the raster data collection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

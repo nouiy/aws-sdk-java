@@ -66,6 +66,19 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     }
 
     @Override
+    public java.util.concurrent.Future<BatchDeleteFeaturedResultsSetResult> batchDeleteFeaturedResultsSetAsync(BatchDeleteFeaturedResultsSetRequest request) {
+
+        return batchDeleteFeaturedResultsSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDeleteFeaturedResultsSetResult> batchDeleteFeaturedResultsSetAsync(BatchDeleteFeaturedResultsSetRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchDeleteFeaturedResultsSetRequest, BatchDeleteFeaturedResultsSetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetDocumentStatusResult> batchGetDocumentStatusAsync(BatchGetDocumentStatusRequest request) {
 
         return batchGetDocumentStatusAsync(request, null);
@@ -154,6 +167,19 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     @Override
     public java.util.concurrent.Future<CreateFaqResult> createFaqAsync(CreateFaqRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateFaqRequest, CreateFaqResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFeaturedResultsSetResult> createFeaturedResultsSetAsync(CreateFeaturedResultsSetRequest request) {
+
+        return createFeaturedResultsSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFeaturedResultsSetResult> createFeaturedResultsSetAsync(CreateFeaturedResultsSetRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateFeaturedResultsSetRequest, CreateFeaturedResultsSetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -357,6 +383,19 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     @Override
     public java.util.concurrent.Future<DescribeFaqResult> describeFaqAsync(DescribeFaqRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeFaqRequest, DescribeFaqResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeFeaturedResultsSetResult> describeFeaturedResultsSetAsync(DescribeFeaturedResultsSetRequest request) {
+
+        return describeFeaturedResultsSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeFeaturedResultsSetResult> describeFeaturedResultsSetAsync(DescribeFeaturedResultsSetRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeFeaturedResultsSetRequest, DescribeFeaturedResultsSetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -578,6 +617,19 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     }
 
     @Override
+    public java.util.concurrent.Future<ListFeaturedResultsSetsResult> listFeaturedResultsSetsAsync(ListFeaturedResultsSetsRequest request) {
+
+        return listFeaturedResultsSetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFeaturedResultsSetsResult> listFeaturedResultsSetsAsync(ListFeaturedResultsSetsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListFeaturedResultsSetsRequest, ListFeaturedResultsSetsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListGroupsOlderThanOrderingIdResult> listGroupsOlderThanOrderingIdAsync(ListGroupsOlderThanOrderingIdRequest request) {
 
         return listGroupsOlderThanOrderingIdAsync(request, null);
@@ -769,6 +821,19 @@ public class AbstractAWSkendraAsync extends AbstractAWSkendra implements AWSkend
     @Override
     public java.util.concurrent.Future<UpdateExperienceResult> updateExperienceAsync(UpdateExperienceRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateExperienceRequest, UpdateExperienceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFeaturedResultsSetResult> updateFeaturedResultsSetAsync(UpdateFeaturedResultsSetRequest request) {
+
+        return updateFeaturedResultsSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFeaturedResultsSetResult> updateFeaturedResultsSetAsync(UpdateFeaturedResultsSetRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateFeaturedResultsSetRequest, UpdateFeaturedResultsSetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

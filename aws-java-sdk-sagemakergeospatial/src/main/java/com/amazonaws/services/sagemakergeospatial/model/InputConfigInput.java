@@ -40,7 +40,12 @@ public class InputConfigInput implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String previousEarthObservationJobArn;
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing the RasterDataCollection Query consisting of the Area of Interest,
+     * RasterDataCollectionArn,TimeRange and Property Filters.
+     * </p>
+     */
     private RasterDataCollectionQueryInput rasterDataCollectionQuery;
 
     /**
@@ -124,9 +129,14 @@ public class InputConfigInput implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing the RasterDataCollection Query consisting of the Area of Interest,
+     * RasterDataCollectionArn,TimeRange and Property Filters.
+     * </p>
      * 
      * @param rasterDataCollectionQuery
+     *        The structure representing the RasterDataCollection Query consisting of the Area of Interest,
+     *        RasterDataCollectionArn,TimeRange and Property Filters.
      */
 
     public void setRasterDataCollectionQuery(RasterDataCollectionQueryInput rasterDataCollectionQuery) {
@@ -134,9 +144,13 @@ public class InputConfigInput implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing the RasterDataCollection Query consisting of the Area of Interest,
+     * RasterDataCollectionArn,TimeRange and Property Filters.
+     * </p>
      * 
-     * @return
+     * @return The structure representing the RasterDataCollection Query consisting of the Area of Interest,
+     *         RasterDataCollectionArn,TimeRange and Property Filters.
      */
 
     public RasterDataCollectionQueryInput getRasterDataCollectionQuery() {
@@ -144,9 +158,14 @@ public class InputConfigInput implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing the RasterDataCollection Query consisting of the Area of Interest,
+     * RasterDataCollectionArn,TimeRange and Property Filters.
+     * </p>
      * 
      * @param rasterDataCollectionQuery
+     *        The structure representing the RasterDataCollection Query consisting of the Area of Interest,
+     *        RasterDataCollectionArn,TimeRange and Property Filters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -374,6 +374,83 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
 
     /**
      * <p>
+     * Creates an Network Firewall TLS inspection configuration. A TLS inspection configuration contains the Certificate
+     * Manager certificate references that Network Firewall uses to decrypt and re-encrypt inbound traffic.
+     * </p>
+     * <p>
+     * After you create a TLS inspection configuration, you associate it with a firewall policy.
+     * </p>
+     * <p>
+     * To update the settings for a TLS inspection configuration, use <a>UpdateTLSInspectionConfiguration</a>.
+     * </p>
+     * <p>
+     * To manage a TLS inspection configuration's tags, use the standard Amazon Web Services resource tagging
+     * operations, <a>ListTagsForResource</a>, <a>TagResource</a>, and <a>UntagResource</a>.
+     * </p>
+     * <p>
+     * To retrieve information about TLS inspection configurations, use <a>ListTLSInspectionConfigurations</a> and
+     * <a>DescribeTLSInspectionConfiguration</a>.
+     * </p>
+     * <p>
+     * For more information about TLS inspection configurations, see <a
+     * href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html">Decrypting SSL/TLS
+     * traffic with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>.
+     * </p>
+     * 
+     * @param createTLSInspectionConfigurationRequest
+     * @return A Java Future containing the result of the CreateTLSInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSNetworkFirewallAsync.CreateTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/CreateTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTLSInspectionConfigurationResult> createTLSInspectionConfigurationAsync(
+            CreateTLSInspectionConfigurationRequest createTLSInspectionConfigurationRequest);
+
+    /**
+     * <p>
+     * Creates an Network Firewall TLS inspection configuration. A TLS inspection configuration contains the Certificate
+     * Manager certificate references that Network Firewall uses to decrypt and re-encrypt inbound traffic.
+     * </p>
+     * <p>
+     * After you create a TLS inspection configuration, you associate it with a firewall policy.
+     * </p>
+     * <p>
+     * To update the settings for a TLS inspection configuration, use <a>UpdateTLSInspectionConfiguration</a>.
+     * </p>
+     * <p>
+     * To manage a TLS inspection configuration's tags, use the standard Amazon Web Services resource tagging
+     * operations, <a>ListTagsForResource</a>, <a>TagResource</a>, and <a>UntagResource</a>.
+     * </p>
+     * <p>
+     * To retrieve information about TLS inspection configurations, use <a>ListTLSInspectionConfigurations</a> and
+     * <a>DescribeTLSInspectionConfiguration</a>.
+     * </p>
+     * <p>
+     * For more information about TLS inspection configurations, see <a
+     * href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html">Decrypting SSL/TLS
+     * traffic with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>.
+     * </p>
+     * 
+     * @param createTLSInspectionConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateTLSInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSNetworkFirewallAsyncHandler.CreateTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/CreateTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTLSInspectionConfigurationResult> createTLSInspectionConfigurationAsync(
+            CreateTLSInspectionConfigurationRequest createTLSInspectionConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateTLSInspectionConfigurationRequest, CreateTLSInspectionConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified <a>Firewall</a> and its <a>FirewallStatus</a>. This operation requires the firewall's
      * <code>DeleteProtection</code> flag to be <code>FALSE</code>. You can't revert this operation.
      * </p>
@@ -519,6 +596,43 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      */
     java.util.concurrent.Future<DeleteRuleGroupResult> deleteRuleGroupAsync(DeleteRuleGroupRequest deleteRuleGroupRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteRuleGroupRequest, DeleteRuleGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the specified <a>TLSInspectionConfiguration</a>.
+     * </p>
+     * 
+     * @param deleteTLSInspectionConfigurationRequest
+     * @return A Java Future containing the result of the DeleteTLSInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSNetworkFirewallAsync.DeleteTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DeleteTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTLSInspectionConfigurationResult> deleteTLSInspectionConfigurationAsync(
+            DeleteTLSInspectionConfigurationRequest deleteTLSInspectionConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes the specified <a>TLSInspectionConfiguration</a>.
+     * </p>
+     * 
+     * @param deleteTLSInspectionConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteTLSInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSNetworkFirewallAsyncHandler.DeleteTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DeleteTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTLSInspectionConfigurationResult> deleteTLSInspectionConfigurationAsync(
+            DeleteTLSInspectionConfigurationRequest deleteTLSInspectionConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteTLSInspectionConfigurationRequest, DeleteTLSInspectionConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -718,6 +832,43 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
 
     /**
      * <p>
+     * Returns the data objects for the specified TLS inspection configuration.
+     * </p>
+     * 
+     * @param describeTLSInspectionConfigurationRequest
+     * @return A Java Future containing the result of the DescribeTLSInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSNetworkFirewallAsync.DescribeTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DescribeTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTLSInspectionConfigurationResult> describeTLSInspectionConfigurationAsync(
+            DescribeTLSInspectionConfigurationRequest describeTLSInspectionConfigurationRequest);
+
+    /**
+     * <p>
+     * Returns the data objects for the specified TLS inspection configuration.
+     * </p>
+     * 
+     * @param describeTLSInspectionConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeTLSInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSNetworkFirewallAsyncHandler.DescribeTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DescribeTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTLSInspectionConfigurationResult> describeTLSInspectionConfigurationAsync(
+            DescribeTLSInspectionConfigurationRequest describeTLSInspectionConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeTLSInspectionConfigurationRequest, DescribeTLSInspectionConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Removes the specified subnet associations from the firewall. This removes the firewall endpoints from the subnets
      * and removes any network filtering protections that the endpoints were providing.
      * </p>
@@ -855,6 +1006,43 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      */
     java.util.concurrent.Future<ListRuleGroupsResult> listRuleGroupsAsync(ListRuleGroupsRequest listRuleGroupsRequest,
             com.amazonaws.handlers.AsyncHandler<ListRuleGroupsRequest, ListRuleGroupsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the metadata for the TLS inspection configurations that you have defined. Depending on your setting for
+     * max results and the number of TLS inspection configurations, a single call might not return the full list.
+     * </p>
+     * 
+     * @param listTLSInspectionConfigurationsRequest
+     * @return A Java Future containing the result of the ListTLSInspectionConfigurations operation returned by the
+     *         service.
+     * @sample AWSNetworkFirewallAsync.ListTLSInspectionConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/ListTLSInspectionConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTLSInspectionConfigurationsResult> listTLSInspectionConfigurationsAsync(
+            ListTLSInspectionConfigurationsRequest listTLSInspectionConfigurationsRequest);
+
+    /**
+     * <p>
+     * Retrieves the metadata for the TLS inspection configurations that you have defined. Depending on your setting for
+     * max results and the number of TLS inspection configurations, a single call might not return the full list.
+     * </p>
+     * 
+     * @param listTLSInspectionConfigurationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTLSInspectionConfigurations operation returned by the
+     *         service.
+     * @sample AWSNetworkFirewallAsyncHandler.ListTLSInspectionConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/ListTLSInspectionConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTLSInspectionConfigurationsResult> listTLSInspectionConfigurationsAsync(
+            ListTLSInspectionConfigurationsRequest listTLSInspectionConfigurationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTLSInspectionConfigurationsRequest, ListTLSInspectionConfigurationsResult> asyncHandler);
 
     /**
      * <p>
@@ -1433,5 +1621,56 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
     java.util.concurrent.Future<UpdateSubnetChangeProtectionResult> updateSubnetChangeProtectionAsync(
             UpdateSubnetChangeProtectionRequest updateSubnetChangeProtectionRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateSubnetChangeProtectionRequest, UpdateSubnetChangeProtectionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the TLS inspection configuration settings for the specified TLS inspection configuration. You use a TLS
+     * inspection configuration by reference in one or more firewall policies. When you modify a TLS inspection
+     * configuration, you modify all firewall policies that use the TLS inspection configuration.
+     * </p>
+     * <p>
+     * To update a TLS inspection configuration, first call <a>DescribeTLSInspectionConfiguration</a> to retrieve the
+     * current <a>TLSInspectionConfiguration</a> object, update the object as needed, and then provide the updated
+     * object to this call.
+     * </p>
+     * 
+     * @param updateTLSInspectionConfigurationRequest
+     * @return A Java Future containing the result of the UpdateTLSInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSNetworkFirewallAsync.UpdateTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateTLSInspectionConfigurationResult> updateTLSInspectionConfigurationAsync(
+            UpdateTLSInspectionConfigurationRequest updateTLSInspectionConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates the TLS inspection configuration settings for the specified TLS inspection configuration. You use a TLS
+     * inspection configuration by reference in one or more firewall policies. When you modify a TLS inspection
+     * configuration, you modify all firewall policies that use the TLS inspection configuration.
+     * </p>
+     * <p>
+     * To update a TLS inspection configuration, first call <a>DescribeTLSInspectionConfiguration</a> to retrieve the
+     * current <a>TLSInspectionConfiguration</a> object, update the object as needed, and then provide the updated
+     * object to this call.
+     * </p>
+     * 
+     * @param updateTLSInspectionConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateTLSInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSNetworkFirewallAsyncHandler.UpdateTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateTLSInspectionConfigurationResult> updateTLSInspectionConfigurationAsync(
+            UpdateTLSInspectionConfigurationRequest updateTLSInspectionConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateTLSInspectionConfigurationRequest, UpdateTLSInspectionConfigurationResult> asyncHandler);
 
 }

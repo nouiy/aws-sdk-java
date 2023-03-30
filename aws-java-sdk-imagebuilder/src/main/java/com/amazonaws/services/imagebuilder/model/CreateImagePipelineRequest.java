@@ -103,6 +103,12 @@ public class CreateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String clientToken;
+    /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     */
+    private ImageScanningConfiguration imageScanningConfiguration;
 
     /**
      * <p>
@@ -684,6 +690,46 @@ public class CreateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     * 
+     * @param imageScanningConfiguration
+     *        Contains settings for vulnerability scans.
+     */
+
+    public void setImageScanningConfiguration(ImageScanningConfiguration imageScanningConfiguration) {
+        this.imageScanningConfiguration = imageScanningConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     * 
+     * @return Contains settings for vulnerability scans.
+     */
+
+    public ImageScanningConfiguration getImageScanningConfiguration() {
+        return this.imageScanningConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     * 
+     * @param imageScanningConfiguration
+     *        Contains settings for vulnerability scans.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateImagePipelineRequest withImageScanningConfiguration(ImageScanningConfiguration imageScanningConfiguration) {
+        setImageScanningConfiguration(imageScanningConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -718,7 +764,9 @@ public class CreateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getImageScanningConfiguration() != null)
+            sb.append("ImageScanningConfiguration: ").append(getImageScanningConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -782,6 +830,10 @@ public class CreateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getImageScanningConfiguration() == null ^ this.getImageScanningConfiguration() == null)
+            return false;
+        if (other.getImageScanningConfiguration() != null && other.getImageScanningConfiguration().equals(this.getImageScanningConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -802,6 +854,7 @@ public class CreateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getImageScanningConfiguration() == null) ? 0 : getImageScanningConfiguration().hashCode());
         return hashCode;
     }
 

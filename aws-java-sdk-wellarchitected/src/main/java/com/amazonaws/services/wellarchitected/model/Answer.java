@@ -41,7 +41,10 @@ public class Answer implements Serializable, Cloneable, StructuredPojo {
     private String helpfulResourceUrl;
     /**
      * <p>
-     * The helpful resource text to be displayed.
+     * The helpful resource text to be displayed for a custom lens.
+     * </p>
+     * <p>
+     * This field does not apply to Amazon Web Services official lenses.
      * </p>
      */
     private String helpfulResourceDisplayText;
@@ -226,11 +229,16 @@ public class Answer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The helpful resource text to be displayed.
+     * The helpful resource text to be displayed for a custom lens.
+     * </p>
+     * <p>
+     * This field does not apply to Amazon Web Services official lenses.
      * </p>
      * 
      * @param helpfulResourceDisplayText
-     *        The helpful resource text to be displayed.
+     *        The helpful resource text to be displayed for a custom lens.</p>
+     *        <p>
+     *        This field does not apply to Amazon Web Services official lenses.
      */
 
     public void setHelpfulResourceDisplayText(String helpfulResourceDisplayText) {
@@ -239,10 +247,15 @@ public class Answer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The helpful resource text to be displayed.
+     * The helpful resource text to be displayed for a custom lens.
+     * </p>
+     * <p>
+     * This field does not apply to Amazon Web Services official lenses.
      * </p>
      * 
-     * @return The helpful resource text to be displayed.
+     * @return The helpful resource text to be displayed for a custom lens.</p>
+     *         <p>
+     *         This field does not apply to Amazon Web Services official lenses.
      */
 
     public String getHelpfulResourceDisplayText() {
@@ -251,11 +264,16 @@ public class Answer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The helpful resource text to be displayed.
+     * The helpful resource text to be displayed for a custom lens.
+     * </p>
+     * <p>
+     * This field does not apply to Amazon Web Services official lenses.
      * </p>
      * 
      * @param helpfulResourceDisplayText
-     *        The helpful resource text to be displayed.
+     *        The helpful resource text to be displayed for a custom lens.</p>
+     *        <p>
+     *        This field does not apply to Amazon Web Services official lenses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

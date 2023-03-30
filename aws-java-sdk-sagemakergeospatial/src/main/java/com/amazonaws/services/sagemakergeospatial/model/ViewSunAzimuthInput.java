@@ -18,7 +18,11 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The input structure for specifying ViewSunAzimuth property filter. ViewSunAzimuth refers to the Sun azimuth angle.
+ * From the scene center point on the ground, this is the angle between truth north and the sun. Measured clockwise in
+ * degrees (0-360).
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ViewSunAzimuthInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +30,30 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ViewSunAzimuthInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The minimum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth greater than or
+     * equal to this value.
+     * </p>
+     */
     private Float lowerBound;
-    /** <p/> */
+    /**
+     * <p>
+     * The maximum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth lesser than or
+     * equal to this value.
+     * </p>
+     */
     private Float upperBound;
 
     /**
-     * <p/>
+     * <p>
+     * The minimum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth greater than or
+     * equal to this value.
+     * </p>
      * 
      * @param lowerBound
+     *        The minimum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth greater
+     *        than or equal to this value.
      */
 
     public void setLowerBound(Float lowerBound) {
@@ -42,9 +61,13 @@ public class ViewSunAzimuthInput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p/>
+     * <p>
+     * The minimum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth greater than or
+     * equal to this value.
+     * </p>
      * 
-     * @return
+     * @return The minimum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth greater
+     *         than or equal to this value.
      */
 
     public Float getLowerBound() {
@@ -52,9 +75,14 @@ public class ViewSunAzimuthInput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p/>
+     * <p>
+     * The minimum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth greater than or
+     * equal to this value.
+     * </p>
      * 
      * @param lowerBound
+     *        The minimum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth greater
+     *        than or equal to this value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,9 +92,14 @@ public class ViewSunAzimuthInput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth lesser than or
+     * equal to this value.
+     * </p>
      * 
      * @param upperBound
+     *        The maximum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth lesser than
+     *        or equal to this value.
      */
 
     public void setUpperBound(Float upperBound) {
@@ -74,9 +107,13 @@ public class ViewSunAzimuthInput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth lesser than or
+     * equal to this value.
+     * </p>
      * 
-     * @return
+     * @return The maximum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth lesser
+     *         than or equal to this value.
      */
 
     public Float getUpperBound() {
@@ -84,9 +121,14 @@ public class ViewSunAzimuthInput implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth lesser than or
+     * equal to this value.
+     * </p>
      * 
      * @param upperBound
+     *        The maximum value for ViewSunAzimuth property filter. This filters items having ViewSunAzimuth lesser than
+     *        or equal to this value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

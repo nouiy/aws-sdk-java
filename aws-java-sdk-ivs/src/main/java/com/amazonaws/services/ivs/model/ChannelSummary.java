@@ -42,6 +42,12 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     private Boolean authorized;
     /**
      * <p>
+     * Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * </p>
+     */
+    private Boolean insecureIngest;
+    /**
+     * <p>
      * Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
      * <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the Amazon IVS
      * console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard, respectively.)
@@ -162,6 +168,58 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
 
     public Boolean isAuthorized() {
         return this.authorized;
+    }
+
+    /**
+     * <p>
+     * Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * </p>
+     * 
+     * @param insecureIngest
+     *        Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     */
+
+    public void setInsecureIngest(Boolean insecureIngest) {
+        this.insecureIngest = insecureIngest;
+    }
+
+    /**
+     * <p>
+     * Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * </p>
+     * 
+     * @return Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     */
+
+    public Boolean getInsecureIngest() {
+        return this.insecureIngest;
+    }
+
+    /**
+     * <p>
+     * Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * </p>
+     * 
+     * @param insecureIngest
+     *        Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChannelSummary withInsecureIngest(Boolean insecureIngest) {
+        setInsecureIngest(insecureIngest);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * </p>
+     * 
+     * @return Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     */
+
+    public Boolean isInsecureIngest() {
+        return this.insecureIngest;
     }
 
     /**
@@ -438,6 +496,8 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
             sb.append("Arn: ").append(getArn()).append(",");
         if (getAuthorized() != null)
             sb.append("Authorized: ").append(getAuthorized()).append(",");
+        if (getInsecureIngest() != null)
+            sb.append("InsecureIngest: ").append(getInsecureIngest()).append(",");
         if (getLatencyMode() != null)
             sb.append("LatencyMode: ").append(getLatencyMode()).append(",");
         if (getName() != null)
@@ -468,6 +528,10 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAuthorized() != null && other.getAuthorized().equals(this.getAuthorized()) == false)
             return false;
+        if (other.getInsecureIngest() == null ^ this.getInsecureIngest() == null)
+            return false;
+        if (other.getInsecureIngest() != null && other.getInsecureIngest().equals(this.getInsecureIngest()) == false)
+            return false;
         if (other.getLatencyMode() == null ^ this.getLatencyMode() == null)
             return false;
         if (other.getLatencyMode() != null && other.getLatencyMode().equals(this.getLatencyMode()) == false)
@@ -494,6 +558,7 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getAuthorized() == null) ? 0 : getAuthorized().hashCode());
+        hashCode = prime * hashCode + ((getInsecureIngest() == null) ? 0 : getInsecureIngest().hashCode());
         hashCode = prime * hashCode + ((getLatencyMode() == null) ? 0 : getLatencyMode().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getRecordingConfigurationArn() == null) ? 0 : getRecordingConfigurationArn().hashCode());

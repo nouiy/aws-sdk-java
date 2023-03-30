@@ -34,7 +34,11 @@ public class EksPodPropertiesOverride implements Serializable, Cloneable, Struct
      * </p>
      */
     private java.util.List<EksContainerOverride> containers;
-
+    /**
+     * <p>
+     * Metadata about the overrides for the container that's used on the Amazon EKS pod.
+     * </p>
+     */
     private EksMetadata metadata;
 
     /**
@@ -108,7 +112,12 @@ public class EksPodPropertiesOverride implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Metadata about the overrides for the container that's used on the Amazon EKS pod.
+     * </p>
+     * 
      * @param metadata
+     *        Metadata about the overrides for the container that's used on the Amazon EKS pod.
      */
 
     public void setMetadata(EksMetadata metadata) {
@@ -116,7 +125,11 @@ public class EksPodPropertiesOverride implements Serializable, Cloneable, Struct
     }
 
     /**
-     * @return
+     * <p>
+     * Metadata about the overrides for the container that's used on the Amazon EKS pod.
+     * </p>
+     * 
+     * @return Metadata about the overrides for the container that's used on the Amazon EKS pod.
      */
 
     public EksMetadata getMetadata() {
@@ -124,7 +137,12 @@ public class EksPodPropertiesOverride implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Metadata about the overrides for the container that's used on the Amazon EKS pod.
+     * </p>
+     * 
      * @param metadata
+     *        Metadata about the overrides for the container that's used on the Amazon EKS pod.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

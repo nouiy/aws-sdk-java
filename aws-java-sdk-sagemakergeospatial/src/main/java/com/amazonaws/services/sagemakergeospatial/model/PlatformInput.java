@@ -18,7 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The input structure for specifying Platform. Platform refers to the unique name of the specific platform the
+ * instrument is attached to. For satellites it is the name of the satellite, eg. landsat-8 (Landsat-8), sentinel-2a.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/PlatformInput" target="_top">AWS
  *      API Documentation</a>
@@ -26,7 +29,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PlatformInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ComparisonOperator to use with PlatformInput.
+     * </p>
+     */
     private String comparisonOperator;
     /**
      * <p>
@@ -36,9 +43,12 @@ public class PlatformInput implements Serializable, Cloneable, StructuredPojo {
     private String value;
 
     /**
-     * <p/>
+     * <p>
+     * The ComparisonOperator to use with PlatformInput.
+     * </p>
      * 
      * @param comparisonOperator
+     *        The ComparisonOperator to use with PlatformInput.
      * @see ComparisonOperator
      */
 
@@ -47,9 +57,11 @@ public class PlatformInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ComparisonOperator to use with PlatformInput.
+     * </p>
      * 
-     * @return
+     * @return The ComparisonOperator to use with PlatformInput.
      * @see ComparisonOperator
      */
 
@@ -58,9 +70,12 @@ public class PlatformInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ComparisonOperator to use with PlatformInput.
+     * </p>
      * 
      * @param comparisonOperator
+     *        The ComparisonOperator to use with PlatformInput.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComparisonOperator
      */
@@ -71,9 +86,12 @@ public class PlatformInput implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ComparisonOperator to use with PlatformInput.
+     * </p>
      * 
      * @param comparisonOperator
+     *        The ComparisonOperator to use with PlatformInput.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComparisonOperator
      */

@@ -1048,6 +1048,41 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
+     * Retrieves aggregated statistics for your account. If you are a GuardDuty administrator, you can retrieve the
+     * statistics for all the resources associated with the active member accounts in your organization who have enabled
+     * EKS Runtime Monitoring and have the GuardDuty agent running on their EKS nodes.
+     * </p>
+     * 
+     * @param getCoverageStatisticsRequest
+     * @return A Java Future containing the result of the GetCoverageStatistics operation returned by the service.
+     * @sample AmazonGuardDutyAsync.GetCoverageStatistics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetCoverageStatistics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetCoverageStatisticsResult> getCoverageStatisticsAsync(GetCoverageStatisticsRequest getCoverageStatisticsRequest);
+
+    /**
+     * <p>
+     * Retrieves aggregated statistics for your account. If you are a GuardDuty administrator, you can retrieve the
+     * statistics for all the resources associated with the active member accounts in your organization who have enabled
+     * EKS Runtime Monitoring and have the GuardDuty agent running on their EKS nodes.
+     * </p>
+     * 
+     * @param getCoverageStatisticsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetCoverageStatistics operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.GetCoverageStatistics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetCoverageStatistics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetCoverageStatisticsResult> getCoverageStatisticsAsync(GetCoverageStatisticsRequest getCoverageStatisticsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetCoverageStatisticsRequest, GetCoverageStatisticsResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves an Amazon GuardDuty detector specified by the detectorId.
      * </p>
      * <p>
@@ -1533,6 +1568,45 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      */
     java.util.concurrent.Future<InviteMembersResult> inviteMembersAsync(InviteMembersRequest inviteMembersRequest,
             com.amazonaws.handlers.AsyncHandler<InviteMembersRequest, InviteMembersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists coverage details for your GuardDuty account. If you're a GuardDuty administrator, you can retrieve all
+     * resources associated with the active member accounts in your organization.
+     * </p>
+     * <p>
+     * Make sure the accounts have EKS Runtime Monitoring enabled and GuardDuty agent running on their EKS nodes.
+     * </p>
+     * 
+     * @param listCoverageRequest
+     * @return A Java Future containing the result of the ListCoverage operation returned by the service.
+     * @sample AmazonGuardDutyAsync.ListCoverage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListCoverage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListCoverageResult> listCoverageAsync(ListCoverageRequest listCoverageRequest);
+
+    /**
+     * <p>
+     * Lists coverage details for your GuardDuty account. If you're a GuardDuty administrator, you can retrieve all
+     * resources associated with the active member accounts in your organization.
+     * </p>
+     * <p>
+     * Make sure the accounts have EKS Runtime Monitoring enabled and GuardDuty agent running on their EKS nodes.
+     * </p>
+     * 
+     * @param listCoverageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListCoverage operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.ListCoverage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListCoverage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListCoverageResult> listCoverageAsync(ListCoverageRequest listCoverageRequest,
+            com.amazonaws.handlers.AsyncHandler<ListCoverageRequest, ListCoverageResult> asyncHandler);
 
     /**
      * <p>

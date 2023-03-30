@@ -42,7 +42,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
      * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler
-     * to index your own webpages, or webpages that you have authorization to index.</i>
+     * to index your own web pages, or web pages that you have authorization to index.</i>
      * </p>
      */
     private Urls urls;
@@ -51,9 +51,9 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * Specifies the number of levels in a website that you want to crawl.
      * </p>
      * <p>
-     * The first level begins from the website seed or starting point URL. For example, if a website has 3 levels –
-     * index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in
-     * crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1.
+     * The first level begins from the website seed or starting point URL. For example, if a website has three
+     * levels—index level (the seed in this example), sections level, and subsections level—and you are only interested
+     * in crawling information up to the sections level (levels 0-1), you can set your depth to 1.
      * </p>
      * <p>
      * The default crawl depth is set to 2.
@@ -62,10 +62,10 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
     private Integer crawlDepth;
     /**
      * <p>
-     * The maximum number of URLs on a webpage to include when crawling a website. This number is per webpage.
+     * The maximum number of URLs on a web page to include when crawling a website. This number is per web page.
      * </p>
      * <p>
-     * As a website’s webpages are crawled, any URLs the webpages link to are also crawled. URLs on a webpage are
+     * As a website’s web pages are crawled, any URLs the web pages link to are also crawled. URLs on a web page are
      * crawled in order of appearance.
      * </p>
      * <p>
@@ -75,13 +75,13 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
     private Integer maxLinksPerPage;
     /**
      * <p>
-     * The maximum size (in MB) of a webpage or attachment to crawl.
+     * The maximum size (in MB) of a web page or attachment to crawl.
      * </p>
      * <p>
      * Files larger than this size (in MB) are skipped/not crawled.
      * </p>
      * <p>
-     * The default maximum size of a webpage or attachment is set to 50 MB.
+     * The default maximum size of a web page or attachment is set to 50 MB.
      * </p>
      */
     private Float maxContentSizePerPageInMegaBytes;
@@ -158,7 +158,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
      * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler
-     * to index your own webpages, or webpages that you have authorization to index.</i>
+     * to index your own web pages, or web pages that you have authorization to index.</i>
      * </p>
      * 
      * @param urls
@@ -175,7 +175,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *        <p>
      *        <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
      *        Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web
-     *        Crawler to index your own webpages, or webpages that you have authorization to index.</i>
+     *        Crawler to index your own web pages, or web pages that you have authorization to index.</i>
      */
 
     public void setUrls(Urls urls) {
@@ -196,7 +196,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
      * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler
-     * to index your own webpages, or webpages that you have authorization to index.</i>
+     * to index your own web pages, or web pages that you have authorization to index.</i>
      * </p>
      * 
      * @return Specifies the seed or starting point URLs of the websites or the sitemap URLs of the websites you want to
@@ -212,7 +212,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *         <p>
      *         <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
      *         Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web
-     *         Crawler to index your own webpages, or webpages that you have authorization to index.</i>
+     *         Crawler to index your own web pages, or web pages that you have authorization to index.</i>
      */
 
     public Urls getUrls() {
@@ -233,7 +233,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
      * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler
-     * to index your own webpages, or webpages that you have authorization to index.</i>
+     * to index your own web pages, or web pages that you have authorization to index.</i>
      * </p>
      * 
      * @param urls
@@ -250,7 +250,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *        <p>
      *        <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
      *        Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use Amazon Kendra Web
-     *        Crawler to index your own webpages, or webpages that you have authorization to index.</i>
+     *        Crawler to index your own web pages, or web pages that you have authorization to index.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -264,9 +264,9 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * Specifies the number of levels in a website that you want to crawl.
      * </p>
      * <p>
-     * The first level begins from the website seed or starting point URL. For example, if a website has 3 levels –
-     * index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in
-     * crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1.
+     * The first level begins from the website seed or starting point URL. For example, if a website has three
+     * levels—index level (the seed in this example), sections level, and subsections level—and you are only interested
+     * in crawling information up to the sections level (levels 0-1), you can set your depth to 1.
      * </p>
      * <p>
      * The default crawl depth is set to 2.
@@ -275,10 +275,9 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * @param crawlDepth
      *        Specifies the number of levels in a website that you want to crawl.</p>
      *        <p>
-     *        The first level begins from the website seed or starting point URL. For example, if a website has 3 levels
-     *        – index level (i.e. seed in this example), sections level, and subsections level – and you are only
-     *        interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to
-     *        1.
+     *        The first level begins from the website seed or starting point URL. For example, if a website has three
+     *        levels—index level (the seed in this example), sections level, and subsections level—and you are only
+     *        interested in crawling information up to the sections level (levels 0-1), you can set your depth to 1.
      *        </p>
      *        <p>
      *        The default crawl depth is set to 2.
@@ -293,9 +292,9 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * Specifies the number of levels in a website that you want to crawl.
      * </p>
      * <p>
-     * The first level begins from the website seed or starting point URL. For example, if a website has 3 levels –
-     * index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in
-     * crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1.
+     * The first level begins from the website seed or starting point URL. For example, if a website has three
+     * levels—index level (the seed in this example), sections level, and subsections level—and you are only interested
+     * in crawling information up to the sections level (levels 0-1), you can set your depth to 1.
      * </p>
      * <p>
      * The default crawl depth is set to 2.
@@ -303,10 +302,9 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * 
      * @return Specifies the number of levels in a website that you want to crawl.</p>
      *         <p>
-     *         The first level begins from the website seed or starting point URL. For example, if a website has 3
-     *         levels – index level (i.e. seed in this example), sections level, and subsections level – and you are
-     *         only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your
-     *         depth to 1.
+     *         The first level begins from the website seed or starting point URL. For example, if a website has three
+     *         levels—index level (the seed in this example), sections level, and subsections level—and you are only
+     *         interested in crawling information up to the sections level (levels 0-1), you can set your depth to 1.
      *         </p>
      *         <p>
      *         The default crawl depth is set to 2.
@@ -321,9 +319,9 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * Specifies the number of levels in a website that you want to crawl.
      * </p>
      * <p>
-     * The first level begins from the website seed or starting point URL. For example, if a website has 3 levels –
-     * index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in
-     * crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1.
+     * The first level begins from the website seed or starting point URL. For example, if a website has three
+     * levels—index level (the seed in this example), sections level, and subsections level—and you are only interested
+     * in crawling information up to the sections level (levels 0-1), you can set your depth to 1.
      * </p>
      * <p>
      * The default crawl depth is set to 2.
@@ -332,10 +330,9 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * @param crawlDepth
      *        Specifies the number of levels in a website that you want to crawl.</p>
      *        <p>
-     *        The first level begins from the website seed or starting point URL. For example, if a website has 3 levels
-     *        – index level (i.e. seed in this example), sections level, and subsections level – and you are only
-     *        interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to
-     *        1.
+     *        The first level begins from the website seed or starting point URL. For example, if a website has three
+     *        levels—index level (the seed in this example), sections level, and subsections level—and you are only
+     *        interested in crawling information up to the sections level (levels 0-1), you can set your depth to 1.
      *        </p>
      *        <p>
      *        The default crawl depth is set to 2.
@@ -349,10 +346,10 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The maximum number of URLs on a webpage to include when crawling a website. This number is per webpage.
+     * The maximum number of URLs on a web page to include when crawling a website. This number is per web page.
      * </p>
      * <p>
-     * As a website’s webpages are crawled, any URLs the webpages link to are also crawled. URLs on a webpage are
+     * As a website’s web pages are crawled, any URLs the web pages link to are also crawled. URLs on a web page are
      * crawled in order of appearance.
      * </p>
      * <p>
@@ -360,11 +357,11 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param maxLinksPerPage
-     *        The maximum number of URLs on a webpage to include when crawling a website. This number is per
-     *        webpage.</p>
+     *        The maximum number of URLs on a web page to include when crawling a website. This number is per web
+     *        page.</p>
      *        <p>
-     *        As a website’s webpages are crawled, any URLs the webpages link to are also crawled. URLs on a webpage are
-     *        crawled in order of appearance.
+     *        As a website’s web pages are crawled, any URLs the web pages link to are also crawled. URLs on a web page
+     *        are crawled in order of appearance.
      *        </p>
      *        <p>
      *        The default maximum links per page is 100.
@@ -376,20 +373,20 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The maximum number of URLs on a webpage to include when crawling a website. This number is per webpage.
+     * The maximum number of URLs on a web page to include when crawling a website. This number is per web page.
      * </p>
      * <p>
-     * As a website’s webpages are crawled, any URLs the webpages link to are also crawled. URLs on a webpage are
+     * As a website’s web pages are crawled, any URLs the web pages link to are also crawled. URLs on a web page are
      * crawled in order of appearance.
      * </p>
      * <p>
      * The default maximum links per page is 100.
      * </p>
      * 
-     * @return The maximum number of URLs on a webpage to include when crawling a website. This number is per
-     *         webpage.</p>
+     * @return The maximum number of URLs on a web page to include when crawling a website. This number is per web
+     *         page.</p>
      *         <p>
-     *         As a website’s webpages are crawled, any URLs the webpages link to are also crawled. URLs on a webpage
+     *         As a website’s web pages are crawled, any URLs the web pages link to are also crawled. URLs on a web page
      *         are crawled in order of appearance.
      *         </p>
      *         <p>
@@ -402,10 +399,10 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The maximum number of URLs on a webpage to include when crawling a website. This number is per webpage.
+     * The maximum number of URLs on a web page to include when crawling a website. This number is per web page.
      * </p>
      * <p>
-     * As a website’s webpages are crawled, any URLs the webpages link to are also crawled. URLs on a webpage are
+     * As a website’s web pages are crawled, any URLs the web pages link to are also crawled. URLs on a web page are
      * crawled in order of appearance.
      * </p>
      * <p>
@@ -413,11 +410,11 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param maxLinksPerPage
-     *        The maximum number of URLs on a webpage to include when crawling a website. This number is per
-     *        webpage.</p>
+     *        The maximum number of URLs on a web page to include when crawling a website. This number is per web
+     *        page.</p>
      *        <p>
-     *        As a website’s webpages are crawled, any URLs the webpages link to are also crawled. URLs on a webpage are
-     *        crawled in order of appearance.
+     *        As a website’s web pages are crawled, any URLs the web pages link to are also crawled. URLs on a web page
+     *        are crawled in order of appearance.
      *        </p>
      *        <p>
      *        The default maximum links per page is 100.
@@ -431,22 +428,22 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The maximum size (in MB) of a webpage or attachment to crawl.
+     * The maximum size (in MB) of a web page or attachment to crawl.
      * </p>
      * <p>
      * Files larger than this size (in MB) are skipped/not crawled.
      * </p>
      * <p>
-     * The default maximum size of a webpage or attachment is set to 50 MB.
+     * The default maximum size of a web page or attachment is set to 50 MB.
      * </p>
      * 
      * @param maxContentSizePerPageInMegaBytes
-     *        The maximum size (in MB) of a webpage or attachment to crawl.</p>
+     *        The maximum size (in MB) of a web page or attachment to crawl.</p>
      *        <p>
      *        Files larger than this size (in MB) are skipped/not crawled.
      *        </p>
      *        <p>
-     *        The default maximum size of a webpage or attachment is set to 50 MB.
+     *        The default maximum size of a web page or attachment is set to 50 MB.
      */
 
     public void setMaxContentSizePerPageInMegaBytes(Float maxContentSizePerPageInMegaBytes) {
@@ -455,21 +452,21 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The maximum size (in MB) of a webpage or attachment to crawl.
+     * The maximum size (in MB) of a web page or attachment to crawl.
      * </p>
      * <p>
      * Files larger than this size (in MB) are skipped/not crawled.
      * </p>
      * <p>
-     * The default maximum size of a webpage or attachment is set to 50 MB.
+     * The default maximum size of a web page or attachment is set to 50 MB.
      * </p>
      * 
-     * @return The maximum size (in MB) of a webpage or attachment to crawl.</p>
+     * @return The maximum size (in MB) of a web page or attachment to crawl.</p>
      *         <p>
      *         Files larger than this size (in MB) are skipped/not crawled.
      *         </p>
      *         <p>
-     *         The default maximum size of a webpage or attachment is set to 50 MB.
+     *         The default maximum size of a web page or attachment is set to 50 MB.
      */
 
     public Float getMaxContentSizePerPageInMegaBytes() {
@@ -478,22 +475,22 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The maximum size (in MB) of a webpage or attachment to crawl.
+     * The maximum size (in MB) of a web page or attachment to crawl.
      * </p>
      * <p>
      * Files larger than this size (in MB) are skipped/not crawled.
      * </p>
      * <p>
-     * The default maximum size of a webpage or attachment is set to 50 MB.
+     * The default maximum size of a web page or attachment is set to 50 MB.
      * </p>
      * 
      * @param maxContentSizePerPageInMegaBytes
-     *        The maximum size (in MB) of a webpage or attachment to crawl.</p>
+     *        The maximum size (in MB) of a web page or attachment to crawl.</p>
      *        <p>
      *        Files larger than this size (in MB) are skipped/not crawled.
      *        </p>
      *        <p>
-     *        The default maximum size of a webpage or attachment is set to 50 MB.
+     *        The default maximum size of a web page or attachment is set to 50 MB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

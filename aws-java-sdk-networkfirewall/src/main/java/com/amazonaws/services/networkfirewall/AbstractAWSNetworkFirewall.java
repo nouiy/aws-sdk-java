@@ -53,6 +53,11 @@ public class AbstractAWSNetworkFirewall implements AWSNetworkFirewall {
     }
 
     @Override
+    public CreateTLSInspectionConfigurationResult createTLSInspectionConfiguration(CreateTLSInspectionConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteFirewallResult deleteFirewall(DeleteFirewallRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -69,6 +74,11 @@ public class AbstractAWSNetworkFirewall implements AWSNetworkFirewall {
 
     @Override
     public DeleteRuleGroupResult deleteRuleGroup(DeleteRuleGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteTLSInspectionConfigurationResult deleteTLSInspectionConfiguration(DeleteTLSInspectionConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -103,6 +113,11 @@ public class AbstractAWSNetworkFirewall implements AWSNetworkFirewall {
     }
 
     @Override
+    public DescribeTLSInspectionConfigurationResult describeTLSInspectionConfiguration(DescribeTLSInspectionConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisassociateSubnetsResult disassociateSubnets(DisassociateSubnetsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -119,6 +134,11 @@ public class AbstractAWSNetworkFirewall implements AWSNetworkFirewall {
 
     @Override
     public ListRuleGroupsResult listRuleGroups(ListRuleGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTLSInspectionConfigurationsResult listTLSInspectionConfigurations(ListTLSInspectionConfigurationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -179,6 +199,11 @@ public class AbstractAWSNetworkFirewall implements AWSNetworkFirewall {
 
     @Override
     public UpdateSubnetChangeProtectionResult updateSubnetChangeProtection(UpdateSubnetChangeProtectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateTLSInspectionConfigurationResult updateTLSInspectionConfiguration(UpdateTLSInspectionConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

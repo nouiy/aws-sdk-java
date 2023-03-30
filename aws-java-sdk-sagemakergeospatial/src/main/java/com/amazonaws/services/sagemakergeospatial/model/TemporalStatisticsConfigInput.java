@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure representing the configuration for Temporal Statistics operation.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/TemporalStatisticsConfigInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,17 +28,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class TemporalStatisticsConfigInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The input for the temporal statistics grouping by time frequency option.
+     * </p>
+     */
     private String groupBy;
-    /** <p/> */
+    /**
+     * <p>
+     * The list of the statistics method options.
+     * </p>
+     */
     private java.util.List<String> statistics;
-    /** <p/> */
+    /**
+     * <p>
+     * The list of target band names for the temporal statistic to calculate.
+     * </p>
+     */
     private java.util.List<String> targetBands;
 
     /**
-     * <p/>
+     * <p>
+     * The input for the temporal statistics grouping by time frequency option.
+     * </p>
      * 
      * @param groupBy
+     *        The input for the temporal statistics grouping by time frequency option.
      * @see GroupBy
      */
 
@@ -45,9 +62,11 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input for the temporal statistics grouping by time frequency option.
+     * </p>
      * 
-     * @return
+     * @return The input for the temporal statistics grouping by time frequency option.
      * @see GroupBy
      */
 
@@ -56,9 +75,12 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input for the temporal statistics grouping by time frequency option.
+     * </p>
      * 
      * @param groupBy
+     *        The input for the temporal statistics grouping by time frequency option.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GroupBy
      */
@@ -69,9 +91,12 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input for the temporal statistics grouping by time frequency option.
+     * </p>
      * 
      * @param groupBy
+     *        The input for the temporal statistics grouping by time frequency option.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GroupBy
      */
@@ -82,9 +107,11 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of the statistics method options.
+     * </p>
      * 
-     * @return
+     * @return The list of the statistics method options.
      * @see TemporalStatistics
      */
 
@@ -93,9 +120,12 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of the statistics method options.
+     * </p>
      * 
      * @param statistics
+     *        The list of the statistics method options.
      * @see TemporalStatistics
      */
 
@@ -109,7 +139,9 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of the statistics method options.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setStatistics(java.util.Collection)} or {@link #withStatistics(java.util.Collection)} if you want to
@@ -117,6 +149,7 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
      * </p>
      * 
      * @param statistics
+     *        The list of the statistics method options.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TemporalStatistics
      */
@@ -132,9 +165,12 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of the statistics method options.
+     * </p>
      * 
      * @param statistics
+     *        The list of the statistics method options.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TemporalStatistics
      */
@@ -145,9 +181,12 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of the statistics method options.
+     * </p>
      * 
      * @param statistics
+     *        The list of the statistics method options.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TemporalStatistics
      */
@@ -166,9 +205,11 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of target band names for the temporal statistic to calculate.
+     * </p>
      * 
-     * @return
+     * @return The list of target band names for the temporal statistic to calculate.
      */
 
     public java.util.List<String> getTargetBands() {
@@ -176,9 +217,12 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of target band names for the temporal statistic to calculate.
+     * </p>
      * 
      * @param targetBands
+     *        The list of target band names for the temporal statistic to calculate.
      */
 
     public void setTargetBands(java.util.Collection<String> targetBands) {
@@ -191,7 +235,9 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of target band names for the temporal statistic to calculate.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTargetBands(java.util.Collection)} or {@link #withTargetBands(java.util.Collection)} if you want to
@@ -199,6 +245,7 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
      * </p>
      * 
      * @param targetBands
+     *        The list of target band names for the temporal statistic to calculate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -213,9 +260,12 @@ public class TemporalStatisticsConfigInput implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of target band names for the temporal statistic to calculate.
+     * </p>
      * 
      * @param targetBands
+     *        The list of target band names for the temporal statistic to calculate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

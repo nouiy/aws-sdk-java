@@ -15,13 +15,19 @@ package com.amazonaws.services.sagemakergeospatial.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * Updating or deleting a resource can cause an inconsistent state.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ConflictException extends com.amazonaws.services.sagemakergeospatial.model.AmazonSageMakerGeospatialException {
     private static final long serialVersionUID = 1L;
 
-    /** <p/> */
+    /**
+     * <p>
+     * Identifier of the resource affected.
+     * </p>
+     */
     private String resourceId;
 
     /**
@@ -35,9 +41,12 @@ public class ConflictException extends com.amazonaws.services.sagemakergeospatia
     }
 
     /**
-     * <p/>
+     * <p>
+     * Identifier of the resource affected.
+     * </p>
      * 
      * @param resourceId
+     *        Identifier of the resource affected.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ResourceId")
@@ -46,9 +55,11 @@ public class ConflictException extends com.amazonaws.services.sagemakergeospatia
     }
 
     /**
-     * <p/>
+     * <p>
+     * Identifier of the resource affected.
+     * </p>
      * 
-     * @return
+     * @return Identifier of the resource affected.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ResourceId")
@@ -57,9 +68,12 @@ public class ConflictException extends com.amazonaws.services.sagemakergeospatia
     }
 
     /**
-     * <p/>
+     * <p>
+     * Identifier of the resource affected.
+     * </p>
      * 
      * @param resourceId
+     *        Identifier of the resource affected.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -62,14 +62,13 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
     private java.util.List<Filter> filters;
     /**
      * <p>
-     * The maximum number of results to return in the list.
+     * The maximum items to return in a request.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * Provides a token for pagination, which determines where to begin the next set of results when the current set
-     * reaches the maximum for one request.
+     * A token to specify where to start paginating. This is the NextToken from a previously truncated response.
      * </p>
      */
     private String nextToken;
@@ -385,11 +384,11 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The maximum number of results to return in the list.
+     * The maximum items to return in a request.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to return in the list.
+     *        The maximum items to return in a request.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -398,10 +397,10 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The maximum number of results to return in the list.
+     * The maximum items to return in a request.
      * </p>
      * 
-     * @return The maximum number of results to return in the list.
+     * @return The maximum items to return in a request.
      */
 
     public Integer getMaxResults() {
@@ -410,11 +409,11 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The maximum number of results to return in the list.
+     * The maximum items to return in a request.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to return in the list.
+     *        The maximum items to return in a request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -425,13 +424,11 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Provides a token for pagination, which determines where to begin the next set of results when the current set
-     * reaches the maximum for one request.
+     * A token to specify where to start paginating. This is the NextToken from a previously truncated response.
      * </p>
      * 
      * @param nextToken
-     *        Provides a token for pagination, which determines where to begin the next set of results when the current
-     *        set reaches the maximum for one request.
+     *        A token to specify where to start paginating. This is the NextToken from a previously truncated response.
      */
 
     public void setNextToken(String nextToken) {
@@ -440,12 +437,10 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Provides a token for pagination, which determines where to begin the next set of results when the current set
-     * reaches the maximum for one request.
+     * A token to specify where to start paginating. This is the NextToken from a previously truncated response.
      * </p>
      * 
-     * @return Provides a token for pagination, which determines where to begin the next set of results when the current
-     *         set reaches the maximum for one request.
+     * @return A token to specify where to start paginating. This is the NextToken from a previously truncated response.
      */
 
     public String getNextToken() {
@@ -454,13 +449,11 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Provides a token for pagination, which determines where to begin the next set of results when the current set
-     * reaches the maximum for one request.
+     * A token to specify where to start paginating. This is the NextToken from a previously truncated response.
      * </p>
      * 
      * @param nextToken
-     *        Provides a token for pagination, which determines where to begin the next set of results when the current
-     *        set reaches the maximum for one request.
+     *        A token to specify where to start paginating. This is the NextToken from a previously truncated response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

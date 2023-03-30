@@ -80,26 +80,11 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.imagebuilder.model.transform.InvalidParameterExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterValueException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.imagebuilder.model.transform.InvalidParameterValueExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceInUseException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.imagebuilder.model.transform.ResourceInUseExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidRequestException").withExceptionUnmarshaller(
                                     com.amazonaws.services.imagebuilder.model.transform.InvalidRequestExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ServiceException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.imagebuilder.model.transform.ServiceExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.imagebuilder.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("CallRateLimitExceededException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.imagebuilder.model.transform.CallRateLimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.imagebuilder.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
@@ -113,12 +98,6 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
                             new JsonErrorShapeMetadata().withErrorCode("IdempotentParameterMismatchException").withExceptionUnmarshaller(
                                     com.amazonaws.services.imagebuilder.model.transform.IdempotentParameterMismatchExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterCombinationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.imagebuilder.model.transform.InvalidParameterCombinationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ServiceUnavailableException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.imagebuilder.model.transform.ServiceUnavailableExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ForbiddenException").withExceptionUnmarshaller(
                                     com.amazonaws.services.imagebuilder.model.transform.ForbiddenExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -130,6 +109,27 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidPaginationTokenException").withExceptionUnmarshaller(
                                     com.amazonaws.services.imagebuilder.model.transform.InvalidPaginationTokenExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.imagebuilder.model.transform.InvalidParameterExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterValueException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.imagebuilder.model.transform.InvalidParameterValueExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceInUseException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.imagebuilder.model.transform.ResourceInUseExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ServiceException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.imagebuilder.model.transform.ServiceExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("CallRateLimitExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.imagebuilder.model.transform.CallRateLimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterCombinationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.imagebuilder.model.transform.InvalidParameterCombinationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ServiceUnavailableException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.imagebuilder.model.transform.ServiceUnavailableExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.imagebuilder.model.AWSimagebuilderException.class));
 
     public static AWSimagebuilderClientBuilder builder() {
@@ -195,7 +195,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.
@@ -284,7 +284,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.
@@ -367,7 +367,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.
@@ -452,7 +452,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.
@@ -540,7 +540,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.
@@ -619,7 +619,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.
@@ -700,7 +700,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.
@@ -784,7 +784,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.
@@ -868,7 +868,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -940,7 +940,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -1011,7 +1011,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      *         user that doesn't have permissions to use the action or resource, or specifying an invalid resource
      *         identifier.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws ForbiddenException
@@ -1111,7 +1111,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      *         user that doesn't have permissions to use the action or resource, or specifying an invalid resource
      *         identifier.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws ForbiddenException
@@ -1185,7 +1185,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -1257,7 +1257,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -1329,7 +1329,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -1404,7 +1404,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -1471,7 +1471,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ResourceNotFoundException
      *         At least one of the resources referenced by your request does not exist.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -1540,7 +1540,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -1605,7 +1605,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ResourceNotFoundException
      *         At least one of the resources referenced by your request does not exist.
      * @throws ForbiddenException
@@ -1678,7 +1678,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -1749,7 +1749,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -1818,7 +1818,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -1885,7 +1885,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ResourceNotFoundException
      *         At least one of the resources referenced by your request does not exist.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -1954,7 +1954,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -2019,7 +2019,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ResourceNotFoundException
      *         At least one of the resources referenced by your request does not exist.
      * @throws ForbiddenException
@@ -2091,7 +2091,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ForbiddenException
      *         You are not authorized to perform the requested operation.
      * @throws CallRateLimitExceededException
@@ -2148,6 +2148,146 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Get the runtime information that was logged for a specific runtime instance of the workflow.
+     * </p>
+     * 
+     * @param getWorkflowExecutionRequest
+     * @return Result of the GetWorkflowExecution operation returned by the service.
+     * @throws ServiceException
+     *         This exception is thrown when the service encounters an unrecoverable exception.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an invalid resource
+     *         identifier.
+     * @throws ServiceUnavailableException
+     *         The service is unable to process your request at this time.
+     * @throws InvalidRequestException
+     *         You have requested an action that that the service doesn't support.
+     * @throws ForbiddenException
+     *         You are not authorized to perform the requested operation.
+     * @throws CallRateLimitExceededException
+     *         You have exceeded the permitted request rate for the specific operation.
+     * @sample AWSimagebuilder.GetWorkflowExecution
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/GetWorkflowExecution"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetWorkflowExecutionResult getWorkflowExecution(GetWorkflowExecutionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetWorkflowExecution(request);
+    }
+
+    @SdkInternalApi
+    final GetWorkflowExecutionResult executeGetWorkflowExecution(GetWorkflowExecutionRequest getWorkflowExecutionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getWorkflowExecutionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetWorkflowExecutionRequest> request = null;
+        Response<GetWorkflowExecutionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetWorkflowExecutionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getWorkflowExecutionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "imagebuilder");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetWorkflowExecution");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetWorkflowExecutionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetWorkflowExecutionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get the runtime information that was logged for a specific runtime instance of the workflow step.
+     * </p>
+     * 
+     * @param getWorkflowStepExecutionRequest
+     * @return Result of the GetWorkflowStepExecution operation returned by the service.
+     * @throws ServiceException
+     *         This exception is thrown when the service encounters an unrecoverable exception.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an invalid resource
+     *         identifier.
+     * @throws ServiceUnavailableException
+     *         The service is unable to process your request at this time.
+     * @throws InvalidRequestException
+     *         You have requested an action that that the service doesn't support.
+     * @throws ForbiddenException
+     *         You are not authorized to perform the requested operation.
+     * @throws CallRateLimitExceededException
+     *         You have exceeded the permitted request rate for the specific operation.
+     * @sample AWSimagebuilder.GetWorkflowStepExecution
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/GetWorkflowStepExecution"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetWorkflowStepExecutionResult getWorkflowStepExecution(GetWorkflowStepExecutionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetWorkflowStepExecution(request);
+    }
+
+    @SdkInternalApi
+    final GetWorkflowStepExecutionResult executeGetWorkflowStepExecution(GetWorkflowStepExecutionRequest getWorkflowStepExecutionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getWorkflowStepExecutionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetWorkflowStepExecutionRequest> request = null;
+        Response<GetWorkflowStepExecutionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetWorkflowStepExecutionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getWorkflowStepExecutionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "imagebuilder");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetWorkflowStepExecution");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetWorkflowStepExecutionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetWorkflowStepExecutionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Imports a component and transforms its data into a component document.
      * </p>
      * 
@@ -2162,7 +2302,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.
@@ -2323,7 +2463,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidPaginationTokenException
      *         You have provided an invalid pagination token in your request.
      * @throws ForbiddenException
@@ -2409,7 +2549,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidPaginationTokenException
      *         You have provided an invalid pagination token in your request.
      * @throws ForbiddenException
@@ -2480,7 +2620,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidPaginationTokenException
      *         You have provided an invalid pagination token in your request.
      * @throws ForbiddenException
@@ -2551,7 +2691,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidPaginationTokenException
      *         You have provided an invalid pagination token in your request.
      * @throws ForbiddenException
@@ -2624,7 +2764,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidPaginationTokenException
      *         You have provided an invalid pagination token in your request.
      * @throws ForbiddenException
@@ -2697,7 +2837,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidPaginationTokenException
      *         You have provided an invalid pagination token in your request.
      * @throws ResourceNotFoundException
@@ -2770,7 +2910,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidPaginationTokenException
      *         You have provided an invalid pagination token in your request.
      * @throws ResourceNotFoundException
@@ -2845,7 +2985,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidPaginationTokenException
      *         You have provided an invalid pagination token in your request.
      * @throws ForbiddenException
@@ -2916,7 +3056,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidPaginationTokenException
      *         You have provided an invalid pagination token in your request.
      * @throws ForbiddenException
@@ -2973,6 +3113,180 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Returns a list of image scan aggregations for your account. You can filter by the type of key that Image Builder
+     * uses to group results. For example, if you want to get a list of findings by severity level for one of your
+     * pipelines, you might specify your pipeline with the <code>imagePipelineArn</code> filter. If you don't specify a
+     * filter, Image Builder returns an aggregation for your account.
+     * </p>
+     * <p>
+     * To streamline results, you can use the following filters in your request:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>accountId</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>imageBuildVersionArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>imagePipelineArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vulnerabilityId</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listImageScanFindingAggregationsRequest
+     * @return Result of the ListImageScanFindingAggregations operation returned by the service.
+     * @throws ServiceException
+     *         This exception is thrown when the service encounters an unrecoverable exception.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an invalid resource
+     *         identifier.
+     * @throws ServiceUnavailableException
+     *         The service is unable to process your request at this time.
+     * @throws InvalidRequestException
+     *         You have requested an action that that the service doesn't support.
+     * @throws InvalidPaginationTokenException
+     *         You have provided an invalid pagination token in your request.
+     * @throws ForbiddenException
+     *         You are not authorized to perform the requested operation.
+     * @throws CallRateLimitExceededException
+     *         You have exceeded the permitted request rate for the specific operation.
+     * @sample AWSimagebuilder.ListImageScanFindingAggregations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListImageScanFindingAggregations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListImageScanFindingAggregationsResult listImageScanFindingAggregations(ListImageScanFindingAggregationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListImageScanFindingAggregations(request);
+    }
+
+    @SdkInternalApi
+    final ListImageScanFindingAggregationsResult executeListImageScanFindingAggregations(
+            ListImageScanFindingAggregationsRequest listImageScanFindingAggregationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listImageScanFindingAggregationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListImageScanFindingAggregationsRequest> request = null;
+        Response<ListImageScanFindingAggregationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListImageScanFindingAggregationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listImageScanFindingAggregationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "imagebuilder");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListImageScanFindingAggregations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListImageScanFindingAggregationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListImageScanFindingAggregationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of image scan findings for your account.
+     * </p>
+     * 
+     * @param listImageScanFindingsRequest
+     * @return Result of the ListImageScanFindings operation returned by the service.
+     * @throws ServiceException
+     *         This exception is thrown when the service encounters an unrecoverable exception.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an invalid resource
+     *         identifier.
+     * @throws ServiceUnavailableException
+     *         The service is unable to process your request at this time.
+     * @throws InvalidRequestException
+     *         You have requested an action that that the service doesn't support.
+     * @throws InvalidPaginationTokenException
+     *         You have provided an invalid pagination token in your request.
+     * @throws ForbiddenException
+     *         You are not authorized to perform the requested operation.
+     * @throws CallRateLimitExceededException
+     *         You have exceeded the permitted request rate for the specific operation.
+     * @sample AWSimagebuilder.ListImageScanFindings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListImageScanFindings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListImageScanFindingsResult listImageScanFindings(ListImageScanFindingsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListImageScanFindings(request);
+    }
+
+    @SdkInternalApi
+    final ListImageScanFindingsResult executeListImageScanFindings(ListImageScanFindingsRequest listImageScanFindingsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listImageScanFindingsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListImageScanFindingsRequest> request = null;
+        Response<ListImageScanFindingsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListImageScanFindingsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listImageScanFindingsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "imagebuilder");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListImageScanFindings");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListImageScanFindingsResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new ListImageScanFindingsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the list of images that you have access to. Newly created images can take up to two minutes to appear in
      * the ListImages API Results.
      * </p>
@@ -2988,7 +3302,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidPaginationTokenException
      *         You have provided an invalid pagination token in your request.
      * @throws ForbiddenException
@@ -3059,7 +3373,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidPaginationTokenException
      *         You have provided an invalid pagination token in your request.
      * @throws ForbiddenException
@@ -3180,6 +3494,151 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Returns a list of workflow runtime instance metadata objects for a specific image build version.
+     * </p>
+     * 
+     * @param listWorkflowExecutionsRequest
+     * @return Result of the ListWorkflowExecutions operation returned by the service.
+     * @throws ServiceException
+     *         This exception is thrown when the service encounters an unrecoverable exception.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an invalid resource
+     *         identifier.
+     * @throws ServiceUnavailableException
+     *         The service is unable to process your request at this time.
+     * @throws InvalidRequestException
+     *         You have requested an action that that the service doesn't support.
+     * @throws InvalidPaginationTokenException
+     *         You have provided an invalid pagination token in your request.
+     * @throws ForbiddenException
+     *         You are not authorized to perform the requested operation.
+     * @throws CallRateLimitExceededException
+     *         You have exceeded the permitted request rate for the specific operation.
+     * @sample AWSimagebuilder.ListWorkflowExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListWorkflowExecutions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListWorkflowExecutionsResult listWorkflowExecutions(ListWorkflowExecutionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListWorkflowExecutions(request);
+    }
+
+    @SdkInternalApi
+    final ListWorkflowExecutionsResult executeListWorkflowExecutions(ListWorkflowExecutionsRequest listWorkflowExecutionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listWorkflowExecutionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListWorkflowExecutionsRequest> request = null;
+        Response<ListWorkflowExecutionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListWorkflowExecutionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listWorkflowExecutionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "imagebuilder");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListWorkflowExecutions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListWorkflowExecutionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListWorkflowExecutionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Shows runtime data for each step in a runtime instance of the workflow that you specify in the request.
+     * </p>
+     * 
+     * @param listWorkflowStepExecutionsRequest
+     * @return Result of the ListWorkflowStepExecutions operation returned by the service.
+     * @throws ServiceException
+     *         This exception is thrown when the service encounters an unrecoverable exception.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an invalid resource
+     *         identifier.
+     * @throws ServiceUnavailableException
+     *         The service is unable to process your request at this time.
+     * @throws InvalidRequestException
+     *         You have requested an action that that the service doesn't support.
+     * @throws InvalidPaginationTokenException
+     *         You have provided an invalid pagination token in your request.
+     * @throws ForbiddenException
+     *         You are not authorized to perform the requested operation.
+     * @throws CallRateLimitExceededException
+     *         You have exceeded the permitted request rate for the specific operation.
+     * @sample AWSimagebuilder.ListWorkflowStepExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ListWorkflowStepExecutions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListWorkflowStepExecutionsResult listWorkflowStepExecutions(ListWorkflowStepExecutionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListWorkflowStepExecutions(request);
+    }
+
+    @SdkInternalApi
+    final ListWorkflowStepExecutionsResult executeListWorkflowStepExecutions(ListWorkflowStepExecutionsRequest listWorkflowStepExecutionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listWorkflowStepExecutionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListWorkflowStepExecutionsRequest> request = null;
+        Response<ListWorkflowStepExecutionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListWorkflowStepExecutionsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listWorkflowStepExecutionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "imagebuilder");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListWorkflowStepExecutions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListWorkflowStepExecutionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListWorkflowStepExecutionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Applies a policy to a component. We recommend that you call the RAM API <a
      * href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a>
      * to share resources. If you call the Image Builder API <code>PutComponentPolicy</code>, you must also call the RAM
@@ -3199,7 +3658,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidParameterValueException
      *         The value that you provided for the specified parameter is invalid.
      * @throws ResourceNotFoundException
@@ -3277,7 +3736,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidParameterValueException
      *         The value that you provided for the specified parameter is invalid.
      * @throws ResourceNotFoundException
@@ -3357,7 +3816,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidParameterValueException
      *         The value that you provided for the specified parameter is invalid.
      * @throws ResourceNotFoundException
@@ -3436,7 +3895,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws InvalidParameterValueException
      *         The value that you provided for the specified parameter is invalid.
      * @throws ResourceNotFoundException
@@ -3509,7 +3968,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws ResourceNotFoundException
      *         At least one of the resources referenced by your request does not exist.
      * @throws IdempotentParameterMismatchException
@@ -3711,7 +4170,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.
@@ -3797,7 +4256,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.
@@ -3873,7 +4332,7 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
      * @throws ServiceUnavailableException
      *         The service is unable to process your request at this time.
      * @throws InvalidRequestException
-     *         You have made a request for an action that is not supported by the service.
+     *         You have requested an action that that the service doesn't support.
      * @throws IdempotentParameterMismatchException
      *         You have specified a client token for an operation using parameter values that differ from a previous
      *         request that used the same client token.

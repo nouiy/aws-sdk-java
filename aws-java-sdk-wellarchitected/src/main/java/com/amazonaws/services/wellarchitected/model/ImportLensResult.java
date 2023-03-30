@@ -25,7 +25,7 @@ public class ImportLensResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The ARN for the lens.
+     * The ARN for the lens that was created or updated.
      * </p>
      */
     private String lensArn;
@@ -38,11 +38,11 @@ public class ImportLensResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The ARN for the lens.
+     * The ARN for the lens that was created or updated.
      * </p>
      * 
      * @param lensArn
-     *        The ARN for the lens.
+     *        The ARN for the lens that was created or updated.
      */
 
     public void setLensArn(String lensArn) {
@@ -51,10 +51,10 @@ public class ImportLensResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The ARN for the lens.
+     * The ARN for the lens that was created or updated.
      * </p>
      * 
-     * @return The ARN for the lens.
+     * @return The ARN for the lens that was created or updated.
      */
 
     public String getLensArn() {
@@ -63,11 +63,11 @@ public class ImportLensResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The ARN for the lens.
+     * The ARN for the lens that was created or updated.
      * </p>
      * 
      * @param lensArn
-     *        The ARN for the lens.
+     *        The ARN for the lens that was created or updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

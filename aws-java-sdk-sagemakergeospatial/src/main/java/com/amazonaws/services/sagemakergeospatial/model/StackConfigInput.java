@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The input structure for Stacking Operation.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/StackConfigInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +28,28 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class StackConfigInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing output resolution (in target georeferenced units) of the result of stacking operation.
+     * </p>
+     */
     private OutputResolutionStackInput outputResolution;
-    /** <p/> */
+    /**
+     * <p>
+     * A list of bands to be stacked in the specified order. When the parameter is not provided, all the available bands
+     * in the data collection are stacked in the alphabetical order of their asset names.
+     * </p>
+     */
     private java.util.List<String> targetBands;
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing output resolution (in target georeferenced units) of the result of stacking operation.
+     * </p>
      * 
      * @param outputResolution
+     *        The structure representing output resolution (in target georeferenced units) of the result of stacking
+     *        operation.
      */
 
     public void setOutputResolution(OutputResolutionStackInput outputResolution) {
@@ -42,9 +57,12 @@ public class StackConfigInput implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing output resolution (in target georeferenced units) of the result of stacking operation.
+     * </p>
      * 
-     * @return
+     * @return The structure representing output resolution (in target georeferenced units) of the result of stacking
+     *         operation.
      */
 
     public OutputResolutionStackInput getOutputResolution() {
@@ -52,9 +70,13 @@ public class StackConfigInput implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing output resolution (in target georeferenced units) of the result of stacking operation.
+     * </p>
      * 
      * @param outputResolution
+     *        The structure representing output resolution (in target georeferenced units) of the result of stacking
+     *        operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,9 +86,13 @@ public class StackConfigInput implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * A list of bands to be stacked in the specified order. When the parameter is not provided, all the available bands
+     * in the data collection are stacked in the alphabetical order of their asset names.
+     * </p>
      * 
-     * @return
+     * @return A list of bands to be stacked in the specified order. When the parameter is not provided, all the
+     *         available bands in the data collection are stacked in the alphabetical order of their asset names.
      */
 
     public java.util.List<String> getTargetBands() {
@@ -74,9 +100,14 @@ public class StackConfigInput implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * A list of bands to be stacked in the specified order. When the parameter is not provided, all the available bands
+     * in the data collection are stacked in the alphabetical order of their asset names.
+     * </p>
      * 
      * @param targetBands
+     *        A list of bands to be stacked in the specified order. When the parameter is not provided, all the
+     *        available bands in the data collection are stacked in the alphabetical order of their asset names.
      */
 
     public void setTargetBands(java.util.Collection<String> targetBands) {
@@ -89,7 +120,10 @@ public class StackConfigInput implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * A list of bands to be stacked in the specified order. When the parameter is not provided, all the available bands
+     * in the data collection are stacked in the alphabetical order of their asset names.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTargetBands(java.util.Collection)} or {@link #withTargetBands(java.util.Collection)} if you want to
@@ -97,6 +131,8 @@ public class StackConfigInput implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param targetBands
+     *        A list of bands to be stacked in the specified order. When the parameter is not provided, all the
+     *        available bands in the data collection are stacked in the alphabetical order of their asset names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,9 +147,14 @@ public class StackConfigInput implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * A list of bands to be stacked in the specified order. When the parameter is not provided, all the available bands
+     * in the data collection are stacked in the alphabetical order of their asset names.
+     * </p>
      * 
      * @param targetBands
+     *        A list of bands to be stacked in the specified order. When the parameter is not provided, all the
+     *        available bands in the data collection are stacked in the alphabetical order of their asset names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

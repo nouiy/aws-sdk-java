@@ -106,13 +106,7 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> targetGroupARNs;
     /**
      * <p>
-     * Determines whether any additional health checks are performed on the instances in this group. Amazon EC2 health
-     * checks are always on.
-     * </p>
-     * <p>
-     * The valid values are <code>EC2</code> (default), <code>ELB</code>, and <code>VPC_LATTICE</code>. The
-     * <code>VPC_LATTICE</code> health check type is reserved for use with VPC Lattice, which is in preview release and
-     * is subject to change.
+     * A comma-separated list of one or more health check types.
      * </p>
      */
     private String healthCheckType;
@@ -238,11 +232,7 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     private Integer defaultInstanceWarmup;
     /**
      * <p>
-     * <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not use
-     * this parameter for production workloads. It is also subject to change.</b>
-     * </p>
-     * <p>
-     * The unique identifiers of the traffic sources.
+     * The traffic sources associated with this Auto Scaling group.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TrafficSourceIdentifier> trafficSources;
@@ -868,22 +858,11 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Determines whether any additional health checks are performed on the instances in this group. Amazon EC2 health
-     * checks are always on.
-     * </p>
-     * <p>
-     * The valid values are <code>EC2</code> (default), <code>ELB</code>, and <code>VPC_LATTICE</code>. The
-     * <code>VPC_LATTICE</code> health check type is reserved for use with VPC Lattice, which is in preview release and
-     * is subject to change.
+     * A comma-separated list of one or more health check types.
      * </p>
      * 
      * @param healthCheckType
-     *        Determines whether any additional health checks are performed on the instances in this group. Amazon EC2
-     *        health checks are always on.</p>
-     *        <p>
-     *        The valid values are <code>EC2</code> (default), <code>ELB</code>, and <code>VPC_LATTICE</code>. The
-     *        <code>VPC_LATTICE</code> health check type is reserved for use with VPC Lattice, which is in preview
-     *        release and is subject to change.
+     *        A comma-separated list of one or more health check types.
      */
 
     public void setHealthCheckType(String healthCheckType) {
@@ -892,21 +871,10 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Determines whether any additional health checks are performed on the instances in this group. Amazon EC2 health
-     * checks are always on.
-     * </p>
-     * <p>
-     * The valid values are <code>EC2</code> (default), <code>ELB</code>, and <code>VPC_LATTICE</code>. The
-     * <code>VPC_LATTICE</code> health check type is reserved for use with VPC Lattice, which is in preview release and
-     * is subject to change.
+     * A comma-separated list of one or more health check types.
      * </p>
      * 
-     * @return Determines whether any additional health checks are performed on the instances in this group. Amazon EC2
-     *         health checks are always on.</p>
-     *         <p>
-     *         The valid values are <code>EC2</code> (default), <code>ELB</code>, and <code>VPC_LATTICE</code>. The
-     *         <code>VPC_LATTICE</code> health check type is reserved for use with VPC Lattice, which is in preview
-     *         release and is subject to change.
+     * @return A comma-separated list of one or more health check types.
      */
 
     public String getHealthCheckType() {
@@ -915,22 +883,11 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Determines whether any additional health checks are performed on the instances in this group. Amazon EC2 health
-     * checks are always on.
-     * </p>
-     * <p>
-     * The valid values are <code>EC2</code> (default), <code>ELB</code>, and <code>VPC_LATTICE</code>. The
-     * <code>VPC_LATTICE</code> health check type is reserved for use with VPC Lattice, which is in preview release and
-     * is subject to change.
+     * A comma-separated list of one or more health check types.
      * </p>
      * 
      * @param healthCheckType
-     *        Determines whether any additional health checks are performed on the instances in this group. Amazon EC2
-     *        health checks are always on.</p>
-     *        <p>
-     *        The valid values are <code>EC2</code> (default), <code>ELB</code>, and <code>VPC_LATTICE</code>. The
-     *        <code>VPC_LATTICE</code> health check type is reserved for use with VPC Lattice, which is in preview
-     *        release and is subject to change.
+     *        A comma-separated list of one or more health check types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1925,17 +1882,10 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not use
-     * this parameter for production workloads. It is also subject to change.</b>
-     * </p>
-     * <p>
-     * The unique identifiers of the traffic sources.
+     * The traffic sources associated with this Auto Scaling group.
      * </p>
      * 
-     * @return <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not
-     *         use this parameter for production workloads. It is also subject to change.</b> </p>
-     *         <p>
-     *         The unique identifiers of the traffic sources.
+     * @return The traffic sources associated with this Auto Scaling group.
      */
 
     public java.util.List<TrafficSourceIdentifier> getTrafficSources() {
@@ -1947,18 +1897,11 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not use
-     * this parameter for production workloads. It is also subject to change.</b>
-     * </p>
-     * <p>
-     * The unique identifiers of the traffic sources.
+     * The traffic sources associated with this Auto Scaling group.
      * </p>
      * 
      * @param trafficSources
-     *        <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not
-     *        use this parameter for production workloads. It is also subject to change.</b> </p>
-     *        <p>
-     *        The unique identifiers of the traffic sources.
+     *        The traffic sources associated with this Auto Scaling group.
      */
 
     public void setTrafficSources(java.util.Collection<TrafficSourceIdentifier> trafficSources) {
@@ -1972,11 +1915,7 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not use
-     * this parameter for production workloads. It is also subject to change.</b>
-     * </p>
-     * <p>
-     * The unique identifiers of the traffic sources.
+     * The traffic sources associated with this Auto Scaling group.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1985,10 +1924,7 @@ public class AutoScalingGroup implements Serializable, Cloneable {
      * </p>
      * 
      * @param trafficSources
-     *        <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not
-     *        use this parameter for production workloads. It is also subject to change.</b> </p>
-     *        <p>
-     *        The unique identifiers of the traffic sources.
+     *        The traffic sources associated with this Auto Scaling group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2004,18 +1940,11 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not use
-     * this parameter for production workloads. It is also subject to change.</b>
-     * </p>
-     * <p>
-     * The unique identifiers of the traffic sources.
+     * The traffic sources associated with this Auto Scaling group.
      * </p>
      * 
      * @param trafficSources
-     *        <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not
-     *        use this parameter for production workloads. It is also subject to change.</b> </p>
-     *        <p>
-     *        The unique identifiers of the traffic sources.
+     *        The traffic sources associated with this Auto Scaling group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

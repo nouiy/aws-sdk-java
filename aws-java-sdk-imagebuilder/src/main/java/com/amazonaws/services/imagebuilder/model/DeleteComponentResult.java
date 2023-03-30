@@ -31,7 +31,7 @@ public class DeleteComponentResult extends com.amazonaws.AmazonWebServiceResult<
     private String requestId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the component build version that was deleted.
+     * The ARN of the component build version that this request deleted.
      * </p>
      */
     private String componentBuildVersionArn;
@@ -78,11 +78,11 @@ public class DeleteComponentResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the component build version that was deleted.
+     * The ARN of the component build version that this request deleted.
      * </p>
      * 
      * @param componentBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the component build version that was deleted.
+     *        The ARN of the component build version that this request deleted.
      */
 
     public void setComponentBuildVersionArn(String componentBuildVersionArn) {
@@ -91,10 +91,10 @@ public class DeleteComponentResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the component build version that was deleted.
+     * The ARN of the component build version that this request deleted.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the component build version that was deleted.
+     * @return The ARN of the component build version that this request deleted.
      */
 
     public String getComponentBuildVersionArn() {
@@ -103,11 +103,11 @@ public class DeleteComponentResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the component build version that was deleted.
+     * The ARN of the component build version that this request deleted.
      * </p>
      * 
      * @param componentBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the component build version that was deleted.
+     *        The ARN of the component build version that this request deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * A GeoJSON object representing the geographic extent in the coordinate space.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/AreaOfInterestGeometry"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AreaOfInterestGeometry implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing the MultiPolygon Geometry.
+     * </p>
+     */
     private MultiPolygonGeometryInput multiPolygonGeometry;
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing Polygon Geometry.
+     * </p>
+     */
     private PolygonGeometryInput polygonGeometry;
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing the MultiPolygon Geometry.
+     * </p>
      * 
      * @param multiPolygonGeometry
+     *        The structure representing the MultiPolygon Geometry.
      */
 
     public void setMultiPolygonGeometry(MultiPolygonGeometryInput multiPolygonGeometry) {
@@ -42,9 +55,11 @@ public class AreaOfInterestGeometry implements Serializable, Cloneable, Structur
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing the MultiPolygon Geometry.
+     * </p>
      * 
-     * @return
+     * @return The structure representing the MultiPolygon Geometry.
      */
 
     public MultiPolygonGeometryInput getMultiPolygonGeometry() {
@@ -52,9 +67,12 @@ public class AreaOfInterestGeometry implements Serializable, Cloneable, Structur
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing the MultiPolygon Geometry.
+     * </p>
      * 
      * @param multiPolygonGeometry
+     *        The structure representing the MultiPolygon Geometry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,9 +82,12 @@ public class AreaOfInterestGeometry implements Serializable, Cloneable, Structur
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing Polygon Geometry.
+     * </p>
      * 
      * @param polygonGeometry
+     *        The structure representing Polygon Geometry.
      */
 
     public void setPolygonGeometry(PolygonGeometryInput polygonGeometry) {
@@ -74,9 +95,11 @@ public class AreaOfInterestGeometry implements Serializable, Cloneable, Structur
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing Polygon Geometry.
+     * </p>
      * 
-     * @return
+     * @return The structure representing Polygon Geometry.
      */
 
     public PolygonGeometryInput getPolygonGeometry() {
@@ -84,9 +107,12 @@ public class AreaOfInterestGeometry implements Serializable, Cloneable, Structur
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing Polygon Geometry.
+     * </p>
      * 
      * @param polygonGeometry
+     *        The structure representing Polygon Geometry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

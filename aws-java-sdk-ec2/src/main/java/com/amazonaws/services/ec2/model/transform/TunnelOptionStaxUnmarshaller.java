@@ -179,6 +179,11 @@ public class TunnelOptionStaxUnmarshaller implements Unmarshaller<TunnelOption, 
                     tunnelOption.setLogOptions(VpnTunnelLogOptionsStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("enableTunnelLifecycleControl", targetDepth)) {
+                    tunnelOption.setEnableTunnelLifecycleControl(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return tunnelOption;

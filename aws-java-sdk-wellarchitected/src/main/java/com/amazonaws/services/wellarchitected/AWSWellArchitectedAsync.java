@@ -103,9 +103,21 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Create a lens share.
      * </p>
      * <p>
-     * The owner of a lens can share it with other Amazon Web Services accounts, IAM users, an organization, and
-     * organizational units (OUs) in the same Amazon Web Services Region. Shared access to a lens is not removed until
-     * the lens invitation is deleted.
+     * The owner of a lens can share it with other Amazon Web Services accounts, users, an organization, and
+     * organizational units (OUs) in the same Amazon Web Services Region. Lenses provided by Amazon Web Services (Amazon
+     * Web Services Official Content) cannot be shared.
+     * </p>
+     * <p>
+     * Shared access to a lens is not removed until the lens invitation is deleted.
+     * </p>
+     * <p>
+     * If you share a lens with an organization or OU, all accounts in the organization or OU are granted access to the
+     * lens.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-sharing.html">Sharing a custom lens</a>
+     * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -132,9 +144,21 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Create a lens share.
      * </p>
      * <p>
-     * The owner of a lens can share it with other Amazon Web Services accounts, IAM users, an organization, and
-     * organizational units (OUs) in the same Amazon Web Services Region. Shared access to a lens is not removed until
-     * the lens invitation is deleted.
+     * The owner of a lens can share it with other Amazon Web Services accounts, users, an organization, and
+     * organizational units (OUs) in the same Amazon Web Services Region. Lenses provided by Amazon Web Services (Amazon
+     * Web Services Official Content) cannot be shared.
+     * </p>
+     * <p>
+     * Shared access to a lens is not removed until the lens invitation is deleted.
+     * </p>
+     * <p>
+     * If you share a lens with an organization or OU, all accounts in the organization or OU are granted access to the
+     * lens.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-sharing.html">Sharing a custom lens</a>
+     * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -169,9 +193,9 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * A lens can have up to 100 versions.
      * </p>
      * <p>
-     * After a lens has been imported, create a new lens version to publish it. The owner of a lens can share the lens
-     * with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Only the owner of a
-     * lens can delete it.
+     * Use this operation to publish a new lens version after you have imported a lens. The <code>LensAlias</code> is
+     * used to identify the lens to be published. The owner of a lens can share the lens with other Amazon Web Services
+     * accounts and users in the same Amazon Web Services Region. Only the owner of a lens can delete it.
      * </p>
      * 
      * @param createLensVersionRequest
@@ -190,9 +214,9 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * A lens can have up to 100 versions.
      * </p>
      * <p>
-     * After a lens has been imported, create a new lens version to publish it. The owner of a lens can share the lens
-     * with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Only the owner of a
-     * lens can delete it.
+     * Use this operation to publish a new lens version after you have imported a lens. The <code>LensAlias</code> is
+     * used to identify the lens to be published. The owner of a lens can share the lens with other Amazon Web Services
+     * accounts and users in the same Amazon Web Services Region. Only the owner of a lens can delete it.
      * </p>
      * 
      * @param createLensVersionRequest
@@ -246,15 +270,24 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Create a new workload.
      * </p>
      * <p>
-     * The owner of a workload can share the workload with other Amazon Web Services accounts, IAM users, an
-     * organization, and organizational units (OUs) in the same Amazon Web Services Region. Only the owner of a workload
-     * can delete it.
+     * The owner of a workload can share the workload with other Amazon Web Services accounts, users, an organization,
+     * and organizational units (OUs) in the same Amazon Web Services Region. Only the owner of a workload can delete
+     * it.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html">Defining a Workload</a>
      * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
+     * <important>
+     * <p>
+     * Either <code>AwsRegions</code>, <code>NonAwsRegions</code>, or both must be specified when creating a workload.
+     * </p>
+     * <p>
+     * You also must specify <code>ReviewOwner</code>, even though the parameter is listed as not being required in the
+     * following section.
+     * </p>
+     * </important>
      * 
      * @param createWorkloadRequest
      *        Input for workload creation.
@@ -270,15 +303,24 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Create a new workload.
      * </p>
      * <p>
-     * The owner of a workload can share the workload with other Amazon Web Services accounts, IAM users, an
-     * organization, and organizational units (OUs) in the same Amazon Web Services Region. Only the owner of a workload
-     * can delete it.
+     * The owner of a workload can share the workload with other Amazon Web Services accounts, users, an organization,
+     * and organizational units (OUs) in the same Amazon Web Services Region. Only the owner of a workload can delete
+     * it.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html">Defining a Workload</a>
      * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
+     * <important>
+     * <p>
+     * Either <code>AwsRegions</code>, <code>NonAwsRegions</code>, or both must be specified when creating a workload.
+     * </p>
+     * <p>
+     * You also must specify <code>ReviewOwner</code>, even though the parameter is listed as not being required in the
+     * following section.
+     * </p>
+     * </important>
      * 
      * @param createWorkloadRequest
      *        Input for workload creation.
@@ -299,12 +341,16 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Create a workload share.
      * </p>
      * <p>
-     * The owner of a workload can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web
+     * The owner of a workload can share it with other Amazon Web Services accounts and users in the same Amazon Web
      * Services Region. Shared access to a workload is not removed until the workload invitation is deleted.
      * </p>
      * <p>
+     * If you share a workload with an organization or OU, all accounts in the organization or OU are granted access to
+     * the workload.
+     * </p>
+     * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html">Sharing a Workload</a>
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html">Sharing a workload</a>
      * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * 
@@ -322,12 +368,16 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Create a workload share.
      * </p>
      * <p>
-     * The owner of a workload can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web
+     * The owner of a workload can share it with other Amazon Web Services accounts and users in the same Amazon Web
      * Services Region. Shared access to a workload is not removed until the workload invitation is deleted.
      * </p>
      * <p>
+     * If you share a workload with an organization or OU, all accounts in the organization or OU are granted access to
+     * the workload.
+     * </p>
+     * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html">Sharing a Workload</a>
+     * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html">Sharing a workload</a>
      * in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * 
@@ -350,9 +400,8 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Delete an existing lens.
      * </p>
      * <p>
-     * Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and IAM users
-     * that you shared the lens with can continue to use it, but they will no longer be able to apply it to new
-     * workloads.
+     * Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and users that
+     * you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads.
      * </p>
      * <note>
      * <p>
@@ -379,9 +428,8 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Delete an existing lens.
      * </p>
      * <p>
-     * Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and IAM users
-     * that you shared the lens with can continue to use it, but they will no longer be able to apply it to new
-     * workloads.
+     * Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and users that
+     * you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads.
      * </p>
      * <note>
      * <p>
@@ -413,7 +461,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Delete a lens share.
      * </p>
      * <p>
-     * After the lens share is deleted, Amazon Web Services accounts, IAM users, organizations, and organizational units
+     * After the lens share is deleted, Amazon Web Services accounts, users, organizations, and organizational units
      * (OUs) that you shared the lens with can continue to use it, but they will no longer be able to apply it to new
      * workloads.
      * </p>
@@ -442,7 +490,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Delete a lens share.
      * </p>
      * <p>
-     * After the lens share is deleted, Amazon Web Services accounts, IAM users, organizations, and organizational units
+     * After the lens share is deleted, Amazon Web Services accounts, users, organizations, and organizational units
      * (OUs) that you shared the lens with can continue to use it, but they will no longer be able to apply it to new
      * workloads.
      * </p>
@@ -593,9 +641,13 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Export an existing lens.
      * </p>
      * <p>
+     * Only the owner of a lens can export it. Lenses provided by Amazon Web Services (Amazon Web Services Official
+     * Content) cannot be exported.
+     * </p>
+     * <p>
      * Lenses are defined in JSON. For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format
-     * specification</a> in the <i>Well-Architected Tool User Guide</i>. Only the owner of a lens can export it.
+     * specification</a> in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -622,9 +674,13 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * Export an existing lens.
      * </p>
      * <p>
+     * Only the owner of a lens can export it. Lenses provided by Amazon Web Services (Amazon Web Services Official
+     * Content) cannot be exported.
+     * </p>
+     * <p>
      * Lenses are defined in JSON. For more information, see <a
      * href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format
-     * specification</a> in the <i>Well-Architected Tool User Guide</i>. Only the owner of a lens can export it.
+     * specification</a> in the <i>Well-Architected Tool User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -683,6 +739,43 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      */
     java.util.concurrent.Future<GetAnswerResult> getAnswerAsync(GetAnswerRequest getAnswerRequest,
             com.amazonaws.handlers.AsyncHandler<GetAnswerRequest, GetAnswerResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get a consolidated report of your workloads.
+     * </p>
+     * <p>
+     * You can optionally choose to include workloads that have been shared with you.
+     * </p>
+     * 
+     * @param getConsolidatedReportRequest
+     * @return A Java Future containing the result of the GetConsolidatedReport operation returned by the service.
+     * @sample AWSWellArchitectedAsync.GetConsolidatedReport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetConsolidatedReport"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConsolidatedReportResult> getConsolidatedReportAsync(GetConsolidatedReportRequest getConsolidatedReportRequest);
+
+    /**
+     * <p>
+     * Get a consolidated report of your workloads.
+     * </p>
+     * <p>
+     * You can optionally choose to include workloads that have been shared with you.
+     * </p>
+     * 
+     * @param getConsolidatedReportRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetConsolidatedReport operation returned by the service.
+     * @sample AWSWellArchitectedAsyncHandler.GetConsolidatedReport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetConsolidatedReport"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConsolidatedReportResult> getConsolidatedReportAsync(GetConsolidatedReportRequest getConsolidatedReportRequest,
+            com.amazonaws.handlers.AsyncHandler<GetConsolidatedReportRequest, GetConsolidatedReportResult> asyncHandler);
 
     /**
      * <p>
@@ -880,11 +973,15 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * Import a new lens.
+     * Import a new custom lens or update an existing custom lens.
      * </p>
      * <p>
-     * The lens cannot be applied to workloads or shared with other Amazon Web Services accounts until it's published
-     * with <a>CreateLensVersion</a>
+     * To update an existing custom lens, specify its ARN as the <code>LensAlias</code>. If no ARN is specified, a new
+     * custom lens is created.
+     * </p>
+     * <p>
+     * The new or updated lens will have a status of <code>DRAFT</code>. The lens cannot be applied to workloads or
+     * shared with other Amazon Web Services accounts until it's published with <a>CreateLensVersion</a>.
      * </p>
      * <p>
      * Lenses are defined in JSON. For more information, see <a
@@ -916,11 +1013,15 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * Import a new lens.
+     * Import a new custom lens or update an existing custom lens.
      * </p>
      * <p>
-     * The lens cannot be applied to workloads or shared with other Amazon Web Services accounts until it's published
-     * with <a>CreateLensVersion</a>
+     * To update an existing custom lens, specify its ARN as the <code>LensAlias</code>. If no ARN is specified, a new
+     * custom lens is created.
+     * </p>
+     * <p>
+     * The new or updated lens will have a status of <code>DRAFT</code>. The lens cannot be applied to workloads or
+     * shared with other Amazon Web Services accounts until it's published with <a>CreateLensVersion</a>.
      * </p>
      * <p>
      * Lenses are defined in JSON. For more information, see <a
@@ -957,7 +1058,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * List of answers.
+     * List of answers for a particular workload and lens.
      * </p>
      * 
      * @param listAnswersRequest
@@ -971,7 +1072,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * List of answers.
+     * List of answers for a particular workload and lens.
      * </p>
      * 
      * @param listAnswersRequest
@@ -1087,7 +1188,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * List lens reviews.
+     * List lens reviews for a particular workload.
      * </p>
      * 
      * @param listLensReviewsRequest
@@ -1101,7 +1202,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * List lens reviews.
+     * List lens reviews for a particular workload.
      * </p>
      * 
      * @param listLensReviewsRequest
@@ -1355,7 +1456,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * List workloads. Paginated.
+     * Paginated list of workloads.
      * </p>
      * 
      * @param listWorkloadsRequest
@@ -1369,7 +1470,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * List workloads. Paginated.
+     * Paginated list of workloads.
      * </p>
      * 
      * @param listWorkloadsRequest
@@ -1546,7 +1647,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * Update lens review.
+     * Update lens review for a particular workload.
      * </p>
      * 
      * @param updateLensReviewRequest
@@ -1560,7 +1661,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * Update lens review.
+     * Update lens review for a particular workload.
      * </p>
      * 
      * @param updateLensReviewRequest
@@ -1690,7 +1791,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * Upgrade lens review.
+     * Upgrade lens review for a particular workload.
      * </p>
      * 
      * @param upgradeLensReviewRequest
@@ -1703,7 +1804,7 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
 
     /**
      * <p>
-     * Upgrade lens review.
+     * Upgrade lens review for a particular workload.
      * </p>
      * 
      * @param upgradeLensReviewRequest

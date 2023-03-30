@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The input structure for Reverse Geocoding operation type.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ReverseGeocodingConfig"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ReverseGeocodingConfig implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The field name for the data that describes x-axis coordinate, eg. longitude of a point.
+     * </p>
+     */
     private String xAttributeName;
-    /** <p/> */
+    /**
+     * <p>
+     * The field name for the data that describes y-axis coordinate, eg. latitude of a point.
+     * </p>
+     */
     private String yAttributeName;
 
     /**
-     * <p/>
+     * <p>
+     * The field name for the data that describes x-axis coordinate, eg. longitude of a point.
+     * </p>
      * 
      * @param xAttributeName
+     *        The field name for the data that describes x-axis coordinate, eg. longitude of a point.
      */
 
     public void setXAttributeName(String xAttributeName) {
@@ -42,9 +55,11 @@ public class ReverseGeocodingConfig implements Serializable, Cloneable, Structur
     }
 
     /**
-     * <p/>
+     * <p>
+     * The field name for the data that describes x-axis coordinate, eg. longitude of a point.
+     * </p>
      * 
-     * @return
+     * @return The field name for the data that describes x-axis coordinate, eg. longitude of a point.
      */
 
     public String getXAttributeName() {
@@ -52,9 +67,12 @@ public class ReverseGeocodingConfig implements Serializable, Cloneable, Structur
     }
 
     /**
-     * <p/>
+     * <p>
+     * The field name for the data that describes x-axis coordinate, eg. longitude of a point.
+     * </p>
      * 
      * @param xAttributeName
+     *        The field name for the data that describes x-axis coordinate, eg. longitude of a point.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,9 +82,12 @@ public class ReverseGeocodingConfig implements Serializable, Cloneable, Structur
     }
 
     /**
-     * <p/>
+     * <p>
+     * The field name for the data that describes y-axis coordinate, eg. latitude of a point.
+     * </p>
      * 
      * @param yAttributeName
+     *        The field name for the data that describes y-axis coordinate, eg. latitude of a point.
      */
 
     public void setYAttributeName(String yAttributeName) {
@@ -74,9 +95,11 @@ public class ReverseGeocodingConfig implements Serializable, Cloneable, Structur
     }
 
     /**
-     * <p/>
+     * <p>
+     * The field name for the data that describes y-axis coordinate, eg. latitude of a point.
+     * </p>
      * 
-     * @return
+     * @return The field name for the data that describes y-axis coordinate, eg. latitude of a point.
      */
 
     public String getYAttributeName() {
@@ -84,9 +107,12 @@ public class ReverseGeocodingConfig implements Serializable, Cloneable, Structur
     }
 
     /**
-     * <p/>
+     * <p>
+     * The field name for the data that describes y-axis coordinate, eg. latitude of a point.
+     * </p>
      * 
      * @param yAttributeName
+     *        The field name for the data that describes y-axis coordinate, eg. latitude of a point.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -54,7 +54,7 @@ public class ListVectorEnrichmentJobOutputConfigJsonUnmarshaller implements Unma
                 }
                 if (context.testExpression("CreationTime", targetDepth)) {
                     context.nextToken();
-                    listVectorEnrichmentJobOutputConfig.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                    listVectorEnrichmentJobOutputConfig.setCreationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("DurationInSeconds", targetDepth)) {
                     context.nextToken();

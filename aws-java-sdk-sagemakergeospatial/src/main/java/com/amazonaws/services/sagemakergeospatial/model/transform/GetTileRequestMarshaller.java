@@ -30,6 +30,8 @@ public class GetTileRequestMarshaller {
 
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
             .marshallLocationName("Arn").build();
+    private static final MarshallingInfo<String> EXECUTIONROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("ExecutionRoleArn").build();
     private static final MarshallingInfo<List> IMAGEASSETS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("ImageAssets").build();
     private static final MarshallingInfo<Boolean> IMAGEMASK_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
@@ -68,6 +70,7 @@ public class GetTileRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(getTileRequest.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(getTileRequest.getExecutionRoleArn(), EXECUTIONROLEARN_BINDING);
             protocolMarshaller.marshall(getTileRequest.getImageAssets(), IMAGEASSETS_BINDING);
             protocolMarshaller.marshall(getTileRequest.getImageMask(), IMAGEMASK_BINDING);
             protocolMarshaller.marshall(getTileRequest.getOutputDataType(), OUTPUTDATATYPE_BINDING);

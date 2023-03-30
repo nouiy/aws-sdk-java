@@ -33,6 +33,12 @@ public class ExportVectorEnrichmentJobRequest extends com.amazonaws.AmazonWebSer
     private String arn;
     /**
      * <p>
+     * A unique token that guarantees that the call to this API is idempotent.
+     * </p>
+     */
+    private String clientToken;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the IAM rolewith permission to upload to the location in OutputConfig.
      * </p>
      */
@@ -81,6 +87,46 @@ public class ExportVectorEnrichmentJobRequest extends com.amazonaws.AmazonWebSer
 
     public ExportVectorEnrichmentJobRequest withArn(String arn) {
         setArn(arn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A unique token that guarantees that the call to this API is idempotent.
+     * </p>
+     * 
+     * @param clientToken
+     *        A unique token that guarantees that the call to this API is idempotent.
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * A unique token that guarantees that the call to this API is idempotent.
+     * </p>
+     * 
+     * @return A unique token that guarantees that the call to this API is idempotent.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * A unique token that guarantees that the call to this API is idempotent.
+     * </p>
+     * 
+     * @param clientToken
+     *        A unique token that guarantees that the call to this API is idempotent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExportVectorEnrichmentJobRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
         return this;
     }
 
@@ -178,6 +224,8 @@ public class ExportVectorEnrichmentJobRequest extends com.amazonaws.AmazonWebSer
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getExecutionRoleArn() != null)
             sb.append("ExecutionRoleArn: ").append(getExecutionRoleArn()).append(",");
         if (getOutputConfig() != null)
@@ -200,6 +248,10 @@ public class ExportVectorEnrichmentJobRequest extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
+            return false;
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
         if (other.getExecutionRoleArn() == null ^ this.getExecutionRoleArn() == null)
             return false;
         if (other.getExecutionRoleArn() != null && other.getExecutionRoleArn().equals(this.getExecutionRoleArn()) == false)
@@ -217,6 +269,7 @@ public class ExportVectorEnrichmentJobRequest extends com.amazonaws.AmazonWebSer
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getExecutionRoleArn() == null) ? 0 : getExecutionRoleArn().hashCode());
         hashCode = prime * hashCode + ((getOutputConfig() == null) ? 0 : getOutputConfig().hashCode());
         return hashCode;

@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure representing input for resampling operation.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ResamplingConfigInput"
  *      target="_top">AWS API Documentation</a>
@@ -32,9 +34,18 @@ public class ResamplingConfigInput implements Serializable, Cloneable, Structure
      * </p>
      */
     private String algorithmName;
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing output resolution (in target georeferenced units) of the result of resampling
+     * operation.
+     * </p>
+     */
     private OutputResolutionResamplingInput outputResolution;
-    /** <p/> */
+    /**
+     * <p>
+     * Bands used in the operation. If no target bands are specified, it uses all bands available in the input.
+     * </p>
+     */
     private java.util.List<String> targetBands;
 
     /**
@@ -97,9 +108,14 @@ public class ResamplingConfigInput implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing output resolution (in target georeferenced units) of the result of resampling
+     * operation.
+     * </p>
      * 
      * @param outputResolution
+     *        The structure representing output resolution (in target georeferenced units) of the result of resampling
+     *        operation.
      */
 
     public void setOutputResolution(OutputResolutionResamplingInput outputResolution) {
@@ -107,9 +123,13 @@ public class ResamplingConfigInput implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing output resolution (in target georeferenced units) of the result of resampling
+     * operation.
+     * </p>
      * 
-     * @return
+     * @return The structure representing output resolution (in target georeferenced units) of the result of resampling
+     *         operation.
      */
 
     public OutputResolutionResamplingInput getOutputResolution() {
@@ -117,9 +137,14 @@ public class ResamplingConfigInput implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing output resolution (in target georeferenced units) of the result of resampling
+     * operation.
+     * </p>
      * 
      * @param outputResolution
+     *        The structure representing output resolution (in target georeferenced units) of the result of resampling
+     *        operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,9 +154,11 @@ public class ResamplingConfigInput implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands used in the operation. If no target bands are specified, it uses all bands available in the input.
+     * </p>
      * 
-     * @return
+     * @return Bands used in the operation. If no target bands are specified, it uses all bands available in the input.
      */
 
     public java.util.List<String> getTargetBands() {
@@ -139,9 +166,12 @@ public class ResamplingConfigInput implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands used in the operation. If no target bands are specified, it uses all bands available in the input.
+     * </p>
      * 
      * @param targetBands
+     *        Bands used in the operation. If no target bands are specified, it uses all bands available in the input.
      */
 
     public void setTargetBands(java.util.Collection<String> targetBands) {
@@ -154,7 +184,9 @@ public class ResamplingConfigInput implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands used in the operation. If no target bands are specified, it uses all bands available in the input.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTargetBands(java.util.Collection)} or {@link #withTargetBands(java.util.Collection)} if you want to
@@ -162,6 +194,7 @@ public class ResamplingConfigInput implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param targetBands
+     *        Bands used in the operation. If no target bands are specified, it uses all bands available in the input.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -176,9 +209,12 @@ public class ResamplingConfigInput implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * Bands used in the operation. If no target bands are specified, it uses all bands available in the input.
+     * </p>
      * 
      * @param targetBands
+     *        Bands used in the operation. If no target bands are specified, it uses all bands available in the input.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

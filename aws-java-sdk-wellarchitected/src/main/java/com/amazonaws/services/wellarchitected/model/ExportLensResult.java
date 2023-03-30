@@ -25,18 +25,18 @@ public class ExportLensResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The JSON for the lens.
+     * The JSON representation of a lens.
      * </p>
      */
     private String lensJSON;
 
     /**
      * <p>
-     * The JSON for the lens.
+     * The JSON representation of a lens.
      * </p>
      * 
      * @param lensJSON
-     *        The JSON for the lens.
+     *        The JSON representation of a lens.
      */
 
     public void setLensJSON(String lensJSON) {
@@ -45,10 +45,10 @@ public class ExportLensResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The JSON for the lens.
+     * The JSON representation of a lens.
      * </p>
      * 
-     * @return The JSON for the lens.
+     * @return The JSON representation of a lens.
      */
 
     public String getLensJSON() {
@@ -57,11 +57,11 @@ public class ExportLensResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The JSON for the lens.
+     * The JSON representation of a lens.
      * </p>
      * 
      * @param lensJSON
-     *        The JSON for the lens.
+     *        The JSON representation of a lens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

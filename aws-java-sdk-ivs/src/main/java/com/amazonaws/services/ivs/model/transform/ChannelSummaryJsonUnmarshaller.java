@@ -56,6 +56,10 @@ public class ChannelSummaryJsonUnmarshaller implements Unmarshaller<ChannelSumma
                     context.nextToken();
                     channelSummary.setAuthorized(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("insecureIngest", targetDepth)) {
+                    context.nextToken();
+                    channelSummary.setInsecureIngest(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("latencyMode", targetDepth)) {
                     context.nextToken();
                     channelSummary.setLatencyMode(context.getUnmarshaller(String.class).unmarshall(context));

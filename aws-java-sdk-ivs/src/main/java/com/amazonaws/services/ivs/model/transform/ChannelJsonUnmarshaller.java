@@ -60,6 +60,10 @@ public class ChannelJsonUnmarshaller implements Unmarshaller<Channel, JsonUnmars
                     context.nextToken();
                     channel.setIngestEndpoint(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("insecureIngest", targetDepth)) {
+                    context.nextToken();
+                    channel.setInsecureIngest(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("latencyMode", targetDepth)) {
                     context.nextToken();
                     channel.setLatencyMode(context.getUnmarshaller(String.class).unmarshall(context));

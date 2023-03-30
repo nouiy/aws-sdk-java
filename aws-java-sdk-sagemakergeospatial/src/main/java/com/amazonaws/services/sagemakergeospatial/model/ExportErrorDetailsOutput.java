@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure representing the errors in an export EarthObservationJob operation.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ExportErrorDetailsOutput"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ExportErrorDetailsOutput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * A detailed message describing the error in an export EarthObservationJob operation.
+     * </p>
+     */
     private String message;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of error in an export EarthObservationJob operation.
+     * </p>
+     */
     private String type;
 
     /**
-     * <p/>
+     * <p>
+     * A detailed message describing the error in an export EarthObservationJob operation.
+     * </p>
      * 
      * @param message
+     *        A detailed message describing the error in an export EarthObservationJob operation.
      */
 
     public void setMessage(String message) {
@@ -42,9 +55,11 @@ public class ExportErrorDetailsOutput implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p/>
+     * <p>
+     * A detailed message describing the error in an export EarthObservationJob operation.
+     * </p>
      * 
-     * @return
+     * @return A detailed message describing the error in an export EarthObservationJob operation.
      */
 
     public String getMessage() {
@@ -52,9 +67,12 @@ public class ExportErrorDetailsOutput implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p/>
+     * <p>
+     * A detailed message describing the error in an export EarthObservationJob operation.
+     * </p>
      * 
      * @param message
+     *        A detailed message describing the error in an export EarthObservationJob operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,9 +82,12 @@ public class ExportErrorDetailsOutput implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of error in an export EarthObservationJob operation.
+     * </p>
      * 
      * @param type
+     *        The type of error in an export EarthObservationJob operation.
      * @see ExportErrorType
      */
 
@@ -75,9 +96,11 @@ public class ExportErrorDetailsOutput implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of error in an export EarthObservationJob operation.
+     * </p>
      * 
-     * @return
+     * @return The type of error in an export EarthObservationJob operation.
      * @see ExportErrorType
      */
 
@@ -86,9 +109,12 @@ public class ExportErrorDetailsOutput implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of error in an export EarthObservationJob operation.
+     * </p>
      * 
      * @param type
+     *        The type of error in an export EarthObservationJob operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportErrorType
      */
@@ -99,9 +125,12 @@ public class ExportErrorDetailsOutput implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of error in an export EarthObservationJob operation.
+     * </p>
      * 
      * @param type
+     *        The type of error in an export EarthObservationJob operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportErrorType
      */

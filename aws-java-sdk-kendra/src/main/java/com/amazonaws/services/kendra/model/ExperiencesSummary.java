@@ -45,7 +45,7 @@ public class ExperiencesSummary implements Serializable, Cloneable, StructuredPo
     private String id;
     /**
      * <p>
-     * The date-time your Amazon Kendra experience was created.
+     * The Unix timestamp when your Amazon Kendra experience was created.
      * </p>
      */
     private java.util.Date createdAt;
@@ -145,11 +145,11 @@ public class ExperiencesSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The date-time your Amazon Kendra experience was created.
+     * The Unix timestamp when your Amazon Kendra experience was created.
      * </p>
      * 
      * @param createdAt
-     *        The date-time your Amazon Kendra experience was created.
+     *        The Unix timestamp when your Amazon Kendra experience was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -158,10 +158,10 @@ public class ExperiencesSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The date-time your Amazon Kendra experience was created.
+     * The Unix timestamp when your Amazon Kendra experience was created.
      * </p>
      * 
-     * @return The date-time your Amazon Kendra experience was created.
+     * @return The Unix timestamp when your Amazon Kendra experience was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -170,11 +170,11 @@ public class ExperiencesSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The date-time your Amazon Kendra experience was created.
+     * The Unix timestamp when your Amazon Kendra experience was created.
      * </p>
      * 
      * @param createdAt
-     *        The date-time your Amazon Kendra experience was created.
+     *        The Unix timestamp when your Amazon Kendra experience was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

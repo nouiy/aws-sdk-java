@@ -33,8 +33,29 @@ public class DescribeTrafficSourcesRequest extends com.amazonaws.AmazonWebServic
     private String autoScalingGroupName;
     /**
      * <p>
-     * The type of traffic source you are describing. Currently, the only valid value is <code>vpc-lattice</code>.
+     * The traffic source type that you want to describe.
      * </p>
+     * <p>
+     * The following lists the valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>elb</code> if the traffic source is a Classic Load Balancer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elbv2</code> if the traffic source is a Application Load Balancer, Gateway Load Balancer, or Network Load
+     * Balancer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vpc-lattice</code> if the traffic source is VPC Lattice.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String trafficSourceType;
     /**
@@ -92,12 +113,52 @@ public class DescribeTrafficSourcesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of traffic source you are describing. Currently, the only valid value is <code>vpc-lattice</code>.
+     * The traffic source type that you want to describe.
      * </p>
+     * <p>
+     * The following lists the valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>elb</code> if the traffic source is a Classic Load Balancer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elbv2</code> if the traffic source is a Application Load Balancer, Gateway Load Balancer, or Network Load
+     * Balancer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vpc-lattice</code> if the traffic source is VPC Lattice.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param trafficSourceType
-     *        The type of traffic source you are describing. Currently, the only valid value is <code>vpc-lattice</code>
-     *        .
+     *        The traffic source type that you want to describe.</p>
+     *        <p>
+     *        The following lists the valid values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>elb</code> if the traffic source is a Classic Load Balancer.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elbv2</code> if the traffic source is a Application Load Balancer, Gateway Load Balancer, or Network
+     *        Load Balancer.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>vpc-lattice</code> if the traffic source is VPC Lattice.
+     *        </p>
+     *        </li>
      */
 
     public void setTrafficSourceType(String trafficSourceType) {
@@ -106,11 +167,51 @@ public class DescribeTrafficSourcesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of traffic source you are describing. Currently, the only valid value is <code>vpc-lattice</code>.
+     * The traffic source type that you want to describe.
      * </p>
+     * <p>
+     * The following lists the valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>elb</code> if the traffic source is a Classic Load Balancer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elbv2</code> if the traffic source is a Application Load Balancer, Gateway Load Balancer, or Network Load
+     * Balancer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vpc-lattice</code> if the traffic source is VPC Lattice.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The type of traffic source you are describing. Currently, the only valid value is
-     *         <code>vpc-lattice</code>.
+     * @return The traffic source type that you want to describe.</p>
+     *         <p>
+     *         The following lists the valid values:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>elb</code> if the traffic source is a Classic Load Balancer.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>elbv2</code> if the traffic source is a Application Load Balancer, Gateway Load Balancer, or
+     *         Network Load Balancer.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>vpc-lattice</code> if the traffic source is VPC Lattice.
+     *         </p>
+     *         </li>
      */
 
     public String getTrafficSourceType() {
@@ -119,12 +220,52 @@ public class DescribeTrafficSourcesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of traffic source you are describing. Currently, the only valid value is <code>vpc-lattice</code>.
+     * The traffic source type that you want to describe.
      * </p>
+     * <p>
+     * The following lists the valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>elb</code> if the traffic source is a Classic Load Balancer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>elbv2</code> if the traffic source is a Application Load Balancer, Gateway Load Balancer, or Network Load
+     * Balancer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vpc-lattice</code> if the traffic source is VPC Lattice.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param trafficSourceType
-     *        The type of traffic source you are describing. Currently, the only valid value is <code>vpc-lattice</code>
-     *        .
+     *        The traffic source type that you want to describe.</p>
+     *        <p>
+     *        The following lists the valid values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>elb</code> if the traffic source is a Classic Load Balancer.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>elbv2</code> if the traffic source is a Application Load Balancer, Gateway Load Balancer, or Network
+     *        Load Balancer.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>vpc-lattice</code> if the traffic source is VPC Lattice.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

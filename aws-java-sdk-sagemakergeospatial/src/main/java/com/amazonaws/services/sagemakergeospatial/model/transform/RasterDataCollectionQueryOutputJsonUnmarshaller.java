@@ -66,7 +66,7 @@ public class RasterDataCollectionQueryOutputJsonUnmarshaller implements Unmarsha
                 }
                 if (context.testExpression("TimeRangeFilter", targetDepth)) {
                     context.nextToken();
-                    rasterDataCollectionQueryOutput.setTimeRangeFilter(TimeRangeFilterInputJsonUnmarshaller.getInstance().unmarshall(context));
+                    rasterDataCollectionQueryOutput.setTimeRangeFilter(TimeRangeFilterOutputJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

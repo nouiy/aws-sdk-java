@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * Union representing different data sources to be used as input for an Earth Observation job.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/EojDataSourceConfigInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,13 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class EojDataSourceConfigInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The input structure for S3Data; representing the Amazon S3 location of the input data objects.
+     * </p>
+     */
     private S3DataInput s3Data;
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for S3Data; representing the Amazon S3 location of the input data objects.
+     * </p>
      * 
      * @param s3Data
+     *        The input structure for S3Data; representing the Amazon S3 location of the input data objects.
      */
 
     public void setS3Data(S3DataInput s3Data) {
@@ -40,9 +49,11 @@ public class EojDataSourceConfigInput implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for S3Data; representing the Amazon S3 location of the input data objects.
+     * </p>
      * 
-     * @return
+     * @return The input structure for S3Data; representing the Amazon S3 location of the input data objects.
      */
 
     public S3DataInput getS3Data() {
@@ -50,9 +61,12 @@ public class EojDataSourceConfigInput implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for S3Data; representing the Amazon S3 location of the input data objects.
+     * </p>
      * 
      * @param s3Data
+     *        The input structure for S3Data; representing the Amazon S3 location of the input data objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

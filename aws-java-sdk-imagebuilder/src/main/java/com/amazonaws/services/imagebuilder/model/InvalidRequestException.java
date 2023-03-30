@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You have made a request for an action that is not supported by the service.
+ * You have requested an action that that the service doesn't support.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

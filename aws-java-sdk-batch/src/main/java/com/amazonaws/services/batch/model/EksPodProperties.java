@@ -76,7 +76,13 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private java.util.List<EksVolume> volumes;
-
+    /**
+     * <p>
+     * Metadata about the Kubernetes pod. For more information, see <a
+     * href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     * Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
+     * </p>
+     */
     private EksMetadata metadata;
 
     /**
@@ -474,7 +480,16 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Metadata about the Kubernetes pod. For more information, see <a
+     * href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     * Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
+     * </p>
+     * 
      * @param metadata
+     *        Metadata about the Kubernetes pod. For more information, see <a
+     *        href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     *        Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
      */
 
     public void setMetadata(EksMetadata metadata) {
@@ -482,7 +497,15 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * Metadata about the Kubernetes pod. For more information, see <a
+     * href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     * Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
+     * </p>
+     * 
+     * @return Metadata about the Kubernetes pod. For more information, see <a
+     *         href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/"
+     *         >Understanding Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
      */
 
     public EksMetadata getMetadata() {
@@ -490,7 +513,16 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Metadata about the Kubernetes pod. For more information, see <a
+     * href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     * Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
+     * </p>
+     * 
      * @param metadata
+     *        Metadata about the Kubernetes pod. For more information, see <a
+     *        href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding
+     *        Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

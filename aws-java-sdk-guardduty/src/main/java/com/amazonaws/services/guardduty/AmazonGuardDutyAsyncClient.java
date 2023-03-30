@@ -998,6 +998,39 @@ public class AmazonGuardDutyAsyncClient extends AmazonGuardDutyClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetCoverageStatisticsResult> getCoverageStatisticsAsync(GetCoverageStatisticsRequest request) {
+
+        return getCoverageStatisticsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCoverageStatisticsResult> getCoverageStatisticsAsync(final GetCoverageStatisticsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetCoverageStatisticsRequest, GetCoverageStatisticsResult> asyncHandler) {
+        final GetCoverageStatisticsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetCoverageStatisticsResult>() {
+            @Override
+            public GetCoverageStatisticsResult call() throws Exception {
+                GetCoverageStatisticsResult result = null;
+
+                try {
+                    result = executeGetCoverageStatistics(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDetectorResult> getDetectorAsync(GetDetectorRequest request) {
 
         return getDetectorAsync(request, null);
@@ -1446,6 +1479,39 @@ public class AmazonGuardDutyAsyncClient extends AmazonGuardDutyClient implements
 
                 try {
                     result = executeInviteMembers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCoverageResult> listCoverageAsync(ListCoverageRequest request) {
+
+        return listCoverageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCoverageResult> listCoverageAsync(final ListCoverageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCoverageRequest, ListCoverageResult> asyncHandler) {
+        final ListCoverageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCoverageResult>() {
+            @Override
+            public ListCoverageResult call() throws Exception {
+                ListCoverageResult result = null;
+
+                try {
+                    result = executeListCoverage(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * A list of PropertyFilter objects.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/PropertyFilters"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PropertyFilters implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The Logical Operator used to combine the Property Filters.
+     * </p>
+     */
     private String logicalOperator;
-    /** <p/> */
+    /**
+     * <p>
+     * A list of Property Filters.
+     * </p>
+     */
     private java.util.List<PropertyFilter> properties;
 
     /**
-     * <p/>
+     * <p>
+     * The Logical Operator used to combine the Property Filters.
+     * </p>
      * 
      * @param logicalOperator
+     *        The Logical Operator used to combine the Property Filters.
      * @see LogicalOperator
      */
 
@@ -43,9 +56,11 @@ public class PropertyFilters implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Logical Operator used to combine the Property Filters.
+     * </p>
      * 
-     * @return
+     * @return The Logical Operator used to combine the Property Filters.
      * @see LogicalOperator
      */
 
@@ -54,9 +69,12 @@ public class PropertyFilters implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Logical Operator used to combine the Property Filters.
+     * </p>
      * 
      * @param logicalOperator
+     *        The Logical Operator used to combine the Property Filters.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LogicalOperator
      */
@@ -67,9 +85,12 @@ public class PropertyFilters implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Logical Operator used to combine the Property Filters.
+     * </p>
      * 
      * @param logicalOperator
+     *        The Logical Operator used to combine the Property Filters.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LogicalOperator
      */
@@ -80,9 +101,11 @@ public class PropertyFilters implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * A list of Property Filters.
+     * </p>
      * 
-     * @return
+     * @return A list of Property Filters.
      */
 
     public java.util.List<PropertyFilter> getProperties() {
@@ -90,9 +113,12 @@ public class PropertyFilters implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * A list of Property Filters.
+     * </p>
      * 
      * @param properties
+     *        A list of Property Filters.
      */
 
     public void setProperties(java.util.Collection<PropertyFilter> properties) {
@@ -105,7 +131,9 @@ public class PropertyFilters implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * A list of Property Filters.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setProperties(java.util.Collection)} or {@link #withProperties(java.util.Collection)} if you want to
@@ -113,6 +141,7 @@ public class PropertyFilters implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param properties
+     *        A list of Property Filters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -127,9 +156,12 @@ public class PropertyFilters implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * A list of Property Filters.
+     * </p>
      * 
      * @param properties
+     *        A list of Property Filters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

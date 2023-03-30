@@ -36,13 +36,13 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
     private String executionId;
     /**
      * <p>
-     * The UNIX datetime that the synchronization job started.
+     * The Unix timestamp when the synchronization job started.
      * </p>
      */
     private java.util.Date startTime;
     /**
      * <p>
-     * The UNIX datetime that the synchronization job completed.
+     * The Unix timestamp when the synchronization job completed.
      * </p>
      */
     private java.util.Date endTime;
@@ -125,11 +125,11 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job started.
+     * The Unix timestamp when the synchronization job started.
      * </p>
      * 
      * @param startTime
-     *        The UNIX datetime that the synchronization job started.
+     *        The Unix timestamp when the synchronization job started.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -138,10 +138,10 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job started.
+     * The Unix timestamp when the synchronization job started.
      * </p>
      * 
-     * @return The UNIX datetime that the synchronization job started.
+     * @return The Unix timestamp when the synchronization job started.
      */
 
     public java.util.Date getStartTime() {
@@ -150,11 +150,11 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job started.
+     * The Unix timestamp when the synchronization job started.
      * </p>
      * 
      * @param startTime
-     *        The UNIX datetime that the synchronization job started.
+     *        The Unix timestamp when the synchronization job started.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,11 +165,11 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job completed.
+     * The Unix timestamp when the synchronization job completed.
      * </p>
      * 
      * @param endTime
-     *        The UNIX datetime that the synchronization job completed.
+     *        The Unix timestamp when the synchronization job completed.
      */
 
     public void setEndTime(java.util.Date endTime) {
@@ -178,10 +178,10 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job completed.
+     * The Unix timestamp when the synchronization job completed.
      * </p>
      * 
-     * @return The UNIX datetime that the synchronization job completed.
+     * @return The Unix timestamp when the synchronization job completed.
      */
 
     public java.util.Date getEndTime() {
@@ -190,11 +190,11 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job completed.
+     * The Unix timestamp when the synchronization job completed.
      * </p>
      * 
      * @param endTime
-     *        The UNIX datetime that the synchronization job completed.
+     *        The Unix timestamp when the synchronization job completed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

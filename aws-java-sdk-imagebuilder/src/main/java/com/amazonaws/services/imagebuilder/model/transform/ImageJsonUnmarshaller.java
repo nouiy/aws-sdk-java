@@ -129,6 +129,14 @@ public class ImageJsonUnmarshaller implements Unmarshaller<Image, JsonUnmarshall
                     context.nextToken();
                     image.setImageSource(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("scanState", targetDepth)) {
+                    context.nextToken();
+                    image.setScanState(ImageScanStateJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("imageScanningConfiguration", targetDepth)) {
+                    context.nextToken();
+                    image.setImageScanningConfiguration(ImageScanningConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

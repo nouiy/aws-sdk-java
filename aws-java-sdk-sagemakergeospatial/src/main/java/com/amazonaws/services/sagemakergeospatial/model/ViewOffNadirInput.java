@@ -18,7 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The input structure for specifying ViewOffNadir property filter. ViewOffNadir refers to the angle from the sensor
+ * between nadir (straight down) and the scene center. Measured in degrees (0-90).
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ViewOffNadirInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +29,30 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ViewOffNadirInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The minimum value for ViewOffNadir property filter. This filters items having ViewOffNadir greater than or equal
+     * to this value.
+     * </p>
+     */
     private Float lowerBound;
-    /** <p/> */
+    /**
+     * <p>
+     * The maximum value for ViewOffNadir property filter. This filters items having ViewOffNadir lesser than or equal
+     * to this value.
+     * </p>
+     */
     private Float upperBound;
 
     /**
-     * <p/>
+     * <p>
+     * The minimum value for ViewOffNadir property filter. This filters items having ViewOffNadir greater than or equal
+     * to this value.
+     * </p>
      * 
      * @param lowerBound
+     *        The minimum value for ViewOffNadir property filter. This filters items having ViewOffNadir greater than or
+     *        equal to this value.
      */
 
     public void setLowerBound(Float lowerBound) {
@@ -42,9 +60,13 @@ public class ViewOffNadirInput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * The minimum value for ViewOffNadir property filter. This filters items having ViewOffNadir greater than or equal
+     * to this value.
+     * </p>
      * 
-     * @return
+     * @return The minimum value for ViewOffNadir property filter. This filters items having ViewOffNadir greater than
+     *         or equal to this value.
      */
 
     public Float getLowerBound() {
@@ -52,9 +74,14 @@ public class ViewOffNadirInput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * The minimum value for ViewOffNadir property filter. This filters items having ViewOffNadir greater than or equal
+     * to this value.
+     * </p>
      * 
      * @param lowerBound
+     *        The minimum value for ViewOffNadir property filter. This filters items having ViewOffNadir greater than or
+     *        equal to this value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,9 +91,14 @@ public class ViewOffNadirInput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum value for ViewOffNadir property filter. This filters items having ViewOffNadir lesser than or equal
+     * to this value.
+     * </p>
      * 
      * @param upperBound
+     *        The maximum value for ViewOffNadir property filter. This filters items having ViewOffNadir lesser than or
+     *        equal to this value.
      */
 
     public void setUpperBound(Float upperBound) {
@@ -74,9 +106,13 @@ public class ViewOffNadirInput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum value for ViewOffNadir property filter. This filters items having ViewOffNadir lesser than or equal
+     * to this value.
+     * </p>
      * 
-     * @return
+     * @return The maximum value for ViewOffNadir property filter. This filters items having ViewOffNadir lesser than or
+     *         equal to this value.
      */
 
     public Float getUpperBound() {
@@ -84,9 +120,14 @@ public class ViewOffNadirInput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum value for ViewOffNadir property filter. This filters items having ViewOffNadir lesser than or equal
+     * to this value.
+     * </p>
      * 
      * @param upperBound
+     *        The maximum value for ViewOffNadir property filter. This filters items having ViewOffNadir lesser than or
+     *        equal to this value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

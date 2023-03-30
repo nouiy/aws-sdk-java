@@ -510,6 +510,39 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetConsolidatedReportResult> getConsolidatedReportAsync(GetConsolidatedReportRequest request) {
+
+        return getConsolidatedReportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConsolidatedReportResult> getConsolidatedReportAsync(final GetConsolidatedReportRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetConsolidatedReportRequest, GetConsolidatedReportResult> asyncHandler) {
+        final GetConsolidatedReportRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetConsolidatedReportResult>() {
+            @Override
+            public GetConsolidatedReportResult call() throws Exception {
+                GetConsolidatedReportResult result = null;
+
+                try {
+                    result = executeGetConsolidatedReport(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLensResult> getLensAsync(GetLensRequest request) {
 
         return getLensAsync(request, null);

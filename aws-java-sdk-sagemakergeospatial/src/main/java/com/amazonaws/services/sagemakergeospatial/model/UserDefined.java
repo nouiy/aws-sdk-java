@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The output resolution (in target georeferenced units) of the result of the operation
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/UserDefined" target="_top">AWS
  *      API Documentation</a>
@@ -26,15 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UserDefined implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The units for output resolution of the result.
+     * </p>
+     */
     private String unit;
-    /** <p/> */
+    /**
+     * <p>
+     * The value for output resolution of the result.
+     * </p>
+     */
     private Float value;
 
     /**
-     * <p/>
+     * <p>
+     * The units for output resolution of the result.
+     * </p>
      * 
      * @param unit
+     *        The units for output resolution of the result.
      * @see Unit
      */
 
@@ -43,9 +56,11 @@ public class UserDefined implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The units for output resolution of the result.
+     * </p>
      * 
-     * @return
+     * @return The units for output resolution of the result.
      * @see Unit
      */
 
@@ -54,9 +69,12 @@ public class UserDefined implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The units for output resolution of the result.
+     * </p>
      * 
      * @param unit
+     *        The units for output resolution of the result.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Unit
      */
@@ -67,9 +85,12 @@ public class UserDefined implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The units for output resolution of the result.
+     * </p>
      * 
      * @param unit
+     *        The units for output resolution of the result.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Unit
      */
@@ -80,9 +101,12 @@ public class UserDefined implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The value for output resolution of the result.
+     * </p>
      * 
      * @param value
+     *        The value for output resolution of the result.
      */
 
     public void setValue(Float value) {
@@ -90,9 +114,11 @@ public class UserDefined implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The value for output resolution of the result.
+     * </p>
      * 
-     * @return
+     * @return The value for output resolution of the result.
      */
 
     public Float getValue() {
@@ -100,9 +126,12 @@ public class UserDefined implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The value for output resolution of the result.
+     * </p>
      * 
      * @param value
+     *        The value for output resolution of the result.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

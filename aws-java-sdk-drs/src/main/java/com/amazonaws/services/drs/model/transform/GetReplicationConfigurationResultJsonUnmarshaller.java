@@ -52,6 +52,10 @@ public class GetReplicationConfigurationResultJsonUnmarshaller implements Unmars
                     context.nextToken();
                     getReplicationConfigurationResult.setAssociateDefaultSecurityGroup(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("autoReplicateNewDisks", targetDepth)) {
+                    context.nextToken();
+                    getReplicationConfigurationResult.setAutoReplicateNewDisks(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("bandwidthThrottling", targetDepth)) {
                     context.nextToken();
                     getReplicationConfigurationResult.setBandwidthThrottling(context.getUnmarshaller(Long.class).unmarshall(context));

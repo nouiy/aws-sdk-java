@@ -35,6 +35,8 @@ public class ChannelMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("authorized").build();
     private static final MarshallingInfo<String> INGESTENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ingestEndpoint").build();
+    private static final MarshallingInfo<Boolean> INSECUREINGEST_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("insecureIngest").build();
     private static final MarshallingInfo<String> LATENCYMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latencyMode").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -67,6 +69,7 @@ public class ChannelMarshaller {
             protocolMarshaller.marshall(channel.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(channel.getAuthorized(), AUTHORIZED_BINDING);
             protocolMarshaller.marshall(channel.getIngestEndpoint(), INGESTENDPOINT_BINDING);
+            protocolMarshaller.marshall(channel.getInsecureIngest(), INSECUREINGEST_BINDING);
             protocolMarshaller.marshall(channel.getLatencyMode(), LATENCYMODE_BINDING);
             protocolMarshaller.marshall(channel.getName(), NAME_BINDING);
             protocolMarshaller.marshall(channel.getPlaybackUrl(), PLAYBACKURL_BINDING);

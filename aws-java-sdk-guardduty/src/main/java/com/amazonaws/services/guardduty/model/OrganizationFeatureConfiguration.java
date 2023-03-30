@@ -40,6 +40,12 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
      * </p>
      */
     private String autoEnable;
+    /**
+     * <p>
+     * The additional information that will be configured for the organization.
+     * </p>
+     */
+    private java.util.List<OrganizationAdditionalConfiguration> additionalConfiguration;
 
     /**
      * <p>
@@ -160,6 +166,76 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * The additional information that will be configured for the organization.
+     * </p>
+     * 
+     * @return The additional information that will be configured for the organization.
+     */
+
+    public java.util.List<OrganizationAdditionalConfiguration> getAdditionalConfiguration() {
+        return additionalConfiguration;
+    }
+
+    /**
+     * <p>
+     * The additional information that will be configured for the organization.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        The additional information that will be configured for the organization.
+     */
+
+    public void setAdditionalConfiguration(java.util.Collection<OrganizationAdditionalConfiguration> additionalConfiguration) {
+        if (additionalConfiguration == null) {
+            this.additionalConfiguration = null;
+            return;
+        }
+
+        this.additionalConfiguration = new java.util.ArrayList<OrganizationAdditionalConfiguration>(additionalConfiguration);
+    }
+
+    /**
+     * <p>
+     * The additional information that will be configured for the organization.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalConfiguration(java.util.Collection)} or
+     * {@link #withAdditionalConfiguration(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        The additional information that will be configured for the organization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OrganizationFeatureConfiguration withAdditionalConfiguration(OrganizationAdditionalConfiguration... additionalConfiguration) {
+        if (this.additionalConfiguration == null) {
+            setAdditionalConfiguration(new java.util.ArrayList<OrganizationAdditionalConfiguration>(additionalConfiguration.length));
+        }
+        for (OrganizationAdditionalConfiguration ele : additionalConfiguration) {
+            this.additionalConfiguration.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The additional information that will be configured for the organization.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        The additional information that will be configured for the organization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OrganizationFeatureConfiguration withAdditionalConfiguration(java.util.Collection<OrganizationAdditionalConfiguration> additionalConfiguration) {
+        setAdditionalConfiguration(additionalConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -174,7 +250,9 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getAutoEnable() != null)
-            sb.append("AutoEnable: ").append(getAutoEnable());
+            sb.append("AutoEnable: ").append(getAutoEnable()).append(",");
+        if (getAdditionalConfiguration() != null)
+            sb.append("AdditionalConfiguration: ").append(getAdditionalConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -197,6 +275,10 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
             return false;
         if (other.getAutoEnable() != null && other.getAutoEnable().equals(this.getAutoEnable()) == false)
             return false;
+        if (other.getAdditionalConfiguration() == null ^ this.getAdditionalConfiguration() == null)
+            return false;
+        if (other.getAdditionalConfiguration() != null && other.getAdditionalConfiguration().equals(this.getAdditionalConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -207,6 +289,7 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
 
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getAutoEnable() == null) ? 0 : getAutoEnable().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalConfiguration() == null) ? 0 : getAdditionalConfiguration().hashCode());
         return hashCode;
     }
 

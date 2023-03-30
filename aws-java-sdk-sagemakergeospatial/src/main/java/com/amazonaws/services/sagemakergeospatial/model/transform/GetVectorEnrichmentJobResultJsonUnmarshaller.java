@@ -54,7 +54,7 @@ public class GetVectorEnrichmentJobResultJsonUnmarshaller implements Unmarshalle
                 }
                 if (context.testExpression("CreationTime", targetDepth)) {
                     context.nextToken();
-                    getVectorEnrichmentJobResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                    getVectorEnrichmentJobResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("DurationInSeconds", targetDepth)) {
                     context.nextToken();

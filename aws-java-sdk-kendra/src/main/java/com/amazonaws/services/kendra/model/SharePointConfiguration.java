@@ -43,15 +43,8 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
-     * connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the sever domain name
-     * as part of the credentials. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>.
-     * </p>
-     * <p>
-     * You can also provide OAuth authentication credentials of user name, password, client ID, and client secret. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a
-     * SharePoint data source</a>.
+     * connect to the SharePoint instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Microsoft SharePoint</a>.
      * </p>
      */
     private String secretArn;
@@ -129,8 +122,8 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * you require a secure SSL connection.
      * </p>
      * <p>
-     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
-     * OpenSSL to create an X509 certificate, see <a
+     * You can generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using OpenSSL to
+     * create an X509 certificate, see <a
      * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
      * certificate</a>.
      * </p>
@@ -138,9 +131,9 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     private S3Path sslCertificateS3Path;
     /**
      * <p>
-     * Whether you want to connect to SharePoint using basic authentication of user name and password, or OAuth
-     * authentication of user name, password, client ID, and client secret. You can use OAuth authentication for
-     * SharePoint Online.
+     * Whether you want to connect to SharePoint Online using basic authentication of user name and password, or OAuth
+     * authentication of user name, password, client ID, and client secret, or AD App-only authentication of client
+     * secret.
      * </p>
      */
     private String authenticationType;
@@ -298,28 +291,14 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
-     * connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the sever domain name
-     * as part of the credentials. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>.
-     * </p>
-     * <p>
-     * You can also provide OAuth authentication credentials of user name, password, client ID, and client secret. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a
-     * SharePoint data source</a>.
+     * connect to the SharePoint instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Microsoft SharePoint</a>.
      * </p>
      * 
      * @param secretArn
      *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
-     *        required to connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the
-     *        sever domain name as part of the credentials. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft
-     *        SharePoint Data Source</a>.</p>
-     *        <p>
-     *        You can also provide OAuth authentication credentials of user name, password, client ID, and client
-     *        secret. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a SharePoint data
-     *        source</a>.
+     *        required to connect to the SharePoint instance. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Microsoft SharePoint</a>.
      */
 
     public void setSecretArn(String secretArn) {
@@ -329,27 +308,13 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
-     * connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the sever domain name
-     * as part of the credentials. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>.
-     * </p>
-     * <p>
-     * You can also provide OAuth authentication credentials of user name, password, client ID, and client secret. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a
-     * SharePoint data source</a>.
+     * connect to the SharePoint instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Microsoft SharePoint</a>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
-     *         required to connect to the SharePoint instance. If you use SharePoint Server, you also need to provide
-     *         the sever domain name as part of the credentials. For more information, see <a
-     *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft
-     *         SharePoint Data Source</a>.</p>
-     *         <p>
-     *         You can also provide OAuth authentication credentials of user name, password, client ID, and client
-     *         secret. For more information, see <a
-     *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a SharePoint data
-     *         source</a>.
+     *         required to connect to the SharePoint instance. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Microsoft SharePoint</a>.
      */
 
     public String getSecretArn() {
@@ -359,28 +324,14 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
-     * connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the sever domain name
-     * as part of the credentials. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>.
-     * </p>
-     * <p>
-     * You can also provide OAuth authentication credentials of user name, password, client ID, and client secret. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a
-     * SharePoint data source</a>.
+     * connect to the SharePoint instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Microsoft SharePoint</a>.
      * </p>
      * 
      * @param secretArn
      *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
-     *        required to connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the
-     *        sever domain name as part of the credentials. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft
-     *        SharePoint Data Source</a>.</p>
-     *        <p>
-     *        You can also provide OAuth authentication credentials of user name, password, client ID, and client
-     *        secret. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a SharePoint data
-     *        source</a>.
+     *        required to connect to the SharePoint instance. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Microsoft SharePoint</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -989,8 +940,8 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * you require a secure SSL connection.
      * </p>
      * <p>
-     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
-     * OpenSSL to create an X509 certificate, see <a
+     * You can generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using OpenSSL to
+     * create an X509 certificate, see <a
      * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
      * certificate</a>.
      * </p>
@@ -999,8 +950,8 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint
      *        Server if you require a secure SSL connection.</p>
      *        <p>
-     *        You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of
-     *        using OpenSSL to create an X509 certificate, see <a
+     *        You can generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
+     *        OpenSSL to create an X509 certificate, see <a
      *        href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign
      *        an X509 certificate</a>.
      */
@@ -1015,8 +966,8 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * you require a secure SSL connection.
      * </p>
      * <p>
-     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
-     * OpenSSL to create an X509 certificate, see <a
+     * You can generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using OpenSSL to
+     * create an X509 certificate, see <a
      * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
      * certificate</a>.
      * </p>
@@ -1024,8 +975,8 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * @return The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint
      *         Server if you require a secure SSL connection.</p>
      *         <p>
-     *         You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of
-     *         using OpenSSL to create an X509 certificate, see <a
+     *         You can generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
+     *         OpenSSL to create an X509 certificate, see <a
      *         href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign
      *         an X509 certificate</a>.
      */
@@ -1040,8 +991,8 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * you require a secure SSL connection.
      * </p>
      * <p>
-     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
-     * OpenSSL to create an X509 certificate, see <a
+     * You can generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using OpenSSL to
+     * create an X509 certificate, see <a
      * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
      * certificate</a>.
      * </p>
@@ -1050,8 +1001,8 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint
      *        Server if you require a secure SSL connection.</p>
      *        <p>
-     *        You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of
-     *        using OpenSSL to create an X509 certificate, see <a
+     *        You can generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
+     *        OpenSSL to create an X509 certificate, see <a
      *        href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign
      *        an X509 certificate</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1064,15 +1015,15 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Whether you want to connect to SharePoint using basic authentication of user name and password, or OAuth
-     * authentication of user name, password, client ID, and client secret. You can use OAuth authentication for
-     * SharePoint Online.
+     * Whether you want to connect to SharePoint Online using basic authentication of user name and password, or OAuth
+     * authentication of user name, password, client ID, and client secret, or AD App-only authentication of client
+     * secret.
      * </p>
      * 
      * @param authenticationType
-     *        Whether you want to connect to SharePoint using basic authentication of user name and password, or OAuth
-     *        authentication of user name, password, client ID, and client secret. You can use OAuth authentication for
-     *        SharePoint Online.
+     *        Whether you want to connect to SharePoint Online using basic authentication of user name and password, or
+     *        OAuth authentication of user name, password, client ID, and client secret, or AD App-only authentication
+     *        of client secret.
      * @see SharePointOnlineAuthenticationType
      */
 
@@ -1082,14 +1033,14 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Whether you want to connect to SharePoint using basic authentication of user name and password, or OAuth
-     * authentication of user name, password, client ID, and client secret. You can use OAuth authentication for
-     * SharePoint Online.
+     * Whether you want to connect to SharePoint Online using basic authentication of user name and password, or OAuth
+     * authentication of user name, password, client ID, and client secret, or AD App-only authentication of client
+     * secret.
      * </p>
      * 
-     * @return Whether you want to connect to SharePoint using basic authentication of user name and password, or OAuth
-     *         authentication of user name, password, client ID, and client secret. You can use OAuth authentication for
-     *         SharePoint Online.
+     * @return Whether you want to connect to SharePoint Online using basic authentication of user name and password, or
+     *         OAuth authentication of user name, password, client ID, and client secret, or AD App-only authentication
+     *         of client secret.
      * @see SharePointOnlineAuthenticationType
      */
 
@@ -1099,15 +1050,15 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Whether you want to connect to SharePoint using basic authentication of user name and password, or OAuth
-     * authentication of user name, password, client ID, and client secret. You can use OAuth authentication for
-     * SharePoint Online.
+     * Whether you want to connect to SharePoint Online using basic authentication of user name and password, or OAuth
+     * authentication of user name, password, client ID, and client secret, or AD App-only authentication of client
+     * secret.
      * </p>
      * 
      * @param authenticationType
-     *        Whether you want to connect to SharePoint using basic authentication of user name and password, or OAuth
-     *        authentication of user name, password, client ID, and client secret. You can use OAuth authentication for
-     *        SharePoint Online.
+     *        Whether you want to connect to SharePoint Online using basic authentication of user name and password, or
+     *        OAuth authentication of user name, password, client ID, and client secret, or AD App-only authentication
+     *        of client secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SharePointOnlineAuthenticationType
      */
@@ -1119,15 +1070,15 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Whether you want to connect to SharePoint using basic authentication of user name and password, or OAuth
-     * authentication of user name, password, client ID, and client secret. You can use OAuth authentication for
-     * SharePoint Online.
+     * Whether you want to connect to SharePoint Online using basic authentication of user name and password, or OAuth
+     * authentication of user name, password, client ID, and client secret, or AD App-only authentication of client
+     * secret.
      * </p>
      * 
      * @param authenticationType
-     *        Whether you want to connect to SharePoint using basic authentication of user name and password, or OAuth
-     *        authentication of user name, password, client ID, and client secret. You can use OAuth authentication for
-     *        SharePoint Online.
+     *        Whether you want to connect to SharePoint Online using basic authentication of user name and password, or
+     *        OAuth authentication of user name, password, client ID, and client secret, or AD App-only authentication
+     *        of client secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SharePointOnlineAuthenticationType
      */

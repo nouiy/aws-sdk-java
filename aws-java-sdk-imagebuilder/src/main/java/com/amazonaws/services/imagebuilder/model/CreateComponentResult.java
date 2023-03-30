@@ -37,7 +37,7 @@ public class CreateComponentResult extends com.amazonaws.AmazonWebServiceResult<
     private String clientToken;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the component that was created by this request.
+     * The Amazon Resource Name (ARN) of the component that this request created.
      * </p>
      */
     private String componentBuildVersionArn;
@@ -124,11 +124,11 @@ public class CreateComponentResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the component that was created by this request.
+     * The Amazon Resource Name (ARN) of the component that this request created.
      * </p>
      * 
      * @param componentBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the component that was created by this request.
+     *        The Amazon Resource Name (ARN) of the component that this request created.
      */
 
     public void setComponentBuildVersionArn(String componentBuildVersionArn) {
@@ -137,10 +137,10 @@ public class CreateComponentResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the component that was created by this request.
+     * The Amazon Resource Name (ARN) of the component that this request created.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the component that was created by this request.
+     * @return The Amazon Resource Name (ARN) of the component that this request created.
      */
 
     public String getComponentBuildVersionArn() {
@@ -149,11 +149,11 @@ public class CreateComponentResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the component that was created by this request.
+     * The Amazon Resource Name (ARN) of the component that this request created.
      * </p>
      * 
      * @param componentBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the component that was created by this request.
+     *        The Amazon Resource Name (ARN) of the component that this request created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

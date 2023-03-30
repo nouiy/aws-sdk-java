@@ -52,13 +52,13 @@ public class PersonasSummary implements Serializable, Cloneable, StructuredPojo 
     private String persona;
     /**
      * <p>
-     * The date-time the summary information was created.
+     * The Unix timestamp when the summary information was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The date-time the summary information was last updated.
+     * The Unix timestamp when the summary information was last updated.
      * </p>
      */
     private java.util.Date updatedAt;
@@ -202,11 +202,11 @@ public class PersonasSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The date-time the summary information was created.
+     * The Unix timestamp when the summary information was created.
      * </p>
      * 
      * @param createdAt
-     *        The date-time the summary information was created.
+     *        The Unix timestamp when the summary information was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -215,10 +215,10 @@ public class PersonasSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The date-time the summary information was created.
+     * The Unix timestamp when the summary information was created.
      * </p>
      * 
-     * @return The date-time the summary information was created.
+     * @return The Unix timestamp when the summary information was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -227,11 +227,11 @@ public class PersonasSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The date-time the summary information was created.
+     * The Unix timestamp when the summary information was created.
      * </p>
      * 
      * @param createdAt
-     *        The date-time the summary information was created.
+     *        The Unix timestamp when the summary information was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -242,11 +242,11 @@ public class PersonasSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The date-time the summary information was last updated.
+     * The Unix timestamp when the summary information was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The date-time the summary information was last updated.
+     *        The Unix timestamp when the summary information was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -255,10 +255,10 @@ public class PersonasSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The date-time the summary information was last updated.
+     * The Unix timestamp when the summary information was last updated.
      * </p>
      * 
-     * @return The date-time the summary information was last updated.
+     * @return The Unix timestamp when the summary information was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -267,11 +267,11 @@ public class PersonasSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The date-time the summary information was last updated.
+     * The Unix timestamp when the summary information was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The date-time the summary information was last updated.
+     *        The Unix timestamp when the summary information was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

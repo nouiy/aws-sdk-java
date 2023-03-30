@@ -133,6 +133,7 @@ public class AbstractAWSdrs implements AWSdrs {
     }
 
     @Override
+    @Deprecated
     public RetryDataReplicationResult retryDataReplication(RetryDataReplicationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

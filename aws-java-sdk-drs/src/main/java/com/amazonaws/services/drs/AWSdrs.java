@@ -545,9 +545,9 @@ public interface AWSdrs {
 
     /**
      * <p>
-     * Causes the data replication initiation sequence to begin immediately upon next Handshake for the specified Source
-     * Server ID, regardless of when the previous initiation started. This command will work only if the Source Server
-     * is stalled or is in a DISCONNECTED or STOPPED state.
+     * WARNING: RetryDataReplication is deprecated. Causes the data replication initiation sequence to begin immediately
+     * upon next Handshake for the specified Source Server ID, regardless of when the previous initiation started. This
+     * command will work only if the Source Server is stalled or is in a DISCONNECTED or STOPPED state.
      * </p>
      * 
      * @param retryDataReplicationRequest
@@ -566,6 +566,7 @@ public interface AWSdrs {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/RetryDataReplication" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     RetryDataReplicationResult retryDataReplication(RetryDataReplicationRequest retryDataReplicationRequest);
 
     /**

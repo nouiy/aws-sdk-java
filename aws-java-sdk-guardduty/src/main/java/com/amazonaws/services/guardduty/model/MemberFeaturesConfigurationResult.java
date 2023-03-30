@@ -46,6 +46,12 @@ public class MemberFeaturesConfigurationResult implements Serializable, Cloneabl
      * </p>
      */
     private java.util.Date updatedAt;
+    /**
+     * <p>
+     * Indicates the additional configuration of the feature that is configured for the member account.
+     * </p>
+     */
+    private java.util.List<MemberAdditionalConfigurationResult> additionalConfiguration;
 
     /**
      * <p>
@@ -206,6 +212,76 @@ public class MemberFeaturesConfigurationResult implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * Indicates the additional configuration of the feature that is configured for the member account.
+     * </p>
+     * 
+     * @return Indicates the additional configuration of the feature that is configured for the member account.
+     */
+
+    public java.util.List<MemberAdditionalConfigurationResult> getAdditionalConfiguration() {
+        return additionalConfiguration;
+    }
+
+    /**
+     * <p>
+     * Indicates the additional configuration of the feature that is configured for the member account.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        Indicates the additional configuration of the feature that is configured for the member account.
+     */
+
+    public void setAdditionalConfiguration(java.util.Collection<MemberAdditionalConfigurationResult> additionalConfiguration) {
+        if (additionalConfiguration == null) {
+            this.additionalConfiguration = null;
+            return;
+        }
+
+        this.additionalConfiguration = new java.util.ArrayList<MemberAdditionalConfigurationResult>(additionalConfiguration);
+    }
+
+    /**
+     * <p>
+     * Indicates the additional configuration of the feature that is configured for the member account.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalConfiguration(java.util.Collection)} or
+     * {@link #withAdditionalConfiguration(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        Indicates the additional configuration of the feature that is configured for the member account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MemberFeaturesConfigurationResult withAdditionalConfiguration(MemberAdditionalConfigurationResult... additionalConfiguration) {
+        if (this.additionalConfiguration == null) {
+            setAdditionalConfiguration(new java.util.ArrayList<MemberAdditionalConfigurationResult>(additionalConfiguration.length));
+        }
+        for (MemberAdditionalConfigurationResult ele : additionalConfiguration) {
+            this.additionalConfiguration.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the additional configuration of the feature that is configured for the member account.
+     * </p>
+     * 
+     * @param additionalConfiguration
+     *        Indicates the additional configuration of the feature that is configured for the member account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MemberFeaturesConfigurationResult withAdditionalConfiguration(java.util.Collection<MemberAdditionalConfigurationResult> additionalConfiguration) {
+        setAdditionalConfiguration(additionalConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -222,7 +298,9 @@ public class MemberFeaturesConfigurationResult implements Serializable, Cloneabl
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getUpdatedAt() != null)
-            sb.append("UpdatedAt: ").append(getUpdatedAt());
+            sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
+        if (getAdditionalConfiguration() != null)
+            sb.append("AdditionalConfiguration: ").append(getAdditionalConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -249,6 +327,10 @@ public class MemberFeaturesConfigurationResult implements Serializable, Cloneabl
             return false;
         if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
             return false;
+        if (other.getAdditionalConfiguration() == null ^ this.getAdditionalConfiguration() == null)
+            return false;
+        if (other.getAdditionalConfiguration() != null && other.getAdditionalConfiguration().equals(this.getAdditionalConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -260,6 +342,7 @@ public class MemberFeaturesConfigurationResult implements Serializable, Cloneabl
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalConfiguration() == null) ? 0 : getAdditionalConfiguration().hashCode());
         return hashCode;
     }
 

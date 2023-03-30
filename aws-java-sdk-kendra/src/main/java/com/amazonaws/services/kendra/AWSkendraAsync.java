@@ -159,6 +159,45 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
+     * Removes one or more sets of featured results. Features results are placed above all other results for certain
+     * queries. If there's an exact match of a query, then one or more specific documents are featured in the search
+     * results.
+     * </p>
+     * 
+     * @param batchDeleteFeaturedResultsSetRequest
+     * @return A Java Future containing the result of the BatchDeleteFeaturedResultsSet operation returned by the
+     *         service.
+     * @sample AWSkendraAsync.BatchDeleteFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/BatchDeleteFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDeleteFeaturedResultsSetResult> batchDeleteFeaturedResultsSetAsync(
+            BatchDeleteFeaturedResultsSetRequest batchDeleteFeaturedResultsSetRequest);
+
+    /**
+     * <p>
+     * Removes one or more sets of featured results. Features results are placed above all other results for certain
+     * queries. If there's an exact match of a query, then one or more specific documents are featured in the search
+     * results.
+     * </p>
+     * 
+     * @param batchDeleteFeaturedResultsSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchDeleteFeaturedResultsSet operation returned by the
+     *         service.
+     * @sample AWSkendraAsyncHandler.BatchDeleteFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/BatchDeleteFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDeleteFeaturedResultsSetResult> batchDeleteFeaturedResultsSetAsync(
+            BatchDeleteFeaturedResultsSetRequest batchDeleteFeaturedResultsSetRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchDeleteFeaturedResultsSetRequest, BatchDeleteFeaturedResultsSetResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the indexing status for one or more documents submitted with the <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/API_BatchPutDocument.html"> BatchPutDocument</a> API.
      * </p>
@@ -414,10 +453,6 @@ public interface AWSkendraAsync extends AWSkendra {
      * successfully created. Otherwise, an exception is raised.
      * </p>
      * <p>
-     * Amazon S3 and <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html">custom</a> data
-     * sources are the only supported data sources in the Amazon Web Services GovCloud (US-West) region.
-     * </p>
-     * <p>
      * For an example of creating an index and data source using the Python SDK, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/gs-python.html">Getting started with Python SDK</a>. For an
      * example of creating an index and data source using the Java SDK, see <a
@@ -443,10 +478,6 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * <code>CreateDataSource</code> is a synchronous operation. The operation returns 200 if the data source was
      * successfully created. Otherwise, an exception is raised.
-     * </p>
-     * <p>
-     * Amazon S3 and <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html">custom</a> data
-     * sources are the only supported data sources in the Amazon Web Services GovCloud (US-West) region.
      * </p>
      * <p>
      * For an example of creating an index and data source using the Python SDK, see <a
@@ -507,7 +538,7 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Creates an new set of frequently asked question (FAQ) questions and answers.
+     * Creates a set of frequently ask questions (FAQs) using a specified FAQ file stored in an Amazon S3 bucket.
      * </p>
      * <p>
      * Adding FAQs to an index is an asynchronous operation.
@@ -527,7 +558,7 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Creates an new set of frequently asked question (FAQ) questions and answers.
+     * Creates a set of frequently ask questions (FAQs) using a specified FAQ file stored in an Amazon S3 bucket.
      * </p>
      * <p>
      * Adding FAQs to an index is an asynchronous operation.
@@ -549,6 +580,51 @@ public interface AWSkendraAsync extends AWSkendra {
      */
     java.util.concurrent.Future<CreateFaqResult> createFaqAsync(CreateFaqRequest createFaqRequest,
             com.amazonaws.handlers.AsyncHandler<CreateFaqRequest, CreateFaqResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a set of featured results to display at the top of the search results page. Featured results are placed
+     * above all other results for certain queries. You map specific queries to specific documents for featuring in the
+     * results. If a query contains an exact match, then one or more specific documents are featured in the search
+     * results.
+     * </p>
+     * <p>
+     * You can create up to 50 sets of featured results per index. You can request to increase this limit by contacting
+     * <a href="http://aws.amazon.com/contact-us/">Support</a>.
+     * </p>
+     * 
+     * @param createFeaturedResultsSetRequest
+     * @return A Java Future containing the result of the CreateFeaturedResultsSet operation returned by the service.
+     * @sample AWSkendraAsync.CreateFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFeaturedResultsSetResult> createFeaturedResultsSetAsync(CreateFeaturedResultsSetRequest createFeaturedResultsSetRequest);
+
+    /**
+     * <p>
+     * Creates a set of featured results to display at the top of the search results page. Featured results are placed
+     * above all other results for certain queries. You map specific queries to specific documents for featuring in the
+     * results. If a query contains an exact match, then one or more specific documents are featured in the search
+     * results.
+     * </p>
+     * <p>
+     * You can create up to 50 sets of featured results per index. You can request to increase this limit by contacting
+     * <a href="http://aws.amazon.com/contact-us/">Support</a>.
+     * </p>
+     * 
+     * @param createFeaturedResultsSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateFeaturedResultsSet operation returned by the service.
+     * @sample AWSkendraAsyncHandler.CreateFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFeaturedResultsSetResult> createFeaturedResultsSetAsync(CreateFeaturedResultsSetRequest createFeaturedResultsSetRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateFeaturedResultsSetRequest, CreateFeaturedResultsSetResult> asyncHandler);
 
     /**
      * <p>
@@ -1187,6 +1263,43 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
+     * Gets information about a set of featured results. Features results are placed above all other results for certain
+     * queries. If there's an exact match of a query, then one or more specific documents are featured in the search
+     * results.
+     * </p>
+     * 
+     * @param describeFeaturedResultsSetRequest
+     * @return A Java Future containing the result of the DescribeFeaturedResultsSet operation returned by the service.
+     * @sample AWSkendraAsync.DescribeFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeFeaturedResultsSetResult> describeFeaturedResultsSetAsync(
+            DescribeFeaturedResultsSetRequest describeFeaturedResultsSetRequest);
+
+    /**
+     * <p>
+     * Gets information about a set of featured results. Features results are placed above all other results for certain
+     * queries. If there's an exact match of a query, then one or more specific documents are featured in the search
+     * results.
+     * </p>
+     * 
+     * @param describeFeaturedResultsSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeFeaturedResultsSet operation returned by the service.
+     * @sample AWSkendraAsyncHandler.DescribeFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeFeaturedResultsSetResult> describeFeaturedResultsSetAsync(
+            DescribeFeaturedResultsSetRequest describeFeaturedResultsSetRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeFeaturedResultsSetRequest, DescribeFeaturedResultsSetResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets information about an existing Amazon Kendra index.
      * </p>
      * 
@@ -1787,6 +1900,41 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
+     * Lists all your sets of featured results for a given index. Features results are placed above all other results
+     * for certain queries. If there's an exact match of a query, then one or more specific documents are featured in
+     * the search results.
+     * </p>
+     * 
+     * @param listFeaturedResultsSetsRequest
+     * @return A Java Future containing the result of the ListFeaturedResultsSets operation returned by the service.
+     * @sample AWSkendraAsync.ListFeaturedResultsSets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListFeaturedResultsSets" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFeaturedResultsSetsResult> listFeaturedResultsSetsAsync(ListFeaturedResultsSetsRequest listFeaturedResultsSetsRequest);
+
+    /**
+     * <p>
+     * Lists all your sets of featured results for a given index. Features results are placed above all other results
+     * for certain queries. If there's an exact match of a query, then one or more specific documents are featured in
+     * the search results.
+     * </p>
+     * 
+     * @param listFeaturedResultsSetsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListFeaturedResultsSets operation returned by the service.
+     * @sample AWSkendraAsyncHandler.ListFeaturedResultsSets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListFeaturedResultsSets" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFeaturedResultsSetsResult> listFeaturedResultsSetsAsync(ListFeaturedResultsSetsRequest listFeaturedResultsSetsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListFeaturedResultsSetsRequest, ListFeaturedResultsSetsResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides a list of groups that are mapped to users before a given ordering or timestamp identifier.
      * </p>
      * <p>
@@ -1993,9 +2141,6 @@ public interface AWSkendraAsync extends AWSkendra {
      * If more than five <code>PUT</code> actions for a group are currently processing, a validation exception is
      * thrown.
      * </p>
-     * <p>
-     * <code>PutPrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
-     * </p>
      * 
      * @param putPrincipalMappingRequest
      * @return A Java Future containing the result of the PutPrincipalMapping operation returned by the service.
@@ -2023,9 +2168,6 @@ public interface AWSkendraAsync extends AWSkendra {
      * <p>
      * If more than five <code>PUT</code> actions for a group are currently processing, a validation exception is
      * thrown.
-     * </p>
-     * <p>
-     * <code>PutPrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
      * </p>
      * 
      * @param putPrincipalMappingRequest
@@ -2442,6 +2584,41 @@ public interface AWSkendraAsync extends AWSkendra {
      */
     java.util.concurrent.Future<UpdateExperienceResult> updateExperienceAsync(UpdateExperienceRequest updateExperienceRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateExperienceRequest, UpdateExperienceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a set of featured results. Features results are placed above all other results for certain queries. You
+     * map specific queries to specific documents for featuring in the results. If a query contains an exact match of a
+     * query, then one or more specific documents are featured in the search results.
+     * </p>
+     * 
+     * @param updateFeaturedResultsSetRequest
+     * @return A Java Future containing the result of the UpdateFeaturedResultsSet operation returned by the service.
+     * @sample AWSkendraAsync.UpdateFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFeaturedResultsSetResult> updateFeaturedResultsSetAsync(UpdateFeaturedResultsSetRequest updateFeaturedResultsSetRequest);
+
+    /**
+     * <p>
+     * Updates a set of featured results. Features results are placed above all other results for certain queries. You
+     * map specific queries to specific documents for featuring in the results. If a query contains an exact match of a
+     * query, then one or more specific documents are featured in the search results.
+     * </p>
+     * 
+     * @param updateFeaturedResultsSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateFeaturedResultsSet operation returned by the service.
+     * @sample AWSkendraAsyncHandler.UpdateFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFeaturedResultsSetResult> updateFeaturedResultsSetAsync(UpdateFeaturedResultsSetRequest updateFeaturedResultsSetRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateFeaturedResultsSetRequest, UpdateFeaturedResultsSetResult> asyncHandler);
 
     /**
      * <p>

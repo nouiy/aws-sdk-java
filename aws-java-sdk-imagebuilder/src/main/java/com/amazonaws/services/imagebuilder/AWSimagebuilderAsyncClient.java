@@ -943,6 +943,72 @@ public class AWSimagebuilderAsyncClient extends AWSimagebuilderClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetWorkflowExecutionResult> getWorkflowExecutionAsync(GetWorkflowExecutionRequest request) {
+
+        return getWorkflowExecutionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowExecutionResult> getWorkflowExecutionAsync(final GetWorkflowExecutionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetWorkflowExecutionRequest, GetWorkflowExecutionResult> asyncHandler) {
+        final GetWorkflowExecutionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetWorkflowExecutionResult>() {
+            @Override
+            public GetWorkflowExecutionResult call() throws Exception {
+                GetWorkflowExecutionResult result = null;
+
+                try {
+                    result = executeGetWorkflowExecution(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowStepExecutionResult> getWorkflowStepExecutionAsync(GetWorkflowStepExecutionRequest request) {
+
+        return getWorkflowStepExecutionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowStepExecutionResult> getWorkflowStepExecutionAsync(final GetWorkflowStepExecutionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetWorkflowStepExecutionRequest, GetWorkflowStepExecutionResult> asyncHandler) {
+        final GetWorkflowStepExecutionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetWorkflowStepExecutionResult>() {
+            @Override
+            public GetWorkflowStepExecutionResult call() throws Exception {
+                GetWorkflowStepExecutionResult result = null;
+
+                try {
+                    result = executeGetWorkflowStepExecution(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportComponentResult> importComponentAsync(ImportComponentRequest request) {
 
         return importComponentAsync(request, null);
@@ -1307,6 +1373,74 @@ public class AWSimagebuilderAsyncClient extends AWSimagebuilderClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListImageScanFindingAggregationsResult> listImageScanFindingAggregationsAsync(
+            ListImageScanFindingAggregationsRequest request) {
+
+        return listImageScanFindingAggregationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListImageScanFindingAggregationsResult> listImageScanFindingAggregationsAsync(
+            final ListImageScanFindingAggregationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListImageScanFindingAggregationsRequest, ListImageScanFindingAggregationsResult> asyncHandler) {
+        final ListImageScanFindingAggregationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListImageScanFindingAggregationsResult>() {
+            @Override
+            public ListImageScanFindingAggregationsResult call() throws Exception {
+                ListImageScanFindingAggregationsResult result = null;
+
+                try {
+                    result = executeListImageScanFindingAggregations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListImageScanFindingsResult> listImageScanFindingsAsync(ListImageScanFindingsRequest request) {
+
+        return listImageScanFindingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListImageScanFindingsResult> listImageScanFindingsAsync(final ListImageScanFindingsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListImageScanFindingsRequest, ListImageScanFindingsResult> asyncHandler) {
+        final ListImageScanFindingsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListImageScanFindingsResult>() {
+            @Override
+            public ListImageScanFindingsResult call() throws Exception {
+                ListImageScanFindingsResult result = null;
+
+                try {
+                    result = executeListImageScanFindings(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListImagesResult> listImagesAsync(ListImagesRequest request) {
 
         return listImagesAsync(request, null);
@@ -1392,6 +1526,72 @@ public class AWSimagebuilderAsyncClient extends AWSimagebuilderClient implements
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowExecutionsResult> listWorkflowExecutionsAsync(ListWorkflowExecutionsRequest request) {
+
+        return listWorkflowExecutionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowExecutionsResult> listWorkflowExecutionsAsync(final ListWorkflowExecutionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListWorkflowExecutionsRequest, ListWorkflowExecutionsResult> asyncHandler) {
+        final ListWorkflowExecutionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListWorkflowExecutionsResult>() {
+            @Override
+            public ListWorkflowExecutionsResult call() throws Exception {
+                ListWorkflowExecutionsResult result = null;
+
+                try {
+                    result = executeListWorkflowExecutions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowStepExecutionsResult> listWorkflowStepExecutionsAsync(ListWorkflowStepExecutionsRequest request) {
+
+        return listWorkflowStepExecutionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowStepExecutionsResult> listWorkflowStepExecutionsAsync(final ListWorkflowStepExecutionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListWorkflowStepExecutionsRequest, ListWorkflowStepExecutionsResult> asyncHandler) {
+        final ListWorkflowStepExecutionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListWorkflowStepExecutionsResult>() {
+            @Override
+            public ListWorkflowStepExecutionsResult call() throws Exception {
+                ListWorkflowStepExecutionsResult result = null;
+
+                try {
+                    result = executeListWorkflowStepExecutions(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

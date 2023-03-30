@@ -31,6 +31,8 @@ public class CreateChannelRequestMarshaller {
 
     private static final MarshallingInfo<Boolean> AUTHORIZED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("authorized").build();
+    private static final MarshallingInfo<Boolean> INSECUREINGEST_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("insecureIngest").build();
     private static final MarshallingInfo<String> LATENCYMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latencyMode").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -59,6 +61,7 @@ public class CreateChannelRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createChannelRequest.getAuthorized(), AUTHORIZED_BINDING);
+            protocolMarshaller.marshall(createChannelRequest.getInsecureIngest(), INSECUREINGEST_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getLatencyMode(), LATENCYMODE_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getRecordingConfigurationArn(), RECORDINGCONFIGURATIONARN_BINDING);

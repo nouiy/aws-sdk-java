@@ -409,6 +409,64 @@ public interface AWSNetworkFirewall {
 
     /**
      * <p>
+     * Creates an Network Firewall TLS inspection configuration. A TLS inspection configuration contains the Certificate
+     * Manager certificate references that Network Firewall uses to decrypt and re-encrypt inbound traffic.
+     * </p>
+     * <p>
+     * After you create a TLS inspection configuration, you associate it with a firewall policy.
+     * </p>
+     * <p>
+     * To update the settings for a TLS inspection configuration, use <a>UpdateTLSInspectionConfiguration</a>.
+     * </p>
+     * <p>
+     * To manage a TLS inspection configuration's tags, use the standard Amazon Web Services resource tagging
+     * operations, <a>ListTagsForResource</a>, <a>TagResource</a>, and <a>UntagResource</a>.
+     * </p>
+     * <p>
+     * To retrieve information about TLS inspection configurations, use <a>ListTLSInspectionConfigurations</a> and
+     * <a>DescribeTLSInspectionConfiguration</a>.
+     * </p>
+     * <p>
+     * For more information about TLS inspection configurations, see <a
+     * href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html">Decrypting SSL/TLS
+     * traffic with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>.
+     * </p>
+     * 
+     * @param createTLSInspectionConfigurationRequest
+     * @return Result of the CreateTLSInspectionConfiguration operation returned by the service.
+     * @throws InvalidRequestException
+     *         The operation failed because of a problem with your request. Examples include: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified an unsupported parameter name or value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a property with a value that isn't among the available types.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource that isn't valid in the
+     *         context of the request.
+     *         </p>
+     *         </li>
+     * @throws ThrottlingException
+     *         Unable to process the request due to throttling limitations.
+     * @throws InternalServerErrorException
+     *         Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem.
+     *         Retry your request.
+     * @sample AWSNetworkFirewall.CreateTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/CreateTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateTLSInspectionConfigurationResult createTLSInspectionConfiguration(CreateTLSInspectionConfigurationRequest createTLSInspectionConfigurationRequest);
+
+    /**
+     * <p>
      * Deletes the specified <a>Firewall</a> and its <a>FirewallStatus</a>. This operation requires the firewall's
      * <code>DeleteProtection</code> flag to be <code>FALSE</code>. You can't revert this operation.
      * </p>
@@ -591,6 +649,49 @@ public interface AWSNetworkFirewall {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteRuleGroupResult deleteRuleGroup(DeleteRuleGroupRequest deleteRuleGroupRequest);
+
+    /**
+     * <p>
+     * Deletes the specified <a>TLSInspectionConfiguration</a>.
+     * </p>
+     * 
+     * @param deleteTLSInspectionConfigurationRequest
+     * @return Result of the DeleteTLSInspectionConfiguration operation returned by the service.
+     * @throws InvalidRequestException
+     *         The operation failed because of a problem with your request. Examples include: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified an unsupported parameter name or value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a property with a value that isn't among the available types.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource that isn't valid in the
+     *         context of the request.
+     *         </p>
+     *         </li>
+     * @throws InternalServerErrorException
+     *         Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem.
+     *         Retry your request.
+     * @throws ResourceNotFoundException
+     *         Unable to locate a resource using the parameters that you provided.
+     * @throws ThrottlingException
+     *         Unable to process the request due to throttling limitations.
+     * @throws InvalidOperationException
+     *         The operation failed because it's not valid. For example, you might have tried to delete a rule group or
+     *         firewall policy that's in use.
+     * @sample AWSNetworkFirewall.DeleteTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DeleteTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteTLSInspectionConfigurationResult deleteTLSInspectionConfiguration(DeleteTLSInspectionConfigurationRequest deleteTLSInspectionConfigurationRequest);
 
     /**
      * <p>
@@ -830,6 +931,47 @@ public interface AWSNetworkFirewall {
 
     /**
      * <p>
+     * Returns the data objects for the specified TLS inspection configuration.
+     * </p>
+     * 
+     * @param describeTLSInspectionConfigurationRequest
+     * @return Result of the DescribeTLSInspectionConfiguration operation returned by the service.
+     * @throws InvalidRequestException
+     *         The operation failed because of a problem with your request. Examples include: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified an unsupported parameter name or value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a property with a value that isn't among the available types.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource that isn't valid in the
+     *         context of the request.
+     *         </p>
+     *         </li>
+     * @throws InternalServerErrorException
+     *         Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem.
+     *         Retry your request.
+     * @throws ResourceNotFoundException
+     *         Unable to locate a resource using the parameters that you provided.
+     * @throws ThrottlingException
+     *         Unable to process the request due to throttling limitations.
+     * @sample AWSNetworkFirewall.DescribeTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DescribeTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTLSInspectionConfigurationResult describeTLSInspectionConfiguration(
+            DescribeTLSInspectionConfigurationRequest describeTLSInspectionConfigurationRequest);
+
+    /**
+     * <p>
      * Removes the specified subnet associations from the firewall. This removes the firewall endpoints from the subnets
      * and removes any network filtering protections that the endpoints were providing.
      * </p>
@@ -990,6 +1132,44 @@ public interface AWSNetworkFirewall {
      *      target="_top">AWS API Documentation</a>
      */
     ListRuleGroupsResult listRuleGroups(ListRuleGroupsRequest listRuleGroupsRequest);
+
+    /**
+     * <p>
+     * Retrieves the metadata for the TLS inspection configurations that you have defined. Depending on your setting for
+     * max results and the number of TLS inspection configurations, a single call might not return the full list.
+     * </p>
+     * 
+     * @param listTLSInspectionConfigurationsRequest
+     * @return Result of the ListTLSInspectionConfigurations operation returned by the service.
+     * @throws InvalidRequestException
+     *         The operation failed because of a problem with your request. Examples include: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified an unsupported parameter name or value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a property with a value that isn't among the available types.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource that isn't valid in the
+     *         context of the request.
+     *         </p>
+     *         </li>
+     * @throws InternalServerErrorException
+     *         Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem.
+     *         Retry your request.
+     * @throws ThrottlingException
+     *         Unable to process the request due to throttling limitations.
+     * @sample AWSNetworkFirewall.ListTLSInspectionConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/ListTLSInspectionConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTLSInspectionConfigurationsResult listTLSInspectionConfigurations(ListTLSInspectionConfigurationsRequest listTLSInspectionConfigurationsRequest);
 
     /**
      * <p>
@@ -1582,6 +1762,55 @@ public interface AWSNetworkFirewall {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateSubnetChangeProtectionResult updateSubnetChangeProtection(UpdateSubnetChangeProtectionRequest updateSubnetChangeProtectionRequest);
+
+    /**
+     * <p>
+     * Updates the TLS inspection configuration settings for the specified TLS inspection configuration. You use a TLS
+     * inspection configuration by reference in one or more firewall policies. When you modify a TLS inspection
+     * configuration, you modify all firewall policies that use the TLS inspection configuration.
+     * </p>
+     * <p>
+     * To update a TLS inspection configuration, first call <a>DescribeTLSInspectionConfiguration</a> to retrieve the
+     * current <a>TLSInspectionConfiguration</a> object, update the object as needed, and then provide the updated
+     * object to this call.
+     * </p>
+     * 
+     * @param updateTLSInspectionConfigurationRequest
+     * @return Result of the UpdateTLSInspectionConfiguration operation returned by the service.
+     * @throws InvalidRequestException
+     *         The operation failed because of a problem with your request. Examples include: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified an unsupported parameter name or value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a property with a value that isn't among the available types.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource that isn't valid in the
+     *         context of the request.
+     *         </p>
+     *         </li>
+     * @throws ResourceNotFoundException
+     *         Unable to locate a resource using the parameters that you provided.
+     * @throws ThrottlingException
+     *         Unable to process the request due to throttling limitations.
+     * @throws InternalServerErrorException
+     *         Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem.
+     *         Retry your request.
+     * @throws InvalidTokenException
+     *         The token you provided is stale or isn't valid for the operation.
+     * @sample AWSNetworkFirewall.UpdateTLSInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateTLSInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateTLSInspectionConfigurationResult updateTLSInspectionConfiguration(UpdateTLSInspectionConfigurationRequest updateTLSInspectionConfigurationRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

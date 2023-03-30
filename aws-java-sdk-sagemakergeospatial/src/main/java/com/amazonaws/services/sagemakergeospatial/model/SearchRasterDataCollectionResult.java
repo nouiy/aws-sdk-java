@@ -23,9 +23,17 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SearchRasterDataCollectionResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * Approximate number of results in the response.
+     * </p>
+     */
     private Integer approximateResultCount;
-    /** <p/> */
+    /**
+     * <p>
+     * List of items matching the Raster DataCollectionQuery.
+     * </p>
+     */
     private java.util.List<ItemSource> items;
     /**
      * <p>
@@ -36,9 +44,12 @@ public class SearchRasterDataCollectionResult extends com.amazonaws.AmazonWebSer
     private String nextToken;
 
     /**
-     * <p/>
+     * <p>
+     * Approximate number of results in the response.
+     * </p>
      * 
      * @param approximateResultCount
+     *        Approximate number of results in the response.
      */
 
     public void setApproximateResultCount(Integer approximateResultCount) {
@@ -46,9 +57,11 @@ public class SearchRasterDataCollectionResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * Approximate number of results in the response.
+     * </p>
      * 
-     * @return
+     * @return Approximate number of results in the response.
      */
 
     public Integer getApproximateResultCount() {
@@ -56,9 +69,12 @@ public class SearchRasterDataCollectionResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * Approximate number of results in the response.
+     * </p>
      * 
      * @param approximateResultCount
+     *        Approximate number of results in the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,9 +84,11 @@ public class SearchRasterDataCollectionResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of items matching the Raster DataCollectionQuery.
+     * </p>
      * 
-     * @return
+     * @return List of items matching the Raster DataCollectionQuery.
      */
 
     public java.util.List<ItemSource> getItems() {
@@ -78,9 +96,12 @@ public class SearchRasterDataCollectionResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of items matching the Raster DataCollectionQuery.
+     * </p>
      * 
      * @param items
+     *        List of items matching the Raster DataCollectionQuery.
      */
 
     public void setItems(java.util.Collection<ItemSource> items) {
@@ -93,7 +114,9 @@ public class SearchRasterDataCollectionResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of items matching the Raster DataCollectionQuery.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setItems(java.util.Collection)} or {@link #withItems(java.util.Collection)} if you want to override the
@@ -101,6 +124,7 @@ public class SearchRasterDataCollectionResult extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param items
+     *        List of items matching the Raster DataCollectionQuery.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -115,9 +139,12 @@ public class SearchRasterDataCollectionResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of items matching the Raster DataCollectionQuery.
+     * </p>
      * 
      * @param items
+     *        List of items matching the Raster DataCollectionQuery.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

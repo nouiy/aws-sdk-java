@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure representing the EoCloudCover filter.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/EoCloudCoverInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class EoCloudCoverInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * Lower bound for EoCloudCover.
+     * </p>
+     */
     private Float lowerBound;
-    /** <p/> */
+    /**
+     * <p>
+     * Upper bound for EoCloudCover.
+     * </p>
+     */
     private Float upperBound;
 
     /**
-     * <p/>
+     * <p>
+     * Lower bound for EoCloudCover.
+     * </p>
      * 
      * @param lowerBound
+     *        Lower bound for EoCloudCover.
      */
 
     public void setLowerBound(Float lowerBound) {
@@ -42,9 +55,11 @@ public class EoCloudCoverInput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * Lower bound for EoCloudCover.
+     * </p>
      * 
-     * @return
+     * @return Lower bound for EoCloudCover.
      */
 
     public Float getLowerBound() {
@@ -52,9 +67,12 @@ public class EoCloudCoverInput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * Lower bound for EoCloudCover.
+     * </p>
      * 
      * @param lowerBound
+     *        Lower bound for EoCloudCover.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,9 +82,12 @@ public class EoCloudCoverInput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * Upper bound for EoCloudCover.
+     * </p>
      * 
      * @param upperBound
+     *        Upper bound for EoCloudCover.
      */
 
     public void setUpperBound(Float upperBound) {
@@ -74,9 +95,11 @@ public class EoCloudCoverInput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * Upper bound for EoCloudCover.
+     * </p>
      * 
-     * @return
+     * @return Upper bound for EoCloudCover.
      */
 
     public Float getUpperBound() {
@@ -84,9 +107,12 @@ public class EoCloudCoverInput implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * <p/>
+     * <p>
+     * Upper bound for EoCloudCover.
+     * </p>
      * 
      * @param upperBound
+     *        Upper bound for EoCloudCover.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

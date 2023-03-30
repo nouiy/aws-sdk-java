@@ -37,7 +37,7 @@ public class RelevanceFeedback implements Serializable, Cloneable, StructuredPoj
     private String resultId;
     /**
      * <p>
-     * Whether to document was relevant or not relevant to the search.
+     * Whether the document was relevant or not relevant to the search.
      * </p>
      */
     private String relevanceValue;
@@ -84,11 +84,11 @@ public class RelevanceFeedback implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether to document was relevant or not relevant to the search.
+     * Whether the document was relevant or not relevant to the search.
      * </p>
      * 
      * @param relevanceValue
-     *        Whether to document was relevant or not relevant to the search.
+     *        Whether the document was relevant or not relevant to the search.
      * @see RelevanceType
      */
 
@@ -98,10 +98,10 @@ public class RelevanceFeedback implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether to document was relevant or not relevant to the search.
+     * Whether the document was relevant or not relevant to the search.
      * </p>
      * 
-     * @return Whether to document was relevant or not relevant to the search.
+     * @return Whether the document was relevant or not relevant to the search.
      * @see RelevanceType
      */
 
@@ -111,11 +111,11 @@ public class RelevanceFeedback implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether to document was relevant or not relevant to the search.
+     * Whether the document was relevant or not relevant to the search.
      * </p>
      * 
      * @param relevanceValue
-     *        Whether to document was relevant or not relevant to the search.
+     *        Whether the document was relevant or not relevant to the search.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RelevanceType
      */
@@ -127,11 +127,11 @@ public class RelevanceFeedback implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether to document was relevant or not relevant to the search.
+     * Whether the document was relevant or not relevant to the search.
      * </p>
      * 
      * @param relevanceValue
-     *        Whether to document was relevant or not relevant to the search.
+     *        Whether the document was relevant or not relevant to the search.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RelevanceType
      */

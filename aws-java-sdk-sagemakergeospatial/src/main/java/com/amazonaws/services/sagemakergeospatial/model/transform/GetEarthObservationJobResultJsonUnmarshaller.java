@@ -54,7 +54,7 @@ public class GetEarthObservationJobResultJsonUnmarshaller implements Unmarshalle
                 }
                 if (context.testExpression("CreationTime", targetDepth)) {
                     context.nextToken();
-                    getEarthObservationJobResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                    getEarthObservationJobResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("DurationInSeconds", targetDepth)) {
                     context.nextToken();

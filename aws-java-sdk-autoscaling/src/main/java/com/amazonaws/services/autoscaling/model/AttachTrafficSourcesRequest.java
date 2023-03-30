@@ -35,11 +35,6 @@ public class AttachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * </p>
-     * <p>
-     * Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. Amazon EC2
-     * Auto Scaling registers the running instances with the attached target groups. The target groups receive incoming
-     * traffic and route requests to one or more registered targets.
-     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TrafficSourceIdentifier> trafficSources;
 
@@ -87,17 +82,8 @@ public class AttachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * </p>
-     * <p>
-     * Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. Amazon EC2
-     * Auto Scaling registers the running instances with the attached target groups. The target groups receive incoming
-     * traffic and route requests to one or more registered targets.
-     * </p>
      * 
-     * @return The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.</p>
-     *         <p>
-     *         Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group.
-     *         Amazon EC2 Auto Scaling registers the running instances with the attached target groups. The target
-     *         groups receive incoming traffic and route requests to one or more registered targets.
+     * @return The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      */
 
     public java.util.List<TrafficSourceIdentifier> getTrafficSources() {
@@ -111,18 +97,9 @@ public class AttachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * </p>
-     * <p>
-     * Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. Amazon EC2
-     * Auto Scaling registers the running instances with the attached target groups. The target groups receive incoming
-     * traffic and route requests to one or more registered targets.
-     * </p>
      * 
      * @param trafficSources
-     *        The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.</p>
-     *        <p>
-     *        Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. Amazon
-     *        EC2 Auto Scaling registers the running instances with the attached target groups. The target groups
-     *        receive incoming traffic and route requests to one or more registered targets.
+     *        The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      */
 
     public void setTrafficSources(java.util.Collection<TrafficSourceIdentifier> trafficSources) {
@@ -139,22 +116,13 @@ public class AttachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * </p>
      * <p>
-     * Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. Amazon EC2
-     * Auto Scaling registers the running instances with the attached target groups. The target groups receive incoming
-     * traffic and route requests to one or more registered targets.
-     * </p>
-     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTrafficSources(java.util.Collection)} or {@link #withTrafficSources(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param trafficSources
-     *        The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.</p>
-     *        <p>
-     *        Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. Amazon
-     *        EC2 Auto Scaling registers the running instances with the attached target groups. The target groups
-     *        receive incoming traffic and route requests to one or more registered targets.
+     *        The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -172,18 +140,9 @@ public class AttachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * </p>
-     * <p>
-     * Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. Amazon EC2
-     * Auto Scaling registers the running instances with the attached target groups. The target groups receive incoming
-     * traffic and route requests to one or more registered targets.
-     * </p>
      * 
      * @param trafficSources
-     *        The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.</p>
-     *        <p>
-     *        Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group. Amazon
-     *        EC2 Auto Scaling registers the running instances with the attached target groups. The target groups
-     *        receive incoming traffic and route requests to one or more registered targets.
+     *        The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

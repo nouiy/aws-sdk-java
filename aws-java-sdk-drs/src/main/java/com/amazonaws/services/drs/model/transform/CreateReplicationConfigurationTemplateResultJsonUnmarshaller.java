@@ -57,6 +57,10 @@ public class CreateReplicationConfigurationTemplateResultJsonUnmarshaller implem
                     context.nextToken();
                     createReplicationConfigurationTemplateResult.setAssociateDefaultSecurityGroup(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("autoReplicateNewDisks", targetDepth)) {
+                    context.nextToken();
+                    createReplicationConfigurationTemplateResult.setAutoReplicateNewDisks(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("bandwidthThrottling", targetDepth)) {
                     context.nextToken();
                     createReplicationConfigurationTemplateResult.setBandwidthThrottling(context.getUnmarshaller(Long.class).unmarshall(context));

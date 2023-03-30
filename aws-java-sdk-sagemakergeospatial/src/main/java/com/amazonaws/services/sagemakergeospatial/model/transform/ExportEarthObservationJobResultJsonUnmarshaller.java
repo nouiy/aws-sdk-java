@@ -54,7 +54,7 @@ public class ExportEarthObservationJobResultJsonUnmarshaller implements Unmarsha
                 }
                 if (context.testExpression("CreationTime", targetDepth)) {
                     context.nextToken();
-                    exportEarthObservationJobResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                    exportEarthObservationJobResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("ExecutionRoleArn", targetDepth)) {
                     context.nextToken();

@@ -31,7 +31,8 @@ public enum ScalingActivityStatusCode {
     WaitingForInstanceWarmup("WaitingForInstanceWarmup"),
     Successful("Successful"),
     Failed("Failed"),
-    Cancelled("Cancelled");
+    Cancelled("Cancelled"),
+    WaitingForConnectionDraining("WaitingForConnectionDraining");
 
     private String value;
 

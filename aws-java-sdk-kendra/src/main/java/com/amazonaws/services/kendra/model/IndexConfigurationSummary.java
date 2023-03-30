@@ -55,7 +55,7 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
     private java.util.Date createdAt;
     /**
      * <p>
-     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
+     * The Unix timestamp when the index was last updated.
      * </p>
      */
     private java.util.Date updatedAt;
@@ -253,11 +253,11 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
+     * The Unix timestamp when the index was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
+     *        The Unix timestamp when the index was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -266,10 +266,10 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
+     * The Unix timestamp when the index was last updated.
      * </p>
      * 
-     * @return The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
+     * @return The Unix timestamp when the index was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -278,11 +278,11 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
+     * The Unix timestamp when the index was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
+     *        The Unix timestamp when the index was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

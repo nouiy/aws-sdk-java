@@ -158,6 +158,16 @@ public class AbstractAWSimagebuilder implements AWSimagebuilder {
     }
 
     @Override
+    public GetWorkflowExecutionResult getWorkflowExecution(GetWorkflowExecutionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetWorkflowStepExecutionResult getWorkflowStepExecution(GetWorkflowStepExecutionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ImportComponentResult importComponent(ImportComponentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -213,6 +223,16 @@ public class AbstractAWSimagebuilder implements AWSimagebuilder {
     }
 
     @Override
+    public ListImageScanFindingAggregationsResult listImageScanFindingAggregations(ListImageScanFindingAggregationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListImageScanFindingsResult listImageScanFindings(ListImageScanFindingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListImagesResult listImages(ListImagesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -224,6 +244,16 @@ public class AbstractAWSimagebuilder implements AWSimagebuilder {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListWorkflowExecutionsResult listWorkflowExecutions(ListWorkflowExecutionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListWorkflowStepExecutionsResult listWorkflowStepExecutions(ListWorkflowStepExecutionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

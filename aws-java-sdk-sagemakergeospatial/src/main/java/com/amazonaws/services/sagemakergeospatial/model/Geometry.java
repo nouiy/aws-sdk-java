@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure representing a Geometry in terms of Type and Coordinates as per GeoJson spec.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/Geometry" target="_top">AWS API
  *      Documentation</a>
@@ -26,15 +28,25 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Geometry implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The coordinates of the GeoJson Geometry.
+     * </p>
+     */
     private java.util.List<java.util.List<java.util.List<Double>>> coordinates;
-    /** <p/> */
+    /**
+     * <p>
+     * GeoJson Geometry types like Polygon and MultiPolygon.
+     * </p>
+     */
     private String type;
 
     /**
-     * <p/>
+     * <p>
+     * The coordinates of the GeoJson Geometry.
+     * </p>
      * 
-     * @return
+     * @return The coordinates of the GeoJson Geometry.
      */
 
     public java.util.List<java.util.List<java.util.List<Double>>> getCoordinates() {
@@ -42,9 +54,12 @@ public class Geometry implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The coordinates of the GeoJson Geometry.
+     * </p>
      * 
      * @param coordinates
+     *        The coordinates of the GeoJson Geometry.
      */
 
     public void setCoordinates(java.util.Collection<java.util.List<java.util.List<Double>>> coordinates) {
@@ -57,7 +72,9 @@ public class Geometry implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The coordinates of the GeoJson Geometry.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCoordinates(java.util.Collection)} or {@link #withCoordinates(java.util.Collection)} if you want to
@@ -65,6 +82,7 @@ public class Geometry implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param coordinates
+     *        The coordinates of the GeoJson Geometry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -79,9 +97,12 @@ public class Geometry implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The coordinates of the GeoJson Geometry.
+     * </p>
      * 
      * @param coordinates
+     *        The coordinates of the GeoJson Geometry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -91,9 +112,12 @@ public class Geometry implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * GeoJson Geometry types like Polygon and MultiPolygon.
+     * </p>
      * 
      * @param type
+     *        GeoJson Geometry types like Polygon and MultiPolygon.
      */
 
     public void setType(String type) {
@@ -101,9 +125,11 @@ public class Geometry implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * GeoJson Geometry types like Polygon and MultiPolygon.
+     * </p>
      * 
-     * @return
+     * @return GeoJson Geometry types like Polygon and MultiPolygon.
      */
 
     public String getType() {
@@ -111,9 +137,12 @@ public class Geometry implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * GeoJson Geometry types like Polygon and MultiPolygon.
+     * </p>
      * 
      * @param type
+     *        GeoJson Geometry types like Polygon and MultiPolygon.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,12 +33,6 @@ public class UpdateDataQualityRulesetRequest extends com.amazonaws.AmazonWebServ
     private String name;
     /**
      * <p>
-     * The new name of the ruleset, if you are renaming it.
-     * </p>
-     */
-    private String updatedName;
-    /**
-     * <p>
      * A description of the ruleset.
      * </p>
      */
@@ -87,46 +81,6 @@ public class UpdateDataQualityRulesetRequest extends com.amazonaws.AmazonWebServ
 
     public UpdateDataQualityRulesetRequest withName(String name) {
         setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The new name of the ruleset, if you are renaming it.
-     * </p>
-     * 
-     * @param updatedName
-     *        The new name of the ruleset, if you are renaming it.
-     */
-
-    public void setUpdatedName(String updatedName) {
-        this.updatedName = updatedName;
-    }
-
-    /**
-     * <p>
-     * The new name of the ruleset, if you are renaming it.
-     * </p>
-     * 
-     * @return The new name of the ruleset, if you are renaming it.
-     */
-
-    public String getUpdatedName() {
-        return this.updatedName;
-    }
-
-    /**
-     * <p>
-     * The new name of the ruleset, if you are renaming it.
-     * </p>
-     * 
-     * @param updatedName
-     *        The new name of the ruleset, if you are renaming it.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateDataQualityRulesetRequest withUpdatedName(String updatedName) {
-        setUpdatedName(updatedName);
         return this;
     }
 
@@ -224,8 +178,6 @@ public class UpdateDataQualityRulesetRequest extends com.amazonaws.AmazonWebServ
         sb.append("{");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getUpdatedName() != null)
-            sb.append("UpdatedName: ").append(getUpdatedName()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getRuleset() != null)
@@ -248,10 +200,6 @@ public class UpdateDataQualityRulesetRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
-        if (other.getUpdatedName() == null ^ this.getUpdatedName() == null)
-            return false;
-        if (other.getUpdatedName() != null && other.getUpdatedName().equals(this.getUpdatedName()) == false)
-            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
@@ -269,7 +217,6 @@ public class UpdateDataQualityRulesetRequest extends com.amazonaws.AmazonWebServ
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getUpdatedName() == null) ? 0 : getUpdatedName().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getRuleset() == null) ? 0 : getRuleset().hashCode());
         return hashCode;

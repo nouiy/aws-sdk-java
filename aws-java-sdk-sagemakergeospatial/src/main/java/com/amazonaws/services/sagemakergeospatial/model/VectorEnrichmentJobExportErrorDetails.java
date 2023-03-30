@@ -35,7 +35,11 @@ public class VectorEnrichmentJobExportErrorDetails implements Serializable, Clon
      * </p>
      */
     private String message;
-    /** <p/> */
+    /**
+     * <p>
+     * The output error details for an Export operation on a Vector Enrichment job.
+     * </p>
+     */
     private String type;
 
     /**
@@ -79,9 +83,12 @@ public class VectorEnrichmentJobExportErrorDetails implements Serializable, Clon
     }
 
     /**
-     * <p/>
+     * <p>
+     * The output error details for an Export operation on a Vector Enrichment job.
+     * </p>
      * 
      * @param type
+     *        The output error details for an Export operation on a Vector Enrichment job.
      * @see VectorEnrichmentJobExportErrorType
      */
 
@@ -90,9 +97,11 @@ public class VectorEnrichmentJobExportErrorDetails implements Serializable, Clon
     }
 
     /**
-     * <p/>
+     * <p>
+     * The output error details for an Export operation on a Vector Enrichment job.
+     * </p>
      * 
-     * @return
+     * @return The output error details for an Export operation on a Vector Enrichment job.
      * @see VectorEnrichmentJobExportErrorType
      */
 
@@ -101,9 +110,12 @@ public class VectorEnrichmentJobExportErrorDetails implements Serializable, Clon
     }
 
     /**
-     * <p/>
+     * <p>
+     * The output error details for an Export operation on a Vector Enrichment job.
+     * </p>
      * 
      * @param type
+     *        The output error details for an Export operation on a Vector Enrichment job.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VectorEnrichmentJobExportErrorType
      */
@@ -114,9 +126,12 @@ public class VectorEnrichmentJobExportErrorDetails implements Serializable, Clon
     }
 
     /**
-     * <p/>
+     * <p>
+     * The output error details for an Export operation on a Vector Enrichment job.
+     * </p>
      * 
      * @param type
+     *        The output error details for an Export operation on a Vector Enrichment job.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VectorEnrichmentJobExportErrorType
      */

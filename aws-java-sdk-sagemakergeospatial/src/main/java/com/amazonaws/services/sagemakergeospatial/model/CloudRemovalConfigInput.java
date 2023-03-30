@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * Input structure for Cloud Removal Operation type
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/CloudRemovalConfigInput"
  *      target="_top">AWS API Documentation</a>
@@ -38,7 +40,11 @@ public class CloudRemovalConfigInput implements Serializable, Cloneable, Structu
      * </p>
      */
     private String interpolationValue;
-    /** <p/> */
+    /**
+     * <p>
+     * TargetBands to be returned in the output of CloudRemoval operation.
+     * </p>
+     */
     private java.util.List<String> targetBands;
 
     /**
@@ -141,9 +147,11 @@ public class CloudRemovalConfigInput implements Serializable, Cloneable, Structu
     }
 
     /**
-     * <p/>
+     * <p>
+     * TargetBands to be returned in the output of CloudRemoval operation.
+     * </p>
      * 
-     * @return
+     * @return TargetBands to be returned in the output of CloudRemoval operation.
      */
 
     public java.util.List<String> getTargetBands() {
@@ -151,9 +159,12 @@ public class CloudRemovalConfigInput implements Serializable, Cloneable, Structu
     }
 
     /**
-     * <p/>
+     * <p>
+     * TargetBands to be returned in the output of CloudRemoval operation.
+     * </p>
      * 
      * @param targetBands
+     *        TargetBands to be returned in the output of CloudRemoval operation.
      */
 
     public void setTargetBands(java.util.Collection<String> targetBands) {
@@ -166,7 +177,9 @@ public class CloudRemovalConfigInput implements Serializable, Cloneable, Structu
     }
 
     /**
-     * <p/>
+     * <p>
+     * TargetBands to be returned in the output of CloudRemoval operation.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTargetBands(java.util.Collection)} or {@link #withTargetBands(java.util.Collection)} if you want to
@@ -174,6 +187,7 @@ public class CloudRemovalConfigInput implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param targetBands
+     *        TargetBands to be returned in the output of CloudRemoval operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -188,9 +202,12 @@ public class CloudRemovalConfigInput implements Serializable, Cloneable, Structu
     }
 
     /**
-     * <p/>
+     * <p>
+     * TargetBands to be returned in the output of CloudRemoval operation.
+     * </p>
      * 
      * @param targetBands
+     *        TargetBands to be returned in the output of CloudRemoval operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -15,13 +15,19 @@ package com.amazonaws.services.sagemakergeospatial.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * The request references a resource which does not exist.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ResourceNotFoundException extends com.amazonaws.services.sagemakergeospatial.model.AmazonSageMakerGeospatialException {
     private static final long serialVersionUID = 1L;
 
-    /** <p/> */
+    /**
+     * <p>
+     * Identifier of the resource that was not found.
+     * </p>
+     */
     private String resourceId;
 
     /**
@@ -35,9 +41,12 @@ public class ResourceNotFoundException extends com.amazonaws.services.sagemakerg
     }
 
     /**
-     * <p/>
+     * <p>
+     * Identifier of the resource that was not found.
+     * </p>
      * 
      * @param resourceId
+     *        Identifier of the resource that was not found.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ResourceId")
@@ -46,9 +55,11 @@ public class ResourceNotFoundException extends com.amazonaws.services.sagemakerg
     }
 
     /**
-     * <p/>
+     * <p>
+     * Identifier of the resource that was not found.
+     * </p>
      * 
-     * @return
+     * @return Identifier of the resource that was not found.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ResourceId")
@@ -57,9 +68,12 @@ public class ResourceNotFoundException extends com.amazonaws.services.sagemakerg
     }
 
     /**
-     * <p/>
+     * <p>
+     * Identifier of the resource that was not found.
+     * </p>
      * 
      * @param resourceId
+     *        Identifier of the resource that was not found.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

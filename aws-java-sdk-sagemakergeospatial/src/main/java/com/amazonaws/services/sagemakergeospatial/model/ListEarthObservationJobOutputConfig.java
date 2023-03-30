@@ -53,7 +53,11 @@ public class ListEarthObservationJobOutputConfig implements Serializable, Clonea
      * </p>
      */
     private String name;
-    /** <p/> */
+    /**
+     * <p>
+     * The operation type for an Earth Observation job.
+     * </p>
+     */
     private String operationType;
     /**
      * <p>
@@ -229,9 +233,12 @@ public class ListEarthObservationJobOutputConfig implements Serializable, Clonea
     }
 
     /**
-     * <p/>
+     * <p>
+     * The operation type for an Earth Observation job.
+     * </p>
      * 
      * @param operationType
+     *        The operation type for an Earth Observation job.
      */
 
     public void setOperationType(String operationType) {
@@ -239,9 +246,11 @@ public class ListEarthObservationJobOutputConfig implements Serializable, Clonea
     }
 
     /**
-     * <p/>
+     * <p>
+     * The operation type for an Earth Observation job.
+     * </p>
      * 
-     * @return
+     * @return The operation type for an Earth Observation job.
      */
 
     public String getOperationType() {
@@ -249,9 +258,12 @@ public class ListEarthObservationJobOutputConfig implements Serializable, Clonea
     }
 
     /**
-     * <p/>
+     * <p>
+     * The operation type for an Earth Observation job.
+     * </p>
      * 
      * @param operationType
+     *        The operation type for an Earth Observation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

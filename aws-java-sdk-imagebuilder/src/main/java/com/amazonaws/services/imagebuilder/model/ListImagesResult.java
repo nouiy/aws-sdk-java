@@ -48,8 +48,8 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
     private java.util.List<ImageVersion> imageVersionList;
     /**
      * <p>
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the
-     * service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the
+     * service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      * </p>
      */
     private String nextToken;
@@ -246,14 +246,14 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the
-     * service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the
+     * service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      * </p>
      * 
      * @param nextToken
-     *        The next token used for paginated responses. When this is not empty, there are additional elements that
-     *        the service has not included in this request. Use this token with the next request to retrieve additional
-     *        objects.
+     *        The next token used for paginated responses. When this field isn't empty, there are additional elements
+     *        that the service has'ot included in this request. Use this token with the next request to retrieve
+     *        additional objects.
      */
 
     public void setNextToken(String nextToken) {
@@ -262,13 +262,13 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the
-     * service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the
+     * service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      * </p>
      * 
-     * @return The next token used for paginated responses. When this is not empty, there are additional elements that
-     *         the service has not included in this request. Use this token with the next request to retrieve additional
-     *         objects.
+     * @return The next token used for paginated responses. When this field isn't empty, there are additional elements
+     *         that the service has'ot included in this request. Use this token with the next request to retrieve
+     *         additional objects.
      */
 
     public String getNextToken() {
@@ -277,14 +277,14 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the
-     * service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the
+     * service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      * </p>
      * 
      * @param nextToken
-     *        The next token used for paginated responses. When this is not empty, there are additional elements that
-     *        the service has not included in this request. Use this token with the next request to retrieve additional
-     *        objects.
+     *        The next token used for paginated responses. When this field isn't empty, there are additional elements
+     *        that the service has'ot included in this request. Use this token with the next request to retrieve
+     *        additional objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

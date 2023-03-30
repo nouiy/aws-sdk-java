@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure containing the Amazon S3 path to export the Earth Observation job output.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ExportS3DataInput"
  *      target="_top">AWS API Documentation</a>
@@ -28,7 +30,7 @@ public class ExportS3DataInput implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      */
     private String kmsKeyId;
@@ -41,11 +43,11 @@ public class ExportS3DataInput implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     *        The Key Management Service key ID for server-side encryption.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -54,10 +56,10 @@ public class ExportS3DataInput implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
-     * @return The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * @return The Key Management Service key ID for server-side encryption.
      */
 
     public String getKmsKeyId() {
@@ -66,11 +68,11 @@ public class ExportS3DataInput implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     *        The Key Management Service key ID for server-side encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

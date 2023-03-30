@@ -135,6 +135,12 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private StatefulEngineOptions statefulEngineOptions;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the TLS inspection configuration.
+     * </p>
+     */
+    private String tLSInspectionConfigurationArn;
 
     /**
      * <p>
@@ -1067,6 +1073,46 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the TLS inspection configuration.
+     * </p>
+     * 
+     * @param tLSInspectionConfigurationArn
+     *        The Amazon Resource Name (ARN) of the TLS inspection configuration.
+     */
+
+    public void setTLSInspectionConfigurationArn(String tLSInspectionConfigurationArn) {
+        this.tLSInspectionConfigurationArn = tLSInspectionConfigurationArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the TLS inspection configuration.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the TLS inspection configuration.
+     */
+
+    public String getTLSInspectionConfigurationArn() {
+        return this.tLSInspectionConfigurationArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the TLS inspection configuration.
+     * </p>
+     * 
+     * @param tLSInspectionConfigurationArn
+     *        The Amazon Resource Name (ARN) of the TLS inspection configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FirewallPolicy withTLSInspectionConfigurationArn(String tLSInspectionConfigurationArn) {
+        setTLSInspectionConfigurationArn(tLSInspectionConfigurationArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1091,7 +1137,9 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
         if (getStatefulDefaultActions() != null)
             sb.append("StatefulDefaultActions: ").append(getStatefulDefaultActions()).append(",");
         if (getStatefulEngineOptions() != null)
-            sb.append("StatefulEngineOptions: ").append(getStatefulEngineOptions());
+            sb.append("StatefulEngineOptions: ").append(getStatefulEngineOptions()).append(",");
+        if (getTLSInspectionConfigurationArn() != null)
+            sb.append("TLSInspectionConfigurationArn: ").append(getTLSInspectionConfigurationArn());
         sb.append("}");
         return sb.toString();
     }
@@ -1135,6 +1183,11 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getStatefulEngineOptions() != null && other.getStatefulEngineOptions().equals(this.getStatefulEngineOptions()) == false)
             return false;
+        if (other.getTLSInspectionConfigurationArn() == null ^ this.getTLSInspectionConfigurationArn() == null)
+            return false;
+        if (other.getTLSInspectionConfigurationArn() != null
+                && other.getTLSInspectionConfigurationArn().equals(this.getTLSInspectionConfigurationArn()) == false)
+            return false;
         return true;
     }
 
@@ -1150,6 +1203,7 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStatefulRuleGroupReferences() == null) ? 0 : getStatefulRuleGroupReferences().hashCode());
         hashCode = prime * hashCode + ((getStatefulDefaultActions() == null) ? 0 : getStatefulDefaultActions().hashCode());
         hashCode = prime * hashCode + ((getStatefulEngineOptions() == null) ? 0 : getStatefulEngineOptions().hashCode());
+        hashCode = prime * hashCode + ((getTLSInspectionConfigurationArn() == null) ? 0 : getTLSInspectionConfigurationArn().hashCode());
         return hashCode;
     }
 

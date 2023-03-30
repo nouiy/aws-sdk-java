@@ -28,15 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VectorEnrichmentJobConfig implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The input structure for Map Matching operation type.
+     * </p>
+     */
     private MapMatchingConfig mapMatchingConfig;
-    /** <p/> */
+    /**
+     * <p>
+     * The input structure for Reverse Geocoding operation type.
+     * </p>
+     */
     private ReverseGeocodingConfig reverseGeocodingConfig;
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for Map Matching operation type.
+     * </p>
      * 
      * @param mapMatchingConfig
+     *        The input structure for Map Matching operation type.
      */
 
     public void setMapMatchingConfig(MapMatchingConfig mapMatchingConfig) {
@@ -44,9 +55,11 @@ public class VectorEnrichmentJobConfig implements Serializable, Cloneable, Struc
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for Map Matching operation type.
+     * </p>
      * 
-     * @return
+     * @return The input structure for Map Matching operation type.
      */
 
     public MapMatchingConfig getMapMatchingConfig() {
@@ -54,9 +67,12 @@ public class VectorEnrichmentJobConfig implements Serializable, Cloneable, Struc
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for Map Matching operation type.
+     * </p>
      * 
      * @param mapMatchingConfig
+     *        The input structure for Map Matching operation type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,9 +82,12 @@ public class VectorEnrichmentJobConfig implements Serializable, Cloneable, Struc
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for Reverse Geocoding operation type.
+     * </p>
      * 
      * @param reverseGeocodingConfig
+     *        The input structure for Reverse Geocoding operation type.
      */
 
     public void setReverseGeocodingConfig(ReverseGeocodingConfig reverseGeocodingConfig) {
@@ -76,9 +95,11 @@ public class VectorEnrichmentJobConfig implements Serializable, Cloneable, Struc
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for Reverse Geocoding operation type.
+     * </p>
      * 
-     * @return
+     * @return The input structure for Reverse Geocoding operation type.
      */
 
     public ReverseGeocodingConfig getReverseGeocodingConfig() {
@@ -86,9 +107,12 @@ public class VectorEnrichmentJobConfig implements Serializable, Cloneable, Struc
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for Reverse Geocoding operation type.
+     * </p>
      * 
      * @param reverseGeocodingConfig
+     *        The input structure for Reverse Geocoding operation type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * OutputResolution Configuration indicating the target resolution for the output of Resampling operation.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/OutputResolutionResamplingInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,13 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class OutputResolutionResamplingInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * User Defined Resolution for the output of Resampling operation defined by value and unit.
+     * </p>
+     */
     private UserDefined userDefined;
 
     /**
-     * <p/>
+     * <p>
+     * User Defined Resolution for the output of Resampling operation defined by value and unit.
+     * </p>
      * 
      * @param userDefined
+     *        User Defined Resolution for the output of Resampling operation defined by value and unit.
      */
 
     public void setUserDefined(UserDefined userDefined) {
@@ -40,9 +49,11 @@ public class OutputResolutionResamplingInput implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * User Defined Resolution for the output of Resampling operation defined by value and unit.
+     * </p>
      * 
-     * @return
+     * @return User Defined Resolution for the output of Resampling operation defined by value and unit.
      */
 
     public UserDefined getUserDefined() {
@@ -50,9 +61,12 @@ public class OutputResolutionResamplingInput implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * User Defined Resolution for the output of Resampling operation defined by value and unit.
+     * </p>
      * 
      * @param userDefined
+     *        User Defined Resolution for the output of Resampling operation defined by value and unit.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

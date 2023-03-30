@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * Represents an arithmetic operation to compute spectral index.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/Operation" target="_top">AWS API
  *      Documentation</a>
@@ -26,7 +28,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Operation implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * Textual representation of the math operation; Equation used to compute the spectral index.
+     * </p>
+     */
     private String equation;
     /**
      * <p>
@@ -42,9 +48,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     private String outputType;
 
     /**
-     * <p/>
+     * <p>
+     * Textual representation of the math operation; Equation used to compute the spectral index.
+     * </p>
      * 
      * @param equation
+     *        Textual representation of the math operation; Equation used to compute the spectral index.
      */
 
     public void setEquation(String equation) {
@@ -52,9 +61,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Textual representation of the math operation; Equation used to compute the spectral index.
+     * </p>
      * 
-     * @return
+     * @return Textual representation of the math operation; Equation used to compute the spectral index.
      */
 
     public String getEquation() {
@@ -62,9 +73,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Textual representation of the math operation; Equation used to compute the spectral index.
+     * </p>
      * 
      * @param equation
+     *        Textual representation of the math operation; Equation used to compute the spectral index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

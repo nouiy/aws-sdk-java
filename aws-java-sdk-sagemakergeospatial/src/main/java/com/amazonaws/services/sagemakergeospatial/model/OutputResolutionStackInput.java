@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The input structure representing Output Resolution for Stacking Operation.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/OutputResolutionStackInput"
  *      target="_top">AWS API Documentation</a>
@@ -26,15 +28,29 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class OutputResolutionStackInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * A string value representing Predefined Output Resolution for a stacking operation. Allowed values are
+     * <code>HIGHEST</code>, <code>LOWEST</code>, and <code>AVERAGE</code>.
+     * </p>
+     */
     private String predefined;
-    /** <p/> */
+    /**
+     * <p>
+     * The structure representing User Output Resolution for a Stacking operation defined as a value and unit.
+     * </p>
+     */
     private UserDefined userDefined;
 
     /**
-     * <p/>
+     * <p>
+     * A string value representing Predefined Output Resolution for a stacking operation. Allowed values are
+     * <code>HIGHEST</code>, <code>LOWEST</code>, and <code>AVERAGE</code>.
+     * </p>
      * 
      * @param predefined
+     *        A string value representing Predefined Output Resolution for a stacking operation. Allowed values are
+     *        <code>HIGHEST</code>, <code>LOWEST</code>, and <code>AVERAGE</code>.
      * @see PredefinedResolution
      */
 
@@ -43,9 +59,13 @@ public class OutputResolutionStackInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * A string value representing Predefined Output Resolution for a stacking operation. Allowed values are
+     * <code>HIGHEST</code>, <code>LOWEST</code>, and <code>AVERAGE</code>.
+     * </p>
      * 
-     * @return
+     * @return A string value representing Predefined Output Resolution for a stacking operation. Allowed values are
+     *         <code>HIGHEST</code>, <code>LOWEST</code>, and <code>AVERAGE</code>.
      * @see PredefinedResolution
      */
 
@@ -54,9 +74,14 @@ public class OutputResolutionStackInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * A string value representing Predefined Output Resolution for a stacking operation. Allowed values are
+     * <code>HIGHEST</code>, <code>LOWEST</code>, and <code>AVERAGE</code>.
+     * </p>
      * 
      * @param predefined
+     *        A string value representing Predefined Output Resolution for a stacking operation. Allowed values are
+     *        <code>HIGHEST</code>, <code>LOWEST</code>, and <code>AVERAGE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PredefinedResolution
      */
@@ -67,9 +92,14 @@ public class OutputResolutionStackInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * A string value representing Predefined Output Resolution for a stacking operation. Allowed values are
+     * <code>HIGHEST</code>, <code>LOWEST</code>, and <code>AVERAGE</code>.
+     * </p>
      * 
      * @param predefined
+     *        A string value representing Predefined Output Resolution for a stacking operation. Allowed values are
+     *        <code>HIGHEST</code>, <code>LOWEST</code>, and <code>AVERAGE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PredefinedResolution
      */
@@ -80,9 +110,12 @@ public class OutputResolutionStackInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing User Output Resolution for a Stacking operation defined as a value and unit.
+     * </p>
      * 
      * @param userDefined
+     *        The structure representing User Output Resolution for a Stacking operation defined as a value and unit.
      */
 
     public void setUserDefined(UserDefined userDefined) {
@@ -90,9 +123,11 @@ public class OutputResolutionStackInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing User Output Resolution for a Stacking operation defined as a value and unit.
+     * </p>
      * 
-     * @return
+     * @return The structure representing User Output Resolution for a Stacking operation defined as a value and unit.
      */
 
     public UserDefined getUserDefined() {
@@ -100,9 +135,12 @@ public class OutputResolutionStackInput implements Serializable, Cloneable, Stru
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure representing User Output Resolution for a Stacking operation defined as a value and unit.
+     * </p>
      * 
      * @param userDefined
+     *        The structure representing User Output Resolution for a Stacking operation defined as a value and unit.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

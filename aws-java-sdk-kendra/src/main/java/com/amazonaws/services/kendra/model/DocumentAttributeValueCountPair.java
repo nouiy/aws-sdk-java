@@ -52,6 +52,8 @@ public class DocumentAttributeValueCountPair implements Serializable, Cloneable,
      * by department but also by a sub department within a department. The counts for documents that belong to
      * "Frontend" and "Backend" within "Engineering" are returned for a query.
      * </p>
+     * <p/>
+     * <p/>
      */
     private java.util.List<FacetResult> facetResults;
 
@@ -147,9 +149,12 @@ public class DocumentAttributeValueCountPair implements Serializable, Cloneable,
      * by department but also by a sub department within a department. The counts for documents that belong to
      * "Frontend" and "Backend" within "Engineering" are returned for a query.
      * </p>
+     * <p/>
+     * <p/>
      * 
      * @return Contains the results of a document attribute that is a nested facet. A <code>FacetResult</code> contains
-     *         the counts for each facet nested within a facet.</p>
+     *         the counts for each facet nested within a facet.
+     *         </p>
      *         <p>
      *         For example, the document attribute or facet "Department" includes a value called "Engineering". In
      *         addition, the document attribute or facet "SubDepartment" includes the values "Frontend" and "Backend"
@@ -157,6 +162,8 @@ public class DocumentAttributeValueCountPair implements Serializable, Cloneable,
      *         documents can be searched not only by department but also by a sub department within a department. The
      *         counts for documents that belong to "Frontend" and "Backend" within "Engineering" are returned for a
      *         query.
+     *         </p>
+     *         <p/>
      */
 
     public java.util.List<FacetResult> getFacetResults() {
@@ -175,16 +182,21 @@ public class DocumentAttributeValueCountPair implements Serializable, Cloneable,
      * by department but also by a sub department within a department. The counts for documents that belong to
      * "Frontend" and "Backend" within "Engineering" are returned for a query.
      * </p>
+     * <p/>
+     * <p/>
      * 
      * @param facetResults
      *        Contains the results of a document attribute that is a nested facet. A <code>FacetResult</code> contains
-     *        the counts for each facet nested within a facet.</p>
+     *        the counts for each facet nested within a facet.
+     *        </p>
      *        <p>
      *        For example, the document attribute or facet "Department" includes a value called "Engineering". In
      *        addition, the document attribute or facet "SubDepartment" includes the values "Frontend" and "Backend" for
      *        documents assigned to "Engineering". You can display nested facets in the search results so that documents
      *        can be searched not only by department but also by a sub department within a department. The counts for
      *        documents that belong to "Frontend" and "Backend" within "Engineering" are returned for a query.
+     *        </p>
+     *        <p/>
      */
 
     public void setFacetResults(java.util.Collection<FacetResult> facetResults) {
@@ -208,6 +220,8 @@ public class DocumentAttributeValueCountPair implements Serializable, Cloneable,
      * by department but also by a sub department within a department. The counts for documents that belong to
      * "Frontend" and "Backend" within "Engineering" are returned for a query.
      * </p>
+     * <p/>
+     * <p/>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFacetResults(java.util.Collection)} or {@link #withFacetResults(java.util.Collection)} if you want to
@@ -223,6 +237,8 @@ public class DocumentAttributeValueCountPair implements Serializable, Cloneable,
      *        documents assigned to "Engineering". You can display nested facets in the search results so that documents
      *        can be searched not only by department but also by a sub department within a department. The counts for
      *        documents that belong to "Frontend" and "Backend" within "Engineering" are returned for a query.
+     *        </p>
+     *        <p/>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -248,16 +264,21 @@ public class DocumentAttributeValueCountPair implements Serializable, Cloneable,
      * by department but also by a sub department within a department. The counts for documents that belong to
      * "Frontend" and "Backend" within "Engineering" are returned for a query.
      * </p>
+     * <p/>
+     * <p/>
      * 
      * @param facetResults
      *        Contains the results of a document attribute that is a nested facet. A <code>FacetResult</code> contains
-     *        the counts for each facet nested within a facet.</p>
+     *        the counts for each facet nested within a facet.
+     *        </p>
      *        <p>
      *        For example, the document attribute or facet "Department" includes a value called "Engineering". In
      *        addition, the document attribute or facet "SubDepartment" includes the values "Frontend" and "Backend" for
      *        documents assigned to "Engineering". You can display nested facets in the search results so that documents
      *        can be searched not only by department but also by a sub department within a department. The counts for
      *        documents that belong to "Frontend" and "Backend" within "Engineering" are returned for a query.
+     *        </p>
+     *        <p/>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

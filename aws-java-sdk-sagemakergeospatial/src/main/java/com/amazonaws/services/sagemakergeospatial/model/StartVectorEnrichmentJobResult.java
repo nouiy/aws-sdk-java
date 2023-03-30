@@ -61,7 +61,7 @@ public class StartVectorEnrichmentJobResult extends com.amazonaws.AmazonWebServi
     private VectorEnrichmentJobConfig jobConfig;
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      */
     private String kmsKeyId;
@@ -332,11 +332,11 @@ public class StartVectorEnrichmentJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     *        The Key Management Service key ID for server-side encryption.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -345,10 +345,10 @@ public class StartVectorEnrichmentJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
-     * @return The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * @return The Key Management Service key ID for server-side encryption.
      */
 
     public String getKmsKeyId() {
@@ -357,11 +357,11 @@ public class StartVectorEnrichmentJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     *        The Key Management Service key ID for server-side encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

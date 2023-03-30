@@ -68,8 +68,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.AssociateEntitiesToExperience
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/AssociateEntitiesToExperience"
      *      target="_top">AWS API Documentation</a>
@@ -103,8 +102,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.AssociatePersonasToEntities
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/AssociatePersonasToEntities"
      *      target="_top">AWS API Documentation</a>
@@ -138,13 +136,41 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.BatchDeleteDocument
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/BatchDeleteDocument" target="_top">AWS API
      *      Documentation</a>
      */
     BatchDeleteDocumentResult batchDeleteDocument(BatchDeleteDocumentRequest batchDeleteDocumentRequest);
+
+    /**
+     * <p>
+     * Removes one or more sets of featured results. Features results are placed above all other results for certain
+     * queries. If there's an exact match of a query, then one or more specific documents are featured in the search
+     * results.
+     * </p>
+     * 
+     * @param batchDeleteFeaturedResultsSetRequest
+     * @return Result of the BatchDeleteFeaturedResultsSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource you want to use doesn’t exist. Please check you have provided the correct resource and try
+     *         again.
+     * @throws AccessDeniedException
+     *         You don't have sufficient access to perform this action. Please ensure you have the required permission
+     *         policies and user accounts and try again.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints set by the Amazon Kendra service. Please provide the correct
+     *         input and try again.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. Please reduce the number of requests and try again.
+     * @throws InternalServerException
+     *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     * @sample AWSkendra.BatchDeleteFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/BatchDeleteFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchDeleteFeaturedResultsSetResult batchDeleteFeaturedResultsSet(BatchDeleteFeaturedResultsSetRequest batchDeleteFeaturedResultsSetRequest);
 
     /**
      * <p>
@@ -179,8 +205,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.BatchGetDocumentStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/BatchGetDocumentStatus" target="_top">AWS
      *      API Documentation</a>
@@ -223,13 +248,12 @@ public interface AWSkendra {
      *         You don't have sufficient access to perform this action. Please ensure you have the required permission
      *         policies and user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.BatchPutDocument
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/BatchPutDocument" target="_top">AWS API
      *      Documentation</a>
@@ -268,8 +292,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ClearQuerySuggestions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ClearQuerySuggestions" target="_top">AWS
      *      API Documentation</a>
@@ -306,9 +329,9 @@ public interface AWSkendra {
      * @param createAccessControlConfigurationRequest
      * @return Result of the CreateAccessControlConfiguration operation returned by the service.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws ValidationException
      *         The input fails to satisfy the constraints set by the Amazon Kendra service. Please provide the correct
      *         input and try again.
@@ -324,8 +347,7 @@ public interface AWSkendra {
      *         again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.CreateAccessControlConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateAccessControlConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -343,10 +365,6 @@ public interface AWSkendra {
      * <p>
      * <code>CreateDataSource</code> is a synchronous operation. The operation returns 200 if the data source was
      * successfully created. Otherwise, an exception is raised.
-     * </p>
-     * <p>
-     * Amazon S3 and <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html">custom</a> data
-     * sources are the only supported data sources in the Amazon Web Services GovCloud (US-West) region.
      * </p>
      * <p>
      * For an example of creating an index and data source using the Python SDK, see <a
@@ -369,9 +387,9 @@ public interface AWSkendra {
      *         The resource you want to use already exists. Please check you have provided the correct resource and try
      *         again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws ThrottlingException
      *         The request was denied due to request throttling. Please reduce the number of requests and try again.
      * @throws AccessDeniedException
@@ -379,8 +397,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.CreateDataSource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateDataSource" target="_top">AWS API
      *      Documentation</a>
@@ -406,9 +423,9 @@ public interface AWSkendra {
      *         The resource you want to use doesn’t exist. Please check you have provided the correct resource and try
      *         again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws ThrottlingException
      *         The request was denied due to request throttling. Please reduce the number of requests and try again.
      * @throws AccessDeniedException
@@ -416,8 +433,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.CreateExperience
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateExperience" target="_top">AWS API
      *      Documentation</a>
@@ -426,7 +442,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Creates an new set of frequently asked question (FAQ) questions and answers.
+     * Creates a set of frequently ask questions (FAQs) using a specified FAQ file stored in an Amazon S3 bucket.
      * </p>
      * <p>
      * Adding FAQs to an index is an asynchronous operation.
@@ -449,21 +465,60 @@ public interface AWSkendra {
      * @throws ThrottlingException
      *         The request was denied due to request throttling. Please reduce the number of requests and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws AccessDeniedException
      *         You don't have sufficient access to perform this action. Please ensure you have the required permission
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.CreateFaq
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateFaq" target="_top">AWS API
      *      Documentation</a>
      */
     CreateFaqResult createFaq(CreateFaqRequest createFaqRequest);
+
+    /**
+     * <p>
+     * Creates a set of featured results to display at the top of the search results page. Featured results are placed
+     * above all other results for certain queries. You map specific queries to specific documents for featuring in the
+     * results. If a query contains an exact match, then one or more specific documents are featured in the search
+     * results.
+     * </p>
+     * <p>
+     * You can create up to 50 sets of featured results per index. You can request to increase this limit by contacting
+     * <a href="http://aws.amazon.com/contact-us/">Support</a>.
+     * </p>
+     * 
+     * @param createFeaturedResultsSetRequest
+     * @return Result of the CreateFeaturedResultsSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource you want to use doesn’t exist. Please check you have provided the correct resource and try
+     *         again.
+     * @throws AccessDeniedException
+     *         You don't have sufficient access to perform this action. Please ensure you have the required permission
+     *         policies and user accounts and try again.
+     * @throws FeaturedResultsConflictException
+     *         An error message with a list of conflicting queries used across different sets of featured results. This
+     *         occurred with the request for a new featured results set. Check that the queries you specified for
+     *         featured results are unique per featured results set for each index.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints set by the Amazon Kendra service. Please provide the correct
+     *         input and try again.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. Please reduce the number of requests and try again.
+     * @throws ConflictException
+     *         A conflict occurred with the request. Please fix any inconsistences with your resources and try again.
+     * @throws InternalServerException
+     *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     * @sample AWSkendra.CreateFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateFeaturedResultsSetResult createFeaturedResultsSet(CreateFeaturedResultsSetRequest createFeaturedResultsSetRequest);
 
     /**
      * <p>
@@ -491,9 +546,9 @@ public interface AWSkendra {
      *         The resource you want to use already exists. Please check you have provided the correct resource and try
      *         again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws ThrottlingException
      *         The request was denied due to request throttling. Please reduce the number of requests and try again.
      * @throws AccessDeniedException
@@ -503,8 +558,7 @@ public interface AWSkendra {
      *         A conflict occurred with the request. Please fix any inconsistences with your resources and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.CreateIndex
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateIndex" target="_top">AWS API
      *      Documentation</a>
@@ -551,15 +605,14 @@ public interface AWSkendra {
      *         You don't have sufficient access to perform this action. Please ensure you have the required permission
      *         policies and user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws ConflictException
      *         A conflict occurred with the request. Please fix any inconsistences with your resources and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.CreateQuerySuggestionsBlockList
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateQuerySuggestionsBlockList"
      *      target="_top">AWS API Documentation</a>
@@ -589,16 +642,15 @@ public interface AWSkendra {
      * @throws ThrottlingException
      *         The request was denied due to request throttling. Please reduce the number of requests and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws AccessDeniedException
      *         You don't have sufficient access to perform this action. Please ensure you have the required permission
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.CreateThesaurus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateThesaurus" target="_top">AWS API
      *      Documentation</a>
@@ -629,8 +681,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DeleteAccessControlConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteAccessControlConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -662,8 +713,7 @@ public interface AWSkendra {
      *         The request was denied due to request throttling. Please reduce the number of requests and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DeleteDataSource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteDataSource" target="_top">AWS API
      *      Documentation</a>
@@ -695,8 +745,7 @@ public interface AWSkendra {
      *         The request was denied due to request throttling. Please reduce the number of requests and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DeleteExperience
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteExperience" target="_top">AWS API
      *      Documentation</a>
@@ -725,8 +774,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DeleteFaq
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteFaq" target="_top">AWS API
      *      Documentation</a>
@@ -757,8 +805,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DeleteIndex
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteIndex" target="_top">AWS API
      *      Documentation</a>
@@ -803,8 +850,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DeletePrincipalMapping
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeletePrincipalMapping" target="_top">AWS
      *      API Documentation</a>
@@ -841,8 +887,7 @@ public interface AWSkendra {
      *         A conflict occurred with the request. Please fix any inconsistences with your resources and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DeleteQuerySuggestionsBlockList
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteQuerySuggestionsBlockList"
      *      target="_top">AWS API Documentation</a>
@@ -871,8 +916,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DeleteThesaurus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteThesaurus" target="_top">AWS API
      *      Documentation</a>
@@ -901,8 +945,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DescribeAccessControlConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeAccessControlConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -930,8 +973,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DescribeDataSource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeDataSource" target="_top">AWS API
      *      Documentation</a>
@@ -961,8 +1003,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DescribeExperience
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeExperience" target="_top">AWS API
      *      Documentation</a>
@@ -989,13 +1030,41 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DescribeFaq
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeFaq" target="_top">AWS API
      *      Documentation</a>
      */
     DescribeFaqResult describeFaq(DescribeFaqRequest describeFaqRequest);
+
+    /**
+     * <p>
+     * Gets information about a set of featured results. Features results are placed above all other results for certain
+     * queries. If there's an exact match of a query, then one or more specific documents are featured in the search
+     * results.
+     * </p>
+     * 
+     * @param describeFeaturedResultsSetRequest
+     * @return Result of the DescribeFeaturedResultsSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource you want to use doesn’t exist. Please check you have provided the correct resource and try
+     *         again.
+     * @throws AccessDeniedException
+     *         You don't have sufficient access to perform this action. Please ensure you have the required permission
+     *         policies and user accounts and try again.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints set by the Amazon Kendra service. Please provide the correct
+     *         input and try again.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. Please reduce the number of requests and try again.
+     * @throws InternalServerException
+     *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     * @sample AWSkendra.DescribeFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeFeaturedResultsSetResult describeFeaturedResultsSet(DescribeFeaturedResultsSetRequest describeFeaturedResultsSetRequest);
 
     /**
      * <p>
@@ -1017,8 +1086,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DescribeIndex
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeIndex" target="_top">AWS API
      *      Documentation</a>
@@ -1052,8 +1120,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DescribePrincipalMapping
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribePrincipalMapping"
      *      target="_top">AWS API Documentation</a>
@@ -1087,8 +1154,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DescribeQuerySuggestionsBlockList
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeQuerySuggestionsBlockList"
      *      target="_top">AWS API Documentation</a>
@@ -1122,8 +1188,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DescribeQuerySuggestionsConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeQuerySuggestionsConfig"
      *      target="_top">AWS API Documentation</a>
@@ -1150,8 +1215,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DescribeThesaurus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeThesaurus" target="_top">AWS API
      *      Documentation</a>
@@ -1182,8 +1246,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DisassociateEntitiesFromExperience
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DisassociateEntitiesFromExperience"
      *      target="_top">AWS API Documentation</a>
@@ -1215,8 +1278,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.DisassociatePersonasFromEntities
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DisassociatePersonasFromEntities"
      *      target="_top">AWS API Documentation</a>
@@ -1245,15 +1307,14 @@ public interface AWSkendra {
      *         You don't have sufficient access to perform this action. Please ensure you have the required permission
      *         policies and user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws ConflictException
      *         A conflict occurred with the request. Please fix any inconsistences with your resources and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.GetQuerySuggestions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/GetQuerySuggestions" target="_top">AWS API
      *      Documentation</a>
@@ -1278,8 +1339,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.GetSnapshots
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/GetSnapshots" target="_top">AWS API
      *      Documentation</a>
@@ -1308,8 +1368,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListAccessControlConfigurations
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListAccessControlConfigurations"
      *      target="_top">AWS API Documentation</a>
@@ -1338,8 +1397,7 @@ public interface AWSkendra {
      *         A conflict occurred with the request. Please fix any inconsistences with your resources and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListDataSourceSyncJobs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListDataSourceSyncJobs" target="_top">AWS
      *      API Documentation</a>
@@ -1366,8 +1424,7 @@ public interface AWSkendra {
      *         The request was denied due to request throttling. Please reduce the number of requests and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListDataSources
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListDataSources" target="_top">AWS API
      *      Documentation</a>
@@ -1394,8 +1451,7 @@ public interface AWSkendra {
      *         The request was denied due to request throttling. Please reduce the number of requests and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListEntityPersonas
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListEntityPersonas" target="_top">AWS API
      *      Documentation</a>
@@ -1426,8 +1482,7 @@ public interface AWSkendra {
      *         The request was denied due to request throttling. Please reduce the number of requests and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListExperienceEntities
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListExperienceEntities" target="_top">AWS
      *      API Documentation</a>
@@ -1457,8 +1512,7 @@ public interface AWSkendra {
      *         The request was denied due to request throttling. Please reduce the number of requests and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListExperiences
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListExperiences" target="_top">AWS API
      *      Documentation</a>
@@ -1485,13 +1539,41 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListFaqs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListFaqs" target="_top">AWS API
      *      Documentation</a>
      */
     ListFaqsResult listFaqs(ListFaqsRequest listFaqsRequest);
+
+    /**
+     * <p>
+     * Lists all your sets of featured results for a given index. Features results are placed above all other results
+     * for certain queries. If there's an exact match of a query, then one or more specific documents are featured in
+     * the search results.
+     * </p>
+     * 
+     * @param listFeaturedResultsSetsRequest
+     * @return Result of the ListFeaturedResultsSets operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource you want to use doesn’t exist. Please check you have provided the correct resource and try
+     *         again.
+     * @throws AccessDeniedException
+     *         You don't have sufficient access to perform this action. Please ensure you have the required permission
+     *         policies and user accounts and try again.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints set by the Amazon Kendra service. Please provide the correct
+     *         input and try again.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. Please reduce the number of requests and try again.
+     * @throws InternalServerException
+     *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     * @sample AWSkendra.ListFeaturedResultsSets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListFeaturedResultsSets" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListFeaturedResultsSetsResult listFeaturedResultsSets(ListFeaturedResultsSetsRequest listFeaturedResultsSetsRequest);
 
     /**
      * <p>
@@ -1519,8 +1601,7 @@ public interface AWSkendra {
      *         A conflict occurred with the request. Please fix any inconsistences with your resources and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListGroupsOlderThanOrderingId
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListGroupsOlderThanOrderingId"
      *      target="_top">AWS API Documentation</a>
@@ -1544,8 +1625,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListIndices
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListIndices" target="_top">AWS API
      *      Documentation</a>
@@ -1580,8 +1660,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListQuerySuggestionsBlockLists
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListQuerySuggestionsBlockLists"
      *      target="_top">AWS API Documentation</a>
@@ -1609,8 +1688,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListTagsForResource" target="_top">AWS API
      *      Documentation</a>
@@ -1637,8 +1715,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.ListThesauri
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListThesauri" target="_top">AWS API
      *      Documentation</a>
@@ -1664,9 +1741,6 @@ public interface AWSkendra {
      * If more than five <code>PUT</code> actions for a group are currently processing, a validation exception is
      * thrown.
      * </p>
-     * <p>
-     * <code>PutPrincipalMapping</code> is currently not supported in the Amazon Web Services GovCloud (US-West) region.
-     * </p>
      * 
      * @param putPrincipalMappingRequest
      * @return Result of the PutPrincipalMapping operation returned by the service.
@@ -1684,13 +1758,12 @@ public interface AWSkendra {
      *         You don't have sufficient access to perform this action. Please ensure you have the required permission
      *         policies and user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.PutPrincipalMapping
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/PutPrincipalMapping" target="_top">AWS API
      *      Documentation</a>
@@ -1751,13 +1824,12 @@ public interface AWSkendra {
      *         You don't have sufficient access to perform this action. Please ensure you have the required permission
      *         policies and user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.Query
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/Query" target="_top">AWS API
      *      Documentation</a>
@@ -1790,8 +1862,7 @@ public interface AWSkendra {
      *         A conflict occurred with the request. Please fix any inconsistences with your resources and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.StartDataSourceSyncJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/StartDataSourceSyncJob" target="_top">AWS
      *      API Documentation</a>
@@ -1818,8 +1889,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.StopDataSourceSyncJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/StopDataSourceSyncJob" target="_top">AWS
      *      API Documentation</a>
@@ -1852,8 +1922,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.SubmitFeedback
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/SubmitFeedback" target="_top">AWS API
      *      Documentation</a>
@@ -1881,8 +1950,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -1909,8 +1977,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UntagResource" target="_top">AWS API
      *      Documentation</a>
@@ -1957,13 +2024,12 @@ public interface AWSkendra {
      *         You don't have sufficient access to perform this action. Please ensure you have the required permission
      *         policies and user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.UpdateAccessControlConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateAccessControlConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -1992,8 +2058,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.UpdateDataSource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateDataSource" target="_top">AWS API
      *      Documentation</a>
@@ -2025,13 +2090,45 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.UpdateExperience
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateExperience" target="_top">AWS API
      *      Documentation</a>
      */
     UpdateExperienceResult updateExperience(UpdateExperienceRequest updateExperienceRequest);
+
+    /**
+     * <p>
+     * Updates a set of featured results. Features results are placed above all other results for certain queries. You
+     * map specific queries to specific documents for featuring in the results. If a query contains an exact match of a
+     * query, then one or more specific documents are featured in the search results.
+     * </p>
+     * 
+     * @param updateFeaturedResultsSetRequest
+     * @return Result of the UpdateFeaturedResultsSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource you want to use doesn’t exist. Please check you have provided the correct resource and try
+     *         again.
+     * @throws AccessDeniedException
+     *         You don't have sufficient access to perform this action. Please ensure you have the required permission
+     *         policies and user accounts and try again.
+     * @throws FeaturedResultsConflictException
+     *         An error message with a list of conflicting queries used across different sets of featured results. This
+     *         occurred with the request for a new featured results set. Check that the queries you specified for
+     *         featured results are unique per featured results set for each index.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints set by the Amazon Kendra service. Please provide the correct
+     *         input and try again.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. Please reduce the number of requests and try again.
+     * @throws InternalServerException
+     *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
+     * @sample AWSkendra.UpdateFeaturedResultsSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateFeaturedResultsSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateFeaturedResultsSetResult updateFeaturedResultsSet(UpdateFeaturedResultsSetRequest updateFeaturedResultsSetRequest);
 
     /**
      * <p>
@@ -2054,13 +2151,12 @@ public interface AWSkendra {
      *         You don't have sufficient access to perform this action. Please ensure you have the required permission
      *         policies and user accounts and try again.
      * @throws ServiceQuotaExceededException
-     *         You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra
-     *         Quotas pg] for more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us">
-     *         Support</a> to inquire about an increase of limits.
+     *         You have exceeded the set limits for your Amazon Kendra service. Please see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a> for more information, or
+     *         contact <a href="http://aws.amazon.com/contact-us/">Support</a> to inquire about an increase of limits.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.UpdateIndex
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateIndex" target="_top">AWS API
      *      Documentation</a>
@@ -2104,8 +2200,7 @@ public interface AWSkendra {
      *         A conflict occurred with the request. Please fix any inconsistences with your resources and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.UpdateQuerySuggestionsBlockList
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateQuerySuggestionsBlockList"
      *      target="_top">AWS API Documentation</a>
@@ -2152,8 +2247,7 @@ public interface AWSkendra {
      *         policies and user accounts and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.UpdateQuerySuggestionsConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateQuerySuggestionsConfig"
      *      target="_top">AWS API Documentation</a>
@@ -2182,8 +2276,7 @@ public interface AWSkendra {
      *         A conflict occurred with the request. Please fix any inconsistences with your resources and try again.
      * @throws InternalServerException
      *         An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes
-     *         and try again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for
-     *         help.
+     *         and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a> for help.
      * @sample AWSkendra.UpdateThesaurus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateThesaurus" target="_top">AWS API
      *      Documentation</a>

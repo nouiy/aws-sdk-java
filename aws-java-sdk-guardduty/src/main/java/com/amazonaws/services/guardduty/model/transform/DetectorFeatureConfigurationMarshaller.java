@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.guardduty.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class DetectorFeatureConfigurationMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<List> ADDITIONALCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("additionalConfiguration").build();
 
     private static final DetectorFeatureConfigurationMarshaller instance = new DetectorFeatureConfigurationMarshaller();
 
@@ -50,6 +53,7 @@ public class DetectorFeatureConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(detectorFeatureConfiguration.getName(), NAME_BINDING);
             protocolMarshaller.marshall(detectorFeatureConfiguration.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(detectorFeatureConfiguration.getAdditionalConfiguration(), ADDITIONALCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

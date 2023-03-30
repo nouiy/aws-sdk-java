@@ -25,18 +25,18 @@ public class CreateExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier for your created Amazon Kendra experience.
+     * The identifier of your Amazon Kendra experience.
      * </p>
      */
     private String id;
 
     /**
      * <p>
-     * The identifier for your created Amazon Kendra experience.
+     * The identifier of your Amazon Kendra experience.
      * </p>
      * 
      * @param id
-     *        The identifier for your created Amazon Kendra experience.
+     *        The identifier of your Amazon Kendra experience.
      */
 
     public void setId(String id) {
@@ -45,10 +45,10 @@ public class CreateExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier for your created Amazon Kendra experience.
+     * The identifier of your Amazon Kendra experience.
      * </p>
      * 
-     * @return The identifier for your created Amazon Kendra experience.
+     * @return The identifier of your Amazon Kendra experience.
      */
 
     public String getId() {
@@ -57,11 +57,11 @@ public class CreateExperienceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier for your created Amazon Kendra experience.
+     * The identifier of your Amazon Kendra experience.
      * </p>
      * 
      * @param id
-     *        The identifier for your created Amazon Kendra experience.
+     *        The identifier of your Amazon Kendra experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

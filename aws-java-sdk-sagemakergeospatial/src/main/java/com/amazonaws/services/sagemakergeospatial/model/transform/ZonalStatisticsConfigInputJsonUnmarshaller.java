@@ -64,6 +64,10 @@ public class ZonalStatisticsConfigInputJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     zonalStatisticsConfigInput.setZoneS3Path(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ZoneS3PathKmsKeyId", targetDepth)) {
+                    context.nextToken();
+                    zonalStatisticsConfigInput.setZoneS3PathKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

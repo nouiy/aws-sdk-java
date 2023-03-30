@@ -60,6 +60,12 @@ public class ClusterStatusJsonUnmarshaller implements Unmarshaller<ClusterStatus
                     context.nextToken();
                     clusterStatus.setTimeline(ClusterTimelineJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ErrorDetails", targetDepth)) {
+                    context.nextToken();
+                    clusterStatus.setErrorDetails(new ListUnmarshaller<ErrorDetail>(ErrorDetailJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

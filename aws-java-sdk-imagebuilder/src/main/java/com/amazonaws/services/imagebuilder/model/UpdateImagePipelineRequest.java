@@ -52,15 +52,15 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
     private String containerRecipeArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images updated by
-     * this image pipeline.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that Image Builder uses to build images that
+     * this image pipeline has updated.
      * </p>
      */
     private String infrastructureConfigurationArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute
-     * images updated by this image pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that Image Builder uses to configure and
+     * distribute images that this image pipeline has updated.
      * </p>
      */
     private String distributionConfigurationArn;
@@ -96,6 +96,12 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String clientToken;
+    /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     */
+    private ImageScanningConfiguration imageScanningConfiguration;
 
     /**
      * <p>
@@ -265,13 +271,13 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images updated by
-     * this image pipeline.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that Image Builder uses to build images that
+     * this image pipeline has updated.
      * </p>
      * 
      * @param infrastructureConfigurationArn
-     *        The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images
-     *        updated by this image pipeline.
+     *        The Amazon Resource Name (ARN) of the infrastructure configuration that Image Builder uses to build images
+     *        that this image pipeline has updated.
      */
 
     public void setInfrastructureConfigurationArn(String infrastructureConfigurationArn) {
@@ -280,12 +286,12 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images updated by
-     * this image pipeline.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that Image Builder uses to build images that
+     * this image pipeline has updated.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images
-     *         updated by this image pipeline.
+     * @return The Amazon Resource Name (ARN) of the infrastructure configuration that Image Builder uses to build
+     *         images that this image pipeline has updated.
      */
 
     public String getInfrastructureConfigurationArn() {
@@ -294,13 +300,13 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images updated by
-     * this image pipeline.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that Image Builder uses to build images that
+     * this image pipeline has updated.
      * </p>
      * 
      * @param infrastructureConfigurationArn
-     *        The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images
-     *        updated by this image pipeline.
+     *        The Amazon Resource Name (ARN) of the infrastructure configuration that Image Builder uses to build images
+     *        that this image pipeline has updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -311,13 +317,13 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute
-     * images updated by this image pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that Image Builder uses to configure and
+     * distribute images that this image pipeline has updated.
      * </p>
      * 
      * @param distributionConfigurationArn
-     *        The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and
-     *        distribute images updated by this image pipeline.
+     *        The Amazon Resource Name (ARN) of the distribution configuration that Image Builder uses to configure and
+     *        distribute images that this image pipeline has updated.
      */
 
     public void setDistributionConfigurationArn(String distributionConfigurationArn) {
@@ -326,12 +332,12 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute
-     * images updated by this image pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that Image Builder uses to configure and
+     * distribute images that this image pipeline has updated.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and
-     *         distribute images updated by this image pipeline.
+     * @return The Amazon Resource Name (ARN) of the distribution configuration that Image Builder uses to configure and
+     *         distribute images that this image pipeline has updated.
      */
 
     public String getDistributionConfigurationArn() {
@@ -340,13 +346,13 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute
-     * images updated by this image pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that Image Builder uses to configure and
+     * distribute images that this image pipeline has updated.
      * </p>
      * 
      * @param distributionConfigurationArn
-     *        The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and
-     *        distribute images updated by this image pipeline.
+     *        The Amazon Resource Name (ARN) of the distribution configuration that Image Builder uses to configure and
+     *        distribute images that this image pipeline has updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -603,6 +609,46 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     * 
+     * @param imageScanningConfiguration
+     *        Contains settings for vulnerability scans.
+     */
+
+    public void setImageScanningConfiguration(ImageScanningConfiguration imageScanningConfiguration) {
+        this.imageScanningConfiguration = imageScanningConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     * 
+     * @return Contains settings for vulnerability scans.
+     */
+
+    public ImageScanningConfiguration getImageScanningConfiguration() {
+        return this.imageScanningConfiguration;
+    }
+
+    /**
+     * <p>
+     * Contains settings for vulnerability scans.
+     * </p>
+     * 
+     * @param imageScanningConfiguration
+     *        Contains settings for vulnerability scans.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateImagePipelineRequest withImageScanningConfiguration(ImageScanningConfiguration imageScanningConfiguration) {
+        setImageScanningConfiguration(imageScanningConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -635,7 +681,9 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getImageScanningConfiguration() != null)
+            sb.append("ImageScanningConfiguration: ").append(getImageScanningConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -695,6 +743,10 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getImageScanningConfiguration() == null ^ this.getImageScanningConfiguration() == null)
+            return false;
+        if (other.getImageScanningConfiguration() != null && other.getImageScanningConfiguration().equals(this.getImageScanningConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -714,6 +766,7 @@ public class UpdateImagePipelineRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getSchedule() == null) ? 0 : getSchedule().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getImageScanningConfiguration() == null) ? 0 : getImageScanningConfiguration().hashCode());
         return hashCode;
     }
 

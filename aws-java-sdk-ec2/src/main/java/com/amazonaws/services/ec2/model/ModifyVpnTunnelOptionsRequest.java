@@ -44,6 +44,15 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
      * </p>
      */
     private ModifyVpnTunnelOptionsSpecification tunnelOptions;
+    /**
+     * <p>
+     * Choose whether or not to trigger immediate tunnel replacement.
+     * </p>
+     * <p>
+     * Valid values: <code>True</code> | <code>False</code>
+     * </p>
+     */
+    private Boolean skipTunnelReplacement;
 
     /**
      * <p>
@@ -166,6 +175,78 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
     }
 
     /**
+     * <p>
+     * Choose whether or not to trigger immediate tunnel replacement.
+     * </p>
+     * <p>
+     * Valid values: <code>True</code> | <code>False</code>
+     * </p>
+     * 
+     * @param skipTunnelReplacement
+     *        Choose whether or not to trigger immediate tunnel replacement.</p>
+     *        <p>
+     *        Valid values: <code>True</code> | <code>False</code>
+     */
+
+    public void setSkipTunnelReplacement(Boolean skipTunnelReplacement) {
+        this.skipTunnelReplacement = skipTunnelReplacement;
+    }
+
+    /**
+     * <p>
+     * Choose whether or not to trigger immediate tunnel replacement.
+     * </p>
+     * <p>
+     * Valid values: <code>True</code> | <code>False</code>
+     * </p>
+     * 
+     * @return Choose whether or not to trigger immediate tunnel replacement.</p>
+     *         <p>
+     *         Valid values: <code>True</code> | <code>False</code>
+     */
+
+    public Boolean getSkipTunnelReplacement() {
+        return this.skipTunnelReplacement;
+    }
+
+    /**
+     * <p>
+     * Choose whether or not to trigger immediate tunnel replacement.
+     * </p>
+     * <p>
+     * Valid values: <code>True</code> | <code>False</code>
+     * </p>
+     * 
+     * @param skipTunnelReplacement
+     *        Choose whether or not to trigger immediate tunnel replacement.</p>
+     *        <p>
+     *        Valid values: <code>True</code> | <code>False</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyVpnTunnelOptionsRequest withSkipTunnelReplacement(Boolean skipTunnelReplacement) {
+        setSkipTunnelReplacement(skipTunnelReplacement);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Choose whether or not to trigger immediate tunnel replacement.
+     * </p>
+     * <p>
+     * Valid values: <code>True</code> | <code>False</code>
+     * </p>
+     * 
+     * @return Choose whether or not to trigger immediate tunnel replacement.</p>
+     *         <p>
+     *         Valid values: <code>True</code> | <code>False</code>
+     */
+
+    public Boolean isSkipTunnelReplacement() {
+        return this.skipTunnelReplacement;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -193,7 +274,9 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
         if (getVpnTunnelOutsideIpAddress() != null)
             sb.append("VpnTunnelOutsideIpAddress: ").append(getVpnTunnelOutsideIpAddress()).append(",");
         if (getTunnelOptions() != null)
-            sb.append("TunnelOptions: ").append(getTunnelOptions());
+            sb.append("TunnelOptions: ").append(getTunnelOptions()).append(",");
+        if (getSkipTunnelReplacement() != null)
+            sb.append("SkipTunnelReplacement: ").append(getSkipTunnelReplacement());
         sb.append("}");
         return sb.toString();
     }
@@ -220,6 +303,10 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
             return false;
         if (other.getTunnelOptions() != null && other.getTunnelOptions().equals(this.getTunnelOptions()) == false)
             return false;
+        if (other.getSkipTunnelReplacement() == null ^ this.getSkipTunnelReplacement() == null)
+            return false;
+        if (other.getSkipTunnelReplacement() != null && other.getSkipTunnelReplacement().equals(this.getSkipTunnelReplacement()) == false)
+            return false;
         return true;
     }
 
@@ -231,6 +318,7 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
         hashCode = prime * hashCode + ((getVpnConnectionId() == null) ? 0 : getVpnConnectionId().hashCode());
         hashCode = prime * hashCode + ((getVpnTunnelOutsideIpAddress() == null) ? 0 : getVpnTunnelOutsideIpAddress().hashCode());
         hashCode = prime * hashCode + ((getTunnelOptions() == null) ? 0 : getTunnelOptions().hashCode());
+        hashCode = prime * hashCode + ((getSkipTunnelReplacement() == null) ? 0 : getSkipTunnelReplacement().hashCode());
         return hashCode;
     }
 

@@ -38,7 +38,19 @@ public class SearchRasterDataCollectionRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String nextToken;
-    /** <p/> */
+    /**
+     * <p>
+     * RasterDataCollectionQuery consisting of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_AreaOfInterest.html"
+     * >AreaOfInterest(AOI)</a>, <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_PropertyFilter.html"
+     * >PropertyFilters</a> and <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_TimeRangeFilterInput.html"
+     * >TimeRangeFilterInput</a> used in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_SearchRasterDataCollection.html"
+     * >SearchRasterDataCollection</a>.
+     * </p>
+     */
     private RasterDataCollectionQueryWithBandFilterInput rasterDataCollectionQuery;
 
     /**
@@ -128,9 +140,28 @@ public class SearchRasterDataCollectionRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * <p/>
+     * <p>
+     * RasterDataCollectionQuery consisting of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_AreaOfInterest.html"
+     * >AreaOfInterest(AOI)</a>, <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_PropertyFilter.html"
+     * >PropertyFilters</a> and <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_TimeRangeFilterInput.html"
+     * >TimeRangeFilterInput</a> used in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_SearchRasterDataCollection.html"
+     * >SearchRasterDataCollection</a>.
+     * </p>
      * 
      * @param rasterDataCollectionQuery
+     *        RasterDataCollectionQuery consisting of <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_AreaOfInterest.html"
+     *        >AreaOfInterest(AOI)</a>, <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_PropertyFilter.html"
+     *        >PropertyFilters</a> and <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_TimeRangeFilterInput.html"
+     *        >TimeRangeFilterInput</a> used in <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_SearchRasterDataCollection.html"
+     *        >SearchRasterDataCollection</a>.
      */
 
     public void setRasterDataCollectionQuery(RasterDataCollectionQueryWithBandFilterInput rasterDataCollectionQuery) {
@@ -138,9 +169,27 @@ public class SearchRasterDataCollectionRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * <p/>
+     * <p>
+     * RasterDataCollectionQuery consisting of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_AreaOfInterest.html"
+     * >AreaOfInterest(AOI)</a>, <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_PropertyFilter.html"
+     * >PropertyFilters</a> and <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_TimeRangeFilterInput.html"
+     * >TimeRangeFilterInput</a> used in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_SearchRasterDataCollection.html"
+     * >SearchRasterDataCollection</a>.
+     * </p>
      * 
-     * @return
+     * @return RasterDataCollectionQuery consisting of <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_AreaOfInterest.html"
+     *         >AreaOfInterest(AOI)</a>, <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_PropertyFilter.html"
+     *         >PropertyFilters</a> and <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_TimeRangeFilterInput.html"
+     *         >TimeRangeFilterInput</a> used in <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_SearchRasterDataCollection.html"
+     *         >SearchRasterDataCollection</a>.
      */
 
     public RasterDataCollectionQueryWithBandFilterInput getRasterDataCollectionQuery() {
@@ -148,9 +197,28 @@ public class SearchRasterDataCollectionRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * <p/>
+     * <p>
+     * RasterDataCollectionQuery consisting of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_AreaOfInterest.html"
+     * >AreaOfInterest(AOI)</a>, <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_PropertyFilter.html"
+     * >PropertyFilters</a> and <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_TimeRangeFilterInput.html"
+     * >TimeRangeFilterInput</a> used in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_SearchRasterDataCollection.html"
+     * >SearchRasterDataCollection</a>.
+     * </p>
      * 
      * @param rasterDataCollectionQuery
+     *        RasterDataCollectionQuery consisting of <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_AreaOfInterest.html"
+     *        >AreaOfInterest(AOI)</a>, <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_PropertyFilter.html"
+     *        >PropertyFilters</a> and <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_TimeRangeFilterInput.html"
+     *        >TimeRangeFilterInput</a> used in <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_geospatial_SearchRasterDataCollection.html"
+     *        >SearchRasterDataCollection</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -57,7 +57,9 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
      * @sample AmazonSageMakerGeospatial.DeleteEarthObservationJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/DeleteEarthObservationJob"
      *      target="_top">AWS API Documentation</a>
@@ -80,7 +82,9 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
      * @sample AmazonSageMakerGeospatial.DeleteVectorEnrichmentJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/DeleteVectorEnrichmentJob"
      *      target="_top">AWS API Documentation</a>
@@ -90,7 +94,7 @@ public interface AmazonSageMakerGeospatial {
     /**
      * <p>
      * Use this operation to export results of an Earth Observation job and optionally source images used as input to
-     * the EOJ to an S3 location.
+     * the EOJ to an Amazon S3 location.
      * </p>
      * 
      * @param exportEarthObservationJobRequest
@@ -106,7 +110,9 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
      * @sample AmazonSageMakerGeospatial.ExportEarthObservationJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ExportEarthObservationJob"
      *      target="_top">AWS API Documentation</a>
@@ -115,7 +121,7 @@ public interface AmazonSageMakerGeospatial {
 
     /**
      * <p>
-     * Use this operation to copy results of a Vector Enrichment job to an S3 location.
+     * Use this operation to copy results of a Vector Enrichment job to an Amazon S3 location.
      * </p>
      * 
      * @param exportVectorEnrichmentJobRequest
@@ -131,7 +137,9 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
      * @sample AmazonSageMakerGeospatial.ExportVectorEnrichmentJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ExportVectorEnrichmentJob"
      *      target="_top">AWS API Documentation</a>
@@ -154,6 +162,7 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @sample AmazonSageMakerGeospatial.GetEarthObservationJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/GetEarthObservationJob"
      *      target="_top">AWS API Documentation</a>
@@ -176,6 +185,7 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @sample AmazonSageMakerGeospatial.GetRasterDataCollection
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/GetRasterDataCollection"
      *      target="_top">AWS API Documentation</a>
@@ -198,6 +208,7 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @sample AmazonSageMakerGeospatial.GetTile
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/GetTile" target="_top">AWS
      *      API Documentation</a>
@@ -220,6 +231,7 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @sample AmazonSageMakerGeospatial.GetVectorEnrichmentJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/GetVectorEnrichmentJob"
      *      target="_top">AWS API Documentation</a>
@@ -243,6 +255,7 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @sample AmazonSageMakerGeospatial.ListEarthObservationJobs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ListEarthObservationJobs"
      *      target="_top">AWS API Documentation</a>
@@ -265,6 +278,7 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @sample AmazonSageMakerGeospatial.ListRasterDataCollections
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ListRasterDataCollections"
      *      target="_top">AWS API Documentation</a>
@@ -287,6 +301,7 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @sample AmazonSageMakerGeospatial.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -309,6 +324,7 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @sample AmazonSageMakerGeospatial.ListVectorEnrichmentJobs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/ListVectorEnrichmentJobs"
      *      target="_top">AWS API Documentation</a>
@@ -332,6 +348,7 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @sample AmazonSageMakerGeospatial.SearchRasterDataCollection
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/SearchRasterDataCollection"
      *      target="_top">AWS API Documentation</a>
@@ -356,7 +373,9 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
      * @sample AmazonSageMakerGeospatial.StartEarthObservationJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/StartEarthObservationJob"
      *      target="_top">AWS API Documentation</a>
@@ -382,7 +401,9 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
      * @sample AmazonSageMakerGeospatial.StartVectorEnrichmentJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/StartVectorEnrichmentJob"
      *      target="_top">AWS API Documentation</a>
@@ -405,7 +426,9 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
      * @sample AmazonSageMakerGeospatial.StopEarthObservationJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/StopEarthObservationJob"
      *      target="_top">AWS API Documentation</a>
@@ -428,7 +451,9 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
      * @sample AmazonSageMakerGeospatial.StopVectorEnrichmentJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/StopVectorEnrichmentJob"
      *      target="_top">AWS API Documentation</a>
@@ -451,6 +476,7 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @sample AmazonSageMakerGeospatial.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/TagResource"
      *      target="_top">AWS API Documentation</a>
@@ -473,6 +499,7 @@ public interface AmazonSageMakerGeospatial {
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception, or failure.
      * @throws ResourceNotFoundException
+     *         The request references a resource which does not exist.
      * @sample AmazonSageMakerGeospatial.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/UntagResource"
      *      target="_top">AWS API Documentation</a>

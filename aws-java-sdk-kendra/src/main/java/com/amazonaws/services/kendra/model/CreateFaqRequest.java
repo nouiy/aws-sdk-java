@@ -51,9 +51,9 @@ public class CreateFaqRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private S3Path s3Path;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the S3 bucket that contains the FAQs. For more
-     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
-     * Kendra</a>.
+     * The Amazon Resource Name (ARN) of an IAM role with permission to access the S3 bucket that contains the FAQs. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM access roles for
+     * Amazon Kendra</a>.
      * </p>
      */
     private String roleArn;
@@ -258,15 +258,15 @@ public class CreateFaqRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the S3 bucket that contains the FAQs. For more
-     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
-     * Kendra</a>.
+     * The Amazon Resource Name (ARN) of an IAM role with permission to access the S3 bucket that contains the FAQs. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM access roles for
+     * Amazon Kendra</a>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of a role with permission to access the S3 bucket that contains the FAQs.
-     *        For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles
-     *        for Amazon Kendra</a>.
+     *        The Amazon Resource Name (ARN) of an IAM role with permission to access the S3 bucket that contains the
+     *        FAQs. For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM
+     *        access roles for Amazon Kendra</a>.
      */
 
     public void setRoleArn(String roleArn) {
@@ -275,14 +275,14 @@ public class CreateFaqRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the S3 bucket that contains the FAQs. For more
-     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
-     * Kendra</a>.
+     * The Amazon Resource Name (ARN) of an IAM role with permission to access the S3 bucket that contains the FAQs. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM access roles for
+     * Amazon Kendra</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of a role with permission to access the S3 bucket that contains the FAQs.
-     *         For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles
-     *         for Amazon Kendra</a>.
+     * @return The Amazon Resource Name (ARN) of an IAM role with permission to access the S3 bucket that contains the
+     *         FAQs. For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM
+     *         access roles for Amazon Kendra</a>.
      */
 
     public String getRoleArn() {
@@ -291,15 +291,15 @@ public class CreateFaqRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the S3 bucket that contains the FAQs. For more
-     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
-     * Kendra</a>.
+     * The Amazon Resource Name (ARN) of an IAM role with permission to access the S3 bucket that contains the FAQs. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM access roles for
+     * Amazon Kendra</a>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of a role with permission to access the S3 bucket that contains the FAQs.
-     *        For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles
-     *        for Amazon Kendra</a>.
+     *        The Amazon Resource Name (ARN) of an IAM role with permission to access the S3 bucket that contains the
+     *        FAQs. For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM
+     *        access roles for Amazon Kendra</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

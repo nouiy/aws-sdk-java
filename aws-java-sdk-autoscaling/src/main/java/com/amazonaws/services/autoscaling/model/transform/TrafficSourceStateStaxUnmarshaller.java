@@ -52,6 +52,16 @@ public class TrafficSourceStateStaxUnmarshaller implements Unmarshaller<TrafficS
                     trafficSourceState.setState(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("Identifier", targetDepth)) {
+                    trafficSourceState.setIdentifier(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("Type", targetDepth)) {
+                    trafficSourceState.setType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return trafficSourceState;

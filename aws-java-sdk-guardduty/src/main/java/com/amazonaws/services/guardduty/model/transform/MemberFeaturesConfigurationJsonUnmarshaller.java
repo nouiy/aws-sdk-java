@@ -56,6 +56,13 @@ public class MemberFeaturesConfigurationJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     memberFeaturesConfiguration.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("additionalConfiguration", targetDepth)) {
+                    context.nextToken();
+                    memberFeaturesConfiguration.setAdditionalConfiguration(new ListUnmarshaller<MemberAdditionalConfiguration>(
+                            MemberAdditionalConfigurationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -25,7 +25,7 @@ public class GetSnapshotsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The date-time for the beginning and end of the time window for the search metrics data.
+     * The Unix timestamp for the beginning and end of the time window for the search metrics data.
      * </p>
      */
     private TimeRange snapShotTimeFilter;
@@ -51,11 +51,11 @@ public class GetSnapshotsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The date-time for the beginning and end of the time window for the search metrics data.
+     * The Unix timestamp for the beginning and end of the time window for the search metrics data.
      * </p>
      * 
      * @param snapShotTimeFilter
-     *        The date-time for the beginning and end of the time window for the search metrics data.
+     *        The Unix timestamp for the beginning and end of the time window for the search metrics data.
      */
 
     public void setSnapShotTimeFilter(TimeRange snapShotTimeFilter) {
@@ -64,10 +64,10 @@ public class GetSnapshotsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The date-time for the beginning and end of the time window for the search metrics data.
+     * The Unix timestamp for the beginning and end of the time window for the search metrics data.
      * </p>
      * 
-     * @return The date-time for the beginning and end of the time window for the search metrics data.
+     * @return The Unix timestamp for the beginning and end of the time window for the search metrics data.
      */
 
     public TimeRange getSnapShotTimeFilter() {
@@ -76,11 +76,11 @@ public class GetSnapshotsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The date-time for the beginning and end of the time window for the search metrics data.
+     * The Unix timestamp for the beginning and end of the time window for the search metrics data.
      * </p>
      * 
      * @param snapShotTimeFilter
-     *        The date-time for the beginning and end of the time window for the search metrics data.
+     *        The Unix timestamp for the beginning and end of the time window for the search metrics data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

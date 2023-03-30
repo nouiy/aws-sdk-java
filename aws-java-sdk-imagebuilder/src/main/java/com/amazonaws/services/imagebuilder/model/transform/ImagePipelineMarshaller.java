@@ -63,6 +63,8 @@ public class ImagePipelineMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dateNextRun").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> IMAGESCANNINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("imageScanningConfiguration").build();
 
     private static final ImagePipelineMarshaller instance = new ImagePipelineMarshaller();
 
@@ -97,6 +99,7 @@ public class ImagePipelineMarshaller {
             protocolMarshaller.marshall(imagePipeline.getDateLastRun(), DATELASTRUN_BINDING);
             protocolMarshaller.marshall(imagePipeline.getDateNextRun(), DATENEXTRUN_BINDING);
             protocolMarshaller.marshall(imagePipeline.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(imagePipeline.getImageScanningConfiguration(), IMAGESCANNINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

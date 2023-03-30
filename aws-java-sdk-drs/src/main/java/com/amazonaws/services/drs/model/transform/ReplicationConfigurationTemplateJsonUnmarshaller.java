@@ -56,6 +56,10 @@ public class ReplicationConfigurationTemplateJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     replicationConfigurationTemplate.setAssociateDefaultSecurityGroup(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("autoReplicateNewDisks", targetDepth)) {
+                    context.nextToken();
+                    replicationConfigurationTemplate.setAutoReplicateNewDisks(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("bandwidthThrottling", targetDepth)) {
                     context.nextToken();
                     replicationConfigurationTemplate.setBandwidthThrottling(context.getUnmarshaller(Long.class).unmarshall(context));

@@ -28,15 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class EarthObservationJobErrorDetails implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * A detailed message describing the error in an Earth Observation job.
+     * </p>
+     */
     private String message;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of error in an Earth Observation job.
+     * </p>
+     */
     private String type;
 
     /**
-     * <p/>
+     * <p>
+     * A detailed message describing the error in an Earth Observation job.
+     * </p>
      * 
      * @param message
+     *        A detailed message describing the error in an Earth Observation job.
      */
 
     public void setMessage(String message) {
@@ -44,9 +55,11 @@ public class EarthObservationJobErrorDetails implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * A detailed message describing the error in an Earth Observation job.
+     * </p>
      * 
-     * @return
+     * @return A detailed message describing the error in an Earth Observation job.
      */
 
     public String getMessage() {
@@ -54,9 +67,12 @@ public class EarthObservationJobErrorDetails implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * A detailed message describing the error in an Earth Observation job.
+     * </p>
      * 
      * @param message
+     *        A detailed message describing the error in an Earth Observation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,9 +82,12 @@ public class EarthObservationJobErrorDetails implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of error in an Earth Observation job.
+     * </p>
      * 
      * @param type
+     *        The type of error in an Earth Observation job.
      * @see EarthObservationJobErrorType
      */
 
@@ -77,9 +96,11 @@ public class EarthObservationJobErrorDetails implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of error in an Earth Observation job.
+     * </p>
      * 
-     * @return
+     * @return The type of error in an Earth Observation job.
      * @see EarthObservationJobErrorType
      */
 
@@ -88,9 +109,12 @@ public class EarthObservationJobErrorDetails implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of error in an Earth Observation job.
+     * </p>
      * 
      * @param type
+     *        The type of error in an Earth Observation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EarthObservationJobErrorType
      */
@@ -101,9 +125,12 @@ public class EarthObservationJobErrorDetails implements Serializable, Cloneable,
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of error in an Earth Observation job.
+     * </p>
      * 
      * @param type
+     *        The type of error in an Earth Observation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EarthObservationJobErrorType
      */

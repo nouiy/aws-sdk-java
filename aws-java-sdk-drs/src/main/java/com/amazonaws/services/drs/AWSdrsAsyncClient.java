@@ -775,12 +775,14 @@ public class AWSdrsAsyncClient extends AWSdrsClient implements AWSdrsAsync {
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<RetryDataReplicationResult> retryDataReplicationAsync(RetryDataReplicationRequest request) {
 
         return retryDataReplicationAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<RetryDataReplicationResult> retryDataReplicationAsync(final RetryDataReplicationRequest request,
             final com.amazonaws.handlers.AsyncHandler<RetryDataReplicationRequest, RetryDataReplicationResult> asyncHandler) {
         final RetryDataReplicationRequest finalRequest = beforeClientExecution(request);

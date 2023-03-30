@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The structure containing the asset properties.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-geospatial-2020-05-27/AssetValue" target="_top">AWS
  *      API Documentation</a>
@@ -26,13 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AssetValue implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * Link to the asset object.
+     * </p>
+     */
     private String href;
 
     /**
-     * <p/>
+     * <p>
+     * Link to the asset object.
+     * </p>
      * 
      * @param href
+     *        Link to the asset object.
      */
 
     public void setHref(String href) {
@@ -40,9 +49,11 @@ public class AssetValue implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Link to the asset object.
+     * </p>
      * 
-     * @return
+     * @return Link to the asset object.
      */
 
     public String getHref() {
@@ -50,9 +61,12 @@ public class AssetValue implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Link to the asset object.
+     * </p>
      * 
      * @param href
+     *        Link to the asset object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -29,13 +29,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ExportVectorEnrichmentJobOutputConfig implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The input structure for Amazon S3 data; representing the Amazon S3 location of the input data objects.
+     * </p>
+     */
     private VectorEnrichmentJobS3Data s3Data;
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for Amazon S3 data; representing the Amazon S3 location of the input data objects.
+     * </p>
      * 
      * @param s3Data
+     *        The input structure for Amazon S3 data; representing the Amazon S3 location of the input data objects.
      */
 
     public void setS3Data(VectorEnrichmentJobS3Data s3Data) {
@@ -43,9 +50,11 @@ public class ExportVectorEnrichmentJobOutputConfig implements Serializable, Clon
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for Amazon S3 data; representing the Amazon S3 location of the input data objects.
+     * </p>
      * 
-     * @return
+     * @return The input structure for Amazon S3 data; representing the Amazon S3 location of the input data objects.
      */
 
     public VectorEnrichmentJobS3Data getS3Data() {
@@ -53,9 +62,12 @@ public class ExportVectorEnrichmentJobOutputConfig implements Serializable, Clon
     }
 
     /**
-     * <p/>
+     * <p>
+     * The input structure for Amazon S3 data; representing the Amazon S3 location of the input data objects.
+     * </p>
      * 
      * @param s3Data
+     *        The input structure for Amazon S3 data; representing the Amazon S3 location of the input data objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

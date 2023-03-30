@@ -277,7 +277,12 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private FargatePlatformConfiguration fargatePlatformConfiguration;
-
+    /**
+     * <p>
+     * The amount of ephemeral storage allocated for the task. This parameter is used to expand the total amount of
+     * ephemeral storage available, beyond the default amount, for tasks hosted on Fargate.
+     * </p>
+     */
     private EphemeralStorage ephemeralStorage;
 
     /**
@@ -2172,7 +2177,14 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The amount of ephemeral storage allocated for the task. This parameter is used to expand the total amount of
+     * ephemeral storage available, beyond the default amount, for tasks hosted on Fargate.
+     * </p>
+     * 
      * @param ephemeralStorage
+     *        The amount of ephemeral storage allocated for the task. This parameter is used to expand the total amount
+     *        of ephemeral storage available, beyond the default amount, for tasks hosted on Fargate.
      */
 
     public void setEphemeralStorage(EphemeralStorage ephemeralStorage) {
@@ -2180,7 +2192,13 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @return
+     * <p>
+     * The amount of ephemeral storage allocated for the task. This parameter is used to expand the total amount of
+     * ephemeral storage available, beyond the default amount, for tasks hosted on Fargate.
+     * </p>
+     * 
+     * @return The amount of ephemeral storage allocated for the task. This parameter is used to expand the total amount
+     *         of ephemeral storage available, beyond the default amount, for tasks hosted on Fargate.
      */
 
     public EphemeralStorage getEphemeralStorage() {
@@ -2188,7 +2206,14 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The amount of ephemeral storage allocated for the task. This parameter is used to expand the total amount of
+     * ephemeral storage available, beyond the default amount, for tasks hosted on Fargate.
+     * </p>
+     * 
      * @param ephemeralStorage
+     *        The amount of ephemeral storage allocated for the task. This parameter is used to expand the total amount
+     *        of ephemeral storage available, beyond the default amount, for tasks hosted on Fargate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

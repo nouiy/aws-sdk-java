@@ -137,7 +137,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputOverprovisioned</code> </b> — The instance’s EBS throughput configuration can be sized
      * down while still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current
+     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current
      * instance during the look-back period.
      * </p>
      * </li>
@@ -145,23 +145,24 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
-     * throughput performance. This is identified by analyzing the <code>VolumeReadOps</code> and
-     * <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current instance during the look-back period.
+     * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
+     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSOverprovisioned</code> </b> — The instance’s EBS IOPS configuration can be sized down while
      * still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metric of EBS volumes attached to the current
-     * instance during the look-back period.
+     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metric of EBS volumes attached to the current instance
+     * during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSUnderprovisioned</code> </b> — The instance’s EBS IOPS configuration doesn't meet the
      * performance requirements of your workload and there is an alternative instance type that provides better EBS IOPS
-     * performance. This is identified by analyzing the <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code>
+     * performance. This is identified by analyzing the <code>VolumeReadOps</code> and <code>VolumeWriteOps</code>
      * metric of EBS volumes attached to the current instance during the look-back period.
      * </p>
      * </li>
@@ -336,6 +337,12 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * </ul>
      */
     private java.util.List<String> inferredWorkloadTypes;
+    /**
+     * <p>
+     * The state of the instance when the recommendation was generated.
+     * </p>
+     */
+    private String instanceState;
 
     /**
      * <p>
@@ -824,7 +831,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputOverprovisioned</code> </b> — The instance’s EBS throughput configuration can be sized
      * down while still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current
+     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current
      * instance during the look-back period.
      * </p>
      * </li>
@@ -832,23 +839,24 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
-     * throughput performance. This is identified by analyzing the <code>VolumeReadOps</code> and
-     * <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current instance during the look-back period.
+     * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
+     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSOverprovisioned</code> </b> — The instance’s EBS IOPS configuration can be sized down while
      * still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metric of EBS volumes attached to the current
-     * instance during the look-back period.
+     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metric of EBS volumes attached to the current instance
+     * during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSUnderprovisioned</code> </b> — The instance’s EBS IOPS configuration doesn't meet the
      * performance requirements of your workload and there is an alternative instance type that provides better EBS IOPS
-     * performance. This is identified by analyzing the <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code>
+     * performance. This is identified by analyzing the <code>VolumeReadOps</code> and <code>VolumeWriteOps</code>
      * metric of EBS volumes attached to the current instance during the look-back period.
      * </p>
      * </li>
@@ -978,8 +986,8 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *         <p>
      *         <b> <code>EBSThroughputOverprovisioned</code> </b> — The instance’s EBS throughput configuration can be
      *         sized down while still meeting the performance requirements of your workload. This is identified by
-     *         analyzing the <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached
-     *         to the current instance during the look-back period.
+     *         analyzing the <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes
+     *         attached to the current instance during the look-back period.
      *         </p>
      *         </li>
      *         <li>
@@ -987,24 +995,24 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *         <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't
      *         meet the performance requirements of your workload and there is an alternative instance type that
      *         provides better EBS throughput performance. This is identified by analyzing the
-     *         <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current
-     *         instance during the look-back period.
+     *         <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the
+     *         current instance during the look-back period.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <b> <code>EBSIOPSOverprovisioned</code> </b> — The instance’s EBS IOPS configuration can be sized down
      *         while still meeting the performance requirements of your workload. This is identified by analyzing the
-     *         <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metric of EBS volumes attached to the
-     *         current instance during the look-back period.
+     *         <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metric of EBS volumes attached to the current
+     *         instance during the look-back period.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <b> <code>EBSIOPSUnderprovisioned</code> </b> — The instance’s EBS IOPS configuration doesn't meet the
      *         performance requirements of your workload and there is an alternative instance type that provides better
-     *         EBS IOPS performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     *         <code>VolumeWriteBytes</code> metric of EBS volumes attached to the current instance during the look-back
+     *         EBS IOPS performance. This is identified by analyzing the <code>VolumeReadOps</code> and
+     *         <code>VolumeWriteOps</code> metric of EBS volumes attached to the current instance during the look-back
      *         period.
      *         </p>
      *         </li>
@@ -1145,7 +1153,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputOverprovisioned</code> </b> — The instance’s EBS throughput configuration can be sized
      * down while still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current
+     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current
      * instance during the look-back period.
      * </p>
      * </li>
@@ -1153,23 +1161,24 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
-     * throughput performance. This is identified by analyzing the <code>VolumeReadOps</code> and
-     * <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current instance during the look-back period.
+     * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
+     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSOverprovisioned</code> </b> — The instance’s EBS IOPS configuration can be sized down while
      * still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metric of EBS volumes attached to the current
-     * instance during the look-back period.
+     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metric of EBS volumes attached to the current instance
+     * during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSUnderprovisioned</code> </b> — The instance’s EBS IOPS configuration doesn't meet the
      * performance requirements of your workload and there is an alternative instance type that provides better EBS IOPS
-     * performance. This is identified by analyzing the <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code>
+     * performance. This is identified by analyzing the <code>VolumeReadOps</code> and <code>VolumeWriteOps</code>
      * metric of EBS volumes attached to the current instance during the look-back period.
      * </p>
      * </li>
@@ -1300,33 +1309,33 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <p>
      *        <b> <code>EBSThroughputOverprovisioned</code> </b> — The instance’s EBS throughput configuration can be
      *        sized down while still meeting the performance requirements of your workload. This is identified by
-     *        analyzing the <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached
-     *        to the current instance during the look-back period.
+     *        analyzing the <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes
+     *        attached to the current instance during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't
      *        meet the performance requirements of your workload and there is an alternative instance type that provides
-     *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadOps</code> and
-     *        <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current instance during the look-back
-     *        period.
+     *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
+     *        <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the
+     *        look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSIOPSOverprovisioned</code> </b> — The instance’s EBS IOPS configuration can be sized down
      *        while still meeting the performance requirements of your workload. This is identified by analyzing the
-     *        <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metric of EBS volumes attached to the
-     *        current instance during the look-back period.
+     *        <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metric of EBS volumes attached to the current
+     *        instance during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSIOPSUnderprovisioned</code> </b> — The instance’s EBS IOPS configuration doesn't meet the
      *        performance requirements of your workload and there is an alternative instance type that provides better
-     *        EBS IOPS performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     *        <code>VolumeWriteBytes</code> metric of EBS volumes attached to the current instance during the look-back
+     *        EBS IOPS performance. This is identified by analyzing the <code>VolumeReadOps</code> and
+     *        <code>VolumeWriteOps</code> metric of EBS volumes attached to the current instance during the look-back
      *        period.
      *        </p>
      *        </li>
@@ -1472,7 +1481,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputOverprovisioned</code> </b> — The instance’s EBS throughput configuration can be sized
      * down while still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current
+     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current
      * instance during the look-back period.
      * </p>
      * </li>
@@ -1480,23 +1489,24 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
-     * throughput performance. This is identified by analyzing the <code>VolumeReadOps</code> and
-     * <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current instance during the look-back period.
+     * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
+     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSOverprovisioned</code> </b> — The instance’s EBS IOPS configuration can be sized down while
      * still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metric of EBS volumes attached to the current
-     * instance during the look-back period.
+     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metric of EBS volumes attached to the current instance
+     * during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSUnderprovisioned</code> </b> — The instance’s EBS IOPS configuration doesn't meet the
      * performance requirements of your workload and there is an alternative instance type that provides better EBS IOPS
-     * performance. This is identified by analyzing the <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code>
+     * performance. This is identified by analyzing the <code>VolumeReadOps</code> and <code>VolumeWriteOps</code>
      * metric of EBS volumes attached to the current instance during the look-back period.
      * </p>
      * </li>
@@ -1632,33 +1642,33 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <p>
      *        <b> <code>EBSThroughputOverprovisioned</code> </b> — The instance’s EBS throughput configuration can be
      *        sized down while still meeting the performance requirements of your workload. This is identified by
-     *        analyzing the <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached
-     *        to the current instance during the look-back period.
+     *        analyzing the <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes
+     *        attached to the current instance during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't
      *        meet the performance requirements of your workload and there is an alternative instance type that provides
-     *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadOps</code> and
-     *        <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current instance during the look-back
-     *        period.
+     *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
+     *        <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the
+     *        look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSIOPSOverprovisioned</code> </b> — The instance’s EBS IOPS configuration can be sized down
      *        while still meeting the performance requirements of your workload. This is identified by analyzing the
-     *        <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metric of EBS volumes attached to the
-     *        current instance during the look-back period.
+     *        <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metric of EBS volumes attached to the current
+     *        instance during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSIOPSUnderprovisioned</code> </b> — The instance’s EBS IOPS configuration doesn't meet the
      *        performance requirements of your workload and there is an alternative instance type that provides better
-     *        EBS IOPS performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     *        <code>VolumeWriteBytes</code> metric of EBS volumes attached to the current instance during the look-back
+     *        EBS IOPS performance. This is identified by analyzing the <code>VolumeReadOps</code> and
+     *        <code>VolumeWriteOps</code> metric of EBS volumes attached to the current instance during the look-back
      *        period.
      *        </p>
      *        </li>
@@ -1806,7 +1816,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputOverprovisioned</code> </b> — The instance’s EBS throughput configuration can be sized
      * down while still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current
+     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current
      * instance during the look-back period.
      * </p>
      * </li>
@@ -1814,23 +1824,24 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
-     * throughput performance. This is identified by analyzing the <code>VolumeReadOps</code> and
-     * <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current instance during the look-back period.
+     * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
+     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSOverprovisioned</code> </b> — The instance’s EBS IOPS configuration can be sized down while
      * still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metric of EBS volumes attached to the current
-     * instance during the look-back period.
+     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metric of EBS volumes attached to the current instance
+     * during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSUnderprovisioned</code> </b> — The instance’s EBS IOPS configuration doesn't meet the
      * performance requirements of your workload and there is an alternative instance type that provides better EBS IOPS
-     * performance. This is identified by analyzing the <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code>
+     * performance. This is identified by analyzing the <code>VolumeReadOps</code> and <code>VolumeWriteOps</code>
      * metric of EBS volumes attached to the current instance during the look-back period.
      * </p>
      * </li>
@@ -1961,33 +1972,33 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <p>
      *        <b> <code>EBSThroughputOverprovisioned</code> </b> — The instance’s EBS throughput configuration can be
      *        sized down while still meeting the performance requirements of your workload. This is identified by
-     *        analyzing the <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached
-     *        to the current instance during the look-back period.
+     *        analyzing the <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes
+     *        attached to the current instance during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't
      *        meet the performance requirements of your workload and there is an alternative instance type that provides
-     *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadOps</code> and
-     *        <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current instance during the look-back
-     *        period.
+     *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
+     *        <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the
+     *        look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSIOPSOverprovisioned</code> </b> — The instance’s EBS IOPS configuration can be sized down
      *        while still meeting the performance requirements of your workload. This is identified by analyzing the
-     *        <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metric of EBS volumes attached to the
-     *        current instance during the look-back period.
+     *        <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metric of EBS volumes attached to the current
+     *        instance during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSIOPSUnderprovisioned</code> </b> — The instance’s EBS IOPS configuration doesn't meet the
      *        performance requirements of your workload and there is an alternative instance type that provides better
-     *        EBS IOPS performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     *        <code>VolumeWriteBytes</code> metric of EBS volumes attached to the current instance during the look-back
+     *        EBS IOPS performance. This is identified by analyzing the <code>VolumeReadOps</code> and
+     *        <code>VolumeWriteOps</code> metric of EBS volumes attached to the current instance during the look-back
      *        period.
      *        </p>
      *        </li>
@@ -2130,7 +2141,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputOverprovisioned</code> </b> — The instance’s EBS throughput configuration can be sized
      * down while still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current
+     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current
      * instance during the look-back period.
      * </p>
      * </li>
@@ -2138,23 +2149,24 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <p>
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
-     * throughput performance. This is identified by analyzing the <code>VolumeReadOps</code> and
-     * <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current instance during the look-back period.
+     * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
+     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSOverprovisioned</code> </b> — The instance’s EBS IOPS configuration can be sized down while
      * still meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metric of EBS volumes attached to the current
-     * instance during the look-back period.
+     * <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metric of EBS volumes attached to the current instance
+     * during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>EBSIOPSUnderprovisioned</code> </b> — The instance’s EBS IOPS configuration doesn't meet the
      * performance requirements of your workload and there is an alternative instance type that provides better EBS IOPS
-     * performance. This is identified by analyzing the <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code>
+     * performance. This is identified by analyzing the <code>VolumeReadOps</code> and <code>VolumeWriteOps</code>
      * metric of EBS volumes attached to the current instance during the look-back period.
      * </p>
      * </li>
@@ -2285,33 +2297,33 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <p>
      *        <b> <code>EBSThroughputOverprovisioned</code> </b> — The instance’s EBS throughput configuration can be
      *        sized down while still meeting the performance requirements of your workload. This is identified by
-     *        analyzing the <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metrics of EBS volumes attached
-     *        to the current instance during the look-back period.
+     *        analyzing the <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes
+     *        attached to the current instance during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't
      *        meet the performance requirements of your workload and there is an alternative instance type that provides
-     *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadOps</code> and
-     *        <code>VolumeWriteOps</code> metrics of EBS volumes attached to the current instance during the look-back
-     *        period.
+     *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
+     *        <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the
+     *        look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSIOPSOverprovisioned</code> </b> — The instance’s EBS IOPS configuration can be sized down
      *        while still meeting the performance requirements of your workload. This is identified by analyzing the
-     *        <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metric of EBS volumes attached to the
-     *        current instance during the look-back period.
+     *        <code>VolumeReadOps</code> and <code>VolumeWriteOps</code> metric of EBS volumes attached to the current
+     *        instance during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>EBSIOPSUnderprovisioned</code> </b> — The instance’s EBS IOPS configuration doesn't meet the
      *        performance requirements of your workload and there is an alternative instance type that provides better
-     *        EBS IOPS performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     *        <code>VolumeWriteBytes</code> metric of EBS volumes attached to the current instance during the look-back
+     *        EBS IOPS performance. This is identified by analyzing the <code>VolumeReadOps</code> and
+     *        <code>VolumeWriteOps</code> metric of EBS volumes attached to the current instance during the look-back
      *        period.
      *        </p>
      *        </li>
@@ -3351,6 +3363,65 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The state of the instance when the recommendation was generated.
+     * </p>
+     * 
+     * @param instanceState
+     *        The state of the instance when the recommendation was generated.
+     * @see InstanceState
+     */
+
+    public void setInstanceState(String instanceState) {
+        this.instanceState = instanceState;
+    }
+
+    /**
+     * <p>
+     * The state of the instance when the recommendation was generated.
+     * </p>
+     * 
+     * @return The state of the instance when the recommendation was generated.
+     * @see InstanceState
+     */
+
+    public String getInstanceState() {
+        return this.instanceState;
+    }
+
+    /**
+     * <p>
+     * The state of the instance when the recommendation was generated.
+     * </p>
+     * 
+     * @param instanceState
+     *        The state of the instance when the recommendation was generated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceState
+     */
+
+    public InstanceRecommendation withInstanceState(String instanceState) {
+        setInstanceState(instanceState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The state of the instance when the recommendation was generated.
+     * </p>
+     * 
+     * @param instanceState
+     *        The state of the instance when the recommendation was generated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceState
+     */
+
+    public InstanceRecommendation withInstanceState(InstanceState instanceState) {
+        this.instanceState = instanceState.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3389,7 +3460,9 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
         if (getEffectiveRecommendationPreferences() != null)
             sb.append("EffectiveRecommendationPreferences: ").append(getEffectiveRecommendationPreferences()).append(",");
         if (getInferredWorkloadTypes() != null)
-            sb.append("InferredWorkloadTypes: ").append(getInferredWorkloadTypes());
+            sb.append("InferredWorkloadTypes: ").append(getInferredWorkloadTypes()).append(",");
+        if (getInstanceState() != null)
+            sb.append("InstanceState: ").append(getInstanceState());
         sb.append("}");
         return sb.toString();
     }
@@ -3461,6 +3534,10 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
             return false;
         if (other.getInferredWorkloadTypes() != null && other.getInferredWorkloadTypes().equals(this.getInferredWorkloadTypes()) == false)
             return false;
+        if (other.getInstanceState() == null ^ this.getInstanceState() == null)
+            return false;
+        if (other.getInstanceState() != null && other.getInstanceState().equals(this.getInstanceState()) == false)
+            return false;
         return true;
     }
 
@@ -3483,6 +3560,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getCurrentPerformanceRisk() == null) ? 0 : getCurrentPerformanceRisk().hashCode());
         hashCode = prime * hashCode + ((getEffectiveRecommendationPreferences() == null) ? 0 : getEffectiveRecommendationPreferences().hashCode());
         hashCode = prime * hashCode + ((getInferredWorkloadTypes() == null) ? 0 : getInferredWorkloadTypes().hashCode());
+        hashCode = prime * hashCode + ((getInstanceState() == null) ? 0 : getInstanceState().hashCode());
         return hashCode;
     }
 

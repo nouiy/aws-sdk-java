@@ -56,6 +56,13 @@ public class OrganizationFeatureConfigurationResultJsonUnmarshaller implements U
                     context.nextToken();
                     organizationFeatureConfigurationResult.setAutoEnable(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("additionalConfiguration", targetDepth)) {
+                    context.nextToken();
+                    organizationFeatureConfigurationResult.setAdditionalConfiguration(new ListUnmarshaller<OrganizationAdditionalConfigurationResult>(
+                            OrganizationAdditionalConfigurationResultJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -29,8 +29,6 @@ public class UpdateDataQualityRulesetRequestMarshaller {
 
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Name").build();
-    private static final MarshallingInfo<String> UPDATEDNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdatedName").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> RULESET_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -53,7 +51,6 @@ public class UpdateDataQualityRulesetRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateDataQualityRulesetRequest.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(updateDataQualityRulesetRequest.getUpdatedName(), UPDATEDNAME_BINDING);
             protocolMarshaller.marshall(updateDataQualityRulesetRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateDataQualityRulesetRequest.getRuleset(), RULESET_BINDING);
         } catch (Exception e) {

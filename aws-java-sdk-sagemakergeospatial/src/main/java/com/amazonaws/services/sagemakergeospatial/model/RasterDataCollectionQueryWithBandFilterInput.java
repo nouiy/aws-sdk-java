@@ -29,19 +29,38 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RasterDataCollectionQueryWithBandFilterInput implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The Area of interest to be used in the search query.
+     * </p>
+     */
     private AreaOfInterest areaOfInterest;
-    /** <p/> */
+    /**
+     * <p>
+     * The list of Bands to be displayed in the result for each item.
+     * </p>
+     */
     private java.util.List<String> bandFilter;
-    /** <p/> */
+    /**
+     * <p>
+     * The Property Filters used in the search query.
+     * </p>
+     */
     private PropertyFilters propertyFilters;
-    /** <p/> */
+    /**
+     * <p>
+     * The TimeRange Filter used in the search query.
+     * </p>
+     */
     private TimeRangeFilterInput timeRangeFilter;
 
     /**
-     * <p/>
+     * <p>
+     * The Area of interest to be used in the search query.
+     * </p>
      * 
      * @param areaOfInterest
+     *        The Area of interest to be used in the search query.
      */
 
     public void setAreaOfInterest(AreaOfInterest areaOfInterest) {
@@ -49,9 +68,11 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Area of interest to be used in the search query.
+     * </p>
      * 
-     * @return
+     * @return The Area of interest to be used in the search query.
      */
 
     public AreaOfInterest getAreaOfInterest() {
@@ -59,9 +80,12 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Area of interest to be used in the search query.
+     * </p>
      * 
      * @param areaOfInterest
+     *        The Area of interest to be used in the search query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -71,9 +95,11 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of Bands to be displayed in the result for each item.
+     * </p>
      * 
-     * @return
+     * @return The list of Bands to be displayed in the result for each item.
      */
 
     public java.util.List<String> getBandFilter() {
@@ -81,9 +107,12 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of Bands to be displayed in the result for each item.
+     * </p>
      * 
      * @param bandFilter
+     *        The list of Bands to be displayed in the result for each item.
      */
 
     public void setBandFilter(java.util.Collection<String> bandFilter) {
@@ -96,7 +125,9 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of Bands to be displayed in the result for each item.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setBandFilter(java.util.Collection)} or {@link #withBandFilter(java.util.Collection)} if you want to
@@ -104,6 +135,7 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
      * </p>
      * 
      * @param bandFilter
+     *        The list of Bands to be displayed in the result for each item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -118,9 +150,12 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The list of Bands to be displayed in the result for each item.
+     * </p>
      * 
      * @param bandFilter
+     *        The list of Bands to be displayed in the result for each item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,9 +165,12 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Property Filters used in the search query.
+     * </p>
      * 
      * @param propertyFilters
+     *        The Property Filters used in the search query.
      */
 
     public void setPropertyFilters(PropertyFilters propertyFilters) {
@@ -140,9 +178,11 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Property Filters used in the search query.
+     * </p>
      * 
-     * @return
+     * @return The Property Filters used in the search query.
      */
 
     public PropertyFilters getPropertyFilters() {
@@ -150,9 +190,12 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Property Filters used in the search query.
+     * </p>
      * 
      * @param propertyFilters
+     *        The Property Filters used in the search query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -162,9 +205,12 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The TimeRange Filter used in the search query.
+     * </p>
      * 
      * @param timeRangeFilter
+     *        The TimeRange Filter used in the search query.
      */
 
     public void setTimeRangeFilter(TimeRangeFilterInput timeRangeFilter) {
@@ -172,9 +218,11 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The TimeRange Filter used in the search query.
+     * </p>
      * 
-     * @return
+     * @return The TimeRange Filter used in the search query.
      */
 
     public TimeRangeFilterInput getTimeRangeFilter() {
@@ -182,9 +230,12 @@ public class RasterDataCollectionQueryWithBandFilterInput implements Serializabl
     }
 
     /**
-     * <p/>
+     * <p>
+     * The TimeRange Filter used in the search query.
+     * </p>
      * 
      * @param timeRangeFilter
+     *        The TimeRange Filter used in the search query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

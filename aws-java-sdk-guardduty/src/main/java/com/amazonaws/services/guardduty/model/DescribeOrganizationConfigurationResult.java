@@ -28,6 +28,10 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * <p>
      * Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
      * </p>
+     * <p>
+     * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
+     * similar results.
+     * </p>
      */
     @Deprecated
     private Boolean autoEnable;
@@ -64,20 +68,21 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty enabled
      * automatically.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
-     * have GuardDuty enabled automatically.
+     * <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty enabled
+     * automatically. This includes <code>NEW</code> accounts that join the organization and accounts that may have been
+     * suspended or removed from the organization in GuardDuty.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
-     * automatically.
+     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
+     * organization. GuardDuty must be managed for each account individually by the administrator.
      * </p>
      * </li>
      * </ul>
@@ -88,9 +93,16 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * <p>
      * Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
      * </p>
+     * <p>
+     * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
+     * similar results.
+     * </p>
      * 
      * @param autoEnable
-     *        Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
+     *        Indicates whether GuardDuty is automatically enabled for accounts added to the organization.</p>
+     *        <p>
+     *        Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
+     *        achieve the similar results.
      */
     @Deprecated
     public void setAutoEnable(Boolean autoEnable) {
@@ -101,8 +113,15 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * <p>
      * Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
      * </p>
+     * <p>
+     * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
+     * similar results.
+     * </p>
      * 
-     * @return Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
+     * @return Indicates whether GuardDuty is automatically enabled for accounts added to the organization.</p>
+     *         <p>
+     *         Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
+     *         achieve the similar results.
      */
     @Deprecated
     public Boolean getAutoEnable() {
@@ -113,9 +132,16 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * <p>
      * Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
      * </p>
+     * <p>
+     * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
+     * similar results.
+     * </p>
      * 
      * @param autoEnable
-     *        Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
+     *        Indicates whether GuardDuty is automatically enabled for accounts added to the organization.</p>
+     *        <p>
+     *        Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
+     *        achieve the similar results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated
@@ -128,8 +154,15 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * <p>
      * Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
      * </p>
+     * <p>
+     * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
+     * similar results.
+     * </p>
      * 
-     * @return Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
+     * @return Indicates whether GuardDuty is automatically enabled for accounts added to the organization.</p>
+     *         <p>
+     *         Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
+     *         achieve the similar results.
      */
     @Deprecated
     public Boolean isAutoEnable() {
@@ -353,20 +386,21 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty enabled
      * automatically.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
-     * have GuardDuty enabled automatically.
+     * <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty enabled
+     * automatically. This includes <code>NEW</code> accounts that join the organization and accounts that may have been
+     * suspended or removed from the organization in GuardDuty.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
-     * automatically.
+     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
+     * organization. GuardDuty must be managed for each account individually by the administrator.
      * </p>
      * </li>
      * </ul>
@@ -376,20 +410,21 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *        <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty
      *        enabled automatically.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
-     *        configured to have GuardDuty enabled automatically.
+     *        <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty
+     *        enabled automatically. This includes <code>NEW</code> accounts that join the organization and accounts
+     *        that may have been suspended or removed from the organization in GuardDuty.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
-     *        enabled automatically.
+     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
+     *        organization. GuardDuty must be managed for each account individually by the administrator.
      *        </p>
      *        </li>
      * @see AutoEnableMembers
@@ -406,20 +441,21 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty enabled
      * automatically.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
-     * have GuardDuty enabled automatically.
+     * <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty enabled
+     * automatically. This includes <code>NEW</code> accounts that join the organization and accounts that may have been
+     * suspended or removed from the organization in GuardDuty.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
-     * automatically.
+     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
+     * organization. GuardDuty must be managed for each account individually by the administrator.
      * </p>
      * </li>
      * </ul>
@@ -428,20 +464,21 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *         <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty
      *         enabled automatically.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
-     *         configured to have GuardDuty enabled automatically.
+     *         <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty
+     *         enabled automatically. This includes <code>NEW</code> accounts that join the organization and accounts
+     *         that may have been suspended or removed from the organization in GuardDuty.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
-     *         enabled automatically.
+     *         <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
+     *         organization. GuardDuty must be managed for each account individually by the administrator.
      *         </p>
      *         </li>
      * @see AutoEnableMembers
@@ -458,20 +495,21 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty enabled
      * automatically.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
-     * have GuardDuty enabled automatically.
+     * <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty enabled
+     * automatically. This includes <code>NEW</code> accounts that join the organization and accounts that may have been
+     * suspended or removed from the organization in GuardDuty.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
-     * automatically.
+     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
+     * organization. GuardDuty must be managed for each account individually by the administrator.
      * </p>
      * </li>
      * </ul>
@@ -481,20 +519,21 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *        <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty
      *        enabled automatically.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
-     *        configured to have GuardDuty enabled automatically.
+     *        <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty
+     *        enabled automatically. This includes <code>NEW</code> accounts that join the organization and accounts
+     *        that may have been suspended or removed from the organization in GuardDuty.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
-     *        enabled automatically.
+     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
+     *        organization. GuardDuty must be managed for each account individually by the administrator.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -513,20 +552,21 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty enabled
      * automatically.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
-     * have GuardDuty enabled automatically.
+     * <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty enabled
+     * automatically. This includes <code>NEW</code> accounts that join the organization and accounts that may have been
+     * suspended or removed from the organization in GuardDuty.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
-     * automatically.
+     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
+     * organization. GuardDuty must be managed for each account individually by the administrator.
      * </p>
      * </li>
      * </ul>
@@ -536,20 +576,21 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *        <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty
      *        enabled automatically.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
-     *        configured to have GuardDuty enabled automatically.
+     *        <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty
+     *        enabled automatically. This includes <code>NEW</code> accounts that join the organization and accounts
+     *        that may have been suspended or removed from the organization in GuardDuty.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
-     *        enabled automatically.
+     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
+     *        organization. GuardDuty must be managed for each account individually by the administrator.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

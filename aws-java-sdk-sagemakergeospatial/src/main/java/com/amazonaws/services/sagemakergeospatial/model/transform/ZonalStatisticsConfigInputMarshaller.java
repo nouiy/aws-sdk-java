@@ -34,6 +34,8 @@ public class ZonalStatisticsConfigInputMarshaller {
             .marshallLocationName("TargetBands").build();
     private static final MarshallingInfo<String> ZONES3PATH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ZoneS3Path").build();
+    private static final MarshallingInfo<String> ZONES3PATHKMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ZoneS3PathKmsKeyId").build();
 
     private static final ZonalStatisticsConfigInputMarshaller instance = new ZonalStatisticsConfigInputMarshaller();
 
@@ -54,6 +56,7 @@ public class ZonalStatisticsConfigInputMarshaller {
             protocolMarshaller.marshall(zonalStatisticsConfigInput.getStatistics(), STATISTICS_BINDING);
             protocolMarshaller.marshall(zonalStatisticsConfigInput.getTargetBands(), TARGETBANDS_BINDING);
             protocolMarshaller.marshall(zonalStatisticsConfigInput.getZoneS3Path(), ZONES3PATH_BINDING);
+            protocolMarshaller.marshall(zonalStatisticsConfigInput.getZoneS3PathKmsKeyId(), ZONES3PATHKMSKEYID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -272,6 +272,11 @@ public class CreateVpnConnectionRequestMarshaller implements Marshaller<Request<
                             }
                         }
                     }
+
+                    if (vpnConnectionOptionsSpecificationTunnelOptionsListValue.getEnableTunnelLifecycleControl() != null) {
+                        request.addParameter("Options.TunnelOptions." + tunnelOptionsListIndex + ".EnableTunnelLifecycleControl",
+                                StringUtils.fromBoolean(vpnConnectionOptionsSpecificationTunnelOptionsListValue.getEnableTunnelLifecycleControl()));
+                    }
                     tunnelOptionsListIndex++;
                 }
             }

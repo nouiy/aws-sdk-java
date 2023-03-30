@@ -33,6 +33,8 @@ public class UpdateReplicationConfigurationTemplateRequestMarshaller {
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<Boolean> ASSOCIATEDEFAULTSECURITYGROUP_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("associateDefaultSecurityGroup").build();
+    private static final MarshallingInfo<Boolean> AUTOREPLICATENEWDISKS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoReplicateNewDisks").build();
     private static final MarshallingInfo<Long> BANDWIDTHTHROTTLING_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bandwidthThrottling").build();
     private static final MarshallingInfo<Boolean> CREATEPUBLICIP_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
@@ -79,6 +81,7 @@ public class UpdateReplicationConfigurationTemplateRequestMarshaller {
             protocolMarshaller.marshall(updateReplicationConfigurationTemplateRequest.getArn(), ARN_BINDING);
             protocolMarshaller
                     .marshall(updateReplicationConfigurationTemplateRequest.getAssociateDefaultSecurityGroup(), ASSOCIATEDEFAULTSECURITYGROUP_BINDING);
+            protocolMarshaller.marshall(updateReplicationConfigurationTemplateRequest.getAutoReplicateNewDisks(), AUTOREPLICATENEWDISKS_BINDING);
             protocolMarshaller.marshall(updateReplicationConfigurationTemplateRequest.getBandwidthThrottling(), BANDWIDTHTHROTTLING_BINDING);
             protocolMarshaller.marshall(updateReplicationConfigurationTemplateRequest.getCreatePublicIP(), CREATEPUBLICIP_BINDING);
             protocolMarshaller.marshall(updateReplicationConfigurationTemplateRequest.getDataPlaneRouting(), DATAPLANEROUTING_BINDING);

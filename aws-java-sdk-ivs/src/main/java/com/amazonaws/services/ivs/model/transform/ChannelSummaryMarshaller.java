@@ -33,6 +33,8 @@ public class ChannelSummaryMarshaller {
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<Boolean> AUTHORIZED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("authorized").build();
+    private static final MarshallingInfo<Boolean> INSECUREINGEST_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("insecureIngest").build();
     private static final MarshallingInfo<String> LATENCYMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latencyMode").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -60,6 +62,7 @@ public class ChannelSummaryMarshaller {
         try {
             protocolMarshaller.marshall(channelSummary.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(channelSummary.getAuthorized(), AUTHORIZED_BINDING);
+            protocolMarshaller.marshall(channelSummary.getInsecureIngest(), INSECUREINGEST_BINDING);
             protocolMarshaller.marshall(channelSummary.getLatencyMode(), LATENCYMODE_BINDING);
             protocolMarshaller.marshall(channelSummary.getName(), NAME_BINDING);
             protocolMarshaller.marshall(channelSummary.getRecordingConfigurationArn(), RECORDINGCONFIGURATIONARN_BINDING);

@@ -71,13 +71,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     private String description;
     /**
      * <p>
-     * The Unix datetime that the index was created.
+     * The Unix timestamp when the index was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The Unix datetime that the index was last updated.
+     * The Unix when the index was last updated.
      * </p>
      */
     private java.util.Date updatedAt;
@@ -478,11 +478,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Unix datetime that the index was created.
+     * The Unix timestamp when the index was created.
      * </p>
      * 
      * @param createdAt
-     *        The Unix datetime that the index was created.
+     *        The Unix timestamp when the index was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -491,10 +491,10 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Unix datetime that the index was created.
+     * The Unix timestamp when the index was created.
      * </p>
      * 
-     * @return The Unix datetime that the index was created.
+     * @return The Unix timestamp when the index was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -503,11 +503,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Unix datetime that the index was created.
+     * The Unix timestamp when the index was created.
      * </p>
      * 
      * @param createdAt
-     *        The Unix datetime that the index was created.
+     *        The Unix timestamp when the index was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -518,11 +518,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Unix datetime that the index was last updated.
+     * The Unix when the index was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix datetime that the index was last updated.
+     *        The Unix when the index was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -531,10 +531,10 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Unix datetime that the index was last updated.
+     * The Unix when the index was last updated.
      * </p>
      * 
-     * @return The Unix datetime that the index was last updated.
+     * @return The Unix when the index was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -543,11 +543,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Unix datetime that the index was last updated.
+     * The Unix when the index was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix datetime that the index was last updated.
+     *        The Unix when the index was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

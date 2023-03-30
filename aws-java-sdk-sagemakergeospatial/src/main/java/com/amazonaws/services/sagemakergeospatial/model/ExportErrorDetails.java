@@ -28,15 +28,27 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ExportErrorDetails implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The structure for returning the export error details while exporting results of an Earth Observation job.
+     * </p>
+     */
     private ExportErrorDetailsOutput exportResults;
-    /** <p/> */
+    /**
+     * <p>
+     * The structure for returning the export error details while exporting the source images of an Earth Observation
+     * job.
+     * </p>
+     */
     private ExportErrorDetailsOutput exportSourceImages;
 
     /**
-     * <p/>
+     * <p>
+     * The structure for returning the export error details while exporting results of an Earth Observation job.
+     * </p>
      * 
      * @param exportResults
+     *        The structure for returning the export error details while exporting results of an Earth Observation job.
      */
 
     public void setExportResults(ExportErrorDetailsOutput exportResults) {
@@ -44,9 +56,11 @@ public class ExportErrorDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure for returning the export error details while exporting results of an Earth Observation job.
+     * </p>
      * 
-     * @return
+     * @return The structure for returning the export error details while exporting results of an Earth Observation job.
      */
 
     public ExportErrorDetailsOutput getExportResults() {
@@ -54,9 +68,12 @@ public class ExportErrorDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure for returning the export error details while exporting results of an Earth Observation job.
+     * </p>
      * 
      * @param exportResults
+     *        The structure for returning the export error details while exporting results of an Earth Observation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,9 +83,14 @@ public class ExportErrorDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure for returning the export error details while exporting the source images of an Earth Observation
+     * job.
+     * </p>
      * 
      * @param exportSourceImages
+     *        The structure for returning the export error details while exporting the source images of an Earth
+     *        Observation job.
      */
 
     public void setExportSourceImages(ExportErrorDetailsOutput exportSourceImages) {
@@ -76,9 +98,13 @@ public class ExportErrorDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure for returning the export error details while exporting the source images of an Earth Observation
+     * job.
+     * </p>
      * 
-     * @return
+     * @return The structure for returning the export error details while exporting the source images of an Earth
+     *         Observation job.
      */
 
     public ExportErrorDetailsOutput getExportSourceImages() {
@@ -86,9 +112,14 @@ public class ExportErrorDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The structure for returning the export error details while exporting the source images of an Earth Observation
+     * job.
+     * </p>
      * 
      * @param exportSourceImages
+     *        The structure for returning the export error details while exporting the source images of an Earth
+     *        Observation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

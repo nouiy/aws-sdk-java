@@ -584,6 +584,25 @@ public interface AmazonGuardDuty {
 
     /**
      * <p>
+     * Retrieves aggregated statistics for your account. If you are a GuardDuty administrator, you can retrieve the
+     * statistics for all the resources associated with the active member accounts in your organization who have enabled
+     * EKS Runtime Monitoring and have the GuardDuty agent running on their EKS nodes.
+     * </p>
+     * 
+     * @param getCoverageStatisticsRequest
+     * @return Result of the GetCoverageStatistics operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.GetCoverageStatistics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetCoverageStatistics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetCoverageStatisticsResult getCoverageStatistics(GetCoverageStatisticsRequest getCoverageStatisticsRequest);
+
+    /**
+     * <p>
      * Retrieves an Amazon GuardDuty detector specified by the detectorId.
      * </p>
      * <p>
@@ -845,6 +864,27 @@ public interface AmazonGuardDuty {
      *      Documentation</a>
      */
     InviteMembersResult inviteMembers(InviteMembersRequest inviteMembersRequest);
+
+    /**
+     * <p>
+     * Lists coverage details for your GuardDuty account. If you're a GuardDuty administrator, you can retrieve all
+     * resources associated with the active member accounts in your organization.
+     * </p>
+     * <p>
+     * Make sure the accounts have EKS Runtime Monitoring enabled and GuardDuty agent running on their EKS nodes.
+     * </p>
+     * 
+     * @param listCoverageRequest
+     * @return Result of the ListCoverage operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.ListCoverage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/ListCoverage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListCoverageResult listCoverage(ListCoverageRequest listCoverageRequest);
 
     /**
      * <p>
