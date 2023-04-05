@@ -22,8 +22,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * The type and amount of a resource to assign to a container. The supported resource types are GPUs and Elastic
  * Inference accelerators. For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-gpu.html">Working with GPUs on Amazon ECS</a>
- * or <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-inference.html">Working with Amazon
- * Elastic Inference on Amazon ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>
+ * or <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/url-ecs-dev;ecs-inference.html">Working with
+ * Amazon Elastic Inference on Amazon ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ResourceRequirement" target="_top">AWS API
@@ -43,7 +43,8 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * If the <code>InferenceAccelerator</code> type is used, the <code>value</code> matches the <code>deviceName</code>
-     * for an <a>InferenceAccelerator</a> specified in a task definition.
+     * for an <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html">
+     * InferenceAccelerator</a> specified in a task definition.
      * </p>
      */
     private String value;
@@ -66,7 +67,8 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * If the <code>InferenceAccelerator</code> type is used, the <code>value</code> matches the <code>deviceName</code>
-     * for an <a>InferenceAccelerator</a> specified in a task definition.
+     * for an <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html">
+     * InferenceAccelerator</a> specified in a task definition.
      * </p>
      * 
      * @param value
@@ -78,7 +80,9 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *        </p>
      *        <p>
      *        If the <code>InferenceAccelerator</code> type is used, the <code>value</code> matches the
-     *        <code>deviceName</code> for an <a>InferenceAccelerator</a> specified in a task definition.
+     *        <code>deviceName</code> for an <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html"
+     *        >InferenceAccelerator</a> specified in a task definition.
      */
 
     public void setValue(String value) {
@@ -96,7 +100,8 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * If the <code>InferenceAccelerator</code> type is used, the <code>value</code> matches the <code>deviceName</code>
-     * for an <a>InferenceAccelerator</a> specified in a task definition.
+     * for an <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html">
+     * InferenceAccelerator</a> specified in a task definition.
      * </p>
      * 
      * @return The value for the specified resource type.</p>
@@ -107,7 +112,9 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *         </p>
      *         <p>
      *         If the <code>InferenceAccelerator</code> type is used, the <code>value</code> matches the
-     *         <code>deviceName</code> for an <a>InferenceAccelerator</a> specified in a task definition.
+     *         <code>deviceName</code> for an <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html"
+     *         >InferenceAccelerator</a> specified in a task definition.
      */
 
     public String getValue() {
@@ -125,7 +132,8 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * If the <code>InferenceAccelerator</code> type is used, the <code>value</code> matches the <code>deviceName</code>
-     * for an <a>InferenceAccelerator</a> specified in a task definition.
+     * for an <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html">
+     * InferenceAccelerator</a> specified in a task definition.
      * </p>
      * 
      * @param value
@@ -137,7 +145,9 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *        </p>
      *        <p>
      *        If the <code>InferenceAccelerator</code> type is used, the <code>value</code> matches the
-     *        <code>deviceName</code> for an <a>InferenceAccelerator</a> specified in a task definition.
+     *        <code>deviceName</code> for an <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html"
+     *        >InferenceAccelerator</a> specified in a task definition.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

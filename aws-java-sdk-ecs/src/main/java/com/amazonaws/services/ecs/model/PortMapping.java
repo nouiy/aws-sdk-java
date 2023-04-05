@@ -102,9 +102,11 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * The default reserved ports are 22 for SSH, the Docker ports 2375 and 2376, and the Amazon ECS container agent
      * ports 51678-51680. Any host port that was previously specified in a running task is also reserved while the task
      * is running. That is, after a task stops, the host port is released. The current reserved ports are displayed in
-     * the <code>remainingResources</code> of <a>DescribeContainerInstances</a> output. A container instance can have up
-     * to 100 reserved ports at a time. This number includes the default reserved ports. Automatically assigned ports
-     * aren't included in the 100 reserved ports quota.
+     * the <code>remainingResources</code> of <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeContainerInstances.html"
+     * >DescribeContainerInstances</a> output. A container instance can have up to 100 reserved ports at a time. This
+     * number includes the default reserved ports. Automatically assigned ports aren't included in the 100 reserved
+     * ports quota.
      * </p>
      */
     private Integer hostPort;
@@ -390,9 +392,11 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * The default reserved ports are 22 for SSH, the Docker ports 2375 and 2376, and the Amazon ECS container agent
      * ports 51678-51680. Any host port that was previously specified in a running task is also reserved while the task
      * is running. That is, after a task stops, the host port is released. The current reserved ports are displayed in
-     * the <code>remainingResources</code> of <a>DescribeContainerInstances</a> output. A container instance can have up
-     * to 100 reserved ports at a time. This number includes the default reserved ports. Automatically assigned ports
-     * aren't included in the 100 reserved ports quota.
+     * the <code>remainingResources</code> of <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeContainerInstances.html"
+     * >DescribeContainerInstances</a> output. A container instance can have up to 100 reserved ports at a time. This
+     * number includes the default reserved ports. Automatically assigned ports aren't included in the 100 reserved
+     * ports quota.
      * </p>
      * 
      * @param hostPort
@@ -436,9 +440,11 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      *        The default reserved ports are 22 for SSH, the Docker ports 2375 and 2376, and the Amazon ECS container
      *        agent ports 51678-51680. Any host port that was previously specified in a running task is also reserved
      *        while the task is running. That is, after a task stops, the host port is released. The current reserved
-     *        ports are displayed in the <code>remainingResources</code> of <a>DescribeContainerInstances</a> output. A
-     *        container instance can have up to 100 reserved ports at a time. This number includes the default reserved
-     *        ports. Automatically assigned ports aren't included in the 100 reserved ports quota.
+     *        ports are displayed in the <code>remainingResources</code> of <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeContainerInstances.html"
+     *        >DescribeContainerInstances</a> output. A container instance can have up to 100 reserved ports at a time.
+     *        This number includes the default reserved ports. Automatically assigned ports aren't included in the 100
+     *        reserved ports quota.
      */
 
     public void setHostPort(Integer hostPort) {
@@ -488,9 +494,11 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * The default reserved ports are 22 for SSH, the Docker ports 2375 and 2376, and the Amazon ECS container agent
      * ports 51678-51680. Any host port that was previously specified in a running task is also reserved while the task
      * is running. That is, after a task stops, the host port is released. The current reserved ports are displayed in
-     * the <code>remainingResources</code> of <a>DescribeContainerInstances</a> output. A container instance can have up
-     * to 100 reserved ports at a time. This number includes the default reserved ports. Automatically assigned ports
-     * aren't included in the 100 reserved ports quota.
+     * the <code>remainingResources</code> of <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeContainerInstances.html"
+     * >DescribeContainerInstances</a> output. A container instance can have up to 100 reserved ports at a time. This
+     * number includes the default reserved ports. Automatically assigned ports aren't included in the 100 reserved
+     * ports quota.
      * </p>
      * 
      * @return The port number on the container instance to reserve for your container.</p>
@@ -534,9 +542,11 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      *         The default reserved ports are 22 for SSH, the Docker ports 2375 and 2376, and the Amazon ECS container
      *         agent ports 51678-51680. Any host port that was previously specified in a running task is also reserved
      *         while the task is running. That is, after a task stops, the host port is released. The current reserved
-     *         ports are displayed in the <code>remainingResources</code> of <a>DescribeContainerInstances</a> output. A
-     *         container instance can have up to 100 reserved ports at a time. This number includes the default reserved
-     *         ports. Automatically assigned ports aren't included in the 100 reserved ports quota.
+     *         ports are displayed in the <code>remainingResources</code> of <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeContainerInstances.html"
+     *         >DescribeContainerInstances</a> output. A container instance can have up to 100 reserved ports at a time.
+     *         This number includes the default reserved ports. Automatically assigned ports aren't included in the 100
+     *         reserved ports quota.
      */
 
     public Integer getHostPort() {
@@ -586,9 +596,11 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * The default reserved ports are 22 for SSH, the Docker ports 2375 and 2376, and the Amazon ECS container agent
      * ports 51678-51680. Any host port that was previously specified in a running task is also reserved while the task
      * is running. That is, after a task stops, the host port is released. The current reserved ports are displayed in
-     * the <code>remainingResources</code> of <a>DescribeContainerInstances</a> output. A container instance can have up
-     * to 100 reserved ports at a time. This number includes the default reserved ports. Automatically assigned ports
-     * aren't included in the 100 reserved ports quota.
+     * the <code>remainingResources</code> of <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeContainerInstances.html"
+     * >DescribeContainerInstances</a> output. A container instance can have up to 100 reserved ports at a time. This
+     * number includes the default reserved ports. Automatically assigned ports aren't included in the 100 reserved
+     * ports quota.
      * </p>
      * 
      * @param hostPort
@@ -632,9 +644,11 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      *        The default reserved ports are 22 for SSH, the Docker ports 2375 and 2376, and the Amazon ECS container
      *        agent ports 51678-51680. Any host port that was previously specified in a running task is also reserved
      *        while the task is running. That is, after a task stops, the host port is released. The current reserved
-     *        ports are displayed in the <code>remainingResources</code> of <a>DescribeContainerInstances</a> output. A
-     *        container instance can have up to 100 reserved ports at a time. This number includes the default reserved
-     *        ports. Automatically assigned ports aren't included in the 100 reserved ports quota.
+     *        ports are displayed in the <code>remainingResources</code> of <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeContainerInstances.html"
+     *        >DescribeContainerInstances</a> output. A container instance can have up to 100 reserved ports at a time.
+     *        This number includes the default reserved ports. Automatically assigned ports aren't included in the 100
+     *        reserved ports quota.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

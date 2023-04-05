@@ -61,7 +61,7 @@ import java.util.concurrent.ExecutorService;
  * Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This
  * includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect.
  * Network Firewall uses rules that are compatible with Suricata, a free, open source network analysis and threat
- * detection engine. Network Firewall supports Suricata version 5.0.2. For information about Suricata, see the <a
+ * detection engine. Network Firewall supports Suricata version 6.0.9. For information about Suricata, see the <a
  * href="https://suricata.io/">Suricata website</a>.
  * </p>
  * <p>

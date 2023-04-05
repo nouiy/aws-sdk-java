@@ -1,3 +1,36 @@
+# __1.12.443__ __2023-04-05__
+## __AWS App Runner__
+  - ### Features
+    - App Runner adds support for seven new vCPU and memory configurations.
+
+## __AWS Config__
+  - ### Features
+    - This release adds resourceType enums for types released in March 2023.
+
+## __AWS Network Firewall__
+  - ### Features
+    - AWS Network Firewall now supports IPv6-only subnets.
+
+## __AWS SSO Identity Store__
+  - ### Features
+    - Documentation updates for Identity Store CLI command reference.
+
+## __AWS Service Catalog__
+  - ### Features
+    - removed incorrect product type value
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - This is a document only updated to add information about Amazon Elastic Inference (EI).
+
+## __Amazon Interactive Video Service RealTime__
+  - ### Features
+    - Fix ParticipantToken ExpirationTime format
+
+## __Amazon VPC Lattice__
+  - ### Features
+    - This release removes the entities in the API doc model package for auth policies.
+
 # __1.12.442__ __2023-04-04__
 ## __AWS Amplify UI Builder__
   - ### Features

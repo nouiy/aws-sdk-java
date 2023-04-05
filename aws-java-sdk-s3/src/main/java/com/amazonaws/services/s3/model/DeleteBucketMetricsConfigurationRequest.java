@@ -71,22 +71,25 @@ public class DeleteBucketMetricsConfigurationRequest extends AmazonWebServiceReq
     }
 
     /**
-     * Returns the ID used to identify the metrics configuration.
+     * The ID used to identify the metrics configuration. The ID has a 64 character limit and can only contain letters,
+     * numbers, periods, dashes, and underscores.
      */
     public String getId() {
         return id;
     }
 
     /**
-     * Sets the ID used to identify the metrics configuration.
+     * Sets the ID used to identify the metrics configuration. The ID has a 64 character limit and can only contain letters,
+     * numbers, periods, dashes, and underscores.
      */
     public void setId(String id) {
         this.id = id;
     }
 
     /**
-     * Sets the ID used to identify the metrics configuration
-     * and returns {@link DeleteBucketMetricsConfigurationRequest} object for method chaining.
+     * Sets the ID used to identify the metrics configuration and returns {@link DeleteBucketMetricsConfigurationRequest}
+     * object for method chaining. The ID has a 64 character limit and can only contain letters, numbers, periods,
+     * dashes, and underscores.
      */
     public DeleteBucketMetricsConfigurationRequest withId(String id) {
         setId(id);

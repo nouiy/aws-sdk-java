@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum IPAddressType {
 
     DUALSTACK("DUALSTACK"),
-    IPV4("IPV4");
+    IPV4("IPV4"),
+    IPV6("IPV6");
 
     private String value;
 

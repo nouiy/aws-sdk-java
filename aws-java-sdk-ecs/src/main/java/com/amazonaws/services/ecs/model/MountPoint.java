@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details for a volume mount point that's used in a container definition.
+ * The details for a volume mount point that's used in a container definition.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/MountPoint" target="_top">AWS API

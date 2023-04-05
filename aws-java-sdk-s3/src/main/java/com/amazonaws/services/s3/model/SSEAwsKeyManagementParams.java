@@ -23,9 +23,11 @@ public class SSEAwsKeyManagementParams implements Serializable {
      */
     private String awsKmsKeyId;
 
-    /*
+    /**
      * Specifies the Amazon Web Services KMS Encryption Context to use for object encryption.
-     * The value of this header is a base64-encoded UTF-8 string holding JSON with the encryption context key-value pairs.
+     * The value of this header is a base64-encoded UTF-8 string holding JSON with the encryption context key-value
+     * pairs. This value is stored as object metadata and automatically gets passed on to Amazon Web Services KMS for
+     * future <code>GetObject</code> or <code>CopyObject</code> operations on this object.
      */
     private String awsKmsEncryptionContext;
 

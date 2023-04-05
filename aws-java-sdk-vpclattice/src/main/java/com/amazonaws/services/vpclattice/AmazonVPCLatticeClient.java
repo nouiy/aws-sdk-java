@@ -694,9 +694,9 @@ public class AmazonVPCLatticeClient extends AmazonWebServiceClient implements Am
      * account.
      * </p>
      * <p>
-     * Once a security group is added to the VPC association it cannot be removed. You can add or update the security
-     * groups being used for the VPC association once a security group is attached. To remove all security groups you
-     * must reassociate the VPC.
+     * If you add a security group to the service network and VPC association, the association must continue to always
+     * have at least one security group. You can add or edit security groups at any time. However, to remove all
+     * security groups, you must first delete the association and recreate it without security groups.
      * </p>
      * 
      * @param createServiceNetworkVpcAssociationRequest
@@ -911,10 +911,10 @@ public class AmazonVPCLatticeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Deletes the specified auth policy. If an auth is set to <code>Amazon Web Services_IAM</code> and the auth policy
-     * is deleted, all requests will be denied by default. If you are trying to remove the auth policy completely, you
-     * must set the auth_type to <code>NONE</code>. If auth is enabled on the resource, but no auth policy is set, all
-     * requests will be denied.
+     * Deletes the specified auth policy. If an auth is set to <code>AWS_IAM</code> and the auth policy is deleted, all
+     * requests will be denied by default. If you are trying to remove the auth policy completely, you must set the
+     * auth_type to <code>NONE</code>. If auth is enabled on the resource, but no auth policy is set, all requests will
+     * be denied.
      * </p>
      * 
      * @param deleteAuthPolicyRequest
@@ -1808,8 +1808,8 @@ public class AmazonVPCLatticeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Retrieves information about the resource policy. The resource policy is an IAM policy created by AWS RAM on
-     * behalf of the resource owner when they share a resource.
+     * Retrieves information about the resource policy. The resource policy is an IAM policy created on behalf of the
+     * resource owner when they share a resource.
      * </p>
      * 
      * @param getResourcePolicyRequest
@@ -2922,7 +2922,7 @@ public class AmazonVPCLatticeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Creates or updates the auth policy.
+     * Creates or updates the auth policy. The policy string in JSON must not contain newlines or blank lines.
      * </p>
      * 
      * @param putAuthPolicyRequest
@@ -3594,7 +3594,10 @@ public class AmazonVPCLatticeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Updates the service network and VPC association. Once you add a security group, it cannot be removed.
+     * Updates the service network and VPC association. If you add a security group to the service network and VPC
+     * association, the association must continue to always have at least one security group. You can add or edit
+     * security groups at any time. However, to remove all security groups, you must first delete the association and
+     * recreate it without security groups.
      * </p>
      * 
      * @param updateServiceNetworkVpcAssociationRequest

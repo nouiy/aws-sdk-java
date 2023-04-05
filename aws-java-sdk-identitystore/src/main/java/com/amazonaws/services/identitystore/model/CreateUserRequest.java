@@ -35,20 +35,21 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * A unique string used to identify the user. The length limit is 128 characters. This value can consist of letters,
      * accented characters, symbols, numbers, and punctuation. This value is specified at the time the user is created
-     * and stored as an attribute of the user object in the identity store.
+     * and stored as an attribute of the user object in the identity store. "Administrator" and "AWSAdministrators" are
+     * reserved names and can't be used for users or groups.
      * </p>
      */
     private String userName;
     /**
      * <p>
-     * An object containing the user's name.
+     * An object containing the name of the user.
      * </p>
      */
     private Name name;
     /**
      * <p>
-     * A string containing the user's name. This value is typically formatted for display when the user is referenced.
-     * For example, "John Doe."
+     * A string containing the name of the user. This value is typically formatted for display when the user is
+     * referenced. For example, "John Doe."
      * </p>
      */
     private String displayName;
@@ -60,7 +61,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String nickName;
     /**
      * <p>
-     * A string containing a URL that may be associated with the user.
+     * A string containing a URL that might be associated with the user.
      * </p>
      */
     private String profileUrl;
@@ -84,15 +85,15 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private java.util.List<PhoneNumber> phoneNumbers;
     /**
      * <p>
-     * A string indicating the user's type. Possible values depend on each customer's specific needs, so they are left
-     * unspecified.
+     * A string indicating the type of user. Possible values are left unspecified. The value can vary based on your
+     * specific use case.
      * </p>
      */
     private String userType;
     /**
      * <p>
-     * A string containing the user's title. Possible values are left unspecified given that they depend on each
-     * customer's specific needs.
+     * A string containing the title of the user. Possible values are left unspecified. The value can vary based on your
+     * specific use case.
      * </p>
      */
     private String title;
@@ -104,13 +105,13 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String preferredLanguage;
     /**
      * <p>
-     * A string containing the user's geographical region or location.
+     * A string containing the geographical region or location of the user.
      * </p>
      */
     private String locale;
     /**
      * <p>
-     * A string containing the user's time zone.
+     * A string containing the time zone of the user.
      * </p>
      */
     private String timezone;
@@ -159,13 +160,15 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * A unique string used to identify the user. The length limit is 128 characters. This value can consist of letters,
      * accented characters, symbols, numbers, and punctuation. This value is specified at the time the user is created
-     * and stored as an attribute of the user object in the identity store.
+     * and stored as an attribute of the user object in the identity store. "Administrator" and "AWSAdministrators" are
+     * reserved names and can't be used for users or groups.
      * </p>
      * 
      * @param userName
      *        A unique string used to identify the user. The length limit is 128 characters. This value can consist of
      *        letters, accented characters, symbols, numbers, and punctuation. This value is specified at the time the
-     *        user is created and stored as an attribute of the user object in the identity store.
+     *        user is created and stored as an attribute of the user object in the identity store. "Administrator" and
+     *        "AWSAdministrators" are reserved names and can't be used for users or groups.
      */
 
     public void setUserName(String userName) {
@@ -176,12 +179,14 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * A unique string used to identify the user. The length limit is 128 characters. This value can consist of letters,
      * accented characters, symbols, numbers, and punctuation. This value is specified at the time the user is created
-     * and stored as an attribute of the user object in the identity store.
+     * and stored as an attribute of the user object in the identity store. "Administrator" and "AWSAdministrators" are
+     * reserved names and can't be used for users or groups.
      * </p>
      * 
      * @return A unique string used to identify the user. The length limit is 128 characters. This value can consist of
      *         letters, accented characters, symbols, numbers, and punctuation. This value is specified at the time the
-     *         user is created and stored as an attribute of the user object in the identity store.
+     *         user is created and stored as an attribute of the user object in the identity store. "Administrator" and
+     *         "AWSAdministrators" are reserved names and can't be used for users or groups.
      */
 
     public String getUserName() {
@@ -192,13 +197,15 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * A unique string used to identify the user. The length limit is 128 characters. This value can consist of letters,
      * accented characters, symbols, numbers, and punctuation. This value is specified at the time the user is created
-     * and stored as an attribute of the user object in the identity store.
+     * and stored as an attribute of the user object in the identity store. "Administrator" and "AWSAdministrators" are
+     * reserved names and can't be used for users or groups.
      * </p>
      * 
      * @param userName
      *        A unique string used to identify the user. The length limit is 128 characters. This value can consist of
      *        letters, accented characters, symbols, numbers, and punctuation. This value is specified at the time the
-     *        user is created and stored as an attribute of the user object in the identity store.
+     *        user is created and stored as an attribute of the user object in the identity store. "Administrator" and
+     *        "AWSAdministrators" are reserved names and can't be used for users or groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -209,11 +216,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * An object containing the user's name.
+     * An object containing the name of the user.
      * </p>
      * 
      * @param name
-     *        An object containing the user's name.
+     *        An object containing the name of the user.
      */
 
     public void setName(Name name) {
@@ -222,10 +229,10 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * An object containing the user's name.
+     * An object containing the name of the user.
      * </p>
      * 
-     * @return An object containing the user's name.
+     * @return An object containing the name of the user.
      */
 
     public Name getName() {
@@ -234,11 +241,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * An object containing the user's name.
+     * An object containing the name of the user.
      * </p>
      * 
      * @param name
-     *        An object containing the user's name.
+     *        An object containing the name of the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -249,12 +256,12 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's name. This value is typically formatted for display when the user is referenced.
-     * For example, "John Doe."
+     * A string containing the name of the user. This value is typically formatted for display when the user is
+     * referenced. For example, "John Doe."
      * </p>
      * 
      * @param displayName
-     *        A string containing the user's name. This value is typically formatted for display when the user is
+     *        A string containing the name of the user. This value is typically formatted for display when the user is
      *        referenced. For example, "John Doe."
      */
 
@@ -264,11 +271,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's name. This value is typically formatted for display when the user is referenced.
-     * For example, "John Doe."
+     * A string containing the name of the user. This value is typically formatted for display when the user is
+     * referenced. For example, "John Doe."
      * </p>
      * 
-     * @return A string containing the user's name. This value is typically formatted for display when the user is
+     * @return A string containing the name of the user. This value is typically formatted for display when the user is
      *         referenced. For example, "John Doe."
      */
 
@@ -278,12 +285,12 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's name. This value is typically formatted for display when the user is referenced.
-     * For example, "John Doe."
+     * A string containing the name of the user. This value is typically formatted for display when the user is
+     * referenced. For example, "John Doe."
      * </p>
      * 
      * @param displayName
-     *        A string containing the user's name. This value is typically formatted for display when the user is
+     *        A string containing the name of the user. This value is typically formatted for display when the user is
      *        referenced. For example, "John Doe."
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -335,11 +342,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing a URL that may be associated with the user.
+     * A string containing a URL that might be associated with the user.
      * </p>
      * 
      * @param profileUrl
-     *        A string containing a URL that may be associated with the user.
+     *        A string containing a URL that might be associated with the user.
      */
 
     public void setProfileUrl(String profileUrl) {
@@ -348,10 +355,10 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing a URL that may be associated with the user.
+     * A string containing a URL that might be associated with the user.
      * </p>
      * 
-     * @return A string containing a URL that may be associated with the user.
+     * @return A string containing a URL that might be associated with the user.
      */
 
     public String getProfileUrl() {
@@ -360,11 +367,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing a URL that may be associated with the user.
+     * A string containing a URL that might be associated with the user.
      * </p>
      * 
      * @param profileUrl
-     *        A string containing a URL that may be associated with the user.
+     *        A string containing a URL that might be associated with the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -585,13 +592,13 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string indicating the user's type. Possible values depend on each customer's specific needs, so they are left
-     * unspecified.
+     * A string indicating the type of user. Possible values are left unspecified. The value can vary based on your
+     * specific use case.
      * </p>
      * 
      * @param userType
-     *        A string indicating the user's type. Possible values depend on each customer's specific needs, so they are
-     *        left unspecified.
+     *        A string indicating the type of user. Possible values are left unspecified. The value can vary based on
+     *        your specific use case.
      */
 
     public void setUserType(String userType) {
@@ -600,12 +607,12 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string indicating the user's type. Possible values depend on each customer's specific needs, so they are left
-     * unspecified.
+     * A string indicating the type of user. Possible values are left unspecified. The value can vary based on your
+     * specific use case.
      * </p>
      * 
-     * @return A string indicating the user's type. Possible values depend on each customer's specific needs, so they
-     *         are left unspecified.
+     * @return A string indicating the type of user. Possible values are left unspecified. The value can vary based on
+     *         your specific use case.
      */
 
     public String getUserType() {
@@ -614,13 +621,13 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string indicating the user's type. Possible values depend on each customer's specific needs, so they are left
-     * unspecified.
+     * A string indicating the type of user. Possible values are left unspecified. The value can vary based on your
+     * specific use case.
      * </p>
      * 
      * @param userType
-     *        A string indicating the user's type. Possible values depend on each customer's specific needs, so they are
-     *        left unspecified.
+     *        A string indicating the type of user. Possible values are left unspecified. The value can vary based on
+     *        your specific use case.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -631,13 +638,13 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's title. Possible values are left unspecified given that they depend on each
-     * customer's specific needs.
+     * A string containing the title of the user. Possible values are left unspecified. The value can vary based on your
+     * specific use case.
      * </p>
      * 
      * @param title
-     *        A string containing the user's title. Possible values are left unspecified given that they depend on each
-     *        customer's specific needs.
+     *        A string containing the title of the user. Possible values are left unspecified. The value can vary based
+     *        on your specific use case.
      */
 
     public void setTitle(String title) {
@@ -646,12 +653,12 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's title. Possible values are left unspecified given that they depend on each
-     * customer's specific needs.
+     * A string containing the title of the user. Possible values are left unspecified. The value can vary based on your
+     * specific use case.
      * </p>
      * 
-     * @return A string containing the user's title. Possible values are left unspecified given that they depend on each
-     *         customer's specific needs.
+     * @return A string containing the title of the user. Possible values are left unspecified. The value can vary based
+     *         on your specific use case.
      */
 
     public String getTitle() {
@@ -660,13 +667,13 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's title. Possible values are left unspecified given that they depend on each
-     * customer's specific needs.
+     * A string containing the title of the user. Possible values are left unspecified. The value can vary based on your
+     * specific use case.
      * </p>
      * 
      * @param title
-     *        A string containing the user's title. Possible values are left unspecified given that they depend on each
-     *        customer's specific needs.
+     *        A string containing the title of the user. Possible values are left unspecified. The value can vary based
+     *        on your specific use case.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -717,11 +724,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's geographical region or location.
+     * A string containing the geographical region or location of the user.
      * </p>
      * 
      * @param locale
-     *        A string containing the user's geographical region or location.
+     *        A string containing the geographical region or location of the user.
      */
 
     public void setLocale(String locale) {
@@ -730,10 +737,10 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's geographical region or location.
+     * A string containing the geographical region or location of the user.
      * </p>
      * 
-     * @return A string containing the user's geographical region or location.
+     * @return A string containing the geographical region or location of the user.
      */
 
     public String getLocale() {
@@ -742,11 +749,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's geographical region or location.
+     * A string containing the geographical region or location of the user.
      * </p>
      * 
      * @param locale
-     *        A string containing the user's geographical region or location.
+     *        A string containing the geographical region or location of the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -757,11 +764,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's time zone.
+     * A string containing the time zone of the user.
      * </p>
      * 
      * @param timezone
-     *        A string containing the user's time zone.
+     *        A string containing the time zone of the user.
      */
 
     public void setTimezone(String timezone) {
@@ -770,10 +777,10 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's time zone.
+     * A string containing the time zone of the user.
      * </p>
      * 
-     * @return A string containing the user's time zone.
+     * @return A string containing the time zone of the user.
      */
 
     public String getTimezone() {
@@ -782,11 +789,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A string containing the user's time zone.
+     * A string containing the time zone of the user.
      * </p>
      * 
      * @param timezone
-     *        A string containing the user's time zone.
+     *        A string containing the time zone of the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

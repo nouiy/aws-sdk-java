@@ -203,8 +203,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
     private RuntimePlatform runtimePlatform;
     /**
      * <p>
-     * The task launch types the task definition was validated against. To determine which task launch types the task
-     * definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
+     * The task launch types the task definition was validated against. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
+     * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> requiresCompatibilities;
@@ -1960,12 +1961,14 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The task launch types the task definition was validated against. To determine which task launch types the task
-     * definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
+     * The task launch types the task definition was validated against. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
+     * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return The task launch types the task definition was validated against. To determine which task launch types the
-     *         task definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
+     * @return The task launch types the task definition was validated against. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
+     *         types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @see Compatibility
      */
 
@@ -1978,13 +1981,15 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The task launch types the task definition was validated against. To determine which task launch types the task
-     * definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
+     * The task launch types the task definition was validated against. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
+     * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param requiresCompatibilities
-     *        The task launch types the task definition was validated against. To determine which task launch types the
-     *        task definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
+     *        The task launch types the task definition was validated against. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
+     *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @see Compatibility
      */
 
@@ -1999,8 +2004,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The task launch types the task definition was validated against. To determine which task launch types the task
-     * definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
+     * The task launch types the task definition was validated against. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
+     * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2009,8 +2015,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param requiresCompatibilities
-     *        The task launch types the task definition was validated against. To determine which task launch types the
-     *        task definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
+     *        The task launch types the task definition was validated against. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
+     *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Compatibility
      */
@@ -2027,13 +2034,15 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The task launch types the task definition was validated against. To determine which task launch types the task
-     * definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
+     * The task launch types the task definition was validated against. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
+     * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param requiresCompatibilities
-     *        The task launch types the task definition was validated against. To determine which task launch types the
-     *        task definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
+     *        The task launch types the task definition was validated against. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
+     *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Compatibility
      */
@@ -2045,13 +2054,15 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The task launch types the task definition was validated against. To determine which task launch types the task
-     * definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
+     * The task launch types the task definition was validated against. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
+     * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param requiresCompatibilities
-     *        The task launch types the task definition was validated against. To determine which task launch types the
-     *        task definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
+     *        The task launch types the task definition was validated against. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
+     *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Compatibility
      */

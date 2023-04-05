@@ -32,7 +32,7 @@ import com.amazonaws.services.identitystore.model.*;
  * </p>
  * 
  * <pre>
- * <code> &lt;note&gt; &lt;p&gt;Although AWS Single Sign-On was renamed, the &lt;code&gt;sso&lt;/code&gt; and &lt;code&gt;identitystore&lt;/code&gt; API namespaces will continue to retain their original name for backward compatibility purposes. For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#renamed&quot;&gt;IAM Identity Center rename&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;This reference guide describes the identity store operations that you can call programatically and includes detailed information on data types and errors.&lt;/p&gt; </code>
+ * <code> &lt;note&gt; &lt;p&gt;Although AWS Single Sign-On was renamed, the &lt;code&gt;sso&lt;/code&gt; and &lt;code&gt;identitystore&lt;/code&gt; API namespaces will continue to retain their original name for backward compatibility purposes. For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#renamed&quot;&gt;IAM Identity Center rename&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;This reference guide describes the identity store operations that you can call programatically and includes detailed information about data types and errors.&lt;/p&gt; </code>
  * </pre>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -104,7 +104,7 @@ public interface AWSIdentityStoreAsync extends AWSIdentityStore {
 
     /**
      * <p>
-     * Creates a new user within the specified identity store.
+     * Creates a user within the specified identity store.
      * </p>
      * 
      * @param createUserRequest
@@ -117,7 +117,7 @@ public interface AWSIdentityStoreAsync extends AWSIdentityStore {
 
     /**
      * <p>
-     * Creates a new user within the specified identity store.
+     * Creates a user within the specified identity store.
      * </p>
      * 
      * @param createUserRequest

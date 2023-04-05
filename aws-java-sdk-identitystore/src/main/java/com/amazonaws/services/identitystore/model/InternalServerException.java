@@ -32,7 +32,7 @@ public class InternalServerException extends com.amazonaws.services.identitystor
     private String requestId;
     /**
      * <p>
-     * The number of seconds that you would like to wait before retrying the next request.
+     * The number of seconds to wait before retrying the next request.
      * </p>
      */
     private Integer retryAfterSeconds;
@@ -97,11 +97,11 @@ public class InternalServerException extends com.amazonaws.services.identitystor
 
     /**
      * <p>
-     * The number of seconds that you would like to wait before retrying the next request.
+     * The number of seconds to wait before retrying the next request.
      * </p>
      * 
      * @param retryAfterSeconds
-     *        The number of seconds that you would like to wait before retrying the next request.
+     *        The number of seconds to wait before retrying the next request.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("RetryAfterSeconds")
@@ -111,10 +111,10 @@ public class InternalServerException extends com.amazonaws.services.identitystor
 
     /**
      * <p>
-     * The number of seconds that you would like to wait before retrying the next request.
+     * The number of seconds to wait before retrying the next request.
      * </p>
      * 
-     * @return The number of seconds that you would like to wait before retrying the next request.
+     * @return The number of seconds to wait before retrying the next request.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("RetryAfterSeconds")
@@ -124,11 +124,11 @@ public class InternalServerException extends com.amazonaws.services.identitystor
 
     /**
      * <p>
-     * The number of seconds that you would like to wait before retrying the next request.
+     * The number of seconds to wait before retrying the next request.
      * </p>
      * 
      * @param retryAfterSeconds
-     *        The number of seconds that you would like to wait before retrying the next request.
+     *        The number of seconds to wait before retrying the next request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

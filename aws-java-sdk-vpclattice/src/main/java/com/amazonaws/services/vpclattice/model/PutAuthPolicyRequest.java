@@ -27,7 +27,7 @@ public class PutAuthPolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The auth policy.
+     * The auth policy. The policy string in JSON must not contain newlines or blank lines.
      * </p>
      */
     private String policy;
@@ -40,11 +40,11 @@ public class PutAuthPolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The auth policy.
+     * The auth policy. The policy string in JSON must not contain newlines or blank lines.
      * </p>
      * 
      * @param policy
-     *        The auth policy.
+     *        The auth policy. The policy string in JSON must not contain newlines or blank lines.
      */
 
     public void setPolicy(String policy) {
@@ -53,10 +53,10 @@ public class PutAuthPolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The auth policy.
+     * The auth policy. The policy string in JSON must not contain newlines or blank lines.
      * </p>
      * 
-     * @return The auth policy.
+     * @return The auth policy. The policy string in JSON must not contain newlines or blank lines.
      */
 
     public String getPolicy() {
@@ -65,11 +65,11 @@ public class PutAuthPolicyRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The auth policy.
+     * The auth policy. The policy string in JSON must not contain newlines or blank lines.
      * </p>
      * 
      * @param policy
-     *        The auth policy.
+     *        The auth policy. The policy string in JSON must not contain newlines or blank lines.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

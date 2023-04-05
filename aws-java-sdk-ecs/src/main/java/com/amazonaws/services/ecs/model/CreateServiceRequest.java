@@ -367,7 +367,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags
      * aren't propagated. Tags can only be propagated to the task during task creation. To add tags to a task after task
-     * creation, use the <a>TagResource</a> API action.
+     * creation, use the <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API action.
      * </p>
      */
     private String propagateTags;
@@ -3067,13 +3068,16 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags
      * aren't propagated. Tags can only be propagated to the task during task creation. To add tags to a task after task
-     * creation, use the <a>TagResource</a> API action.
+     * creation, use the <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API action.
      * </p>
      * 
      * @param propagateTags
      *        Specifies whether to propagate the tags from the task definition to the task. If no value is specified,
      *        the tags aren't propagated. Tags can only be propagated to the task during task creation. To add tags to a
-     *        task after task creation, use the <a>TagResource</a> API action.
+     *        task after task creation, use the <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API
+     *        action.
      * @see PropagateTags
      */
 
@@ -3085,12 +3089,15 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags
      * aren't propagated. Tags can only be propagated to the task during task creation. To add tags to a task after task
-     * creation, use the <a>TagResource</a> API action.
+     * creation, use the <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API action.
      * </p>
      * 
      * @return Specifies whether to propagate the tags from the task definition to the task. If no value is specified,
      *         the tags aren't propagated. Tags can only be propagated to the task during task creation. To add tags to
-     *         a task after task creation, use the <a>TagResource</a> API action.
+     *         a task after task creation, use the <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API
+     *         action.
      * @see PropagateTags
      */
 
@@ -3102,13 +3109,16 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags
      * aren't propagated. Tags can only be propagated to the task during task creation. To add tags to a task after task
-     * creation, use the <a>TagResource</a> API action.
+     * creation, use the <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API action.
      * </p>
      * 
      * @param propagateTags
      *        Specifies whether to propagate the tags from the task definition to the task. If no value is specified,
      *        the tags aren't propagated. Tags can only be propagated to the task during task creation. To add tags to a
-     *        task after task creation, use the <a>TagResource</a> API action.
+     *        task after task creation, use the <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API
+     *        action.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PropagateTags
      */
@@ -3122,13 +3132,16 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags
      * aren't propagated. Tags can only be propagated to the task during task creation. To add tags to a task after task
-     * creation, use the <a>TagResource</a> API action.
+     * creation, use the <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API action.
      * </p>
      * 
      * @param propagateTags
      *        Specifies whether to propagate the tags from the task definition to the task. If no value is specified,
      *        the tags aren't propagated. Tags can only be propagated to the task during task creation. To add tags to a
-     *        task after task creation, use the <a>TagResource</a> API action.
+     *        task after task creation, use the <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API
+     *        action.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PropagateTags
      */

@@ -25,22 +25,24 @@ public class MetricsConfiguration implements Serializable {
     private MetricsFilter filter;
 
     /**
-     * Returns the identifier used to represent a metrics configuration.
+     * Returns the ID used to identify the metrics configuration. The ID has a 64 character limit and can only contain letters,
+     * numbers, periods, dashes, and underscores.
      */
     public String getId() {
         return id;
     }
 
     /**
-     * Sets the identifier used to represent a metrics configuration.
+     * Sets the ID used to identify the metrics configuration. The ID has a 64 character limit and can only contain letters,
+     * numbers, periods, dashes, and underscores.
      */
     public void setId(String id) {
         this.id = id;
     }
 
     /**
-     * Sets the identifier used to represent a metrics configuration
-     * and return this object for method chaining.
+     * Sets the ID used to identify the metrics configuration and returns this object for method chaining.
+     * The ID has a 64 character limit and can only contain letters, numbers, periods, dashes, and underscores.
      */
     public MetricsConfiguration withId(String id) {
         setId(id);

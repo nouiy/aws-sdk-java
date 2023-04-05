@@ -6597,7 +6597,7 @@
         "unmarshallingType" : null,
         "varargSetterDocumentation" : "/**<p>ISO 8601 timestamp (returned as a string) for when this token expires.</p>\n@param expirationTime ISO 8601 timestamp (returned as a string) for when this token expires.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
-          "timestampFormat" : "unixTimestamp",
+          "timestampFormat" : "iso8601",
           "variableDeclarationType" : "java.util.Date",
           "variableName" : "expirationTime",
           "variableType" : "java.util.Date",
@@ -6717,7 +6717,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "Token",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The issued client token, encrypted.</p>\n@param token The issued client token, encrypted.*/",
         "setterMethodName" : "setToken",
         "setterModel" : {
@@ -7253,7 +7253,7 @@
           "unmarshallingType" : null,
           "varargSetterDocumentation" : "/**<p>ISO 8601 timestamp (returned as a string) for when this token expires.</p>\n@param expirationTime ISO 8601 timestamp (returned as a string) for when this token expires.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
-            "timestampFormat" : "unixTimestamp",
+            "timestampFormat" : "iso8601",
             "variableDeclarationType" : "java.util.Date",
             "variableName" : "expirationTime",
             "variableType" : "java.util.Date",
@@ -7375,7 +7375,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "Token",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The issued client token, encrypted.</p>\n@param token The issued client token, encrypted.*/",
           "setterMethodName" : "setToken",
           "setterModel" : {

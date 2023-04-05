@@ -34,8 +34,8 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A unique identifier for a user or group that is not the primary identifier. This value can be an identifier from
-     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For
-     * example, a unique <code>UserDisplayName</code>.
+     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For the
+     * unique attribute, the only valid paths are <code>userName</code> and <code>emails.value</code>.
      * </p>
      */
     private AlternateIdentifier alternateIdentifier;
@@ -83,14 +83,15 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A unique identifier for a user or group that is not the primary identifier. This value can be an identifier from
-     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For
-     * example, a unique <code>UserDisplayName</code>.
+     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For the
+     * unique attribute, the only valid paths are <code>userName</code> and <code>emails.value</code>.
      * </p>
      * 
      * @param alternateIdentifier
      *        A unique identifier for a user or group that is not the primary identifier. This value can be an
      *        identifier from an external identity provider (IdP) that is associated with the user, the group, or a
-     *        unique attribute. For example, a unique <code>UserDisplayName</code>.
+     *        unique attribute. For the unique attribute, the only valid paths are <code>userName</code> and
+     *        <code>emails.value</code>.
      */
 
     public void setAlternateIdentifier(AlternateIdentifier alternateIdentifier) {
@@ -100,13 +101,14 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A unique identifier for a user or group that is not the primary identifier. This value can be an identifier from
-     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For
-     * example, a unique <code>UserDisplayName</code>.
+     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For the
+     * unique attribute, the only valid paths are <code>userName</code> and <code>emails.value</code>.
      * </p>
      * 
      * @return A unique identifier for a user or group that is not the primary identifier. This value can be an
      *         identifier from an external identity provider (IdP) that is associated with the user, the group, or a
-     *         unique attribute. For example, a unique <code>UserDisplayName</code>.
+     *         unique attribute. For the unique attribute, the only valid paths are <code>userName</code> and
+     *         <code>emails.value</code>.
      */
 
     public AlternateIdentifier getAlternateIdentifier() {
@@ -116,14 +118,15 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A unique identifier for a user or group that is not the primary identifier. This value can be an identifier from
-     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For
-     * example, a unique <code>UserDisplayName</code>.
+     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For the
+     * unique attribute, the only valid paths are <code>userName</code> and <code>emails.value</code>.
      * </p>
      * 
      * @param alternateIdentifier
      *        A unique identifier for a user or group that is not the primary identifier. This value can be an
      *        identifier from an external identity provider (IdP) that is associated with the user, the group, or a
-     *        unique attribute. For example, a unique <code>UserDisplayName</code>.
+     *        unique attribute. For the unique attribute, the only valid paths are <code>userName</code> and
+     *        <code>emails.value</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

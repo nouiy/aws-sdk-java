@@ -480,7 +480,7 @@ public class ParticipantToken implements Serializable, Cloneable, StructuredPojo
         if (getParticipantId() != null)
             sb.append("ParticipantId: ").append(getParticipantId()).append(",");
         if (getToken() != null)
-            sb.append("Token: ").append(getToken()).append(",");
+            sb.append("Token: ").append("***Sensitive Data Redacted***").append(",");
         if (getUserId() != null)
             sb.append("UserId: ").append(getUserId());
         sb.append("}");

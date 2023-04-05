@@ -45,8 +45,7 @@ public class ServiceConnectServiceResource implements Serializable, Cloneable, S
      * hyphen.
      * </p>
      * <p>
-     * If this parameter isn't specified, the default value of <code>discoveryName.namespace</code> is used. If the
-     * <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used in
+     * If the <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used in
      * <code>portName.namespace</code>.
      * </p>
      */
@@ -71,8 +70,7 @@ public class ServiceConnectServiceResource implements Serializable, Cloneable, S
      * hyphen.
      * </p>
      * <p>
-     * If this parameter isn't specified, the default value of <code>discoveryName.namespace</code> is used. If the
-     * <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used in
+     * If the <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used in
      * <code>portName.namespace</code>.
      * </p>
      * 
@@ -85,9 +83,8 @@ public class ServiceConnectServiceResource implements Serializable, Cloneable, S
      *        can't start with a hyphen.
      *        </p>
      *        <p>
-     *        If this parameter isn't specified, the default value of <code>discoveryName.namespace</code> is used. If
-     *        the <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used in
-     *        <code>portName.namespace</code>.
+     *        If the <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used
+     *        in <code>portName.namespace</code>.
      */
 
     public void setDiscoveryName(String discoveryName) {
@@ -105,8 +102,7 @@ public class ServiceConnectServiceResource implements Serializable, Cloneable, S
      * hyphen.
      * </p>
      * <p>
-     * If this parameter isn't specified, the default value of <code>discoveryName.namespace</code> is used. If the
-     * <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used in
+     * If the <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used in
      * <code>portName.namespace</code>.
      * </p>
      * 
@@ -118,9 +114,8 @@ public class ServiceConnectServiceResource implements Serializable, Cloneable, S
      *         can't start with a hyphen.
      *         </p>
      *         <p>
-     *         If this parameter isn't specified, the default value of <code>discoveryName.namespace</code> is used. If
-     *         the <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used in
-     *         <code>portName.namespace</code>.
+     *         If the <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used
+     *         in <code>portName.namespace</code>.
      */
 
     public String getDiscoveryName() {
@@ -138,8 +133,7 @@ public class ServiceConnectServiceResource implements Serializable, Cloneable, S
      * hyphen.
      * </p>
      * <p>
-     * If this parameter isn't specified, the default value of <code>discoveryName.namespace</code> is used. If the
-     * <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used in
+     * If the <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used in
      * <code>portName.namespace</code>.
      * </p>
      * 
@@ -152,9 +146,8 @@ public class ServiceConnectServiceResource implements Serializable, Cloneable, S
      *        can't start with a hyphen.
      *        </p>
      *        <p>
-     *        If this parameter isn't specified, the default value of <code>discoveryName.namespace</code> is used. If
-     *        the <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used in
-     *        <code>portName.namespace</code>.
+     *        If the <code>discoveryName</code> isn't specified, the port mapping name from the task definition is used
+     *        in <code>portName.namespace</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

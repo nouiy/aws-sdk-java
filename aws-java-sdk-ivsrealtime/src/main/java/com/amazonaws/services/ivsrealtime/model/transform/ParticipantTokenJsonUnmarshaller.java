@@ -65,7 +65,7 @@ public class ParticipantTokenJsonUnmarshaller implements Unmarshaller<Participan
                 }
                 if (context.testExpression("expirationTime", targetDepth)) {
                     context.nextToken();
-                    participantToken.setExpirationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                    participantToken.setExpirationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("participantId", targetDepth)) {
                     context.nextToken();

@@ -270,7 +270,30 @@ public enum ResourceType {
     AWSIoTScheduledAudit("AWS::IoT::ScheduledAudit"),
     AWSEventsConnection("AWS::Events::Connection"),
     AWSEventSchemasSchema("AWS::EventSchemas::Schema"),
-    AWSMediaPackagePackagingConfiguration("AWS::MediaPackage::PackagingConfiguration");
+    AWSMediaPackagePackagingConfiguration("AWS::MediaPackage::PackagingConfiguration"),
+    AWSKinesisVideoSignalingChannel("AWS::KinesisVideo::SignalingChannel"),
+    AWSAppStreamDirectoryConfig("AWS::AppStream::DirectoryConfig"),
+    AWSLookoutVisionProject("AWS::LookoutVision::Project"),
+    AWSRoute53RecoveryControlCluster("AWS::Route53RecoveryControl::Cluster"),
+    AWSRoute53RecoveryControlSafetyRule("AWS::Route53RecoveryControl::SafetyRule"),
+    AWSRoute53RecoveryControlControlPanel("AWS::Route53RecoveryControl::ControlPanel"),
+    AWSRoute53RecoveryControlRoutingControl("AWS::Route53RecoveryControl::RoutingControl"),
+    AWSRoute53RecoveryReadinessResourceSet("AWS::Route53RecoveryReadiness::ResourceSet"),
+    AWSRoboMakerSimulationApplication("AWS::RoboMaker::SimulationApplication"),
+    AWSRoboMakerRobotApplication("AWS::RoboMaker::RobotApplication"),
+    AWSHealthLakeFHIRDatastore("AWS::HealthLake::FHIRDatastore"),
+    AWSPinpointSegment("AWS::Pinpoint::Segment"),
+    AWSPinpointApplicationSettings("AWS::Pinpoint::ApplicationSettings"),
+    AWSEventsRule("AWS::Events::Rule"),
+    AWSEC2DHCPOptions("AWS::EC2::DHCPOptions"),
+    AWSEC2NetworkInsightsPath("AWS::EC2::NetworkInsightsPath"),
+    AWSEC2TrafficMirrorFilter("AWS::EC2::TrafficMirrorFilter"),
+    AWSEC2IPAM("AWS::EC2::IPAM"),
+    AWSIoTTwinMakerScene("AWS::IoTTwinMaker::Scene"),
+    AWSNetworkManagerTransitGatewayRegistration("AWS::NetworkManager::TransitGatewayRegistration"),
+    AWSCustomerProfilesDomain("AWS::CustomerProfiles::Domain"),
+    AWSAutoScalingWarmPool("AWS::AutoScaling::WarmPool"),
+    AWSConnectPhoneNumber("AWS::Connect::PhoneNumber");
 
     private String value;
 
