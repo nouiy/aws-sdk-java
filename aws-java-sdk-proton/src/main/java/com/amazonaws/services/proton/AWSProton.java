@@ -743,6 +743,58 @@ public interface AWSProton {
 
     /**
      * <p>
+     * Create a service instance.
+     * </p>
+     * 
+     * @param createServiceInstanceRequest
+     * @return Result of the CreateServiceInstance operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The request <i>couldn't</i> be made due to a conflicting operation or resource.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.CreateServiceInstance
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/CreateServiceInstance" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateServiceInstanceResult createServiceInstance(CreateServiceInstanceRequest createServiceInstanceRequest);
+
+    /**
+     * <p>
+     * Create the Proton Ops configuration file.
+     * </p>
+     * 
+     * @param createServiceSyncConfigRequest
+     * @return Result of the CreateServiceSyncConfig operation returned by the service.
+     * @throws ServiceQuotaExceededException
+     *         A quota was exceeded. For more information, see <a
+     *         href="https://docs.aws.amazon.com/proton/latest/userguide/ag-limits.html">Proton Quotas</a> in the
+     *         <i>Proton User Guide</i>.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The request <i>couldn't</i> be made due to a conflicting operation or resource.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.CreateServiceSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/CreateServiceSyncConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateServiceSyncConfigResult createServiceSyncConfig(CreateServiceSyncConfigRequest createServiceSyncConfigRequest);
+
+    /**
+     * <p>
      * Create a service template. The administrator creates a service template to define standardized infrastructure and
      * an optional CI/CD service pipeline. Developers, in turn, select the service template from Proton. If the selected
      * service template includes a service pipeline definition, they provide a link to their source code repository.
@@ -1052,6 +1104,31 @@ public interface AWSProton {
 
     /**
      * <p>
+     * Delete the Proton Ops file.
+     * </p>
+     * 
+     * @param deleteServiceSyncConfigRequest
+     * @return Result of the DeleteServiceSyncConfig operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The request <i>couldn't</i> be made due to a conflicting operation or resource.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.DeleteServiceSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/DeleteServiceSyncConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteServiceSyncConfigResult deleteServiceSyncConfig(DeleteServiceSyncConfigRequest deleteServiceSyncConfigRequest);
+
+    /**
+     * <p>
      * If no other major or minor versions of the service template exist, delete the service template.
      * </p>
      * 
@@ -1352,8 +1429,8 @@ public interface AWSProton {
      * <p>
      * The action returns staleness counts (counts of resources that are up-to-date, behind a template major version, or
      * behind a template minor version), the total number of resources, and the number of resources that are in a failed
-     * state, grouped by resource type. Components, environments, and service templates are exceptions—see the
-     * <code>components</code>, <code>environments</code>, and <code>serviceTemplates</code> field descriptions.
+     * state, grouped by resource type. Components, environments, and service templates return less information - see
+     * the <code>components</code>, <code>environments</code>, and <code>serviceTemplates</code> field descriptions.
      * </p>
      * <p>
      * For context, the action also returns the total number of each type of Proton template in the Amazon Web Services
@@ -1427,6 +1504,75 @@ public interface AWSProton {
      *      Documentation</a>
      */
     GetServiceInstanceResult getServiceInstance(GetServiceInstanceRequest getServiceInstanceRequest);
+
+    /**
+     * <p>
+     * Get the status of the synced service instance.
+     * </p>
+     * 
+     * @param getServiceInstanceSyncStatusRequest
+     * @return Result of the GetServiceInstanceSyncStatus operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.GetServiceInstanceSyncStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetServiceInstanceSyncStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetServiceInstanceSyncStatusResult getServiceInstanceSyncStatus(GetServiceInstanceSyncStatusRequest getServiceInstanceSyncStatusRequest);
+
+    /**
+     * <p>
+     * Get detailed data for the service sync blocker summary.
+     * </p>
+     * 
+     * @param getServiceSyncBlockerSummaryRequest
+     * @return Result of the GetServiceSyncBlockerSummary operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.GetServiceSyncBlockerSummary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetServiceSyncBlockerSummary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetServiceSyncBlockerSummaryResult getServiceSyncBlockerSummary(GetServiceSyncBlockerSummaryRequest getServiceSyncBlockerSummaryRequest);
+
+    /**
+     * <p>
+     * Get detailed information for the service sync configuration.
+     * </p>
+     * 
+     * @param getServiceSyncConfigRequest
+     * @return Result of the GetServiceSyncConfig operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.GetServiceSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetServiceSyncConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetServiceSyncConfigResult getServiceSyncConfig(GetServiceSyncConfigRequest getServiceSyncConfigRequest);
 
     /**
      * <p>
@@ -2540,6 +2686,56 @@ public interface AWSProton {
      *      API Documentation</a>
      */
     UpdateServicePipelineResult updateServicePipeline(UpdateServicePipelineRequest updateServicePipelineRequest);
+
+    /**
+     * <p>
+     * Update the service sync blocker by resolving it.
+     * </p>
+     * 
+     * @param updateServiceSyncBlockerRequest
+     * @return Result of the UpdateServiceSyncBlocker operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The request <i>couldn't</i> be made due to a conflicting operation or resource.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.UpdateServiceSyncBlocker
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/UpdateServiceSyncBlocker"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateServiceSyncBlockerResult updateServiceSyncBlocker(UpdateServiceSyncBlockerRequest updateServiceSyncBlockerRequest);
+
+    /**
+     * <p>
+     * Update the Proton Ops config file.
+     * </p>
+     * 
+     * @param updateServiceSyncConfigRequest
+     * @return Result of the UpdateServiceSyncConfig operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The request <i>couldn't</i> be made due to a conflicting operation or resource.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.UpdateServiceSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/UpdateServiceSyncConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateServiceSyncConfigResult updateServiceSyncConfig(UpdateServiceSyncConfigRequest updateServiceSyncConfigRequest);
 
     /**
      * <p>

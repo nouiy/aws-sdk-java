@@ -27,7 +27,7 @@ public class ModifyCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The DB engine. The only supported value is <code>custom-oracle-ee</code>.
+     * The DB engine. The only supported values are <code>custom-oracle-ee</code> and <code>custom-oracle-ee-cdb</code>.
      * </p>
      */
     private String engine;
@@ -76,11 +76,12 @@ public class ModifyCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The DB engine. The only supported value is <code>custom-oracle-ee</code>.
+     * The DB engine. The only supported values are <code>custom-oracle-ee</code> and <code>custom-oracle-ee-cdb</code>.
      * </p>
      * 
      * @param engine
-     *        The DB engine. The only supported value is <code>custom-oracle-ee</code>.
+     *        The DB engine. The only supported values are <code>custom-oracle-ee</code> and
+     *        <code>custom-oracle-ee-cdb</code>.
      */
 
     public void setEngine(String engine) {
@@ -89,10 +90,11 @@ public class ModifyCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The DB engine. The only supported value is <code>custom-oracle-ee</code>.
+     * The DB engine. The only supported values are <code>custom-oracle-ee</code> and <code>custom-oracle-ee-cdb</code>.
      * </p>
      * 
-     * @return The DB engine. The only supported value is <code>custom-oracle-ee</code>.
+     * @return The DB engine. The only supported values are <code>custom-oracle-ee</code> and
+     *         <code>custom-oracle-ee-cdb</code>.
      */
 
     public String getEngine() {
@@ -101,11 +103,12 @@ public class ModifyCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The DB engine. The only supported value is <code>custom-oracle-ee</code>.
+     * The DB engine. The only supported values are <code>custom-oracle-ee</code> and <code>custom-oracle-ee-cdb</code>.
      * </p>
      * 
      * @param engine
-     *        The DB engine. The only supported value is <code>custom-oracle-ee</code>.
+     *        The DB engine. The only supported values are <code>custom-oracle-ee</code> and
+     *        <code>custom-oracle-ee-cdb</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -26,7 +26,8 @@ public enum EffectiveDeploymentExecutionStatus {
     COMPLETED("COMPLETED"),
     TIMED_OUT("TIMED_OUT"),
     CANCELED("CANCELED"),
-    REJECTED("REJECTED");
+    REJECTED("REJECTED"),
+    SUCCEEDED("SUCCEEDED");
 
     private String value;
 

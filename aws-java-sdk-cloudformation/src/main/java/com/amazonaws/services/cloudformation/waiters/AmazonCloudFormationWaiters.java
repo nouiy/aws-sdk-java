@@ -148,7 +148,8 @@ public class AmazonCloudFormationWaiters {
                 .withAcceptors(new StackDeleteComplete.IsDELETE_COMPLETEMatcher(), new StackDeleteComplete.IsValidationErrorMatcher(),
                         new StackDeleteComplete.IsDELETE_FAILEDMatcher(), new StackDeleteComplete.IsCREATE_FAILEDMatcher(),
                         new StackDeleteComplete.IsROLLBACK_FAILEDMatcher(), new StackDeleteComplete.IsUPDATE_ROLLBACK_IN_PROGRESSMatcher(),
-                        new StackDeleteComplete.IsUPDATE_ROLLBACK_FAILEDMatcher(), new StackDeleteComplete.IsUPDATE_ROLLBACK_COMPLETEMatcher())
+                        new StackDeleteComplete.IsUPDATE_ROLLBACK_FAILEDMatcher(), new StackDeleteComplete.IsUPDATE_ROLLBACK_COMPLETEMatcher(),
+                        new StackDeleteComplete.IsUPDATE_COMPLETEMatcher())
                 .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(120), new FixedDelayStrategy(30)))
                 .withExecutorService(executorService).build();
     }

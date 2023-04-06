@@ -482,22 +482,27 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     * <code>custom-oracle-ee (for RDS Custom for Oracle DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-oracle-ee-cdb (for RDS Custom for Oracle DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-sqlserver-se (for RDS Custom for SQL Server DB instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-web (for RDS Custom for SQL Server DB instances)</code>
      * </p>
      * </li>
      * <li>
@@ -2000,22 +2005,27 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     *        <code>custom-oracle-ee (for RDS Custom for Oracle DB instances)</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     *        <code>custom-oracle-ee-cdb (for RDS Custom for Oracle DB instances)</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     *        <code>custom-sqlserver-ee (for RDS Custom for SQL Server DB instances)</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
+     *        <code>custom-sqlserver-se (for RDS Custom for SQL Server DB instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-web (for RDS Custom for SQL Server DB instances)</code>
      *        </p>
      *        </li>
      *        <li>
@@ -4766,22 +4776,27 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     * <code>custom-oracle-ee (for RDS Custom for Oracle DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-oracle-ee-cdb (for RDS Custom for Oracle DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-sqlserver-se (for RDS Custom for SQL Server DB instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-web (for RDS Custom for SQL Server DB instances)</code>
      * </p>
      * </li>
      * <li>
@@ -4867,22 +4882,27 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     *        <code>custom-oracle-ee (for RDS Custom for Oracle DB instances)</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     *        <code>custom-oracle-ee-cdb (for RDS Custom for Oracle DB instances)</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     *        <code>custom-sqlserver-ee (for RDS Custom for SQL Server DB instances)</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
+     *        <code>custom-sqlserver-se (for RDS Custom for SQL Server DB instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-web (for RDS Custom for SQL Server DB instances)</code>
      *        </p>
      *        </li>
      *        <li>
@@ -4974,22 +4994,27 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     * <code>custom-oracle-ee (for RDS Custom for Oracle DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-oracle-ee-cdb (for RDS Custom for Oracle DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-sqlserver-se (for RDS Custom for SQL Server DB instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-web (for RDS Custom for SQL Server DB instances)</code>
      * </p>
      * </li>
      * <li>
@@ -5074,22 +5099,27 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         <li>
      *         <p>
-     *         <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     *         <code>custom-oracle-ee (for RDS Custom for Oracle DB instances)</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     *         <code>custom-oracle-ee-cdb (for RDS Custom for Oracle DB instances)</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     *         <code>custom-sqlserver-ee (for RDS Custom for SQL Server DB instances)</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
+     *         <code>custom-sqlserver-se (for RDS Custom for SQL Server DB instances)</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-sqlserver-web (for RDS Custom for SQL Server DB instances)</code>
      *         </p>
      *         </li>
      *         <li>
@@ -5181,22 +5211,27 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     * <code>custom-oracle-ee (for RDS Custom for Oracle DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-oracle-ee-cdb (for RDS Custom for Oracle DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server DB instances)</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
+     * <code>custom-sqlserver-se (for RDS Custom for SQL Server DB instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-web (for RDS Custom for SQL Server DB instances)</code>
      * </p>
      * </li>
      * <li>
@@ -5282,22 +5317,27 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     *        <code>custom-oracle-ee (for RDS Custom for Oracle DB instances)</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     *        <code>custom-oracle-ee-cdb (for RDS Custom for Oracle DB instances)</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     *        <code>custom-sqlserver-ee (for RDS Custom for SQL Server DB instances)</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
+     *        <code>custom-sqlserver-se (for RDS Custom for SQL Server DB instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-web (for RDS Custom for SQL Server DB instances)</code>
      *        </p>
      *        </li>
      *        <li>

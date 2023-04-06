@@ -29,6 +29,8 @@ public class RepositorySummaryMarshaller {
 
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
+    private static final MarshallingInfo<String> CONNECTIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectionArn").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> PROVIDER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -51,6 +53,7 @@ public class RepositorySummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(repositorySummary.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(repositorySummary.getConnectionArn(), CONNECTIONARN_BINDING);
             protocolMarshaller.marshall(repositorySummary.getName(), NAME_BINDING);
             protocolMarshaller.marshall(repositorySummary.getProvider(), PROVIDER_BINDING);
         } catch (Exception e) {

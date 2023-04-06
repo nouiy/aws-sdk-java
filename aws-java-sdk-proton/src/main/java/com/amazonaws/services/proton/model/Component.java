@@ -71,6 +71,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     private String environmentName;
     /**
      * <p>
+     * The last token the client requested.
+     * </p>
+     */
+    private String lastClientRequestToken;
+    /**
+     * <p>
      * The time when a deployment of the component was last attempted.
      * </p>
      */
@@ -371,6 +377,46 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     public Component withEnvironmentName(String environmentName) {
         setEnvironmentName(environmentName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The last token the client requested.
+     * </p>
+     * 
+     * @param lastClientRequestToken
+     *        The last token the client requested.
+     */
+
+    public void setLastClientRequestToken(String lastClientRequestToken) {
+        this.lastClientRequestToken = lastClientRequestToken;
+    }
+
+    /**
+     * <p>
+     * The last token the client requested.
+     * </p>
+     * 
+     * @return The last token the client requested.
+     */
+
+    public String getLastClientRequestToken() {
+        return this.lastClientRequestToken;
+    }
+
+    /**
+     * <p>
+     * The last token the client requested.
+     * </p>
+     * 
+     * @param lastClientRequestToken
+     *        The last token the client requested.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Component withLastClientRequestToken(String lastClientRequestToken) {
+        setLastClientRequestToken(lastClientRequestToken);
         return this;
     }
 
@@ -696,6 +742,8 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
             sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getEnvironmentName() != null)
             sb.append("EnvironmentName: ").append(getEnvironmentName()).append(",");
+        if (getLastClientRequestToken() != null)
+            sb.append("LastClientRequestToken: ").append(getLastClientRequestToken()).append(",");
         if (getLastDeploymentAttemptedAt() != null)
             sb.append("LastDeploymentAttemptedAt: ").append(getLastDeploymentAttemptedAt()).append(",");
         if (getLastDeploymentSucceededAt() != null)
@@ -748,6 +796,10 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEnvironmentName() != null && other.getEnvironmentName().equals(this.getEnvironmentName()) == false)
             return false;
+        if (other.getLastClientRequestToken() == null ^ this.getLastClientRequestToken() == null)
+            return false;
+        if (other.getLastClientRequestToken() != null && other.getLastClientRequestToken().equals(this.getLastClientRequestToken()) == false)
+            return false;
         if (other.getLastDeploymentAttemptedAt() == null ^ this.getLastDeploymentAttemptedAt() == null)
             return false;
         if (other.getLastDeploymentAttemptedAt() != null && other.getLastDeploymentAttemptedAt().equals(this.getLastDeploymentAttemptedAt()) == false)
@@ -790,6 +842,7 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getDeploymentStatusMessage() == null) ? 0 : getDeploymentStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getEnvironmentName() == null) ? 0 : getEnvironmentName().hashCode());
+        hashCode = prime * hashCode + ((getLastClientRequestToken() == null) ? 0 : getLastClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getLastDeploymentAttemptedAt() == null) ? 0 : getLastDeploymentAttemptedAt().hashCode());
         hashCode = prime * hashCode + ((getLastDeploymentSucceededAt() == null) ? 0 : getLastDeploymentSucceededAt().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedAt() == null) ? 0 : getLastModifiedAt().hashCode());

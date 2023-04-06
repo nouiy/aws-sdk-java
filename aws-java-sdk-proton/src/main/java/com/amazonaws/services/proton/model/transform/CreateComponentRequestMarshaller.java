@@ -18,6 +18,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.proton.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -28,6 +30,9 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateComponentRequestMarshaller {
 
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> ENVIRONMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -63,6 +68,7 @@ public class CreateComponentRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(createComponentRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createComponentRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createComponentRequest.getEnvironmentName(), ENVIRONMENTNAME_BINDING);
             protocolMarshaller.marshall(createComponentRequest.getManifest(), MANIFEST_BINDING);

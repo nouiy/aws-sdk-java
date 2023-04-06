@@ -193,6 +193,32 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     }
 
     @Override
+    public java.util.concurrent.Future<CreateServiceInstanceResult> createServiceInstanceAsync(CreateServiceInstanceRequest request) {
+
+        return createServiceInstanceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateServiceInstanceResult> createServiceInstanceAsync(CreateServiceInstanceRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateServiceInstanceRequest, CreateServiceInstanceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateServiceSyncConfigResult> createServiceSyncConfigAsync(CreateServiceSyncConfigRequest request) {
+
+        return createServiceSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateServiceSyncConfigResult> createServiceSyncConfigAsync(CreateServiceSyncConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateServiceSyncConfigRequest, CreateServiceSyncConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateServiceTemplateResult> createServiceTemplateAsync(CreateServiceTemplateRequest request) {
 
         return createServiceTemplateAsync(request, null);
@@ -322,6 +348,19 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     @Override
     public java.util.concurrent.Future<DeleteServiceResult> deleteServiceAsync(DeleteServiceRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteServiceRequest, DeleteServiceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteServiceSyncConfigResult> deleteServiceSyncConfigAsync(DeleteServiceSyncConfigRequest request) {
+
+        return deleteServiceSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteServiceSyncConfigResult> deleteServiceSyncConfigAsync(DeleteServiceSyncConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteServiceSyncConfigRequest, DeleteServiceSyncConfigResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -506,6 +545,45 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     @Override
     public java.util.concurrent.Future<GetServiceInstanceResult> getServiceInstanceAsync(GetServiceInstanceRequest request,
             com.amazonaws.handlers.AsyncHandler<GetServiceInstanceRequest, GetServiceInstanceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetServiceInstanceSyncStatusResult> getServiceInstanceSyncStatusAsync(GetServiceInstanceSyncStatusRequest request) {
+
+        return getServiceInstanceSyncStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetServiceInstanceSyncStatusResult> getServiceInstanceSyncStatusAsync(GetServiceInstanceSyncStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetServiceInstanceSyncStatusRequest, GetServiceInstanceSyncStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetServiceSyncBlockerSummaryResult> getServiceSyncBlockerSummaryAsync(GetServiceSyncBlockerSummaryRequest request) {
+
+        return getServiceSyncBlockerSummaryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetServiceSyncBlockerSummaryResult> getServiceSyncBlockerSummaryAsync(GetServiceSyncBlockerSummaryRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetServiceSyncBlockerSummaryRequest, GetServiceSyncBlockerSummaryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetServiceSyncConfigResult> getServiceSyncConfigAsync(GetServiceSyncConfigRequest request) {
+
+        return getServiceSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetServiceSyncConfigResult> getServiceSyncConfigAsync(GetServiceSyncConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetServiceSyncConfigRequest, GetServiceSyncConfigResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1007,6 +1085,32 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     @Override
     public java.util.concurrent.Future<UpdateServicePipelineResult> updateServicePipelineAsync(UpdateServicePipelineRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateServicePipelineRequest, UpdateServicePipelineResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateServiceSyncBlockerResult> updateServiceSyncBlockerAsync(UpdateServiceSyncBlockerRequest request) {
+
+        return updateServiceSyncBlockerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateServiceSyncBlockerResult> updateServiceSyncBlockerAsync(UpdateServiceSyncBlockerRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateServiceSyncBlockerRequest, UpdateServiceSyncBlockerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateServiceSyncConfigResult> updateServiceSyncConfigAsync(UpdateServiceSyncConfigRequest request) {
+
+        return updateServiceSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateServiceSyncConfigResult> updateServiceSyncConfigAsync(UpdateServiceSyncConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateServiceSyncConfigRequest, UpdateServiceSyncConfigResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -27,6 +27,12 @@ public class UpdateComponentRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
+     * The client token for the updated component.
+     * </p>
+     */
+    private String clientToken;
+    /**
+     * <p>
      * The deployment type. It defines the mode for updating a component, as follows:
      * </p>
      * <dl>
@@ -101,6 +107,46 @@ public class UpdateComponentRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      */
     private String templateFile;
+
+    /**
+     * <p>
+     * The client token for the updated component.
+     * </p>
+     * 
+     * @param clientToken
+     *        The client token for the updated component.
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * The client token for the updated component.
+     * </p>
+     * 
+     * @return The client token for the updated component.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * The client token for the updated component.
+     * </p>
+     * 
+     * @param clientToken
+     *        The client token for the updated component.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateComponentRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
+        return this;
+    }
 
     /**
      * <p>
@@ -658,6 +704,8 @@ public class UpdateComponentRequest extends com.amazonaws.AmazonWebServiceReques
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getDeploymentType() != null)
             sb.append("DeploymentType: ").append(getDeploymentType()).append(",");
         if (getDescription() != null)
@@ -686,6 +734,10 @@ public class UpdateComponentRequest extends com.amazonaws.AmazonWebServiceReques
         if (obj instanceof UpdateComponentRequest == false)
             return false;
         UpdateComponentRequest other = (UpdateComponentRequest) obj;
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
+            return false;
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
         if (other.getDeploymentType() == null ^ this.getDeploymentType() == null)
             return false;
         if (other.getDeploymentType() != null && other.getDeploymentType().equals(this.getDeploymentType()) == false)
@@ -722,6 +774,7 @@ public class UpdateComponentRequest extends com.amazonaws.AmazonWebServiceReques
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getDeploymentType() == null) ? 0 : getDeploymentType().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());

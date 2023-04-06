@@ -60,6 +60,12 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
     private String environmentName;
     /**
      * <p>
+     * The last client request token received.
+     * </p>
+     */
+    private String lastClientRequestToken;
+    /**
+     * <p>
      * The time when a deployment of the service instance was last attempted.
      * </p>
      */
@@ -323,6 +329,46 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
 
     public ServiceInstance withEnvironmentName(String environmentName) {
         setEnvironmentName(environmentName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The last client request token received.
+     * </p>
+     * 
+     * @param lastClientRequestToken
+     *        The last client request token received.
+     */
+
+    public void setLastClientRequestToken(String lastClientRequestToken) {
+        this.lastClientRequestToken = lastClientRequestToken;
+    }
+
+    /**
+     * <p>
+     * The last client request token received.
+     * </p>
+     * 
+     * @return The last client request token received.
+     */
+
+    public String getLastClientRequestToken() {
+        return this.lastClientRequestToken;
+    }
+
+    /**
+     * <p>
+     * The last client request token received.
+     * </p>
+     * 
+     * @param lastClientRequestToken
+     *        The last client request token received.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ServiceInstance withLastClientRequestToken(String lastClientRequestToken) {
+        setLastClientRequestToken(lastClientRequestToken);
         return this;
     }
 
@@ -668,6 +714,8 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
             sb.append("DeploymentStatusMessage: ").append("***Sensitive Data Redacted***").append(",");
         if (getEnvironmentName() != null)
             sb.append("EnvironmentName: ").append(getEnvironmentName()).append(",");
+        if (getLastClientRequestToken() != null)
+            sb.append("LastClientRequestToken: ").append(getLastClientRequestToken()).append(",");
         if (getLastDeploymentAttemptedAt() != null)
             sb.append("LastDeploymentAttemptedAt: ").append(getLastDeploymentAttemptedAt()).append(",");
         if (getLastDeploymentSucceededAt() != null)
@@ -718,6 +766,10 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getEnvironmentName() != null && other.getEnvironmentName().equals(this.getEnvironmentName()) == false)
             return false;
+        if (other.getLastClientRequestToken() == null ^ this.getLastClientRequestToken() == null)
+            return false;
+        if (other.getLastClientRequestToken() != null && other.getLastClientRequestToken().equals(this.getLastClientRequestToken()) == false)
+            return false;
         if (other.getLastDeploymentAttemptedAt() == null ^ this.getLastDeploymentAttemptedAt() == null)
             return false;
         if (other.getLastDeploymentAttemptedAt() != null && other.getLastDeploymentAttemptedAt().equals(this.getLastDeploymentAttemptedAt()) == false)
@@ -763,6 +815,7 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getDeploymentStatus() == null) ? 0 : getDeploymentStatus().hashCode());
         hashCode = prime * hashCode + ((getDeploymentStatusMessage() == null) ? 0 : getDeploymentStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getEnvironmentName() == null) ? 0 : getEnvironmentName().hashCode());
+        hashCode = prime * hashCode + ((getLastClientRequestToken() == null) ? 0 : getLastClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getLastDeploymentAttemptedAt() == null) ? 0 : getLastDeploymentAttemptedAt().hashCode());
         hashCode = prime * hashCode + ((getLastDeploymentSucceededAt() == null) ? 0 : getLastDeploymentSucceededAt().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());

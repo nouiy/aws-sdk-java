@@ -39,6 +39,8 @@ public class ComponentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> ENVIRONMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("environmentName").build();
+    private static final MarshallingInfo<String> LASTCLIENTREQUESTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastClientRequestToken").build();
     private static final MarshallingInfo<java.util.Date> LASTDEPLOYMENTATTEMPTEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastDeploymentAttemptedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTDEPLOYMENTSUCCEEDEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -76,6 +78,7 @@ public class ComponentMarshaller {
             protocolMarshaller.marshall(component.getDeploymentStatusMessage(), DEPLOYMENTSTATUSMESSAGE_BINDING);
             protocolMarshaller.marshall(component.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(component.getEnvironmentName(), ENVIRONMENTNAME_BINDING);
+            protocolMarshaller.marshall(component.getLastClientRequestToken(), LASTCLIENTREQUESTTOKEN_BINDING);
             protocolMarshaller.marshall(component.getLastDeploymentAttemptedAt(), LASTDEPLOYMENTATTEMPTEDAT_BINDING);
             protocolMarshaller.marshall(component.getLastDeploymentSucceededAt(), LASTDEPLOYMENTSUCCEEDEDAT_BINDING);
             protocolMarshaller.marshall(component.getLastModifiedAt(), LASTMODIFIEDAT_BINDING);

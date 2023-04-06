@@ -52,6 +52,10 @@ public class RepositorySummaryJsonUnmarshaller implements Unmarshaller<Repositor
                     context.nextToken();
                     repositorySummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("connectionArn", targetDepth)) {
+                    context.nextToken();
+                    repositorySummary.setConnectionArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     repositorySummary.setName(context.getUnmarshaller(String.class).unmarshall(context));

@@ -1372,6 +1372,145 @@ public class AWSProtonClient extends AmazonWebServiceClient implements AWSProton
 
     /**
      * <p>
+     * Create a service instance.
+     * </p>
+     * 
+     * @param createServiceInstanceRequest
+     * @return Result of the CreateServiceInstance operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The request <i>couldn't</i> be made due to a conflicting operation or resource.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.CreateServiceInstance
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/CreateServiceInstance" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateServiceInstanceResult createServiceInstance(CreateServiceInstanceRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateServiceInstance(request);
+    }
+
+    @SdkInternalApi
+    final CreateServiceInstanceResult executeCreateServiceInstance(CreateServiceInstanceRequest createServiceInstanceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createServiceInstanceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateServiceInstanceRequest> request = null;
+        Response<CreateServiceInstanceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateServiceInstanceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createServiceInstanceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Proton");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateServiceInstance");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateServiceInstanceResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new CreateServiceInstanceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Create the Proton Ops configuration file.
+     * </p>
+     * 
+     * @param createServiceSyncConfigRequest
+     * @return Result of the CreateServiceSyncConfig operation returned by the service.
+     * @throws ServiceQuotaExceededException
+     *         A quota was exceeded. For more information, see <a
+     *         href="https://docs.aws.amazon.com/proton/latest/userguide/ag-limits.html">Proton Quotas</a> in the
+     *         <i>Proton User Guide</i>.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The request <i>couldn't</i> be made due to a conflicting operation or resource.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.CreateServiceSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/CreateServiceSyncConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateServiceSyncConfigResult createServiceSyncConfig(CreateServiceSyncConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateServiceSyncConfig(request);
+    }
+
+    @SdkInternalApi
+    final CreateServiceSyncConfigResult executeCreateServiceSyncConfig(CreateServiceSyncConfigRequest createServiceSyncConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createServiceSyncConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateServiceSyncConfigRequest> request = null;
+        Response<CreateServiceSyncConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateServiceSyncConfigRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createServiceSyncConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Proton");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateServiceSyncConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateServiceSyncConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateServiceSyncConfigResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Create a service template. The administrator creates a service template to define standardized infrastructure and
      * an optional CI/CD service pipeline. Developers, in turn, select the service template from Proton. If the selected
      * service template includes a service pipeline definition, they provide a link to their source code repository.
@@ -2101,6 +2240,75 @@ public class AWSProtonClient extends AmazonWebServiceClient implements AWSProton
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteServiceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteServiceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete the Proton Ops file.
+     * </p>
+     * 
+     * @param deleteServiceSyncConfigRequest
+     * @return Result of the DeleteServiceSyncConfig operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The request <i>couldn't</i> be made due to a conflicting operation or resource.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.DeleteServiceSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/DeleteServiceSyncConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteServiceSyncConfigResult deleteServiceSyncConfig(DeleteServiceSyncConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteServiceSyncConfig(request);
+    }
+
+    @SdkInternalApi
+    final DeleteServiceSyncConfigResult executeDeleteServiceSyncConfig(DeleteServiceSyncConfigRequest deleteServiceSyncConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteServiceSyncConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteServiceSyncConfigRequest> request = null;
+        Response<DeleteServiceSyncConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteServiceSyncConfigRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteServiceSyncConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Proton");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteServiceSyncConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteServiceSyncConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteServiceSyncConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2888,8 +3096,8 @@ public class AWSProtonClient extends AmazonWebServiceClient implements AWSProton
      * <p>
      * The action returns staleness counts (counts of resources that are up-to-date, behind a template major version, or
      * behind a template minor version), the total number of resources, and the number of resources that are in a failed
-     * state, grouped by resource type. Components, environments, and service templates are exceptions—see the
-     * <code>components</code>, <code>environments</code>, and <code>serviceTemplates</code> field descriptions.
+     * state, grouped by resource type. Components, environments, and service templates return less information - see
+     * the <code>components</code>, <code>environments</code>, and <code>serviceTemplates</code> field descriptions.
      * </p>
      * <p>
      * For context, the action also returns the total number of each type of Proton template in the Amazon Web Services
@@ -3080,6 +3288,205 @@ public class AWSProtonClient extends AmazonWebServiceClient implements AWSProton
 
             HttpResponseHandler<AmazonWebServiceResponse<GetServiceInstanceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetServiceInstanceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get the status of the synced service instance.
+     * </p>
+     * 
+     * @param getServiceInstanceSyncStatusRequest
+     * @return Result of the GetServiceInstanceSyncStatus operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.GetServiceInstanceSyncStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetServiceInstanceSyncStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetServiceInstanceSyncStatusResult getServiceInstanceSyncStatus(GetServiceInstanceSyncStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetServiceInstanceSyncStatus(request);
+    }
+
+    @SdkInternalApi
+    final GetServiceInstanceSyncStatusResult executeGetServiceInstanceSyncStatus(GetServiceInstanceSyncStatusRequest getServiceInstanceSyncStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getServiceInstanceSyncStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetServiceInstanceSyncStatusRequest> request = null;
+        Response<GetServiceInstanceSyncStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetServiceInstanceSyncStatusRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getServiceInstanceSyncStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Proton");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetServiceInstanceSyncStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetServiceInstanceSyncStatusResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetServiceInstanceSyncStatusResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get detailed data for the service sync blocker summary.
+     * </p>
+     * 
+     * @param getServiceSyncBlockerSummaryRequest
+     * @return Result of the GetServiceSyncBlockerSummary operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.GetServiceSyncBlockerSummary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetServiceSyncBlockerSummary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetServiceSyncBlockerSummaryResult getServiceSyncBlockerSummary(GetServiceSyncBlockerSummaryRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetServiceSyncBlockerSummary(request);
+    }
+
+    @SdkInternalApi
+    final GetServiceSyncBlockerSummaryResult executeGetServiceSyncBlockerSummary(GetServiceSyncBlockerSummaryRequest getServiceSyncBlockerSummaryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getServiceSyncBlockerSummaryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetServiceSyncBlockerSummaryRequest> request = null;
+        Response<GetServiceSyncBlockerSummaryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetServiceSyncBlockerSummaryRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getServiceSyncBlockerSummaryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Proton");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetServiceSyncBlockerSummary");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetServiceSyncBlockerSummaryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetServiceSyncBlockerSummaryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get detailed information for the service sync configuration.
+     * </p>
+     * 
+     * @param getServiceSyncConfigRequest
+     * @return Result of the GetServiceSyncConfig operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.GetServiceSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetServiceSyncConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetServiceSyncConfigResult getServiceSyncConfig(GetServiceSyncConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetServiceSyncConfig(request);
+    }
+
+    @SdkInternalApi
+    final GetServiceSyncConfigResult executeGetServiceSyncConfig(GetServiceSyncConfigRequest getServiceSyncConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getServiceSyncConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetServiceSyncConfigRequest> request = null;
+        Response<GetServiceSyncConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetServiceSyncConfigRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getServiceSyncConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Proton");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetServiceSyncConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetServiceSyncConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetServiceSyncConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -5791,6 +6198,144 @@ public class AWSProtonClient extends AmazonWebServiceClient implements AWSProton
             HttpResponseHandler<AmazonWebServiceResponse<UpdateServicePipelineResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new UpdateServicePipelineResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update the service sync blocker by resolving it.
+     * </p>
+     * 
+     * @param updateServiceSyncBlockerRequest
+     * @return Result of the UpdateServiceSyncBlocker operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The request <i>couldn't</i> be made due to a conflicting operation or resource.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.UpdateServiceSyncBlocker
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/UpdateServiceSyncBlocker"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateServiceSyncBlockerResult updateServiceSyncBlocker(UpdateServiceSyncBlockerRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateServiceSyncBlocker(request);
+    }
+
+    @SdkInternalApi
+    final UpdateServiceSyncBlockerResult executeUpdateServiceSyncBlocker(UpdateServiceSyncBlockerRequest updateServiceSyncBlockerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateServiceSyncBlockerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateServiceSyncBlockerRequest> request = null;
+        Response<UpdateServiceSyncBlockerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateServiceSyncBlockerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateServiceSyncBlockerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Proton");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateServiceSyncBlocker");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateServiceSyncBlockerResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateServiceSyncBlockerResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update the Proton Ops config file.
+     * </p>
+     * 
+     * @param updateServiceSyncConfigRequest
+     * @return Result of the UpdateServiceSyncConfig operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The request <i>couldn't</i> be made due to a conflicting operation or resource.
+     * @throws ResourceNotFoundException
+     *         The requested resource <i>wasn't</i> found.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.UpdateServiceSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/UpdateServiceSyncConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UpdateServiceSyncConfigResult updateServiceSyncConfig(UpdateServiceSyncConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateServiceSyncConfig(request);
+    }
+
+    @SdkInternalApi
+    final UpdateServiceSyncConfigResult executeUpdateServiceSyncConfig(UpdateServiceSyncConfigRequest updateServiceSyncConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateServiceSyncConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateServiceSyncConfigRequest> request = null;
+        Response<UpdateServiceSyncConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateServiceSyncConfigRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateServiceSyncConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Proton");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateServiceSyncConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateServiceSyncConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateServiceSyncConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

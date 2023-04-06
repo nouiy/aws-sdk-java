@@ -17,6 +17,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.proton.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -27,6 +29,9 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateServiceInstanceRequestMarshaller {
 
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<String> DEPLOYMENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deploymentType").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -56,6 +61,7 @@ public class UpdateServiceInstanceRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(updateServiceInstanceRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(updateServiceInstanceRequest.getDeploymentType(), DEPLOYMENTTYPE_BINDING);
             protocolMarshaller.marshall(updateServiceInstanceRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(updateServiceInstanceRequest.getServiceName(), SERVICENAME_BINDING);

@@ -89,6 +89,16 @@ public class AbstractAWSProton implements AWSProton {
     }
 
     @Override
+    public CreateServiceInstanceResult createServiceInstance(CreateServiceInstanceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateServiceSyncConfigResult createServiceSyncConfig(CreateServiceSyncConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateServiceTemplateResult createServiceTemplate(CreateServiceTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -135,6 +145,11 @@ public class AbstractAWSProton implements AWSProton {
 
     @Override
     public DeleteServiceResult deleteService(DeleteServiceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteServiceSyncConfigResult deleteServiceSyncConfig(DeleteServiceSyncConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -205,6 +220,21 @@ public class AbstractAWSProton implements AWSProton {
 
     @Override
     public GetServiceInstanceResult getServiceInstance(GetServiceInstanceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetServiceInstanceSyncStatusResult getServiceInstanceSyncStatus(GetServiceInstanceSyncStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetServiceSyncBlockerSummaryResult getServiceSyncBlockerSummary(GetServiceSyncBlockerSummaryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetServiceSyncConfigResult getServiceSyncConfig(GetServiceSyncConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -390,6 +420,16 @@ public class AbstractAWSProton implements AWSProton {
 
     @Override
     public UpdateServicePipelineResult updateServicePipeline(UpdateServicePipelineRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateServiceSyncBlockerResult updateServiceSyncBlocker(UpdateServiceSyncBlockerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateServiceSyncConfigResult updateServiceSyncConfig(UpdateServiceSyncConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

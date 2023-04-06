@@ -129,8 +129,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The linked repository that you use to host your rendered infrastructure templates for self-managed provisioning.
-     * A linked repository is a repository that has been registered with Proton. For more information, see
-     * <a>CreateRepository</a>.
+     * A linked repository is a repository that has been registered with Proton. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_CreateRepository.html">CreateRepository</a>.
      * </p>
      */
     private RepositoryBranch provisioningRepository;
@@ -842,14 +842,16 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The linked repository that you use to host your rendered infrastructure templates for self-managed provisioning.
-     * A linked repository is a repository that has been registered with Proton. For more information, see
-     * <a>CreateRepository</a>.
+     * A linked repository is a repository that has been registered with Proton. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_CreateRepository.html">CreateRepository</a>.
      * </p>
      * 
      * @param provisioningRepository
      *        The linked repository that you use to host your rendered infrastructure templates for self-managed
      *        provisioning. A linked repository is a repository that has been registered with Proton. For more
-     *        information, see <a>CreateRepository</a>.
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/proton/latest/APIReference/API_CreateRepository.html"
+     *        >CreateRepository</a>.
      */
 
     public void setProvisioningRepository(RepositoryBranch provisioningRepository) {
@@ -859,13 +861,15 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The linked repository that you use to host your rendered infrastructure templates for self-managed provisioning.
-     * A linked repository is a repository that has been registered with Proton. For more information, see
-     * <a>CreateRepository</a>.
+     * A linked repository is a repository that has been registered with Proton. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_CreateRepository.html">CreateRepository</a>.
      * </p>
      * 
      * @return The linked repository that you use to host your rendered infrastructure templates for self-managed
      *         provisioning. A linked repository is a repository that has been registered with Proton. For more
-     *         information, see <a>CreateRepository</a>.
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/proton/latest/APIReference/API_CreateRepository.html"
+     *         >CreateRepository</a>.
      */
 
     public RepositoryBranch getProvisioningRepository() {
@@ -875,14 +879,16 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The linked repository that you use to host your rendered infrastructure templates for self-managed provisioning.
-     * A linked repository is a repository that has been registered with Proton. For more information, see
-     * <a>CreateRepository</a>.
+     * A linked repository is a repository that has been registered with Proton. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_CreateRepository.html">CreateRepository</a>.
      * </p>
      * 
      * @param provisioningRepository
      *        The linked repository that you use to host your rendered infrastructure templates for self-managed
      *        provisioning. A linked repository is a repository that has been registered with Proton. For more
-     *        information, see <a>CreateRepository</a>.
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/proton/latest/APIReference/API_CreateRepository.html"
+     *        >CreateRepository</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

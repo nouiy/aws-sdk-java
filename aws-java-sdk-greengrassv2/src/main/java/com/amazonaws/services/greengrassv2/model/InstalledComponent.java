@@ -72,7 +72,7 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
     private java.util.Date lastStatusChangeTimestamp;
     /**
      * <p>
-     * The last time the Greengrass core device sent a message containing a certain component to the Amazon Web Services
+     * The last time the Greengrass core device sent a message containing a component's state to the Amazon Web Services
      * Cloud.
      * </p>
      * <p>
@@ -86,6 +86,12 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
      * deployment or thing deployment, the source will be the The ID of the deployment. and for local deployments it
      * will be <code>LOCAL</code>.
      * </p>
+     * <note>
+     * <p>
+     * Any deployment will attempt to reinstall currently broken components on the device, which will update the last
+     * installation source.
+     * </p>
+     * </note>
      */
     private String lastInstallationSource;
     /**
@@ -408,7 +414,7 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The last time the Greengrass core device sent a message containing a certain component to the Amazon Web Services
+     * The last time the Greengrass core device sent a message containing a component's state to the Amazon Web Services
      * Cloud.
      * </p>
      * <p>
@@ -416,7 +422,7 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param lastReportedTimestamp
-     *        The last time the Greengrass core device sent a message containing a certain component to the Amazon Web
+     *        The last time the Greengrass core device sent a message containing a component's state to the Amazon Web
      *        Services Cloud.</p>
      *        <p>
      *        A component does not need to see a state change for this field to update.
@@ -428,14 +434,14 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The last time the Greengrass core device sent a message containing a certain component to the Amazon Web Services
+     * The last time the Greengrass core device sent a message containing a component's state to the Amazon Web Services
      * Cloud.
      * </p>
      * <p>
      * A component does not need to see a state change for this field to update.
      * </p>
      * 
-     * @return The last time the Greengrass core device sent a message containing a certain component to the Amazon Web
+     * @return The last time the Greengrass core device sent a message containing a component's state to the Amazon Web
      *         Services Cloud.</p>
      *         <p>
      *         A component does not need to see a state change for this field to update.
@@ -447,7 +453,7 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The last time the Greengrass core device sent a message containing a certain component to the Amazon Web Services
+     * The last time the Greengrass core device sent a message containing a component's state to the Amazon Web Services
      * Cloud.
      * </p>
      * <p>
@@ -455,7 +461,7 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param lastReportedTimestamp
-     *        The last time the Greengrass core device sent a message containing a certain component to the Amazon Web
+     *        The last time the Greengrass core device sent a message containing a component's state to the Amazon Web
      *        Services Cloud.</p>
      *        <p>
      *        A component does not need to see a state change for this field to update.
@@ -473,11 +479,21 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
      * deployment or thing deployment, the source will be the The ID of the deployment. and for local deployments it
      * will be <code>LOCAL</code>.
      * </p>
+     * <note>
+     * <p>
+     * Any deployment will attempt to reinstall currently broken components on the device, which will update the last
+     * installation source.
+     * </p>
+     * </note>
      * 
      * @param lastInstallationSource
      *        The most recent deployment source that brought the component to the Greengrass core device. For a thing
      *        group deployment or thing deployment, the source will be the The ID of the deployment. and for local
-     *        deployments it will be <code>LOCAL</code>.
+     *        deployments it will be <code>LOCAL</code>.</p> <note>
+     *        <p>
+     *        Any deployment will attempt to reinstall currently broken components on the device, which will update the
+     *        last installation source.
+     *        </p>
      */
 
     public void setLastInstallationSource(String lastInstallationSource) {
@@ -490,10 +506,20 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
      * deployment or thing deployment, the source will be the The ID of the deployment. and for local deployments it
      * will be <code>LOCAL</code>.
      * </p>
+     * <note>
+     * <p>
+     * Any deployment will attempt to reinstall currently broken components on the device, which will update the last
+     * installation source.
+     * </p>
+     * </note>
      * 
      * @return The most recent deployment source that brought the component to the Greengrass core device. For a thing
      *         group deployment or thing deployment, the source will be the The ID of the deployment. and for local
-     *         deployments it will be <code>LOCAL</code>.
+     *         deployments it will be <code>LOCAL</code>.</p> <note>
+     *         <p>
+     *         Any deployment will attempt to reinstall currently broken components on the device, which will update the
+     *         last installation source.
+     *         </p>
      */
 
     public String getLastInstallationSource() {
@@ -506,11 +532,21 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
      * deployment or thing deployment, the source will be the The ID of the deployment. and for local deployments it
      * will be <code>LOCAL</code>.
      * </p>
+     * <note>
+     * <p>
+     * Any deployment will attempt to reinstall currently broken components on the device, which will update the last
+     * installation source.
+     * </p>
+     * </note>
      * 
      * @param lastInstallationSource
      *        The most recent deployment source that brought the component to the Greengrass core device. For a thing
      *        group deployment or thing deployment, the source will be the The ID of the deployment. and for local
-     *        deployments it will be <code>LOCAL</code>.
+     *        deployments it will be <code>LOCAL</code>.</p> <note>
+     *        <p>
+     *        Any deployment will attempt to reinstall currently broken components on the device, which will update the
+     *        last installation source.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

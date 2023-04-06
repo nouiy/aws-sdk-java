@@ -72,6 +72,10 @@ public class ComponentJsonUnmarshaller implements Unmarshaller<Component, JsonUn
                     context.nextToken();
                     component.setEnvironmentName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("lastClientRequestToken", targetDepth)) {
+                    context.nextToken();
+                    component.setLastClientRequestToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("lastDeploymentAttemptedAt", targetDepth)) {
                     context.nextToken();
                     component.setLastDeploymentAttemptedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

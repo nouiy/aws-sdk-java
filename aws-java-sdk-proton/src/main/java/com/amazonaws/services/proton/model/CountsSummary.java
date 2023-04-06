@@ -42,7 +42,8 @@ public class CountsSummary implements Serializable, Cloneable, StructuredPojo {
     private ResourceCountsSummary components;
     /**
      * <p>
-     * The total number of environment templates in the Amazon Web Services account.
+     * The total number of environment templates in the Amazon Web Services account. The
+     * <code>environmentTemplates</code> object will only contain <code>total</code> members.
      * </p>
      */
     private ResourceCountsSummary environmentTemplates;
@@ -154,11 +155,13 @@ public class CountsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The total number of environment templates in the Amazon Web Services account.
+     * The total number of environment templates in the Amazon Web Services account. The
+     * <code>environmentTemplates</code> object will only contain <code>total</code> members.
      * </p>
      * 
      * @param environmentTemplates
-     *        The total number of environment templates in the Amazon Web Services account.
+     *        The total number of environment templates in the Amazon Web Services account. The
+     *        <code>environmentTemplates</code> object will only contain <code>total</code> members.
      */
 
     public void setEnvironmentTemplates(ResourceCountsSummary environmentTemplates) {
@@ -167,10 +170,12 @@ public class CountsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The total number of environment templates in the Amazon Web Services account.
+     * The total number of environment templates in the Amazon Web Services account. The
+     * <code>environmentTemplates</code> object will only contain <code>total</code> members.
      * </p>
      * 
-     * @return The total number of environment templates in the Amazon Web Services account.
+     * @return The total number of environment templates in the Amazon Web Services account. The
+     *         <code>environmentTemplates</code> object will only contain <code>total</code> members.
      */
 
     public ResourceCountsSummary getEnvironmentTemplates() {
@@ -179,11 +184,13 @@ public class CountsSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The total number of environment templates in the Amazon Web Services account.
+     * The total number of environment templates in the Amazon Web Services account. The
+     * <code>environmentTemplates</code> object will only contain <code>total</code> members.
      * </p>
      * 
      * @param environmentTemplates
-     *        The total number of environment templates in the Amazon Web Services account.
+     *        The total number of environment templates in the Amazon Web Services account. The
+     *        <code>environmentTemplates</code> object will only contain <code>total</code> members.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

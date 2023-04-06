@@ -242,12 +242,6 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * Can only be specified if the source DB instance identifier specifies a DB instance in another Amazon Web Services
-     * Region.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * </li>
@@ -2270,12 +2264,6 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * Can only be specified if the source DB instance identifier specifies a DB instance in another Amazon Web Services
-     * Region.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * </li>
@@ -2315,12 +2303,6 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        Constraints:
      *        </p>
      *        <ul>
-     *        <li>
-     *        <p>
-     *        Can only be specified if the source DB instance identifier specifies a DB instance in another Amazon Web
-     *        Services Region.
-     *        </p>
-     *        </li>
      *        <li>
      *        <p>
      *        If supplied, must match the name of an existing DBSubnetGroup.
@@ -2370,12 +2352,6 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * Can only be specified if the source DB instance identifier specifies a DB instance in another Amazon Web Services
-     * Region.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * </li>
@@ -2414,12 +2390,6 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *         Constraints:
      *         </p>
      *         <ul>
-     *         <li>
-     *         <p>
-     *         Can only be specified if the source DB instance identifier specifies a DB instance in another Amazon Web
-     *         Services Region.
-     *         </p>
-     *         </li>
      *         <li>
      *         <p>
      *         If supplied, must match the name of an existing DBSubnetGroup.
@@ -2469,12 +2439,6 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * Can only be specified if the source DB instance identifier specifies a DB instance in another Amazon Web Services
-     * Region.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * </li>
@@ -2514,12 +2478,6 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        Constraints:
      *        </p>
      *        <ul>
-     *        <li>
-     *        <p>
-     *        Can only be specified if the source DB instance identifier specifies a DB instance in another Amazon Web
-     *        Services Region.
-     *        </p>
-     *        </li>
      *        <li>
      *        <p>
      *        If supplied, must match the name of an existing DBSubnetGroup.

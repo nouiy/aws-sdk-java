@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum SyncType {
 
-    TEMPLATE_SYNC("TEMPLATE_SYNC");
+    TEMPLATE_SYNC("TEMPLATE_SYNC"),
+    SERVICE_SYNC("SERVICE_SYNC");
 
     private String value;
 

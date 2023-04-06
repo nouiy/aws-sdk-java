@@ -27,7 +27,8 @@ public class DeleteCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The database engine. The only supported engine is <code>custom-oracle-ee</code>.
+     * The database engine. The only supported engines are <code>custom-oracle-ee</code> and
+     * <code>custom-oracle-ee-cdb</code>.
      * </p>
      */
     private String engine;
@@ -42,11 +43,13 @@ public class DeleteCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The database engine. The only supported engine is <code>custom-oracle-ee</code>.
+     * The database engine. The only supported engines are <code>custom-oracle-ee</code> and
+     * <code>custom-oracle-ee-cdb</code>.
      * </p>
      * 
      * @param engine
-     *        The database engine. The only supported engine is <code>custom-oracle-ee</code>.
+     *        The database engine. The only supported engines are <code>custom-oracle-ee</code> and
+     *        <code>custom-oracle-ee-cdb</code>.
      */
 
     public void setEngine(String engine) {
@@ -55,10 +58,12 @@ public class DeleteCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The database engine. The only supported engine is <code>custom-oracle-ee</code>.
+     * The database engine. The only supported engines are <code>custom-oracle-ee</code> and
+     * <code>custom-oracle-ee-cdb</code>.
      * </p>
      * 
-     * @return The database engine. The only supported engine is <code>custom-oracle-ee</code>.
+     * @return The database engine. The only supported engines are <code>custom-oracle-ee</code> and
+     *         <code>custom-oracle-ee-cdb</code>.
      */
 
     public String getEngine() {
@@ -67,11 +72,13 @@ public class DeleteCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The database engine. The only supported engine is <code>custom-oracle-ee</code>.
+     * The database engine. The only supported engines are <code>custom-oracle-ee</code> and
+     * <code>custom-oracle-ee-cdb</code>.
      * </p>
      * 
      * @param engine
-     *        The database engine. The only supported engine is <code>custom-oracle-ee</code>.
+     *        The database engine. The only supported engines are <code>custom-oracle-ee</code> and
+     *        <code>custom-oracle-ee-cdb</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

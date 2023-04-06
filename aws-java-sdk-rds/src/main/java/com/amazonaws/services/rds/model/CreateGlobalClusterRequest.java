@@ -27,7 +27,7 @@ public class CreateGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The cluster identifier of the new global database cluster.
+     * The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
      * </p>
      */
     private String globalClusterIdentifier;
@@ -72,11 +72,11 @@ public class CreateGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The cluster identifier of the new global database cluster.
+     * The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
      * </p>
      * 
      * @param globalClusterIdentifier
-     *        The cluster identifier of the new global database cluster.
+     *        The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
      */
 
     public void setGlobalClusterIdentifier(String globalClusterIdentifier) {
@@ -85,10 +85,11 @@ public class CreateGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The cluster identifier of the new global database cluster.
+     * The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
      * </p>
      * 
-     * @return The cluster identifier of the new global database cluster.
+     * @return The cluster identifier of the new global database cluster. This parameter is stored as a lowercase
+     *         string.
      */
 
     public String getGlobalClusterIdentifier() {
@@ -97,11 +98,11 @@ public class CreateGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The cluster identifier of the new global database cluster.
+     * The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
      * </p>
      * 
      * @param globalClusterIdentifier
-     *        The cluster identifier of the new global database cluster.
+     *        The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
