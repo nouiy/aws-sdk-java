@@ -42,6 +42,19 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
     private DataflowEndpoint endpoint;
     /**
      * <p>
+     * Health reasons for a dataflow endpoint. This field is ignored when calling
+     * <code>CreateDataflowEndpointGroup</code>.
+     * </p>
+     */
+    private java.util.List<String> healthReasons;
+    /**
+     * <p>
+     * A dataflow endpoint health status. This field is ignored when calling <code>CreateDataflowEndpointGroup</code>.
+     * </p>
+     */
+    private String healthStatus;
+    /**
+     * <p>
      * Endpoint security details including a list of subnets, a list of security groups and a role to connect streams to
      * instances.
      * </p>
@@ -130,6 +143,177 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
+     * Health reasons for a dataflow endpoint. This field is ignored when calling
+     * <code>CreateDataflowEndpointGroup</code>.
+     * </p>
+     * 
+     * @return Health reasons for a dataflow endpoint. This field is ignored when calling
+     *         <code>CreateDataflowEndpointGroup</code>.
+     * @see CapabilityHealthReason
+     */
+
+    public java.util.List<String> getHealthReasons() {
+        return healthReasons;
+    }
+
+    /**
+     * <p>
+     * Health reasons for a dataflow endpoint. This field is ignored when calling
+     * <code>CreateDataflowEndpointGroup</code>.
+     * </p>
+     * 
+     * @param healthReasons
+     *        Health reasons for a dataflow endpoint. This field is ignored when calling
+     *        <code>CreateDataflowEndpointGroup</code>.
+     * @see CapabilityHealthReason
+     */
+
+    public void setHealthReasons(java.util.Collection<String> healthReasons) {
+        if (healthReasons == null) {
+            this.healthReasons = null;
+            return;
+        }
+
+        this.healthReasons = new java.util.ArrayList<String>(healthReasons);
+    }
+
+    /**
+     * <p>
+     * Health reasons for a dataflow endpoint. This field is ignored when calling
+     * <code>CreateDataflowEndpointGroup</code>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setHealthReasons(java.util.Collection)} or {@link #withHealthReasons(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param healthReasons
+     *        Health reasons for a dataflow endpoint. This field is ignored when calling
+     *        <code>CreateDataflowEndpointGroup</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CapabilityHealthReason
+     */
+
+    public EndpointDetails withHealthReasons(String... healthReasons) {
+        if (this.healthReasons == null) {
+            setHealthReasons(new java.util.ArrayList<String>(healthReasons.length));
+        }
+        for (String ele : healthReasons) {
+            this.healthReasons.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Health reasons for a dataflow endpoint. This field is ignored when calling
+     * <code>CreateDataflowEndpointGroup</code>.
+     * </p>
+     * 
+     * @param healthReasons
+     *        Health reasons for a dataflow endpoint. This field is ignored when calling
+     *        <code>CreateDataflowEndpointGroup</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CapabilityHealthReason
+     */
+
+    public EndpointDetails withHealthReasons(java.util.Collection<String> healthReasons) {
+        setHealthReasons(healthReasons);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Health reasons for a dataflow endpoint. This field is ignored when calling
+     * <code>CreateDataflowEndpointGroup</code>.
+     * </p>
+     * 
+     * @param healthReasons
+     *        Health reasons for a dataflow endpoint. This field is ignored when calling
+     *        <code>CreateDataflowEndpointGroup</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CapabilityHealthReason
+     */
+
+    public EndpointDetails withHealthReasons(CapabilityHealthReason... healthReasons) {
+        java.util.ArrayList<String> healthReasonsCopy = new java.util.ArrayList<String>(healthReasons.length);
+        for (CapabilityHealthReason value : healthReasons) {
+            healthReasonsCopy.add(value.toString());
+        }
+        if (getHealthReasons() == null) {
+            setHealthReasons(healthReasonsCopy);
+        } else {
+            getHealthReasons().addAll(healthReasonsCopy);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A dataflow endpoint health status. This field is ignored when calling <code>CreateDataflowEndpointGroup</code>.
+     * </p>
+     * 
+     * @param healthStatus
+     *        A dataflow endpoint health status. This field is ignored when calling
+     *        <code>CreateDataflowEndpointGroup</code>.
+     * @see CapabilityHealth
+     */
+
+    public void setHealthStatus(String healthStatus) {
+        this.healthStatus = healthStatus;
+    }
+
+    /**
+     * <p>
+     * A dataflow endpoint health status. This field is ignored when calling <code>CreateDataflowEndpointGroup</code>.
+     * </p>
+     * 
+     * @return A dataflow endpoint health status. This field is ignored when calling
+     *         <code>CreateDataflowEndpointGroup</code>.
+     * @see CapabilityHealth
+     */
+
+    public String getHealthStatus() {
+        return this.healthStatus;
+    }
+
+    /**
+     * <p>
+     * A dataflow endpoint health status. This field is ignored when calling <code>CreateDataflowEndpointGroup</code>.
+     * </p>
+     * 
+     * @param healthStatus
+     *        A dataflow endpoint health status. This field is ignored when calling
+     *        <code>CreateDataflowEndpointGroup</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CapabilityHealth
+     */
+
+    public EndpointDetails withHealthStatus(String healthStatus) {
+        setHealthStatus(healthStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A dataflow endpoint health status. This field is ignored when calling <code>CreateDataflowEndpointGroup</code>.
+     * </p>
+     * 
+     * @param healthStatus
+     *        A dataflow endpoint health status. This field is ignored when calling
+     *        <code>CreateDataflowEndpointGroup</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CapabilityHealth
+     */
+
+    public EndpointDetails withHealthStatus(CapabilityHealth healthStatus) {
+        this.healthStatus = healthStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * Endpoint security details including a list of subnets, a list of security groups and a role to connect streams to
      * instances.
      * </p>
@@ -190,6 +374,10 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
             sb.append("AwsGroundStationAgentEndpoint: ").append(getAwsGroundStationAgentEndpoint()).append(",");
         if (getEndpoint() != null)
             sb.append("Endpoint: ").append(getEndpoint()).append(",");
+        if (getHealthReasons() != null)
+            sb.append("HealthReasons: ").append(getHealthReasons()).append(",");
+        if (getHealthStatus() != null)
+            sb.append("HealthStatus: ").append(getHealthStatus()).append(",");
         if (getSecurityDetails() != null)
             sb.append("SecurityDetails: ").append(getSecurityDetails());
         sb.append("}");
@@ -215,6 +403,14 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getEndpoint() != null && other.getEndpoint().equals(this.getEndpoint()) == false)
             return false;
+        if (other.getHealthReasons() == null ^ this.getHealthReasons() == null)
+            return false;
+        if (other.getHealthReasons() != null && other.getHealthReasons().equals(this.getHealthReasons()) == false)
+            return false;
+        if (other.getHealthStatus() == null ^ this.getHealthStatus() == null)
+            return false;
+        if (other.getHealthStatus() != null && other.getHealthStatus().equals(this.getHealthStatus()) == false)
+            return false;
         if (other.getSecurityDetails() == null ^ this.getSecurityDetails() == null)
             return false;
         if (other.getSecurityDetails() != null && other.getSecurityDetails().equals(this.getSecurityDetails()) == false)
@@ -229,6 +425,8 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
 
         hashCode = prime * hashCode + ((getAwsGroundStationAgentEndpoint() == null) ? 0 : getAwsGroundStationAgentEndpoint().hashCode());
         hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());
+        hashCode = prime * hashCode + ((getHealthReasons() == null) ? 0 : getHealthReasons().hashCode());
+        hashCode = prime * hashCode + ((getHealthStatus() == null) ? 0 : getHealthStatus().hashCode());
         hashCode = prime * hashCode + ((getSecurityDetails() == null) ? 0 : getSecurityDetails().hashCode());
         return hashCode;
     }

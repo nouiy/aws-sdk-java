@@ -1,3 +1,12 @@
+# __1.12.448__ __2023-04-12__
+## __AWS Ground Station__
+  - ### Features
+    - AWS Ground Station Wideband DigIF GA Release
+
+## __Amazon Managed Blockchain__
+  - ### Features
+    - Removal of the Ropsten network. The Ethereum foundation ceased support of Ropsten on December 31st, 2022..
+
 # __1.12.447__ __2023-04-11__
 ## __AWS IoT__
   - ### Features

@@ -30,6 +30,12 @@ public class AgentDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * List of CPU cores reserved for the agent.
+     * </p>
+     */
+    private java.util.List<Integer> agentCpuCores;
+    /**
+     * <p>
      * Current agent version.
      * </p>
      */
@@ -53,11 +59,86 @@ public class AgentDetails implements Serializable, Cloneable, StructuredPojo {
      */
     private String instanceType;
     /**
+     * <note>
      * <p>
-     * Number of Cpu cores reserved for agent.
+     * This field should not be used. Use agentCpuCores instead.
+     * </p>
+     * </note>
+     * <p>
+     * List of CPU cores reserved for processes other than the agent running on the EC2 instance.
      * </p>
      */
     private java.util.List<Integer> reservedCpuCores;
+
+    /**
+     * <p>
+     * List of CPU cores reserved for the agent.
+     * </p>
+     * 
+     * @return List of CPU cores reserved for the agent.
+     */
+
+    public java.util.List<Integer> getAgentCpuCores() {
+        return agentCpuCores;
+    }
+
+    /**
+     * <p>
+     * List of CPU cores reserved for the agent.
+     * </p>
+     * 
+     * @param agentCpuCores
+     *        List of CPU cores reserved for the agent.
+     */
+
+    public void setAgentCpuCores(java.util.Collection<Integer> agentCpuCores) {
+        if (agentCpuCores == null) {
+            this.agentCpuCores = null;
+            return;
+        }
+
+        this.agentCpuCores = new java.util.ArrayList<Integer>(agentCpuCores);
+    }
+
+    /**
+     * <p>
+     * List of CPU cores reserved for the agent.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAgentCpuCores(java.util.Collection)} or {@link #withAgentCpuCores(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param agentCpuCores
+     *        List of CPU cores reserved for the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentDetails withAgentCpuCores(Integer... agentCpuCores) {
+        if (this.agentCpuCores == null) {
+            setAgentCpuCores(new java.util.ArrayList<Integer>(agentCpuCores.length));
+        }
+        for (Integer ele : agentCpuCores) {
+            this.agentCpuCores.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * List of CPU cores reserved for the agent.
+     * </p>
+     * 
+     * @param agentCpuCores
+     *        List of CPU cores reserved for the agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentDetails withAgentCpuCores(java.util.Collection<Integer> agentCpuCores) {
+        setAgentCpuCores(agentCpuCores);
+        return this;
+    }
 
     /**
      * <p>
@@ -250,11 +331,21 @@ public class AgentDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <note>
      * <p>
-     * Number of Cpu cores reserved for agent.
+     * This field should not be used. Use agentCpuCores instead.
+     * </p>
+     * </note>
+     * <p>
+     * List of CPU cores reserved for processes other than the agent running on the EC2 instance.
      * </p>
      * 
-     * @return Number of Cpu cores reserved for agent.
+     * @return <p>
+     *         This field should not be used. Use agentCpuCores instead.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         List of CPU cores reserved for processes other than the agent running on the EC2 instance.
      */
 
     public java.util.List<Integer> getReservedCpuCores() {
@@ -262,12 +353,22 @@ public class AgentDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <note>
      * <p>
-     * Number of Cpu cores reserved for agent.
+     * This field should not be used. Use agentCpuCores instead.
+     * </p>
+     * </note>
+     * <p>
+     * List of CPU cores reserved for processes other than the agent running on the EC2 instance.
      * </p>
      * 
      * @param reservedCpuCores
-     *        Number of Cpu cores reserved for agent.
+     *        <p>
+     *        This field should not be used. Use agentCpuCores instead.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        List of CPU cores reserved for processes other than the agent running on the EC2 instance.
      */
 
     public void setReservedCpuCores(java.util.Collection<Integer> reservedCpuCores) {
@@ -280,8 +381,13 @@ public class AgentDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <note>
      * <p>
-     * Number of Cpu cores reserved for agent.
+     * This field should not be used. Use agentCpuCores instead.
+     * </p>
+     * </note>
+     * <p>
+     * List of CPU cores reserved for processes other than the agent running on the EC2 instance.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -290,7 +396,12 @@ public class AgentDetails implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param reservedCpuCores
-     *        Number of Cpu cores reserved for agent.
+     *        <p>
+     *        This field should not be used. Use agentCpuCores instead.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        List of CPU cores reserved for processes other than the agent running on the EC2 instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -305,12 +416,22 @@ public class AgentDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <note>
      * <p>
-     * Number of Cpu cores reserved for agent.
+     * This field should not be used. Use agentCpuCores instead.
+     * </p>
+     * </note>
+     * <p>
+     * List of CPU cores reserved for processes other than the agent running on the EC2 instance.
      * </p>
      * 
      * @param reservedCpuCores
-     *        Number of Cpu cores reserved for agent.
+     *        <p>
+     *        This field should not be used. Use agentCpuCores instead.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        List of CPU cores reserved for processes other than the agent running on the EC2 instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -331,6 +452,8 @@ public class AgentDetails implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAgentCpuCores() != null)
+            sb.append("AgentCpuCores: ").append(getAgentCpuCores()).append(",");
         if (getAgentVersion() != null)
             sb.append("AgentVersion: ").append(getAgentVersion()).append(",");
         if (getComponentVersions() != null)
@@ -355,6 +478,10 @@ public class AgentDetails implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof AgentDetails == false)
             return false;
         AgentDetails other = (AgentDetails) obj;
+        if (other.getAgentCpuCores() == null ^ this.getAgentCpuCores() == null)
+            return false;
+        if (other.getAgentCpuCores() != null && other.getAgentCpuCores().equals(this.getAgentCpuCores()) == false)
+            return false;
         if (other.getAgentVersion() == null ^ this.getAgentVersion() == null)
             return false;
         if (other.getAgentVersion() != null && other.getAgentVersion().equals(this.getAgentVersion()) == false)
@@ -383,6 +510,7 @@ public class AgentDetails implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAgentCpuCores() == null) ? 0 : getAgentCpuCores().hashCode());
         hashCode = prime * hashCode + ((getAgentVersion() == null) ? 0 : getAgentVersion().hashCode());
         hashCode = prime * hashCode + ((getComponentVersions() == null) ? 0 : getComponentVersions().hashCode());
         hashCode = prime * hashCode + ((getInstanceId() == null) ? 0 : getInstanceId().hashCode());

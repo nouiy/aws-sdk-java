@@ -836,6 +836,11 @@ public class AWSGroundStationClient extends AmazonWebServiceClient implements AW
     }
 
     /**
+     * <note>
+     * <p>
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
      * <p>
      * Gets the latest configuration information for a registered agent.
      * </p>
@@ -1702,8 +1707,13 @@ public class AWSGroundStationClient extends AmazonWebServiceClient implements AW
     }
 
     /**
+     * <note>
      * <p>
-     * Registers a new agent with AWS Groundstation.
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
+     * <p>
+     * Registers a new agent with AWS Ground Station.
      * </p>
      * 
      * @param registerAgentRequest
@@ -1946,6 +1956,11 @@ public class AWSGroundStationClient extends AmazonWebServiceClient implements AW
     }
 
     /**
+     * <note>
+     * <p>
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
      * <p>
      * Update the status of the agent.
      * </p>

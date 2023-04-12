@@ -40,7 +40,7 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     * Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      * </p>
      * </note>
      */
@@ -133,14 +133,14 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     * Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      * </p>
      * </note>
      * 
      * @param type
      *        The type of the accessor.</p> <note>
      *        <p>
-     *        Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     *        Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      *        </p>
      * @see AccessorType
      */
@@ -155,13 +155,13 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     * Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      * </p>
      * </note>
      * 
      * @return The type of the accessor.</p> <note>
      *         <p>
-     *         Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     *         Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      *         </p>
      * @see AccessorType
      */
@@ -176,14 +176,14 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     * Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      * </p>
      * </note>
      * 
      * @param type
      *        The type of the accessor.</p> <note>
      *        <p>
-     *        Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     *        Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccessorType
@@ -200,14 +200,14 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     * Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      * </p>
      * </note>
      * 
      * @param type
      *        The type of the accessor.</p> <note>
      *        <p>
-     *        Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     *        Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccessorType

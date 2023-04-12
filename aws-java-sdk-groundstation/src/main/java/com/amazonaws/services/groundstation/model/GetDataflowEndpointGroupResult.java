@@ -26,15 +26,17 @@ public class GetDataflowEndpointGroupResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Amount of time, in seconds, after a contact ends for the contact to remain in a <code>POSTPASS</code> state. A
-     * CloudWatch event is emitted when the contact enters and exits the <code>POSTPASS</code> state.
+     * Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint Group will be in a
+     * <code>POSTPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the
+     * Dataflow Endpoint Group enters and exits the <code>POSTPASS</code> state.
      * </p>
      */
     private Integer contactPostPassDurationSeconds;
     /**
      * <p>
-     * Amount of time, in seconds, prior to contact start for the contact to remain in a <code>PREPASS</code> state. A
-     * CloudWatch event is emitted when the contact enters and exits the <code>PREPASS</code> state.
+     * Amount of time, in seconds, before a contact starts that the Ground Station Dataflow Endpoint Group will be in a
+     * <code>PREPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the
+     * Dataflow Endpoint Group enters and exits the <code>PREPASS</code> state.
      * </p>
      */
     private Integer contactPrePassDurationSeconds;
@@ -65,13 +67,15 @@ public class GetDataflowEndpointGroupResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Amount of time, in seconds, after a contact ends for the contact to remain in a <code>POSTPASS</code> state. A
-     * CloudWatch event is emitted when the contact enters and exits the <code>POSTPASS</code> state.
+     * Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint Group will be in a
+     * <code>POSTPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the
+     * Dataflow Endpoint Group enters and exits the <code>POSTPASS</code> state.
      * </p>
      * 
      * @param contactPostPassDurationSeconds
-     *        Amount of time, in seconds, after a contact ends for the contact to remain in a <code>POSTPASS</code>
-     *        state. A CloudWatch event is emitted when the contact enters and exits the <code>POSTPASS</code> state.
+     *        Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint Group will be
+     *        in a <code>POSTPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be
+     *        emitted when the Dataflow Endpoint Group enters and exits the <code>POSTPASS</code> state.
      */
 
     public void setContactPostPassDurationSeconds(Integer contactPostPassDurationSeconds) {
@@ -80,12 +84,14 @@ public class GetDataflowEndpointGroupResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Amount of time, in seconds, after a contact ends for the contact to remain in a <code>POSTPASS</code> state. A
-     * CloudWatch event is emitted when the contact enters and exits the <code>POSTPASS</code> state.
+     * Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint Group will be in a
+     * <code>POSTPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the
+     * Dataflow Endpoint Group enters and exits the <code>POSTPASS</code> state.
      * </p>
      * 
-     * @return Amount of time, in seconds, after a contact ends for the contact to remain in a <code>POSTPASS</code>
-     *         state. A CloudWatch event is emitted when the contact enters and exits the <code>POSTPASS</code> state.
+     * @return Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint Group will be
+     *         in a <code>POSTPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be
+     *         emitted when the Dataflow Endpoint Group enters and exits the <code>POSTPASS</code> state.
      */
 
     public Integer getContactPostPassDurationSeconds() {
@@ -94,13 +100,15 @@ public class GetDataflowEndpointGroupResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Amount of time, in seconds, after a contact ends for the contact to remain in a <code>POSTPASS</code> state. A
-     * CloudWatch event is emitted when the contact enters and exits the <code>POSTPASS</code> state.
+     * Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint Group will be in a
+     * <code>POSTPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the
+     * Dataflow Endpoint Group enters and exits the <code>POSTPASS</code> state.
      * </p>
      * 
      * @param contactPostPassDurationSeconds
-     *        Amount of time, in seconds, after a contact ends for the contact to remain in a <code>POSTPASS</code>
-     *        state. A CloudWatch event is emitted when the contact enters and exits the <code>POSTPASS</code> state.
+     *        Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint Group will be
+     *        in a <code>POSTPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be
+     *        emitted when the Dataflow Endpoint Group enters and exits the <code>POSTPASS</code> state.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,13 +119,15 @@ public class GetDataflowEndpointGroupResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Amount of time, in seconds, prior to contact start for the contact to remain in a <code>PREPASS</code> state. A
-     * CloudWatch event is emitted when the contact enters and exits the <code>PREPASS</code> state.
+     * Amount of time, in seconds, before a contact starts that the Ground Station Dataflow Endpoint Group will be in a
+     * <code>PREPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the
+     * Dataflow Endpoint Group enters and exits the <code>PREPASS</code> state.
      * </p>
      * 
      * @param contactPrePassDurationSeconds
-     *        Amount of time, in seconds, prior to contact start for the contact to remain in a <code>PREPASS</code>
-     *        state. A CloudWatch event is emitted when the contact enters and exits the <code>PREPASS</code> state.
+     *        Amount of time, in seconds, before a contact starts that the Ground Station Dataflow Endpoint Group will
+     *        be in a <code>PREPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be
+     *        emitted when the Dataflow Endpoint Group enters and exits the <code>PREPASS</code> state.
      */
 
     public void setContactPrePassDurationSeconds(Integer contactPrePassDurationSeconds) {
@@ -126,12 +136,14 @@ public class GetDataflowEndpointGroupResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Amount of time, in seconds, prior to contact start for the contact to remain in a <code>PREPASS</code> state. A
-     * CloudWatch event is emitted when the contact enters and exits the <code>PREPASS</code> state.
+     * Amount of time, in seconds, before a contact starts that the Ground Station Dataflow Endpoint Group will be in a
+     * <code>PREPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the
+     * Dataflow Endpoint Group enters and exits the <code>PREPASS</code> state.
      * </p>
      * 
-     * @return Amount of time, in seconds, prior to contact start for the contact to remain in a <code>PREPASS</code>
-     *         state. A CloudWatch event is emitted when the contact enters and exits the <code>PREPASS</code> state.
+     * @return Amount of time, in seconds, before a contact starts that the Ground Station Dataflow Endpoint Group will
+     *         be in a <code>PREPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be
+     *         emitted when the Dataflow Endpoint Group enters and exits the <code>PREPASS</code> state.
      */
 
     public Integer getContactPrePassDurationSeconds() {
@@ -140,13 +152,15 @@ public class GetDataflowEndpointGroupResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Amount of time, in seconds, prior to contact start for the contact to remain in a <code>PREPASS</code> state. A
-     * CloudWatch event is emitted when the contact enters and exits the <code>PREPASS</code> state.
+     * Amount of time, in seconds, before a contact starts that the Ground Station Dataflow Endpoint Group will be in a
+     * <code>PREPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the
+     * Dataflow Endpoint Group enters and exits the <code>PREPASS</code> state.
      * </p>
      * 
      * @param contactPrePassDurationSeconds
-     *        Amount of time, in seconds, prior to contact start for the contact to remain in a <code>PREPASS</code>
-     *        state. A CloudWatch event is emitted when the contact enters and exits the <code>PREPASS</code> state.
+     *        Amount of time, in seconds, before a contact starts that the Ground Station Dataflow Endpoint Group will
+     *        be in a <code>PREPASS</code> state. A Ground Station Dataflow Endpoint Group State Change event will be
+     *        emitted when the Dataflow Endpoint Group enters and exits the <code>PREPASS</code> state.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

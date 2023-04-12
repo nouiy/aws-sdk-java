@@ -56,6 +56,16 @@ public class EndpointDetailsJsonUnmarshaller implements Unmarshaller<EndpointDet
                     context.nextToken();
                     endpointDetails.setEndpoint(DataflowEndpointJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("healthReasons", targetDepth)) {
+                    context.nextToken();
+                    endpointDetails.setHealthReasons(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("healthStatus", targetDepth)) {
+                    context.nextToken();
+                    endpointDetails.setHealthStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("securityDetails", targetDepth)) {
                     context.nextToken();
                     endpointDetails.setSecurityDetails(SecurityDetailsJsonUnmarshaller.getInstance().unmarshall(context));

@@ -33,7 +33,7 @@ public class RegisterAgentRequest extends com.amazonaws.AmazonWebServiceRequest 
     private AgentDetails agentDetails;
     /**
      * <p>
-     * Data for associating and agent with the capabilities it is managing.
+     * Data for associating an agent with the capabilities it is managing.
      * </p>
      */
     private DiscoveryData discoveryData;
@@ -80,11 +80,11 @@ public class RegisterAgentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Data for associating and agent with the capabilities it is managing.
+     * Data for associating an agent with the capabilities it is managing.
      * </p>
      * 
      * @param discoveryData
-     *        Data for associating and agent with the capabilities it is managing.
+     *        Data for associating an agent with the capabilities it is managing.
      */
 
     public void setDiscoveryData(DiscoveryData discoveryData) {
@@ -93,10 +93,10 @@ public class RegisterAgentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Data for associating and agent with the capabilities it is managing.
+     * Data for associating an agent with the capabilities it is managing.
      * </p>
      * 
-     * @return Data for associating and agent with the capabilities it is managing.
+     * @return Data for associating an agent with the capabilities it is managing.
      */
 
     public DiscoveryData getDiscoveryData() {
@@ -105,11 +105,11 @@ public class RegisterAgentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Data for associating and agent with the capabilities it is managing.
+     * Data for associating an agent with the capabilities it is managing.
      * </p>
      * 
      * @param discoveryData
-     *        Data for associating and agent with the capabilities it is managing.
+     *        Data for associating an agent with the capabilities it is managing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

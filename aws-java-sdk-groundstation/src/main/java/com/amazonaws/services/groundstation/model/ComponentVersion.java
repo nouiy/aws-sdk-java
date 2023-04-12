@@ -48,7 +48,6 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
      * 
      * @param componentType
      *        Component type.
-     * @see ComponentType
      */
 
     public void setComponentType(String componentType) {
@@ -61,7 +60,6 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @return Component type.
-     * @see ComponentType
      */
 
     public String getComponentType() {
@@ -76,27 +74,10 @@ public class ComponentVersion implements Serializable, Cloneable, StructuredPojo
      * @param componentType
      *        Component type.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ComponentType
      */
 
     public ComponentVersion withComponentType(String componentType) {
         setComponentType(componentType);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Component type.
-     * </p>
-     * 
-     * @param componentType
-     *        Component type.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ComponentType
-     */
-
-    public ComponentVersion withComponentType(ComponentType componentType) {
-        this.componentType = componentType.toString();
         return this;
     }
 

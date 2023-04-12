@@ -40,7 +40,7 @@ public class CreateAccessorRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <note>
      * <p>
-     * Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     * Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      * </p>
      * </note>
      */
@@ -127,14 +127,14 @@ public class CreateAccessorRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <note>
      * <p>
-     * Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     * Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      * </p>
      * </note>
      * 
      * @param accessorType
      *        The type of accessor.</p> <note>
      *        <p>
-     *        Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     *        Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      *        </p>
      * @see AccessorType
      */
@@ -149,13 +149,13 @@ public class CreateAccessorRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <note>
      * <p>
-     * Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     * Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      * </p>
      * </note>
      * 
      * @return The type of accessor.</p> <note>
      *         <p>
-     *         Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     *         Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      *         </p>
      * @see AccessorType
      */
@@ -170,14 +170,14 @@ public class CreateAccessorRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <note>
      * <p>
-     * Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     * Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      * </p>
      * </note>
      * 
      * @param accessorType
      *        The type of accessor.</p> <note>
      *        <p>
-     *        Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     *        Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccessorType
@@ -194,14 +194,14 @@ public class CreateAccessorRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <note>
      * <p>
-     * Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     * Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      * </p>
      * </note>
      * 
      * @param accessorType
      *        The type of accessor.</p> <note>
      *        <p>
-     *        Currently accessor type is restricted to <code>BILLING_TOKEN</code>.
+     *        Currently, accessor type is restricted to <code>BILLING_TOKEN</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccessorType

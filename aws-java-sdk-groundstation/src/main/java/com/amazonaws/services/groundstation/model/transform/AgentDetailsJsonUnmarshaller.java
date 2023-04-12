@@ -48,6 +48,12 @@ public class AgentDetailsJsonUnmarshaller implements Unmarshaller<AgentDetails, 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("agentCpuCores", targetDepth)) {
+                    context.nextToken();
+                    agentDetails.setAgentCpuCores(new ListUnmarshaller<Integer>(context.getUnmarshaller(Integer.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("agentVersion", targetDepth)) {
                     context.nextToken();
                     agentDetails.setAgentVersion(context.getUnmarshaller(String.class).unmarshall(context));

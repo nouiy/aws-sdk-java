@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AgentDetailsMarshaller {
 
+    private static final MarshallingInfo<List> AGENTCPUCORES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("agentCpuCores").build();
     private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentVersion").build();
     private static final MarshallingInfo<List> COMPONENTVERSIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -55,6 +57,7 @@ public class AgentDetailsMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(agentDetails.getAgentCpuCores(), AGENTCPUCORES_BINDING);
             protocolMarshaller.marshall(agentDetails.getAgentVersion(), AGENTVERSION_BINDING);
             protocolMarshaller.marshall(agentDetails.getComponentVersions(), COMPONENTVERSIONS_BINDING);
             protocolMarshaller.marshall(agentDetails.getInstanceId(), INSTANCEID_BINDING);

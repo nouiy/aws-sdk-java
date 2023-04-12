@@ -48,11 +48,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * rinkeby = <code>4</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * ropsten = <code>3</code>
-     * </p>
-     * </li>
      * </ul>
      */
     private String chainId;
@@ -77,11 +72,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * rinkeby = <code>4</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * ropsten = <code>3</code>
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param chainId
@@ -100,11 +90,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      *        <li>
      *        <p>
      *        rinkeby = <code>4</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        ropsten = <code>3</code>
      *        </p>
      *        </li>
      */
@@ -133,11 +118,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * rinkeby = <code>4</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * ropsten = <code>3</code>
-     * </p>
-     * </li>
      * </ul>
      * 
      * @return The Ethereum <code>CHAIN_ID</code> associated with the Ethereum network. Chain IDs are as follows:</p>
@@ -155,11 +135,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      *         <li>
      *         <p>
      *         rinkeby = <code>4</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         ropsten = <code>3</code>
      *         </p>
      *         </li>
      */
@@ -188,11 +163,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * rinkeby = <code>4</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * ropsten = <code>3</code>
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param chainId
@@ -211,11 +181,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      *        <li>
      *        <p>
      *        rinkeby = <code>4</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        ropsten = <code>3</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

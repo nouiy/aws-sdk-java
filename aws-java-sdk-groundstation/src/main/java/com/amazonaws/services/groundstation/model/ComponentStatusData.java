@@ -198,7 +198,6 @@ public class ComponentStatusData implements Serializable, Cloneable, StructuredP
      * 
      * @param componentType
      *        The Component type.
-     * @see ComponentType
      */
 
     public void setComponentType(String componentType) {
@@ -211,7 +210,6 @@ public class ComponentStatusData implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @return The Component type.
-     * @see ComponentType
      */
 
     public String getComponentType() {
@@ -226,27 +224,10 @@ public class ComponentStatusData implements Serializable, Cloneable, StructuredP
      * @param componentType
      *        The Component type.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ComponentType
      */
 
     public ComponentStatusData withComponentType(String componentType) {
         setComponentType(componentType);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Component type.
-     * </p>
-     * 
-     * @param componentType
-     *        The Component type.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ComponentType
-     */
-
-    public ComponentStatusData withComponentType(ComponentType componentType) {
-        this.componentType = componentType.toString();
         return this;
     }
 

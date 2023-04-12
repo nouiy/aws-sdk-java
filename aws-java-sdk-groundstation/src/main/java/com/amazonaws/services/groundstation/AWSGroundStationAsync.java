@@ -412,6 +412,11 @@ public interface AWSGroundStationAsync extends AWSGroundStation {
             com.amazonaws.handlers.AsyncHandler<DescribeEphemerisRequest, DescribeEphemerisResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
      * <p>
      * Gets the latest configuration information for a registered agent.
      * </p>
@@ -425,6 +430,11 @@ public interface AWSGroundStationAsync extends AWSGroundStation {
     java.util.concurrent.Future<GetAgentConfigurationResult> getAgentConfigurationAsync(GetAgentConfigurationRequest getAgentConfigurationRequest);
 
     /**
+     * <note>
+     * <p>
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
      * <p>
      * Gets the latest configuration information for a registered agent.
      * </p>
@@ -862,8 +872,13 @@ public interface AWSGroundStationAsync extends AWSGroundStation {
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
 
     /**
+     * <note>
      * <p>
-     * Registers a new agent with AWS Groundstation.
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
+     * <p>
+     * Registers a new agent with AWS Ground Station.
      * </p>
      * 
      * @param registerAgentRequest
@@ -875,8 +890,13 @@ public interface AWSGroundStationAsync extends AWSGroundStation {
     java.util.concurrent.Future<RegisterAgentResult> registerAgentAsync(RegisterAgentRequest registerAgentRequest);
 
     /**
+     * <note>
      * <p>
-     * Registers a new agent with AWS Groundstation.
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
+     * <p>
+     * Registers a new agent with AWS Ground Station.
      * </p>
      * 
      * @param registerAgentRequest
@@ -986,6 +1006,11 @@ public interface AWSGroundStationAsync extends AWSGroundStation {
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
      * <p>
      * Update the status of the agent.
      * </p>
@@ -999,6 +1024,11 @@ public interface AWSGroundStationAsync extends AWSGroundStation {
     java.util.concurrent.Future<UpdateAgentStatusResult> updateAgentStatusAsync(UpdateAgentStatusRequest updateAgentStatusRequest);
 
     /**
+     * <note>
+     * <p>
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
      * <p>
      * Update the status of the agent.
      * </p>

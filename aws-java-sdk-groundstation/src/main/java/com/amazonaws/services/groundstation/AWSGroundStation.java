@@ -272,6 +272,11 @@ public interface AWSGroundStation {
     DescribeEphemerisResult describeEphemeris(DescribeEphemerisRequest describeEphemerisRequest);
 
     /**
+     * <note>
+     * <p>
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
      * <p>
      * Gets the latest configuration information for a registered agent.
      * </p>
@@ -545,8 +550,13 @@ public interface AWSGroundStation {
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
 
     /**
+     * <note>
      * <p>
-     * Registers a new agent with AWS Groundstation.
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
+     * <p>
+     * Registers a new agent with AWS Ground Station.
      * </p>
      * 
      * @param registerAgentRequest
@@ -621,6 +631,11 @@ public interface AWSGroundStation {
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
+     * <note>
+     * <p>
+     * For use by AWS Ground Station Agent and shouldn't be called directly.
+     * </p>
+     * </note>
      * <p>
      * Update the status of the agent.
      * </p>
