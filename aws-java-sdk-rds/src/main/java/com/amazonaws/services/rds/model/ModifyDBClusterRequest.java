@@ -529,9 +529,6 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Type: Integer
-     * </p>
-     * <p>
      * Valid for: Multi-AZ DB clusters only
      * </p>
      */
@@ -836,6 +833,38 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String masterUserSecretKmsKeyId;
+    /**
+     * <p>
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The DB engine mode can be modified only from <code>serverless</code> to <code>provisioned</code>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html"> CreateDBCluster</a>.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     */
+    private String engineMode;
+    /**
+     * <p>
+     * A value that indicates whether engine mode changes from <code>serverless</code> to <code>provisioned</code> are
+     * allowed.
+     * </p>
+     * <p>
+     * Constraints: You must allow engine mode changes when specifying a different value for the <code>EngineMode</code>
+     * parameter from the DB cluster's current engine mode.
+     * </p>
+     * <p>
+     * Valid for: Aurora Serverless v1 DB clusters only
+     * </p>
+     */
+    private Boolean allowEngineModeChange;
 
     /**
      * <p>
@@ -4112,17 +4141,11 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Type: Integer
-     * </p>
-     * <p>
      * Valid for: Multi-AZ DB clusters only
      * </p>
      * 
      * @param allocatedStorage
      *        The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.</p>
-     *        <p>
-     *        Type: Integer
-     *        </p>
      *        <p>
      *        Valid for: Multi-AZ DB clusters only
      */
@@ -4136,16 +4159,10 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Type: Integer
-     * </p>
-     * <p>
      * Valid for: Multi-AZ DB clusters only
      * </p>
      * 
      * @return The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.</p>
-     *         <p>
-     *         Type: Integer
-     *         </p>
      *         <p>
      *         Valid for: Multi-AZ DB clusters only
      */
@@ -4159,17 +4176,11 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Type: Integer
-     * </p>
-     * <p>
      * Valid for: Multi-AZ DB clusters only
      * </p>
      * 
      * @param allocatedStorage
      *        The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.</p>
-     *        <p>
-     *        Type: Integer
-     *        </p>
      *        <p>
      *        Valid for: Multi-AZ DB clusters only
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -6184,6 +6195,230 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The DB engine mode can be modified only from <code>serverless</code> to <code>provisioned</code>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html"> CreateDBCluster</a>.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param engineMode
+     *        The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
+     *        <note>
+     *        <p>
+     *        The DB engine mode can be modified only from <code>serverless</code> to <code>provisioned</code>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html">
+     *        CreateDBCluster</a>.
+     *        </p>
+     *        <p>
+     *        Valid for: Aurora DB clusters only
+     */
+
+    public void setEngineMode(String engineMode) {
+        this.engineMode = engineMode;
+    }
+
+    /**
+     * <p>
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The DB engine mode can be modified only from <code>serverless</code> to <code>provisioned</code>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html"> CreateDBCluster</a>.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @return The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
+     *         <note>
+     *         <p>
+     *         The DB engine mode can be modified only from <code>serverless</code> to <code>provisioned</code>.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html">
+     *         CreateDBCluster</a>.
+     *         </p>
+     *         <p>
+     *         Valid for: Aurora DB clusters only
+     */
+
+    public String getEngineMode() {
+        return this.engineMode;
+    }
+
+    /**
+     * <p>
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The DB engine mode can be modified only from <code>serverless</code> to <code>provisioned</code>.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html"> CreateDBCluster</a>.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param engineMode
+     *        The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
+     *        <note>
+     *        <p>
+     *        The DB engine mode can be modified only from <code>serverless</code> to <code>provisioned</code>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html">
+     *        CreateDBCluster</a>.
+     *        </p>
+     *        <p>
+     *        Valid for: Aurora DB clusters only
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyDBClusterRequest withEngineMode(String engineMode) {
+        setEngineMode(engineMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether engine mode changes from <code>serverless</code> to <code>provisioned</code> are
+     * allowed.
+     * </p>
+     * <p>
+     * Constraints: You must allow engine mode changes when specifying a different value for the <code>EngineMode</code>
+     * parameter from the DB cluster's current engine mode.
+     * </p>
+     * <p>
+     * Valid for: Aurora Serverless v1 DB clusters only
+     * </p>
+     * 
+     * @param allowEngineModeChange
+     *        A value that indicates whether engine mode changes from <code>serverless</code> to
+     *        <code>provisioned</code> are allowed.</p>
+     *        <p>
+     *        Constraints: You must allow engine mode changes when specifying a different value for the
+     *        <code>EngineMode</code> parameter from the DB cluster's current engine mode.
+     *        </p>
+     *        <p>
+     *        Valid for: Aurora Serverless v1 DB clusters only
+     */
+
+    public void setAllowEngineModeChange(Boolean allowEngineModeChange) {
+        this.allowEngineModeChange = allowEngineModeChange;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether engine mode changes from <code>serverless</code> to <code>provisioned</code> are
+     * allowed.
+     * </p>
+     * <p>
+     * Constraints: You must allow engine mode changes when specifying a different value for the <code>EngineMode</code>
+     * parameter from the DB cluster's current engine mode.
+     * </p>
+     * <p>
+     * Valid for: Aurora Serverless v1 DB clusters only
+     * </p>
+     * 
+     * @return A value that indicates whether engine mode changes from <code>serverless</code> to
+     *         <code>provisioned</code> are allowed.</p>
+     *         <p>
+     *         Constraints: You must allow engine mode changes when specifying a different value for the
+     *         <code>EngineMode</code> parameter from the DB cluster's current engine mode.
+     *         </p>
+     *         <p>
+     *         Valid for: Aurora Serverless v1 DB clusters only
+     */
+
+    public Boolean getAllowEngineModeChange() {
+        return this.allowEngineModeChange;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether engine mode changes from <code>serverless</code> to <code>provisioned</code> are
+     * allowed.
+     * </p>
+     * <p>
+     * Constraints: You must allow engine mode changes when specifying a different value for the <code>EngineMode</code>
+     * parameter from the DB cluster's current engine mode.
+     * </p>
+     * <p>
+     * Valid for: Aurora Serverless v1 DB clusters only
+     * </p>
+     * 
+     * @param allowEngineModeChange
+     *        A value that indicates whether engine mode changes from <code>serverless</code> to
+     *        <code>provisioned</code> are allowed.</p>
+     *        <p>
+     *        Constraints: You must allow engine mode changes when specifying a different value for the
+     *        <code>EngineMode</code> parameter from the DB cluster's current engine mode.
+     *        </p>
+     *        <p>
+     *        Valid for: Aurora Serverless v1 DB clusters only
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyDBClusterRequest withAllowEngineModeChange(Boolean allowEngineModeChange) {
+        setAllowEngineModeChange(allowEngineModeChange);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether engine mode changes from <code>serverless</code> to <code>provisioned</code> are
+     * allowed.
+     * </p>
+     * <p>
+     * Constraints: You must allow engine mode changes when specifying a different value for the <code>EngineMode</code>
+     * parameter from the DB cluster's current engine mode.
+     * </p>
+     * <p>
+     * Valid for: Aurora Serverless v1 DB clusters only
+     * </p>
+     * 
+     * @return A value that indicates whether engine mode changes from <code>serverless</code> to
+     *         <code>provisioned</code> are allowed.</p>
+     *         <p>
+     *         Constraints: You must allow engine mode changes when specifying a different value for the
+     *         <code>EngineMode</code> parameter from the DB cluster's current engine mode.
+     *         </p>
+     *         <p>
+     *         Valid for: Aurora Serverless v1 DB clusters only
+     */
+
+    public Boolean isAllowEngineModeChange() {
+        return this.allowEngineModeChange;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -6272,7 +6507,11 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         if (getRotateMasterUserPassword() != null)
             sb.append("RotateMasterUserPassword: ").append(getRotateMasterUserPassword()).append(",");
         if (getMasterUserSecretKmsKeyId() != null)
-            sb.append("MasterUserSecretKmsKeyId: ").append(getMasterUserSecretKmsKeyId());
+            sb.append("MasterUserSecretKmsKeyId: ").append(getMasterUserSecretKmsKeyId()).append(",");
+        if (getEngineMode() != null)
+            sb.append("EngineMode: ").append(getEngineMode()).append(",");
+        if (getAllowEngineModeChange() != null)
+            sb.append("AllowEngineModeChange: ").append(getAllowEngineModeChange());
         sb.append("}");
         return sb.toString();
     }
@@ -6447,6 +6686,14 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getMasterUserSecretKmsKeyId() != null && other.getMasterUserSecretKmsKeyId().equals(this.getMasterUserSecretKmsKeyId()) == false)
             return false;
+        if (other.getEngineMode() == null ^ this.getEngineMode() == null)
+            return false;
+        if (other.getEngineMode() != null && other.getEngineMode().equals(this.getEngineMode()) == false)
+            return false;
+        if (other.getAllowEngineModeChange() == null ^ this.getAllowEngineModeChange() == null)
+            return false;
+        if (other.getAllowEngineModeChange() != null && other.getAllowEngineModeChange().equals(this.getAllowEngineModeChange()) == false)
+            return false;
         return true;
     }
 
@@ -6494,6 +6741,8 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getManageMasterUserPassword() == null) ? 0 : getManageMasterUserPassword().hashCode());
         hashCode = prime * hashCode + ((getRotateMasterUserPassword() == null) ? 0 : getRotateMasterUserPassword().hashCode());
         hashCode = prime * hashCode + ((getMasterUserSecretKmsKeyId() == null) ? 0 : getMasterUserSecretKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getEngineMode() == null) ? 0 : getEngineMode().hashCode());
+        hashCode = prime * hashCode + ((getAllowEngineModeChange() == null) ? 0 : getAllowEngineModeChange().hashCode());
         return hashCode;
     }
 

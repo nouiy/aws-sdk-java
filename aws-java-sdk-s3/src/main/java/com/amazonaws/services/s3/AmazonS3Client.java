@@ -350,6 +350,7 @@ import com.amazonaws.util.Base64;
 import com.amazonaws.util.BinaryUtils;
 import com.amazonaws.util.CredentialUtils;
 import com.amazonaws.util.DateUtils;
+import com.amazonaws.util.HostnameValidator;
 import com.amazonaws.util.IOUtils;
 import com.amazonaws.util.LengthCheckInputStream;
 import com.amazonaws.util.Md5Utils;
@@ -4990,6 +4991,8 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
                 WriteGetObjectResponseRequest writeGetObjectResponseRequest = (WriteGetObjectResponseRequest) originalRequest;
 
                 rejectNull(writeGetObjectResponseRequest.getRequestRoute(), "requestRoute must not be null");
+                HostnameValidator.validateHostnameCompliant(writeGetObjectResponseRequest.getRequestRoute(),
+                        "RequestRoute", "writeGetObjectResponseRequest");
 
                 String requestRoute = writeGetObjectResponseRequest.getRequestRoute() + ".";
                 URI newEndpoint = UriResourcePathUtils.updateUriHost(request.getEndpoint(), requestRoute);

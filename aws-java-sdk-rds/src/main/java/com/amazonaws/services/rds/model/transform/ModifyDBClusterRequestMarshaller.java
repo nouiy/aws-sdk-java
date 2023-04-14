@@ -277,6 +277,14 @@ public class ModifyDBClusterRequestMarshaller implements Marshaller<Request<Modi
             request.addParameter("MasterUserSecretKmsKeyId", StringUtils.fromString(modifyDBClusterRequest.getMasterUserSecretKmsKeyId()));
         }
 
+        if (modifyDBClusterRequest.getEngineMode() != null) {
+            request.addParameter("EngineMode", StringUtils.fromString(modifyDBClusterRequest.getEngineMode()));
+        }
+
+        if (modifyDBClusterRequest.getAllowEngineModeChange() != null) {
+            request.addParameter("AllowEngineModeChange", StringUtils.fromBoolean(modifyDBClusterRequest.getAllowEngineModeChange()));
+        }
+
         return request;
     }
 

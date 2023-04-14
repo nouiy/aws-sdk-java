@@ -7722,6 +7722,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         The DB instance isn't in a valid state.
      * @throws DBClusterAlreadyExistsException
      *         The user already has a DB cluster with the given identifier.
+     * @throws DBInstanceAlreadyExistsException
+     *         The user already has a DB instance with the given identifier.
      * @throws DomainNotFoundException
      *         <code>Domain</code> doesn't refer to an existing Active Directory domain.
      * @sample AmazonRDS.ModifyDBCluster

@@ -170,6 +170,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
      * (Kinesis and DynamoDB Streams only) Discard records older than the specified age. The default value is -1, which
      * sets the maximum age to infinite. When the value is set to infinite, Lambda never discards old records.
      * </p>
+     * <note>
+     * <p>
+     * The minimum value that can be set is 60 seconds.
+     * </p>
+     * </note>
      */
     private Integer maximumRecordAgeInSeconds;
     /**
@@ -1253,11 +1258,19 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
      * (Kinesis and DynamoDB Streams only) Discard records older than the specified age. The default value is -1, which
      * sets the maximum age to infinite. When the value is set to infinite, Lambda never discards old records.
      * </p>
+     * <note>
+     * <p>
+     * The minimum value that can be set is 60 seconds.
+     * </p>
+     * </note>
      * 
      * @param maximumRecordAgeInSeconds
      *        (Kinesis and DynamoDB Streams only) Discard records older than the specified age. The default value is -1,
      *        which sets the maximum age to infinite. When the value is set to infinite, Lambda never discards old
-     *        records.
+     *        records.</p> <note>
+     *        <p>
+     *        The minimum value that can be set is 60 seconds.
+     *        </p>
      */
 
     public void setMaximumRecordAgeInSeconds(Integer maximumRecordAgeInSeconds) {
@@ -1269,10 +1282,18 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
      * (Kinesis and DynamoDB Streams only) Discard records older than the specified age. The default value is -1, which
      * sets the maximum age to infinite. When the value is set to infinite, Lambda never discards old records.
      * </p>
+     * <note>
+     * <p>
+     * The minimum value that can be set is 60 seconds.
+     * </p>
+     * </note>
      * 
      * @return (Kinesis and DynamoDB Streams only) Discard records older than the specified age. The default value is
      *         -1, which sets the maximum age to infinite. When the value is set to infinite, Lambda never discards old
-     *         records.
+     *         records.</p> <note>
+     *         <p>
+     *         The minimum value that can be set is 60 seconds.
+     *         </p>
      */
 
     public Integer getMaximumRecordAgeInSeconds() {
@@ -1284,11 +1305,19 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
      * (Kinesis and DynamoDB Streams only) Discard records older than the specified age. The default value is -1, which
      * sets the maximum age to infinite. When the value is set to infinite, Lambda never discards old records.
      * </p>
+     * <note>
+     * <p>
+     * The minimum value that can be set is 60 seconds.
+     * </p>
+     * </note>
      * 
      * @param maximumRecordAgeInSeconds
      *        (Kinesis and DynamoDB Streams only) Discard records older than the specified age. The default value is -1,
      *        which sets the maximum age to infinite. When the value is set to infinite, Lambda never discards old
-     *        records.
+     *        records.</p> <note>
+     *        <p>
+     *        The minimum value that can be set is 60 seconds.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

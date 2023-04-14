@@ -1,3 +1,20 @@
+# __1.12.450__ __2023-04-14__
+## __AWS Lambda__
+  - ### Features
+    - This release adds SnapStart related exceptions to InvokeWithResponseStream API. IAM access related documentation is also added for this API.
+
+## __AWS Migration Hub Refactor Spaces__
+  - ### Features
+    - Doc only update for Refactor Spaces environments without network bridge feature.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - This release supports  ephemeral storage for AWS Fargate Windows containers.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - This release adds support of modifying the engine mode of database clusters.
+
 # __1.12.449__ __2023-04-13__
 ## __AWS MediaConnect__
   - ### Features

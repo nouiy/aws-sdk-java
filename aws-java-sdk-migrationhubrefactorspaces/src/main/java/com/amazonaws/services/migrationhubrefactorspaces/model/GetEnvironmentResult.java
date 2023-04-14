@@ -92,7 +92,7 @@ public class GetEnvironmentResult extends com.amazonaws.AmazonWebServiceResult<c
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * The ID of the transit gateway set up by the environment.
+     * The ID of the Transit Gateway set up by the environment, if applicable.
      * </p>
      */
     private String transitGatewayId;
@@ -611,11 +611,11 @@ public class GetEnvironmentResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ID of the transit gateway set up by the environment.
+     * The ID of the Transit Gateway set up by the environment, if applicable.
      * </p>
      * 
      * @param transitGatewayId
-     *        The ID of the transit gateway set up by the environment.
+     *        The ID of the Transit Gateway set up by the environment, if applicable.
      */
 
     public void setTransitGatewayId(String transitGatewayId) {
@@ -624,10 +624,10 @@ public class GetEnvironmentResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ID of the transit gateway set up by the environment.
+     * The ID of the Transit Gateway set up by the environment, if applicable.
      * </p>
      * 
-     * @return The ID of the transit gateway set up by the environment.
+     * @return The ID of the Transit Gateway set up by the environment, if applicable.
      */
 
     public String getTransitGatewayId() {
@@ -636,11 +636,11 @@ public class GetEnvironmentResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ID of the transit gateway set up by the environment.
+     * The ID of the Transit Gateway set up by the environment, if applicable.
      * </p>
      * 
      * @param transitGatewayId
-     *        The ID of the transit gateway set up by the environment.
+     *        The ID of the Transit Gateway set up by the environment, if applicable.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
