@@ -19,8 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A summary of the properties of a trial component. To get all the properties, call the <a>DescribeTrialComponent</a>
- * API and provide the <code>TrialComponentName</code>.
+ * A summary of the properties of a trial component. To get all the properties, call the <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrialComponent.html"
+ * >DescribeTrialComponent</a> API and provide the <code>TrialComponentName</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/TrialComponentSummary" target="_top">AWS

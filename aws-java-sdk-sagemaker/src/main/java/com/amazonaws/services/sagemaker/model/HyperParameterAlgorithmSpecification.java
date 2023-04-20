@@ -52,7 +52,9 @@ public class HyperParameterAlgorithmSpecification implements Serializable, Clone
     private String algorithmName;
     /**
      * <p>
-     * An array of <a>MetricDefinition</a> objects that specify the metrics that the algorithm emits.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">MetricDefinition</a>
+     * objects that specify the metrics that the algorithm emits.
      * </p>
      */
     private java.util.List<MetricDefinition> metricDefinitions;
@@ -224,10 +226,14 @@ public class HyperParameterAlgorithmSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * An array of <a>MetricDefinition</a> objects that specify the metrics that the algorithm emits.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">MetricDefinition</a>
+     * objects that specify the metrics that the algorithm emits.
      * </p>
      * 
-     * @return An array of <a>MetricDefinition</a> objects that specify the metrics that the algorithm emits.
+     * @return An array of <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">
+     *         MetricDefinition</a> objects that specify the metrics that the algorithm emits.
      */
 
     public java.util.List<MetricDefinition> getMetricDefinitions() {
@@ -236,11 +242,14 @@ public class HyperParameterAlgorithmSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * An array of <a>MetricDefinition</a> objects that specify the metrics that the algorithm emits.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">MetricDefinition</a>
+     * objects that specify the metrics that the algorithm emits.
      * </p>
      * 
      * @param metricDefinitions
-     *        An array of <a>MetricDefinition</a> objects that specify the metrics that the algorithm emits.
+     *        An array of <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">
+     *        MetricDefinition</a> objects that specify the metrics that the algorithm emits.
      */
 
     public void setMetricDefinitions(java.util.Collection<MetricDefinition> metricDefinitions) {
@@ -254,7 +263,9 @@ public class HyperParameterAlgorithmSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * An array of <a>MetricDefinition</a> objects that specify the metrics that the algorithm emits.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">MetricDefinition</a>
+     * objects that specify the metrics that the algorithm emits.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -263,7 +274,8 @@ public class HyperParameterAlgorithmSpecification implements Serializable, Clone
      * </p>
      * 
      * @param metricDefinitions
-     *        An array of <a>MetricDefinition</a> objects that specify the metrics that the algorithm emits.
+     *        An array of <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">
+     *        MetricDefinition</a> objects that specify the metrics that the algorithm emits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -279,11 +291,14 @@ public class HyperParameterAlgorithmSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * An array of <a>MetricDefinition</a> objects that specify the metrics that the algorithm emits.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">MetricDefinition</a>
+     * objects that specify the metrics that the algorithm emits.
      * </p>
      * 
      * @param metricDefinitions
-     *        An array of <a>MetricDefinition</a> objects that specify the metrics that the algorithm emits.
+     *        An array of <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">
+     *        MetricDefinition</a> objects that specify the metrics that the algorithm emits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

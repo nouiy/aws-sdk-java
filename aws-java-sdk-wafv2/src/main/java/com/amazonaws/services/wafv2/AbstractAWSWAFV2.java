@@ -38,6 +38,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
     }
 
     @Override
+    public CreateAPIKeyResult createAPIKey(CreateAPIKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateIPSetResult createIPSet(CreateIPSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -108,6 +113,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
     }
 
     @Override
+    public GetDecryptedAPIKeyResult getDecryptedAPIKey(GetDecryptedAPIKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetIPSetResult getIPSet(GetIPSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -159,6 +169,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
 
     @Override
     public GetWebACLForResourceResult getWebACLForResource(GetWebACLForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAPIKeysResult listAPIKeys(ListAPIKeysRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

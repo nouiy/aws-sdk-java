@@ -159,7 +159,7 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
      * <code>SSN</code>, or <code>ALL</code>.
      * </p>
      * <p>
-     * Length Constraints: Minimum length of 1. Maximum length of 300.
+     * If you leave this parameter empty, the default behavior is equivalent to <code>ALL</code>.
      * </p>
      */
     private String piiEntityTypes;
@@ -1132,7 +1132,7 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
      * <code>SSN</code>, or <code>ALL</code>.
      * </p>
      * <p>
-     * Length Constraints: Minimum length of 1. Maximum length of 300.
+     * If you leave this parameter empty, the default behavior is equivalent to <code>ALL</code>.
      * </p>
      * 
      * @param piiEntityTypes
@@ -1149,7 +1149,7 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
      *        <code>PIN</code>, <code>SSN</code>, or <code>ALL</code>.
      *        </p>
      *        <p>
-     *        Length Constraints: Minimum length of 1. Maximum length of 300.
+     *        If you leave this parameter empty, the default behavior is equivalent to <code>ALL</code>.
      */
 
     public void setPiiEntityTypes(String piiEntityTypes) {
@@ -1172,7 +1172,7 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
      * <code>SSN</code>, or <code>ALL</code>.
      * </p>
      * <p>
-     * Length Constraints: Minimum length of 1. Maximum length of 300.
+     * If you leave this parameter empty, the default behavior is equivalent to <code>ALL</code>.
      * </p>
      * 
      * @return The types of personally identifiable information (PII) to redact from a transcript. You can include as
@@ -1188,7 +1188,7 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
      *         <code>PIN</code>, <code>SSN</code>, or <code>ALL</code>.
      *         </p>
      *         <p>
-     *         Length Constraints: Minimum length of 1. Maximum length of 300.
+     *         If you leave this parameter empty, the default behavior is equivalent to <code>ALL</code>.
      */
 
     public String getPiiEntityTypes() {
@@ -1211,7 +1211,7 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
      * <code>SSN</code>, or <code>ALL</code>.
      * </p>
      * <p>
-     * Length Constraints: Minimum length of 1. Maximum length of 300.
+     * If you leave this parameter empty, the default behavior is equivalent to <code>ALL</code>.
      * </p>
      * 
      * @param piiEntityTypes
@@ -1228,7 +1228,7 @@ public class AmazonTranscribeProcessorConfiguration implements Serializable, Clo
      *        <code>PIN</code>, <code>SSN</code>, or <code>ALL</code>.
      *        </p>
      *        <p>
-     *        Length Constraints: Minimum length of 1. Maximum length of 300.
+     *        If you leave this parameter empty, the default behavior is equivalent to <code>ALL</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

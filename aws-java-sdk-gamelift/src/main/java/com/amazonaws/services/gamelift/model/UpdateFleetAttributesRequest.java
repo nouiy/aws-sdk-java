@@ -81,7 +81,7 @@ public class UpdateFleetAttributesRequest extends com.amazonaws.AmazonWebService
     private java.util.List<String> metricGroups;
     /**
      * <p>
-     * GameLift Anywhere configuration options.
+     * Amazon GameLift Anywhere configuration options.
      * </p>
      */
     private AnywhereConfiguration anywhereConfiguration;
@@ -568,11 +568,11 @@ public class UpdateFleetAttributesRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * GameLift Anywhere configuration options.
+     * Amazon GameLift Anywhere configuration options.
      * </p>
      * 
      * @param anywhereConfiguration
-     *        GameLift Anywhere configuration options.
+     *        Amazon GameLift Anywhere configuration options.
      */
 
     public void setAnywhereConfiguration(AnywhereConfiguration anywhereConfiguration) {
@@ -581,10 +581,10 @@ public class UpdateFleetAttributesRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * GameLift Anywhere configuration options.
+     * Amazon GameLift Anywhere configuration options.
      * </p>
      * 
-     * @return GameLift Anywhere configuration options.
+     * @return Amazon GameLift Anywhere configuration options.
      */
 
     public AnywhereConfiguration getAnywhereConfiguration() {
@@ -593,11 +593,11 @@ public class UpdateFleetAttributesRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * GameLift Anywhere configuration options.
+     * Amazon GameLift Anywhere configuration options.
      * </p>
      * 
      * @param anywhereConfiguration
-     *        GameLift Anywhere configuration options.
+     *        Amazon GameLift Anywhere configuration options.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

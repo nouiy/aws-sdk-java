@@ -38,20 +38,25 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
     private String hyperParameterTuningJobArn;
     /**
      * <p>
-     * The <a>HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobConfig.html">
+     * HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
      * </p>
      */
     private HyperParameterTuningJobConfig hyperParameterTuningJobConfig;
     /**
      * <p>
-     * The <a>HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs that
-     * this tuning job launches.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     * >HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs that this
+     * tuning job launches.
      * </p>
      */
     private HyperParameterTrainingJobDefinition trainingJobDefinition;
     /**
      * <p>
-     * A list of the <a>HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
+     * A list of the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     * >HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
      * </p>
      */
     private java.util.List<HyperParameterTrainingJobDefinition> trainingJobDefinitions;
@@ -81,31 +86,37 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
     private java.util.Date lastModifiedTime;
     /**
      * <p>
-     * The <a>TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by status,
-     * that this tuning job launched.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobStatusCounters.html">
+     * TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by status, that this
+     * tuning job launched.
      * </p>
      */
     private TrainingJobStatusCounters trainingJobStatusCounters;
     /**
      * <p>
-     * The <a>ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the status
-     * of their final objective metric, that this tuning job launched.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ObjectiveStatusCounters.html">
+     * ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the status of their
+     * final objective metric, that this tuning job launched.
      * </p>
      */
     private ObjectiveStatusCounters objectiveStatusCounters;
     /**
      * <p>
-     * A <a>TrainingJobSummary</a> object that describes the training job that completed with the best current
-     * <a>HyperParameterTuningJobObjective</a>.
+     * A <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html">TrainingJobSummary
+     * </a> object that describes the training job that completed with the best current <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html"
+     * >HyperParameterTuningJobObjective</a>.
      * </p>
      */
     private HyperParameterTrainingJobSummary bestTrainingJob;
     /**
      * <p>
      * If the hyperparameter tuning job is an warm start tuning job with a <code>WarmStartType</code> of
-     * <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a>TrainingJobSummary</a> for the training job with the
-     * best objective metric value of all training jobs launched by this tuning job and all parent jobs specified for
-     * the warm start tuning job.
+     * <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html"
+     * >TrainingJobSummary</a> for the training job with the best objective metric value of all training jobs launched
+     * by this tuning job and all parent jobs specified for the warm start tuning job.
      * </p>
      */
     private HyperParameterTrainingJobSummary overallBestTrainingJob;
@@ -216,11 +227,14 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobConfig.html">
+     * HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
      * </p>
      * 
      * @param hyperParameterTuningJobConfig
-     *        The <a>HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
+     *        The <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobConfig.html"
+     *        >HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
      */
 
     public void setHyperParameterTuningJobConfig(HyperParameterTuningJobConfig hyperParameterTuningJobConfig) {
@@ -229,10 +243,13 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobConfig.html">
+     * HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
      * </p>
      * 
-     * @return The <a>HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
+     * @return The <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobConfig.html"
+     *         >HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
      */
 
     public HyperParameterTuningJobConfig getHyperParameterTuningJobConfig() {
@@ -241,11 +258,14 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobConfig.html">
+     * HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
      * </p>
      * 
      * @param hyperParameterTuningJobConfig
-     *        The <a>HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
+     *        The <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobConfig.html"
+     *        >HyperParameterTuningJobConfig</a> object that specifies the configuration of the tuning job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -256,13 +276,17 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs that
-     * this tuning job launches.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     * >HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs that this
+     * tuning job launches.
      * </p>
      * 
      * @param trainingJobDefinition
-     *        The <a>HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs
-     *        that this tuning job launches.
+     *        The <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     *        >HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs that
+     *        this tuning job launches.
      */
 
     public void setTrainingJobDefinition(HyperParameterTrainingJobDefinition trainingJobDefinition) {
@@ -271,12 +295,16 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs that
-     * this tuning job launches.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     * >HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs that this
+     * tuning job launches.
      * </p>
      * 
-     * @return The <a>HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs
-     *         that this tuning job launches.
+     * @return The <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     *         >HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs that
+     *         this tuning job launches.
      */
 
     public HyperParameterTrainingJobDefinition getTrainingJobDefinition() {
@@ -285,13 +313,17 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs that
-     * this tuning job launches.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     * >HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs that this
+     * tuning job launches.
      * </p>
      * 
      * @param trainingJobDefinition
-     *        The <a>HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs
-     *        that this tuning job launches.
+     *        The <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     *        >HyperParameterTrainingJobDefinition</a> object that specifies the definition of the training jobs that
+     *        this tuning job launches.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -302,10 +334,14 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A list of the <a>HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
+     * A list of the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     * >HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
      * </p>
      * 
-     * @return A list of the <a>HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
+     * @return A list of the <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     *         >HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
      */
 
     public java.util.List<HyperParameterTrainingJobDefinition> getTrainingJobDefinitions() {
@@ -314,11 +350,15 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A list of the <a>HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
+     * A list of the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     * >HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
      * </p>
      * 
      * @param trainingJobDefinitions
-     *        A list of the <a>HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
+     *        A list of the <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     *        >HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
      */
 
     public void setTrainingJobDefinitions(java.util.Collection<HyperParameterTrainingJobDefinition> trainingJobDefinitions) {
@@ -332,7 +372,9 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A list of the <a>HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
+     * A list of the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     * >HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -341,7 +383,9 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param trainingJobDefinitions
-     *        A list of the <a>HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
+     *        A list of the <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     *        >HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -357,11 +401,15 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A list of the <a>HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
+     * A list of the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     * >HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
      * </p>
      * 
      * @param trainingJobDefinitions
-     *        A list of the <a>HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
+     *        A list of the <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html"
+     *        >HyperParameterTrainingJobDefinition</a> objects launched for this tuning job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -551,13 +599,16 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by status,
-     * that this tuning job launched.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobStatusCounters.html">
+     * TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by status, that this
+     * tuning job launched.
      * </p>
      * 
      * @param trainingJobStatusCounters
-     *        The <a>TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by
-     *        status, that this tuning job launched.
+     *        The <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobStatusCounters.html">
+     *        TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by status,
+     *        that this tuning job launched.
      */
 
     public void setTrainingJobStatusCounters(TrainingJobStatusCounters trainingJobStatusCounters) {
@@ -566,12 +617,15 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by status,
-     * that this tuning job launched.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobStatusCounters.html">
+     * TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by status, that this
+     * tuning job launched.
      * </p>
      * 
-     * @return The <a>TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by
-     *         status, that this tuning job launched.
+     * @return The <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobStatusCounters.html"
+     *         >TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by status,
+     *         that this tuning job launched.
      */
 
     public TrainingJobStatusCounters getTrainingJobStatusCounters() {
@@ -580,13 +634,16 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by status,
-     * that this tuning job launched.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobStatusCounters.html">
+     * TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by status, that this
+     * tuning job launched.
      * </p>
      * 
      * @param trainingJobStatusCounters
-     *        The <a>TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by
-     *        status, that this tuning job launched.
+     *        The <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobStatusCounters.html">
+     *        TrainingJobStatusCounters</a> object that specifies the number of training jobs, categorized by status,
+     *        that this tuning job launched.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -597,13 +654,15 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the status
-     * of their final objective metric, that this tuning job launched.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ObjectiveStatusCounters.html">
+     * ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the status of their
+     * final objective metric, that this tuning job launched.
      * </p>
      * 
      * @param objectiveStatusCounters
-     *        The <a>ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the
-     *        status of their final objective metric, that this tuning job launched.
+     *        The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ObjectiveStatusCounters.html">
+     *        ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the status
+     *        of their final objective metric, that this tuning job launched.
      */
 
     public void setObjectiveStatusCounters(ObjectiveStatusCounters objectiveStatusCounters) {
@@ -612,12 +671,14 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the status
-     * of their final objective metric, that this tuning job launched.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ObjectiveStatusCounters.html">
+     * ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the status of their
+     * final objective metric, that this tuning job launched.
      * </p>
      * 
-     * @return The <a>ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the
-     *         status of their final objective metric, that this tuning job launched.
+     * @return The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ObjectiveStatusCounters.html">
+     *         ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the status
+     *         of their final objective metric, that this tuning job launched.
      */
 
     public ObjectiveStatusCounters getObjectiveStatusCounters() {
@@ -626,13 +687,15 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The <a>ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the status
-     * of their final objective metric, that this tuning job launched.
+     * The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ObjectiveStatusCounters.html">
+     * ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the status of their
+     * final objective metric, that this tuning job launched.
      * </p>
      * 
      * @param objectiveStatusCounters
-     *        The <a>ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the
-     *        status of their final objective metric, that this tuning job launched.
+     *        The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ObjectiveStatusCounters.html">
+     *        ObjectiveStatusCounters</a> object that specifies the number of training jobs, categorized by the status
+     *        of their final objective metric, that this tuning job launched.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -643,13 +706,19 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A <a>TrainingJobSummary</a> object that describes the training job that completed with the best current
-     * <a>HyperParameterTuningJobObjective</a>.
+     * A <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html">TrainingJobSummary
+     * </a> object that describes the training job that completed with the best current <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html"
+     * >HyperParameterTuningJobObjective</a>.
      * </p>
      * 
      * @param bestTrainingJob
-     *        A <a>TrainingJobSummary</a> object that describes the training job that completed with the best current
-     *        <a>HyperParameterTuningJobObjective</a>.
+     *        A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html">
+     *        TrainingJobSummary</a> object that describes the training job that completed with the best current <a
+     *        href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html">
+     *        HyperParameterTuningJobObjective</a>.
      */
 
     public void setBestTrainingJob(HyperParameterTrainingJobSummary bestTrainingJob) {
@@ -658,12 +727,18 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A <a>TrainingJobSummary</a> object that describes the training job that completed with the best current
-     * <a>HyperParameterTuningJobObjective</a>.
+     * A <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html">TrainingJobSummary
+     * </a> object that describes the training job that completed with the best current <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html"
+     * >HyperParameterTuningJobObjective</a>.
      * </p>
      * 
-     * @return A <a>TrainingJobSummary</a> object that describes the training job that completed with the best current
-     *         <a>HyperParameterTuningJobObjective</a>.
+     * @return A <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html">TrainingJobSummary
+     *         </a> object that describes the training job that completed with the best current <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html"
+     *         >HyperParameterTuningJobObjective</a>.
      */
 
     public HyperParameterTrainingJobSummary getBestTrainingJob() {
@@ -672,13 +747,19 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A <a>TrainingJobSummary</a> object that describes the training job that completed with the best current
-     * <a>HyperParameterTuningJobObjective</a>.
+     * A <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html">TrainingJobSummary
+     * </a> object that describes the training job that completed with the best current <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html"
+     * >HyperParameterTuningJobObjective</a>.
      * </p>
      * 
      * @param bestTrainingJob
-     *        A <a>TrainingJobSummary</a> object that describes the training job that completed with the best current
-     *        <a>HyperParameterTuningJobObjective</a>.
+     *        A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html">
+     *        TrainingJobSummary</a> object that describes the training job that completed with the best current <a
+     *        href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html">
+     *        HyperParameterTuningJobObjective</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -690,16 +771,18 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
     /**
      * <p>
      * If the hyperparameter tuning job is an warm start tuning job with a <code>WarmStartType</code> of
-     * <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a>TrainingJobSummary</a> for the training job with the
-     * best objective metric value of all training jobs launched by this tuning job and all parent jobs specified for
-     * the warm start tuning job.
+     * <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html"
+     * >TrainingJobSummary</a> for the training job with the best objective metric value of all training jobs launched
+     * by this tuning job and all parent jobs specified for the warm start tuning job.
      * </p>
      * 
      * @param overallBestTrainingJob
      *        If the hyperparameter tuning job is an warm start tuning job with a <code>WarmStartType</code> of
-     *        <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a>TrainingJobSummary</a> for the training job with
-     *        the best objective metric value of all training jobs launched by this tuning job and all parent jobs
-     *        specified for the warm start tuning job.
+     *        <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html"
+     *        >TrainingJobSummary</a> for the training job with the best objective metric value of all training jobs
+     *        launched by this tuning job and all parent jobs specified for the warm start tuning job.
      */
 
     public void setOverallBestTrainingJob(HyperParameterTrainingJobSummary overallBestTrainingJob) {
@@ -709,15 +792,17 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
     /**
      * <p>
      * If the hyperparameter tuning job is an warm start tuning job with a <code>WarmStartType</code> of
-     * <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a>TrainingJobSummary</a> for the training job with the
-     * best objective metric value of all training jobs launched by this tuning job and all parent jobs specified for
-     * the warm start tuning job.
+     * <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html"
+     * >TrainingJobSummary</a> for the training job with the best objective metric value of all training jobs launched
+     * by this tuning job and all parent jobs specified for the warm start tuning job.
      * </p>
      * 
      * @return If the hyperparameter tuning job is an warm start tuning job with a <code>WarmStartType</code> of
-     *         <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a>TrainingJobSummary</a> for the training job
-     *         with the best objective metric value of all training jobs launched by this tuning job and all parent jobs
-     *         specified for the warm start tuning job.
+     *         <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html"
+     *         >TrainingJobSummary</a> for the training job with the best objective metric value of all training jobs
+     *         launched by this tuning job and all parent jobs specified for the warm start tuning job.
      */
 
     public HyperParameterTrainingJobSummary getOverallBestTrainingJob() {
@@ -727,16 +812,18 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
     /**
      * <p>
      * If the hyperparameter tuning job is an warm start tuning job with a <code>WarmStartType</code> of
-     * <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a>TrainingJobSummary</a> for the training job with the
-     * best objective metric value of all training jobs launched by this tuning job and all parent jobs specified for
-     * the warm start tuning job.
+     * <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html"
+     * >TrainingJobSummary</a> for the training job with the best objective metric value of all training jobs launched
+     * by this tuning job and all parent jobs specified for the warm start tuning job.
      * </p>
      * 
      * @param overallBestTrainingJob
      *        If the hyperparameter tuning job is an warm start tuning job with a <code>WarmStartType</code> of
-     *        <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a>TrainingJobSummary</a> for the training job with
-     *        the best objective metric value of all training jobs launched by this tuning job and all parent jobs
-     *        specified for the warm start tuning job.
+     *        <code>IDENTICAL_DATA_AND_ALGORITHM</code>, this is the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html"
+     *        >TrainingJobSummary</a> for the training job with the best objective metric value of all training jobs
+     *        launched by this tuning job and all parent jobs specified for the warm start tuning job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

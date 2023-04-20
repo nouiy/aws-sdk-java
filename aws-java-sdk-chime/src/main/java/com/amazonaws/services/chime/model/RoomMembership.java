@@ -34,7 +34,11 @@ public class RoomMembership implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String roomId;
-
+    /**
+     * <p>
+     * The member details, such as email address, name, member ID, and member type.
+     * </p>
+     */
     private Member member;
     /**
      * <p>
@@ -96,7 +100,12 @@ public class RoomMembership implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The member details, such as email address, name, member ID, and member type.
+     * </p>
+     * 
      * @param member
+     *        The member details, such as email address, name, member ID, and member type.
      */
 
     public void setMember(Member member) {
@@ -104,7 +113,11 @@ public class RoomMembership implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The member details, such as email address, name, member ID, and member type.
+     * </p>
+     * 
+     * @return The member details, such as email address, name, member ID, and member type.
      */
 
     public Member getMember() {
@@ -112,7 +125,12 @@ public class RoomMembership implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The member details, such as email address, name, member ID, and member type.
+     * </p>
+     * 
      * @param member
+     *        The member details, such as email address, name, member ID, and member type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

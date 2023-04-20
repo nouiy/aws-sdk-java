@@ -28,15 +28,15 @@ public class ClaimGameServerRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A unique identifier for the game server group where the game server is running. If you are not specifying a game
-     * server to claim, this value identifies where you want GameLift FleetIQ to look for an available game server to
-     * claim.
+     * server to claim, this value identifies where you want Amazon GameLift FleetIQ to look for an available game
+     * server to claim.
      * </p>
      */
     private String gameServerGroupName;
     /**
      * <p>
-     * A custom string that uniquely identifies the game server to claim. If this parameter is left empty, GameLift
-     * FleetIQ searches for an available game server in the specified game server group.
+     * A custom string that uniquely identifies the game server to claim. If this parameter is left empty, Amazon
+     * GameLift FleetIQ searches for an available game server in the specified game server group.
      * </p>
      */
     private String gameServerId;
@@ -51,14 +51,14 @@ public class ClaimGameServerRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A unique identifier for the game server group where the game server is running. If you are not specifying a game
-     * server to claim, this value identifies where you want GameLift FleetIQ to look for an available game server to
-     * claim.
+     * server to claim, this value identifies where you want Amazon GameLift FleetIQ to look for an available game
+     * server to claim.
      * </p>
      * 
      * @param gameServerGroupName
      *        A unique identifier for the game server group where the game server is running. If you are not specifying
-     *        a game server to claim, this value identifies where you want GameLift FleetIQ to look for an available
-     *        game server to claim.
+     *        a game server to claim, this value identifies where you want Amazon GameLift FleetIQ to look for an
+     *        available game server to claim.
      */
 
     public void setGameServerGroupName(String gameServerGroupName) {
@@ -68,13 +68,13 @@ public class ClaimGameServerRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A unique identifier for the game server group where the game server is running. If you are not specifying a game
-     * server to claim, this value identifies where you want GameLift FleetIQ to look for an available game server to
-     * claim.
+     * server to claim, this value identifies where you want Amazon GameLift FleetIQ to look for an available game
+     * server to claim.
      * </p>
      * 
      * @return A unique identifier for the game server group where the game server is running. If you are not specifying
-     *         a game server to claim, this value identifies where you want GameLift FleetIQ to look for an available
-     *         game server to claim.
+     *         a game server to claim, this value identifies where you want Amazon GameLift FleetIQ to look for an
+     *         available game server to claim.
      */
 
     public String getGameServerGroupName() {
@@ -84,14 +84,14 @@ public class ClaimGameServerRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A unique identifier for the game server group where the game server is running. If you are not specifying a game
-     * server to claim, this value identifies where you want GameLift FleetIQ to look for an available game server to
-     * claim.
+     * server to claim, this value identifies where you want Amazon GameLift FleetIQ to look for an available game
+     * server to claim.
      * </p>
      * 
      * @param gameServerGroupName
      *        A unique identifier for the game server group where the game server is running. If you are not specifying
-     *        a game server to claim, this value identifies where you want GameLift FleetIQ to look for an available
-     *        game server to claim.
+     *        a game server to claim, this value identifies where you want Amazon GameLift FleetIQ to look for an
+     *        available game server to claim.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,12 +102,12 @@ public class ClaimGameServerRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A custom string that uniquely identifies the game server to claim. If this parameter is left empty, GameLift
-     * FleetIQ searches for an available game server in the specified game server group.
+     * A custom string that uniquely identifies the game server to claim. If this parameter is left empty, Amazon
+     * GameLift FleetIQ searches for an available game server in the specified game server group.
      * </p>
      * 
      * @param gameServerId
-     *        A custom string that uniquely identifies the game server to claim. If this parameter is left empty,
+     *        A custom string that uniquely identifies the game server to claim. If this parameter is left empty, Amazon
      *        GameLift FleetIQ searches for an available game server in the specified game server group.
      */
 
@@ -117,12 +117,12 @@ public class ClaimGameServerRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A custom string that uniquely identifies the game server to claim. If this parameter is left empty, GameLift
-     * FleetIQ searches for an available game server in the specified game server group.
+     * A custom string that uniquely identifies the game server to claim. If this parameter is left empty, Amazon
+     * GameLift FleetIQ searches for an available game server in the specified game server group.
      * </p>
      * 
      * @return A custom string that uniquely identifies the game server to claim. If this parameter is left empty,
-     *         GameLift FleetIQ searches for an available game server in the specified game server group.
+     *         Amazon GameLift FleetIQ searches for an available game server in the specified game server group.
      */
 
     public String getGameServerId() {
@@ -131,12 +131,12 @@ public class ClaimGameServerRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A custom string that uniquely identifies the game server to claim. If this parameter is left empty, GameLift
-     * FleetIQ searches for an available game server in the specified game server group.
+     * A custom string that uniquely identifies the game server to claim. If this parameter is left empty, Amazon
+     * GameLift FleetIQ searches for an available game server in the specified game server group.
      * </p>
      * 
      * @param gameServerId
-     *        A custom string that uniquely identifies the game server to claim. If this parameter is left empty,
+     *        A custom string that uniquely identifies the game server to claim. If this parameter is left empty, Amazon
      *        GameLift FleetIQ searches for an available game server in the specified game server group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

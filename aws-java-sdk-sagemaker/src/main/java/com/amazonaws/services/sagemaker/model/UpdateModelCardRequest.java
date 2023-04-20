@@ -34,7 +34,7 @@ public class UpdateModelCardRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The updated model card content. Content must be in <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card JSON
      * schema</a> and provided as a string.
      * </p>
      * <p>
@@ -116,7 +116,7 @@ public class UpdateModelCardRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The updated model card content. Content must be in <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card JSON
      * schema</a> and provided as a string.
      * </p>
      * <p>
@@ -125,8 +125,8 @@ public class UpdateModelCardRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param content
      *        The updated model card content. Content must be in <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
-     *        schema</a> and provided as a string.</p>
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card
+     *        JSON schema</a> and provided as a string.</p>
      *        <p>
      *        When updating model card content, be sure to include the full content and not just updated content.
      */
@@ -138,7 +138,7 @@ public class UpdateModelCardRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The updated model card content. Content must be in <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card JSON
      * schema</a> and provided as a string.
      * </p>
      * <p>
@@ -146,8 +146,8 @@ public class UpdateModelCardRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @return The updated model card content. Content must be in <a
-     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
-     *         schema</a> and provided as a string.</p>
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model
+     *         card JSON schema</a> and provided as a string.</p>
      *         <p>
      *         When updating model card content, be sure to include the full content and not just updated content.
      */
@@ -159,7 +159,7 @@ public class UpdateModelCardRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The updated model card content. Content must be in <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card JSON
      * schema</a> and provided as a string.
      * </p>
      * <p>
@@ -168,8 +168,8 @@ public class UpdateModelCardRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param content
      *        The updated model card content. Content must be in <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
-     *        schema</a> and provided as a string.</p>
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card
+     *        JSON schema</a> and provided as a string.</p>
      *        <p>
      *        When updating model card content, be sure to include the full content and not just updated content.
      * @return Returns a reference to this object so that method calls can be chained together.

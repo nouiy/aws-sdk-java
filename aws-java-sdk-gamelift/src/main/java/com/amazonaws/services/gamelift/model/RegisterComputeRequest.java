@@ -39,21 +39,22 @@ public class RegisterComputeRequest extends com.amazonaws.AmazonWebServiceReques
     private String computeName;
     /**
      * <p>
-     * The path to the TLS certificate on your compute resource. The path and certificate are not validated by GameLift.
+     * The path to the TLS certificate on your compute resource. The path and certificate are not validated by Amazon
+     * GameLift.
      * </p>
      */
     private String certificatePath;
     /**
      * <p>
-     * The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
+     * The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your compute
      * resource.
      * </p>
      */
     private String dnsName;
     /**
      * <p>
-     * The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     * resource.
+     * The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     * compute resource.
      * </p>
      */
     private String ipAddress;
@@ -149,12 +150,13 @@ public class RegisterComputeRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The path to the TLS certificate on your compute resource. The path and certificate are not validated by GameLift.
+     * The path to the TLS certificate on your compute resource. The path and certificate are not validated by Amazon
+     * GameLift.
      * </p>
      * 
      * @param certificatePath
      *        The path to the TLS certificate on your compute resource. The path and certificate are not validated by
-     *        GameLift.
+     *        Amazon GameLift.
      */
 
     public void setCertificatePath(String certificatePath) {
@@ -163,11 +165,12 @@ public class RegisterComputeRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The path to the TLS certificate on your compute resource. The path and certificate are not validated by GameLift.
+     * The path to the TLS certificate on your compute resource. The path and certificate are not validated by Amazon
+     * GameLift.
      * </p>
      * 
      * @return The path to the TLS certificate on your compute resource. The path and certificate are not validated by
-     *         GameLift.
+     *         Amazon GameLift.
      */
 
     public String getCertificatePath() {
@@ -176,12 +179,13 @@ public class RegisterComputeRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The path to the TLS certificate on your compute resource. The path and certificate are not validated by GameLift.
+     * The path to the TLS certificate on your compute resource. The path and certificate are not validated by Amazon
+     * GameLift.
      * </p>
      * 
      * @param certificatePath
      *        The path to the TLS certificate on your compute resource. The path and certificate are not validated by
-     *        GameLift.
+     *        Amazon GameLift.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -192,13 +196,13 @@ public class RegisterComputeRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
+     * The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your compute
      * resource.
      * </p>
      * 
      * @param dnsName
-     *        The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     *        resource.
+     *        The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     *        compute resource.
      */
 
     public void setDnsName(String dnsName) {
@@ -207,12 +211,12 @@ public class RegisterComputeRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
+     * The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your compute
      * resource.
      * </p>
      * 
-     * @return The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     *         resource.
+     * @return The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     *         compute resource.
      */
 
     public String getDnsName() {
@@ -221,13 +225,13 @@ public class RegisterComputeRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
+     * The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your compute
      * resource.
      * </p>
      * 
      * @param dnsName
-     *        The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     *        resource.
+     *        The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     *        compute resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -238,12 +242,12 @@ public class RegisterComputeRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     * resource.
+     * The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     * compute resource.
      * </p>
      * 
      * @param ipAddress
-     *        The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your
+     *        The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
      *        compute resource.
      */
 
@@ -253,12 +257,12 @@ public class RegisterComputeRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     * resource.
+     * The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     * compute resource.
      * </p>
      * 
-     * @return The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your
-     *         compute resource.
+     * @return The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage
+     *         your compute resource.
      */
 
     public String getIpAddress() {
@@ -267,12 +271,12 @@ public class RegisterComputeRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     * resource.
+     * The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     * compute resource.
      * </p>
      * 
      * @param ipAddress
-     *        The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your
+     *        The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
      *        compute resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

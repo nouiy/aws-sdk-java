@@ -29,6 +29,8 @@ public class CanvasAppSettingsMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> TIMESERIESFORECASTINGSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TimeSeriesForecastingSettings").build();
+    private static final MarshallingInfo<StructuredPojo> MODELREGISTERSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelRegisterSettings").build();
 
     private static final CanvasAppSettingsMarshaller instance = new CanvasAppSettingsMarshaller();
 
@@ -47,6 +49,7 @@ public class CanvasAppSettingsMarshaller {
 
         try {
             protocolMarshaller.marshall(canvasAppSettings.getTimeSeriesForecastingSettings(), TIMESERIESFORECASTINGSETTINGS_BINDING);
+            protocolMarshaller.marshall(canvasAppSettings.getModelRegisterSettings(), MODELREGISTERSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure that holds the settings for transmitting audio and video recordings to the runtime Amazon S3 bucket.
+ * A structure that holds the settings for transmitting media files to the Amazon S3 bucket. If specified, the settings
+ * in this structure override any settings in <code>S3RecordingSinkConfiguration</code>.
  * </p>
  * 
  * @see <a
@@ -31,24 +32,24 @@ public class S3RecordingSinkRuntimeConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The URL of the S3 bucket used as the runtime sink.
+     * The URI of the S3 bucket used as the sink.
      * </p>
      */
     private String destination;
     /**
      * <p>
-     * The file formats for the audio and video files sent to the Amazon S3 bucket.
+     * The file format for the media files sent to the Amazon S3 bucket.
      * </p>
      */
     private String recordingFileFormat;
 
     /**
      * <p>
-     * The URL of the S3 bucket used as the runtime sink.
+     * The URI of the S3 bucket used as the sink.
      * </p>
      * 
      * @param destination
-     *        The URL of the S3 bucket used as the runtime sink.
+     *        The URI of the S3 bucket used as the sink.
      */
 
     public void setDestination(String destination) {
@@ -57,10 +58,10 @@ public class S3RecordingSinkRuntimeConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The URL of the S3 bucket used as the runtime sink.
+     * The URI of the S3 bucket used as the sink.
      * </p>
      * 
-     * @return The URL of the S3 bucket used as the runtime sink.
+     * @return The URI of the S3 bucket used as the sink.
      */
 
     public String getDestination() {
@@ -69,11 +70,11 @@ public class S3RecordingSinkRuntimeConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The URL of the S3 bucket used as the runtime sink.
+     * The URI of the S3 bucket used as the sink.
      * </p>
      * 
      * @param destination
-     *        The URL of the S3 bucket used as the runtime sink.
+     *        The URI of the S3 bucket used as the sink.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,11 +85,11 @@ public class S3RecordingSinkRuntimeConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The file formats for the audio and video files sent to the Amazon S3 bucket.
+     * The file format for the media files sent to the Amazon S3 bucket.
      * </p>
      * 
      * @param recordingFileFormat
-     *        The file formats for the audio and video files sent to the Amazon S3 bucket.
+     *        The file format for the media files sent to the Amazon S3 bucket.
      * @see RecordingFileFormat
      */
 
@@ -98,10 +99,10 @@ public class S3RecordingSinkRuntimeConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The file formats for the audio and video files sent to the Amazon S3 bucket.
+     * The file format for the media files sent to the Amazon S3 bucket.
      * </p>
      * 
-     * @return The file formats for the audio and video files sent to the Amazon S3 bucket.
+     * @return The file format for the media files sent to the Amazon S3 bucket.
      * @see RecordingFileFormat
      */
 
@@ -111,11 +112,11 @@ public class S3RecordingSinkRuntimeConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The file formats for the audio and video files sent to the Amazon S3 bucket.
+     * The file format for the media files sent to the Amazon S3 bucket.
      * </p>
      * 
      * @param recordingFileFormat
-     *        The file formats for the audio and video files sent to the Amazon S3 bucket.
+     *        The file format for the media files sent to the Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RecordingFileFormat
      */
@@ -127,11 +128,11 @@ public class S3RecordingSinkRuntimeConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The file formats for the audio and video files sent to the Amazon S3 bucket.
+     * The file format for the media files sent to the Amazon S3 bucket.
      * </p>
      * 
      * @param recordingFileFormat
-     *        The file formats for the audio and video files sent to the Amazon S3 bucket.
+     *        The file format for the media files sent to the Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RecordingFileFormat
      */

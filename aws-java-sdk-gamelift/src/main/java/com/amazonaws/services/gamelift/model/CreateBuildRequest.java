@@ -27,14 +27,14 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A descriptive label associated with a build. Build names do not need to be unique. You can change this value
+     * A descriptive label associated with a build. Build names don't need to be unique. You can change this value
      * later.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique. You can change
+     * Version information associated with a build or script. Version strings don't need to be unique. You can change
      * this value later.
      * </p>
      */
@@ -56,8 +56,8 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The operating system that you built the game server binaries to run on. This value determines the type of fleet
      * resources that you can use for this build. If your game build contains multiple executables, they all must run on
-     * the same operating system. If an operating system is not specified when creating a build, GameLift uses the
-     * default value (WINDOWS_2012). This value cannot be changed later.
+     * the same operating system. If an operating system isn't specified when creating a build, Amazon GameLift uses the
+     * default value (WINDOWS_2012). This value can't be changed later.
      * </p>
      */
     private String operatingSystem;
@@ -78,21 +78,21 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * A server SDK version you used when integrating your game server build with GameLift. For more information see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">Integrate games
-     * with custom game servers</a>.
+     * A server SDK version you used when integrating your game server build with Amazon GameLift. For more information
+     * see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">Integrate
+     * games with custom game servers</a>. By default Amazon GameLift sets this value to <code>4.0.2</code>.
      * </p>
      */
     private String serverSdkVersion;
 
     /**
      * <p>
-     * A descriptive label associated with a build. Build names do not need to be unique. You can change this value
+     * A descriptive label associated with a build. Build names don't need to be unique. You can change this value
      * later.
      * </p>
      * 
      * @param name
-     *        A descriptive label associated with a build. Build names do not need to be unique. You can change this
+     *        A descriptive label associated with a build. Build names don't need to be unique. You can change this
      *        value later.
      */
 
@@ -102,11 +102,11 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A descriptive label associated with a build. Build names do not need to be unique. You can change this value
+     * A descriptive label associated with a build. Build names don't need to be unique. You can change this value
      * later.
      * </p>
      * 
-     * @return A descriptive label associated with a build. Build names do not need to be unique. You can change this
+     * @return A descriptive label associated with a build. Build names don't need to be unique. You can change this
      *         value later.
      */
 
@@ -116,12 +116,12 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A descriptive label associated with a build. Build names do not need to be unique. You can change this value
+     * A descriptive label associated with a build. Build names don't need to be unique. You can change this value
      * later.
      * </p>
      * 
      * @param name
-     *        A descriptive label associated with a build. Build names do not need to be unique. You can change this
+     *        A descriptive label associated with a build. Build names don't need to be unique. You can change this
      *        value later.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -133,12 +133,12 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique. You can change
+     * Version information associated with a build or script. Version strings don't need to be unique. You can change
      * this value later.
      * </p>
      * 
      * @param version
-     *        Version information associated with a build or script. Version strings do not need to be unique. You can
+     *        Version information associated with a build or script. Version strings don't need to be unique. You can
      *        change this value later.
      */
 
@@ -148,11 +148,11 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique. You can change
+     * Version information associated with a build or script. Version strings don't need to be unique. You can change
      * this value later.
      * </p>
      * 
-     * @return Version information associated with a build or script. Version strings do not need to be unique. You can
+     * @return Version information associated with a build or script. Version strings don't need to be unique. You can
      *         change this value later.
      */
 
@@ -162,12 +162,12 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique. You can change
+     * Version information associated with a build or script. Version strings don't need to be unique. You can change
      * this value later.
      * </p>
      * 
      * @param version
-     *        Version information associated with a build or script. Version strings do not need to be unique. You can
+     *        Version information associated with a build or script. Version strings don't need to be unique. You can
      *        change this value later.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -261,15 +261,15 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The operating system that you built the game server binaries to run on. This value determines the type of fleet
      * resources that you can use for this build. If your game build contains multiple executables, they all must run on
-     * the same operating system. If an operating system is not specified when creating a build, GameLift uses the
-     * default value (WINDOWS_2012). This value cannot be changed later.
+     * the same operating system. If an operating system isn't specified when creating a build, Amazon GameLift uses the
+     * default value (WINDOWS_2012). This value can't be changed later.
      * </p>
      * 
      * @param operatingSystem
      *        The operating system that you built the game server binaries to run on. This value determines the type of
      *        fleet resources that you can use for this build. If your game build contains multiple executables, they
-     *        all must run on the same operating system. If an operating system is not specified when creating a build,
-     *        GameLift uses the default value (WINDOWS_2012). This value cannot be changed later.
+     *        all must run on the same operating system. If an operating system isn't specified when creating a build,
+     *        Amazon GameLift uses the default value (WINDOWS_2012). This value can't be changed later.
      * @see OperatingSystem
      */
 
@@ -281,14 +281,14 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The operating system that you built the game server binaries to run on. This value determines the type of fleet
      * resources that you can use for this build. If your game build contains multiple executables, they all must run on
-     * the same operating system. If an operating system is not specified when creating a build, GameLift uses the
-     * default value (WINDOWS_2012). This value cannot be changed later.
+     * the same operating system. If an operating system isn't specified when creating a build, Amazon GameLift uses the
+     * default value (WINDOWS_2012). This value can't be changed later.
      * </p>
      * 
      * @return The operating system that you built the game server binaries to run on. This value determines the type of
      *         fleet resources that you can use for this build. If your game build contains multiple executables, they
-     *         all must run on the same operating system. If an operating system is not specified when creating a build,
-     *         GameLift uses the default value (WINDOWS_2012). This value cannot be changed later.
+     *         all must run on the same operating system. If an operating system isn't specified when creating a build,
+     *         Amazon GameLift uses the default value (WINDOWS_2012). This value can't be changed later.
      * @see OperatingSystem
      */
 
@@ -300,15 +300,15 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The operating system that you built the game server binaries to run on. This value determines the type of fleet
      * resources that you can use for this build. If your game build contains multiple executables, they all must run on
-     * the same operating system. If an operating system is not specified when creating a build, GameLift uses the
-     * default value (WINDOWS_2012). This value cannot be changed later.
+     * the same operating system. If an operating system isn't specified when creating a build, Amazon GameLift uses the
+     * default value (WINDOWS_2012). This value can't be changed later.
      * </p>
      * 
      * @param operatingSystem
      *        The operating system that you built the game server binaries to run on. This value determines the type of
      *        fleet resources that you can use for this build. If your game build contains multiple executables, they
-     *        all must run on the same operating system. If an operating system is not specified when creating a build,
-     *        GameLift uses the default value (WINDOWS_2012). This value cannot be changed later.
+     *        all must run on the same operating system. If an operating system isn't specified when creating a build,
+     *        Amazon GameLift uses the default value (WINDOWS_2012). This value can't be changed later.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OperatingSystem
      */
@@ -322,15 +322,15 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The operating system that you built the game server binaries to run on. This value determines the type of fleet
      * resources that you can use for this build. If your game build contains multiple executables, they all must run on
-     * the same operating system. If an operating system is not specified when creating a build, GameLift uses the
-     * default value (WINDOWS_2012). This value cannot be changed later.
+     * the same operating system. If an operating system isn't specified when creating a build, Amazon GameLift uses the
+     * default value (WINDOWS_2012). This value can't be changed later.
      * </p>
      * 
      * @param operatingSystem
      *        The operating system that you built the game server binaries to run on. This value determines the type of
      *        fleet resources that you can use for this build. If your game build contains multiple executables, they
-     *        all must run on the same operating system. If an operating system is not specified when creating a build,
-     *        GameLift uses the default value (WINDOWS_2012). This value cannot be changed later.
+     *        all must run on the same operating system. If an operating system isn't specified when creating a build,
+     *        Amazon GameLift uses the default value (WINDOWS_2012). This value can't be changed later.
      * @see OperatingSystem
      */
 
@@ -342,15 +342,15 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The operating system that you built the game server binaries to run on. This value determines the type of fleet
      * resources that you can use for this build. If your game build contains multiple executables, they all must run on
-     * the same operating system. If an operating system is not specified when creating a build, GameLift uses the
-     * default value (WINDOWS_2012). This value cannot be changed later.
+     * the same operating system. If an operating system isn't specified when creating a build, Amazon GameLift uses the
+     * default value (WINDOWS_2012). This value can't be changed later.
      * </p>
      * 
      * @param operatingSystem
      *        The operating system that you built the game server binaries to run on. This value determines the type of
      *        fleet resources that you can use for this build. If your game build contains multiple executables, they
-     *        all must run on the same operating system. If an operating system is not specified when creating a build,
-     *        GameLift uses the default value (WINDOWS_2012). This value cannot be changed later.
+     *        all must run on the same operating system. If an operating system isn't specified when creating a build,
+     *        Amazon GameLift uses the default value (WINDOWS_2012). This value can't be changed later.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OperatingSystem
      */
@@ -504,15 +504,16 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A server SDK version you used when integrating your game server build with GameLift. For more information see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">Integrate games
-     * with custom game servers</a>.
+     * A server SDK version you used when integrating your game server build with Amazon GameLift. For more information
+     * see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">Integrate
+     * games with custom game servers</a>. By default Amazon GameLift sets this value to <code>4.0.2</code>.
      * </p>
      * 
      * @param serverSdkVersion
-     *        A server SDK version you used when integrating your game server build with GameLift. For more information
-     *        see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">
-     *        Integrate games with custom game servers</a>.
+     *        A server SDK version you used when integrating your game server build with Amazon GameLift. For more
+     *        information see <a
+     *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">Integrate
+     *        games with custom game servers</a>. By default Amazon GameLift sets this value to <code>4.0.2</code>.
      */
 
     public void setServerSdkVersion(String serverSdkVersion) {
@@ -521,14 +522,15 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A server SDK version you used when integrating your game server build with GameLift. For more information see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">Integrate games
-     * with custom game servers</a>.
+     * A server SDK version you used when integrating your game server build with Amazon GameLift. For more information
+     * see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">Integrate
+     * games with custom game servers</a>. By default Amazon GameLift sets this value to <code>4.0.2</code>.
      * </p>
      * 
-     * @return A server SDK version you used when integrating your game server build with GameLift. For more information
-     *         see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">
-     *         Integrate games with custom game servers</a>.
+     * @return A server SDK version you used when integrating your game server build with Amazon GameLift. For more
+     *         information see <a
+     *         href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">Integrate
+     *         games with custom game servers</a>. By default Amazon GameLift sets this value to <code>4.0.2</code>.
      */
 
     public String getServerSdkVersion() {
@@ -537,15 +539,16 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A server SDK version you used when integrating your game server build with GameLift. For more information see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">Integrate games
-     * with custom game servers</a>.
+     * A server SDK version you used when integrating your game server build with Amazon GameLift. For more information
+     * see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">Integrate
+     * games with custom game servers</a>. By default Amazon GameLift sets this value to <code>4.0.2</code>.
      * </p>
      * 
      * @param serverSdkVersion
-     *        A server SDK version you used when integrating your game server build with GameLift. For more information
-     *        see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">
-     *        Integrate games with custom game servers</a>.
+     *        A server SDK version you used when integrating your game server build with Amazon GameLift. For more
+     *        information see <a
+     *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html">Integrate
+     *        games with custom game servers</a>. By default Amazon GameLift sets this value to <code>4.0.2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

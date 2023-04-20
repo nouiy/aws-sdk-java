@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Resources used to host your game servers. A compute resource can be managed GameLift Amazon EC2 instances or your own
- * resources.
+ * Resources used to host your game servers. A compute resource can be managed Amazon GameLift Amazon EC2 instances or
+ * your own resources.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/Compute" target="_top">AWS API
@@ -55,14 +55,14 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
     private String computeArn;
     /**
      * <p>
-     * The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     * resource.
+     * The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     * compute resource.
      * </p>
      */
     private String ipAddress;
     /**
      * <p>
-     * The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
+     * The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your compute
      * resource.
      * </p>
      */
@@ -94,14 +94,14 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
     private String operatingSystem;
     /**
      * <p>
-     * Which compute type that the fleet uses. A fleet can use Anywhere compute resources owned by you or managed Amazon
-     * EC2 instances.
+     * The compute type that the fleet uses. A fleet can use Anywhere compute resources that you own, or use managed
+     * Amazon EC2 instances.
      * </p>
      */
     private String type;
     /**
      * <p>
-     * The endpoint connection details of the GameLift SDK endpoint that your game server connects to.
+     * The endpoint connection details of the Amazon GameLift SDK endpoint that your game server connects to.
      * </p>
      */
     private String gameLiftServiceSdkEndpoint;
@@ -271,12 +271,12 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     * resource.
+     * The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     * compute resource.
      * </p>
      * 
      * @param ipAddress
-     *        The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your
+     *        The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
      *        compute resource.
      */
 
@@ -286,12 +286,12 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     * resource.
+     * The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     * compute resource.
      * </p>
      * 
-     * @return The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your
-     *         compute resource.
+     * @return The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage
+     *         your compute resource.
      */
 
     public String getIpAddress() {
@@ -300,12 +300,12 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     * resource.
+     * The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     * compute resource.
      * </p>
      * 
      * @param ipAddress
-     *        The IP address of the compute resource. GameLift requires the DNS name or IP address to manage your
+     *        The IP address of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
      *        compute resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -317,13 +317,13 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
+     * The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your compute
      * resource.
      * </p>
      * 
      * @param dnsName
-     *        The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     *        resource.
+     *        The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     *        compute resource.
      */
 
     public void setDnsName(String dnsName) {
@@ -332,12 +332,12 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
+     * The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your compute
      * resource.
      * </p>
      * 
-     * @return The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     *         resource.
+     * @return The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     *         compute resource.
      */
 
     public String getDnsName() {
@@ -346,13 +346,13 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
+     * The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your compute
      * resource.
      * </p>
      * 
      * @param dnsName
-     *        The DNS name of the compute resource. GameLift requires the DNS name or IP address to manage your compute
-     *        resource.
+     *        The DNS name of the compute resource. Amazon GameLift requires the DNS name or IP address to manage your
+     *        compute resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -567,13 +567,13 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Which compute type that the fleet uses. A fleet can use Anywhere compute resources owned by you or managed Amazon
-     * EC2 instances.
+     * The compute type that the fleet uses. A fleet can use Anywhere compute resources that you own, or use managed
+     * Amazon EC2 instances.
      * </p>
      * 
      * @param type
-     *        Which compute type that the fleet uses. A fleet can use Anywhere compute resources owned by you or managed
-     *        Amazon EC2 instances.
+     *        The compute type that the fleet uses. A fleet can use Anywhere compute resources that you own, or use
+     *        managed Amazon EC2 instances.
      * @see EC2InstanceType
      */
 
@@ -583,11 +583,11 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Which compute type that the fleet uses. A fleet can use Anywhere compute resources owned by you or managed Amazon
-     * EC2 instances.
+     * The compute type that the fleet uses. A fleet can use Anywhere compute resources that you own, or use managed
+     * Amazon EC2 instances.
      * </p>
      * 
-     * @return Which compute type that the fleet uses. A fleet can use Anywhere compute resources owned by you or
+     * @return The compute type that the fleet uses. A fleet can use Anywhere compute resources that you own, or use
      *         managed Amazon EC2 instances.
      * @see EC2InstanceType
      */
@@ -598,13 +598,13 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Which compute type that the fleet uses. A fleet can use Anywhere compute resources owned by you or managed Amazon
-     * EC2 instances.
+     * The compute type that the fleet uses. A fleet can use Anywhere compute resources that you own, or use managed
+     * Amazon EC2 instances.
      * </p>
      * 
      * @param type
-     *        Which compute type that the fleet uses. A fleet can use Anywhere compute resources owned by you or managed
-     *        Amazon EC2 instances.
+     *        The compute type that the fleet uses. A fleet can use Anywhere compute resources that you own, or use
+     *        managed Amazon EC2 instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType
      */
@@ -616,13 +616,13 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Which compute type that the fleet uses. A fleet can use Anywhere compute resources owned by you or managed Amazon
-     * EC2 instances.
+     * The compute type that the fleet uses. A fleet can use Anywhere compute resources that you own, or use managed
+     * Amazon EC2 instances.
      * </p>
      * 
      * @param type
-     *        Which compute type that the fleet uses. A fleet can use Anywhere compute resources owned by you or managed
-     *        Amazon EC2 instances.
+     *        The compute type that the fleet uses. A fleet can use Anywhere compute resources that you own, or use
+     *        managed Amazon EC2 instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType
      */
@@ -634,11 +634,11 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The endpoint connection details of the GameLift SDK endpoint that your game server connects to.
+     * The endpoint connection details of the Amazon GameLift SDK endpoint that your game server connects to.
      * </p>
      * 
      * @param gameLiftServiceSdkEndpoint
-     *        The endpoint connection details of the GameLift SDK endpoint that your game server connects to.
+     *        The endpoint connection details of the Amazon GameLift SDK endpoint that your game server connects to.
      */
 
     public void setGameLiftServiceSdkEndpoint(String gameLiftServiceSdkEndpoint) {
@@ -647,10 +647,10 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The endpoint connection details of the GameLift SDK endpoint that your game server connects to.
+     * The endpoint connection details of the Amazon GameLift SDK endpoint that your game server connects to.
      * </p>
      * 
-     * @return The endpoint connection details of the GameLift SDK endpoint that your game server connects to.
+     * @return The endpoint connection details of the Amazon GameLift SDK endpoint that your game server connects to.
      */
 
     public String getGameLiftServiceSdkEndpoint() {
@@ -659,11 +659,11 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The endpoint connection details of the GameLift SDK endpoint that your game server connects to.
+     * The endpoint connection details of the Amazon GameLift SDK endpoint that your game server connects to.
      * </p>
      * 
      * @param gameLiftServiceSdkEndpoint
-     *        The endpoint connection details of the GameLift SDK endpoint that your game server connects to.
+     *        The endpoint connection details of the Amazon GameLift SDK endpoint that your game server connects to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

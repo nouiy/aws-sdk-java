@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specified in the <a>GetSearchSuggestions</a> request. Limits the property names that are included in the response.
+ * Specified in the <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_GetSearchSuggestions.html">GetSearchSuggestions
+ * </a> request. Limits the property names that are included in the response.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/SuggestionQuery" target="_top">AWS API

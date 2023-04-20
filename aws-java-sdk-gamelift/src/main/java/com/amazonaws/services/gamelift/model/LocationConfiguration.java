@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A remote location where a multi-location fleet can deploy EC2 instances for game hosting.
+ * A remote location where a multi-location fleet can deploy game servers for game hosting.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/LocationConfiguration" target="_top">AWS API

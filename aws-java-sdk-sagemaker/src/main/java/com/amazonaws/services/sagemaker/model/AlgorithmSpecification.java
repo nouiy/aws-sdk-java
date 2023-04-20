@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the training algorithm to use in a <a>CreateTrainingJob</a> request.
+ * Specifies the training algorithm to use in a <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html">CreateTrainingJob</a>
+ * request.
  * </p>
  * <p>
  * For more information about algorithms provided by SageMaker, see <a
@@ -124,7 +126,8 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
      * </li>
      * <li>
      * <p>
-     * You specify at least one <a>MetricDefinition</a>
+     * You specify at least one <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">MetricDefinition</a>
      * </p>
      * </li>
      * </ul>
@@ -569,7 +572,8 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
      * </li>
      * <li>
      * <p>
-     * You specify at least one <a>MetricDefinition</a>
+     * You specify at least one <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">MetricDefinition</a>
      * </p>
      * </li>
      * </ul>
@@ -609,7 +613,9 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
      *        </li>
      *        <li>
      *        <p>
-     *        You specify at least one <a>MetricDefinition</a>
+     *        You specify at least one <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html"
+     *        >MetricDefinition</a>
      *        </p>
      *        </li>
      */
@@ -655,7 +661,8 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
      * </li>
      * <li>
      * <p>
-     * You specify at least one <a>MetricDefinition</a>
+     * You specify at least one <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">MetricDefinition</a>
      * </p>
      * </li>
      * </ul>
@@ -694,7 +701,9 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
      *         </li>
      *         <li>
      *         <p>
-     *         You specify at least one <a>MetricDefinition</a>
+     *         You specify at least one <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html"
+     *         >MetricDefinition</a>
      *         </p>
      *         </li>
      */
@@ -740,7 +749,8 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
      * </li>
      * <li>
      * <p>
-     * You specify at least one <a>MetricDefinition</a>
+     * You specify at least one <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">MetricDefinition</a>
      * </p>
      * </li>
      * </ul>
@@ -780,7 +790,9 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
      *        </li>
      *        <li>
      *        <p>
-     *        You specify at least one <a>MetricDefinition</a>
+     *        You specify at least one <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html"
+     *        >MetricDefinition</a>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -828,7 +840,8 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
      * </li>
      * <li>
      * <p>
-     * You specify at least one <a>MetricDefinition</a>
+     * You specify at least one <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html">MetricDefinition</a>
      * </p>
      * </li>
      * </ul>
@@ -867,7 +880,9 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
      *         </li>
      *         <li>
      *         <p>
-     *         You specify at least one <a>MetricDefinition</a>
+     *         You specify at least one <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_MetricDefinition.html"
+     *         >MetricDefinition</a>
      *         </p>
      *         </li>
      */

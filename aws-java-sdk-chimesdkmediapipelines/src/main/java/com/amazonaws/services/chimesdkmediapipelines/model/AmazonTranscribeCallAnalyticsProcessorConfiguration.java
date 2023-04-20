@@ -199,8 +199,8 @@ public class AmazonTranscribeCallAnalyticsProcessorConfiguration implements Seri
     private PostCallAnalyticsSettings postCallAnalyticsSettings;
     /**
      * <p>
-     * By default, all <code>CategoryEvents</code> will be sent to the insights target. If this parameter is specified,
-     * only included categories will be sent to the insights target.
+     * By default, all <code>CategoryEvents</code> are sent to the insights target. If this parameter is specified, only
+     * included categories are sent to the insights target.
      * </p>
      */
     private java.util.List<String> callAnalyticsStreamCategories;
@@ -1460,12 +1460,12 @@ public class AmazonTranscribeCallAnalyticsProcessorConfiguration implements Seri
 
     /**
      * <p>
-     * By default, all <code>CategoryEvents</code> will be sent to the insights target. If this parameter is specified,
-     * only included categories will be sent to the insights target.
+     * By default, all <code>CategoryEvents</code> are sent to the insights target. If this parameter is specified, only
+     * included categories are sent to the insights target.
      * </p>
      * 
-     * @return By default, all <code>CategoryEvents</code> will be sent to the insights target. If this parameter is
-     *         specified, only included categories will be sent to the insights target.
+     * @return By default, all <code>CategoryEvents</code> are sent to the insights target. If this parameter is
+     *         specified, only included categories are sent to the insights target.
      */
 
     public java.util.List<String> getCallAnalyticsStreamCategories() {
@@ -1474,13 +1474,13 @@ public class AmazonTranscribeCallAnalyticsProcessorConfiguration implements Seri
 
     /**
      * <p>
-     * By default, all <code>CategoryEvents</code> will be sent to the insights target. If this parameter is specified,
-     * only included categories will be sent to the insights target.
+     * By default, all <code>CategoryEvents</code> are sent to the insights target. If this parameter is specified, only
+     * included categories are sent to the insights target.
      * </p>
      * 
      * @param callAnalyticsStreamCategories
-     *        By default, all <code>CategoryEvents</code> will be sent to the insights target. If this parameter is
-     *        specified, only included categories will be sent to the insights target.
+     *        By default, all <code>CategoryEvents</code> are sent to the insights target. If this parameter is
+     *        specified, only included categories are sent to the insights target.
      */
 
     public void setCallAnalyticsStreamCategories(java.util.Collection<String> callAnalyticsStreamCategories) {
@@ -1494,8 +1494,8 @@ public class AmazonTranscribeCallAnalyticsProcessorConfiguration implements Seri
 
     /**
      * <p>
-     * By default, all <code>CategoryEvents</code> will be sent to the insights target. If this parameter is specified,
-     * only included categories will be sent to the insights target.
+     * By default, all <code>CategoryEvents</code> are sent to the insights target. If this parameter is specified, only
+     * included categories are sent to the insights target.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1504,8 +1504,8 @@ public class AmazonTranscribeCallAnalyticsProcessorConfiguration implements Seri
      * </p>
      * 
      * @param callAnalyticsStreamCategories
-     *        By default, all <code>CategoryEvents</code> will be sent to the insights target. If this parameter is
-     *        specified, only included categories will be sent to the insights target.
+     *        By default, all <code>CategoryEvents</code> are sent to the insights target. If this parameter is
+     *        specified, only included categories are sent to the insights target.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1521,13 +1521,13 @@ public class AmazonTranscribeCallAnalyticsProcessorConfiguration implements Seri
 
     /**
      * <p>
-     * By default, all <code>CategoryEvents</code> will be sent to the insights target. If this parameter is specified,
-     * only included categories will be sent to the insights target.
+     * By default, all <code>CategoryEvents</code> are sent to the insights target. If this parameter is specified, only
+     * included categories are sent to the insights target.
      * </p>
      * 
      * @param callAnalyticsStreamCategories
-     *        By default, all <code>CategoryEvents</code> will be sent to the insights target. If this parameter is
-     *        specified, only included categories will be sent to the insights target.
+     *        By default, all <code>CategoryEvents</code> are sent to the insights target. If this parameter is
+     *        specified, only included categories are sent to the insights target.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -47,7 +47,9 @@ public class CreateExperimentRequest extends com.amazonaws.AmazonWebServiceReque
     private String description;
     /**
      * <p>
-     * A list of tags to associate with the experiment. You can use <a>Search</a> API to search on the tags.
+     * A list of tags to associate with the experiment. You can use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search on the
+     * tags.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -186,10 +188,14 @@ public class CreateExperimentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A list of tags to associate with the experiment. You can use <a>Search</a> API to search on the tags.
+     * A list of tags to associate with the experiment. You can use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search on the
+     * tags.
      * </p>
      * 
-     * @return A list of tags to associate with the experiment. You can use <a>Search</a> API to search on the tags.
+     * @return A list of tags to associate with the experiment. You can use <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search
+     *         on the tags.
      */
 
     public java.util.List<Tag> getTags() {
@@ -198,11 +204,15 @@ public class CreateExperimentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A list of tags to associate with the experiment. You can use <a>Search</a> API to search on the tags.
+     * A list of tags to associate with the experiment. You can use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search on the
+     * tags.
      * </p>
      * 
      * @param tags
-     *        A list of tags to associate with the experiment. You can use <a>Search</a> API to search on the tags.
+     *        A list of tags to associate with the experiment. You can use <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search
+     *        on the tags.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -216,7 +226,9 @@ public class CreateExperimentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A list of tags to associate with the experiment. You can use <a>Search</a> API to search on the tags.
+     * A list of tags to associate with the experiment. You can use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search on the
+     * tags.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -225,7 +237,9 @@ public class CreateExperimentRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param tags
-     *        A list of tags to associate with the experiment. You can use <a>Search</a> API to search on the tags.
+     *        A list of tags to associate with the experiment. You can use <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search
+     *        on the tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -241,11 +255,15 @@ public class CreateExperimentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A list of tags to associate with the experiment. You can use <a>Search</a> API to search on the tags.
+     * A list of tags to associate with the experiment. You can use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search on the
+     * tags.
      * </p>
      * 
      * @param tags
-     *        A list of tags to associate with the experiment. You can use <a>Search</a> API to search on the tags.
+     *        A list of tags to associate with the experiment. You can use <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search
+     *        on the tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

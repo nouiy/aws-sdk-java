@@ -28,7 +28,8 @@ public enum SnowballCapacity {
     T8("T8"),
     T14("T14"),
     T32("T32"),
-    NoPreference("NoPreference");
+    NoPreference("NoPreference"),
+    T240("T240");
 
     private String value;
 

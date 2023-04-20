@@ -20,7 +20,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A conditional statement for a search expression that includes a resource property, a Boolean operator, and a value.
- * Resources that match the statement are returned in the results from the <a>Search</a> API.
+ * Resources that match the statement are returned in the results from the <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API.
  * </p>
  * <p>
  * If you specify a <code>Value</code>, but not an <code>Operator</code>, SageMaker uses the equals operator.
@@ -93,8 +94,9 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see
-     * <a>SearchRecord</a>. You must specify a valid property for the resource.
+     * A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SearchRecord.html">SearchRecord</a>. You must
+     * specify a valid property for the resource.
      * </p>
      */
     private String name;
@@ -247,13 +249,15 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see
-     * <a>SearchRecord</a>. You must specify a valid property for the resource.
+     * A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SearchRecord.html">SearchRecord</a>. You must
+     * specify a valid property for the resource.
      * </p>
      * 
      * @param name
-     *        A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see
-     *        <a>SearchRecord</a>. You must specify a valid property for the resource.
+     *        A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SearchRecord.html">SearchRecord</a>.
+     *        You must specify a valid property for the resource.
      */
 
     public void setName(String name) {
@@ -262,12 +266,14 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see
-     * <a>SearchRecord</a>. You must specify a valid property for the resource.
+     * A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SearchRecord.html">SearchRecord</a>. You must
+     * specify a valid property for the resource.
      * </p>
      * 
-     * @return A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see
-     *         <a>SearchRecord</a>. You must specify a valid property for the resource.
+     * @return A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SearchRecord.html">SearchRecord</a>.
+     *         You must specify a valid property for the resource.
      */
 
     public String getName() {
@@ -276,13 +282,15 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see
-     * <a>SearchRecord</a>. You must specify a valid property for the resource.
+     * A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SearchRecord.html">SearchRecord</a>. You must
+     * specify a valid property for the resource.
      * </p>
      * 
      * @param name
-     *        A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see
-     *        <a>SearchRecord</a>. You must specify a valid property for the resource.
+     *        A resource property name. For example, <code>TrainingJobName</code>. For valid property names, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SearchRecord.html">SearchRecord</a>.
+     *        You must specify a valid property for the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

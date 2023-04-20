@@ -19,9 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The production variant summary for a deployment when an endpoint is creating or updating with the
- * <code> <a>CreateEndpoint</a> </code> or <code> <a>UpdateEndpoint</a> </code> operations. Describes the
- * <code>VariantStatus </code>, weight and capacity for a production variant associated with an endpoint.
+ * The production variant summary for a deployment when an endpoint is creating or updating with the <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html">CreateEndpoint</a> or <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateEndpoint.html">UpdateEndpoint</a>
+ * operations. Describes the <code>VariantStatus </code>, weight and capacity for a production variant associated with
+ * an endpoint.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/PendingProductionVariantSummary"
@@ -52,7 +54,9 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
     /**
      * <p>
      * The requested weight for the variant in this deployment, as specified in the endpoint configuration for the
-     * endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code> operation.
+     * endpoint. The value is taken from the request to the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     * >CreateEndpointConfig</a> operation.
      * </p>
      */
     private Float desiredWeight;
@@ -65,7 +69,9 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
     /**
      * <p>
      * The number of instances requested in this deployment, as specified in the endpoint configuration for the
-     * endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code> operation.
+     * endpoint. The value is taken from the request to the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     * >CreateEndpointConfig</a> operation.
      * </p>
      */
     private Integer desiredInstanceCount;
@@ -264,13 +270,16 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
     /**
      * <p>
      * The requested weight for the variant in this deployment, as specified in the endpoint configuration for the
-     * endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code> operation.
+     * endpoint. The value is taken from the request to the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     * >CreateEndpointConfig</a> operation.
      * </p>
      * 
      * @param desiredWeight
      *        The requested weight for the variant in this deployment, as specified in the endpoint configuration for
-     *        the endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code>
-     *        operation.
+     *        the endpoint. The value is taken from the request to the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     *        >CreateEndpointConfig</a> operation.
      */
 
     public void setDesiredWeight(Float desiredWeight) {
@@ -280,12 +289,15 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
     /**
      * <p>
      * The requested weight for the variant in this deployment, as specified in the endpoint configuration for the
-     * endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code> operation.
+     * endpoint. The value is taken from the request to the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     * >CreateEndpointConfig</a> operation.
      * </p>
      * 
      * @return The requested weight for the variant in this deployment, as specified in the endpoint configuration for
-     *         the endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code>
-     *         operation.
+     *         the endpoint. The value is taken from the request to the <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     *         >CreateEndpointConfig</a> operation.
      */
 
     public Float getDesiredWeight() {
@@ -295,13 +307,16 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
     /**
      * <p>
      * The requested weight for the variant in this deployment, as specified in the endpoint configuration for the
-     * endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code> operation.
+     * endpoint. The value is taken from the request to the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     * >CreateEndpointConfig</a> operation.
      * </p>
      * 
      * @param desiredWeight
      *        The requested weight for the variant in this deployment, as specified in the endpoint configuration for
-     *        the endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code>
-     *        operation.
+     *        the endpoint. The value is taken from the request to the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     *        >CreateEndpointConfig</a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -353,12 +368,16 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
     /**
      * <p>
      * The number of instances requested in this deployment, as specified in the endpoint configuration for the
-     * endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code> operation.
+     * endpoint. The value is taken from the request to the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     * >CreateEndpointConfig</a> operation.
      * </p>
      * 
      * @param desiredInstanceCount
      *        The number of instances requested in this deployment, as specified in the endpoint configuration for the
-     *        endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code> operation.
+     *        endpoint. The value is taken from the request to the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     *        >CreateEndpointConfig</a> operation.
      */
 
     public void setDesiredInstanceCount(Integer desiredInstanceCount) {
@@ -368,12 +387,15 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
     /**
      * <p>
      * The number of instances requested in this deployment, as specified in the endpoint configuration for the
-     * endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code> operation.
+     * endpoint. The value is taken from the request to the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     * >CreateEndpointConfig</a> operation.
      * </p>
      * 
      * @return The number of instances requested in this deployment, as specified in the endpoint configuration for the
-     *         endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code>
-     *         operation.
+     *         endpoint. The value is taken from the request to the <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     *         >CreateEndpointConfig</a> operation.
      */
 
     public Integer getDesiredInstanceCount() {
@@ -383,12 +405,16 @@ public class PendingProductionVariantSummary implements Serializable, Cloneable,
     /**
      * <p>
      * The number of instances requested in this deployment, as specified in the endpoint configuration for the
-     * endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code> operation.
+     * endpoint. The value is taken from the request to the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     * >CreateEndpointConfig</a> operation.
      * </p>
      * 
      * @param desiredInstanceCount
      *        The number of instances requested in this deployment, as specified in the endpoint configuration for the
-     *        endpoint. The value is taken from the request to the <code> <a>CreateEndpointConfig</a> </code> operation.
+     *        endpoint. The value is taken from the request to the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     *        >CreateEndpointConfig</a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -23,10 +23,23 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PutEventsConfigurationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The configuration that allows a bot to receive outgoing events. Can be an HTTPS endpoint or an AWS Lambda
+     * function ARN.
+     * </p>
+     */
     private EventsConfiguration eventsConfiguration;
 
     /**
+     * <p>
+     * The configuration that allows a bot to receive outgoing events. Can be an HTTPS endpoint or an AWS Lambda
+     * function ARN.
+     * </p>
+     * 
      * @param eventsConfiguration
+     *        The configuration that allows a bot to receive outgoing events. Can be an HTTPS endpoint or an AWS Lambda
+     *        function ARN.
      */
 
     public void setEventsConfiguration(EventsConfiguration eventsConfiguration) {
@@ -34,7 +47,13 @@ public class PutEventsConfigurationResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * @return
+     * <p>
+     * The configuration that allows a bot to receive outgoing events. Can be an HTTPS endpoint or an AWS Lambda
+     * function ARN.
+     * </p>
+     * 
+     * @return The configuration that allows a bot to receive outgoing events. Can be an HTTPS endpoint or an AWS Lambda
+     *         function ARN.
      */
 
     public EventsConfiguration getEventsConfiguration() {
@@ -42,7 +61,14 @@ public class PutEventsConfigurationResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The configuration that allows a bot to receive outgoing events. Can be an HTTPS endpoint or an AWS Lambda
+     * function ARN.
+     * </p>
+     * 
      * @param eventsConfiguration
+     *        The configuration that allows a bot to receive outgoing events. Can be an HTTPS endpoint or an AWS Lambda
+     *        function ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,15 +33,17 @@ public class ListInferenceExperimentsRequest extends com.amazonaws.AmazonWebServ
     private String nameContains;
     /**
      * <p>
-     * Selects inference experiments of this type. For the possible types of inference experiments, see
-     * <a>CreateInferenceExperimentRequest$Type</a>.
+     * Selects inference experiments of this type. For the possible types of inference experiments, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     * >CreateInferenceExperiment</a>.
      * </p>
      */
     private String type;
     /**
      * <p>
-     * Selects inference experiments which are in this status. For the possible statuses, see
-     * <a>DescribeInferenceExperimentResponse$Status</a>.
+     * Selects inference experiments which are in this status. For the possible statuses, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceExperiment.html"
+     * >DescribeInferenceExperiment</a>.
      * </p>
      */
     private String statusEquals;
@@ -136,13 +138,15 @@ public class ListInferenceExperimentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Selects inference experiments of this type. For the possible types of inference experiments, see
-     * <a>CreateInferenceExperimentRequest$Type</a>.
+     * Selects inference experiments of this type. For the possible types of inference experiments, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     * >CreateInferenceExperiment</a>.
      * </p>
      * 
      * @param type
-     *        Selects inference experiments of this type. For the possible types of inference experiments, see
-     *        <a>CreateInferenceExperimentRequest$Type</a>.
+     *        Selects inference experiments of this type. For the possible types of inference experiments, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     *        >CreateInferenceExperiment</a>.
      * @see InferenceExperimentType
      */
 
@@ -152,12 +156,14 @@ public class ListInferenceExperimentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Selects inference experiments of this type. For the possible types of inference experiments, see
-     * <a>CreateInferenceExperimentRequest$Type</a>.
+     * Selects inference experiments of this type. For the possible types of inference experiments, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     * >CreateInferenceExperiment</a>.
      * </p>
      * 
-     * @return Selects inference experiments of this type. For the possible types of inference experiments, see
-     *         <a>CreateInferenceExperimentRequest$Type</a>.
+     * @return Selects inference experiments of this type. For the possible types of inference experiments, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     *         >CreateInferenceExperiment</a>.
      * @see InferenceExperimentType
      */
 
@@ -167,13 +173,15 @@ public class ListInferenceExperimentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Selects inference experiments of this type. For the possible types of inference experiments, see
-     * <a>CreateInferenceExperimentRequest$Type</a>.
+     * Selects inference experiments of this type. For the possible types of inference experiments, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     * >CreateInferenceExperiment</a>.
      * </p>
      * 
      * @param type
-     *        Selects inference experiments of this type. For the possible types of inference experiments, see
-     *        <a>CreateInferenceExperimentRequest$Type</a>.
+     *        Selects inference experiments of this type. For the possible types of inference experiments, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     *        >CreateInferenceExperiment</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InferenceExperimentType
      */
@@ -185,13 +193,15 @@ public class ListInferenceExperimentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Selects inference experiments of this type. For the possible types of inference experiments, see
-     * <a>CreateInferenceExperimentRequest$Type</a>.
+     * Selects inference experiments of this type. For the possible types of inference experiments, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     * >CreateInferenceExperiment</a>.
      * </p>
      * 
      * @param type
-     *        Selects inference experiments of this type. For the possible types of inference experiments, see
-     *        <a>CreateInferenceExperimentRequest$Type</a>.
+     *        Selects inference experiments of this type. For the possible types of inference experiments, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     *        >CreateInferenceExperiment</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InferenceExperimentType
      */
@@ -203,13 +213,15 @@ public class ListInferenceExperimentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Selects inference experiments which are in this status. For the possible statuses, see
-     * <a>DescribeInferenceExperimentResponse$Status</a>.
+     * Selects inference experiments which are in this status. For the possible statuses, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceExperiment.html"
+     * >DescribeInferenceExperiment</a>.
      * </p>
      * 
      * @param statusEquals
-     *        Selects inference experiments which are in this status. For the possible statuses, see
-     *        <a>DescribeInferenceExperimentResponse$Status</a>.
+     *        Selects inference experiments which are in this status. For the possible statuses, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceExperiment.html"
+     *        >DescribeInferenceExperiment</a>.
      * @see InferenceExperimentStatus
      */
 
@@ -219,12 +231,14 @@ public class ListInferenceExperimentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Selects inference experiments which are in this status. For the possible statuses, see
-     * <a>DescribeInferenceExperimentResponse$Status</a>.
+     * Selects inference experiments which are in this status. For the possible statuses, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceExperiment.html"
+     * >DescribeInferenceExperiment</a>.
      * </p>
      * 
-     * @return Selects inference experiments which are in this status. For the possible statuses, see
-     *         <a>DescribeInferenceExperimentResponse$Status</a>.
+     * @return Selects inference experiments which are in this status. For the possible statuses, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceExperiment.html"
+     *         >DescribeInferenceExperiment</a>.
      * @see InferenceExperimentStatus
      */
 
@@ -234,13 +248,15 @@ public class ListInferenceExperimentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Selects inference experiments which are in this status. For the possible statuses, see
-     * <a>DescribeInferenceExperimentResponse$Status</a>.
+     * Selects inference experiments which are in this status. For the possible statuses, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceExperiment.html"
+     * >DescribeInferenceExperiment</a>.
      * </p>
      * 
      * @param statusEquals
-     *        Selects inference experiments which are in this status. For the possible statuses, see
-     *        <a>DescribeInferenceExperimentResponse$Status</a>.
+     *        Selects inference experiments which are in this status. For the possible statuses, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceExperiment.html"
+     *        >DescribeInferenceExperiment</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InferenceExperimentStatus
      */
@@ -252,13 +268,15 @@ public class ListInferenceExperimentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Selects inference experiments which are in this status. For the possible statuses, see
-     * <a>DescribeInferenceExperimentResponse$Status</a>.
+     * Selects inference experiments which are in this status. For the possible statuses, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceExperiment.html"
+     * >DescribeInferenceExperiment</a>.
      * </p>
      * 
      * @param statusEquals
-     *        Selects inference experiments which are in this status. For the possible statuses, see
-     *        <a>DescribeInferenceExperimentResponse$Status</a>.
+     *        Selects inference experiments which are in this status. For the possible statuses, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceExperiment.html"
+     *        >DescribeInferenceExperiment</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InferenceExperimentStatus
      */

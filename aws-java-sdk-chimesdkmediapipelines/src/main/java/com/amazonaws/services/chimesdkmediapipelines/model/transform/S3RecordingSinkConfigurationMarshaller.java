@@ -29,6 +29,8 @@ public class S3RecordingSinkConfigurationMarshaller {
 
     private static final MarshallingInfo<String> DESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Destination").build();
+    private static final MarshallingInfo<String> RECORDINGFILEFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RecordingFileFormat").build();
 
     private static final S3RecordingSinkConfigurationMarshaller instance = new S3RecordingSinkConfigurationMarshaller();
 
@@ -47,6 +49,7 @@ public class S3RecordingSinkConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(s3RecordingSinkConfiguration.getDestination(), DESTINATION_BINDING);
+            protocolMarshaller.marshall(s3RecordingSinkConfiguration.getRecordingFileFormat(), RECORDINGFILEFORMAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

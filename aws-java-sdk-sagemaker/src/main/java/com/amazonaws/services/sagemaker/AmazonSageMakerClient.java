@@ -237,8 +237,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * hyperparameter tuning job launches after you call this API, but not to training jobs that the hyperparameter
      * tuning job launched before you called this API. To make sure that the tags associated with a hyperparameter
      * tuning job are also added to all training jobs that the hyperparameter tuning job launches, add the tags when you
-     * first create the tuning job by specifying them in the <code>Tags</code> parameter of
-     * <a>CreateHyperParameterTuningJob</a>
+     * first create the tuning job by specifying them in the <code>Tags</code> parameter of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateHyperParameterTuningJob.html"
+     * >CreateHyperParameterTuningJob</a>
      * </p>
      * </note> <note>
      * <p>
@@ -246,7 +247,10 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * that the Domain or User Profile launches after you call this API, but not to Apps that the Domain or User Profile
      * launched before you called this API. To make sure that the tags associated with a Domain or User Profile are also
      * added to all Apps that the Domain or User Profile launches, add the tags when you first create the Domain or User
-     * Profile by specifying them in the <code>Tags</code> parameter of <a>CreateDomain</a> or <a>CreateUserProfile</a>.
+     * Profile by specifying them in the <code>Tags</code> parameter of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateDomain.html">CreateDomain</a> or <a
+     * href
+     * ="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateUserProfile.html">CreateUserProfile</a>.
      * </p>
      * </note>
      * 
@@ -303,7 +307,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
     /**
      * <p>
      * Associates a trial component with a trial. A trial component can be associated with multiple trials. To
-     * disassociate a trial component from a trial, call the <a>DisassociateTrialComponent</a> API.
+     * disassociate a trial component from a trial, call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DisassociateTrialComponent.html"
+     * >DisassociateTrialComponent</a> API.
      * </p>
      * 
      * @param associateTrialComponentRequest
@@ -968,9 +974,13 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * body contains the <code>CompilationJobArn</code> for the compiled job.
      * </p>
      * <p>
-     * To stop a model compilation job, use <a>StopCompilationJob</a>. To get information about a particular model
-     * compilation job, use <a>DescribeCompilationJob</a>. To get information about multiple model compilation jobs, use
-     * <a>ListCompilationJobs</a>.
+     * To stop a model compilation job, use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopCompilationJob.html"
+     * >StopCompilationJob</a>. To get information about a particular model compilation job, use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeCompilationJob.html"
+     * >DescribeCompilationJob</a>. To get information about multiple model compilation jobs, use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListCompilationJobs.html"
+     * >ListCompilationJobs</a>.
      * </p>
      * 
      * @param createCompilationJobRequest
@@ -1513,8 +1523,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
     /**
      * <p>
      * Creates an endpoint using the endpoint configuration specified in the request. SageMaker uses the endpoint to
-     * provision resources and deploy models. You create the endpoint configuration with the <a>CreateEndpointConfig</a>
-     * API.
+     * provision resources and deploy models. You create the endpoint configuration with the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"
+     * >CreateEndpointConfig</a> API.
      * </p>
      * <p>
      * Use this API to deploy models using SageMaker hosting services.
@@ -1540,21 +1551,27 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * </p>
      * <note>
      * <p>
-     * When you call <a>CreateEndpoint</a>, a load call is made to DynamoDB to verify that your endpoint configuration
-     * exists. When you read data from a DynamoDB table supporting <a
+     * When you call <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html">CreateEndpoint</a>, a
+     * load call is made to DynamoDB to verify that your endpoint configuration exists. When you read data from a
+     * DynamoDB table supporting <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
      * <code>Eventually Consistent Reads</code> </a>, the response might not reflect the results of a recently completed
      * write operation. The response might include some stale data. If the dependent entities are not yet in DynamoDB,
      * this causes a validation error. If you repeat your read request after a short time, the response should return
      * the latest data. So retry logic is recommended to handle these possible issues. We also recommend that customers
-     * call <a>DescribeEndpointConfig</a> before calling <a>CreateEndpoint</a> to minimize the potential impact of a
-     * DynamoDB eventually consistent read.
+     * call <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeEndpointConfig.html">
+     * DescribeEndpointConfig</a> before calling <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html">CreateEndpoint</a> to
+     * minimize the potential impact of a DynamoDB eventually consistent read.
      * </p>
      * </note>
      * <p>
      * When SageMaker receives the request, it sets the endpoint status to <code>Creating</code>. After it creates the
      * endpoint, it sets the status to <code>InService</code>. SageMaker can then process incoming requests for
-     * inferences. To check the status of an endpoint, use the <a>DescribeEndpoint</a> API.
+     * inferences. To check the status of an endpoint, use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeEndpoint.html">DescribeEndpoint</a>
+     * API.
      * </p>
      * <p>
      * If any of the models hosted at this endpoint get model data from an Amazon S3 location, SageMaker uses Amazon Web
@@ -1569,8 +1586,10 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * To add the IAM role policies for using this API operation, go to the <a
      * href="https://console.aws.amazon.com/iam/">IAM console</a>, and choose Roles in the left navigation pane. Search
-     * the IAM role that you want to grant access to use the <a>CreateEndpoint</a> and <a>CreateEndpointConfig</a> API
-     * operations, add the following policies to the role.
+     * the IAM role that you want to grant access to use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html">CreateEndpoint</a> and
+     * <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html">
+     * CreateEndpointConfig</a> API operations, add the following policies to the role.
      * </p>
      * <ul>
      * <li>
@@ -1664,7 +1683,8 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * Creates an endpoint configuration that SageMaker hosting services uses to deploy models. In the configuration,
      * you identify one or more models, created using the <code>CreateModel</code> API, to deploy and the resources that
-     * you want SageMaker to provision. Then you call the <a>CreateEndpoint</a> API.
+     * you want SageMaker to provision. Then you call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html">CreateEndpoint</a> API.
      * </p>
      * <note>
      * <p>
@@ -1684,15 +1704,19 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * </p>
      * <note>
      * <p>
-     * When you call <a>CreateEndpoint</a>, a load call is made to DynamoDB to verify that your endpoint configuration
-     * exists. When you read data from a DynamoDB table supporting <a
+     * When you call <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html">CreateEndpoint</a>, a
+     * load call is made to DynamoDB to verify that your endpoint configuration exists. When you read data from a
+     * DynamoDB table supporting <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
      * <code>Eventually Consistent Reads</code> </a>, the response might not reflect the results of a recently completed
      * write operation. The response might include some stale data. If the dependent entities are not yet in DynamoDB,
      * this causes a validation error. If you repeat your read request after a short time, the response should return
      * the latest data. So retry logic is recommended to handle these possible issues. We also recommend that customers
-     * call <a>DescribeEndpointConfig</a> before calling <a>CreateEndpoint</a> to minimize the potential impact of a
-     * DynamoDB eventually consistent read.
+     * call <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeEndpointConfig.html">
+     * DescribeEndpointConfig</a> before calling <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html">CreateEndpoint</a> to
+     * minimize the potential impact of a DynamoDB eventually consistent read.
      * </p>
      * </note>
      * 
@@ -1772,17 +1796,25 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * use the logging APIs provided by the SDK.
      * </p>
      * <p>
-     * You can add tags to experiments, trials, trial components and then use the <a>Search</a> API to search for the
+     * You can add tags to experiments, trials, trial components and then use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search for the
      * tags.
      * </p>
      * <p>
      * To add a description to an experiment, specify the optional <code>Description</code> parameter. To add a
-     * description later, or to change the description, call the <a>UpdateExperiment</a> API.
+     * description later, or to change the description, call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateExperiment.html">UpdateExperiment</a>
+     * API.
      * </p>
      * <p>
-     * To get a list of all your experiments, call the <a>ListExperiments</a> API. To view an experiment's properties,
-     * call the <a>DescribeExperiment</a> API. To get a list of all the trials associated with an experiment, call the
-     * <a>ListTrials</a> API. To create a trial call the <a>CreateTrial</a> API.
+     * To get a list of all your experiments, call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListExperiments.html">ListExperiments</a>
+     * API. To view an experiment's properties, call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeExperiment.html"
+     * >DescribeExperiment</a> API. To get a list of all the trials associated with an experiment, call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListTrials.html">ListTrials</a> API. To
+     * create a trial call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrial.html">CreateTrial</a> API.
      * </p>
      * 
      * @param createExperimentRequest
@@ -3516,9 +3548,10 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * </p>
      * <note>
      * <p>
-     * The URL that you get from a call to <a>CreatePresignedNotebookInstanceUrl</a> is valid only for 5 minutes. If you
-     * try to use the URL after the 5-minute limit expires, you are directed to the Amazon Web Services console sign-in
-     * page.
+     * The URL that you get from a call to <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreatePresignedNotebookInstanceUrl.html"
+     * >CreatePresignedNotebookInstanceUrl</a> is valid only for 5 minutes. If you try to use the URL after the 5-minute
+     * limit expires, you are directed to the Amazon Web Services console sign-in page.
      * </p>
      * </note>
      * 
@@ -4079,11 +4112,18 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * use the logging APIs provided by the SDK.
      * </p>
      * <p>
-     * You can add tags to a trial and then use the <a>Search</a> API to search for the tags.
+     * You can add tags to a trial and then use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search for the
+     * tags.
      * </p>
      * <p>
-     * To get a list of all your trials, call the <a>ListTrials</a> API. To view a trial's properties, call the
-     * <a>DescribeTrial</a> API. To create a trial component, call the <a>CreateTrialComponent</a> API.
+     * To get a list of all your trials, call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListTrials.html">ListTrials</a> API. To view
+     * a trial's properties, call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrial.html">DescribeTrial</a> API. To
+     * create a trial component, call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrialComponent.html"
+     * >CreateTrialComponent</a> API.
      * </p>
      * 
      * @param createTrialRequest
@@ -4155,7 +4195,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * use the logging APIs provided by the SDK.
      * </p>
      * <p>
-     * You can add tags to a trial component and then use the <a>Search</a> API to search for the tags.
+     * You can add tags to a trial component and then use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search for the
+     * tags.
      * </p>
      * 
      * @param createTrialComponentRequest
@@ -4283,6 +4325,7 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * </p>
      * <p>
      * If you want to create a new workforce in an Amazon Web Services Region where a workforce already exists, use the
+     * <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteWorkforce.html">DeleteWorkforce</a>
      * API operation to delete the existing workforce and then use <code>CreateWorkforce</code> to create a new
      * workforce.
      * </p>
@@ -5296,8 +5339,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Deletes an SageMaker experiment. All trials associated with the experiment must be deleted first. Use the
-     * <a>ListTrials</a> API to get a list of the trials associated with the experiment.
+     * Deletes an SageMaker experiment. All trials associated with the experiment must be deleted first. Use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListTrials.html">ListTrials</a> API to get a
+     * list of the trials associated with the experiment.
      * </p>
      * 
      * @param deleteExperimentRequest
@@ -5607,8 +5651,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * Use this operation to delete a human task user interface (worker task template).
      * </p>
      * <p>
-     * To see a list of human task user interfaces (work task templates) in your account, use . When you delete a worker
-     * task template, it no longer appears when you call <code>ListHumanTaskUis</code>.
+     * To see a list of human task user interfaces (work task templates) in your account, use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListHumanTaskUis.html">ListHumanTaskUis</a>.
+     * When you delete a worker task template, it no longer appears when you call <code>ListHumanTaskUis</code>.
      * </p>
      * 
      * @param deleteHumanTaskUiRequest
@@ -6815,8 +6860,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Deletes the specified trial. All trial components that make up the trial must be deleted first. Use the
-     * <a>DescribeTrialComponent</a> API to get the list of trial components.
+     * Deletes the specified trial. All trial components that make up the trial must be deleted first. Use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrialComponent.html"
+     * >DescribeTrialComponent</a> API to get the list of trial components.
      * </p>
      * 
      * @param deleteTrialRequest
@@ -6874,8 +6920,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
     /**
      * <p>
      * Deletes the specified trial component. A trial component must be disassociated from all trials before the trial
-     * component can be deleted. To disassociate a trial component from a trial, call the
-     * <a>DisassociateTrialComponent</a> API.
+     * component can be deleted. To disassociate a trial component from a trial, call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DisassociateTrialComponent.html"
+     * >DisassociateTrialComponent</a> API.
      * </p>
      * 
      * @param deleteTrialComponentRequest
@@ -6996,13 +7043,16 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * </p>
      * <p>
      * If you want to create a new workforce in an Amazon Web Services Region where a workforce already exists, use this
-     * operation to delete the existing workforce and then use to create a new workforce.
+     * operation to delete the existing workforce and then use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateWorkforce.html">CreateWorkforce</a> to
+     * create a new workforce.
      * </p>
      * <important>
      * <p>
-     * If a private workforce contains one or more work teams, you must use the operation to delete all work teams
-     * before you delete the workforce. If you try to delete a workforce that contains one or more work teams, you will
-     * recieve a <code>ResourceInUse</code> error.
+     * If a private workforce contains one or more work teams, you must use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteWorkteam.html">DeleteWorkteam</a>
+     * operation to delete all work teams before you delete the workforce. If you try to delete a workforce that
+     * contains one or more work teams, you will recieve a <code>ResourceInUse</code> error.
      * </p>
      * </important>
      * 
@@ -7634,8 +7684,11 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * Returns information about a model compilation job.
      * </p>
      * <p>
-     * To create a model compilation job, use <a>CreateCompilationJob</a>. To get information about multiple model
-     * compilation jobs, use <a>ListCompilationJobs</a>.
+     * To create a model compilation job, use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateCompilationJob.html"
+     * >CreateCompilationJob</a>. To get information about multiple model compilation jobs, use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListCompilationJobs.html"
+     * >ListCompilationJobs</a>.
      * </p>
      * 
      * @param describeCompilationJobRequest
@@ -10614,10 +10667,13 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * Disassociates a trial component from a trial. This doesn't effect other trials the component is associated with.
      * Before you can delete a component, you must disassociate the component from all trials it is associated with. To
-     * associate a trial component with a trial, call the <a>AssociateTrialComponent</a> API.
+     * associate a trial component with a trial, call the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AssociateTrialComponent.html"
+     * >AssociateTrialComponent</a> API.
      * </p>
      * <p>
-     * To get a list of the trials a component is associated with, use the <a>Search</a> API. Specify
+     * To get a list of the trials a component is associated with, use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API. Specify
      * <code>ExperimentTrialComponent</code> for the <code>Resource</code> parameter. The list appears in the response
      * under <code>Results.TrialComponent.Parents</code>.
      * </p>
@@ -11658,8 +11714,11 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * Lists model compilation jobs that satisfy various filters.
      * </p>
      * <p>
-     * To create a model compilation job, use <a>CreateCompilationJob</a>. To get information about a particular model
-     * compilation job you have created, use <a>DescribeCompilationJob</a>.
+     * To create a model compilation job, use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateCompilationJob.html"
+     * >CreateCompilationJob</a>. To get information about a particular model compilation job you have created, use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeCompilationJob.html">
+     * DescribeCompilationJob</a>.
      * </p>
      * 
      * @param listCompilationJobsRequest
@@ -12622,8 +12681,10 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Gets a list of <a>HyperParameterTuningJobSummary</a> objects that describe the hyperparameter tuning jobs
-     * launched in your account.
+     * Gets a list of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobSummary.html"
+     * >HyperParameterTuningJobSummary</a> objects that describe the hyperparameter tuning jobs launched in your
+     * account.
      * </p>
      * 
      * @param listHyperParameterTuningJobsRequest
@@ -13936,8 +13997,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Lists notebook instance lifestyle configurations created with the <a>CreateNotebookInstanceLifecycleConfig</a>
-     * API.
+     * Lists notebook instance lifestyle configurations created with the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateNotebookInstanceLifecycleConfig.html"
+     * >CreateNotebookInstanceLifecycleConfig</a> API.
      * </p>
      * 
      * @param listNotebookInstanceLifecycleConfigsRequest
@@ -14754,8 +14816,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Gets a list of <a>TrainingJobSummary</a> objects that describe the training jobs that a hyperparameter tuning job
-     * launched.
+     * Gets a list of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html">TrainingJobSummary
+     * </a> objects that describe the training jobs that a hyperparameter tuning job launched.
      * </p>
      * 
      * @param listTrainingJobsForHyperParameterTuningJobRequest
@@ -16040,8 +16103,8 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * </p>
      * <p>
      * When it receives a <code>StopCompilationJob</code> request, Amazon SageMaker changes the
-     * <a>CompilationJobSummary$CompilationJobStatus</a> of the job to <code>Stopping</code>. After Amazon SageMaker
-     * stops the job, it sets the <a>CompilationJobSummary$CompilationJobStatus</a> to <code>Stopped</code>.
+     * <code>CompilationJobStatus</code> of the job to <code>Stopping</code>. After Amazon SageMaker stops the job, it
+     * sets the <code>CompilationJobStatus</code> to <code>Stopped</code>.
      * </p>
      * 
      * @param stopCompilationJobRequest
@@ -17313,8 +17376,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * </p>
      * <p>
      * When SageMaker receives the request, it sets the endpoint status to <code>Updating</code>. After updating the
-     * endpoint, it sets the status to <code>InService</code>. To check the status of an endpoint, use the
-     * <a>DescribeEndpoint</a> API.
+     * endpoint, it sets the status to <code>InService</code>. To check the status of an endpoint, use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeEndpoint.html">DescribeEndpoint</a>
+     * API.
      * </p>
      * <note>
      * <p>
@@ -17387,7 +17451,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * Updates variant weight of one or more variants associated with an existing endpoint, or capacity of one variant
      * associated with an existing endpoint. When it receives the request, SageMaker sets the endpoint status to
      * <code>Updating</code>. After updating the endpoint, it sets the status to <code>InService</code>. To check the
-     * status of an endpoint, use the <a>DescribeEndpoint</a> API.
+     * status of an endpoint, use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeEndpoint.html">DescribeEndpoint</a>
+     * API.
      * </p>
      * 
      * @param updateEndpointWeightsAndCapacitiesRequest
@@ -17685,8 +17751,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Updates the properties of a SageMaker image. To change the image's tags, use the <a>AddTags</a> and
-     * <a>DeleteTags</a> APIs.
+     * Updates the properties of a SageMaker image. To change the image's tags, use the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AddTags.html">AddTags</a> and <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteTags.html">DeleteTags</a> APIs.
      * </p>
      * 
      * @param updateImageRequest
@@ -17805,8 +17872,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
     /**
      * <p>
      * Updates an inference experiment that you created. The status of the inference experiment has to be either
-     * <code>Created</code>, <code>Running</code>. For more information on the status of an inference experiment, see
-     * <a>DescribeInferenceExperimentResponse$Status</a>.
+     * <code>Created</code>, <code>Running</code>. For more information on the status of an inference experiment, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceExperiment.html">
+     * DescribeInferenceExperiment</a>.
      * </p>
      * 
      * @param updateInferenceExperimentRequest
@@ -18174,8 +18242,9 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Updates a notebook instance lifecycle configuration created with the <a>CreateNotebookInstanceLifecycleConfig</a>
-     * API.
+     * Updates a notebook instance lifecycle configuration created with the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateNotebookInstanceLifecycleConfig.html"
+     * >CreateNotebookInstanceLifecycleConfig</a> API.
      * </p>
      * 
      * @param updateNotebookInstanceLifecycleConfigRequest
@@ -18747,12 +18816,16 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <important>
      * <p>
      * You can only update your OIDC IdP configuration when there are no work teams associated with your workforce. You
-     * can delete work teams using the operation.
+     * can delete work teams using the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteWorkteam.html">DeleteWorkteam</a>
+     * operation.
      * </p>
      * </important>
      * <p>
      * After restricting access to a range of IP addresses or updating your OIDC IdP configuration with this operation,
-     * you can view details about your update workforce using the operation.
+     * you can view details about your update workforce using the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeWorkforce.html">DescribeWorkforce</a>
+     * operation.
      * </p>
      * <important>
      * <p>

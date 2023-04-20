@@ -32,17 +32,18 @@ public class CreateFleetLocationsResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * .
      * </p>
      */
     private String fleetArn;
     /**
      * <p>
      * The remote locations that are being added to the fleet, and the life-cycle status of each location. For new
-     * locations, the status is set to <code>NEW</code>. During location creation, GameLift updates each location's
-     * status as instances are deployed there and prepared for game hosting. This list does not include the fleet home
-     * Region or any remote locations that were already added to the fleet.
+     * locations, the status is set to <code>NEW</code>. During location creation, Amazon GameLift updates each
+     * location's status as instances are deployed there and prepared for game hosting. This list does not include the
+     * fleet home Region or any remote locations that were already added to the fleet.
      * </p>
      */
     private java.util.List<LocationState> locationStates;
@@ -90,14 +91,15 @@ public class CreateFleetLocationsResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * .
      * </p>
      * 
      * @param fleetArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *        Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *        <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
      */
 
@@ -108,13 +110,14 @@ public class CreateFleetLocationsResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * .
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *         GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *         Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *         <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
      */
 
@@ -125,14 +128,15 @@ public class CreateFleetLocationsResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * .
      * </p>
      * 
      * @param fleetArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *        Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *        <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -145,14 +149,14 @@ public class CreateFleetLocationsResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The remote locations that are being added to the fleet, and the life-cycle status of each location. For new
-     * locations, the status is set to <code>NEW</code>. During location creation, GameLift updates each location's
-     * status as instances are deployed there and prepared for game hosting. This list does not include the fleet home
-     * Region or any remote locations that were already added to the fleet.
+     * locations, the status is set to <code>NEW</code>. During location creation, Amazon GameLift updates each
+     * location's status as instances are deployed there and prepared for game hosting. This list does not include the
+     * fleet home Region or any remote locations that were already added to the fleet.
      * </p>
      * 
      * @return The remote locations that are being added to the fleet, and the life-cycle status of each location. For
-     *         new locations, the status is set to <code>NEW</code>. During location creation, GameLift updates each
-     *         location's status as instances are deployed there and prepared for game hosting. This list does not
+     *         new locations, the status is set to <code>NEW</code>. During location creation, Amazon GameLift updates
+     *         each location's status as instances are deployed there and prepared for game hosting. This list does not
      *         include the fleet home Region or any remote locations that were already added to the fleet.
      */
 
@@ -163,15 +167,15 @@ public class CreateFleetLocationsResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The remote locations that are being added to the fleet, and the life-cycle status of each location. For new
-     * locations, the status is set to <code>NEW</code>. During location creation, GameLift updates each location's
-     * status as instances are deployed there and prepared for game hosting. This list does not include the fleet home
-     * Region or any remote locations that were already added to the fleet.
+     * locations, the status is set to <code>NEW</code>. During location creation, Amazon GameLift updates each
+     * location's status as instances are deployed there and prepared for game hosting. This list does not include the
+     * fleet home Region or any remote locations that were already added to the fleet.
      * </p>
      * 
      * @param locationStates
      *        The remote locations that are being added to the fleet, and the life-cycle status of each location. For
-     *        new locations, the status is set to <code>NEW</code>. During location creation, GameLift updates each
-     *        location's status as instances are deployed there and prepared for game hosting. This list does not
+     *        new locations, the status is set to <code>NEW</code>. During location creation, Amazon GameLift updates
+     *        each location's status as instances are deployed there and prepared for game hosting. This list does not
      *        include the fleet home Region or any remote locations that were already added to the fleet.
      */
 
@@ -187,9 +191,9 @@ public class CreateFleetLocationsResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The remote locations that are being added to the fleet, and the life-cycle status of each location. For new
-     * locations, the status is set to <code>NEW</code>. During location creation, GameLift updates each location's
-     * status as instances are deployed there and prepared for game hosting. This list does not include the fleet home
-     * Region or any remote locations that were already added to the fleet.
+     * locations, the status is set to <code>NEW</code>. During location creation, Amazon GameLift updates each
+     * location's status as instances are deployed there and prepared for game hosting. This list does not include the
+     * fleet home Region or any remote locations that were already added to the fleet.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -199,8 +203,8 @@ public class CreateFleetLocationsResult extends com.amazonaws.AmazonWebServiceRe
      * 
      * @param locationStates
      *        The remote locations that are being added to the fleet, and the life-cycle status of each location. For
-     *        new locations, the status is set to <code>NEW</code>. During location creation, GameLift updates each
-     *        location's status as instances are deployed there and prepared for game hosting. This list does not
+     *        new locations, the status is set to <code>NEW</code>. During location creation, Amazon GameLift updates
+     *        each location's status as instances are deployed there and prepared for game hosting. This list does not
      *        include the fleet home Region or any remote locations that were already added to the fleet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -218,15 +222,15 @@ public class CreateFleetLocationsResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The remote locations that are being added to the fleet, and the life-cycle status of each location. For new
-     * locations, the status is set to <code>NEW</code>. During location creation, GameLift updates each location's
-     * status as instances are deployed there and prepared for game hosting. This list does not include the fleet home
-     * Region or any remote locations that were already added to the fleet.
+     * locations, the status is set to <code>NEW</code>. During location creation, Amazon GameLift updates each
+     * location's status as instances are deployed there and prepared for game hosting. This list does not include the
+     * fleet home Region or any remote locations that were already added to the fleet.
      * </p>
      * 
      * @param locationStates
      *        The remote locations that are being added to the fleet, and the life-cycle status of each location. For
-     *        new locations, the status is set to <code>NEW</code>. During location creation, GameLift updates each
-     *        location's status as instances are deployed there and prepared for game hosting. This list does not
+     *        new locations, the status is set to <code>NEW</code>. During location creation, Amazon GameLift updates
+     *        each location's status as instances are deployed there and prepared for game hosting. This list does not
      *        include the fleet home Region or any remote locations that were already added to the fleet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -23,6 +23,11 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateMeetingWithAttendeesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A meeting created using the Amazon Chime SDK.
+     * </p>
+     */
     private Meeting meeting;
     /**
      * <p>
@@ -39,7 +44,12 @@ public class CreateMeetingWithAttendeesResult extends com.amazonaws.AmazonWebSer
     private java.util.List<CreateAttendeeError> errors;
 
     /**
+     * <p>
+     * A meeting created using the Amazon Chime SDK.
+     * </p>
+     * 
      * @param meeting
+     *        A meeting created using the Amazon Chime SDK.
      */
 
     public void setMeeting(Meeting meeting) {
@@ -47,7 +57,11 @@ public class CreateMeetingWithAttendeesResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * A meeting created using the Amazon Chime SDK.
+     * </p>
+     * 
+     * @return A meeting created using the Amazon Chime SDK.
      */
 
     public Meeting getMeeting() {
@@ -55,7 +69,12 @@ public class CreateMeetingWithAttendeesResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * A meeting created using the Amazon Chime SDK.
+     * </p>
+     * 
      * @param meeting
+     *        A meeting created using the Amazon Chime SDK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

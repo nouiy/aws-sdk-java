@@ -24,10 +24,20 @@ import javax.annotation.Generated;
 public class PutSipMediaApplicationLoggingConfigurationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements
         Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The logging configuration of the SIP media application.
+     * </p>
+     */
     private SipMediaApplicationLoggingConfiguration sipMediaApplicationLoggingConfiguration;
 
     /**
+     * <p>
+     * The logging configuration of the SIP media application.
+     * </p>
+     * 
      * @param sipMediaApplicationLoggingConfiguration
+     *        The logging configuration of the SIP media application.
      */
 
     public void setSipMediaApplicationLoggingConfiguration(SipMediaApplicationLoggingConfiguration sipMediaApplicationLoggingConfiguration) {
@@ -35,7 +45,11 @@ public class PutSipMediaApplicationLoggingConfigurationResult extends com.amazon
     }
 
     /**
-     * @return
+     * <p>
+     * The logging configuration of the SIP media application.
+     * </p>
+     * 
+     * @return The logging configuration of the SIP media application.
      */
 
     public SipMediaApplicationLoggingConfiguration getSipMediaApplicationLoggingConfiguration() {
@@ -43,7 +57,12 @@ public class PutSipMediaApplicationLoggingConfigurationResult extends com.amazon
     }
 
     /**
+     * <p>
+     * The logging configuration of the SIP media application.
+     * </p>
+     * 
      * @param sipMediaApplicationLoggingConfiguration
+     *        The logging configuration of the SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

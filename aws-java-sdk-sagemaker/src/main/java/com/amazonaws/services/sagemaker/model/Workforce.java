@@ -46,7 +46,9 @@ public class Workforce implements Serializable, Cloneable, StructuredPojo {
     private String workforceArn;
     /**
      * <p>
-     * The most recent date that was used to successfully add one or more IP address ranges (<a
+     * The most recent date that <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateWorkforce.html">UpdateWorkforce</a> was
+     * used to successfully add one or more IP address ranges (<a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">CIDRs</a>) to a private workforce's
      * allow list.
      * </p>
@@ -187,13 +189,17 @@ public class Workforce implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The most recent date that was used to successfully add one or more IP address ranges (<a
+     * The most recent date that <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateWorkforce.html">UpdateWorkforce</a> was
+     * used to successfully add one or more IP address ranges (<a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">CIDRs</a>) to a private workforce's
      * allow list.
      * </p>
      * 
      * @param lastUpdatedDate
-     *        The most recent date that was used to successfully add one or more IP address ranges (<a
+     *        The most recent date that <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateWorkforce.html"
+     *        >UpdateWorkforce</a> was used to successfully add one or more IP address ranges (<a
      *        href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">CIDRs</a>) to a private
      *        workforce's allow list.
      */
@@ -204,12 +210,16 @@ public class Workforce implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The most recent date that was used to successfully add one or more IP address ranges (<a
+     * The most recent date that <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateWorkforce.html">UpdateWorkforce</a> was
+     * used to successfully add one or more IP address ranges (<a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">CIDRs</a>) to a private workforce's
      * allow list.
      * </p>
      * 
-     * @return The most recent date that was used to successfully add one or more IP address ranges (<a
+     * @return The most recent date that <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateWorkforce.html"
+     *         >UpdateWorkforce</a> was used to successfully add one or more IP address ranges (<a
      *         href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">CIDRs</a>) to a private
      *         workforce's allow list.
      */
@@ -220,13 +230,17 @@ public class Workforce implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The most recent date that was used to successfully add one or more IP address ranges (<a
+     * The most recent date that <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateWorkforce.html">UpdateWorkforce</a> was
+     * used to successfully add one or more IP address ranges (<a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">CIDRs</a>) to a private workforce's
      * allow list.
      * </p>
      * 
      * @param lastUpdatedDate
-     *        The most recent date that was used to successfully add one or more IP address ranges (<a
+     *        The most recent date that <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateWorkforce.html"
+     *        >UpdateWorkforce</a> was used to successfully add one or more IP address ranges (<a
      *        href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">CIDRs</a>) to a private
      *        workforce's allow list.
      * @return Returns a reference to this object so that method calls can be chained together.

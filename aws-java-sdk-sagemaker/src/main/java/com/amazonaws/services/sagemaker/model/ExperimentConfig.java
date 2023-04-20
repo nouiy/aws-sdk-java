@@ -25,17 +25,19 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <ul>
  * <li>
  * <p>
- * <a>CreateProcessingJob</a>
+ * <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateProcessingJob.html">CreateProcessingJob</a>
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>CreateTrainingJob</a>
+ * <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html">CreateTrainingJob</a>
  * </p>
  * </li>
  * <li>
  * <p>
- * <a>CreateTransformJob</a>
+ * <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTransformJob.html">CreateTransformJob</a>
  * </p>
  * </li>
  * </ul>

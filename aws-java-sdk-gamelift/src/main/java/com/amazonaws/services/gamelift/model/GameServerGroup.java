@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * <b>This data type is used with the GameLift FleetIQ and game server groups.</b>
+ * <b>This data type is used with the Amazon GameLift FleetIQ and game server groups.</b>
  * </p>
  * <p>
  * Properties that describe a game server group resource. A game server group manages certain properties related to a
@@ -59,15 +59,15 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
     private String roleArn;
     /**
      * <p>
-     * The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
-     * instances in the corresponding Auto Scaling group.
+     * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and automatically
+     * scaling instances in the corresponding Auto Scaling group.
      * </p>
      */
     private java.util.List<InstanceDefinition> instanceDefinitions;
     /**
      * <p>
-     * Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game server
-     * group. Method options include the following:
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
+     * server group. Method options include the following:
      * </p>
      * <ul>
      * <li>
@@ -118,13 +118,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code> - GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
+     * <code>NEW</code> - Amazon GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an Auto
-     * Scaling group in your Amazon Web Services account.
+     * <code>ACTIVATING</code> - Amazon GameLift FleetIQ is setting up a game server group, which includes creating an
+     * Auto Scaling group in your Amazon Web Services account.
      * </p>
      * </li>
      * <li>
@@ -139,9 +139,9 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>DELETING</code> - GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request and is
-     * processing it. GameLift FleetIQ must first complete and release hosts before it deletes the Auto Scaling group
-     * and the game server group.
+     * <code>DELETING</code> - Amazon GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request
+     * and is processing it. Amazon GameLift FleetIQ must first complete and release hosts before it deletes the Auto
+     * Scaling group and the game server group.
      * </p>
      * </li>
      * <li>
@@ -323,12 +323,12 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
-     * instances in the corresponding Auto Scaling group.
+     * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and automatically
+     * scaling instances in the corresponding Auto Scaling group.
      * </p>
      * 
-     * @return The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically
-     *         scaling instances in the corresponding Auto Scaling group.
+     * @return The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
+     *         automatically scaling instances in the corresponding Auto Scaling group.
      */
 
     public java.util.List<InstanceDefinition> getInstanceDefinitions() {
@@ -337,12 +337,12 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
-     * instances in the corresponding Auto Scaling group.
+     * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and automatically
+     * scaling instances in the corresponding Auto Scaling group.
      * </p>
      * 
      * @param instanceDefinitions
-     *        The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically
+     *        The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and automatically
      *        scaling instances in the corresponding Auto Scaling group.
      */
 
@@ -357,8 +357,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
-     * instances in the corresponding Auto Scaling group.
+     * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and automatically
+     * scaling instances in the corresponding Auto Scaling group.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -367,7 +367,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param instanceDefinitions
-     *        The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically
+     *        The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and automatically
      *        scaling instances in the corresponding Auto Scaling group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -384,12 +384,12 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
-     * instances in the corresponding Auto Scaling group.
+     * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and automatically
+     * scaling instances in the corresponding Auto Scaling group.
      * </p>
      * 
      * @param instanceDefinitions
-     *        The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically
+     *        The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and automatically
      *        scaling instances in the corresponding Auto Scaling group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -401,8 +401,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game server
-     * group. Method options include the following:
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
+     * server group. Method options include the following:
      * </p>
      * <ul>
      * <li>
@@ -430,8 +430,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * </ul>
      * 
      * @param balancingStrategy
-     *        Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
-     *        server group. Method options include the following:</p>
+     *        Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the
+     *        game server group. Method options include the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -464,8 +464,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game server
-     * group. Method options include the following:
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
+     * server group. Method options include the following:
      * </p>
      * <ul>
      * <li>
@@ -492,8 +492,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * </ul>
      * 
-     * @return Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
-     *         server group. Method options include the following:</p>
+     * @return Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the
+     *         game server group. Method options include the following:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -526,8 +526,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game server
-     * group. Method options include the following:
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
+     * server group. Method options include the following:
      * </p>
      * <ul>
      * <li>
@@ -555,8 +555,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * </ul>
      * 
      * @param balancingStrategy
-     *        Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
-     *        server group. Method options include the following:</p>
+     *        Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the
+     *        game server group. Method options include the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -591,8 +591,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game server
-     * group. Method options include the following:
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
+     * server group. Method options include the following:
      * </p>
      * <ul>
      * <li>
@@ -620,8 +620,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * </ul>
      * 
      * @param balancingStrategy
-     *        Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
-     *        server group. Method options include the following:</p>
+     *        Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the
+     *        game server group. Method options include the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -799,13 +799,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code> - GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
+     * <code>NEW</code> - Amazon GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an Auto
-     * Scaling group in your Amazon Web Services account.
+     * <code>ACTIVATING</code> - Amazon GameLift FleetIQ is setting up a game server group, which includes creating an
+     * Auto Scaling group in your Amazon Web Services account.
      * </p>
      * </li>
      * <li>
@@ -820,9 +820,9 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>DELETING</code> - GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request and is
-     * processing it. GameLift FleetIQ must first complete and release hosts before it deletes the Auto Scaling group
-     * and the game server group.
+     * <code>DELETING</code> - Amazon GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request
+     * and is processing it. Amazon GameLift FleetIQ must first complete and release hosts before it deletes the Auto
+     * Scaling group and the game server group.
      * </p>
      * </li>
      * <li>
@@ -843,13 +843,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NEW</code> - GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
+     *        <code>NEW</code> - Amazon GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an
-     *        Auto Scaling group in your Amazon Web Services account.
+     *        <code>ACTIVATING</code> - Amazon GameLift FleetIQ is setting up a game server group, which includes
+     *        creating an Auto Scaling group in your Amazon Web Services account.
      *        </p>
      *        </li>
      *        <li>
@@ -864,9 +864,9 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETING</code> - GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request
-     *        and is processing it. GameLift FleetIQ must first complete and release hosts before it deletes the Auto
-     *        Scaling group and the game server group.
+     *        <code>DELETING</code> - Amazon GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code>
+     *        request and is processing it. Amazon GameLift FleetIQ must first complete and release hosts before it
+     *        deletes the Auto Scaling group and the game server group.
      *        </p>
      *        </li>
      *        <li>
@@ -894,13 +894,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code> - GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
+     * <code>NEW</code> - Amazon GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an Auto
-     * Scaling group in your Amazon Web Services account.
+     * <code>ACTIVATING</code> - Amazon GameLift FleetIQ is setting up a game server group, which includes creating an
+     * Auto Scaling group in your Amazon Web Services account.
      * </p>
      * </li>
      * <li>
@@ -915,9 +915,9 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>DELETING</code> - GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request and is
-     * processing it. GameLift FleetIQ must first complete and release hosts before it deletes the Auto Scaling group
-     * and the game server group.
+     * <code>DELETING</code> - Amazon GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request
+     * and is processing it. Amazon GameLift FleetIQ must first complete and release hosts before it deletes the Auto
+     * Scaling group and the game server group.
      * </p>
      * </li>
      * <li>
@@ -937,13 +937,14 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>NEW</code> - GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
+     *         <code>NEW</code> - Amazon GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code>
+     *         request.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an
-     *         Auto Scaling group in your Amazon Web Services account.
+     *         <code>ACTIVATING</code> - Amazon GameLift FleetIQ is setting up a game server group, which includes
+     *         creating an Auto Scaling group in your Amazon Web Services account.
      *         </p>
      *         </li>
      *         <li>
@@ -958,9 +959,9 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *         </li>
      *         <li>
      *         <p>
-     *         <code>DELETING</code> - GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code>
-     *         request and is processing it. GameLift FleetIQ must first complete and release hosts before it deletes
-     *         the Auto Scaling group and the game server group.
+     *         <code>DELETING</code> - Amazon GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code>
+     *         request and is processing it. Amazon GameLift FleetIQ must first complete and release hosts before it
+     *         deletes the Auto Scaling group and the game server group.
      *         </p>
      *         </li>
      *         <li>
@@ -988,13 +989,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code> - GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
+     * <code>NEW</code> - Amazon GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an Auto
-     * Scaling group in your Amazon Web Services account.
+     * <code>ACTIVATING</code> - Amazon GameLift FleetIQ is setting up a game server group, which includes creating an
+     * Auto Scaling group in your Amazon Web Services account.
      * </p>
      * </li>
      * <li>
@@ -1009,9 +1010,9 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>DELETING</code> - GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request and is
-     * processing it. GameLift FleetIQ must first complete and release hosts before it deletes the Auto Scaling group
-     * and the game server group.
+     * <code>DELETING</code> - Amazon GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request
+     * and is processing it. Amazon GameLift FleetIQ must first complete and release hosts before it deletes the Auto
+     * Scaling group and the game server group.
      * </p>
      * </li>
      * <li>
@@ -1032,13 +1033,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NEW</code> - GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
+     *        <code>NEW</code> - Amazon GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an
-     *        Auto Scaling group in your Amazon Web Services account.
+     *        <code>ACTIVATING</code> - Amazon GameLift FleetIQ is setting up a game server group, which includes
+     *        creating an Auto Scaling group in your Amazon Web Services account.
      *        </p>
      *        </li>
      *        <li>
@@ -1053,9 +1054,9 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETING</code> - GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request
-     *        and is processing it. GameLift FleetIQ must first complete and release hosts before it deletes the Auto
-     *        Scaling group and the game server group.
+     *        <code>DELETING</code> - Amazon GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code>
+     *        request and is processing it. Amazon GameLift FleetIQ must first complete and release hosts before it
+     *        deletes the Auto Scaling group and the game server group.
      *        </p>
      *        </li>
      *        <li>
@@ -1085,13 +1086,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>NEW</code> - GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
+     * <code>NEW</code> - Amazon GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an Auto
-     * Scaling group in your Amazon Web Services account.
+     * <code>ACTIVATING</code> - Amazon GameLift FleetIQ is setting up a game server group, which includes creating an
+     * Auto Scaling group in your Amazon Web Services account.
      * </p>
      * </li>
      * <li>
@@ -1106,9 +1107,9 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>DELETING</code> - GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request and is
-     * processing it. GameLift FleetIQ must first complete and release hosts before it deletes the Auto Scaling group
-     * and the game server group.
+     * <code>DELETING</code> - Amazon GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request
+     * and is processing it. Amazon GameLift FleetIQ must first complete and release hosts before it deletes the Auto
+     * Scaling group and the game server group.
      * </p>
      * </li>
      * <li>
@@ -1129,13 +1130,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NEW</code> - GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
+     *        <code>NEW</code> - Amazon GameLift FleetIQ has validated the <code>CreateGameServerGroup()</code> request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an
-     *        Auto Scaling group in your Amazon Web Services account.
+     *        <code>ACTIVATING</code> - Amazon GameLift FleetIQ is setting up a game server group, which includes
+     *        creating an Auto Scaling group in your Amazon Web Services account.
      *        </p>
      *        </li>
      *        <li>
@@ -1150,9 +1151,9 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETING</code> - GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code> request
-     *        and is processing it. GameLift FleetIQ must first complete and release hosts before it deletes the Auto
-     *        Scaling group and the game server group.
+     *        <code>DELETING</code> - Amazon GameLift FleetIQ has received a valid <code>DeleteGameServerGroup()</code>
+     *        request and is processing it. Amazon GameLift FleetIQ must first complete and release hosts before it
+     *        deletes the Auto Scaling group and the game server group.
      *        </p>
      *        </li>
      *        <li>

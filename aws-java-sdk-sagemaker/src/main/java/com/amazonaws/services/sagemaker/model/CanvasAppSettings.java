@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The SageMaker Canvas app settings.
+ * The SageMaker Canvas application settings.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CanvasAppSettings" target="_top">AWS API
@@ -30,18 +30,24 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Time series forecast settings for the Canvas app.
+     * Time series forecast settings for the Canvas application.
      * </p>
      */
     private TimeSeriesForecastingSettings timeSeriesForecastingSettings;
+    /**
+     * <p>
+     * The model registry settings for the SageMaker Canvas application.
+     * </p>
+     */
+    private ModelRegisterSettings modelRegisterSettings;
 
     /**
      * <p>
-     * Time series forecast settings for the Canvas app.
+     * Time series forecast settings for the Canvas application.
      * </p>
      * 
      * @param timeSeriesForecastingSettings
-     *        Time series forecast settings for the Canvas app.
+     *        Time series forecast settings for the Canvas application.
      */
 
     public void setTimeSeriesForecastingSettings(TimeSeriesForecastingSettings timeSeriesForecastingSettings) {
@@ -50,10 +56,10 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Time series forecast settings for the Canvas app.
+     * Time series forecast settings for the Canvas application.
      * </p>
      * 
-     * @return Time series forecast settings for the Canvas app.
+     * @return Time series forecast settings for the Canvas application.
      */
 
     public TimeSeriesForecastingSettings getTimeSeriesForecastingSettings() {
@@ -62,16 +68,56 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Time series forecast settings for the Canvas app.
+     * Time series forecast settings for the Canvas application.
      * </p>
      * 
      * @param timeSeriesForecastingSettings
-     *        Time series forecast settings for the Canvas app.
+     *        Time series forecast settings for the Canvas application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CanvasAppSettings withTimeSeriesForecastingSettings(TimeSeriesForecastingSettings timeSeriesForecastingSettings) {
         setTimeSeriesForecastingSettings(timeSeriesForecastingSettings);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The model registry settings for the SageMaker Canvas application.
+     * </p>
+     * 
+     * @param modelRegisterSettings
+     *        The model registry settings for the SageMaker Canvas application.
+     */
+
+    public void setModelRegisterSettings(ModelRegisterSettings modelRegisterSettings) {
+        this.modelRegisterSettings = modelRegisterSettings;
+    }
+
+    /**
+     * <p>
+     * The model registry settings for the SageMaker Canvas application.
+     * </p>
+     * 
+     * @return The model registry settings for the SageMaker Canvas application.
+     */
+
+    public ModelRegisterSettings getModelRegisterSettings() {
+        return this.modelRegisterSettings;
+    }
+
+    /**
+     * <p>
+     * The model registry settings for the SageMaker Canvas application.
+     * </p>
+     * 
+     * @param modelRegisterSettings
+     *        The model registry settings for the SageMaker Canvas application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CanvasAppSettings withModelRegisterSettings(ModelRegisterSettings modelRegisterSettings) {
+        setModelRegisterSettings(modelRegisterSettings);
         return this;
     }
 
@@ -88,7 +134,9 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getTimeSeriesForecastingSettings() != null)
-            sb.append("TimeSeriesForecastingSettings: ").append(getTimeSeriesForecastingSettings());
+            sb.append("TimeSeriesForecastingSettings: ").append(getTimeSeriesForecastingSettings()).append(",");
+        if (getModelRegisterSettings() != null)
+            sb.append("ModelRegisterSettings: ").append(getModelRegisterSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -108,6 +156,10 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
         if (other.getTimeSeriesForecastingSettings() != null
                 && other.getTimeSeriesForecastingSettings().equals(this.getTimeSeriesForecastingSettings()) == false)
             return false;
+        if (other.getModelRegisterSettings() == null ^ this.getModelRegisterSettings() == null)
+            return false;
+        if (other.getModelRegisterSettings() != null && other.getModelRegisterSettings().equals(this.getModelRegisterSettings()) == false)
+            return false;
         return true;
     }
 
@@ -117,6 +169,7 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getTimeSeriesForecastingSettings() == null) ? 0 : getTimeSeriesForecastingSettings().hashCode());
+        hashCode = prime * hashCode + ((getModelRegisterSettings() == null) ? 0 : getModelRegisterSettings().hashCode());
         return hashCode;
     }
 

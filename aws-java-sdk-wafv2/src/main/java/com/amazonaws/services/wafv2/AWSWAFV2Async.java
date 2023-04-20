@@ -228,6 +228,53 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
 
     /**
      * <p>
+     * Creates an API key for use in the integration of the CAPTCHA API in your JavaScript client applications. The
+     * integration lets you customize the placement and characteristics of the CAPTCHA puzzle for your end users. For
+     * more information about the CAPTCHA JavaScript integration, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF client
+     * application integration</a> in the <i>WAF Developer Guide</i>.
+     * </p>
+     * <p>
+     * The CAPTCHA API requires a key that authorizes CAPTCHA use from the client application domain. You can use a
+     * single key for up to 5 domains. After you generate a key, you can copy it for use in your JavaScript integration.
+     * </p>
+     * 
+     * @param createAPIKeyRequest
+     * @return A Java Future containing the result of the CreateAPIKey operation returned by the service.
+     * @sample AWSWAFV2Async.CreateAPIKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CreateAPIKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAPIKeyResult> createAPIKeyAsync(CreateAPIKeyRequest createAPIKeyRequest);
+
+    /**
+     * <p>
+     * Creates an API key for use in the integration of the CAPTCHA API in your JavaScript client applications. The
+     * integration lets you customize the placement and characteristics of the CAPTCHA puzzle for your end users. For
+     * more information about the CAPTCHA JavaScript integration, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF client
+     * application integration</a> in the <i>WAF Developer Guide</i>.
+     * </p>
+     * <p>
+     * The CAPTCHA API requires a key that authorizes CAPTCHA use from the client application domain. You can use a
+     * single key for up to 5 domains. After you generate a key, you can copy it for use in your JavaScript integration.
+     * </p>
+     * 
+     * @param createAPIKeyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateAPIKey operation returned by the service.
+     * @sample AWSWAFV2AsyncHandler.CreateAPIKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CreateAPIKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAPIKeyResult> createAPIKeyAsync(CreateAPIKeyRequest createAPIKeyRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateAPIKeyRequest, CreateAPIKeyResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an <a>IPSet</a>, which you use to identify web requests that originate from specific IP addresses or
      * ranges of IP addresses. For example, if you're receiving a lot of requests from a ranges of IP addresses, you can
      * configure WAF to block them using an IPSet that lists those IP addresses.
@@ -848,6 +895,37 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
 
     /**
      * <p>
+     * Returns your API key in decrypted form. Use this to check the token domains that you have defined for the key.
+     * </p>
+     * 
+     * @param getDecryptedAPIKeyRequest
+     * @return A Java Future containing the result of the GetDecryptedAPIKey operation returned by the service.
+     * @sample AWSWAFV2Async.GetDecryptedAPIKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetDecryptedAPIKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDecryptedAPIKeyResult> getDecryptedAPIKeyAsync(GetDecryptedAPIKeyRequest getDecryptedAPIKeyRequest);
+
+    /**
+     * <p>
+     * Returns your API key in decrypted form. Use this to check the token domains that you have defined for the key.
+     * </p>
+     * 
+     * @param getDecryptedAPIKeyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDecryptedAPIKey operation returned by the service.
+     * @sample AWSWAFV2AsyncHandler.GetDecryptedAPIKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetDecryptedAPIKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDecryptedAPIKeyResult> getDecryptedAPIKeyAsync(GetDecryptedAPIKeyRequest getDecryptedAPIKeyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDecryptedAPIKeyRequest, GetDecryptedAPIKeyResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the specified <a>IPSet</a>.
      * </p>
      * 
@@ -1272,6 +1350,37 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
      */
     java.util.concurrent.Future<GetWebACLForResourceResult> getWebACLForResourceAsync(GetWebACLForResourceRequest getWebACLForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<GetWebACLForResourceRequest, GetWebACLForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a list of the API keys that you've defined for the specified scope.
+     * </p>
+     * 
+     * @param listAPIKeysRequest
+     * @return A Java Future containing the result of the ListAPIKeys operation returned by the service.
+     * @sample AWSWAFV2Async.ListAPIKeys
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListAPIKeys" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListAPIKeysResult> listAPIKeysAsync(ListAPIKeysRequest listAPIKeysRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of the API keys that you've defined for the specified scope.
+     * </p>
+     * 
+     * @param listAPIKeysRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAPIKeys operation returned by the service.
+     * @sample AWSWAFV2AsyncHandler.ListAPIKeys
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListAPIKeys" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListAPIKeysResult> listAPIKeysAsync(ListAPIKeysRequest listAPIKeysRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAPIKeysRequest, ListAPIKeysResult> asyncHandler);
 
     /**
      * <p>

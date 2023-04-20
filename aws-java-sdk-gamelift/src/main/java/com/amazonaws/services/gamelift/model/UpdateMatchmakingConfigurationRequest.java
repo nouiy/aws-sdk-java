@@ -41,11 +41,11 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     * be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are created
-     * with this matchmaking configuration. If <code>FlexMatchMode</code> is set to <code>STANDALONE</code>, do not set
-     * this parameter.
+     * that is assigned to a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique
+     * across all Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
+     * <code>STANDALONE</code>, do not set this parameter.
      * </p>
      */
     private java.util.List<String> gameSessionQueueArns;
@@ -135,7 +135,7 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
     private String backfillMode;
     /**
      * <p>
-     * Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a standalone
      * matchmaking solution.
      * </p>
      * <ul>
@@ -149,8 +149,8 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session for the
-     * match.
+     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game session
+     * for the match.
      * </p>
      * </li>
      * </ul>
@@ -246,19 +246,19 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     * be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are created
-     * with this matchmaking configuration. If <code>FlexMatchMode</code> is set to <code>STANDALONE</code>, do not set
-     * this parameter.
+     * that is assigned to a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique
+     * across all Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
+     * <code>STANDALONE</code>, do not set this parameter.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *         GameLift game session queue resource and uniquely identifies it. ARNs are unique across all Regions.
-     *         Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     *         be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are
-     *         created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
+     *         Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
+     *         Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     *         Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions
+     *         for matches that are created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
      *         <code>STANDALONE</code>, do not set this parameter.
      */
 
@@ -269,20 +269,20 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     * be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are created
-     * with this matchmaking configuration. If <code>FlexMatchMode</code> is set to <code>STANDALONE</code>, do not set
-     * this parameter.
+     * that is assigned to a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique
+     * across all Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
+     * <code>STANDALONE</code>, do not set this parameter.
      * </p>
      * 
      * @param gameSessionQueueArns
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift game session queue resource and uniquely identifies it. ARNs are unique across all Regions.
-     *        Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can be
-     *        located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are
-     *        created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
+     *        Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
+     *        Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     *        Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     *        matches that are created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
      *        <code>STANDALONE</code>, do not set this parameter.
      */
 
@@ -298,11 +298,11 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     * be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are created
-     * with this matchmaking configuration. If <code>FlexMatchMode</code> is set to <code>STANDALONE</code>, do not set
-     * this parameter.
+     * that is assigned to a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique
+     * across all Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
+     * <code>STANDALONE</code>, do not set this parameter.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -313,10 +313,10 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
      * @param gameSessionQueueArns
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift game session queue resource and uniquely identifies it. ARNs are unique across all Regions.
-     *        Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can be
-     *        located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are
-     *        created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
+     *        Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
+     *        Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     *        Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     *        matches that are created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
      *        <code>STANDALONE</code>, do not set this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -334,20 +334,20 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     * be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are created
-     * with this matchmaking configuration. If <code>FlexMatchMode</code> is set to <code>STANDALONE</code>, do not set
-     * this parameter.
+     * that is assigned to a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique
+     * across all Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
+     * <code>STANDALONE</code>, do not set this parameter.
      * </p>
      * 
      * @param gameSessionQueueArns
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift game session queue resource and uniquely identifies it. ARNs are unique across all Regions.
-     *        Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can be
-     *        located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are
-     *        created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
+     *        Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
+     *        Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     *        Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     *        matches that are created with this matchmaking configuration. If <code>FlexMatchMode</code> is set to
      *        <code>STANDALONE</code>, do not set this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -999,7 +999,7 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a standalone
      * matchmaking solution.
      * </p>
      * <ul>
@@ -1013,15 +1013,15 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session for the
-     * match.
+     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game session
+     * for the match.
      * </p>
      * </li>
      * </ul>
      * 
      * @param flexMatchMode
-     *        Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
-     *        matchmaking solution. </p>
+     *        Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a
+     *        standalone matchmaking solution. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1033,8 +1033,8 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
      *        </li>
      *        <li>
      *        <p>
-     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session
-     *        for the match.
+     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game
+     *        session for the match.
      *        </p>
      *        </li>
      * @see FlexMatchMode
@@ -1046,7 +1046,7 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a standalone
      * matchmaking solution.
      * </p>
      * <ul>
@@ -1060,14 +1060,14 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session for the
-     * match.
+     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game session
+     * for the match.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
-     *         matchmaking solution. </p>
+     * @return Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a
+     *         standalone matchmaking solution. </p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1079,8 +1079,8 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
      *         </li>
      *         <li>
      *         <p>
-     *         <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session
-     *         for the match.
+     *         <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game
+     *         session for the match.
      *         </p>
      *         </li>
      * @see FlexMatchMode
@@ -1092,7 +1092,7 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a standalone
      * matchmaking solution.
      * </p>
      * <ul>
@@ -1106,15 +1106,15 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session for the
-     * match.
+     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game session
+     * for the match.
      * </p>
      * </li>
      * </ul>
      * 
      * @param flexMatchMode
-     *        Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
-     *        matchmaking solution. </p>
+     *        Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a
+     *        standalone matchmaking solution. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1126,8 +1126,8 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
      *        </li>
      *        <li>
      *        <p>
-     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session
-     *        for the match.
+     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game
+     *        session for the match.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1141,7 +1141,7 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a standalone
      * matchmaking solution.
      * </p>
      * <ul>
@@ -1155,15 +1155,15 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session for the
-     * match.
+     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game session
+     * for the match.
      * </p>
      * </li>
      * </ul>
      * 
      * @param flexMatchMode
-     *        Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
-     *        matchmaking solution. </p>
+     *        Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a
+     *        standalone matchmaking solution. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1175,8 +1175,8 @@ public class UpdateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
      *        </li>
      *        <li>
      *        <p>
-     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session
-     *        for the match.
+     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game
+     *        session for the match.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

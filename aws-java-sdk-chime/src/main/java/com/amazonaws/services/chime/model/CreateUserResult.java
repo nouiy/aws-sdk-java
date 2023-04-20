@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateUserResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The user on the Amazon Chime account.
+     * </p>
+     */
     private User user;
 
     /**
+     * <p>
+     * The user on the Amazon Chime account.
+     * </p>
+     * 
      * @param user
+     *        The user on the Amazon Chime account.
      */
 
     public void setUser(User user) {
@@ -34,7 +44,11 @@ public class CreateUserResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
-     * @return
+     * <p>
+     * The user on the Amazon Chime account.
+     * </p>
+     * 
+     * @return The user on the Amazon Chime account.
      */
 
     public User getUser() {
@@ -42,7 +56,12 @@ public class CreateUserResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
+     * <p>
+     * The user on the Amazon Chime account.
+     * </p>
+     * 
      * @param user
+     *        The user on the Amazon Chime account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

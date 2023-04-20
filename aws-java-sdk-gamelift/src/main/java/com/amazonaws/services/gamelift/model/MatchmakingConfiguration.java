@@ -39,10 +39,10 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift matchmaking configuration resource and uniquely identifies it. ARNs are unique
-     * across all Regions. Format is
+     * that is assigned to a Amazon GameLift matchmaking configuration resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
      * <code>arn:aws:gamelift:&lt;region&gt;::matchmakingconfiguration/&lt;matchmaking configuration name&gt;</code>. In
-     * a GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
+     * a Amazon GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
      * </p>
      */
     private String configurationArn;
@@ -55,11 +55,11 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     * be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are created
-     * with this matchmaking configuration. This property is not set when <code>FlexMatchMode</code> is set to
-     * <code>STANDALONE</code>.
+     * that is assigned to a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique
+     * across all Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     * matches that are created with this matchmaking configuration. This property is not set when
+     * <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.
      * </p>
      */
     private java.util.List<String> gameSessionQueueArns;
@@ -164,7 +164,7 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
     private String backfillMode;
     /**
      * <p>
-     * Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a standalone
      * matchmaking solution.
      * </p>
      * <ul>
@@ -178,8 +178,8 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
      * </li>
      * <li>
      * <p>
-     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session for the
-     * match.
+     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game session
+     * for the match.
      * </p>
      * </li>
      * </ul>
@@ -235,19 +235,19 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift matchmaking configuration resource and uniquely identifies it. ARNs are unique
-     * across all Regions. Format is
+     * that is assigned to a Amazon GameLift matchmaking configuration resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
      * <code>arn:aws:gamelift:&lt;region&gt;::matchmakingconfiguration/&lt;matchmaking configuration name&gt;</code>. In
-     * a GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
+     * a Amazon GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
      * </p>
      * 
      * @param configurationArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift matchmaking configuration resource and uniquely identifies it. ARNs are unique across all
+     *        Amazon GameLift matchmaking configuration resource and uniquely identifies it. ARNs are unique across all
      *        Regions. Format is
      *        <code>arn:aws:gamelift:&lt;region&gt;::matchmakingconfiguration/&lt;matchmaking configuration name&gt;</code>
-     *        . In a GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
+     *        . In a Amazon GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
      */
 
     public void setConfigurationArn(String configurationArn) {
@@ -257,18 +257,18 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift matchmaking configuration resource and uniquely identifies it. ARNs are unique
-     * across all Regions. Format is
+     * that is assigned to a Amazon GameLift matchmaking configuration resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
      * <code>arn:aws:gamelift:&lt;region&gt;::matchmakingconfiguration/&lt;matchmaking configuration name&gt;</code>. In
-     * a GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
+     * a Amazon GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *         GameLift matchmaking configuration resource and uniquely identifies it. ARNs are unique across all
+     *         Amazon GameLift matchmaking configuration resource and uniquely identifies it. ARNs are unique across all
      *         Regions. Format is
      *         <code>arn:aws:gamelift:&lt;region&gt;::matchmakingconfiguration/&lt;matchmaking configuration name&gt;</code>
-     *         . In a GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
+     *         . In a Amazon GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
      */
 
     public String getConfigurationArn() {
@@ -278,19 +278,19 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift matchmaking configuration resource and uniquely identifies it. ARNs are unique
-     * across all Regions. Format is
+     * that is assigned to a Amazon GameLift matchmaking configuration resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
      * <code>arn:aws:gamelift:&lt;region&gt;::matchmakingconfiguration/&lt;matchmaking configuration name&gt;</code>. In
-     * a GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
+     * a Amazon GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
      * </p>
      * 
      * @param configurationArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift matchmaking configuration resource and uniquely identifies it. ARNs are unique across all
+     *        Amazon GameLift matchmaking configuration resource and uniquely identifies it. ARNs are unique across all
      *        Regions. Format is
      *        <code>arn:aws:gamelift:&lt;region&gt;::matchmakingconfiguration/&lt;matchmaking configuration name&gt;</code>
-     *        . In a GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
+     *        . In a Amazon GameLift configuration ARN, the resource ID matches the <i>Name</i> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -342,20 +342,20 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     * be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are created
-     * with this matchmaking configuration. This property is not set when <code>FlexMatchMode</code> is set to
-     * <code>STANDALONE</code>.
+     * that is assigned to a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique
+     * across all Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     * matches that are created with this matchmaking configuration. This property is not set when
+     * <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *         GameLift game session queue resource and uniquely identifies it. ARNs are unique across all Regions.
-     *         Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     *         be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are
-     *         created with this matchmaking configuration. This property is not set when <code>FlexMatchMode</code> is
-     *         set to <code>STANDALONE</code>.
+     *         Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
+     *         Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     *         Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions
+     *         for matches that are created with this matchmaking configuration. This property is not set when
+     *         <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.
      */
 
     public java.util.List<String> getGameSessionQueueArns() {
@@ -365,21 +365,21 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     * be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are created
-     * with this matchmaking configuration. This property is not set when <code>FlexMatchMode</code> is set to
-     * <code>STANDALONE</code>.
+     * that is assigned to a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique
+     * across all Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     * matches that are created with this matchmaking configuration. This property is not set when
+     * <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.
      * </p>
      * 
      * @param gameSessionQueueArns
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift game session queue resource and uniquely identifies it. ARNs are unique across all Regions.
-     *        Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can be
-     *        located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are
-     *        created with this matchmaking configuration. This property is not set when <code>FlexMatchMode</code> is
-     *        set to <code>STANDALONE</code>.
+     *        Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
+     *        Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     *        Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     *        matches that are created with this matchmaking configuration. This property is not set when
+     *        <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.
      */
 
     public void setGameSessionQueueArns(java.util.Collection<String> gameSessionQueueArns) {
@@ -394,11 +394,11 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     * be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are created
-     * with this matchmaking configuration. This property is not set when <code>FlexMatchMode</code> is set to
-     * <code>STANDALONE</code>.
+     * that is assigned to a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique
+     * across all Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     * matches that are created with this matchmaking configuration. This property is not set when
+     * <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -409,11 +409,11 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
      * @param gameSessionQueueArns
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift game session queue resource and uniquely identifies it. ARNs are unique across all Regions.
-     *        Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can be
-     *        located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are
-     *        created with this matchmaking configuration. This property is not set when <code>FlexMatchMode</code> is
-     *        set to <code>STANDALONE</code>.
+     *        Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
+     *        Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     *        Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     *        matches that are created with this matchmaking configuration. This property is not set when
+     *        <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -430,21 +430,21 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can
-     * be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are created
-     * with this matchmaking configuration. This property is not set when <code>FlexMatchMode</code> is set to
-     * <code>STANDALONE</code>.
+     * that is assigned to a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique
+     * across all Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     * matches that are created with this matchmaking configuration. This property is not set when
+     * <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.
      * </p>
      * 
      * @param gameSessionQueueArns
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift game session queue resource and uniquely identifies it. ARNs are unique across all Regions.
-     *        Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>. Queues can be
-     *        located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are
-     *        created with this matchmaking configuration. This property is not set when <code>FlexMatchMode</code> is
-     *        set to <code>STANDALONE</code>.
+     *        Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
+     *        Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;</code>.
+     *        Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions for
+     *        matches that are created with this matchmaking configuration. This property is not set when
+     *        <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1191,7 +1191,7 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a standalone
      * matchmaking solution.
      * </p>
      * <ul>
@@ -1205,15 +1205,15 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
      * </li>
      * <li>
      * <p>
-     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session for the
-     * match.
+     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game session
+     * for the match.
      * </p>
      * </li>
      * </ul>
      * 
      * @param flexMatchMode
-     *        Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
-     *        matchmaking solution. </p>
+     *        Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a
+     *        standalone matchmaking solution. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1225,8 +1225,8 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
      *        </li>
      *        <li>
      *        <p>
-     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session
-     *        for the match.
+     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game
+     *        session for the match.
      *        </p>
      *        </li>
      * @see FlexMatchMode
@@ -1238,7 +1238,7 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a standalone
      * matchmaking solution.
      * </p>
      * <ul>
@@ -1252,14 +1252,14 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
      * </li>
      * <li>
      * <p>
-     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session for the
-     * match.
+     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game session
+     * for the match.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
-     *         matchmaking solution. </p>
+     * @return Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a
+     *         standalone matchmaking solution. </p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1271,8 +1271,8 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
      *         </li>
      *         <li>
      *         <p>
-     *         <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session
-     *         for the match.
+     *         <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game
+     *         session for the match.
      *         </p>
      *         </li>
      * @see FlexMatchMode
@@ -1284,7 +1284,7 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a standalone
      * matchmaking solution.
      * </p>
      * <ul>
@@ -1298,15 +1298,15 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
      * </li>
      * <li>
      * <p>
-     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session for the
-     * match.
+     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game session
+     * for the match.
      * </p>
      * </li>
      * </ul>
      * 
      * @param flexMatchMode
-     *        Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
-     *        matchmaking solution. </p>
+     *        Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a
+     *        standalone matchmaking solution. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1318,8 +1318,8 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
      *        </li>
      *        <li>
      *        <p>
-     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session
-     *        for the match.
+     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game
+     *        session for the match.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1333,7 +1333,7 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a standalone
      * matchmaking solution.
      * </p>
      * <ul>
@@ -1347,15 +1347,15 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
      * </li>
      * <li>
      * <p>
-     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session for the
-     * match.
+     * <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game session
+     * for the match.
      * </p>
      * </li>
      * </ul>
      * 
      * @param flexMatchMode
-     *        Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone
-     *        matchmaking solution. </p>
+     *        Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a
+     *        standalone matchmaking solution. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1367,8 +1367,8 @@ public class MatchmakingConfiguration implements Serializable, Cloneable, Struct
      *        </li>
      *        <li>
      *        <p>
-     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session
-     *        for the match.
+     *        <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game
+     *        session for the match.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

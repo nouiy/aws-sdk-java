@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents an EC2 instance of virtual computing resources that hosts one or more game servers. In GameLift, a fleet
- * can contain zero or more instances.
+ * Represents an EC2 instance of virtual computing resources that hosts one or more game servers. In Amazon GameLift, a
+ * fleet can contain zero or more instances.
  * </p>
  * <p>
  * <b>Related actions</b>
@@ -41,8 +41,9 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * .
      * </p>
      */
     private String fleetArn;
@@ -108,8 +109,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has successfully
-     * launched and reported back to GameLift that it is ready to host a game session. The instance is now considered
-     * ready to host game sessions.
+     * launched and reported back to Amazon GameLift that it is ready to host a game session. The instance is now
+     * considered ready to host game sessions.
      * </p>
      * </li>
      * <li>
@@ -179,14 +180,15 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * .
      * </p>
      * 
      * @param fleetArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *        Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *        <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
      */
 
@@ -197,13 +199,14 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * .
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *         GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *         Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *         <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
      */
 
@@ -214,14 +217,15 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * .
      * </p>
      * 
      * @param fleetArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *        Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *        <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -619,8 +623,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has successfully
-     * launched and reported back to GameLift that it is ready to host a game session. The instance is now considered
-     * ready to host game sessions.
+     * launched and reported back to Amazon GameLift that it is ready to host a game session. The instance is now
+     * considered ready to host game sessions.
      * </p>
      * </li>
      * <li>
@@ -643,8 +647,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has
-     *        successfully launched and reported back to GameLift that it is ready to host a game session. The instance
-     *        is now considered ready to host game sessions.
+     *        successfully launched and reported back to Amazon GameLift that it is ready to host a game session. The
+     *        instance is now considered ready to host game sessions.
      *        </p>
      *        </li>
      *        <li>
@@ -674,8 +678,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has successfully
-     * launched and reported back to GameLift that it is ready to host a game session. The instance is now considered
-     * ready to host game sessions.
+     * launched and reported back to Amazon GameLift that it is ready to host a game session. The instance is now
+     * considered ready to host game sessions.
      * </p>
      * </li>
      * <li>
@@ -697,8 +701,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has
-     *         successfully launched and reported back to GameLift that it is ready to host a game session. The instance
-     *         is now considered ready to host game sessions.
+     *         successfully launched and reported back to Amazon GameLift that it is ready to host a game session. The
+     *         instance is now considered ready to host game sessions.
      *         </p>
      *         </li>
      *         <li>
@@ -728,8 +732,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has successfully
-     * launched and reported back to GameLift that it is ready to host a game session. The instance is now considered
-     * ready to host game sessions.
+     * launched and reported back to Amazon GameLift that it is ready to host a game session. The instance is now
+     * considered ready to host game sessions.
      * </p>
      * </li>
      * <li>
@@ -752,8 +756,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has
-     *        successfully launched and reported back to GameLift that it is ready to host a game session. The instance
-     *        is now considered ready to host game sessions.
+     *        successfully launched and reported back to Amazon GameLift that it is ready to host a game session. The
+     *        instance is now considered ready to host game sessions.
      *        </p>
      *        </li>
      *        <li>
@@ -785,8 +789,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has successfully
-     * launched and reported back to GameLift that it is ready to host a game session. The instance is now considered
-     * ready to host game sessions.
+     * launched and reported back to Amazon GameLift that it is ready to host a game session. The instance is now
+     * considered ready to host game sessions.
      * </p>
      * </li>
      * <li>
@@ -809,8 +813,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has
-     *        successfully launched and reported back to GameLift that it is ready to host a game session. The instance
-     *        is now considered ready to host game sessions.
+     *        successfully launched and reported back to Amazon GameLift that it is ready to host a game session. The
+     *        instance is now considered ready to host game sessions.
      *        </p>
      *        </li>
      *        <li>
@@ -840,8 +844,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has successfully
-     * launched and reported back to GameLift that it is ready to host a game session. The instance is now considered
-     * ready to host game sessions.
+     * launched and reported back to Amazon GameLift that it is ready to host a game session. The instance is now
+     * considered ready to host game sessions.
      * </p>
      * </li>
      * <li>
@@ -864,8 +868,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has
-     *        successfully launched and reported back to GameLift that it is ready to host a game session. The instance
-     *        is now considered ready to host game sessions.
+     *        successfully launched and reported back to Amazon GameLift that it is ready to host a game session. The
+     *        instance is now considered ready to host game sessions.
      *        </p>
      *        </li>
      *        <li>

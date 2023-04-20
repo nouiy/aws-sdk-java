@@ -92,8 +92,10 @@ public class HyperParameterTrainingJobSummary implements Serializable, Cloneable
     private String failureReason;
     /**
      * <p>
-     * The <a>FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective metric of
-     * the tuning job that launched this training job.
+     * The <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_FinalHyperParameterTuningJobObjectiveMetric.html"
+     * >FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective metric of the
+     * tuning job that launched this training job.
      * </p>
      */
     private FinalHyperParameterTuningJobObjectiveMetric finalHyperParameterTuningJobObjectiveMetric;
@@ -591,13 +593,17 @@ public class HyperParameterTrainingJobSummary implements Serializable, Cloneable
 
     /**
      * <p>
-     * The <a>FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective metric of
-     * the tuning job that launched this training job.
+     * The <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_FinalHyperParameterTuningJobObjectiveMetric.html"
+     * >FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective metric of the
+     * tuning job that launched this training job.
      * </p>
      * 
      * @param finalHyperParameterTuningJobObjectiveMetric
-     *        The <a>FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective
-     *        metric of the tuning job that launched this training job.
+     *        The <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_FinalHyperParameterTuningJobObjectiveMetric.html"
+     *        >FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective metric
+     *        of the tuning job that launched this training job.
      */
 
     public void setFinalHyperParameterTuningJobObjectiveMetric(FinalHyperParameterTuningJobObjectiveMetric finalHyperParameterTuningJobObjectiveMetric) {
@@ -606,12 +612,16 @@ public class HyperParameterTrainingJobSummary implements Serializable, Cloneable
 
     /**
      * <p>
-     * The <a>FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective metric of
-     * the tuning job that launched this training job.
+     * The <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_FinalHyperParameterTuningJobObjectiveMetric.html"
+     * >FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective metric of the
+     * tuning job that launched this training job.
      * </p>
      * 
-     * @return The <a>FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective
-     *         metric of the tuning job that launched this training job.
+     * @return The <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_FinalHyperParameterTuningJobObjectiveMetric.html"
+     *         >FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective metric
+     *         of the tuning job that launched this training job.
      */
 
     public FinalHyperParameterTuningJobObjectiveMetric getFinalHyperParameterTuningJobObjectiveMetric() {
@@ -620,13 +630,17 @@ public class HyperParameterTrainingJobSummary implements Serializable, Cloneable
 
     /**
      * <p>
-     * The <a>FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective metric of
-     * the tuning job that launched this training job.
+     * The <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_FinalHyperParameterTuningJobObjectiveMetric.html"
+     * >FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective metric of the
+     * tuning job that launched this training job.
      * </p>
      * 
      * @param finalHyperParameterTuningJobObjectiveMetric
-     *        The <a>FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective
-     *        metric of the tuning job that launched this training job.
+     *        The <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_FinalHyperParameterTuningJobObjectiveMetric.html"
+     *        >FinalHyperParameterTuningJobObjectiveMetric</a> object that specifies the value of the objective metric
+     *        of the tuning job that launched this training job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

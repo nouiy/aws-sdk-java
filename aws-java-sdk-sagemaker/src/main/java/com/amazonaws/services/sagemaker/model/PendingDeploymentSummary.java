@@ -36,8 +36,10 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
     private String endpointConfigName;
     /**
      * <p>
-     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for
-     * the in-progress deployment.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     * >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for the in-progress
+     * deployment.
      * </p>
      */
     private java.util.List<PendingProductionVariantSummary> productionVariants;
@@ -49,9 +51,11 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
     private java.util.Date startTime;
     /**
      * <p>
-     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
-     * the in-progress deployment.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     * >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in shadow mode with
+     * production traffic replicated from the model specified on <code>ProductionVariants</code> for the in-progress
+     * deployment.
      * </p>
      */
     private java.util.List<PendingProductionVariantSummary> shadowProductionVariants;
@@ -98,12 +102,16 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for
-     * the in-progress deployment.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     * >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for the in-progress
+     * deployment.
      * </p>
      * 
-     * @return An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this
-     *         endpoint for the in-progress deployment.
+     * @return An array of <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     *         >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for the
+     *         in-progress deployment.
      */
 
     public java.util.List<PendingProductionVariantSummary> getProductionVariants() {
@@ -112,13 +120,17 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for
-     * the in-progress deployment.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     * >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for the in-progress
+     * deployment.
      * </p>
      * 
      * @param productionVariants
-     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
-     *        for the in-progress deployment.
+     *        An array of <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     *        >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for the
+     *        in-progress deployment.
      */
 
     public void setProductionVariants(java.util.Collection<PendingProductionVariantSummary> productionVariants) {
@@ -132,8 +144,10 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for
-     * the in-progress deployment.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     * >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for the in-progress
+     * deployment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -142,8 +156,10 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param productionVariants
-     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
-     *        for the in-progress deployment.
+     *        An array of <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     *        >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for the
+     *        in-progress deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,13 +175,17 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for
-     * the in-progress deployment.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     * >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for the in-progress
+     * deployment.
      * </p>
      * 
      * @param productionVariants
-     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
-     *        for the in-progress deployment.
+     *        An array of <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     *        >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for the
+     *        in-progress deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -216,14 +236,18 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
-     * the in-progress deployment.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     * >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in shadow mode with
+     * production traffic replicated from the model specified on <code>ProductionVariants</code> for the in-progress
+     * deployment.
      * </p>
      * 
-     * @return An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this
-     *         endpoint in shadow mode with production traffic replicated from the model specified on
-     *         <code>ProductionVariants</code> for the in-progress deployment.
+     * @return An array of <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     *         >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in shadow
+     *         mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
+     *         the in-progress deployment.
      */
 
     public java.util.List<PendingProductionVariantSummary> getShadowProductionVariants() {
@@ -232,15 +256,19 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
-     * the in-progress deployment.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     * >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in shadow mode with
+     * production traffic replicated from the model specified on <code>ProductionVariants</code> for the in-progress
+     * deployment.
      * </p>
      * 
      * @param shadowProductionVariants
-     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
-     *        in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code> for the in-progress deployment.
+     *        An array of <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     *        >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in shadow
+     *        mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
+     *        the in-progress deployment.
      */
 
     public void setShadowProductionVariants(java.util.Collection<PendingProductionVariantSummary> shadowProductionVariants) {
@@ -254,9 +282,11 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
-     * the in-progress deployment.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     * >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in shadow mode with
+     * production traffic replicated from the model specified on <code>ProductionVariants</code> for the in-progress
+     * deployment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -265,9 +295,11 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param shadowProductionVariants
-     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
-     *        in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code> for the in-progress deployment.
+     *        An array of <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     *        >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in shadow
+     *        mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
+     *        the in-progress deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -283,15 +315,19 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
-     * the in-progress deployment.
+     * An array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     * >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in shadow mode with
+     * production traffic replicated from the model specified on <code>ProductionVariants</code> for the in-progress
+     * deployment.
      * </p>
      * 
      * @param shadowProductionVariants
-     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
-     *        in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code> for the in-progress deployment.
+     *        An array of <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PendingProductionVariantSummary.html"
+     *        >PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in shadow
+     *        mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
+     *        the in-progress deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

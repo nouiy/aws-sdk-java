@@ -49,7 +49,7 @@ public class ModelCard implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The content of the model card. Content uses the <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card JSON
      * schema</a> and provided as a string.
      * </p>
      */
@@ -250,14 +250,14 @@ public class ModelCard implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The content of the model card. Content uses the <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card JSON
      * schema</a> and provided as a string.
      * </p>
      * 
      * @param content
      *        The content of the model card. Content uses the <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
-     *        schema</a> and provided as a string.
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card
+     *        JSON schema</a> and provided as a string.
      */
 
     public void setContent(String content) {
@@ -267,13 +267,13 @@ public class ModelCard implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The content of the model card. Content uses the <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card JSON
      * schema</a> and provided as a string.
      * </p>
      * 
      * @return The content of the model card. Content uses the <a
-     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
-     *         schema</a> and provided as a string.
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model
+     *         card JSON schema</a> and provided as a string.
      */
 
     public String getContent() {
@@ -283,14 +283,14 @@ public class ModelCard implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The content of the model card. Content uses the <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card JSON
      * schema</a> and provided as a string.
      * </p>
      * 
      * @param content
      *        The content of the model card. Content uses the <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards-api-json-schema.html">model card JSON
-     *        schema</a> and provided as a string.
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema">model card
+     *        JSON schema</a> and provided as a string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

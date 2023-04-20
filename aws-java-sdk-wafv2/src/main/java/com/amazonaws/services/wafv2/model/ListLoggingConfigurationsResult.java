@@ -23,7 +23,12 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListLoggingConfigurationsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * Array of logging configurations. If you specified a <code>Limit</code> in your request, this might not be the
+     * full list.
+     * </p>
+     */
     private java.util.List<LoggingConfiguration> loggingConfigurations;
     /**
      * <p>
@@ -35,9 +40,13 @@ public class ListLoggingConfigurationsResult extends com.amazonaws.AmazonWebServ
     private String nextMarker;
 
     /**
-     * <p/>
+     * <p>
+     * Array of logging configurations. If you specified a <code>Limit</code> in your request, this might not be the
+     * full list.
+     * </p>
      * 
-     * @return
+     * @return Array of logging configurations. If you specified a <code>Limit</code> in your request, this might not be
+     *         the full list.
      */
 
     public java.util.List<LoggingConfiguration> getLoggingConfigurations() {
@@ -45,9 +54,14 @@ public class ListLoggingConfigurationsResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * <p/>
+     * <p>
+     * Array of logging configurations. If you specified a <code>Limit</code> in your request, this might not be the
+     * full list.
+     * </p>
      * 
      * @param loggingConfigurations
+     *        Array of logging configurations. If you specified a <code>Limit</code> in your request, this might not be
+     *        the full list.
      */
 
     public void setLoggingConfigurations(java.util.Collection<LoggingConfiguration> loggingConfigurations) {
@@ -60,7 +74,10 @@ public class ListLoggingConfigurationsResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * <p/>
+     * <p>
+     * Array of logging configurations. If you specified a <code>Limit</code> in your request, this might not be the
+     * full list.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setLoggingConfigurations(java.util.Collection)} or
@@ -68,6 +85,8 @@ public class ListLoggingConfigurationsResult extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param loggingConfigurations
+     *        Array of logging configurations. If you specified a <code>Limit</code> in your request, this might not be
+     *        the full list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,9 +101,14 @@ public class ListLoggingConfigurationsResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * <p/>
+     * <p>
+     * Array of logging configurations. If you specified a <code>Limit</code> in your request, this might not be the
+     * full list.
+     * </p>
      * 
      * @param loggingConfigurations
+     *        Array of logging configurations. If you specified a <code>Limit</code> in your request, this might not be
+     *        the full list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

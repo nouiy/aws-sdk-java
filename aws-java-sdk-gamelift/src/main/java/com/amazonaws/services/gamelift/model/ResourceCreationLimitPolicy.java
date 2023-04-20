@@ -24,8 +24,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * The policy is evaluated when a player tries to create a new game session. On receiving a
- * <code>CreateGameSession</code> request, GameLift checks that the player (identified by <code>CreatorId</code>) has
- * created fewer than game session limit in the specified time period.
+ * <code>CreateGameSession</code> request, Amazon GameLift checks that the player (identified by <code>CreatorId</code>)
+ * has created fewer than game session limit in the specified time period.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ResourceCreationLimitPolicy"
@@ -41,8 +41,8 @@ public class ResourceCreationLimitPolicy implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * The policy is evaluated when a player tries to create a new game session. On receiving a
-     * <code>CreateGameSession</code> request, GameLift checks that the player (identified by <code>CreatorId</code>)
-     * has created fewer than game session limit in the specified time period.
+     * <code>CreateGameSession</code> request, Amazon GameLift checks that the player (identified by
+     * <code>CreatorId</code>) has created fewer than game session limit in the specified time period.
      * </p>
      */
     private Integer newGameSessionsPerCreator;
@@ -60,8 +60,8 @@ public class ResourceCreationLimitPolicy implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * The policy is evaluated when a player tries to create a new game session. On receiving a
-     * <code>CreateGameSession</code> request, GameLift checks that the player (identified by <code>CreatorId</code>)
-     * has created fewer than game session limit in the specified time period.
+     * <code>CreateGameSession</code> request, Amazon GameLift checks that the player (identified by
+     * <code>CreatorId</code>) has created fewer than game session limit in the specified time period.
      * </p>
      * 
      * @param newGameSessionsPerCreator
@@ -69,7 +69,7 @@ public class ResourceCreationLimitPolicy implements Serializable, Cloneable, Str
      *        of time. With this policy, you can control players' ability to consume available resources.</p>
      *        <p>
      *        The policy is evaluated when a player tries to create a new game session. On receiving a
-     *        <code>CreateGameSession</code> request, GameLift checks that the player (identified by
+     *        <code>CreateGameSession</code> request, Amazon GameLift checks that the player (identified by
      *        <code>CreatorId</code>) has created fewer than game session limit in the specified time period.
      */
 
@@ -84,15 +84,15 @@ public class ResourceCreationLimitPolicy implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * The policy is evaluated when a player tries to create a new game session. On receiving a
-     * <code>CreateGameSession</code> request, GameLift checks that the player (identified by <code>CreatorId</code>)
-     * has created fewer than game session limit in the specified time period.
+     * <code>CreateGameSession</code> request, Amazon GameLift checks that the player (identified by
+     * <code>CreatorId</code>) has created fewer than game session limit in the specified time period.
      * </p>
      * 
      * @return A policy that puts limits on the number of game sessions that a player can create within a specified span
      *         of time. With this policy, you can control players' ability to consume available resources.</p>
      *         <p>
      *         The policy is evaluated when a player tries to create a new game session. On receiving a
-     *         <code>CreateGameSession</code> request, GameLift checks that the player (identified by
+     *         <code>CreateGameSession</code> request, Amazon GameLift checks that the player (identified by
      *         <code>CreatorId</code>) has created fewer than game session limit in the specified time period.
      */
 
@@ -107,8 +107,8 @@ public class ResourceCreationLimitPolicy implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * The policy is evaluated when a player tries to create a new game session. On receiving a
-     * <code>CreateGameSession</code> request, GameLift checks that the player (identified by <code>CreatorId</code>)
-     * has created fewer than game session limit in the specified time period.
+     * <code>CreateGameSession</code> request, Amazon GameLift checks that the player (identified by
+     * <code>CreatorId</code>) has created fewer than game session limit in the specified time period.
      * </p>
      * 
      * @param newGameSessionsPerCreator
@@ -116,7 +116,7 @@ public class ResourceCreationLimitPolicy implements Serializable, Cloneable, Str
      *        of time. With this policy, you can control players' ability to consume available resources.</p>
      *        <p>
      *        The policy is evaluated when a player tries to create a new game session. On receiving a
-     *        <code>CreateGameSession</code> request, GameLift checks that the player (identified by
+     *        <code>CreateGameSession</code> request, Amazon GameLift checks that the player (identified by
      *        <code>CreatorId</code>) has created fewer than game session limit in the specified time period.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

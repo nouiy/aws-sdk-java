@@ -119,8 +119,9 @@ public class CreateTrainingJobRequest extends com.amazonaws.AmazonWebServiceRequ
     private ResourceConfig resourceConfig;
     /**
      * <p>
-     * A <a>VpcConfig</a> object that specifies the VPC that you want your training job to connect to. Control access to
-     * and from your training container by configuring the VPC. For more information, see <a
+     * A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a> object
+     * that specifies the VPC that you want your training job to connect to. Control access to and from your training
+     * container by configuring the VPC. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
      * Virtual Private Cloud</a>.
      * </p>
@@ -884,15 +885,17 @@ public class CreateTrainingJobRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A <a>VpcConfig</a> object that specifies the VPC that you want your training job to connect to. Control access to
-     * and from your training container by configuring the VPC. For more information, see <a
+     * A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a> object
+     * that specifies the VPC that you want your training job to connect to. Control access to and from your training
+     * container by configuring the VPC. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
      * Virtual Private Cloud</a>.
      * </p>
      * 
      * @param vpcConfig
-     *        A <a>VpcConfig</a> object that specifies the VPC that you want your training job to connect to. Control
-     *        access to and from your training container by configuring the VPC. For more information, see <a
+     *        A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a>
+     *        object that specifies the VPC that you want your training job to connect to. Control access to and from
+     *        your training container by configuring the VPC. For more information, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an
      *        Amazon Virtual Private Cloud</a>.
      */
@@ -903,14 +906,16 @@ public class CreateTrainingJobRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A <a>VpcConfig</a> object that specifies the VPC that you want your training job to connect to. Control access to
-     * and from your training container by configuring the VPC. For more information, see <a
+     * A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a> object
+     * that specifies the VPC that you want your training job to connect to. Control access to and from your training
+     * container by configuring the VPC. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
      * Virtual Private Cloud</a>.
      * </p>
      * 
-     * @return A <a>VpcConfig</a> object that specifies the VPC that you want your training job to connect to. Control
-     *         access to and from your training container by configuring the VPC. For more information, see <a
+     * @return A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a>
+     *         object that specifies the VPC that you want your training job to connect to. Control access to and from
+     *         your training container by configuring the VPC. For more information, see <a
      *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an
      *         Amazon Virtual Private Cloud</a>.
      */
@@ -921,15 +926,17 @@ public class CreateTrainingJobRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A <a>VpcConfig</a> object that specifies the VPC that you want your training job to connect to. Control access to
-     * and from your training container by configuring the VPC. For more information, see <a
+     * A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a> object
+     * that specifies the VPC that you want your training job to connect to. Control access to and from your training
+     * container by configuring the VPC. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
      * Virtual Private Cloud</a>.
      * </p>
      * 
      * @param vpcConfig
-     *        A <a>VpcConfig</a> object that specifies the VPC that you want your training job to connect to. Control
-     *        access to and from your training container by configuring the VPC. For more information, see <a
+     *        A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a>
+     *        object that specifies the VPC that you want your training job to connect to. Control access to and from
+     *        your training container by configuring the VPC. For more information, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an
      *        Amazon Virtual Private Cloud</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

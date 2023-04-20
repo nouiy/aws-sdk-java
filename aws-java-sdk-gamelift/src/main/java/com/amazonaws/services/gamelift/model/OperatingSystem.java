@@ -22,7 +22,8 @@ public enum OperatingSystem {
 
     WINDOWS_2012("WINDOWS_2012"),
     AMAZON_LINUX("AMAZON_LINUX"),
-    AMAZON_LINUX_2("AMAZON_LINUX_2");
+    AMAZON_LINUX_2("AMAZON_LINUX_2"),
+    WINDOWS_2016("WINDOWS_2016");
 
     private String value;
 

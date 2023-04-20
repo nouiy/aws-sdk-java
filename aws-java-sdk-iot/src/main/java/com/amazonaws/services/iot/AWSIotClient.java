@@ -87,7 +87,7 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
     private static final Log log = LogFactory.getLog(AWSIot.class);
 
     /** Default signing name for the service. */
-    private static final String DEFAULT_SIGNING_NAME = "execute-api";
+    private static final String DEFAULT_SIGNING_NAME = "iot";
 
     /** Client configuration factory providing ClientConfigurations tailored to this client */
     protected static final ClientConfigurationFactory configFactory = new ClientConfigurationFactory();

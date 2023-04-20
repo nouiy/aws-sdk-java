@@ -95,7 +95,7 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or
      * <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on their video
-     * or content streams, remote attendess can receive those streams, but only after media renegotiation between the
+     * or content streams, remote attendees can receive those streams, but only after media renegotiation between the
      * client and the Amazon Chime back-end server.
      * </p>
      * </li>
@@ -302,7 +302,7 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or
      * <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on their video
-     * or content streams, remote attendess can receive those streams, but only after media renegotiation between the
+     * or content streams, remote attendees can receive those streams, but only after media renegotiation between the
      * client and the Amazon Chime back-end server.
      * </p>
      * </li>
@@ -339,7 +339,7 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or
      *        <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on
-     *        their video or content streams, remote attendess can receive those streams, but only after media
+     *        their video or content streams, remote attendees can receive those streams, but only after media
      *        renegotiation between the client and the Amazon Chime back-end server.
      *        </p>
      *        </li>
@@ -383,7 +383,7 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or
      * <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on their video
-     * or content streams, remote attendess can receive those streams, but only after media renegotiation between the
+     * or content streams, remote attendees can receive those streams, but only after media renegotiation between the
      * client and the Amazon Chime back-end server.
      * </p>
      * </li>
@@ -419,7 +419,7 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or
      *         <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on
-     *         their video or content streams, remote attendess can receive those streams, but only after media
+     *         their video or content streams, remote attendees can receive those streams, but only after media
      *         renegotiation between the client and the Amazon Chime back-end server.
      *         </p>
      *         </li>
@@ -463,7 +463,7 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or
      * <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on their video
-     * or content streams, remote attendess can receive those streams, but only after media renegotiation between the
+     * or content streams, remote attendees can receive those streams, but only after media renegotiation between the
      * client and the Amazon Chime back-end server.
      * </p>
      * </li>
@@ -500,7 +500,7 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or
      *        <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on
-     *        their video or content streams, remote attendess can receive those streams, but only after media
+     *        their video or content streams, remote attendees can receive those streams, but only after media
      *        renegotiation between the client and the Amazon Chime back-end server.
      *        </p>
      *        </li>

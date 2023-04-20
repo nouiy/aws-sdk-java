@@ -55,6 +55,10 @@ public class EngineTranscribeSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageOptions").build();
     private static final MarshallingInfo<String> PREFERREDLANGUAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PreferredLanguage").build();
+    private static final MarshallingInfo<String> VOCABULARYNAMES_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VocabularyNames").build();
+    private static final MarshallingInfo<String> VOCABULARYFILTERNAMES_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VocabularyFilterNames").build();
 
     private static final EngineTranscribeSettingsMarshaller instance = new EngineTranscribeSettingsMarshaller();
 
@@ -86,6 +90,8 @@ public class EngineTranscribeSettingsMarshaller {
             protocolMarshaller.marshall(engineTranscribeSettings.getIdentifyLanguage(), IDENTIFYLANGUAGE_BINDING);
             protocolMarshaller.marshall(engineTranscribeSettings.getLanguageOptions(), LANGUAGEOPTIONS_BINDING);
             protocolMarshaller.marshall(engineTranscribeSettings.getPreferredLanguage(), PREFERREDLANGUAGE_BINDING);
+            protocolMarshaller.marshall(engineTranscribeSettings.getVocabularyNames(), VOCABULARYNAMES_BINDING);
+            protocolMarshaller.marshall(engineTranscribeSettings.getVocabularyFilterNames(), VOCABULARYFILTERNAMES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

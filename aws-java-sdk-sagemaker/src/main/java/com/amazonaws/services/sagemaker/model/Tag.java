@@ -25,7 +25,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * You can add tags to notebook instances, training jobs, hyperparameter tuning jobs, batch transform jobs, models,
  * labeling jobs, work teams, endpoint configurations, and endpoints. For more information on adding tags to SageMaker
- * resources, see <a>AddTags</a>.
+ * resources, see <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AddTags.html">AddTags</a>.
  * </p>
  * <p>
  * For more information on adding metadata to your Amazon Web Services resources with tagging, see <a

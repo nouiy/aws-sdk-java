@@ -19,8 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines under what conditions SageMaker creates a human loop. Used within . See for the required format of activation
- * conditions.
+ * Defines under what conditions SageMaker creates a human loop. Used within <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateFlowDefinition.html"
+ * >CreateFlowDefinition</a>. See <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HumanLoopActivationConditionsConfig.html"
+ * >HumanLoopActivationConditionsConfig</a> for the required format of activation conditions.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/HumanLoopActivationConditionsConfig"

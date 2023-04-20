@@ -69,8 +69,8 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      * </li>
      * <li>
      * <p>
-     * <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons are the
-     * game session terminated before the placement process was completed, or an unexpected internal error.
+     * <b>FAILED</b> -- Amazon GameLift is not able to complete the process of placing the game session. Common reasons
+     * are the game session terminated before the placement process was completed, or an unexpected internal error.
      * </p>
      * </li>
      * </ul>
@@ -141,8 +141,9 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
     private java.util.Date endTime;
     /**
      * <p>
-     * The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>).
+     * The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP address
+     * and port number. This value is set once the new game session is placed (placement status is
+     * <code>FULFILLED</code>).
      * </p>
      */
     private String ipAddress;
@@ -172,8 +173,9 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
     private String dnsName;
     /**
      * <p>
-     * The port number for the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>).
+     * The port number for the game session. To connect to a Amazon GameLift game server, an app needs both the IP
+     * address and port number. This value is set once the new game session is placed (placement status is
+     * <code>FULFILLED</code>).
      * </p>
      */
     private Integer port;
@@ -318,8 +320,8 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      * </li>
      * <li>
      * <p>
-     * <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons are the
-     * game session terminated before the placement process was completed, or an unexpected internal error.
+     * <b>FAILED</b> -- Amazon GameLift is not able to complete the process of placing the game session. Common reasons
+     * are the game session terminated before the placement process was completed, or an unexpected internal error.
      * </p>
      * </li>
      * </ul>
@@ -351,9 +353,9 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      *        </li>
      *        <li>
      *        <p>
-     *        <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons
-     *        are the game session terminated before the placement process was completed, or an unexpected internal
-     *        error.
+     *        <b>FAILED</b> -- Amazon GameLift is not able to complete the process of placing the game session. Common
+     *        reasons are the game session terminated before the placement process was completed, or an unexpected
+     *        internal error.
      *        </p>
      *        </li>
      * @see GameSessionPlacementState
@@ -392,8 +394,8 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      * </li>
      * <li>
      * <p>
-     * <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons are the
-     * game session terminated before the placement process was completed, or an unexpected internal error.
+     * <b>FAILED</b> -- Amazon GameLift is not able to complete the process of placing the game session. Common reasons
+     * are the game session terminated before the placement process was completed, or an unexpected internal error.
      * </p>
      * </li>
      * </ul>
@@ -424,9 +426,9 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      *         </li>
      *         <li>
      *         <p>
-     *         <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons
-     *         are the game session terminated before the placement process was completed, or an unexpected internal
-     *         error.
+     *         <b>FAILED</b> -- Amazon GameLift is not able to complete the process of placing the game session. Common
+     *         reasons are the game session terminated before the placement process was completed, or an unexpected
+     *         internal error.
      *         </p>
      *         </li>
      * @see GameSessionPlacementState
@@ -465,8 +467,8 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      * </li>
      * <li>
      * <p>
-     * <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons are the
-     * game session terminated before the placement process was completed, or an unexpected internal error.
+     * <b>FAILED</b> -- Amazon GameLift is not able to complete the process of placing the game session. Common reasons
+     * are the game session terminated before the placement process was completed, or an unexpected internal error.
      * </p>
      * </li>
      * </ul>
@@ -498,9 +500,9 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      *        </li>
      *        <li>
      *        <p>
-     *        <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons
-     *        are the game session terminated before the placement process was completed, or an unexpected internal
-     *        error.
+     *        <b>FAILED</b> -- Amazon GameLift is not able to complete the process of placing the game session. Common
+     *        reasons are the game session terminated before the placement process was completed, or an unexpected
+     *        internal error.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -541,8 +543,8 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      * </li>
      * <li>
      * <p>
-     * <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons are the
-     * game session terminated before the placement process was completed, or an unexpected internal error.
+     * <b>FAILED</b> -- Amazon GameLift is not able to complete the process of placing the game session. Common reasons
+     * are the game session terminated before the placement process was completed, or an unexpected internal error.
      * </p>
      * </li>
      * </ul>
@@ -574,9 +576,9 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      *        </li>
      *        <li>
      *        <p>
-     *        <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons
-     *        are the game session terminated before the placement process was completed, or an unexpected internal
-     *        error.
+     *        <b>FAILED</b> -- Amazon GameLift is not able to complete the process of placing the game session. Common
+     *        reasons are the game session terminated before the placement process was completed, or an unexpected
+     *        internal error.
      *        </p>
      *        </li>
      * @see GameSessionPlacementState
@@ -615,8 +617,8 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      * </li>
      * <li>
      * <p>
-     * <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons are the
-     * game session terminated before the placement process was completed, or an unexpected internal error.
+     * <b>FAILED</b> -- Amazon GameLift is not able to complete the process of placing the game session. Common reasons
+     * are the game session terminated before the placement process was completed, or an unexpected internal error.
      * </p>
      * </li>
      * </ul>
@@ -648,9 +650,9 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      *        </li>
      *        <li>
      *        <p>
-     *        <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons
-     *        are the game session terminated before the placement process was completed, or an unexpected internal
-     *        error.
+     *        <b>FAILED</b> -- Amazon GameLift is not able to complete the process of placing the game session. Common
+     *        reasons are the game session terminated before the placement process was completed, or an unexpected
+     *        internal error.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1146,13 +1148,14 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>).
+     * The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP address
+     * and port number. This value is set once the new game session is placed (placement status is
+     * <code>FULFILLED</code>).
      * </p>
      * 
      * @param ipAddress
-     *        The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address
-     *        and port number. This value is set once the new game session is placed (placement status is
+     *        The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP
+     *        address and port number. This value is set once the new game session is placed (placement status is
      *        <code>FULFILLED</code>).
      */
 
@@ -1162,11 +1165,12 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>).
+     * The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP address
+     * and port number. This value is set once the new game session is placed (placement status is
+     * <code>FULFILLED</code>).
      * </p>
      * 
-     * @return The IP address of the game session. To connect to a GameLift game server, an app needs both the IP
+     * @return The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP
      *         address and port number. This value is set once the new game session is placed (placement status is
      *         <code>FULFILLED</code>).
      */
@@ -1177,13 +1181,14 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>).
+     * The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP address
+     * and port number. This value is set once the new game session is placed (placement status is
+     * <code>FULFILLED</code>).
      * </p>
      * 
      * @param ipAddress
-     *        The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address
-     *        and port number. This value is set once the new game session is placed (placement status is
+     *        The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP
+     *        address and port number. This value is set once the new game session is placed (placement status is
      *        <code>FULFILLED</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1343,13 +1348,14 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The port number for the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>).
+     * The port number for the game session. To connect to a Amazon GameLift game server, an app needs both the IP
+     * address and port number. This value is set once the new game session is placed (placement status is
+     * <code>FULFILLED</code>).
      * </p>
      * 
      * @param port
-     *        The port number for the game session. To connect to a GameLift game server, an app needs both the IP
-     *        address and port number. This value is set once the new game session is placed (placement status is
+     *        The port number for the game session. To connect to a Amazon GameLift game server, an app needs both the
+     *        IP address and port number. This value is set once the new game session is placed (placement status is
      *        <code>FULFILLED</code>).
      */
 
@@ -1359,12 +1365,13 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The port number for the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>).
+     * The port number for the game session. To connect to a Amazon GameLift game server, an app needs both the IP
+     * address and port number. This value is set once the new game session is placed (placement status is
+     * <code>FULFILLED</code>).
      * </p>
      * 
-     * @return The port number for the game session. To connect to a GameLift game server, an app needs both the IP
-     *         address and port number. This value is set once the new game session is placed (placement status is
+     * @return The port number for the game session. To connect to a Amazon GameLift game server, an app needs both the
+     *         IP address and port number. This value is set once the new game session is placed (placement status is
      *         <code>FULFILLED</code>).
      */
 
@@ -1374,13 +1381,14 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The port number for the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>).
+     * The port number for the game session. To connect to a Amazon GameLift game server, an app needs both the IP
+     * address and port number. This value is set once the new game session is placed (placement status is
+     * <code>FULFILLED</code>).
      * </p>
      * 
      * @param port
-     *        The port number for the game session. To connect to a GameLift game server, an app needs both the IP
-     *        address and port number. This value is set once the new game session is placed (placement status is
+     *        The port number for the game session. To connect to a Amazon GameLift game server, an app needs both the
+     *        IP address and port number. This value is set once the new game session is placed (placement status is
      *        <code>FULFILLED</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */

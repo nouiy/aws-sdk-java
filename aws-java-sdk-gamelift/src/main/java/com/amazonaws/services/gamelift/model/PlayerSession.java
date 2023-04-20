@@ -121,8 +121,8 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
     private String status;
     /**
      * <p>
-     * The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number.
+     * The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP address
+     * and port number.
      * </p>
      */
     private String ipAddress;
@@ -159,8 +159,8 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
     private Integer port;
     /**
      * <p>
-     * Developer-defined information related to a player. GameLift does not use this data, so it can be formatted as
-     * needed for use in the game.
+     * Developer-defined information related to a player. Amazon GameLift does not use this data, so it can be formatted
+     * as needed for use in the game.
      * </p>
      */
     private String playerData;
@@ -806,13 +806,13 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number.
+     * The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP address
+     * and port number.
      * </p>
      * 
      * @param ipAddress
-     *        The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address
-     *        and port number.
+     *        The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP
+     *        address and port number.
      */
 
     public void setIpAddress(String ipAddress) {
@@ -821,11 +821,11 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number.
+     * The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP address
+     * and port number.
      * </p>
      * 
-     * @return The IP address of the game session. To connect to a GameLift game server, an app needs both the IP
+     * @return The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP
      *         address and port number.
      */
 
@@ -835,13 +835,13 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and
-     * port number.
+     * The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP address
+     * and port number.
      * </p>
      * 
      * @param ipAddress
-     *        The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address
-     *        and port number.
+     *        The IP address of the game session. To connect to a Amazon GameLift game server, an app needs both the IP
+     *        address and port number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1046,13 +1046,13 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Developer-defined information related to a player. GameLift does not use this data, so it can be formatted as
-     * needed for use in the game.
+     * Developer-defined information related to a player. Amazon GameLift does not use this data, so it can be formatted
+     * as needed for use in the game.
      * </p>
      * 
      * @param playerData
-     *        Developer-defined information related to a player. GameLift does not use this data, so it can be formatted
-     *        as needed for use in the game.
+     *        Developer-defined information related to a player. Amazon GameLift does not use this data, so it can be
+     *        formatted as needed for use in the game.
      */
 
     public void setPlayerData(String playerData) {
@@ -1061,11 +1061,11 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Developer-defined information related to a player. GameLift does not use this data, so it can be formatted as
-     * needed for use in the game.
+     * Developer-defined information related to a player. Amazon GameLift does not use this data, so it can be formatted
+     * as needed for use in the game.
      * </p>
      * 
-     * @return Developer-defined information related to a player. GameLift does not use this data, so it can be
+     * @return Developer-defined information related to a player. Amazon GameLift does not use this data, so it can be
      *         formatted as needed for use in the game.
      */
 
@@ -1075,13 +1075,13 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Developer-defined information related to a player. GameLift does not use this data, so it can be formatted as
-     * needed for use in the game.
+     * Developer-defined information related to a player. Amazon GameLift does not use this data, so it can be formatted
+     * as needed for use in the game.
      * </p>
      * 
      * @param playerData
-     *        Developer-defined information related to a player. GameLift does not use this data, so it can be formatted
-     *        as needed for use in the game.
+     *        Developer-defined information related to a player. Amazon GameLift does not use this data, so it can be
+     *        formatted as needed for use in the game.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

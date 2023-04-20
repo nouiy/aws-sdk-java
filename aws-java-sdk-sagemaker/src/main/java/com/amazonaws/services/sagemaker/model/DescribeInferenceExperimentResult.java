@@ -90,8 +90,9 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a> API, or
-     * if any operation fails with an unexpected error, it shows as cancelled.
+     * <code>Cancelled</code> - When you conclude your experiment early using the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     * >StopInferenceExperiment</a> API, or if any operation fails with an unexpected error, it shows as cancelled.
      * </p>
      * </li>
      * </ul>
@@ -99,8 +100,9 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
     private String status;
     /**
      * <p>
-     * The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API, that
-     * explains the status of the inference experiment.
+     * The error message or client-specified <code>Reason</code> from the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     * >StopInferenceExperiment</a> API, that explains the status of the inference experiment.
      * </p>
      */
     private String statusReason;
@@ -168,7 +170,9 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * <p>
      * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to
      * encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint. For more
-     * information, see <a>CreateInferenceExperimentRequest$KmsKey</a>.
+     * information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     * >CreateInferenceExperiment</a>.
      * </p>
      */
     private String kmsKey;
@@ -395,8 +399,9 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a> API, or
-     * if any operation fails with an unexpected error, it shows as cancelled.
+     * <code>Cancelled</code> - When you conclude your experiment early using the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     * >StopInferenceExperiment</a> API, or if any operation fails with an unexpected error, it shows as cancelled.
      * </p>
      * </li>
      * </ul>
@@ -443,8 +448,10 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a>
-     *        API, or if any operation fails with an unexpected error, it shows as cancelled.
+     *        <code>Cancelled</code> - When you conclude your experiment early using the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     *        >StopInferenceExperiment</a> API, or if any operation fails with an unexpected error, it shows as
+     *        cancelled.
      *        </p>
      *        </li>
      * @see InferenceExperimentStatus
@@ -497,8 +504,9 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a> API, or
-     * if any operation fails with an unexpected error, it shows as cancelled.
+     * <code>Cancelled</code> - When you conclude your experiment early using the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     * >StopInferenceExperiment</a> API, or if any operation fails with an unexpected error, it shows as cancelled.
      * </p>
      * </li>
      * </ul>
@@ -544,8 +552,10 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a>
-     *         API, or if any operation fails with an unexpected error, it shows as cancelled.
+     *         <code>Cancelled</code> - When you conclude your experiment early using the <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     *         >StopInferenceExperiment</a> API, or if any operation fails with an unexpected error, it shows as
+     *         cancelled.
      *         </p>
      *         </li>
      * @see InferenceExperimentStatus
@@ -598,8 +608,9 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a> API, or
-     * if any operation fails with an unexpected error, it shows as cancelled.
+     * <code>Cancelled</code> - When you conclude your experiment early using the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     * >StopInferenceExperiment</a> API, or if any operation fails with an unexpected error, it shows as cancelled.
      * </p>
      * </li>
      * </ul>
@@ -646,8 +657,10 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a>
-     *        API, or if any operation fails with an unexpected error, it shows as cancelled.
+     *        <code>Cancelled</code> - When you conclude your experiment early using the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     *        >StopInferenceExperiment</a> API, or if any operation fails with an unexpected error, it shows as
+     *        cancelled.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -702,8 +715,9 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a> API, or
-     * if any operation fails with an unexpected error, it shows as cancelled.
+     * <code>Cancelled</code> - When you conclude your experiment early using the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     * >StopInferenceExperiment</a> API, or if any operation fails with an unexpected error, it shows as cancelled.
      * </p>
      * </li>
      * </ul>
@@ -750,8 +764,10 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a>
-     *        API, or if any operation fails with an unexpected error, it shows as cancelled.
+     *        <code>Cancelled</code> - When you conclude your experiment early using the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     *        >StopInferenceExperiment</a> API, or if any operation fails with an unexpected error, it shows as
+     *        cancelled.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -765,13 +781,15 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API, that
-     * explains the status of the inference experiment.
+     * The error message or client-specified <code>Reason</code> from the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     * >StopInferenceExperiment</a> API, that explains the status of the inference experiment.
      * </p>
      * 
      * @param statusReason
-     *        The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API,
-     *        that explains the status of the inference experiment.
+     *        The error message or client-specified <code>Reason</code> from the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     *        >StopInferenceExperiment</a> API, that explains the status of the inference experiment.
      */
 
     public void setStatusReason(String statusReason) {
@@ -780,12 +798,14 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API, that
-     * explains the status of the inference experiment.
+     * The error message or client-specified <code>Reason</code> from the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     * >StopInferenceExperiment</a> API, that explains the status of the inference experiment.
      * </p>
      * 
-     * @return The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API,
-     *         that explains the status of the inference experiment.
+     * @return The error message or client-specified <code>Reason</code> from the <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     *         >StopInferenceExperiment</a> API, that explains the status of the inference experiment.
      */
 
     public String getStatusReason() {
@@ -794,13 +814,15 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API, that
-     * explains the status of the inference experiment.
+     * The error message or client-specified <code>Reason</code> from the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     * >StopInferenceExperiment</a> API, that explains the status of the inference experiment.
      * </p>
      * 
      * @param statusReason
-     *        The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API,
-     *        that explains the status of the inference experiment.
+     *        The error message or client-specified <code>Reason</code> from the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html"
+     *        >StopInferenceExperiment</a> API, that explains the status of the inference experiment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1243,13 +1265,17 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * <p>
      * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to
      * encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint. For more
-     * information, see <a>CreateInferenceExperimentRequest$KmsKey</a>.
+     * information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     * >CreateInferenceExperiment</a>.
      * </p>
      * 
      * @param kmsKey
      *        The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to
      *        encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint. For more
-     *        information, see <a>CreateInferenceExperimentRequest$KmsKey</a>.
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     *        >CreateInferenceExperiment</a>.
      */
 
     public void setKmsKey(String kmsKey) {
@@ -1260,12 +1286,16 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * <p>
      * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to
      * encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint. For more
-     * information, see <a>CreateInferenceExperimentRequest$KmsKey</a>.
+     * information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     * >CreateInferenceExperiment</a>.
      * </p>
      * 
      * @return The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses
      *         to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint. For
-     *         more information, see <a>CreateInferenceExperimentRequest$KmsKey</a>.
+     *         more information, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     *         >CreateInferenceExperiment</a>.
      */
 
     public String getKmsKey() {
@@ -1276,13 +1306,17 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * <p>
      * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to
      * encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint. For more
-     * information, see <a>CreateInferenceExperimentRequest$KmsKey</a>.
+     * information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     * >CreateInferenceExperiment</a>.
      * </p>
      * 
      * @param kmsKey
      *        The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to
      *        encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint. For more
-     *        information, see <a>CreateInferenceExperimentRequest$KmsKey</a>.
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceExperiment.html"
+     *        >CreateInferenceExperiment</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

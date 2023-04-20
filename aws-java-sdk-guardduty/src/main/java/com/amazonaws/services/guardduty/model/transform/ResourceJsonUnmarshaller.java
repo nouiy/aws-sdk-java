@@ -94,6 +94,10 @@ public class ResourceJsonUnmarshaller implements Unmarshaller<Resource, JsonUnma
                     context.nextToken();
                     resource.setRdsDbUserDetails(RdsDbUserDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("lambdaDetails", targetDepth)) {
+                    context.nextToken();
+                    resource.setLambdaDetails(LambdaDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

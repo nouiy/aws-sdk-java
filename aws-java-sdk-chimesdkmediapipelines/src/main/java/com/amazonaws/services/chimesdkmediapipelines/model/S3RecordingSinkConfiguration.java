@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The structure that holds the settings for transmitting audio and video to the Amazon S3 bucket.
+ * The structure that holds the settings for transmitting media to the Amazon S3 bucket. These values are used as
+ * defaults if <code>S3RecordingSinkRuntimeConfiguration</code> is not specified.
  * </p>
  * 
  * @see <a
@@ -31,18 +32,24 @@ public class S3RecordingSinkConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The URL of the Amazon S3 bucket used as the recording sink.
+     * The default URI of the Amazon S3 bucket used as the recording sink.
      * </p>
      */
     private String destination;
+    /**
+     * <p>
+     * The default file format for the media files sent to the Amazon S3 bucket.
+     * </p>
+     */
+    private String recordingFileFormat;
 
     /**
      * <p>
-     * The URL of the Amazon S3 bucket used as the recording sink.
+     * The default URI of the Amazon S3 bucket used as the recording sink.
      * </p>
      * 
      * @param destination
-     *        The URL of the Amazon S3 bucket used as the recording sink.
+     *        The default URI of the Amazon S3 bucket used as the recording sink.
      */
 
     public void setDestination(String destination) {
@@ -51,10 +58,10 @@ public class S3RecordingSinkConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The URL of the Amazon S3 bucket used as the recording sink.
+     * The default URI of the Amazon S3 bucket used as the recording sink.
      * </p>
      * 
-     * @return The URL of the Amazon S3 bucket used as the recording sink.
+     * @return The default URI of the Amazon S3 bucket used as the recording sink.
      */
 
     public String getDestination() {
@@ -63,16 +70,75 @@ public class S3RecordingSinkConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The URL of the Amazon S3 bucket used as the recording sink.
+     * The default URI of the Amazon S3 bucket used as the recording sink.
      * </p>
      * 
      * @param destination
-     *        The URL of the Amazon S3 bucket used as the recording sink.
+     *        The default URI of the Amazon S3 bucket used as the recording sink.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public S3RecordingSinkConfiguration withDestination(String destination) {
         setDestination(destination);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The default file format for the media files sent to the Amazon S3 bucket.
+     * </p>
+     * 
+     * @param recordingFileFormat
+     *        The default file format for the media files sent to the Amazon S3 bucket.
+     * @see RecordingFileFormat
+     */
+
+    public void setRecordingFileFormat(String recordingFileFormat) {
+        this.recordingFileFormat = recordingFileFormat;
+    }
+
+    /**
+     * <p>
+     * The default file format for the media files sent to the Amazon S3 bucket.
+     * </p>
+     * 
+     * @return The default file format for the media files sent to the Amazon S3 bucket.
+     * @see RecordingFileFormat
+     */
+
+    public String getRecordingFileFormat() {
+        return this.recordingFileFormat;
+    }
+
+    /**
+     * <p>
+     * The default file format for the media files sent to the Amazon S3 bucket.
+     * </p>
+     * 
+     * @param recordingFileFormat
+     *        The default file format for the media files sent to the Amazon S3 bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RecordingFileFormat
+     */
+
+    public S3RecordingSinkConfiguration withRecordingFileFormat(String recordingFileFormat) {
+        setRecordingFileFormat(recordingFileFormat);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The default file format for the media files sent to the Amazon S3 bucket.
+     * </p>
+     * 
+     * @param recordingFileFormat
+     *        The default file format for the media files sent to the Amazon S3 bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RecordingFileFormat
+     */
+
+    public S3RecordingSinkConfiguration withRecordingFileFormat(RecordingFileFormat recordingFileFormat) {
+        this.recordingFileFormat = recordingFileFormat.toString();
         return this;
     }
 
@@ -89,7 +155,9 @@ public class S3RecordingSinkConfiguration implements Serializable, Cloneable, St
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getDestination() != null)
-            sb.append("Destination: ").append("***Sensitive Data Redacted***");
+            sb.append("Destination: ").append("***Sensitive Data Redacted***").append(",");
+        if (getRecordingFileFormat() != null)
+            sb.append("RecordingFileFormat: ").append(getRecordingFileFormat());
         sb.append("}");
         return sb.toString();
     }
@@ -108,6 +176,10 @@ public class S3RecordingSinkConfiguration implements Serializable, Cloneable, St
             return false;
         if (other.getDestination() != null && other.getDestination().equals(this.getDestination()) == false)
             return false;
+        if (other.getRecordingFileFormat() == null ^ this.getRecordingFileFormat() == null)
+            return false;
+        if (other.getRecordingFileFormat() != null && other.getRecordingFileFormat().equals(this.getRecordingFileFormat()) == false)
+            return false;
         return true;
     }
 
@@ -117,6 +189,7 @@ public class S3RecordingSinkConfiguration implements Serializable, Cloneable, St
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDestination() == null) ? 0 : getDestination().hashCode());
+        hashCode = prime * hashCode + ((getRecordingFileFormat() == null) ? 0 : getRecordingFileFormat().hashCode());
         return hashCode;
     }
 

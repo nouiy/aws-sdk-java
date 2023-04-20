@@ -31,7 +31,9 @@ public enum TranscribeLanguageCode {
     PtBR("pt-BR"),
     JaJP("ja-JP"),
     KoKR("ko-KR"),
-    ZhCN("zh-CN");
+    ZhCN("zh-CN"),
+    ThTH("th-TH"),
+    HiIN("hi-IN");
 
     private String value;
 

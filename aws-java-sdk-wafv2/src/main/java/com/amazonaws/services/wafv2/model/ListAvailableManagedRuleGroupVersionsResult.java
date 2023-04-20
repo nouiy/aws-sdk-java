@@ -34,7 +34,8 @@ public class ListAvailableManagedRuleGroupVersionsResult extends com.amazonaws.A
     private String nextMarker;
     /**
      * <p>
-     * The versions that are currently available for the specified managed rule group.
+     * The versions that are currently available for the specified managed rule group. If you specified a
+     * <code>Limit</code> in your request, this might not be the full list.
      * </p>
      */
     private java.util.List<ManagedRuleGroupVersion> versions;
@@ -102,10 +103,12 @@ public class ListAvailableManagedRuleGroupVersionsResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The versions that are currently available for the specified managed rule group.
+     * The versions that are currently available for the specified managed rule group. If you specified a
+     * <code>Limit</code> in your request, this might not be the full list.
      * </p>
      * 
-     * @return The versions that are currently available for the specified managed rule group.
+     * @return The versions that are currently available for the specified managed rule group. If you specified a
+     *         <code>Limit</code> in your request, this might not be the full list.
      */
 
     public java.util.List<ManagedRuleGroupVersion> getVersions() {
@@ -114,11 +117,13 @@ public class ListAvailableManagedRuleGroupVersionsResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The versions that are currently available for the specified managed rule group.
+     * The versions that are currently available for the specified managed rule group. If you specified a
+     * <code>Limit</code> in your request, this might not be the full list.
      * </p>
      * 
      * @param versions
-     *        The versions that are currently available for the specified managed rule group.
+     *        The versions that are currently available for the specified managed rule group. If you specified a
+     *        <code>Limit</code> in your request, this might not be the full list.
      */
 
     public void setVersions(java.util.Collection<ManagedRuleGroupVersion> versions) {
@@ -132,7 +137,8 @@ public class ListAvailableManagedRuleGroupVersionsResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The versions that are currently available for the specified managed rule group.
+     * The versions that are currently available for the specified managed rule group. If you specified a
+     * <code>Limit</code> in your request, this might not be the full list.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -141,7 +147,8 @@ public class ListAvailableManagedRuleGroupVersionsResult extends com.amazonaws.A
      * </p>
      * 
      * @param versions
-     *        The versions that are currently available for the specified managed rule group.
+     *        The versions that are currently available for the specified managed rule group. If you specified a
+     *        <code>Limit</code> in your request, this might not be the full list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -157,11 +164,13 @@ public class ListAvailableManagedRuleGroupVersionsResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The versions that are currently available for the specified managed rule group.
+     * The versions that are currently available for the specified managed rule group. If you specified a
+     * <code>Limit</code> in your request, this might not be the full list.
      * </p>
      * 
      * @param versions
-     *        The versions that are currently available for the specified managed rule group.
+     *        The versions that are currently available for the specified managed rule group. If you specified a
+     *        <code>Limit</code> in your request, this might not be the full list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

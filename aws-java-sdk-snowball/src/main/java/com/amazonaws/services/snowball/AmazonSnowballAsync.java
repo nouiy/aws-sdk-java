@@ -202,7 +202,7 @@ public interface AmazonSnowballAsync extends AmazonSnowball {
      * <ul>
      * <li>
      * <p>
-     * Snow Family device type: <b>SNC1_SSD</b>
+     * Device type: <b>SNC1_SSD</b>
      * </p>
      * <ul>
      * <li>
@@ -219,7 +219,7 @@ public interface AmazonSnowballAsync extends AmazonSnowball {
      * <p/></li>
      * <li>
      * <p>
-     * Snow Family device type: <b>SNC1_HDD</b>
+     * Device type: <b>SNC1_HDD</b>
      * </p>
      * <ul>
      * <li>
@@ -342,6 +342,40 @@ public interface AmazonSnowballAsync extends AmazonSnowball {
      * This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region.
      * </p>
      * </note></li>
+     * </ul>
+     * <p/></li>
+     * <li>
+     * <p>
+     * Device type: <b>V3_5C</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Capacity: T32
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Description: Snowball Edge Compute Optimized without GPU
+     * </p>
+     * </li>
+     * </ul>
+     * <p/></li>
+     * <li>
+     * <p>
+     * Device type: <b>V3_5S</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Capacity: T240
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Description: Snowball Edge Storage Optimized 210TB
+     * </p>
+     * </li>
      * </ul>
      * <p/></li>
      * </ul>
@@ -382,7 +416,7 @@ public interface AmazonSnowballAsync extends AmazonSnowball {
      * <ul>
      * <li>
      * <p>
-     * Snow Family device type: <b>SNC1_SSD</b>
+     * Device type: <b>SNC1_SSD</b>
      * </p>
      * <ul>
      * <li>
@@ -399,7 +433,7 @@ public interface AmazonSnowballAsync extends AmazonSnowball {
      * <p/></li>
      * <li>
      * <p>
-     * Snow Family device type: <b>SNC1_HDD</b>
+     * Device type: <b>SNC1_HDD</b>
      * </p>
      * <ul>
      * <li>
@@ -522,6 +556,40 @@ public interface AmazonSnowballAsync extends AmazonSnowball {
      * This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region.
      * </p>
      * </note></li>
+     * </ul>
+     * <p/></li>
+     * <li>
+     * <p>
+     * Device type: <b>V3_5C</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Capacity: T32
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Description: Snowball Edge Compute Optimized without GPU
+     * </p>
+     * </li>
+     * </ul>
+     * <p/></li>
+     * <li>
+     * <p>
+     * Device type: <b>V3_5S</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Capacity: T240
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Description: Snowball Edge Storage Optimized 210TB
+     * </p>
+     * </li>
      * </ul>
      * <p/></li>
      * </ul>
@@ -1042,8 +1110,9 @@ public interface AmazonSnowballAsync extends AmazonSnowball {
      * <p>
      * This action returns a list of the different Amazon EC2 Amazon Machine Images (AMIs) that are owned by your Amazon
      * Web Services accountthat would be supported for use on a Snow device. Currently, supported AMIs are based on the
-     * CentOS 7 (x86_64) - with Updates HVM, Ubuntu Server 14.04 LTS (HVM), and Ubuntu 16.04 LTS - Xenial (HVM) images,
-     * available on the Amazon Web Services Marketplace.
+     * Amazon Linux-2, Ubuntu 20.04 LTS - Focal, or Ubuntu 22.04 LTS - Jammy images, available on the Amazon Web
+     * Services Marketplace. Ubuntu 16.04 LTS - Xenial (HVM) images are no longer supported in the Market, but still
+     * supported for use on devices through Amazon EC2 VM Import/Export and running locally in AMIs.
      * </p>
      * 
      * @param listCompatibleImagesRequest
@@ -1058,8 +1127,9 @@ public interface AmazonSnowballAsync extends AmazonSnowball {
      * <p>
      * This action returns a list of the different Amazon EC2 Amazon Machine Images (AMIs) that are owned by your Amazon
      * Web Services accountthat would be supported for use on a Snow device. Currently, supported AMIs are based on the
-     * CentOS 7 (x86_64) - with Updates HVM, Ubuntu Server 14.04 LTS (HVM), and Ubuntu 16.04 LTS - Xenial (HVM) images,
-     * available on the Amazon Web Services Marketplace.
+     * Amazon Linux-2, Ubuntu 20.04 LTS - Focal, or Ubuntu 22.04 LTS - Jammy images, available on the Amazon Web
+     * Services Marketplace. Ubuntu 16.04 LTS - Xenial (HVM) images are no longer supported in the Market, but still
+     * supported for use on devices through Amazon EC2 VM Import/Export and running locally in AMIs.
      * </p>
      * 
      * @param listCompatibleImagesRequest

@@ -33,7 +33,7 @@ public class GetComputeAuthTokenRequest extends com.amazonaws.AmazonWebServiceRe
     private String fleetId;
     /**
      * <p>
-     * The name of the compute resource you are requesting the authorization token for.
+     * The name of the compute resource you are requesting the authentication token for.
      * </p>
      */
     private String computeName;
@@ -80,11 +80,11 @@ public class GetComputeAuthTokenRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the compute resource you are requesting the authorization token for.
+     * The name of the compute resource you are requesting the authentication token for.
      * </p>
      * 
      * @param computeName
-     *        The name of the compute resource you are requesting the authorization token for.
+     *        The name of the compute resource you are requesting the authentication token for.
      */
 
     public void setComputeName(String computeName) {
@@ -93,10 +93,10 @@ public class GetComputeAuthTokenRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the compute resource you are requesting the authorization token for.
+     * The name of the compute resource you are requesting the authentication token for.
      * </p>
      * 
-     * @return The name of the compute resource you are requesting the authorization token for.
+     * @return The name of the compute resource you are requesting the authentication token for.
      */
 
     public String getComputeName() {
@@ -105,11 +105,11 @@ public class GetComputeAuthTokenRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the compute resource you are requesting the authorization token for.
+     * The name of the compute resource you are requesting the authentication token for.
      * </p>
      * 
      * @param computeName
-     *        The name of the compute resource you are requesting the authorization token for.
+     *        The name of the compute resource you are requesting the authentication token for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

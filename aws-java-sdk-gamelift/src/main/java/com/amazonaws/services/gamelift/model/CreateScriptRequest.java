@@ -27,7 +27,7 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A descriptive label that is associated with a script. Script names do not need to be unique. You can use <a
+     * A descriptive label that is associated with a script. Script names don't need to be unique. You can use <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to change
      * this value later.
      * </p>
@@ -35,7 +35,7 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String name;
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique. You can use <a
+     * Version information associated with a build or script. Version strings don't need to be unique. You can use <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to change
      * this value later.
      * </p>
@@ -81,15 +81,15 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A descriptive label that is associated with a script. Script names do not need to be unique. You can use <a
+     * A descriptive label that is associated with a script. Script names don't need to be unique. You can use <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to change
      * this value later.
      * </p>
      * 
      * @param name
-     *        A descriptive label that is associated with a script. Script names do not need to be unique. You can use
-     *        <a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a>
-     *        to change this value later.
+     *        A descriptive label that is associated with a script. Script names don't need to be unique. You can use <a
+     *        href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to
+     *        change this value later.
      */
 
     public void setName(String name) {
@@ -98,12 +98,12 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A descriptive label that is associated with a script. Script names do not need to be unique. You can use <a
+     * A descriptive label that is associated with a script. Script names don't need to be unique. You can use <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to change
      * this value later.
      * </p>
      * 
-     * @return A descriptive label that is associated with a script. Script names do not need to be unique. You can use
+     * @return A descriptive label that is associated with a script. Script names don't need to be unique. You can use
      *         <a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a>
      *         to change this value later.
      */
@@ -114,15 +114,15 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A descriptive label that is associated with a script. Script names do not need to be unique. You can use <a
+     * A descriptive label that is associated with a script. Script names don't need to be unique. You can use <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to change
      * this value later.
      * </p>
      * 
      * @param name
-     *        A descriptive label that is associated with a script. Script names do not need to be unique. You can use
-     *        <a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a>
-     *        to change this value later.
+     *        A descriptive label that is associated with a script. Script names don't need to be unique. You can use <a
+     *        href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to
+     *        change this value later.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,13 +133,13 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique. You can use <a
+     * Version information associated with a build or script. Version strings don't need to be unique. You can use <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to change
      * this value later.
      * </p>
      * 
      * @param version
-     *        Version information associated with a build or script. Version strings do not need to be unique. You can
+     *        Version information associated with a build or script. Version strings don't need to be unique. You can
      *        use <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to
      *        change this value later.
@@ -151,12 +151,12 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique. You can use <a
+     * Version information associated with a build or script. Version strings don't need to be unique. You can use <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to change
      * this value later.
      * </p>
      * 
-     * @return Version information associated with a build or script. Version strings do not need to be unique. You can
+     * @return Version information associated with a build or script. Version strings don't need to be unique. You can
      *         use <a
      *         href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to
      *         change this value later.
@@ -168,13 +168,13 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique. You can use <a
+     * Version information associated with a build or script. Version strings don't need to be unique. You can use <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to change
      * this value later.
      * </p>
      * 
      * @param version
-     *        Version information associated with a build or script. Version strings do not need to be unique. You can
+     *        Version information associated with a build or script. Version strings don't need to be unique. You can
      *        use <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateScript.html">UpdateScript</a> to
      *        change this value later.

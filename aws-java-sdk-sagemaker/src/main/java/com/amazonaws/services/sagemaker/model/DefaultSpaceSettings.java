@@ -30,13 +30,13 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The execution role for the space.
+     * The ARN of the execution role for the space.
      * </p>
      */
     private String executionRole;
     /**
      * <p>
-     * The security groups for the Amazon Virtual Private Cloud that the space uses for communication.
+     * The security group IDs for the Amazon Virtual Private Cloud that the space uses for communication.
      * </p>
      */
     private java.util.List<String> securityGroups;
@@ -47,11 +47,11 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The execution role for the space.
+     * The ARN of the execution role for the space.
      * </p>
      * 
      * @param executionRole
-     *        The execution role for the space.
+     *        The ARN of the execution role for the space.
      */
 
     public void setExecutionRole(String executionRole) {
@@ -60,10 +60,10 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The execution role for the space.
+     * The ARN of the execution role for the space.
      * </p>
      * 
-     * @return The execution role for the space.
+     * @return The ARN of the execution role for the space.
      */
 
     public String getExecutionRole() {
@@ -72,11 +72,11 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The execution role for the space.
+     * The ARN of the execution role for the space.
      * </p>
      * 
      * @param executionRole
-     *        The execution role for the space.
+     *        The ARN of the execution role for the space.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,10 +87,10 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The security groups for the Amazon Virtual Private Cloud that the space uses for communication.
+     * The security group IDs for the Amazon Virtual Private Cloud that the space uses for communication.
      * </p>
      * 
-     * @return The security groups for the Amazon Virtual Private Cloud that the space uses for communication.
+     * @return The security group IDs for the Amazon Virtual Private Cloud that the space uses for communication.
      */
 
     public java.util.List<String> getSecurityGroups() {
@@ -99,11 +99,11 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The security groups for the Amazon Virtual Private Cloud that the space uses for communication.
+     * The security group IDs for the Amazon Virtual Private Cloud that the space uses for communication.
      * </p>
      * 
      * @param securityGroups
-     *        The security groups for the Amazon Virtual Private Cloud that the space uses for communication.
+     *        The security group IDs for the Amazon Virtual Private Cloud that the space uses for communication.
      */
 
     public void setSecurityGroups(java.util.Collection<String> securityGroups) {
@@ -117,7 +117,7 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The security groups for the Amazon Virtual Private Cloud that the space uses for communication.
+     * The security group IDs for the Amazon Virtual Private Cloud that the space uses for communication.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -126,7 +126,7 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param securityGroups
-     *        The security groups for the Amazon Virtual Private Cloud that the space uses for communication.
+     *        The security group IDs for the Amazon Virtual Private Cloud that the space uses for communication.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,11 +142,11 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The security groups for the Amazon Virtual Private Cloud that the space uses for communication.
+     * The security group IDs for the Amazon Virtual Private Cloud that the space uses for communication.
      * </p>
      * 
      * @param securityGroups
-     *        The security groups for the Amazon Virtual Private Cloud that the space uses for communication.
+     *        The security group IDs for the Amazon Virtual Private Cloud that the space uses for communication.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

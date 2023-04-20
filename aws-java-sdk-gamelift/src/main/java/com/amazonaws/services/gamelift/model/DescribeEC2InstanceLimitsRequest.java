@@ -27,9 +27,9 @@ public class DescribeEC2InstanceLimitsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Name of an Amazon EC2 instance type that is supported in GameLift. A fleet instance type determines the computing
-     * resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do not specify
-     * a value for this parameter to retrieve limits for all instance types.
+     * Name of an Amazon EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines the
+     * computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do
+     * not specify a value for this parameter to retrieve limits for all instance types.
      * </p>
      */
     private String eC2InstanceType;
@@ -43,14 +43,14 @@ public class DescribeEC2InstanceLimitsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Name of an Amazon EC2 instance type that is supported in GameLift. A fleet instance type determines the computing
-     * resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do not specify
-     * a value for this parameter to retrieve limits for all instance types.
+     * Name of an Amazon EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines the
+     * computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do
+     * not specify a value for this parameter to retrieve limits for all instance types.
      * </p>
      * 
      * @param eC2InstanceType
-     *        Name of an Amazon EC2 instance type that is supported in GameLift. A fleet instance type determines the
-     *        computing resources of each instance in the fleet, including CPU, memory, storage, and networking
+     *        Name of an Amazon EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines
+     *        the computing resources of each instance in the fleet, including CPU, memory, storage, and networking
      *        capacity. Do not specify a value for this parameter to retrieve limits for all instance types.
      * @see EC2InstanceType
      */
@@ -61,14 +61,14 @@ public class DescribeEC2InstanceLimitsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Name of an Amazon EC2 instance type that is supported in GameLift. A fleet instance type determines the computing
-     * resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do not specify
-     * a value for this parameter to retrieve limits for all instance types.
+     * Name of an Amazon EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines the
+     * computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do
+     * not specify a value for this parameter to retrieve limits for all instance types.
      * </p>
      * 
-     * @return Name of an Amazon EC2 instance type that is supported in GameLift. A fleet instance type determines the
-     *         computing resources of each instance in the fleet, including CPU, memory, storage, and networking
-     *         capacity. Do not specify a value for this parameter to retrieve limits for all instance types.
+     * @return Name of an Amazon EC2 instance type that is supported in Amazon GameLift. A fleet instance type
+     *         determines the computing resources of each instance in the fleet, including CPU, memory, storage, and
+     *         networking capacity. Do not specify a value for this parameter to retrieve limits for all instance types.
      * @see EC2InstanceType
      */
 
@@ -78,14 +78,14 @@ public class DescribeEC2InstanceLimitsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Name of an Amazon EC2 instance type that is supported in GameLift. A fleet instance type determines the computing
-     * resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do not specify
-     * a value for this parameter to retrieve limits for all instance types.
+     * Name of an Amazon EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines the
+     * computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do
+     * not specify a value for this parameter to retrieve limits for all instance types.
      * </p>
      * 
      * @param eC2InstanceType
-     *        Name of an Amazon EC2 instance type that is supported in GameLift. A fleet instance type determines the
-     *        computing resources of each instance in the fleet, including CPU, memory, storage, and networking
+     *        Name of an Amazon EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines
+     *        the computing resources of each instance in the fleet, including CPU, memory, storage, and networking
      *        capacity. Do not specify a value for this parameter to retrieve limits for all instance types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType
@@ -98,14 +98,14 @@ public class DescribeEC2InstanceLimitsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Name of an Amazon EC2 instance type that is supported in GameLift. A fleet instance type determines the computing
-     * resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do not specify
-     * a value for this parameter to retrieve limits for all instance types.
+     * Name of an Amazon EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines the
+     * computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do
+     * not specify a value for this parameter to retrieve limits for all instance types.
      * </p>
      * 
      * @param eC2InstanceType
-     *        Name of an Amazon EC2 instance type that is supported in GameLift. A fleet instance type determines the
-     *        computing resources of each instance in the fleet, including CPU, memory, storage, and networking
+     *        Name of an Amazon EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines
+     *        the computing resources of each instance in the fleet, including CPU, memory, storage, and networking
      *        capacity. Do not specify a value for this parameter to retrieve limits for all instance types.
      * @see EC2InstanceType
      */
@@ -116,14 +116,14 @@ public class DescribeEC2InstanceLimitsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Name of an Amazon EC2 instance type that is supported in GameLift. A fleet instance type determines the computing
-     * resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do not specify
-     * a value for this parameter to retrieve limits for all instance types.
+     * Name of an Amazon EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines the
+     * computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Do
+     * not specify a value for this parameter to retrieve limits for all instance types.
      * </p>
      * 
      * @param eC2InstanceType
-     *        Name of an Amazon EC2 instance type that is supported in GameLift. A fleet instance type determines the
-     *        computing resources of each instance in the fleet, including CPU, memory, storage, and networking
+     *        Name of an Amazon EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines
+     *        the computing resources of each instance in the fleet, including CPU, memory, storage, and networking
      *        capacity. Do not specify a value for this parameter to retrieve limits for all instance types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType

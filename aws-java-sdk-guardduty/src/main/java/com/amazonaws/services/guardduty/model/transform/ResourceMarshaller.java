@@ -50,6 +50,8 @@ public class ResourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rdsDbInstanceDetails").build();
     private static final MarshallingInfo<StructuredPojo> RDSDBUSERDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rdsDbUserDetails").build();
+    private static final MarshallingInfo<StructuredPojo> LAMBDADETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambdaDetails").build();
 
     private static final ResourceMarshaller instance = new ResourceMarshaller();
 
@@ -78,6 +80,7 @@ public class ResourceMarshaller {
             protocolMarshaller.marshall(resource.getContainerDetails(), CONTAINERDETAILS_BINDING);
             protocolMarshaller.marshall(resource.getRdsDbInstanceDetails(), RDSDBINSTANCEDETAILS_BINDING);
             protocolMarshaller.marshall(resource.getRdsDbUserDetails(), RDSDBUSERDETAILS_BINDING);
+            protocolMarshaller.marshall(resource.getLambdaDetails(), LAMBDADETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

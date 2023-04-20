@@ -40,34 +40,42 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_IntegerParameterRange.html">
+     * IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a hyperparameter tuning job
+     * searches.
      * </p>
      */
     private java.util.List<IntegerParameterRange> integerParameterRanges;
     /**
      * <p>
-     * The array of <a>ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContinuousParameterRange.html"
+     * >ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a hyperparameter
+     * tuning job searches.
      * </p>
      */
     private java.util.List<ContinuousParameterRange> continuousParameterRanges;
     /**
      * <p>
-     * The array of <a>CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CategoricalParameterRange.html"
+     * >CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a hyperparameter
+     * tuning job searches.
      * </p>
      */
     private java.util.List<CategoricalParameterRange> categoricalParameterRanges;
 
     /**
      * <p>
-     * The array of <a>IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_IntegerParameterRange.html">
+     * IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a hyperparameter tuning job
+     * searches.
      * </p>
      * 
-     * @return The array of <a>IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a
-     *         hyperparameter tuning job searches.
+     * @return The array of <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_IntegerParameterRange.html"
+     *         >IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a hyperparameter
+     *         tuning job searches.
      */
 
     public java.util.List<IntegerParameterRange> getIntegerParameterRanges() {
@@ -76,13 +84,16 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_IntegerParameterRange.html">
+     * IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a hyperparameter tuning job
+     * searches.
      * </p>
      * 
      * @param integerParameterRanges
-     *        The array of <a>IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a
-     *        hyperparameter tuning job searches.
+     *        The array of <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_IntegerParameterRange.html"
+     *        >IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a hyperparameter
+     *        tuning job searches.
      */
 
     public void setIntegerParameterRanges(java.util.Collection<IntegerParameterRange> integerParameterRanges) {
@@ -96,8 +107,9 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_IntegerParameterRange.html">
+     * IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a hyperparameter tuning job
+     * searches.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -106,8 +118,10 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param integerParameterRanges
-     *        The array of <a>IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a
-     *        hyperparameter tuning job searches.
+     *        The array of <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_IntegerParameterRange.html"
+     *        >IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a hyperparameter
+     *        tuning job searches.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -123,13 +137,16 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_IntegerParameterRange.html">
+     * IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a hyperparameter tuning job
+     * searches.
      * </p>
      * 
      * @param integerParameterRanges
-     *        The array of <a>IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a
-     *        hyperparameter tuning job searches.
+     *        The array of <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_IntegerParameterRange.html"
+     *        >IntegerParameterRange</a> objects that specify ranges of integer hyperparameters that a hyperparameter
+     *        tuning job searches.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -140,12 +157,16 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContinuousParameterRange.html"
+     * >ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a hyperparameter
+     * tuning job searches.
      * </p>
      * 
-     * @return The array of <a>ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters
-     *         that a hyperparameter tuning job searches.
+     * @return The array of <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContinuousParameterRange.html"
+     *         >ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a
+     *         hyperparameter tuning job searches.
      */
 
     public java.util.List<ContinuousParameterRange> getContinuousParameterRanges() {
@@ -154,13 +175,17 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContinuousParameterRange.html"
+     * >ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a hyperparameter
+     * tuning job searches.
      * </p>
      * 
      * @param continuousParameterRanges
-     *        The array of <a>ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters
-     *        that a hyperparameter tuning job searches.
+     *        The array of <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContinuousParameterRange.html"
+     *        >ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a
+     *        hyperparameter tuning job searches.
      */
 
     public void setContinuousParameterRanges(java.util.Collection<ContinuousParameterRange> continuousParameterRanges) {
@@ -174,8 +199,10 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContinuousParameterRange.html"
+     * >ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a hyperparameter
+     * tuning job searches.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -184,8 +211,10 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param continuousParameterRanges
-     *        The array of <a>ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters
-     *        that a hyperparameter tuning job searches.
+     *        The array of <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContinuousParameterRange.html"
+     *        >ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a
+     *        hyperparameter tuning job searches.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -201,13 +230,17 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContinuousParameterRange.html"
+     * >ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a hyperparameter
+     * tuning job searches.
      * </p>
      * 
      * @param continuousParameterRanges
-     *        The array of <a>ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters
-     *        that a hyperparameter tuning job searches.
+     *        The array of <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContinuousParameterRange.html"
+     *        >ContinuousParameterRange</a> objects that specify ranges of continuous hyperparameters that a
+     *        hyperparameter tuning job searches.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,12 +251,16 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CategoricalParameterRange.html"
+     * >CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a hyperparameter
+     * tuning job searches.
      * </p>
      * 
-     * @return The array of <a>CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters
-     *         that a hyperparameter tuning job searches.
+     * @return The array of <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CategoricalParameterRange.html"
+     *         >CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a
+     *         hyperparameter tuning job searches.
      */
 
     public java.util.List<CategoricalParameterRange> getCategoricalParameterRanges() {
@@ -232,13 +269,17 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CategoricalParameterRange.html"
+     * >CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a hyperparameter
+     * tuning job searches.
      * </p>
      * 
      * @param categoricalParameterRanges
-     *        The array of <a>CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters
-     *        that a hyperparameter tuning job searches.
+     *        The array of <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CategoricalParameterRange.html"
+     *        >CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a
+     *        hyperparameter tuning job searches.
      */
 
     public void setCategoricalParameterRanges(java.util.Collection<CategoricalParameterRange> categoricalParameterRanges) {
@@ -252,8 +293,10 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CategoricalParameterRange.html"
+     * >CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a hyperparameter
+     * tuning job searches.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -262,8 +305,10 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param categoricalParameterRanges
-     *        The array of <a>CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters
-     *        that a hyperparameter tuning job searches.
+     *        The array of <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CategoricalParameterRange.html"
+     *        >CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a
+     *        hyperparameter tuning job searches.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -279,13 +324,17 @@ public class ParameterRanges implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The array of <a>CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a
-     * hyperparameter tuning job searches.
+     * The array of <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CategoricalParameterRange.html"
+     * >CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a hyperparameter
+     * tuning job searches.
      * </p>
      * 
      * @param categoricalParameterRanges
-     *        The array of <a>CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters
-     *        that a hyperparameter tuning job searches.
+     *        The array of <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CategoricalParameterRange.html"
+     *        >CategoricalParameterRange</a> objects that specify ranges of categorical hyperparameters that a
+     *        hyperparameter tuning job searches.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

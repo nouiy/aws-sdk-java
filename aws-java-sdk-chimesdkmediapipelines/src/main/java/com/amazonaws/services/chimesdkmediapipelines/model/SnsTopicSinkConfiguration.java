@@ -30,21 +30,18 @@ public class SnsTopicSinkConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The URL of the SNS sink, <a
-     * href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     * The ARN of the SNS sink.
      * </p>
      */
     private String insightsTarget;
 
     /**
      * <p>
-     * The URL of the SNS sink, <a
-     * href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     * The ARN of the SNS sink.
      * </p>
      * 
      * @param insightsTarget
-     *        The URL of the SNS sink, <a
-     *        href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     *        The ARN of the SNS sink.
      */
 
     public void setInsightsTarget(String insightsTarget) {
@@ -53,12 +50,10 @@ public class SnsTopicSinkConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The URL of the SNS sink, <a
-     * href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     * The ARN of the SNS sink.
      * </p>
      * 
-     * @return The URL of the SNS sink, <a
-     *         href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     * @return The ARN of the SNS sink.
      */
 
     public String getInsightsTarget() {
@@ -67,13 +62,11 @@ public class SnsTopicSinkConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The URL of the SNS sink, <a
-     * href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     * The ARN of the SNS sink.
      * </p>
      * 
      * @param insightsTarget
-     *        The URL of the SNS sink, <a
-     *        href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     *        The ARN of the SNS sink.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

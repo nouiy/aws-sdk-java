@@ -52,6 +52,12 @@ public class CreateClusterResultJsonUnmarshaller implements Unmarshaller<CreateC
                     context.nextToken();
                     createClusterResult.setClusterId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobListEntries", targetDepth)) {
+                    context.nextToken();
+                    createClusterResult.setJobListEntries(new ListUnmarshaller<JobListEntry>(JobListEntryJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

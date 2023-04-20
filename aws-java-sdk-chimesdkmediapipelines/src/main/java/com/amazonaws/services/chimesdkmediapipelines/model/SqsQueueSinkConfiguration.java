@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The URL of the SQS sink.
+ * The configuration settings for the SQS sink.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/SqsQueueSinkConfiguration"
@@ -30,21 +30,18 @@ public class SqsQueueSinkConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The URL of the SQS sink, <a
-     * href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     * The ARN of the SQS sink.
      * </p>
      */
     private String insightsTarget;
 
     /**
      * <p>
-     * The URL of the SQS sink, <a
-     * href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     * The ARN of the SQS sink.
      * </p>
      * 
      * @param insightsTarget
-     *        The URL of the SQS sink, <a
-     *        href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     *        The ARN of the SQS sink.
      */
 
     public void setInsightsTarget(String insightsTarget) {
@@ -53,12 +50,10 @@ public class SqsQueueSinkConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The URL of the SQS sink, <a
-     * href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     * The ARN of the SQS sink.
      * </p>
      * 
-     * @return The URL of the SQS sink, <a
-     *         href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     * @return The ARN of the SQS sink.
      */
 
     public String getInsightsTarget() {
@@ -67,13 +62,11 @@ public class SqsQueueSinkConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The URL of the SQS sink, <a
-     * href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     * The ARN of the SQS sink.
      * </p>
      * 
      * @param insightsTarget
-     *        The URL of the SQS sink, <a
-     *        href="https://aws.amazon.com/kinesis/data-streams/">https://aws.amazon.com/kinesis/data-streams/</a>.
+     *        The ARN of the SQS sink.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

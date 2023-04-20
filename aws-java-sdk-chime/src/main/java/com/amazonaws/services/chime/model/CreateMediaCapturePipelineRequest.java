@@ -51,7 +51,8 @@ public class CreateMediaCapturePipelineRequest extends com.amazonaws.AmazonWebSe
     private String sinkArn;
     /**
      * <p>
-     * The token assigned to the client making the pipeline request.
+     * The unique identifier for the client request. The token makes the API request idempotent. Use a different token
+     * for different media pipeline requests.
      * </p>
      */
     private String clientRequestToken;
@@ -267,11 +268,13 @@ public class CreateMediaCapturePipelineRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The token assigned to the client making the pipeline request.
+     * The unique identifier for the client request. The token makes the API request idempotent. Use a different token
+     * for different media pipeline requests.
      * </p>
      * 
      * @param clientRequestToken
-     *        The token assigned to the client making the pipeline request.
+     *        The unique identifier for the client request. The token makes the API request idempotent. Use a different
+     *        token for different media pipeline requests.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -280,10 +283,12 @@ public class CreateMediaCapturePipelineRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The token assigned to the client making the pipeline request.
+     * The unique identifier for the client request. The token makes the API request idempotent. Use a different token
+     * for different media pipeline requests.
      * </p>
      * 
-     * @return The token assigned to the client making the pipeline request.
+     * @return The unique identifier for the client request. The token makes the API request idempotent. Use a different
+     *         token for different media pipeline requests.
      */
 
     public String getClientRequestToken() {
@@ -292,11 +297,13 @@ public class CreateMediaCapturePipelineRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The token assigned to the client making the pipeline request.
+     * The unique identifier for the client request. The token makes the API request idempotent. Use a different token
+     * for different media pipeline requests.
      * </p>
      * 
      * @param clientRequestToken
-     *        The token assigned to the client making the pipeline request.
+     *        The unique identifier for the client request. The token makes the API request idempotent. Use a different
+     *        token for different media pipeline requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

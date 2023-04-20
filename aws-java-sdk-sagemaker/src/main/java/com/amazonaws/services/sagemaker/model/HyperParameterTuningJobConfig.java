@@ -46,22 +46,28 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
     private HyperParameterTuningJobStrategyConfig strategyConfig;
     /**
      * <p>
-     * The <a>HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the performance of
-     * training jobs launched by this tuning job.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html">
+     * HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the performance of training
+     * jobs launched by this tuning job.
      * </p>
      */
     private HyperParameterTuningJobObjective hyperParameterTuningJobObjective;
     /**
      * <p>
-     * The <a>ResourceLimits</a> object that specifies the maximum number of training and parallel training jobs that
-     * can be used for this hyperparameter tuning job.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ResourceLimits.html">ResourceLimits</a>
+     * object that specifies the maximum number of training and parallel training jobs that can be used for this
+     * hyperparameter tuning job.
      * </p>
      */
     private ResourceLimits resourceLimits;
     /**
      * <p>
-     * The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job searches over
-     * to find the optimal configuration for the highest model performance against your chosen objective metric.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ParameterRanges.html">ParameterRanges</a>
+     * object that specifies the ranges of hyperparameters that this tuning job searches over to find the optimal
+     * configuration for the highest model performance against your chosen objective metric.
      * </p>
      */
     private ParameterRanges parameterRanges;
@@ -238,13 +244,17 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The <a>HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the performance of
-     * training jobs launched by this tuning job.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html">
+     * HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the performance of training
+     * jobs launched by this tuning job.
      * </p>
      * 
      * @param hyperParameterTuningJobObjective
-     *        The <a>HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the
-     *        performance of training jobs launched by this tuning job.
+     *        The <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html"
+     *        >HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the performance of
+     *        training jobs launched by this tuning job.
      */
 
     public void setHyperParameterTuningJobObjective(HyperParameterTuningJobObjective hyperParameterTuningJobObjective) {
@@ -253,12 +263,16 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The <a>HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the performance of
-     * training jobs launched by this tuning job.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html">
+     * HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the performance of training
+     * jobs launched by this tuning job.
      * </p>
      * 
-     * @return The <a>HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the
-     *         performance of training jobs launched by this tuning job.
+     * @return The <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html"
+     *         >HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the performance of
+     *         training jobs launched by this tuning job.
      */
 
     public HyperParameterTuningJobObjective getHyperParameterTuningJobObjective() {
@@ -267,13 +281,17 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The <a>HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the performance of
-     * training jobs launched by this tuning job.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html">
+     * HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the performance of training
+     * jobs launched by this tuning job.
      * </p>
      * 
      * @param hyperParameterTuningJobObjective
-     *        The <a>HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the
-     *        performance of training jobs launched by this tuning job.
+     *        The <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobObjective.html"
+     *        >HyperParameterTuningJobObjective</a> specifies the objective metric used to evaluate the performance of
+     *        training jobs launched by this tuning job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -284,13 +302,17 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The <a>ResourceLimits</a> object that specifies the maximum number of training and parallel training jobs that
-     * can be used for this hyperparameter tuning job.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ResourceLimits.html">ResourceLimits</a>
+     * object that specifies the maximum number of training and parallel training jobs that can be used for this
+     * hyperparameter tuning job.
      * </p>
      * 
      * @param resourceLimits
-     *        The <a>ResourceLimits</a> object that specifies the maximum number of training and parallel training jobs
-     *        that can be used for this hyperparameter tuning job.
+     *        The <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ResourceLimits.html">ResourceLimits
+     *        </a> object that specifies the maximum number of training and parallel training jobs that can be used for
+     *        this hyperparameter tuning job.
      */
 
     public void setResourceLimits(ResourceLimits resourceLimits) {
@@ -299,12 +321,16 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The <a>ResourceLimits</a> object that specifies the maximum number of training and parallel training jobs that
-     * can be used for this hyperparameter tuning job.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ResourceLimits.html">ResourceLimits</a>
+     * object that specifies the maximum number of training and parallel training jobs that can be used for this
+     * hyperparameter tuning job.
      * </p>
      * 
-     * @return The <a>ResourceLimits</a> object that specifies the maximum number of training and parallel training jobs
-     *         that can be used for this hyperparameter tuning job.
+     * @return The <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ResourceLimits.html">ResourceLimits
+     *         </a> object that specifies the maximum number of training and parallel training jobs that can be used for
+     *         this hyperparameter tuning job.
      */
 
     public ResourceLimits getResourceLimits() {
@@ -313,13 +339,17 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The <a>ResourceLimits</a> object that specifies the maximum number of training and parallel training jobs that
-     * can be used for this hyperparameter tuning job.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ResourceLimits.html">ResourceLimits</a>
+     * object that specifies the maximum number of training and parallel training jobs that can be used for this
+     * hyperparameter tuning job.
      * </p>
      * 
      * @param resourceLimits
-     *        The <a>ResourceLimits</a> object that specifies the maximum number of training and parallel training jobs
-     *        that can be used for this hyperparameter tuning job.
+     *        The <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ResourceLimits.html">ResourceLimits
+     *        </a> object that specifies the maximum number of training and parallel training jobs that can be used for
+     *        this hyperparameter tuning job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -330,14 +360,16 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job searches over
-     * to find the optimal configuration for the highest model performance against your chosen objective metric.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ParameterRanges.html">ParameterRanges</a>
+     * object that specifies the ranges of hyperparameters that this tuning job searches over to find the optimal
+     * configuration for the highest model performance against your chosen objective metric.
      * </p>
      * 
      * @param parameterRanges
-     *        The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job
-     *        searches over to find the optimal configuration for the highest model performance against your chosen
-     *        objective metric.
+     *        The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ParameterRanges.html">
+     *        ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job searches over
+     *        to find the optimal configuration for the highest model performance against your chosen objective metric.
      */
 
     public void setParameterRanges(ParameterRanges parameterRanges) {
@@ -346,13 +378,16 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job searches over
-     * to find the optimal configuration for the highest model performance against your chosen objective metric.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ParameterRanges.html">ParameterRanges</a>
+     * object that specifies the ranges of hyperparameters that this tuning job searches over to find the optimal
+     * configuration for the highest model performance against your chosen objective metric.
      * </p>
      * 
-     * @return The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job
-     *         searches over to find the optimal configuration for the highest model performance against your chosen
-     *         objective metric.
+     * @return The <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ParameterRanges.html">ParameterRanges
+     *         </a> object that specifies the ranges of hyperparameters that this tuning job searches over to find the
+     *         optimal configuration for the highest model performance against your chosen objective metric.
      */
 
     public ParameterRanges getParameterRanges() {
@@ -361,14 +396,16 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job searches over
-     * to find the optimal configuration for the highest model performance against your chosen objective metric.
+     * The <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ParameterRanges.html">ParameterRanges</a>
+     * object that specifies the ranges of hyperparameters that this tuning job searches over to find the optimal
+     * configuration for the highest model performance against your chosen objective metric.
      * </p>
      * 
      * @param parameterRanges
-     *        The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job
-     *        searches over to find the optimal configuration for the highest model performance against your chosen
-     *        objective metric.
+     *        The <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ParameterRanges.html">
+     *        ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job searches over
+     *        to find the optimal configuration for the highest model performance against your chosen objective metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

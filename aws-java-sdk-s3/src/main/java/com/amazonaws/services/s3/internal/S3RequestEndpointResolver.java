@@ -129,23 +129,31 @@ public class S3RequestEndpointResolver {
     }
 
     private String getHostStyleResourcePath() {
-        String resourcePath = key;
-        /*
-         * If the key name starts with a slash character, in order to prevent it being treated as a
-         * path delimiter, we need to add another slash before the key name. {@see
-         * com.amazonaws.http.HttpRequestFactory#createHttpRequest}
-         */
-        if (key != null && key.startsWith("/")) {
-            resourcePath = "/" + key;
-        }
-        return resourcePath;
+        return keyForPath();
     }
 
     private String getPathStyleResourcePath() {
         if (bucketName == null) {
-            return key;
+            return keyForPath();
         }
 
-        return bucketName + "/" + (key != null ? key : "");
+        return bucketName + "/" + keyForPath();
+    }
+
+    private String keyForPath() {
+        if (key == null) {
+            return "";
+        }
+
+        // If the key name starts with a slash AND that key will be at the start of the resource path, prepend it with "/" so
+        // that it doesn't get treated as a redundant slash and get pruned out in later path normalization logic.
+        //
+        // A key will be at the start of the resource path IF we're using access points (therefore, bucket == null) or we're
+        // using virtual style addressing (therefore, isPathStyleAccess == false).
+        if ((bucketName == null || !isPathStyleAccess) && key.startsWith("/")) {
+            return "/" + key;
+        }
+
+        return key;
     }
 }

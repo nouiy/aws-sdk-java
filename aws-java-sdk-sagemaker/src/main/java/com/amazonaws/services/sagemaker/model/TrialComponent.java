@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The properties of a trial component as returned by the <a>Search</a> API.
+ * The properties of a trial component as returned by the <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/TrialComponent" target="_top">AWS API
@@ -127,7 +128,9 @@ public class TrialComponent implements Serializable, Cloneable, StructuredPojo {
     private String lineageGroupArn;
     /**
      * <p>
-     * The list of tags that are associated with the component. You can use <a>Search</a> API to search on the tags.
+     * The list of tags that are associated with the component. You can use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search on the
+     * tags.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -945,11 +948,14 @@ public class TrialComponent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of tags that are associated with the component. You can use <a>Search</a> API to search on the tags.
+     * The list of tags that are associated with the component. You can use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search on the
+     * tags.
      * </p>
      * 
-     * @return The list of tags that are associated with the component. You can use <a>Search</a> API to search on the
-     *         tags.
+     * @return The list of tags that are associated with the component. You can use <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search
+     *         on the tags.
      */
 
     public java.util.List<Tag> getTags() {
@@ -958,12 +964,15 @@ public class TrialComponent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of tags that are associated with the component. You can use <a>Search</a> API to search on the tags.
+     * The list of tags that are associated with the component. You can use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search on the
+     * tags.
      * </p>
      * 
      * @param tags
-     *        The list of tags that are associated with the component. You can use <a>Search</a> API to search on the
-     *        tags.
+     *        The list of tags that are associated with the component. You can use <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search
+     *        on the tags.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -977,7 +986,9 @@ public class TrialComponent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of tags that are associated with the component. You can use <a>Search</a> API to search on the tags.
+     * The list of tags that are associated with the component. You can use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search on the
+     * tags.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -986,8 +997,9 @@ public class TrialComponent implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param tags
-     *        The list of tags that are associated with the component. You can use <a>Search</a> API to search on the
-     *        tags.
+     *        The list of tags that are associated with the component. You can use <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search
+     *        on the tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1003,12 +1015,15 @@ public class TrialComponent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of tags that are associated with the component. You can use <a>Search</a> API to search on the tags.
+     * The list of tags that are associated with the component. You can use <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search on the
+     * tags.
      * </p>
      * 
      * @param tags
-     *        The list of tags that are associated with the component. You can use <a>Search</a> API to search on the
-     *        tags.
+     *        The list of tags that are associated with the component. You can use <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API to search
+     *        on the tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

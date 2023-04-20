@@ -45,20 +45,20 @@ public class Script implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift script resource and uniquely identifies it. ARNs are unique across all Regions. In
-     * a GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.
+     * that is assigned to a Amazon GameLift script resource and uniquely identifies it. ARNs are unique across all
+     * Regions. In a GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.
      * </p>
      */
     private String scriptArn;
     /**
      * <p>
-     * A descriptive label that is associated with a script. Script names do not need to be unique.
+     * A descriptive label that is associated with a script. Script names don't need to be unique.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique.
+     * Version information associated with a build or script. Version strings don't need to be unique.
      * </p>
      */
     private String version;
@@ -130,15 +130,15 @@ public class Script implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift script resource and uniquely identifies it. ARNs are unique across all Regions. In
-     * a GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.
+     * that is assigned to a Amazon GameLift script resource and uniquely identifies it. ARNs are unique across all
+     * Regions. In a GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.
      * </p>
      * 
      * @param scriptArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift script resource and uniquely identifies it. ARNs are unique across all Regions. In a GameLift
-     *        script ARN, the resource ID matches the <i>ScriptId</i> value.
+     *        Amazon GameLift script resource and uniquely identifies it. ARNs are unique across all Regions. In a
+     *        GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.
      */
 
     public void setScriptArn(String scriptArn) {
@@ -148,14 +148,14 @@ public class Script implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift script resource and uniquely identifies it. ARNs are unique across all Regions. In
-     * a GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.
+     * that is assigned to a Amazon GameLift script resource and uniquely identifies it. ARNs are unique across all
+     * Regions. In a GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *         GameLift script resource and uniquely identifies it. ARNs are unique across all Regions. In a GameLift
-     *         script ARN, the resource ID matches the <i>ScriptId</i> value.
+     *         Amazon GameLift script resource and uniquely identifies it. ARNs are unique across all Regions. In a
+     *         GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.
      */
 
     public String getScriptArn() {
@@ -165,15 +165,15 @@ public class Script implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift script resource and uniquely identifies it. ARNs are unique across all Regions. In
-     * a GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.
+     * that is assigned to a Amazon GameLift script resource and uniquely identifies it. ARNs are unique across all
+     * Regions. In a GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.
      * </p>
      * 
      * @param scriptArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift script resource and uniquely identifies it. ARNs are unique across all Regions. In a GameLift
-     *        script ARN, the resource ID matches the <i>ScriptId</i> value.
+     *        Amazon GameLift script resource and uniquely identifies it. ARNs are unique across all Regions. In a
+     *        GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,11 +184,11 @@ public class Script implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A descriptive label that is associated with a script. Script names do not need to be unique.
+     * A descriptive label that is associated with a script. Script names don't need to be unique.
      * </p>
      * 
      * @param name
-     *        A descriptive label that is associated with a script. Script names do not need to be unique.
+     *        A descriptive label that is associated with a script. Script names don't need to be unique.
      */
 
     public void setName(String name) {
@@ -197,10 +197,10 @@ public class Script implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A descriptive label that is associated with a script. Script names do not need to be unique.
+     * A descriptive label that is associated with a script. Script names don't need to be unique.
      * </p>
      * 
-     * @return A descriptive label that is associated with a script. Script names do not need to be unique.
+     * @return A descriptive label that is associated with a script. Script names don't need to be unique.
      */
 
     public String getName() {
@@ -209,11 +209,11 @@ public class Script implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A descriptive label that is associated with a script. Script names do not need to be unique.
+     * A descriptive label that is associated with a script. Script names don't need to be unique.
      * </p>
      * 
      * @param name
-     *        A descriptive label that is associated with a script. Script names do not need to be unique.
+     *        A descriptive label that is associated with a script. Script names don't need to be unique.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -224,11 +224,11 @@ public class Script implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique.
+     * Version information associated with a build or script. Version strings don't need to be unique.
      * </p>
      * 
      * @param version
-     *        Version information associated with a build or script. Version strings do not need to be unique.
+     *        Version information associated with a build or script. Version strings don't need to be unique.
      */
 
     public void setVersion(String version) {
@@ -237,10 +237,10 @@ public class Script implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique.
+     * Version information associated with a build or script. Version strings don't need to be unique.
      * </p>
      * 
-     * @return Version information associated with a build or script. Version strings do not need to be unique.
+     * @return Version information associated with a build or script. Version strings don't need to be unique.
      */
 
     public String getVersion() {
@@ -249,11 +249,11 @@ public class Script implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique.
+     * Version information associated with a build or script. Version strings don't need to be unique.
      * </p>
      * 
      * @param version
-     *        Version information associated with a build or script. Version strings do not need to be unique.
+     *        Version information associated with a build or script. Version strings don't need to be unique.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

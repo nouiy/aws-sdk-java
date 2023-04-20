@@ -19,8 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A summary of the properties of an experiment. To get the complete set of properties, call the
- * <a>DescribeExperiment</a> API and provide the <code>ExperimentName</code>.
+ * A summary of the properties of an experiment. To get the complete set of properties, call the <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeExperiment.html">DescribeExperiment</a>
+ * API and provide the <code>ExperimentName</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ExperimentSummary" target="_top">AWS API

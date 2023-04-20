@@ -62,7 +62,12 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private java.util.List<Tag> tags;
-
+    /**
+     * <p>
+     * The resource target configurations for receiving Amazon Chime SDK meeting and attendee event notifications. The
+     * Amazon Chime SDK supports resource targets located in the US East (N. Virginia) AWS Region (us-east-1).
+     * </p>
+     */
     private MeetingNotificationConfiguration notificationsConfiguration;
     /**
      * <p>
@@ -341,7 +346,15 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The resource target configurations for receiving Amazon Chime SDK meeting and attendee event notifications. The
+     * Amazon Chime SDK supports resource targets located in the US East (N. Virginia) AWS Region (us-east-1).
+     * </p>
+     * 
      * @param notificationsConfiguration
+     *        The resource target configurations for receiving Amazon Chime SDK meeting and attendee event
+     *        notifications. The Amazon Chime SDK supports resource targets located in the US East (N. Virginia) AWS
+     *        Region (us-east-1).
      */
 
     public void setNotificationsConfiguration(MeetingNotificationConfiguration notificationsConfiguration) {
@@ -349,7 +362,14 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * The resource target configurations for receiving Amazon Chime SDK meeting and attendee event notifications. The
+     * Amazon Chime SDK supports resource targets located in the US East (N. Virginia) AWS Region (us-east-1).
+     * </p>
+     * 
+     * @return The resource target configurations for receiving Amazon Chime SDK meeting and attendee event
+     *         notifications. The Amazon Chime SDK supports resource targets located in the US East (N. Virginia) AWS
+     *         Region (us-east-1).
      */
 
     public MeetingNotificationConfiguration getNotificationsConfiguration() {
@@ -357,7 +377,15 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The resource target configurations for receiving Amazon Chime SDK meeting and attendee event notifications. The
+     * Amazon Chime SDK supports resource targets located in the US East (N. Virginia) AWS Region (us-east-1).
+     * </p>
+     * 
      * @param notificationsConfiguration
+     *        The resource target configurations for receiving Amazon Chime SDK meeting and attendee event
+     *        notifications. The Amazon Chime SDK supports resource targets located in the US East (N. Virginia) AWS
+     *        Region (us-east-1).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

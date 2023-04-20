@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Your IAM user lacks the necessary Amazon EC2 permissions to perform the attempted action.
+ * Your user lacks the necessary Amazon EC2 permissions to perform the attempted action.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

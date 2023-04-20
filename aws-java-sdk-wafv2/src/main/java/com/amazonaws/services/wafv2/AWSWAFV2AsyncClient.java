@@ -214,6 +214,39 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
     }
 
     @Override
+    public java.util.concurrent.Future<CreateAPIKeyResult> createAPIKeyAsync(CreateAPIKeyRequest request) {
+
+        return createAPIKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAPIKeyResult> createAPIKeyAsync(final CreateAPIKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateAPIKeyRequest, CreateAPIKeyResult> asyncHandler) {
+        final CreateAPIKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateAPIKeyResult>() {
+            @Override
+            public CreateAPIKeyResult call() throws Exception {
+                CreateAPIKeyResult result = null;
+
+                try {
+                    result = executeCreateAPIKey(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateIPSetResult> createIPSetAsync(CreateIPSetRequest request) {
 
         return createIPSetAsync(request, null);
@@ -678,6 +711,39 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
     }
 
     @Override
+    public java.util.concurrent.Future<GetDecryptedAPIKeyResult> getDecryptedAPIKeyAsync(GetDecryptedAPIKeyRequest request) {
+
+        return getDecryptedAPIKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDecryptedAPIKeyResult> getDecryptedAPIKeyAsync(final GetDecryptedAPIKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDecryptedAPIKeyRequest, GetDecryptedAPIKeyResult> asyncHandler) {
+        final GetDecryptedAPIKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDecryptedAPIKeyResult>() {
+            @Override
+            public GetDecryptedAPIKeyResult call() throws Exception {
+                GetDecryptedAPIKeyResult result = null;
+
+                try {
+                    result = executeGetDecryptedAPIKey(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetIPSetResult> getIPSetAsync(GetIPSetRequest request) {
 
         return getIPSetAsync(request, null);
@@ -1027,6 +1093,39 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
 
                 try {
                     result = executeGetWebACLForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAPIKeysResult> listAPIKeysAsync(ListAPIKeysRequest request) {
+
+        return listAPIKeysAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAPIKeysResult> listAPIKeysAsync(final ListAPIKeysRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAPIKeysRequest, ListAPIKeysResult> asyncHandler) {
+        final ListAPIKeysRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAPIKeysResult>() {
+            @Override
+            public ListAPIKeysResult call() throws Exception {
+                ListAPIKeysResult result = null;
+
+                try {
+                    result = executeListAPIKeys(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

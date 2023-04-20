@@ -1,3 +1,44 @@
+# __1.12.453__ __2023-04-20__
+## __AWS IoT__
+  - ### Features
+    - Support additional OTA states in GetOTAUpdate API
+
+## __AWS WAFV2__
+  - ### Features
+    - You can now create encrypted API keys to use in a client application integration of the JavaScript CAPTCHA API . You can also retrieve a list of your API keys and the JavaScript application integration URL.
+
+## __Amazon Chime__
+  - ### Features
+    - Adds support for Hindi and Thai languages and additional Amazon Transcribe parameters to the StartMeetingTranscription API.
+
+## __Amazon Chime SDK Media Pipelines__
+  - ### Features
+    - This release adds support for specifying the recording file format in an S3 recording sink configuration.
+
+## __Amazon Chime SDK Meetings__
+  - ### Features
+    - Adds support for Hindi and Thai languages and additional Amazon Transcribe parameters to the StartMeetingTranscription API.
+
+## __Amazon GameLift__
+  - ### Features
+    - Amazon GameLift supports creating Builds for Windows 2016 operating system.
+
+## __Amazon GuardDuty__
+  - ### Features
+    - This release adds support for the new Lambda Protection feature.
+
+## __Amazon Import/Export Snowball__
+  - ### Features
+    - Adds support for Amazon S3 compatible storage. AWS Snow Family customers can now use Amazon S3 compatible storage on Snowball Edge devices. Also adds support for V3_5S. This is a refreshed AWS Snowball Edge Storage Optimized device type with 210TB SSD (customer usable).
+
+## __Amazon S3__
+  - ### Bugfixes
+    - Fixed bug where GetObject requests for the object key / via an access point would return the results of the ListObjects operation.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Amazon SageMaker Canvas adds ModelRegisterSettings support for CanvasAppSettings.
+
 # __1.12.452__ __2023-04-19__
 ## __AWS Resource Access Manager__
   - ### Features

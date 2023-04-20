@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * GameLift Anywhere configuration options for your Anywhere fleets.
+ * Amazon GameLift Anywhere configuration options for your Anywhere fleets.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/AnywhereConfiguration" target="_top">AWS API
@@ -30,24 +30,27 @@ public class AnywhereConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The cost to run your fleet per hour. GameLift uses the provided cost of your fleet to balance usage in queues.
-     * For more information about queues, see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a>.
+     * The cost to run your fleet per hour. Amazon GameLift uses the provided cost of your fleet to balance usage in
+     * queues. For more information about queues, see <a
+     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a> in the
+     * <i>Amazon GameLift Developer Guide</i>.
      * </p>
      */
     private String cost;
 
     /**
      * <p>
-     * The cost to run your fleet per hour. GameLift uses the provided cost of your fleet to balance usage in queues.
-     * For more information about queues, see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a>.
+     * The cost to run your fleet per hour. Amazon GameLift uses the provided cost of your fleet to balance usage in
+     * queues. For more information about queues, see <a
+     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a> in the
+     * <i>Amazon GameLift Developer Guide</i>.
      * </p>
      * 
      * @param cost
-     *        The cost to run your fleet per hour. GameLift uses the provided cost of your fleet to balance usage in
-     *        queues. For more information about queues, see <a
-     *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a>.
+     *        The cost to run your fleet per hour. Amazon GameLift uses the provided cost of your fleet to balance usage
+     *        in queues. For more information about queues, see <a
+     *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a>
+     *        in the <i>Amazon GameLift Developer Guide</i>.
      */
 
     public void setCost(String cost) {
@@ -56,15 +59,16 @@ public class AnywhereConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The cost to run your fleet per hour. GameLift uses the provided cost of your fleet to balance usage in queues.
-     * For more information about queues, see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a>.
+     * The cost to run your fleet per hour. Amazon GameLift uses the provided cost of your fleet to balance usage in
+     * queues. For more information about queues, see <a
+     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a> in the
+     * <i>Amazon GameLift Developer Guide</i>.
      * </p>
      * 
-     * @return The cost to run your fleet per hour. GameLift uses the provided cost of your fleet to balance usage in
-     *         queues. For more information about queues, see <a
-     *         href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up
-     *         queues</a>.
+     * @return The cost to run your fleet per hour. Amazon GameLift uses the provided cost of your fleet to balance
+     *         usage in queues. For more information about queues, see <a
+     *         href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a>
+     *         in the <i>Amazon GameLift Developer Guide</i>.
      */
 
     public String getCost() {
@@ -73,15 +77,17 @@ public class AnywhereConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The cost to run your fleet per hour. GameLift uses the provided cost of your fleet to balance usage in queues.
-     * For more information about queues, see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a>.
+     * The cost to run your fleet per hour. Amazon GameLift uses the provided cost of your fleet to balance usage in
+     * queues. For more information about queues, see <a
+     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a> in the
+     * <i>Amazon GameLift Developer Guide</i>.
      * </p>
      * 
      * @param cost
-     *        The cost to run your fleet per hour. GameLift uses the provided cost of your fleet to balance usage in
-     *        queues. For more information about queues, see <a
-     *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a>.
+     *        The cost to run your fleet per hour. Amazon GameLift uses the provided cost of your fleet to balance usage
+     *        in queues. For more information about queues, see <a
+     *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html">Setting up queues</a>
+     *        in the <i>Amazon GameLift Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -265,6 +265,62 @@ public interface AWSWAFV2 {
 
     /**
      * <p>
+     * Creates an API key for use in the integration of the CAPTCHA API in your JavaScript client applications. The
+     * integration lets you customize the placement and characteristics of the CAPTCHA puzzle for your end users. For
+     * more information about the CAPTCHA JavaScript integration, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF client
+     * application integration</a> in the <i>WAF Developer Guide</i>.
+     * </p>
+     * <p>
+     * The CAPTCHA API requires a key that authorizes CAPTCHA use from the client application domain. You can use a
+     * single key for up to 5 domains. After you generate a key, you can copy it for use in your JavaScript integration.
+     * </p>
+     * 
+     * @param createAPIKeyRequest
+     * @return Result of the CreateAPIKey operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @throws WAFLimitsExceededException
+     *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
+     * @sample AWSWAFV2.CreateAPIKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CreateAPIKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateAPIKeyResult createAPIKey(CreateAPIKeyRequest createAPIKeyRequest);
+
+    /**
+     * <p>
      * Creates an <a>IPSet</a>, which you use to identify web requests that originate from specific IP addresses or
      * ranges of IP addresses. For example, if you're receiving a lot of requests from a ranges of IP addresses, you can
      * configure WAF to block them using an IPSet that lists those IP addresses.
@@ -1161,6 +1217,52 @@ public interface AWSWAFV2 {
 
     /**
      * <p>
+     * Returns your API key in decrypted form. Use this to check the token domains that you have defined for the key.
+     * </p>
+     * 
+     * @param getDecryptedAPIKeyRequest
+     * @return Result of the GetDecryptedAPIKey operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @throws WAFInvalidResourceException
+     *         WAF couldn’t perform the operation because the resource that you requested isn’t valid. Check the
+     *         resource, and try again.
+     * @sample AWSWAFV2.GetDecryptedAPIKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetDecryptedAPIKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetDecryptedAPIKeyResult getDecryptedAPIKey(GetDecryptedAPIKeyRequest getDecryptedAPIKeyRequest);
+
+    /**
+     * <p>
      * Retrieves the specified <a>IPSet</a>.
      * </p>
      * 
@@ -1717,6 +1819,52 @@ public interface AWSWAFV2 {
      *      Documentation</a>
      */
     GetWebACLForResourceResult getWebACLForResource(GetWebACLForResourceRequest getWebACLForResourceRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of the API keys that you've defined for the specified scope.
+     * </p>
+     * 
+     * @param listAPIKeysRequest
+     * @return Result of the ListAPIKeys operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @throws WAFInvalidResourceException
+     *         WAF couldn’t perform the operation because the resource that you requested isn’t valid. Check the
+     *         resource, and try again.
+     * @sample AWSWAFV2.ListAPIKeys
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListAPIKeys" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListAPIKeysResult listAPIKeys(ListAPIKeysRequest listAPIKeysRequest);
 
     /**
      * <p>

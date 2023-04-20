@@ -33,7 +33,8 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     private String nextMarker;
     /**
      * <p>
-     * The collection of tagging definitions for the resource.
+     * The collection of tagging definitions for the resource. If you specified a <code>Limit</code> in your request,
+     * this might not be the full list.
      * </p>
      */
     private TagInfoForResource tagInfoForResource;
@@ -95,11 +96,13 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The collection of tagging definitions for the resource.
+     * The collection of tagging definitions for the resource. If you specified a <code>Limit</code> in your request,
+     * this might not be the full list.
      * </p>
      * 
      * @param tagInfoForResource
-     *        The collection of tagging definitions for the resource.
+     *        The collection of tagging definitions for the resource. If you specified a <code>Limit</code> in your
+     *        request, this might not be the full list.
      */
 
     public void setTagInfoForResource(TagInfoForResource tagInfoForResource) {
@@ -108,10 +111,12 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The collection of tagging definitions for the resource.
+     * The collection of tagging definitions for the resource. If you specified a <code>Limit</code> in your request,
+     * this might not be the full list.
      * </p>
      * 
-     * @return The collection of tagging definitions for the resource.
+     * @return The collection of tagging definitions for the resource. If you specified a <code>Limit</code> in your
+     *         request, this might not be the full list.
      */
 
     public TagInfoForResource getTagInfoForResource() {
@@ -120,11 +125,13 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The collection of tagging definitions for the resource.
+     * The collection of tagging definitions for the resource. If you specified a <code>Limit</code> in your request,
+     * this might not be the full list.
      * </p>
      * 
      * @param tagInfoForResource
-     *        The collection of tagging definitions for the resource.
+     *        The collection of tagging definitions for the resource. If you specified a <code>Limit</code> in your
+     *        request, this might not be the full list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

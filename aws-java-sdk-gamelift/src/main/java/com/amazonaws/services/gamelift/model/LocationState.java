@@ -31,8 +31,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet location, creating new
- * instances with the game build or Realtime script and starting server processes.
+ * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet location, creating
+ * new instances with the game build or Realtime script and starting server processes.
  * </p>
  * </li>
  * <li>

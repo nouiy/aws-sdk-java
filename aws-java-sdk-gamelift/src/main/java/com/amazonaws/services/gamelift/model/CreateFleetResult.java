@@ -33,9 +33,9 @@ public class CreateFleetResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The fleet's locations and life-cycle status of each location. For new fleets, the status of all locations is set
-     * to <code>NEW</code>. During fleet creation, GameLift updates each location status as instances are deployed there
-     * and prepared for game hosting. This list includes an entry for the fleet's home Region. For fleets with no remote
-     * locations, only one entry, representing the home Region, is returned.
+     * to <code>NEW</code>. During fleet creation, Amazon GameLift updates each location status as instances are
+     * deployed there and prepared for game hosting. This list includes an entry for the fleet's home Region. For fleets
+     * with no remote locations, only one entry, representing the home Region, is returned.
      * </p>
      */
     private java.util.List<LocationState> locationStates;
@@ -89,15 +89,16 @@ public class CreateFleetResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The fleet's locations and life-cycle status of each location. For new fleets, the status of all locations is set
-     * to <code>NEW</code>. During fleet creation, GameLift updates each location status as instances are deployed there
-     * and prepared for game hosting. This list includes an entry for the fleet's home Region. For fleets with no remote
-     * locations, only one entry, representing the home Region, is returned.
+     * to <code>NEW</code>. During fleet creation, Amazon GameLift updates each location status as instances are
+     * deployed there and prepared for game hosting. This list includes an entry for the fleet's home Region. For fleets
+     * with no remote locations, only one entry, representing the home Region, is returned.
      * </p>
      * 
      * @return The fleet's locations and life-cycle status of each location. For new fleets, the status of all locations
-     *         is set to <code>NEW</code>. During fleet creation, GameLift updates each location status as instances are
-     *         deployed there and prepared for game hosting. This list includes an entry for the fleet's home Region.
-     *         For fleets with no remote locations, only one entry, representing the home Region, is returned.
+     *         is set to <code>NEW</code>. During fleet creation, Amazon GameLift updates each location status as
+     *         instances are deployed there and prepared for game hosting. This list includes an entry for the fleet's
+     *         home Region. For fleets with no remote locations, only one entry, representing the home Region, is
+     *         returned.
      */
 
     public java.util.List<LocationState> getLocationStates() {
@@ -107,16 +108,17 @@ public class CreateFleetResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The fleet's locations and life-cycle status of each location. For new fleets, the status of all locations is set
-     * to <code>NEW</code>. During fleet creation, GameLift updates each location status as instances are deployed there
-     * and prepared for game hosting. This list includes an entry for the fleet's home Region. For fleets with no remote
-     * locations, only one entry, representing the home Region, is returned.
+     * to <code>NEW</code>. During fleet creation, Amazon GameLift updates each location status as instances are
+     * deployed there and prepared for game hosting. This list includes an entry for the fleet's home Region. For fleets
+     * with no remote locations, only one entry, representing the home Region, is returned.
      * </p>
      * 
      * @param locationStates
      *        The fleet's locations and life-cycle status of each location. For new fleets, the status of all locations
-     *        is set to <code>NEW</code>. During fleet creation, GameLift updates each location status as instances are
-     *        deployed there and prepared for game hosting. This list includes an entry for the fleet's home Region. For
-     *        fleets with no remote locations, only one entry, representing the home Region, is returned.
+     *        is set to <code>NEW</code>. During fleet creation, Amazon GameLift updates each location status as
+     *        instances are deployed there and prepared for game hosting. This list includes an entry for the fleet's
+     *        home Region. For fleets with no remote locations, only one entry, representing the home Region, is
+     *        returned.
      */
 
     public void setLocationStates(java.util.Collection<LocationState> locationStates) {
@@ -131,9 +133,9 @@ public class CreateFleetResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The fleet's locations and life-cycle status of each location. For new fleets, the status of all locations is set
-     * to <code>NEW</code>. During fleet creation, GameLift updates each location status as instances are deployed there
-     * and prepared for game hosting. This list includes an entry for the fleet's home Region. For fleets with no remote
-     * locations, only one entry, representing the home Region, is returned.
+     * to <code>NEW</code>. During fleet creation, Amazon GameLift updates each location status as instances are
+     * deployed there and prepared for game hosting. This list includes an entry for the fleet's home Region. For fleets
+     * with no remote locations, only one entry, representing the home Region, is returned.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -143,9 +145,10 @@ public class CreateFleetResult extends com.amazonaws.AmazonWebServiceResult<com.
      * 
      * @param locationStates
      *        The fleet's locations and life-cycle status of each location. For new fleets, the status of all locations
-     *        is set to <code>NEW</code>. During fleet creation, GameLift updates each location status as instances are
-     *        deployed there and prepared for game hosting. This list includes an entry for the fleet's home Region. For
-     *        fleets with no remote locations, only one entry, representing the home Region, is returned.
+     *        is set to <code>NEW</code>. During fleet creation, Amazon GameLift updates each location status as
+     *        instances are deployed there and prepared for game hosting. This list includes an entry for the fleet's
+     *        home Region. For fleets with no remote locations, only one entry, representing the home Region, is
+     *        returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -162,16 +165,17 @@ public class CreateFleetResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The fleet's locations and life-cycle status of each location. For new fleets, the status of all locations is set
-     * to <code>NEW</code>. During fleet creation, GameLift updates each location status as instances are deployed there
-     * and prepared for game hosting. This list includes an entry for the fleet's home Region. For fleets with no remote
-     * locations, only one entry, representing the home Region, is returned.
+     * to <code>NEW</code>. During fleet creation, Amazon GameLift updates each location status as instances are
+     * deployed there and prepared for game hosting. This list includes an entry for the fleet's home Region. For fleets
+     * with no remote locations, only one entry, representing the home Region, is returned.
      * </p>
      * 
      * @param locationStates
      *        The fleet's locations and life-cycle status of each location. For new fleets, the status of all locations
-     *        is set to <code>NEW</code>. During fleet creation, GameLift updates each location status as instances are
-     *        deployed there and prepared for game hosting. This list includes an entry for the fleet's home Region. For
-     *        fleets with no remote locations, only one entry, representing the home Region, is returned.
+     *        is set to <code>NEW</code>. During fleet creation, Amazon GameLift updates each location status as
+     *        instances are deployed there and prepared for game hosting. This list includes an entry for the fleet's
+     *        home Region. For fleets with no remote locations, only one entry, representing the home Region, is
+     *        returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

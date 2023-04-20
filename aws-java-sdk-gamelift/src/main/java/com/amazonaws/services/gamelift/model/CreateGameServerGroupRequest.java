@@ -28,8 +28,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the Amazon
-     * EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per Amazon
-     * Web Services account.
+     * EC2 Auto Scaling group and the Amazon GameLift FleetIQ game server group. The name must be unique per Region per
+     * Amazon Web Services account.
      * </p>
      */
     private String gameServerGroupName;
@@ -43,17 +43,17 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
-     * GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value should
-     * be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling
-     * group using the Amazon Web Services console or APIs.
+     * Amazon GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value
+     * should be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto
+     * Scaling group using the Amazon Web Services console or APIs.
      * </p>
      */
     private Integer minSize;
     /**
      * <p>
      * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
-     * GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created,
-     * update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
+     * Amazon GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is
+     * created, update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      */
     private Integer maxSize;
@@ -71,7 +71,7 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * <p>
      * If you specify network interfaces in your launch template, you must explicitly set the property
      * <code>AssociatePublicIpAddress</code> to "true". If no network interface is specified in the launch template,
-     * GameLift FleetIQ uses your account's default VPC.
+     * Amazon GameLift FleetIQ uses your account's default VPC.
      * </p>
      * </note>
      */
@@ -79,11 +79,11 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
-     * at least two different instance types that are supported by GameLift FleetIQ. For more information on instance
-     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
-     * Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting
-     * for each instance type. If no weight value is specified for an instance type, it is set to the default value "1".
-     * For more information about capacity weighting, see <a
+     * at least two different instance types that are supported by Amazon GameLift FleetIQ. For more information on
+     * instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2
+     * Instance Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity
+     * weighting for each instance type. If no weight value is specified for an instance type, it is set to the default
+     * value "1". For more information about capacity weighting, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
      * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
@@ -100,8 +100,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     private GameServerGroupAutoScalingPolicy autoScalingPolicy;
     /**
      * <p>
-     * Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game server
-     * group. Method options include the following:
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
+     * server group. Method options include the following:
      * </p>
      * <ul>
      * <li>
@@ -143,8 +143,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list of virtual private cloud (VPC) subnets to use with instances in the game server group. By default, all
-     * GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs that you've
-     * set up. This property cannot be updated after the game server group is created, and the corresponding Auto
+     * Amazon GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs that
+     * you've set up. This property cannot be updated after the game server group is created, and the corresponding Auto
      * Scaling group will always use the property value that is set with this request, even if the Auto Scaling group is
      * updated directly.
      * </p>
@@ -163,14 +163,14 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the Amazon
-     * EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per Amazon
-     * Web Services account.
+     * EC2 Auto Scaling group and the Amazon GameLift FleetIQ game server group. The name must be unique per Region per
+     * Amazon Web Services account.
      * </p>
      * 
      * @param gameServerGroupName
      *        An identifier for the new game server group. This value is used to generate unique ARN identifiers for the
-     *        Amazon EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per
-     *        Region per Amazon Web Services account.
+     *        Amazon EC2 Auto Scaling group and the Amazon GameLift FleetIQ game server group. The name must be unique
+     *        per Region per Amazon Web Services account.
      */
 
     public void setGameServerGroupName(String gameServerGroupName) {
@@ -180,13 +180,13 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the Amazon
-     * EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per Amazon
-     * Web Services account.
+     * EC2 Auto Scaling group and the Amazon GameLift FleetIQ game server group. The name must be unique per Region per
+     * Amazon Web Services account.
      * </p>
      * 
      * @return An identifier for the new game server group. This value is used to generate unique ARN identifiers for
-     *         the Amazon EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per
-     *         Region per Amazon Web Services account.
+     *         the Amazon EC2 Auto Scaling group and the Amazon GameLift FleetIQ game server group. The name must be
+     *         unique per Region per Amazon Web Services account.
      */
 
     public String getGameServerGroupName() {
@@ -196,14 +196,14 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the Amazon
-     * EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per Amazon
-     * Web Services account.
+     * EC2 Auto Scaling group and the Amazon GameLift FleetIQ game server group. The name must be unique per Region per
+     * Amazon Web Services account.
      * </p>
      * 
      * @param gameServerGroupName
      *        An identifier for the new game server group. This value is used to generate unique ARN identifiers for the
-     *        Amazon EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per
-     *        Region per Amazon Web Services account.
+     *        Amazon EC2 Auto Scaling group and the Amazon GameLift FleetIQ game server group. The name must be unique
+     *        per Region per Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -264,16 +264,16 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
-     * GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value should
-     * be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling
-     * group using the Amazon Web Services console or APIs.
+     * Amazon GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value
+     * should be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto
+     * Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @param minSize
      *        The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
-     *        events, GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production,
-     *        this value should be set to at least 1. After the Auto Scaling group is created, update this value
-     *        directly in the Auto Scaling group using the Amazon Web Services console or APIs.
+     *        events, Amazon GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In
+     *        production, this value should be set to at least 1. After the Auto Scaling group is created, update this
+     *        value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      */
 
     public void setMinSize(Integer minSize) {
@@ -283,15 +283,15 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
-     * GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value should
-     * be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling
-     * group using the Amazon Web Services console or APIs.
+     * Amazon GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value
+     * should be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto
+     * Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @return The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
-     *         events, GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production,
-     *         this value should be set to at least 1. After the Auto Scaling group is created, update this value
-     *         directly in the Auto Scaling group using the Amazon Web Services console or APIs.
+     *         events, Amazon GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In
+     *         production, this value should be set to at least 1. After the Auto Scaling group is created, update this
+     *         value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      */
 
     public Integer getMinSize() {
@@ -301,16 +301,16 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
-     * GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value should
-     * be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling
-     * group using the Amazon Web Services console or APIs.
+     * Amazon GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value
+     * should be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto
+     * Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @param minSize
      *        The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
-     *        events, GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production,
-     *        this value should be set to at least 1. After the Auto Scaling group is created, update this value
-     *        directly in the Auto Scaling group using the Amazon Web Services console or APIs.
+     *        events, Amazon GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In
+     *        production, this value should be set to at least 1. After the Auto Scaling group is created, update this
+     *        value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -322,15 +322,15 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
-     * GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created,
-     * update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
+     * Amazon GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is
+     * created, update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @param maxSize
      *        The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
-     *        events, GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling
-     *        group is created, update this value directly in the Auto Scaling group using the Amazon Web Services
-     *        console or APIs.
+     *        events, Amazon GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto
+     *        Scaling group is created, update this value directly in the Auto Scaling group using the Amazon Web
+     *        Services console or APIs.
      */
 
     public void setMaxSize(Integer maxSize) {
@@ -340,14 +340,14 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
-     * GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created,
-     * update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
+     * Amazon GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is
+     * created, update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @return The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
-     *         events, GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling
-     *         group is created, update this value directly in the Auto Scaling group using the Amazon Web Services
-     *         console or APIs.
+     *         events, Amazon GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto
+     *         Scaling group is created, update this value directly in the Auto Scaling group using the Amazon Web
+     *         Services console or APIs.
      */
 
     public Integer getMaxSize() {
@@ -357,15 +357,15 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
-     * GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created,
-     * update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
+     * Amazon GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is
+     * created, update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @param maxSize
      *        The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
-     *        events, GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling
-     *        group is created, update this value directly in the Auto Scaling group using the Amazon Web Services
-     *        console or APIs.
+     *        events, Amazon GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto
+     *        Scaling group is created, update this value directly in the Auto Scaling group using the Amazon Web
+     *        Services console or APIs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -388,7 +388,7 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * <p>
      * If you specify network interfaces in your launch template, you must explicitly set the property
      * <code>AssociatePublicIpAddress</code> to "true". If no network interface is specified in the launch template,
-     * GameLift FleetIQ uses your account's default VPC.
+     * Amazon GameLift FleetIQ uses your account's default VPC.
      * </p>
      * </note>
      * 
@@ -403,7 +403,7 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *        <p>
      *        If you specify network interfaces in your launch template, you must explicitly set the property
      *        <code>AssociatePublicIpAddress</code> to "true". If no network interface is specified in the launch
-     *        template, GameLift FleetIQ uses your account's default VPC.
+     *        template, Amazon GameLift FleetIQ uses your account's default VPC.
      *        </p>
      */
 
@@ -425,7 +425,7 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * <p>
      * If you specify network interfaces in your launch template, you must explicitly set the property
      * <code>AssociatePublicIpAddress</code> to "true". If no network interface is specified in the launch template,
-     * GameLift FleetIQ uses your account's default VPC.
+     * Amazon GameLift FleetIQ uses your account's default VPC.
      * </p>
      * </note>
      * 
@@ -439,7 +439,7 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *         <p>
      *         If you specify network interfaces in your launch template, you must explicitly set the property
      *         <code>AssociatePublicIpAddress</code> to "true". If no network interface is specified in the launch
-     *         template, GameLift FleetIQ uses your account's default VPC.
+     *         template, Amazon GameLift FleetIQ uses your account's default VPC.
      *         </p>
      */
 
@@ -461,7 +461,7 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * <p>
      * If you specify network interfaces in your launch template, you must explicitly set the property
      * <code>AssociatePublicIpAddress</code> to "true". If no network interface is specified in the launch template,
-     * GameLift FleetIQ uses your account's default VPC.
+     * Amazon GameLift FleetIQ uses your account's default VPC.
      * </p>
      * </note>
      * 
@@ -476,7 +476,7 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *        <p>
      *        If you specify network interfaces in your launch template, you must explicitly set the property
      *        <code>AssociatePublicIpAddress</code> to "true". If no network interface is specified in the launch
-     *        template, GameLift FleetIQ uses your account's default VPC.
+     *        template, Amazon GameLift FleetIQ uses your account's default VPC.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -489,17 +489,17 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
-     * at least two different instance types that are supported by GameLift FleetIQ. For more information on instance
-     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
-     * Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting
-     * for each instance type. If no weight value is specified for an instance type, it is set to the default value "1".
-     * For more information about capacity weighting, see <a
+     * at least two different instance types that are supported by Amazon GameLift FleetIQ. For more information on
+     * instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2
+     * Instance Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity
+     * weighting for each instance type. If no weight value is specified for an instance type, it is set to the default
+     * value "1". For more information about capacity weighting, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
      * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      * 
      * @return The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must
-     *         specify at least two different instance types that are supported by GameLift FleetIQ. For more
+     *         specify at least two different instance types that are supported by Amazon GameLift FleetIQ. For more
      *         information on instance types, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
      *         the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting for
@@ -516,19 +516,19 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
-     * at least two different instance types that are supported by GameLift FleetIQ. For more information on instance
-     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
-     * Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting
-     * for each instance type. If no weight value is specified for an instance type, it is set to the default value "1".
-     * For more information about capacity weighting, see <a
+     * at least two different instance types that are supported by Amazon GameLift FleetIQ. For more information on
+     * instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2
+     * Instance Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity
+     * weighting for each instance type. If no weight value is specified for an instance type, it is set to the default
+     * value "1". For more information about capacity weighting, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
      * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      * 
      * @param instanceDefinitions
      *        The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must
-     *        specify at least two different instance types that are supported by GameLift FleetIQ. For more information
-     *        on instance types, see <a
+     *        specify at least two different instance types that are supported by Amazon GameLift FleetIQ. For more
+     *        information on instance types, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
      *        the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting for each
      *        instance type. If no weight value is specified for an instance type, it is set to the default value "1".
@@ -549,11 +549,11 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
-     * at least two different instance types that are supported by GameLift FleetIQ. For more information on instance
-     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
-     * Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting
-     * for each instance type. If no weight value is specified for an instance type, it is set to the default value "1".
-     * For more information about capacity weighting, see <a
+     * at least two different instance types that are supported by Amazon GameLift FleetIQ. For more information on
+     * instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2
+     * Instance Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity
+     * weighting for each instance type. If no weight value is specified for an instance type, it is set to the default
+     * value "1". For more information about capacity weighting, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
      * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
@@ -565,8 +565,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * 
      * @param instanceDefinitions
      *        The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must
-     *        specify at least two different instance types that are supported by GameLift FleetIQ. For more information
-     *        on instance types, see <a
+     *        specify at least two different instance types that are supported by Amazon GameLift FleetIQ. For more
+     *        information on instance types, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
      *        the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting for each
      *        instance type. If no weight value is specified for an instance type, it is set to the default value "1".
@@ -589,19 +589,19 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
-     * at least two different instance types that are supported by GameLift FleetIQ. For more information on instance
-     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
-     * Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting
-     * for each instance type. If no weight value is specified for an instance type, it is set to the default value "1".
-     * For more information about capacity weighting, see <a
+     * at least two different instance types that are supported by Amazon GameLift FleetIQ. For more information on
+     * instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2
+     * Instance Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity
+     * weighting for each instance type. If no weight value is specified for an instance type, it is set to the default
+     * value "1". For more information about capacity weighting, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
      * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      * 
      * @param instanceDefinitions
      *        The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must
-     *        specify at least two different instance types that are supported by GameLift FleetIQ. For more information
-     *        on instance types, see <a
+     *        specify at least two different instance types that are supported by Amazon GameLift FleetIQ. For more
+     *        information on instance types, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
      *        the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting for each
      *        instance type. If no weight value is specified for an instance type, it is set to the default value "1".
@@ -679,8 +679,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game server
-     * group. Method options include the following:
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
+     * server group. Method options include the following:
      * </p>
      * <ul>
      * <li>
@@ -708,8 +708,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * </ul>
      * 
      * @param balancingStrategy
-     *        Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
-     *        server group. Method options include the following:</p>
+     *        Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the
+     *        game server group. Method options include the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -742,8 +742,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game server
-     * group. Method options include the following:
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
+     * server group. Method options include the following:
      * </p>
      * <ul>
      * <li>
@@ -770,8 +770,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ul>
      * 
-     * @return Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
-     *         server group. Method options include the following:</p>
+     * @return Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the
+     *         game server group. Method options include the following:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -804,8 +804,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game server
-     * group. Method options include the following:
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
+     * server group. Method options include the following:
      * </p>
      * <ul>
      * <li>
@@ -833,8 +833,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * </ul>
      * 
      * @param balancingStrategy
-     *        Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
-     *        server group. Method options include the following:</p>
+     *        Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the
+     *        game server group. Method options include the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -869,8 +869,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game server
-     * group. Method options include the following:
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
+     * server group. Method options include the following:
      * </p>
      * <ul>
      * <li>
@@ -898,8 +898,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * </ul>
      * 
      * @param balancingStrategy
-     *        Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game
-     *        server group. Method options include the following:</p>
+     *        Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the
+     *        game server group. Method options include the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1034,15 +1034,15 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list of virtual private cloud (VPC) subnets to use with instances in the game server group. By default, all
-     * GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs that you've
-     * set up. This property cannot be updated after the game server group is created, and the corresponding Auto
+     * Amazon GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs that
+     * you've set up. This property cannot be updated after the game server group is created, and the corresponding Auto
      * Scaling group will always use the property value that is set with this request, even if the Auto Scaling group is
      * updated directly.
      * </p>
      * 
      * @return A list of virtual private cloud (VPC) subnets to use with instances in the game server group. By default,
-     *         all GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs
-     *         that you've set up. This property cannot be updated after the game server group is created, and the
+     *         all Amazon GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify
+     *         VPCs that you've set up. This property cannot be updated after the game server group is created, and the
      *         corresponding Auto Scaling group will always use the property value that is set with this request, even
      *         if the Auto Scaling group is updated directly.
      */
@@ -1054,16 +1054,16 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list of virtual private cloud (VPC) subnets to use with instances in the game server group. By default, all
-     * GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs that you've
-     * set up. This property cannot be updated after the game server group is created, and the corresponding Auto
+     * Amazon GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs that
+     * you've set up. This property cannot be updated after the game server group is created, and the corresponding Auto
      * Scaling group will always use the property value that is set with this request, even if the Auto Scaling group is
      * updated directly.
      * </p>
      * 
      * @param vpcSubnets
      *        A list of virtual private cloud (VPC) subnets to use with instances in the game server group. By default,
-     *        all GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs
-     *        that you've set up. This property cannot be updated after the game server group is created, and the
+     *        all Amazon GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify
+     *        VPCs that you've set up. This property cannot be updated after the game server group is created, and the
      *        corresponding Auto Scaling group will always use the property value that is set with this request, even if
      *        the Auto Scaling group is updated directly.
      */
@@ -1080,8 +1080,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list of virtual private cloud (VPC) subnets to use with instances in the game server group. By default, all
-     * GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs that you've
-     * set up. This property cannot be updated after the game server group is created, and the corresponding Auto
+     * Amazon GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs that
+     * you've set up. This property cannot be updated after the game server group is created, and the corresponding Auto
      * Scaling group will always use the property value that is set with this request, even if the Auto Scaling group is
      * updated directly.
      * </p>
@@ -1093,8 +1093,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * 
      * @param vpcSubnets
      *        A list of virtual private cloud (VPC) subnets to use with instances in the game server group. By default,
-     *        all GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs
-     *        that you've set up. This property cannot be updated after the game server group is created, and the
+     *        all Amazon GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify
+     *        VPCs that you've set up. This property cannot be updated after the game server group is created, and the
      *        corresponding Auto Scaling group will always use the property value that is set with this request, even if
      *        the Auto Scaling group is updated directly.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1113,16 +1113,16 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list of virtual private cloud (VPC) subnets to use with instances in the game server group. By default, all
-     * GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs that you've
-     * set up. This property cannot be updated after the game server group is created, and the corresponding Auto
+     * Amazon GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs that
+     * you've set up. This property cannot be updated after the game server group is created, and the corresponding Auto
      * Scaling group will always use the property value that is set with this request, even if the Auto Scaling group is
      * updated directly.
      * </p>
      * 
      * @param vpcSubnets
      *        A list of virtual private cloud (VPC) subnets to use with instances in the game server group. By default,
-     *        all GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify VPCs
-     *        that you've set up. This property cannot be updated after the game server group is created, and the
+     *        all Amazon GameLift FleetIQ-supported Availability Zones are used. You can use this parameter to specify
+     *        VPCs that you've set up. This property cannot be updated after the game server group is created, and the
      *        corresponding Auto Scaling group will always use the property value that is set with this request, even if
      *        the Auto Scaling group is updated directly.
      * @return Returns a reference to this object so that method calls can be chained together.

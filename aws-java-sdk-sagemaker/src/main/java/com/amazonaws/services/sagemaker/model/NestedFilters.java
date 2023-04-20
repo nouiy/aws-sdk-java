@@ -19,8 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A list of nested <a>Filter</a> objects. A resource must satisfy the conditions of all filters to be included in the
- * results returned from the <a>Search</a> API.
+ * A list of nested <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Filter.html">Filter</a>
+ * objects. A resource must satisfy the conditions of all filters to be included in the results returned from the <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API.
  * </p>
  * <p>
  * For example, to filter on a training job's <code>InputDataConfig</code> property with a specific channel name and

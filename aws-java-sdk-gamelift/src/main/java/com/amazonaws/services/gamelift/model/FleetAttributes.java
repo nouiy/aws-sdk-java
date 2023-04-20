@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a GameLift fleet of game hosting resources.
+ * Describes a Amazon GameLift fleet of game hosting resources.
  * </p>
  * <p>
  * <b>Related actions</b>
@@ -40,9 +40,9 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
-     * GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * . In a GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.
      * </p>
      */
     private String fleetArn;
@@ -102,8 +102,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet, creating new instances
-     * with the game build or Realtime script and starting server processes.
+     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet, creating new
+     * instances with the game build or Realtime script and starting server processes.
      * </p>
      * </li>
      * <li>
@@ -138,8 +138,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * associated with the GameLift build resource that is deployed on instances in this fleet. In a GameLift build ARN,
-     * the resource ID matches the <code>BuildId</code> value.
+     * associated with the Amazon GameLift build resource that is deployed on instances in this fleet. In a GameLift
+     * build ARN, the resource ID matches the <code>BuildId</code> value.
      * </p>
      */
     private String buildArn;
@@ -174,8 +174,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     private String serverLaunchParameters;
     /**
      * <p>
-     * <b>This parameter is no longer used.</b> Game session log paths are now defined using the GameLift server API
-     * <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
+     * <b>This parameter is no longer used.</b> Game session log paths are now defined using the Amazon GameLift server
+     * API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
      * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process"
      * >Server API Reference</a>.
      * </p>
@@ -240,8 +240,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     private CertificateConfiguration certificateConfiguration;
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with GameLift
-     * Anywhere or use Amazon EC2 instances with managed GameLift.
+     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
+     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift.
      * </p>
      */
     private String computeType;
@@ -291,15 +291,15 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
-     * GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * . In a GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.
      * </p>
      * 
      * @param fleetArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *        Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *        <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
      *        GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.
      */
@@ -311,14 +311,14 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
-     * GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * . In a GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *         GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *         Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *         <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
      *         GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.
      */
@@ -330,15 +330,15 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-     * Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
-     * GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.
+     * that is assigned to a Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all
+     * Regions. Format is <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>
+     * . In a GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.
      * </p>
      * 
      * @param fleetArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a
-     *        GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *        Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *        <code>arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
      *        GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -739,8 +739,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet, creating new instances
-     * with the game build or Realtime script and starting server processes.
+     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet, creating new
+     * instances with the game build or Realtime script and starting server processes.
      * </p>
      * </li>
      * <li>
@@ -775,8 +775,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet, creating new
-     *        instances with the game build or Realtime script and starting server processes.
+     *        <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet, creating
+     *        new instances with the game build or Realtime script and starting server processes.
      *        </p>
      *        </li>
      *        <li>
@@ -818,8 +818,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet, creating new instances
-     * with the game build or Realtime script and starting server processes.
+     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet, creating new
+     * instances with the game build or Realtime script and starting server processes.
      * </p>
      * </li>
      * <li>
@@ -853,8 +853,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      *         </li>
      *         <li>
      *         <p>
-     *         <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet, creating new
-     *         instances with the game build or Realtime script and starting server processes.
+     *         <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet,
+     *         creating new instances with the game build or Realtime script and starting server processes.
      *         </p>
      *         </li>
      *         <li>
@@ -896,8 +896,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet, creating new instances
-     * with the game build or Realtime script and starting server processes.
+     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet, creating new
+     * instances with the game build or Realtime script and starting server processes.
      * </p>
      * </li>
      * <li>
@@ -932,8 +932,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet, creating new
-     *        instances with the game build or Realtime script and starting server processes.
+     *        <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet, creating
+     *        new instances with the game build or Realtime script and starting server processes.
      *        </p>
      *        </li>
      *        <li>
@@ -977,8 +977,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet, creating new instances
-     * with the game build or Realtime script and starting server processes.
+     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet, creating new
+     * instances with the game build or Realtime script and starting server processes.
      * </p>
      * </li>
      * <li>
@@ -1013,8 +1013,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet, creating new
-     *        instances with the game build or Realtime script and starting server processes.
+     *        <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet, creating
+     *        new instances with the game build or Realtime script and starting server processes.
      *        </p>
      *        </li>
      *        <li>
@@ -1056,8 +1056,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet, creating new instances
-     * with the game build or Realtime script and starting server processes.
+     * <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet, creating new
+     * instances with the game build or Realtime script and starting server processes.
      * </p>
      * </li>
      * <li>
@@ -1092,8 +1092,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- GameLift is setting up the new fleet, creating new
-     *        instances with the game build or Realtime script and starting server processes.
+     *        <b>DOWNLOADING/VALIDATING/BUILDING/ACTIVATING</b> -- Amazon GameLift is setting up the new fleet, creating
+     *        new instances with the game build or Realtime script and starting server processes.
      *        </p>
      *        </li>
      *        <li>
@@ -1168,15 +1168,15 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * associated with the GameLift build resource that is deployed on instances in this fleet. In a GameLift build ARN,
-     * the resource ID matches the <code>BuildId</code> value.
+     * associated with the Amazon GameLift build resource that is deployed on instances in this fleet. In a GameLift
+     * build ARN, the resource ID matches the <code>BuildId</code> value.
      * </p>
      * 
      * @param buildArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) associated with the
-     *        GameLift build resource that is deployed on instances in this fleet. In a GameLift build ARN, the resource
-     *        ID matches the <code>BuildId</code> value.
+     *        Amazon GameLift build resource that is deployed on instances in this fleet. In a GameLift build ARN, the
+     *        resource ID matches the <code>BuildId</code> value.
      */
 
     public void setBuildArn(String buildArn) {
@@ -1186,13 +1186,13 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * associated with the GameLift build resource that is deployed on instances in this fleet. In a GameLift build ARN,
-     * the resource ID matches the <code>BuildId</code> value.
+     * associated with the Amazon GameLift build resource that is deployed on instances in this fleet. In a GameLift
+     * build ARN, the resource ID matches the <code>BuildId</code> value.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) associated with the
-     *         GameLift build resource that is deployed on instances in this fleet. In a GameLift build ARN, the
+     *         Amazon GameLift build resource that is deployed on instances in this fleet. In a GameLift build ARN, the
      *         resource ID matches the <code>BuildId</code> value.
      */
 
@@ -1203,15 +1203,15 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * associated with the GameLift build resource that is deployed on instances in this fleet. In a GameLift build ARN,
-     * the resource ID matches the <code>BuildId</code> value.
+     * associated with the Amazon GameLift build resource that is deployed on instances in this fleet. In a GameLift
+     * build ARN, the resource ID matches the <code>BuildId</code> value.
      * </p>
      * 
      * @param buildArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) associated with the
-     *        GameLift build resource that is deployed on instances in this fleet. In a GameLift build ARN, the resource
-     *        ID matches the <code>BuildId</code> value.
+     *        Amazon GameLift build resource that is deployed on instances in this fleet. In a GameLift build ARN, the
+     *        resource ID matches the <code>BuildId</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1415,14 +1415,14 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * <b>This parameter is no longer used.</b> Game session log paths are now defined using the GameLift server API
-     * <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
+     * <b>This parameter is no longer used.</b> Game session log paths are now defined using the Amazon GameLift server
+     * API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
      * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process"
      * >Server API Reference</a>.
      * </p>
      * 
-     * @return <b>This parameter is no longer used.</b> Game session log paths are now defined using the GameLift server
-     *         API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
+     * @return <b>This parameter is no longer used.</b> Game session log paths are now defined using the Amazon GameLift
+     *         server API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
      *         "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process"
      *         >Server API Reference</a>.
      */
@@ -1433,15 +1433,15 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * <b>This parameter is no longer used.</b> Game session log paths are now defined using the GameLift server API
-     * <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
+     * <b>This parameter is no longer used.</b> Game session log paths are now defined using the Amazon GameLift server
+     * API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
      * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process"
      * >Server API Reference</a>.
      * </p>
      * 
      * @param logPaths
-     *        <b>This parameter is no longer used.</b> Game session log paths are now defined using the GameLift server
-     *        API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
+     *        <b>This parameter is no longer used.</b> Game session log paths are now defined using the Amazon GameLift
+     *        server API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
      *        "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process"
      *        >Server API Reference</a>.
      */
@@ -1457,8 +1457,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * <b>This parameter is no longer used.</b> Game session log paths are now defined using the GameLift server API
-     * <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
+     * <b>This parameter is no longer used.</b> Game session log paths are now defined using the Amazon GameLift server
+     * API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
      * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process"
      * >Server API Reference</a>.
      * </p>
@@ -1469,8 +1469,8 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param logPaths
-     *        <b>This parameter is no longer used.</b> Game session log paths are now defined using the GameLift server
-     *        API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
+     *        <b>This parameter is no longer used.</b> Game session log paths are now defined using the Amazon GameLift
+     *        server API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
      *        "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process"
      *        >Server API Reference</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1488,15 +1488,15 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * <b>This parameter is no longer used.</b> Game session log paths are now defined using the GameLift server API
-     * <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
+     * <b>This parameter is no longer used.</b> Game session log paths are now defined using the Amazon GameLift server
+     * API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
      * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process"
      * >Server API Reference</a>.
      * </p>
      * 
      * @param logPaths
-     *        <b>This parameter is no longer used.</b> Game session log paths are now defined using the GameLift server
-     *        API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
+     *        <b>This parameter is no longer used.</b> Game session log paths are now defined using the Amazon GameLift
+     *        server API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href=
      *        "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process"
      *        >Server API Reference</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2118,13 +2118,13 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with GameLift
-     * Anywhere or use Amazon EC2 instances with managed GameLift.
+     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
+     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift.
      * </p>
      * 
      * @param computeType
      *        The type of compute resource used to host your game servers. You can use your own compute resources with
-     *        GameLift Anywhere or use Amazon EC2 instances with managed GameLift.
+     *        Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift.
      * @see ComputeType
      */
 
@@ -2134,12 +2134,12 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with GameLift
-     * Anywhere or use Amazon EC2 instances with managed GameLift.
+     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
+     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift.
      * </p>
      * 
      * @return The type of compute resource used to host your game servers. You can use your own compute resources with
-     *         GameLift Anywhere or use Amazon EC2 instances with managed GameLift.
+     *         Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift.
      * @see ComputeType
      */
 
@@ -2149,13 +2149,13 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with GameLift
-     * Anywhere or use Amazon EC2 instances with managed GameLift.
+     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
+     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift.
      * </p>
      * 
      * @param computeType
      *        The type of compute resource used to host your game servers. You can use your own compute resources with
-     *        GameLift Anywhere or use Amazon EC2 instances with managed GameLift.
+     *        Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComputeType
      */
@@ -2167,13 +2167,13 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with GameLift
-     * Anywhere or use Amazon EC2 instances with managed GameLift.
+     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
+     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift.
      * </p>
      * 
      * @param computeType
      *        The type of compute resource used to host your game servers. You can use your own compute resources with
-     *        GameLift Anywhere or use Amazon EC2 instances with managed GameLift.
+     *        Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift.
      * @see ComputeType
      */
 
@@ -2183,13 +2183,13 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with GameLift
-     * Anywhere or use Amazon EC2 instances with managed GameLift.
+     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
+     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift.
      * </p>
      * 
      * @param computeType
      *        The type of compute resource used to host your game servers. You can use your own compute resources with
-     *        GameLift Anywhere or use Amazon EC2 instances with managed GameLift.
+     *        Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComputeType
      */

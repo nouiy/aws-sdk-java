@@ -34,7 +34,7 @@ public class UpdateRuntimeConfigurationRequest extends com.amazonaws.AmazonWebSe
     private String fleetId;
     /**
      * <p>
-     * Instructions for alaunching server processes on each instance in the fleet. Server processes run either a custom
+     * Instructions for launching server processes on each instance in the fleet. Server processes run either a custom
      * game build executable or a Realtime Servers script. The runtime configuration lists the types of server processes
      * to run on an instance, how to launch them, and the number of processes to run concurrently.
      * </p>
@@ -89,13 +89,13 @@ public class UpdateRuntimeConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Instructions for alaunching server processes on each instance in the fleet. Server processes run either a custom
+     * Instructions for launching server processes on each instance in the fleet. Server processes run either a custom
      * game build executable or a Realtime Servers script. The runtime configuration lists the types of server processes
      * to run on an instance, how to launch them, and the number of processes to run concurrently.
      * </p>
      * 
      * @param runtimeConfiguration
-     *        Instructions for alaunching server processes on each instance in the fleet. Server processes run either a
+     *        Instructions for launching server processes on each instance in the fleet. Server processes run either a
      *        custom game build executable or a Realtime Servers script. The runtime configuration lists the types of
      *        server processes to run on an instance, how to launch them, and the number of processes to run
      *        concurrently.
@@ -107,12 +107,12 @@ public class UpdateRuntimeConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Instructions for alaunching server processes on each instance in the fleet. Server processes run either a custom
+     * Instructions for launching server processes on each instance in the fleet. Server processes run either a custom
      * game build executable or a Realtime Servers script. The runtime configuration lists the types of server processes
      * to run on an instance, how to launch them, and the number of processes to run concurrently.
      * </p>
      * 
-     * @return Instructions for alaunching server processes on each instance in the fleet. Server processes run either a
+     * @return Instructions for launching server processes on each instance in the fleet. Server processes run either a
      *         custom game build executable or a Realtime Servers script. The runtime configuration lists the types of
      *         server processes to run on an instance, how to launch them, and the number of processes to run
      *         concurrently.
@@ -124,13 +124,13 @@ public class UpdateRuntimeConfigurationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Instructions for alaunching server processes on each instance in the fleet. Server processes run either a custom
+     * Instructions for launching server processes on each instance in the fleet. Server processes run either a custom
      * game build executable or a Realtime Servers script. The runtime configuration lists the types of server processes
      * to run on an instance, how to launch them, and the number of processes to run concurrently.
      * </p>
      * 
      * @param runtimeConfiguration
-     *        Instructions for alaunching server processes on each instance in the fleet. Server processes run either a
+     *        Instructions for launching server processes on each instance in the fleet. Server processes run either a
      *        custom game build executable or a Realtime Servers script. The runtime configuration lists the types of
      *        server processes to run on an instance, how to launch them, and the number of processes to run
      *        concurrently.

@@ -42,15 +42,15 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * assigned to a GameLift build resource and uniquely identifies it. ARNs are unique across all Regions. Format is
-     * <code>arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a GameLift
-     * build ARN, the resource ID matches the <i>BuildId</i> value.
+     * assigned to a Amazon GameLift build resource and uniquely identifies it. ARNs are unique across all Regions.
+     * Format is <code>arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
+     * GameLift build ARN, the resource ID matches the <i>BuildId</i> value.
      * </p>
      */
     private String buildArn;
     /**
      * <p>
-     * A descriptive label associated with a build. Build names do not need to be unique. It can be set using <a
+     * A descriptive label associated with a build. Build names don't need to be unique. It can be set using <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateBuild.html">CreateBuild</a> or <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/UpdateBuild">UpdateBuild</a>.
      * </p>
@@ -58,7 +58,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique.
+     * Version information associated with a build or script. Version strings don't need to be unique.
      * </p>
      */
     private String version;
@@ -112,7 +112,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date creationTime;
     /**
      * <p>
-     * The GameLift Server SDK version used to develop your game server.
+     * The Amazon GameLift Server SDK version used to develop your game server.
      * </p>
      */
     private String serverSdkVersion;
@@ -160,15 +160,15 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * assigned to a GameLift build resource and uniquely identifies it. ARNs are unique across all Regions. Format is
-     * <code>arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a GameLift
-     * build ARN, the resource ID matches the <i>BuildId</i> value.
+     * assigned to a Amazon GameLift build resource and uniquely identifies it. ARNs are unique across all Regions.
+     * Format is <code>arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
+     * GameLift build ARN, the resource ID matches the <i>BuildId</i> value.
      * </p>
      * 
      * @param buildArn
      *        The Amazon Resource Name (<a
-     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) assigned to a GameLift
-     *        build resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) assigned to a Amazon
+     *        GameLift build resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *        <code>arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
      *        GameLift build ARN, the resource ID matches the <i>BuildId</i> value.
      */
@@ -180,14 +180,14 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * assigned to a GameLift build resource and uniquely identifies it. ARNs are unique across all Regions. Format is
-     * <code>arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a GameLift
-     * build ARN, the resource ID matches the <i>BuildId</i> value.
+     * assigned to a Amazon GameLift build resource and uniquely identifies it. ARNs are unique across all Regions.
+     * Format is <code>arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
+     * GameLift build ARN, the resource ID matches the <i>BuildId</i> value.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
-     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) assigned to a GameLift
-     *         build resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) assigned to a Amazon
+     *         GameLift build resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *         <code>arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
      *         GameLift build ARN, the resource ID matches the <i>BuildId</i> value.
      */
@@ -199,15 +199,15 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * assigned to a GameLift build resource and uniquely identifies it. ARNs are unique across all Regions. Format is
-     * <code>arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a GameLift
-     * build ARN, the resource ID matches the <i>BuildId</i> value.
+     * assigned to a Amazon GameLift build resource and uniquely identifies it. ARNs are unique across all Regions.
+     * Format is <code>arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
+     * GameLift build ARN, the resource ID matches the <i>BuildId</i> value.
      * </p>
      * 
      * @param buildArn
      *        The Amazon Resource Name (<a
-     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) assigned to a GameLift
-     *        build resource and uniquely identifies it. ARNs are unique across all Regions. Format is
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) assigned to a Amazon
+     *        GameLift build resource and uniquely identifies it. ARNs are unique across all Regions. Format is
      *        <code>arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912</code>. In a
      *        GameLift build ARN, the resource ID matches the <i>BuildId</i> value.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -220,13 +220,13 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A descriptive label associated with a build. Build names do not need to be unique. It can be set using <a
+     * A descriptive label associated with a build. Build names don't need to be unique. It can be set using <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateBuild.html">CreateBuild</a> or <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/UpdateBuild">UpdateBuild</a>.
      * </p>
      * 
      * @param name
-     *        A descriptive label associated with a build. Build names do not need to be unique. It can be set using <a
+     *        A descriptive label associated with a build. Build names don't need to be unique. It can be set using <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateBuild.html">CreateBuild</a> or <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/apireference/UpdateBuild">UpdateBuild</a>.
      */
@@ -237,12 +237,12 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A descriptive label associated with a build. Build names do not need to be unique. It can be set using <a
+     * A descriptive label associated with a build. Build names don't need to be unique. It can be set using <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateBuild.html">CreateBuild</a> or <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/UpdateBuild">UpdateBuild</a>.
      * </p>
      * 
-     * @return A descriptive label associated with a build. Build names do not need to be unique. It can be set using <a
+     * @return A descriptive label associated with a build. Build names don't need to be unique. It can be set using <a
      *         href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateBuild.html">CreateBuild</a> or
      *         <a href="https://docs.aws.amazon.com/gamelift/latest/apireference/UpdateBuild">UpdateBuild</a>.
      */
@@ -253,13 +253,13 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A descriptive label associated with a build. Build names do not need to be unique. It can be set using <a
+     * A descriptive label associated with a build. Build names don't need to be unique. It can be set using <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateBuild.html">CreateBuild</a> or <a
      * href="https://docs.aws.amazon.com/gamelift/latest/apireference/UpdateBuild">UpdateBuild</a>.
      * </p>
      * 
      * @param name
-     *        A descriptive label associated with a build. Build names do not need to be unique. It can be set using <a
+     *        A descriptive label associated with a build. Build names don't need to be unique. It can be set using <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateBuild.html">CreateBuild</a> or <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/apireference/UpdateBuild">UpdateBuild</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -272,11 +272,11 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique.
+     * Version information associated with a build or script. Version strings don't need to be unique.
      * </p>
      * 
      * @param version
-     *        Version information associated with a build or script. Version strings do not need to be unique.
+     *        Version information associated with a build or script. Version strings don't need to be unique.
      */
 
     public void setVersion(String version) {
@@ -285,10 +285,10 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique.
+     * Version information associated with a build or script. Version strings don't need to be unique.
      * </p>
      * 
-     * @return Version information associated with a build or script. Version strings do not need to be unique.
+     * @return Version information associated with a build or script. Version strings don't need to be unique.
      */
 
     public String getVersion() {
@@ -297,11 +297,11 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Version information associated with a build or script. Version strings do not need to be unique.
+     * Version information associated with a build or script. Version strings don't need to be unique.
      * </p>
      * 
      * @param version
-     *        Version information associated with a build or script. Version strings do not need to be unique.
+     *        Version information associated with a build or script. Version strings don't need to be unique.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -775,11 +775,11 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The GameLift Server SDK version used to develop your game server.
+     * The Amazon GameLift Server SDK version used to develop your game server.
      * </p>
      * 
      * @param serverSdkVersion
-     *        The GameLift Server SDK version used to develop your game server.
+     *        The Amazon GameLift Server SDK version used to develop your game server.
      */
 
     public void setServerSdkVersion(String serverSdkVersion) {
@@ -788,10 +788,10 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The GameLift Server SDK version used to develop your game server.
+     * The Amazon GameLift Server SDK version used to develop your game server.
      * </p>
      * 
-     * @return The GameLift Server SDK version used to develop your game server.
+     * @return The Amazon GameLift Server SDK version used to develop your game server.
      */
 
     public String getServerSdkVersion() {
@@ -800,11 +800,11 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The GameLift Server SDK version used to develop your game server.
+     * The Amazon GameLift Server SDK version used to develop your game server.
      * </p>
      * 
      * @param serverSdkVersion
-     *        The GameLift Server SDK version used to develop your game server.
+     *        The Amazon GameLift Server SDK version used to develop your game server.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

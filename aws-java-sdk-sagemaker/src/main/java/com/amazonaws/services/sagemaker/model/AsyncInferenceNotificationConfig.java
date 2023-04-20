@@ -46,6 +46,11 @@ public class AsyncInferenceNotificationConfig implements Serializable, Cloneable
      * <p>
      * The Amazon SNS topics where you want the inference response to be included.
      * </p>
+     * <note>
+     * <p>
+     * The inference response is included only if the response size is less than or equal to 128 KB.
+     * </p>
+     * </note>
      */
     private java.util.List<String> includeInferenceResponseIn;
 
@@ -145,8 +150,16 @@ public class AsyncInferenceNotificationConfig implements Serializable, Cloneable
      * <p>
      * The Amazon SNS topics where you want the inference response to be included.
      * </p>
+     * <note>
+     * <p>
+     * The inference response is included only if the response size is less than or equal to 128 KB.
+     * </p>
+     * </note>
      * 
-     * @return The Amazon SNS topics where you want the inference response to be included.
+     * @return The Amazon SNS topics where you want the inference response to be included.</p> <note>
+     *         <p>
+     *         The inference response is included only if the response size is less than or equal to 128 KB.
+     *         </p>
      * @see AsyncNotificationTopicTypes
      */
 
@@ -158,9 +171,17 @@ public class AsyncInferenceNotificationConfig implements Serializable, Cloneable
      * <p>
      * The Amazon SNS topics where you want the inference response to be included.
      * </p>
+     * <note>
+     * <p>
+     * The inference response is included only if the response size is less than or equal to 128 KB.
+     * </p>
+     * </note>
      * 
      * @param includeInferenceResponseIn
-     *        The Amazon SNS topics where you want the inference response to be included.
+     *        The Amazon SNS topics where you want the inference response to be included.</p> <note>
+     *        <p>
+     *        The inference response is included only if the response size is less than or equal to 128 KB.
+     *        </p>
      * @see AsyncNotificationTopicTypes
      */
 
@@ -177,6 +198,11 @@ public class AsyncInferenceNotificationConfig implements Serializable, Cloneable
      * <p>
      * The Amazon SNS topics where you want the inference response to be included.
      * </p>
+     * <note>
+     * <p>
+     * The inference response is included only if the response size is less than or equal to 128 KB.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setIncludeInferenceResponseIn(java.util.Collection)} or
@@ -184,7 +210,10 @@ public class AsyncInferenceNotificationConfig implements Serializable, Cloneable
      * </p>
      * 
      * @param includeInferenceResponseIn
-     *        The Amazon SNS topics where you want the inference response to be included.
+     *        The Amazon SNS topics where you want the inference response to be included.</p> <note>
+     *        <p>
+     *        The inference response is included only if the response size is less than or equal to 128 KB.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AsyncNotificationTopicTypes
      */
@@ -203,9 +232,17 @@ public class AsyncInferenceNotificationConfig implements Serializable, Cloneable
      * <p>
      * The Amazon SNS topics where you want the inference response to be included.
      * </p>
+     * <note>
+     * <p>
+     * The inference response is included only if the response size is less than or equal to 128 KB.
+     * </p>
+     * </note>
      * 
      * @param includeInferenceResponseIn
-     *        The Amazon SNS topics where you want the inference response to be included.
+     *        The Amazon SNS topics where you want the inference response to be included.</p> <note>
+     *        <p>
+     *        The inference response is included only if the response size is less than or equal to 128 KB.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AsyncNotificationTopicTypes
      */
@@ -219,9 +256,17 @@ public class AsyncInferenceNotificationConfig implements Serializable, Cloneable
      * <p>
      * The Amazon SNS topics where you want the inference response to be included.
      * </p>
+     * <note>
+     * <p>
+     * The inference response is included only if the response size is less than or equal to 128 KB.
+     * </p>
+     * </note>
      * 
      * @param includeInferenceResponseIn
-     *        The Amazon SNS topics where you want the inference response to be included.
+     *        The Amazon SNS topics where you want the inference response to be included.</p> <note>
+     *        <p>
+     *        The inference response is included only if the response size is less than or equal to 128 KB.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AsyncNotificationTopicTypes
      */

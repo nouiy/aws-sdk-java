@@ -527,7 +527,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      *         <a>CreateClusterRequest$SnowballType</a> value supports your <a>CreateJobRequest$JobType</a>, and try
      *         again.
      * @throws Ec2RequestFailedException
-     *         Your IAM user lacks the necessary Amazon EC2 permissions to perform the attempted action.
+     *         Your user lacks the necessary Amazon EC2 permissions to perform the attempted action.
      * @sample AmazonSnowball.CreateCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/CreateCluster" target="_top">AWS API
      *      Documentation</a>
@@ -604,7 +604,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * <ul>
      * <li>
      * <p>
-     * Snow Family device type: <b>SNC1_SSD</b>
+     * Device type: <b>SNC1_SSD</b>
      * </p>
      * <ul>
      * <li>
@@ -621,7 +621,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * <p/></li>
      * <li>
      * <p>
-     * Snow Family device type: <b>SNC1_HDD</b>
+     * Device type: <b>SNC1_HDD</b>
      * </p>
      * <ul>
      * <li>
@@ -746,6 +746,40 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * </note></li>
      * </ul>
      * <p/></li>
+     * <li>
+     * <p>
+     * Device type: <b>V3_5C</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Capacity: T32
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Description: Snowball Edge Compute Optimized without GPU
+     * </p>
+     * </li>
+     * </ul>
+     * <p/></li>
+     * <li>
+     * <p>
+     * Device type: <b>V3_5S</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Capacity: T240
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Description: Snowball Edge Storage Optimized 210TB
+     * </p>
+     * </li>
+     * </ul>
+     * <p/></li>
      * </ul>
      * 
      * @param createJobRequest
@@ -765,7 +799,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      *         cluster and you have more nodes to create for this cluster, try again and create jobs until your cluster
      *         has exactly five nodes.
      * @throws Ec2RequestFailedException
-     *         Your IAM user lacks the necessary Amazon EC2 permissions to perform the attempted action.
+     *         Your user lacks the necessary Amazon EC2 permissions to perform the attempted action.
      * @sample AmazonSnowball.CreateJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/CreateJob" target="_top">AWS API
      *      Documentation</a>
@@ -1649,8 +1683,9 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * <p>
      * This action returns a list of the different Amazon EC2 Amazon Machine Images (AMIs) that are owned by your Amazon
      * Web Services accountthat would be supported for use on a Snow device. Currently, supported AMIs are based on the
-     * CentOS 7 (x86_64) - with Updates HVM, Ubuntu Server 14.04 LTS (HVM), and Ubuntu 16.04 LTS - Xenial (HVM) images,
-     * available on the Amazon Web Services Marketplace.
+     * Amazon Linux-2, Ubuntu 20.04 LTS - Focal, or Ubuntu 22.04 LTS - Jammy images, available on the Amazon Web
+     * Services Marketplace. Ubuntu 16.04 LTS - Xenial (HVM) images are no longer supported in the Market, but still
+     * supported for use on devices through Amazon EC2 VM Import/Export and running locally in AMIs.
      * </p>
      * 
      * @param listCompatibleImagesRequest
@@ -1659,7 +1694,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      *         The <code>NextToken</code> string was altered unexpectedly, and the operation has stopped. Run the
      *         operation without changing the <code>NextToken</code> string, and try again.
      * @throws Ec2RequestFailedException
-     *         Your IAM user lacks the necessary Amazon EC2 permissions to perform the attempted action.
+     *         Your user lacks the necessary Amazon EC2 permissions to perform the attempted action.
      * @sample AmazonSnowball.ListCompatibleImages
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/ListCompatibleImages" target="_top">AWS
      *      API Documentation</a>
@@ -1914,7 +1949,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      *         <a>CreateClusterRequest$SnowballType</a> value supports your <a>CreateJobRequest$JobType</a>, and try
      *         again.
      * @throws Ec2RequestFailedException
-     *         Your IAM user lacks the necessary Amazon EC2 permissions to perform the attempted action.
+     *         Your user lacks the necessary Amazon EC2 permissions to perform the attempted action.
      * @sample AmazonSnowball.UpdateCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/UpdateCluster" target="_top">AWS API
      *      Documentation</a>
@@ -1989,7 +2024,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      *         cluster and you have more nodes to create for this cluster, try again and create jobs until your cluster
      *         has exactly five nodes.
      * @throws Ec2RequestFailedException
-     *         Your IAM user lacks the necessary Amazon EC2 permissions to perform the attempted action.
+     *         Your user lacks the necessary Amazon EC2 permissions to perform the attempted action.
      * @sample AmazonSnowball.UpdateJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/UpdateJob" target="_top">AWS API
      *      Documentation</a>

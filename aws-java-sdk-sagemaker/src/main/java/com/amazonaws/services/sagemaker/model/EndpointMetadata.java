@@ -42,8 +42,8 @@ public class EndpointMetadata implements Serializable, Cloneable, StructuredPojo
     private String endpointConfigName;
     /**
      * <p>
-     * The status of the endpoint. For possible values of the status of an endpoint, see
-     * <a>EndpointSummary$EndpointStatus</a>.
+     * The status of the endpoint. For possible values of the status of an endpoint, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_EndpointSummary.html">EndpointSummary</a>.
      * </p>
      */
     private String endpointStatus;
@@ -137,13 +137,14 @@ public class EndpointMetadata implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The status of the endpoint. For possible values of the status of an endpoint, see
-     * <a>EndpointSummary$EndpointStatus</a>.
+     * The status of the endpoint. For possible values of the status of an endpoint, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_EndpointSummary.html">EndpointSummary</a>.
      * </p>
      * 
      * @param endpointStatus
-     *        The status of the endpoint. For possible values of the status of an endpoint, see
-     *        <a>EndpointSummary$EndpointStatus</a>.
+     *        The status of the endpoint. For possible values of the status of an endpoint, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_EndpointSummary.html"
+     *        >EndpointSummary</a>.
      * @see EndpointStatus
      */
 
@@ -153,12 +154,13 @@ public class EndpointMetadata implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The status of the endpoint. For possible values of the status of an endpoint, see
-     * <a>EndpointSummary$EndpointStatus</a>.
+     * The status of the endpoint. For possible values of the status of an endpoint, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_EndpointSummary.html">EndpointSummary</a>.
      * </p>
      * 
-     * @return The status of the endpoint. For possible values of the status of an endpoint, see
-     *         <a>EndpointSummary$EndpointStatus</a>.
+     * @return The status of the endpoint. For possible values of the status of an endpoint, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_EndpointSummary.html"
+     *         >EndpointSummary</a>.
      * @see EndpointStatus
      */
 
@@ -168,13 +170,14 @@ public class EndpointMetadata implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The status of the endpoint. For possible values of the status of an endpoint, see
-     * <a>EndpointSummary$EndpointStatus</a>.
+     * The status of the endpoint. For possible values of the status of an endpoint, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_EndpointSummary.html">EndpointSummary</a>.
      * </p>
      * 
      * @param endpointStatus
-     *        The status of the endpoint. For possible values of the status of an endpoint, see
-     *        <a>EndpointSummary$EndpointStatus</a>.
+     *        The status of the endpoint. For possible values of the status of an endpoint, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_EndpointSummary.html"
+     *        >EndpointSummary</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EndpointStatus
      */
@@ -186,13 +189,14 @@ public class EndpointMetadata implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The status of the endpoint. For possible values of the status of an endpoint, see
-     * <a>EndpointSummary$EndpointStatus</a>.
+     * The status of the endpoint. For possible values of the status of an endpoint, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_EndpointSummary.html">EndpointSummary</a>.
      * </p>
      * 
      * @param endpointStatus
-     *        The status of the endpoint. For possible values of the status of an endpoint, see
-     *        <a>EndpointSummary$EndpointStatus</a>.
+     *        The status of the endpoint. For possible values of the status of an endpoint, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_EndpointSummary.html"
+     *        >EndpointSummary</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EndpointStatus
      */

@@ -33,6 +33,8 @@ public class OnDeviceServiceConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TGWOnDeviceService").build();
     private static final MarshallingInfo<StructuredPojo> EKSONDEVICESERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EKSOnDeviceService").build();
+    private static final MarshallingInfo<StructuredPojo> S3ONDEVICESERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3OnDeviceService").build();
 
     private static final OnDeviceServiceConfigurationMarshaller instance = new OnDeviceServiceConfigurationMarshaller();
 
@@ -53,6 +55,7 @@ public class OnDeviceServiceConfigurationMarshaller {
             protocolMarshaller.marshall(onDeviceServiceConfiguration.getNFSOnDeviceService(), NFSONDEVICESERVICE_BINDING);
             protocolMarshaller.marshall(onDeviceServiceConfiguration.getTGWOnDeviceService(), TGWONDEVICESERVICE_BINDING);
             protocolMarshaller.marshall(onDeviceServiceConfiguration.getEKSOnDeviceService(), EKSONDEVICESERVICE_BINDING);
+            protocolMarshaller.marshall(onDeviceServiceConfiguration.getS3OnDeviceService(), S3ONDEVICESERVICE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

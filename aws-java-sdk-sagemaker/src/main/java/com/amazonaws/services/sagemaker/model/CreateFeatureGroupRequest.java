@@ -122,11 +122,14 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * You can turn the <code>OnlineStore</code> on or off by specifying <code>True</code> for the
-     * <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>; the default value is <code>False</code>.
+     * <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>.
      * </p>
      * <p>
      * You can also include an Amazon Web Services KMS key ID (<code>KMSKeyId</code>) for at-rest encryption of the
      * <code>OnlineStore</code>.
+     * </p>
+     * <p>
+     * The default value is <code>False</code>.
      * </p>
      */
     private OnlineStoreConfig onlineStoreConfig;
@@ -161,7 +164,9 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * <p>
-     * To learn more about this parameter, see <a>OfflineStoreConfig</a>.
+     * To learn more about this parameter, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OfflineStoreConfig.html"
+     * >OfflineStoreConfig</a>.
      * </p>
      */
     private OfflineStoreConfig offlineStoreConfig;
@@ -812,20 +817,25 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * You can turn the <code>OnlineStore</code> on or off by specifying <code>True</code> for the
-     * <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>; the default value is <code>False</code>.
+     * <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>.
      * </p>
      * <p>
      * You can also include an Amazon Web Services KMS key ID (<code>KMSKeyId</code>) for at-rest encryption of the
      * <code>OnlineStore</code>.
      * </p>
+     * <p>
+     * The default value is <code>False</code>.
+     * </p>
      * 
      * @param onlineStoreConfig
      *        You can turn the <code>OnlineStore</code> on or off by specifying <code>True</code> for the
-     *        <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>; the default value is
-     *        <code>False</code>.</p>
+     *        <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>.</p>
      *        <p>
      *        You can also include an Amazon Web Services KMS key ID (<code>KMSKeyId</code>) for at-rest encryption of
      *        the <code>OnlineStore</code>.
+     *        </p>
+     *        <p>
+     *        The default value is <code>False</code>.
      */
 
     public void setOnlineStoreConfig(OnlineStoreConfig onlineStoreConfig) {
@@ -835,19 +845,24 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * You can turn the <code>OnlineStore</code> on or off by specifying <code>True</code> for the
-     * <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>; the default value is <code>False</code>.
+     * <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>.
      * </p>
      * <p>
      * You can also include an Amazon Web Services KMS key ID (<code>KMSKeyId</code>) for at-rest encryption of the
      * <code>OnlineStore</code>.
      * </p>
+     * <p>
+     * The default value is <code>False</code>.
+     * </p>
      * 
      * @return You can turn the <code>OnlineStore</code> on or off by specifying <code>True</code> for the
-     *         <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>; the default value is
-     *         <code>False</code>.</p>
+     *         <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>.</p>
      *         <p>
      *         You can also include an Amazon Web Services KMS key ID (<code>KMSKeyId</code>) for at-rest encryption of
      *         the <code>OnlineStore</code>.
+     *         </p>
+     *         <p>
+     *         The default value is <code>False</code>.
      */
 
     public OnlineStoreConfig getOnlineStoreConfig() {
@@ -857,20 +872,25 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * You can turn the <code>OnlineStore</code> on or off by specifying <code>True</code> for the
-     * <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>; the default value is <code>False</code>.
+     * <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>.
      * </p>
      * <p>
      * You can also include an Amazon Web Services KMS key ID (<code>KMSKeyId</code>) for at-rest encryption of the
      * <code>OnlineStore</code>.
      * </p>
+     * <p>
+     * The default value is <code>False</code>.
+     * </p>
      * 
      * @param onlineStoreConfig
      *        You can turn the <code>OnlineStore</code> on or off by specifying <code>True</code> for the
-     *        <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>; the default value is
-     *        <code>False</code>.</p>
+     *        <code>EnableOnlineStore</code> flag in <code>OnlineStoreConfig</code>.</p>
      *        <p>
      *        You can also include an Amazon Web Services KMS key ID (<code>KMSKeyId</code>) for at-rest encryption of
      *        the <code>OnlineStore</code>.
+     *        </p>
+     *        <p>
+     *        The default value is <code>False</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -910,7 +930,9 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * <p>
-     * To learn more about this parameter, see <a>OfflineStoreConfig</a>.
+     * To learn more about this parameter, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OfflineStoreConfig.html"
+     * >OfflineStoreConfig</a>.
      * </p>
      * 
      * @param offlineStoreConfig
@@ -943,7 +965,9 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        </ul>
      *        <p>
-     *        To learn more about this parameter, see <a>OfflineStoreConfig</a>.
+     *        To learn more about this parameter, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OfflineStoreConfig.html"
+     *        >OfflineStoreConfig</a>.
      */
 
     public void setOfflineStoreConfig(OfflineStoreConfig offlineStoreConfig) {
@@ -981,7 +1005,9 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * <p>
-     * To learn more about this parameter, see <a>OfflineStoreConfig</a>.
+     * To learn more about this parameter, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OfflineStoreConfig.html"
+     * >OfflineStoreConfig</a>.
      * </p>
      * 
      * @return Use this to configure an <code>OfflineFeatureStore</code>. This parameter allows you to specify:</p>
@@ -1013,7 +1039,9 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *         </li>
      *         </ul>
      *         <p>
-     *         To learn more about this parameter, see <a>OfflineStoreConfig</a>.
+     *         To learn more about this parameter, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OfflineStoreConfig.html"
+     *         >OfflineStoreConfig</a>.
      */
 
     public OfflineStoreConfig getOfflineStoreConfig() {
@@ -1051,7 +1079,9 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * <p>
-     * To learn more about this parameter, see <a>OfflineStoreConfig</a>.
+     * To learn more about this parameter, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OfflineStoreConfig.html"
+     * >OfflineStoreConfig</a>.
      * </p>
      * 
      * @param offlineStoreConfig
@@ -1084,7 +1114,9 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        </ul>
      *        <p>
-     *        To learn more about this parameter, see <a>OfflineStoreConfig</a>.
+     *        To learn more about this parameter, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_OfflineStoreConfig.html"
+     *        >OfflineStoreConfig</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

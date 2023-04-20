@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum LongTermPricingType {
 
     OneYear("OneYear"),
-    ThreeYear("ThreeYear");
+    ThreeYear("ThreeYear"),
+    OneMonth("OneMonth");
 
     private String value;
 

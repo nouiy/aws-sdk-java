@@ -50,7 +50,8 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      * <code>PublicInternetOnly</code>.
      * </p>
      * <p>
-     * Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>.
+     * Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>, unless
+     * specified as part of the <code>DefaultUserSettings</code> for the domain.
      * </p>
      * <p>
      * Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studio. Therefore, the number of
@@ -150,7 +151,8 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      * <code>PublicInternetOnly</code>.
      * </p>
      * <p>
-     * Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>.
+     * Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>, unless
+     * specified as part of the <code>DefaultUserSettings</code> for the domain.
      * </p>
      * <p>
      * Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studio. Therefore, the number of
@@ -164,7 +166,7 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         <p>
      *         Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>
-     *         .
+     *         , unless specified as part of the <code>DefaultUserSettings</code> for the domain.
      *         </p>
      *         <p>
      *         Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studio. Therefore, the number
@@ -184,7 +186,8 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      * <code>PublicInternetOnly</code>.
      * </p>
      * <p>
-     * Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>.
+     * Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>, unless
+     * specified as part of the <code>DefaultUserSettings</code> for the domain.
      * </p>
      * <p>
      * Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studio. Therefore, the number of
@@ -198,7 +201,8 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      *        <code>PublicInternetOnly</code>.
      *        </p>
      *        <p>
-     *        Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>.
+     *        Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>,
+     *        unless specified as part of the <code>DefaultUserSettings</code> for the domain.
      *        </p>
      *        <p>
      *        Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studio. Therefore, the number
@@ -223,7 +227,8 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      * <code>PublicInternetOnly</code>.
      * </p>
      * <p>
-     * Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>.
+     * Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>, unless
+     * specified as part of the <code>DefaultUserSettings</code> for the domain.
      * </p>
      * <p>
      * Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studio. Therefore, the number of
@@ -242,7 +247,8 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      *        <code>PublicInternetOnly</code>.
      *        </p>
      *        <p>
-     *        Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>.
+     *        Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>,
+     *        unless specified as part of the <code>DefaultUserSettings</code> for the domain.
      *        </p>
      *        <p>
      *        Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studio. Therefore, the number
@@ -269,7 +275,8 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      * <code>PublicInternetOnly</code>.
      * </p>
      * <p>
-     * Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>.
+     * Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>, unless
+     * specified as part of the <code>DefaultUserSettings</code> for the domain.
      * </p>
      * <p>
      * Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studio. Therefore, the number of
@@ -283,7 +290,8 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      *        <code>PublicInternetOnly</code>.
      *        </p>
      *        <p>
-     *        Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>.
+     *        Required when the <code>CreateDomain.AppNetworkAccessType</code> parameter is set to <code>VpcOnly</code>,
+     *        unless specified as part of the <code>DefaultUserSettings</code> for the domain.
      *        </p>
      *        <p>
      *        Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studio. Therefore, the number

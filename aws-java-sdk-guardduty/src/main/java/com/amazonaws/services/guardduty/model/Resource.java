@@ -93,6 +93,12 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private RdsDbUserDetails rdsDbUserDetails;
+    /**
+     * <p>
+     * Contains information about the Lambda function that was involved in a finding.
+     * </p>
+     */
+    private LambdaDetails lambdaDetails;
 
     /**
      * <p>
@@ -563,6 +569,46 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains information about the Lambda function that was involved in a finding.
+     * </p>
+     * 
+     * @param lambdaDetails
+     *        Contains information about the Lambda function that was involved in a finding.
+     */
+
+    public void setLambdaDetails(LambdaDetails lambdaDetails) {
+        this.lambdaDetails = lambdaDetails;
+    }
+
+    /**
+     * <p>
+     * Contains information about the Lambda function that was involved in a finding.
+     * </p>
+     * 
+     * @return Contains information about the Lambda function that was involved in a finding.
+     */
+
+    public LambdaDetails getLambdaDetails() {
+        return this.lambdaDetails;
+    }
+
+    /**
+     * <p>
+     * Contains information about the Lambda function that was involved in a finding.
+     * </p>
+     * 
+     * @param lambdaDetails
+     *        Contains information about the Lambda function that was involved in a finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Resource withLambdaDetails(LambdaDetails lambdaDetails) {
+        setLambdaDetails(lambdaDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -595,7 +641,9 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
         if (getRdsDbInstanceDetails() != null)
             sb.append("RdsDbInstanceDetails: ").append(getRdsDbInstanceDetails()).append(",");
         if (getRdsDbUserDetails() != null)
-            sb.append("RdsDbUserDetails: ").append(getRdsDbUserDetails());
+            sb.append("RdsDbUserDetails: ").append(getRdsDbUserDetails()).append(",");
+        if (getLambdaDetails() != null)
+            sb.append("LambdaDetails: ").append(getLambdaDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -654,6 +702,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRdsDbUserDetails() != null && other.getRdsDbUserDetails().equals(this.getRdsDbUserDetails()) == false)
             return false;
+        if (other.getLambdaDetails() == null ^ this.getLambdaDetails() == null)
+            return false;
+        if (other.getLambdaDetails() != null && other.getLambdaDetails().equals(this.getLambdaDetails()) == false)
+            return false;
         return true;
     }
 
@@ -673,6 +725,7 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getContainerDetails() == null) ? 0 : getContainerDetails().hashCode());
         hashCode = prime * hashCode + ((getRdsDbInstanceDetails() == null) ? 0 : getRdsDbInstanceDetails().hashCode());
         hashCode = prime * hashCode + ((getRdsDbUserDetails() == null) ? 0 : getRdsDbUserDetails().hashCode());
+        hashCode = prime * hashCode + ((getLambdaDetails() == null) ? 0 : getLambdaDetails().hashCode());
         return hashCode;
     }
 

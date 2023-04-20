@@ -19,7 +19,16 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The settings for a post-call voice analytics task.
+ * Allows you to specify additional settings for your Call Analytics post-call request, including output locations for
+ * your redacted transcript, which IAM role to use, and which encryption key to use.
+ * </p>
+ * <p>
+ * <code>DataAccessRoleArn</code> and <code>OutputLocation</code> are required fields.
+ * </p>
+ * <p>
+ * <code>PostCallAnalyticsSettings</code> provides the same insights as a Call Analytics post-call transcription. For
+ * more information, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/tca-post-call.html">Post-call
+ * analytics with real-time transcriptions</a> in the <i>Amazon Transcribe Developer Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/PostCallAnalyticsSettings"
@@ -50,7 +59,7 @@ public class PostCallAnalyticsSettings implements Serializable, Cloneable, Struc
     private String contentRedactionOutput;
     /**
      * <p>
-     * The ID of the KMS (Key Management System) key used to encrypt the output.
+     * The ID of the KMS (Key Management Service) key used to encrypt the output.
      * </p>
      */
     private String outputEncryptionKMSKeyId;
@@ -208,11 +217,11 @@ public class PostCallAnalyticsSettings implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ID of the KMS (Key Management System) key used to encrypt the output.
+     * The ID of the KMS (Key Management Service) key used to encrypt the output.
      * </p>
      * 
      * @param outputEncryptionKMSKeyId
-     *        The ID of the KMS (Key Management System) key used to encrypt the output.
+     *        The ID of the KMS (Key Management Service) key used to encrypt the output.
      */
 
     public void setOutputEncryptionKMSKeyId(String outputEncryptionKMSKeyId) {
@@ -221,10 +230,10 @@ public class PostCallAnalyticsSettings implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ID of the KMS (Key Management System) key used to encrypt the output.
+     * The ID of the KMS (Key Management Service) key used to encrypt the output.
      * </p>
      * 
-     * @return The ID of the KMS (Key Management System) key used to encrypt the output.
+     * @return The ID of the KMS (Key Management Service) key used to encrypt the output.
      */
 
     public String getOutputEncryptionKMSKeyId() {
@@ -233,11 +242,11 @@ public class PostCallAnalyticsSettings implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ID of the KMS (Key Management System) key used to encrypt the output.
+     * The ID of the KMS (Key Management Service) key used to encrypt the output.
      * </p>
      * 
      * @param outputEncryptionKMSKeyId
-     *        The ID of the KMS (Key Management System) key used to encrypt the output.
+     *        The ID of the KMS (Key Management Service) key used to encrypt the output.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

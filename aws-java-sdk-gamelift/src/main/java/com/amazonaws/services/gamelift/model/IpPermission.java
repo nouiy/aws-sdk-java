@@ -22,7 +22,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an instance in
  * a fleet. New game sessions are assigned an IP address/port number combination, which must fall into the fleet's
  * allowed ranges. Fleets with custom game builds must have permissions explicitly set. For Realtime Servers fleets,
- * GameLift automatically opens two port ranges, one for TCP messaging and one for UDP.
+ * Amazon GameLift automatically opens two port ranges, one for TCP messaging and one for UDP.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/IpPermission" target="_top">AWS API
@@ -36,17 +36,23 @@ public class IpPermission implements Serializable, Cloneable, StructuredPojo {
      * A starting value for a range of allowed port numbers.
      * </p>
      * <p>
-     * For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     * For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     * </p>
+     * <p>
+     * For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      * </p>
      */
     private Integer fromPort;
     /**
      * <p>
-     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher
-     * than <code>FromPort</code>.
+     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be equal to
+     * or greater than <code>FromPort</code>.
      * </p>
      * <p>
-     * For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     * For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     * </p>
+     * <p>
+     * For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      * </p>
      */
     private Integer toPort;
@@ -70,13 +76,19 @@ public class IpPermission implements Serializable, Cloneable, StructuredPojo {
      * A starting value for a range of allowed port numbers.
      * </p>
      * <p>
-     * For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     * For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     * </p>
+     * <p>
+     * For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      * </p>
      * 
      * @param fromPort
      *        A starting value for a range of allowed port numbers.</p>
      *        <p>
-     *        For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     *        For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     *        </p>
+     *        <p>
+     *        For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      */
 
     public void setFromPort(Integer fromPort) {
@@ -88,12 +100,18 @@ public class IpPermission implements Serializable, Cloneable, StructuredPojo {
      * A starting value for a range of allowed port numbers.
      * </p>
      * <p>
-     * For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     * For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     * </p>
+     * <p>
+     * For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      * </p>
      * 
      * @return A starting value for a range of allowed port numbers.</p>
      *         <p>
-     *         For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     *         For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     *         </p>
+     *         <p>
+     *         For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      */
 
     public Integer getFromPort() {
@@ -105,13 +123,19 @@ public class IpPermission implements Serializable, Cloneable, StructuredPojo {
      * A starting value for a range of allowed port numbers.
      * </p>
      * <p>
-     * For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     * For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     * </p>
+     * <p>
+     * For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      * </p>
      * 
      * @param fromPort
      *        A starting value for a range of allowed port numbers.</p>
      *        <p>
-     *        For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     *        For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     *        </p>
+     *        <p>
+     *        For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -122,18 +146,24 @@ public class IpPermission implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher
-     * than <code>FromPort</code>.
+     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be equal to
+     * or greater than <code>FromPort</code>.
      * </p>
      * <p>
-     * For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     * For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     * </p>
+     * <p>
+     * For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      * </p>
      * 
      * @param toPort
      *        An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be
-     *        higher than <code>FromPort</code>.</p>
+     *        equal to or greater than <code>FromPort</code>.</p>
      *        <p>
-     *        For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     *        For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     *        </p>
+     *        <p>
+     *        For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      */
 
     public void setToPort(Integer toPort) {
@@ -142,17 +172,23 @@ public class IpPermission implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher
-     * than <code>FromPort</code>.
+     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be equal to
+     * or greater than <code>FromPort</code>.
      * </p>
      * <p>
-     * For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     * For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     * </p>
+     * <p>
+     * For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      * </p>
      * 
      * @return An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be
-     *         higher than <code>FromPort</code>.</p>
+     *         equal to or greater than <code>FromPort</code>.</p>
      *         <p>
-     *         For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     *         For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     *         </p>
+     *         <p>
+     *         For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      */
 
     public Integer getToPort() {
@@ -161,18 +197,24 @@ public class IpPermission implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher
-     * than <code>FromPort</code>.
+     * An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be equal to
+     * or greater than <code>FromPort</code>.
      * </p>
      * <p>
-     * For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     * For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     * </p>
+     * <p>
+     * For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      * </p>
      * 
      * @param toPort
      *        An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be
-     *        higher than <code>FromPort</code>.</p>
+     *        equal to or greater than <code>FromPort</code>.</p>
      *        <p>
-     *        For fleets using Windows and Linux builds, only ports 1026-60000 are valid.
+     *        For fleets using Linux builds, only ports <code>22</code> and <code>1026-60000</code> are valid.
+     *        </p>
+     *        <p>
+     *        For fleets using Windows builds, only ports <code>1026-60000</code> are valid.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

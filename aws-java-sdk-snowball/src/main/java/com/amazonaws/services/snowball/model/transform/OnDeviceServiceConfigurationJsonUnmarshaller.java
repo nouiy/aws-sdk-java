@@ -60,6 +60,10 @@ public class OnDeviceServiceConfigurationJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     onDeviceServiceConfiguration.setEKSOnDeviceService(EKSOnDeviceServiceConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("S3OnDeviceService", targetDepth)) {
+                    context.nextToken();
+                    onDeviceServiceConfiguration.setS3OnDeviceService(S3OnDeviceServiceConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

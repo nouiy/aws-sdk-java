@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure the holds the settings for recording audio and video.
+ * A structure that holds the settings for recording media.
  * </p>
  * 
  * @see <a

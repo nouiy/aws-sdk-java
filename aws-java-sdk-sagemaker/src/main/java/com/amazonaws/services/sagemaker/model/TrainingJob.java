@@ -108,7 +108,9 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Provides detailed information about the state of the training job. For detailed information about the secondary
-     * status of the training job, see <code>StatusMessage</code> under <a>SecondaryStatusTransition</a>.
+     * status of the training job, see <code>StatusMessage</code> under <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SecondaryStatusTransition.html"
+     * >SecondaryStatusTransition</a>.
      * </p>
      * <p>
      * SageMaker provides primary statuses and secondary statuses that apply to each of them:
@@ -259,8 +261,9 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
     private ResourceConfig resourceConfig;
     /**
      * <p>
-     * A <a>VpcConfig</a> object that specifies the VPC that this training job has access to. For more information, see
-     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
+     * A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a> object
+     * that specifies the VPC that this training job has access to. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
      * Virtual Private Cloud</a>.
      * </p>
      */
@@ -974,7 +977,9 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Provides detailed information about the state of the training job. For detailed information about the secondary
-     * status of the training job, see <code>StatusMessage</code> under <a>SecondaryStatusTransition</a>.
+     * status of the training job, see <code>StatusMessage</code> under <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SecondaryStatusTransition.html"
+     * >SecondaryStatusTransition</a>.
      * </p>
      * <p>
      * SageMaker provides primary statuses and secondary statuses that apply to each of them:
@@ -1081,8 +1086,9 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param secondaryStatus
      *        Provides detailed information about the state of the training job. For detailed information about the
-     *        secondary status of the training job, see <code>StatusMessage</code> under
-     *        <a>SecondaryStatusTransition</a>.</p>
+     *        secondary status of the training job, see <code>StatusMessage</code> under <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SecondaryStatusTransition.html"
+     *        >SecondaryStatusTransition</a>.</p>
      *        <p>
      *        SageMaker provides primary statuses and secondary statuses that apply to each of them:
      *        </p>
@@ -1195,7 +1201,9 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Provides detailed information about the state of the training job. For detailed information about the secondary
-     * status of the training job, see <code>StatusMessage</code> under <a>SecondaryStatusTransition</a>.
+     * status of the training job, see <code>StatusMessage</code> under <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SecondaryStatusTransition.html"
+     * >SecondaryStatusTransition</a>.
      * </p>
      * <p>
      * SageMaker provides primary statuses and secondary statuses that apply to each of them:
@@ -1301,8 +1309,9 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @return Provides detailed information about the state of the training job. For detailed information about the
-     *         secondary status of the training job, see <code>StatusMessage</code> under
-     *         <a>SecondaryStatusTransition</a>.</p>
+     *         secondary status of the training job, see <code>StatusMessage</code> under <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SecondaryStatusTransition.html"
+     *         >SecondaryStatusTransition</a>.</p>
      *         <p>
      *         SageMaker provides primary statuses and secondary statuses that apply to each of them:
      *         </p>
@@ -1415,7 +1424,9 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Provides detailed information about the state of the training job. For detailed information about the secondary
-     * status of the training job, see <code>StatusMessage</code> under <a>SecondaryStatusTransition</a>.
+     * status of the training job, see <code>StatusMessage</code> under <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SecondaryStatusTransition.html"
+     * >SecondaryStatusTransition</a>.
      * </p>
      * <p>
      * SageMaker provides primary statuses and secondary statuses that apply to each of them:
@@ -1522,8 +1533,9 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param secondaryStatus
      *        Provides detailed information about the state of the training job. For detailed information about the
-     *        secondary status of the training job, see <code>StatusMessage</code> under
-     *        <a>SecondaryStatusTransition</a>.</p>
+     *        secondary status of the training job, see <code>StatusMessage</code> under <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SecondaryStatusTransition.html"
+     *        >SecondaryStatusTransition</a>.</p>
      *        <p>
      *        SageMaker provides primary statuses and secondary statuses that apply to each of them:
      *        </p>
@@ -1638,7 +1650,9 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Provides detailed information about the state of the training job. For detailed information about the secondary
-     * status of the training job, see <code>StatusMessage</code> under <a>SecondaryStatusTransition</a>.
+     * status of the training job, see <code>StatusMessage</code> under <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SecondaryStatusTransition.html"
+     * >SecondaryStatusTransition</a>.
      * </p>
      * <p>
      * SageMaker provides primary statuses and secondary statuses that apply to each of them:
@@ -1745,8 +1759,9 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param secondaryStatus
      *        Provides detailed information about the state of the training job. For detailed information about the
-     *        secondary status of the training job, see <code>StatusMessage</code> under
-     *        <a>SecondaryStatusTransition</a>.</p>
+     *        secondary status of the training job, see <code>StatusMessage</code> under <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SecondaryStatusTransition.html"
+     *        >SecondaryStatusTransition</a>.</p>
      *        <p>
      *        SageMaker provides primary statuses and secondary statuses that apply to each of them:
      *        </p>
@@ -2204,15 +2219,17 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A <a>VpcConfig</a> object that specifies the VPC that this training job has access to. For more information, see
-     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
+     * A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a> object
+     * that specifies the VPC that this training job has access to. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
      * Virtual Private Cloud</a>.
      * </p>
      * 
      * @param vpcConfig
-     *        A <a>VpcConfig</a> object that specifies the VPC that this training job has access to. For more
-     *        information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training
-     *        Jobs by Using an Amazon Virtual Private Cloud</a>.
+     *        A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a>
+     *        object that specifies the VPC that this training job has access to. For more information, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an
+     *        Amazon Virtual Private Cloud</a>.
      */
 
     public void setVpcConfig(VpcConfig vpcConfig) {
@@ -2221,14 +2238,16 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A <a>VpcConfig</a> object that specifies the VPC that this training job has access to. For more information, see
-     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
+     * A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a> object
+     * that specifies the VPC that this training job has access to. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
      * Virtual Private Cloud</a>.
      * </p>
      * 
-     * @return A <a>VpcConfig</a> object that specifies the VPC that this training job has access to. For more
-     *         information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect
-     *         Training Jobs by Using an Amazon Virtual Private Cloud</a>.
+     * @return A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a>
+     *         object that specifies the VPC that this training job has access to. For more information, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an
+     *         Amazon Virtual Private Cloud</a>.
      */
 
     public VpcConfig getVpcConfig() {
@@ -2237,15 +2256,17 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A <a>VpcConfig</a> object that specifies the VPC that this training job has access to. For more information, see
-     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
+     * A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a> object
+     * that specifies the VPC that this training job has access to. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an Amazon
      * Virtual Private Cloud</a>.
      * </p>
      * 
      * @param vpcConfig
-     *        A <a>VpcConfig</a> object that specifies the VPC that this training job has access to. For more
-     *        information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training
-     *        Jobs by Using an Amazon Virtual Private Cloud</a>.
+     *        A <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html">VpcConfig</a>
+     *        object that specifies the VPC that this training job has access to. For more information, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html">Protect Training Jobs by Using an
+     *        Amazon Virtual Private Cloud</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

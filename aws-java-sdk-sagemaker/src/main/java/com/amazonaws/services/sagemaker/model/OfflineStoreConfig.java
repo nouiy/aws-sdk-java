@@ -45,7 +45,13 @@ public class OfflineStoreConfig implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Set to <code>True</code> to disable the automatic creation of an Amazon Web Services Glue table when configuring
-     * an <code>OfflineStore</code>.
+     * an <code>OfflineStore</code>. If set to <code>False</code>, Feature Store will name the <code>OfflineStore</code>
+     * Glue table following <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/tables-databases-columns-names.html">Athena's naming
+     * recommendations</a>.
+     * </p>
+     * <p>
+     * The default value is <code>False</code>.
      * </p>
      */
     private Boolean disableGlueTableCreation;
@@ -106,12 +112,23 @@ public class OfflineStoreConfig implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Set to <code>True</code> to disable the automatic creation of an Amazon Web Services Glue table when configuring
-     * an <code>OfflineStore</code>.
+     * an <code>OfflineStore</code>. If set to <code>False</code>, Feature Store will name the <code>OfflineStore</code>
+     * Glue table following <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/tables-databases-columns-names.html">Athena's naming
+     * recommendations</a>.
+     * </p>
+     * <p>
+     * The default value is <code>False</code>.
      * </p>
      * 
      * @param disableGlueTableCreation
      *        Set to <code>True</code> to disable the automatic creation of an Amazon Web Services Glue table when
-     *        configuring an <code>OfflineStore</code>.
+     *        configuring an <code>OfflineStore</code>. If set to <code>False</code>, Feature Store will name the
+     *        <code>OfflineStore</code> Glue table following <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/tables-databases-columns-names.html">Athena's naming
+     *        recommendations</a>.</p>
+     *        <p>
+     *        The default value is <code>False</code>.
      */
 
     public void setDisableGlueTableCreation(Boolean disableGlueTableCreation) {
@@ -121,11 +138,22 @@ public class OfflineStoreConfig implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Set to <code>True</code> to disable the automatic creation of an Amazon Web Services Glue table when configuring
-     * an <code>OfflineStore</code>.
+     * an <code>OfflineStore</code>. If set to <code>False</code>, Feature Store will name the <code>OfflineStore</code>
+     * Glue table following <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/tables-databases-columns-names.html">Athena's naming
+     * recommendations</a>.
+     * </p>
+     * <p>
+     * The default value is <code>False</code>.
      * </p>
      * 
      * @return Set to <code>True</code> to disable the automatic creation of an Amazon Web Services Glue table when
-     *         configuring an <code>OfflineStore</code>.
+     *         configuring an <code>OfflineStore</code>. If set to <code>False</code>, Feature Store will name the
+     *         <code>OfflineStore</code> Glue table following <a
+     *         href="https://docs.aws.amazon.com/athena/latest/ug/tables-databases-columns-names.html">Athena's naming
+     *         recommendations</a>.</p>
+     *         <p>
+     *         The default value is <code>False</code>.
      */
 
     public Boolean getDisableGlueTableCreation() {
@@ -135,12 +163,23 @@ public class OfflineStoreConfig implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Set to <code>True</code> to disable the automatic creation of an Amazon Web Services Glue table when configuring
-     * an <code>OfflineStore</code>.
+     * an <code>OfflineStore</code>. If set to <code>False</code>, Feature Store will name the <code>OfflineStore</code>
+     * Glue table following <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/tables-databases-columns-names.html">Athena's naming
+     * recommendations</a>.
+     * </p>
+     * <p>
+     * The default value is <code>False</code>.
      * </p>
      * 
      * @param disableGlueTableCreation
      *        Set to <code>True</code> to disable the automatic creation of an Amazon Web Services Glue table when
-     *        configuring an <code>OfflineStore</code>.
+     *        configuring an <code>OfflineStore</code>. If set to <code>False</code>, Feature Store will name the
+     *        <code>OfflineStore</code> Glue table following <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/tables-databases-columns-names.html">Athena's naming
+     *        recommendations</a>.</p>
+     *        <p>
+     *        The default value is <code>False</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -152,11 +191,22 @@ public class OfflineStoreConfig implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Set to <code>True</code> to disable the automatic creation of an Amazon Web Services Glue table when configuring
-     * an <code>OfflineStore</code>.
+     * an <code>OfflineStore</code>. If set to <code>False</code>, Feature Store will name the <code>OfflineStore</code>
+     * Glue table following <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/tables-databases-columns-names.html">Athena's naming
+     * recommendations</a>.
+     * </p>
+     * <p>
+     * The default value is <code>False</code>.
      * </p>
      * 
      * @return Set to <code>True</code> to disable the automatic creation of an Amazon Web Services Glue table when
-     *         configuring an <code>OfflineStore</code>.
+     *         configuring an <code>OfflineStore</code>. If set to <code>False</code>, Feature Store will name the
+     *         <code>OfflineStore</code> Glue table following <a
+     *         href="https://docs.aws.amazon.com/athena/latest/ug/tables-databases-columns-names.html">Athena's naming
+     *         recommendations</a>.</p>
+     *         <p>
+     *         The default value is <code>False</code>.
      */
 
     public Boolean isDisableGlueTableCreation() {
