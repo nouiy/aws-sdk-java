@@ -1,3 +1,8 @@
+# __1.12.457__ __2023-04-26__
+## __Amazon OpenSearch Ingestion__
+  - ### Features
+    - Initial release for OpenSearch Ingestion
+
 # __1.12.456__ __2023-04-25__
 ## __AWS DataSync__
   - ### Features
