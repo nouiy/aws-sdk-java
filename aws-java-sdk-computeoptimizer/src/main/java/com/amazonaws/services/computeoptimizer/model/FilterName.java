@@ -22,7 +22,8 @@ public enum FilterName {
 
     Finding("Finding"),
     FindingReasonCodes("FindingReasonCodes"),
-    RecommendationSourceType("RecommendationSourceType");
+    RecommendationSourceType("RecommendationSourceType"),
+    InferredWorkloadTypes("InferredWorkloadTypes");
 
     private String value;
 

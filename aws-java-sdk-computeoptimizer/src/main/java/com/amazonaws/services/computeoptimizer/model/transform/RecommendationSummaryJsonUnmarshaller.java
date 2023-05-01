@@ -70,6 +70,13 @@ public class RecommendationSummaryJsonUnmarshaller implements Unmarshaller<Recom
                     context.nextToken();
                     recommendationSummary.setCurrentPerformanceRiskRatings(CurrentPerformanceRiskRatingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("inferredWorkloadSavings", targetDepth)) {
+                    context.nextToken();
+                    recommendationSummary.setInferredWorkloadSavings(new ListUnmarshaller<InferredWorkloadSaving>(InferredWorkloadSavingJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

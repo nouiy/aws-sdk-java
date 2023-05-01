@@ -158,6 +158,16 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * <code>Redis</code> - Infers that Redis might be running on the instances.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      */
     private java.util.List<String> inferredWorkloadTypes;
@@ -900,6 +910,16 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * <code>Redis</code> - Infers that Redis might be running on the instances.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The applications that might be running on the instances in the Auto Scaling group as inferred by Compute
@@ -941,6 +961,16 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      *         <li>
      *         <p>
      *         <code>Redis</code> - Infers that Redis might be running on the instances.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
      *         </p>
      *         </li>
      * @see InferredWorkloadType
@@ -994,6 +1024,16 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * <code>Redis</code> - Infers that Redis might be running on the instances.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param inferredWorkloadTypes
@@ -1036,6 +1076,16 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        <code>Redis</code> - Infers that Redis might be running on the instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
      *        </p>
      *        </li>
      * @see InferredWorkloadType
@@ -1094,6 +1144,16 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * <code>Redis</code> - Infers that Redis might be running on the instances.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1141,6 +1201,16 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        <code>Redis</code> - Infers that Redis might be running on the instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1201,6 +1271,16 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * <code>Redis</code> - Infers that Redis might be running on the instances.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param inferredWorkloadTypes
@@ -1243,6 +1323,16 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        <code>Redis</code> - Infers that Redis might be running on the instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1298,6 +1388,16 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      * <code>Redis</code> - Infers that Redis might be running on the instances.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param inferredWorkloadTypes
@@ -1340,6 +1440,16 @@ public class AutoScalingGroupRecommendation implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        <code>Redis</code> - Infers that Redis might be running on the instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

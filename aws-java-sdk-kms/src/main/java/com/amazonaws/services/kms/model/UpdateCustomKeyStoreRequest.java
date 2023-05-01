@@ -37,6 +37,12 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * Changes the friendly name of the custom key store to the value that you specify. The custom key store name must
      * be unique in the Amazon Web Services account.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * To change this value, an CloudHSM key store must be disconnected. An external key store can be connected or
      * disconnected.
@@ -224,6 +230,12 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * Changes the friendly name of the custom key store to the value that you specify. The custom key store name must
      * be unique in the Amazon Web Services account.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * To change this value, an CloudHSM key store must be disconnected. An external key store can be connected or
      * disconnected.
@@ -231,7 +243,12 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param newCustomKeyStoreName
      *        Changes the friendly name of the custom key store to the value that you specify. The custom key store name
-     *        must be unique in the Amazon Web Services account.</p>
+     *        must be unique in the Amazon Web Services account.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important>
      *        <p>
      *        To change this value, an CloudHSM key store must be disconnected. An external key store can be connected
      *        or disconnected.
@@ -246,13 +263,24 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * Changes the friendly name of the custom key store to the value that you specify. The custom key store name must
      * be unique in the Amazon Web Services account.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * To change this value, an CloudHSM key store must be disconnected. An external key store can be connected or
      * disconnected.
      * </p>
      * 
      * @return Changes the friendly name of the custom key store to the value that you specify. The custom key store
-     *         name must be unique in the Amazon Web Services account.</p>
+     *         name must be unique in the Amazon Web Services account.</p> <important>
+     *         <p>
+     *         Do not include confidential or sensitive information in this field. This field may be displayed in
+     *         plaintext in CloudTrail logs and other output.
+     *         </p>
+     *         </important>
      *         <p>
      *         To change this value, an CloudHSM key store must be disconnected. An external key store can be connected
      *         or disconnected.
@@ -267,6 +295,12 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * Changes the friendly name of the custom key store to the value that you specify. The custom key store name must
      * be unique in the Amazon Web Services account.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * To change this value, an CloudHSM key store must be disconnected. An external key store can be connected or
      * disconnected.
@@ -274,7 +308,12 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param newCustomKeyStoreName
      *        Changes the friendly name of the custom key store to the value that you specify. The custom key store name
-     *        must be unique in the Amazon Web Services account.</p>
+     *        must be unique in the Amazon Web Services account.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important>
      *        <p>
      *        To change this value, an CloudHSM key store must be disconnected. An external key store can be connected
      *        or disconnected.

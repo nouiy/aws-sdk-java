@@ -146,7 +146,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
      * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current instance during the look-back
      * period.
      * </p>
      * </li>
@@ -334,6 +334,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Kafka</code> - Infers that Kafka might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      */
     private java.util.List<String> inferredWorkloadTypes;
@@ -343,6 +348,12 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * </p>
      */
     private String instanceState;
+    /**
+     * <p>
+     * A list of tags assigned to your Amazon EC2 instance recommendations.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -840,7 +851,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
      * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current instance during the look-back
      * period.
      * </p>
      * </li>
@@ -995,7 +1006,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *         <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't
      *         meet the performance requirements of your workload and there is an alternative instance type that
      *         provides better EBS throughput performance. This is identified by analyzing the
-     *         <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the
+     *         <code>VolumeReadBytes</code> and <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the
      *         current instance during the look-back period.
      *         </p>
      *         </li>
@@ -1162,7 +1173,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
      * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current instance during the look-back
      * period.
      * </p>
      * </li>
@@ -1318,8 +1329,8 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't
      *        meet the performance requirements of your workload and there is an alternative instance type that provides
      *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     *        <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the
-     *        look-back period.
+     *        <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current instance during the look-back
+     *        period.
      *        </p>
      *        </li>
      *        <li>
@@ -1490,7 +1501,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
      * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current instance during the look-back
      * period.
      * </p>
      * </li>
@@ -1651,8 +1662,8 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't
      *        meet the performance requirements of your workload and there is an alternative instance type that provides
      *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     *        <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the
-     *        look-back period.
+     *        <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current instance during the look-back
+     *        period.
      *        </p>
      *        </li>
      *        <li>
@@ -1825,7 +1836,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
      * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current instance during the look-back
      * period.
      * </p>
      * </li>
@@ -1981,8 +1992,8 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't
      *        meet the performance requirements of your workload and there is an alternative instance type that provides
      *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     *        <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the
-     *        look-back period.
+     *        <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current instance during the look-back
+     *        period.
      *        </p>
      *        </li>
      *        <li>
@@ -2150,7 +2161,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't meet
      * the performance requirements of your workload and there is an alternative instance type that provides better EBS
      * throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     * <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the look-back
+     * <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current instance during the look-back
      * period.
      * </p>
      * </li>
@@ -2306,8 +2317,8 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <b> <code>EBSThroughputUnderprovisioned</code> </b> — The instance’s EBS throughput configuration doesn't
      *        meet the performance requirements of your workload and there is an alternative instance type that provides
      *        better EBS throughput performance. This is identified by analyzing the <code>VolumeReadBytes</code> and
-     *        <code>VolumeWriteBytes</code>&gt; metrics of EBS volumes attached to the current instance during the
-     *        look-back period.
+     *        <code>VolumeWriteBytes</code> metrics of EBS volumes attached to the current instance during the look-back
+     *        period.
      *        </p>
      *        </li>
      *        <li>
@@ -2867,6 +2878,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Kafka</code> - Infers that Kafka might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The applications that might be running on the instance as inferred by Compute Optimizer.</p>
@@ -2912,6 +2928,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *         <li>
      *         <p>
      *         <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
      *         </p>
      *         </li>
      * @see InferredWorkloadType
@@ -2969,6 +2990,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Kafka</code> - Infers that Kafka might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param inferredWorkloadTypes
@@ -3015,6 +3041,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <li>
      *        <p>
      *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
      *        </p>
      *        </li>
      * @see InferredWorkloadType
@@ -3077,6 +3108,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Kafka</code> - Infers that Kafka might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -3128,6 +3164,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <li>
      *        <p>
      *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3192,6 +3233,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Kafka</code> - Infers that Kafka might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param inferredWorkloadTypes
@@ -3238,6 +3284,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <li>
      *        <p>
      *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3297,6 +3348,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Kafka</code> - Infers that Kafka might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param inferredWorkloadTypes
@@ -3343,6 +3399,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <li>
      *        <p>
      *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SQLServer</code> - Infers that SQLServer might be running on the instance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3422,6 +3483,76 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * A list of tags assigned to your Amazon EC2 instance recommendations.
+     * </p>
+     * 
+     * @return A list of tags assigned to your Amazon EC2 instance recommendations.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A list of tags assigned to your Amazon EC2 instance recommendations.
+     * </p>
+     * 
+     * @param tags
+     *        A list of tags assigned to your Amazon EC2 instance recommendations.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * A list of tags assigned to your Amazon EC2 instance recommendations.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        A list of tags assigned to your Amazon EC2 instance recommendations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstanceRecommendation withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of tags assigned to your Amazon EC2 instance recommendations.
+     * </p>
+     * 
+     * @param tags
+     *        A list of tags assigned to your Amazon EC2 instance recommendations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstanceRecommendation withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3462,7 +3593,9 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
         if (getInferredWorkloadTypes() != null)
             sb.append("InferredWorkloadTypes: ").append(getInferredWorkloadTypes()).append(",");
         if (getInstanceState() != null)
-            sb.append("InstanceState: ").append(getInstanceState());
+            sb.append("InstanceState: ").append(getInstanceState()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -3538,6 +3671,10 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
             return false;
         if (other.getInstanceState() != null && other.getInstanceState().equals(this.getInstanceState()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -3561,6 +3698,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getEffectiveRecommendationPreferences() == null) ? 0 : getEffectiveRecommendationPreferences().hashCode());
         hashCode = prime * hashCode + ((getInferredWorkloadTypes() == null) ? 0 : getInferredWorkloadTypes().hashCode());
         hashCode = prime * hashCode + ((getInstanceState() == null) ? 0 : getInstanceState().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

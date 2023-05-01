@@ -179,6 +179,12 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A description of the KMS key. The default value is an empty string (no description).
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * The description is not a shared property of multi-Region keys. You can specify the same description or a
      * different description for each key in a set of related multi-Region keys. KMS does not synchronize this property.
@@ -190,7 +196,12 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Assigns one or more tags to the replica key. Use this parameter to tag the KMS key when it is created. To tag an
      * existing KMS key, use the <a>TagResource</a> operation.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important> <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key Management
@@ -1177,13 +1188,24 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A description of the KMS key. The default value is an empty string (no description).
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * The description is not a shared property of multi-Region keys. You can specify the same description or a
      * different description for each key in a set of related multi-Region keys. KMS does not synchronize this property.
      * </p>
      * 
      * @param description
-     *        A description of the KMS key. The default value is an empty string (no description).</p>
+     *        A description of the KMS key. The default value is an empty string (no description).</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important>
      *        <p>
      *        The description is not a shared property of multi-Region keys. You can specify the same description or a
      *        different description for each key in a set of related multi-Region keys. KMS does not synchronize this
@@ -1198,12 +1220,23 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A description of the KMS key. The default value is an empty string (no description).
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * The description is not a shared property of multi-Region keys. You can specify the same description or a
      * different description for each key in a set of related multi-Region keys. KMS does not synchronize this property.
      * </p>
      * 
-     * @return A description of the KMS key. The default value is an empty string (no description).</p>
+     * @return A description of the KMS key. The default value is an empty string (no description).</p> <important>
+     *         <p>
+     *         Do not include confidential or sensitive information in this field. This field may be displayed in
+     *         plaintext in CloudTrail logs and other output.
+     *         </p>
+     *         </important>
      *         <p>
      *         The description is not a shared property of multi-Region keys. You can specify the same description or a
      *         different description for each key in a set of related multi-Region keys. KMS does not synchronize this
@@ -1218,13 +1251,24 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A description of the KMS key. The default value is an empty string (no description).
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * The description is not a shared property of multi-Region keys. You can specify the same description or a
      * different description for each key in a set of related multi-Region keys. KMS does not synchronize this property.
      * </p>
      * 
      * @param description
-     *        A description of the KMS key. The default value is an empty string (no description).</p>
+     *        A description of the KMS key. The default value is an empty string (no description).</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important>
      *        <p>
      *        The description is not a shared property of multi-Region keys. You can specify the same description or a
      *        different description for each key in a set of related multi-Region keys. KMS does not synchronize this
@@ -1242,7 +1286,12 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Assigns one or more tags to the replica key. Use this parameter to tag the KMS key when it is created. To tag an
      * existing KMS key, use the <a>TagResource</a> operation.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important> <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key Management
@@ -1271,7 +1320,12 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @return Assigns one or more tags to the replica key. Use this parameter to tag the KMS key when it is created. To
-     *         tag an existing KMS key, use the <a>TagResource</a> operation.</p> <note>
+     *         tag an existing KMS key, use the <a>TagResource</a> operation.</p> <important>
+     *         <p>
+     *         Do not include confidential or sensitive information in this field. This field may be displayed in
+     *         plaintext in CloudTrail logs and other output.
+     *         </p>
+     *         </important> <note>
      *         <p>
      *         Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key
@@ -1312,7 +1366,12 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Assigns one or more tags to the replica key. Use this parameter to tag the KMS key when it is created. To tag an
      * existing KMS key, use the <a>TagResource</a> operation.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important> <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key Management
@@ -1342,7 +1401,12 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param tags
      *        Assigns one or more tags to the replica key. Use this parameter to tag the KMS key when it is created. To
-     *        tag an existing KMS key, use the <a>TagResource</a> operation.</p> <note>
+     *        tag an existing KMS key, use the <a>TagResource</a> operation.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important> <note>
      *        <p>
      *        Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key
@@ -1385,7 +1449,12 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Assigns one or more tags to the replica key. Use this parameter to tag the KMS key when it is created. To tag an
      * existing KMS key, use the <a>TagResource</a> operation.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important> <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key Management
@@ -1420,7 +1489,12 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param tags
      *        Assigns one or more tags to the replica key. Use this parameter to tag the KMS key when it is created. To
-     *        tag an existing KMS key, use the <a>TagResource</a> operation.</p> <note>
+     *        tag an existing KMS key, use the <a>TagResource</a> operation.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important> <note>
      *        <p>
      *        Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key
@@ -1465,7 +1539,12 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Assigns one or more tags to the replica key. Use this parameter to tag the KMS key when it is created. To tag an
      * existing KMS key, use the <a>TagResource</a> operation.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important> <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key Management
@@ -1495,7 +1574,12 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param tags
      *        Assigns one or more tags to the replica key. Use this parameter to tag the KMS key when it is created. To
-     *        tag an existing KMS key, use the <a>TagResource</a> operation.</p> <note>
+     *        tag an existing KMS key, use the <a>TagResource</a> operation.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important> <note>
      *        <p>
      *        Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key

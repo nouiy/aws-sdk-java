@@ -29,6 +29,12 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * Specifies the encryption context that will be used when encrypting the private key in the data key pair.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
@@ -109,11 +115,45 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> grantTokens;
+    /**
+     * <p>
+     * A signed <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitro-enclave-how.html#term-attestdoc">attestation
+     * document</a> from an Amazon Web Services Nitro enclave and the encryption algorithm to use with the enclave's
+     * public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
+     * </p>
+     * <p>
+     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
+     * parameter, use the <a
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web Services
+     * Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     * </p>
+     * <p>
+     * When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts the
+     * plaintext private data key under the public key in the attestation document, and returns the resulting ciphertext
+     * in the <code>CiphertextForRecipient</code> field in the response. This ciphertext can be decrypted only with the
+     * private key in the enclave. The <code>CiphertextBlob</code> field in the response contains a copy of the private
+     * data key encrypted under the KMS key specified by the <code>KeyId</code> parameter. The
+     * <code>PrivateKeyPlaintext</code> field in the response is null or empty.
+     * </p>
+     * <p>
+     * For information about the interaction between KMS and Amazon Web Services Nitro Enclaves, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/services-nitro-enclaves.html">How Amazon Web Services
+     * Nitro Enclaves uses KMS</a> in the <i>Key Management Service Developer Guide</i>.
+     * </p>
+     */
+    private RecipientInfo recipient;
 
     /**
      * <p>
      * Specifies the encryption context that will be used when encrypting the private key in the data key pair.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
@@ -128,7 +168,12 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @return Specifies the encryption context that will be used when encrypting the private key in the data key
-     *         pair.</p>
+     *         pair.</p> <important>
+     *         <p>
+     *         Do not include confidential or sensitive information in this field. This field may be displayed in
+     *         plaintext in CloudTrail logs and other output.
+     *         </p>
+     *         </important>
      *         <p>
      *         An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      *         authenticated data. When you use an encryption context to encrypt data, you must specify the same (an
@@ -153,6 +198,12 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * Specifies the encryption context that will be used when encrypting the private key in the data key pair.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
@@ -168,7 +219,12 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @param encryptionContext
      *        Specifies the encryption context that will be used when encrypting the private key in the data key
-     *        pair.</p>
+     *        pair.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important>
      *        <p>
      *        An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      *        authenticated data. When you use an encryption context to encrypt data, you must specify the same (an
@@ -190,6 +246,12 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * Specifies the encryption context that will be used when encrypting the private key in the data key pair.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
@@ -205,7 +267,12 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @param encryptionContext
      *        Specifies the encryption context that will be used when encrypting the private key in the data key
-     *        pair.</p>
+     *        pair.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important>
      *        <p>
      *        An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      *        authenticated data. When you use an encryption context to encrypt data, you must specify the same (an
@@ -731,6 +798,179 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * A signed <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitro-enclave-how.html#term-attestdoc">attestation
+     * document</a> from an Amazon Web Services Nitro enclave and the encryption algorithm to use with the enclave's
+     * public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
+     * </p>
+     * <p>
+     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
+     * parameter, use the <a
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web Services
+     * Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     * </p>
+     * <p>
+     * When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts the
+     * plaintext private data key under the public key in the attestation document, and returns the resulting ciphertext
+     * in the <code>CiphertextForRecipient</code> field in the response. This ciphertext can be decrypted only with the
+     * private key in the enclave. The <code>CiphertextBlob</code> field in the response contains a copy of the private
+     * data key encrypted under the KMS key specified by the <code>KeyId</code> parameter. The
+     * <code>PrivateKeyPlaintext</code> field in the response is null or empty.
+     * </p>
+     * <p>
+     * For information about the interaction between KMS and Amazon Web Services Nitro Enclaves, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/services-nitro-enclaves.html">How Amazon Web Services
+     * Nitro Enclaves uses KMS</a> in the <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * 
+     * @param recipient
+     *        A signed <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitro-enclave-how.html#term-attestdoc"
+     *        >attestation document</a> from an Amazon Web Services Nitro enclave and the encryption algorithm to use
+     *        with the enclave's public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
+     *        </p>
+     *        <p>
+     *        This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
+     *        parameter, use the <a
+     *        href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web
+     *        Services Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     *        </p>
+     *        <p>
+     *        When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts
+     *        the plaintext private data key under the public key in the attestation document, and returns the resulting
+     *        ciphertext in the <code>CiphertextForRecipient</code> field in the response. This ciphertext can be
+     *        decrypted only with the private key in the enclave. The <code>CiphertextBlob</code> field in the response
+     *        contains a copy of the private data key encrypted under the KMS key specified by the <code>KeyId</code>
+     *        parameter. The <code>PrivateKeyPlaintext</code> field in the response is null or empty.
+     *        </p>
+     *        <p>
+     *        For information about the interaction between KMS and Amazon Web Services Nitro Enclaves, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/services-nitro-enclaves.html">How Amazon Web
+     *        Services Nitro Enclaves uses KMS</a> in the <i>Key Management Service Developer Guide</i>.
+     */
+
+    public void setRecipient(RecipientInfo recipient) {
+        this.recipient = recipient;
+    }
+
+    /**
+     * <p>
+     * A signed <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitro-enclave-how.html#term-attestdoc">attestation
+     * document</a> from an Amazon Web Services Nitro enclave and the encryption algorithm to use with the enclave's
+     * public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
+     * </p>
+     * <p>
+     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
+     * parameter, use the <a
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web Services
+     * Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     * </p>
+     * <p>
+     * When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts the
+     * plaintext private data key under the public key in the attestation document, and returns the resulting ciphertext
+     * in the <code>CiphertextForRecipient</code> field in the response. This ciphertext can be decrypted only with the
+     * private key in the enclave. The <code>CiphertextBlob</code> field in the response contains a copy of the private
+     * data key encrypted under the KMS key specified by the <code>KeyId</code> parameter. The
+     * <code>PrivateKeyPlaintext</code> field in the response is null or empty.
+     * </p>
+     * <p>
+     * For information about the interaction between KMS and Amazon Web Services Nitro Enclaves, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/services-nitro-enclaves.html">How Amazon Web Services
+     * Nitro Enclaves uses KMS</a> in the <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * 
+     * @return A signed <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitro-enclave-how.html#term-attestdoc"
+     *         >attestation document</a> from an Amazon Web Services Nitro enclave and the encryption algorithm to use
+     *         with the enclave's public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
+     *         </p>
+     *         <p>
+     *         This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include
+     *         this parameter, use the <a
+     *         href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web
+     *         Services Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     *         </p>
+     *         <p>
+     *         When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts
+     *         the plaintext private data key under the public key in the attestation document, and returns the
+     *         resulting ciphertext in the <code>CiphertextForRecipient</code> field in the response. This ciphertext
+     *         can be decrypted only with the private key in the enclave. The <code>CiphertextBlob</code> field in the
+     *         response contains a copy of the private data key encrypted under the KMS key specified by the
+     *         <code>KeyId</code> parameter. The <code>PrivateKeyPlaintext</code> field in the response is null or
+     *         empty.
+     *         </p>
+     *         <p>
+     *         For information about the interaction between KMS and Amazon Web Services Nitro Enclaves, see <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/services-nitro-enclaves.html">How Amazon Web
+     *         Services Nitro Enclaves uses KMS</a> in the <i>Key Management Service Developer Guide</i>.
+     */
+
+    public RecipientInfo getRecipient() {
+        return this.recipient;
+    }
+
+    /**
+     * <p>
+     * A signed <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitro-enclave-how.html#term-attestdoc">attestation
+     * document</a> from an Amazon Web Services Nitro enclave and the encryption algorithm to use with the enclave's
+     * public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
+     * </p>
+     * <p>
+     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
+     * parameter, use the <a
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web Services
+     * Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     * </p>
+     * <p>
+     * When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts the
+     * plaintext private data key under the public key in the attestation document, and returns the resulting ciphertext
+     * in the <code>CiphertextForRecipient</code> field in the response. This ciphertext can be decrypted only with the
+     * private key in the enclave. The <code>CiphertextBlob</code> field in the response contains a copy of the private
+     * data key encrypted under the KMS key specified by the <code>KeyId</code> parameter. The
+     * <code>PrivateKeyPlaintext</code> field in the response is null or empty.
+     * </p>
+     * <p>
+     * For information about the interaction between KMS and Amazon Web Services Nitro Enclaves, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/services-nitro-enclaves.html">How Amazon Web Services
+     * Nitro Enclaves uses KMS</a> in the <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * 
+     * @param recipient
+     *        A signed <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitro-enclave-how.html#term-attestdoc"
+     *        >attestation document</a> from an Amazon Web Services Nitro enclave and the encryption algorithm to use
+     *        with the enclave's public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
+     *        </p>
+     *        <p>
+     *        This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
+     *        parameter, use the <a
+     *        href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web
+     *        Services Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     *        </p>
+     *        <p>
+     *        When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts
+     *        the plaintext private data key under the public key in the attestation document, and returns the resulting
+     *        ciphertext in the <code>CiphertextForRecipient</code> field in the response. This ciphertext can be
+     *        decrypted only with the private key in the enclave. The <code>CiphertextBlob</code> field in the response
+     *        contains a copy of the private data key encrypted under the KMS key specified by the <code>KeyId</code>
+     *        parameter. The <code>PrivateKeyPlaintext</code> field in the response is null or empty.
+     *        </p>
+     *        <p>
+     *        For information about the interaction between KMS and Amazon Web Services Nitro Enclaves, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/services-nitro-enclaves.html">How Amazon Web
+     *        Services Nitro Enclaves uses KMS</a> in the <i>Key Management Service Developer Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GenerateDataKeyPairRequest withRecipient(RecipientInfo recipient) {
+        setRecipient(recipient);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -749,7 +989,9 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
         if (getKeyPairSpec() != null)
             sb.append("KeyPairSpec: ").append(getKeyPairSpec()).append(",");
         if (getGrantTokens() != null)
-            sb.append("GrantTokens: ").append(getGrantTokens());
+            sb.append("GrantTokens: ").append(getGrantTokens()).append(",");
+        if (getRecipient() != null)
+            sb.append("Recipient: ").append(getRecipient());
         sb.append("}");
         return sb.toString();
     }
@@ -780,6 +1022,10 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getGrantTokens() != null && other.getGrantTokens().equals(this.getGrantTokens()) == false)
             return false;
+        if (other.getRecipient() == null ^ this.getRecipient() == null)
+            return false;
+        if (other.getRecipient() != null && other.getRecipient().equals(this.getRecipient()) == false)
+            return false;
         return true;
     }
 
@@ -792,6 +1038,7 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getKeyId() == null) ? 0 : getKeyId().hashCode());
         hashCode = prime * hashCode + ((getKeyPairSpec() == null) ? 0 : getKeyPairSpec().hashCode());
         hashCode = prime * hashCode + ((getGrantTokens() == null) ? 0 : getGrantTokens().hashCode());
+        hashCode = prime * hashCode + ((getRecipient() == null) ? 0 : getRecipient().hashCode());
         return hashCode;
     }
 

@@ -71,12 +71,15 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String policy;
     /**
      * <p>
-     * A description of the KMS key.
+     * A description of the KMS key. Use a description that helps you decide whether the KMS key is appropriate for a
+     * task. The default value is an empty string (no description).
      * </p>
+     * <important>
      * <p>
-     * Use a description that helps you decide whether the KMS key is appropriate for a task. The default value is an
-     * empty string (no description).
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
      * </p>
+     * </important>
      * <p>
      * To set or change the description after the key is created, use <a>UpdateKeyDescription</a>.
      * </p>
@@ -349,7 +352,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Assigns one or more tags to the KMS key. Use this parameter to tag the KMS key when it is created. To tag an
      * existing KMS key, use the <a>TagResource</a> operation.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important> <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key Management
@@ -710,22 +718,27 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A description of the KMS key.
+     * A description of the KMS key. Use a description that helps you decide whether the KMS key is appropriate for a
+     * task. The default value is an empty string (no description).
      * </p>
+     * <important>
      * <p>
-     * Use a description that helps you decide whether the KMS key is appropriate for a task. The default value is an
-     * empty string (no description).
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
      * </p>
+     * </important>
      * <p>
      * To set or change the description after the key is created, use <a>UpdateKeyDescription</a>.
      * </p>
      * 
      * @param description
-     *        A description of the KMS key.</p>
+     *        A description of the KMS key. Use a description that helps you decide whether the KMS key is appropriate
+     *        for a task. The default value is an empty string (no description).</p> <important>
      *        <p>
-     *        Use a description that helps you decide whether the KMS key is appropriate for a task. The default value
-     *        is an empty string (no description).
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
      *        </p>
+     *        </important>
      *        <p>
      *        To set or change the description after the key is created, use <a>UpdateKeyDescription</a>.
      */
@@ -736,21 +749,26 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A description of the KMS key.
+     * A description of the KMS key. Use a description that helps you decide whether the KMS key is appropriate for a
+     * task. The default value is an empty string (no description).
      * </p>
+     * <important>
      * <p>
-     * Use a description that helps you decide whether the KMS key is appropriate for a task. The default value is an
-     * empty string (no description).
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
      * </p>
+     * </important>
      * <p>
      * To set or change the description after the key is created, use <a>UpdateKeyDescription</a>.
      * </p>
      * 
-     * @return A description of the KMS key.</p>
+     * @return A description of the KMS key. Use a description that helps you decide whether the KMS key is appropriate
+     *         for a task. The default value is an empty string (no description).</p> <important>
      *         <p>
-     *         Use a description that helps you decide whether the KMS key is appropriate for a task. The default value
-     *         is an empty string (no description).
+     *         Do not include confidential or sensitive information in this field. This field may be displayed in
+     *         plaintext in CloudTrail logs and other output.
      *         </p>
+     *         </important>
      *         <p>
      *         To set or change the description after the key is created, use <a>UpdateKeyDescription</a>.
      */
@@ -761,22 +779,27 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A description of the KMS key.
+     * A description of the KMS key. Use a description that helps you decide whether the KMS key is appropriate for a
+     * task. The default value is an empty string (no description).
      * </p>
+     * <important>
      * <p>
-     * Use a description that helps you decide whether the KMS key is appropriate for a task. The default value is an
-     * empty string (no description).
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
      * </p>
+     * </important>
      * <p>
      * To set or change the description after the key is created, use <a>UpdateKeyDescription</a>.
      * </p>
      * 
      * @param description
-     *        A description of the KMS key.</p>
+     *        A description of the KMS key. Use a description that helps you decide whether the KMS key is appropriate
+     *        for a task. The default value is an empty string (no description).</p> <important>
      *        <p>
-     *        Use a description that helps you decide whether the KMS key is appropriate for a task. The default value
-     *        is an empty string (no description).
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
      *        </p>
+     *        </important>
      *        <p>
      *        To set or change the description after the key is created, use <a>UpdateKeyDescription</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3328,7 +3351,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Assigns one or more tags to the KMS key. Use this parameter to tag the KMS key when it is created. To tag an
      * existing KMS key, use the <a>TagResource</a> operation.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important> <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key Management
@@ -3353,7 +3381,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @return Assigns one or more tags to the KMS key. Use this parameter to tag the KMS key when it is created. To tag
-     *         an existing KMS key, use the <a>TagResource</a> operation.</p> <note>
+     *         an existing KMS key, use the <a>TagResource</a> operation.</p> <important>
+     *         <p>
+     *         Do not include confidential or sensitive information in this field. This field may be displayed in
+     *         plaintext in CloudTrail logs and other output.
+     *         </p>
+     *         </important> <note>
      *         <p>
      *         Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key
@@ -3390,7 +3423,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Assigns one or more tags to the KMS key. Use this parameter to tag the KMS key when it is created. To tag an
      * existing KMS key, use the <a>TagResource</a> operation.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important> <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key Management
@@ -3416,7 +3454,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param tags
      *        Assigns one or more tags to the KMS key. Use this parameter to tag the KMS key when it is created. To tag
-     *        an existing KMS key, use the <a>TagResource</a> operation.</p> <note>
+     *        an existing KMS key, use the <a>TagResource</a> operation.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important> <note>
      *        <p>
      *        Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key
@@ -3455,7 +3498,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Assigns one or more tags to the KMS key. Use this parameter to tag the KMS key when it is created. To tag an
      * existing KMS key, use the <a>TagResource</a> operation.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important> <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key Management
@@ -3486,7 +3534,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param tags
      *        Assigns one or more tags to the KMS key. Use this parameter to tag the KMS key when it is created. To tag
-     *        an existing KMS key, use the <a>TagResource</a> operation.</p> <note>
+     *        an existing KMS key, use the <a>TagResource</a> operation.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important> <note>
      *        <p>
      *        Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key
@@ -3527,7 +3580,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Assigns one or more tags to the KMS key. Use this parameter to tag the KMS key when it is created. To tag an
      * existing KMS key, use the <a>TagResource</a> operation.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important> <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key Management
@@ -3553,7 +3611,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param tags
      *        Assigns one or more tags to the KMS key. Use this parameter to tag the KMS key when it is created. To tag
-     *        an existing KMS key, use the <a>TagResource</a> operation.</p> <note>
+     *        an existing KMS key, use the <a>TagResource</a> operation.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important> <note>
      *        <p>
      *        Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC for KMS</a> in the <i>Key

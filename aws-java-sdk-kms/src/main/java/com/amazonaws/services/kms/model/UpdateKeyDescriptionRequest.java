@@ -56,6 +56,12 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * New description for the KMS key.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      */
     private String description;
 
@@ -226,9 +232,19 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * New description for the KMS key.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * 
      * @param description
-     *        New description for the KMS key.
+     *        New description for the KMS key.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
      */
 
     public void setDescription(String description) {
@@ -239,8 +255,18 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * New description for the KMS key.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * 
-     * @return New description for the KMS key.
+     * @return New description for the KMS key.</p> <important>
+     *         <p>
+     *         Do not include confidential or sensitive information in this field. This field may be displayed in
+     *         plaintext in CloudTrail logs and other output.
+     *         </p>
      */
 
     public String getDescription() {
@@ -251,9 +277,19 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * New description for the KMS key.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * 
      * @param description
-     *        New description for the KMS key.
+     *        New description for the KMS key.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -50,6 +50,8 @@ public class ECSServiceRecommendationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceRecommendationOptions").build();
     private static final MarshallingInfo<String> CURRENTPERFORMANCERISK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("currentPerformanceRisk").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final ECSServiceRecommendationMarshaller instance = new ECSServiceRecommendationMarshaller();
 
@@ -78,6 +80,7 @@ public class ECSServiceRecommendationMarshaller {
             protocolMarshaller.marshall(eCSServiceRecommendation.getFindingReasonCodes(), FINDINGREASONCODES_BINDING);
             protocolMarshaller.marshall(eCSServiceRecommendation.getServiceRecommendationOptions(), SERVICERECOMMENDATIONOPTIONS_BINDING);
             protocolMarshaller.marshall(eCSServiceRecommendation.getCurrentPerformanceRisk(), CURRENTPERFORMANCERISK_BINDING);
+            protocolMarshaller.marshall(eCSServiceRecommendation.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

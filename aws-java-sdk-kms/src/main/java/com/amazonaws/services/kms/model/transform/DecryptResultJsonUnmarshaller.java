@@ -60,6 +60,10 @@ public class DecryptResultJsonUnmarshaller implements Unmarshaller<DecryptResult
                     context.nextToken();
                     decryptResult.setEncryptionAlgorithm(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CiphertextForRecipient", targetDepth)) {
+                    context.nextToken();
+                    decryptResult.setCiphertextForRecipient(context.getUnmarshaller(java.nio.ByteBuffer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

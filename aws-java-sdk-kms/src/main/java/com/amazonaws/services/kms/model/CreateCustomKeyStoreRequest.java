@@ -30,6 +30,12 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services account
      * and Region. This parameter is required for all custom key stores.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      */
     private String customKeyStoreName;
     /**
@@ -240,10 +246,20 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services account
      * and Region. This parameter is required for all custom key stores.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * 
      * @param customKeyStoreName
      *        Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services
-     *        account and Region. This parameter is required for all custom key stores.
+     *        account and Region. This parameter is required for all custom key stores.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
      */
 
     public void setCustomKeyStoreName(String customKeyStoreName) {
@@ -255,9 +271,19 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services account
      * and Region. This parameter is required for all custom key stores.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * 
      * @return Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services
-     *         account and Region. This parameter is required for all custom key stores.
+     *         account and Region. This parameter is required for all custom key stores.</p> <important>
+     *         <p>
+     *         Do not include confidential or sensitive information in this field. This field may be displayed in
+     *         plaintext in CloudTrail logs and other output.
+     *         </p>
      */
 
     public String getCustomKeyStoreName() {
@@ -269,10 +295,20 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services account
      * and Region. This parameter is required for all custom key stores.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * 
      * @param customKeyStoreName
      *        Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services
-     *        account and Region. This parameter is required for all custom key stores.
+     *        account and Region. This parameter is required for all custom key stores.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

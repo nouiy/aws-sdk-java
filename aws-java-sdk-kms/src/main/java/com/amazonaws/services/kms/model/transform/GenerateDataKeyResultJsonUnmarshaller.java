@@ -60,6 +60,10 @@ public class GenerateDataKeyResultJsonUnmarshaller implements Unmarshaller<Gener
                     context.nextToken();
                     generateDataKeyResult.setKeyId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CiphertextForRecipient", targetDepth)) {
+                    context.nextToken();
+                    generateDataKeyResult.setCiphertextForRecipient(context.getUnmarshaller(java.nio.ByteBuffer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

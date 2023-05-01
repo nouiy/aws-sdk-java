@@ -39,6 +39,22 @@ public class ECSServiceRecommendationFilter implements Serializable, Cloneable, 
      * <p>
      * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code.
      * </p>
+     * <p>
+     * You can filter your Amazon ECS service recommendations by <code>tag:key</code> and <code>tag-key</code> tags.
+     * </p>
+     * <p>
+     * A <code>tag:key</code> is a key and value combination of a tag assigned to your Amazon ECS service
+     * recommendations. Use the tag key in the filter name and the tag value as the filter value. For example, to find
+     * all Amazon ECS service recommendations that have a tag with the key of <code>Owner</code> and the value of
+     * <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name and <code>TeamA</code> for the filter
+     * value.
+     * </p>
+     * <p>
+     * A <code>tag-key</code> is the key of a tag assigned to your Amazon ECS service recommendations. Use this filter
+     * to find all of your Amazon ECS service recommendations that have a tag with a specific key. This doesn’t consider
+     * the tag value. For example, you can find your Amazon ECS service recommendations with a tag key value of
+     * <code>Owner</code> or without any tag keys assigned.
+     * </p>
      */
     private String name;
     /**
@@ -76,6 +92,22 @@ public class ECSServiceRecommendationFilter implements Serializable, Cloneable, 
      * <p>
      * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code.
      * </p>
+     * <p>
+     * You can filter your Amazon ECS service recommendations by <code>tag:key</code> and <code>tag-key</code> tags.
+     * </p>
+     * <p>
+     * A <code>tag:key</code> is a key and value combination of a tag assigned to your Amazon ECS service
+     * recommendations. Use the tag key in the filter name and the tag value as the filter value. For example, to find
+     * all Amazon ECS service recommendations that have a tag with the key of <code>Owner</code> and the value of
+     * <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name and <code>TeamA</code> for the filter
+     * value.
+     * </p>
+     * <p>
+     * A <code>tag-key</code> is the key of a tag assigned to your Amazon ECS service recommendations. Use this filter
+     * to find all of your Amazon ECS service recommendations that have a tag with a specific key. This doesn’t consider
+     * the tag value. For example, you can find your Amazon ECS service recommendations with a tag key value of
+     * <code>Owner</code> or without any tag keys assigned.
+     * </p>
      * 
      * @param name
      *        The name of the filter. </p>
@@ -84,6 +116,23 @@ public class ECSServiceRecommendationFilter implements Serializable, Cloneable, 
      *        </p>
      *        <p>
      *        Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code.
+     *        </p>
+     *        <p>
+     *        You can filter your Amazon ECS service recommendations by <code>tag:key</code> and <code>tag-key</code>
+     *        tags.
+     *        </p>
+     *        <p>
+     *        A <code>tag:key</code> is a key and value combination of a tag assigned to your Amazon ECS service
+     *        recommendations. Use the tag key in the filter name and the tag value as the filter value. For example, to
+     *        find all Amazon ECS service recommendations that have a tag with the key of <code>Owner</code> and the
+     *        value of <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name and <code>TeamA</code> for
+     *        the filter value.
+     *        </p>
+     *        <p>
+     *        A <code>tag-key</code> is the key of a tag assigned to your Amazon ECS service recommendations. Use this
+     *        filter to find all of your Amazon ECS service recommendations that have a tag with a specific key. This
+     *        doesn’t consider the tag value. For example, you can find your Amazon ECS service recommendations with a
+     *        tag key value of <code>Owner</code> or without any tag keys assigned.
      * @see ECSServiceRecommendationFilterName
      */
 
@@ -101,6 +150,22 @@ public class ECSServiceRecommendationFilter implements Serializable, Cloneable, 
      * <p>
      * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code.
      * </p>
+     * <p>
+     * You can filter your Amazon ECS service recommendations by <code>tag:key</code> and <code>tag-key</code> tags.
+     * </p>
+     * <p>
+     * A <code>tag:key</code> is a key and value combination of a tag assigned to your Amazon ECS service
+     * recommendations. Use the tag key in the filter name and the tag value as the filter value. For example, to find
+     * all Amazon ECS service recommendations that have a tag with the key of <code>Owner</code> and the value of
+     * <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name and <code>TeamA</code> for the filter
+     * value.
+     * </p>
+     * <p>
+     * A <code>tag-key</code> is the key of a tag assigned to your Amazon ECS service recommendations. Use this filter
+     * to find all of your Amazon ECS service recommendations that have a tag with a specific key. This doesn’t consider
+     * the tag value. For example, you can find your Amazon ECS service recommendations with a tag key value of
+     * <code>Owner</code> or without any tag keys assigned.
+     * </p>
      * 
      * @return The name of the filter. </p>
      *         <p>
@@ -108,6 +173,23 @@ public class ECSServiceRecommendationFilter implements Serializable, Cloneable, 
      *         </p>
      *         <p>
      *         Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code.
+     *         </p>
+     *         <p>
+     *         You can filter your Amazon ECS service recommendations by <code>tag:key</code> and <code>tag-key</code>
+     *         tags.
+     *         </p>
+     *         <p>
+     *         A <code>tag:key</code> is a key and value combination of a tag assigned to your Amazon ECS service
+     *         recommendations. Use the tag key in the filter name and the tag value as the filter value. For example,
+     *         to find all Amazon ECS service recommendations that have a tag with the key of <code>Owner</code> and the
+     *         value of <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name and <code>TeamA</code>
+     *         for the filter value.
+     *         </p>
+     *         <p>
+     *         A <code>tag-key</code> is the key of a tag assigned to your Amazon ECS service recommendations. Use this
+     *         filter to find all of your Amazon ECS service recommendations that have a tag with a specific key. This
+     *         doesn’t consider the tag value. For example, you can find your Amazon ECS service recommendations with a
+     *         tag key value of <code>Owner</code> or without any tag keys assigned.
      * @see ECSServiceRecommendationFilterName
      */
 
@@ -125,6 +207,22 @@ public class ECSServiceRecommendationFilter implements Serializable, Cloneable, 
      * <p>
      * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code.
      * </p>
+     * <p>
+     * You can filter your Amazon ECS service recommendations by <code>tag:key</code> and <code>tag-key</code> tags.
+     * </p>
+     * <p>
+     * A <code>tag:key</code> is a key and value combination of a tag assigned to your Amazon ECS service
+     * recommendations. Use the tag key in the filter name and the tag value as the filter value. For example, to find
+     * all Amazon ECS service recommendations that have a tag with the key of <code>Owner</code> and the value of
+     * <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name and <code>TeamA</code> for the filter
+     * value.
+     * </p>
+     * <p>
+     * A <code>tag-key</code> is the key of a tag assigned to your Amazon ECS service recommendations. Use this filter
+     * to find all of your Amazon ECS service recommendations that have a tag with a specific key. This doesn’t consider
+     * the tag value. For example, you can find your Amazon ECS service recommendations with a tag key value of
+     * <code>Owner</code> or without any tag keys assigned.
+     * </p>
      * 
      * @param name
      *        The name of the filter. </p>
@@ -133,6 +231,23 @@ public class ECSServiceRecommendationFilter implements Serializable, Cloneable, 
      *        </p>
      *        <p>
      *        Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code.
+     *        </p>
+     *        <p>
+     *        You can filter your Amazon ECS service recommendations by <code>tag:key</code> and <code>tag-key</code>
+     *        tags.
+     *        </p>
+     *        <p>
+     *        A <code>tag:key</code> is a key and value combination of a tag assigned to your Amazon ECS service
+     *        recommendations. Use the tag key in the filter name and the tag value as the filter value. For example, to
+     *        find all Amazon ECS service recommendations that have a tag with the key of <code>Owner</code> and the
+     *        value of <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name and <code>TeamA</code> for
+     *        the filter value.
+     *        </p>
+     *        <p>
+     *        A <code>tag-key</code> is the key of a tag assigned to your Amazon ECS service recommendations. Use this
+     *        filter to find all of your Amazon ECS service recommendations that have a tag with a specific key. This
+     *        doesn’t consider the tag value. For example, you can find your Amazon ECS service recommendations with a
+     *        tag key value of <code>Owner</code> or without any tag keys assigned.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ECSServiceRecommendationFilterName
      */
@@ -152,6 +267,22 @@ public class ECSServiceRecommendationFilter implements Serializable, Cloneable, 
      * <p>
      * Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code.
      * </p>
+     * <p>
+     * You can filter your Amazon ECS service recommendations by <code>tag:key</code> and <code>tag-key</code> tags.
+     * </p>
+     * <p>
+     * A <code>tag:key</code> is a key and value combination of a tag assigned to your Amazon ECS service
+     * recommendations. Use the tag key in the filter name and the tag value as the filter value. For example, to find
+     * all Amazon ECS service recommendations that have a tag with the key of <code>Owner</code> and the value of
+     * <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name and <code>TeamA</code> for the filter
+     * value.
+     * </p>
+     * <p>
+     * A <code>tag-key</code> is the key of a tag assigned to your Amazon ECS service recommendations. Use this filter
+     * to find all of your Amazon ECS service recommendations that have a tag with a specific key. This doesn’t consider
+     * the tag value. For example, you can find your Amazon ECS service recommendations with a tag key value of
+     * <code>Owner</code> or without any tag keys assigned.
+     * </p>
      * 
      * @param name
      *        The name of the filter. </p>
@@ -160,6 +291,23 @@ public class ECSServiceRecommendationFilter implements Serializable, Cloneable, 
      *        </p>
      *        <p>
      *        Specify <code>FindingReasonCode</code> to return recommendations with a specific finding reason code.
+     *        </p>
+     *        <p>
+     *        You can filter your Amazon ECS service recommendations by <code>tag:key</code> and <code>tag-key</code>
+     *        tags.
+     *        </p>
+     *        <p>
+     *        A <code>tag:key</code> is a key and value combination of a tag assigned to your Amazon ECS service
+     *        recommendations. Use the tag key in the filter name and the tag value as the filter value. For example, to
+     *        find all Amazon ECS service recommendations that have a tag with the key of <code>Owner</code> and the
+     *        value of <code>TeamA</code>, specify <code>tag:Owner</code> for the filter name and <code>TeamA</code> for
+     *        the filter value.
+     *        </p>
+     *        <p>
+     *        A <code>tag-key</code> is the key of a tag assigned to your Amazon ECS service recommendations. Use this
+     *        filter to find all of your Amazon ECS service recommendations that have a tag with a specific key. This
+     *        doesn’t consider the tag value. For example, you can find your Amazon ECS service recommendations with a
+     *        tag key value of <code>Owner</code> or without any tag keys assigned.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ECSServiceRecommendationFilterName
      */

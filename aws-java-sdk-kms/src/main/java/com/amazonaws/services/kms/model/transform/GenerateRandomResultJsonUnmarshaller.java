@@ -52,6 +52,10 @@ public class GenerateRandomResultJsonUnmarshaller implements Unmarshaller<Genera
                     context.nextToken();
                     generateRandomResult.setPlaintext(context.getUnmarshaller(java.nio.ByteBuffer.class).unmarshall(context));
                 }
+                if (context.testExpression("CiphertextForRecipient", targetDepth)) {
+                    context.nextToken();
+                    generateRandomResult.setCiphertextForRecipient(context.getUnmarshaller(java.nio.ByteBuffer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

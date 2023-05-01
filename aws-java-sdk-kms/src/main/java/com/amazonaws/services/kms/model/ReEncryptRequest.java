@@ -146,6 +146,12 @@ public class ReEncryptRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * Specifies that encryption context to use when the reencrypting the data.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * A destination encryption context is valid only when the destination KMS key is a symmetric encryption KMS key.
      * The standard ciphertext format for asymmetric KMS keys does not include fields for metadata.
@@ -975,6 +981,12 @@ public class ReEncryptRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * Specifies that encryption context to use when the reencrypting the data.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * A destination encryption context is valid only when the destination KMS key is a symmetric encryption KMS key.
      * The standard ciphertext format for asymmetric KMS keys does not include fields for metadata.
@@ -992,7 +1004,12 @@ public class ReEncryptRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
-     * @return Specifies that encryption context to use when the reencrypting the data.</p>
+     * @return Specifies that encryption context to use when the reencrypting the data.</p> <important>
+     *         <p>
+     *         Do not include confidential or sensitive information in this field. This field may be displayed in
+     *         plaintext in CloudTrail logs and other output.
+     *         </p>
+     *         </important>
      *         <p>
      *         A destination encryption context is valid only when the destination KMS key is a symmetric encryption KMS
      *         key. The standard ciphertext format for asymmetric KMS keys does not include fields for metadata.
@@ -1021,6 +1038,12 @@ public class ReEncryptRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * Specifies that encryption context to use when the reencrypting the data.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * A destination encryption context is valid only when the destination KMS key is a symmetric encryption KMS key.
      * The standard ciphertext format for asymmetric KMS keys does not include fields for metadata.
@@ -1039,7 +1062,12 @@ public class ReEncryptRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param destinationEncryptionContext
-     *        Specifies that encryption context to use when the reencrypting the data.</p>
+     *        Specifies that encryption context to use when the reencrypting the data.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important>
      *        <p>
      *        A destination encryption context is valid only when the destination KMS key is a symmetric encryption KMS
      *        key. The standard ciphertext format for asymmetric KMS keys does not include fields for metadata.
@@ -1066,6 +1094,12 @@ public class ReEncryptRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * Specifies that encryption context to use when the reencrypting the data.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * <p>
      * A destination encryption context is valid only when the destination KMS key is a symmetric encryption KMS key.
      * The standard ciphertext format for asymmetric KMS keys does not include fields for metadata.
@@ -1084,7 +1118,12 @@ public class ReEncryptRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param destinationEncryptionContext
-     *        Specifies that encryption context to use when the reencrypting the data.</p>
+     *        Specifies that encryption context to use when the reencrypting the data.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
+     *        </important>
      *        <p>
      *        A destination encryption context is valid only when the destination KMS key is a symmetric encryption KMS
      *        key. The standard ciphertext format for asymmetric KMS keys does not include fields for metadata.

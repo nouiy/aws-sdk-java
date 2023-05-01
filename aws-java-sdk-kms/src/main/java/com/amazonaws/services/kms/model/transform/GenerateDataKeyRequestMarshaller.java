@@ -39,6 +39,8 @@ public class GenerateDataKeyRequestMarshaller {
             .marshallLocationName("KeySpec").build();
     private static final MarshallingInfo<List> GRANTTOKENS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("GrantTokens").build();
+    private static final MarshallingInfo<StructuredPojo> RECIPIENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Recipient").build();
 
     private static final GenerateDataKeyRequestMarshaller instance = new GenerateDataKeyRequestMarshaller();
 
@@ -61,6 +63,7 @@ public class GenerateDataKeyRequestMarshaller {
             protocolMarshaller.marshall(generateDataKeyRequest.getNumberOfBytes(), NUMBEROFBYTES_BINDING);
             protocolMarshaller.marshall(generateDataKeyRequest.getKeySpec(), KEYSPEC_BINDING);
             protocolMarshaller.marshall(generateDataKeyRequest.getGrantTokens(), GRANTTOKENS_BINDING);
+            protocolMarshaller.marshall(generateDataKeyRequest.getRecipient(), RECIPIENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

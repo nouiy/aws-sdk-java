@@ -31,6 +31,12 @@ public class UpdateAliasRequest extends com.amazonaws.AmazonWebServiceRequest im
      * alias name, such as <code>alias/ExampleAlias</code>. You cannot use <code>UpdateAlias</code> to change the alias
      * name.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      */
     private String aliasName;
     /**
@@ -79,11 +85,21 @@ public class UpdateAliasRequest extends com.amazonaws.AmazonWebServiceRequest im
      * alias name, such as <code>alias/ExampleAlias</code>. You cannot use <code>UpdateAlias</code> to change the alias
      * name.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * 
      * @param aliasName
      *        Identifies the alias that is changing its KMS key. This value must begin with <code>alias/</code> followed
      *        by the alias name, such as <code>alias/ExampleAlias</code>. You cannot use <code>UpdateAlias</code> to
-     *        change the alias name.
+     *        change the alias name.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
      */
 
     public void setAliasName(String aliasName) {
@@ -96,10 +112,20 @@ public class UpdateAliasRequest extends com.amazonaws.AmazonWebServiceRequest im
      * alias name, such as <code>alias/ExampleAlias</code>. You cannot use <code>UpdateAlias</code> to change the alias
      * name.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * 
      * @return Identifies the alias that is changing its KMS key. This value must begin with <code>alias/</code>
      *         followed by the alias name, such as <code>alias/ExampleAlias</code>. You cannot use
-     *         <code>UpdateAlias</code> to change the alias name.
+     *         <code>UpdateAlias</code> to change the alias name.</p> <important>
+     *         <p>
+     *         Do not include confidential or sensitive information in this field. This field may be displayed in
+     *         plaintext in CloudTrail logs and other output.
+     *         </p>
      */
 
     public String getAliasName() {
@@ -112,11 +138,21 @@ public class UpdateAliasRequest extends com.amazonaws.AmazonWebServiceRequest im
      * alias name, such as <code>alias/ExampleAlias</code>. You cannot use <code>UpdateAlias</code> to change the alias
      * name.
      * </p>
+     * <important>
+     * <p>
+     * Do not include confidential or sensitive information in this field. This field may be displayed in plaintext in
+     * CloudTrail logs and other output.
+     * </p>
+     * </important>
      * 
      * @param aliasName
      *        Identifies the alias that is changing its KMS key. This value must begin with <code>alias/</code> followed
      *        by the alias name, such as <code>alias/ExampleAlias</code>. You cannot use <code>UpdateAlias</code> to
-     *        change the alias name.
+     *        change the alias name.</p> <important>
+     *        <p>
+     *        Do not include confidential or sensitive information in this field. This field may be displayed in
+     *        plaintext in CloudTrail logs and other output.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

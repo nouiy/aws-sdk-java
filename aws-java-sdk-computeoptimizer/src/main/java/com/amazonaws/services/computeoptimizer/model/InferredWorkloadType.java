@@ -27,7 +27,8 @@ public enum InferredWorkloadType {
     Nginx("Nginx"),
     PostgreSql("PostgreSql"),
     Redis("Redis"),
-    Kafka("Kafka");
+    Kafka("Kafka"),
+    SQLServer("SQLServer");
 
     private String value;
 
