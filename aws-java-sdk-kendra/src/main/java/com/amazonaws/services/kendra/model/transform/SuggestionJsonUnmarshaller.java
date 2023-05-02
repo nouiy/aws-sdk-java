@@ -56,6 +56,12 @@ public class SuggestionJsonUnmarshaller implements Unmarshaller<Suggestion, Json
                     context.nextToken();
                     suggestion.setValue(SuggestionValueJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SourceDocuments", targetDepth)) {
+                    context.nextToken();
+                    suggestion.setSourceDocuments(new ListUnmarshaller<SourceDocument>(SourceDocumentJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -37,12 +37,16 @@ public class PhysicalResourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("excluded").build();
     private static final MarshallingInfo<StructuredPojo> LOGICALRESOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logicalResourceId").build();
+    private static final MarshallingInfo<String> PARENTRESOURCENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentResourceName").build();
     private static final MarshallingInfo<StructuredPojo> PHYSICALRESOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("physicalResourceId").build();
     private static final MarshallingInfo<String> RESOURCENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceName").build();
     private static final MarshallingInfo<String> RESOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceType").build();
+    private static final MarshallingInfo<String> SOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceType").build();
 
     private static final PhysicalResourceMarshaller instance = new PhysicalResourceMarshaller();
 
@@ -64,9 +68,11 @@ public class PhysicalResourceMarshaller {
             protocolMarshaller.marshall(physicalResource.getAppComponents(), APPCOMPONENTS_BINDING);
             protocolMarshaller.marshall(physicalResource.getExcluded(), EXCLUDED_BINDING);
             protocolMarshaller.marshall(physicalResource.getLogicalResourceId(), LOGICALRESOURCEID_BINDING);
+            protocolMarshaller.marshall(physicalResource.getParentResourceName(), PARENTRESOURCENAME_BINDING);
             protocolMarshaller.marshall(physicalResource.getPhysicalResourceId(), PHYSICALRESOURCEID_BINDING);
             protocolMarshaller.marshall(physicalResource.getResourceName(), RESOURCENAME_BINDING);
             protocolMarshaller.marshall(physicalResource.getResourceType(), RESOURCETYPE_BINDING);
+            protocolMarshaller.marshall(physicalResource.getSourceType(), SOURCETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

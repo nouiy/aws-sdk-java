@@ -43,6 +43,13 @@ public class Suggestion implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private SuggestionValue value;
+    /**
+     * <p>
+     * The list of document IDs and their fields/attributes that are used for a single query suggestion, if document
+     * fields set to use for query suggestions.
+     * </p>
+     */
+    private java.util.List<SourceDocument> sourceDocuments;
 
     /**
      * <p>
@@ -140,6 +147,84 @@ public class Suggestion implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The list of document IDs and their fields/attributes that are used for a single query suggestion, if document
+     * fields set to use for query suggestions.
+     * </p>
+     * 
+     * @return The list of document IDs and their fields/attributes that are used for a single query suggestion, if
+     *         document fields set to use for query suggestions.
+     */
+
+    public java.util.List<SourceDocument> getSourceDocuments() {
+        return sourceDocuments;
+    }
+
+    /**
+     * <p>
+     * The list of document IDs and their fields/attributes that are used for a single query suggestion, if document
+     * fields set to use for query suggestions.
+     * </p>
+     * 
+     * @param sourceDocuments
+     *        The list of document IDs and their fields/attributes that are used for a single query suggestion, if
+     *        document fields set to use for query suggestions.
+     */
+
+    public void setSourceDocuments(java.util.Collection<SourceDocument> sourceDocuments) {
+        if (sourceDocuments == null) {
+            this.sourceDocuments = null;
+            return;
+        }
+
+        this.sourceDocuments = new java.util.ArrayList<SourceDocument>(sourceDocuments);
+    }
+
+    /**
+     * <p>
+     * The list of document IDs and their fields/attributes that are used for a single query suggestion, if document
+     * fields set to use for query suggestions.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSourceDocuments(java.util.Collection)} or {@link #withSourceDocuments(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param sourceDocuments
+     *        The list of document IDs and their fields/attributes that are used for a single query suggestion, if
+     *        document fields set to use for query suggestions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Suggestion withSourceDocuments(SourceDocument... sourceDocuments) {
+        if (this.sourceDocuments == null) {
+            setSourceDocuments(new java.util.ArrayList<SourceDocument>(sourceDocuments.length));
+        }
+        for (SourceDocument ele : sourceDocuments) {
+            this.sourceDocuments.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of document IDs and their fields/attributes that are used for a single query suggestion, if document
+     * fields set to use for query suggestions.
+     * </p>
+     * 
+     * @param sourceDocuments
+     *        The list of document IDs and their fields/attributes that are used for a single query suggestion, if
+     *        document fields set to use for query suggestions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Suggestion withSourceDocuments(java.util.Collection<SourceDocument> sourceDocuments) {
+        setSourceDocuments(sourceDocuments);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -154,7 +239,9 @@ public class Suggestion implements Serializable, Cloneable, StructuredPojo {
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getValue() != null)
-            sb.append("Value: ").append(getValue());
+            sb.append("Value: ").append(getValue()).append(",");
+        if (getSourceDocuments() != null)
+            sb.append("SourceDocuments: ").append(getSourceDocuments());
         sb.append("}");
         return sb.toString();
     }
@@ -177,6 +264,10 @@ public class Suggestion implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getValue() != null && other.getValue().equals(this.getValue()) == false)
             return false;
+        if (other.getSourceDocuments() == null ^ this.getSourceDocuments() == null)
+            return false;
+        if (other.getSourceDocuments() != null && other.getSourceDocuments().equals(this.getSourceDocuments()) == false)
+            return false;
         return true;
     }
 
@@ -187,6 +278,7 @@ public class Suggestion implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getValue() == null) ? 0 : getValue().hashCode());
+        hashCode = prime * hashCode + ((getSourceDocuments() == null) ? 0 : getSourceDocuments().hashCode());
         return hashCode;
     }
 

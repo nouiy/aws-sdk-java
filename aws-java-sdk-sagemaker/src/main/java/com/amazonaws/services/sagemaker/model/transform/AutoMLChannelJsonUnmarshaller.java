@@ -68,6 +68,10 @@ public class AutoMLChannelJsonUnmarshaller implements Unmarshaller<AutoMLChannel
                     context.nextToken();
                     autoMLChannel.setChannelType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("SampleWeightAttributeName", targetDepth)) {
+                    context.nextToken();
+                    autoMLChannel.setSampleWeightAttributeName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

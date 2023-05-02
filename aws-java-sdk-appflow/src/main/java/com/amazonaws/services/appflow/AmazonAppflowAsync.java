@@ -81,6 +81,87 @@ public interface AmazonAppflowAsync extends AmazonAppflow {
 
     /**
      * <p>
+     * Cancels active runs for a flow.
+     * </p>
+     * <p>
+     * You can cancel all of the active runs for a flow, or you can cancel specific runs by providing their IDs.
+     * </p>
+     * <p>
+     * You can cancel a flow run only when the run is in progress. You can't cancel a run that has already completed or
+     * failed. You also can't cancel a run that's scheduled to occur but hasn't started yet. To prevent a scheduled run,
+     * you can deactivate the flow with the <code>StopFlow</code> action.
+     * </p>
+     * <p>
+     * You cannot resume a run after you cancel it.
+     * </p>
+     * <p>
+     * When you send your request, the status for each run becomes <code>CancelStarted</code>. When the cancellation
+     * completes, the status becomes <code>Canceled</code>.
+     * </p>
+     * <note>
+     * <p>
+     * When you cancel a run, you still incur charges for any data that the run already processed before the
+     * cancellation. If the run had already written some data to the flow destination, then that data remains in the
+     * destination. If you configured the flow to use a batch API (such as the Salesforce Bulk API 2.0), then the run
+     * will finish reading or writing its entire batch of data after the cancellation. For these operations, the data
+     * processing charges for Amazon AppFlow apply. For the pricing information, see <a
+     * href="http://aws.amazon.com/appflow/pricing/">Amazon AppFlow pricing</a>.
+     * </p>
+     * </note>
+     * 
+     * @param cancelFlowExecutionsRequest
+     * @return A Java Future containing the result of the CancelFlowExecutions operation returned by the service.
+     * @sample AmazonAppflowAsync.CancelFlowExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/CancelFlowExecutions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CancelFlowExecutionsResult> cancelFlowExecutionsAsync(CancelFlowExecutionsRequest cancelFlowExecutionsRequest);
+
+    /**
+     * <p>
+     * Cancels active runs for a flow.
+     * </p>
+     * <p>
+     * You can cancel all of the active runs for a flow, or you can cancel specific runs by providing their IDs.
+     * </p>
+     * <p>
+     * You can cancel a flow run only when the run is in progress. You can't cancel a run that has already completed or
+     * failed. You also can't cancel a run that's scheduled to occur but hasn't started yet. To prevent a scheduled run,
+     * you can deactivate the flow with the <code>StopFlow</code> action.
+     * </p>
+     * <p>
+     * You cannot resume a run after you cancel it.
+     * </p>
+     * <p>
+     * When you send your request, the status for each run becomes <code>CancelStarted</code>. When the cancellation
+     * completes, the status becomes <code>Canceled</code>.
+     * </p>
+     * <note>
+     * <p>
+     * When you cancel a run, you still incur charges for any data that the run already processed before the
+     * cancellation. If the run had already written some data to the flow destination, then that data remains in the
+     * destination. If you configured the flow to use a batch API (such as the Salesforce Bulk API 2.0), then the run
+     * will finish reading or writing its entire batch of data after the cancellation. For these operations, the data
+     * processing charges for Amazon AppFlow apply. For the pricing information, see <a
+     * href="http://aws.amazon.com/appflow/pricing/">Amazon AppFlow pricing</a>.
+     * </p>
+     * </note>
+     * 
+     * @param cancelFlowExecutionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CancelFlowExecutions operation returned by the service.
+     * @sample AmazonAppflowAsyncHandler.CancelFlowExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/CancelFlowExecutions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CancelFlowExecutionsResult> cancelFlowExecutionsAsync(CancelFlowExecutionsRequest cancelFlowExecutionsRequest,
+            com.amazonaws.handlers.AsyncHandler<CancelFlowExecutionsRequest, CancelFlowExecutionsResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new connector profile associated with your Amazon Web Services account. There is a soft quota of 100
      * connector profiles per Amazon Web Services account. If you need more connector profiles than this quota allows,
      * you can submit a request to the Amazon AppFlow team through the Amazon AppFlow support channel. In each connector

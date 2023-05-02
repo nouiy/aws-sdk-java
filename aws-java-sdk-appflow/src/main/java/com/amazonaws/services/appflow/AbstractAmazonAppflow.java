@@ -28,6 +28,11 @@ public class AbstractAmazonAppflow implements AmazonAppflow {
     }
 
     @Override
+    public CancelFlowExecutionsResult cancelFlowExecutions(CancelFlowExecutionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateConnectorProfileResult createConnectorProfile(CreateConnectorProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -28,6 +28,19 @@ public class AbstractAmazonAppflowAsync extends AbstractAmazonAppflow implements
     }
 
     @Override
+    public java.util.concurrent.Future<CancelFlowExecutionsResult> cancelFlowExecutionsAsync(CancelFlowExecutionsRequest request) {
+
+        return cancelFlowExecutionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelFlowExecutionsResult> cancelFlowExecutionsAsync(CancelFlowExecutionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<CancelFlowExecutionsRequest, CancelFlowExecutionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateConnectorProfileResult> createConnectorProfileAsync(CreateConnectorProfileRequest request) {
 
         return createConnectorProfileAsync(request, null);

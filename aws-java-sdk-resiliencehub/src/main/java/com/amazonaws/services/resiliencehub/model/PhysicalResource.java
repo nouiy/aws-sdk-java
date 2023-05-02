@@ -70,6 +70,12 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
     private LogicalResourceId logicalResourceId;
     /**
      * <p>
+     * The name of the parent resource.
+     * </p>
+     */
+    private String parentResourceName;
+    /**
+     * <p>
      * The physical identifier of the resource.
      * </p>
      */
@@ -86,6 +92,12 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String resourceType;
+    /**
+     * <p>
+     * The type of input source.
+     * </p>
+     */
+    private String sourceType;
 
     /**
      * <p>
@@ -403,6 +415,46 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
+     * The name of the parent resource.
+     * </p>
+     * 
+     * @param parentResourceName
+     *        The name of the parent resource.
+     */
+
+    public void setParentResourceName(String parentResourceName) {
+        this.parentResourceName = parentResourceName;
+    }
+
+    /**
+     * <p>
+     * The name of the parent resource.
+     * </p>
+     * 
+     * @return The name of the parent resource.
+     */
+
+    public String getParentResourceName() {
+        return this.parentResourceName;
+    }
+
+    /**
+     * <p>
+     * The name of the parent resource.
+     * </p>
+     * 
+     * @param parentResourceName
+     *        The name of the parent resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PhysicalResource withParentResourceName(String parentResourceName) {
+        setParentResourceName(parentResourceName);
+        return this;
+    }
+
+    /**
+     * <p>
      * The physical identifier of the resource.
      * </p>
      * 
@@ -522,6 +574,65 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The type of input source.
+     * </p>
+     * 
+     * @param sourceType
+     *        The type of input source.
+     * @see ResourceSourceType
+     */
+
+    public void setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+    }
+
+    /**
+     * <p>
+     * The type of input source.
+     * </p>
+     * 
+     * @return The type of input source.
+     * @see ResourceSourceType
+     */
+
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    /**
+     * <p>
+     * The type of input source.
+     * </p>
+     * 
+     * @param sourceType
+     *        The type of input source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceSourceType
+     */
+
+    public PhysicalResource withSourceType(String sourceType) {
+        setSourceType(sourceType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of input source.
+     * </p>
+     * 
+     * @param sourceType
+     *        The type of input source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceSourceType
+     */
+
+    public PhysicalResource withSourceType(ResourceSourceType sourceType) {
+        this.sourceType = sourceType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -541,12 +652,16 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
             sb.append("Excluded: ").append(getExcluded()).append(",");
         if (getLogicalResourceId() != null)
             sb.append("LogicalResourceId: ").append(getLogicalResourceId()).append(",");
+        if (getParentResourceName() != null)
+            sb.append("ParentResourceName: ").append(getParentResourceName()).append(",");
         if (getPhysicalResourceId() != null)
             sb.append("PhysicalResourceId: ").append(getPhysicalResourceId()).append(",");
         if (getResourceName() != null)
             sb.append("ResourceName: ").append(getResourceName()).append(",");
         if (getResourceType() != null)
-            sb.append("ResourceType: ").append(getResourceType());
+            sb.append("ResourceType: ").append(getResourceType()).append(",");
+        if (getSourceType() != null)
+            sb.append("SourceType: ").append(getSourceType());
         sb.append("}");
         return sb.toString();
     }
@@ -577,6 +692,10 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getLogicalResourceId() != null && other.getLogicalResourceId().equals(this.getLogicalResourceId()) == false)
             return false;
+        if (other.getParentResourceName() == null ^ this.getParentResourceName() == null)
+            return false;
+        if (other.getParentResourceName() != null && other.getParentResourceName().equals(this.getParentResourceName()) == false)
+            return false;
         if (other.getPhysicalResourceId() == null ^ this.getPhysicalResourceId() == null)
             return false;
         if (other.getPhysicalResourceId() != null && other.getPhysicalResourceId().equals(this.getPhysicalResourceId()) == false)
@@ -588,6 +707,10 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
         if (other.getResourceType() == null ^ this.getResourceType() == null)
             return false;
         if (other.getResourceType() != null && other.getResourceType().equals(this.getResourceType()) == false)
+            return false;
+        if (other.getSourceType() == null ^ this.getSourceType() == null)
+            return false;
+        if (other.getSourceType() != null && other.getSourceType().equals(this.getSourceType()) == false)
             return false;
         return true;
     }
@@ -601,9 +724,11 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getAppComponents() == null) ? 0 : getAppComponents().hashCode());
         hashCode = prime * hashCode + ((getExcluded() == null) ? 0 : getExcluded().hashCode());
         hashCode = prime * hashCode + ((getLogicalResourceId() == null) ? 0 : getLogicalResourceId().hashCode());
+        hashCode = prime * hashCode + ((getParentResourceName() == null) ? 0 : getParentResourceName().hashCode());
         hashCode = prime * hashCode + ((getPhysicalResourceId() == null) ? 0 : getPhysicalResourceId().hashCode());
         hashCode = prime * hashCode + ((getResourceName() == null) ? 0 : getResourceName().hashCode());
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
+        hashCode = prime * hashCode + ((getSourceType() == null) ? 0 : getSourceType().hashCode());
         return hashCode;
     }
 

@@ -22,7 +22,9 @@ public enum ExecutionStatus {
 
     InProgress("InProgress"),
     Successful("Successful"),
-    Error("Error");
+    Error("Error"),
+    CancelStarted("CancelStarted"),
+    Canceled("Canceled");
 
     private String value;
 

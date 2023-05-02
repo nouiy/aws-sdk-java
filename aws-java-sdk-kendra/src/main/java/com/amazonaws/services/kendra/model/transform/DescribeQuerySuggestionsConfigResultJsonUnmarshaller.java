@@ -85,6 +85,11 @@ public class DescribeQuerySuggestionsConfigResultJsonUnmarshaller implements Unm
                     context.nextToken();
                     describeQuerySuggestionsConfigResult.setTotalSuggestionsCount(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("AttributeSuggestionsConfig", targetDepth)) {
+                    context.nextToken();
+                    describeQuerySuggestionsConfigResult.setAttributeSuggestionsConfig(AttributeSuggestionsDescribeConfigJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -71,6 +71,25 @@ public class AutoMLChannel implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String channelType;
+    /**
+     * <p>
+     * If specified, this column name indicates which column of the dataset should be treated as sample weights for use
+     * by the objective metric during the training, evaluation, and the selection of the best model. This column is not
+     * considered as a predictive feature. For more information on Autopilot metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">Metrics and
+     * validation</a>.
+     * </p>
+     * <p>
+     * Sample weights should be numeric, non-negative, with larger values indicating which rows are more important than
+     * others. Data points that have invalid or no weight value are excluded.
+     * </p>
+     * <p>
+     * Support for sample weights is available in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">Ensembling</a>
+     * mode only.
+     * </p>
+     */
+    private String sampleWeightAttributeName;
 
     /**
      * <p>
@@ -353,6 +372,121 @@ public class AutoMLChannel implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * If specified, this column name indicates which column of the dataset should be treated as sample weights for use
+     * by the objective metric during the training, evaluation, and the selection of the best model. This column is not
+     * considered as a predictive feature. For more information on Autopilot metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">Metrics and
+     * validation</a>.
+     * </p>
+     * <p>
+     * Sample weights should be numeric, non-negative, with larger values indicating which rows are more important than
+     * others. Data points that have invalid or no weight value are excluded.
+     * </p>
+     * <p>
+     * Support for sample weights is available in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">Ensembling</a>
+     * mode only.
+     * </p>
+     * 
+     * @param sampleWeightAttributeName
+     *        If specified, this column name indicates which column of the dataset should be treated as sample weights
+     *        for use by the objective metric during the training, evaluation, and the selection of the best model. This
+     *        column is not considered as a predictive feature. For more information on Autopilot metrics, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">Metrics and
+     *        validation</a>.</p>
+     *        <p>
+     *        Sample weights should be numeric, non-negative, with larger values indicating which rows are more
+     *        important than others. Data points that have invalid or no weight value are excluded.
+     *        </p>
+     *        <p>
+     *        Support for sample weights is available in <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"
+     *        >Ensembling</a> mode only.
+     */
+
+    public void setSampleWeightAttributeName(String sampleWeightAttributeName) {
+        this.sampleWeightAttributeName = sampleWeightAttributeName;
+    }
+
+    /**
+     * <p>
+     * If specified, this column name indicates which column of the dataset should be treated as sample weights for use
+     * by the objective metric during the training, evaluation, and the selection of the best model. This column is not
+     * considered as a predictive feature. For more information on Autopilot metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">Metrics and
+     * validation</a>.
+     * </p>
+     * <p>
+     * Sample weights should be numeric, non-negative, with larger values indicating which rows are more important than
+     * others. Data points that have invalid or no weight value are excluded.
+     * </p>
+     * <p>
+     * Support for sample weights is available in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">Ensembling</a>
+     * mode only.
+     * </p>
+     * 
+     * @return If specified, this column name indicates which column of the dataset should be treated as sample weights
+     *         for use by the objective metric during the training, evaluation, and the selection of the best model.
+     *         This column is not considered as a predictive feature. For more information on Autopilot metrics, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">Metrics and
+     *         validation</a>.</p>
+     *         <p>
+     *         Sample weights should be numeric, non-negative, with larger values indicating which rows are more
+     *         important than others. Data points that have invalid or no weight value are excluded.
+     *         </p>
+     *         <p>
+     *         Support for sample weights is available in <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"
+     *         >Ensembling</a> mode only.
+     */
+
+    public String getSampleWeightAttributeName() {
+        return this.sampleWeightAttributeName;
+    }
+
+    /**
+     * <p>
+     * If specified, this column name indicates which column of the dataset should be treated as sample weights for use
+     * by the objective metric during the training, evaluation, and the selection of the best model. This column is not
+     * considered as a predictive feature. For more information on Autopilot metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">Metrics and
+     * validation</a>.
+     * </p>
+     * <p>
+     * Sample weights should be numeric, non-negative, with larger values indicating which rows are more important than
+     * others. Data points that have invalid or no weight value are excluded.
+     * </p>
+     * <p>
+     * Support for sample weights is available in <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html">Ensembling</a>
+     * mode only.
+     * </p>
+     * 
+     * @param sampleWeightAttributeName
+     *        If specified, this column name indicates which column of the dataset should be treated as sample weights
+     *        for use by the objective metric during the training, evaluation, and the selection of the best model. This
+     *        column is not considered as a predictive feature. For more information on Autopilot metrics, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">Metrics and
+     *        validation</a>.</p>
+     *        <p>
+     *        Sample weights should be numeric, non-negative, with larger values indicating which rows are more
+     *        important than others. Data points that have invalid or no weight value are excluded.
+     *        </p>
+     *        <p>
+     *        Support for sample weights is available in <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"
+     *        >Ensembling</a> mode only.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutoMLChannel withSampleWeightAttributeName(String sampleWeightAttributeName) {
+        setSampleWeightAttributeName(sampleWeightAttributeName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -373,7 +507,9 @@ public class AutoMLChannel implements Serializable, Cloneable, StructuredPojo {
         if (getContentType() != null)
             sb.append("ContentType: ").append(getContentType()).append(",");
         if (getChannelType() != null)
-            sb.append("ChannelType: ").append(getChannelType());
+            sb.append("ChannelType: ").append(getChannelType()).append(",");
+        if (getSampleWeightAttributeName() != null)
+            sb.append("SampleWeightAttributeName: ").append(getSampleWeightAttributeName());
         sb.append("}");
         return sb.toString();
     }
@@ -408,6 +544,10 @@ public class AutoMLChannel implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getChannelType() != null && other.getChannelType().equals(this.getChannelType()) == false)
             return false;
+        if (other.getSampleWeightAttributeName() == null ^ this.getSampleWeightAttributeName() == null)
+            return false;
+        if (other.getSampleWeightAttributeName() != null && other.getSampleWeightAttributeName().equals(this.getSampleWeightAttributeName()) == false)
+            return false;
         return true;
     }
 
@@ -421,6 +561,7 @@ public class AutoMLChannel implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTargetAttributeName() == null) ? 0 : getTargetAttributeName().hashCode());
         hashCode = prime * hashCode + ((getContentType() == null) ? 0 : getContentType().hashCode());
         hashCode = prime * hashCode + ((getChannelType() == null) ? 0 : getChannelType().hashCode());
+        hashCode = prime * hashCode + ((getSampleWeightAttributeName() == null) ? 0 : getSampleWeightAttributeName().hashCode());
         return hashCode;
     }
 

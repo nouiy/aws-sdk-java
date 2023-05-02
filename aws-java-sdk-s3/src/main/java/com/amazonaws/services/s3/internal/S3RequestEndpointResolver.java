@@ -119,7 +119,7 @@ public class S3RequestEndpointResolver {
             request.setResourcePath(SdkHttpUtils.urlEncode(getHostStyleResourcePath(), true));
         } else {
             request.setEndpoint(endpoint);
-            request.setResourcePath(SdkHttpUtils.urlEncode(getPathStyleResourcePath(), true));
+            request.setResourcePath(getPathStyleResourcePath());
         }
     }
 
@@ -134,10 +134,11 @@ public class S3RequestEndpointResolver {
 
     private String getPathStyleResourcePath() {
         if (bucketName == null) {
-            return keyForPath();
+            return SdkHttpUtils.urlEncode(keyForPath(), true);
         }
 
-        return bucketName + "/" + keyForPath();
+        String encodedBucketName = SdkHttpUtils.urlEncode(bucketName, false);
+        return encodedBucketName + "/" + SdkHttpUtils.urlEncode(keyForPath(), true);
     }
 
     private String keyForPath() {

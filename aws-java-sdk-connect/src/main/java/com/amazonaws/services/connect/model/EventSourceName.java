@@ -25,7 +25,8 @@ public enum EventSourceName {
     OnPostChatAnalysisAvailable("OnPostChatAnalysisAvailable"),
     OnZendeskTicketCreate("OnZendeskTicketCreate"),
     OnZendeskTicketStatusUpdate("OnZendeskTicketStatusUpdate"),
-    OnSalesforceCaseCreate("OnSalesforceCaseCreate");
+    OnSalesforceCaseCreate("OnSalesforceCaseCreate"),
+    OnContactEvaluationSubmit("OnContactEvaluationSubmit");
 
     private String value;
 

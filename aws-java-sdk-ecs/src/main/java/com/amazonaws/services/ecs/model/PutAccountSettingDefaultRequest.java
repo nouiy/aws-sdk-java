@@ -50,8 +50,8 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
     private String name;
     /**
      * <p>
-     * The account setting value for the specified principal ARN. Accepted values are <code>enabled</code> and
-     * <code>disabled</code>.
+     * The account setting value for the specified principal ARN. Accepted values are <code>enabled</code>,
+     * <code>disabled</code>, <code>on</code>, and <code>off</code>.
      * </p>
      */
     private String value;
@@ -253,13 +253,13 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The account setting value for the specified principal ARN. Accepted values are <code>enabled</code> and
-     * <code>disabled</code>.
+     * The account setting value for the specified principal ARN. Accepted values are <code>enabled</code>,
+     * <code>disabled</code>, <code>on</code>, and <code>off</code>.
      * </p>
      * 
      * @param value
-     *        The account setting value for the specified principal ARN. Accepted values are <code>enabled</code> and
-     *        <code>disabled</code>.
+     *        The account setting value for the specified principal ARN. Accepted values are <code>enabled</code>,
+     *        <code>disabled</code>, <code>on</code>, and <code>off</code>.
      */
 
     public void setValue(String value) {
@@ -268,12 +268,12 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The account setting value for the specified principal ARN. Accepted values are <code>enabled</code> and
-     * <code>disabled</code>.
+     * The account setting value for the specified principal ARN. Accepted values are <code>enabled</code>,
+     * <code>disabled</code>, <code>on</code>, and <code>off</code>.
      * </p>
      * 
-     * @return The account setting value for the specified principal ARN. Accepted values are <code>enabled</code> and
-     *         <code>disabled</code>.
+     * @return The account setting value for the specified principal ARN. Accepted values are <code>enabled</code>,
+     *         <code>disabled</code>, <code>on</code>, and <code>off</code>.
      */
 
     public String getValue() {
@@ -282,13 +282,13 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The account setting value for the specified principal ARN. Accepted values are <code>enabled</code> and
-     * <code>disabled</code>.
+     * The account setting value for the specified principal ARN. Accepted values are <code>enabled</code>,
+     * <code>disabled</code>, <code>on</code>, and <code>off</code>.
      * </p>
      * 
      * @param value
-     *        The account setting value for the specified principal ARN. Accepted values are <code>enabled</code> and
-     *        <code>disabled</code>.
+     *        The account setting value for the specified principal ARN. Accepted values are <code>enabled</code>,
+     *        <code>disabled</code>, <code>on</code>, and <code>off</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

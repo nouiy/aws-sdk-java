@@ -39,6 +39,8 @@ public class UpdateQuerySuggestionsConfigRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MinimumNumberOfQueryingUsers").build();
     private static final MarshallingInfo<Integer> MINIMUMQUERYCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MinimumQueryCount").build();
+    private static final MarshallingInfo<StructuredPojo> ATTRIBUTESUGGESTIONSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AttributeSuggestionsConfig").build();
 
     private static final UpdateQuerySuggestionsConfigRequestMarshaller instance = new UpdateQuerySuggestionsConfigRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class UpdateQuerySuggestionsConfigRequestMarshaller {
                     INCLUDEQUERIESWITHOUTUSERINFORMATION_BINDING);
             protocolMarshaller.marshall(updateQuerySuggestionsConfigRequest.getMinimumNumberOfQueryingUsers(), MINIMUMNUMBEROFQUERYINGUSERS_BINDING);
             protocolMarshaller.marshall(updateQuerySuggestionsConfigRequest.getMinimumQueryCount(), MINIMUMQUERYCOUNT_BINDING);
+            protocolMarshaller.marshall(updateQuerySuggestionsConfigRequest.getAttributeSuggestionsConfig(), ATTRIBUTESUGGESTIONSCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

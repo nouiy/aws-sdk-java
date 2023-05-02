@@ -33,7 +33,7 @@ public class UpdateFeaturedResultsSetRequest extends com.amazonaws.AmazonWebServ
     private String indexId;
     /**
      * <p>
-     * The identifier of the index used for featuring results.
+     * The identifier of the set of featured results that you want to update.
      * </p>
      */
     private String featuredResultsSetId;
@@ -116,11 +116,11 @@ public class UpdateFeaturedResultsSetRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The identifier of the index used for featuring results.
+     * The identifier of the set of featured results that you want to update.
      * </p>
      * 
      * @param featuredResultsSetId
-     *        The identifier of the index used for featuring results.
+     *        The identifier of the set of featured results that you want to update.
      */
 
     public void setFeaturedResultsSetId(String featuredResultsSetId) {
@@ -129,10 +129,10 @@ public class UpdateFeaturedResultsSetRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The identifier of the index used for featuring results.
+     * The identifier of the set of featured results that you want to update.
      * </p>
      * 
-     * @return The identifier of the index used for featuring results.
+     * @return The identifier of the set of featured results that you want to update.
      */
 
     public String getFeaturedResultsSetId() {
@@ -141,11 +141,11 @@ public class UpdateFeaturedResultsSetRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The identifier of the index used for featuring results.
+     * The identifier of the set of featured results that you want to update.
      * </p>
      * 
      * @param featuredResultsSetId
-     *        The identifier of the index used for featuring results.
+     *        The identifier of the set of featured results that you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

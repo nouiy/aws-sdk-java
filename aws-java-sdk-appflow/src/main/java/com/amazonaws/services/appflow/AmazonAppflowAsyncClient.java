@@ -121,6 +121,39 @@ public class AmazonAppflowAsyncClient extends AmazonAppflowClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<CancelFlowExecutionsResult> cancelFlowExecutionsAsync(CancelFlowExecutionsRequest request) {
+
+        return cancelFlowExecutionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelFlowExecutionsResult> cancelFlowExecutionsAsync(final CancelFlowExecutionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CancelFlowExecutionsRequest, CancelFlowExecutionsResult> asyncHandler) {
+        final CancelFlowExecutionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CancelFlowExecutionsResult>() {
+            @Override
+            public CancelFlowExecutionsResult call() throws Exception {
+                CancelFlowExecutionsResult result = null;
+
+                try {
+                    result = executeCancelFlowExecutions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateConnectorProfileResult> createConnectorProfileAsync(CreateConnectorProfileRequest request) {
 
         return createConnectorProfileAsync(request, null);

@@ -69,6 +69,10 @@ public class PhysicalResourceJsonUnmarshaller implements Unmarshaller<PhysicalRe
                     context.nextToken();
                     physicalResource.setLogicalResourceId(LogicalResourceIdJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("parentResourceName", targetDepth)) {
+                    context.nextToken();
+                    physicalResource.setParentResourceName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("physicalResourceId", targetDepth)) {
                     context.nextToken();
                     physicalResource.setPhysicalResourceId(PhysicalResourceIdJsonUnmarshaller.getInstance().unmarshall(context));
@@ -80,6 +84,10 @@ public class PhysicalResourceJsonUnmarshaller implements Unmarshaller<PhysicalRe
                 if (context.testExpression("resourceType", targetDepth)) {
                     context.nextToken();
                     physicalResource.setResourceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("sourceType", targetDepth)) {
+                    context.nextToken();
+                    physicalResource.setSourceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -703,7 +703,7 @@ public interface AWSkendraAsync extends AWSkendra {
      * </p>
      * <p>
      * For an example of creating a block list for query suggestions using the Python SDK, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/query-suggestions.html#suggestions-block-list">Query
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/query-suggestions.html#query-suggestions-blocklist">Query
      * suggestions block list</a>.
      * </p>
      * 
@@ -739,7 +739,7 @@ public interface AWSkendraAsync extends AWSkendra {
      * </p>
      * <p>
      * For an example of creating a block list for query suggestions using the Python SDK, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/query-suggestions.html#suggestions-block-list">Query
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/query-suggestions.html#query-suggestions-blocklist">Query
      * suggestions block list</a>.
      * </p>
      * 
@@ -2724,8 +2724,7 @@ public interface AWSkendraAsync extends AWSkendra {
      * Amazon Kendra supports partial updates, so you only need to provide the fields you want to update.
      * </p>
      * <p>
-     * If an update is currently processing (i.e. 'happening'), you need to wait for the update to finish before making
-     * another update.
+     * If an update is currently processing, you need to wait for the update to finish before making another update.
      * </p>
      * <p>
      * Updates to query suggestions settings might not take effect right away. The time for your updated settings to
@@ -2757,8 +2756,7 @@ public interface AWSkendraAsync extends AWSkendra {
      * Amazon Kendra supports partial updates, so you only need to provide the fields you want to update.
      * </p>
      * <p>
-     * If an update is currently processing (i.e. 'happening'), you need to wait for the update to finish before making
-     * another update.
+     * If an update is currently processing, you need to wait for the update to finish before making another update.
      * </p>
      * <p>
      * Updates to query suggestions settings might not take effect right away. The time for your updated settings to
