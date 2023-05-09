@@ -153,6 +153,10 @@ public class CodeGenConfigurationNodeMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3DeltaCatalogTarget").build();
     private static final MarshallingInfo<StructuredPojo> S3DELTADIRECTTARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3DeltaDirectTarget").build();
+    private static final MarshallingInfo<StructuredPojo> AMAZONREDSHIFTSOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AmazonRedshiftSource").build();
+    private static final MarshallingInfo<StructuredPojo> AMAZONREDSHIFTTARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AmazonRedshiftTarget").build();
 
     private static final CodeGenConfigurationNodeMarshaller instance = new CodeGenConfigurationNodeMarshaller();
 
@@ -233,6 +237,8 @@ public class CodeGenConfigurationNodeMarshaller {
             protocolMarshaller.marshall(codeGenConfigurationNode.getS3DeltaSource(), S3DELTASOURCE_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getS3DeltaCatalogTarget(), S3DELTACATALOGTARGET_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getS3DeltaDirectTarget(), S3DELTADIRECTTARGET_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getAmazonRedshiftSource(), AMAZONREDSHIFTSOURCE_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getAmazonRedshiftTarget(), AMAZONREDSHIFTTARGET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

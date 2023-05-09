@@ -418,6 +418,18 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
      * </p>
      */
     private S3DeltaDirectTarget s3DeltaDirectTarget;
+    /**
+     * <p>
+     * Specifies a target that writes to a data source in Amazon Redshift.
+     * </p>
+     */
+    private AmazonRedshiftSource amazonRedshiftSource;
+    /**
+     * <p>
+     * Specifies a target that writes to a data target in Amazon Redshift.
+     * </p>
+     */
+    private AmazonRedshiftTarget amazonRedshiftTarget;
 
     /**
      * <p>
@@ -3022,6 +3034,86 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies a target that writes to a data source in Amazon Redshift.
+     * </p>
+     * 
+     * @param amazonRedshiftSource
+     *        Specifies a target that writes to a data source in Amazon Redshift.
+     */
+
+    public void setAmazonRedshiftSource(AmazonRedshiftSource amazonRedshiftSource) {
+        this.amazonRedshiftSource = amazonRedshiftSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a data source in Amazon Redshift.
+     * </p>
+     * 
+     * @return Specifies a target that writes to a data source in Amazon Redshift.
+     */
+
+    public AmazonRedshiftSource getAmazonRedshiftSource() {
+        return this.amazonRedshiftSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a data source in Amazon Redshift.
+     * </p>
+     * 
+     * @param amazonRedshiftSource
+     *        Specifies a target that writes to a data source in Amazon Redshift.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withAmazonRedshiftSource(AmazonRedshiftSource amazonRedshiftSource) {
+        setAmazonRedshiftSource(amazonRedshiftSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a data target in Amazon Redshift.
+     * </p>
+     * 
+     * @param amazonRedshiftTarget
+     *        Specifies a target that writes to a data target in Amazon Redshift.
+     */
+
+    public void setAmazonRedshiftTarget(AmazonRedshiftTarget amazonRedshiftTarget) {
+        this.amazonRedshiftTarget = amazonRedshiftTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a data target in Amazon Redshift.
+     * </p>
+     * 
+     * @return Specifies a target that writes to a data target in Amazon Redshift.
+     */
+
+    public AmazonRedshiftTarget getAmazonRedshiftTarget() {
+        return this.amazonRedshiftTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a data target in Amazon Redshift.
+     * </p>
+     * 
+     * @param amazonRedshiftTarget
+     *        Specifies a target that writes to a data target in Amazon Redshift.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withAmazonRedshiftTarget(AmazonRedshiftTarget amazonRedshiftTarget) {
+        setAmazonRedshiftTarget(amazonRedshiftTarget);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3158,7 +3250,11 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         if (getS3DeltaCatalogTarget() != null)
             sb.append("S3DeltaCatalogTarget: ").append(getS3DeltaCatalogTarget()).append(",");
         if (getS3DeltaDirectTarget() != null)
-            sb.append("S3DeltaDirectTarget: ").append(getS3DeltaDirectTarget());
+            sb.append("S3DeltaDirectTarget: ").append(getS3DeltaDirectTarget()).append(",");
+        if (getAmazonRedshiftSource() != null)
+            sb.append("AmazonRedshiftSource: ").append(getAmazonRedshiftSource()).append(",");
+        if (getAmazonRedshiftTarget() != null)
+            sb.append("AmazonRedshiftTarget: ").append(getAmazonRedshiftTarget());
         sb.append("}");
         return sb.toString();
     }
@@ -3427,6 +3523,14 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
             return false;
         if (other.getS3DeltaDirectTarget() != null && other.getS3DeltaDirectTarget().equals(this.getS3DeltaDirectTarget()) == false)
             return false;
+        if (other.getAmazonRedshiftSource() == null ^ this.getAmazonRedshiftSource() == null)
+            return false;
+        if (other.getAmazonRedshiftSource() != null && other.getAmazonRedshiftSource().equals(this.getAmazonRedshiftSource()) == false)
+            return false;
+        if (other.getAmazonRedshiftTarget() == null ^ this.getAmazonRedshiftTarget() == null)
+            return false;
+        if (other.getAmazonRedshiftTarget() != null && other.getAmazonRedshiftTarget().equals(this.getAmazonRedshiftTarget()) == false)
+            return false;
         return true;
     }
 
@@ -3498,6 +3602,8 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getS3DeltaSource() == null) ? 0 : getS3DeltaSource().hashCode());
         hashCode = prime * hashCode + ((getS3DeltaCatalogTarget() == null) ? 0 : getS3DeltaCatalogTarget().hashCode());
         hashCode = prime * hashCode + ((getS3DeltaDirectTarget() == null) ? 0 : getS3DeltaDirectTarget().hashCode());
+        hashCode = prime * hashCode + ((getAmazonRedshiftSource() == null) ? 0 : getAmazonRedshiftSource().hashCode());
+        hashCode = prime * hashCode + ((getAmazonRedshiftTarget() == null) ? 0 : getAmazonRedshiftTarget().hashCode());
         return hashCode;
     }
 

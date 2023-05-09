@@ -40,7 +40,8 @@ public enum MetricType {
     ElastiCachePrimaryEngineCPUUtilization("ElastiCachePrimaryEngineCPUUtilization"),
     ElastiCacheReplicaEngineCPUUtilization("ElastiCacheReplicaEngineCPUUtilization"),
     ElastiCacheDatabaseMemoryUsageCountedForEvictPercentage("ElastiCacheDatabaseMemoryUsageCountedForEvictPercentage"),
-    NeptuneReaderAverageCPUUtilization("NeptuneReaderAverageCPUUtilization");
+    NeptuneReaderAverageCPUUtilization("NeptuneReaderAverageCPUUtilization"),
+    SageMakerVariantProvisionedConcurrencyUtilization("SageMakerVariantProvisionedConcurrencyUtilization");
 
     private String value;
 

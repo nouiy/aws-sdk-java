@@ -302,6 +302,14 @@ public class CodeGenConfigurationNodeJsonUnmarshaller implements Unmarshaller<Co
                     context.nextToken();
                     codeGenConfigurationNode.setS3DeltaDirectTarget(S3DeltaDirectTargetJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AmazonRedshiftSource", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setAmazonRedshiftSource(AmazonRedshiftSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AmazonRedshiftTarget", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setAmazonRedshiftTarget(AmazonRedshiftTargetJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

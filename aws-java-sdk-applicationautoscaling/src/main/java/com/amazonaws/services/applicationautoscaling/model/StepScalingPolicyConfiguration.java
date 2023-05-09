@@ -113,6 +113,11 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * SageMaker endpoint variants
      * </p>
      * </li>
@@ -503,6 +508,11 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * SageMaker endpoint variants
      * </p>
      * </li>
@@ -596,6 +606,11 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        Neptune clusters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SageMaker Serverless endpoint provisioned concurrency
      *        </p>
      *        </li>
      *        <li>
@@ -702,6 +717,11 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * SageMaker endpoint variants
      * </p>
      * </li>
@@ -794,6 +814,11 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      *         <li>
      *         <p>
      *         Neptune clusters
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         SageMaker Serverless endpoint provisioned concurrency
      *         </p>
      *         </li>
      *         <li>
@@ -900,6 +925,11 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * SageMaker endpoint variants
      * </p>
      * </li>
@@ -993,6 +1023,11 @@ public class StepScalingPolicyConfiguration implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        Neptune clusters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SageMaker Serverless endpoint provisioned concurrency
      *        </p>
      *        </li>
      *        <li>

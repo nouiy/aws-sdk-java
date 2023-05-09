@@ -99,6 +99,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * </li>
      * <li>
      * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * SageMaker endpoint variants
      * </p>
      * </li>
@@ -183,6 +188,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * <li>
      * <p>
      * Neptune clusters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
      * </p>
      * </li>
      * <li>
@@ -457,6 +467,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * </li>
      * <li>
      * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * SageMaker endpoint variants
      * </p>
      * </li>
@@ -540,6 +555,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *        <li>
      *        <p>
      *        Neptune clusters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SageMaker Serverless endpoint provisioned concurrency
      *        </p>
      *        </li>
      *        <li>
@@ -636,6 +656,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * </li>
      * <li>
      * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * SageMaker endpoint variants
      * </p>
      * </li>
@@ -718,6 +743,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *         <li>
      *         <p>
      *         Neptune clusters
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         SageMaker Serverless endpoint provisioned concurrency
      *         </p>
      *         </li>
      *         <li>
@@ -814,6 +844,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * </li>
      * <li>
      * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * SageMaker endpoint variants
      * </p>
      * </li>
@@ -897,6 +932,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *        <li>
      *        <p>
      *        Neptune clusters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SageMaker Serverless endpoint provisioned concurrency
      *        </p>
      *        </li>
      *        <li>
@@ -994,6 +1034,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * </li>
      * <li>
      * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * SageMaker endpoint variants
      * </p>
      * </li>
@@ -1077,6 +1122,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *        <li>
      *        <p>
      *        Neptune clusters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SageMaker Serverless endpoint provisioned concurrency
      *        </p>
      *        </li>
      *        <li>
@@ -1172,6 +1222,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * </li>
      * <li>
      * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * SageMaker endpoint variants
      * </p>
      * </li>
@@ -1254,6 +1309,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *         <li>
      *         <p>
      *         Neptune clusters
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         SageMaker Serverless endpoint provisioned concurrency
      *         </p>
      *         </li>
      *         <li>
@@ -1349,6 +1409,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      * </li>
      * <li>
      * <p>
+     * SageMaker Serverless endpoint provisioned concurrency
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * SageMaker endpoint variants
      * </p>
      * </li>
@@ -1432,6 +1497,11 @@ public class TargetTrackingScalingPolicyConfiguration implements Serializable, C
      *        <li>
      *        <p>
      *        Neptune clusters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SageMaker Serverless endpoint provisioned concurrency
      *        </p>
      *        </li>
      *        <li>
