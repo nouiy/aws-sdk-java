@@ -60,6 +60,8 @@ public class FaceDetailMarshaller {
             .marshallLocationName("Confidence").build();
     private static final MarshallingInfo<StructuredPojo> FACEOCCLUDED_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FaceOccluded").build();
+    private static final MarshallingInfo<StructuredPojo> EYEDIRECTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EyeDirection").build();
 
     private static final FaceDetailMarshaller instance = new FaceDetailMarshaller();
 
@@ -93,6 +95,7 @@ public class FaceDetailMarshaller {
             protocolMarshaller.marshall(faceDetail.getQuality(), QUALITY_BINDING);
             protocolMarshaller.marshall(faceDetail.getConfidence(), CONFIDENCE_BINDING);
             protocolMarshaller.marshall(faceDetail.getFaceOccluded(), FACEOCCLUDED_BINDING);
+            protocolMarshaller.marshall(faceDetail.getEyeDirection(), EYEDIRECTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

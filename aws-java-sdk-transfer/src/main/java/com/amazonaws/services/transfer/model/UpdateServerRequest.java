@@ -309,7 +309,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String securityPolicyName;
     /**
      * <p>
-     * A system-assigned unique identifier for a server instance that the user account is assigned to.
+     * A system-assigned unique identifier for a server instance that the Transfer Family user is assigned to.
      * </p>
      */
     private String serverId;
@@ -321,7 +321,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      * <p>
      * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
@@ -2410,11 +2410,11 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A system-assigned unique identifier for a server instance that the user account is assigned to.
+     * A system-assigned unique identifier for a server instance that the Transfer Family user is assigned to.
      * </p>
      * 
      * @param serverId
-     *        A system-assigned unique identifier for a server instance that the user account is assigned to.
+     *        A system-assigned unique identifier for a server instance that the Transfer Family user is assigned to.
      */
 
     public void setServerId(String serverId) {
@@ -2423,10 +2423,10 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A system-assigned unique identifier for a server instance that the user account is assigned to.
+     * A system-assigned unique identifier for a server instance that the Transfer Family user is assigned to.
      * </p>
      * 
-     * @return A system-assigned unique identifier for a server instance that the user account is assigned to.
+     * @return A system-assigned unique identifier for a server instance that the Transfer Family user is assigned to.
      */
 
     public String getServerId() {
@@ -2435,11 +2435,11 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A system-assigned unique identifier for a server instance that the user account is assigned to.
+     * A system-assigned unique identifier for a server instance that the Transfer Family user is assigned to.
      * </p>
      * 
      * @param serverId
-     *        A system-assigned unique identifier for a server instance that the user account is assigned to.
+     *        A system-assigned unique identifier for a server instance that the Transfer Family user is assigned to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2456,7 +2456,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      * <p>
      * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
@@ -2472,7 +2472,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *        also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
-     *        upload occurs when a file is open when the session disconnects.
+     *        upload occurs when the server session disconnects while the file is still being uploaded.
      *        </p>
      *        <p>
      *        To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as
@@ -2494,7 +2494,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      * <p>
      * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
@@ -2509,7 +2509,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <p>
      *         In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *         also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
-     *         upload occurs when a file is open when the session disconnects.
+     *         upload occurs when the server session disconnects while the file is still being uploaded.
      *         </p>
      *         <p>
      *         To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as
@@ -2531,7 +2531,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      * <p>
      * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
@@ -2547,7 +2547,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *        also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
-     *        upload occurs when a file is open when the session disconnects.
+     *        upload occurs when the server session disconnects while the file is still being uploaded.
      *        </p>
      *        <p>
      *        To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as

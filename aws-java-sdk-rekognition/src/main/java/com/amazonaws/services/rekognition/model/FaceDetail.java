@@ -164,6 +164,12 @@ public class FaceDetail implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private FaceOccluded faceOccluded;
+    /**
+     * <p>
+     * Indicates the direction the eyes are gazing in, as defined by pitch and yaw.
+     * </p>
+     */
+    private EyeDirection eyeDirection;
 
     /**
      * <p>
@@ -926,6 +932,46 @@ public class FaceDetail implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates the direction the eyes are gazing in, as defined by pitch and yaw.
+     * </p>
+     * 
+     * @param eyeDirection
+     *        Indicates the direction the eyes are gazing in, as defined by pitch and yaw.
+     */
+
+    public void setEyeDirection(EyeDirection eyeDirection) {
+        this.eyeDirection = eyeDirection;
+    }
+
+    /**
+     * <p>
+     * Indicates the direction the eyes are gazing in, as defined by pitch and yaw.
+     * </p>
+     * 
+     * @return Indicates the direction the eyes are gazing in, as defined by pitch and yaw.
+     */
+
+    public EyeDirection getEyeDirection() {
+        return this.eyeDirection;
+    }
+
+    /**
+     * <p>
+     * Indicates the direction the eyes are gazing in, as defined by pitch and yaw.
+     * </p>
+     * 
+     * @param eyeDirection
+     *        Indicates the direction the eyes are gazing in, as defined by pitch and yaw.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FaceDetail withEyeDirection(EyeDirection eyeDirection) {
+        setEyeDirection(eyeDirection);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -968,7 +1014,9 @@ public class FaceDetail implements Serializable, Cloneable, StructuredPojo {
         if (getConfidence() != null)
             sb.append("Confidence: ").append(getConfidence()).append(",");
         if (getFaceOccluded() != null)
-            sb.append("FaceOccluded: ").append(getFaceOccluded());
+            sb.append("FaceOccluded: ").append(getFaceOccluded()).append(",");
+        if (getEyeDirection() != null)
+            sb.append("EyeDirection: ").append(getEyeDirection());
         sb.append("}");
         return sb.toString();
     }
@@ -1047,6 +1095,10 @@ public class FaceDetail implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getFaceOccluded() != null && other.getFaceOccluded().equals(this.getFaceOccluded()) == false)
             return false;
+        if (other.getEyeDirection() == null ^ this.getEyeDirection() == null)
+            return false;
+        if (other.getEyeDirection() != null && other.getEyeDirection().equals(this.getEyeDirection()) == false)
+            return false;
         return true;
     }
 
@@ -1071,6 +1123,7 @@ public class FaceDetail implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getQuality() == null) ? 0 : getQuality().hashCode());
         hashCode = prime * hashCode + ((getConfidence() == null) ? 0 : getConfidence().hashCode());
         hashCode = prime * hashCode + ((getFaceOccluded() == null) ? 0 : getFaceOccluded().hashCode());
+        hashCode = prime * hashCode + ((getEyeDirection() == null) ? 0 : getEyeDirection().hashCode());
         return hashCode;
     }
 

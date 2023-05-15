@@ -132,7 +132,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      */
@@ -278,7 +278,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      */
     private WorkflowDetails workflowDetails;
@@ -889,7 +889,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -910,7 +910,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you
      *        choose this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter
-     *        or the <code>IdentityProviderDetails</code> data type.
+     *        for the <code>IdentityProviderDetails</code> data type.
      * @see IdentityProviderType
      */
 
@@ -936,7 +936,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -956,7 +956,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      *         <p>
      *         Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If
      *         you choose this value, you must specify the ARN for the Lambda function in the <code>Function</code>
-     *         parameter or the <code>IdentityProviderDetails</code> data type.
+     *         parameter for the <code>IdentityProviderDetails</code> data type.
      * @see IdentityProviderType
      */
 
@@ -982,7 +982,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -1003,7 +1003,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you
      *        choose this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter
-     *        or the <code>IdentityProviderDetails</code> data type.
+     *        for the <code>IdentityProviderDetails</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdentityProviderType
      */
@@ -1031,7 +1031,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -1052,7 +1052,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you
      *        choose this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter
-     *        or the <code>IdentityProviderDetails</code> data type.
+     *        for the <code>IdentityProviderDetails</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdentityProviderType
      */
@@ -2250,7 +2250,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      * 
      * @param workflowDetails
@@ -2259,7 +2259,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *        also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
-     *        upload occurs when a file is open when the session disconnects.
+     *        upload occurs when the server session disconnects while the file is still being uploaded.
      */
 
     public void setWorkflowDetails(WorkflowDetails workflowDetails) {
@@ -2274,7 +2274,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      * 
      * @return Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
@@ -2282,7 +2282,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      *         <p>
      *         In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *         also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
-     *         upload occurs when a file is open when the session disconnects.
+     *         upload occurs when the server session disconnects while the file is still being uploaded.
      */
 
     public WorkflowDetails getWorkflowDetails() {
@@ -2297,7 +2297,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      * 
      * @param workflowDetails
@@ -2306,7 +2306,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *        also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
-     *        upload occurs when a file is open when the session disconnects.
+     *        upload occurs when the server session disconnects while the file is still being uploaded.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

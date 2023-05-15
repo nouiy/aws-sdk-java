@@ -178,10 +178,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String hostKey;
     /**
      * <p>
-     * Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code> or
-     * <code>API_GATEWAY</code>. Accepts an array containing all of the information required to use a directory in
-     * <code>AWS_DIRECTORY_SERVICE</code> or invoke a customer-supplied authentication API, including the API Gateway
-     * URL. Not required when <code>IdentityProviderType</code> is set to <code>SERVICE_MANAGED</code>.
+     * Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code>,
+     * <code>Amazon Web Services_LAMBDA</code> or <code>API_GATEWAY</code>. Accepts an array containing all of the
+     * information required to use a directory in <code>AWS_DIRECTORY_SERVICE</code> or invoke a customer-supplied
+     * authentication API, including the API Gateway URL. Not required when <code>IdentityProviderType</code> is set to
+     * <code>SERVICE_MANAGED</code>.
      * </p>
      */
     private IdentityProviderDetails identityProviderDetails;
@@ -203,7 +204,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      */
@@ -359,7 +360,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      */
     private WorkflowDetails workflowDetails;
@@ -1373,17 +1374,19 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code> or
-     * <code>API_GATEWAY</code>. Accepts an array containing all of the information required to use a directory in
-     * <code>AWS_DIRECTORY_SERVICE</code> or invoke a customer-supplied authentication API, including the API Gateway
-     * URL. Not required when <code>IdentityProviderType</code> is set to <code>SERVICE_MANAGED</code>.
+     * Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code>,
+     * <code>Amazon Web Services_LAMBDA</code> or <code>API_GATEWAY</code>. Accepts an array containing all of the
+     * information required to use a directory in <code>AWS_DIRECTORY_SERVICE</code> or invoke a customer-supplied
+     * authentication API, including the API Gateway URL. Not required when <code>IdentityProviderType</code> is set to
+     * <code>SERVICE_MANAGED</code>.
      * </p>
      * 
      * @param identityProviderDetails
-     *        Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code> or
-     *        <code>API_GATEWAY</code>. Accepts an array containing all of the information required to use a directory
-     *        in <code>AWS_DIRECTORY_SERVICE</code> or invoke a customer-supplied authentication API, including the API
-     *        Gateway URL. Not required when <code>IdentityProviderType</code> is set to <code>SERVICE_MANAGED</code>.
+     *        Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code>,
+     *        <code>Amazon Web Services_LAMBDA</code> or <code>API_GATEWAY</code>. Accepts an array containing all of
+     *        the information required to use a directory in <code>AWS_DIRECTORY_SERVICE</code> or invoke a
+     *        customer-supplied authentication API, including the API Gateway URL. Not required when
+     *        <code>IdentityProviderType</code> is set to <code>SERVICE_MANAGED</code>.
      */
 
     public void setIdentityProviderDetails(IdentityProviderDetails identityProviderDetails) {
@@ -1392,16 +1395,18 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code> or
-     * <code>API_GATEWAY</code>. Accepts an array containing all of the information required to use a directory in
-     * <code>AWS_DIRECTORY_SERVICE</code> or invoke a customer-supplied authentication API, including the API Gateway
-     * URL. Not required when <code>IdentityProviderType</code> is set to <code>SERVICE_MANAGED</code>.
+     * Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code>,
+     * <code>Amazon Web Services_LAMBDA</code> or <code>API_GATEWAY</code>. Accepts an array containing all of the
+     * information required to use a directory in <code>AWS_DIRECTORY_SERVICE</code> or invoke a customer-supplied
+     * authentication API, including the API Gateway URL. Not required when <code>IdentityProviderType</code> is set to
+     * <code>SERVICE_MANAGED</code>.
      * </p>
      * 
-     * @return Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code> or
-     *         <code>API_GATEWAY</code>. Accepts an array containing all of the information required to use a directory
-     *         in <code>AWS_DIRECTORY_SERVICE</code> or invoke a customer-supplied authentication API, including the API
-     *         Gateway URL. Not required when <code>IdentityProviderType</code> is set to <code>SERVICE_MANAGED</code>.
+     * @return Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code>,
+     *         <code>Amazon Web Services_LAMBDA</code> or <code>API_GATEWAY</code>. Accepts an array containing all of
+     *         the information required to use a directory in <code>AWS_DIRECTORY_SERVICE</code> or invoke a
+     *         customer-supplied authentication API, including the API Gateway URL. Not required when
+     *         <code>IdentityProviderType</code> is set to <code>SERVICE_MANAGED</code>.
      */
 
     public IdentityProviderDetails getIdentityProviderDetails() {
@@ -1410,17 +1415,19 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code> or
-     * <code>API_GATEWAY</code>. Accepts an array containing all of the information required to use a directory in
-     * <code>AWS_DIRECTORY_SERVICE</code> or invoke a customer-supplied authentication API, including the API Gateway
-     * URL. Not required when <code>IdentityProviderType</code> is set to <code>SERVICE_MANAGED</code>.
+     * Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code>,
+     * <code>Amazon Web Services_LAMBDA</code> or <code>API_GATEWAY</code>. Accepts an array containing all of the
+     * information required to use a directory in <code>AWS_DIRECTORY_SERVICE</code> or invoke a customer-supplied
+     * authentication API, including the API Gateway URL. Not required when <code>IdentityProviderType</code> is set to
+     * <code>SERVICE_MANAGED</code>.
      * </p>
      * 
      * @param identityProviderDetails
-     *        Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code> or
-     *        <code>API_GATEWAY</code>. Accepts an array containing all of the information required to use a directory
-     *        in <code>AWS_DIRECTORY_SERVICE</code> or invoke a customer-supplied authentication API, including the API
-     *        Gateway URL. Not required when <code>IdentityProviderType</code> is set to <code>SERVICE_MANAGED</code>.
+     *        Required when <code>IdentityProviderType</code> is set to <code>AWS_DIRECTORY_SERVICE</code>,
+     *        <code>Amazon Web Services_LAMBDA</code> or <code>API_GATEWAY</code>. Accepts an array containing all of
+     *        the information required to use a directory in <code>AWS_DIRECTORY_SERVICE</code> or invoke a
+     *        customer-supplied authentication API, including the API Gateway URL. Not required when
+     *        <code>IdentityProviderType</code> is set to <code>SERVICE_MANAGED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1447,7 +1454,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -1468,7 +1475,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you
      *        choose this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter
-     *        or the <code>IdentityProviderDetails</code> data type.
+     *        for the <code>IdentityProviderDetails</code> data type.
      * @see IdentityProviderType
      */
 
@@ -1494,7 +1501,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -1514,7 +1521,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <p>
      *         Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If
      *         you choose this value, you must specify the ARN for the Lambda function in the <code>Function</code>
-     *         parameter or the <code>IdentityProviderDetails</code> data type.
+     *         parameter for the <code>IdentityProviderDetails</code> data type.
      * @see IdentityProviderType
      */
 
@@ -1540,7 +1547,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -1561,7 +1568,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you
      *        choose this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter
-     *        or the <code>IdentityProviderDetails</code> data type.
+     *        for the <code>IdentityProviderDetails</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdentityProviderType
      */
@@ -1589,7 +1596,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -1610,7 +1617,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you
      *        choose this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter
-     *        or the <code>IdentityProviderDetails</code> data type.
+     *        for the <code>IdentityProviderDetails</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdentityProviderType
      */
@@ -2829,7 +2836,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      * 
      * @param workflowDetails
@@ -2838,7 +2845,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *        also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
-     *        upload occurs when a file is open when the session disconnects.
+     *        upload occurs when the server session disconnects while the file is still being uploaded.
      */
 
     public void setWorkflowDetails(WorkflowDetails workflowDetails) {
@@ -2853,7 +2860,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      * 
      * @return Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
@@ -2861,7 +2868,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <p>
      *         In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *         also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
-     *         upload occurs when a file is open when the session disconnects.
+     *         upload occurs when the server session disconnects while the file is still being uploaded.
      */
 
     public WorkflowDetails getWorkflowDetails() {
@@ -2876,7 +2883,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
-     * when a file is open when the session disconnects.
+     * when the server session disconnects while the file is still being uploaded.
      * </p>
      * 
      * @param workflowDetails
@@ -2885,7 +2892,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *        also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
-     *        upload occurs when a file is open when the session disconnects.
+     *        upload occurs when the server session disconnects while the file is still being uploaded.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

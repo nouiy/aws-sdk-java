@@ -120,7 +120,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String role;
     /**
      * <p>
-     * A system-assigned unique identifier for a server instance that the user account is assigned to.
+     * A system-assigned unique identifier for a Transfer Family server instance that the user is assigned to.
      * </p>
      */
     private String serverId;
@@ -819,11 +819,11 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A system-assigned unique identifier for a server instance that the user account is assigned to.
+     * A system-assigned unique identifier for a Transfer Family server instance that the user is assigned to.
      * </p>
      * 
      * @param serverId
-     *        A system-assigned unique identifier for a server instance that the user account is assigned to.
+     *        A system-assigned unique identifier for a Transfer Family server instance that the user is assigned to.
      */
 
     public void setServerId(String serverId) {
@@ -832,10 +832,10 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A system-assigned unique identifier for a server instance that the user account is assigned to.
+     * A system-assigned unique identifier for a Transfer Family server instance that the user is assigned to.
      * </p>
      * 
-     * @return A system-assigned unique identifier for a server instance that the user account is assigned to.
+     * @return A system-assigned unique identifier for a Transfer Family server instance that the user is assigned to.
      */
 
     public String getServerId() {
@@ -844,11 +844,11 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A system-assigned unique identifier for a server instance that the user account is assigned to.
+     * A system-assigned unique identifier for a Transfer Family server instance that the user is assigned to.
      * </p>
      * 
      * @param serverId
-     *        A system-assigned unique identifier for a server instance that the user account is assigned to.
+     *        A system-assigned unique identifier for a Transfer Family server instance that the user is assigned to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
