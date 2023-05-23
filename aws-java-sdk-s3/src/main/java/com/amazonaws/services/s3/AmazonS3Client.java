@@ -5488,6 +5488,11 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
                     ase.setErrorMessage("The bucket is in this region: " + region +
                                         ". Please use this region to retry the request");
                 }
+            } else if ("SignatureDoesNotMatch".equals(ase.getErrorCode()) && !BucketNameUtils.isDNSBucketName(bucket)) {
+                String originalMsg = ase.getErrorMessage();
+                ase.setErrorMessage(originalMsg + " If you start to see this issue after you upgrade the SDK to 1.12.460 or "
+                                    + "later, it could be because the bucket provided contains '/'. "
+                                    + "See https://github.com/aws/aws-sdk-java/discussions/2976 for more details");
             }
             throw ase;
         } finally {

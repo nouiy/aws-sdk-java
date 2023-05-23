@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Optional settings that configure the translation output. Use these settings for real time translations and
- * asynchronous translation jobs.
+ * Settings to configure your translation output, including the option to set the formality level of the output text and
+ * the option to mask profane words and phrases.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/translate-2017-07-01/TranslationSettings" target="_top">AWS API

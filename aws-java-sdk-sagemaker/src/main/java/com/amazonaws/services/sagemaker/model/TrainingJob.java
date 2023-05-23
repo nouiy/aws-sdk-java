@@ -244,6 +244,9 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * An array of <code>Channel</code> objects that describes each data input channel.
      * </p>
+     * <p>
+     * Your input must be in the same Amazon Web Services region as your training job.
+     * </p>
      */
     private java.util.List<Channel> inputDataConfig;
     /**
@@ -2065,8 +2068,13 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * An array of <code>Channel</code> objects that describes each data input channel.
      * </p>
+     * <p>
+     * Your input must be in the same Amazon Web Services region as your training job.
+     * </p>
      * 
-     * @return An array of <code>Channel</code> objects that describes each data input channel.
+     * @return An array of <code>Channel</code> objects that describes each data input channel.</p>
+     *         <p>
+     *         Your input must be in the same Amazon Web Services region as your training job.
      */
 
     public java.util.List<Channel> getInputDataConfig() {
@@ -2077,9 +2085,14 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * An array of <code>Channel</code> objects that describes each data input channel.
      * </p>
+     * <p>
+     * Your input must be in the same Amazon Web Services region as your training job.
+     * </p>
      * 
      * @param inputDataConfig
-     *        An array of <code>Channel</code> objects that describes each data input channel.
+     *        An array of <code>Channel</code> objects that describes each data input channel.</p>
+     *        <p>
+     *        Your input must be in the same Amazon Web Services region as your training job.
      */
 
     public void setInputDataConfig(java.util.Collection<Channel> inputDataConfig) {
@@ -2096,13 +2109,18 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
      * An array of <code>Channel</code> objects that describes each data input channel.
      * </p>
      * <p>
+     * Your input must be in the same Amazon Web Services region as your training job.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setInputDataConfig(java.util.Collection)} or {@link #withInputDataConfig(java.util.Collection)} if you
      * want to override the existing values.
      * </p>
      * 
      * @param inputDataConfig
-     *        An array of <code>Channel</code> objects that describes each data input channel.
+     *        An array of <code>Channel</code> objects that describes each data input channel.</p>
+     *        <p>
+     *        Your input must be in the same Amazon Web Services region as your training job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2120,9 +2138,14 @@ public class TrainingJob implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * An array of <code>Channel</code> objects that describes each data input channel.
      * </p>
+     * <p>
+     * Your input must be in the same Amazon Web Services region as your training job.
+     * </p>
      * 
      * @param inputDataConfig
-     *        An array of <code>Channel</code> objects that describes each data input channel.
+     *        An array of <code>Channel</code> objects that describes each data input channel.</p>
+     *        <p>
+     *        Your input must be in the same Amazon Web Services region as your training job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
