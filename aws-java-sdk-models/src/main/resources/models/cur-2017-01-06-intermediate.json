@@ -279,6 +279,9 @@
         "name" : "ApSouth1",
         "value" : "ap-south-1"
       }, {
+        "name" : "ApSouth2",
+        "value" : "ap-south-2"
+      }, {
         "name" : "ApSoutheast1",
         "value" : "ap-southeast-1"
       }, {
@@ -302,6 +305,9 @@
       }, {
         "name" : "EuCentral1",
         "value" : "eu-central-1"
+      }, {
+        "name" : "EuCentral2",
+        "value" : "eu-central-2"
       }, {
         "name" : "EuWest1",
         "value" : "eu-west-1"
@@ -4565,6 +4571,9 @@
       "enums" : [ {
         "name" : "RESOURCES",
         "value" : "RESOURCES"
+      }, {
+        "name" : "SPLIT_COST_ALLOCATION_DATA",
+        "value" : "SPLIT_COST_ALLOCATION_DATA"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.costandusagereport.enum.SchemaElement",

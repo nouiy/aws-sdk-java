@@ -59,6 +59,14 @@ public class GraphqlApiMarshaller {
             .marshallLocationName("dns").build();
     private static final MarshallingInfo<String> VISIBILITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("visibility").build();
+    private static final MarshallingInfo<String> APITYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("apiType").build();
+    private static final MarshallingInfo<String> MERGEDAPIEXECUTIONROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("mergedApiExecutionRoleArn").build();
+    private static final MarshallingInfo<String> OWNER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("owner").build();
+    private static final MarshallingInfo<String> OWNERCONTACT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ownerContact").build();
 
     private static final GraphqlApiMarshaller instance = new GraphqlApiMarshaller();
 
@@ -91,6 +99,10 @@ public class GraphqlApiMarshaller {
             protocolMarshaller.marshall(graphqlApi.getLambdaAuthorizerConfig(), LAMBDAAUTHORIZERCONFIG_BINDING);
             protocolMarshaller.marshall(graphqlApi.getDns(), DNS_BINDING);
             protocolMarshaller.marshall(graphqlApi.getVisibility(), VISIBILITY_BINDING);
+            protocolMarshaller.marshall(graphqlApi.getApiType(), APITYPE_BINDING);
+            protocolMarshaller.marshall(graphqlApi.getMergedApiExecutionRoleArn(), MERGEDAPIEXECUTIONROLEARN_BINDING);
+            protocolMarshaller.marshall(graphqlApi.getOwner(), OWNER_BINDING);
+            protocolMarshaller.marshall(graphqlApi.getOwnerContact(), OWNERCONTACT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -1,3 +1,20 @@
+# __1.12.475__ __2023-05-24__
+## __AWS AppSync__
+  - ### Features
+    - This release introduces AppSync Merged APIs, which provide the ability to compose multiple source APIs into a single federated/merged API.
+
+## __AWS Cost and Usage Report Service__
+  - ### Features
+    - Add support for split cost allocation data on a report.
+
+## __Amazon Connect Service__
+  - ### Features
+    - Amazon Connect Evaluation Capabilities: validation improvements
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - SageMaker now provides an instantaneous deployment recommendation through the DescribeModel API
+
 # __1.12.474__ __2023-05-23__
 ## __Amazon SageMaker Service__
   - ### Features
