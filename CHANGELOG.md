@@ -1,3 +1,28 @@
+# __1.12.480__ __2023-06-01__
+## __AWS WAFV2__
+  - ### Features
+    - Corrected the information for the header order FieldToMatch setting
+
+## __Alexa For Business__
+  - ### Features
+    - Alexa for Business has been deprecated and is no longer supported.
+
+## __Amazon Appflow__
+  - ### Features
+    - Added ability to select DataTransferApiType for DescribeConnector and CreateFlow requests when using Async supported connectors. Added supportedDataTransferType to DescribeConnector/DescribeConnectors/ListConnector response.
+
+## __Amazon Connect Customer Profiles__
+  - ### Features
+    - This release introduces calculated attribute related APIs.
+
+## __Amazon Interactive Video Service__
+  - ### Features
+    - API Update for IVS Advanced Channel type
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Amazon Sagemaker Autopilot adds support for Parquet file input to NLP text classification jobs.
+
 # __1.12.479__ __2023-05-31__
 ## __AWS Config__
   - ### Features

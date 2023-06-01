@@ -75,6 +75,36 @@ public interface AmazonCustomerProfiles {
 
     /**
      * <p>
+     * Creates a new calculated attribute definition. After creation, new object data ingested into Customer Profiles
+     * will be included in the calculated attribute, which can be retrieved for a profile using the <a href=
+     * "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetCalculatedAttributeForProfile.html"
+     * >GetCalculatedAttributeForProfile</a> API. Defining a calculated attribute makes it available for all profiles
+     * within a domain. Each calculated attribute can only reference one <code>ObjectType</code> and at most, two fields
+     * from that <code>ObjectType</code>.
+     * </p>
+     * 
+     * @param createCalculatedAttributeDefinitionRequest
+     * @return Result of the CreateCalculatedAttributeDefinition operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.CreateCalculatedAttributeDefinition
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/CreateCalculatedAttributeDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateCalculatedAttributeDefinitionResult createCalculatedAttributeDefinition(
+            CreateCalculatedAttributeDefinitionRequest createCalculatedAttributeDefinitionRequest);
+
+    /**
+     * <p>
      * Creates a domain, which is a container for all customer data, such as customer profile attributes, object types,
      * profile keys, and encryption keys. You can create multiple domains, and each domain can have multiple third-party
      * integrations.
@@ -163,6 +193,33 @@ public interface AmazonCustomerProfiles {
      *      target="_top">AWS API Documentation</a>
      */
     CreateProfileResult createProfile(CreateProfileRequest createProfileRequest);
+
+    /**
+     * <p>
+     * Deletes an existing calculated attribute definition. Note that deleting a default calculated attribute is
+     * possible, however once deleted, you will be unable to undo that action and will need to recreate it on your own
+     * using the CreateCalculatedAttributeDefinition API if you want it back.
+     * </p>
+     * 
+     * @param deleteCalculatedAttributeDefinitionRequest
+     * @return Result of the DeleteCalculatedAttributeDefinition operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.DeleteCalculatedAttributeDefinition
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DeleteCalculatedAttributeDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteCalculatedAttributeDefinitionResult deleteCalculatedAttributeDefinition(
+            DeleteCalculatedAttributeDefinitionRequest deleteCalculatedAttributeDefinitionRequest);
 
     /**
      * <p>
@@ -365,6 +422,54 @@ public interface AmazonCustomerProfiles {
      *      target="_top">AWS API Documentation</a>
      */
     GetAutoMergingPreviewResult getAutoMergingPreview(GetAutoMergingPreviewRequest getAutoMergingPreviewRequest);
+
+    /**
+     * <p>
+     * Provides more information on a calculated attribute definition for Customer Profiles.
+     * </p>
+     * 
+     * @param getCalculatedAttributeDefinitionRequest
+     * @return Result of the GetCalculatedAttributeDefinition operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.GetCalculatedAttributeDefinition
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetCalculatedAttributeDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetCalculatedAttributeDefinitionResult getCalculatedAttributeDefinition(GetCalculatedAttributeDefinitionRequest getCalculatedAttributeDefinitionRequest);
+
+    /**
+     * <p>
+     * Retrieve a calculated attribute for a customer profile.
+     * </p>
+     * 
+     * @param getCalculatedAttributeForProfileRequest
+     * @return Result of the GetCalculatedAttributeForProfile operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.GetCalculatedAttributeForProfile
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetCalculatedAttributeForProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetCalculatedAttributeForProfileResult getCalculatedAttributeForProfile(GetCalculatedAttributeForProfileRequest getCalculatedAttributeForProfileRequest);
 
     /**
      * <p>
@@ -654,6 +759,56 @@ public interface AmazonCustomerProfiles {
      *      target="_top">AWS API Documentation</a>
      */
     ListAccountIntegrationsResult listAccountIntegrations(ListAccountIntegrationsRequest listAccountIntegrationsRequest);
+
+    /**
+     * <p>
+     * Lists calculated attribute definitions for Customer Profiles
+     * </p>
+     * 
+     * @param listCalculatedAttributeDefinitionsRequest
+     * @return Result of the ListCalculatedAttributeDefinitions operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.ListCalculatedAttributeDefinitions
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListCalculatedAttributeDefinitions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListCalculatedAttributeDefinitionsResult listCalculatedAttributeDefinitions(
+            ListCalculatedAttributeDefinitionsRequest listCalculatedAttributeDefinitionsRequest);
+
+    /**
+     * <p>
+     * Retrieve a list of calculated attributes for a customer profile.
+     * </p>
+     * 
+     * @param listCalculatedAttributesForProfileRequest
+     * @return Result of the ListCalculatedAttributesForProfile operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.ListCalculatedAttributesForProfile
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListCalculatedAttributesForProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListCalculatedAttributesForProfileResult listCalculatedAttributesForProfile(
+            ListCalculatedAttributesForProfileRequest listCalculatedAttributesForProfileRequest);
 
     /**
      * <p>
@@ -1094,6 +1249,33 @@ public interface AmazonCustomerProfiles {
      *      target="_top">AWS API Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Updates an existing calculated attribute definition. When updating the Conditions, note that increasing the date
+     * range of a calculated attribute will not trigger inclusion of historical data greater than the current date
+     * range.
+     * </p>
+     * 
+     * @param updateCalculatedAttributeDefinitionRequest
+     * @return Result of the UpdateCalculatedAttributeDefinition operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.UpdateCalculatedAttributeDefinition
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/UpdateCalculatedAttributeDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateCalculatedAttributeDefinitionResult updateCalculatedAttributeDefinition(
+            UpdateCalculatedAttributeDefinitionRequest updateCalculatedAttributeDefinitionRequest);
 
     /**
      * <p>

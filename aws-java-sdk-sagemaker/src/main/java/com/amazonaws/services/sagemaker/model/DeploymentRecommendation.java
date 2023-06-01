@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A set of recommended deployment configurations for the model.
+ * A set of recommended deployment configurations for the model. To get more advanced recommendations, see <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceRecommendationsJob.html"
+ * >CreateInferenceRecommendationsJob</a> to create an inference recommendation job.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeploymentRecommendation" target="_top">AWS
@@ -30,8 +32,10 @@ public class DeploymentRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Status of the deployment recommendation. <code>NOT_APPLICABLE</code> means that SageMaker is unable to provide a
-     * default recommendation for the model using the information provided.
+     * Status of the deployment recommendation. The status <code>NOT_APPLICABLE</code> means that SageMaker is unable to
+     * provide a default recommendation for the model using the information provided. If the deployment status is
+     * <code>IN_PROGRESS</code>, retry your API call after a few seconds to get a <code>COMPLETED</code> deployment
+     * recommendation.
      * </p>
      */
     private String recommendationStatus;
@@ -46,13 +50,17 @@ public class DeploymentRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Status of the deployment recommendation. <code>NOT_APPLICABLE</code> means that SageMaker is unable to provide a
-     * default recommendation for the model using the information provided.
+     * Status of the deployment recommendation. The status <code>NOT_APPLICABLE</code> means that SageMaker is unable to
+     * provide a default recommendation for the model using the information provided. If the deployment status is
+     * <code>IN_PROGRESS</code>, retry your API call after a few seconds to get a <code>COMPLETED</code> deployment
+     * recommendation.
      * </p>
      * 
      * @param recommendationStatus
-     *        Status of the deployment recommendation. <code>NOT_APPLICABLE</code> means that SageMaker is unable to
-     *        provide a default recommendation for the model using the information provided.
+     *        Status of the deployment recommendation. The status <code>NOT_APPLICABLE</code> means that SageMaker is
+     *        unable to provide a default recommendation for the model using the information provided. If the deployment
+     *        status is <code>IN_PROGRESS</code>, retry your API call after a few seconds to get a
+     *        <code>COMPLETED</code> deployment recommendation.
      * @see RecommendationStatus
      */
 
@@ -62,12 +70,16 @@ public class DeploymentRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Status of the deployment recommendation. <code>NOT_APPLICABLE</code> means that SageMaker is unable to provide a
-     * default recommendation for the model using the information provided.
+     * Status of the deployment recommendation. The status <code>NOT_APPLICABLE</code> means that SageMaker is unable to
+     * provide a default recommendation for the model using the information provided. If the deployment status is
+     * <code>IN_PROGRESS</code>, retry your API call after a few seconds to get a <code>COMPLETED</code> deployment
+     * recommendation.
      * </p>
      * 
-     * @return Status of the deployment recommendation. <code>NOT_APPLICABLE</code> means that SageMaker is unable to
-     *         provide a default recommendation for the model using the information provided.
+     * @return Status of the deployment recommendation. The status <code>NOT_APPLICABLE</code> means that SageMaker is
+     *         unable to provide a default recommendation for the model using the information provided. If the
+     *         deployment status is <code>IN_PROGRESS</code>, retry your API call after a few seconds to get a
+     *         <code>COMPLETED</code> deployment recommendation.
      * @see RecommendationStatus
      */
 
@@ -77,13 +89,17 @@ public class DeploymentRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Status of the deployment recommendation. <code>NOT_APPLICABLE</code> means that SageMaker is unable to provide a
-     * default recommendation for the model using the information provided.
+     * Status of the deployment recommendation. The status <code>NOT_APPLICABLE</code> means that SageMaker is unable to
+     * provide a default recommendation for the model using the information provided. If the deployment status is
+     * <code>IN_PROGRESS</code>, retry your API call after a few seconds to get a <code>COMPLETED</code> deployment
+     * recommendation.
      * </p>
      * 
      * @param recommendationStatus
-     *        Status of the deployment recommendation. <code>NOT_APPLICABLE</code> means that SageMaker is unable to
-     *        provide a default recommendation for the model using the information provided.
+     *        Status of the deployment recommendation. The status <code>NOT_APPLICABLE</code> means that SageMaker is
+     *        unable to provide a default recommendation for the model using the information provided. If the deployment
+     *        status is <code>IN_PROGRESS</code>, retry your API call after a few seconds to get a
+     *        <code>COMPLETED</code> deployment recommendation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RecommendationStatus
      */
@@ -95,13 +111,17 @@ public class DeploymentRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Status of the deployment recommendation. <code>NOT_APPLICABLE</code> means that SageMaker is unable to provide a
-     * default recommendation for the model using the information provided.
+     * Status of the deployment recommendation. The status <code>NOT_APPLICABLE</code> means that SageMaker is unable to
+     * provide a default recommendation for the model using the information provided. If the deployment status is
+     * <code>IN_PROGRESS</code>, retry your API call after a few seconds to get a <code>COMPLETED</code> deployment
+     * recommendation.
      * </p>
      * 
      * @param recommendationStatus
-     *        Status of the deployment recommendation. <code>NOT_APPLICABLE</code> means that SageMaker is unable to
-     *        provide a default recommendation for the model using the information provided.
+     *        Status of the deployment recommendation. The status <code>NOT_APPLICABLE</code> means that SageMaker is
+     *        unable to provide a default recommendation for the model using the information provided. If the deployment
+     *        status is <code>IN_PROGRESS</code>, retry your API call after a few seconds to get a
+     *        <code>COMPLETED</code> deployment recommendation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RecommendationStatus
      */

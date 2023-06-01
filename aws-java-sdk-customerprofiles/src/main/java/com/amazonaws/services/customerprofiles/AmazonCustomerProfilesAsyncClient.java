@@ -114,6 +114,41 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
     }
 
     @Override
+    public java.util.concurrent.Future<CreateCalculatedAttributeDefinitionResult> createCalculatedAttributeDefinitionAsync(
+            CreateCalculatedAttributeDefinitionRequest request) {
+
+        return createCalculatedAttributeDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCalculatedAttributeDefinitionResult> createCalculatedAttributeDefinitionAsync(
+            final CreateCalculatedAttributeDefinitionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateCalculatedAttributeDefinitionRequest, CreateCalculatedAttributeDefinitionResult> asyncHandler) {
+        final CreateCalculatedAttributeDefinitionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateCalculatedAttributeDefinitionResult>() {
+            @Override
+            public CreateCalculatedAttributeDefinitionResult call() throws Exception {
+                CreateCalculatedAttributeDefinitionResult result = null;
+
+                try {
+                    result = executeCreateCalculatedAttributeDefinition(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateDomainResult> createDomainAsync(CreateDomainRequest request) {
 
         return createDomainAsync(request, null);
@@ -197,6 +232,41 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
 
                 try {
                     result = executeCreateProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCalculatedAttributeDefinitionResult> deleteCalculatedAttributeDefinitionAsync(
+            DeleteCalculatedAttributeDefinitionRequest request) {
+
+        return deleteCalculatedAttributeDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCalculatedAttributeDefinitionResult> deleteCalculatedAttributeDefinitionAsync(
+            final DeleteCalculatedAttributeDefinitionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteCalculatedAttributeDefinitionRequest, DeleteCalculatedAttributeDefinitionResult> asyncHandler) {
+        final DeleteCalculatedAttributeDefinitionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteCalculatedAttributeDefinitionResult>() {
+            @Override
+            public DeleteCalculatedAttributeDefinitionResult call() throws Exception {
+                DeleteCalculatedAttributeDefinitionResult result = null;
+
+                try {
+                    result = executeDeleteCalculatedAttributeDefinition(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -461,6 +531,76 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
 
                 try {
                     result = executeGetAutoMergingPreview(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCalculatedAttributeDefinitionResult> getCalculatedAttributeDefinitionAsync(
+            GetCalculatedAttributeDefinitionRequest request) {
+
+        return getCalculatedAttributeDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCalculatedAttributeDefinitionResult> getCalculatedAttributeDefinitionAsync(
+            final GetCalculatedAttributeDefinitionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetCalculatedAttributeDefinitionRequest, GetCalculatedAttributeDefinitionResult> asyncHandler) {
+        final GetCalculatedAttributeDefinitionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetCalculatedAttributeDefinitionResult>() {
+            @Override
+            public GetCalculatedAttributeDefinitionResult call() throws Exception {
+                GetCalculatedAttributeDefinitionResult result = null;
+
+                try {
+                    result = executeGetCalculatedAttributeDefinition(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCalculatedAttributeForProfileResult> getCalculatedAttributeForProfileAsync(
+            GetCalculatedAttributeForProfileRequest request) {
+
+        return getCalculatedAttributeForProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCalculatedAttributeForProfileResult> getCalculatedAttributeForProfileAsync(
+            final GetCalculatedAttributeForProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetCalculatedAttributeForProfileRequest, GetCalculatedAttributeForProfileResult> asyncHandler) {
+        final GetCalculatedAttributeForProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetCalculatedAttributeForProfileResult>() {
+            @Override
+            public GetCalculatedAttributeForProfileResult call() throws Exception {
+                GetCalculatedAttributeForProfileResult result = null;
+
+                try {
+                    result = executeGetCalculatedAttributeForProfile(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -758,6 +898,76 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
 
                 try {
                     result = executeListAccountIntegrations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCalculatedAttributeDefinitionsResult> listCalculatedAttributeDefinitionsAsync(
+            ListCalculatedAttributeDefinitionsRequest request) {
+
+        return listCalculatedAttributeDefinitionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCalculatedAttributeDefinitionsResult> listCalculatedAttributeDefinitionsAsync(
+            final ListCalculatedAttributeDefinitionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCalculatedAttributeDefinitionsRequest, ListCalculatedAttributeDefinitionsResult> asyncHandler) {
+        final ListCalculatedAttributeDefinitionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCalculatedAttributeDefinitionsResult>() {
+            @Override
+            public ListCalculatedAttributeDefinitionsResult call() throws Exception {
+                ListCalculatedAttributeDefinitionsResult result = null;
+
+                try {
+                    result = executeListCalculatedAttributeDefinitions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCalculatedAttributesForProfileResult> listCalculatedAttributesForProfileAsync(
+            ListCalculatedAttributesForProfileRequest request) {
+
+        return listCalculatedAttributesForProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCalculatedAttributesForProfileResult> listCalculatedAttributesForProfileAsync(
+            final ListCalculatedAttributesForProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCalculatedAttributesForProfileRequest, ListCalculatedAttributesForProfileResult> asyncHandler) {
+        final ListCalculatedAttributesForProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCalculatedAttributesForProfileResult>() {
+            @Override
+            public ListCalculatedAttributesForProfileResult call() throws Exception {
+                ListCalculatedAttributesForProfileResult result = null;
+
+                try {
+                    result = executeListCalculatedAttributesForProfile(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1254,6 +1464,41 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateCalculatedAttributeDefinitionResult> updateCalculatedAttributeDefinitionAsync(
+            UpdateCalculatedAttributeDefinitionRequest request) {
+
+        return updateCalculatedAttributeDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateCalculatedAttributeDefinitionResult> updateCalculatedAttributeDefinitionAsync(
+            final UpdateCalculatedAttributeDefinitionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateCalculatedAttributeDefinitionRequest, UpdateCalculatedAttributeDefinitionResult> asyncHandler) {
+        final UpdateCalculatedAttributeDefinitionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateCalculatedAttributeDefinitionResult>() {
+            @Override
+            public UpdateCalculatedAttributeDefinitionResult call() throws Exception {
+                UpdateCalculatedAttributeDefinitionResult result = null;
+
+                try {
+                    result = executeUpdateCalculatedAttributeDefinition(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

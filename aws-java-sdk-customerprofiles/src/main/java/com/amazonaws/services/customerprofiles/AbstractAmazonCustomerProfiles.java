@@ -33,6 +33,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
     }
 
     @Override
+    public CreateCalculatedAttributeDefinitionResult createCalculatedAttributeDefinition(CreateCalculatedAttributeDefinitionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateDomainResult createDomain(CreateDomainRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -44,6 +49,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
 
     @Override
     public CreateProfileResult createProfile(CreateProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteCalculatedAttributeDefinitionResult deleteCalculatedAttributeDefinition(DeleteCalculatedAttributeDefinitionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -84,6 +94,16 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
 
     @Override
     public GetAutoMergingPreviewResult getAutoMergingPreview(GetAutoMergingPreviewRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetCalculatedAttributeDefinitionResult getCalculatedAttributeDefinition(GetCalculatedAttributeDefinitionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetCalculatedAttributeForProfileResult getCalculatedAttributeForProfile(GetCalculatedAttributeForProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -129,6 +149,16 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
 
     @Override
     public ListAccountIntegrationsResult listAccountIntegrations(ListAccountIntegrationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCalculatedAttributeDefinitionsResult listCalculatedAttributeDefinitions(ListCalculatedAttributeDefinitionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCalculatedAttributesForProfileResult listCalculatedAttributesForProfile(ListCalculatedAttributesForProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -204,6 +234,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateCalculatedAttributeDefinitionResult updateCalculatedAttributeDefinition(UpdateCalculatedAttributeDefinitionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
