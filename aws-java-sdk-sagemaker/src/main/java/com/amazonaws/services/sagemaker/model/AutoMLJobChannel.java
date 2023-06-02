@@ -47,14 +47,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default value
-     * is <code>image/*</code>.
+     * ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, <code>image/*</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * TextClassification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>. The
-     * default value is <code>text/csv;header=present</code>.
+     * TextClassification: <code>text/csv;header=present</code>
      * </p>
      * </li>
      * </ul>
@@ -158,14 +156,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default value
-     * is <code>image/*</code>.
+     * ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, <code>image/*</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * TextClassification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>. The
-     * default value is <code>text/csv;header=present</code>.
+     * TextClassification: <code>text/csv;header=present</code>
      * </p>
      * </li>
      * </ul>
@@ -176,14 +172,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default
-     *        value is <code>image/*</code>.
+     *        ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, <code>image/*</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        TextClassification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
-     *        The default value is <code>text/csv;header=present</code>.
+     *        TextClassification: <code>text/csv;header=present</code>
      *        </p>
      *        </li>
      */
@@ -200,14 +194,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default value
-     * is <code>image/*</code>.
+     * ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, <code>image/*</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * TextClassification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>. The
-     * default value is <code>text/csv;header=present</code>.
+     * TextClassification: <code>text/csv;header=present</code>
      * </p>
      * </li>
      * </ul>
@@ -217,14 +209,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The
-     *         default value is <code>image/*</code>.
+     *         ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, <code>image/*</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         TextClassification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>
-     *         . The default value is <code>text/csv;header=present</code>.
+     *         TextClassification: <code>text/csv;header=present</code>
      *         </p>
      *         </li>
      */
@@ -241,14 +231,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default value
-     * is <code>image/*</code>.
+     * ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, <code>image/*</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * TextClassification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>. The
-     * default value is <code>text/csv;header=present</code>.
+     * TextClassification: <code>text/csv;header=present</code>
      * </p>
      * </li>
      * </ul>
@@ -259,14 +247,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default
-     *        value is <code>image/*</code>.
+     *        ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, <code>image/*</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        TextClassification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
-     *        The default value is <code>text/csv;header=present</code>.
+     *        TextClassification: <code>text/csv;header=present</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

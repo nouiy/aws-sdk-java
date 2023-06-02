@@ -72,7 +72,7 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
     private Boolean includeGlobalServiceEvents;
     /**
      * <p>
-     * Specifies whether the trail exists in one region or in all regions.
+     * Specifies whether the trail exists in one Region or in all Regions.
      * </p>
      */
     private Boolean isMultiRegionTrail;
@@ -413,11 +413,11 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Specifies whether the trail exists in one region or in all regions.
+     * Specifies whether the trail exists in one Region or in all Regions.
      * </p>
      * 
      * @param isMultiRegionTrail
-     *        Specifies whether the trail exists in one region or in all regions.
+     *        Specifies whether the trail exists in one Region or in all Regions.
      */
 
     public void setIsMultiRegionTrail(Boolean isMultiRegionTrail) {
@@ -426,10 +426,10 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Specifies whether the trail exists in one region or in all regions.
+     * Specifies whether the trail exists in one Region or in all Regions.
      * </p>
      * 
-     * @return Specifies whether the trail exists in one region or in all regions.
+     * @return Specifies whether the trail exists in one Region or in all Regions.
      */
 
     public Boolean getIsMultiRegionTrail() {
@@ -438,11 +438,11 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Specifies whether the trail exists in one region or in all regions.
+     * Specifies whether the trail exists in one Region or in all Regions.
      * </p>
      * 
      * @param isMultiRegionTrail
-     *        Specifies whether the trail exists in one region or in all regions.
+     *        Specifies whether the trail exists in one Region or in all Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -453,10 +453,10 @@ public class CreateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Specifies whether the trail exists in one region or in all regions.
+     * Specifies whether the trail exists in one Region or in all Regions.
      * </p>
      * 
-     * @return Specifies whether the trail exists in one region or in all regions.
+     * @return Specifies whether the trail exists in one Region or in all Regions.
      */
 
     public Boolean isMultiRegionTrail() {

@@ -157,8 +157,7 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Inspect a string containing the list of the request's header names, ordered as they appear in the web request
      * that WAF receives for inspection. WAF generates the string and then uses that as the field to match component in
-     * its inspection. WAF separates the header names in the string using colons and no added spaces, for example
-     * <code>Host:User-Agent:Accept:Authorization:Referer</code>.
+     * its inspection. WAF separates the header names in the string using commas and no added spaces.
      * </p>
      * <p>
      * Matches against the header order string are case insensitive.
@@ -868,8 +867,7 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Inspect a string containing the list of the request's header names, ordered as they appear in the web request
      * that WAF receives for inspection. WAF generates the string and then uses that as the field to match component in
-     * its inspection. WAF separates the header names in the string using colons and no added spaces, for example
-     * <code>Host:User-Agent:Accept:Authorization:Referer</code>.
+     * its inspection. WAF separates the header names in the string using commas and no added spaces.
      * </p>
      * <p>
      * Matches against the header order string are case insensitive.
@@ -878,8 +876,8 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * @param headerOrder
      *        Inspect a string containing the list of the request's header names, ordered as they appear in the web
      *        request that WAF receives for inspection. WAF generates the string and then uses that as the field to
-     *        match component in its inspection. WAF separates the header names in the string using colons and no added
-     *        spaces, for example <code>Host:User-Agent:Accept:Authorization:Referer</code>.</p>
+     *        match component in its inspection. WAF separates the header names in the string using commas and no added
+     *        spaces.</p>
      *        <p>
      *        Matches against the header order string are case insensitive.
      */
@@ -892,8 +890,7 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Inspect a string containing the list of the request's header names, ordered as they appear in the web request
      * that WAF receives for inspection. WAF generates the string and then uses that as the field to match component in
-     * its inspection. WAF separates the header names in the string using colons and no added spaces, for example
-     * <code>Host:User-Agent:Accept:Authorization:Referer</code>.
+     * its inspection. WAF separates the header names in the string using commas and no added spaces.
      * </p>
      * <p>
      * Matches against the header order string are case insensitive.
@@ -901,8 +898,8 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * 
      * @return Inspect a string containing the list of the request's header names, ordered as they appear in the web
      *         request that WAF receives for inspection. WAF generates the string and then uses that as the field to
-     *         match component in its inspection. WAF separates the header names in the string using colons and no added
-     *         spaces, for example <code>Host:User-Agent:Accept:Authorization:Referer</code>.</p>
+     *         match component in its inspection. WAF separates the header names in the string using commas and no added
+     *         spaces.</p>
      *         <p>
      *         Matches against the header order string are case insensitive.
      */
@@ -915,8 +912,7 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Inspect a string containing the list of the request's header names, ordered as they appear in the web request
      * that WAF receives for inspection. WAF generates the string and then uses that as the field to match component in
-     * its inspection. WAF separates the header names in the string using colons and no added spaces, for example
-     * <code>Host:User-Agent:Accept:Authorization:Referer</code>.
+     * its inspection. WAF separates the header names in the string using commas and no added spaces.
      * </p>
      * <p>
      * Matches against the header order string are case insensitive.
@@ -925,8 +921,8 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * @param headerOrder
      *        Inspect a string containing the list of the request's header names, ordered as they appear in the web
      *        request that WAF receives for inspection. WAF generates the string and then uses that as the field to
-     *        match component in its inspection. WAF separates the header names in the string using colons and no added
-     *        spaces, for example <code>Host:User-Agent:Accept:Authorization:Referer</code>.</p>
+     *        match component in its inspection. WAF separates the header names in the string using commas and no added
+     *        spaces.</p>
      *        <p>
      *        Matches against the header order string are case insensitive.
      * @return Returns a reference to this object so that method calls can be chained together.

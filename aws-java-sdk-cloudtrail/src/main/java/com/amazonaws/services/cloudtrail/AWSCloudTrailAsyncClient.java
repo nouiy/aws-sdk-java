@@ -55,6 +55,294 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * User Guide</a> for information about the data that is included with each Amazon Web Services API call listed in the
  * log files.
  * </p>
+ * <p>
+ * <b>Actions available for CloudTrail trails</b>
+ * </p>
+ * <p>
+ * The following actions are available for CloudTrail trails.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>AddTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>CreateTrail</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteTrail</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DescribeTrails</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetEventSelectors</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetInsightSelectors</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetTrail</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetTrailStatus</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListTrails</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>PutEventSelectors</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>PutInsightSelectors</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>RemoveTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StartLogging</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StopLogging</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>UpdateTrail</a>
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Actions available for CloudTrail event data stores</b>
+ * </p>
+ * <p>
+ * The following actions are available for CloudTrail event data stores.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>AddTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>CancelQuery</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>CreateEventDataStore</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteEventDataStore</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DescribeQuery</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetEventDataStore</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetQueryResults</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListEventDataStores</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListQueries</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>RemoveTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>RestoreEventDataStore</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StartEventDataStoreIngestion</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StartImport</a>
+ * </p>
+ * <p>
+ * The following additional actions are available for imports.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>GetImport</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListImportFailures</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListImports</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StopImport</a>
+ * </p>
+ * </li>
+ * </ul>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StartQuery</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StartEventDataStoreIngestion</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>UpdateEventDataStore</a>
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Actions available for CloudTrail channels</b>
+ * </p>
+ * <p>
+ * The following actions are available for CloudTrail channels.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>AddTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>CreateChannel</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteChannel</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteResourcePolicy</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetChannel</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetResourcePolicy</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListChannels</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>PutResourcePolicy</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>RemoveTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>UpdateChannel</a>
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Actions available for managing delegated administrators</b>
+ * </p>
+ * <p>
+ * The following actions are available for adding or a removing a delegated administrator to manage an Organizations
+ * organization’s CloudTrail resources.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>DeregisterOrganizationDelegatedAdmin</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>RegisterOrganizationDelegatedAdmin</a>
+ * </p>
+ * </li>
+ * </ul>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -1539,6 +1827,39 @@ public class AWSCloudTrailAsyncClient extends AWSCloudTrailClient implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<StartEventDataStoreIngestionResult> startEventDataStoreIngestionAsync(StartEventDataStoreIngestionRequest request) {
+
+        return startEventDataStoreIngestionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartEventDataStoreIngestionResult> startEventDataStoreIngestionAsync(final StartEventDataStoreIngestionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartEventDataStoreIngestionRequest, StartEventDataStoreIngestionResult> asyncHandler) {
+        final StartEventDataStoreIngestionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartEventDataStoreIngestionResult>() {
+            @Override
+            public StartEventDataStoreIngestionResult call() throws Exception {
+                StartEventDataStoreIngestionResult result = null;
+
+                try {
+                    result = executeStartEventDataStoreIngestion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartImportResult> startImportAsync(StartImportRequest request) {
 
         return startImportAsync(request, null);
@@ -1622,6 +1943,39 @@ public class AWSCloudTrailAsyncClient extends AWSCloudTrailClient implements AWS
 
                 try {
                     result = executeStartQuery(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopEventDataStoreIngestionResult> stopEventDataStoreIngestionAsync(StopEventDataStoreIngestionRequest request) {
+
+        return stopEventDataStoreIngestionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopEventDataStoreIngestionResult> stopEventDataStoreIngestionAsync(final StopEventDataStoreIngestionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopEventDataStoreIngestionRequest, StopEventDataStoreIngestionResult> asyncHandler) {
+        final StopEventDataStoreIngestionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopEventDataStoreIngestionResult>() {
+            @Override
+            public StopEventDataStoreIngestionResult call() throws Exception {
+                StopEventDataStoreIngestionResult result = null;
+
+                try {
+                    result = executeStopEventDataStoreIngestion(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

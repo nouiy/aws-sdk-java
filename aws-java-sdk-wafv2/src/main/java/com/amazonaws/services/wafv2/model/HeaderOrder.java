@@ -21,8 +21,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Inspect a string containing the list of the request's header names, ordered as they appear in the web request that
  * WAF receives for inspection. WAF generates the string and then uses that as the field to match component in its
- * inspection. WAF separates the header names in the string using colons and no added spaces, for example
- * <code>Host:User-Agent:Accept:Authorization:Referer</code>.
+ * inspection. WAF separates the header names in the string using commas and no added spaces.
  * </p>
  * <p>
  * Matches against the header order string are case insensitive.

@@ -46,7 +46,7 @@ public class UpdateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
     private com.amazonaws.internal.SdkInternalList<AdvancedEventSelector> advancedEventSelectors;
     /**
      * <p>
-     * Specifies whether an event data store collects events from all regions, or only from the region in which it was
+     * Specifies whether an event data store collects events from all Regions, or only from the Region in which it was
      * created.
      * </p>
      */
@@ -280,12 +280,12 @@ public class UpdateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies whether an event data store collects events from all regions, or only from the region in which it was
+     * Specifies whether an event data store collects events from all Regions, or only from the Region in which it was
      * created.
      * </p>
      * 
      * @param multiRegionEnabled
-     *        Specifies whether an event data store collects events from all regions, or only from the region in which
+     *        Specifies whether an event data store collects events from all Regions, or only from the Region in which
      *        it was created.
      */
 
@@ -295,11 +295,11 @@ public class UpdateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies whether an event data store collects events from all regions, or only from the region in which it was
+     * Specifies whether an event data store collects events from all Regions, or only from the Region in which it was
      * created.
      * </p>
      * 
-     * @return Specifies whether an event data store collects events from all regions, or only from the region in which
+     * @return Specifies whether an event data store collects events from all Regions, or only from the Region in which
      *         it was created.
      */
 
@@ -309,12 +309,12 @@ public class UpdateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies whether an event data store collects events from all regions, or only from the region in which it was
+     * Specifies whether an event data store collects events from all Regions, or only from the Region in which it was
      * created.
      * </p>
      * 
      * @param multiRegionEnabled
-     *        Specifies whether an event data store collects events from all regions, or only from the region in which
+     *        Specifies whether an event data store collects events from all Regions, or only from the Region in which
      *        it was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -326,11 +326,11 @@ public class UpdateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies whether an event data store collects events from all regions, or only from the region in which it was
+     * Specifies whether an event data store collects events from all Regions, or only from the Region in which it was
      * created.
      * </p>
      * 
-     * @return Specifies whether an event data store collects events from all regions, or only from the region in which
+     * @return Specifies whether an event data store collects events from all Regions, or only from the Region in which
      *         it was created.
      */
 

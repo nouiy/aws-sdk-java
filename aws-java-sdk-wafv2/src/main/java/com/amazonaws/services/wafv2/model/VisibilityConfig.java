@@ -30,16 +30,15 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A boolean indicating whether WAF should store a sampling of the web requests that match the rules. You can view
-     * the sampled requests through the WAF console.
+     * Indicates whether WAF should store a sampling of the web requests that match the rules. You can view the sampled
+     * requests through the WAF console.
      * </p>
      */
     private Boolean sampledRequestsEnabled;
     /**
      * <p>
-     * A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
-     * available metrics, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
+     * Indicates whether the associated resource sends metrics to Amazon CloudWatch. For the list of available metrics,
+     * see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      * Metrics</a> in the <i>WAF Developer Guide</i>.
      * </p>
      * <p>
@@ -62,13 +61,13 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A boolean indicating whether WAF should store a sampling of the web requests that match the rules. You can view
-     * the sampled requests through the WAF console.
+     * Indicates whether WAF should store a sampling of the web requests that match the rules. You can view the sampled
+     * requests through the WAF console.
      * </p>
      * 
      * @param sampledRequestsEnabled
-     *        A boolean indicating whether WAF should store a sampling of the web requests that match the rules. You can
-     *        view the sampled requests through the WAF console.
+     *        Indicates whether WAF should store a sampling of the web requests that match the rules. You can view the
+     *        sampled requests through the WAF console.
      */
 
     public void setSampledRequestsEnabled(Boolean sampledRequestsEnabled) {
@@ -77,12 +76,12 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A boolean indicating whether WAF should store a sampling of the web requests that match the rules. You can view
-     * the sampled requests through the WAF console.
+     * Indicates whether WAF should store a sampling of the web requests that match the rules. You can view the sampled
+     * requests through the WAF console.
      * </p>
      * 
-     * @return A boolean indicating whether WAF should store a sampling of the web requests that match the rules. You
-     *         can view the sampled requests through the WAF console.
+     * @return Indicates whether WAF should store a sampling of the web requests that match the rules. You can view the
+     *         sampled requests through the WAF console.
      */
 
     public Boolean getSampledRequestsEnabled() {
@@ -91,13 +90,13 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A boolean indicating whether WAF should store a sampling of the web requests that match the rules. You can view
-     * the sampled requests through the WAF console.
+     * Indicates whether WAF should store a sampling of the web requests that match the rules. You can view the sampled
+     * requests through the WAF console.
      * </p>
      * 
      * @param sampledRequestsEnabled
-     *        A boolean indicating whether WAF should store a sampling of the web requests that match the rules. You can
-     *        view the sampled requests through the WAF console.
+     *        Indicates whether WAF should store a sampling of the web requests that match the rules. You can view the
+     *        sampled requests through the WAF console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,12 +107,12 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A boolean indicating whether WAF should store a sampling of the web requests that match the rules. You can view
-     * the sampled requests through the WAF console.
+     * Indicates whether WAF should store a sampling of the web requests that match the rules. You can view the sampled
+     * requests through the WAF console.
      * </p>
      * 
-     * @return A boolean indicating whether WAF should store a sampling of the web requests that match the rules. You
-     *         can view the sampled requests through the WAF console.
+     * @return Indicates whether WAF should store a sampling of the web requests that match the rules. You can view the
+     *         sampled requests through the WAF console.
      */
 
     public Boolean isSampledRequestsEnabled() {
@@ -122,9 +121,8 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
-     * available metrics, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
+     * Indicates whether the associated resource sends metrics to Amazon CloudWatch. For the list of available metrics,
+     * see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      * Metrics</a> in the <i>WAF Developer Guide</i>.
      * </p>
      * <p>
@@ -136,8 +134,8 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param cloudWatchMetricsEnabled
-     *        A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
-     *        available metrics, see <a
+     *        Indicates whether the associated resource sends metrics to Amazon CloudWatch. For the list of available
+     *        metrics, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      *        Metrics</a> in the <i>WAF Developer Guide</i>.</p>
      *        <p>
@@ -154,9 +152,8 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
-     * available metrics, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
+     * Indicates whether the associated resource sends metrics to Amazon CloudWatch. For the list of available metrics,
+     * see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      * Metrics</a> in the <i>WAF Developer Guide</i>.
      * </p>
      * <p>
@@ -167,8 +164,8 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * action</a> in the <i>WAF Developer Guide</i>.
      * </p>
      * 
-     * @return A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
-     *         available metrics, see <a
+     * @return Indicates whether the associated resource sends metrics to Amazon CloudWatch. For the list of available
+     *         metrics, see <a
      *         href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      *         Metrics</a> in the <i>WAF Developer Guide</i>.</p>
      *         <p>
@@ -185,9 +182,8 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
-     * available metrics, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
+     * Indicates whether the associated resource sends metrics to Amazon CloudWatch. For the list of available metrics,
+     * see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      * Metrics</a> in the <i>WAF Developer Guide</i>.
      * </p>
      * <p>
@@ -199,8 +195,8 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param cloudWatchMetricsEnabled
-     *        A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
-     *        available metrics, see <a
+     *        Indicates whether the associated resource sends metrics to Amazon CloudWatch. For the list of available
+     *        metrics, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      *        Metrics</a> in the <i>WAF Developer Guide</i>.</p>
      *        <p>
@@ -219,9 +215,8 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
-     * available metrics, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
+     * Indicates whether the associated resource sends metrics to Amazon CloudWatch. For the list of available metrics,
+     * see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      * Metrics</a> in the <i>WAF Developer Guide</i>.
      * </p>
      * <p>
@@ -232,8 +227,8 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * action</a> in the <i>WAF Developer Guide</i>.
      * </p>
      * 
-     * @return A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
-     *         available metrics, see <a
+     * @return Indicates whether the associated resource sends metrics to Amazon CloudWatch. For the list of available
+     *         metrics, see <a
      *         href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      *         Metrics</a> in the <i>WAF Developer Guide</i>.</p>
      *         <p>

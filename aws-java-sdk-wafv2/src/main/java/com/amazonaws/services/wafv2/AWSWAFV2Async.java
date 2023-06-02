@@ -777,6 +777,76 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
 
     /**
      * <p>
+     * Provides high-level information for the Amazon Web Services Managed Rules rule groups and Amazon Web Services
+     * Marketplace managed rule groups.
+     * </p>
+     * 
+     * @param describeAllManagedProductsRequest
+     * @return A Java Future containing the result of the DescribeAllManagedProducts operation returned by the service.
+     * @sample AWSWAFV2Async.DescribeAllManagedProducts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeAllManagedProducts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAllManagedProductsResult> describeAllManagedProductsAsync(
+            DescribeAllManagedProductsRequest describeAllManagedProductsRequest);
+
+    /**
+     * <p>
+     * Provides high-level information for the Amazon Web Services Managed Rules rule groups and Amazon Web Services
+     * Marketplace managed rule groups.
+     * </p>
+     * 
+     * @param describeAllManagedProductsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeAllManagedProducts operation returned by the service.
+     * @sample AWSWAFV2AsyncHandler.DescribeAllManagedProducts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeAllManagedProducts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAllManagedProductsResult> describeAllManagedProductsAsync(
+            DescribeAllManagedProductsRequest describeAllManagedProductsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeAllManagedProductsRequest, DescribeAllManagedProductsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides high-level information for the managed rule groups owned by a specific vendor.
+     * </p>
+     * 
+     * @param describeManagedProductsByVendorRequest
+     * @return A Java Future containing the result of the DescribeManagedProductsByVendor operation returned by the
+     *         service.
+     * @sample AWSWAFV2Async.DescribeManagedProductsByVendor
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeManagedProductsByVendor"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeManagedProductsByVendorResult> describeManagedProductsByVendorAsync(
+            DescribeManagedProductsByVendorRequest describeManagedProductsByVendorRequest);
+
+    /**
+     * <p>
+     * Provides high-level information for the managed rule groups owned by a specific vendor.
+     * </p>
+     * 
+     * @param describeManagedProductsByVendorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeManagedProductsByVendor operation returned by the
+     *         service.
+     * @sample AWSWAFV2AsyncHandler.DescribeManagedProductsByVendor
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeManagedProductsByVendor"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeManagedProductsByVendorResult> describeManagedProductsByVendorAsync(
+            DescribeManagedProductsByVendorRequest describeManagedProductsByVendorRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeManagedProductsByVendorRequest, DescribeManagedProductsByVendorResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides high-level information for a managed rule group, including descriptions of the rules.
      * </p>
      * 

@@ -1058,6 +1058,68 @@ public interface AWSWAFV2 {
 
     /**
      * <p>
+     * Provides high-level information for the Amazon Web Services Managed Rules rule groups and Amazon Web Services
+     * Marketplace managed rule groups.
+     * </p>
+     * 
+     * @param describeAllManagedProductsRequest
+     * @return Result of the DescribeAllManagedProducts operation returned by the service.
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @sample AWSWAFV2.DescribeAllManagedProducts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeAllManagedProducts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeAllManagedProductsResult describeAllManagedProducts(DescribeAllManagedProductsRequest describeAllManagedProductsRequest);
+
+    /**
+     * <p>
+     * Provides high-level information for the managed rule groups owned by a specific vendor.
+     * </p>
+     * 
+     * @param describeManagedProductsByVendorRequest
+     * @return Result of the DescribeManagedProductsByVendor operation returned by the service.
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @sample AWSWAFV2.DescribeManagedProductsByVendor
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeManagedProductsByVendor"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeManagedProductsByVendorResult describeManagedProductsByVendor(DescribeManagedProductsByVendorRequest describeManagedProductsByVendorRequest);
+
+    /**
+     * <p>
      * Provides high-level information for a managed rule group, including descriptions of the rules.
      * </p>
      * 

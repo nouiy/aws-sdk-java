@@ -75,6 +75,294 @@ import com.amazonaws.services.cloudtrail.model.transform.*;
  * User Guide</a> for information about the data that is included with each Amazon Web Services API call listed in the
  * log files.
  * </p>
+ * <p>
+ * <b>Actions available for CloudTrail trails</b>
+ * </p>
+ * <p>
+ * The following actions are available for CloudTrail trails.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>AddTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>CreateTrail</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteTrail</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DescribeTrails</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetEventSelectors</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetInsightSelectors</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetTrail</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetTrailStatus</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListTrails</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>PutEventSelectors</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>PutInsightSelectors</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>RemoveTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StartLogging</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StopLogging</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>UpdateTrail</a>
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Actions available for CloudTrail event data stores</b>
+ * </p>
+ * <p>
+ * The following actions are available for CloudTrail event data stores.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>AddTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>CancelQuery</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>CreateEventDataStore</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteEventDataStore</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DescribeQuery</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetEventDataStore</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetQueryResults</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListEventDataStores</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListQueries</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>RemoveTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>RestoreEventDataStore</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StartEventDataStoreIngestion</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StartImport</a>
+ * </p>
+ * <p>
+ * The following additional actions are available for imports.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>GetImport</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListImportFailures</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListImports</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StopImport</a>
+ * </p>
+ * </li>
+ * </ul>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StartQuery</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StartEventDataStoreIngestion</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>UpdateEventDataStore</a>
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Actions available for CloudTrail channels</b>
+ * </p>
+ * <p>
+ * The following actions are available for CloudTrail channels.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>AddTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>CreateChannel</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteChannel</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>DeleteResourcePolicy</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetChannel</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetResourcePolicy</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListChannels</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>PutResourcePolicy</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>RemoveTags</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>UpdateChannel</a>
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Actions available for managing delegated administrators</b>
+ * </p>
+ * <p>
+ * The following actions are available for adding or a removing a delegated administrator to manage an Organizations
+ * organization’s CloudTrail resources.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a>DeregisterOrganizationDelegatedAdmin</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>RegisterOrganizationDelegatedAdmin</a>
+ * </p>
+ * </li>
+ * </ul>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -544,7 +832,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * keys with the same name but different values. If you specify a key without a value, the tag will be created with
      * the specified key and a value of null. You can tag a trail or event data store that applies to all Amazon Web
      * Services Regions only from the Region in which the trail or event data store was created (also known as its home
-     * region).
+     * Region).
      * </p>
      * 
      * @param addTagsRequest
@@ -564,7 +852,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
-     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN:
@@ -915,8 +1203,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the KMS key ARN is not valid.
      * @throws KmsKeyNotFoundException
      *         This exception is thrown when the KMS key does not exist, when the S3 bucket and the KMS key are not in
-     *         the same region, or when the KMS key associated with the Amazon SNS topic either does not exist or is not
-     *         in the same region.
+     *         the same Region, or when the KMS key associated with the Amazon SNS topic either does not exist or is not
+     *         in the same Region.
      * @throws KmsException
      *         This exception is thrown when there is an issue with the specified KMS key and the trail or event data
      *         store can't be updated.
@@ -1063,8 +1351,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the combination of parameters provided is not valid.
      * @throws KmsKeyNotFoundException
      *         This exception is thrown when the KMS key does not exist, when the S3 bucket and the KMS key are not in
-     *         the same region, or when the KMS key associated with the Amazon SNS topic either does not exist or is not
-     *         in the same region.
+     *         the same Region, or when the KMS key associated with the Amazon SNS topic either does not exist or is not
+     *         in the same Region.
      * @throws KmsKeyDisabledException
      *         This exception is no longer in use.
      * @throws KmsException
@@ -1075,7 +1363,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws InvalidCloudWatchLogsRoleArnException
      *         This exception is thrown when the provided role is not valid.
      * @throws CloudWatchLogsDeliveryUnavailableException
-     *         Cannot set a CloudWatch Logs delivery for this region.
+     *         Cannot set a CloudWatch Logs delivery for this Region.
      * @throws InvalidTagParameterException
      *         This exception is thrown when the specified tag key or values are not valid. It can also occur if there
      *         are duplicate tags or too many tags on the resource.
@@ -1399,9 +1687,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
-     * Deletes a trail. This operation must be called from the region in which the trail was created.
-     * <code>DeleteTrail</code> cannot be called on the shadow trails (replicated trails in other regions) of a trail
-     * that is enabled in all regions.
+     * Deletes a trail. This operation must be called from the Region in which the trail was created.
+     * <code>DeleteTrail</code> cannot be called on the shadow trails (replicated trails in other Regions) of a trail
+     * that is enabled in all Regions.
      * </p>
      * 
      * @param deleteTrailRequest
@@ -1451,7 +1739,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
-     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN: <code>
@@ -1462,7 +1750,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
      *         then try the operation again.
      * @throws InvalidHomeRegionException
-     *         This exception is thrown when an operation is called on a trail from a region other than the region in
+     *         This exception is thrown when an operation is called on a trail from a Region other than the Region in
      *         which the trail was created.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
@@ -1699,7 +1987,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
-     * Retrieves settings for one or more trails associated with the current region for your account.
+     * Retrieves settings for one or more trails associated with the current Region for your account.
      * </p>
      * 
      * @param describeTrailsRequest
@@ -2013,7 +2301,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
-     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN: <code>
@@ -2194,7 +2482,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
-     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN: <code>
@@ -2424,7 +2712,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
-     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN:
@@ -2518,8 +2806,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * <p>
      * Returns a JSON-formatted list of information about the specified trail. Fields include information on delivery
      * errors, Amazon SNS and Amazon S3 errors, and start and stop logging times for each trail. This operation returns
-     * trail status from a single region. To return trail status from all regions, you must call the operation on each
-     * region.
+     * trail status from a single Region. To return trail status from all Regions, you must call the operation on each
+     * Region.
      * </p>
      * 
      * @param getTrailStatusRequest
@@ -2537,7 +2825,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
-     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN:
@@ -2691,7 +2979,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
-     * Returns information about all event data stores in the account, in the current region.
+     * Returns information about all event data stores in the account, in the current Region.
      * </p>
      * 
      * @param listEventDataStoresRequest
@@ -2891,8 +3179,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * </p>
      * <note>
      * <p>
-     * CloudTrail uses different private and public key pairs per region. Each digest file is signed with a private key
-     * unique to its region. When you validate a digest file from a specific region, you must look in the same region
+     * CloudTrail uses different private and public key pairs per Region. Each digest file is signed with a private key
+     * unique to its Region. When you validate a digest file from a specific Region, you must look in the same Region
      * for its corresponding public key.
      * </p>
      * </note>
@@ -3050,7 +3338,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
-     * Lists the tags for the trail, event data store, or channel in the current region.
+     * Lists the tags for the specified trails, event data stores, or channels in the current Region.
      * </p>
      * 
      * @param listTagsRequest
@@ -3070,7 +3358,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
-     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN:
@@ -3237,7 +3525,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html#cloudtrail-concepts-management-events"
      * >management events</a> or <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html#cloudtrail-concepts-insights-events"
-     * >CloudTrail Insights events</a> that are captured by CloudTrail. You can look up events that occurred in a region
+     * >CloudTrail Insights events</a> that are captured by CloudTrail. You can look up events that occurred in a Region
      * within the last 90 days. Lookup supports the following attributes for management events:
      * </p>
      * <ul>
@@ -3308,7 +3596,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * </p>
      * <important>
      * <p>
-     * The rate of lookup requests is limited to two per second, per account, per region. If this limit is exceeded, a
+     * The rate of lookup requests is limited to two per second, per account, per Region. If this limit is exceeded, a
      * throttling error occurs.
      * </p>
      * </important>
@@ -3432,7 +3720,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * </li>
      * </ol>
      * <p>
-     * The <code>PutEventSelectors</code> operation must be called from the region in which the trail was created;
+     * The <code>PutEventSelectors</code> operation must be called from the Region in which the trail was created;
      * otherwise, an <code>InvalidHomeRegionException</code> exception is thrown.
      * </p>
      * <p>
@@ -3500,13 +3788,13 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
-     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN: <code>
      *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws InvalidHomeRegionException
-     *         This exception is thrown when an operation is called on a trail from a region other than the region in
+     *         This exception is thrown when an operation is called on a trail from a Region other than the Region in
      *         which the trail was created.
      * @throws InvalidEventSelectorsException
      *         This exception is thrown when the <code>PutEventSelectors</code> operation is called with a number of
@@ -3673,13 +3961,13 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
-     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN: <code>
      *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws InvalidHomeRegionException
-     *         This exception is thrown when an operation is called on a trail from a region other than the region in
+     *         This exception is thrown when an operation is called on a trail from a Region other than the Region in
      *         which the trail was created.
      * @throws InvalidInsightSelectorsException
      *         The formatting or syntax of the <code>InsightSelectors</code> JSON statement in your <code>
@@ -3971,7 +4259,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
-     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN:
@@ -4185,6 +4473,92 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
+     * Starts the ingestion of live events on an event data store specified as either an ARN or the ID portion of the
+     * ARN. To start ingestion, the event data store <code>Status</code> must be <code>STOPPED_INGESTION</code> and the
+     * <code>eventCategory</code> must be <code>Management</code>, <code>Data</code>, or <code>ConfigurationItem</code>.
+     * </p>
+     * 
+     * @param startEventDataStoreIngestionRequest
+     * @return Result of the StartEventDataStoreIngestion operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InvalidEventDataStoreStatusException
+     *         The event data store is not in a status that supports the operation.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws InvalidEventDataStoreCategoryException
+     *         This exception is thrown when event categories of specified event data stores are not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @throws NotOrganizationMasterAccountException
+     *         This exception is thrown when the Amazon Web Services account making the request to create or update an
+     *         organization trail or event data store is not the management account for an organization in
+     *         Organizations. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a> or <a
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
+     *         event data store</a>.
+     * @throws NoManagementAccountSLRExistsException
+     *         This exception is thrown when the management account does not have a service-linked role.
+     * @throws InsufficientDependencyServiceAccessPermissionException
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
+     * @sample AWSCloudTrail.StartEventDataStoreIngestion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/StartEventDataStoreIngestion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartEventDataStoreIngestionResult startEventDataStoreIngestion(StartEventDataStoreIngestionRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartEventDataStoreIngestion(request);
+    }
+
+    @SdkInternalApi
+    final StartEventDataStoreIngestionResult executeStartEventDataStoreIngestion(StartEventDataStoreIngestionRequest startEventDataStoreIngestionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startEventDataStoreIngestionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartEventDataStoreIngestionRequest> request = null;
+        Response<StartEventDataStoreIngestionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartEventDataStoreIngestionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startEventDataStoreIngestionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartEventDataStoreIngestion");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartEventDataStoreIngestionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartEventDataStoreIngestionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Starts an import of logged trail events from a source S3 bucket to a destination event data store. By default,
      * CloudTrail only imports events contained in the S3 bucket's <code>CloudTrail</code> prefix and the prefixes
      * inside the <code>CloudTrail</code> prefix, and does not check prefixes for other Amazon Web Services services. If
@@ -4292,9 +4666,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
     /**
      * <p>
      * Starts the recording of Amazon Web Services API calls and log file delivery for a trail. For a trail that is
-     * enabled in all regions, this operation must be called from the region in which the trail was created. This
-     * operation cannot be called on the shadow trails (replicated trails in other regions) of a trail that is enabled
-     * in all regions.
+     * enabled in all Regions, this operation must be called from the Region in which the trail was created. This
+     * operation cannot be called on the shadow trails (replicated trails in other Regions) of a trail that is enabled
+     * in all Regions.
      * </p>
      * 
      * @param startLoggingRequest
@@ -4312,7 +4686,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
-     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN:
@@ -4356,7 +4730,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         </li>
      * @throws InvalidHomeRegionException
-     *         This exception is thrown when an operation is called on a trail from a region other than the region in
+     *         This exception is thrown when an operation is called on a trail from a Region other than the Region in
      *         which the trail was created.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
@@ -4515,6 +4889,92 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
+     * Stops the ingestion of live events on an event data store specified as either an ARN or the ID portion of the
+     * ARN. To stop ingestion, the event data store <code>Status</code> must be <code>ENABLED</code> and the
+     * <code>eventCategory</code> must be <code>Management</code>, <code>Data</code>, or <code>ConfigurationItem</code>.
+     * </p>
+     * 
+     * @param stopEventDataStoreIngestionRequest
+     * @return Result of the StopEventDataStoreIngestion operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InvalidEventDataStoreStatusException
+     *         The event data store is not in a status that supports the operation.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws InvalidEventDataStoreCategoryException
+     *         This exception is thrown when event categories of specified event data stores are not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @throws NotOrganizationMasterAccountException
+     *         This exception is thrown when the Amazon Web Services account making the request to create or update an
+     *         organization trail or event data store is not the management account for an organization in
+     *         Organizations. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a> or <a
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
+     *         event data store</a>.
+     * @throws NoManagementAccountSLRExistsException
+     *         This exception is thrown when the management account does not have a service-linked role.
+     * @throws InsufficientDependencyServiceAccessPermissionException
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
+     * @sample AWSCloudTrail.StopEventDataStoreIngestion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/StopEventDataStoreIngestion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StopEventDataStoreIngestionResult stopEventDataStoreIngestion(StopEventDataStoreIngestionRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopEventDataStoreIngestion(request);
+    }
+
+    @SdkInternalApi
+    final StopEventDataStoreIngestionResult executeStopEventDataStoreIngestion(StopEventDataStoreIngestionRequest stopEventDataStoreIngestionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopEventDataStoreIngestionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopEventDataStoreIngestionRequest> request = null;
+        Response<StopEventDataStoreIngestionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopEventDataStoreIngestionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(stopEventDataStoreIngestionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopEventDataStoreIngestion");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopEventDataStoreIngestionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StopEventDataStoreIngestionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Stops a specified import.
      * </p>
      * 
@@ -4580,9 +5040,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * <p>
      * Suspends the recording of Amazon Web Services API calls and log file delivery for the specified trail. Under most
      * circumstances, there is no need to use this action. You can update a trail without stopping it first. This action
-     * is the only way to stop recording. For a trail enabled in all regions, this operation must be called from the
-     * region in which the trail was created, or an <code>InvalidHomeRegionException</code> will occur. This operation
-     * cannot be called on the shadow trails (replicated trails in other regions) of a trail enabled in all regions.
+     * is the only way to stop recording. For a trail enabled in all Regions, this operation must be called from the
+     * Region in which the trail was created, or an <code>InvalidHomeRegionException</code> will occur. This operation
+     * cannot be called on the shadow trails (replicated trails in other Regions) of a trail enabled in all Regions.
      * </p>
      * 
      * @param stopLoggingRequest
@@ -4632,7 +5092,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
-     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN: <code>
@@ -4643,7 +5103,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
      *         then try the operation again.
      * @throws InvalidHomeRegionException
-     *         This exception is thrown when an operation is called on a trail from a region other than the region in
+     *         This exception is thrown when an operation is called on a trail from a Region other than the Region in
      *         which the trail was created.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
@@ -4860,8 +5320,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the KMS key ARN is not valid.
      * @throws KmsKeyNotFoundException
      *         This exception is thrown when the KMS key does not exist, when the S3 bucket and the KMS key are not in
-     *         the same region, or when the KMS key associated with the Amazon SNS topic either does not exist or is not
-     *         in the same region.
+     *         the same Region, or when the KMS key associated with the Amazon SNS topic either does not exist or is not
+     *         in the same Region.
      * @throws KmsException
      *         This exception is thrown when there is an issue with the specified KMS key and the trail or event data
      *         store can't be updated.
@@ -4945,7 +5405,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * Updates trail settings that control what events you are logging, and how to handle log files. Changes to a trail
      * do not require stopping the CloudTrail service. Use this action to designate an existing bucket for log delivery.
      * If the existing bucket has previously been a target for CloudTrail log files, an IAM policy exists for the
-     * bucket. <code>UpdateTrail</code> must be called from the region in which the trail was created; otherwise, an
+     * bucket. <code>UpdateTrail</code> must be called from the Region in which the trail was created; otherwise, an
      * <code>InvalidHomeRegionException</code> is thrown.
      * </p>
      * 
@@ -5049,7 +5509,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
-     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
      *         </p>
      *         <p>
      *         The following is the format of a channel ARN: <code>
@@ -5062,12 +5522,12 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws InvalidParameterCombinationException
      *         This exception is thrown when the combination of parameters provided is not valid.
      * @throws InvalidHomeRegionException
-     *         This exception is thrown when an operation is called on a trail from a region other than the region in
+     *         This exception is thrown when an operation is called on a trail from a Region other than the Region in
      *         which the trail was created.
      * @throws KmsKeyNotFoundException
      *         This exception is thrown when the KMS key does not exist, when the S3 bucket and the KMS key are not in
-     *         the same region, or when the KMS key associated with the Amazon SNS topic either does not exist or is not
-     *         in the same region.
+     *         the same Region, or when the KMS key associated with the Amazon SNS topic either does not exist or is not
+     *         in the same Region.
      * @throws KmsKeyDisabledException
      *         This exception is no longer in use.
      * @throws KmsException
@@ -5078,7 +5538,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws InvalidCloudWatchLogsRoleArnException
      *         This exception is thrown when the provided role is not valid.
      * @throws CloudWatchLogsDeliveryUnavailableException
-     *         Cannot set a CloudWatch Logs delivery for this region.
+     *         Cannot set a CloudWatch Logs delivery for this Region.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException

@@ -44,7 +44,7 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the managed rule group vendor. You use this, along with the rule group name, to identify the rule
+     * The name of the managed rule group vendor. You use this, along with the rule group name, to identify a rule
      * group.
      * </p>
      */
@@ -114,12 +114,12 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the managed rule group vendor. You use this, along with the rule group name, to identify the rule
+     * The name of the managed rule group vendor. You use this, along with the rule group name, to identify a rule
      * group.
      * </p>
      * 
      * @param vendorName
-     *        The name of the managed rule group vendor. You use this, along with the rule group name, to identify the
+     *        The name of the managed rule group vendor. You use this, along with the rule group name, to identify a
      *        rule group.
      */
 
@@ -129,11 +129,11 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the managed rule group vendor. You use this, along with the rule group name, to identify the rule
+     * The name of the managed rule group vendor. You use this, along with the rule group name, to identify a rule
      * group.
      * </p>
      * 
-     * @return The name of the managed rule group vendor. You use this, along with the rule group name, to identify the
+     * @return The name of the managed rule group vendor. You use this, along with the rule group name, to identify a
      *         rule group.
      */
 
@@ -143,12 +143,12 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the managed rule group vendor. You use this, along with the rule group name, to identify the rule
+     * The name of the managed rule group vendor. You use this, along with the rule group name, to identify a rule
      * group.
      * </p>
      * 
      * @param vendorName
-     *        The name of the managed rule group vendor. You use this, along with the rule group name, to identify the
+     *        The name of the managed rule group vendor. You use this, along with the rule group name, to identify a
      *        rule group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
