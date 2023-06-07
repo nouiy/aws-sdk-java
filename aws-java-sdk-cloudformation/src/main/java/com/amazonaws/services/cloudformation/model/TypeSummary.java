@@ -55,7 +55,7 @@ public class TypeSummary implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
      * </p>
      * <p>
-     * To set the default version of an extension, use <code> <a>SetTypeDefaultVersion</a> </code>.
+     * To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
      * </p>
      */
     private String defaultVersionId;
@@ -312,7 +312,7 @@ public class TypeSummary implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
      * </p>
      * <p>
-     * To set the default version of an extension, use <code> <a>SetTypeDefaultVersion</a> </code>.
+     * To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
      * </p>
      * 
      * @param defaultVersionId
@@ -326,7 +326,7 @@ public class TypeSummary implements Serializable, Cloneable {
      *        >RegisterType</a>.
      *        </p>
      *        <p>
-     *        To set the default version of an extension, use <code> <a>SetTypeDefaultVersion</a> </code>.
+     *        To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
      */
 
     public void setDefaultVersionId(String defaultVersionId) {
@@ -345,7 +345,7 @@ public class TypeSummary implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
      * </p>
      * <p>
-     * To set the default version of an extension, use <code> <a>SetTypeDefaultVersion</a> </code>.
+     * To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
      * </p>
      * 
      * @return The ID of the default version of the extension. The default version is used when the extension version
@@ -358,7 +358,7 @@ public class TypeSummary implements Serializable, Cloneable {
      *         >RegisterType</a>.
      *         </p>
      *         <p>
-     *         To set the default version of an extension, use <code> <a>SetTypeDefaultVersion</a> </code>.
+     *         To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
      */
 
     public String getDefaultVersionId() {
@@ -377,7 +377,7 @@ public class TypeSummary implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
      * </p>
      * <p>
-     * To set the default version of an extension, use <code> <a>SetTypeDefaultVersion</a> </code>.
+     * To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
      * </p>
      * 
      * @param defaultVersionId
@@ -391,7 +391,7 @@ public class TypeSummary implements Serializable, Cloneable {
      *        >RegisterType</a>.
      *        </p>
      *        <p>
-     *        To set the default version of an extension, use <code> <a>SetTypeDefaultVersion</a> </code>.
+     *        To set the default version of an extension, use <a>SetTypeDefaultVersion</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

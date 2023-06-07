@@ -190,6 +190,47 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
 
     /**
      * <p>
+     * Creates an event stream, which is a subscription to real-time events, such as when profiles are created and
+     * updated through Amazon Connect Customer Profiles.
+     * </p>
+     * <p>
+     * Each event stream can be associated with only one Kinesis Data Stream destination in the same region and Amazon
+     * Web Services account as the customer profiles domain
+     * </p>
+     * 
+     * @param createEventStreamRequest
+     * @return A Java Future containing the result of the CreateEventStream operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.CreateEventStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/CreateEventStream"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEventStreamResult> createEventStreamAsync(CreateEventStreamRequest createEventStreamRequest);
+
+    /**
+     * <p>
+     * Creates an event stream, which is a subscription to real-time events, such as when profiles are created and
+     * updated through Amazon Connect Customer Profiles.
+     * </p>
+     * <p>
+     * Each event stream can be associated with only one Kinesis Data Stream destination in the same region and Amazon
+     * Web Services account as the customer profiles domain
+     * </p>
+     * 
+     * @param createEventStreamRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateEventStream operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.CreateEventStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/CreateEventStream"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEventStreamResult> createEventStreamAsync(CreateEventStreamRequest createEventStreamRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateEventStreamRequest, CreateEventStreamResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an integration workflow. An integration workflow is an async process which ingests historic data and sets
      * up an integration for ongoing updates. The supported Amazon AppFlow sources are Salesforce, ServiceNow, and
      * Marketo.
@@ -335,6 +376,37 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      */
     java.util.concurrent.Future<DeleteDomainResult> deleteDomainAsync(DeleteDomainRequest deleteDomainRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteDomainRequest, DeleteDomainResult> asyncHandler);
+
+    /**
+     * <p>
+     * Disables and deletes the specified event stream.
+     * </p>
+     * 
+     * @param deleteEventStreamRequest
+     * @return A Java Future containing the result of the DeleteEventStream operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.DeleteEventStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DeleteEventStream"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEventStreamResult> deleteEventStreamAsync(DeleteEventStreamRequest deleteEventStreamRequest);
+
+    /**
+     * <p>
+     * Disables and deletes the specified event stream.
+     * </p>
+     * 
+     * @param deleteEventStreamRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEventStream operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.DeleteEventStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DeleteEventStream"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEventStreamResult> deleteEventStreamAsync(DeleteEventStreamRequest deleteEventStreamRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEventStreamRequest, DeleteEventStreamResult> asyncHandler);
 
     /**
      * <p>
@@ -691,6 +763,37 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      */
     java.util.concurrent.Future<GetDomainResult> getDomainAsync(GetDomainRequest getDomainRequest,
             com.amazonaws.handlers.AsyncHandler<GetDomainRequest, GetDomainResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns information about the specified event stream in a specific domain.
+     * </p>
+     * 
+     * @param getEventStreamRequest
+     * @return A Java Future containing the result of the GetEventStream operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.GetEventStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetEventStream"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEventStreamResult> getEventStreamAsync(GetEventStreamRequest getEventStreamRequest);
+
+    /**
+     * <p>
+     * Returns information about the specified event stream in a specific domain.
+     * </p>
+     * 
+     * @param getEventStreamRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetEventStream operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.GetEventStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetEventStream"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEventStreamResult> getEventStreamAsync(GetEventStreamRequest getEventStreamRequest,
+            com.amazonaws.handlers.AsyncHandler<GetEventStreamRequest, GetEventStreamResult> asyncHandler);
 
     /**
      * <p>
@@ -1212,6 +1315,37 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      */
     java.util.concurrent.Future<ListDomainsResult> listDomainsAsync(ListDomainsRequest listDomainsRequest,
             com.amazonaws.handlers.AsyncHandler<ListDomainsRequest, ListDomainsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of all the event streams in a specific domain.
+     * </p>
+     * 
+     * @param listEventStreamsRequest
+     * @return A Java Future containing the result of the ListEventStreams operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.ListEventStreams
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListEventStreams"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEventStreamsResult> listEventStreamsAsync(ListEventStreamsRequest listEventStreamsRequest);
+
+    /**
+     * <p>
+     * Returns a list of all the event streams in a specific domain.
+     * </p>
+     * 
+     * @param listEventStreamsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEventStreams operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.ListEventStreams
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListEventStreams"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEventStreamsResult> listEventStreamsAsync(ListEventStreamsRequest listEventStreamsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEventStreamsRequest, ListEventStreamsResult> asyncHandler);
 
     /**
      * <p>

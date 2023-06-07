@@ -281,8 +281,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
-     * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
+     * >REVIEW_IN_PROGRESS</a> state until you execute the change set.
      * </p>
      * <p>
      * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
@@ -2555,8 +2555,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
-     * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
+     * >REVIEW_IN_PROGRESS</a> state until you execute the change set.
      * </p>
      * <p>
      * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
@@ -2571,7 +2571,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      *        template or resources. The stack will be in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
-     *        > <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
+     *        >REVIEW_IN_PROGRESS</a> state until you execute the change set.
      *        </p>
      *        <p>
      *        By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
@@ -2593,8 +2593,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
-     * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
+     * >REVIEW_IN_PROGRESS</a> state until you execute the change set.
      * </p>
      * <p>
      * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
@@ -2608,7 +2608,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      *         template or resources. The stack will be in the <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
-     *         > <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
+     *         >REVIEW_IN_PROGRESS</a> state until you execute the change set.
      *         </p>
      *         <p>
      *         By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
@@ -2630,8 +2630,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
-     * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
+     * >REVIEW_IN_PROGRESS</a> state until you execute the change set.
      * </p>
      * <p>
      * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
@@ -2646,7 +2646,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      *        template or resources. The stack will be in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
-     *        > <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
+     *        >REVIEW_IN_PROGRESS</a> state until you execute the change set.
      *        </p>
      *        <p>
      *        By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
@@ -2670,8 +2670,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
-     * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
+     * >REVIEW_IN_PROGRESS</a> state until you execute the change set.
      * </p>
      * <p>
      * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
@@ -2686,7 +2686,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      *        template or resources. The stack will be in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
-     *        > <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
+     *        >REVIEW_IN_PROGRESS</a> state until you execute the change set.
      *        </p>
      *        <p>
      *        By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
@@ -2708,8 +2708,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
-     * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
+     * >REVIEW_IN_PROGRESS</a> state until you execute the change set.
      * </p>
      * <p>
      * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
@@ -2724,7 +2724,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      *        template or resources. The stack will be in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
-     *        > <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
+     *        >REVIEW_IN_PROGRESS</a> state until you execute the change set.
      *        </p>
      *        <p>
      *        By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to

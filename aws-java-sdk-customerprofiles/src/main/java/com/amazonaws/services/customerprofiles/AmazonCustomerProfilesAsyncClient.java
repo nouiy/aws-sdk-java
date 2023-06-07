@@ -182,6 +182,39 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
     }
 
     @Override
+    public java.util.concurrent.Future<CreateEventStreamResult> createEventStreamAsync(CreateEventStreamRequest request) {
+
+        return createEventStreamAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEventStreamResult> createEventStreamAsync(final CreateEventStreamRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateEventStreamRequest, CreateEventStreamResult> asyncHandler) {
+        final CreateEventStreamRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateEventStreamResult>() {
+            @Override
+            public CreateEventStreamResult call() throws Exception {
+                CreateEventStreamResult result = null;
+
+                try {
+                    result = executeCreateEventStream(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateIntegrationWorkflowResult> createIntegrationWorkflowAsync(CreateIntegrationWorkflowRequest request) {
 
         return createIntegrationWorkflowAsync(request, null);
@@ -300,6 +333,39 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
 
                 try {
                     result = executeDeleteDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEventStreamResult> deleteEventStreamAsync(DeleteEventStreamRequest request) {
+
+        return deleteEventStreamAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEventStreamResult> deleteEventStreamAsync(final DeleteEventStreamRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteEventStreamRequest, DeleteEventStreamResult> asyncHandler) {
+        final DeleteEventStreamRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteEventStreamResult>() {
+            @Override
+            public DeleteEventStreamResult call() throws Exception {
+                DeleteEventStreamResult result = null;
+
+                try {
+                    result = executeDeleteEventStream(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -634,6 +700,39 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
 
                 try {
                     result = executeGetDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventStreamResult> getEventStreamAsync(GetEventStreamRequest request) {
+
+        return getEventStreamAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventStreamResult> getEventStreamAsync(final GetEventStreamRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEventStreamRequest, GetEventStreamResult> asyncHandler) {
+        final GetEventStreamRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEventStreamResult>() {
+            @Override
+            public GetEventStreamResult call() throws Exception {
+                GetEventStreamResult result = null;
+
+                try {
+                    result = executeGetEventStream(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1001,6 +1100,39 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
 
                 try {
                     result = executeListDomains(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEventStreamsResult> listEventStreamsAsync(ListEventStreamsRequest request) {
+
+        return listEventStreamsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEventStreamsResult> listEventStreamsAsync(final ListEventStreamsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEventStreamsRequest, ListEventStreamsResult> asyncHandler) {
+        final ListEventStreamsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEventStreamsResult>() {
+            @Override
+            public ListEventStreamsResult call() throws Exception {
+                ListEventStreamsResult result = null;
+
+                try {
+                    result = executeListEventStreams(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

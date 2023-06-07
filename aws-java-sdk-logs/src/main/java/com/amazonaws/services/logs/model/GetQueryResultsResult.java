@@ -48,7 +48,7 @@ public class GetQueryResultsResult extends com.amazonaws.AmazonWebServiceResult<
      * and <code>Unknown</code>.
      * </p>
      * <p>
-     * Queries time out after 15 minutes of runtime. To avoid having your queries time out, reduce the time range being
+     * Queries time out after 60 minutes of runtime. To avoid having your queries time out, reduce the time range being
      * searched or partition your query into a number of queries.
      * </p>
      */
@@ -214,7 +214,7 @@ public class GetQueryResultsResult extends com.amazonaws.AmazonWebServiceResult<
      * and <code>Unknown</code>.
      * </p>
      * <p>
-     * Queries time out after 15 minutes of runtime. To avoid having your queries time out, reduce the time range being
+     * Queries time out after 60 minutes of runtime. To avoid having your queries time out, reduce the time range being
      * searched or partition your query into a number of queries.
      * </p>
      * 
@@ -223,7 +223,7 @@ public class GetQueryResultsResult extends com.amazonaws.AmazonWebServiceResult<
      *        <code>Complete</code>, <code>Failed</code>, <code>Running</code>, <code>Scheduled</code>,
      *        <code>Timeout</code>, and <code>Unknown</code>.</p>
      *        <p>
-     *        Queries time out after 15 minutes of runtime. To avoid having your queries time out, reduce the time range
+     *        Queries time out after 60 minutes of runtime. To avoid having your queries time out, reduce the time range
      *        being searched or partition your query into a number of queries.
      * @see QueryStatus
      */
@@ -239,7 +239,7 @@ public class GetQueryResultsResult extends com.amazonaws.AmazonWebServiceResult<
      * and <code>Unknown</code>.
      * </p>
      * <p>
-     * Queries time out after 15 minutes of runtime. To avoid having your queries time out, reduce the time range being
+     * Queries time out after 60 minutes of runtime. To avoid having your queries time out, reduce the time range being
      * searched or partition your query into a number of queries.
      * </p>
      * 
@@ -247,7 +247,7 @@ public class GetQueryResultsResult extends com.amazonaws.AmazonWebServiceResult<
      *         <code>Complete</code>, <code>Failed</code>, <code>Running</code>, <code>Scheduled</code>,
      *         <code>Timeout</code>, and <code>Unknown</code>.</p>
      *         <p>
-     *         Queries time out after 15 minutes of runtime. To avoid having your queries time out, reduce the time
+     *         Queries time out after 60 minutes of runtime. To avoid having your queries time out, reduce the time
      *         range being searched or partition your query into a number of queries.
      * @see QueryStatus
      */
@@ -263,7 +263,7 @@ public class GetQueryResultsResult extends com.amazonaws.AmazonWebServiceResult<
      * and <code>Unknown</code>.
      * </p>
      * <p>
-     * Queries time out after 15 minutes of runtime. To avoid having your queries time out, reduce the time range being
+     * Queries time out after 60 minutes of runtime. To avoid having your queries time out, reduce the time range being
      * searched or partition your query into a number of queries.
      * </p>
      * 
@@ -272,7 +272,7 @@ public class GetQueryResultsResult extends com.amazonaws.AmazonWebServiceResult<
      *        <code>Complete</code>, <code>Failed</code>, <code>Running</code>, <code>Scheduled</code>,
      *        <code>Timeout</code>, and <code>Unknown</code>.</p>
      *        <p>
-     *        Queries time out after 15 minutes of runtime. To avoid having your queries time out, reduce the time range
+     *        Queries time out after 60 minutes of runtime. To avoid having your queries time out, reduce the time range
      *        being searched or partition your query into a number of queries.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryStatus
@@ -290,7 +290,7 @@ public class GetQueryResultsResult extends com.amazonaws.AmazonWebServiceResult<
      * and <code>Unknown</code>.
      * </p>
      * <p>
-     * Queries time out after 15 minutes of runtime. To avoid having your queries time out, reduce the time range being
+     * Queries time out after 60 minutes of runtime. To avoid having your queries time out, reduce the time range being
      * searched or partition your query into a number of queries.
      * </p>
      * 
@@ -299,7 +299,7 @@ public class GetQueryResultsResult extends com.amazonaws.AmazonWebServiceResult<
      *        <code>Complete</code>, <code>Failed</code>, <code>Running</code>, <code>Scheduled</code>,
      *        <code>Timeout</code>, and <code>Unknown</code>.</p>
      *        <p>
-     *        Queries time out after 15 minutes of runtime. To avoid having your queries time out, reduce the time range
+     *        Queries time out after 60 minutes of runtime. To avoid having your queries time out, reduce the time range
      *        being searched or partition your query into a number of queries.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryStatus

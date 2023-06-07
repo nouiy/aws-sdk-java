@@ -145,6 +145,34 @@ public interface AmazonCustomerProfiles {
 
     /**
      * <p>
+     * Creates an event stream, which is a subscription to real-time events, such as when profiles are created and
+     * updated through Amazon Connect Customer Profiles.
+     * </p>
+     * <p>
+     * Each event stream can be associated with only one Kinesis Data Stream destination in the same region and Amazon
+     * Web Services account as the customer profiles domain
+     * </p>
+     * 
+     * @param createEventStreamRequest
+     * @return Result of the CreateEventStream operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.CreateEventStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/CreateEventStream"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateEventStreamResult createEventStream(CreateEventStreamRequest createEventStreamRequest);
+
+    /**
+     * <p>
      * Creates an integration workflow. An integration workflow is an async process which ingests historic data and sets
      * up an integration for ongoing updates. The supported Amazon AppFlow sources are Salesforce, ServiceNow, and
      * Marketo.
@@ -244,6 +272,29 @@ public interface AmazonCustomerProfiles {
      *      API Documentation</a>
      */
     DeleteDomainResult deleteDomain(DeleteDomainRequest deleteDomainRequest);
+
+    /**
+     * <p>
+     * Disables and deletes the specified event stream.
+     * </p>
+     * 
+     * @param deleteEventStreamRequest
+     * @return Result of the DeleteEventStream operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.DeleteEventStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DeleteEventStream"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteEventStreamResult deleteEventStream(DeleteEventStreamRequest deleteEventStreamRequest);
 
     /**
      * <p>
@@ -493,6 +544,29 @@ public interface AmazonCustomerProfiles {
      *      API Documentation</a>
      */
     GetDomainResult getDomain(GetDomainRequest getDomainRequest);
+
+    /**
+     * <p>
+     * Returns information about the specified event stream in a specific domain.
+     * </p>
+     * 
+     * @param getEventStreamRequest
+     * @return Result of the GetEventStream operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.GetEventStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetEventStream"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetEventStreamResult getEventStream(GetEventStreamRequest getEventStreamRequest);
 
     /**
      * <p>
@@ -832,6 +906,29 @@ public interface AmazonCustomerProfiles {
      *      API Documentation</a>
      */
     ListDomainsResult listDomains(ListDomainsRequest listDomainsRequest);
+
+    /**
+     * <p>
+     * Returns a list of all the event streams in a specific domain.
+     * </p>
+     * 
+     * @param listEventStreamsRequest
+     * @return Result of the ListEventStreams operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.ListEventStreams
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListEventStreams"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListEventStreamsResult listEventStreams(ListEventStreamsRequest listEventStreamsRequest);
 
     /**
      * <p>

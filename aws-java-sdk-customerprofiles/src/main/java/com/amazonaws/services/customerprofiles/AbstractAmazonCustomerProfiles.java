@@ -43,6 +43,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
     }
 
     @Override
+    public CreateEventStreamResult createEventStream(CreateEventStreamRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateIntegrationWorkflowResult createIntegrationWorkflow(CreateIntegrationWorkflowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -59,6 +64,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
 
     @Override
     public DeleteDomainResult deleteDomain(DeleteDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteEventStreamResult deleteEventStream(DeleteEventStreamRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -109,6 +119,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
 
     @Override
     public GetDomainResult getDomain(GetDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetEventStreamResult getEventStream(GetEventStreamRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -164,6 +179,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
 
     @Override
     public ListDomainsResult listDomains(ListDomainsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEventStreamsResult listEventStreams(ListEventStreamsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

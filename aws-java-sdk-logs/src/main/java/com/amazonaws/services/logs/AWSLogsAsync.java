@@ -299,7 +299,7 @@ public interface AWSLogsAsync extends AWSLogs {
      * Logs to decrypt this data whenever it is requested.
      * </p>
      * <p>
-     * If you attempt to associate a KMS key with the log group but the KMS keydoes not exist or the KMS key is
+     * If you attempt to associate a KMS key with the log group but the KMS key does not exist or the KMS key is
      * disabled, you receive an <code>InvalidParameterException</code> error.
      * </p>
      * <important>
@@ -356,7 +356,7 @@ public interface AWSLogsAsync extends AWSLogs {
      * Logs to decrypt this data whenever it is requested.
      * </p>
      * <p>
-     * If you attempt to associate a KMS key with the log group but the KMS keydoes not exist or the KMS key is
+     * If you attempt to associate a KMS key with the log group but the KMS key does not exist or the KMS key is
      * disabled, you receive an <code>InvalidParameterException</code> error.
      * </p>
      * <important>
@@ -461,6 +461,45 @@ public interface AWSLogsAsync extends AWSLogs {
      */
     java.util.concurrent.Future<CreateLogStreamResult> createLogStreamAsync(CreateLogStreamRequest createLogStreamRequest,
             com.amazonaws.handlers.AsyncHandler<CreateLogStreamRequest, CreateLogStreamResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a CloudWatch Logs account policy.
+     * </p>
+     * <p>
+     * To use this operation, you must be signed on with the <code>logs:DeleteDataProtectionPolicy</code> and
+     * <code>logs:DeleteAccountPolicy</code> permissions.
+     * </p>
+     * 
+     * @param deleteAccountPolicyRequest
+     * @return A Java Future containing the result of the DeleteAccountPolicy operation returned by the service.
+     * @sample AWSLogsAsync.DeleteAccountPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteAccountPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccountPolicyResult> deleteAccountPolicyAsync(DeleteAccountPolicyRequest deleteAccountPolicyRequest);
+
+    /**
+     * <p>
+     * Deletes a CloudWatch Logs account policy.
+     * </p>
+     * <p>
+     * To use this operation, you must be signed on with the <code>logs:DeleteDataProtectionPolicy</code> and
+     * <code>logs:DeleteAccountPolicy</code> permissions.
+     * </p>
+     * 
+     * @param deleteAccountPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAccountPolicy operation returned by the service.
+     * @sample AWSLogsAsyncHandler.DeleteAccountPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteAccountPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccountPolicyResult> deleteAccountPolicyAsync(DeleteAccountPolicyRequest deleteAccountPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAccountPolicyRequest, DeleteAccountPolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -780,6 +819,37 @@ public interface AWSLogsAsync extends AWSLogs {
      */
     java.util.concurrent.Future<DeleteSubscriptionFilterResult> deleteSubscriptionFilterAsync(DeleteSubscriptionFilterRequest deleteSubscriptionFilterRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteSubscriptionFilterRequest, DeleteSubscriptionFilterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of all CloudWatch Logs account policies in the account.
+     * </p>
+     * 
+     * @param describeAccountPoliciesRequest
+     * @return A Java Future containing the result of the DescribeAccountPolicies operation returned by the service.
+     * @sample AWSLogsAsync.DescribeAccountPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeAccountPolicies" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAccountPoliciesResult> describeAccountPoliciesAsync(DescribeAccountPoliciesRequest describeAccountPoliciesRequest);
+
+    /**
+     * <p>
+     * Returns a list of all CloudWatch Logs account policies in the account.
+     * </p>
+     * 
+     * @param describeAccountPoliciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeAccountPolicies operation returned by the service.
+     * @sample AWSLogsAsyncHandler.DescribeAccountPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeAccountPolicies" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAccountPoliciesResult> describeAccountPoliciesAsync(DescribeAccountPoliciesRequest describeAccountPoliciesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeAccountPoliciesRequest, DescribeAccountPoliciesResult> asyncHandler);
 
     /**
      * <p>
@@ -1221,7 +1291,7 @@ public interface AWSLogsAsync extends AWSLogs {
      * filter pattern, a time range, and the name of the log stream.
      * </p>
      * <p>
-     * You must have the <code>logs;FilterLogEvents</code> permission to perform this operation.
+     * You must have the <code>logs:FilterLogEvents</code> permission to perform this operation.
      * </p>
      * <p>
      * You can specify the log group to search by using either <code>logGroupIdentifier</code> or
@@ -1258,7 +1328,7 @@ public interface AWSLogsAsync extends AWSLogs {
      * filter pattern, a time range, and the name of the log stream.
      * </p>
      * <p>
-     * You must have the <code>logs;FilterLogEvents</code> permission to perform this operation.
+     * You must have the <code>logs:FilterLogEvents</code> permission to perform this operation.
      * </p>
      * <p>
      * You can specify the log group to search by using either <code>logGroupIdentifier</code> or
@@ -1655,6 +1725,117 @@ public interface AWSLogsAsync extends AWSLogs {
 
     /**
      * <p>
+     * Creates an account-level data protection policy that applies to all log groups in the account. A data protection
+     * policy can help safeguard sensitive data that's ingested by your log groups by auditing and masking the sensitive
+     * log data. Each account can have only one account-level policy.
+     * </p>
+     * <important>
+     * <p>
+     * Sensitive data is detected and masked when it is ingested into a log group. When you set a data protection
+     * policy, log events ingested into the log groups before that time are not masked.
+     * </p>
+     * </important>
+     * <p>
+     * If you use <code>PutAccountPolicy</code> to create a data protection policy for your whole account, it applies to
+     * both existing log groups and all log groups that are created later in this account. The account policy is applied
+     * to existing log groups with eventual consistency. It might take up to 5 minutes before sensitive data in existing
+     * log groups begins to be masked.
+     * </p>
+     * <p>
+     * By default, when a user views a log event that includes masked data, the sensitive data is replaced by asterisks.
+     * A user who has the <code>logs:Unmask</code> permission can use a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_GetLogEvents.html"
+     * >GetLogEvents</a> or <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_FilterLogEvents.html"
+     * >FilterLogEvents</a> operation with the <code>unmask</code> parameter set to <code>true</code> to view the
+     * unmasked log events. Users with the <code>logs:Unmask</code> can also view unmasked data in the CloudWatch Logs
+     * console by running a CloudWatch Logs Insights query with the <code>unmask</code> query command.
+     * </p>
+     * <p>
+     * For more information, including a list of types of data that can be audited and masked, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/mask-sensitive-log-data.html">Protect sensitive
+     * log data with masking</a>.
+     * </p>
+     * <p>
+     * To use the <code>PutAccountPolicy</code> operation, you must be signed on with the
+     * <code>logs:PutDataProtectionPolicy</code> and <code>logs:PutAccountPolicy</code> permissions.
+     * </p>
+     * <p>
+     * The <code>PutAccountPolicy</code> operation applies to all log groups in the account. You can also use <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDataProtectionPolicy.html"
+     * >PutDataProtectionPolicy</a> to create a data protection policy that applies to just one log group. If a log
+     * group has its own data protection policy and the account also has an account-level data protection policy, then
+     * the two policies are cumulative. Any sensitive term specified in either policy is masked.
+     * </p>
+     * 
+     * @param putAccountPolicyRequest
+     * @return A Java Future containing the result of the PutAccountPolicy operation returned by the service.
+     * @sample AWSLogsAsync.PutAccountPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutAccountPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutAccountPolicyResult> putAccountPolicyAsync(PutAccountPolicyRequest putAccountPolicyRequest);
+
+    /**
+     * <p>
+     * Creates an account-level data protection policy that applies to all log groups in the account. A data protection
+     * policy can help safeguard sensitive data that's ingested by your log groups by auditing and masking the sensitive
+     * log data. Each account can have only one account-level policy.
+     * </p>
+     * <important>
+     * <p>
+     * Sensitive data is detected and masked when it is ingested into a log group. When you set a data protection
+     * policy, log events ingested into the log groups before that time are not masked.
+     * </p>
+     * </important>
+     * <p>
+     * If you use <code>PutAccountPolicy</code> to create a data protection policy for your whole account, it applies to
+     * both existing log groups and all log groups that are created later in this account. The account policy is applied
+     * to existing log groups with eventual consistency. It might take up to 5 minutes before sensitive data in existing
+     * log groups begins to be masked.
+     * </p>
+     * <p>
+     * By default, when a user views a log event that includes masked data, the sensitive data is replaced by asterisks.
+     * A user who has the <code>logs:Unmask</code> permission can use a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_GetLogEvents.html"
+     * >GetLogEvents</a> or <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_FilterLogEvents.html"
+     * >FilterLogEvents</a> operation with the <code>unmask</code> parameter set to <code>true</code> to view the
+     * unmasked log events. Users with the <code>logs:Unmask</code> can also view unmasked data in the CloudWatch Logs
+     * console by running a CloudWatch Logs Insights query with the <code>unmask</code> query command.
+     * </p>
+     * <p>
+     * For more information, including a list of types of data that can be audited and masked, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/mask-sensitive-log-data.html">Protect sensitive
+     * log data with masking</a>.
+     * </p>
+     * <p>
+     * To use the <code>PutAccountPolicy</code> operation, you must be signed on with the
+     * <code>logs:PutDataProtectionPolicy</code> and <code>logs:PutAccountPolicy</code> permissions.
+     * </p>
+     * <p>
+     * The <code>PutAccountPolicy</code> operation applies to all log groups in the account. You can also use <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDataProtectionPolicy.html"
+     * >PutDataProtectionPolicy</a> to create a data protection policy that applies to just one log group. If a log
+     * group has its own data protection policy and the account also has an account-level data protection policy, then
+     * the two policies are cumulative. Any sensitive term specified in either policy is masked.
+     * </p>
+     * 
+     * @param putAccountPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutAccountPolicy operation returned by the service.
+     * @sample AWSLogsAsyncHandler.PutAccountPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutAccountPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutAccountPolicyResult> putAccountPolicyAsync(PutAccountPolicyRequest putAccountPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<PutAccountPolicyRequest, PutAccountPolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a data protection policy for the specified log group. A data protection policy can help safeguard
      * sensitive data that's ingested by the log group by auditing and masking the sensitive log data.
      * </p>
@@ -1678,6 +1859,14 @@ public interface AWSLogsAsync extends AWSLogs {
      * For more information, including a list of types of data that can be audited and masked, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/mask-sensitive-log-data.html">Protect sensitive
      * log data with masking</a>.
+     * </p>
+     * <p>
+     * The <code>PutDataProtectionPolicy</code> operation applies to only the specified log group. You can also use <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutAccountPolicy.html">
+     * PutAccountPolicy</a> to create an account-level data protection policy that applies to all log groups in the
+     * account, including both existing log groups and log groups that are created level. If a log group has its own
+     * data protection policy and the account also has an account-level data protection policy, then the two policies
+     * are cumulative. Any sensitive term specified in either policy is masked.
      * </p>
      * 
      * @param putDataProtectionPolicyRequest
@@ -1713,6 +1902,14 @@ public interface AWSLogsAsync extends AWSLogs {
      * For more information, including a list of types of data that can be audited and masked, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/mask-sensitive-log-data.html">Protect sensitive
      * log data with masking</a>.
+     * </p>
+     * <p>
+     * The <code>PutDataProtectionPolicy</code> operation applies to only the specified log group. You can also use <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutAccountPolicy.html">
+     * PutAccountPolicy</a> to create an account-level data protection policy that applies to all log groups in the
+     * account, including both existing log groups and log groups that are created level. If a log group has its own
+     * data protection policy and the account also has an account-level data protection policy, then the two policies
+     * are cumulative. Any sensitive term specified in either policy is masked.
      * </p>
      * 
      * @param putDataProtectionPolicyRequest
@@ -1878,6 +2075,11 @@ public interface AWSLogsAsync extends AWSLogs {
      * </li>
      * <li>
      * <p>
+     * Each log event can be no larger than 256 KB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * The maximum number of log events in a batch is 10,000.
      * </p>
      * </li>
@@ -1946,6 +2148,11 @@ public interface AWSLogsAsync extends AWSLogs {
      * <li>
      * <p>
      * A batch of log events in a single request cannot span more than 24 hours. Otherwise, the operation fails.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Each log event can be no larger than 256 KB.
      * </p>
      * </li>
      * <li>
@@ -2255,8 +2462,8 @@ public interface AWSLogsAsync extends AWSLogs {
      * filter, you must specify the correct name in <code>filterName</code>.
      * </p>
      * <p>
-     * To perform a <code>PutSubscriptionFilter</code> operation, you must also have the <code>iam:PassRole</code>
-     * permission.
+     * To perform a <code>PutSubscriptionFilter</code> operation for any destination except a Lambda function, you must
+     * also have the <code>iam:PassRole</code> permission.
      * </p>
      * 
      * @param putSubscriptionFilterRequest
@@ -2307,8 +2514,8 @@ public interface AWSLogsAsync extends AWSLogs {
      * filter, you must specify the correct name in <code>filterName</code>.
      * </p>
      * <p>
-     * To perform a <code>PutSubscriptionFilter</code> operation, you must also have the <code>iam:PassRole</code>
-     * permission.
+     * To perform a <code>PutSubscriptionFilter</code> operation for any destination except a Lambda function, you must
+     * also have the <code>iam:PassRole</code> permission.
      * </p>
      * 
      * @param putSubscriptionFilterRequest
@@ -2335,7 +2542,7 @@ public interface AWSLogsAsync extends AWSLogs {
      * Query Syntax</a>.
      * </p>
      * <p>
-     * Queries time out after 15 minutes of runtime. If your queries are timing out, reduce the time range being
+     * Queries time out after 60 minutes of runtime. If your queries are timing out, reduce the time range being
      * searched or partition your query into a number of queries.
      * </p>
      * <p>
@@ -2346,7 +2553,7 @@ public interface AWSLogsAsync extends AWSLogs {
      * definition must be defined in the monitoring account.
      * </p>
      * <p>
-     * You can have up to 20 concurrent CloudWatch Logs insights queries, including queries that have been added to
+     * You can have up to 30 concurrent CloudWatch Logs insights queries, including queries that have been added to
      * dashboards.
      * </p>
      * 
@@ -2369,7 +2576,7 @@ public interface AWSLogsAsync extends AWSLogs {
      * Query Syntax</a>.
      * </p>
      * <p>
-     * Queries time out after 15 minutes of runtime. If your queries are timing out, reduce the time range being
+     * Queries time out after 60 minutes of runtime. If your queries are timing out, reduce the time range being
      * searched or partition your query into a number of queries.
      * </p>
      * <p>
@@ -2380,7 +2587,7 @@ public interface AWSLogsAsync extends AWSLogs {
      * definition must be defined in the monitoring account.
      * </p>
      * <p>
-     * You can have up to 20 concurrent CloudWatch Logs insights queries, including queries that have been added to
+     * You can have up to 30 concurrent CloudWatch Logs insights queries, including queries that have been added to
      * dashboards.
      * </p>
      * 

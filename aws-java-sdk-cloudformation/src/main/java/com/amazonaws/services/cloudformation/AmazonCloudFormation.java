@@ -47,7 +47,7 @@ import com.amazonaws.services.cloudformation.waiters.AmazonCloudFormationWaiters
  * <p>
  * CloudFormation makes use of other Amazon Web Services products. If you need additional technical information about a
  * specific Amazon Web Services product, you can find the product's technical documentation at <a
- * href="https://docs.aws.amazon.com/"> <code>docs.aws.amazon.com</code> </a>.
+ * href="https://docs.aws.amazon.com/">docs.aws.amazon.com</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -278,7 +278,7 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Creates a stack as specified in the template. After the call completes successfully, the stack creation starts.
-     * You can check the status of the stack through the <a>DescribeStacks</a>operation.
+     * You can check the status of the stack through the <a>DescribeStacks</a> operation.
      * </p>
      * 
      * @param createStackRequest
@@ -862,12 +862,12 @@ public interface AmazonCloudFormation {
      * identifiers.
      * </p>
      * <p>
-     * When you initiate a registration request using <code> <a>RegisterType</a> </code>, you can then use
-     * <code> <a>DescribeTypeRegistration</a> </code> to monitor the progress of that registration request.
+     * When you initiate a registration request using <a>RegisterType</a>, you can then use
+     * <a>DescribeTypeRegistration</a> to monitor the progress of that registration request.
      * </p>
      * <p>
-     * Once the registration request has completed, use <code> <a>DescribeType</a> </code> to return detailed
-     * information about an extension.
+     * Once the registration request has completed, use <a>DescribeType</a> to return detailed information about an
+     * extension.
      * </p>
      * 
      * @param describeTypeRegistrationRequest
@@ -957,9 +957,9 @@ public interface AmazonCloudFormation {
      * </p>
      * <p>
      * <code>DetectStackSetDrift</code> returns the <code>OperationId</code> of the stack set drift detection operation.
-     * Use this operation id with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress of the drift
-     * detection operation. The drift detection operation may take some time, depending on the number of stack instances
-     * included in the stack set, in addition to the number of resources included in each stack.
+     * Use this operation id with <a>DescribeStackSetOperation</a> to monitor the progress of the drift detection
+     * operation. The drift detection operation may take some time, depending on the number of stack instances included
+     * in the stack set, in addition to the number of resources included in each stack.
      * </p>
      * <p>
      * Once the operation has completed, use the following actions to return drift information:
@@ -967,21 +967,21 @@ public interface AmazonCloudFormation {
      * <ul>
      * <li>
      * <p>
-     * Use <code> <a>DescribeStackSet</a> </code> to return detailed information about the stack set, including detailed
-     * information about the last <i>completed</i> drift operation performed on the stack set. (Information about drift
-     * operations that are in progress isn't included.)
+     * Use <a>DescribeStackSet</a> to return detailed information about the stack set, including detailed information
+     * about the last <i>completed</i> drift operation performed on the stack set. (Information about drift operations
+     * that are in progress isn't included.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Use <code> <a>ListStackInstances</a> </code> to return a list of stack instances belonging to the stack set,
-     * including the drift status and last drift time checked of each instance.
+     * Use <a>ListStackInstances</a> to return a list of stack instances belonging to the stack set, including the drift
+     * status and last drift time checked of each instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Use <code> <a>DescribeStackInstance</a> </code> to return detailed information about a specific stack instance,
-     * including its drift status and last drift time checked.
+     * Use <a>DescribeStackInstance</a> to return detailed information about a specific stack instance, including its
+     * drift status and last drift time checked.
      * </p>
      * </li>
      * </ul>
@@ -994,7 +994,7 @@ public interface AmazonCloudFormation {
      * You can only run a single drift detection operation on a given stack set at one time.
      * </p>
      * <p>
-     * To stop a drift detection stack set operation, use <code> <a>StopStackSetOperation</a> </code>.
+     * To stop a drift detection stack set operation, use <a>StopStackSetOperation</a>.
      * </p>
      * 
      * @param detectStackSetDriftRequest
@@ -1199,7 +1199,7 @@ public interface AmazonCloudFormation {
      * Lists all exported output values in the account and Region in which you call this action. Use this action to see
      * the exported output values that you can import into other stacks. To import values, use the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html">
-     * <code>Fn::ImportValue</code> </a> function.
+     * Fn::ImportValue</a> function.
      * </p>
      * <p>
      * For more information, see <a
@@ -1223,8 +1223,8 @@ public interface AmazonCloudFormation {
      * </p>
      * <p>
      * For more information about importing an exported output value, see the <a href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html">
-     * <code>Fn::ImportValue</code> </a> function.
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html"
+     * >Fn::ImportValue</a> function.
      * </p>
      * 
      * @param listImportsRequest
@@ -1515,8 +1515,8 @@ public interface AmazonCloudFormation {
      * >DeregisterType</a> to deregister specific extension versions if necessary.
      * </p>
      * <p>
-     * Once you have initiated a registration request using <code> <a>RegisterType</a> </code>, you can use
-     * <code> <a>DescribeTypeRegistration</a> </code> to monitor the progress of the registration request.
+     * Once you have initiated a registration request using <a>RegisterType</a>, you can use
+     * <a>DescribeTypeRegistration</a> to monitor the progress of the registration request.
      * </p>
      * <p>
      * Once you have registered a private extension in your account and Region, use <a
