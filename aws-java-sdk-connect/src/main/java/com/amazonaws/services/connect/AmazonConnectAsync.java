@@ -5088,6 +5088,68 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Searches the hours of operation in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchHoursOfOperationsRequest
+     * @return A Java Future containing the result of the SearchHoursOfOperations operation returned by the service.
+     * @sample AmazonConnectAsync.SearchHoursOfOperations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchHoursOfOperations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchHoursOfOperationsResult> searchHoursOfOperationsAsync(SearchHoursOfOperationsRequest searchHoursOfOperationsRequest);
+
+    /**
+     * <p>
+     * Searches the hours of operation in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchHoursOfOperationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchHoursOfOperations operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchHoursOfOperations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchHoursOfOperations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchHoursOfOperationsResult> searchHoursOfOperationsAsync(SearchHoursOfOperationsRequest searchHoursOfOperationsRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchHoursOfOperationsRequest, SearchHoursOfOperationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Searches prompts in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchPromptsRequest
+     * @return A Java Future containing the result of the SearchPrompts operation returned by the service.
+     * @sample AmazonConnectAsync.SearchPrompts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchPrompts" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchPromptsResult> searchPromptsAsync(SearchPromptsRequest searchPromptsRequest);
+
+    /**
+     * <p>
+     * Searches prompts in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchPromptsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchPrompts operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchPrompts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchPrompts" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchPromptsResult> searchPromptsAsync(SearchPromptsRequest searchPromptsRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchPromptsRequest, SearchPromptsResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -5122,6 +5184,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<SearchQueuesResult> searchQueuesAsync(SearchQueuesRequest searchQueuesRequest,
             com.amazonaws.handlers.AsyncHandler<SearchQueuesRequest, SearchQueuesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Searches quick connects in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchQuickConnectsRequest
+     * @return A Java Future containing the result of the SearchQuickConnects operation returned by the service.
+     * @sample AmazonConnectAsync.SearchQuickConnects
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchQuickConnects" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchQuickConnectsResult> searchQuickConnectsAsync(SearchQuickConnectsRequest searchQuickConnectsRequest);
+
+    /**
+     * <p>
+     * Searches quick connects in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchQuickConnectsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchQuickConnects operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchQuickConnects
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchQuickConnects" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchQuickConnectsResult> searchQuickConnectsAsync(SearchQuickConnectsRequest searchQuickConnectsRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchQuickConnectsRequest, SearchQuickConnectsResult> asyncHandler);
 
     /**
      * <p>

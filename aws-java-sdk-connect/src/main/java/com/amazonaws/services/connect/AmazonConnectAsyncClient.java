@@ -4465,6 +4465,72 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<SearchHoursOfOperationsResult> searchHoursOfOperationsAsync(SearchHoursOfOperationsRequest request) {
+
+        return searchHoursOfOperationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchHoursOfOperationsResult> searchHoursOfOperationsAsync(final SearchHoursOfOperationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchHoursOfOperationsRequest, SearchHoursOfOperationsResult> asyncHandler) {
+        final SearchHoursOfOperationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchHoursOfOperationsResult>() {
+            @Override
+            public SearchHoursOfOperationsResult call() throws Exception {
+                SearchHoursOfOperationsResult result = null;
+
+                try {
+                    result = executeSearchHoursOfOperations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchPromptsResult> searchPromptsAsync(SearchPromptsRequest request) {
+
+        return searchPromptsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchPromptsResult> searchPromptsAsync(final SearchPromptsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchPromptsRequest, SearchPromptsResult> asyncHandler) {
+        final SearchPromptsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchPromptsResult>() {
+            @Override
+            public SearchPromptsResult call() throws Exception {
+                SearchPromptsResult result = null;
+
+                try {
+                    result = executeSearchPrompts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchQueuesResult> searchQueuesAsync(SearchQueuesRequest request) {
 
         return searchQueuesAsync(request, null);
@@ -4482,6 +4548,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeSearchQueues(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchQuickConnectsResult> searchQuickConnectsAsync(SearchQuickConnectsRequest request) {
+
+        return searchQuickConnectsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchQuickConnectsResult> searchQuickConnectsAsync(final SearchQuickConnectsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchQuickConnectsRequest, SearchQuickConnectsResult> asyncHandler) {
+        final SearchQuickConnectsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchQuickConnectsResult>() {
+            @Override
+            public SearchQuickConnectsResult call() throws Exception {
+                SearchQuickConnectsResult result = null;
+
+                try {
+                    result = executeSearchQuickConnects(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

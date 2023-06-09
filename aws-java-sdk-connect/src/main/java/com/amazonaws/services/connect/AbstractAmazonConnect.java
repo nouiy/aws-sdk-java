@@ -688,7 +688,22 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public SearchHoursOfOperationsResult searchHoursOfOperations(SearchHoursOfOperationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchPromptsResult searchPrompts(SearchPromptsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SearchQueuesResult searchQueues(SearchQueuesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchQuickConnectsResult searchQuickConnects(SearchQuickConnectsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

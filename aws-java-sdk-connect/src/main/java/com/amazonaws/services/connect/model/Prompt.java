@@ -48,7 +48,7 @@ public class Prompt implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * A description for the prompt.
+     * The description of the prompt.
      * </p>
      */
     private String description;
@@ -182,11 +182,11 @@ public class Prompt implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A description for the prompt.
+     * The description of the prompt.
      * </p>
      * 
      * @param description
-     *        A description for the prompt.
+     *        The description of the prompt.
      */
 
     public void setDescription(String description) {
@@ -195,10 +195,10 @@ public class Prompt implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A description for the prompt.
+     * The description of the prompt.
      * </p>
      * 
-     * @return A description for the prompt.
+     * @return The description of the prompt.
      */
 
     public String getDescription() {
@@ -207,11 +207,11 @@ public class Prompt implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A description for the prompt.
+     * The description of the prompt.
      * </p>
      * 
      * @param description
-     *        A description for the prompt.
+     *        The description of the prompt.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

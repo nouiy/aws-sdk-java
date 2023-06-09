@@ -1,3 +1,12 @@
+# __1.12.486__ __2023-06-09__
+## __AWS Certificate Manager Private Certificate Authority__
+  - ### Features
+    - Document-only update to refresh CLI  documentation for AWS Private CA. No change to the service.
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release adds search APIs for Prompts, Quick Connects and Hours of Operations, which can be used to search for those resources within a Connect Instance.
+
 # __1.12.485__ __2023-06-08__
 ## __AWS Comprehend Medical__
   - ### Features
@@ -635,6 +644,10 @@
 ## __AWS Key Management Service__
   - ### Features
     - This release makes the NitroEnclave request parameter Recipient and the response field for CiphertextForRecipient available in AWS SDKs. It also adds the regex pattern for CloudHsmClusterId validation.
+
+## __Amazon S3__
+  - ### Bugfixes
+    - URL encode bucket name for path style requests. Avoid using slash '/' in the bucket name as this may cause signature mismatch errors. See [#2976](https://github.com/aws/aws-sdk-java/discussions/2976).
 
 # __1.12.459__ __2023-04-28__
 ## __AWS Direct Connect__

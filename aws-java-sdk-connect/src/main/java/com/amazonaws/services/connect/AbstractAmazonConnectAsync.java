@@ -1754,6 +1754,32 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<SearchHoursOfOperationsResult> searchHoursOfOperationsAsync(SearchHoursOfOperationsRequest request) {
+
+        return searchHoursOfOperationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchHoursOfOperationsResult> searchHoursOfOperationsAsync(SearchHoursOfOperationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchHoursOfOperationsRequest, SearchHoursOfOperationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchPromptsResult> searchPromptsAsync(SearchPromptsRequest request) {
+
+        return searchPromptsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchPromptsResult> searchPromptsAsync(SearchPromptsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchPromptsRequest, SearchPromptsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchQueuesResult> searchQueuesAsync(SearchQueuesRequest request) {
 
         return searchQueuesAsync(request, null);
@@ -1762,6 +1788,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<SearchQueuesResult> searchQueuesAsync(SearchQueuesRequest request,
             com.amazonaws.handlers.AsyncHandler<SearchQueuesRequest, SearchQueuesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchQuickConnectsResult> searchQuickConnectsAsync(SearchQuickConnectsRequest request) {
+
+        return searchQuickConnectsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchQuickConnectsResult> searchQuickConnectsAsync(SearchQuickConnectsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchQuickConnectsRequest, SearchQuickConnectsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

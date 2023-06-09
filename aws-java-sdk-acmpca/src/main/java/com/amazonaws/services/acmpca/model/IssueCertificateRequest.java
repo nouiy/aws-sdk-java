@@ -83,7 +83,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * The specified signing algorithm family (RSA or ECDSA) much match the algorithm family of the CA's secret key.
+     * The specified signing algorithm family (RSA or ECDSA) must match the algorithm family of the CA's secret key.
      * </p>
      * </note>
      */
@@ -145,7 +145,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The <code>ValidityNotBefore</code> value is expressed as an explicit date and time, using the
      * <code>Validity</code> type value <code>ABSOLUTE</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_Validity.html">Validity</a> in this API
+     * href="https://docs.aws.amazon.com/privateca/latest/APIReference/API_Validity.html">Validity</a> in this API
      * reference and <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.5">Validity</a> in RFC 5280.
      * </p>
      */
@@ -490,7 +490,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * The specified signing algorithm family (RSA or ECDSA) much match the algorithm family of the CA's secret key.
+     * The specified signing algorithm family (RSA or ECDSA) must match the algorithm family of the CA's secret key.
      * </p>
      * </note>
      * 
@@ -502,7 +502,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <note>
      *        <p>
-     *        The specified signing algorithm family (RSA or ECDSA) much match the algorithm family of the CA's secret
+     *        The specified signing algorithm family (RSA or ECDSA) must match the algorithm family of the CA's secret
      *        key.
      *        </p>
      * @see SigningAlgorithm
@@ -522,7 +522,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * The specified signing algorithm family (RSA or ECDSA) much match the algorithm family of the CA's secret key.
+     * The specified signing algorithm family (RSA or ECDSA) must match the algorithm family of the CA's secret key.
      * </p>
      * </note>
      * 
@@ -533,7 +533,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <note>
      *         <p>
-     *         The specified signing algorithm family (RSA or ECDSA) much match the algorithm family of the CA's secret
+     *         The specified signing algorithm family (RSA or ECDSA) must match the algorithm family of the CA's secret
      *         key.
      *         </p>
      * @see SigningAlgorithm
@@ -553,7 +553,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * The specified signing algorithm family (RSA or ECDSA) much match the algorithm family of the CA's secret key.
+     * The specified signing algorithm family (RSA or ECDSA) must match the algorithm family of the CA's secret key.
      * </p>
      * </note>
      * 
@@ -565,7 +565,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <note>
      *        <p>
-     *        The specified signing algorithm family (RSA or ECDSA) much match the algorithm family of the CA's secret
+     *        The specified signing algorithm family (RSA or ECDSA) must match the algorithm family of the CA's secret
      *        key.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -587,7 +587,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * The specified signing algorithm family (RSA or ECDSA) much match the algorithm family of the CA's secret key.
+     * The specified signing algorithm family (RSA or ECDSA) must match the algorithm family of the CA's secret key.
      * </p>
      * </note>
      * 
@@ -599,7 +599,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <note>
      *        <p>
-     *        The specified signing algorithm family (RSA or ECDSA) much match the algorithm family of the CA's secret
+     *        The specified signing algorithm family (RSA or ECDSA) must match the algorithm family of the CA's secret
      *        key.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -878,7 +878,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The <code>ValidityNotBefore</code> value is expressed as an explicit date and time, using the
      * <code>Validity</code> type value <code>ABSOLUTE</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_Validity.html">Validity</a> in this API
+     * href="https://docs.aws.amazon.com/privateca/latest/APIReference/API_Validity.html">Validity</a> in this API
      * reference and <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.5">Validity</a> in RFC 5280.
      * </p>
      * 
@@ -896,9 +896,9 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        The <code>ValidityNotBefore</code> value is expressed as an explicit date and time, using the
      *        <code>Validity</code> type value <code>ABSOLUTE</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_Validity.html">Validity</a> in this API
-     *        reference and <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.5">Validity</a> in RFC
-     *        5280.
+     *        href="https://docs.aws.amazon.com/privateca/latest/APIReference/API_Validity.html">Validity</a> in this
+     *        API reference and <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.5">Validity</a> in
+     *        RFC 5280.
      */
 
     public void setValidityNotBefore(Validity validityNotBefore) {
@@ -921,7 +921,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The <code>ValidityNotBefore</code> value is expressed as an explicit date and time, using the
      * <code>Validity</code> type value <code>ABSOLUTE</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_Validity.html">Validity</a> in this API
+     * href="https://docs.aws.amazon.com/privateca/latest/APIReference/API_Validity.html">Validity</a> in this API
      * reference and <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.5">Validity</a> in RFC 5280.
      * </p>
      * 
@@ -938,9 +938,9 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         The <code>ValidityNotBefore</code> value is expressed as an explicit date and time, using the
      *         <code>Validity</code> type value <code>ABSOLUTE</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_Validity.html">Validity</a> in this API
-     *         reference and <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.5">Validity</a> in RFC
-     *         5280.
+     *         href="https://docs.aws.amazon.com/privateca/latest/APIReference/API_Validity.html">Validity</a> in this
+     *         API reference and <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.5">Validity</a> in
+     *         RFC 5280.
      */
 
     public Validity getValidityNotBefore() {
@@ -963,7 +963,7 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The <code>ValidityNotBefore</code> value is expressed as an explicit date and time, using the
      * <code>Validity</code> type value <code>ABSOLUTE</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_Validity.html">Validity</a> in this API
+     * href="https://docs.aws.amazon.com/privateca/latest/APIReference/API_Validity.html">Validity</a> in this API
      * reference and <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.5">Validity</a> in RFC 5280.
      * </p>
      * 
@@ -981,9 +981,9 @@ public class IssueCertificateRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        The <code>ValidityNotBefore</code> value is expressed as an explicit date and time, using the
      *        <code>Validity</code> type value <code>ABSOLUTE</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_Validity.html">Validity</a> in this API
-     *        reference and <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.5">Validity</a> in RFC
-     *        5280.
+     *        href="https://docs.aws.amazon.com/privateca/latest/APIReference/API_Validity.html">Validity</a> in this
+     *        API reference and <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.5">Validity</a> in
+     *        RFC 5280.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

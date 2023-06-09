@@ -3607,6 +3607,52 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Searches the hours of operation in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchHoursOfOperationsRequest
+     * @return Result of the SearchHoursOfOperations operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchHoursOfOperations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchHoursOfOperations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    SearchHoursOfOperationsResult searchHoursOfOperations(SearchHoursOfOperationsRequest searchHoursOfOperationsRequest);
+
+    /**
+     * <p>
+     * Searches prompts in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchPromptsRequest
+     * @return Result of the SearchPrompts operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchPrompts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchPrompts" target="_top">AWS API
+     *      Documentation</a>
+     */
+    SearchPromptsResult searchPrompts(SearchPromptsRequest searchPromptsRequest);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -3630,6 +3676,29 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     SearchQueuesResult searchQueues(SearchQueuesRequest searchQueuesRequest);
+
+    /**
+     * <p>
+     * Searches quick connects in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchQuickConnectsRequest
+     * @return Result of the SearchQuickConnects operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchQuickConnects
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchQuickConnects" target="_top">AWS
+     *      API Documentation</a>
+     */
+    SearchQuickConnectsResult searchQuickConnects(SearchQuickConnectsRequest searchQuickConnectsRequest);
 
     /**
      * <p>
