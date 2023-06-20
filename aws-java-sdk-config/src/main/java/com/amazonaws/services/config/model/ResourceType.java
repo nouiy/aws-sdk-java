@@ -316,7 +316,28 @@ public enum ResourceType {
     AWSRedshiftScheduledAction("AWS::Redshift::ScheduledAction"),
     AWSRoute53ResolverFirewallRuleGroupAssociation("AWS::Route53Resolver::FirewallRuleGroupAssociation"),
     AWSSageMakerAppImageConfig("AWS::SageMaker::AppImageConfig"),
-    AWSSageMakerImage("AWS::SageMaker::Image");
+    AWSSageMakerImage("AWS::SageMaker::Image"),
+    AWSECSTaskSet("AWS::ECS::TaskSet"),
+    AWSCassandraKeyspace("AWS::Cassandra::Keyspace"),
+    AWSSignerSigningProfile("AWS::Signer::SigningProfile"),
+    AWSAmplifyApp("AWS::Amplify::App"),
+    AWSAppMeshVirtualNode("AWS::AppMesh::VirtualNode"),
+    AWSAppMeshVirtualService("AWS::AppMesh::VirtualService"),
+    AWSAppRunnerVpcConnector("AWS::AppRunner::VpcConnector"),
+    AWSAppStreamApplication("AWS::AppStream::Application"),
+    AWSCodeArtifactRepository("AWS::CodeArtifact::Repository"),
+    AWSEC2PrefixList("AWS::EC2::PrefixList"),
+    AWSEC2SpotFleet("AWS::EC2::SpotFleet"),
+    AWSEvidentlyProject("AWS::Evidently::Project"),
+    AWSForecastDataset("AWS::Forecast::Dataset"),
+    AWSIAMSAMLProvider("AWS::IAM::SAMLProvider"),
+    AWSIAMServerCertificate("AWS::IAM::ServerCertificate"),
+    AWSPinpointCampaign("AWS::Pinpoint::Campaign"),
+    AWSPinpointInAppTemplate("AWS::Pinpoint::InAppTemplate"),
+    AWSSageMakerDomain("AWS::SageMaker::Domain"),
+    AWSTransferAgreement("AWS::Transfer::Agreement"),
+    AWSTransferConnector("AWS::Transfer::Connector"),
+    AWSKinesisFirehoseDeliveryStream("AWS::KinesisFirehose::DeliveryStream");
 
     private String value;
 

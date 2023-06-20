@@ -249,6 +249,19 @@ public class AbstractAmazonRedshiftAsync extends AbstractAmazonRedshift implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateCustomDomainAssociationResult> createCustomDomainAssociationAsync(CreateCustomDomainAssociationRequest request) {
+
+        return createCustomDomainAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCustomDomainAssociationResult> createCustomDomainAssociationAsync(CreateCustomDomainAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateCustomDomainAssociationRequest, CreateCustomDomainAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateEndpointAccessResult> createEndpointAccessAsync(CreateEndpointAccessRequest request) {
 
         return createEndpointAccessAsync(request, null);
@@ -452,6 +465,19 @@ public class AbstractAmazonRedshiftAsync extends AbstractAmazonRedshift implemen
     @Override
     public java.util.concurrent.Future<DeleteClusterSubnetGroupResult> deleteClusterSubnetGroupAsync(DeleteClusterSubnetGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteClusterSubnetGroupRequest, DeleteClusterSubnetGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomDomainAssociationResult> deleteCustomDomainAssociationAsync(DeleteCustomDomainAssociationRequest request) {
+
+        return deleteCustomDomainAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomDomainAssociationResult> deleteCustomDomainAssociationAsync(DeleteCustomDomainAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteCustomDomainAssociationRequest, DeleteCustomDomainAssociationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -867,6 +893,21 @@ public class AbstractAmazonRedshiftAsync extends AbstractAmazonRedshift implemen
             com.amazonaws.handlers.AsyncHandler<DescribeClustersRequest, DescribeClustersResult> asyncHandler) {
 
         return describeClustersAsync(new DescribeClustersRequest(), asyncHandler);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeCustomDomainAssociationsResult> describeCustomDomainAssociationsAsync(
+            DescribeCustomDomainAssociationsRequest request) {
+
+        return describeCustomDomainAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeCustomDomainAssociationsResult> describeCustomDomainAssociationsAsync(
+            DescribeCustomDomainAssociationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeCustomDomainAssociationsRequest, DescribeCustomDomainAssociationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -1716,6 +1757,19 @@ public class AbstractAmazonRedshiftAsync extends AbstractAmazonRedshift implemen
     @Override
     public java.util.concurrent.Future<ClusterSubnetGroup> modifyClusterSubnetGroupAsync(ModifyClusterSubnetGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<ModifyClusterSubnetGroupRequest, ClusterSubnetGroup> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyCustomDomainAssociationResult> modifyCustomDomainAssociationAsync(ModifyCustomDomainAssociationRequest request) {
+
+        return modifyCustomDomainAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyCustomDomainAssociationResult> modifyCustomDomainAssociationAsync(ModifyCustomDomainAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyCustomDomainAssociationRequest, ModifyCustomDomainAssociationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

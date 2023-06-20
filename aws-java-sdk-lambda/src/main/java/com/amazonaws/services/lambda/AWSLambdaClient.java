@@ -264,6 +264,9 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
                             new JsonErrorShapeMetadata().withErrorCode("ProvisionedConcurrencyConfigNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.lambda.model.transform.ProvisionedConcurrencyConfigNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("RecursiveInvocationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.lambda.model.transform.RecursiveInvocationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("CodeStorageExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.lambda.model.transform.CodeStorageExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -3087,6 +3090,9 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
      * @throws ResourceNotReadyException
      *         The function is inactive and its VPC connection is no longer available. Wait for the VPC connection to
      *         reestablish and try again.
+     * @throws RecursiveInvocationException
+     *         Lambda has detected your function being invoked in a recursive loop with other Amazon Web Services
+     *         resources and stopped your function's invocation.
      * @sample AWSLambda.Invoke
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/Invoke" target="_top">AWS API
      *      Documentation</a>

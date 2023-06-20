@@ -633,6 +633,26 @@ public interface AmazonRedshift {
 
     /**
      * <p>
+     * Used to create a custom domain name for a cluster. Properties include the custom domain name, the cluster the
+     * custom domain is associated with, and the certificate Amazon Resource Name (ARN).
+     * </p>
+     * 
+     * @param createCustomDomainAssociationRequest
+     * @return Result of the CreateCustomDomainAssociation operation returned by the service.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
+     * @throws CustomCnameAssociationException
+     *         An error occurred when an attempt was made to change the custom domain association.
+     * @sample AmazonRedshift.CreateCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateCustomDomainAssociationResult createCustomDomainAssociation(CreateCustomDomainAssociationRequest createCustomDomainAssociationRequest);
+
+    /**
+     * <p>
      * Creates a Redshift-managed VPC endpoint.
      * </p>
      * 
@@ -1096,6 +1116,25 @@ public interface AmazonRedshift {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteClusterSubnetGroupResult deleteClusterSubnetGroup(DeleteClusterSubnetGroupRequest deleteClusterSubnetGroupRequest);
+
+    /**
+     * <p>
+     * Contains information about deleting a custom domain association for a cluster.
+     * </p>
+     * 
+     * @param deleteCustomDomainAssociationRequest
+     * @return Result of the DeleteCustomDomainAssociation operation returned by the service.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
+     * @throws CustomCnameAssociationException
+     *         An error occurred when an attempt was made to change the custom domain association.
+     * @sample AmazonRedshift.DeleteCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteCustomDomainAssociationResult deleteCustomDomainAssociation(DeleteCustomDomainAssociationRequest deleteCustomDomainAssociationRequest);
 
     /**
      * <p>
@@ -1594,6 +1633,23 @@ public interface AmazonRedshift {
      * @see #describeClusters(DescribeClustersRequest)
      */
     DescribeClustersResult describeClusters();
+
+    /**
+     * <p>
+     * Contains information for custom domain associations for a cluster.
+     * </p>
+     * 
+     * @param describeCustomDomainAssociationsRequest
+     * @return Result of the DescribeCustomDomainAssociations operation returned by the service.
+     * @throws CustomDomainAssociationNotFoundException
+     *         An error occurred. The custom domain name couldn't be found.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @sample AmazonRedshift.DescribeCustomDomainAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeCustomDomainAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeCustomDomainAssociationsResult describeCustomDomainAssociations(DescribeCustomDomainAssociationsRequest describeCustomDomainAssociationsRequest);
 
     /**
      * <p>
@@ -2594,6 +2650,10 @@ public interface AmazonRedshift {
      *         The retention period specified is either in the past or is not a valid value.</p>
      *         <p>
      *         The value must be either -1 or an integer between 1 and 3,653.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws CustomCnameAssociationException
+     *         An error occurred when an attempt was made to change the custom domain association.
      * @sample AmazonRedshift.ModifyCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyCluster" target="_top">AWS API
      *      Documentation</a>
@@ -2757,6 +2817,25 @@ public interface AmazonRedshift {
      *      target="_top">AWS API Documentation</a>
      */
     ClusterSubnetGroup modifyClusterSubnetGroup(ModifyClusterSubnetGroupRequest modifyClusterSubnetGroupRequest);
+
+    /**
+     * <p>
+     * Contains information for changing a custom domain association.
+     * </p>
+     * 
+     * @param modifyCustomDomainAssociationRequest
+     * @return Result of the ModifyCustomDomainAssociation operation returned by the service.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
+     * @throws CustomCnameAssociationException
+     *         An error occurred when an attempt was made to change the custom domain association.
+     * @sample AmazonRedshift.ModifyCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ModifyCustomDomainAssociationResult modifyCustomDomainAssociation(ModifyCustomDomainAssociationRequest modifyCustomDomainAssociationRequest);
 
     /**
      * <p>

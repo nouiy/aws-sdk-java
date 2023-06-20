@@ -635,6 +635,10 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
             exceptionUnmarshallersMap.put("HsmConfigurationAlreadyExistsFault", new HsmConfigurationAlreadyExistsExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new HsmConfigurationAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CustomCnameAssociationFault") == null) {
+            exceptionUnmarshallersMap.put("CustomCnameAssociationFault", new CustomCnameAssociationExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new CustomCnameAssociationExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("SubscriptionNotFound") == null) {
             exceptionUnmarshallersMap.put("SubscriptionNotFound", new SubscriptionNotFoundExceptionUnmarshaller());
         }
@@ -643,6 +647,10 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
             exceptionUnmarshallersMap.put("InvalidReservedNodeState", new InvalidReservedNodeStateExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new InvalidReservedNodeStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CustomDomainAssociationNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("CustomDomainAssociationNotFoundFault", new CustomDomainAssociationNotFoundExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new CustomDomainAssociationNotFoundExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("SubnetAlreadyInUse") == null) {
             exceptionUnmarshallersMap.put("SubnetAlreadyInUse", new SubnetAlreadyInUseExceptionUnmarshaller());
         }
@@ -2060,6 +2068,69 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Used to create a custom domain name for a cluster. Properties include the custom domain name, the cluster the
+     * custom domain is associated with, and the certificate Amazon Resource Name (ARN).
+     * </p>
+     * 
+     * @param createCustomDomainAssociationRequest
+     * @return Result of the CreateCustomDomainAssociation operation returned by the service.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
+     * @throws CustomCnameAssociationException
+     *         An error occurred when an attempt was made to change the custom domain association.
+     * @sample AmazonRedshift.CreateCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateCustomDomainAssociationResult createCustomDomainAssociation(CreateCustomDomainAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateCustomDomainAssociation(request);
+    }
+
+    @SdkInternalApi
+    final CreateCustomDomainAssociationResult executeCreateCustomDomainAssociation(CreateCustomDomainAssociationRequest createCustomDomainAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createCustomDomainAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateCustomDomainAssociationRequest> request = null;
+        Response<CreateCustomDomainAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateCustomDomainAssociationRequestMarshaller().marshall(super.beforeMarshalling(createCustomDomainAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateCustomDomainAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateCustomDomainAssociationResult> responseHandler = new StaxResponseHandler<CreateCustomDomainAssociationResult>(
+                    new CreateCustomDomainAssociationResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a Redshift-managed VPC endpoint.
      * </p>
      * 
@@ -3195,6 +3266,68 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
             StaxResponseHandler<DeleteClusterSubnetGroupResult> responseHandler = new StaxResponseHandler<DeleteClusterSubnetGroupResult>(
                     new DeleteClusterSubnetGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Contains information about deleting a custom domain association for a cluster.
+     * </p>
+     * 
+     * @param deleteCustomDomainAssociationRequest
+     * @return Result of the DeleteCustomDomainAssociation operation returned by the service.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
+     * @throws CustomCnameAssociationException
+     *         An error occurred when an attempt was made to change the custom domain association.
+     * @sample AmazonRedshift.DeleteCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteCustomDomainAssociationResult deleteCustomDomainAssociation(DeleteCustomDomainAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteCustomDomainAssociation(request);
+    }
+
+    @SdkInternalApi
+    final DeleteCustomDomainAssociationResult executeDeleteCustomDomainAssociation(DeleteCustomDomainAssociationRequest deleteCustomDomainAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteCustomDomainAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteCustomDomainAssociationRequest> request = null;
+        Response<DeleteCustomDomainAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteCustomDomainAssociationRequestMarshaller().marshall(super.beforeMarshalling(deleteCustomDomainAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteCustomDomainAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteCustomDomainAssociationResult> responseHandler = new StaxResponseHandler<DeleteCustomDomainAssociationResult>(
+                    new DeleteCustomDomainAssociationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -4591,6 +4724,67 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
     @Override
     public DescribeClustersResult describeClusters() {
         return describeClusters(new DescribeClustersRequest());
+    }
+
+    /**
+     * <p>
+     * Contains information for custom domain associations for a cluster.
+     * </p>
+     * 
+     * @param describeCustomDomainAssociationsRequest
+     * @return Result of the DescribeCustomDomainAssociations operation returned by the service.
+     * @throws CustomDomainAssociationNotFoundException
+     *         An error occurred. The custom domain name couldn't be found.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @sample AmazonRedshift.DescribeCustomDomainAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeCustomDomainAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeCustomDomainAssociationsResult describeCustomDomainAssociations(DescribeCustomDomainAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeCustomDomainAssociations(request);
+    }
+
+    @SdkInternalApi
+    final DescribeCustomDomainAssociationsResult executeDescribeCustomDomainAssociations(
+            DescribeCustomDomainAssociationsRequest describeCustomDomainAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeCustomDomainAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeCustomDomainAssociationsRequest> request = null;
+        Response<DescribeCustomDomainAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeCustomDomainAssociationsRequestMarshaller().marshall(super.beforeMarshalling(describeCustomDomainAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeCustomDomainAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeCustomDomainAssociationsResult> responseHandler = new StaxResponseHandler<DescribeCustomDomainAssociationsResult>(
+                    new DescribeCustomDomainAssociationsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -7163,6 +7357,10 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The retention period specified is either in the past or is not a valid value.</p>
      *         <p>
      *         The value must be either -1 or an integer between 1 and 3,653.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws CustomCnameAssociationException
+     *         An error occurred when an attempt was made to change the custom domain association.
      * @sample AmazonRedshift.ModifyCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyCluster" target="_top">AWS API
      *      Documentation</a>
@@ -7654,6 +7852,68 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
             }
 
             StaxResponseHandler<ClusterSubnetGroup> responseHandler = new StaxResponseHandler<ClusterSubnetGroup>(new ClusterSubnetGroupStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Contains information for changing a custom domain association.
+     * </p>
+     * 
+     * @param modifyCustomDomainAssociationRequest
+     * @return Result of the ModifyCustomDomainAssociation operation returned by the service.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
+     * @throws CustomCnameAssociationException
+     *         An error occurred when an attempt was made to change the custom domain association.
+     * @sample AmazonRedshift.ModifyCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ModifyCustomDomainAssociationResult modifyCustomDomainAssociation(ModifyCustomDomainAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyCustomDomainAssociation(request);
+    }
+
+    @SdkInternalApi
+    final ModifyCustomDomainAssociationResult executeModifyCustomDomainAssociation(ModifyCustomDomainAssociationRequest modifyCustomDomainAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyCustomDomainAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyCustomDomainAssociationRequest> request = null;
+        Response<ModifyCustomDomainAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyCustomDomainAssociationRequestMarshaller().marshall(super.beforeMarshalling(modifyCustomDomainAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyCustomDomainAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyCustomDomainAssociationResult> responseHandler = new StaxResponseHandler<ModifyCustomDomainAssociationResult>(
+                    new ModifyCustomDomainAssociationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

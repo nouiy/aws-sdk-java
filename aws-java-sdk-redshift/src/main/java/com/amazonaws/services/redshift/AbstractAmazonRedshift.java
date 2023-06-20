@@ -124,6 +124,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     }
 
     @Override
+    public CreateCustomDomainAssociationResult createCustomDomainAssociation(CreateCustomDomainAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateEndpointAccessResult createEndpointAccess(CreateEndpointAccessRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -200,6 +205,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
 
     @Override
     public DeleteClusterSubnetGroupResult deleteClusterSubnetGroup(DeleteClusterSubnetGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteCustomDomainAssociationResult deleteCustomDomainAssociation(DeleteCustomDomainAssociationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -336,6 +346,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     @Override
     public DescribeClustersResult describeClusters() {
         return describeClusters(new DescribeClustersRequest());
+    }
+
+    @Override
+    public DescribeCustomDomainAssociationsResult describeCustomDomainAssociations(DescribeCustomDomainAssociationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -616,6 +631,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
 
     @Override
     public ClusterSubnetGroup modifyClusterSubnetGroup(ModifyClusterSubnetGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ModifyCustomDomainAssociationResult modifyCustomDomainAssociation(ModifyCustomDomainAssociationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

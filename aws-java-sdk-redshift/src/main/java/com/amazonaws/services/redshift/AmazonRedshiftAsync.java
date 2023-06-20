@@ -749,6 +749,43 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
 
     /**
      * <p>
+     * Used to create a custom domain name for a cluster. Properties include the custom domain name, the cluster the
+     * custom domain is associated with, and the certificate Amazon Resource Name (ARN).
+     * </p>
+     * 
+     * @param createCustomDomainAssociationRequest
+     * @return A Java Future containing the result of the CreateCustomDomainAssociation operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsync.CreateCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCustomDomainAssociationResult> createCustomDomainAssociationAsync(
+            CreateCustomDomainAssociationRequest createCustomDomainAssociationRequest);
+
+    /**
+     * <p>
+     * Used to create a custom domain name for a cluster. Properties include the custom domain name, the cluster the
+     * custom domain is associated with, and the certificate Amazon Resource Name (ARN).
+     * </p>
+     * 
+     * @param createCustomDomainAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateCustomDomainAssociation operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsyncHandler.CreateCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCustomDomainAssociationResult> createCustomDomainAssociationAsync(
+            CreateCustomDomainAssociationRequest createCustomDomainAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateCustomDomainAssociationRequest, CreateCustomDomainAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a Redshift-managed VPC endpoint.
      * </p>
      * 
@@ -1432,6 +1469,41 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
      */
     java.util.concurrent.Future<DeleteClusterSubnetGroupResult> deleteClusterSubnetGroupAsync(DeleteClusterSubnetGroupRequest deleteClusterSubnetGroupRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteClusterSubnetGroupRequest, DeleteClusterSubnetGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Contains information about deleting a custom domain association for a cluster.
+     * </p>
+     * 
+     * @param deleteCustomDomainAssociationRequest
+     * @return A Java Future containing the result of the DeleteCustomDomainAssociation operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsync.DeleteCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCustomDomainAssociationResult> deleteCustomDomainAssociationAsync(
+            DeleteCustomDomainAssociationRequest deleteCustomDomainAssociationRequest);
+
+    /**
+     * <p>
+     * Contains information about deleting a custom domain association for a cluster.
+     * </p>
+     * 
+     * @param deleteCustomDomainAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteCustomDomainAssociation operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsyncHandler.DeleteCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCustomDomainAssociationResult> deleteCustomDomainAssociationAsync(
+            DeleteCustomDomainAssociationRequest deleteCustomDomainAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteCustomDomainAssociationRequest, DeleteCustomDomainAssociationResult> asyncHandler);
 
     /**
      * <p>
@@ -2381,6 +2453,41 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
      */
     java.util.concurrent.Future<DescribeClustersResult> describeClustersAsync(
             com.amazonaws.handlers.AsyncHandler<DescribeClustersRequest, DescribeClustersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Contains information for custom domain associations for a cluster.
+     * </p>
+     * 
+     * @param describeCustomDomainAssociationsRequest
+     * @return A Java Future containing the result of the DescribeCustomDomainAssociations operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsync.DescribeCustomDomainAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeCustomDomainAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeCustomDomainAssociationsResult> describeCustomDomainAssociationsAsync(
+            DescribeCustomDomainAssociationsRequest describeCustomDomainAssociationsRequest);
+
+    /**
+     * <p>
+     * Contains information for custom domain associations for a cluster.
+     * </p>
+     * 
+     * @param describeCustomDomainAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeCustomDomainAssociations operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsyncHandler.DescribeCustomDomainAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeCustomDomainAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeCustomDomainAssociationsResult> describeCustomDomainAssociationsAsync(
+            DescribeCustomDomainAssociationsRequest describeCustomDomainAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeCustomDomainAssociationsRequest, DescribeCustomDomainAssociationsResult> asyncHandler);
 
     /**
      * <p>
@@ -4429,6 +4536,41 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
      */
     java.util.concurrent.Future<ClusterSubnetGroup> modifyClusterSubnetGroupAsync(ModifyClusterSubnetGroupRequest modifyClusterSubnetGroupRequest,
             com.amazonaws.handlers.AsyncHandler<ModifyClusterSubnetGroupRequest, ClusterSubnetGroup> asyncHandler);
+
+    /**
+     * <p>
+     * Contains information for changing a custom domain association.
+     * </p>
+     * 
+     * @param modifyCustomDomainAssociationRequest
+     * @return A Java Future containing the result of the ModifyCustomDomainAssociation operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsync.ModifyCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyCustomDomainAssociationResult> modifyCustomDomainAssociationAsync(
+            ModifyCustomDomainAssociationRequest modifyCustomDomainAssociationRequest);
+
+    /**
+     * <p>
+     * Contains information for changing a custom domain association.
+     * </p>
+     * 
+     * @param modifyCustomDomainAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyCustomDomainAssociation operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsyncHandler.ModifyCustomDomainAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyCustomDomainAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyCustomDomainAssociationResult> modifyCustomDomainAssociationAsync(
+            ModifyCustomDomainAssociationRequest modifyCustomDomainAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyCustomDomainAssociationRequest, ModifyCustomDomainAssociationResult> asyncHandler);
 
     /**
      * <p>

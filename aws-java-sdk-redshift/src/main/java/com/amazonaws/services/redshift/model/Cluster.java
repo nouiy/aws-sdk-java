@@ -524,6 +524,24 @@ public class Cluster implements Serializable, Cloneable {
      * </p>
      */
     private ReservedNodeExchangeStatus reservedNodeExchangeStatus;
+    /**
+     * <p>
+     * The custom domain name associated with the cluster.
+     * </p>
+     */
+    private String customDomainName;
+    /**
+     * <p>
+     * The certificate Amazon Resource Name (ARN) for the custom domain name.
+     * </p>
+     */
+    private String customDomainCertificateArn;
+    /**
+     * <p>
+     * The expiration date for the certificate associated with the custom domain name.
+     * </p>
+     */
+    private java.util.Date customDomainCertificateExpiryDate;
 
     /**
      * <p>
@@ -4090,6 +4108,126 @@ public class Cluster implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The custom domain name associated with the cluster.
+     * </p>
+     * 
+     * @param customDomainName
+     *        The custom domain name associated with the cluster.
+     */
+
+    public void setCustomDomainName(String customDomainName) {
+        this.customDomainName = customDomainName;
+    }
+
+    /**
+     * <p>
+     * The custom domain name associated with the cluster.
+     * </p>
+     * 
+     * @return The custom domain name associated with the cluster.
+     */
+
+    public String getCustomDomainName() {
+        return this.customDomainName;
+    }
+
+    /**
+     * <p>
+     * The custom domain name associated with the cluster.
+     * </p>
+     * 
+     * @param customDomainName
+     *        The custom domain name associated with the cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withCustomDomainName(String customDomainName) {
+        setCustomDomainName(customDomainName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The certificate Amazon Resource Name (ARN) for the custom domain name.
+     * </p>
+     * 
+     * @param customDomainCertificateArn
+     *        The certificate Amazon Resource Name (ARN) for the custom domain name.
+     */
+
+    public void setCustomDomainCertificateArn(String customDomainCertificateArn) {
+        this.customDomainCertificateArn = customDomainCertificateArn;
+    }
+
+    /**
+     * <p>
+     * The certificate Amazon Resource Name (ARN) for the custom domain name.
+     * </p>
+     * 
+     * @return The certificate Amazon Resource Name (ARN) for the custom domain name.
+     */
+
+    public String getCustomDomainCertificateArn() {
+        return this.customDomainCertificateArn;
+    }
+
+    /**
+     * <p>
+     * The certificate Amazon Resource Name (ARN) for the custom domain name.
+     * </p>
+     * 
+     * @param customDomainCertificateArn
+     *        The certificate Amazon Resource Name (ARN) for the custom domain name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withCustomDomainCertificateArn(String customDomainCertificateArn) {
+        setCustomDomainCertificateArn(customDomainCertificateArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The expiration date for the certificate associated with the custom domain name.
+     * </p>
+     * 
+     * @param customDomainCertificateExpiryDate
+     *        The expiration date for the certificate associated with the custom domain name.
+     */
+
+    public void setCustomDomainCertificateExpiryDate(java.util.Date customDomainCertificateExpiryDate) {
+        this.customDomainCertificateExpiryDate = customDomainCertificateExpiryDate;
+    }
+
+    /**
+     * <p>
+     * The expiration date for the certificate associated with the custom domain name.
+     * </p>
+     * 
+     * @return The expiration date for the certificate associated with the custom domain name.
+     */
+
+    public java.util.Date getCustomDomainCertificateExpiryDate() {
+        return this.customDomainCertificateExpiryDate;
+    }
+
+    /**
+     * <p>
+     * The expiration date for the certificate associated with the custom domain name.
+     * </p>
+     * 
+     * @param customDomainCertificateExpiryDate
+     *        The expiration date for the certificate associated with the custom domain name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withCustomDomainCertificateExpiryDate(java.util.Date customDomainCertificateExpiryDate) {
+        setCustomDomainCertificateExpiryDate(customDomainCertificateExpiryDate);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4204,7 +4342,13 @@ public class Cluster implements Serializable, Cloneable {
         if (getDefaultIamRoleArn() != null)
             sb.append("DefaultIamRoleArn: ").append(getDefaultIamRoleArn()).append(",");
         if (getReservedNodeExchangeStatus() != null)
-            sb.append("ReservedNodeExchangeStatus: ").append(getReservedNodeExchangeStatus());
+            sb.append("ReservedNodeExchangeStatus: ").append(getReservedNodeExchangeStatus()).append(",");
+        if (getCustomDomainName() != null)
+            sb.append("CustomDomainName: ").append(getCustomDomainName()).append(",");
+        if (getCustomDomainCertificateArn() != null)
+            sb.append("CustomDomainCertificateArn: ").append(getCustomDomainCertificateArn()).append(",");
+        if (getCustomDomainCertificateExpiryDate() != null)
+            sb.append("CustomDomainCertificateExpiryDate: ").append(getCustomDomainCertificateExpiryDate());
         sb.append("}");
         return sb.toString();
     }
@@ -4435,6 +4579,19 @@ public class Cluster implements Serializable, Cloneable {
             return false;
         if (other.getReservedNodeExchangeStatus() != null && other.getReservedNodeExchangeStatus().equals(this.getReservedNodeExchangeStatus()) == false)
             return false;
+        if (other.getCustomDomainName() == null ^ this.getCustomDomainName() == null)
+            return false;
+        if (other.getCustomDomainName() != null && other.getCustomDomainName().equals(this.getCustomDomainName()) == false)
+            return false;
+        if (other.getCustomDomainCertificateArn() == null ^ this.getCustomDomainCertificateArn() == null)
+            return false;
+        if (other.getCustomDomainCertificateArn() != null && other.getCustomDomainCertificateArn().equals(this.getCustomDomainCertificateArn()) == false)
+            return false;
+        if (other.getCustomDomainCertificateExpiryDate() == null ^ this.getCustomDomainCertificateExpiryDate() == null)
+            return false;
+        if (other.getCustomDomainCertificateExpiryDate() != null
+                && other.getCustomDomainCertificateExpiryDate().equals(this.getCustomDomainCertificateExpiryDate()) == false)
+            return false;
         return true;
     }
 
@@ -4495,6 +4652,9 @@ public class Cluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getAquaConfiguration() == null) ? 0 : getAquaConfiguration().hashCode());
         hashCode = prime * hashCode + ((getDefaultIamRoleArn() == null) ? 0 : getDefaultIamRoleArn().hashCode());
         hashCode = prime * hashCode + ((getReservedNodeExchangeStatus() == null) ? 0 : getReservedNodeExchangeStatus().hashCode());
+        hashCode = prime * hashCode + ((getCustomDomainName() == null) ? 0 : getCustomDomainName().hashCode());
+        hashCode = prime * hashCode + ((getCustomDomainCertificateArn() == null) ? 0 : getCustomDomainCertificateArn().hashCode());
+        hashCode = prime * hashCode + ((getCustomDomainCertificateExpiryDate() == null) ? 0 : getCustomDomainCertificateExpiryDate().hashCode());
         return hashCode;
     }
 

@@ -1,3 +1,24 @@
+# __1.12.492__ __2023-06-20__
+## __AWS Config__
+  - ### Features
+    - Updated ResourceType enum with new resource types onboarded by AWS Config in May 2023.
+
+## __AWS Lambda__
+  - ### Features
+    - This release adds RecursiveInvocationException to the Invoke API and InvokeWithResponseStream API.
+
+## __Amazon Appflow__
+  - ### Features
+    - This release adds new API to reset connector metadata cache
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Adds support for targeting Dedicated Host allocations by assetIds in AWS Outposts
+
+## __Amazon Redshift__
+  - ### Features
+    - Added support for custom domain names for Redshift Provisioned clusters. This feature enables customers to create a custom domain name and use ACM to generate fully secure connections to it.
+
 # __1.12.491__ __2023-06-19__
 ## __AWS CloudFormation__
   - ### Features

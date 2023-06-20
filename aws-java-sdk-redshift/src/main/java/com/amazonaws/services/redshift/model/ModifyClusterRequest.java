@@ -128,8 +128,8 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Operations never return the password, so this operation provides a way to regain access to the admin user for a
-     * cluster if the password is lost.
+     * Operations never return the password, so this operation provides a way to regain access to the admin user account
+     * for a cluster if the password is lost.
      * </p>
      * </note>
      * <p>
@@ -1100,8 +1100,8 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Operations never return the password, so this operation provides a way to regain access to the admin user for a
-     * cluster if the password is lost.
+     * Operations never return the password, so this operation provides a way to regain access to the admin user account
+     * for a cluster if the password is lost.
      * </p>
      * </note>
      * <p>
@@ -1145,7 +1145,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        element exists in the <code>PendingModifiedValues</code> element of the operation response. </p> <note>
      *        <p>
      *        Operations never return the password, so this operation provides a way to regain access to the admin user
-     *        for a cluster if the password is lost.
+     *        account for a cluster if the password is lost.
      *        </p>
      *        </note>
      *        <p>
@@ -1195,8 +1195,8 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Operations never return the password, so this operation provides a way to regain access to the admin user for a
-     * cluster if the password is lost.
+     * Operations never return the password, so this operation provides a way to regain access to the admin user account
+     * for a cluster if the password is lost.
      * </p>
      * </note>
      * <p>
@@ -1239,7 +1239,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         element exists in the <code>PendingModifiedValues</code> element of the operation response. </p> <note>
      *         <p>
      *         Operations never return the password, so this operation provides a way to regain access to the admin user
-     *         for a cluster if the password is lost.
+     *         account for a cluster if the password is lost.
      *         </p>
      *         </note>
      *         <p>
@@ -1289,8 +1289,8 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Operations never return the password, so this operation provides a way to regain access to the admin user for a
-     * cluster if the password is lost.
+     * Operations never return the password, so this operation provides a way to regain access to the admin user account
+     * for a cluster if the password is lost.
      * </p>
      * </note>
      * <p>
@@ -1334,7 +1334,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        element exists in the <code>PendingModifiedValues</code> element of the operation response. </p> <note>
      *        <p>
      *        Operations never return the password, so this operation provides a way to regain access to the admin user
-     *        for a cluster if the password is lost.
+     *        account for a cluster if the password is lost.
      *        </p>
      *        </note>
      *        <p>

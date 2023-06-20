@@ -344,6 +344,21 @@ public class ClusterStaxUnmarshaller implements Unmarshaller<Cluster, StaxUnmars
                     cluster.setReservedNodeExchangeStatus(ReservedNodeExchangeStatusStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("CustomDomainName", targetDepth)) {
+                    cluster.setCustomDomainName(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("CustomDomainCertificateArn", targetDepth)) {
+                    cluster.setCustomDomainCertificateArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("CustomDomainCertificateExpiryDate", targetDepth)) {
+                    cluster.setCustomDomainCertificateExpiryDate(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return cluster;

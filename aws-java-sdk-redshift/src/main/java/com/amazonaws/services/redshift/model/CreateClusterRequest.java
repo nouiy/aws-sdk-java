@@ -142,7 +142,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String nodeType;
     /**
      * <p>
-     * The user name associated with the admin user for the cluster that is being created.
+     * The user name associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
      * Constraints:
@@ -180,7 +180,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String masterUsername;
     /**
      * <p>
-     * The password associated with the admin user for the cluster that is being created.
+     * The password associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
      * Constraints:
@@ -1228,7 +1228,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The user name associated with the admin user for the cluster that is being created.
+     * The user name associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
      * Constraints:
@@ -1264,7 +1264,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </ul>
      * 
      * @param masterUsername
-     *        The user name associated with the admin user for the cluster that is being created.</p>
+     *        The user name associated with the admin user account for the cluster that is being created.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -1305,7 +1305,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The user name associated with the admin user for the cluster that is being created.
+     * The user name associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
      * Constraints:
@@ -1340,7 +1340,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * </ul>
      * 
-     * @return The user name associated with the admin user for the cluster that is being created.</p>
+     * @return The user name associated with the admin user account for the cluster that is being created.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -1381,7 +1381,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The user name associated with the admin user for the cluster that is being created.
+     * The user name associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
      * Constraints:
@@ -1417,7 +1417,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </ul>
      * 
      * @param masterUsername
-     *        The user name associated with the admin user for the cluster that is being created.</p>
+     *        The user name associated with the admin user account for the cluster that is being created.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -1460,7 +1460,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The password associated with the admin user for the cluster that is being created.
+     * The password associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
      * Constraints:
@@ -1495,7 +1495,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </ul>
      * 
      * @param masterUserPassword
-     *        The password associated with the admin user for the cluster that is being created.</p>
+     *        The password associated with the admin user account for the cluster that is being created.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -1534,7 +1534,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The password associated with the admin user for the cluster that is being created.
+     * The password associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
      * Constraints:
@@ -1568,7 +1568,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * </ul>
      * 
-     * @return The password associated with the admin user for the cluster that is being created.</p>
+     * @return The password associated with the admin user account for the cluster that is being created.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -1607,7 +1607,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The password associated with the admin user for the cluster that is being created.
+     * The password associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
      * Constraints:
@@ -1642,7 +1642,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </ul>
      * 
      * @param masterUserPassword
-     *        The password associated with the admin user for the cluster that is being created.</p>
+     *        The password associated with the admin user account for the cluster that is being created.</p>
      *        <p>
      *        Constraints:
      *        </p>

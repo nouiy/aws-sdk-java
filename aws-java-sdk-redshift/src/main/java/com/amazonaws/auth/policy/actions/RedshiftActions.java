@@ -59,6 +59,8 @@ public enum RedshiftActions implements Action {
     CreateClusterSnapshot("redshift:CreateClusterSnapshot"),
     /** Action for the CreateClusterSubnetGroup operation. */
     CreateClusterSubnetGroup("redshift:CreateClusterSubnetGroup"),
+    /** Action for the CreateCustomDomainAssociation operation. */
+    CreateCustomDomainAssociation("redshift:CreateCustomDomainAssociation"),
     /** Action for the CreateEndpointAccess operation. */
     CreateEndpointAccess("redshift:CreateEndpointAccess"),
     /** Action for the CreateEventSubscription operation. */
@@ -91,6 +93,8 @@ public enum RedshiftActions implements Action {
     DeleteClusterSnapshot("redshift:DeleteClusterSnapshot"),
     /** Action for the DeleteClusterSubnetGroup operation. */
     DeleteClusterSubnetGroup("redshift:DeleteClusterSubnetGroup"),
+    /** Action for the DeleteCustomDomainAssociation operation. */
+    DeleteCustomDomainAssociation("redshift:DeleteCustomDomainAssociation"),
     /** Action for the DeleteEndpointAccess operation. */
     DeleteEndpointAccess("redshift:DeleteEndpointAccess"),
     /** Action for the DeleteEventSubscription operation. */
@@ -133,6 +137,8 @@ public enum RedshiftActions implements Action {
     DescribeClusterVersions("redshift:DescribeClusterVersions"),
     /** Action for the DescribeClusters operation. */
     DescribeClusters("redshift:DescribeClusters"),
+    /** Action for the DescribeCustomDomainAssociations operation. */
+    DescribeCustomDomainAssociations("redshift:DescribeCustomDomainAssociations"),
     /** Action for the DescribeDataShares operation. */
     DescribeDataShares("redshift:DescribeDataShares"),
     /** Action for the DescribeDataSharesForConsumer operation. */
@@ -223,6 +229,8 @@ public enum RedshiftActions implements Action {
     ModifyClusterSnapshotSchedule("redshift:ModifyClusterSnapshotSchedule"),
     /** Action for the ModifyClusterSubnetGroup operation. */
     ModifyClusterSubnetGroup("redshift:ModifyClusterSubnetGroup"),
+    /** Action for the ModifyCustomDomainAssociation operation. */
+    ModifyCustomDomainAssociation("redshift:ModifyCustomDomainAssociation"),
     /** Action for the ModifyEndpointAccess operation. */
     ModifyEndpointAccess("redshift:ModifyEndpointAccess"),
     /** Action for the ModifyEventSubscription operation. */
