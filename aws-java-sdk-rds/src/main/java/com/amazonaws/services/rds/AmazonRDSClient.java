@@ -5104,7 +5104,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
-     * Returns information about Amazon Aurora DB clusters and Multi-AZ DB clusters. This API supports pagination.
+     * Describes existing Amazon Aurora DB clusters and Multi-AZ DB clusters. This API supports pagination.
      * </p>
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
@@ -5308,7 +5308,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
-     * Returns information about provisioned RDS instances. This API supports pagination.
+     * Describes provisioned RDS instances. This API supports pagination.
      * </p>
      * <note>
      * <p>
@@ -7687,8 +7687,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
-     * Modify the settings for an Amazon Aurora DB cluster or a Multi-AZ DB cluster. You can change one or more settings
-     * by specifying these parameters and the new values in the request.
+     * Modifies the settings of an Amazon Aurora DB cluster or a Multi-AZ DB cluster. You can change one or more
+     * settings by specifying these parameters and the new values in the request.
      * </p>
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a

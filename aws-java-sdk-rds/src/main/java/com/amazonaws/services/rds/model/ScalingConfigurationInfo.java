@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Shows the scaling configuration for an Aurora DB cluster in <code>serverless</code> DB engine mode.
+ * The scaling configuration for an Aurora DB cluster in <code>serverless</code> DB engine mode.
  * </p>
  * <p>
  * For more information, see <a

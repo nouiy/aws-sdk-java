@@ -1,4 +1,21 @@
-# __1.12.494__ __2023-06-22__
+# __1.12.495__ __2023-06-23__
+## __Amazon DevOps Guru__
+  - ### Features
+    - This release adds support for encryption via customer managed keys.
+
+## __Amazon FSx__
+  - ### Features
+    - Update to Amazon FSx documentation.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Documentation improvements for create, describe, and modify DB clusters and DB instances.
+
+## __Amazon Verified Permissions__
+  - ### Features
+    - Added improved descriptions and new code samples to SDK documentation.
+
+# __1.12.494__ __2023-06-23__
 ## __AWS Step Functions__
   - ### Features
     - Adds support for Versions and Aliases. Adds 8 operations: PublishStateMachineVersion, DeleteStateMachineVersion, ListStateMachineVersions, CreateStateMachineAlias, DescribeStateMachineAlias, UpdateStateMachineAlias, DeleteStateMachineAlias, ListStateMachineAliases

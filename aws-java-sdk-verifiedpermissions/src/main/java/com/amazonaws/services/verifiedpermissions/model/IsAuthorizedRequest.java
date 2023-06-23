@@ -59,9 +59,15 @@ public class IsAuthorizedRequest extends com.amazonaws.AmazonWebServiceRequest i
     private ContextDefinition context;
     /**
      * <p>
-     * Specifies the list of entities and their associated attributes that Verified Permissions can examine when
-     * evaluating the policies.
+     * Specifies the list of resources and principals and their associated attributes that Verified Permissions can
+     * examine when evaluating the policies.
      * </p>
+     * <note>
+     * <p>
+     * You can include only principal and resource entities in this parameter; you can't include actions. You must
+     * specify actions in the schema.
+     * </p>
+     * </note>
      */
     private EntitiesDefinition entities;
 
@@ -279,13 +285,23 @@ public class IsAuthorizedRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the list of entities and their associated attributes that Verified Permissions can examine when
-     * evaluating the policies.
+     * Specifies the list of resources and principals and their associated attributes that Verified Permissions can
+     * examine when evaluating the policies.
      * </p>
+     * <note>
+     * <p>
+     * You can include only principal and resource entities in this parameter; you can't include actions. You must
+     * specify actions in the schema.
+     * </p>
+     * </note>
      * 
      * @param entities
-     *        Specifies the list of entities and their associated attributes that Verified Permissions can examine when
-     *        evaluating the policies.
+     *        Specifies the list of resources and principals and their associated attributes that Verified Permissions
+     *        can examine when evaluating the policies. </p> <note>
+     *        <p>
+     *        You can include only principal and resource entities in this parameter; you can't include actions. You
+     *        must specify actions in the schema.
+     *        </p>
      */
 
     public void setEntities(EntitiesDefinition entities) {
@@ -294,12 +310,22 @@ public class IsAuthorizedRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the list of entities and their associated attributes that Verified Permissions can examine when
-     * evaluating the policies.
+     * Specifies the list of resources and principals and their associated attributes that Verified Permissions can
+     * examine when evaluating the policies.
      * </p>
+     * <note>
+     * <p>
+     * You can include only principal and resource entities in this parameter; you can't include actions. You must
+     * specify actions in the schema.
+     * </p>
+     * </note>
      * 
-     * @return Specifies the list of entities and their associated attributes that Verified Permissions can examine when
-     *         evaluating the policies.
+     * @return Specifies the list of resources and principals and their associated attributes that Verified Permissions
+     *         can examine when evaluating the policies. </p> <note>
+     *         <p>
+     *         You can include only principal and resource entities in this parameter; you can't include actions. You
+     *         must specify actions in the schema.
+     *         </p>
      */
 
     public EntitiesDefinition getEntities() {
@@ -308,13 +334,23 @@ public class IsAuthorizedRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the list of entities and their associated attributes that Verified Permissions can examine when
-     * evaluating the policies.
+     * Specifies the list of resources and principals and their associated attributes that Verified Permissions can
+     * examine when evaluating the policies.
      * </p>
+     * <note>
+     * <p>
+     * You can include only principal and resource entities in this parameter; you can't include actions. You must
+     * specify actions in the schema.
+     * </p>
+     * </note>
      * 
      * @param entities
-     *        Specifies the list of entities and their associated attributes that Verified Permissions can examine when
-     *        evaluating the policies.
+     *        Specifies the list of resources and principals and their associated attributes that Verified Permissions
+     *        can examine when evaluating the policies. </p> <note>
+     *        <p>
+     *        You can include only principal and resource entities in this parameter; you can't include actions. You
+     *        must specify actions in the schema.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

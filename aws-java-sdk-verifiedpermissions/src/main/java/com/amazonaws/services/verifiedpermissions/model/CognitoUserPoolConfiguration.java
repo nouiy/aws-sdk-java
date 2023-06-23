@@ -30,7 +30,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * Example:
- * <code>"CognitoUserPoolConfiguration":{"UserPoolArn":"cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","ClientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"]}</code>
+ * <code>"CognitoUserPoolConfiguration":{"UserPoolArn":"arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5","ClientIds": ["a1b2c3d4e5f6g7h8i9j0kalbmc"]}</code>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/CognitoUserPoolConfiguration"
@@ -45,7 +45,7 @@ public class CognitoUserPoolConfiguration implements Serializable, Cloneable, St
      * (ARN)</a> of the Amazon Cognito user pool that contains the identities to be authorized.
      * </p>
      * <p>
-     * Example: <code>"UserPoolArn": "cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
+     * Example: <code>"UserPoolArn": "arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
      * </p>
      */
     private String userPoolArn;
@@ -65,14 +65,15 @@ public class CognitoUserPoolConfiguration implements Serializable, Cloneable, St
      * (ARN)</a> of the Amazon Cognito user pool that contains the identities to be authorized.
      * </p>
      * <p>
-     * Example: <code>"UserPoolArn": "cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
+     * Example: <code>"UserPoolArn": "arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
      * </p>
      * 
      * @param userPoolArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource
      *        Name (ARN)</a> of the Amazon Cognito user pool that contains the identities to be authorized.</p>
      *        <p>
-     *        Example: <code>"UserPoolArn": "cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
+     *        Example:
+     *        <code>"UserPoolArn": "arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
      */
 
     public void setUserPoolArn(String userPoolArn) {
@@ -85,13 +86,14 @@ public class CognitoUserPoolConfiguration implements Serializable, Cloneable, St
      * (ARN)</a> of the Amazon Cognito user pool that contains the identities to be authorized.
      * </p>
      * <p>
-     * Example: <code>"UserPoolArn": "cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
+     * Example: <code>"UserPoolArn": "arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
      * </p>
      * 
      * @return The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource
      *         Name (ARN)</a> of the Amazon Cognito user pool that contains the identities to be authorized.</p>
      *         <p>
-     *         Example: <code>"UserPoolArn": "cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
+     *         Example:
+     *         <code>"UserPoolArn": "arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
      */
 
     public String getUserPoolArn() {
@@ -104,14 +106,15 @@ public class CognitoUserPoolConfiguration implements Serializable, Cloneable, St
      * (ARN)</a> of the Amazon Cognito user pool that contains the identities to be authorized.
      * </p>
      * <p>
-     * Example: <code>"UserPoolArn": "cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
+     * Example: <code>"UserPoolArn": "arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
      * </p>
      * 
      * @param userPoolArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource
      *        Name (ARN)</a> of the Amazon Cognito user pool that contains the identities to be authorized.</p>
      *        <p>
-     *        Example: <code>"UserPoolArn": "cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
+     *        Example:
+     *        <code>"UserPoolArn": "arn:aws:cognito-idp:us-east-1:123456789012:userpool/us-east-1_1a2b3c4d5"</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

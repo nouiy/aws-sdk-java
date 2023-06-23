@@ -100,8 +100,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
     private String dailyAutomaticBackupStartTime;
     /**
      * <p>
-     * The number of days to retain automatic backups. The default is to retain backups for 7 days. Setting this value
-     * to 0 disables the creation of automatic backups. The maximum retention period for backups is 90 days.
+     * The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic
+     * backups. You can retain automatic backups for a maximum of 90 days. The default is <code>30</code>.
      * </p>
      */
     private Integer automaticBackupRetentionDays;
@@ -699,14 +699,13 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * The number of days to retain automatic backups. The default is to retain backups for 7 days. Setting this value
-     * to 0 disables the creation of automatic backups. The maximum retention period for backups is 90 days.
+     * The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic
+     * backups. You can retain automatic backups for a maximum of 90 days. The default is <code>30</code>.
      * </p>
      * 
      * @param automaticBackupRetentionDays
-     *        The number of days to retain automatic backups. The default is to retain backups for 7 days. Setting this
-     *        value to 0 disables the creation of automatic backups. The maximum retention period for backups is 90
-     *        days.
+     *        The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic
+     *        backups. You can retain automatic backups for a maximum of 90 days. The default is <code>30</code>.
      */
 
     public void setAutomaticBackupRetentionDays(Integer automaticBackupRetentionDays) {
@@ -715,13 +714,13 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * The number of days to retain automatic backups. The default is to retain backups for 7 days. Setting this value
-     * to 0 disables the creation of automatic backups. The maximum retention period for backups is 90 days.
+     * The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic
+     * backups. You can retain automatic backups for a maximum of 90 days. The default is <code>30</code>.
      * </p>
      * 
-     * @return The number of days to retain automatic backups. The default is to retain backups for 7 days. Setting this
-     *         value to 0 disables the creation of automatic backups. The maximum retention period for backups is 90
-     *         days.
+     * @return The number of days to retain automatic backups. Setting this property to <code>0</code> disables
+     *         automatic backups. You can retain automatic backups for a maximum of 90 days. The default is
+     *         <code>30</code>.
      */
 
     public Integer getAutomaticBackupRetentionDays() {
@@ -730,14 +729,13 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * The number of days to retain automatic backups. The default is to retain backups for 7 days. Setting this value
-     * to 0 disables the creation of automatic backups. The maximum retention period for backups is 90 days.
+     * The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic
+     * backups. You can retain automatic backups for a maximum of 90 days. The default is <code>30</code>.
      * </p>
      * 
      * @param automaticBackupRetentionDays
-     *        The number of days to retain automatic backups. The default is to retain backups for 7 days. Setting this
-     *        value to 0 disables the creation of automatic backups. The maximum retention period for backups is 90
-     *        days.
+     *        The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic
+     *        backups. You can retain automatic backups for a maximum of 90 days. The default is <code>30</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

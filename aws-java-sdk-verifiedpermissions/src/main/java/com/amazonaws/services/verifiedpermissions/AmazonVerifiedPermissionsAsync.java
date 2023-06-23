@@ -87,17 +87,17 @@ import com.amazonaws.services.verifiedpermissions.model.*;
  * <ul>
  * <li>
  * <p>
- * Parameters that end in <code>Detail</code> are used in <code>Get</code> operations.
+ * Parameter type structures that end in <code>Detail</code> are used in <code>Get</code> operations.
  * </p>
  * </li>
  * <li>
  * <p>
- * Parameters that end in <code>Item</code> are used in <code>List</code> operations.
+ * Parameter type structures that end in <code>Item</code> are used in <code>List</code> operations.
  * </p>
  * </li>
  * <li>
  * <p>
- * Parameters that use neither suffix are used in the mutating (create and update) operations.
+ * Parameter type structures that use neither suffix are used in the mutating (create and update) operations.
  * </p>
  * </li>
  * </ul>
@@ -277,6 +277,12 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * <p>
      * Creates a policy store. A policy store is a container for policy resources.
      * </p>
+     * <note>
+     * <p>
+     * Although <a href="https://docs.cedarpolicy.com/schema.html#namespace">Cedar supports multiple namespaces</a>,
+     * Verified Permissions currently supports only one namespace per policy store.
+     * </p>
+     * </note>
      * 
      * @param createPolicyStoreRequest
      * @return A Java Future containing the result of the CreatePolicyStore operation returned by the service.
@@ -290,6 +296,12 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * <p>
      * Creates a policy store. A policy store is a container for policy resources.
      * </p>
+     * <note>
+     * <p>
+     * Although <a href="https://docs.cedarpolicy.com/schema.html#namespace">Cedar supports multiple namespaces</a>,
+     * Verified Permissions currently supports only one namespace per policy store.
+     * </p>
+     * </note>
      * 
      * @param createPolicyStoreRequest
      * @param asyncHandler

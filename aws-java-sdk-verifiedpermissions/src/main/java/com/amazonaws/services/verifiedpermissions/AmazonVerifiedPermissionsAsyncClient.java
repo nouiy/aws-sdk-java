@@ -87,17 +87,17 @@ import java.util.concurrent.ExecutorService;
  * <ul>
  * <li>
  * <p>
- * Parameters that end in <code>Detail</code> are used in <code>Get</code> operations.
+ * Parameter type structures that end in <code>Detail</code> are used in <code>Get</code> operations.
  * </p>
  * </li>
  * <li>
  * <p>
- * Parameters that end in <code>Item</code> are used in <code>List</code> operations.
+ * Parameter type structures that end in <code>Item</code> are used in <code>List</code> operations.
  * </p>
  * </li>
  * <li>
  * <p>
- * Parameters that use neither suffix are used in the mutating (create and update) operations.
+ * Parameter type structures that use neither suffix are used in the mutating (create and update) operations.
  * </p>
  * </li>
  * </ul>
