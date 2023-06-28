@@ -1349,6 +1349,8 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
      *         The request throughput limit was exceeded. For more information, see <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html#api-requests">Lambda
      *         quotas</a>.
+     * @throws ResourceConflictException
+     *         The resource already exists, or another operation is in progress.
      * @throws ResourceInUseException
      *         The operation conflicts with the resource's availability. For example, you tried to update an event
      *         source mapping in the CREATING state, or you tried to delete an event source mapping currently UPDATING.
@@ -1405,7 +1407,8 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
     /**
      * <p>
      * Deletes a Lambda function. To delete a specific function version, use the <code>Qualifier</code> parameter.
-     * Otherwise, all versions and aliases are deleted.
+     * Otherwise, all versions and aliases are deleted. This doesn't require the user to have explicit permissions for
+     * <a>DeleteAlias</a>.
      * </p>
      * <p>
      * To delete Lambda event source mappings that invoke a function, use <a>DeleteEventSourceMapping</a>. For Amazon

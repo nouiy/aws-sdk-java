@@ -41,7 +41,7 @@ public class DomainMembership implements Serializable, Cloneable {
     private String status;
     /**
      * <p>
-     * The fully qualified domain name of the Active Directory Domain.
+     * The fully qualified domain name (FQDN) of the Active Directory Domain.
      * </p>
      */
     private String fQDN;
@@ -51,6 +51,24 @@ public class DomainMembership implements Serializable, Cloneable {
      * </p>
      */
     private String iAMRoleName;
+    /**
+     * <p>
+     * The Active Directory organizational unit for your DB instance to join.
+     * </p>
+     */
+    private String oU;
+    /**
+     * <p>
+     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * </p>
+     */
+    private String authSecretArn;
+    /**
+     * <p>
+     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> dnsIps;
 
     /**
      * <p>
@@ -140,11 +158,11 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The fully qualified domain name of the Active Directory Domain.
+     * The fully qualified domain name (FQDN) of the Active Directory Domain.
      * </p>
      * 
      * @param fQDN
-     *        The fully qualified domain name of the Active Directory Domain.
+     *        The fully qualified domain name (FQDN) of the Active Directory Domain.
      */
 
     public void setFQDN(String fQDN) {
@@ -153,10 +171,10 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The fully qualified domain name of the Active Directory Domain.
+     * The fully qualified domain name (FQDN) of the Active Directory Domain.
      * </p>
      * 
-     * @return The fully qualified domain name of the Active Directory Domain.
+     * @return The fully qualified domain name (FQDN) of the Active Directory Domain.
      */
 
     public String getFQDN() {
@@ -165,11 +183,11 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The fully qualified domain name of the Active Directory Domain.
+     * The fully qualified domain name (FQDN) of the Active Directory Domain.
      * </p>
      * 
      * @param fQDN
-     *        The fully qualified domain name of the Active Directory Domain.
+     *        The fully qualified domain name (FQDN) of the Active Directory Domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -219,6 +237,162 @@ public class DomainMembership implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The Active Directory organizational unit for your DB instance to join.
+     * </p>
+     * 
+     * @param oU
+     *        The Active Directory organizational unit for your DB instance to join.
+     */
+
+    public void setOU(String oU) {
+        this.oU = oU;
+    }
+
+    /**
+     * <p>
+     * The Active Directory organizational unit for your DB instance to join.
+     * </p>
+     * 
+     * @return The Active Directory organizational unit for your DB instance to join.
+     */
+
+    public String getOU() {
+        return this.oU;
+    }
+
+    /**
+     * <p>
+     * The Active Directory organizational unit for your DB instance to join.
+     * </p>
+     * 
+     * @param oU
+     *        The Active Directory organizational unit for your DB instance to join.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DomainMembership withOU(String oU) {
+        setOU(oU);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * </p>
+     * 
+     * @param authSecretArn
+     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
+     *        join.
+     */
+
+    public void setAuthSecretArn(String authSecretArn) {
+        this.authSecretArn = authSecretArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * </p>
+     * 
+     * @return The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
+     *         join.
+     */
+
+    public String getAuthSecretArn() {
+        return this.authSecretArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * </p>
+     * 
+     * @param authSecretArn
+     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
+     *        join.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DomainMembership withAuthSecretArn(String authSecretArn) {
+        setAuthSecretArn(authSecretArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * </p>
+     * 
+     * @return The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     */
+
+    public java.util.List<String> getDnsIps() {
+        if (dnsIps == null) {
+            dnsIps = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return dnsIps;
+    }
+
+    /**
+     * <p>
+     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * </p>
+     * 
+     * @param dnsIps
+     *        The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     */
+
+    public void setDnsIps(java.util.Collection<String> dnsIps) {
+        if (dnsIps == null) {
+            this.dnsIps = null;
+            return;
+        }
+
+        this.dnsIps = new com.amazonaws.internal.SdkInternalList<String>(dnsIps);
+    }
+
+    /**
+     * <p>
+     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDnsIps(java.util.Collection)} or {@link #withDnsIps(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param dnsIps
+     *        The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DomainMembership withDnsIps(String... dnsIps) {
+        if (this.dnsIps == null) {
+            setDnsIps(new com.amazonaws.internal.SdkInternalList<String>(dnsIps.length));
+        }
+        for (String ele : dnsIps) {
+            this.dnsIps.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * </p>
+     * 
+     * @param dnsIps
+     *        The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DomainMembership withDnsIps(java.util.Collection<String> dnsIps) {
+        setDnsIps(dnsIps);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -237,7 +411,13 @@ public class DomainMembership implements Serializable, Cloneable {
         if (getFQDN() != null)
             sb.append("FQDN: ").append(getFQDN()).append(",");
         if (getIAMRoleName() != null)
-            sb.append("IAMRoleName: ").append(getIAMRoleName());
+            sb.append("IAMRoleName: ").append(getIAMRoleName()).append(",");
+        if (getOU() != null)
+            sb.append("OU: ").append(getOU()).append(",");
+        if (getAuthSecretArn() != null)
+            sb.append("AuthSecretArn: ").append(getAuthSecretArn()).append(",");
+        if (getDnsIps() != null)
+            sb.append("DnsIps: ").append(getDnsIps());
         sb.append("}");
         return sb.toString();
     }
@@ -268,6 +448,18 @@ public class DomainMembership implements Serializable, Cloneable {
             return false;
         if (other.getIAMRoleName() != null && other.getIAMRoleName().equals(this.getIAMRoleName()) == false)
             return false;
+        if (other.getOU() == null ^ this.getOU() == null)
+            return false;
+        if (other.getOU() != null && other.getOU().equals(this.getOU()) == false)
+            return false;
+        if (other.getAuthSecretArn() == null ^ this.getAuthSecretArn() == null)
+            return false;
+        if (other.getAuthSecretArn() != null && other.getAuthSecretArn().equals(this.getAuthSecretArn()) == false)
+            return false;
+        if (other.getDnsIps() == null ^ this.getDnsIps() == null)
+            return false;
+        if (other.getDnsIps() != null && other.getDnsIps().equals(this.getDnsIps()) == false)
+            return false;
         return true;
     }
 
@@ -280,6 +472,9 @@ public class DomainMembership implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getFQDN() == null) ? 0 : getFQDN().hashCode());
         hashCode = prime * hashCode + ((getIAMRoleName() == null) ? 0 : getIAMRoleName().hashCode());
+        hashCode = prime * hashCode + ((getOU() == null) ? 0 : getOU().hashCode());
+        hashCode = prime * hashCode + ((getAuthSecretArn() == null) ? 0 : getAuthSecretArn().hashCode());
+        hashCode = prime * hashCode + ((getDnsIps() == null) ? 0 : getDnsIps().hashCode());
         return hashCode;
     }
 

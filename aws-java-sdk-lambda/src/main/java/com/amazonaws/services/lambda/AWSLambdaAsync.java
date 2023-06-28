@@ -882,7 +882,8 @@ public interface AWSLambdaAsync extends AWSLambda {
     /**
      * <p>
      * Deletes a Lambda function. To delete a specific function version, use the <code>Qualifier</code> parameter.
-     * Otherwise, all versions and aliases are deleted.
+     * Otherwise, all versions and aliases are deleted. This doesn't require the user to have explicit permissions for
+     * <a>DeleteAlias</a>.
      * </p>
      * <p>
      * To delete Lambda event source mappings that invoke a function, use <a>DeleteEventSourceMapping</a>. For Amazon
@@ -901,7 +902,8 @@ public interface AWSLambdaAsync extends AWSLambda {
     /**
      * <p>
      * Deletes a Lambda function. To delete a specific function version, use the <code>Qualifier</code> parameter.
-     * Otherwise, all versions and aliases are deleted.
+     * Otherwise, all versions and aliases are deleted. This doesn't require the user to have explicit permissions for
+     * <a>DeleteAlias</a>.
      * </p>
      * <p>
      * To delete Lambda event source mappings that invoke a function, use <a>DeleteEventSourceMapping</a>. For Amazon

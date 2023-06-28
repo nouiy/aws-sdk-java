@@ -209,6 +209,32 @@ public class CreateDBInstanceRequestMarshaller implements Marshaller<Request<Cre
             request.addParameter("Domain", StringUtils.fromString(createDBInstanceRequest.getDomain()));
         }
 
+        if (createDBInstanceRequest.getDomainFqdn() != null) {
+            request.addParameter("DomainFqdn", StringUtils.fromString(createDBInstanceRequest.getDomainFqdn()));
+        }
+
+        if (createDBInstanceRequest.getDomainOu() != null) {
+            request.addParameter("DomainOu", StringUtils.fromString(createDBInstanceRequest.getDomainOu()));
+        }
+
+        if (createDBInstanceRequest.getDomainAuthSecretArn() != null) {
+            request.addParameter("DomainAuthSecretArn", StringUtils.fromString(createDBInstanceRequest.getDomainAuthSecretArn()));
+        }
+
+        if (!createDBInstanceRequest.getDomainDnsIps().isEmpty()
+                || !((com.amazonaws.internal.SdkInternalList<String>) createDBInstanceRequest.getDomainDnsIps()).isAutoConstruct()) {
+            com.amazonaws.internal.SdkInternalList<String> domainDnsIpsList = (com.amazonaws.internal.SdkInternalList<String>) createDBInstanceRequest
+                    .getDomainDnsIps();
+            int domainDnsIpsListIndex = 1;
+
+            for (String domainDnsIpsListValue : domainDnsIpsList) {
+                if (domainDnsIpsListValue != null) {
+                    request.addParameter("DomainDnsIps.member." + domainDnsIpsListIndex, StringUtils.fromString(domainDnsIpsListValue));
+                }
+                domainDnsIpsListIndex++;
+            }
+        }
+
         if (createDBInstanceRequest.getCopyTagsToSnapshot() != null) {
             request.addParameter("CopyTagsToSnapshot", StringUtils.fromBoolean(createDBInstanceRequest.getCopyTagsToSnapshot()));
         }

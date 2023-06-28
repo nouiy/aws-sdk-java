@@ -86,6 +86,15 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private Integer trafficPercentageToMonitor;
+    /**
+     * <p>
+     * Defines the health event threshold percentages, for performance score and availability score. Internet Monitor
+     * creates a health event when there's an internet issue that affects your application end users where a health
+     * score percentage is at or below a set threshold. If you don't set a health event threshold, the default calue is
+     * 95%.
+     * </p>
+     */
+    private HealthEventsConfig healthEventsConfig;
 
     /**
      * <p>
@@ -556,6 +565,64 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * Defines the health event threshold percentages, for performance score and availability score. Internet Monitor
+     * creates a health event when there's an internet issue that affects your application end users where a health
+     * score percentage is at or below a set threshold. If you don't set a health event threshold, the default calue is
+     * 95%.
+     * </p>
+     * 
+     * @param healthEventsConfig
+     *        Defines the health event threshold percentages, for performance score and availability score. Internet
+     *        Monitor creates a health event when there's an internet issue that affects your application end users
+     *        where a health score percentage is at or below a set threshold. If you don't set a health event threshold,
+     *        the default calue is 95%.
+     */
+
+    public void setHealthEventsConfig(HealthEventsConfig healthEventsConfig) {
+        this.healthEventsConfig = healthEventsConfig;
+    }
+
+    /**
+     * <p>
+     * Defines the health event threshold percentages, for performance score and availability score. Internet Monitor
+     * creates a health event when there's an internet issue that affects your application end users where a health
+     * score percentage is at or below a set threshold. If you don't set a health event threshold, the default calue is
+     * 95%.
+     * </p>
+     * 
+     * @return Defines the health event threshold percentages, for performance score and availability score. Internet
+     *         Monitor creates a health event when there's an internet issue that affects your application end users
+     *         where a health score percentage is at or below a set threshold. If you don't set a health event
+     *         threshold, the default calue is 95%.
+     */
+
+    public HealthEventsConfig getHealthEventsConfig() {
+        return this.healthEventsConfig;
+    }
+
+    /**
+     * <p>
+     * Defines the health event threshold percentages, for performance score and availability score. Internet Monitor
+     * creates a health event when there's an internet issue that affects your application end users where a health
+     * score percentage is at or below a set threshold. If you don't set a health event threshold, the default calue is
+     * 95%.
+     * </p>
+     * 
+     * @param healthEventsConfig
+     *        Defines the health event threshold percentages, for performance score and availability score. Internet
+     *        Monitor creates a health event when there's an internet issue that affects your application end users
+     *        where a health score percentage is at or below a set threshold. If you don't set a health event threshold,
+     *        the default calue is 95%.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateMonitorRequest withHealthEventsConfig(HealthEventsConfig healthEventsConfig) {
+        setHealthEventsConfig(healthEventsConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -580,7 +647,9 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getInternetMeasurementsLogDelivery() != null)
             sb.append("InternetMeasurementsLogDelivery: ").append(getInternetMeasurementsLogDelivery()).append(",");
         if (getTrafficPercentageToMonitor() != null)
-            sb.append("TrafficPercentageToMonitor: ").append(getTrafficPercentageToMonitor());
+            sb.append("TrafficPercentageToMonitor: ").append(getTrafficPercentageToMonitor()).append(",");
+        if (getHealthEventsConfig() != null)
+            sb.append("HealthEventsConfig: ").append(getHealthEventsConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -624,6 +693,10 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getTrafficPercentageToMonitor() != null && other.getTrafficPercentageToMonitor().equals(this.getTrafficPercentageToMonitor()) == false)
             return false;
+        if (other.getHealthEventsConfig() == null ^ this.getHealthEventsConfig() == null)
+            return false;
+        if (other.getHealthEventsConfig() != null && other.getHealthEventsConfig().equals(this.getHealthEventsConfig()) == false)
+            return false;
         return true;
     }
 
@@ -639,6 +712,7 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getMaxCityNetworksToMonitor() == null) ? 0 : getMaxCityNetworksToMonitor().hashCode());
         hashCode = prime * hashCode + ((getInternetMeasurementsLogDelivery() == null) ? 0 : getInternetMeasurementsLogDelivery().hashCode());
         hashCode = prime * hashCode + ((getTrafficPercentageToMonitor() == null) ? 0 : getTrafficPercentageToMonitor().hashCode());
+        hashCode = prime * hashCode + ((getHealthEventsConfig() == null) ? 0 : getHealthEventsConfig().hashCode());
         return hashCode;
     }
 

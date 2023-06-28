@@ -37,14 +37,16 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     private String uUID;
     /**
      * <p>
-     * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon
-     * MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams and Amazon DocumentDB.
+     * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Stream
+     * event sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams, Amazon DocumentDB, Amazon
+     * MSK, and self-managed Apache Kafka.
      * </p>
      */
     private String startingPosition;
     /**
      * <p>
      * With <code>StartingPosition</code> set to <code>AT_TIMESTAMP</code>, the time from which to start reading.
+     * <code>StartingPositionTimestamp</code> cannot be in the future.
      * </p>
      */
     private java.util.Date startingPositionTimestamp;
@@ -276,14 +278,15 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon
-     * MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams and Amazon DocumentDB.
+     * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Stream
+     * event sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams, Amazon DocumentDB, Amazon
+     * MSK, and self-managed Apache Kafka.
      * </p>
      * 
      * @param startingPosition
-     *        The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and
-     *        Amazon MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams and
-     *        Amazon DocumentDB.
+     *        The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB
+     *        Stream event sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams, Amazon
+     *        DocumentDB, Amazon MSK, and self-managed Apache Kafka.
      * @see EventSourcePosition
      */
 
@@ -293,13 +296,14 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon
-     * MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams and Amazon DocumentDB.
+     * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Stream
+     * event sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams, Amazon DocumentDB, Amazon
+     * MSK, and self-managed Apache Kafka.
      * </p>
      * 
-     * @return The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and
-     *         Amazon MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams and
-     *         Amazon DocumentDB.
+     * @return The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB
+     *         Stream event sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams, Amazon
+     *         DocumentDB, Amazon MSK, and self-managed Apache Kafka.
      * @see EventSourcePosition
      */
 
@@ -309,14 +313,15 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon
-     * MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams and Amazon DocumentDB.
+     * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Stream
+     * event sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams, Amazon DocumentDB, Amazon
+     * MSK, and self-managed Apache Kafka.
      * </p>
      * 
      * @param startingPosition
-     *        The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and
-     *        Amazon MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams and
-     *        Amazon DocumentDB.
+     *        The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB
+     *        Stream event sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams, Amazon
+     *        DocumentDB, Amazon MSK, and self-managed Apache Kafka.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventSourcePosition
      */
@@ -328,14 +333,15 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon
-     * MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams and Amazon DocumentDB.
+     * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Stream
+     * event sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams, Amazon DocumentDB, Amazon
+     * MSK, and self-managed Apache Kafka.
      * </p>
      * 
      * @param startingPosition
-     *        The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and
-     *        Amazon MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams and
-     *        Amazon DocumentDB.
+     *        The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB
+     *        Stream event sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams, Amazon
+     *        DocumentDB, Amazon MSK, and self-managed Apache Kafka.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventSourcePosition
      */
@@ -348,10 +354,12 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * With <code>StartingPosition</code> set to <code>AT_TIMESTAMP</code>, the time from which to start reading.
+     * <code>StartingPositionTimestamp</code> cannot be in the future.
      * </p>
      * 
      * @param startingPositionTimestamp
      *        With <code>StartingPosition</code> set to <code>AT_TIMESTAMP</code>, the time from which to start reading.
+     *        <code>StartingPositionTimestamp</code> cannot be in the future.
      */
 
     public void setStartingPositionTimestamp(java.util.Date startingPositionTimestamp) {
@@ -361,10 +369,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * With <code>StartingPosition</code> set to <code>AT_TIMESTAMP</code>, the time from which to start reading.
+     * <code>StartingPositionTimestamp</code> cannot be in the future.
      * </p>
      * 
      * @return With <code>StartingPosition</code> set to <code>AT_TIMESTAMP</code>, the time from which to start
-     *         reading.
+     *         reading. <code>StartingPositionTimestamp</code> cannot be in the future.
      */
 
     public java.util.Date getStartingPositionTimestamp() {
@@ -374,10 +383,12 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * With <code>StartingPosition</code> set to <code>AT_TIMESTAMP</code>, the time from which to start reading.
+     * <code>StartingPositionTimestamp</code> cannot be in the future.
      * </p>
      * 
      * @param startingPositionTimestamp
      *        With <code>StartingPosition</code> set to <code>AT_TIMESTAMP</code>, the time from which to start reading.
+     *        <code>StartingPositionTimestamp</code> cannot be in the future.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

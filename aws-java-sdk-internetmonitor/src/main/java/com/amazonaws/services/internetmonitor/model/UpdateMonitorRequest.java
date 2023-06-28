@@ -89,6 +89,14 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private Integer trafficPercentageToMonitor;
+    /**
+     * <p>
+     * The list of health event thresholds. A health event threshold percentage, for performance and availability,
+     * determines when Internet Monitor creates a health event when there's an internet issue that affects your
+     * application end users.
+     * </p>
+     */
+    private HealthEventsConfig healthEventsConfig;
 
     /**
      * <p>
@@ -609,6 +617,58 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The list of health event thresholds. A health event threshold percentage, for performance and availability,
+     * determines when Internet Monitor creates a health event when there's an internet issue that affects your
+     * application end users.
+     * </p>
+     * 
+     * @param healthEventsConfig
+     *        The list of health event thresholds. A health event threshold percentage, for performance and
+     *        availability, determines when Internet Monitor creates a health event when there's an internet issue that
+     *        affects your application end users.
+     */
+
+    public void setHealthEventsConfig(HealthEventsConfig healthEventsConfig) {
+        this.healthEventsConfig = healthEventsConfig;
+    }
+
+    /**
+     * <p>
+     * The list of health event thresholds. A health event threshold percentage, for performance and availability,
+     * determines when Internet Monitor creates a health event when there's an internet issue that affects your
+     * application end users.
+     * </p>
+     * 
+     * @return The list of health event thresholds. A health event threshold percentage, for performance and
+     *         availability, determines when Internet Monitor creates a health event when there's an internet issue that
+     *         affects your application end users.
+     */
+
+    public HealthEventsConfig getHealthEventsConfig() {
+        return this.healthEventsConfig;
+    }
+
+    /**
+     * <p>
+     * The list of health event thresholds. A health event threshold percentage, for performance and availability,
+     * determines when Internet Monitor creates a health event when there's an internet issue that affects your
+     * application end users.
+     * </p>
+     * 
+     * @param healthEventsConfig
+     *        The list of health event thresholds. A health event threshold percentage, for performance and
+     *        availability, determines when Internet Monitor creates a health event when there's an internet issue that
+     *        affects your application end users.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateMonitorRequest withHealthEventsConfig(HealthEventsConfig healthEventsConfig) {
+        setHealthEventsConfig(healthEventsConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -635,7 +695,9 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getInternetMeasurementsLogDelivery() != null)
             sb.append("InternetMeasurementsLogDelivery: ").append(getInternetMeasurementsLogDelivery()).append(",");
         if (getTrafficPercentageToMonitor() != null)
-            sb.append("TrafficPercentageToMonitor: ").append(getTrafficPercentageToMonitor());
+            sb.append("TrafficPercentageToMonitor: ").append(getTrafficPercentageToMonitor()).append(",");
+        if (getHealthEventsConfig() != null)
+            sb.append("HealthEventsConfig: ").append(getHealthEventsConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -683,6 +745,10 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getTrafficPercentageToMonitor() != null && other.getTrafficPercentageToMonitor().equals(this.getTrafficPercentageToMonitor()) == false)
             return false;
+        if (other.getHealthEventsConfig() == null ^ this.getHealthEventsConfig() == null)
+            return false;
+        if (other.getHealthEventsConfig() != null && other.getHealthEventsConfig().equals(this.getHealthEventsConfig()) == false)
+            return false;
         return true;
     }
 
@@ -699,6 +765,7 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getMaxCityNetworksToMonitor() == null) ? 0 : getMaxCityNetworksToMonitor().hashCode());
         hashCode = prime * hashCode + ((getInternetMeasurementsLogDelivery() == null) ? 0 : getInternetMeasurementsLogDelivery().hashCode());
         hashCode = prime * hashCode + ((getTrafficPercentageToMonitor() == null) ? 0 : getTrafficPercentageToMonitor().hashCode());
+        hashCode = prime * hashCode + ((getHealthEventsConfig() == null) ? 0 : getHealthEventsConfig().hashCode());
         return hashCode;
     }
 

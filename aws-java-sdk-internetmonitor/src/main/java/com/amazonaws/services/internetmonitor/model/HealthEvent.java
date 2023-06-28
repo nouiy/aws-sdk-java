@@ -88,6 +88,13 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String impactType;
+    /**
+     * <p>
+     * The value of the threshold percentage for performance or availability that was configured when Amazon CloudWatch
+     * Internet Monitor created the health event.
+     * </p>
+     */
+    private Double healthScoreThreshold;
 
     /**
      * <p>
@@ -558,6 +565,52 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The value of the threshold percentage for performance or availability that was configured when Amazon CloudWatch
+     * Internet Monitor created the health event.
+     * </p>
+     * 
+     * @param healthScoreThreshold
+     *        The value of the threshold percentage for performance or availability that was configured when Amazon
+     *        CloudWatch Internet Monitor created the health event.
+     */
+
+    public void setHealthScoreThreshold(Double healthScoreThreshold) {
+        this.healthScoreThreshold = healthScoreThreshold;
+    }
+
+    /**
+     * <p>
+     * The value of the threshold percentage for performance or availability that was configured when Amazon CloudWatch
+     * Internet Monitor created the health event.
+     * </p>
+     * 
+     * @return The value of the threshold percentage for performance or availability that was configured when Amazon
+     *         CloudWatch Internet Monitor created the health event.
+     */
+
+    public Double getHealthScoreThreshold() {
+        return this.healthScoreThreshold;
+    }
+
+    /**
+     * <p>
+     * The value of the threshold percentage for performance or availability that was configured when Amazon CloudWatch
+     * Internet Monitor created the health event.
+     * </p>
+     * 
+     * @param healthScoreThreshold
+     *        The value of the threshold percentage for performance or availability that was configured when Amazon
+     *        CloudWatch Internet Monitor created the health event.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HealthEvent withHealthScoreThreshold(Double healthScoreThreshold) {
+        setHealthScoreThreshold(healthScoreThreshold);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -588,7 +641,9 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
         if (getPercentOfTotalTrafficImpacted() != null)
             sb.append("PercentOfTotalTrafficImpacted: ").append(getPercentOfTotalTrafficImpacted()).append(",");
         if (getImpactType() != null)
-            sb.append("ImpactType: ").append(getImpactType());
+            sb.append("ImpactType: ").append(getImpactType()).append(",");
+        if (getHealthScoreThreshold() != null)
+            sb.append("HealthScoreThreshold: ").append(getHealthScoreThreshold());
         sb.append("}");
         return sb.toString();
     }
@@ -644,6 +699,10 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getImpactType() != null && other.getImpactType().equals(this.getImpactType()) == false)
             return false;
+        if (other.getHealthScoreThreshold() == null ^ this.getHealthScoreThreshold() == null)
+            return false;
+        if (other.getHealthScoreThreshold() != null && other.getHealthScoreThreshold().equals(this.getHealthScoreThreshold()) == false)
+            return false;
         return true;
     }
 
@@ -662,6 +721,7 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getPercentOfTotalTrafficImpacted() == null) ? 0 : getPercentOfTotalTrafficImpacted().hashCode());
         hashCode = prime * hashCode + ((getImpactType() == null) ? 0 : getImpactType().hashCode());
+        hashCode = prime * hashCode + ((getHealthScoreThreshold() == null) ? 0 : getHealthScoreThreshold().hashCode());
         return hashCode;
     }
 

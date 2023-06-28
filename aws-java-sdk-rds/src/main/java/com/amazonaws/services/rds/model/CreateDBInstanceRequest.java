@@ -1321,6 +1321,78 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private String domain;
     /**
      * <p>
+     * Specifies the fully qualified domain name of an Active Directory domain.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Cannot be greater than 64 characters.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
+     * </p>
+     */
+    private String domainFqdn;
+    /**
+     * <p>
+     * The Active Directory organizational unit for your DB instance to join.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Must be in the distinguished name format.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot be greater than 64 characters.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>OU=mymanagedADtestOU,DC=mymanagedADtest,DC=mymanagedAD,DC=mydomain</code>
+     * </p>
+     */
+    private String domainOu;
+    /**
+     * <p>
+     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * </p>
+     * <p>
+     * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
+     * </p>
+     */
+    private String domainAuthSecretArn;
+    /**
+     * <p>
+     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Two IP addresses must be provided. If there isn't a secondary domain controller, use the IP address of the
+     * primary domain controller for both entries in the list.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>123.124.125.126,234.235.236.237</code>
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> domainDnsIps;
+    /**
+     * <p>
      * Spcifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
      * copied.
      * </p>
@@ -10316,6 +10388,506 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
+     * Specifies the fully qualified domain name of an Active Directory domain.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Cannot be greater than 64 characters.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
+     * </p>
+     * 
+     * @param domainFqdn
+     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Cannot be greater than 64 characters.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
+     */
+
+    public void setDomainFqdn(String domainFqdn) {
+        this.domainFqdn = domainFqdn;
+    }
+
+    /**
+     * <p>
+     * Specifies the fully qualified domain name of an Active Directory domain.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Cannot be greater than 64 characters.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
+     * </p>
+     * 
+     * @return Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *         <p>
+     *         Constraints:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Cannot be greater than 64 characters.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
+     */
+
+    public String getDomainFqdn() {
+        return this.domainFqdn;
+    }
+
+    /**
+     * <p>
+     * Specifies the fully qualified domain name of an Active Directory domain.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Cannot be greater than 64 characters.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
+     * </p>
+     * 
+     * @param domainFqdn
+     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Cannot be greater than 64 characters.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceRequest withDomainFqdn(String domainFqdn) {
+        setDomainFqdn(domainFqdn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Active Directory organizational unit for your DB instance to join.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Must be in the distinguished name format.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot be greater than 64 characters.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>OU=mymanagedADtestOU,DC=mymanagedADtest,DC=mymanagedAD,DC=mydomain</code>
+     * </p>
+     * 
+     * @param domainOu
+     *        The Active Directory organizational unit for your DB instance to join.</p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Must be in the distinguished name format.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Cannot be greater than 64 characters.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Example: <code>OU=mymanagedADtestOU,DC=mymanagedADtest,DC=mymanagedAD,DC=mydomain</code>
+     */
+
+    public void setDomainOu(String domainOu) {
+        this.domainOu = domainOu;
+    }
+
+    /**
+     * <p>
+     * The Active Directory organizational unit for your DB instance to join.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Must be in the distinguished name format.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot be greater than 64 characters.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>OU=mymanagedADtestOU,DC=mymanagedADtest,DC=mymanagedAD,DC=mydomain</code>
+     * </p>
+     * 
+     * @return The Active Directory organizational unit for your DB instance to join.</p>
+     *         <p>
+     *         Constraints:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Must be in the distinguished name format.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Cannot be greater than 64 characters.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Example: <code>OU=mymanagedADtestOU,DC=mymanagedADtest,DC=mymanagedAD,DC=mydomain</code>
+     */
+
+    public String getDomainOu() {
+        return this.domainOu;
+    }
+
+    /**
+     * <p>
+     * The Active Directory organizational unit for your DB instance to join.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Must be in the distinguished name format.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cannot be greater than 64 characters.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>OU=mymanagedADtestOU,DC=mymanagedADtest,DC=mymanagedAD,DC=mydomain</code>
+     * </p>
+     * 
+     * @param domainOu
+     *        The Active Directory organizational unit for your DB instance to join.</p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Must be in the distinguished name format.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Cannot be greater than 64 characters.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Example: <code>OU=mymanagedADtestOU,DC=mymanagedADtest,DC=mymanagedAD,DC=mydomain</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceRequest withDomainOu(String domainOu) {
+        setDomainOu(domainOu);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * </p>
+     * <p>
+     * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
+     * </p>
+     * 
+     * @param domainAuthSecretArn
+     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
+     *        join.</p>
+     *        <p>
+     *        Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
+     */
+
+    public void setDomainAuthSecretArn(String domainAuthSecretArn) {
+        this.domainAuthSecretArn = domainAuthSecretArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * </p>
+     * <p>
+     * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
+     * </p>
+     * 
+     * @return The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
+     *         join.</p>
+     *         <p>
+     *         Example:
+     *         <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
+     */
+
+    public String getDomainAuthSecretArn() {
+        return this.domainAuthSecretArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * </p>
+     * <p>
+     * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
+     * </p>
+     * 
+     * @param domainAuthSecretArn
+     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
+     *        join.</p>
+     *        <p>
+     *        Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceRequest withDomainAuthSecretArn(String domainAuthSecretArn) {
+        setDomainAuthSecretArn(domainAuthSecretArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Two IP addresses must be provided. If there isn't a secondary domain controller, use the IP address of the
+     * primary domain controller for both entries in the list.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>123.124.125.126,234.235.236.237</code>
+     * </p>
+     * 
+     * @return The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.</p>
+     *         <p>
+     *         Constraints:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Two IP addresses must be provided. If there isn't a secondary domain controller, use the IP address of
+     *         the primary domain controller for both entries in the list.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Example: <code>123.124.125.126,234.235.236.237</code>
+     */
+
+    public java.util.List<String> getDomainDnsIps() {
+        if (domainDnsIps == null) {
+            domainDnsIps = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return domainDnsIps;
+    }
+
+    /**
+     * <p>
+     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Two IP addresses must be provided. If there isn't a secondary domain controller, use the IP address of the
+     * primary domain controller for both entries in the list.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>123.124.125.126,234.235.236.237</code>
+     * </p>
+     * 
+     * @param domainDnsIps
+     *        The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.</p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Two IP addresses must be provided. If there isn't a secondary domain controller, use the IP address of the
+     *        primary domain controller for both entries in the list.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Example: <code>123.124.125.126,234.235.236.237</code>
+     */
+
+    public void setDomainDnsIps(java.util.Collection<String> domainDnsIps) {
+        if (domainDnsIps == null) {
+            this.domainDnsIps = null;
+            return;
+        }
+
+        this.domainDnsIps = new com.amazonaws.internal.SdkInternalList<String>(domainDnsIps);
+    }
+
+    /**
+     * <p>
+     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Two IP addresses must be provided. If there isn't a secondary domain controller, use the IP address of the
+     * primary domain controller for both entries in the list.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>123.124.125.126,234.235.236.237</code>
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDomainDnsIps(java.util.Collection)} or {@link #withDomainDnsIps(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param domainDnsIps
+     *        The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.</p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Two IP addresses must be provided. If there isn't a secondary domain controller, use the IP address of the
+     *        primary domain controller for both entries in the list.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Example: <code>123.124.125.126,234.235.236.237</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceRequest withDomainDnsIps(String... domainDnsIps) {
+        if (this.domainDnsIps == null) {
+            setDomainDnsIps(new com.amazonaws.internal.SdkInternalList<String>(domainDnsIps.length));
+        }
+        for (String ele : domainDnsIps) {
+            this.domainDnsIps.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Two IP addresses must be provided. If there isn't a secondary domain controller, use the IP address of the
+     * primary domain controller for both entries in the list.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>123.124.125.126,234.235.236.237</code>
+     * </p>
+     * 
+     * @param domainDnsIps
+     *        The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.</p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Two IP addresses must be provided. If there isn't a secondary domain controller, use the IP address of the
+     *        primary domain controller for both entries in the list.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Example: <code>123.124.125.126,234.235.236.237</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceRequest withDomainDnsIps(java.util.Collection<String> domainDnsIps) {
+        setDomainDnsIps(domainDnsIps);
+        return this;
+    }
+
+    /**
+     * <p>
      * Spcifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
      * copied.
      * </p>
@@ -13608,6 +14180,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
             sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
         if (getDomain() != null)
             sb.append("Domain: ").append(getDomain()).append(",");
+        if (getDomainFqdn() != null)
+            sb.append("DomainFqdn: ").append(getDomainFqdn()).append(",");
+        if (getDomainOu() != null)
+            sb.append("DomainOu: ").append(getDomainOu()).append(",");
+        if (getDomainAuthSecretArn() != null)
+            sb.append("DomainAuthSecretArn: ").append(getDomainAuthSecretArn()).append(",");
+        if (getDomainDnsIps() != null)
+            sb.append("DomainDnsIps: ").append(getDomainDnsIps()).append(",");
         if (getCopyTagsToSnapshot() != null)
             sb.append("CopyTagsToSnapshot: ").append(getCopyTagsToSnapshot()).append(",");
         if (getMonitoringInterval() != null)
@@ -13798,6 +14378,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getDomain() != null && other.getDomain().equals(this.getDomain()) == false)
             return false;
+        if (other.getDomainFqdn() == null ^ this.getDomainFqdn() == null)
+            return false;
+        if (other.getDomainFqdn() != null && other.getDomainFqdn().equals(this.getDomainFqdn()) == false)
+            return false;
+        if (other.getDomainOu() == null ^ this.getDomainOu() == null)
+            return false;
+        if (other.getDomainOu() != null && other.getDomainOu().equals(this.getDomainOu()) == false)
+            return false;
+        if (other.getDomainAuthSecretArn() == null ^ this.getDomainAuthSecretArn() == null)
+            return false;
+        if (other.getDomainAuthSecretArn() != null && other.getDomainAuthSecretArn().equals(this.getDomainAuthSecretArn()) == false)
+            return false;
+        if (other.getDomainDnsIps() == null ^ this.getDomainDnsIps() == null)
+            return false;
+        if (other.getDomainDnsIps() != null && other.getDomainDnsIps().equals(this.getDomainDnsIps()) == false)
+            return false;
         if (other.getCopyTagsToSnapshot() == null ^ this.getCopyTagsToSnapshot() == null)
             return false;
         if (other.getCopyTagsToSnapshot() != null && other.getCopyTagsToSnapshot().equals(this.getCopyTagsToSnapshot()) == false)
@@ -13929,6 +14525,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getStorageEncrypted() == null) ? 0 : getStorageEncrypted().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getDomain() == null) ? 0 : getDomain().hashCode());
+        hashCode = prime * hashCode + ((getDomainFqdn() == null) ? 0 : getDomainFqdn().hashCode());
+        hashCode = prime * hashCode + ((getDomainOu() == null) ? 0 : getDomainOu().hashCode());
+        hashCode = prime * hashCode + ((getDomainAuthSecretArn() == null) ? 0 : getDomainAuthSecretArn().hashCode());
+        hashCode = prime * hashCode + ((getDomainDnsIps() == null) ? 0 : getDomainDnsIps().hashCode());
         hashCode = prime * hashCode + ((getCopyTagsToSnapshot() == null) ? 0 : getCopyTagsToSnapshot().hashCode());
         hashCode = prime * hashCode + ((getMonitoringInterval() == null) ? 0 : getMonitoringInterval().hashCode());
         hashCode = prime * hashCode + ((getMonitoringRoleArn() == null) ? 0 : getMonitoringRoleArn().hashCode());

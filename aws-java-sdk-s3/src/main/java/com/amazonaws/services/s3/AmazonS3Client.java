@@ -884,6 +884,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         addParameterIfNotNull(request, "key-marker", listVersionsRequest.getKeyMarker());
         addParameterIfNotNull(request, "version-id-marker", listVersionsRequest.getVersionIdMarker());
         addParameterIfNotNull(request, "delimiter", listVersionsRequest.getDelimiter());
+        addStringListHeader(request, Headers.OPTIONAL_OBJECT_ATTRIBUTE, listVersionsRequest.getOptionalObjectAttributes());
 
         if (listVersionsRequest.getMaxResults() != null && listVersionsRequest.getMaxResults() >= 0) request.addParameter("max-keys", listVersionsRequest.getMaxResults().toString());
         request.addParameter("encoding-type", shouldSDKDecodeResponse ? Constants.URL_ENCODING : listVersionsRequest.getEncodingType());
@@ -931,6 +932,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         addParameterIfNotNull(request, "prefix", listObjectsRequest.getPrefix());
         addParameterIfNotNull(request, "marker", listObjectsRequest.getMarker());
         addParameterIfNotNull(request, "delimiter", listObjectsRequest.getDelimiter());
+        addStringListHeader(request, Headers.OPTIONAL_OBJECT_ATTRIBUTE, listObjectsRequest.getOptionalObjectAttributes());
         if (listObjectsRequest.getMaxKeys() != null && listObjectsRequest.getMaxKeys().intValue() >= 0) request.addParameter("max-keys", listObjectsRequest.getMaxKeys().toString());
         request.addParameter("encoding-type", shouldSDKDecodeResponse ? Constants.URL_ENCODING : listObjectsRequest.getEncodingType());
 
@@ -978,6 +980,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         addParameterIfNotNull(request, "max-keys", listObjectsV2Request.getMaxKeys());
         addParameterIfNotNull(request, "prefix", listObjectsV2Request.getPrefix());
         addParameterIfNotNull(request, "encoding-type", listObjectsV2Request.getEncodingType());
+        addStringListHeader(request, Headers.OPTIONAL_OBJECT_ATTRIBUTE, listObjectsV2Request.getOptionalObjectAttributes());
         request.addParameter("fetch-owner", Boolean.toString(listObjectsV2Request.isFetchOwner()));
 
         populateRequesterPaysHeader(request, listObjectsV2Request.isRequesterPays());
