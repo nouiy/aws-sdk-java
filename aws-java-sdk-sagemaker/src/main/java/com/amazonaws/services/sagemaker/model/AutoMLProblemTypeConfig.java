@@ -47,6 +47,12 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
      * </p>
      */
     private TabularJobConfig tabularJobConfig;
+    /**
+     * <p>
+     * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     * </p>
+     */
+    private TimeSeriesForecastingJobConfig timeSeriesForecastingJobConfig;
 
     /**
      * <p>
@@ -169,6 +175,46 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     * </p>
+     * 
+     * @param timeSeriesForecastingJobConfig
+     *        Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     */
+
+    public void setTimeSeriesForecastingJobConfig(TimeSeriesForecastingJobConfig timeSeriesForecastingJobConfig) {
+        this.timeSeriesForecastingJobConfig = timeSeriesForecastingJobConfig;
+    }
+
+    /**
+     * <p>
+     * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     * </p>
+     * 
+     * @return Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     */
+
+    public TimeSeriesForecastingJobConfig getTimeSeriesForecastingJobConfig() {
+        return this.timeSeriesForecastingJobConfig;
+    }
+
+    /**
+     * <p>
+     * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     * </p>
+     * 
+     * @param timeSeriesForecastingJobConfig
+     *        Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutoMLProblemTypeConfig withTimeSeriesForecastingJobConfig(TimeSeriesForecastingJobConfig timeSeriesForecastingJobConfig) {
+        setTimeSeriesForecastingJobConfig(timeSeriesForecastingJobConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -185,7 +231,9 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
         if (getTextClassificationJobConfig() != null)
             sb.append("TextClassificationJobConfig: ").append(getTextClassificationJobConfig()).append(",");
         if (getTabularJobConfig() != null)
-            sb.append("TabularJobConfig: ").append(getTabularJobConfig());
+            sb.append("TabularJobConfig: ").append(getTabularJobConfig()).append(",");
+        if (getTimeSeriesForecastingJobConfig() != null)
+            sb.append("TimeSeriesForecastingJobConfig: ").append(getTimeSeriesForecastingJobConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -212,6 +260,11 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
             return false;
         if (other.getTabularJobConfig() != null && other.getTabularJobConfig().equals(this.getTabularJobConfig()) == false)
             return false;
+        if (other.getTimeSeriesForecastingJobConfig() == null ^ this.getTimeSeriesForecastingJobConfig() == null)
+            return false;
+        if (other.getTimeSeriesForecastingJobConfig() != null
+                && other.getTimeSeriesForecastingJobConfig().equals(this.getTimeSeriesForecastingJobConfig()) == false)
+            return false;
         return true;
     }
 
@@ -223,6 +276,7 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getImageClassificationJobConfig() == null) ? 0 : getImageClassificationJobConfig().hashCode());
         hashCode = prime * hashCode + ((getTextClassificationJobConfig() == null) ? 0 : getTextClassificationJobConfig().hashCode());
         hashCode = prime * hashCode + ((getTabularJobConfig() == null) ? 0 : getTabularJobConfig().hashCode());
+        hashCode = prime * hashCode + ((getTimeSeriesForecastingJobConfig() == null) ? 0 : getTimeSeriesForecastingJobConfig().hashCode());
         return hashCode;
     }
 

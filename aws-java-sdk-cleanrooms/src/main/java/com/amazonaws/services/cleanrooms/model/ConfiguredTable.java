@@ -54,7 +54,7 @@ public class ConfiguredTable implements Serializable, Cloneable, StructuredPojo 
     private String description;
     /**
      * <p>
-     * The AWS Glue table that this configured table represents.
+     * The Glue table that this configured table represents.
      * </p>
      */
     private TableReference tableReference;
@@ -85,7 +85,7 @@ public class ConfiguredTable implements Serializable, Cloneable, StructuredPojo 
     private String analysisMethod;
     /**
      * <p>
-     * The columns within the underlying AWS Glue table that can be utilized within collaborations.
+     * The columns within the underlying Glue table that can be utilized within collaborations.
      * </p>
      */
     private java.util.List<String> allowedColumns;
@@ -252,11 +252,11 @@ public class ConfiguredTable implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The AWS Glue table that this configured table represents.
+     * The Glue table that this configured table represents.
      * </p>
      * 
      * @param tableReference
-     *        The AWS Glue table that this configured table represents.
+     *        The Glue table that this configured table represents.
      */
 
     public void setTableReference(TableReference tableReference) {
@@ -265,10 +265,10 @@ public class ConfiguredTable implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The AWS Glue table that this configured table represents.
+     * The Glue table that this configured table represents.
      * </p>
      * 
-     * @return The AWS Glue table that this configured table represents.
+     * @return The Glue table that this configured table represents.
      */
 
     public TableReference getTableReference() {
@@ -277,11 +277,11 @@ public class ConfiguredTable implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The AWS Glue table that this configured table represents.
+     * The Glue table that this configured table represents.
      * </p>
      * 
      * @param tableReference
-     *        The AWS Glue table that this configured table represents.
+     *        The Glue table that this configured table represents.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -539,10 +539,10 @@ public class ConfiguredTable implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The columns within the underlying AWS Glue table that can be utilized within collaborations.
+     * The columns within the underlying Glue table that can be utilized within collaborations.
      * </p>
      * 
-     * @return The columns within the underlying AWS Glue table that can be utilized within collaborations.
+     * @return The columns within the underlying Glue table that can be utilized within collaborations.
      */
 
     public java.util.List<String> getAllowedColumns() {
@@ -551,11 +551,11 @@ public class ConfiguredTable implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The columns within the underlying AWS Glue table that can be utilized within collaborations.
+     * The columns within the underlying Glue table that can be utilized within collaborations.
      * </p>
      * 
      * @param allowedColumns
-     *        The columns within the underlying AWS Glue table that can be utilized within collaborations.
+     *        The columns within the underlying Glue table that can be utilized within collaborations.
      */
 
     public void setAllowedColumns(java.util.Collection<String> allowedColumns) {
@@ -569,7 +569,7 @@ public class ConfiguredTable implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The columns within the underlying AWS Glue table that can be utilized within collaborations.
+     * The columns within the underlying Glue table that can be utilized within collaborations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -578,7 +578,7 @@ public class ConfiguredTable implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param allowedColumns
-     *        The columns within the underlying AWS Glue table that can be utilized within collaborations.
+     *        The columns within the underlying Glue table that can be utilized within collaborations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -594,11 +594,11 @@ public class ConfiguredTable implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The columns within the underlying AWS Glue table that can be utilized within collaborations.
+     * The columns within the underlying Glue table that can be utilized within collaborations.
      * </p>
      * 
      * @param allowedColumns
-     *        The columns within the underlying AWS Glue table that can be utilized within collaborations.
+     *        The columns within the underlying Glue table that can be utilized within collaborations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

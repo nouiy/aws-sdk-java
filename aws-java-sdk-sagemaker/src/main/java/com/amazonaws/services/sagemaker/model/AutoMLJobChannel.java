@@ -36,6 +36,11 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <code>training</code>. Channels for <code>training</code> and <code>validation</code> must share the same
      * <code>ContentType</code>
      * </p>
+     * <note>
+     * <p>
+     * The type of channel defaults to <code>training</code> for the time-series forecasting problem type.
+     * </p>
+     * </note>
      */
     private String channelType;
     /**
@@ -46,20 +51,26 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * For Tabular problem types: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
+     * For tabular problem types: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
      * The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default
+     * For image classification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default
      * value is <code>image/*</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For TextClassification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
+     * For text classification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
      * The default value is <code>text/csv;header=present</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting: <code>text/csv;header=present</code> or
+     * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
      * </ul>
@@ -86,11 +97,19 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <code>training</code>. Channels for <code>training</code> and <code>validation</code> must share the same
      * <code>ContentType</code>
      * </p>
+     * <note>
+     * <p>
+     * The type of channel defaults to <code>training</code> for the time-series forecasting problem type.
+     * </p>
+     * </note>
      * 
      * @param channelType
      *        The type of channel. Defines whether the data are used for training or validation. The default value is
      *        <code>training</code>. Channels for <code>training</code> and <code>validation</code> must share the same
-     *        <code>ContentType</code>
+     *        <code>ContentType</code> </p> <note>
+     *        <p>
+     *        The type of channel defaults to <code>training</code> for the time-series forecasting problem type.
+     *        </p>
      * @see AutoMLChannelType
      */
 
@@ -104,10 +123,18 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <code>training</code>. Channels for <code>training</code> and <code>validation</code> must share the same
      * <code>ContentType</code>
      * </p>
+     * <note>
+     * <p>
+     * The type of channel defaults to <code>training</code> for the time-series forecasting problem type.
+     * </p>
+     * </note>
      * 
      * @return The type of channel. Defines whether the data are used for training or validation. The default value is
      *         <code>training</code>. Channels for <code>training</code> and <code>validation</code> must share the same
-     *         <code>ContentType</code>
+     *         <code>ContentType</code> </p> <note>
+     *         <p>
+     *         The type of channel defaults to <code>training</code> for the time-series forecasting problem type.
+     *         </p>
      * @see AutoMLChannelType
      */
 
@@ -121,11 +148,19 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <code>training</code>. Channels for <code>training</code> and <code>validation</code> must share the same
      * <code>ContentType</code>
      * </p>
+     * <note>
+     * <p>
+     * The type of channel defaults to <code>training</code> for the time-series forecasting problem type.
+     * </p>
+     * </note>
      * 
      * @param channelType
      *        The type of channel. Defines whether the data are used for training or validation. The default value is
      *        <code>training</code>. Channels for <code>training</code> and <code>validation</code> must share the same
-     *        <code>ContentType</code>
+     *        <code>ContentType</code> </p> <note>
+     *        <p>
+     *        The type of channel defaults to <code>training</code> for the time-series forecasting problem type.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoMLChannelType
      */
@@ -141,11 +176,19 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <code>training</code>. Channels for <code>training</code> and <code>validation</code> must share the same
      * <code>ContentType</code>
      * </p>
+     * <note>
+     * <p>
+     * The type of channel defaults to <code>training</code> for the time-series forecasting problem type.
+     * </p>
+     * </note>
      * 
      * @param channelType
      *        The type of channel. Defines whether the data are used for training or validation. The default value is
      *        <code>training</code>. Channels for <code>training</code> and <code>validation</code> must share the same
-     *        <code>ContentType</code>
+     *        <code>ContentType</code> </p> <note>
+     *        <p>
+     *        The type of channel defaults to <code>training</code> for the time-series forecasting problem type.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoMLChannelType
      */
@@ -163,20 +206,26 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * For Tabular problem types: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
+     * For tabular problem types: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
      * The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default
+     * For image classification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default
      * value is <code>image/*</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For TextClassification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
+     * For text classification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
      * The default value is <code>text/csv;header=present</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting: <code>text/csv;header=present</code> or
+     * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
      * </ul>
@@ -187,19 +236,25 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        For Tabular problem types: <code>text/csv;header=present</code> or
+     *        For tabular problem types: <code>text/csv;header=present</code> or
      *        <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The
+     *        For image classification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The
      *        default value is <code>image/*</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For TextClassification: <code>text/csv;header=present</code> or
+     *        For text classification: <code>text/csv;header=present</code> or
+     *        <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For time-series forecasting: <code>text/csv;header=present</code> or
      *        <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      *        </p>
      *        </li>
@@ -217,20 +272,26 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * For Tabular problem types: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
+     * For tabular problem types: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
      * The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default
+     * For image classification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default
      * value is <code>image/*</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For TextClassification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
+     * For text classification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
      * The default value is <code>text/csv;header=present</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting: <code>text/csv;header=present</code> or
+     * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
      * </ul>
@@ -240,19 +301,25 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         For Tabular problem types: <code>text/csv;header=present</code> or
+     *         For tabular problem types: <code>text/csv;header=present</code> or
      *         <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The
+     *         For image classification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The
      *         default value is <code>image/*</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For TextClassification: <code>text/csv;header=present</code> or
+     *         For text classification: <code>text/csv;header=present</code> or
+     *         <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For time-series forecasting: <code>text/csv;header=present</code> or
      *         <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      *         </p>
      *         </li>
@@ -270,20 +337,26 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * For Tabular problem types: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
+     * For tabular problem types: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
      * The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default
+     * For image classification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The default
      * value is <code>image/*</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For TextClassification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
+     * For text classification: <code>text/csv;header=present</code> or <code>x-application/vnd.amazon+parquet</code>.
      * The default value is <code>text/csv;header=present</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting: <code>text/csv;header=present</code> or
+     * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
      * </ul>
@@ -294,19 +367,25 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        For Tabular problem types: <code>text/csv;header=present</code> or
+     *        For tabular problem types: <code>text/csv;header=present</code> or
      *        <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For ImageClassification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The
+     *        For image classification: <code>image/png</code>, <code>image/jpeg</code>, or <code>image/*</code>. The
      *        default value is <code>image/*</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For TextClassification: <code>text/csv;header=present</code> or
+     *        For text classification: <code>text/csv;header=present</code> or
+     *        <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For time-series forecasting: <code>text/csv;header=present</code> or
      *        <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      *        </p>
      *        </li>

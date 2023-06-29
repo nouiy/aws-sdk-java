@@ -22,7 +22,8 @@ public enum AutoMLProblemTypeConfigName {
 
     ImageClassification("ImageClassification"),
     TextClassification("TextClassification"),
-    Tabular("Tabular");
+    Tabular("Tabular"),
+    TimeSeriesForecasting("TimeSeriesForecasting");
 
     private String value;
 

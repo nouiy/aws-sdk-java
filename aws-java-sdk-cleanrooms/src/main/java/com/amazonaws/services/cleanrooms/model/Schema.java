@@ -55,7 +55,7 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
     private String analysisMethod;
     /**
      * <p>
-     * The unique account ID for the AWS account that owns the schema.
+     * The unique account ID for the Amazon Web Services account that owns the schema.
      * </p>
      */
     private String creatorAccountId;
@@ -411,11 +411,11 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique account ID for the AWS account that owns the schema.
+     * The unique account ID for the Amazon Web Services account that owns the schema.
      * </p>
      * 
      * @param creatorAccountId
-     *        The unique account ID for the AWS account that owns the schema.
+     *        The unique account ID for the Amazon Web Services account that owns the schema.
      */
 
     public void setCreatorAccountId(String creatorAccountId) {
@@ -424,10 +424,10 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique account ID for the AWS account that owns the schema.
+     * The unique account ID for the Amazon Web Services account that owns the schema.
      * </p>
      * 
-     * @return The unique account ID for the AWS account that owns the schema.
+     * @return The unique account ID for the Amazon Web Services account that owns the schema.
      */
 
     public String getCreatorAccountId() {
@@ -436,11 +436,11 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique account ID for the AWS account that owns the schema.
+     * The unique account ID for the Amazon Web Services account that owns the schema.
      * </p>
      * 
      * @param creatorAccountId
-     *        The unique account ID for the AWS account that owns the schema.
+     *        The unique account ID for the Amazon Web Services account that owns the schema.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

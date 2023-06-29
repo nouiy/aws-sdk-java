@@ -54,7 +54,8 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
     private String collaborationId;
     /**
      * <p>
-     * The identifier used to reference members of the collaboration. Currently only supports AWS account ID.
+     * The identifier used to reference members of the collaboration. Currently only supports Amazon Web Services
+     * account ID.
      * </p>
      */
     private String collaborationCreatorAccountId;
@@ -263,11 +264,13 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier used to reference members of the collaboration. Currently only supports AWS account ID.
+     * The identifier used to reference members of the collaboration. Currently only supports Amazon Web Services
+     * account ID.
      * </p>
      * 
      * @param collaborationCreatorAccountId
-     *        The identifier used to reference members of the collaboration. Currently only supports AWS account ID.
+     *        The identifier used to reference members of the collaboration. Currently only supports Amazon Web Services
+     *        account ID.
      */
 
     public void setCollaborationCreatorAccountId(String collaborationCreatorAccountId) {
@@ -276,10 +279,12 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier used to reference members of the collaboration. Currently only supports AWS account ID.
+     * The identifier used to reference members of the collaboration. Currently only supports Amazon Web Services
+     * account ID.
      * </p>
      * 
-     * @return The identifier used to reference members of the collaboration. Currently only supports AWS account ID.
+     * @return The identifier used to reference members of the collaboration. Currently only supports Amazon Web
+     *         Services account ID.
      */
 
     public String getCollaborationCreatorAccountId() {
@@ -288,11 +293,13 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier used to reference members of the collaboration. Currently only supports AWS account ID.
+     * The identifier used to reference members of the collaboration. Currently only supports Amazon Web Services
+     * account ID.
      * </p>
      * 
      * @param collaborationCreatorAccountId
-     *        The identifier used to reference members of the collaboration. Currently only supports AWS account ID.
+     *        The identifier used to reference members of the collaboration. Currently only supports Amazon Web Services
+     *        account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

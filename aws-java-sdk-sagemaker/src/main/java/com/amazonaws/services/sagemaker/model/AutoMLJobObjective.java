@@ -70,6 +70,11 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * For image or text classification problem types: <code>Accuracy</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting problem types: <code>AverageWeightedQuantileLoss</code>
+     * </p>
+     * </li>
      * </ul>
      */
     private String metricName;
@@ -116,6 +121,11 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * For image or text classification problem types: <code>Accuracy</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting problem types: <code>AverageWeightedQuantileLoss</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param metricName
@@ -156,6 +166,11 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *        <li>
      *        <p>
      *        For image or text classification problem types: <code>Accuracy</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For time-series forecasting problem types: <code>AverageWeightedQuantileLoss</code>
      *        </p>
      *        </li>
      * @see AutoMLMetricEnum
@@ -207,6 +222,11 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * For image or text classification problem types: <code>Accuracy</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting problem types: <code>AverageWeightedQuantileLoss</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The name of the objective metric used to measure the predictive quality of a machine learning system.
@@ -246,6 +266,11 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *         <li>
      *         <p>
      *         For image or text classification problem types: <code>Accuracy</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For time-series forecasting problem types: <code>AverageWeightedQuantileLoss</code>
      *         </p>
      *         </li>
      * @see AutoMLMetricEnum
@@ -297,6 +322,11 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * For image or text classification problem types: <code>Accuracy</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting problem types: <code>AverageWeightedQuantileLoss</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param metricName
@@ -337,6 +367,11 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *        <li>
      *        <p>
      *        For image or text classification problem types: <code>Accuracy</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For time-series forecasting problem types: <code>AverageWeightedQuantileLoss</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -390,6 +425,11 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * For image or text classification problem types: <code>Accuracy</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting problem types: <code>AverageWeightedQuantileLoss</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param metricName
@@ -430,6 +470,11 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *        <li>
      *        <p>
      *        For image or text classification problem types: <code>Accuracy</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For time-series forecasting problem types: <code>AverageWeightedQuantileLoss</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

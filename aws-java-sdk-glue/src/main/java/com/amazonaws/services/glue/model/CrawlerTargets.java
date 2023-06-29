@@ -64,6 +64,12 @@ public class CrawlerTargets implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<DeltaTarget> deltaTargets;
+    /**
+     * <p>
+     * Specifies Apache Iceberg data store targets.
+     * </p>
+     */
+    private java.util.List<IcebergTarget> icebergTargets;
 
     /**
      * <p>
@@ -486,6 +492,76 @@ public class CrawlerTargets implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies Apache Iceberg data store targets.
+     * </p>
+     * 
+     * @return Specifies Apache Iceberg data store targets.
+     */
+
+    public java.util.List<IcebergTarget> getIcebergTargets() {
+        return icebergTargets;
+    }
+
+    /**
+     * <p>
+     * Specifies Apache Iceberg data store targets.
+     * </p>
+     * 
+     * @param icebergTargets
+     *        Specifies Apache Iceberg data store targets.
+     */
+
+    public void setIcebergTargets(java.util.Collection<IcebergTarget> icebergTargets) {
+        if (icebergTargets == null) {
+            this.icebergTargets = null;
+            return;
+        }
+
+        this.icebergTargets = new java.util.ArrayList<IcebergTarget>(icebergTargets);
+    }
+
+    /**
+     * <p>
+     * Specifies Apache Iceberg data store targets.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setIcebergTargets(java.util.Collection)} or {@link #withIcebergTargets(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param icebergTargets
+     *        Specifies Apache Iceberg data store targets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CrawlerTargets withIcebergTargets(IcebergTarget... icebergTargets) {
+        if (this.icebergTargets == null) {
+            setIcebergTargets(new java.util.ArrayList<IcebergTarget>(icebergTargets.length));
+        }
+        for (IcebergTarget ele : icebergTargets) {
+            this.icebergTargets.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies Apache Iceberg data store targets.
+     * </p>
+     * 
+     * @param icebergTargets
+     *        Specifies Apache Iceberg data store targets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CrawlerTargets withIcebergTargets(java.util.Collection<IcebergTarget> icebergTargets) {
+        setIcebergTargets(icebergTargets);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -508,7 +584,9 @@ public class CrawlerTargets implements Serializable, Cloneable, StructuredPojo {
         if (getCatalogTargets() != null)
             sb.append("CatalogTargets: ").append(getCatalogTargets()).append(",");
         if (getDeltaTargets() != null)
-            sb.append("DeltaTargets: ").append(getDeltaTargets());
+            sb.append("DeltaTargets: ").append(getDeltaTargets()).append(",");
+        if (getIcebergTargets() != null)
+            sb.append("IcebergTargets: ").append(getIcebergTargets());
         sb.append("}");
         return sb.toString();
     }
@@ -547,6 +625,10 @@ public class CrawlerTargets implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDeltaTargets() != null && other.getDeltaTargets().equals(this.getDeltaTargets()) == false)
             return false;
+        if (other.getIcebergTargets() == null ^ this.getIcebergTargets() == null)
+            return false;
+        if (other.getIcebergTargets() != null && other.getIcebergTargets().equals(this.getIcebergTargets()) == false)
+            return false;
         return true;
     }
 
@@ -561,6 +643,7 @@ public class CrawlerTargets implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getDynamoDBTargets() == null) ? 0 : getDynamoDBTargets().hashCode());
         hashCode = prime * hashCode + ((getCatalogTargets() == null) ? 0 : getCatalogTargets().hashCode());
         hashCode = prime * hashCode + ((getDeltaTargets() == null) ? 0 : getDeltaTargets().hashCode());
+        hashCode = prime * hashCode + ((getIcebergTargets() == null) ? 0 : getIcebergTargets().hashCode());
         return hashCode;
     }
 

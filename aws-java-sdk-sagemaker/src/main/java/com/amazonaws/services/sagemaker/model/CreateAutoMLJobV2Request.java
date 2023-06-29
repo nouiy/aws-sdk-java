@@ -42,17 +42,22 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * <ul>
      * <li>
      * <p>
-     * For Tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
+     * For tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ImageClassification: <code>S3Prefix</code>, <code>ManifestFile</code>, <code>AugmentedManifestFile</code>.
+     * For image classification: <code>S3Prefix</code>, <code>ManifestFile</code>, <code>AugmentedManifestFile</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For TextClassification: <code>S3Prefix</code>.
+     * For text classification: <code>S3Prefix</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting: <code>S3Prefix</code>.
      * </p>
      * </li>
      * </ul>
@@ -121,6 +126,12 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * The validation and training datasets must contain the same headers. For jobs created by calling
      * <code>CreateAutoMLJob</code>, the validation dataset must be less than 2 GB in size.
      * </p>
+     * <note>
+     * <p>
+     * This attribute must not be set for the time-series forecasting problem type, as Autopilot automatically splits
+     * the input dataset into training and validation sets.
+     * </p>
+     * </note>
      */
     private AutoMLDataSplitConfig dataSplitConfig;
 
@@ -175,17 +186,22 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * <ul>
      * <li>
      * <p>
-     * For Tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
+     * For tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ImageClassification: <code>S3Prefix</code>, <code>ManifestFile</code>, <code>AugmentedManifestFile</code>.
+     * For image classification: <code>S3Prefix</code>, <code>ManifestFile</code>, <code>AugmentedManifestFile</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For TextClassification: <code>S3Prefix</code>.
+     * For text classification: <code>S3Prefix</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting: <code>S3Prefix</code>.
      * </p>
      * </li>
      * </ul>
@@ -198,18 +214,23 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *         <ul>
      *         <li>
      *         <p>
-     *         For Tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
+     *         For tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For ImageClassification: <code>S3Prefix</code>, <code>ManifestFile</code>,
+     *         For image classification: <code>S3Prefix</code>, <code>ManifestFile</code>,
      *         <code>AugmentedManifestFile</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For TextClassification: <code>S3Prefix</code>.
+     *         For text classification: <code>S3Prefix</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For time-series forecasting: <code>S3Prefix</code>.
      *         </p>
      *         </li>
      */
@@ -229,17 +250,22 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * <ul>
      * <li>
      * <p>
-     * For Tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
+     * For tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ImageClassification: <code>S3Prefix</code>, <code>ManifestFile</code>, <code>AugmentedManifestFile</code>.
+     * For image classification: <code>S3Prefix</code>, <code>ManifestFile</code>, <code>AugmentedManifestFile</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For TextClassification: <code>S3Prefix</code>.
+     * For text classification: <code>S3Prefix</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting: <code>S3Prefix</code>.
      * </p>
      * </li>
      * </ul>
@@ -253,18 +279,23 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        <ul>
      *        <li>
      *        <p>
-     *        For Tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
+     *        For tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For ImageClassification: <code>S3Prefix</code>, <code>ManifestFile</code>,
+     *        For image classification: <code>S3Prefix</code>, <code>ManifestFile</code>,
      *        <code>AugmentedManifestFile</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For TextClassification: <code>S3Prefix</code>.
+     *        For text classification: <code>S3Prefix</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For time-series forecasting: <code>S3Prefix</code>.
      *        </p>
      *        </li>
      */
@@ -289,17 +320,22 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * <ul>
      * <li>
      * <p>
-     * For Tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
+     * For tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ImageClassification: <code>S3Prefix</code>, <code>ManifestFile</code>, <code>AugmentedManifestFile</code>.
+     * For image classification: <code>S3Prefix</code>, <code>ManifestFile</code>, <code>AugmentedManifestFile</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For TextClassification: <code>S3Prefix</code>.
+     * For text classification: <code>S3Prefix</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting: <code>S3Prefix</code>.
      * </p>
      * </li>
      * </ul>
@@ -318,18 +354,23 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        <ul>
      *        <li>
      *        <p>
-     *        For Tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
+     *        For tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For ImageClassification: <code>S3Prefix</code>, <code>ManifestFile</code>,
+     *        For image classification: <code>S3Prefix</code>, <code>ManifestFile</code>,
      *        <code>AugmentedManifestFile</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For TextClassification: <code>S3Prefix</code>.
+     *        For text classification: <code>S3Prefix</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For time-series forecasting: <code>S3Prefix</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -356,17 +397,22 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * <ul>
      * <li>
      * <p>
-     * For Tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
+     * For tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ImageClassification: <code>S3Prefix</code>, <code>ManifestFile</code>, <code>AugmentedManifestFile</code>.
+     * For image classification: <code>S3Prefix</code>, <code>ManifestFile</code>, <code>AugmentedManifestFile</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For TextClassification: <code>S3Prefix</code>.
+     * For text classification: <code>S3Prefix</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For time-series forecasting: <code>S3Prefix</code>.
      * </p>
      * </li>
      * </ul>
@@ -380,18 +426,23 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        <ul>
      *        <li>
      *        <p>
-     *        For Tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
+     *        For tabular problem types: <code>S3Prefix</code>, <code>ManifestFile</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For ImageClassification: <code>S3Prefix</code>, <code>ManifestFile</code>,
+     *        For image classification: <code>S3Prefix</code>, <code>ManifestFile</code>,
      *        <code>AugmentedManifestFile</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For TextClassification: <code>S3Prefix</code>.
+     *        For text classification: <code>S3Prefix</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For time-series forecasting: <code>S3Prefix</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -801,12 +852,24 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * The validation and training datasets must contain the same headers. For jobs created by calling
      * <code>CreateAutoMLJob</code>, the validation dataset must be less than 2 GB in size.
      * </p>
+     * <note>
+     * <p>
+     * This attribute must not be set for the time-series forecasting problem type, as Autopilot automatically splits
+     * the input dataset into training and validation sets.
+     * </p>
+     * </note>
      * 
      * @param dataSplitConfig
      *        This structure specifies how to split the data into train and validation datasets.</p>
      *        <p>
      *        The validation and training datasets must contain the same headers. For jobs created by calling
      *        <code>CreateAutoMLJob</code>, the validation dataset must be less than 2 GB in size.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This attribute must not be set for the time-series forecasting problem type, as Autopilot automatically
+     *        splits the input dataset into training and validation sets.
+     *        </p>
      */
 
     public void setDataSplitConfig(AutoMLDataSplitConfig dataSplitConfig) {
@@ -821,11 +884,23 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * The validation and training datasets must contain the same headers. For jobs created by calling
      * <code>CreateAutoMLJob</code>, the validation dataset must be less than 2 GB in size.
      * </p>
+     * <note>
+     * <p>
+     * This attribute must not be set for the time-series forecasting problem type, as Autopilot automatically splits
+     * the input dataset into training and validation sets.
+     * </p>
+     * </note>
      * 
      * @return This structure specifies how to split the data into train and validation datasets.</p>
      *         <p>
      *         The validation and training datasets must contain the same headers. For jobs created by calling
      *         <code>CreateAutoMLJob</code>, the validation dataset must be less than 2 GB in size.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         This attribute must not be set for the time-series forecasting problem type, as Autopilot automatically
+     *         splits the input dataset into training and validation sets.
+     *         </p>
      */
 
     public AutoMLDataSplitConfig getDataSplitConfig() {
@@ -840,12 +915,24 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * The validation and training datasets must contain the same headers. For jobs created by calling
      * <code>CreateAutoMLJob</code>, the validation dataset must be less than 2 GB in size.
      * </p>
+     * <note>
+     * <p>
+     * This attribute must not be set for the time-series forecasting problem type, as Autopilot automatically splits
+     * the input dataset into training and validation sets.
+     * </p>
+     * </note>
      * 
      * @param dataSplitConfig
      *        This structure specifies how to split the data into train and validation datasets.</p>
      *        <p>
      *        The validation and training datasets must contain the same headers. For jobs created by calling
      *        <code>CreateAutoMLJob</code>, the validation dataset must be less than 2 GB in size.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This attribute must not be set for the time-series forecasting problem type, as Autopilot automatically
+     *        splits the input dataset into training and validation sets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

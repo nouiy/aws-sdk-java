@@ -276,7 +276,7 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * before being disconnected. After this time elapses, the instance is terminated and replaced by a new instance.
      * </p>
      * <p>
-     * Specify a value between 600 and 360000.
+     * Specify a value between 600 and 432000.
      * </p>
      */
     private Integer maxUserDurationInSeconds;
@@ -1899,7 +1899,7 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * before being disconnected. After this time elapses, the instance is terminated and replaced by a new instance.
      * </p>
      * <p>
-     * Specify a value between 600 and 360000.
+     * Specify a value between 600 and 432000.
      * </p>
      * 
      * @param maxUserDurationInSeconds
@@ -1908,7 +1908,7 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        open documents before being disconnected. After this time elapses, the instance is terminated and replaced
      *        by a new instance.</p>
      *        <p>
-     *        Specify a value between 600 and 360000.
+     *        Specify a value between 600 and 432000.
      */
 
     public void setMaxUserDurationInSeconds(Integer maxUserDurationInSeconds) {
@@ -1922,7 +1922,7 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * before being disconnected. After this time elapses, the instance is terminated and replaced by a new instance.
      * </p>
      * <p>
-     * Specify a value between 600 and 360000.
+     * Specify a value between 600 and 432000.
      * </p>
      * 
      * @return The maximum amount of time that a streaming session can remain active, in seconds. If users are still
@@ -1930,7 +1930,7 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         any open documents before being disconnected. After this time elapses, the instance is terminated and
      *         replaced by a new instance.</p>
      *         <p>
-     *         Specify a value between 600 and 360000.
+     *         Specify a value between 600 and 432000.
      */
 
     public Integer getMaxUserDurationInSeconds() {
@@ -1944,7 +1944,7 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * before being disconnected. After this time elapses, the instance is terminated and replaced by a new instance.
      * </p>
      * <p>
-     * Specify a value between 600 and 360000.
+     * Specify a value between 600 and 432000.
      * </p>
      * 
      * @param maxUserDurationInSeconds
@@ -1953,7 +1953,7 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        open documents before being disconnected. After this time elapses, the instance is terminated and replaced
      *        by a new instance.</p>
      *        <p>
-     *        Specify a value between 600 and 360000.
+     *        Specify a value between 600 and 432000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

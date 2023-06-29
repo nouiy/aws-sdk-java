@@ -34,7 +34,11 @@ public enum AutoMLMetricExtendedEnum {
     Recall("Recall"),
     RecallMacro("RecallMacro"),
     LogLoss("LogLoss"),
-    InferenceLatency("InferenceLatency");
+    InferenceLatency("InferenceLatency"),
+    MAPE("MAPE"),
+    MASE("MASE"),
+    WAPE("WAPE"),
+    AverageWeightedQuantileLoss("AverageWeightedQuantileLoss");
 
     private String value;
 

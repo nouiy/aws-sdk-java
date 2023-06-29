@@ -84,6 +84,12 @@ public class CrawlerTargetsJsonUnmarshaller implements Unmarshaller<CrawlerTarge
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("IcebergTargets", targetDepth)) {
+                    context.nextToken();
+                    crawlerTargets.setIcebergTargets(new ListUnmarshaller<IcebergTarget>(IcebergTargetJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
