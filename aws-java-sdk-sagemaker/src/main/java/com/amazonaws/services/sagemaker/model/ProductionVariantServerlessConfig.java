@@ -46,6 +46,14 @@ public class ProductionVariantServerlessConfig implements Serializable, Cloneabl
      * The amount of provisioned concurrency to allocate for the serverless endpoint. Should be less than or equal to
      * <code>MaxConcurrency</code>.
      * </p>
+     * <note>
+     * <p>
+     * This field is not supported for serverless endpoint recommendations for Inference Recommender jobs. For more
+     * information about creating an Inference Recommender job, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceRecommendationsJob.html"
+     * >CreateInferenceRecommendationsJobs</a>.
+     * </p>
+     * </note>
      */
     private Integer provisionedConcurrency;
 
@@ -140,10 +148,24 @@ public class ProductionVariantServerlessConfig implements Serializable, Cloneabl
      * The amount of provisioned concurrency to allocate for the serverless endpoint. Should be less than or equal to
      * <code>MaxConcurrency</code>.
      * </p>
+     * <note>
+     * <p>
+     * This field is not supported for serverless endpoint recommendations for Inference Recommender jobs. For more
+     * information about creating an Inference Recommender job, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceRecommendationsJob.html"
+     * >CreateInferenceRecommendationsJobs</a>.
+     * </p>
+     * </note>
      * 
      * @param provisionedConcurrency
      *        The amount of provisioned concurrency to allocate for the serverless endpoint. Should be less than or
-     *        equal to <code>MaxConcurrency</code>.
+     *        equal to <code>MaxConcurrency</code>.</p> <note>
+     *        <p>
+     *        This field is not supported for serverless endpoint recommendations for Inference Recommender jobs. For
+     *        more information about creating an Inference Recommender job, see <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceRecommendationsJob.html"
+     *        >CreateInferenceRecommendationsJobs</a>.
+     *        </p>
      */
 
     public void setProvisionedConcurrency(Integer provisionedConcurrency) {
@@ -155,9 +177,23 @@ public class ProductionVariantServerlessConfig implements Serializable, Cloneabl
      * The amount of provisioned concurrency to allocate for the serverless endpoint. Should be less than or equal to
      * <code>MaxConcurrency</code>.
      * </p>
+     * <note>
+     * <p>
+     * This field is not supported for serverless endpoint recommendations for Inference Recommender jobs. For more
+     * information about creating an Inference Recommender job, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceRecommendationsJob.html"
+     * >CreateInferenceRecommendationsJobs</a>.
+     * </p>
+     * </note>
      * 
      * @return The amount of provisioned concurrency to allocate for the serverless endpoint. Should be less than or
-     *         equal to <code>MaxConcurrency</code>.
+     *         equal to <code>MaxConcurrency</code>.</p> <note>
+     *         <p>
+     *         This field is not supported for serverless endpoint recommendations for Inference Recommender jobs. For
+     *         more information about creating an Inference Recommender job, see <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceRecommendationsJob.html"
+     *         >CreateInferenceRecommendationsJobs</a>.
+     *         </p>
      */
 
     public Integer getProvisionedConcurrency() {
@@ -169,10 +205,24 @@ public class ProductionVariantServerlessConfig implements Serializable, Cloneabl
      * The amount of provisioned concurrency to allocate for the serverless endpoint. Should be less than or equal to
      * <code>MaxConcurrency</code>.
      * </p>
+     * <note>
+     * <p>
+     * This field is not supported for serverless endpoint recommendations for Inference Recommender jobs. For more
+     * information about creating an Inference Recommender job, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceRecommendationsJob.html"
+     * >CreateInferenceRecommendationsJobs</a>.
+     * </p>
+     * </note>
      * 
      * @param provisionedConcurrency
      *        The amount of provisioned concurrency to allocate for the serverless endpoint. Should be less than or
-     *        equal to <code>MaxConcurrency</code>.
+     *        equal to <code>MaxConcurrency</code>.</p> <note>
+     *        <p>
+     *        This field is not supported for serverless endpoint recommendations for Inference Recommender jobs. For
+     *        more information about creating an Inference Recommender job, see <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceRecommendationsJob.html"
+     *        >CreateInferenceRecommendationsJobs</a>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,13 +28,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RollingUpdatePolicy implements Serializable, Cloneable, StructuredPojo {
 
-    /**
-     * <p>
-     * Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and
-     * terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total instance
-     * count.
-     * </p>
-     */
     private CapacitySize maximumBatchSize;
     /**
      * <p>
@@ -48,27 +41,11 @@ public class RollingUpdatePolicy implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private Integer maximumExecutionTimeoutInSeconds;
-    /**
-     * <p>
-     * Batch size for rollback to the old endpoint fleet. Each rolling step to provision capacity and turn on traffic on
-     * the old endpoint fleet, and terminate capacity on the new endpoint fleet. If this field is absent, the default
-     * value will be set to 100% of total capacity which means to bring up the whole capacity of the old fleet at once
-     * during rollback.
-     * </p>
-     */
+
     private CapacitySize rollbackMaximumBatchSize;
 
     /**
-     * <p>
-     * Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and
-     * terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total instance
-     * count.
-     * </p>
-     * 
      * @param maximumBatchSize
-     *        Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and
-     *        terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total
-     *        instance count.
      */
 
     public void setMaximumBatchSize(CapacitySize maximumBatchSize) {
@@ -76,15 +53,7 @@ public class RollingUpdatePolicy implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p>
-     * Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and
-     * terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total instance
-     * count.
-     * </p>
-     * 
-     * @return Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and
-     *         terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total
-     *         instance count.
+     * @return
      */
 
     public CapacitySize getMaximumBatchSize() {
@@ -92,16 +61,7 @@ public class RollingUpdatePolicy implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p>
-     * Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and
-     * terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total instance
-     * count.
-     * </p>
-     * 
      * @param maximumBatchSize
-     *        Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and
-     *        terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total
-     *        instance count.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -191,18 +151,7 @@ public class RollingUpdatePolicy implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p>
-     * Batch size for rollback to the old endpoint fleet. Each rolling step to provision capacity and turn on traffic on
-     * the old endpoint fleet, and terminate capacity on the new endpoint fleet. If this field is absent, the default
-     * value will be set to 100% of total capacity which means to bring up the whole capacity of the old fleet at once
-     * during rollback.
-     * </p>
-     * 
      * @param rollbackMaximumBatchSize
-     *        Batch size for rollback to the old endpoint fleet. Each rolling step to provision capacity and turn on
-     *        traffic on the old endpoint fleet, and terminate capacity on the new endpoint fleet. If this field is
-     *        absent, the default value will be set to 100% of total capacity which means to bring up the whole capacity
-     *        of the old fleet at once during rollback.
      */
 
     public void setRollbackMaximumBatchSize(CapacitySize rollbackMaximumBatchSize) {
@@ -210,17 +159,7 @@ public class RollingUpdatePolicy implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p>
-     * Batch size for rollback to the old endpoint fleet. Each rolling step to provision capacity and turn on traffic on
-     * the old endpoint fleet, and terminate capacity on the new endpoint fleet. If this field is absent, the default
-     * value will be set to 100% of total capacity which means to bring up the whole capacity of the old fleet at once
-     * during rollback.
-     * </p>
-     * 
-     * @return Batch size for rollback to the old endpoint fleet. Each rolling step to provision capacity and turn on
-     *         traffic on the old endpoint fleet, and terminate capacity on the new endpoint fleet. If this field is
-     *         absent, the default value will be set to 100% of total capacity which means to bring up the whole
-     *         capacity of the old fleet at once during rollback.
+     * @return
      */
 
     public CapacitySize getRollbackMaximumBatchSize() {
@@ -228,18 +167,7 @@ public class RollingUpdatePolicy implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * <p>
-     * Batch size for rollback to the old endpoint fleet. Each rolling step to provision capacity and turn on traffic on
-     * the old endpoint fleet, and terminate capacity on the new endpoint fleet. If this field is absent, the default
-     * value will be set to 100% of total capacity which means to bring up the whole capacity of the old fleet at once
-     * during rollback.
-     * </p>
-     * 
      * @param rollbackMaximumBatchSize
-     *        Batch size for rollback to the old endpoint fleet. Each rolling step to provision capacity and turn on
-     *        traffic on the old endpoint fleet, and terminate capacity on the new endpoint fleet. If this field is
-     *        absent, the default value will be set to 100% of total capacity which means to bring up the whole capacity
-     *        of the old fleet at once during rollback.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

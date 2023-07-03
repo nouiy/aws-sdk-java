@@ -1,3 +1,12 @@
+# __1.12.501__ __2023-07-03__
+## __AWS Batch__
+  - ### Features
+    - This feature allows customers to use AWS Batch with Linux with ARM64 CPU Architecture and X86_64 CPU Architecture with Windows OS on Fargate Platform.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - SageMaker Inference Recommender now accepts new fields SupportedEndpointType and ServerlessConfiguration to support serverless endpoints.
+
 # __1.12.500__ __2023-06-30__
 ## __AWS Elemental MediaConvert__
   - ### Features

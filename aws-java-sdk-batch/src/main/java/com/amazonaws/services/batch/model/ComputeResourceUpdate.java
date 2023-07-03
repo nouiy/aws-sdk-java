@@ -32,7 +32,7 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The minimum number of Amazon EC2 vCPUs that an environment should maintain (even if the compute environment is
+     * The minimum number of vCPUs that an environment should maintain (even if the compute environment is
      * <code>DISABLED</code>).
      * </p>
      * <note>
@@ -59,8 +59,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
     private Integer maxvCpus;
     /**
      * <p>
-     * The desired number of Amazon EC2 vCPUS in the compute environment. Batch modifies this value between the minimum
-     * and maximum values based on job queue demand.
+     * The desired number of vCPUS in the compute environment. Batch modifies this value between the minimum and maximum
+     * values based on job queue demand.
      * </p>
      * <note>
      * <p>
@@ -434,7 +434,7 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The minimum number of Amazon EC2 vCPUs that an environment should maintain (even if the compute environment is
+     * The minimum number of vCPUs that an environment should maintain (even if the compute environment is
      * <code>DISABLED</code>).
      * </p>
      * <note>
@@ -444,8 +444,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * </note>
      * 
      * @param minvCpus
-     *        The minimum number of Amazon EC2 vCPUs that an environment should maintain (even if the compute
-     *        environment is <code>DISABLED</code>).</p> <note>
+     *        The minimum number of vCPUs that an environment should maintain (even if the compute environment is
+     *        <code>DISABLED</code>).</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      *        </p>
@@ -457,7 +457,7 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The minimum number of Amazon EC2 vCPUs that an environment should maintain (even if the compute environment is
+     * The minimum number of vCPUs that an environment should maintain (even if the compute environment is
      * <code>DISABLED</code>).
      * </p>
      * <note>
@@ -466,8 +466,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * </p>
      * </note>
      * 
-     * @return The minimum number of Amazon EC2 vCPUs that an environment should maintain (even if the compute
-     *         environment is <code>DISABLED</code>).</p> <note>
+     * @return The minimum number of vCPUs that an environment should maintain (even if the compute environment is
+     *         <code>DISABLED</code>).</p> <note>
      *         <p>
      *         This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      *         </p>
@@ -479,7 +479,7 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The minimum number of Amazon EC2 vCPUs that an environment should maintain (even if the compute environment is
+     * The minimum number of vCPUs that an environment should maintain (even if the compute environment is
      * <code>DISABLED</code>).
      * </p>
      * <note>
@@ -489,8 +489,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * </note>
      * 
      * @param minvCpus
-     *        The minimum number of Amazon EC2 vCPUs that an environment should maintain (even if the compute
-     *        environment is <code>DISABLED</code>).</p> <note>
+     *        The minimum number of vCPUs that an environment should maintain (even if the compute environment is
+     *        <code>DISABLED</code>).</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      *        </p>
@@ -592,8 +592,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The desired number of Amazon EC2 vCPUS in the compute environment. Batch modifies this value between the minimum
-     * and maximum values based on job queue demand.
+     * The desired number of vCPUS in the compute environment. Batch modifies this value between the minimum and maximum
+     * values based on job queue demand.
      * </p>
      * <note>
      * <p>
@@ -618,8 +618,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * </note>
      * 
      * @param desiredvCpus
-     *        The desired number of Amazon EC2 vCPUS in the compute environment. Batch modifies this value between the
-     *        minimum and maximum values based on job queue demand.</p> <note>
+     *        The desired number of vCPUS in the compute environment. Batch modifies this value between the minimum and
+     *        maximum values based on job queue demand.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      *        </p>
@@ -647,8 +647,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The desired number of Amazon EC2 vCPUS in the compute environment. Batch modifies this value between the minimum
-     * and maximum values based on job queue demand.
+     * The desired number of vCPUS in the compute environment. Batch modifies this value between the minimum and maximum
+     * values based on job queue demand.
      * </p>
      * <note>
      * <p>
@@ -672,8 +672,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * </p>
      * </note>
      * 
-     * @return The desired number of Amazon EC2 vCPUS in the compute environment. Batch modifies this value between the
-     *         minimum and maximum values based on job queue demand.</p> <note>
+     * @return The desired number of vCPUS in the compute environment. Batch modifies this value between the minimum and
+     *         maximum values based on job queue demand.</p> <note>
      *         <p>
      *         This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      *         </p>
@@ -701,8 +701,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The desired number of Amazon EC2 vCPUS in the compute environment. Batch modifies this value between the minimum
-     * and maximum values based on job queue demand.
+     * The desired number of vCPUS in the compute environment. Batch modifies this value between the minimum and maximum
+     * values based on job queue demand.
      * </p>
      * <note>
      * <p>
@@ -727,8 +727,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * </note>
      * 
      * @param desiredvCpus
-     *        The desired number of Amazon EC2 vCPUS in the compute environment. Batch modifies this value between the
-     *        minimum and maximum values based on job queue demand.</p> <note>
+     *        The desired number of vCPUS in the compute environment. Batch modifies this value between the minimum and
+     *        maximum values based on job queue demand.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      *        </p>
