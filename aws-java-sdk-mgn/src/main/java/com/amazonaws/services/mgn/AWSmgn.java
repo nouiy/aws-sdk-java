@@ -702,6 +702,24 @@ public interface AWSmgn {
 
     /**
      * <p>
+     * List Managed Accounts.
+     * </p>
+     * 
+     * @param listManagedAccountsRequest
+     *        List managed accounts request.
+     * @return Result of the ListManagedAccounts operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @sample AWSmgn.ListManagedAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/ListManagedAccounts" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListManagedAccountsResult listManagedAccounts(ListManagedAccountsRequest listManagedAccountsRequest);
+
+    /**
+     * <p>
      * List source server post migration custom actions.
      * </p>
      * 
@@ -795,6 +813,29 @@ public interface AWSmgn {
 
     /**
      * <p>
+     * Pause Replication.
+     * </p>
+     * 
+     * @param pauseReplicationRequest
+     * @return Result of the PauseReplication operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @sample AWSmgn.PauseReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/PauseReplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    PauseReplicationResult pauseReplication(PauseReplicationRequest pauseReplicationRequest);
+
+    /**
+     * <p>
      * Put source server post migration custom action.
      * </p>
      * 
@@ -872,6 +913,29 @@ public interface AWSmgn {
      *      Documentation</a>
      */
     RemoveTemplateActionResult removeTemplateAction(RemoveTemplateActionRequest removeTemplateActionRequest);
+
+    /**
+     * <p>
+     * Resume Replication.
+     * </p>
+     * 
+     * @param resumeReplicationRequest
+     * @return Result of the ResumeReplication operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @sample AWSmgn.ResumeReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/ResumeReplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ResumeReplicationResult resumeReplication(ResumeReplicationRequest resumeReplicationRequest);
 
     /**
      * <p>
@@ -1000,6 +1064,29 @@ public interface AWSmgn {
      *      Documentation</a>
      */
     StartTestResult startTest(StartTestRequest startTestRequest);
+
+    /**
+     * <p>
+     * Stop Replication.
+     * </p>
+     * 
+     * @param stopReplicationRequest
+     * @return Result of the StopReplication operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @sample AWSmgn.StopReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/StopReplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StopReplicationResult stopReplication(StopReplicationRequest stopReplicationRequest);
 
     /**
      * <p>

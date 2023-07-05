@@ -945,6 +945,13 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * group, you must provide a full phone number ARN. If a UUID is provided in this scenario, you will receive a
      * <code>ResourceNotFoundException</code>.
      * </p>
+     * <p>
+     * Only use the phone number ARN format that doesn't contain <code>instance</code> in the path, for example,
+     * <code>arn:aws:connect:us-east-1:1234567890:phone-number/uuid</code>. This is the same ARN format that is returned
+     * when you call the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbersV2.html">ListPhoneNumbersV2</a>
+     * API.
+     * </p>
      * </important>
      * 
      * @param createQueueRequest
@@ -972,6 +979,13 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * this API using an instance in the alternate Amazon Web Services Region associated with the traffic distribution
      * group, you must provide a full phone number ARN. If a UUID is provided in this scenario, you will receive a
      * <code>ResourceNotFoundException</code>.
+     * </p>
+     * <p>
+     * Only use the phone number ARN format that doesn't contain <code>instance</code> in the path, for example,
+     * <code>arn:aws:connect:us-east-1:1234567890:phone-number/uuid</code>. This is the same ARN format that is returned
+     * when you call the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbersV2.html">ListPhoneNumbersV2</a>
+     * API.
      * </p>
      * </important>
      * 
@@ -5214,9 +5228,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Searches queues in an Amazon Connect instance, with optional filtering.
      * </p>
      * 
@@ -5229,9 +5240,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<SearchQueuesResult> searchQueuesAsync(SearchQueuesRequest searchQueuesRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Searches queues in an Amazon Connect instance, with optional filtering.
      * </p>
@@ -5313,9 +5321,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Searches routing profiles in an Amazon Connect instance, with optional filtering.
      * </p>
      * 
@@ -5328,9 +5333,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<SearchRoutingProfilesResult> searchRoutingProfilesAsync(SearchRoutingProfilesRequest searchRoutingProfilesRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Searches routing profiles in an Amazon Connect instance, with optional filtering.
      * </p>
@@ -5350,9 +5352,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Searches security profiles in an Amazon Connect instance, with optional filtering.
      * </p>
      * 
@@ -5365,9 +5364,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<SearchSecurityProfilesResult> searchSecurityProfilesAsync(SearchSecurityProfilesRequest searchSecurityProfilesRequest);
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Searches security profiles in an Amazon Connect instance, with optional filtering.
      * </p>
@@ -7113,6 +7109,13 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * group, you must provide a full phone number ARN. If a UUID is provided in this scenario, you will receive a
      * <code>ResourceNotFoundException</code>.
      * </p>
+     * <p>
+     * Only use the phone number ARN format that doesn't contain <code>instance</code> in the path, for example,
+     * <code>arn:aws:connect:us-east-1:1234567890:phone-number/uuid</code>. This is the same ARN format that is returned
+     * when you call the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbersV2.html">ListPhoneNumbersV2</a>
+     * API.
+     * </p>
      * </important>
      * 
      * @param updateQueueOutboundCallerConfigRequest
@@ -7142,6 +7145,13 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * this API using an instance in the alternate Amazon Web Services Region associated with the traffic distribution
      * group, you must provide a full phone number ARN. If a UUID is provided in this scenario, you will receive a
      * <code>ResourceNotFoundException</code>.
+     * </p>
+     * <p>
+     * Only use the phone number ARN format that doesn't contain <code>instance</code> in the path, for example,
+     * <code>arn:aws:connect:us-east-1:1234567890:phone-number/uuid</code>. This is the same ARN format that is returned
+     * when you call the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbersV2.html">ListPhoneNumbersV2</a>
+     * API.
      * </p>
      * </important>
      * 

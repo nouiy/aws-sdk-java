@@ -37,8 +37,10 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
     /**
      * <p>
      * Whether the rule is active after it is created. If this parameter is equal to <code>ENABLED</code>, Security Hub
-     * will apply the rule to findings and finding updates after the rule is created. To change the value of this
-     * parameter after creating a rule, use <code>BatchUpdateAutomationRules</code>.
+     * starts applying the rule to findings and finding updates after the rule is created. To change the value of this
+     * parameter after creating a rule, use <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateAutomationRules.html">
+     * <code>BatchUpdateAutomationRules</code> </a>.
      * </p>
      */
     private String ruleStatus;
@@ -66,16 +68,16 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
      * Specifies whether a rule is the last to be applied with respect to a finding that matches the rule criteria. This
      * is useful when a finding matches the criteria for multiple rules, and each rule has different actions. If the
      * value of this field is set to <code>true</code> for a rule, Security Hub applies the rule action to a finding
-     * that matches the rule criteria and won't evaluate other rules for the finding.&#x2028; The default value of this
-     * field is <code>false</code>.
+     * that matches the rule criteria and doesn't evaluate other rules for the finding.&#x2028; The default value of
+     * this field is <code>false</code>.
      * </p>
      */
     private Boolean isTerminal;
     /**
      * <p>
      * A set of ASFF finding field attributes and corresponding expected values that Security Hub uses to filter
-     * findings. If a finding matches the conditions specified in this parameter, Security Hub applies the rule action
-     * to the finding.
+     * findings. If a rule is enabled and a finding matches the conditions specified in this parameter, Security Hub
+     * applies the rule action to the finding.
      * </p>
      */
     private AutomationRulesFindingFilters criteria;
@@ -130,14 +132,18 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
     /**
      * <p>
      * Whether the rule is active after it is created. If this parameter is equal to <code>ENABLED</code>, Security Hub
-     * will apply the rule to findings and finding updates after the rule is created. To change the value of this
-     * parameter after creating a rule, use <code>BatchUpdateAutomationRules</code>.
+     * starts applying the rule to findings and finding updates after the rule is created. To change the value of this
+     * parameter after creating a rule, use <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateAutomationRules.html">
+     * <code>BatchUpdateAutomationRules</code> </a>.
      * </p>
      * 
      * @param ruleStatus
      *        Whether the rule is active after it is created. If this parameter is equal to <code>ENABLED</code>,
-     *        Security Hub will apply the rule to findings and finding updates after the rule is created. To change the
-     *        value of this parameter after creating a rule, use <code>BatchUpdateAutomationRules</code>.
+     *        Security Hub starts applying the rule to findings and finding updates after the rule is created. To change
+     *        the value of this parameter after creating a rule, use <a
+     *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateAutomationRules.html">
+     *        <code>BatchUpdateAutomationRules</code> </a>.
      * @see RuleStatus
      */
 
@@ -148,13 +154,17 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
     /**
      * <p>
      * Whether the rule is active after it is created. If this parameter is equal to <code>ENABLED</code>, Security Hub
-     * will apply the rule to findings and finding updates after the rule is created. To change the value of this
-     * parameter after creating a rule, use <code>BatchUpdateAutomationRules</code>.
+     * starts applying the rule to findings and finding updates after the rule is created. To change the value of this
+     * parameter after creating a rule, use <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateAutomationRules.html">
+     * <code>BatchUpdateAutomationRules</code> </a>.
      * </p>
      * 
      * @return Whether the rule is active after it is created. If this parameter is equal to <code>ENABLED</code>,
-     *         Security Hub will apply the rule to findings and finding updates after the rule is created. To change the
-     *         value of this parameter after creating a rule, use <code>BatchUpdateAutomationRules</code>.
+     *         Security Hub starts applying the rule to findings and finding updates after the rule is created. To
+     *         change the value of this parameter after creating a rule, use <a
+     *         href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateAutomationRules.html">
+     *         <code>BatchUpdateAutomationRules</code> </a>.
      * @see RuleStatus
      */
 
@@ -165,14 +175,18 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
     /**
      * <p>
      * Whether the rule is active after it is created. If this parameter is equal to <code>ENABLED</code>, Security Hub
-     * will apply the rule to findings and finding updates after the rule is created. To change the value of this
-     * parameter after creating a rule, use <code>BatchUpdateAutomationRules</code>.
+     * starts applying the rule to findings and finding updates after the rule is created. To change the value of this
+     * parameter after creating a rule, use <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateAutomationRules.html">
+     * <code>BatchUpdateAutomationRules</code> </a>.
      * </p>
      * 
      * @param ruleStatus
      *        Whether the rule is active after it is created. If this parameter is equal to <code>ENABLED</code>,
-     *        Security Hub will apply the rule to findings and finding updates after the rule is created. To change the
-     *        value of this parameter after creating a rule, use <code>BatchUpdateAutomationRules</code>.
+     *        Security Hub starts applying the rule to findings and finding updates after the rule is created. To change
+     *        the value of this parameter after creating a rule, use <a
+     *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateAutomationRules.html">
+     *        <code>BatchUpdateAutomationRules</code> </a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleStatus
      */
@@ -185,14 +199,18 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
     /**
      * <p>
      * Whether the rule is active after it is created. If this parameter is equal to <code>ENABLED</code>, Security Hub
-     * will apply the rule to findings and finding updates after the rule is created. To change the value of this
-     * parameter after creating a rule, use <code>BatchUpdateAutomationRules</code>.
+     * starts applying the rule to findings and finding updates after the rule is created. To change the value of this
+     * parameter after creating a rule, use <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateAutomationRules.html">
+     * <code>BatchUpdateAutomationRules</code> </a>.
      * </p>
      * 
      * @param ruleStatus
      *        Whether the rule is active after it is created. If this parameter is equal to <code>ENABLED</code>,
-     *        Security Hub will apply the rule to findings and finding updates after the rule is created. To change the
-     *        value of this parameter after creating a rule, use <code>BatchUpdateAutomationRules</code>.
+     *        Security Hub starts applying the rule to findings and finding updates after the rule is created. To change
+     *        the value of this parameter after creating a rule, use <a
+     *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateAutomationRules.html">
+     *        <code>BatchUpdateAutomationRules</code> </a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleStatus
      */
@@ -333,15 +351,15 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
      * Specifies whether a rule is the last to be applied with respect to a finding that matches the rule criteria. This
      * is useful when a finding matches the criteria for multiple rules, and each rule has different actions. If the
      * value of this field is set to <code>true</code> for a rule, Security Hub applies the rule action to a finding
-     * that matches the rule criteria and won't evaluate other rules for the finding.&#x2028; The default value of this
-     * field is <code>false</code>.
+     * that matches the rule criteria and doesn't evaluate other rules for the finding.&#x2028; The default value of
+     * this field is <code>false</code>.
      * </p>
      * 
      * @param isTerminal
      *        Specifies whether a rule is the last to be applied with respect to a finding that matches the rule
      *        criteria. This is useful when a finding matches the criteria for multiple rules, and each rule has
      *        different actions. If the value of this field is set to <code>true</code> for a rule, Security Hub applies
-     *        the rule action to a finding that matches the rule criteria and won't evaluate other rules for the
+     *        the rule action to a finding that matches the rule criteria and doesn't evaluate other rules for the
      *        finding.&#x2028; The default value of this field is <code>false</code>.
      */
 
@@ -354,14 +372,14 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
      * Specifies whether a rule is the last to be applied with respect to a finding that matches the rule criteria. This
      * is useful when a finding matches the criteria for multiple rules, and each rule has different actions. If the
      * value of this field is set to <code>true</code> for a rule, Security Hub applies the rule action to a finding
-     * that matches the rule criteria and won't evaluate other rules for the finding.&#x2028; The default value of this
-     * field is <code>false</code>.
+     * that matches the rule criteria and doesn't evaluate other rules for the finding.&#x2028; The default value of
+     * this field is <code>false</code>.
      * </p>
      * 
      * @return Specifies whether a rule is the last to be applied with respect to a finding that matches the rule
      *         criteria. This is useful when a finding matches the criteria for multiple rules, and each rule has
      *         different actions. If the value of this field is set to <code>true</code> for a rule, Security Hub
-     *         applies the rule action to a finding that matches the rule criteria and won't evaluate other rules for
+     *         applies the rule action to a finding that matches the rule criteria and doesn't evaluate other rules for
      *         the finding.&#x2028; The default value of this field is <code>false</code>.
      */
 
@@ -374,15 +392,15 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
      * Specifies whether a rule is the last to be applied with respect to a finding that matches the rule criteria. This
      * is useful when a finding matches the criteria for multiple rules, and each rule has different actions. If the
      * value of this field is set to <code>true</code> for a rule, Security Hub applies the rule action to a finding
-     * that matches the rule criteria and won't evaluate other rules for the finding.&#x2028; The default value of this
-     * field is <code>false</code>.
+     * that matches the rule criteria and doesn't evaluate other rules for the finding.&#x2028; The default value of
+     * this field is <code>false</code>.
      * </p>
      * 
      * @param isTerminal
      *        Specifies whether a rule is the last to be applied with respect to a finding that matches the rule
      *        criteria. This is useful when a finding matches the criteria for multiple rules, and each rule has
      *        different actions. If the value of this field is set to <code>true</code> for a rule, Security Hub applies
-     *        the rule action to a finding that matches the rule criteria and won't evaluate other rules for the
+     *        the rule action to a finding that matches the rule criteria and doesn't evaluate other rules for the
      *        finding.&#x2028; The default value of this field is <code>false</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -397,14 +415,14 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
      * Specifies whether a rule is the last to be applied with respect to a finding that matches the rule criteria. This
      * is useful when a finding matches the criteria for multiple rules, and each rule has different actions. If the
      * value of this field is set to <code>true</code> for a rule, Security Hub applies the rule action to a finding
-     * that matches the rule criteria and won't evaluate other rules for the finding.&#x2028; The default value of this
-     * field is <code>false</code>.
+     * that matches the rule criteria and doesn't evaluate other rules for the finding.&#x2028; The default value of
+     * this field is <code>false</code>.
      * </p>
      * 
      * @return Specifies whether a rule is the last to be applied with respect to a finding that matches the rule
      *         criteria. This is useful when a finding matches the criteria for multiple rules, and each rule has
      *         different actions. If the value of this field is set to <code>true</code> for a rule, Security Hub
-     *         applies the rule action to a finding that matches the rule criteria and won't evaluate other rules for
+     *         applies the rule action to a finding that matches the rule criteria and doesn't evaluate other rules for
      *         the finding.&#x2028; The default value of this field is <code>false</code>.
      */
 
@@ -415,14 +433,14 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
     /**
      * <p>
      * A set of ASFF finding field attributes and corresponding expected values that Security Hub uses to filter
-     * findings. If a finding matches the conditions specified in this parameter, Security Hub applies the rule action
-     * to the finding.
+     * findings. If a rule is enabled and a finding matches the conditions specified in this parameter, Security Hub
+     * applies the rule action to the finding.
      * </p>
      * 
      * @param criteria
      *        A set of ASFF finding field attributes and corresponding expected values that Security Hub uses to filter
-     *        findings. If a finding matches the conditions specified in this parameter, Security Hub applies the rule
-     *        action to the finding.
+     *        findings. If a rule is enabled and a finding matches the conditions specified in this parameter, Security
+     *        Hub applies the rule action to the finding.
      */
 
     public void setCriteria(AutomationRulesFindingFilters criteria) {
@@ -432,13 +450,13 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
     /**
      * <p>
      * A set of ASFF finding field attributes and corresponding expected values that Security Hub uses to filter
-     * findings. If a finding matches the conditions specified in this parameter, Security Hub applies the rule action
-     * to the finding.
+     * findings. If a rule is enabled and a finding matches the conditions specified in this parameter, Security Hub
+     * applies the rule action to the finding.
      * </p>
      * 
      * @return A set of ASFF finding field attributes and corresponding expected values that Security Hub uses to filter
-     *         findings. If a finding matches the conditions specified in this parameter, Security Hub applies the rule
-     *         action to the finding.
+     *         findings. If a rule is enabled and a finding matches the conditions specified in this parameter, Security
+     *         Hub applies the rule action to the finding.
      */
 
     public AutomationRulesFindingFilters getCriteria() {
@@ -448,14 +466,14 @@ public class UpdateAutomationRulesRequestItem implements Serializable, Cloneable
     /**
      * <p>
      * A set of ASFF finding field attributes and corresponding expected values that Security Hub uses to filter
-     * findings. If a finding matches the conditions specified in this parameter, Security Hub applies the rule action
-     * to the finding.
+     * findings. If a rule is enabled and a finding matches the conditions specified in this parameter, Security Hub
+     * applies the rule action to the finding.
      * </p>
      * 
      * @param criteria
      *        A set of ASFF finding field attributes and corresponding expected values that Security Hub uses to filter
-     *        findings. If a finding matches the conditions specified in this parameter, Security Hub applies the rule
-     *        action to the finding.
+     *        findings. If a rule is enabled and a finding matches the conditions specified in this parameter, Security
+     *        Hub applies the rule action to the finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

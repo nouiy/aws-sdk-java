@@ -106,10 +106,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. For example, a
-     * <code>GetMetricDataV2</code> request can filter by 50 queues, 35 agents, and 15 routing profiles for a total of
-     * 100 filter values. <code>VOICE</code>, <code>CHAT</code>, and <code>TASK</code> are valid
-     * <code>filterValue</code> for the <code>CHANNEL</code> filter key.
+     * <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. VOICE, CHAT, and TASK are
+     * valid <code>filterValue</code> for the CHANNEL filter key. They do not count towards limitation of 100 filter
+     * values. For example, a GetMetricDataV2 request can filter by 50 queues, 35 agents, and 15 routing profiles for a
+     * total of 100 filter values, along with 3 channel filters.
      * </p>
      * </li>
      * </ul>
@@ -669,10 +669,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. For example, a
-     * <code>GetMetricDataV2</code> request can filter by 50 queues, 35 agents, and 15 routing profiles for a total of
-     * 100 filter values. <code>VOICE</code>, <code>CHAT</code>, and <code>TASK</code> are valid
-     * <code>filterValue</code> for the <code>CHANNEL</code> filter key.
+     * <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. VOICE, CHAT, and TASK are
+     * valid <code>filterValue</code> for the CHANNEL filter key. They do not count towards limitation of 100 filter
+     * values. For example, a GetMetricDataV2 request can filter by 50 queues, 35 agents, and 15 routing profiles for a
+     * total of 100 filter values, along with 3 channel filters.
      * </p>
      * </li>
      * </ul>
@@ -728,10 +728,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. For example, a
-     *         <code>GetMetricDataV2</code> request can filter by 50 queues, 35 agents, and 15 routing profiles for a
-     *         total of 100 filter values. <code>VOICE</code>, <code>CHAT</code>, and <code>TASK</code> are valid
-     *         <code>filterValue</code> for the <code>CHANNEL</code> filter key.
+     *         <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. VOICE, CHAT, and
+     *         TASK are valid <code>filterValue</code> for the CHANNEL filter key. They do not count towards limitation
+     *         of 100 filter values. For example, a GetMetricDataV2 request can filter by 50 queues, 35 agents, and 15
+     *         routing profiles for a total of 100 filter values, along with 3 channel filters.
      *         </p>
      *         </li>
      */
@@ -794,10 +794,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. For example, a
-     * <code>GetMetricDataV2</code> request can filter by 50 queues, 35 agents, and 15 routing profiles for a total of
-     * 100 filter values. <code>VOICE</code>, <code>CHAT</code>, and <code>TASK</code> are valid
-     * <code>filterValue</code> for the <code>CHANNEL</code> filter key.
+     * <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. VOICE, CHAT, and TASK are
+     * valid <code>filterValue</code> for the CHANNEL filter key. They do not count towards limitation of 100 filter
+     * values. For example, a GetMetricDataV2 request can filter by 50 queues, 35 agents, and 15 routing profiles for a
+     * total of 100 filter values, along with 3 channel filters.
      * </p>
      * </li>
      * </ul>
@@ -854,10 +854,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. For example, a
-     *        <code>GetMetricDataV2</code> request can filter by 50 queues, 35 agents, and 15 routing profiles for a
-     *        total of 100 filter values. <code>VOICE</code>, <code>CHAT</code>, and <code>TASK</code> are valid
-     *        <code>filterValue</code> for the <code>CHANNEL</code> filter key.
+     *        <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. VOICE, CHAT, and
+     *        TASK are valid <code>filterValue</code> for the CHANNEL filter key. They do not count towards limitation
+     *        of 100 filter values. For example, a GetMetricDataV2 request can filter by 50 queues, 35 agents, and 15
+     *        routing profiles for a total of 100 filter values, along with 3 channel filters.
      *        </p>
      *        </li>
      */
@@ -925,10 +925,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. For example, a
-     * <code>GetMetricDataV2</code> request can filter by 50 queues, 35 agents, and 15 routing profiles for a total of
-     * 100 filter values. <code>VOICE</code>, <code>CHAT</code>, and <code>TASK</code> are valid
-     * <code>filterValue</code> for the <code>CHANNEL</code> filter key.
+     * <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. VOICE, CHAT, and TASK are
+     * valid <code>filterValue</code> for the CHANNEL filter key. They do not count towards limitation of 100 filter
+     * values. For example, a GetMetricDataV2 request can filter by 50 queues, 35 agents, and 15 routing profiles for a
+     * total of 100 filter values, along with 3 channel filters.
      * </p>
      * </li>
      * </ul>
@@ -990,10 +990,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. For example, a
-     *        <code>GetMetricDataV2</code> request can filter by 50 queues, 35 agents, and 15 routing profiles for a
-     *        total of 100 filter values. <code>VOICE</code>, <code>CHAT</code>, and <code>TASK</code> are valid
-     *        <code>filterValue</code> for the <code>CHANNEL</code> filter key.
+     *        <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. VOICE, CHAT, and
+     *        TASK are valid <code>filterValue</code> for the CHANNEL filter key. They do not count towards limitation
+     *        of 100 filter values. For example, a GetMetricDataV2 request can filter by 50 queues, 35 agents, and 15
+     *        routing profiles for a total of 100 filter values, along with 3 channel filters.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1063,10 +1063,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. For example, a
-     * <code>GetMetricDataV2</code> request can filter by 50 queues, 35 agents, and 15 routing profiles for a total of
-     * 100 filter values. <code>VOICE</code>, <code>CHAT</code>, and <code>TASK</code> are valid
-     * <code>filterValue</code> for the <code>CHANNEL</code> filter key.
+     * <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. VOICE, CHAT, and TASK are
+     * valid <code>filterValue</code> for the CHANNEL filter key. They do not count towards limitation of 100 filter
+     * values. For example, a GetMetricDataV2 request can filter by 50 queues, 35 agents, and 15 routing profiles for a
+     * total of 100 filter values, along with 3 channel filters.
      * </p>
      * </li>
      * </ul>
@@ -1123,10 +1123,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. For example, a
-     *        <code>GetMetricDataV2</code> request can filter by 50 queues, 35 agents, and 15 routing profiles for a
-     *        total of 100 filter values. <code>VOICE</code>, <code>CHAT</code>, and <code>TASK</code> are valid
-     *        <code>filterValue</code> for the <code>CHANNEL</code> filter key.
+     *        <b>Filter values</b>: A maximum of 100 filter values are supported in a single request. VOICE, CHAT, and
+     *        TASK are valid <code>filterValue</code> for the CHANNEL filter key. They do not count towards limitation
+     *        of 100 filter values. For example, a GetMetricDataV2 request can filter by 50 queues, 35 agents, and 15
+     *        routing profiles for a total of 100 filter values, along with 3 channel filters.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

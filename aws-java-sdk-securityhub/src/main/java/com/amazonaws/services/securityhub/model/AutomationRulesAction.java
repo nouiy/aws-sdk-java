@@ -31,8 +31,7 @@ public class AutomationRulesAction implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies that the rule action should update the <code>Types</code> finding field. The <code>Types</code> finding
-     * field provides one or more finding types in the format of namespace/category/classifier that classify a finding.
-     * For more information, see <a
+     * field classifies findings in the format of namespace/category/classifier. For more information, see <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      * >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
@@ -48,16 +47,15 @@ public class AutomationRulesAction implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies that the rule action should update the <code>Types</code> finding field. The <code>Types</code> finding
-     * field provides one or more finding types in the format of namespace/category/classifier that classify a finding.
-     * For more information, see <a
+     * field classifies findings in the format of namespace/category/classifier. For more information, see <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      * >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @param type
      *        Specifies that the rule action should update the <code>Types</code> finding field. The <code>Types</code>
-     *        finding field provides one or more finding types in the format of namespace/category/classifier that
-     *        classify a finding. For more information, see <a href=
+     *        finding field classifies findings in the format of namespace/category/classifier. For more information,
+     *        see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      *        >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * @see AutomationRulesActionType
@@ -70,15 +68,14 @@ public class AutomationRulesAction implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies that the rule action should update the <code>Types</code> finding field. The <code>Types</code> finding
-     * field provides one or more finding types in the format of namespace/category/classifier that classify a finding.
-     * For more information, see <a
+     * field classifies findings in the format of namespace/category/classifier. For more information, see <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      * >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @return Specifies that the rule action should update the <code>Types</code> finding field. The <code>Types</code>
-     *         finding field provides one or more finding types in the format of namespace/category/classifier that
-     *         classify a finding. For more information, see <a href=
+     *         finding field classifies findings in the format of namespace/category/classifier. For more information,
+     *         see <a href=
      *         "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      *         >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * @see AutomationRulesActionType
@@ -91,16 +88,15 @@ public class AutomationRulesAction implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies that the rule action should update the <code>Types</code> finding field. The <code>Types</code> finding
-     * field provides one or more finding types in the format of namespace/category/classifier that classify a finding.
-     * For more information, see <a
+     * field classifies findings in the format of namespace/category/classifier. For more information, see <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      * >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @param type
      *        Specifies that the rule action should update the <code>Types</code> finding field. The <code>Types</code>
-     *        finding field provides one or more finding types in the format of namespace/category/classifier that
-     *        classify a finding. For more information, see <a href=
+     *        finding field classifies findings in the format of namespace/category/classifier. For more information,
+     *        see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      *        >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -115,16 +111,15 @@ public class AutomationRulesAction implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies that the rule action should update the <code>Types</code> finding field. The <code>Types</code> finding
-     * field provides one or more finding types in the format of namespace/category/classifier that classify a finding.
-     * For more information, see <a
+     * field classifies findings in the format of namespace/category/classifier. For more information, see <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      * >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @param type
      *        Specifies that the rule action should update the <code>Types</code> finding field. The <code>Types</code>
-     *        finding field provides one or more finding types in the format of namespace/category/classifier that
-     *        classify a finding. For more information, see <a href=
+     *        finding field classifies findings in the format of namespace/category/classifier. For more information,
+     *        see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      *        >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

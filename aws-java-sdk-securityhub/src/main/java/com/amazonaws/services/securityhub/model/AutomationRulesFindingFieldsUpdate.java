@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Identifies the finding fields that the automation rule action will update when a finding matches the defined
- * criteria.
+ * Identifies the finding fields that the automation rule action updates when a finding matches the defined criteria.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AutomationRulesFindingFieldsUpdate"
@@ -34,31 +33,31 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
     private SeverityUpdate severity;
     /**
      * <p>
-     * The rule action will update the <code>VerificationState</code> field of a finding.
+     * The rule action updates the <code>VerificationState</code> field of a finding.
      * </p>
      */
     private String verificationState;
     /**
      * <p>
-     * The rule action will update the <code>Confidence</code> field of a finding.
+     * The rule action updates the <code>Confidence</code> field of a finding.
      * </p>
      */
     private Integer confidence;
     /**
      * <p>
-     * The rule action will update the <code>Criticality</code> field of a finding.
+     * The rule action updates the <code>Criticality</code> field of a finding.
      * </p>
      */
     private Integer criticality;
     /**
      * <p>
-     * The rule action will update the <code>Types</code> field of a finding.
+     * The rule action updates the <code>Types</code> field of a finding.
      * </p>
      */
     private java.util.List<String> types;
     /**
      * <p>
-     * The rule action will update the <code>UserDefinedFields</code> field of a finding.
+     * The rule action updates the <code>UserDefinedFields</code> field of a finding.
      * </p>
      */
     private java.util.Map<String, String> userDefinedFields;
@@ -66,7 +65,7 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
     private WorkflowUpdate workflow;
     /**
      * <p>
-     * A list of findings that are related to a finding.
+     * The rule action updates the <code>RelatedFindings</code> field of a finding.
      * </p>
      */
     private java.util.List<RelatedFinding> relatedFindings;
@@ -125,11 +124,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>VerificationState</code> field of a finding.
+     * The rule action updates the <code>VerificationState</code> field of a finding.
      * </p>
      * 
      * @param verificationState
-     *        The rule action will update the <code>VerificationState</code> field of a finding.
+     *        The rule action updates the <code>VerificationState</code> field of a finding.
      * @see VerificationState
      */
 
@@ -139,10 +138,10 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>VerificationState</code> field of a finding.
+     * The rule action updates the <code>VerificationState</code> field of a finding.
      * </p>
      * 
-     * @return The rule action will update the <code>VerificationState</code> field of a finding.
+     * @return The rule action updates the <code>VerificationState</code> field of a finding.
      * @see VerificationState
      */
 
@@ -152,11 +151,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>VerificationState</code> field of a finding.
+     * The rule action updates the <code>VerificationState</code> field of a finding.
      * </p>
      * 
      * @param verificationState
-     *        The rule action will update the <code>VerificationState</code> field of a finding.
+     *        The rule action updates the <code>VerificationState</code> field of a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VerificationState
      */
@@ -168,11 +167,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>VerificationState</code> field of a finding.
+     * The rule action updates the <code>VerificationState</code> field of a finding.
      * </p>
      * 
      * @param verificationState
-     *        The rule action will update the <code>VerificationState</code> field of a finding.
+     *        The rule action updates the <code>VerificationState</code> field of a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VerificationState
      */
@@ -184,11 +183,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>Confidence</code> field of a finding.
+     * The rule action updates the <code>Confidence</code> field of a finding.
      * </p>
      * 
      * @param confidence
-     *        The rule action will update the <code>Confidence</code> field of a finding.
+     *        The rule action updates the <code>Confidence</code> field of a finding.
      */
 
     public void setConfidence(Integer confidence) {
@@ -197,10 +196,10 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>Confidence</code> field of a finding.
+     * The rule action updates the <code>Confidence</code> field of a finding.
      * </p>
      * 
-     * @return The rule action will update the <code>Confidence</code> field of a finding.
+     * @return The rule action updates the <code>Confidence</code> field of a finding.
      */
 
     public Integer getConfidence() {
@@ -209,11 +208,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>Confidence</code> field of a finding.
+     * The rule action updates the <code>Confidence</code> field of a finding.
      * </p>
      * 
      * @param confidence
-     *        The rule action will update the <code>Confidence</code> field of a finding.
+     *        The rule action updates the <code>Confidence</code> field of a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -224,11 +223,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>Criticality</code> field of a finding.
+     * The rule action updates the <code>Criticality</code> field of a finding.
      * </p>
      * 
      * @param criticality
-     *        The rule action will update the <code>Criticality</code> field of a finding.
+     *        The rule action updates the <code>Criticality</code> field of a finding.
      */
 
     public void setCriticality(Integer criticality) {
@@ -237,10 +236,10 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>Criticality</code> field of a finding.
+     * The rule action updates the <code>Criticality</code> field of a finding.
      * </p>
      * 
-     * @return The rule action will update the <code>Criticality</code> field of a finding.
+     * @return The rule action updates the <code>Criticality</code> field of a finding.
      */
 
     public Integer getCriticality() {
@@ -249,11 +248,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>Criticality</code> field of a finding.
+     * The rule action updates the <code>Criticality</code> field of a finding.
      * </p>
      * 
      * @param criticality
-     *        The rule action will update the <code>Criticality</code> field of a finding.
+     *        The rule action updates the <code>Criticality</code> field of a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -264,10 +263,10 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>Types</code> field of a finding.
+     * The rule action updates the <code>Types</code> field of a finding.
      * </p>
      * 
-     * @return The rule action will update the <code>Types</code> field of a finding.
+     * @return The rule action updates the <code>Types</code> field of a finding.
      */
 
     public java.util.List<String> getTypes() {
@@ -276,11 +275,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>Types</code> field of a finding.
+     * The rule action updates the <code>Types</code> field of a finding.
      * </p>
      * 
      * @param types
-     *        The rule action will update the <code>Types</code> field of a finding.
+     *        The rule action updates the <code>Types</code> field of a finding.
      */
 
     public void setTypes(java.util.Collection<String> types) {
@@ -294,7 +293,7 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>Types</code> field of a finding.
+     * The rule action updates the <code>Types</code> field of a finding.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -303,7 +302,7 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
      * </p>
      * 
      * @param types
-     *        The rule action will update the <code>Types</code> field of a finding.
+     *        The rule action updates the <code>Types</code> field of a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -319,11 +318,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>Types</code> field of a finding.
+     * The rule action updates the <code>Types</code> field of a finding.
      * </p>
      * 
      * @param types
-     *        The rule action will update the <code>Types</code> field of a finding.
+     *        The rule action updates the <code>Types</code> field of a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -334,10 +333,10 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>UserDefinedFields</code> field of a finding.
+     * The rule action updates the <code>UserDefinedFields</code> field of a finding.
      * </p>
      * 
-     * @return The rule action will update the <code>UserDefinedFields</code> field of a finding.
+     * @return The rule action updates the <code>UserDefinedFields</code> field of a finding.
      */
 
     public java.util.Map<String, String> getUserDefinedFields() {
@@ -346,11 +345,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>UserDefinedFields</code> field of a finding.
+     * The rule action updates the <code>UserDefinedFields</code> field of a finding.
      * </p>
      * 
      * @param userDefinedFields
-     *        The rule action will update the <code>UserDefinedFields</code> field of a finding.
+     *        The rule action updates the <code>UserDefinedFields</code> field of a finding.
      */
 
     public void setUserDefinedFields(java.util.Map<String, String> userDefinedFields) {
@@ -359,11 +358,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * The rule action will update the <code>UserDefinedFields</code> field of a finding.
+     * The rule action updates the <code>UserDefinedFields</code> field of a finding.
      * </p>
      * 
      * @param userDefinedFields
-     *        The rule action will update the <code>UserDefinedFields</code> field of a finding.
+     *        The rule action updates the <code>UserDefinedFields</code> field of a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -428,10 +427,10 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * A list of findings that are related to a finding.
+     * The rule action updates the <code>RelatedFindings</code> field of a finding.
      * </p>
      * 
-     * @return A list of findings that are related to a finding.
+     * @return The rule action updates the <code>RelatedFindings</code> field of a finding.
      */
 
     public java.util.List<RelatedFinding> getRelatedFindings() {
@@ -440,11 +439,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * A list of findings that are related to a finding.
+     * The rule action updates the <code>RelatedFindings</code> field of a finding.
      * </p>
      * 
      * @param relatedFindings
-     *        A list of findings that are related to a finding.
+     *        The rule action updates the <code>RelatedFindings</code> field of a finding.
      */
 
     public void setRelatedFindings(java.util.Collection<RelatedFinding> relatedFindings) {
@@ -458,7 +457,7 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * A list of findings that are related to a finding.
+     * The rule action updates the <code>RelatedFindings</code> field of a finding.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -467,7 +466,7 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
      * </p>
      * 
      * @param relatedFindings
-     *        A list of findings that are related to a finding.
+     *        The rule action updates the <code>RelatedFindings</code> field of a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -483,11 +482,11 @@ public class AutomationRulesFindingFieldsUpdate implements Serializable, Cloneab
 
     /**
      * <p>
-     * A list of findings that are related to a finding.
+     * The rule action updates the <code>RelatedFindings</code> field of a finding.
      * </p>
      * 
      * @param relatedFindings
-     *        A list of findings that are related to a finding.
+     *        The rule action updates the <code>RelatedFindings</code> field of a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -7413,9 +7413,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * <p>
      * Deleting a KMS key is a destructive and potentially dangerous operation. When a KMS key is deleted, all data that
      * was encrypted under the KMS key is unrecoverable. (The only exception is a <a
-     * href="kms/latest/developerguide/multi-region-keys-delete.html">multi-Region replica key</a>, or an asymmetric or
-     * HMAC KMS key with imported key material[BUGBUG-link to importing-keys-managing.html#import-delete-key.) To
-     * prevent the use of a KMS key without deleting it, use <a>DisableKey</a>.
+     * href="kms/latest/developerguide/multi-region-keys-delete.html">multi-Region replica key</a>, or an <a
+     * href="kms/latest/developerguide/importing-keys-managing.html#import-delete-key">asymmetric or HMAC KMS key with
+     * imported key material</a>.) To prevent the use of a KMS key without deleting it, use <a>DisableKey</a>.
      * </p>
      * </important>
      * <p>
@@ -7494,9 +7494,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * <p>
      * Deleting a KMS key is a destructive and potentially dangerous operation. When a KMS key is deleted, all data that
      * was encrypted under the KMS key is unrecoverable. (The only exception is a <a
-     * href="kms/latest/developerguide/multi-region-keys-delete.html">multi-Region replica key</a>, or an asymmetric or
-     * HMAC KMS key with imported key material[BUGBUG-link to importing-keys-managing.html#import-delete-key.) To
-     * prevent the use of a KMS key without deleting it, use <a>DisableKey</a>.
+     * href="kms/latest/developerguide/multi-region-keys-delete.html">multi-Region replica key</a>, or an <a
+     * href="kms/latest/developerguide/importing-keys-managing.html#import-delete-key">asymmetric or HMAC KMS key with
+     * imported key material</a>.) To prevent the use of a KMS key without deleting it, use <a>DisableKey</a>.
      * </p>
      * </important>
      * <p>

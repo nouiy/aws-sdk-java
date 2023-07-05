@@ -198,6 +198,11 @@ public class AbstractAWSmgn implements AWSmgn {
     }
 
     @Override
+    public ListManagedAccountsResult listManagedAccounts(ListManagedAccountsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListSourceServerActionsResult listSourceServerActions(ListSourceServerActionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -223,6 +228,11 @@ public class AbstractAWSmgn implements AWSmgn {
     }
 
     @Override
+    public PauseReplicationResult pauseReplication(PauseReplicationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public PutSourceServerActionResult putSourceServerAction(PutSourceServerActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -239,6 +249,11 @@ public class AbstractAWSmgn implements AWSmgn {
 
     @Override
     public RemoveTemplateActionResult removeTemplateAction(RemoveTemplateActionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ResumeReplicationResult resumeReplication(ResumeReplicationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -269,6 +284,11 @@ public class AbstractAWSmgn implements AWSmgn {
 
     @Override
     public StartTestResult startTest(StartTestRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopReplicationResult stopReplication(StopReplicationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

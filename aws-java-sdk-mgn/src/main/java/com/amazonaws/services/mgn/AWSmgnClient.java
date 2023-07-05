@@ -2266,6 +2266,66 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
     /**
      * <p>
+     * List Managed Accounts.
+     * </p>
+     * 
+     * @param listManagedAccountsRequest
+     *        List managed accounts request.
+     * @return Result of the ListManagedAccounts operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @sample AWSmgn.ListManagedAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/ListManagedAccounts" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListManagedAccountsResult listManagedAccounts(ListManagedAccountsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListManagedAccounts(request);
+    }
+
+    @SdkInternalApi
+    final ListManagedAccountsResult executeListManagedAccounts(ListManagedAccountsRequest listManagedAccountsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listManagedAccountsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListManagedAccountsRequest> request = null;
+        Response<ListManagedAccountsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListManagedAccountsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listManagedAccountsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "mgn");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListManagedAccounts");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListManagedAccountsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListManagedAccountsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * List source server post migration custom actions.
      * </p>
      * 
@@ -2571,6 +2631,71 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
     /**
      * <p>
+     * Pause Replication.
+     * </p>
+     * 
+     * @param pauseReplicationRequest
+     * @return Result of the PauseReplication operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @sample AWSmgn.PauseReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/PauseReplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public PauseReplicationResult pauseReplication(PauseReplicationRequest request) {
+        request = beforeClientExecution(request);
+        return executePauseReplication(request);
+    }
+
+    @SdkInternalApi
+    final PauseReplicationResult executePauseReplication(PauseReplicationRequest pauseReplicationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(pauseReplicationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PauseReplicationRequest> request = null;
+        Response<PauseReplicationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PauseReplicationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(pauseReplicationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "mgn");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PauseReplication");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PauseReplicationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new PauseReplicationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Put source server post migration custom action.
      * </p>
      * 
@@ -2810,6 +2935,71 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
             HttpResponseHandler<AmazonWebServiceResponse<RemoveTemplateActionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new RemoveTemplateActionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Resume Replication.
+     * </p>
+     * 
+     * @param resumeReplicationRequest
+     * @return Result of the ResumeReplication operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @sample AWSmgn.ResumeReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/ResumeReplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ResumeReplicationResult resumeReplication(ResumeReplicationRequest request) {
+        request = beforeClientExecution(request);
+        return executeResumeReplication(request);
+    }
+
+    @SdkInternalApi
+    final ResumeReplicationResult executeResumeReplication(ResumeReplicationRequest resumeReplicationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(resumeReplicationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ResumeReplicationRequest> request = null;
+        Response<ResumeReplicationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ResumeReplicationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(resumeReplicationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "mgn");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ResumeReplication");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ResumeReplicationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ResumeReplicationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3190,6 +3380,71 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
             HttpResponseHandler<AmazonWebServiceResponse<StartTestResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartTestResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Stop Replication.
+     * </p>
+     * 
+     * @param stopReplicationRequest
+     * @return Result of the StopReplication operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @sample AWSmgn.StopReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/StopReplication" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StopReplicationResult stopReplication(StopReplicationRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopReplication(request);
+    }
+
+    @SdkInternalApi
+    final StopReplicationResult executeStopReplication(StopReplicationRequest stopReplicationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopReplicationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopReplicationRequest> request = null;
+        Response<StopReplicationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopReplicationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(stopReplicationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "mgn");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopReplication");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopReplicationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StopReplicationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

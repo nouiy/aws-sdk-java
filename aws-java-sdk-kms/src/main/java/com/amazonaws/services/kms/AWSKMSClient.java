@@ -328,6 +328,9 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("CloudHsmClusterNotActiveException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kms.model.transform.CloudHsmClusterNotActiveExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("DryRunOperationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.kms.model.transform.DryRunOperationExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.kms.model.AWSKMSException.class));
 
     /**
@@ -1503,6 +1506,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         exception.
      *         </p>
      *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.CreateGrant
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/CreateGrant" target="_top">AWS API
      *      Documentation</a>
@@ -2150,6 +2155,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         exception.
      *         </p>
      *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.Decrypt
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/Decrypt" target="_top">AWS API
      *      Documentation</a>
@@ -3880,6 +3887,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         exception.
      *         </p>
      *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.Encrypt
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/Encrypt" target="_top">AWS API
      *      Documentation</a>
@@ -4134,6 +4143,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         exception.
      *         </p>
      *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.GenerateDataKey
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateDataKey" target="_top">AWS API
      *      Documentation</a>
@@ -4356,6 +4367,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      * @throws UnsupportedOperationException
      *         The request was rejected because a specified parameter is not supported or a specified resource is not
      *         valid for this operation.
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.GenerateDataKeyPair
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateDataKeyPair" target="_top">AWS API
      *      Documentation</a>
@@ -4553,6 +4566,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      * @throws UnsupportedOperationException
      *         The request was rejected because a specified parameter is not supported or a specified resource is not
      *         valid for this operation.
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.GenerateDataKeyPairWithoutPlaintext
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateDataKeyPairWithoutPlaintext"
      *      target="_top">AWS API Documentation</a>
@@ -4766,6 +4781,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         exception.
      *         </p>
      *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.GenerateDataKeyWithoutPlaintext
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateDataKeyWithoutPlaintext"
      *      target="_top">AWS API Documentation</a>
@@ -4919,6 +4936,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         exception.
      *         </p>
      *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.GenerateMac
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateMac" target="_top">AWS API
      *      Documentation</a>
@@ -7039,6 +7058,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         exception.
      *         </p>
      *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.ReEncrypt
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/ReEncrypt" target="_top">AWS API
      *      Documentation</a>
@@ -7387,6 +7408,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         exception.
      *         </p>
      *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.RetireGrant
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/RetireGrant" target="_top">AWS API
      *      Documentation</a>
@@ -7531,6 +7554,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         exception.
      *         </p>
      *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.RevokeGrant
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/RevokeGrant" target="_top">AWS API
      *      Documentation</a>
@@ -7592,9 +7617,9 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      * <p>
      * Deleting a KMS key is a destructive and potentially dangerous operation. When a KMS key is deleted, all data that
      * was encrypted under the KMS key is unrecoverable. (The only exception is a <a
-     * href="kms/latest/developerguide/multi-region-keys-delete.html">multi-Region replica key</a>, or an asymmetric or
-     * HMAC KMS key with imported key material[BUGBUG-link to importing-keys-managing.html#import-delete-key.) To
-     * prevent the use of a KMS key without deleting it, use <a>DisableKey</a>.
+     * href="kms/latest/developerguide/multi-region-keys-delete.html">multi-Region replica key</a>, or an <a
+     * href="kms/latest/developerguide/importing-keys-managing.html#import-delete-key">asymmetric or HMAC KMS key with
+     * imported key material</a>.) To prevent the use of a KMS key without deleting it, use <a>DisableKey</a>.
      * </p>
      * </important>
      * <p>
@@ -7874,6 +7899,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         exception.
      *         </p>
      *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.Sign
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/Sign" target="_top">AWS API Documentation</a>
      */
@@ -9152,6 +9179,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         The request was rejected because the signature verification failed. Signature verification fails when it
      *         cannot confirm that signature was produced by signing the specified message with the specified KMS key
      *         and signing algorithm.
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.Verify
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/Verify" target="_top">AWS API
      *      Documentation</a>
@@ -9301,6 +9330,8 @@ public class AWSKMSClient extends AmazonWebServiceClient implements AWSKMS {
      *         exception.
      *         </p>
      *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
      * @sample AWSKMS.VerifyMac
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/VerifyMac" target="_top">AWS API
      *      Documentation</a>

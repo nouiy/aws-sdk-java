@@ -1208,6 +1208,39 @@ public class AWSmgnAsyncClient extends AWSmgnClient implements AWSmgnAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<ListManagedAccountsResult> listManagedAccountsAsync(ListManagedAccountsRequest request) {
+
+        return listManagedAccountsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListManagedAccountsResult> listManagedAccountsAsync(final ListManagedAccountsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListManagedAccountsRequest, ListManagedAccountsResult> asyncHandler) {
+        final ListManagedAccountsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListManagedAccountsResult>() {
+            @Override
+            public ListManagedAccountsResult call() throws Exception {
+                ListManagedAccountsResult result = null;
+
+                try {
+                    result = executeListManagedAccounts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSourceServerActionsResult> listSourceServerActionsAsync(ListSourceServerActionsRequest request) {
 
         return listSourceServerActionsAsync(request, null);
@@ -1373,6 +1406,39 @@ public class AWSmgnAsyncClient extends AWSmgnClient implements AWSmgnAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<PauseReplicationResult> pauseReplicationAsync(PauseReplicationRequest request) {
+
+        return pauseReplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PauseReplicationResult> pauseReplicationAsync(final PauseReplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PauseReplicationRequest, PauseReplicationResult> asyncHandler) {
+        final PauseReplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PauseReplicationResult>() {
+            @Override
+            public PauseReplicationResult call() throws Exception {
+                PauseReplicationResult result = null;
+
+                try {
+                    result = executePauseReplication(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<PutSourceServerActionResult> putSourceServerActionAsync(PutSourceServerActionRequest request) {
 
         return putSourceServerActionAsync(request, null);
@@ -1489,6 +1555,39 @@ public class AWSmgnAsyncClient extends AWSmgnClient implements AWSmgnAsync {
 
                 try {
                     result = executeRemoveTemplateAction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResumeReplicationResult> resumeReplicationAsync(ResumeReplicationRequest request) {
+
+        return resumeReplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResumeReplicationResult> resumeReplicationAsync(final ResumeReplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ResumeReplicationRequest, ResumeReplicationResult> asyncHandler) {
+        final ResumeReplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ResumeReplicationResult>() {
+            @Override
+            public ResumeReplicationResult call() throws Exception {
+                ResumeReplicationResult result = null;
+
+                try {
+                    result = executeResumeReplication(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1687,6 +1786,39 @@ public class AWSmgnAsyncClient extends AWSmgnClient implements AWSmgnAsync {
 
                 try {
                     result = executeStartTest(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopReplicationResult> stopReplicationAsync(StopReplicationRequest request) {
+
+        return stopReplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopReplicationResult> stopReplicationAsync(final StopReplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopReplicationRequest, StopReplicationResult> asyncHandler) {
+        final StopReplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopReplicationResult>() {
+            @Override
+            public StopReplicationResult call() throws Exception {
+                StopReplicationResult result = null;
+
+                try {
+                    result = executeStopReplication(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
