@@ -233,7 +233,17 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public DeleteQueueResult deleteQueue(DeleteQueueRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteQuickConnectResult deleteQuickConnect(DeleteQuickConnectRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteRoutingProfileResult deleteRoutingProfile(DeleteRoutingProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

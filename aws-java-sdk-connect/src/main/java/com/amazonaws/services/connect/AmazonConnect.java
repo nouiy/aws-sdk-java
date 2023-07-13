@@ -1265,6 +1265,31 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Deletes a queue.
+     * </p>
+     * 
+     * @param deleteQueueRequest
+     * @return Result of the DeleteQueue operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DeleteQueue
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteQueue" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteQueueResult deleteQueue(DeleteQueueRequest deleteQueueRequest);
+
+    /**
+     * <p>
      * Deletes a quick connect.
      * </p>
      * 
@@ -1285,6 +1310,31 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     DeleteQuickConnectResult deleteQuickConnect(DeleteQuickConnectRequest deleteQuickConnectRequest);
+
+    /**
+     * <p>
+     * Deletes a routing profile.
+     * </p>
+     * 
+     * @param deleteRoutingProfileRequest
+     * @return Result of the DeleteRoutingProfile operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DeleteRoutingProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteRoutingProfile" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteRoutingProfileResult deleteRoutingProfile(DeleteRoutingProfileRequest deleteRoutingProfileRequest);
 
     /**
      * <p>

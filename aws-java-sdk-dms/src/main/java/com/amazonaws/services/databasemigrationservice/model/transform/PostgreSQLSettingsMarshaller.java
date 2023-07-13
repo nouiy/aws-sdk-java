@@ -71,6 +71,10 @@ public class PostgreSQLSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MapJsonbAsClob").build();
     private static final MarshallingInfo<String> MAPLONGVARCHARAS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MapLongVarcharAs").build();
+    private static final MarshallingInfo<String> DATABASEMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DatabaseMode").build();
+    private static final MarshallingInfo<String> BABELFISHDATABASENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BabelfishDatabaseName").build();
 
     private static final PostgreSQLSettingsMarshaller instance = new PostgreSQLSettingsMarshaller();
 
@@ -110,6 +114,8 @@ public class PostgreSQLSettingsMarshaller {
             protocolMarshaller.marshall(postgreSQLSettings.getMapBooleanAsBoolean(), MAPBOOLEANASBOOLEAN_BINDING);
             protocolMarshaller.marshall(postgreSQLSettings.getMapJsonbAsClob(), MAPJSONBASCLOB_BINDING);
             protocolMarshaller.marshall(postgreSQLSettings.getMapLongVarcharAs(), MAPLONGVARCHARAS_BINDING);
+            protocolMarshaller.marshall(postgreSQLSettings.getDatabaseMode(), DATABASEMODE_BINDING);
+            protocolMarshaller.marshall(postgreSQLSettings.getBabelfishDatabaseName(), BABELFISHDATABASENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

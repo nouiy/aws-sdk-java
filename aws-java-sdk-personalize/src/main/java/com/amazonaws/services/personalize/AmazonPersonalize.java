@@ -2138,6 +2138,27 @@ public interface AmazonPersonalize {
 
     /**
      * <p>
+     * Update a dataset to replace its schema with a new or existing one. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/updating-dataset-schema.html">Replacing a dataset's
+     * schema</a>.
+     * </p>
+     * 
+     * @param updateDatasetRequest
+     * @return Result of the UpdateDataset operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonPersonalize.UpdateDataset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/UpdateDataset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateDatasetResult updateDataset(UpdateDatasetRequest updateDatasetRequest);
+
+    /**
+     * <p>
      * Updates a metric attribution.
      * </p>
      * 

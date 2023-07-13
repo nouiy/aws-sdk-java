@@ -39,7 +39,7 @@ public class KeyValuePair implements Serializable, Cloneable, StructuredPojo {
     private String key;
     /**
      * <p>
-     * For <code>SCTE35_ENHANCED</code> output, defines a vaue. MediaTailor; takes this value, and its associated key,
+     * For <code>SCTE35_ENHANCED</code> output, defines a value. MediaTailor; takes this value, and its associated key,
      * and generates the key/value pair within the <code>EXT-X-ASSET</code>tag. If you specify a value, you must also
      * specify a corresponding key.
      * </p>
@@ -100,15 +100,15 @@ public class KeyValuePair implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For <code>SCTE35_ENHANCED</code> output, defines a vaue. MediaTailor; takes this value, and its associated key,
+     * For <code>SCTE35_ENHANCED</code> output, defines a value. MediaTailor; takes this value, and its associated key,
      * and generates the key/value pair within the <code>EXT-X-ASSET</code>tag. If you specify a value, you must also
      * specify a corresponding key.
      * </p>
      * 
      * @param value
-     *        For <code>SCTE35_ENHANCED</code> output, defines a vaue. MediaTailor; takes this value, and its associated
-     *        key, and generates the key/value pair within the <code>EXT-X-ASSET</code>tag. If you specify a value, you
-     *        must also specify a corresponding key.
+     *        For <code>SCTE35_ENHANCED</code> output, defines a value. MediaTailor; takes this value, and its
+     *        associated key, and generates the key/value pair within the <code>EXT-X-ASSET</code>tag. If you specify a
+     *        value, you must also specify a corresponding key.
      */
 
     public void setValue(String value) {
@@ -117,12 +117,12 @@ public class KeyValuePair implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For <code>SCTE35_ENHANCED</code> output, defines a vaue. MediaTailor; takes this value, and its associated key,
+     * For <code>SCTE35_ENHANCED</code> output, defines a value. MediaTailor; takes this value, and its associated key,
      * and generates the key/value pair within the <code>EXT-X-ASSET</code>tag. If you specify a value, you must also
      * specify a corresponding key.
      * </p>
      * 
-     * @return For <code>SCTE35_ENHANCED</code> output, defines a vaue. MediaTailor; takes this value, and its
+     * @return For <code>SCTE35_ENHANCED</code> output, defines a value. MediaTailor; takes this value, and its
      *         associated key, and generates the key/value pair within the <code>EXT-X-ASSET</code>tag. If you specify a
      *         value, you must also specify a corresponding key.
      */
@@ -133,15 +133,15 @@ public class KeyValuePair implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For <code>SCTE35_ENHANCED</code> output, defines a vaue. MediaTailor; takes this value, and its associated key,
+     * For <code>SCTE35_ENHANCED</code> output, defines a value. MediaTailor; takes this value, and its associated key,
      * and generates the key/value pair within the <code>EXT-X-ASSET</code>tag. If you specify a value, you must also
      * specify a corresponding key.
      * </p>
      * 
      * @param value
-     *        For <code>SCTE35_ENHANCED</code> output, defines a vaue. MediaTailor; takes this value, and its associated
-     *        key, and generates the key/value pair within the <code>EXT-X-ASSET</code>tag. If you specify a value, you
-     *        must also specify a corresponding key.
+     *        For <code>SCTE35_ENHANCED</code> output, defines a value. MediaTailor; takes this value, and its
+     *        associated key, and generates the key/value pair within the <code>EXT-X-ASSET</code>tag. If you specify a
+     *        value, you must also specify a corresponding key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

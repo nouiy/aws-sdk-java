@@ -233,6 +233,20 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String mapLongVarcharAs;
+    /**
+     * <p>
+     * Specifies whether to use default or custom replication behavior for PostgreSQL-compatible endpoints. You can use
+     * this setting to specify replication behavior for endpoints that require additional configuration, such as
+     * Babelfish endpoints.
+     * </p>
+     */
+    private String databaseMode;
+    /**
+     * <p>
+     * The Babelfish for Aurora PostgreSQL database name for the endpoint.
+     * </p>
+     */
+    private String babelfishDatabaseName;
 
     /**
      * <p>
@@ -1670,6 +1684,121 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Specifies whether to use default or custom replication behavior for PostgreSQL-compatible endpoints. You can use
+     * this setting to specify replication behavior for endpoints that require additional configuration, such as
+     * Babelfish endpoints.
+     * </p>
+     * 
+     * @param databaseMode
+     *        Specifies whether to use default or custom replication behavior for PostgreSQL-compatible endpoints. You
+     *        can use this setting to specify replication behavior for endpoints that require additional configuration,
+     *        such as Babelfish endpoints.
+     * @see DatabaseMode
+     */
+
+    public void setDatabaseMode(String databaseMode) {
+        this.databaseMode = databaseMode;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to use default or custom replication behavior for PostgreSQL-compatible endpoints. You can use
+     * this setting to specify replication behavior for endpoints that require additional configuration, such as
+     * Babelfish endpoints.
+     * </p>
+     * 
+     * @return Specifies whether to use default or custom replication behavior for PostgreSQL-compatible endpoints. You
+     *         can use this setting to specify replication behavior for endpoints that require additional configuration,
+     *         such as Babelfish endpoints.
+     * @see DatabaseMode
+     */
+
+    public String getDatabaseMode() {
+        return this.databaseMode;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to use default or custom replication behavior for PostgreSQL-compatible endpoints. You can use
+     * this setting to specify replication behavior for endpoints that require additional configuration, such as
+     * Babelfish endpoints.
+     * </p>
+     * 
+     * @param databaseMode
+     *        Specifies whether to use default or custom replication behavior for PostgreSQL-compatible endpoints. You
+     *        can use this setting to specify replication behavior for endpoints that require additional configuration,
+     *        such as Babelfish endpoints.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DatabaseMode
+     */
+
+    public PostgreSQLSettings withDatabaseMode(String databaseMode) {
+        setDatabaseMode(databaseMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to use default or custom replication behavior for PostgreSQL-compatible endpoints. You can use
+     * this setting to specify replication behavior for endpoints that require additional configuration, such as
+     * Babelfish endpoints.
+     * </p>
+     * 
+     * @param databaseMode
+     *        Specifies whether to use default or custom replication behavior for PostgreSQL-compatible endpoints. You
+     *        can use this setting to specify replication behavior for endpoints that require additional configuration,
+     *        such as Babelfish endpoints.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DatabaseMode
+     */
+
+    public PostgreSQLSettings withDatabaseMode(DatabaseMode databaseMode) {
+        this.databaseMode = databaseMode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Babelfish for Aurora PostgreSQL database name for the endpoint.
+     * </p>
+     * 
+     * @param babelfishDatabaseName
+     *        The Babelfish for Aurora PostgreSQL database name for the endpoint.
+     */
+
+    public void setBabelfishDatabaseName(String babelfishDatabaseName) {
+        this.babelfishDatabaseName = babelfishDatabaseName;
+    }
+
+    /**
+     * <p>
+     * The Babelfish for Aurora PostgreSQL database name for the endpoint.
+     * </p>
+     * 
+     * @return The Babelfish for Aurora PostgreSQL database name for the endpoint.
+     */
+
+    public String getBabelfishDatabaseName() {
+        return this.babelfishDatabaseName;
+    }
+
+    /**
+     * <p>
+     * The Babelfish for Aurora PostgreSQL database name for the endpoint.
+     * </p>
+     * 
+     * @param babelfishDatabaseName
+     *        The Babelfish for Aurora PostgreSQL database name for the endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PostgreSQLSettings withBabelfishDatabaseName(String babelfishDatabaseName) {
+        setBabelfishDatabaseName(babelfishDatabaseName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1724,7 +1853,11 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
         if (getMapJsonbAsClob() != null)
             sb.append("MapJsonbAsClob: ").append(getMapJsonbAsClob()).append(",");
         if (getMapLongVarcharAs() != null)
-            sb.append("MapLongVarcharAs: ").append(getMapLongVarcharAs());
+            sb.append("MapLongVarcharAs: ").append(getMapLongVarcharAs()).append(",");
+        if (getDatabaseMode() != null)
+            sb.append("DatabaseMode: ").append(getDatabaseMode()).append(",");
+        if (getBabelfishDatabaseName() != null)
+            sb.append("BabelfishDatabaseName: ").append(getBabelfishDatabaseName());
         sb.append("}");
         return sb.toString();
     }
@@ -1827,6 +1960,14 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getMapLongVarcharAs() != null && other.getMapLongVarcharAs().equals(this.getMapLongVarcharAs()) == false)
             return false;
+        if (other.getDatabaseMode() == null ^ this.getDatabaseMode() == null)
+            return false;
+        if (other.getDatabaseMode() != null && other.getDatabaseMode().equals(this.getDatabaseMode()) == false)
+            return false;
+        if (other.getBabelfishDatabaseName() == null ^ this.getBabelfishDatabaseName() == null)
+            return false;
+        if (other.getBabelfishDatabaseName() != null && other.getBabelfishDatabaseName().equals(this.getBabelfishDatabaseName()) == false)
+            return false;
         return true;
     }
 
@@ -1857,6 +1998,8 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getMapBooleanAsBoolean() == null) ? 0 : getMapBooleanAsBoolean().hashCode());
         hashCode = prime * hashCode + ((getMapJsonbAsClob() == null) ? 0 : getMapJsonbAsClob().hashCode());
         hashCode = prime * hashCode + ((getMapLongVarcharAs() == null) ? 0 : getMapLongVarcharAs().hashCode());
+        hashCode = prime * hashCode + ((getDatabaseMode() == null) ? 0 : getDatabaseMode().hashCode());
+        hashCode = prime * hashCode + ((getBabelfishDatabaseName() == null) ? 0 : getBabelfishDatabaseName().hashCode());
         return hashCode;
     }
 

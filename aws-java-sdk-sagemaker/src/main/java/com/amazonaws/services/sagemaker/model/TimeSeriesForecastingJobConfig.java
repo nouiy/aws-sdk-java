@@ -63,15 +63,6 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
      * These column keys must not include any column set in <code>TimeSeriesConfig</code>.
      * </p>
      * </note>
-     * <p>
-     * When not provided, the AutoML job V2 includes all the columns from the original dataset that are not already
-     * declared in <code>TimeSeriesConfig</code>. If provided, the AutoML job V2 only considers these additional columns
-     * as a complement to the ones declared in <code>TimeSeriesConfig</code>.
-     * </p>
-     * <p>
-     * Autopilot supports the following data types: <code>numeric</code>, <code>categorical</code>, <code>text</code>,
-     * and <code>datetime</code>.
-     * </p>
      */
     private String featureSpecificationS3Uri;
 
@@ -182,15 +173,6 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
      * These column keys must not include any column set in <code>TimeSeriesConfig</code>.
      * </p>
      * </note>
-     * <p>
-     * When not provided, the AutoML job V2 includes all the columns from the original dataset that are not already
-     * declared in <code>TimeSeriesConfig</code>. If provided, the AutoML job V2 only considers these additional columns
-     * as a complement to the ones declared in <code>TimeSeriesConfig</code>.
-     * </p>
-     * <p>
-     * Autopilot supports the following data types: <code>numeric</code>, <code>categorical</code>, <code>text</code>,
-     * and <code>datetime</code>.
-     * </p>
      * 
      * @param featureSpecificationS3Uri
      *        A URL to the Amazon S3 data source containing additional selected features that complement the target,
@@ -218,15 +200,6 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
      *        <p>
      *        These column keys must not include any column set in <code>TimeSeriesConfig</code>.
      *        </p>
-     *        </note>
-     *        <p>
-     *        When not provided, the AutoML job V2 includes all the columns from the original dataset that are not
-     *        already declared in <code>TimeSeriesConfig</code>. If provided, the AutoML job V2 only considers these
-     *        additional columns as a complement to the ones declared in <code>TimeSeriesConfig</code>.
-     *        </p>
-     *        <p>
-     *        Autopilot supports the following data types: <code>numeric</code>, <code>categorical</code>,
-     *        <code>text</code>, and <code>datetime</code>.
      */
 
     public void setFeatureSpecificationS3Uri(String featureSpecificationS3Uri) {
@@ -262,15 +235,6 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
      * These column keys must not include any column set in <code>TimeSeriesConfig</code>.
      * </p>
      * </note>
-     * <p>
-     * When not provided, the AutoML job V2 includes all the columns from the original dataset that are not already
-     * declared in <code>TimeSeriesConfig</code>. If provided, the AutoML job V2 only considers these additional columns
-     * as a complement to the ones declared in <code>TimeSeriesConfig</code>.
-     * </p>
-     * <p>
-     * Autopilot supports the following data types: <code>numeric</code>, <code>categorical</code>, <code>text</code>,
-     * and <code>datetime</code>.
-     * </p>
      * 
      * @return A URL to the Amazon S3 data source containing additional selected features that complement the target,
      *         itemID, timestamp, and grouped columns set in <code>TimeSeriesConfig</code>. When not provided, the
@@ -297,15 +261,6 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
      *         <p>
      *         These column keys must not include any column set in <code>TimeSeriesConfig</code>.
      *         </p>
-     *         </note>
-     *         <p>
-     *         When not provided, the AutoML job V2 includes all the columns from the original dataset that are not
-     *         already declared in <code>TimeSeriesConfig</code>. If provided, the AutoML job V2 only considers these
-     *         additional columns as a complement to the ones declared in <code>TimeSeriesConfig</code>.
-     *         </p>
-     *         <p>
-     *         Autopilot supports the following data types: <code>numeric</code>, <code>categorical</code>,
-     *         <code>text</code>, and <code>datetime</code>.
      */
 
     public String getFeatureSpecificationS3Uri() {
@@ -341,15 +296,6 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
      * These column keys must not include any column set in <code>TimeSeriesConfig</code>.
      * </p>
      * </note>
-     * <p>
-     * When not provided, the AutoML job V2 includes all the columns from the original dataset that are not already
-     * declared in <code>TimeSeriesConfig</code>. If provided, the AutoML job V2 only considers these additional columns
-     * as a complement to the ones declared in <code>TimeSeriesConfig</code>.
-     * </p>
-     * <p>
-     * Autopilot supports the following data types: <code>numeric</code>, <code>categorical</code>, <code>text</code>,
-     * and <code>datetime</code>.
-     * </p>
      * 
      * @param featureSpecificationS3Uri
      *        A URL to the Amazon S3 data source containing additional selected features that complement the target,
@@ -377,15 +323,6 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
      *        <p>
      *        These column keys must not include any column set in <code>TimeSeriesConfig</code>.
      *        </p>
-     *        </note>
-     *        <p>
-     *        When not provided, the AutoML job V2 includes all the columns from the original dataset that are not
-     *        already declared in <code>TimeSeriesConfig</code>. If provided, the AutoML job V2 only considers these
-     *        additional columns as a complement to the ones declared in <code>TimeSeriesConfig</code>.
-     *        </p>
-     *        <p>
-     *        Autopilot supports the following data types: <code>numeric</code>, <code>categorical</code>,
-     *        <code>text</code>, and <code>datetime</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

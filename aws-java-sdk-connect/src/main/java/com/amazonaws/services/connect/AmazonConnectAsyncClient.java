@@ -1448,6 +1448,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteQueueResult> deleteQueueAsync(DeleteQueueRequest request) {
+
+        return deleteQueueAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteQueueResult> deleteQueueAsync(final DeleteQueueRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteQueueRequest, DeleteQueueResult> asyncHandler) {
+        final DeleteQueueRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteQueueResult>() {
+            @Override
+            public DeleteQueueResult call() throws Exception {
+                DeleteQueueResult result = null;
+
+                try {
+                    result = executeDeleteQueue(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteQuickConnectResult> deleteQuickConnectAsync(DeleteQuickConnectRequest request) {
 
         return deleteQuickConnectAsync(request, null);
@@ -1465,6 +1498,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDeleteQuickConnect(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRoutingProfileResult> deleteRoutingProfileAsync(DeleteRoutingProfileRequest request) {
+
+        return deleteRoutingProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRoutingProfileResult> deleteRoutingProfileAsync(final DeleteRoutingProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteRoutingProfileRequest, DeleteRoutingProfileResult> asyncHandler) {
+        final DeleteRoutingProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteRoutingProfileResult>() {
+            @Override
+            public DeleteRoutingProfileResult call() throws Exception {
+                DeleteRoutingProfileResult result = null;
+
+                try {
+                    result = executeDeleteRoutingProfile(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

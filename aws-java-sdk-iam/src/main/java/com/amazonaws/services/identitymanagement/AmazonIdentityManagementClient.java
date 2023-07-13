@@ -495,9 +495,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * </note>
      * <p>
      * For more information about roles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">Working with roles</a>. For more
-     * information about instance profiles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About instance profiles</a>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM roles</a> in the <i>IAM User Guide</i>.
+     * For more information about instance profiles, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html">Using
+     * instance profiles</a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @param addRoleToInstanceProfileRequest
@@ -1408,10 +1409,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * <note>
      * <p>
      * Amazon Web Services secures communication with some OIDC identity providers (IdPs) through our library of trusted
-     * certificate authorities (CAs) instead of using a certificate thumbprint to verify your IdP server certificate.
-     * These OIDC IdPs include Google, Auth0, and those that use an Amazon S3 bucket to host a JSON Web Key Set (JWKS)
-     * endpoint. In these cases, your legacy thumbprint remains in your configuration, but is no longer used for
-     * validation.
+     * root certificate authorities (CAs) instead of using a certificate thumbprint to verify your IdP server
+     * certificate. These OIDC IdPs include Auth0, GitHub, Google, and those that use an Amazon S3 bucket to host a JSON
+     * Web Key Set (JWKS) endpoint. In these cases, your legacy thumbprint remains in your configuration, but is no
+     * longer used for validation.
      * </p>
      * </note> <note>
      * <p>
@@ -1651,9 +1652,12 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
 
     /**
      * <p>
-     * Creates a new role for your Amazon Web Services account. For more information about roles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">IAM roles</a>. For information
-     * about quotas for role names and the number of roles you can create, see <a
+     * Creates a new role for your Amazon Web Services account.
+     * </p>
+     * <p>
+     * For more information about roles, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM roles</a> in the <i>IAM User Guide</i>.
+     * For information about quotas for role names and the number of roles you can create, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html">IAM and STS quotas</a> in the
      * <i>IAM User Guide</i>.
      * </p>
@@ -2567,7 +2571,8 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * </important>
      * <p>
      * For more information about instance profiles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About instance profiles</a>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html">Using
+     * instance profiles</a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @param deleteInstanceProfileRequest
@@ -5325,8 +5330,8 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * <p>
      * Retrieves information about the specified instance profile, including the instance profile's path, GUID, ARN, and
      * role. For more information about instance profiles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About instance profiles</a> in
-     * the <i>IAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html">Using
+     * instance profiles</a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @param getInstanceProfileRequest
@@ -5830,7 +5835,7 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * <p>
      * Retrieves information about the specified role, including the role's path, GUID, ARN, and the role's trust policy
      * that grants permission to assume the role. For more information about roles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">Working with roles</a>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM roles</a> in the <i>IAM User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -5922,8 +5927,7 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * </p>
      * <p>
      * For more information about roles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/roles-toplevel.html">Using roles to delegate permissions
-     * and federate identities</a>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM roles</a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @param getRolePolicyRequest
@@ -7327,7 +7331,8 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * <p>
      * Lists the instance profiles that have the specified path prefix. If there are none, the operation returns an
      * empty list. For more information about instance profiles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About instance profiles</a>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html">Using
+     * instance profiles</a> in the <i>IAM User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -7402,7 +7407,8 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * <p>
      * Lists the instance profiles that have the specified associated IAM role. If there are none, the operation returns
      * an empty list. For more information about instance profiles, go to <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About instance profiles</a>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html">Using
+     * instance profiles</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code> parameters.
@@ -8207,7 +8213,7 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * <p>
      * Lists the IAM roles that have the specified path prefix. If there are none, the operation returns an empty list.
      * For more information about roles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">Working with roles</a>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM roles</a> in the <i>IAM User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -9288,9 +9294,9 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html"> <code>CreateRole</code> </a>. You
      * can update a role's trust policy using <a
      * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateAssumeRolePolicy.html">
-     * <code>UpdateAssumerolePolicy</code> </a>. For more information about IAM roles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/roles-toplevel.html">Using roles to delegate permissions
-     * and federate identities</a>.
+     * <code>UpdateAssumeRolePolicy</code> </a>. For more information about roles, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/roles-toplevel.html">IAM roles</a> in the <i>IAM User
+     * Guide</i>.
      * </p>
      * <p>
      * A role can also have a managed policy attached to it. To attach a managed policy to a role, use <a
@@ -9628,10 +9634,11 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * </p>
      * </important>
      * <p>
-     * For more information about IAM roles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">Working with roles</a>. For more
-     * information about instance profiles, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About instance profiles</a>.
+     * For more information about roles, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM roles</a> in the <i>IAM User Guide</i>.
+     * For more information about instance profiles, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html">Using
+     * instance profiles</a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @param removeRoleFromInstanceProfileRequest
@@ -12136,10 +12143,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * <note>
      * <p>
      * Amazon Web Services secures communication with some OIDC identity providers (IdPs) through our library of trusted
-     * certificate authorities (CAs) instead of using a certificate thumbprint to verify your IdP server certificate.
-     * These OIDC IdPs include Google, Auth0, and those that use an Amazon S3 bucket to host a JSON Web Key Set (JWKS)
-     * endpoint. In these cases, your legacy thumbprint remains in your configuration, but is no longer used for
-     * validation.
+     * root certificate authorities (CAs) instead of using a certificate thumbprint to verify your IdP server
+     * certificate. These OIDC IdPs include Auth0, GitHub, Google, and those that use an Amazon S3 bucket to host a JSON
+     * Web Key Set (JWKS) endpoint. In these cases, your legacy thumbprint remains in your configuration, but is no
+     * longer used for validation.
      * </p>
      * </note> <note>
      * <p>

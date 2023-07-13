@@ -64,7 +64,7 @@ public class Solution implements Serializable, Cloneable, StructuredPojo {
     private Boolean performAutoML;
     /**
      * <p>
-     * The ARN of the recipe used to create the solution.
+     * The ARN of the recipe used to create the solution. This is required when <code>performAutoML</code> is false.
      * </p>
      */
     private String recipeArn;
@@ -399,11 +399,12 @@ public class Solution implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the recipe used to create the solution.
+     * The ARN of the recipe used to create the solution. This is required when <code>performAutoML</code> is false.
      * </p>
      * 
      * @param recipeArn
-     *        The ARN of the recipe used to create the solution.
+     *        The ARN of the recipe used to create the solution. This is required when <code>performAutoML</code> is
+     *        false.
      */
 
     public void setRecipeArn(String recipeArn) {
@@ -412,10 +413,11 @@ public class Solution implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the recipe used to create the solution.
+     * The ARN of the recipe used to create the solution. This is required when <code>performAutoML</code> is false.
      * </p>
      * 
-     * @return The ARN of the recipe used to create the solution.
+     * @return The ARN of the recipe used to create the solution. This is required when <code>performAutoML</code> is
+     *         false.
      */
 
     public String getRecipeArn() {
@@ -424,11 +426,12 @@ public class Solution implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the recipe used to create the solution.
+     * The ARN of the recipe used to create the solution. This is required when <code>performAutoML</code> is false.
      * </p>
      * 
      * @param recipeArn
-     *        The ARN of the recipe used to create the solution.
+     *        The ARN of the recipe used to create the solution. This is required when <code>performAutoML</code> is
+     *        false.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

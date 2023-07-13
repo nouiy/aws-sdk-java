@@ -40,6 +40,12 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private ModelRegisterSettings modelRegisterSettings;
+    /**
+     * <p>
+     * The workspace settings for the SageMaker Canvas application.
+     * </p>
+     */
+    private WorkspaceSettings workspaceSettings;
 
     /**
      * <p>
@@ -122,6 +128,46 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The workspace settings for the SageMaker Canvas application.
+     * </p>
+     * 
+     * @param workspaceSettings
+     *        The workspace settings for the SageMaker Canvas application.
+     */
+
+    public void setWorkspaceSettings(WorkspaceSettings workspaceSettings) {
+        this.workspaceSettings = workspaceSettings;
+    }
+
+    /**
+     * <p>
+     * The workspace settings for the SageMaker Canvas application.
+     * </p>
+     * 
+     * @return The workspace settings for the SageMaker Canvas application.
+     */
+
+    public WorkspaceSettings getWorkspaceSettings() {
+        return this.workspaceSettings;
+    }
+
+    /**
+     * <p>
+     * The workspace settings for the SageMaker Canvas application.
+     * </p>
+     * 
+     * @param workspaceSettings
+     *        The workspace settings for the SageMaker Canvas application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CanvasAppSettings withWorkspaceSettings(WorkspaceSettings workspaceSettings) {
+        setWorkspaceSettings(workspaceSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +182,9 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
         if (getTimeSeriesForecastingSettings() != null)
             sb.append("TimeSeriesForecastingSettings: ").append(getTimeSeriesForecastingSettings()).append(",");
         if (getModelRegisterSettings() != null)
-            sb.append("ModelRegisterSettings: ").append(getModelRegisterSettings());
+            sb.append("ModelRegisterSettings: ").append(getModelRegisterSettings()).append(",");
+        if (getWorkspaceSettings() != null)
+            sb.append("WorkspaceSettings: ").append(getWorkspaceSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -160,6 +208,10 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getModelRegisterSettings() != null && other.getModelRegisterSettings().equals(this.getModelRegisterSettings()) == false)
             return false;
+        if (other.getWorkspaceSettings() == null ^ this.getWorkspaceSettings() == null)
+            return false;
+        if (other.getWorkspaceSettings() != null && other.getWorkspaceSettings().equals(this.getWorkspaceSettings()) == false)
+            return false;
         return true;
     }
 
@@ -170,6 +222,7 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
 
         hashCode = prime * hashCode + ((getTimeSeriesForecastingSettings() == null) ? 0 : getTimeSeriesForecastingSettings().hashCode());
         hashCode = prime * hashCode + ((getModelRegisterSettings() == null) ? 0 : getModelRegisterSettings().hashCode());
+        hashCode = prime * hashCode + ((getWorkspaceSettings() == null) ? 0 : getWorkspaceSettings().hashCode());
         return hashCode;
     }
 

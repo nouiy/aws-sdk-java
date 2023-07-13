@@ -3796,6 +3796,41 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
 
     /**
      * <p>
+     * Update a dataset to replace its schema with a new or existing one. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/updating-dataset-schema.html">Replacing a dataset's
+     * schema</a>.
+     * </p>
+     * 
+     * @param updateDatasetRequest
+     * @return A Java Future containing the result of the UpdateDataset operation returned by the service.
+     * @sample AmazonPersonalizeAsync.UpdateDataset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/UpdateDataset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDatasetResult> updateDatasetAsync(UpdateDatasetRequest updateDatasetRequest);
+
+    /**
+     * <p>
+     * Update a dataset to replace its schema with a new or existing one. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/updating-dataset-schema.html">Replacing a dataset's
+     * schema</a>.
+     * </p>
+     * 
+     * @param updateDatasetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateDataset operation returned by the service.
+     * @sample AmazonPersonalizeAsyncHandler.UpdateDataset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/UpdateDataset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDatasetResult> updateDatasetAsync(UpdateDatasetRequest updateDatasetRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateDatasetRequest, UpdateDatasetResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates a metric attribution.
      * </p>
      * 

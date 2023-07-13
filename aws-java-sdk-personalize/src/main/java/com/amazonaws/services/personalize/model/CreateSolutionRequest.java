@@ -64,7 +64,7 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
     private Boolean performAutoML;
     /**
      * <p>
-     * The ARN of the recipe to use for model training. Only specified when <code>performAutoML</code> is false.
+     * The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is false.
      * </p>
      */
     private String recipeArn;
@@ -403,11 +403,12 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN of the recipe to use for model training. Only specified when <code>performAutoML</code> is false.
+     * The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is false.
      * </p>
      * 
      * @param recipeArn
-     *        The ARN of the recipe to use for model training. Only specified when <code>performAutoML</code> is false.
+     *        The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is
+     *        false.
      */
 
     public void setRecipeArn(String recipeArn) {
@@ -416,10 +417,11 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN of the recipe to use for model training. Only specified when <code>performAutoML</code> is false.
+     * The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is false.
      * </p>
      * 
-     * @return The ARN of the recipe to use for model training. Only specified when <code>performAutoML</code> is false.
+     * @return The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is
+     *         false.
      */
 
     public String getRecipeArn() {
@@ -428,11 +430,12 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN of the recipe to use for model training. Only specified when <code>performAutoML</code> is false.
+     * The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is false.
      * </p>
      * 
      * @param recipeArn
-     *        The ARN of the recipe to use for model training. Only specified when <code>performAutoML</code> is false.
+     *        The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is
+     *        false.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -673,7 +673,18 @@ public enum InstanceType {
     I4g2xlarge("i4g.2xlarge"),
     I4g4xlarge("i4g.4xlarge"),
     I4g8xlarge("i4g.8xlarge"),
-    I4g16xlarge("i4g.16xlarge");
+    I4g16xlarge("i4g.16xlarge"),
+    Hpc7g4xlarge("hpc7g.4xlarge"),
+    Hpc7g8xlarge("hpc7g.8xlarge"),
+    Hpc7g16xlarge("hpc7g.16xlarge"),
+    C7gnMedium("c7gn.medium"),
+    C7gnLarge("c7gn.large"),
+    C7gnXlarge("c7gn.xlarge"),
+    C7gn2xlarge("c7gn.2xlarge"),
+    C7gn4xlarge("c7gn.4xlarge"),
+    C7gn8xlarge("c7gn.8xlarge"),
+    C7gn12xlarge("c7gn.12xlarge"),
+    C7gn16xlarge("c7gn.16xlarge");
 
     private String value;
 

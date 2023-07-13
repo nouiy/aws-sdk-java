@@ -84,7 +84,7 @@ public class InstanceSummary implements Serializable, Cloneable, StructuredPojo 
     private Boolean outboundCallsEnabled;
     /**
      * <p>
-     * This URL allows contact center users to access Amazon Connect admin website.
+     * This URL allows contact center users to access the Amazon Connect admin website.
      * </p>
      */
     private String instanceAccessUrl;
@@ -513,11 +513,11 @@ public class InstanceSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * This URL allows contact center users to access Amazon Connect admin website.
+     * This URL allows contact center users to access the Amazon Connect admin website.
      * </p>
      * 
      * @param instanceAccessUrl
-     *        This URL allows contact center users to access Amazon Connect admin website.
+     *        This URL allows contact center users to access the Amazon Connect admin website.
      */
 
     public void setInstanceAccessUrl(String instanceAccessUrl) {
@@ -526,10 +526,10 @@ public class InstanceSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * This URL allows contact center users to access Amazon Connect admin website.
+     * This URL allows contact center users to access the Amazon Connect admin website.
      * </p>
      * 
-     * @return This URL allows contact center users to access Amazon Connect admin website.
+     * @return This URL allows contact center users to access the Amazon Connect admin website.
      */
 
     public String getInstanceAccessUrl() {
@@ -538,11 +538,11 @@ public class InstanceSummary implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * This URL allows contact center users to access Amazon Connect admin website.
+     * This URL allows contact center users to access the Amazon Connect admin website.
      * </p>
      * 
      * @param instanceAccessUrl
-     *        This URL allows contact center users to access Amazon Connect admin website.
+     *        This URL allows contact center users to access the Amazon Connect admin website.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
