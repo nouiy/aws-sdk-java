@@ -37,7 +37,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private Boolean applyDuringMaintenanceWindow;
     /**
      * <p>
-     * The desired capacity for the runtime environment to update.
+     * The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is
+     * 100.
      * </p>
      */
     private Integer desiredCapacity;
@@ -153,11 +154,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The desired capacity for the runtime environment to update.
+     * The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is
+     * 100.
      * </p>
      * 
      * @param desiredCapacity
-     *        The desired capacity for the runtime environment to update.
+     *        The desired capacity for the runtime environment to update. The minimum possible value is 0 and the
+     *        maximum is 100.
      */
 
     public void setDesiredCapacity(Integer desiredCapacity) {
@@ -166,10 +169,12 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The desired capacity for the runtime environment to update.
+     * The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is
+     * 100.
      * </p>
      * 
-     * @return The desired capacity for the runtime environment to update.
+     * @return The desired capacity for the runtime environment to update. The minimum possible value is 0 and the
+     *         maximum is 100.
      */
 
     public Integer getDesiredCapacity() {
@@ -178,11 +183,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The desired capacity for the runtime environment to update.
+     * The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is
+     * 100.
      * </p>
      * 
      * @param desiredCapacity
-     *        The desired capacity for the runtime environment to update.
+     *        The desired capacity for the runtime environment to update. The minimum possible value is 0 and the
+     *        maximum is 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

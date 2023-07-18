@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -99,29 +99,29 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
-      }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
       }, {
         "exceptionName" : "ThrottlingException",
         "documentation" : "<p>The number of requests made exceeds the limit.</p>",
         "httpStatusCode" : 429
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -156,29 +156,29 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
-      }, {
         "exceptionName" : "ServiceQuotaExceededException",
         "documentation" : "<p>One or more quotas for Amazon Web Services Mainframe Modernization exceeds the limit.</p>",
         "httpStatusCode" : 402
       }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
         "httpStatusCode" : 403
       }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -213,33 +213,33 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
         "documentation" : "<p>One or more quotas for Amazon Web Services Mainframe Modernization exceeds the limit.</p>",
         "httpStatusCode" : 402
       }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
         "httpStatusCode" : 403
       }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -274,33 +274,33 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
         "documentation" : "<p>One or more quotas for Amazon Web Services Mainframe Modernization exceeds the limit.</p>",
         "httpStatusCode" : 402
       }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
         "httpStatusCode" : 403
       }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -335,29 +335,29 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
-      }, {
         "exceptionName" : "ServiceQuotaExceededException",
         "documentation" : "<p>One or more quotas for Amazon Web Services Mainframe Modernization exceeds the limit.</p>",
         "httpStatusCode" : 402
       }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
         "httpStatusCode" : 403
       }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -392,25 +392,25 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
-      }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
         "httpStatusCode" : 403
       }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -445,29 +445,29 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
-      }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
       }, {
         "exceptionName" : "ThrottlingException",
         "documentation" : "<p>The number of requests made exceeds the limit.</p>",
         "httpStatusCode" : 429
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -502,25 +502,25 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
-      }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
         "httpStatusCode" : 403
       }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -555,6 +555,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -562,18 +574,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -608,6 +608,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -615,18 +627,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -661,6 +661,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -668,18 +680,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -714,6 +714,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -721,18 +733,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -767,6 +767,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -774,18 +786,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -820,6 +820,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -827,18 +839,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -873,6 +873,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -880,18 +892,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -913,6 +913,51 @@
       },
       "syncReturnType" : "GetEnvironmentResult"
     },
+    "GetSignedBluinsightsUrl" : {
+      "asyncCallableType" : "java.util.concurrent.Callable<GetSignedBluinsightsUrlResult>",
+      "asyncFutureType" : "java.util.concurrent.Future<GetSignedBluinsightsUrlResult>",
+      "asyncHandlerType" : "com.amazonaws.handlers.AsyncHandler<GetSignedBluinsightsUrlRequest, GetSignedBluinsightsUrlResult>",
+      "asyncReturnType" : "GetSignedBluinsightsUrlResult",
+      "authenticated" : true,
+      "deprecated" : false,
+      "documentation" : "<p>Gets a single sign-on URL that can be used to connect to AWS Blu Insights.</p>",
+      "endpointCacheRequired" : false,
+      "endpointDiscovery" : null,
+      "endpointOperation" : false,
+      "endpointTrait" : null,
+      "exceptions" : [ {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
+      } ],
+      "hasBlobMemberAsPayload" : false,
+      "hostPrefixProcessor" : null,
+      "input" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "GetSignedBluinsightsUrlRequest",
+        "variableName" : "getSignedBluinsightsUrlRequest",
+        "variableType" : "GetSignedBluinsightsUrlRequest",
+        "documentation" : null,
+        "simpleType" : "GetSignedBluinsightsUrlRequest",
+        "variableSetterType" : "GetSignedBluinsightsUrlRequest"
+      },
+      "inputStreamPropertyName" : null,
+      "methodName" : "getSignedBluinsightsUrl",
+      "operationName" : "GetSignedBluinsightsUrl",
+      "returnType" : {
+        "returnType" : "GetSignedBluinsightsUrlResult",
+        "documentation" : null
+      },
+      "syncReturnType" : "GetSignedBluinsightsUrlResult"
+    },
     "ListApplicationVersions" : {
       "asyncCallableType" : "java.util.concurrent.Callable<ListApplicationVersionsResult>",
       "asyncFutureType" : "java.util.concurrent.Future<ListApplicationVersionsResult>",
@@ -926,6 +971,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -933,18 +990,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -979,6 +1024,14 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -986,14 +1039,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1028,6 +1073,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -1035,18 +1092,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1081,6 +1126,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -1088,18 +1145,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1134,6 +1179,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -1141,18 +1198,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1187,6 +1232,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -1194,18 +1251,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1240,6 +1285,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -1247,18 +1304,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1293,6 +1338,14 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -1300,14 +1353,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1342,6 +1387,14 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -1349,14 +1402,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1391,6 +1436,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -1398,18 +1455,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1444,29 +1489,29 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
-      }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
       }, {
         "exceptionName" : "ThrottlingException",
         "documentation" : "<p>The number of requests made exceeds the limit.</p>",
         "httpStatusCode" : 429
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1501,29 +1546,29 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
-      }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
       }, {
         "exceptionName" : "ThrottlingException",
         "documentation" : "<p>The number of requests made exceeds the limit.</p>",
         "httpStatusCode" : 429
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1558,29 +1603,29 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
-      }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
       }, {
         "exceptionName" : "ThrottlingException",
         "documentation" : "<p>The number of requests made exceeds the limit.</p>",
         "httpStatusCode" : 429
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1615,29 +1660,29 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
         "documentation" : "<p>One or more quotas for Amazon Web Services Mainframe Modernization exceeds the limit.</p>",
         "httpStatusCode" : 402
       }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
         "httpStatusCode" : 403
       }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1672,6 +1717,18 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "ValidationException",
         "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
         "httpStatusCode" : 400
@@ -1679,18 +1736,6 @@
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
-      }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1725,29 +1770,29 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
-      }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
-        "httpStatusCode" : 403
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
       }, {
         "exceptionName" : "ThrottlingException",
         "documentation" : "<p>The number of requests made exceeds the limit.</p>",
         "httpStatusCode" : 429
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1782,33 +1827,33 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ValidationException",
-        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
-        "httpStatusCode" : 400
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource was not found.</p>",
+        "httpStatusCode" : 404
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
         "documentation" : "<p>One or more quotas for Amazon Web Services Mainframe Modernization exceeds the limit.</p>",
         "httpStatusCode" : 402
       }, {
-        "exceptionName" : "ConflictException",
-        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
-        "httpStatusCode" : 409
-      }, {
-        "exceptionName" : "InternalServerException",
-        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
-        "httpStatusCode" : 500
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
+        "httpStatusCode" : 429
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>The account or role doesn't have the right permissions to make the request.</p>",
         "httpStatusCode" : 403
       }, {
-        "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>The number of requests made exceeds the limit.</p>",
-        "httpStatusCode" : 429
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>The parameters provided in the request conflict with existing resources.</p>",
+        "httpStatusCode" : 409
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource was not found.</p>",
-        "httpStatusCode" : 404
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>One or more parameters provided in the request is not valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>An unexpected error occurred during the processing of the request.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -8448,12 +8493,12 @@
         "c2jName" : "roleArn",
         "c2jShape" : "Arn",
         "deprecated" : false,
-        "documentation" : "<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>",
+        "documentation" : "<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>\n@param roleArn The Amazon Resource Name (ARN) of the role associated with the application.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>\n@param roleArn The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withRoleArn",
-        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>\n@return The Amazon Resource Name (ARN) of the role associated with the application.*/",
+        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>\n@return The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.*/",
         "getterMethodName" : "getRoleArn",
         "getterModel" : {
           "returnType" : "String",
@@ -8487,7 +8532,7 @@
         "marshallingType" : "STRING",
         "name" : "RoleArn",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>\n@param roleArn The Amazon Resource Name (ARN) of the role associated with the application.*/",
+        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>\n@param roleArn The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.*/",
         "setterMethodName" : "setRoleArn",
         "setterModel" : {
           "timestampFormat" : null,
@@ -8502,13 +8547,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>\n@param roleArn The Amazon Resource Name (ARN) of the role associated with the application.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>\n@param roleArn The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "roleArn",
           "variableType" : "String",
-          "documentation" : "<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>",
+          "documentation" : "<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -9092,12 +9137,12 @@
           "c2jName" : "roleArn",
           "c2jShape" : "Arn",
           "deprecated" : false,
-          "documentation" : "<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>",
+          "documentation" : "<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>\n@param roleArn The Amazon Resource Name (ARN) of the role associated with the application.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>\n@param roleArn The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withRoleArn",
-          "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>\n@return The Amazon Resource Name (ARN) of the role associated with the application.*/",
+          "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>\n@return The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.*/",
           "getterMethodName" : "getRoleArn",
           "getterModel" : {
             "returnType" : "String",
@@ -9131,7 +9176,7 @@
           "marshallingType" : "STRING",
           "name" : "RoleArn",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>\n@param roleArn The Amazon Resource Name (ARN) of the role associated with the application.*/",
+          "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>\n@param roleArn The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.*/",
           "setterMethodName" : "setRoleArn",
           "setterModel" : {
             "timestampFormat" : null,
@@ -9146,13 +9191,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>\n@param roleArn The Amazon Resource Name (ARN) of the role associated with the application.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>\n@param roleArn The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "roleArn",
             "variableType" : "String",
-            "documentation" : "<p>The Amazon Resource Name (ARN) of the role associated with the application.</p>",
+            "documentation" : "<p>The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services resources that are not part of the application or are in a different Amazon Web Services account.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -22379,14 +22424,14 @@
         "name" : "Available",
         "value" : "Available"
       }, {
+        "name" : "Updating",
+        "value" : "Updating"
+      }, {
         "name" : "Deleting",
         "value" : "Deleting"
       }, {
         "name" : "Failed",
         "value" : "Failed"
-      }, {
-        "name" : "Updating",
-        "value" : "Updating"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.mainframemodernization.enum.EnvironmentLifecycle",
@@ -40195,6 +40240,238 @@
       },
       "wrapper" : false
     },
+    "GetSignedBluinsightsUrlRequest" : {
+      "c2jName" : "GetSignedBluinsightsUrlRequest",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : null,
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.mainframemodernization.request.GetSignedBluinsightsUrlRequest",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : {
+        "action" : "GetSignedBluinsightsUrl",
+        "locationName" : null,
+        "requestUri" : "/signed-bi-url",
+        "target" : null,
+        "verb" : "GET",
+        "xmlNameSpaceUri" : null
+      },
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.mainframemodernization.request",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : null,
+      "shapeName" : "GetSignedBluinsightsUrlRequest",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "GetSignedBluinsightsUrlRequest",
+        "variableName" : "getSignedBluinsightsUrlRequest",
+        "variableType" : "GetSignedBluinsightsUrlRequest",
+        "documentation" : null,
+        "simpleType" : "GetSignedBluinsightsUrlRequest",
+        "variableSetterType" : "GetSignedBluinsightsUrlRequest"
+      },
+      "wrapper" : false
+    },
+    "GetSignedBluinsightsUrlResult" : {
+      "c2jName" : "GetSignedBluinsightsUrlResponse",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.mainframemodernization.response.GetSignedBluinsightsUrlResult",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ {
+        "c2jName" : "signedBiUrl",
+        "c2jShape" : "String",
+        "deprecated" : false,
+        "documentation" : "<p>Single sign-on AWS Blu Insights URL.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>Single sign-on AWS Blu Insights URL.</p>\n@param signedBiUrl Single sign-on AWS Blu Insights URL.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withSignedBiUrl",
+        "getterDocumentation" : "/**<p>Single sign-on AWS Blu Insights URL.</p>\n@return Single sign-on AWS Blu Insights URL.*/",
+        "getterMethodName" : "getSignedBiUrl",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "signedBiUrl",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "signedBiUrl",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "SignedBiUrl",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Single sign-on AWS Blu Insights URL.</p>\n@param signedBiUrl Single sign-on AWS Blu Insights URL.*/",
+        "setterMethodName" : "setSignedBiUrl",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "signedBiUrl",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Single sign-on AWS Blu Insights URL.</p>\n@param signedBiUrl Single sign-on AWS Blu Insights URL.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "signedBiUrl",
+          "variableType" : "String",
+          "documentation" : "<p>Single sign-on AWS Blu Insights URL.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      } ],
+      "membersAsMap" : {
+        "SignedBiUrl" : {
+          "c2jName" : "signedBiUrl",
+          "c2jShape" : "String",
+          "deprecated" : false,
+          "documentation" : "<p>Single sign-on AWS Blu Insights URL.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>Single sign-on AWS Blu Insights URL.</p>\n@param signedBiUrl Single sign-on AWS Blu Insights URL.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withSignedBiUrl",
+          "getterDocumentation" : "/**<p>Single sign-on AWS Blu Insights URL.</p>\n@return Single sign-on AWS Blu Insights URL.*/",
+          "getterMethodName" : "getSignedBiUrl",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "signedBiUrl",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "signedBiUrl",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "SignedBiUrl",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>Single sign-on AWS Blu Insights URL.</p>\n@param signedBiUrl Single sign-on AWS Blu Insights URL.*/",
+          "setterMethodName" : "setSignedBiUrl",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "signedBiUrl",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>Single sign-on AWS Blu Insights URL.</p>\n@param signedBiUrl Single sign-on AWS Blu Insights URL.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "signedBiUrl",
+            "variableType" : "String",
+            "documentation" : "<p>Single sign-on AWS Blu Insights URL.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        }
+      },
+      "packageName" : "com.amazonaws.services.mainframemodernization.response",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ "signedBiUrl" ],
+      "shapeName" : "GetSignedBluinsightsUrlResult",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "GetSignedBluinsightsUrlResult",
+        "variableName" : "getSignedBluinsightsUrlResult",
+        "variableType" : "GetSignedBluinsightsUrlResult",
+        "documentation" : null,
+        "simpleType" : "GetSignedBluinsightsUrlResult",
+        "variableSetterType" : "GetSignedBluinsightsUrlResult"
+      },
+      "wrapper" : false
+    },
     "HighAvailabilityConfig" : {
       "c2jName" : "HighAvailabilityConfig",
       "customization" : {
@@ -40219,12 +40496,12 @@
         "c2jName" : "desiredCapacity",
         "c2jShape" : "CapacityValue",
         "deprecated" : false,
-        "documentation" : "<p>The number of instances in a high availability configuration.</p>",
+        "documentation" : "<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The number of instances in a high availability configuration.</p>\n@param desiredCapacity The number of instances in a high availability configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>\n@param desiredCapacity The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withDesiredCapacity",
-        "getterDocumentation" : "/**<p>The number of instances in a high availability configuration.</p>\n@return The number of instances in a high availability configuration.*/",
+        "getterDocumentation" : "/**<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>\n@return The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.*/",
         "getterMethodName" : "getDesiredCapacity",
         "getterModel" : {
           "returnType" : "Integer",
@@ -40258,7 +40535,7 @@
         "marshallingType" : "INTEGER",
         "name" : "DesiredCapacity",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The number of instances in a high availability configuration.</p>\n@param desiredCapacity The number of instances in a high availability configuration.*/",
+        "setterDocumentation" : "/**<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>\n@param desiredCapacity The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.*/",
         "setterMethodName" : "setDesiredCapacity",
         "setterModel" : {
           "timestampFormat" : null,
@@ -40273,13 +40550,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The number of instances in a high availability configuration.</p>\n@param desiredCapacity The number of instances in a high availability configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>\n@param desiredCapacity The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "Integer",
           "variableName" : "desiredCapacity",
           "variableType" : "Integer",
-          "documentation" : "<p>The number of instances in a high availability configuration.</p>",
+          "documentation" : "<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>",
           "simpleType" : "Integer",
           "variableSetterType" : "Integer"
         },
@@ -40290,12 +40567,12 @@
           "c2jName" : "desiredCapacity",
           "c2jShape" : "CapacityValue",
           "deprecated" : false,
-          "documentation" : "<p>The number of instances in a high availability configuration.</p>",
+          "documentation" : "<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The number of instances in a high availability configuration.</p>\n@param desiredCapacity The number of instances in a high availability configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>\n@param desiredCapacity The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withDesiredCapacity",
-          "getterDocumentation" : "/**<p>The number of instances in a high availability configuration.</p>\n@return The number of instances in a high availability configuration.*/",
+          "getterDocumentation" : "/**<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>\n@return The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.*/",
           "getterMethodName" : "getDesiredCapacity",
           "getterModel" : {
             "returnType" : "Integer",
@@ -40329,7 +40606,7 @@
           "marshallingType" : "INTEGER",
           "name" : "DesiredCapacity",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The number of instances in a high availability configuration.</p>\n@param desiredCapacity The number of instances in a high availability configuration.*/",
+          "setterDocumentation" : "/**<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>\n@param desiredCapacity The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.*/",
           "setterMethodName" : "setDesiredCapacity",
           "setterModel" : {
             "timestampFormat" : null,
@@ -40344,13 +40621,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The number of instances in a high availability configuration.</p>\n@param desiredCapacity The number of instances in a high availability configuration.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>\n@param desiredCapacity The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "Integer",
             "variableName" : "desiredCapacity",
             "variableType" : "Integer",
-            "documentation" : "<p>The number of instances in a high availability configuration.</p>",
+            "documentation" : "<p>The number of instances in a high availability configuration. The minimum possible value is 1 and the maximum is 100.</p>",
             "simpleType" : "Integer",
             "variableSetterType" : "Integer"
           },
@@ -60277,12 +60554,12 @@
         "c2jName" : "desiredCapacity",
         "c2jShape" : "CapacityValue",
         "deprecated" : false,
-        "documentation" : "<p>The desired capacity for the runtime environment to update.</p>",
+        "documentation" : "<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The desired capacity for the runtime environment to update.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withDesiredCapacity",
-        "getterDocumentation" : "/**<p>The desired capacity for the runtime environment to update.</p>\n@return The desired capacity for the runtime environment to update.*/",
+        "getterDocumentation" : "/**<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>\n@return The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.*/",
         "getterMethodName" : "getDesiredCapacity",
         "getterModel" : {
           "returnType" : "Integer",
@@ -60316,7 +60593,7 @@
         "marshallingType" : "INTEGER",
         "name" : "DesiredCapacity",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The desired capacity for the runtime environment to update.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update.*/",
+        "setterDocumentation" : "/**<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.*/",
         "setterMethodName" : "setDesiredCapacity",
         "setterModel" : {
           "timestampFormat" : null,
@@ -60331,13 +60608,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The desired capacity for the runtime environment to update.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "Integer",
           "variableName" : "desiredCapacity",
           "variableType" : "Integer",
-          "documentation" : "<p>The desired capacity for the runtime environment to update.</p>",
+          "documentation" : "<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>",
           "simpleType" : "Integer",
           "variableSetterType" : "Integer"
         },
@@ -60694,12 +60971,12 @@
           "c2jName" : "desiredCapacity",
           "c2jShape" : "CapacityValue",
           "deprecated" : false,
-          "documentation" : "<p>The desired capacity for the runtime environment to update.</p>",
+          "documentation" : "<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The desired capacity for the runtime environment to update.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withDesiredCapacity",
-          "getterDocumentation" : "/**<p>The desired capacity for the runtime environment to update.</p>\n@return The desired capacity for the runtime environment to update.*/",
+          "getterDocumentation" : "/**<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>\n@return The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.*/",
           "getterMethodName" : "getDesiredCapacity",
           "getterModel" : {
             "returnType" : "Integer",
@@ -60733,7 +61010,7 @@
           "marshallingType" : "INTEGER",
           "name" : "DesiredCapacity",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The desired capacity for the runtime environment to update.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update.*/",
+          "setterDocumentation" : "/**<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.*/",
           "setterMethodName" : "setDesiredCapacity",
           "setterModel" : {
             "timestampFormat" : null,
@@ -60748,13 +61025,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The desired capacity for the runtime environment to update.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>\n@param desiredCapacity The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "Integer",
             "variableName" : "desiredCapacity",
             "variableType" : "Integer",
-            "documentation" : "<p>The desired capacity for the runtime environment to update.</p>",
+            "documentation" : "<p>The desired capacity for the runtime environment to update. The minimum possible value is 0 and the maximum is 100.</p>",
             "simpleType" : "Integer",
             "variableSetterType" : "Integer"
           },

@@ -50,12 +50,15 @@ import com.amazonaws.services.codegurusecurity.model.transform.*;
  * Client for accessing Amazon CodeGuru Security. All service calls made using this client are blocking, and will not
  * return until the service call completes.
  * <p>
+ * <note>
  * <p>
- * This section provides documentation for the <a href=
- * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/codeguru/latest/security-ug/what-is-codeguru-security.html"
- * >Amazon CodeGuru Security</a> API operations. CodeGuru Security is a service that uses program analysis and machine
- * learning to detect security policy violations and vulnerabilities, and recommends ways to address these security
- * risks.
+ * Amazon CodeGuru Security is in preview release and is subject to change.
+ * </p>
+ * </note>
+ * <p>
+ * This section provides documentation for the Amazon CodeGuru Security API operations. CodeGuru Security is a service
+ * that uses program analysis and machine learning to detect security policy violations and vulnerabilities, and
+ * recommends ways to address these security risks.
  * </p>
  * <p>
  * By proactively detecting and providing recommendations for addressing security risks, CodeGuru Security improves the
@@ -675,7 +678,7 @@ public class AmazonCodeGuruSecurityClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
-     * Returns a list of all the scans in an account.
+     * Returns a list of all the standard scans in an account. Does not return express scans.
      * </p>
      * 
      * @param listScansRequest

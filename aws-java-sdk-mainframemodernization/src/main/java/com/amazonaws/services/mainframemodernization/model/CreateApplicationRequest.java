@@ -66,7 +66,8 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role associated with the application.
+     * The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services
+     * resources that are not part of the application or are in a different Amazon Web Services account.
      * </p>
      */
     private String roleArn;
@@ -359,11 +360,13 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role associated with the application.
+     * The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services
+     * resources that are not part of the application or are in a different Amazon Web Services account.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the role associated with the application.
+     *        The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web
+     *        Services resources that are not part of the application or are in a different Amazon Web Services account.
      */
 
     public void setRoleArn(String roleArn) {
@@ -372,10 +375,13 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role associated with the application.
+     * The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services
+     * resources that are not part of the application or are in a different Amazon Web Services account.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the role associated with the application.
+     * @return The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web
+     *         Services resources that are not part of the application or are in a different Amazon Web Services
+     *         account.
      */
 
     public String getRoleArn() {
@@ -384,11 +390,13 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role associated with the application.
+     * The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web Services
+     * resources that are not part of the application or are in a different Amazon Web Services account.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the role associated with the application.
+     *        The Amazon Resource Name (ARN) that identifies a role that the application uses to access Amazon Web
+     *        Services resources that are not part of the application or are in a different Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

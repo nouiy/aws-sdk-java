@@ -319,12 +319,37 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public ListIntentMetricsResult listIntentMetrics(ListIntentMetricsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListIntentPathsResult listIntentPaths(ListIntentPathsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListIntentStageMetricsResult listIntentStageMetrics(ListIntentStageMetricsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListIntentsResult listIntents(ListIntentsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public ListRecommendedIntentsResult listRecommendedIntents(ListRecommendedIntentsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListSessionAnalyticsDataResult listSessionAnalyticsData(ListSessionAnalyticsDataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListSessionMetricsResult listSessionMetrics(ListSessionMetricsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -360,6 +385,16 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public ListTestSetsResult listTestSets(ListTestSetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListUtteranceAnalyticsDataResult listUtteranceAnalyticsData(ListUtteranceAnalyticsDataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListUtteranceMetricsResult listUtteranceMetrics(ListUtteranceMetricsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

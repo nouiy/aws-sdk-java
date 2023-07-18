@@ -28,7 +28,7 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The type of analysis you want CodeGuru Security to perform in the scan, either <code>Security</code> or
-     * <code>All</code>. The <code>Secuirty</code> type only generates findings related to security. The
+     * <code>All</code>. The <code>Security</code> type only generates findings related to security. The
      * <code>All</code> type generates both security findings and quality findings. Defaults to <code>Security</code>
      * type if missing.
      * </p>
@@ -90,14 +90,14 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The type of analysis you want CodeGuru Security to perform in the scan, either <code>Security</code> or
-     * <code>All</code>. The <code>Secuirty</code> type only generates findings related to security. The
+     * <code>All</code>. The <code>Security</code> type only generates findings related to security. The
      * <code>All</code> type generates both security findings and quality findings. Defaults to <code>Security</code>
      * type if missing.
      * </p>
      * 
      * @param analysisType
      *        The type of analysis you want CodeGuru Security to perform in the scan, either <code>Security</code> or
-     *        <code>All</code>. The <code>Secuirty</code> type only generates findings related to security. The
+     *        <code>All</code>. The <code>Security</code> type only generates findings related to security. The
      *        <code>All</code> type generates both security findings and quality findings. Defaults to
      *        <code>Security</code> type if missing.
      * @see AnalysisType
@@ -110,13 +110,13 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The type of analysis you want CodeGuru Security to perform in the scan, either <code>Security</code> or
-     * <code>All</code>. The <code>Secuirty</code> type only generates findings related to security. The
+     * <code>All</code>. The <code>Security</code> type only generates findings related to security. The
      * <code>All</code> type generates both security findings and quality findings. Defaults to <code>Security</code>
      * type if missing.
      * </p>
      * 
      * @return The type of analysis you want CodeGuru Security to perform in the scan, either <code>Security</code> or
-     *         <code>All</code>. The <code>Secuirty</code> type only generates findings related to security. The
+     *         <code>All</code>. The <code>Security</code> type only generates findings related to security. The
      *         <code>All</code> type generates both security findings and quality findings. Defaults to
      *         <code>Security</code> type if missing.
      * @see AnalysisType
@@ -129,14 +129,14 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The type of analysis you want CodeGuru Security to perform in the scan, either <code>Security</code> or
-     * <code>All</code>. The <code>Secuirty</code> type only generates findings related to security. The
+     * <code>All</code>. The <code>Security</code> type only generates findings related to security. The
      * <code>All</code> type generates both security findings and quality findings. Defaults to <code>Security</code>
      * type if missing.
      * </p>
      * 
      * @param analysisType
      *        The type of analysis you want CodeGuru Security to perform in the scan, either <code>Security</code> or
-     *        <code>All</code>. The <code>Secuirty</code> type only generates findings related to security. The
+     *        <code>All</code>. The <code>Security</code> type only generates findings related to security. The
      *        <code>All</code> type generates both security findings and quality findings. Defaults to
      *        <code>Security</code> type if missing.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -151,14 +151,14 @@ public class CreateScanRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The type of analysis you want CodeGuru Security to perform in the scan, either <code>Security</code> or
-     * <code>All</code>. The <code>Secuirty</code> type only generates findings related to security. The
+     * <code>All</code>. The <code>Security</code> type only generates findings related to security. The
      * <code>All</code> type generates both security findings and quality findings. Defaults to <code>Security</code>
      * type if missing.
      * </p>
      * 
      * @param analysisType
      *        The type of analysis you want CodeGuru Security to perform in the scan, either <code>Security</code> or
-     *        <code>All</code>. The <code>Secuirty</code> type only generates findings related to security. The
+     *        <code>All</code>. The <code>Security</code> type only generates findings related to security. The
      *        <code>All</code> type generates both security findings and quality findings. Defaults to
      *        <code>Security</code> type if missing.
      * @return Returns a reference to this object so that method calls can be chained together.

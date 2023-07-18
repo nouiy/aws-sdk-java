@@ -1999,6 +1999,105 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListIntentMetricsResult> listIntentMetricsAsync(ListIntentMetricsRequest request) {
+
+        return listIntentMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIntentMetricsResult> listIntentMetricsAsync(final ListIntentMetricsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListIntentMetricsRequest, ListIntentMetricsResult> asyncHandler) {
+        final ListIntentMetricsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListIntentMetricsResult>() {
+            @Override
+            public ListIntentMetricsResult call() throws Exception {
+                ListIntentMetricsResult result = null;
+
+                try {
+                    result = executeListIntentMetrics(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIntentPathsResult> listIntentPathsAsync(ListIntentPathsRequest request) {
+
+        return listIntentPathsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIntentPathsResult> listIntentPathsAsync(final ListIntentPathsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListIntentPathsRequest, ListIntentPathsResult> asyncHandler) {
+        final ListIntentPathsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListIntentPathsResult>() {
+            @Override
+            public ListIntentPathsResult call() throws Exception {
+                ListIntentPathsResult result = null;
+
+                try {
+                    result = executeListIntentPaths(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIntentStageMetricsResult> listIntentStageMetricsAsync(ListIntentStageMetricsRequest request) {
+
+        return listIntentStageMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIntentStageMetricsResult> listIntentStageMetricsAsync(final ListIntentStageMetricsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListIntentStageMetricsRequest, ListIntentStageMetricsResult> asyncHandler) {
+        final ListIntentStageMetricsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListIntentStageMetricsResult>() {
+            @Override
+            public ListIntentStageMetricsResult call() throws Exception {
+                ListIntentStageMetricsResult result = null;
+
+                try {
+                    result = executeListIntentStageMetrics(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListIntentsResult> listIntentsAsync(ListIntentsRequest request) {
 
         return listIntentsAsync(request, null);
@@ -2049,6 +2148,72 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeListRecommendedIntents(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSessionAnalyticsDataResult> listSessionAnalyticsDataAsync(ListSessionAnalyticsDataRequest request) {
+
+        return listSessionAnalyticsDataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSessionAnalyticsDataResult> listSessionAnalyticsDataAsync(final ListSessionAnalyticsDataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSessionAnalyticsDataRequest, ListSessionAnalyticsDataResult> asyncHandler) {
+        final ListSessionAnalyticsDataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSessionAnalyticsDataResult>() {
+            @Override
+            public ListSessionAnalyticsDataResult call() throws Exception {
+                ListSessionAnalyticsDataResult result = null;
+
+                try {
+                    result = executeListSessionAnalyticsData(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSessionMetricsResult> listSessionMetricsAsync(ListSessionMetricsRequest request) {
+
+        return listSessionMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSessionMetricsResult> listSessionMetricsAsync(final ListSessionMetricsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSessionMetricsRequest, ListSessionMetricsResult> asyncHandler) {
+        final ListSessionMetricsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSessionMetricsResult>() {
+            @Override
+            public ListSessionMetricsResult call() throws Exception {
+                ListSessionMetricsResult result = null;
+
+                try {
+                    result = executeListSessionMetrics(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2280,6 +2445,72 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeListTestSets(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUtteranceAnalyticsDataResult> listUtteranceAnalyticsDataAsync(ListUtteranceAnalyticsDataRequest request) {
+
+        return listUtteranceAnalyticsDataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUtteranceAnalyticsDataResult> listUtteranceAnalyticsDataAsync(final ListUtteranceAnalyticsDataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListUtteranceAnalyticsDataRequest, ListUtteranceAnalyticsDataResult> asyncHandler) {
+        final ListUtteranceAnalyticsDataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListUtteranceAnalyticsDataResult>() {
+            @Override
+            public ListUtteranceAnalyticsDataResult call() throws Exception {
+                ListUtteranceAnalyticsDataResult result = null;
+
+                try {
+                    result = executeListUtteranceAnalyticsData(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUtteranceMetricsResult> listUtteranceMetricsAsync(ListUtteranceMetricsRequest request) {
+
+        return listUtteranceMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUtteranceMetricsResult> listUtteranceMetricsAsync(final ListUtteranceMetricsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListUtteranceMetricsRequest, ListUtteranceMetricsResult> asyncHandler) {
+        final ListUtteranceMetricsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListUtteranceMetricsResult>() {
+            @Override
+            public ListUtteranceMetricsResult call() throws Exception {
+                ListUtteranceMetricsResult result = null;
+
+                try {
+                    result = executeListUtteranceMetrics(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

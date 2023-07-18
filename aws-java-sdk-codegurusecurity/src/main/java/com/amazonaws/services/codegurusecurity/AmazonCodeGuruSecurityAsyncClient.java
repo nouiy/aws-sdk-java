@@ -25,12 +25,15 @@ import java.util.concurrent.ExecutorService;
  * object representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
+ * <note>
  * <p>
- * This section provides documentation for the <a href=
- * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/codeguru/latest/security-ug/what-is-codeguru-security.html"
- * >Amazon CodeGuru Security</a> API operations. CodeGuru Security is a service that uses program analysis and machine
- * learning to detect security policy violations and vulnerabilities, and recommends ways to address these security
- * risks.
+ * Amazon CodeGuru Security is in preview release and is subject to change.
+ * </p>
+ * </note>
+ * <p>
+ * This section provides documentation for the Amazon CodeGuru Security API operations. CodeGuru Security is a service
+ * that uses program analysis and machine learning to detect security policy violations and vulnerabilities, and
+ * recommends ways to address these security risks.
  * </p>
  * <p>
  * By proactively detecting and providing recommendations for addressing security risks, CodeGuru Security improves the

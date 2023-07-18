@@ -4189,6 +4189,307 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Retrieves summary metrics for the intents in your bot. The following fields are required:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>metrics</code> – A list of <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_AnalyticsIntentMetric.html"
+     * >AnalyticsIntentMetric</a> objects. In each object, use the <code>name</code> field to specify the metric to
+     * calculate, the <code>statistic</code> field to specify whether to calculate the <code>Sum</code>,
+     * <code>Average</code>, or <code>Max</code> number, and the <code>order</code> field to specify whether to sort the
+     * results in <code>Ascending</code> or <code>Descending</code> order.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>startDateTime</code> and <code>endDateTime</code> – Define a time range for which you want to retrieve
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results, the <code>groupBy</code> field to specify categories by
+     * which to group the results, and the <code>binBy</code> field to specify time intervals by which to group the
+     * results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note that an <code>order</code> field exists in both <code>binBy</code> and <code>metrics</code>. You can specify
+     * only one <code>order</code> in a given request.
+     * </p>
+     * 
+     * @param listIntentMetricsRequest
+     * @return Result of the ListIntentMetrics operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListIntentMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListIntentMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListIntentMetricsResult listIntentMetrics(ListIntentMetricsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListIntentMetrics(request);
+    }
+
+    @SdkInternalApi
+    final ListIntentMetricsResult executeListIntentMetrics(ListIntentMetricsRequest listIntentMetricsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listIntentMetricsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListIntentMetricsRequest> request = null;
+        Response<ListIntentMetricsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListIntentMetricsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listIntentMetricsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListIntentMetrics");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListIntentMetricsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListIntentMetricsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves summary statistics for a path of intents that users take over sessions with your bot. The following
+     * fields are required:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>startDateTime</code> and <code>endDateTime</code> – Define a time range for which you want to retrieve
+     * results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>intentPath</code> – Define an order of intents for which you want to retrieve metrics. Separate intents in
+     * the path with a forward slash. For example, populate the <code>intentPath</code> field with
+     * <code>/BookCar/BookHotel</code> to see details about how many times users invoked the <code>BookCar</code> and
+     * <code>BookHotel</code> intents in that order.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Use the optional <code>filters</code> field to filter the results.
+     * </p>
+     * 
+     * @param listIntentPathsRequest
+     * @return Result of the ListIntentPaths operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListIntentPaths
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListIntentPaths" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListIntentPathsResult listIntentPaths(ListIntentPathsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListIntentPaths(request);
+    }
+
+    @SdkInternalApi
+    final ListIntentPathsResult executeListIntentPaths(ListIntentPathsRequest listIntentPathsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listIntentPathsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListIntentPathsRequest> request = null;
+        Response<ListIntentPathsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListIntentPathsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listIntentPathsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListIntentPaths");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListIntentPathsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListIntentPathsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves summary metrics for the intent stages in your bot. The following fields are required:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>metrics</code> – A list of <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_AnalyticsIntentStageMetric.html"
+     * >AnalyticsIntentStageMetric</a> objects. In each object, use the <code>name</code> field to specify the metric to
+     * calculate, the <code>statistic</code> field to specify whether to calculate the <code>Sum</code>,
+     * <code>Average</code>, or <code>Max</code> number, and the <code>order</code> field to specify whether to sort the
+     * results in <code>Ascending</code> or <code>Descending</code> order.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>startDateTime</code> and <code>endDateTime</code> – Define a time range for which you want to retrieve
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results, the <code>groupBy</code> field to specify categories by
+     * which to group the results, and the <code>binBy</code> field to specify time intervals by which to group the
+     * results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note that an <code>order</code> field exists in both <code>binBy</code> and <code>metrics</code>. You can only
+     * specify one <code>order</code> in a given request.
+     * </p>
+     * 
+     * @param listIntentStageMetricsRequest
+     * @return Result of the ListIntentStageMetrics operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListIntentStageMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListIntentStageMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListIntentStageMetricsResult listIntentStageMetrics(ListIntentStageMetricsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListIntentStageMetrics(request);
+    }
+
+    @SdkInternalApi
+    final ListIntentStageMetricsResult executeListIntentStageMetrics(ListIntentStageMetricsRequest listIntentStageMetricsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listIntentStageMetricsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListIntentStageMetricsRequest> request = null;
+        Response<ListIntentStageMetricsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListIntentStageMetricsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listIntentStageMetricsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListIntentStageMetrics");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListIntentStageMetricsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListIntentStageMetricsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get a list of intents that meet the specified criteria.
      * </p>
      * 
@@ -4308,6 +4609,198 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
             HttpResponseHandler<AmazonWebServiceResponse<ListRecommendedIntentsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListRecommendedIntentsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves a list of metadata for individual user sessions with your bot. The <code>startDateTime</code> and
+     * <code>endDateTime</code> fields are required. These fields define a time range for which you want to retrieve
+     * results. Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results and the <code>sortBy</code> field to specify the values
+     * by which to sort the results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listSessionAnalyticsDataRequest
+     * @return Result of the ListSessionAnalyticsData operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListSessionAnalyticsData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListSessionAnalyticsData"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListSessionAnalyticsDataResult listSessionAnalyticsData(ListSessionAnalyticsDataRequest request) {
+        request = beforeClientExecution(request);
+        return executeListSessionAnalyticsData(request);
+    }
+
+    @SdkInternalApi
+    final ListSessionAnalyticsDataResult executeListSessionAnalyticsData(ListSessionAnalyticsDataRequest listSessionAnalyticsDataRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listSessionAnalyticsDataRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListSessionAnalyticsDataRequest> request = null;
+        Response<ListSessionAnalyticsDataResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListSessionAnalyticsDataRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listSessionAnalyticsDataRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListSessionAnalyticsData");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListSessionAnalyticsDataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListSessionAnalyticsDataResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves summary metrics for the user sessions with your bot. The following fields are required:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>metrics</code> – A list of <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_AnalyticsSessionMetric.html"
+     * >AnalyticsSessionMetric</a> objects. In each object, use the <code>name</code> field to specify the metric to
+     * calculate, the <code>statistic</code> field to specify whether to calculate the <code>Sum</code>,
+     * <code>Average</code>, or <code>Max</code> number, and the <code>order</code> field to specify whether to sort the
+     * results in <code>Ascending</code> or <code>Descending</code> order.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>startDateTime</code> and <code>endDateTime</code> – Define a time range for which you want to retrieve
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results, the <code>groupBy</code> field to specify categories by
+     * which to group the results, and the <code>binBy</code> field to specify time intervals by which to group the
+     * results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note that an <code>order</code> field exists in both <code>binBy</code> and <code>metrics</code>. Currently, you
+     * can specify it in either field, but not in both.
+     * </p>
+     * 
+     * @param listSessionMetricsRequest
+     * @return Result of the ListSessionMetrics operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListSessionMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListSessionMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListSessionMetricsResult listSessionMetrics(ListSessionMetricsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListSessionMetrics(request);
+    }
+
+    @SdkInternalApi
+    final ListSessionMetricsResult executeListSessionMetrics(ListSessionMetricsRequest listSessionMetricsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listSessionMetricsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListSessionMetricsRequest> request = null;
+        Response<ListSessionMetricsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListSessionMetricsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listSessionMetricsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListSessionMetrics");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListSessionMetricsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListSessionMetricsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4759,6 +5252,198 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTestSetsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTestSetsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves a list of metadata for individual user utterances to your bot. The <code>startDateTime</code> and
+     * <code>endDateTime</code> fields are required. These fields define a time range for which you want to retrieve
+     * results. Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results and the <code>sortBy</code> field to specify the values
+     * by which to sort the results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listUtteranceAnalyticsDataRequest
+     * @return Result of the ListUtteranceAnalyticsData operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListUtteranceAnalyticsData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListUtteranceAnalyticsData"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListUtteranceAnalyticsDataResult listUtteranceAnalyticsData(ListUtteranceAnalyticsDataRequest request) {
+        request = beforeClientExecution(request);
+        return executeListUtteranceAnalyticsData(request);
+    }
+
+    @SdkInternalApi
+    final ListUtteranceAnalyticsDataResult executeListUtteranceAnalyticsData(ListUtteranceAnalyticsDataRequest listUtteranceAnalyticsDataRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listUtteranceAnalyticsDataRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListUtteranceAnalyticsDataRequest> request = null;
+        Response<ListUtteranceAnalyticsDataResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListUtteranceAnalyticsDataRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listUtteranceAnalyticsDataRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListUtteranceAnalyticsData");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListUtteranceAnalyticsDataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListUtteranceAnalyticsDataResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves summary metrics for the utterances in your bot. The following fields are required:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>metrics</code> – A list of <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_AnalyticsUtteranceMetric.html"
+     * >AnalyticsUtteranceMetric</a> objects. In each object, use the <code>name</code> field to specify the metric to
+     * calculate, the <code>statistic</code> field to specify whether to calculate the <code>Sum</code>,
+     * <code>Average</code>, or <code>Max</code> number, and the <code>order</code> field to specify whether to sort the
+     * results in <code>Ascending</code> or <code>Descending</code> order.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>startDateTime</code> and <code>endDateTime</code> – Define a time range for which you want to retrieve
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results, the <code>groupBy</code> field to specify categories by
+     * which to group the results, and the <code>binBy</code> field to specify time intervals by which to group the
+     * results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note that an <code>order</code> field exists in both <code>binBy</code> and <code>metrics</code>. Currently, you
+     * can specify it in either field, but not in both.
+     * </p>
+     * 
+     * @param listUtteranceMetricsRequest
+     * @return Result of the ListUtteranceMetrics operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListUtteranceMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListUtteranceMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListUtteranceMetricsResult listUtteranceMetrics(ListUtteranceMetricsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListUtteranceMetrics(request);
+    }
+
+    @SdkInternalApi
+    final ListUtteranceMetricsResult executeListUtteranceMetrics(ListUtteranceMetricsRequest listUtteranceMetricsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listUtteranceMetricsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListUtteranceMetricsRequest> request = null;
+        Response<ListUtteranceMetricsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListUtteranceMetricsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listUtteranceMetricsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListUtteranceMetrics");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListUtteranceMetricsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListUtteranceMetricsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

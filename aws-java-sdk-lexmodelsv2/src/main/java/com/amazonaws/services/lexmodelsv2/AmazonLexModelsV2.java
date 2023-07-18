@@ -1611,6 +1611,180 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
+     * Retrieves summary metrics for the intents in your bot. The following fields are required:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>metrics</code> – A list of <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_AnalyticsIntentMetric.html"
+     * >AnalyticsIntentMetric</a> objects. In each object, use the <code>name</code> field to specify the metric to
+     * calculate, the <code>statistic</code> field to specify whether to calculate the <code>Sum</code>,
+     * <code>Average</code>, or <code>Max</code> number, and the <code>order</code> field to specify whether to sort the
+     * results in <code>Ascending</code> or <code>Descending</code> order.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>startDateTime</code> and <code>endDateTime</code> – Define a time range for which you want to retrieve
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results, the <code>groupBy</code> field to specify categories by
+     * which to group the results, and the <code>binBy</code> field to specify time intervals by which to group the
+     * results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note that an <code>order</code> field exists in both <code>binBy</code> and <code>metrics</code>. You can specify
+     * only one <code>order</code> in a given request.
+     * </p>
+     * 
+     * @param listIntentMetricsRequest
+     * @return Result of the ListIntentMetrics operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListIntentMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListIntentMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListIntentMetricsResult listIntentMetrics(ListIntentMetricsRequest listIntentMetricsRequest);
+
+    /**
+     * <p>
+     * Retrieves summary statistics for a path of intents that users take over sessions with your bot. The following
+     * fields are required:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>startDateTime</code> and <code>endDateTime</code> – Define a time range for which you want to retrieve
+     * results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>intentPath</code> – Define an order of intents for which you want to retrieve metrics. Separate intents in
+     * the path with a forward slash. For example, populate the <code>intentPath</code> field with
+     * <code>/BookCar/BookHotel</code> to see details about how many times users invoked the <code>BookCar</code> and
+     * <code>BookHotel</code> intents in that order.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Use the optional <code>filters</code> field to filter the results.
+     * </p>
+     * 
+     * @param listIntentPathsRequest
+     * @return Result of the ListIntentPaths operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListIntentPaths
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListIntentPaths" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListIntentPathsResult listIntentPaths(ListIntentPathsRequest listIntentPathsRequest);
+
+    /**
+     * <p>
+     * Retrieves summary metrics for the intent stages in your bot. The following fields are required:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>metrics</code> – A list of <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_AnalyticsIntentStageMetric.html"
+     * >AnalyticsIntentStageMetric</a> objects. In each object, use the <code>name</code> field to specify the metric to
+     * calculate, the <code>statistic</code> field to specify whether to calculate the <code>Sum</code>,
+     * <code>Average</code>, or <code>Max</code> number, and the <code>order</code> field to specify whether to sort the
+     * results in <code>Ascending</code> or <code>Descending</code> order.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>startDateTime</code> and <code>endDateTime</code> – Define a time range for which you want to retrieve
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results, the <code>groupBy</code> field to specify categories by
+     * which to group the results, and the <code>binBy</code> field to specify time intervals by which to group the
+     * results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note that an <code>order</code> field exists in both <code>binBy</code> and <code>metrics</code>. You can only
+     * specify one <code>order</code> in a given request.
+     * </p>
+     * 
+     * @param listIntentStageMetricsRequest
+     * @return Result of the ListIntentStageMetrics operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListIntentStageMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListIntentStageMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListIntentStageMetricsResult listIntentStageMetrics(ListIntentStageMetricsRequest listIntentStageMetricsRequest);
+
+    /**
+     * <p>
      * Get a list of intents that meet the specified criteria.
      * </p>
      * 
@@ -1654,6 +1828,112 @@ public interface AmazonLexModelsV2 {
      *      target="_top">AWS API Documentation</a>
      */
     ListRecommendedIntentsResult listRecommendedIntents(ListRecommendedIntentsRequest listRecommendedIntentsRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of metadata for individual user sessions with your bot. The <code>startDateTime</code> and
+     * <code>endDateTime</code> fields are required. These fields define a time range for which you want to retrieve
+     * results. Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results and the <code>sortBy</code> field to specify the values
+     * by which to sort the results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listSessionAnalyticsDataRequest
+     * @return Result of the ListSessionAnalyticsData operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListSessionAnalyticsData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListSessionAnalyticsData"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListSessionAnalyticsDataResult listSessionAnalyticsData(ListSessionAnalyticsDataRequest listSessionAnalyticsDataRequest);
+
+    /**
+     * <p>
+     * Retrieves summary metrics for the user sessions with your bot. The following fields are required:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>metrics</code> – A list of <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_AnalyticsSessionMetric.html"
+     * >AnalyticsSessionMetric</a> objects. In each object, use the <code>name</code> field to specify the metric to
+     * calculate, the <code>statistic</code> field to specify whether to calculate the <code>Sum</code>,
+     * <code>Average</code>, or <code>Max</code> number, and the <code>order</code> field to specify whether to sort the
+     * results in <code>Ascending</code> or <code>Descending</code> order.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>startDateTime</code> and <code>endDateTime</code> – Define a time range for which you want to retrieve
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results, the <code>groupBy</code> field to specify categories by
+     * which to group the results, and the <code>binBy</code> field to specify time intervals by which to group the
+     * results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note that an <code>order</code> field exists in both <code>binBy</code> and <code>metrics</code>. Currently, you
+     * can specify it in either field, but not in both.
+     * </p>
+     * 
+     * @param listSessionMetricsRequest
+     * @return Result of the ListSessionMetrics operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListSessionMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListSessionMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListSessionMetricsResult listSessionMetrics(ListSessionMetricsRequest listSessionMetricsRequest);
 
     /**
      * <p>
@@ -1809,6 +2089,112 @@ public interface AmazonLexModelsV2 {
      *      Documentation</a>
      */
     ListTestSetsResult listTestSets(ListTestSetsRequest listTestSetsRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of metadata for individual user utterances to your bot. The <code>startDateTime</code> and
+     * <code>endDateTime</code> fields are required. These fields define a time range for which you want to retrieve
+     * results. Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results and the <code>sortBy</code> field to specify the values
+     * by which to sort the results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listUtteranceAnalyticsDataRequest
+     * @return Result of the ListUtteranceAnalyticsData operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListUtteranceAnalyticsData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListUtteranceAnalyticsData"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListUtteranceAnalyticsDataResult listUtteranceAnalyticsData(ListUtteranceAnalyticsDataRequest listUtteranceAnalyticsDataRequest);
+
+    /**
+     * <p>
+     * Retrieves summary metrics for the utterances in your bot. The following fields are required:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>metrics</code> – A list of <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_AnalyticsUtteranceMetric.html"
+     * >AnalyticsUtteranceMetric</a> objects. In each object, use the <code>name</code> field to specify the metric to
+     * calculate, the <code>statistic</code> field to specify whether to calculate the <code>Sum</code>,
+     * <code>Average</code>, or <code>Max</code> number, and the <code>order</code> field to specify whether to sort the
+     * results in <code>Ascending</code> or <code>Descending</code> order.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>startDateTime</code> and <code>endDateTime</code> – Define a time range for which you want to retrieve
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Of the optional fields, you can organize the results in the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use the <code>filters</code> field to filter the results, the <code>groupBy</code> field to specify categories by
+     * which to group the results, and the <code>binBy</code> field to specify time intervals by which to group the
+     * results.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use the <code>maxResults</code> field to limit the number of results to return in a single response and the
+     * <code>nextToken</code> field to return the next batch of results if the response does not return the full set of
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note that an <code>order</code> field exists in both <code>binBy</code> and <code>metrics</code>. Currently, you
+     * can specify it in either field, but not in both.
+     * </p>
+     * 
+     * @param listUtteranceMetricsRequest
+     * @return Result of the ListUtteranceMetrics operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListUtteranceMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListUtteranceMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListUtteranceMetricsResult listUtteranceMetrics(ListUtteranceMetricsRequest listUtteranceMetricsRequest);
 
     /**
      * <p>

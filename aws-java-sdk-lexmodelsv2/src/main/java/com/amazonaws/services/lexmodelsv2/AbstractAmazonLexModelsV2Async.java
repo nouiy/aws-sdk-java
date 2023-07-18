@@ -792,6 +792,45 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     }
 
     @Override
+    public java.util.concurrent.Future<ListIntentMetricsResult> listIntentMetricsAsync(ListIntentMetricsRequest request) {
+
+        return listIntentMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIntentMetricsResult> listIntentMetricsAsync(ListIntentMetricsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListIntentMetricsRequest, ListIntentMetricsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIntentPathsResult> listIntentPathsAsync(ListIntentPathsRequest request) {
+
+        return listIntentPathsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIntentPathsResult> listIntentPathsAsync(ListIntentPathsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListIntentPathsRequest, ListIntentPathsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIntentStageMetricsResult> listIntentStageMetricsAsync(ListIntentStageMetricsRequest request) {
+
+        return listIntentStageMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIntentStageMetricsResult> listIntentStageMetricsAsync(ListIntentStageMetricsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListIntentStageMetricsRequest, ListIntentStageMetricsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListIntentsResult> listIntentsAsync(ListIntentsRequest request) {
 
         return listIntentsAsync(request, null);
@@ -813,6 +852,32 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     @Override
     public java.util.concurrent.Future<ListRecommendedIntentsResult> listRecommendedIntentsAsync(ListRecommendedIntentsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListRecommendedIntentsRequest, ListRecommendedIntentsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSessionAnalyticsDataResult> listSessionAnalyticsDataAsync(ListSessionAnalyticsDataRequest request) {
+
+        return listSessionAnalyticsDataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSessionAnalyticsDataResult> listSessionAnalyticsDataAsync(ListSessionAnalyticsDataRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListSessionAnalyticsDataRequest, ListSessionAnalyticsDataResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSessionMetricsResult> listSessionMetricsAsync(ListSessionMetricsRequest request) {
+
+        return listSessionMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSessionMetricsResult> listSessionMetricsAsync(ListSessionMetricsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListSessionMetricsRequest, ListSessionMetricsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -904,6 +969,32 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     @Override
     public java.util.concurrent.Future<ListTestSetsResult> listTestSetsAsync(ListTestSetsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTestSetsRequest, ListTestSetsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUtteranceAnalyticsDataResult> listUtteranceAnalyticsDataAsync(ListUtteranceAnalyticsDataRequest request) {
+
+        return listUtteranceAnalyticsDataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUtteranceAnalyticsDataResult> listUtteranceAnalyticsDataAsync(ListUtteranceAnalyticsDataRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListUtteranceAnalyticsDataRequest, ListUtteranceAnalyticsDataResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUtteranceMetricsResult> listUtteranceMetricsAsync(ListUtteranceMetricsRequest request) {
+
+        return listUtteranceMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUtteranceMetricsResult> listUtteranceMetricsAsync(ListUtteranceMetricsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListUtteranceMetricsRequest, ListUtteranceMetricsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
