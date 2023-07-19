@@ -1000,6 +1000,71 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
 
     /**
      * <p>
+     * Refreshes a registered application.
+     * </p>
+     * 
+     * @param startApplicationRefreshRequest
+     * @return Result of the StartApplicationRefresh operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource is not available.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         A conflict has occurred.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSSsmSap.StartApplicationRefresh
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/StartApplicationRefresh"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartApplicationRefreshResult startApplicationRefresh(StartApplicationRefreshRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartApplicationRefresh(request);
+    }
+
+    @SdkInternalApi
+    final StartApplicationRefreshResult executeStartApplicationRefresh(StartApplicationRefreshRequest startApplicationRefreshRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startApplicationRefreshRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartApplicationRefreshRequest> request = null;
+        Response<StartApplicationRefreshResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartApplicationRefreshRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startApplicationRefreshRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartApplicationRefresh");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartApplicationRefreshResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartApplicationRefreshResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates tag for a resource by specifying the ARN.
      * </p>
      * 
@@ -1131,6 +1196,8 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      *         The resource is not available.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         A conflict has occurred.
      * @throws InternalServerException
      *         An internal error has occurred.
      * @sample AWSSsmSap.UpdateApplicationSettings

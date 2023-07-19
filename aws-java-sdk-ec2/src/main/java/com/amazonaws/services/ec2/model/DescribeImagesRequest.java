@@ -61,7 +61,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * <li>
      * <p>
      * <code>architecture</code> - The image architecture (<code>i386</code> | <code>x86_64</code> | <code>arm64</code>
-     * ).
+     * | <code>x86_64_mac</code> | <code>arm64_mac</code>).
      * </p>
      * </li>
      * <li>
@@ -540,7 +540,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * <li>
      * <p>
      * <code>architecture</code> - The image architecture (<code>i386</code> | <code>x86_64</code> | <code>arm64</code>
-     * ).
+     * | <code>x86_64_mac</code> | <code>arm64_mac</code>).
      * </p>
      * </li>
      * <li>
@@ -722,7 +722,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      *         <li>
      *         <p>
      *         <code>architecture</code> - The image architecture (<code>i386</code> | <code>x86_64</code> |
-     *         <code>arm64</code>).
+     *         <code>arm64</code> | <code>x86_64_mac</code> | <code>arm64_mac</code>).
      *         </p>
      *         </li>
      *         <li>
@@ -917,7 +917,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * <li>
      * <p>
      * <code>architecture</code> - The image architecture (<code>i386</code> | <code>x86_64</code> | <code>arm64</code>
-     * ).
+     * | <code>x86_64_mac</code> | <code>arm64_mac</code>).
      * </p>
      * </li>
      * <li>
@@ -1100,7 +1100,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      *        <li>
      *        <p>
      *        <code>architecture</code> - The image architecture (<code>i386</code> | <code>x86_64</code> |
-     *        <code>arm64</code>).
+     *        <code>arm64</code> | <code>x86_64_mac</code> | <code>arm64_mac</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -1297,7 +1297,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * <li>
      * <p>
      * <code>architecture</code> - The image architecture (<code>i386</code> | <code>x86_64</code> | <code>arm64</code>
-     * ).
+     * | <code>x86_64_mac</code> | <code>arm64_mac</code>).
      * </p>
      * </li>
      * <li>
@@ -1485,7 +1485,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      *        <li>
      *        <p>
      *        <code>architecture</code> - The image architecture (<code>i386</code> | <code>x86_64</code> |
-     *        <code>arm64</code>).
+     *        <code>arm64</code> | <code>x86_64_mac</code> | <code>arm64_mac</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -1684,7 +1684,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * <li>
      * <p>
      * <code>architecture</code> - The image architecture (<code>i386</code> | <code>x86_64</code> | <code>arm64</code>
-     * ).
+     * | <code>x86_64_mac</code> | <code>arm64_mac</code>).
      * </p>
      * </li>
      * <li>
@@ -1867,7 +1867,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      *        <li>
      *        <p>
      *        <code>architecture</code> - The image architecture (<code>i386</code> | <code>x86_64</code> |
-     *        <code>arm64</code>).
+     *        <code>arm64</code> | <code>x86_64_mac</code> | <code>arm64_mac</code>).
      *        </p>
      *        </li>
      *        <li>

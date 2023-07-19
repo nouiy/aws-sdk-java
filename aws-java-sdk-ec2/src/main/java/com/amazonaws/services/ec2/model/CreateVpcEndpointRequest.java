@@ -36,13 +36,13 @@ public class CreateVpcEndpointRequest extends AmazonWebServiceRequest implements
     private String vpcEndpointType;
     /**
      * <p>
-     * The ID of the VPC for the endpoint.
+     * The ID of the VPC.
      * </p>
      */
     private String vpcId;
     /**
      * <p>
-     * The service name.
+     * The name of the endpoint service.
      * </p>
      */
     private String serviceName;
@@ -201,11 +201,11 @@ public class CreateVpcEndpointRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The ID of the VPC for the endpoint.
+     * The ID of the VPC.
      * </p>
      * 
      * @param vpcId
-     *        The ID of the VPC for the endpoint.
+     *        The ID of the VPC.
      */
 
     public void setVpcId(String vpcId) {
@@ -214,10 +214,10 @@ public class CreateVpcEndpointRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The ID of the VPC for the endpoint.
+     * The ID of the VPC.
      * </p>
      * 
-     * @return The ID of the VPC for the endpoint.
+     * @return The ID of the VPC.
      */
 
     public String getVpcId() {
@@ -226,11 +226,11 @@ public class CreateVpcEndpointRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The ID of the VPC for the endpoint.
+     * The ID of the VPC.
      * </p>
      * 
      * @param vpcId
-     *        The ID of the VPC for the endpoint.
+     *        The ID of the VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -241,11 +241,11 @@ public class CreateVpcEndpointRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The service name.
+     * The name of the endpoint service.
      * </p>
      * 
      * @param serviceName
-     *        The service name.
+     *        The name of the endpoint service.
      */
 
     public void setServiceName(String serviceName) {
@@ -254,10 +254,10 @@ public class CreateVpcEndpointRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The service name.
+     * The name of the endpoint service.
      * </p>
      * 
-     * @return The service name.
+     * @return The name of the endpoint service.
      */
 
     public String getServiceName() {
@@ -266,11 +266,11 @@ public class CreateVpcEndpointRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The service name.
+     * The name of the endpoint service.
      * </p>
      * 
      * @param serviceName
-     *        The service name.
+     *        The name of the endpoint service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -118,6 +118,13 @@ public class RateBasedStatementCustomKey implements Serializable, Cloneable, Str
      * </p>
      */
     private RateLimitLabelNamespace labelNamespace;
+    /**
+     * <p>
+     * Use the request's URI path as an aggregate key. Each distinct URI path contributes to the aggregation instance.
+     * If you use just the URI path as your custom key, then each URI path fully defines an aggregation instance.
+     * </p>
+     */
+    private RateLimitUriPath uriPath;
 
     /**
      * <p>
@@ -650,6 +657,55 @@ public class RateBasedStatementCustomKey implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * Use the request's URI path as an aggregate key. Each distinct URI path contributes to the aggregation instance.
+     * If you use just the URI path as your custom key, then each URI path fully defines an aggregation instance.
+     * </p>
+     * 
+     * @param uriPath
+     *        Use the request's URI path as an aggregate key. Each distinct URI path contributes to the aggregation
+     *        instance. If you use just the URI path as your custom key, then each URI path fully defines an aggregation
+     *        instance.
+     */
+
+    public void setUriPath(RateLimitUriPath uriPath) {
+        this.uriPath = uriPath;
+    }
+
+    /**
+     * <p>
+     * Use the request's URI path as an aggregate key. Each distinct URI path contributes to the aggregation instance.
+     * If you use just the URI path as your custom key, then each URI path fully defines an aggregation instance.
+     * </p>
+     * 
+     * @return Use the request's URI path as an aggregate key. Each distinct URI path contributes to the aggregation
+     *         instance. If you use just the URI path as your custom key, then each URI path fully defines an
+     *         aggregation instance.
+     */
+
+    public RateLimitUriPath getUriPath() {
+        return this.uriPath;
+    }
+
+    /**
+     * <p>
+     * Use the request's URI path as an aggregate key. Each distinct URI path contributes to the aggregation instance.
+     * If you use just the URI path as your custom key, then each URI path fully defines an aggregation instance.
+     * </p>
+     * 
+     * @param uriPath
+     *        Use the request's URI path as an aggregate key. Each distinct URI path contributes to the aggregation
+     *        instance. If you use just the URI path as your custom key, then each URI path fully defines an aggregation
+     *        instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RateBasedStatementCustomKey withUriPath(RateLimitUriPath uriPath) {
+        setUriPath(uriPath);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -676,7 +732,9 @@ public class RateBasedStatementCustomKey implements Serializable, Cloneable, Str
         if (getIP() != null)
             sb.append("IP: ").append(getIP()).append(",");
         if (getLabelNamespace() != null)
-            sb.append("LabelNamespace: ").append(getLabelNamespace());
+            sb.append("LabelNamespace: ").append(getLabelNamespace()).append(",");
+        if (getUriPath() != null)
+            sb.append("UriPath: ").append(getUriPath());
         sb.append("}");
         return sb.toString();
     }
@@ -723,6 +781,10 @@ public class RateBasedStatementCustomKey implements Serializable, Cloneable, Str
             return false;
         if (other.getLabelNamespace() != null && other.getLabelNamespace().equals(this.getLabelNamespace()) == false)
             return false;
+        if (other.getUriPath() == null ^ this.getUriPath() == null)
+            return false;
+        if (other.getUriPath() != null && other.getUriPath().equals(this.getUriPath()) == false)
+            return false;
         return true;
     }
 
@@ -739,6 +801,7 @@ public class RateBasedStatementCustomKey implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getForwardedIP() == null) ? 0 : getForwardedIP().hashCode());
         hashCode = prime * hashCode + ((getIP() == null) ? 0 : getIP().hashCode());
         hashCode = prime * hashCode + ((getLabelNamespace() == null) ? 0 : getLabelNamespace().hashCode());
+        hashCode = prime * hashCode + ((getUriPath() == null) ? 0 : getUriPath().hashCode());
         return hashCode;
     }
 

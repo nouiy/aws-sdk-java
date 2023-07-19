@@ -150,7 +150,9 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
     private Boolean hibernationSupported;
     /**
      * <p>
-     * Indicates whether the instance type is a burstable performance instance type.
+     * Indicates whether the instance type is a burstable performance T instance type. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">Burstable
+     * performance instances</a>.
      * </p>
      */
     private Boolean burstablePerformanceSupported;
@@ -1295,11 +1297,15 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether the instance type is a burstable performance instance type.
+     * Indicates whether the instance type is a burstable performance T instance type. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">Burstable
+     * performance instances</a>.
      * </p>
      * 
      * @param burstablePerformanceSupported
-     *        Indicates whether the instance type is a burstable performance instance type.
+     *        Indicates whether the instance type is a burstable performance T instance type. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">
+     *        Burstable performance instances</a>.
      */
 
     public void setBurstablePerformanceSupported(Boolean burstablePerformanceSupported) {
@@ -1308,10 +1314,14 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether the instance type is a burstable performance instance type.
+     * Indicates whether the instance type is a burstable performance T instance type. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">Burstable
+     * performance instances</a>.
      * </p>
      * 
-     * @return Indicates whether the instance type is a burstable performance instance type.
+     * @return Indicates whether the instance type is a burstable performance T instance type. For more information, see
+     *         <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">
+     *         Burstable performance instances</a>.
      */
 
     public Boolean getBurstablePerformanceSupported() {
@@ -1320,11 +1330,15 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether the instance type is a burstable performance instance type.
+     * Indicates whether the instance type is a burstable performance T instance type. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">Burstable
+     * performance instances</a>.
      * </p>
      * 
      * @param burstablePerformanceSupported
-     *        Indicates whether the instance type is a burstable performance instance type.
+     *        Indicates whether the instance type is a burstable performance T instance type. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">
+     *        Burstable performance instances</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1335,10 +1349,14 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether the instance type is a burstable performance instance type.
+     * Indicates whether the instance type is a burstable performance T instance type. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">Burstable
+     * performance instances</a>.
      * </p>
      * 
-     * @return Indicates whether the instance type is a burstable performance instance type.
+     * @return Indicates whether the instance type is a burstable performance T instance type. For more information, see
+     *         <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">
+     *         Burstable performance instances</a>.
      */
 
     public Boolean isBurstablePerformanceSupported() {

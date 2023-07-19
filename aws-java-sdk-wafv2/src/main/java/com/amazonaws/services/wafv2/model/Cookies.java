@@ -45,8 +45,7 @@ public class Cookies implements Serializable, Cloneable, StructuredPojo {
      * <code>ExcludedCookies</code>.
      * </p>
      * <p>
-     * Example JSON:
-     * <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code>
+     * Example JSON: <code>"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }</code>
      * </p>
      */
     private CookieMatchPattern matchPattern;
@@ -97,8 +96,7 @@ public class Cookies implements Serializable, Cloneable, StructuredPojo {
      * <code>ExcludedCookies</code>.
      * </p>
      * <p>
-     * Example JSON:
-     * <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code>
+     * Example JSON: <code>"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }</code>
      * </p>
      * 
      * @param matchPattern
@@ -108,8 +106,7 @@ public class Cookies implements Serializable, Cloneable, StructuredPojo {
      *        <code>ExcludedCookies</code>.
      *        </p>
      *        <p>
-     *        Example JSON:
-     *        <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code>
+     *        Example JSON: <code>"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }</code>
      */
 
     public void setMatchPattern(CookieMatchPattern matchPattern) {
@@ -125,8 +122,7 @@ public class Cookies implements Serializable, Cloneable, StructuredPojo {
      * <code>ExcludedCookies</code>.
      * </p>
      * <p>
-     * Example JSON:
-     * <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code>
+     * Example JSON: <code>"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }</code>
      * </p>
      * 
      * @return The filter to use to identify the subset of cookies to inspect in a web request. </p>
@@ -135,8 +131,7 @@ public class Cookies implements Serializable, Cloneable, StructuredPojo {
      *         <code>ExcludedCookies</code>.
      *         </p>
      *         <p>
-     *         Example JSON:
-     *         <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code>
+     *         Example JSON: <code>"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }</code>
      */
 
     public CookieMatchPattern getMatchPattern() {
@@ -152,8 +147,7 @@ public class Cookies implements Serializable, Cloneable, StructuredPojo {
      * <code>ExcludedCookies</code>.
      * </p>
      * <p>
-     * Example JSON:
-     * <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code>
+     * Example JSON: <code>"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }</code>
      * </p>
      * 
      * @param matchPattern
@@ -163,8 +157,7 @@ public class Cookies implements Serializable, Cloneable, StructuredPojo {
      *        <code>ExcludedCookies</code>.
      *        </p>
      *        <p>
-     *        Example JSON:
-     *        <code>"MatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code>
+     *        Example JSON: <code>"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

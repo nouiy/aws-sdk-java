@@ -29,13 +29,6 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
      * <i>Amazon EC2 User Guide</i>.
      * </p>
-     * <p>
-     * When you change your EBS-backed instance type, instance restart or replacement behavior depends on the instance
-     * type compatibility between the old and new types. An instance that's backed by an instance store volume is always
-     * replaced. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html">Change the instance type</a>
-     * in the <i>Amazon EC2 User Guide</i>.
-     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InstanceTypeInfo> instanceTypes;
     /**
@@ -52,23 +45,10 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
      * <i>Amazon EC2 User Guide</i>.
      * </p>
-     * <p>
-     * When you change your EBS-backed instance type, instance restart or replacement behavior depends on the instance
-     * type compatibility between the old and new types. An instance that's backed by an instance store volume is always
-     * replaced. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html">Change the instance type</a>
-     * in the <i>Amazon EC2 User Guide</i>.
-     * </p>
      * 
      * @return The instance type. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *         <i>Amazon EC2 User Guide</i>.</p>
-     *         <p>
-     *         When you change your EBS-backed instance type, instance restart or replacement behavior depends on the
-     *         instance type compatibility between the old and new types. An instance that's backed by an instance store
-     *         volume is always replaced. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html">Change the instance
-     *         type</a> in the <i>Amazon EC2 User Guide</i>.
+     *         <i>Amazon EC2 User Guide</i>.
      */
 
     public java.util.List<InstanceTypeInfo> getInstanceTypes() {
@@ -84,24 +64,11 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
      * <i>Amazon EC2 User Guide</i>.
      * </p>
-     * <p>
-     * When you change your EBS-backed instance type, instance restart or replacement behavior depends on the instance
-     * type compatibility between the old and new types. An instance that's backed by an instance store volume is always
-     * replaced. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html">Change the instance type</a>
-     * in the <i>Amazon EC2 User Guide</i>.
-     * </p>
      * 
      * @param instanceTypes
      *        The instance type. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.</p>
-     *        <p>
-     *        When you change your EBS-backed instance type, instance restart or replacement behavior depends on the
-     *        instance type compatibility between the old and new types. An instance that's backed by an instance store
-     *        volume is always replaced. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html">Change the instance
-     *        type</a> in the <i>Amazon EC2 User Guide</i>.
+     *        <i>Amazon EC2 User Guide</i>.
      */
 
     public void setInstanceTypes(java.util.Collection<InstanceTypeInfo> instanceTypes) {
@@ -120,13 +87,6 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
      * <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
-     * When you change your EBS-backed instance type, instance restart or replacement behavior depends on the instance
-     * type compatibility between the old and new types. An instance that's backed by an instance store volume is always
-     * replaced. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html">Change the instance type</a>
-     * in the <i>Amazon EC2 User Guide</i>.
-     * </p>
-     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setInstanceTypes(java.util.Collection)} or {@link #withInstanceTypes(java.util.Collection)} if you want
      * to override the existing values.
@@ -135,13 +95,7 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
      * @param instanceTypes
      *        The instance type. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.</p>
-     *        <p>
-     *        When you change your EBS-backed instance type, instance restart or replacement behavior depends on the
-     *        instance type compatibility between the old and new types. An instance that's backed by an instance store
-     *        volume is always replaced. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html">Change the instance
-     *        type</a> in the <i>Amazon EC2 User Guide</i>.
+     *        <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -161,24 +115,11 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
      * <i>Amazon EC2 User Guide</i>.
      * </p>
-     * <p>
-     * When you change your EBS-backed instance type, instance restart or replacement behavior depends on the instance
-     * type compatibility between the old and new types. An instance that's backed by an instance store volume is always
-     * replaced. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html">Change the instance type</a>
-     * in the <i>Amazon EC2 User Guide</i>.
-     * </p>
      * 
      * @param instanceTypes
      *        The instance type. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.</p>
-     *        <p>
-     *        When you change your EBS-backed instance type, instance restart or replacement behavior depends on the
-     *        instance type compatibility between the old and new types. An instance that's backed by an instance store
-     *        volume is always replaced. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html">Change the instance
-     *        type</a> in the <i>Amazon EC2 User Guide</i>.
+     *        <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

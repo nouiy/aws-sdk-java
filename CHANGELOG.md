@@ -1,3 +1,32 @@
+# __1.12.509__ __2023-07-19__
+## __AWS CloudFormation__
+  - ### Features
+    - SDK and documentation updates for GetTemplateSummary API (unrecognized resources)
+
+## __AWS Health Imaging__
+  - ### Features
+    - General Availability (GA) release of AWS Health Imaging, enabling customers to store, transform, and analyze medical imaging data at petabyte-scale.
+
+## __AWS Resource Access Manager__
+  - ### Features
+    - This release adds support for securely sharing with AWS service principals.
+
+## __AWS Systems Manager for SAP__
+  - ### Features
+    - Added support for SAP Hana High Availability discovery (primary and secondary nodes) and Backint agent installation with SSM for SAP.
+
+## __AWS WAFV2__
+  - ### Features
+    - Added the URI path to the custom aggregation keys that you can specify for a rate-based rule.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Amazon EC2 documentation updates.
+
+## __Amazon Managed Grafana__
+  - ### Features
+    - Amazon Managed Grafana now supports grafanaVersion update for existing workspaces with UpdateWorkspaceConfiguration API. DescribeWorkspaceConfiguration API additionally returns grafanaVersion. A new ListVersions API lists available versions or, if given a workspaceId, the versions it can upgrade to.
+
 # __1.12.508__ __2023-07-18__
 ## __AWSMainframeModernization__
   - ### Features

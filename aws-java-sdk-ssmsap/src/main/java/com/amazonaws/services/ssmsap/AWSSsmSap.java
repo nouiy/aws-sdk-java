@@ -311,6 +311,27 @@ public interface AWSSsmSap {
 
     /**
      * <p>
+     * Refreshes a registered application.
+     * </p>
+     * 
+     * @param startApplicationRefreshRequest
+     * @return Result of the StartApplicationRefresh operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource is not available.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         A conflict has occurred.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSSsmSap.StartApplicationRefresh
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/StartApplicationRefresh"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartApplicationRefreshResult startApplicationRefresh(StartApplicationRefreshRequest startApplicationRefreshRequest);
+
+    /**
+     * <p>
      * Creates tag for a resource by specifying the ARN.
      * </p>
      * 
@@ -358,6 +379,8 @@ public interface AWSSsmSap {
      *         The resource is not available.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         A conflict has occurred.
      * @throws InternalServerException
      *         An internal error has occurred.
      * @sample AWSSsmSap.UpdateApplicationSettings

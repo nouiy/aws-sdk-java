@@ -43,6 +43,8 @@ public class RateBasedStatementCustomKeyMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IP").build();
     private static final MarshallingInfo<StructuredPojo> LABELNAMESPACE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LabelNamespace").build();
+    private static final MarshallingInfo<StructuredPojo> URIPATH_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UriPath").build();
 
     private static final RateBasedStatementCustomKeyMarshaller instance = new RateBasedStatementCustomKeyMarshaller();
 
@@ -68,6 +70,7 @@ public class RateBasedStatementCustomKeyMarshaller {
             protocolMarshaller.marshall(rateBasedStatementCustomKey.getForwardedIP(), FORWARDEDIP_BINDING);
             protocolMarshaller.marshall(rateBasedStatementCustomKey.getIP(), IP_BINDING);
             protocolMarshaller.marshall(rateBasedStatementCustomKey.getLabelNamespace(), LABELNAMESPACE_BINDING);
+            protocolMarshaller.marshall(rateBasedStatementCustomKey.getUriPath(), URIPATH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

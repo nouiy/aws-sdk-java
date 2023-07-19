@@ -49,7 +49,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * <code>ExcludedHeaders</code>.
      * </p>
      * <p>
-     * Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code>
+     * Example JSON: <code>"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }</code>
      * </p>
      */
     private HeaderMatchPattern matchPattern;
@@ -100,7 +100,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * <code>ExcludedHeaders</code>.
      * </p>
      * <p>
-     * Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code>
+     * Example JSON: <code>"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }</code>
      * </p>
      * 
      * @param matchPattern
@@ -110,7 +110,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      *        <code>ExcludedHeaders</code>.
      *        </p>
      *        <p>
-     *        Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code>
+     *        Example JSON: <code>"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }</code>
      */
 
     public void setMatchPattern(HeaderMatchPattern matchPattern) {
@@ -126,7 +126,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * <code>ExcludedHeaders</code>.
      * </p>
      * <p>
-     * Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code>
+     * Example JSON: <code>"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }</code>
      * </p>
      * 
      * @return The filter to use to identify the subset of headers to inspect in a web request. </p>
@@ -135,7 +135,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      *         <code>ExcludedHeaders</code>.
      *         </p>
      *         <p>
-     *         Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code>
+     *         Example JSON: <code>"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }</code>
      */
 
     public HeaderMatchPattern getMatchPattern() {
@@ -151,7 +151,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * <code>ExcludedHeaders</code>.
      * </p>
      * <p>
-     * Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code>
+     * Example JSON: <code>"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }</code>
      * </p>
      * 
      * @param matchPattern
@@ -161,7 +161,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      *        <code>ExcludedHeaders</code>.
      *        </p>
      *        <p>
-     *        Example JSON: <code>"MatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code>
+     *        Example JSON: <code>"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

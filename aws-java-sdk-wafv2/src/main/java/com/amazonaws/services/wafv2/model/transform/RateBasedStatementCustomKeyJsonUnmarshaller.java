@@ -80,6 +80,10 @@ public class RateBasedStatementCustomKeyJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     rateBasedStatementCustomKey.setLabelNamespace(RateLimitLabelNamespaceJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("UriPath", targetDepth)) {
+                    context.nextToken();
+                    rateBasedStatementCustomKey.setUriPath(RateLimitUriPathJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
