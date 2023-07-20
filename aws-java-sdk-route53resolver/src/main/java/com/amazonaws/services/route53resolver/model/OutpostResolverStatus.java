@@ -10,7 +10,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.lexmodelsv2.model;
+package com.amazonaws.services.route53resolver.model;
 
 import javax.annotation.Generated;
 
@@ -18,15 +18,19 @@ import javax.annotation.Generated;
  * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public enum BotChannelType {
+public enum OutpostResolverStatus {
 
-    Facebook("Facebook"),
-    Slack("Slack"),
-    TwilioSms("TwilioSms");
+    CREATING("CREATING"),
+    OPERATIONAL("OPERATIONAL"),
+    UPDATING("UPDATING"),
+    DELETING("DELETING"),
+    ACTION_NEEDED("ACTION_NEEDED"),
+    FAILED_CREATION("FAILED_CREATION"),
+    FAILED_DELETION("FAILED_DELETION");
 
     private String value;
 
-    private BotChannelType(String value) {
+    private OutpostResolverStatus(String value) {
         this.value = value;
     }
 
@@ -40,17 +44,17 @@ public enum BotChannelType {
      *
      * @param value
      *        real value
-     * @return BotChannelType corresponding to the value
+     * @return OutpostResolverStatus corresponding to the value
      *
      * @throws IllegalArgumentException
      *         If the specified value does not map to one of the known values in this enum.
      */
-    public static BotChannelType fromValue(String value) {
+    public static OutpostResolverStatus fromValue(String value) {
         if (value == null || "".equals(value)) {
             throw new IllegalArgumentException("Value cannot be null or empty!");
         }
 
-        for (BotChannelType enumEntry : BotChannelType.values()) {
+        for (OutpostResolverStatus enumEntry : OutpostResolverStatus.values()) {
             if (enumEntry.toString().equals(value)) {
                 return enumEntry;
             }

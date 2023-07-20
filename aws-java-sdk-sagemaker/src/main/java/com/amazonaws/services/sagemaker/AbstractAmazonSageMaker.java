@@ -1174,6 +1174,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public ListResourceCatalogsResult listResourceCatalogs(ListResourceCatalogsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListSpacesResult listSpaces(ListSpacesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

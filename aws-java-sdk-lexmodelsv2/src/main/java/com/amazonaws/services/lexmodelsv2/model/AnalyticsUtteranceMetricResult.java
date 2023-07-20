@@ -50,7 +50,7 @@ public class AnalyticsUtteranceMetricResult implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
-     * <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     * <code>UtteranceTimestamp</code> – The date and time of the utterance.
      * </p>
      * </li>
      * </ul>
@@ -109,7 +109,7 @@ public class AnalyticsUtteranceMetricResult implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
-     * <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     * <code>UtteranceTimestamp</code> – The date and time of the utterance.
      * </p>
      * </li>
      * </ul>
@@ -134,7 +134,7 @@ public class AnalyticsUtteranceMetricResult implements Serializable, Cloneable, 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     *        <code>UtteranceTimestamp</code> – The date and time of the utterance.
      *        </p>
      *        </li>
      * @see AnalyticsUtteranceMetricName
@@ -166,7 +166,7 @@ public class AnalyticsUtteranceMetricResult implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
-     * <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     * <code>UtteranceTimestamp</code> – The date and time of the utterance.
      * </p>
      * </li>
      * </ul>
@@ -190,7 +190,7 @@ public class AnalyticsUtteranceMetricResult implements Serializable, Cloneable, 
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     *         <code>UtteranceTimestamp</code> – The date and time of the utterance.
      *         </p>
      *         </li>
      * @see AnalyticsUtteranceMetricName
@@ -222,7 +222,7 @@ public class AnalyticsUtteranceMetricResult implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
-     * <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     * <code>UtteranceTimestamp</code> – The date and time of the utterance.
      * </p>
      * </li>
      * </ul>
@@ -247,7 +247,7 @@ public class AnalyticsUtteranceMetricResult implements Serializable, Cloneable, 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     *        <code>UtteranceTimestamp</code> – The date and time of the utterance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -281,7 +281,7 @@ public class AnalyticsUtteranceMetricResult implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
-     * <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     * <code>UtteranceTimestamp</code> – The date and time of the utterance.
      * </p>
      * </li>
      * </ul>
@@ -306,7 +306,7 @@ public class AnalyticsUtteranceMetricResult implements Serializable, Cloneable, 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     *        <code>UtteranceTimestamp</code> – The date and time of the utterance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

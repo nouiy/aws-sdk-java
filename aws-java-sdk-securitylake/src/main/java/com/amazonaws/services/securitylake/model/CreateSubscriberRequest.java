@@ -56,6 +56,13 @@ public class CreateSubscriberRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String subscriberName;
+    /**
+     * <p>
+     * An array of objects, one for each tag to associate with the subscriber. For each tag, you must specify both a tag
+     * key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -354,6 +361,84 @@ public class CreateSubscriberRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * An array of objects, one for each tag to associate with the subscriber. For each tag, you must specify both a tag
+     * key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * </p>
+     * 
+     * @return An array of objects, one for each tag to associate with the subscriber. For each tag, you must specify
+     *         both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * An array of objects, one for each tag to associate with the subscriber. For each tag, you must specify both a tag
+     * key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * </p>
+     * 
+     * @param tags
+     *        An array of objects, one for each tag to associate with the subscriber. For each tag, you must specify
+     *        both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * An array of objects, one for each tag to associate with the subscriber. For each tag, you must specify both a tag
+     * key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        An array of objects, one for each tag to associate with the subscriber. For each tag, you must specify
+     *        both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSubscriberRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of objects, one for each tag to associate with the subscriber. For each tag, you must specify both a tag
+     * key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * </p>
+     * 
+     * @param tags
+     *        An array of objects, one for each tag to associate with the subscriber. For each tag, you must specify
+     *        both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSubscriberRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -374,7 +459,9 @@ public class CreateSubscriberRequest extends com.amazonaws.AmazonWebServiceReque
         if (getSubscriberIdentity() != null)
             sb.append("SubscriberIdentity: ").append(getSubscriberIdentity()).append(",");
         if (getSubscriberName() != null)
-            sb.append("SubscriberName: ").append(getSubscriberName());
+            sb.append("SubscriberName: ").append(getSubscriberName()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -409,6 +496,10 @@ public class CreateSubscriberRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getSubscriberName() != null && other.getSubscriberName().equals(this.getSubscriberName()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -422,6 +513,7 @@ public class CreateSubscriberRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getSubscriberDescription() == null) ? 0 : getSubscriberDescription().hashCode());
         hashCode = prime * hashCode + ((getSubscriberIdentity() == null) ? 0 : getSubscriberIdentity().hashCode());
         hashCode = prime * hashCode + ((getSubscriberName() == null) ? 0 : getSubscriberName().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

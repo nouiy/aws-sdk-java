@@ -32,6 +32,8 @@ public class CreateDataLakeRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configurations").build();
     private static final MarshallingInfo<String> METASTOREMANAGERROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metaStoreManagerRoleArn").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateDataLakeRequestMarshaller instance = new CreateDataLakeRequestMarshaller();
 
@@ -51,6 +53,7 @@ public class CreateDataLakeRequestMarshaller {
         try {
             protocolMarshaller.marshall(createDataLakeRequest.getConfigurations(), CONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(createDataLakeRequest.getMetaStoreManagerRoleArn(), METASTOREMANAGERROLEARN_BINDING);
+            protocolMarshaller.marshall(createDataLakeRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -9497,6 +9497,39 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Lists Amazon SageMaker Catalogs based on given filters and orders. The maximum number of
+     * <code>ResourceCatalog</code>s viewable is 1000.
+     * </p>
+     * 
+     * @param listResourceCatalogsRequest
+     * @return A Java Future containing the result of the ListResourceCatalogs operation returned by the service.
+     * @sample AmazonSageMakerAsync.ListResourceCatalogs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListResourceCatalogs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListResourceCatalogsResult> listResourceCatalogsAsync(ListResourceCatalogsRequest listResourceCatalogsRequest);
+
+    /**
+     * <p>
+     * Lists Amazon SageMaker Catalogs based on given filters and orders. The maximum number of
+     * <code>ResourceCatalog</code>s viewable is 1000.
+     * </p>
+     * 
+     * @param listResourceCatalogsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListResourceCatalogs operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.ListResourceCatalogs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListResourceCatalogs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListResourceCatalogsResult> listResourceCatalogsAsync(ListResourceCatalogsRequest listResourceCatalogsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListResourceCatalogsRequest, ListResourceCatalogsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists spaces.
      * </p>
      * 
@@ -11436,7 +11469,19 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
-     * Updates the feature group.
+     * Updates the feature group by either adding features or updating the online store configuration. Use one of the
+     * following request parameters at a time while using the <code>UpdateFeatureGroup</code> API.
+     * </p>
+     * <p>
+     * You can add features for your feature group using the <code>FeatureAdditions</code> request parameter. Features
+     * cannot be removed from a feature group.
+     * </p>
+     * <p>
+     * You can update the online store configuration by using the <code>OnlineStoreConfig</code> request parameter. If a
+     * <code>TtlDuration</code> is specified, the default <code>TtlDuration</code> applies for all records added to the
+     * feature group <i>after the feature group is updated</i>. If a record level <code>TtlDuration</code> exists from
+     * using the <code>PutRecord</code> API, the record level <code>TtlDuration</code> applies to that record instead of
+     * the default <code>TtlDuration</code>.
      * </p>
      * 
      * @param updateFeatureGroupRequest
@@ -11449,7 +11494,19 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
-     * Updates the feature group.
+     * Updates the feature group by either adding features or updating the online store configuration. Use one of the
+     * following request parameters at a time while using the <code>UpdateFeatureGroup</code> API.
+     * </p>
+     * <p>
+     * You can add features for your feature group using the <code>FeatureAdditions</code> request parameter. Features
+     * cannot be removed from a feature group.
+     * </p>
+     * <p>
+     * You can update the online store configuration by using the <code>OnlineStoreConfig</code> request parameter. If a
+     * <code>TtlDuration</code> is specified, the default <code>TtlDuration</code> applies for all records added to the
+     * feature group <i>after the feature group is updated</i>. If a record level <code>TtlDuration</code> exists from
+     * using the <code>PutRecord</code> API, the record level <code>TtlDuration</code> applies to that record instead of
+     * the default <code>TtlDuration</code>.
      * </p>
      * 
      * @param updateFeatureGroupRequest

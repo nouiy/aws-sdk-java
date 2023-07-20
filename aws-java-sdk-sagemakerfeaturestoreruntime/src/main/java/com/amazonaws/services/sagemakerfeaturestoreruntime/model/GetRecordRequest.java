@@ -27,7 +27,7 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the feature group from which you want to retrieve a record.
+     * The name or Amazon Resource Name (ARN) of the feature group from which you want to retrieve a record.
      * </p>
      */
     private String featureGroupName;
@@ -46,20 +46,20 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private java.util.List<String> featureNames;
     /**
      * <p>
-     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>BatchGetRecord</code>
-     * will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
-     * <code>BatchGetRecord</code> will return null.
+     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>GetRecord</code> will
+     * return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     * <code>GetRecord</code> will return null.
      * </p>
      */
     private String expirationTimeResponse;
 
     /**
      * <p>
-     * The name of the feature group from which you want to retrieve a record.
+     * The name or Amazon Resource Name (ARN) of the feature group from which you want to retrieve a record.
      * </p>
      * 
      * @param featureGroupName
-     *        The name of the feature group from which you want to retrieve a record.
+     *        The name or Amazon Resource Name (ARN) of the feature group from which you want to retrieve a record.
      */
 
     public void setFeatureGroupName(String featureGroupName) {
@@ -68,10 +68,10 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the feature group from which you want to retrieve a record.
+     * The name or Amazon Resource Name (ARN) of the feature group from which you want to retrieve a record.
      * </p>
      * 
-     * @return The name of the feature group from which you want to retrieve a record.
+     * @return The name or Amazon Resource Name (ARN) of the feature group from which you want to retrieve a record.
      */
 
     public String getFeatureGroupName() {
@@ -80,11 +80,11 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the feature group from which you want to retrieve a record.
+     * The name or Amazon Resource Name (ARN) of the feature group from which you want to retrieve a record.
      * </p>
      * 
      * @param featureGroupName
-     *        The name of the feature group from which you want to retrieve a record.
+     *        The name or Amazon Resource Name (ARN) of the feature group from which you want to retrieve a record.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,15 +215,15 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>BatchGetRecord</code>
-     * will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
-     * <code>BatchGetRecord</code> will return null.
+     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>GetRecord</code> will
+     * return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     * <code>GetRecord</code> will return null.
      * </p>
      * 
      * @param expirationTimeResponse
-     *        Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>,
-     *        <code>BatchGetRecord</code> will return the value of <code>ExpiresAt</code>, if it is not null. If
-     *        <code>Disabled</code> and null, <code>BatchGetRecord</code> will return null.
+     *        Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>GetRecord</code>
+     *        will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     *        <code>GetRecord</code> will return null.
      * @see ExpirationTimeResponse
      */
 
@@ -233,14 +233,14 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>BatchGetRecord</code>
-     * will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
-     * <code>BatchGetRecord</code> will return null.
+     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>GetRecord</code> will
+     * return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     * <code>GetRecord</code> will return null.
      * </p>
      * 
-     * @return Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>,
-     *         <code>BatchGetRecord</code> will return the value of <code>ExpiresAt</code>, if it is not null. If
-     *         <code>Disabled</code> and null, <code>BatchGetRecord</code> will return null.
+     * @return Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>GetRecord</code>
+     *         will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     *         <code>GetRecord</code> will return null.
      * @see ExpirationTimeResponse
      */
 
@@ -250,15 +250,15 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>BatchGetRecord</code>
-     * will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
-     * <code>BatchGetRecord</code> will return null.
+     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>GetRecord</code> will
+     * return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     * <code>GetRecord</code> will return null.
      * </p>
      * 
      * @param expirationTimeResponse
-     *        Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>,
-     *        <code>BatchGetRecord</code> will return the value of <code>ExpiresAt</code>, if it is not null. If
-     *        <code>Disabled</code> and null, <code>BatchGetRecord</code> will return null.
+     *        Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>GetRecord</code>
+     *        will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     *        <code>GetRecord</code> will return null.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExpirationTimeResponse
      */
@@ -270,15 +270,15 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>BatchGetRecord</code>
-     * will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
-     * <code>BatchGetRecord</code> will return null.
+     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>GetRecord</code> will
+     * return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     * <code>GetRecord</code> will return null.
      * </p>
      * 
      * @param expirationTimeResponse
-     *        Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>,
-     *        <code>BatchGetRecord</code> will return the value of <code>ExpiresAt</code>, if it is not null. If
-     *        <code>Disabled</code> and null, <code>BatchGetRecord</code> will return null.
+     *        Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>GetRecord</code>
+     *        will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     *        <code>GetRecord</code> will return null.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExpirationTimeResponse
      */

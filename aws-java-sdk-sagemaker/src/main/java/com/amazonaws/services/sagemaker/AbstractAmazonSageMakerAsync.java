@@ -3051,6 +3051,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListResourceCatalogsResult> listResourceCatalogsAsync(ListResourceCatalogsRequest request) {
+
+        return listResourceCatalogsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListResourceCatalogsResult> listResourceCatalogsAsync(ListResourceCatalogsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListResourceCatalogsRequest, ListResourceCatalogsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSpacesResult> listSpacesAsync(ListSpacesRequest request) {
 
         return listSpacesAsync(request, null);

@@ -7701,6 +7701,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListResourceCatalogsResult> listResourceCatalogsAsync(ListResourceCatalogsRequest request) {
+
+        return listResourceCatalogsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListResourceCatalogsResult> listResourceCatalogsAsync(final ListResourceCatalogsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListResourceCatalogsRequest, ListResourceCatalogsResult> asyncHandler) {
+        final ListResourceCatalogsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListResourceCatalogsResult>() {
+            @Override
+            public ListResourceCatalogsResult call() throws Exception {
+                ListResourceCatalogsResult result = null;
+
+                try {
+                    result = executeListResourceCatalogs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSpacesResult> listSpacesAsync(ListSpacesRequest request) {
 
         return listSpacesAsync(request, null);

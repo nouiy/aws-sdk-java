@@ -27,8 +27,8 @@ public class BatchGetRecordRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of <code>FeatureGroup</code> names, with their corresponding <code>RecordIdentifier</code> value, and
-     * Feature name that have been requested to be retrieved in batch.
+     * A list containing the name or Amazon Resource Name (ARN) of the <code>FeatureGroup</code>, the list of names of
+     * <code>Feature</code>s to be retrieved, and the corresponding <code>RecordIdentifier</code> values as strings.
      * </p>
      */
     private java.util.List<BatchGetRecordIdentifier> identifiers;
@@ -43,12 +43,13 @@ public class BatchGetRecordRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of <code>FeatureGroup</code> names, with their corresponding <code>RecordIdentifier</code> value, and
-     * Feature name that have been requested to be retrieved in batch.
+     * A list containing the name or Amazon Resource Name (ARN) of the <code>FeatureGroup</code>, the list of names of
+     * <code>Feature</code>s to be retrieved, and the corresponding <code>RecordIdentifier</code> values as strings.
      * </p>
      * 
-     * @return A list of <code>FeatureGroup</code> names, with their corresponding <code>RecordIdentifier</code> value,
-     *         and Feature name that have been requested to be retrieved in batch.
+     * @return A list containing the name or Amazon Resource Name (ARN) of the <code>FeatureGroup</code>, the list of
+     *         names of <code>Feature</code>s to be retrieved, and the corresponding <code>RecordIdentifier</code>
+     *         values as strings.
      */
 
     public java.util.List<BatchGetRecordIdentifier> getIdentifiers() {
@@ -57,13 +58,14 @@ public class BatchGetRecordRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of <code>FeatureGroup</code> names, with their corresponding <code>RecordIdentifier</code> value, and
-     * Feature name that have been requested to be retrieved in batch.
+     * A list containing the name or Amazon Resource Name (ARN) of the <code>FeatureGroup</code>, the list of names of
+     * <code>Feature</code>s to be retrieved, and the corresponding <code>RecordIdentifier</code> values as strings.
      * </p>
      * 
      * @param identifiers
-     *        A list of <code>FeatureGroup</code> names, with their corresponding <code>RecordIdentifier</code> value,
-     *        and Feature name that have been requested to be retrieved in batch.
+     *        A list containing the name or Amazon Resource Name (ARN) of the <code>FeatureGroup</code>, the list of
+     *        names of <code>Feature</code>s to be retrieved, and the corresponding <code>RecordIdentifier</code> values
+     *        as strings.
      */
 
     public void setIdentifiers(java.util.Collection<BatchGetRecordIdentifier> identifiers) {
@@ -77,8 +79,8 @@ public class BatchGetRecordRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of <code>FeatureGroup</code> names, with their corresponding <code>RecordIdentifier</code> value, and
-     * Feature name that have been requested to be retrieved in batch.
+     * A list containing the name or Amazon Resource Name (ARN) of the <code>FeatureGroup</code>, the list of names of
+     * <code>Feature</code>s to be retrieved, and the corresponding <code>RecordIdentifier</code> values as strings.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -87,8 +89,9 @@ public class BatchGetRecordRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param identifiers
-     *        A list of <code>FeatureGroup</code> names, with their corresponding <code>RecordIdentifier</code> value,
-     *        and Feature name that have been requested to be retrieved in batch.
+     *        A list containing the name or Amazon Resource Name (ARN) of the <code>FeatureGroup</code>, the list of
+     *        names of <code>Feature</code>s to be retrieved, and the corresponding <code>RecordIdentifier</code> values
+     *        as strings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,13 +107,14 @@ public class BatchGetRecordRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of <code>FeatureGroup</code> names, with their corresponding <code>RecordIdentifier</code> value, and
-     * Feature name that have been requested to be retrieved in batch.
+     * A list containing the name or Amazon Resource Name (ARN) of the <code>FeatureGroup</code>, the list of names of
+     * <code>Feature</code>s to be retrieved, and the corresponding <code>RecordIdentifier</code> values as strings.
      * </p>
      * 
      * @param identifiers
-     *        A list of <code>FeatureGroup</code> names, with their corresponding <code>RecordIdentifier</code> value,
-     *        and Feature name that have been requested to be retrieved in batch.
+     *        A list containing the name or Amazon Resource Name (ARN) of the <code>FeatureGroup</code>, the list of
+     *        names of <code>Feature</code>s to be retrieved, and the corresponding <code>RecordIdentifier</code> values
+     *        as strings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

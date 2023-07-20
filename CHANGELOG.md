@@ -1,4 +1,45 @@
-# __1.12.510__ __2023-07-20__
+# __1.12.511__ __2023-07-20__
+## __Amazon CodeCatalyst__
+  - ### Features
+    - This release adds support for updating and deleting spaces and projects in Amazon CodeCatalyst. It also adds support for creating, getting, and deleting source repositories in CodeCatalyst projects.
+
+## __Amazon Connect Cases__
+  - ### Features
+    - This release adds the ability to assign a case to a queue or user.
+
+## __Amazon Lex Model Building V2__
+  - ### Features
+    - This release updates type for Channel field in SessionSpecification and UtteranceSpecification
+
+## __Amazon Route 53 Resolver__
+  - ### Features
+    - This release adds support for Route 53 On Outposts, a new feature that allows customers to run Route 53 Resolver and Resolver endpoints locally on their Outposts.
+
+## __Amazon S3__
+  - ### Features
+    - Add ability to set a server-side encryption customer managed key for `CompleteMultipartUpload`.
+
+## __Amazon SageMaker Feature Store Runtime__
+  - ### Features
+    - Cross account support for SageMaker Feature Store
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Cross account support for SageMaker Feature Store
+
+## __Amazon Security Lake__
+  - ### Features
+    - Adding support for Tags on Create and Resource Tagging API.
+
+## __Amazon Simple Storage Service__
+  - ### Features
+    - Improve performance of S3 clients by simplifying and optimizing endpoint resolution.
+
+## __Amazon Transcribe Service__
+  - ### Features
+    - Added API argument --toxicity-detection to startTranscriptionJob API, which allows users to view toxicity scores of submitted audio.
+
+# __1.12.510__ __2023-07-19__
 ## __AWS Savings Plans__
   - ### Features
     - Savings Plans endpoints update

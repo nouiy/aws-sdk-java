@@ -14490,6 +14490,62 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Lists Amazon SageMaker Catalogs based on given filters and orders. The maximum number of
+     * <code>ResourceCatalog</code>s viewable is 1000.
+     * </p>
+     * 
+     * @param listResourceCatalogsRequest
+     * @return Result of the ListResourceCatalogs operation returned by the service.
+     * @sample AmazonSageMaker.ListResourceCatalogs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListResourceCatalogs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListResourceCatalogsResult listResourceCatalogs(ListResourceCatalogsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListResourceCatalogs(request);
+    }
+
+    @SdkInternalApi
+    final ListResourceCatalogsResult executeListResourceCatalogs(ListResourceCatalogsRequest listResourceCatalogsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listResourceCatalogsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListResourceCatalogsRequest> request = null;
+        Response<ListResourceCatalogsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListResourceCatalogsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listResourceCatalogsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListResourceCatalogs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListResourceCatalogsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListResourceCatalogsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists spaces.
      * </p>
      * 
@@ -17609,7 +17665,19 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Updates the feature group.
+     * Updates the feature group by either adding features or updating the online store configuration. Use one of the
+     * following request parameters at a time while using the <code>UpdateFeatureGroup</code> API.
+     * </p>
+     * <p>
+     * You can add features for your feature group using the <code>FeatureAdditions</code> request parameter. Features
+     * cannot be removed from a feature group.
+     * </p>
+     * <p>
+     * You can update the online store configuration by using the <code>OnlineStoreConfig</code> request parameter. If a
+     * <code>TtlDuration</code> is specified, the default <code>TtlDuration</code> applies for all records added to the
+     * feature group <i>after the feature group is updated</i>. If a record level <code>TtlDuration</code> exists from
+     * using the <code>PutRecord</code> API, the record level <code>TtlDuration</code> applies to that record instead of
+     * the default <code>TtlDuration</code>.
      * </p>
      * 
      * @param updateFeatureGroupRequest

@@ -77,7 +77,9 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For more
-     * information, see the Amazon Security Lake User Guide.
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/source-management.html">Amazon Security Lake
+     * User Guide</a>.
      * </p>
      */
     private java.util.List<LogSourceResource> sources;
@@ -498,11 +500,15 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For more
-     * information, see the Amazon Security Lake User Guide.
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/source-management.html">Amazon Security Lake
+     * User Guide</a>.
      * </p>
      * 
      * @return Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For
-     *         more information, see the Amazon Security Lake User Guide.
+     *         more information, see the <a
+     *         href="https://docs.aws.amazon.com/security-lake/latest/userguide/source-management.html">Amazon Security
+     *         Lake User Guide</a>.
      */
 
     public java.util.List<LogSourceResource> getSources() {
@@ -512,12 +518,16 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For more
-     * information, see the Amazon Security Lake User Guide.
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/source-management.html">Amazon Security Lake
+     * User Guide</a>.
      * </p>
      * 
      * @param sources
      *        Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For
-     *        more information, see the Amazon Security Lake User Guide.
+     *        more information, see the <a
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/source-management.html">Amazon Security
+     *        Lake User Guide</a>.
      */
 
     public void setSources(java.util.Collection<LogSourceResource> sources) {
@@ -532,7 +542,9 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For more
-     * information, see the Amazon Security Lake User Guide.
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/source-management.html">Amazon Security Lake
+     * User Guide</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -542,7 +554,9 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
      * 
      * @param sources
      *        Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For
-     *        more information, see the Amazon Security Lake User Guide.
+     *        more information, see the <a
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/source-management.html">Amazon Security
+     *        Lake User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -559,12 +573,16 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For more
-     * information, see the Amazon Security Lake User Guide.
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/source-management.html">Amazon Security Lake
+     * User Guide</a>.
      * </p>
      * 
      * @param sources
      *        Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For
-     *        more information, see the Amazon Security Lake User Guide.
+     *        more information, see the <a
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/source-management.html">Amazon Security
+     *        Lake User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

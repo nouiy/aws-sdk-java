@@ -78,7 +78,7 @@ public interface AmazonSecurityLake {
      * Adds a natively supported Amazon Web Service as an Amazon Security Lake source. Enables source types for member
      * accounts in required Amazon Web Services Regions, based on the parameters you specify. You can choose any source
      * type in any Region for either accounts that are part of a trusted organization or standalone accounts. Once you
-     * add an Amazon Web Service as a source, Security Lake starts collecting logs and events from it,
+     * add an Amazon Web Service as a source, Security Lake starts collecting logs and events from it.
      * </p>
      * <p>
      * You can use this API only to enable natively supported Amazon Web Services as a source. Use
@@ -152,11 +152,10 @@ public interface AmazonSecurityLake {
      * <p>
      * Initializes an Amazon Security Lake instance with the provided (or default) configuration. You can enable
      * Security Lake in Amazon Web Services Regions with customized settings before enabling log collection in Regions.
-     * By default, the <code>CreateDataLake</code> Security Lake in all Regions. To specify particular Regions,
-     * configure these Regions using the <code>configurations</code> parameter. If you have already enabled Security
-     * Lake in a Region when you call this command, the command will update the Region if you provide new configuration
-     * parameters. If you have not already enabled Security Lake in the Region when you call this API, it will set up
-     * the data lake in the Region with the specified configurations.
+     * To specify particular Regions, configure these Regions using the <code>configurations</code> parameter. If you
+     * have already enabled Security Lake in a Region when you call this command, the command will update the Region if
+     * you provide new configuration parameters. If you have not already enabled Security Lake in the Region when you
+     * call this API, it will set up the data lake in the Region with the specified configurations.
      * </p>
      * <p>
      * When you enable Security Lake, it starts ingesting security data after the <code>CreateAwsLogSource</code> call.
@@ -476,10 +475,10 @@ public interface AmazonSecurityLake {
 
     /**
      * <p>
-     * Removes automatic the enablement of configuration settings for new member accounts (but retains the settings for
-     * the delegated administrator) from Amazon Security Lake. You must run this API using the credentials of the
-     * delegated administrator. When you run this API, new member accounts that are added after the organization enables
-     * Security Lake won't contribute to the data lake.
+     * Turns off automatic enablement of Amazon Security Lake for member accounts that are added to an organization in
+     * Organizations. Only the delegated Security Lake administrator for an organization can perform this operation. If
+     * the delegated Security Lake administrator performs this operation, new member accounts won't automatically
+     * contribute data to the data lake.
      * </p>
      * 
      * @param deleteDataLakeOrganizationConfigurationRequest
@@ -781,8 +780,8 @@ public interface AmazonSecurityLake {
 
     /**
      * <p>
-     * Retrieves the Amazon Security Lake configuration object for the specified Amazon Web Services account ID. You can
-     * use the <code>ListDataLakes</code> API to know whether Security Lake is enabled for any region.
+     * Retrieves the Amazon Security Lake configuration object for the specified Amazon Web Services Regions. You can
+     * use this operation to determine whether Security Lake is enabled for a Region.
      * </p>
      * 
      * @param listDataLakesRequest
@@ -879,6 +878,39 @@ public interface AmazonSecurityLake {
 
     /**
      * <p>
+     * Retrieves the tags (keys and values) that are associated with an Amazon Security Lake resource: a subscriber, or
+     * the data lake configuration for your Amazon Web Services account in a particular Amazon Web Services Region.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws BadRequestException
+     *         The request is malformed or contains an error such as an invalid parameter value or a missing required
+     *         parameter.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws InternalServerException
+     *         Internal service exceptions are sometimes caused by transient issues. Before you start troubleshooting,
+     *         perform the operation again.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. Access denied errors appear when Amazon
+     *         Security Lake explicitly or implicitly denies an authorization request. An explicit denial occurs when a
+     *         policy contains a Deny statement for the specific Amazon Web Services action. An implicit denial occurs
+     *         when there is no applicable Deny statement and also no applicable Allow statement.
+     * @throws ConflictException
+     *         Occurs when a conflict with a previous successful write is detected. This generally occurs when the
+     *         previous write did not have time to propagate to the host serving the current request. A retry (with
+     *         appropriate backoff logic) is the recommended response to this exception.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @sample AmazonSecurityLake.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securitylake-2018-05-10/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
      * Designates the Amazon Security Lake delegated administrator account for the organization. This API can only be
      * called by the organization management account. The organization management account cannot be the delegated
      * administrator account.
@@ -912,6 +944,79 @@ public interface AmazonSecurityLake {
      */
     RegisterDataLakeDelegatedAdministratorResult registerDataLakeDelegatedAdministrator(
             RegisterDataLakeDelegatedAdministratorRequest registerDataLakeDelegatedAdministratorRequest);
+
+    /**
+     * <p>
+     * Adds or updates one or more tags that are associated with an Amazon Security Lake resource: a subscriber, or the
+     * data lake configuration for your Amazon Web Services account in a particular Amazon Web Services Region. A
+     * <i>tag</i> is a label that you can define and associate with Amazon Web Services resources. Each tag consists of
+     * a required <i>tag key</i> and an associated <i>tag value</i>. A <i>tag key</i> is a general label that acts as a
+     * category for a more specific tag value. A <i>tag value</i> acts as a descriptor for a tag key. Tags can help you
+     * identify, categorize, and manage resources in different ways, such as by owner, environment, or other criteria.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/tagging-resources.html">Tagging Amazon Security
+     * Lake resources</a> in the <i>Amazon Security Lake User Guide</i>.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws BadRequestException
+     *         The request is malformed or contains an error such as an invalid parameter value or a missing required
+     *         parameter.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws InternalServerException
+     *         Internal service exceptions are sometimes caused by transient issues. Before you start troubleshooting,
+     *         perform the operation again.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. Access denied errors appear when Amazon
+     *         Security Lake explicitly or implicitly denies an authorization request. An explicit denial occurs when a
+     *         policy contains a Deny statement for the specific Amazon Web Services action. An implicit denial occurs
+     *         when there is no applicable Deny statement and also no applicable Allow statement.
+     * @throws ConflictException
+     *         Occurs when a conflict with a previous successful write is detected. This generally occurs when the
+     *         previous write did not have time to propagate to the host serving the current request. A retry (with
+     *         appropriate backoff logic) is the recommended response to this exception.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @sample AmazonSecurityLake.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securitylake-2018-05-10/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Removes one or more tags (keys and values) from an Amazon Security Lake resource: a subscriber, or the data lake
+     * configuration for your Amazon Web Services account in a particular Amazon Web Services Region.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws BadRequestException
+     *         The request is malformed or contains an error such as an invalid parameter value or a missing required
+     *         parameter.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws InternalServerException
+     *         Internal service exceptions are sometimes caused by transient issues. Before you start troubleshooting,
+     *         perform the operation again.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. Access denied errors appear when Amazon
+     *         Security Lake explicitly or implicitly denies an authorization request. An explicit denial occurs when a
+     *         policy contains a Deny statement for the specific Amazon Web Services action. An implicit denial occurs
+     *         when there is no applicable Deny statement and also no applicable Allow statement.
+     * @throws ConflictException
+     *         Occurs when a conflict with a previous successful write is detected. This generally occurs when the
+     *         previous write did not have time to propagate to the host serving the current request. A retry (with
+     *         appropriate backoff logic) is the recommended response to this exception.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @sample AmazonSecurityLake.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securitylake-2018-05-10/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
      * <p>

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The output of Records that have been retrieved in a batch.
+ * The output of records that have been retrieved in a batch.
  * </p>
  * 
  * @see <a

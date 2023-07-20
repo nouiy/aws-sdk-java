@@ -38,6 +38,13 @@ public class CreateDataLakeRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private String metaStoreManagerRoleArn;
+    /**
+     * <p>
+     * An array of objects, one for each tag to associate with the data lake configuration. For each tag, you must
+     * specify both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -156,6 +163,84 @@ public class CreateDataLakeRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * An array of objects, one for each tag to associate with the data lake configuration. For each tag, you must
+     * specify both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * </p>
+     * 
+     * @return An array of objects, one for each tag to associate with the data lake configuration. For each tag, you
+     *         must specify both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * An array of objects, one for each tag to associate with the data lake configuration. For each tag, you must
+     * specify both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * </p>
+     * 
+     * @param tags
+     *        An array of objects, one for each tag to associate with the data lake configuration. For each tag, you
+     *        must specify both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * An array of objects, one for each tag to associate with the data lake configuration. For each tag, you must
+     * specify both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        An array of objects, one for each tag to associate with the data lake configuration. For each tag, you
+     *        must specify both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataLakeRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of objects, one for each tag to associate with the data lake configuration. For each tag, you must
+     * specify both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * </p>
+     * 
+     * @param tags
+     *        An array of objects, one for each tag to associate with the data lake configuration. For each tag, you
+     *        must specify both a tag key and a tag value. A tag value cannot be null, but it can be an empty string.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataLakeRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -170,7 +255,9 @@ public class CreateDataLakeRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getConfigurations() != null)
             sb.append("Configurations: ").append(getConfigurations()).append(",");
         if (getMetaStoreManagerRoleArn() != null)
-            sb.append("MetaStoreManagerRoleArn: ").append(getMetaStoreManagerRoleArn());
+            sb.append("MetaStoreManagerRoleArn: ").append(getMetaStoreManagerRoleArn()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -193,6 +280,10 @@ public class CreateDataLakeRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getMetaStoreManagerRoleArn() != null && other.getMetaStoreManagerRoleArn().equals(this.getMetaStoreManagerRoleArn()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -203,6 +294,7 @@ public class CreateDataLakeRequest extends com.amazonaws.AmazonWebServiceRequest
 
         hashCode = prime * hashCode + ((getConfigurations() == null) ? 0 : getConfigurations().hashCode());
         hashCode = prime * hashCode + ((getMetaStoreManagerRoleArn() == null) ? 0 : getMetaStoreManagerRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

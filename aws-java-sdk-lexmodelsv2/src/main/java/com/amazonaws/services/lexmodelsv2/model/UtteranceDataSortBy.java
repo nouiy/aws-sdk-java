@@ -40,7 +40,7 @@ public class UtteranceDataSortBy implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     * <code>UtteranceTimestamp</code> – The date and time of the utterance.
      * </p>
      * </li>
      * </ul>
@@ -65,7 +65,7 @@ public class UtteranceDataSortBy implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     * <code>UtteranceTimestamp</code> – The date and time of the utterance.
      * </p>
      * </li>
      * </ul>
@@ -80,7 +80,7 @@ public class UtteranceDataSortBy implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     *        <code>UtteranceTimestamp</code> – The date and time of the utterance.
      *        </p>
      *        </li>
      * @see AnalyticsUtteranceSortByName
@@ -102,7 +102,7 @@ public class UtteranceDataSortBy implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     * <code>UtteranceTimestamp</code> – The date and time of the utterance.
      * </p>
      * </li>
      * </ul>
@@ -116,7 +116,7 @@ public class UtteranceDataSortBy implements Serializable, Cloneable, StructuredP
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     *         <code>UtteranceTimestamp</code> – The date and time of the utterance.
      *         </p>
      *         </li>
      * @see AnalyticsUtteranceSortByName
@@ -138,7 +138,7 @@ public class UtteranceDataSortBy implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     * <code>UtteranceTimestamp</code> – The date and time of the utterance.
      * </p>
      * </li>
      * </ul>
@@ -153,7 +153,7 @@ public class UtteranceDataSortBy implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     *        <code>UtteranceTimestamp</code> – The date and time of the utterance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -177,7 +177,7 @@ public class UtteranceDataSortBy implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     * <code>UtteranceTimestamp</code> – The date and time of the utterance.
      * </p>
      * </li>
      * </ul>
@@ -192,7 +192,7 @@ public class UtteranceDataSortBy implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UtteranceTimeStamp</code> – The date and time of the utterance.
+     *        <code>UtteranceTimestamp</code> – The date and time of the utterance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

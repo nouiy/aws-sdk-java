@@ -1720,7 +1720,7 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Retrieves summary metrics for the intent stages in your bot. The following fields are required:
+     * Retrieves summary metrics for the stages within intents in your bot. The following fields are required:
      * </p>
      * <ul>
      * <li>
@@ -2091,10 +2091,28 @@ public interface AmazonLexModelsV2 {
     ListTestSetsResult listTestSets(ListTestSetsRequest listTestSetsRequest);
 
     /**
+     * <note>
      * <p>
-     * Retrieves a list of metadata for individual user utterances to your bot. The <code>startDateTime</code> and
-     * <code>endDateTime</code> fields are required. These fields define a time range for which you want to retrieve
-     * results. Of the optional fields, you can organize the results in the following ways:
+     * To use this API operation, your IAM role must have permissions to perform the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListAggregatedUtterances.html"
+     * >ListAggregatedUtterances</a> operation, which provides access to utterance-related analytics. See <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/monitoring-utterances.html">Viewing utterance statistics</a>
+     * for the IAM policy to apply to the IAM role.
+     * </p>
+     * </note>
+     * <p>
+     * Retrieves a list of metadata for individual user utterances to your bot. The following fields are required:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>startDateTime</code> and <code>endDateTime</code> – Define a time range for which you want to retrieve
+     * results.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Of the optional fields, you can organize the results in the following ways:
      * </p>
      * <ul>
      * <li>
@@ -2132,6 +2150,15 @@ public interface AmazonLexModelsV2 {
     ListUtteranceAnalyticsDataResult listUtteranceAnalyticsData(ListUtteranceAnalyticsDataRequest listUtteranceAnalyticsDataRequest);
 
     /**
+     * <note>
+     * <p>
+     * To use this API operation, your IAM role must have permissions to perform the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListAggregatedUtterances.html"
+     * >ListAggregatedUtterances</a> operation, which provides access to utterance-related analytics. See <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/monitoring-utterances.html">Viewing utterance statistics</a>
+     * for the IAM policy to apply to the IAM role.
+     * </p>
+     * </note>
      * <p>
      * Retrieves summary metrics for the utterances in your bot. The following fields are required:
      * </p>

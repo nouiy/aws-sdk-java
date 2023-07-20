@@ -429,7 +429,6 @@ public class UtteranceSpecification implements Serializable, Cloneable, Structur
      * 
      * @param channel
      *        The channel that is integrated with the bot that the utterance was made to.
-     * @see BotChannelType
      */
 
     public void setChannel(String channel) {
@@ -442,7 +441,6 @@ public class UtteranceSpecification implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @return The channel that is integrated with the bot that the utterance was made to.
-     * @see BotChannelType
      */
 
     public String getChannel() {
@@ -457,27 +455,10 @@ public class UtteranceSpecification implements Serializable, Cloneable, Structur
      * @param channel
      *        The channel that is integrated with the bot that the utterance was made to.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see BotChannelType
      */
 
     public UtteranceSpecification withChannel(String channel) {
         setChannel(channel);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The channel that is integrated with the bot that the utterance was made to.
-     * </p>
-     * 
-     * @param channel
-     *        The channel that is integrated with the bot that the utterance was made to.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see BotChannelType
-     */
-
-    public UtteranceSpecification withChannel(BotChannelType channel) {
-        this.channel = channel.toString();
         return this;
     }
 

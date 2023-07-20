@@ -27,7 +27,7 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the feature group that you're updating.
+     * The name or Amazon Resource Name (ARN) of the feature group that you're updating.
      * </p>
      */
     private String featureGroupName;
@@ -48,11 +48,11 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the feature group that you're updating.
+     * The name or Amazon Resource Name (ARN) of the feature group that you're updating.
      * </p>
      * 
      * @param featureGroupName
-     *        The name of the feature group that you're updating.
+     *        The name or Amazon Resource Name (ARN) of the feature group that you're updating.
      */
 
     public void setFeatureGroupName(String featureGroupName) {
@@ -61,10 +61,10 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the feature group that you're updating.
+     * The name or Amazon Resource Name (ARN) of the feature group that you're updating.
      * </p>
      * 
-     * @return The name of the feature group that you're updating.
+     * @return The name or Amazon Resource Name (ARN) of the feature group that you're updating.
      */
 
     public String getFeatureGroupName() {
@@ -73,11 +73,11 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the feature group that you're updating.
+     * The name or Amazon Resource Name (ARN) of the feature group that you're updating.
      * </p>
      * 
      * @param featureGroupName
-     *        The name of the feature group that you're updating.
+     *        The name or Amazon Resource Name (ARN) of the feature group that you're updating.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

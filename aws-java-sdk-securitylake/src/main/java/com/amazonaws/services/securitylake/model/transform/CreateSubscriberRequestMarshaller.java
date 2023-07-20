@@ -38,6 +38,8 @@ public class CreateSubscriberRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("subscriberIdentity").build();
     private static final MarshallingInfo<String> SUBSCRIBERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("subscriberName").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateSubscriberRequestMarshaller instance = new CreateSubscriberRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class CreateSubscriberRequestMarshaller {
             protocolMarshaller.marshall(createSubscriberRequest.getSubscriberDescription(), SUBSCRIBERDESCRIPTION_BINDING);
             protocolMarshaller.marshall(createSubscriberRequest.getSubscriberIdentity(), SUBSCRIBERIDENTITY_BINDING);
             protocolMarshaller.marshall(createSubscriberRequest.getSubscriberName(), SUBSCRIBERNAME_BINDING);
+            protocolMarshaller.marshall(createSubscriberRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

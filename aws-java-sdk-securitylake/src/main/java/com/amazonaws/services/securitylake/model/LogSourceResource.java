@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The supported source types from which logs and events are collected in Amazon Security Lake. For the list of
- * supported Amazon Web Services, see the <a
+ * The supported source types from which logs and events are collected in Amazon Security Lake. For a list of supported
+ * Amazon Web Services, see the <a
  * href="https://docs.aws.amazon.com/security-lake/latest/userguide/internal-sources.html">Amazon Security Lake User
  * Guide</a>.
  * </p>
@@ -33,24 +33,35 @@ public class LogSourceResource implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services.
+     * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For more
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/internal-sources.html">Amazon Security Lake User
+     * Guide</a>.
      * </p>
      */
     private AwsLogSourceResource awsLogSource;
     /**
      * <p>
-     * Amazon Security Lake supports custom source types. For a detailed list, see the Amazon Security Lake User Guide.
+     * Amazon Security Lake supports custom source types. For more information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/custom-sources.html">Amazon Security Lake User
+     * Guide</a>.
      * </p>
      */
     private CustomLogSourceResource customLogSource;
 
     /**
      * <p>
-     * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services.
+     * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For more
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/internal-sources.html">Amazon Security Lake User
+     * Guide</a>.
      * </p>
      * 
      * @param awsLogSource
-     *        Amazon Security Lake supports log and event collection for natively supported Amazon Web Services.
+     *        Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For
+     *        more information, see the <a
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/internal-sources.html">Amazon Security
+     *        Lake User Guide</a>.
      */
 
     public void setAwsLogSource(AwsLogSourceResource awsLogSource) {
@@ -59,10 +70,16 @@ public class LogSourceResource implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services.
+     * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For more
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/internal-sources.html">Amazon Security Lake User
+     * Guide</a>.
      * </p>
      * 
-     * @return Amazon Security Lake supports log and event collection for natively supported Amazon Web Services.
+     * @return Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For
+     *         more information, see the <a
+     *         href="https://docs.aws.amazon.com/security-lake/latest/userguide/internal-sources.html">Amazon Security
+     *         Lake User Guide</a>.
      */
 
     public AwsLogSourceResource getAwsLogSource() {
@@ -71,11 +88,17 @@ public class LogSourceResource implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services.
+     * Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For more
+     * information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/internal-sources.html">Amazon Security Lake User
+     * Guide</a>.
      * </p>
      * 
      * @param awsLogSource
-     *        Amazon Security Lake supports log and event collection for natively supported Amazon Web Services.
+     *        Amazon Security Lake supports log and event collection for natively supported Amazon Web Services. For
+     *        more information, see the <a
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/internal-sources.html">Amazon Security
+     *        Lake User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,12 +109,15 @@ public class LogSourceResource implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Amazon Security Lake supports custom source types. For a detailed list, see the Amazon Security Lake User Guide.
+     * Amazon Security Lake supports custom source types. For more information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/custom-sources.html">Amazon Security Lake User
+     * Guide</a>.
      * </p>
      * 
      * @param customLogSource
-     *        Amazon Security Lake supports custom source types. For a detailed list, see the Amazon Security Lake User
-     *        Guide.
+     *        Amazon Security Lake supports custom source types. For more information, see the <a
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/custom-sources.html">Amazon Security Lake
+     *        User Guide</a>.
      */
 
     public void setCustomLogSource(CustomLogSourceResource customLogSource) {
@@ -100,11 +126,14 @@ public class LogSourceResource implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Amazon Security Lake supports custom source types. For a detailed list, see the Amazon Security Lake User Guide.
+     * Amazon Security Lake supports custom source types. For more information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/custom-sources.html">Amazon Security Lake User
+     * Guide</a>.
      * </p>
      * 
-     * @return Amazon Security Lake supports custom source types. For a detailed list, see the Amazon Security Lake User
-     *         Guide.
+     * @return Amazon Security Lake supports custom source types. For more information, see the <a
+     *         href="https://docs.aws.amazon.com/security-lake/latest/userguide/custom-sources.html">Amazon Security
+     *         Lake User Guide</a>.
      */
 
     public CustomLogSourceResource getCustomLogSource() {
@@ -113,12 +142,15 @@ public class LogSourceResource implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Amazon Security Lake supports custom source types. For a detailed list, see the Amazon Security Lake User Guide.
+     * Amazon Security Lake supports custom source types. For more information, see the <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/custom-sources.html">Amazon Security Lake User
+     * Guide</a>.
      * </p>
      * 
      * @param customLogSource
-     *        Amazon Security Lake supports custom source types. For a detailed list, see the Amazon Security Lake User
-     *        Guide.
+     *        Amazon Security Lake supports custom source types. For more information, see the <a
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/custom-sources.html">Amazon Security Lake
+     *        User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

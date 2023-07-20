@@ -260,7 +260,6 @@ public class SessionSpecification implements Serializable, Cloneable, Structured
      * 
      * @param channel
      *        The channel that is integrated with the bot that the session was held with.
-     * @see BotChannelType
      */
 
     public void setChannel(String channel) {
@@ -273,7 +272,6 @@ public class SessionSpecification implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @return The channel that is integrated with the bot that the session was held with.
-     * @see BotChannelType
      */
 
     public String getChannel() {
@@ -288,27 +286,10 @@ public class SessionSpecification implements Serializable, Cloneable, Structured
      * @param channel
      *        The channel that is integrated with the bot that the session was held with.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see BotChannelType
      */
 
     public SessionSpecification withChannel(String channel) {
         setChannel(channel);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The channel that is integrated with the bot that the session was held with.
-     * </p>
-     * 
-     * @param channel
-     *        The channel that is integrated with the bot that the session was held with.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see BotChannelType
-     */
-
-    public SessionSpecification withChannel(BotChannelType channel) {
-        this.channel = channel.toString();
         return this;
     }
 

@@ -27,7 +27,7 @@ public class PutRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the feature group that you want to insert the record into.
+     * The name or Amazon Resource Name (ARN) of the feature group that you want to insert the record into.
      * </p>
      */
     private String featureGroupName;
@@ -74,11 +74,11 @@ public class PutRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the feature group that you want to insert the record into.
+     * The name or Amazon Resource Name (ARN) of the feature group that you want to insert the record into.
      * </p>
      * 
      * @param featureGroupName
-     *        The name of the feature group that you want to insert the record into.
+     *        The name or Amazon Resource Name (ARN) of the feature group that you want to insert the record into.
      */
 
     public void setFeatureGroupName(String featureGroupName) {
@@ -87,10 +87,10 @@ public class PutRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the feature group that you want to insert the record into.
+     * The name or Amazon Resource Name (ARN) of the feature group that you want to insert the record into.
      * </p>
      * 
-     * @return The name of the feature group that you want to insert the record into.
+     * @return The name or Amazon Resource Name (ARN) of the feature group that you want to insert the record into.
      */
 
     public String getFeatureGroupName() {
@@ -99,11 +99,11 @@ public class PutRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the feature group that you want to insert the record into.
+     * The name or Amazon Resource Name (ARN) of the feature group that you want to insert the record into.
      * </p>
      * 
      * @param featureGroupName
-     *        The name of the feature group that you want to insert the record into.
+     *        The name or Amazon Resource Name (ARN) of the feature group that you want to insert the record into.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,17 +27,17 @@ public class DeleteDataLakeOrganizationConfigurationRequest extends com.amazonaw
 
     /**
      * <p>
-     * Removes the automatic enablement of configuration settings for new member accounts in Security Lake.
+     * Turns off automatic enablement of Security Lake for member accounts that are added to an organization.
      * </p>
      */
     private java.util.List<DataLakeAutoEnableNewAccountConfiguration> autoEnableNewAccount;
 
     /**
      * <p>
-     * Removes the automatic enablement of configuration settings for new member accounts in Security Lake.
+     * Turns off automatic enablement of Security Lake for member accounts that are added to an organization.
      * </p>
      * 
-     * @return Removes the automatic enablement of configuration settings for new member accounts in Security Lake.
+     * @return Turns off automatic enablement of Security Lake for member accounts that are added to an organization.
      */
 
     public java.util.List<DataLakeAutoEnableNewAccountConfiguration> getAutoEnableNewAccount() {
@@ -46,11 +46,11 @@ public class DeleteDataLakeOrganizationConfigurationRequest extends com.amazonaw
 
     /**
      * <p>
-     * Removes the automatic enablement of configuration settings for new member accounts in Security Lake.
+     * Turns off automatic enablement of Security Lake for member accounts that are added to an organization.
      * </p>
      * 
      * @param autoEnableNewAccount
-     *        Removes the automatic enablement of configuration settings for new member accounts in Security Lake.
+     *        Turns off automatic enablement of Security Lake for member accounts that are added to an organization.
      */
 
     public void setAutoEnableNewAccount(java.util.Collection<DataLakeAutoEnableNewAccountConfiguration> autoEnableNewAccount) {
@@ -64,7 +64,7 @@ public class DeleteDataLakeOrganizationConfigurationRequest extends com.amazonaw
 
     /**
      * <p>
-     * Removes the automatic enablement of configuration settings for new member accounts in Security Lake.
+     * Turns off automatic enablement of Security Lake for member accounts that are added to an organization.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -73,7 +73,7 @@ public class DeleteDataLakeOrganizationConfigurationRequest extends com.amazonaw
      * </p>
      * 
      * @param autoEnableNewAccount
-     *        Removes the automatic enablement of configuration settings for new member accounts in Security Lake.
+     *        Turns off automatic enablement of Security Lake for member accounts that are added to an organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class DeleteDataLakeOrganizationConfigurationRequest extends com.amazonaw
 
     /**
      * <p>
-     * Removes the automatic enablement of configuration settings for new member accounts in Security Lake.
+     * Turns off automatic enablement of Security Lake for member accounts that are added to an organization.
      * </p>
      * 
      * @param autoEnableNewAccount
-     *        Removes the automatic enablement of configuration settings for new member accounts in Security Lake.
+     *        Turns off automatic enablement of Security Lake for member accounts that are added to an organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

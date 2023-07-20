@@ -60,7 +60,7 @@ public class HttpsNotificationConfiguration implements Serializable, Cloneable, 
      * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
      * access</a> and <a
      * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
-     * Managed Policies</a> in the Amazon Security Lake User Guide.
+     * Managed Policies</a> in the <i>Amazon Security Lake User Guide</i>.
      * </p>
      */
     private String targetRoleArn;
@@ -257,7 +257,7 @@ public class HttpsNotificationConfiguration implements Serializable, Cloneable, 
      * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
      * access</a> and <a
      * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
-     * Managed Policies</a> in the Amazon Security Lake User Guide.
+     * Managed Policies</a> in the <i>Amazon Security Lake User Guide</i>.
      * </p>
      * 
      * @param targetRoleArn
@@ -266,7 +266,7 @@ public class HttpsNotificationConfiguration implements Serializable, Cloneable, 
      *        href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing
      *        data access</a> and <a
      *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web
-     *        Services Managed Policies</a> in the Amazon Security Lake User Guide.
+     *        Services Managed Policies</a> in the <i>Amazon Security Lake User Guide</i>.
      */
 
     public void setTargetRoleArn(String targetRoleArn) {
@@ -280,7 +280,7 @@ public class HttpsNotificationConfiguration implements Serializable, Cloneable, 
      * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
      * access</a> and <a
      * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
-     * Managed Policies</a> in the Amazon Security Lake User Guide.
+     * Managed Policies</a> in the <i>Amazon Security Lake User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created. For more
@@ -288,7 +288,7 @@ public class HttpsNotificationConfiguration implements Serializable, Cloneable, 
      *         href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing
      *         data access</a> and <a
      *         href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web
-     *         Services Managed Policies</a> in the Amazon Security Lake User Guide.
+     *         Services Managed Policies</a> in the <i>Amazon Security Lake User Guide</i>.
      */
 
     public String getTargetRoleArn() {
@@ -302,7 +302,7 @@ public class HttpsNotificationConfiguration implements Serializable, Cloneable, 
      * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
      * access</a> and <a
      * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
-     * Managed Policies</a> in the Amazon Security Lake User Guide.
+     * Managed Policies</a> in the <i>Amazon Security Lake User Guide</i>.
      * </p>
      * 
      * @param targetRoleArn
@@ -311,7 +311,7 @@ public class HttpsNotificationConfiguration implements Serializable, Cloneable, 
      *        href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing
      *        data access</a> and <a
      *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web
-     *        Services Managed Policies</a> in the Amazon Security Lake User Guide.
+     *        Services Managed Policies</a> in the <i>Amazon Security Lake User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
