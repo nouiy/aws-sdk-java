@@ -42,6 +42,8 @@ public class CrawlerTargetsMarshaller {
             .marshallLocationName("DeltaTargets").build();
     private static final MarshallingInfo<List> ICEBERGTARGETS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IcebergTargets").build();
+    private static final MarshallingInfo<List> HUDITARGETS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("HudiTargets").build();
 
     private static final CrawlerTargetsMarshaller instance = new CrawlerTargetsMarshaller();
 
@@ -66,6 +68,7 @@ public class CrawlerTargetsMarshaller {
             protocolMarshaller.marshall(crawlerTargets.getCatalogTargets(), CATALOGTARGETS_BINDING);
             protocolMarshaller.marshall(crawlerTargets.getDeltaTargets(), DELTATARGETS_BINDING);
             protocolMarshaller.marshall(crawlerTargets.getIcebergTargets(), ICEBERGTARGETS_BINDING);
+            protocolMarshaller.marshall(crawlerTargets.getHudiTargets(), HUDITARGETS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

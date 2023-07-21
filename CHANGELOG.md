@@ -1,3 +1,20 @@
+# __1.12.512__ __2023-07-21__
+## __AWS Elemental MediaConvert__
+  - ### Features
+    - This release includes improvements to Preserve 444 handling, compatibility of HEVC sources without frame rates, and general improvements to MP4 outputs.
+
+## __AWS Glue__
+  - ### Features
+    - This release adds support for AWS Glue Crawler with Apache Hudi Tables, allowing Crawlers to discover Hudi Tables in S3 and register them in Glue Data Catalog for query engines to query against.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Adds support for the DBSystemID parameter of CreateDBInstance to RDS Custom for Oracle.
+
+## __Amazon WorkSpaces__
+  - ### Features
+    - Fixed VolumeEncryptionKey descriptions
+
 # __1.12.511__ __2023-07-20__
 ## __Amazon CodeCatalyst__
   - ### Features

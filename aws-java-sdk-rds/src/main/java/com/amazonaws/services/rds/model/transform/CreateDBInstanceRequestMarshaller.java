@@ -353,6 +353,10 @@ public class CreateDBInstanceRequestMarshaller implements Marshaller<Request<Cre
             request.addParameter("CACertificateIdentifier", StringUtils.fromString(createDBInstanceRequest.getCACertificateIdentifier()));
         }
 
+        if (createDBInstanceRequest.getDBSystemId() != null) {
+            request.addParameter("DBSystemId", StringUtils.fromString(createDBInstanceRequest.getDBSystemId()));
+        }
+
         return request;
     }
 

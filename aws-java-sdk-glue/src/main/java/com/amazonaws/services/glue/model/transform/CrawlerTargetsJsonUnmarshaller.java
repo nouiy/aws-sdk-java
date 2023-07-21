@@ -90,6 +90,12 @@ public class CrawlerTargetsJsonUnmarshaller implements Unmarshaller<CrawlerTarge
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("HudiTargets", targetDepth)) {
+                    context.nextToken();
+                    crawlerTargets.setHudiTargets(new ListUnmarshaller<HudiTarget>(HudiTargetJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

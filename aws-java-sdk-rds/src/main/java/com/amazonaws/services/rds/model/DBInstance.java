@@ -76,23 +76,10 @@ public class DBInstance implements Serializable, Cloneable {
     private String masterUsername;
     /**
      * <p>
-     * The meaning of this parameter differs depending on the database engine.
+     * Contains the initial database name that you provided (if required) when you created the DB instance. This name is
+     * returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather
+     * than the CDB.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For RDS for MariaDB, Microsoft SQL Server, MySQL, and PostgreSQL - The name of the initial database specified for
-     * this DB instance when it was created, if one was provided. This same name is returned for the life of the DB
-     * instance.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For RDS for Oracle - The Oracle System ID (SID) of the created DB instance. This value is only returned when the
-     * object returned is an Oracle DB instance.
-     * </p>
-     * </li>
-     * </ul>
      */
     private String dBName;
     /**
@@ -980,40 +967,15 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The meaning of this parameter differs depending on the database engine.
+     * Contains the initial database name that you provided (if required) when you created the DB instance. This name is
+     * returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather
+     * than the CDB.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For RDS for MariaDB, Microsoft SQL Server, MySQL, and PostgreSQL - The name of the initial database specified for
-     * this DB instance when it was created, if one was provided. This same name is returned for the life of the DB
-     * instance.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For RDS for Oracle - The Oracle System ID (SID) of the created DB instance. This value is only returned when the
-     * object returned is an Oracle DB instance.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param dBName
-     *        The meaning of this parameter differs depending on the database engine.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For RDS for MariaDB, Microsoft SQL Server, MySQL, and PostgreSQL - The name of the initial database
-     *        specified for this DB instance when it was created, if one was provided. This same name is returned for
-     *        the life of the DB instance.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        For RDS for Oracle - The Oracle System ID (SID) of the created DB instance. This value is only returned
-     *        when the object returned is an Oracle DB instance.
-     *        </p>
-     *        </li>
+     *        Contains the initial database name that you provided (if required) when you created the DB instance. This
+     *        name is returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies
+     *        the PDB rather than the CDB.
      */
 
     public void setDBName(String dBName) {
@@ -1022,39 +984,14 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The meaning of this parameter differs depending on the database engine.
+     * Contains the initial database name that you provided (if required) when you created the DB instance. This name is
+     * returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather
+     * than the CDB.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For RDS for MariaDB, Microsoft SQL Server, MySQL, and PostgreSQL - The name of the initial database specified for
-     * this DB instance when it was created, if one was provided. This same name is returned for the life of the DB
-     * instance.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For RDS for Oracle - The Oracle System ID (SID) of the created DB instance. This value is only returned when the
-     * object returned is an Oracle DB instance.
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @return The meaning of this parameter differs depending on the database engine.</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         For RDS for MariaDB, Microsoft SQL Server, MySQL, and PostgreSQL - The name of the initial database
-     *         specified for this DB instance when it was created, if one was provided. This same name is returned for
-     *         the life of the DB instance.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         For RDS for Oracle - The Oracle System ID (SID) of the created DB instance. This value is only returned
-     *         when the object returned is an Oracle DB instance.
-     *         </p>
-     *         </li>
+     * @return Contains the initial database name that you provided (if required) when you created the DB instance. This
+     *         name is returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name
+     *         identifies the PDB rather than the CDB.
      */
 
     public String getDBName() {
@@ -1063,40 +1000,15 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The meaning of this parameter differs depending on the database engine.
+     * Contains the initial database name that you provided (if required) when you created the DB instance. This name is
+     * returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather
+     * than the CDB.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For RDS for MariaDB, Microsoft SQL Server, MySQL, and PostgreSQL - The name of the initial database specified for
-     * this DB instance when it was created, if one was provided. This same name is returned for the life of the DB
-     * instance.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For RDS for Oracle - The Oracle System ID (SID) of the created DB instance. This value is only returned when the
-     * object returned is an Oracle DB instance.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param dBName
-     *        The meaning of this parameter differs depending on the database engine.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For RDS for MariaDB, Microsoft SQL Server, MySQL, and PostgreSQL - The name of the initial database
-     *        specified for this DB instance when it was created, if one was provided. This same name is returned for
-     *        the life of the DB instance.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        For RDS for Oracle - The Oracle System ID (SID) of the created DB instance. This value is only returned
-     *        when the object returned is an Oracle DB instance.
-     *        </p>
-     *        </li>
+     *        Contains the initial database name that you provided (if required) when you created the DB instance. This
+     *        name is returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies
+     *        the PDB rather than the CDB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
