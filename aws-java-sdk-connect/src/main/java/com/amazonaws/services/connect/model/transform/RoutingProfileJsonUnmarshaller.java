@@ -91,6 +91,10 @@ public class RoutingProfileJsonUnmarshaller implements Unmarshaller<RoutingProfi
                     context.nextToken();
                     routingProfile.setNumberOfAssociatedUsers(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("AgentAvailabilityTimer", targetDepth)) {
+                    context.nextToken();
+                    routingProfile.setAgentAvailabilityTimer(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

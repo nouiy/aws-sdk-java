@@ -30,13 +30,13 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) that identifies the Auto Scaling group.
+     * The Amazon Resource Name (ARN) that identifies the Auto Scaling group, or the Auto Scaling group name.
      * </p>
      */
     private String autoScalingGroupArn;
     /**
      * <p>
-     * The managed scaling settings for the Auto Scaling group capacity provider.
+     * he managed scaling settings for the Auto Scaling group capacity provider.
      * </p>
      */
     private ManagedScaling managedScaling;
@@ -67,11 +67,11 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) that identifies the Auto Scaling group.
+     * The Amazon Resource Name (ARN) that identifies the Auto Scaling group, or the Auto Scaling group name.
      * </p>
      * 
      * @param autoScalingGroupArn
-     *        The Amazon Resource Name (ARN) that identifies the Auto Scaling group.
+     *        The Amazon Resource Name (ARN) that identifies the Auto Scaling group, or the Auto Scaling group name.
      */
 
     public void setAutoScalingGroupArn(String autoScalingGroupArn) {
@@ -80,10 +80,10 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) that identifies the Auto Scaling group.
+     * The Amazon Resource Name (ARN) that identifies the Auto Scaling group, or the Auto Scaling group name.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) that identifies the Auto Scaling group.
+     * @return The Amazon Resource Name (ARN) that identifies the Auto Scaling group, or the Auto Scaling group name.
      */
 
     public String getAutoScalingGroupArn() {
@@ -92,11 +92,11 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) that identifies the Auto Scaling group.
+     * The Amazon Resource Name (ARN) that identifies the Auto Scaling group, or the Auto Scaling group name.
      * </p>
      * 
      * @param autoScalingGroupArn
-     *        The Amazon Resource Name (ARN) that identifies the Auto Scaling group.
+     *        The Amazon Resource Name (ARN) that identifies the Auto Scaling group, or the Auto Scaling group name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,11 +107,11 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The managed scaling settings for the Auto Scaling group capacity provider.
+     * he managed scaling settings for the Auto Scaling group capacity provider.
      * </p>
      * 
      * @param managedScaling
-     *        The managed scaling settings for the Auto Scaling group capacity provider.
+     *        he managed scaling settings for the Auto Scaling group capacity provider.
      */
 
     public void setManagedScaling(ManagedScaling managedScaling) {
@@ -120,10 +120,10 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The managed scaling settings for the Auto Scaling group capacity provider.
+     * he managed scaling settings for the Auto Scaling group capacity provider.
      * </p>
      * 
-     * @return The managed scaling settings for the Auto Scaling group capacity provider.
+     * @return he managed scaling settings for the Auto Scaling group capacity provider.
      */
 
     public ManagedScaling getManagedScaling() {
@@ -132,11 +132,11 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The managed scaling settings for the Auto Scaling group capacity provider.
+     * he managed scaling settings for the Auto Scaling group capacity provider.
      * </p>
      * 
      * @param managedScaling
-     *        The managed scaling settings for the Auto Scaling group capacity provider.
+     *        he managed scaling settings for the Auto Scaling group capacity provider.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

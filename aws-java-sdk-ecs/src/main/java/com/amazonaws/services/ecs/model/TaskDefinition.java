@@ -203,7 +203,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
     private RuntimePlatform runtimePlatform;
     /**
      * <p>
-     * The task launch types the task definition was validated against. For more information, see <a
+     * The task launch types the task definition was validated against. The valid values are <code>EC2</code>,
+     * <code>FARGATE</code>, and <code>EXTERNAL</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -1961,12 +1962,14 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The task launch types the task definition was validated against. For more information, see <a
+     * The task launch types the task definition was validated against. The valid values are <code>EC2</code>,
+     * <code>FARGATE</code>, and <code>EXTERNAL</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return The task launch types the task definition was validated against. For more information, see <a
+     * @return The task launch types the task definition was validated against. The valid values are <code>EC2</code>,
+     *         <code>FARGATE</code>, and <code>EXTERNAL</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *         types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @see Compatibility
@@ -1981,13 +1984,15 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The task launch types the task definition was validated against. For more information, see <a
+     * The task launch types the task definition was validated against. The valid values are <code>EC2</code>,
+     * <code>FARGATE</code>, and <code>EXTERNAL</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param requiresCompatibilities
-     *        The task launch types the task definition was validated against. For more information, see <a
+     *        The task launch types the task definition was validated against. The valid values are <code>EC2</code>,
+     *        <code>FARGATE</code>, and <code>EXTERNAL</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @see Compatibility
@@ -2004,7 +2009,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The task launch types the task definition was validated against. For more information, see <a
+     * The task launch types the task definition was validated against. The valid values are <code>EC2</code>,
+     * <code>FARGATE</code>, and <code>EXTERNAL</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -2015,7 +2021,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param requiresCompatibilities
-     *        The task launch types the task definition was validated against. For more information, see <a
+     *        The task launch types the task definition was validated against. The valid values are <code>EC2</code>,
+     *        <code>FARGATE</code>, and <code>EXTERNAL</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2034,13 +2041,15 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The task launch types the task definition was validated against. For more information, see <a
+     * The task launch types the task definition was validated against. The valid values are <code>EC2</code>,
+     * <code>FARGATE</code>, and <code>EXTERNAL</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param requiresCompatibilities
-     *        The task launch types the task definition was validated against. For more information, see <a
+     *        The task launch types the task definition was validated against. The valid values are <code>EC2</code>,
+     *        <code>FARGATE</code>, and <code>EXTERNAL</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2054,13 +2063,15 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The task launch types the task definition was validated against. For more information, see <a
+     * The task launch types the task definition was validated against. The valid values are <code>EC2</code>,
+     * <code>FARGATE</code>, and <code>EXTERNAL</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch types</a>
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param requiresCompatibilities
-     *        The task launch types the task definition was validated against. For more information, see <a
+     *        The task launch types the task definition was validated against. The valid values are <code>EC2</code>,
+     *        <code>FARGATE</code>, and <code>EXTERNAL</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

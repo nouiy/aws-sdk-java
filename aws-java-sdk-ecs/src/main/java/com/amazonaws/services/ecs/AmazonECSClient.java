@@ -1943,6 +1943,11 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * <p>
      * Currently, stopped tasks appear in the returned results for at least one hour.
      * </p>
+     * <p>
+     * If you have tasks with tags, and then delete the cluster, the tagged tasks are returned in the response. If you
+     * create a new cluster with the same name as the deleted cluster, the tagged tasks are not included in the
+     * response.
+     * </p>
      * 
      * @param describeTasksRequest
      * @return Result of the DescribeTasks operation returned by the service.
@@ -2882,8 +2887,7 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * launch type, what IAM principal started the task, or by the desired status of the task.
      * </p>
      * <p>
-     * Recently stopped tasks might appear in the returned results. Currently, stopped tasks appear in the returned
-     * results for at least one hour.
+     * Recently stopped tasks might appear in the returned results.
      * </p>
      * 
      * @param listTasksRequest
@@ -4634,17 +4638,12 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * </ul>
      * <note>
      * <p>
-     * You must have a service-linked role when you update any of the following service properties. If you specified a
-     * custom role when you created the service, Amazon ECS automatically replaces the <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Service.html#ECS-Type-Service-roleArn"
-     * >roleARN</a> associated with the service with the ARN of your service-linked role. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Service-linked
-     * roles</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * You must have a service-linked role when you update any of the following service properties:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>loadBalancers,</code>
+     * <code>loadBalancers</code>,
      * </p>
      * </li>
      * <li>
@@ -4653,6 +4652,11 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For more information about the role see the <code>CreateService</code> request parameter <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html#ECS-CreateService-request-role"
+     * > <code>role</code> </a>.
+     * </p>
      * </note>
      * 
      * @param updateServiceRequest

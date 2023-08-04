@@ -91,6 +91,13 @@ public class RoutingProfile implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Long numberOfAssociatedUsers;
+    /**
+     * <p>
+     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
+     * last inbound contact</i> or <i>longest idle time</i>.
+     * </p>
+     */
+    private String agentAvailabilityTimer;
 
     /**
      * <p>
@@ -569,6 +576,73 @@ public class RoutingProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
+     * last inbound contact</i> or <i>longest idle time</i>.
+     * </p>
+     * 
+     * @param agentAvailabilityTimer
+     *        Whether agents with this routing profile will have their routing order calculated based on <i>time since
+     *        their last inbound contact</i> or <i>longest idle time</i>.
+     * @see AgentAvailabilityTimer
+     */
+
+    public void setAgentAvailabilityTimer(String agentAvailabilityTimer) {
+        this.agentAvailabilityTimer = agentAvailabilityTimer;
+    }
+
+    /**
+     * <p>
+     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
+     * last inbound contact</i> or <i>longest idle time</i>.
+     * </p>
+     * 
+     * @return Whether agents with this routing profile will have their routing order calculated based on <i>time since
+     *         their last inbound contact</i> or <i>longest idle time</i>.
+     * @see AgentAvailabilityTimer
+     */
+
+    public String getAgentAvailabilityTimer() {
+        return this.agentAvailabilityTimer;
+    }
+
+    /**
+     * <p>
+     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
+     * last inbound contact</i> or <i>longest idle time</i>.
+     * </p>
+     * 
+     * @param agentAvailabilityTimer
+     *        Whether agents with this routing profile will have their routing order calculated based on <i>time since
+     *        their last inbound contact</i> or <i>longest idle time</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AgentAvailabilityTimer
+     */
+
+    public RoutingProfile withAgentAvailabilityTimer(String agentAvailabilityTimer) {
+        setAgentAvailabilityTimer(agentAvailabilityTimer);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
+     * last inbound contact</i> or <i>longest idle time</i>.
+     * </p>
+     * 
+     * @param agentAvailabilityTimer
+     *        Whether agents with this routing profile will have their routing order calculated based on <i>time since
+     *        their last inbound contact</i> or <i>longest idle time</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AgentAvailabilityTimer
+     */
+
+    public RoutingProfile withAgentAvailabilityTimer(AgentAvailabilityTimer agentAvailabilityTimer) {
+        this.agentAvailabilityTimer = agentAvailabilityTimer.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -599,7 +673,9 @@ public class RoutingProfile implements Serializable, Cloneable, StructuredPojo {
         if (getNumberOfAssociatedQueues() != null)
             sb.append("NumberOfAssociatedQueues: ").append(getNumberOfAssociatedQueues()).append(",");
         if (getNumberOfAssociatedUsers() != null)
-            sb.append("NumberOfAssociatedUsers: ").append(getNumberOfAssociatedUsers());
+            sb.append("NumberOfAssociatedUsers: ").append(getNumberOfAssociatedUsers()).append(",");
+        if (getAgentAvailabilityTimer() != null)
+            sb.append("AgentAvailabilityTimer: ").append(getAgentAvailabilityTimer());
         sb.append("}");
         return sb.toString();
     }
@@ -654,6 +730,10 @@ public class RoutingProfile implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getNumberOfAssociatedUsers() != null && other.getNumberOfAssociatedUsers().equals(this.getNumberOfAssociatedUsers()) == false)
             return false;
+        if (other.getAgentAvailabilityTimer() == null ^ this.getAgentAvailabilityTimer() == null)
+            return false;
+        if (other.getAgentAvailabilityTimer() != null && other.getAgentAvailabilityTimer().equals(this.getAgentAvailabilityTimer()) == false)
+            return false;
         return true;
     }
 
@@ -672,6 +752,7 @@ public class RoutingProfile implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getNumberOfAssociatedQueues() == null) ? 0 : getNumberOfAssociatedQueues().hashCode());
         hashCode = prime * hashCode + ((getNumberOfAssociatedUsers() == null) ? 0 : getNumberOfAssociatedUsers().hashCode());
+        hashCode = prime * hashCode + ((getAgentAvailabilityTimer() == null) ? 0 : getAgentAvailabilityTimer().hashCode());
         return hashCode;
     }
 

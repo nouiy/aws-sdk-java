@@ -34,7 +34,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * variables</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
  * </p>
  * <p>
- * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
+ * You must use the following platforms for the Fargate launch type:
  * </p>
  * <ul>
  * <li>

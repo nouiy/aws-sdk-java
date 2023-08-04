@@ -278,8 +278,21 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Creates an endpoint for an Network File System (NFS) file server that DataSync can use for a data transfer.
+     * Creates an endpoint for a Network File System (NFS) file server that DataSync can use for a data transfer.
      * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html">Configuring transfers to or
+     * from an NFS file server</a>.
+     * </p>
+     * <note>
+     * <p>
+     * If you're copying data to or from an Snowcone device, you can also use <code>CreateLocationNfs</code> to create
+     * your transfer location. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/nfs-on-snowcone.html">Configuring transfers with
+     * Snowcone</a>.
+     * </p>
+     * </note>
      * 
      * @param createLocationNfsRequest
      *        CreateLocationNfsRequest
@@ -637,7 +650,8 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Returns metadata, such as the path information, about an NFS location.
+     * Provides details about how an DataSync transfer location for a Network File System (NFS) file server is
+     * configured.
      * </p>
      * 
      * @param describeLocationNfsRequest
@@ -1178,10 +1192,12 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Updates some of the parameters of a previously created location for Network File System (NFS) access. For
-     * information about creating an NFS location, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html">Creating a location for
-     * NFS</a>.
+     * Modifies some configurations of the Network File System (NFS) transfer location that you're using with DataSync.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html">Configuring transfers to or
+     * from an NFS file server</a>.
      * </p>
      * 
      * @param updateLocationNfsRequest

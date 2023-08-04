@@ -49,6 +49,8 @@ public class RoutingProfileMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NumberOfAssociatedQueues").build();
     private static final MarshallingInfo<Long> NUMBEROFASSOCIATEDUSERS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NumberOfAssociatedUsers").build();
+    private static final MarshallingInfo<String> AGENTAVAILABILITYTIMER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AgentAvailabilityTimer").build();
 
     private static final RoutingProfileMarshaller instance = new RoutingProfileMarshaller();
 
@@ -76,6 +78,7 @@ public class RoutingProfileMarshaller {
             protocolMarshaller.marshall(routingProfile.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(routingProfile.getNumberOfAssociatedQueues(), NUMBEROFASSOCIATEDQUEUES_BINDING);
             protocolMarshaller.marshall(routingProfile.getNumberOfAssociatedUsers(), NUMBEROFASSOCIATEDUSERS_BINDING);
+            protocolMarshaller.marshall(routingProfile.getAgentAvailabilityTimer(), AGENTAVAILABILITYTIMER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

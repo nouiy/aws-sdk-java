@@ -2395,6 +2395,21 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateRoutingProfileAgentAvailabilityTimerResult> updateRoutingProfileAgentAvailabilityTimerAsync(
+            UpdateRoutingProfileAgentAvailabilityTimerRequest request) {
+
+        return updateRoutingProfileAgentAvailabilityTimerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRoutingProfileAgentAvailabilityTimerResult> updateRoutingProfileAgentAvailabilityTimerAsync(
+            UpdateRoutingProfileAgentAvailabilityTimerRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateRoutingProfileAgentAvailabilityTimerRequest, UpdateRoutingProfileAgentAvailabilityTimerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateRoutingProfileConcurrencyResult> updateRoutingProfileConcurrencyAsync(
             UpdateRoutingProfileConcurrencyRequest request) {
 

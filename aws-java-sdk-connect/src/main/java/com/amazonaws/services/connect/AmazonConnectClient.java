@@ -13020,6 +13020,76 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
+     * last inbound contact</i> or <i>longest idle time</i>.
+     * </p>
+     * 
+     * @param updateRoutingProfileAgentAvailabilityTimerRequest
+     * @return Result of the UpdateRoutingProfileAgentAvailabilityTimer operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.UpdateRoutingProfileAgentAvailabilityTimer
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRoutingProfileAgentAvailabilityTimer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateRoutingProfileAgentAvailabilityTimerResult updateRoutingProfileAgentAvailabilityTimer(UpdateRoutingProfileAgentAvailabilityTimerRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateRoutingProfileAgentAvailabilityTimer(request);
+    }
+
+    @SdkInternalApi
+    final UpdateRoutingProfileAgentAvailabilityTimerResult executeUpdateRoutingProfileAgentAvailabilityTimer(
+            UpdateRoutingProfileAgentAvailabilityTimerRequest updateRoutingProfileAgentAvailabilityTimerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateRoutingProfileAgentAvailabilityTimerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateRoutingProfileAgentAvailabilityTimerRequest> request = null;
+        Response<UpdateRoutingProfileAgentAvailabilityTimerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateRoutingProfileAgentAvailabilityTimerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateRoutingProfileAgentAvailabilityTimerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateRoutingProfileAgentAvailabilityTimer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateRoutingProfileAgentAvailabilityTimerResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateRoutingProfileAgentAvailabilityTimerResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates the channels that agents can handle in the Contact Control Panel (CCP) for a routing profile.
      * </p>
      * 

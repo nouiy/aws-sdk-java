@@ -5121,6 +5121,32 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
+     * last inbound contact</i> or <i>longest idle time</i>.
+     * </p>
+     * 
+     * @param updateRoutingProfileAgentAvailabilityTimerRequest
+     * @return Result of the UpdateRoutingProfileAgentAvailabilityTimer operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.UpdateRoutingProfileAgentAvailabilityTimer
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRoutingProfileAgentAvailabilityTimer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateRoutingProfileAgentAvailabilityTimerResult updateRoutingProfileAgentAvailabilityTimer(
+            UpdateRoutingProfileAgentAvailabilityTimerRequest updateRoutingProfileAgentAvailabilityTimerRequest);
+
+    /**
+     * <p>
      * Updates the channels that agents can handle in the Contact Control Panel (CCP) for a routing profile.
      * </p>
      * 

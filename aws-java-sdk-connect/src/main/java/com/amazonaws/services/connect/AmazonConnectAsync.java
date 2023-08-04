@@ -7335,6 +7335,45 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
+     * last inbound contact</i> or <i>longest idle time</i>.
+     * </p>
+     * 
+     * @param updateRoutingProfileAgentAvailabilityTimerRequest
+     * @return A Java Future containing the result of the UpdateRoutingProfileAgentAvailabilityTimer operation returned
+     *         by the service.
+     * @sample AmazonConnectAsync.UpdateRoutingProfileAgentAvailabilityTimer
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRoutingProfileAgentAvailabilityTimer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRoutingProfileAgentAvailabilityTimerResult> updateRoutingProfileAgentAvailabilityTimerAsync(
+            UpdateRoutingProfileAgentAvailabilityTimerRequest updateRoutingProfileAgentAvailabilityTimerRequest);
+
+    /**
+     * <p>
+     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
+     * last inbound contact</i> or <i>longest idle time</i>.
+     * </p>
+     * 
+     * @param updateRoutingProfileAgentAvailabilityTimerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateRoutingProfileAgentAvailabilityTimer operation returned
+     *         by the service.
+     * @sample AmazonConnectAsyncHandler.UpdateRoutingProfileAgentAvailabilityTimer
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRoutingProfileAgentAvailabilityTimer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRoutingProfileAgentAvailabilityTimerResult> updateRoutingProfileAgentAvailabilityTimerAsync(
+            UpdateRoutingProfileAgentAvailabilityTimerRequest updateRoutingProfileAgentAvailabilityTimerRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateRoutingProfileAgentAvailabilityTimerRequest, UpdateRoutingProfileAgentAvailabilityTimerResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates the channels that agents can handle in the Contact Control Panel (CCP) for a routing profile.
      * </p>
      * 

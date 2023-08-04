@@ -6087,6 +6087,41 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateRoutingProfileAgentAvailabilityTimerResult> updateRoutingProfileAgentAvailabilityTimerAsync(
+            UpdateRoutingProfileAgentAvailabilityTimerRequest request) {
+
+        return updateRoutingProfileAgentAvailabilityTimerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRoutingProfileAgentAvailabilityTimerResult> updateRoutingProfileAgentAvailabilityTimerAsync(
+            final UpdateRoutingProfileAgentAvailabilityTimerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateRoutingProfileAgentAvailabilityTimerRequest, UpdateRoutingProfileAgentAvailabilityTimerResult> asyncHandler) {
+        final UpdateRoutingProfileAgentAvailabilityTimerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateRoutingProfileAgentAvailabilityTimerResult>() {
+            @Override
+            public UpdateRoutingProfileAgentAvailabilityTimerResult call() throws Exception {
+                UpdateRoutingProfileAgentAvailabilityTimerResult result = null;
+
+                try {
+                    result = executeUpdateRoutingProfileAgentAvailabilityTimer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateRoutingProfileConcurrencyResult> updateRoutingProfileConcurrencyAsync(
             UpdateRoutingProfileConcurrencyRequest request) {
 
