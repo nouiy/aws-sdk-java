@@ -780,8 +780,8 @@ public interface AmazonRekognition {
      * format manifest file or by copying an existing Amazon Rekognition Custom Labels dataset.
      * </p>
      * <p>
-     * To create a training dataset for a project, specify <code>train</code> for the value of <code>DatasetType</code>.
-     * To create the test dataset for a project, specify <code>test</code> for the value of <code>DatasetType</code>.
+     * To create a training dataset for a project, specify <code>TRAIN</code> for the value of <code>DatasetType</code>.
+     * To create the test dataset for a project, specify <code>TEST</code> for the value of <code>DatasetType</code>.
      * </p>
      * <p>
      * The response from <code>CreateDataset</code> is the Amazon Resource Name (ARN) for the dataset. Creating a
@@ -836,11 +836,17 @@ public interface AmazonRekognition {
     /**
      * <p>
      * This API operation initiates a Face Liveness session. It returns a <code>SessionId</code>, which you can use to
-     * start streaming Face Liveness video and get the results for a Face Liveness session. You can use the
-     * <code>OutputConfig</code> option in the Settings parameter to provide an Amazon S3 bucket location. The Amazon S3
-     * bucket stores reference images and audit images. You can use <code>AuditImagesLimit</code> to limit the number of
-     * audit images returned. This number is between 0 and 4. By default, it is set to 0. The limit is best effort and
-     * based on the duration of the selfie-video.
+     * start streaming Face Liveness video and get the results for a Face Liveness session.
+     * </p>
+     * <p>
+     * You can use the <code>OutputConfig</code> option in the Settings parameter to provide an Amazon S3 bucket
+     * location. The Amazon S3 bucket stores reference images and audit images. If no Amazon S3 bucket is defined, raw
+     * bytes are sent instead.
+     * </p>
+     * <p>
+     * You can use <code>AuditImagesLimit</code> to limit the number of audit images returned when
+     * <code>GetFaceLivenessSessionResults</code> is called. This number is between 0 and 4. By default, it is set to 0.
+     * The limit is best effort and based on the duration of the selfie-video.
      * </p>
      * 
      * @param createFaceLivenessSessionRequest
@@ -1644,9 +1650,10 @@ public interface AmazonRekognition {
      * Image</a>.
      * </p>
      * <p>
-     * You can specify <code>MinConfidence</code> to control the confidence threshold for the labels returned. The
-     * default is 55%. You can also add the <code>MaxLabels</code> parameter to limit the number of labels returned. The
-     * default and upper limit is 1000 labels.
+     * When getting labels, you can specify <code>MinConfidence</code> to control the confidence threshold for the
+     * labels returned. The default is 55%. You can also add the <code>MaxLabels</code> parameter to limit the number of
+     * labels returned. The default and upper limit is 1000 labels. These arguments are only valid when supplying
+     * GENERAL_LABELS as a feature type.
      * </p>
      * <p>
      * <b>Response Elements</b>
@@ -2258,6 +2265,10 @@ public interface AmazonRekognition {
      * and populate the <code>NextToken</code> request parameter with the token value returned from the previous call to
      * <code>GetFaceDetection</code>.
      * </p>
+     * <p>
+     * Note that for the <code>GetFaceDetection</code> operation, the returned values for <code>FaceOccluded</code> and
+     * <code>EyeDirection</code> will always be "null".
+     * </p>
      * 
      * @param getFaceDetectionRequest
      * @return Result of the GetFaceDetection operation returned by the service.
@@ -2285,7 +2296,12 @@ public interface AmazonRekognition {
      * Retrieves the results of a specific Face Liveness session. It requires the <code>sessionId</code> as input, which
      * was created using <code>CreateFaceLivenessSession</code>. Returns the corresponding Face Liveness confidence
      * score, a reference image that includes a face bounding box, and audit images that also contain face bounding
-     * boxes. The Face Liveness confidence score ranges from 0 to 100. The reference image can optionally be returned.
+     * boxes. The Face Liveness confidence score ranges from 0 to 100.
+     * </p>
+     * <p>
+     * The number of audit images returned by <code>GetFaceLivenessSessionResults</code> is defined by the
+     * <code>AuditImagesLimit</code> paramater when calling <code>CreateFaceLivenessSession</code>. Reference images are
+     * always returned when possible.
      * </p>
      * 
      * @param getFaceLivenessSessionResultsRequest
@@ -2615,7 +2631,7 @@ public interface AmazonRekognition {
      * </p>
      * <p>
      * <code>GetTextDetection</code> returns an array of detected text (<code>TextDetections</code>) sorted by the time
-     * the text was detected, up to 50 words per frame of video.
+     * the text was detected, up to 100 words per frame of video.
      * </p>
      * <p>
      * Each element of the array includes the detected text, the precentage confidence in the acuracy of the detected

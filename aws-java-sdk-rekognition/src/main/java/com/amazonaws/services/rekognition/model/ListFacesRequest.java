@@ -41,13 +41,13 @@ public class ListFacesRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private Integer maxResults;
     /**
      * <p>
-     * An array of user IDs to match when listing faces in a collection.
+     * An array of user IDs to filter results with when listing faces in a collection.
      * </p>
      */
     private String userId;
     /**
      * <p>
-     * An array of face IDs to match when listing faces in a collection.
+     * An array of face IDs to filter results with when listing faces in a collection.
      * </p>
      */
     private java.util.List<String> faceIds;
@@ -183,11 +183,11 @@ public class ListFacesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * An array of user IDs to match when listing faces in a collection.
+     * An array of user IDs to filter results with when listing faces in a collection.
      * </p>
      * 
      * @param userId
-     *        An array of user IDs to match when listing faces in a collection.
+     *        An array of user IDs to filter results with when listing faces in a collection.
      */
 
     public void setUserId(String userId) {
@@ -196,10 +196,10 @@ public class ListFacesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * An array of user IDs to match when listing faces in a collection.
+     * An array of user IDs to filter results with when listing faces in a collection.
      * </p>
      * 
-     * @return An array of user IDs to match when listing faces in a collection.
+     * @return An array of user IDs to filter results with when listing faces in a collection.
      */
 
     public String getUserId() {
@@ -208,11 +208,11 @@ public class ListFacesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * An array of user IDs to match when listing faces in a collection.
+     * An array of user IDs to filter results with when listing faces in a collection.
      * </p>
      * 
      * @param userId
-     *        An array of user IDs to match when listing faces in a collection.
+     *        An array of user IDs to filter results with when listing faces in a collection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -223,10 +223,10 @@ public class ListFacesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * An array of face IDs to match when listing faces in a collection.
+     * An array of face IDs to filter results with when listing faces in a collection.
      * </p>
      * 
-     * @return An array of face IDs to match when listing faces in a collection.
+     * @return An array of face IDs to filter results with when listing faces in a collection.
      */
 
     public java.util.List<String> getFaceIds() {
@@ -235,11 +235,11 @@ public class ListFacesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * An array of face IDs to match when listing faces in a collection.
+     * An array of face IDs to filter results with when listing faces in a collection.
      * </p>
      * 
      * @param faceIds
-     *        An array of face IDs to match when listing faces in a collection.
+     *        An array of face IDs to filter results with when listing faces in a collection.
      */
 
     public void setFaceIds(java.util.Collection<String> faceIds) {
@@ -253,7 +253,7 @@ public class ListFacesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * An array of face IDs to match when listing faces in a collection.
+     * An array of face IDs to filter results with when listing faces in a collection.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -262,7 +262,7 @@ public class ListFacesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param faceIds
-     *        An array of face IDs to match when listing faces in a collection.
+     *        An array of face IDs to filter results with when listing faces in a collection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -278,11 +278,11 @@ public class ListFacesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * An array of face IDs to match when listing faces in a collection.
+     * An array of face IDs to filter results with when listing faces in a collection.
      * </p>
      * 
      * @param faceIds
-     *        An array of face IDs to match when listing faces in a collection.
+     *        An array of face IDs to filter results with when listing faces in a collection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

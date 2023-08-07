@@ -34,6 +34,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      * If the event is not an error event, this field is null. <code>INSUFFICIENT_CAPABILITIES</code> indicates that the
      * participant tried to take an action that the participant’s token is not allowed to do. For more information about
      * participant capabilities, see the <code>capabilities</code> field in <a>CreateParticipantToken</a>.
+     * <code>QUOTA_EXCEEDED</code> indicates that the number of participants who want to publish/subscribe to a stage
+     * exceeds the quota; for more information, see <a
+     * href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/service-quotas.html">Service Quotas</a>.
+     * <code>PUBLISHER_NOT_FOUND</code> indicates that the participant tried to subscribe to a publisher that doesn’t
+     * exist.
      * </p>
      */
     private String errorCode;
@@ -69,6 +74,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      * If the event is not an error event, this field is null. <code>INSUFFICIENT_CAPABILITIES</code> indicates that the
      * participant tried to take an action that the participant’s token is not allowed to do. For more information about
      * participant capabilities, see the <code>capabilities</code> field in <a>CreateParticipantToken</a>.
+     * <code>QUOTA_EXCEEDED</code> indicates that the number of participants who want to publish/subscribe to a stage
+     * exceeds the quota; for more information, see <a
+     * href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/service-quotas.html">Service Quotas</a>.
+     * <code>PUBLISHER_NOT_FOUND</code> indicates that the participant tried to subscribe to a publisher that doesn’t
+     * exist.
      * </p>
      * 
      * @param errorCode
@@ -76,7 +86,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      *        occurred. If the event is not an error event, this field is null. <code>INSUFFICIENT_CAPABILITIES</code>
      *        indicates that the participant tried to take an action that the participant’s token is not allowed to do.
      *        For more information about participant capabilities, see the <code>capabilities</code> field in
-     *        <a>CreateParticipantToken</a>.
+     *        <a>CreateParticipantToken</a>. <code>QUOTA_EXCEEDED</code> indicates that the number of participants who
+     *        want to publish/subscribe to a stage exceeds the quota; for more information, see <a
+     *        href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/service-quotas.html">Service Quotas</a>.
+     *        <code>PUBLISHER_NOT_FOUND</code> indicates that the participant tried to subscribe to a publisher that
+     *        doesn’t exist.
      * @see EventErrorCode
      */
 
@@ -90,13 +104,22 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      * If the event is not an error event, this field is null. <code>INSUFFICIENT_CAPABILITIES</code> indicates that the
      * participant tried to take an action that the participant’s token is not allowed to do. For more information about
      * participant capabilities, see the <code>capabilities</code> field in <a>CreateParticipantToken</a>.
+     * <code>QUOTA_EXCEEDED</code> indicates that the number of participants who want to publish/subscribe to a stage
+     * exceeds the quota; for more information, see <a
+     * href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/service-quotas.html">Service Quotas</a>.
+     * <code>PUBLISHER_NOT_FOUND</code> indicates that the participant tried to subscribe to a publisher that doesn’t
+     * exist.
      * </p>
      * 
      * @return If the event is an error event, the error code is provided to give insight into the specific error that
      *         occurred. If the event is not an error event, this field is null. <code>INSUFFICIENT_CAPABILITIES</code>
      *         indicates that the participant tried to take an action that the participant’s token is not allowed to do.
      *         For more information about participant capabilities, see the <code>capabilities</code> field in
-     *         <a>CreateParticipantToken</a>.
+     *         <a>CreateParticipantToken</a>. <code>QUOTA_EXCEEDED</code> indicates that the number of participants who
+     *         want to publish/subscribe to a stage exceeds the quota; for more information, see <a
+     *         href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/service-quotas.html">Service Quotas</a>.
+     *         <code>PUBLISHER_NOT_FOUND</code> indicates that the participant tried to subscribe to a publisher that
+     *         doesn’t exist.
      * @see EventErrorCode
      */
 
@@ -110,6 +133,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      * If the event is not an error event, this field is null. <code>INSUFFICIENT_CAPABILITIES</code> indicates that the
      * participant tried to take an action that the participant’s token is not allowed to do. For more information about
      * participant capabilities, see the <code>capabilities</code> field in <a>CreateParticipantToken</a>.
+     * <code>QUOTA_EXCEEDED</code> indicates that the number of participants who want to publish/subscribe to a stage
+     * exceeds the quota; for more information, see <a
+     * href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/service-quotas.html">Service Quotas</a>.
+     * <code>PUBLISHER_NOT_FOUND</code> indicates that the participant tried to subscribe to a publisher that doesn’t
+     * exist.
      * </p>
      * 
      * @param errorCode
@@ -117,7 +145,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      *        occurred. If the event is not an error event, this field is null. <code>INSUFFICIENT_CAPABILITIES</code>
      *        indicates that the participant tried to take an action that the participant’s token is not allowed to do.
      *        For more information about participant capabilities, see the <code>capabilities</code> field in
-     *        <a>CreateParticipantToken</a>.
+     *        <a>CreateParticipantToken</a>. <code>QUOTA_EXCEEDED</code> indicates that the number of participants who
+     *        want to publish/subscribe to a stage exceeds the quota; for more information, see <a
+     *        href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/service-quotas.html">Service Quotas</a>.
+     *        <code>PUBLISHER_NOT_FOUND</code> indicates that the participant tried to subscribe to a publisher that
+     *        doesn’t exist.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventErrorCode
      */
@@ -133,6 +165,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      * If the event is not an error event, this field is null. <code>INSUFFICIENT_CAPABILITIES</code> indicates that the
      * participant tried to take an action that the participant’s token is not allowed to do. For more information about
      * participant capabilities, see the <code>capabilities</code> field in <a>CreateParticipantToken</a>.
+     * <code>QUOTA_EXCEEDED</code> indicates that the number of participants who want to publish/subscribe to a stage
+     * exceeds the quota; for more information, see <a
+     * href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/service-quotas.html">Service Quotas</a>.
+     * <code>PUBLISHER_NOT_FOUND</code> indicates that the participant tried to subscribe to a publisher that doesn’t
+     * exist.
      * </p>
      * 
      * @param errorCode
@@ -140,7 +177,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      *        occurred. If the event is not an error event, this field is null. <code>INSUFFICIENT_CAPABILITIES</code>
      *        indicates that the participant tried to take an action that the participant’s token is not allowed to do.
      *        For more information about participant capabilities, see the <code>capabilities</code> field in
-     *        <a>CreateParticipantToken</a>.
+     *        <a>CreateParticipantToken</a>. <code>QUOTA_EXCEEDED</code> indicates that the number of participants who
+     *        want to publish/subscribe to a stage exceeds the quota; for more information, see <a
+     *        href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/service-quotas.html">Service Quotas</a>.
+     *        <code>PUBLISHER_NOT_FOUND</code> indicates that the participant tried to subscribe to a publisher that
+     *        doesn’t exist.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventErrorCode
      */

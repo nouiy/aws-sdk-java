@@ -2254,6 +2254,13 @@ public class AmazonKinesisVideoClient extends AmazonWebServiceClient implements 
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * If <code>StorageStatus</code> is enabled, direct peer-to-peer (master-viewer) connections no longer occur. Peers
+     * connect directly to the storage session. You must call the <code>JoinStorageSession</code> API to trigger an SDP
+     * offer send and establish a connection between a peer and the storage session.
+     * </p>
+     * </important>
      * 
      * @param updateMediaStorageConfigurationRequest
      * @return Result of the UpdateMediaStorageConfiguration operation returned by the service.

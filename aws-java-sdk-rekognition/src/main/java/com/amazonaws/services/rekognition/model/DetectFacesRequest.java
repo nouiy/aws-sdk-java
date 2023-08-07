@@ -44,6 +44,11 @@ public class DetectFacesRequest extends com.amazonaws.AmazonWebServiceRequest im
      * If you provide both, <code>["ALL", "DEFAULT"]</code>, the service uses a logical "AND" operator to determine
      * which attributes to return (in this case, all attributes).
      * </p>
+     * <p>
+     * Note that while the FaceOccluded and EyeDirection attributes are supported when using <code>DetectFaces</code>,
+     * they aren't supported when analyzing videos with <code>StartFaceDetection</code> and
+     * <code>GetFaceDetection</code>.
+     * </p>
      */
     private java.util.List<String> attributes;
 
@@ -130,6 +135,11 @@ public class DetectFacesRequest extends com.amazonaws.AmazonWebServiceRequest im
      * If you provide both, <code>["ALL", "DEFAULT"]</code>, the service uses a logical "AND" operator to determine
      * which attributes to return (in this case, all attributes).
      * </p>
+     * <p>
+     * Note that while the FaceOccluded and EyeDirection attributes are supported when using <code>DetectFaces</code>,
+     * they aren't supported when analyzing videos with <code>StartFaceDetection</code> and
+     * <code>GetFaceDetection</code>.
+     * </p>
      * 
      * @return An array of facial attributes you want to be returned. A <code>DEFAULT</code> subset of facial attributes
      *         - <code>BoundingBox</code>, <code>Confidence</code>, <code>Pose</code>, <code>Quality</code>, and
@@ -140,6 +150,11 @@ public class DetectFacesRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <p>
      *         If you provide both, <code>["ALL", "DEFAULT"]</code>, the service uses a logical "AND" operator to
      *         determine which attributes to return (in this case, all attributes).
+     *         </p>
+     *         <p>
+     *         Note that while the FaceOccluded and EyeDirection attributes are supported when using
+     *         <code>DetectFaces</code>, they aren't supported when analyzing videos with
+     *         <code>StartFaceDetection</code> and <code>GetFaceDetection</code>.
      * @see Attribute
      */
 
@@ -160,6 +175,11 @@ public class DetectFacesRequest extends com.amazonaws.AmazonWebServiceRequest im
      * If you provide both, <code>["ALL", "DEFAULT"]</code>, the service uses a logical "AND" operator to determine
      * which attributes to return (in this case, all attributes).
      * </p>
+     * <p>
+     * Note that while the FaceOccluded and EyeDirection attributes are supported when using <code>DetectFaces</code>,
+     * they aren't supported when analyzing videos with <code>StartFaceDetection</code> and
+     * <code>GetFaceDetection</code>.
+     * </p>
      * 
      * @param attributes
      *        An array of facial attributes you want to be returned. A <code>DEFAULT</code> subset of facial attributes
@@ -171,6 +191,11 @@ public class DetectFacesRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        If you provide both, <code>["ALL", "DEFAULT"]</code>, the service uses a logical "AND" operator to
      *        determine which attributes to return (in this case, all attributes).
+     *        </p>
+     *        <p>
+     *        Note that while the FaceOccluded and EyeDirection attributes are supported when using
+     *        <code>DetectFaces</code>, they aren't supported when analyzing videos with <code>StartFaceDetection</code>
+     *        and <code>GetFaceDetection</code>.
      * @see Attribute
      */
 
@@ -197,6 +222,11 @@ public class DetectFacesRequest extends com.amazonaws.AmazonWebServiceRequest im
      * which attributes to return (in this case, all attributes).
      * </p>
      * <p>
+     * Note that while the FaceOccluded and EyeDirection attributes are supported when using <code>DetectFaces</code>,
+     * they aren't supported when analyzing videos with <code>StartFaceDetection</code> and
+     * <code>GetFaceDetection</code>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAttributes(java.util.Collection)} or {@link #withAttributes(java.util.Collection)} if you want to
      * override the existing values.
@@ -212,6 +242,11 @@ public class DetectFacesRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        If you provide both, <code>["ALL", "DEFAULT"]</code>, the service uses a logical "AND" operator to
      *        determine which attributes to return (in this case, all attributes).
+     *        </p>
+     *        <p>
+     *        Note that while the FaceOccluded and EyeDirection attributes are supported when using
+     *        <code>DetectFaces</code>, they aren't supported when analyzing videos with <code>StartFaceDetection</code>
+     *        and <code>GetFaceDetection</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Attribute
      */
@@ -239,6 +274,11 @@ public class DetectFacesRequest extends com.amazonaws.AmazonWebServiceRequest im
      * If you provide both, <code>["ALL", "DEFAULT"]</code>, the service uses a logical "AND" operator to determine
      * which attributes to return (in this case, all attributes).
      * </p>
+     * <p>
+     * Note that while the FaceOccluded and EyeDirection attributes are supported when using <code>DetectFaces</code>,
+     * they aren't supported when analyzing videos with <code>StartFaceDetection</code> and
+     * <code>GetFaceDetection</code>.
+     * </p>
      * 
      * @param attributes
      *        An array of facial attributes you want to be returned. A <code>DEFAULT</code> subset of facial attributes
@@ -250,6 +290,11 @@ public class DetectFacesRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        If you provide both, <code>["ALL", "DEFAULT"]</code>, the service uses a logical "AND" operator to
      *        determine which attributes to return (in this case, all attributes).
+     *        </p>
+     *        <p>
+     *        Note that while the FaceOccluded and EyeDirection attributes are supported when using
+     *        <code>DetectFaces</code>, they aren't supported when analyzing videos with <code>StartFaceDetection</code>
+     *        and <code>GetFaceDetection</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Attribute
      */
@@ -272,6 +317,11 @@ public class DetectFacesRequest extends com.amazonaws.AmazonWebServiceRequest im
      * If you provide both, <code>["ALL", "DEFAULT"]</code>, the service uses a logical "AND" operator to determine
      * which attributes to return (in this case, all attributes).
      * </p>
+     * <p>
+     * Note that while the FaceOccluded and EyeDirection attributes are supported when using <code>DetectFaces</code>,
+     * they aren't supported when analyzing videos with <code>StartFaceDetection</code> and
+     * <code>GetFaceDetection</code>.
+     * </p>
      * 
      * @param attributes
      *        An array of facial attributes you want to be returned. A <code>DEFAULT</code> subset of facial attributes
@@ -283,6 +333,11 @@ public class DetectFacesRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        If you provide both, <code>["ALL", "DEFAULT"]</code>, the service uses a logical "AND" operator to
      *        determine which attributes to return (in this case, all attributes).
+     *        </p>
+     *        <p>
+     *        Note that while the FaceOccluded and EyeDirection attributes are supported when using
+     *        <code>DetectFaces</code>, they aren't supported when analyzing videos with <code>StartFaceDetection</code>
+     *        and <code>GetFaceDetection</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Attribute
      */

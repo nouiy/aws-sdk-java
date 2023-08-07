@@ -20,7 +20,9 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum EventErrorCode {
 
-    INSUFFICIENT_CAPABILITIES("INSUFFICIENT_CAPABILITIES");
+    INSUFFICIENT_CAPABILITIES("INSUFFICIENT_CAPABILITIES"),
+    QUOTA_EXCEEDED("QUOTA_EXCEEDED"),
+    PUBLISHER_NOT_FOUND("PUBLISHER_NOT_FOUND");
 
     private String value;
 

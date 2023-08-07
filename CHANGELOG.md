@@ -1,3 +1,24 @@
+# __1.12.524__ __2023-08-07__
+## __Amazon Detective__
+  - ### Features
+    - Updated the email validation regex to be in line with the TLD name specifications.
+
+## __Amazon Interactive Video Service RealTime__
+  - ### Features
+    - Add QUOTA_EXCEEDED and PUBLISHER_NOT_FOUND to EventErrorCode for stage health events.
+
+## __Amazon Kinesis Video Streams__
+  - ### Features
+    - This release enables minimum of Images SamplingInterval to be as low as 200 milliseconds in Kinesis Video Stream Image feature.
+
+## __Amazon Kinesis Video Streams Archived Media__
+  - ### Features
+    - This release enables minimum of Images SamplingInterval to be as low as 200 milliseconds in Kinesis Video Stream Image feature.
+
+## __Amazon Rekognition__
+  - ### Features
+    - This release adds code snippets for Amazon Rekognition Custom Labels.
+
 # __1.12.523__ __2023-08-04__
 ## __AWS Certificate Manager Private Certificate Authority__
   - ### Features
