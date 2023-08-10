@@ -40,7 +40,7 @@ public class ListAnnotationImportJobsRequest extends com.amazonaws.AmazonWebServ
     private java.util.List<String> ids;
     /**
      * <p>
-     * Specify the pagination token from a previous request to retrieve the next page of results.
+     * Specifies the pagination token from a previous request to retrieve the next page of results.
      * </p>
      */
     private String nextToken;
@@ -163,11 +163,11 @@ public class ListAnnotationImportJobsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specify the pagination token from a previous request to retrieve the next page of results.
+     * Specifies the pagination token from a previous request to retrieve the next page of results.
      * </p>
      * 
      * @param nextToken
-     *        Specify the pagination token from a previous request to retrieve the next page of results.
+     *        Specifies the pagination token from a previous request to retrieve the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -176,10 +176,10 @@ public class ListAnnotationImportJobsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specify the pagination token from a previous request to retrieve the next page of results.
+     * Specifies the pagination token from a previous request to retrieve the next page of results.
      * </p>
      * 
-     * @return Specify the pagination token from a previous request to retrieve the next page of results.
+     * @return Specifies the pagination token from a previous request to retrieve the next page of results.
      */
 
     public String getNextToken() {
@@ -188,11 +188,11 @@ public class ListAnnotationImportJobsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Specify the pagination token from a previous request to retrieve the next page of results.
+     * Specifies the pagination token from a previous request to retrieve the next page of results.
      * </p>
      * 
      * @param nextToken
-     *        Specify the pagination token from a previous request to retrieve the next page of results.
+     *        Specifies the pagination token from a previous request to retrieve the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

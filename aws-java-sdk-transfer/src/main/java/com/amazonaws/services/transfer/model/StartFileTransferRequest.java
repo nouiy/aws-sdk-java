@@ -36,6 +36,11 @@ public class StartFileTransferRequest extends com.amazonaws.AmazonWebServiceRequ
      * One or more source paths for the Transfer Family server. Each string represents a source file path for one
      * outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.
      * </p>
+     * <note>
+     * <p>
+     * Replace <code> <i>DOC-EXAMPLE-BUCKET</i> </code>with one of your actual buckets.
+     * </p>
+     * </note>
      */
     private java.util.List<String> sendFilePaths;
     /**
@@ -106,9 +111,18 @@ public class StartFileTransferRequest extends com.amazonaws.AmazonWebServiceRequ
      * One or more source paths for the Transfer Family server. Each string represents a source file path for one
      * outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.
      * </p>
+     * <note>
+     * <p>
+     * Replace <code> <i>DOC-EXAMPLE-BUCKET</i> </code>with one of your actual buckets.
+     * </p>
+     * </note>
      * 
      * @return One or more source paths for the Transfer Family server. Each string represents a source file path for
-     *         one outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.
+     *         one outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.</p>
+     *         <note>
+     *         <p>
+     *         Replace <code> <i>DOC-EXAMPLE-BUCKET</i> </code>with one of your actual buckets.
+     *         </p>
      */
 
     public java.util.List<String> getSendFilePaths() {
@@ -120,10 +134,19 @@ public class StartFileTransferRequest extends com.amazonaws.AmazonWebServiceRequ
      * One or more source paths for the Transfer Family server. Each string represents a source file path for one
      * outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.
      * </p>
+     * <note>
+     * <p>
+     * Replace <code> <i>DOC-EXAMPLE-BUCKET</i> </code>with one of your actual buckets.
+     * </p>
+     * </note>
      * 
      * @param sendFilePaths
      *        One or more source paths for the Transfer Family server. Each string represents a source file path for one
-     *        outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.
+     *        outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.</p>
+     *        <note>
+     *        <p>
+     *        Replace <code> <i>DOC-EXAMPLE-BUCKET</i> </code>with one of your actual buckets.
+     *        </p>
      */
 
     public void setSendFilePaths(java.util.Collection<String> sendFilePaths) {
@@ -140,6 +163,11 @@ public class StartFileTransferRequest extends com.amazonaws.AmazonWebServiceRequ
      * One or more source paths for the Transfer Family server. Each string represents a source file path for one
      * outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.
      * </p>
+     * <note>
+     * <p>
+     * Replace <code> <i>DOC-EXAMPLE-BUCKET</i> </code>with one of your actual buckets.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSendFilePaths(java.util.Collection)} or {@link #withSendFilePaths(java.util.Collection)} if you want
@@ -148,7 +176,11 @@ public class StartFileTransferRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param sendFilePaths
      *        One or more source paths for the Transfer Family server. Each string represents a source file path for one
-     *        outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.
+     *        outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.</p>
+     *        <note>
+     *        <p>
+     *        Replace <code> <i>DOC-EXAMPLE-BUCKET</i> </code>with one of your actual buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -167,10 +199,19 @@ public class StartFileTransferRequest extends com.amazonaws.AmazonWebServiceRequ
      * One or more source paths for the Transfer Family server. Each string represents a source file path for one
      * outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.
      * </p>
+     * <note>
+     * <p>
+     * Replace <code> <i>DOC-EXAMPLE-BUCKET</i> </code>with one of your actual buckets.
+     * </p>
+     * </note>
      * 
      * @param sendFilePaths
      *        One or more source paths for the Transfer Family server. Each string represents a source file path for one
-     *        outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.
+     *        outbound file transfer. For example, <code> <i>DOC-EXAMPLE-BUCKET</i>/<i>myfile.txt</i> </code>.</p>
+     *        <note>
+     *        <p>
+     *        Replace <code> <i>DOC-EXAMPLE-BUCKET</i> </code>with one of your actual buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

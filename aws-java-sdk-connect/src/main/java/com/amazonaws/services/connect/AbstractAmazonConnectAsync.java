@@ -173,6 +173,21 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateTrafficDistributionGroupUserResult> associateTrafficDistributionGroupUserAsync(
+            AssociateTrafficDistributionGroupUserRequest request) {
+
+        return associateTrafficDistributionGroupUserAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateTrafficDistributionGroupUserResult> associateTrafficDistributionGroupUserAsync(
+            AssociateTrafficDistributionGroupUserRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateTrafficDistributionGroupUserRequest, AssociateTrafficDistributionGroupUserResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ClaimPhoneNumberResult> claimPhoneNumberAsync(ClaimPhoneNumberRequest request) {
 
         return claimPhoneNumberAsync(request, null);
@@ -1117,6 +1132,21 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateTrafficDistributionGroupUserResult> disassociateTrafficDistributionGroupUserAsync(
+            DisassociateTrafficDistributionGroupUserRequest request) {
+
+        return disassociateTrafficDistributionGroupUserAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateTrafficDistributionGroupUserResult> disassociateTrafficDistributionGroupUserAsync(
+            DisassociateTrafficDistributionGroupUserRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateTrafficDistributionGroupUserRequest, DisassociateTrafficDistributionGroupUserResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DismissUserContactResult> dismissUserContactAsync(DismissUserContactRequest request) {
 
         return dismissUserContactAsync(request, null);
@@ -1645,6 +1675,21 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<ListTaskTemplatesResult> listTaskTemplatesAsync(ListTaskTemplatesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTaskTemplatesRequest, ListTaskTemplatesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTrafficDistributionGroupUsersResult> listTrafficDistributionGroupUsersAsync(
+            ListTrafficDistributionGroupUsersRequest request) {
+
+        return listTrafficDistributionGroupUsersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTrafficDistributionGroupUsersResult> listTrafficDistributionGroupUsersAsync(
+            ListTrafficDistributionGroupUsersRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTrafficDistributionGroupUsersRequest, ListTrafficDistributionGroupUsersResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -2482,8 +2482,8 @@ public interface AWSCloudTrail {
      *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-create-edit-query.html">Create or
      *         edit a query</a> in the <i>CloudTrail User Guide</i>.
      * @throws MaxConcurrentQueriesException
-     *         You are already running the maximum number of concurrent queries. Wait a minute for some queries to
-     *         finish, and then run the query again.
+     *         You are already running the maximum number of concurrent queries. The maximum number of concurrent
+     *         queries is 10. Wait a minute for some queries to finish, and then run the query again.
      * @throws InsufficientEncryptionPolicyException
      *         This exception is thrown when the policy on the S3 bucket or KMS key does not have sufficient permissions
      *         for the operation.

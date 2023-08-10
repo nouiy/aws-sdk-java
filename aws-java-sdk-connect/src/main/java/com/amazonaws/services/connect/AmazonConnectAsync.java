@@ -487,6 +487,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Associates an agent with a traffic distribution group.
+     * </p>
+     * 
+     * @param associateTrafficDistributionGroupUserRequest
+     * @return A Java Future containing the result of the AssociateTrafficDistributionGroupUser operation returned by
+     *         the service.
+     * @sample AmazonConnectAsync.AssociateTrafficDistributionGroupUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateTrafficDistributionGroupUser"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateTrafficDistributionGroupUserResult> associateTrafficDistributionGroupUserAsync(
+            AssociateTrafficDistributionGroupUserRequest associateTrafficDistributionGroupUserRequest);
+
+    /**
+     * <p>
+     * Associates an agent with a traffic distribution group.
+     * </p>
+     * 
+     * @param associateTrafficDistributionGroupUserRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateTrafficDistributionGroupUser operation returned by
+     *         the service.
+     * @sample AmazonConnectAsyncHandler.AssociateTrafficDistributionGroupUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateTrafficDistributionGroupUser"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateTrafficDistributionGroupUserResult> associateTrafficDistributionGroupUserAsync(
+            AssociateTrafficDistributionGroupUserRequest associateTrafficDistributionGroupUserRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateTrafficDistributionGroupUserRequest, AssociateTrafficDistributionGroupUserResult> asyncHandler);
+
+    /**
+     * <p>
      * Claims an available phone number to your Amazon Connect instance or traffic distribution group. You can call this
      * API only in the same Amazon Web Services Region where the Amazon Connect instance or traffic distribution group
      * was created.
@@ -3243,6 +3278,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Disassociates an agent from a traffic distribution group.
+     * </p>
+     * 
+     * @param disassociateTrafficDistributionGroupUserRequest
+     * @return A Java Future containing the result of the DisassociateTrafficDistributionGroupUser operation returned by
+     *         the service.
+     * @sample AmazonConnectAsync.DisassociateTrafficDistributionGroupUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateTrafficDistributionGroupUser"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateTrafficDistributionGroupUserResult> disassociateTrafficDistributionGroupUserAsync(
+            DisassociateTrafficDistributionGroupUserRequest disassociateTrafficDistributionGroupUserRequest);
+
+    /**
+     * <p>
+     * Disassociates an agent from a traffic distribution group.
+     * </p>
+     * 
+     * @param disassociateTrafficDistributionGroupUserRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateTrafficDistributionGroupUser operation returned by
+     *         the service.
+     * @sample AmazonConnectAsyncHandler.DisassociateTrafficDistributionGroupUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateTrafficDistributionGroupUser"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateTrafficDistributionGroupUserResult> disassociateTrafficDistributionGroupUserAsync(
+            DisassociateTrafficDistributionGroupUserRequest disassociateTrafficDistributionGroupUserRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateTrafficDistributionGroupUserRequest, DisassociateTrafficDistributionGroupUserResult> asyncHandler);
+
+    /**
+     * <p>
      * Dismisses contacts from an agent’s CCP and returns the agent to an available state, which allows the agent to
      * receive a new routed contact. Contacts can only be dismissed if they are in a <code>MISSED</code>,
      * <code>ERROR</code>, <code>ENDED</code>, or <code>REJECTED</code> state in the <a
@@ -4324,6 +4394,22 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/contact-center-phone-number.html">Set Up Phone
      * Numbers for Your Contact Center</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * When given an instance ARN, <code>ListPhoneNumbersV2</code> returns only the phone numbers claimed to the
+     * instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * When given a traffic distribution group ARN <code>ListPhoneNumbersV2</code> returns only the phone numbers
+     * claimed to the traffic distribution group.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
      * 
      * @param listPhoneNumbersV2Request
      * @return A Java Future containing the result of the ListPhoneNumbersV2 operation returned by the service.
@@ -4344,6 +4430,22 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/contact-center-phone-number.html">Set Up Phone
      * Numbers for Your Contact Center</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * When given an instance ARN, <code>ListPhoneNumbersV2</code> returns only the phone numbers claimed to the
+     * instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * When given a traffic distribution group ARN <code>ListPhoneNumbersV2</code> returns only the phone numbers
+     * claimed to the traffic distribution group.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
      * 
      * @param listPhoneNumbersV2Request
      * @param asyncHandler
@@ -4803,6 +4905,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<ListTaskTemplatesResult> listTaskTemplatesAsync(ListTaskTemplatesRequest listTaskTemplatesRequest,
             com.amazonaws.handlers.AsyncHandler<ListTaskTemplatesRequest, ListTaskTemplatesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists traffic distribution group users.
+     * </p>
+     * 
+     * @param listTrafficDistributionGroupUsersRequest
+     * @return A Java Future containing the result of the ListTrafficDistributionGroupUsers operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.ListTrafficDistributionGroupUsers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListTrafficDistributionGroupUsers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTrafficDistributionGroupUsersResult> listTrafficDistributionGroupUsersAsync(
+            ListTrafficDistributionGroupUsersRequest listTrafficDistributionGroupUsersRequest);
+
+    /**
+     * <p>
+     * Lists traffic distribution group users.
+     * </p>
+     * 
+     * @param listTrafficDistributionGroupUsersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTrafficDistributionGroupUsers operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.ListTrafficDistributionGroupUsers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListTrafficDistributionGroupUsers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTrafficDistributionGroupUsersResult> listTrafficDistributionGroupUsersAsync(
+            ListTrafficDistributionGroupUsersRequest listTrafficDistributionGroupUsersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTrafficDistributionGroupUsersRequest, ListTrafficDistributionGroupUsersResult> asyncHandler);
 
     /**
      * <p>
@@ -7621,6 +7758,13 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * <p>
      * Updates the traffic distribution for a given traffic distribution group.
      * </p>
+     * <note>
+     * <p>
+     * You can change the <code>SignInConfig</code> only for a default <code>TrafficDistributionGroup</code>. If you
+     * call <code>UpdateTrafficDistribution</code> with a modified <code>SignInConfig</code> and a non-default
+     * <code>TrafficDistributionGroup</code>, an <code>InvalidRequestException</code> is returned.
+     * </p>
+     * </note>
      * <p>
      * For more information about updating a traffic distribution group, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/update-telephony-traffic-distribution.html">Update
@@ -7641,6 +7785,13 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * <p>
      * Updates the traffic distribution for a given traffic distribution group.
      * </p>
+     * <note>
+     * <p>
+     * You can change the <code>SignInConfig</code> only for a default <code>TrafficDistributionGroup</code>. If you
+     * call <code>UpdateTrafficDistribution</code> with a modified <code>SignInConfig</code> and a non-default
+     * <code>TrafficDistributionGroup</code>, an <code>InvalidRequestException</code> is returned.
+     * </p>
+     * </note>
      * <p>
      * For more information about updating a traffic distribution group, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/update-telephony-traffic-distribution.html">Update

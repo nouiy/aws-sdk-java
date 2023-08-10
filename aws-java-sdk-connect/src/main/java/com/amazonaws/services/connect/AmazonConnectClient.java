@@ -1004,6 +1004,76 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Associates an agent with a traffic distribution group.
+     * </p>
+     * 
+     * @param associateTrafficDistributionGroupUserRequest
+     * @return Result of the AssociateTrafficDistributionGroupUser operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.AssociateTrafficDistributionGroupUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateTrafficDistributionGroupUser"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AssociateTrafficDistributionGroupUserResult associateTrafficDistributionGroupUser(AssociateTrafficDistributionGroupUserRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateTrafficDistributionGroupUser(request);
+    }
+
+    @SdkInternalApi
+    final AssociateTrafficDistributionGroupUserResult executeAssociateTrafficDistributionGroupUser(
+            AssociateTrafficDistributionGroupUserRequest associateTrafficDistributionGroupUserRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateTrafficDistributionGroupUserRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateTrafficDistributionGroupUserRequest> request = null;
+        Response<AssociateTrafficDistributionGroupUserResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateTrafficDistributionGroupUserRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(associateTrafficDistributionGroupUserRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateTrafficDistributionGroupUser");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AssociateTrafficDistributionGroupUserResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new AssociateTrafficDistributionGroupUserResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Claims an available phone number to your Amazon Connect instance or traffic distribution group. You can call this
      * API only in the same Amazon Web Services Region where the Amazon Connect instance or traffic distribution group
      * was created.
@@ -6052,6 +6122,76 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Disassociates an agent from a traffic distribution group.
+     * </p>
+     * 
+     * @param disassociateTrafficDistributionGroupUserRequest
+     * @return Result of the DisassociateTrafficDistributionGroupUser operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DisassociateTrafficDistributionGroupUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateTrafficDistributionGroupUser"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisassociateTrafficDistributionGroupUserResult disassociateTrafficDistributionGroupUser(DisassociateTrafficDistributionGroupUserRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateTrafficDistributionGroupUser(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateTrafficDistributionGroupUserResult executeDisassociateTrafficDistributionGroupUser(
+            DisassociateTrafficDistributionGroupUserRequest disassociateTrafficDistributionGroupUserRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateTrafficDistributionGroupUserRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateTrafficDistributionGroupUserRequest> request = null;
+        Response<DisassociateTrafficDistributionGroupUserResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateTrafficDistributionGroupUserRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(disassociateTrafficDistributionGroupUserRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateTrafficDistributionGroupUser");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisassociateTrafficDistributionGroupUserResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DisassociateTrafficDistributionGroupUserResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Dismisses contacts from an agent’s CCP and returns the agent to an available state, which allows the agent to
      * receive a new routed contact. Contacts can only be dismissed if they are in a <code>MISSED</code>,
      * <code>ERROR</code>, <code>ENDED</code>, or <code>REJECTED</code> state in the <a
@@ -7978,6 +8118,22 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/contact-center-phone-number.html">Set Up Phone
      * Numbers for Your Contact Center</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * When given an instance ARN, <code>ListPhoneNumbersV2</code> returns only the phone numbers claimed to the
+     * instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * When given a traffic distribution group ARN <code>ListPhoneNumbersV2</code> returns only the phone numbers
+     * claimed to the traffic distribution group.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
      * 
      * @param listPhoneNumbersV2Request
      * @return Result of the ListPhoneNumbersV2 operation returned by the service.
@@ -8849,6 +9005,74 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTaskTemplatesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTaskTemplatesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists traffic distribution group users.
+     * </p>
+     * 
+     * @param listTrafficDistributionGroupUsersRequest
+     * @return Result of the ListTrafficDistributionGroupUsers operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListTrafficDistributionGroupUsers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListTrafficDistributionGroupUsers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListTrafficDistributionGroupUsersResult listTrafficDistributionGroupUsers(ListTrafficDistributionGroupUsersRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTrafficDistributionGroupUsers(request);
+    }
+
+    @SdkInternalApi
+    final ListTrafficDistributionGroupUsersResult executeListTrafficDistributionGroupUsers(
+            ListTrafficDistributionGroupUsersRequest listTrafficDistributionGroupUsersRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTrafficDistributionGroupUsersRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTrafficDistributionGroupUsersRequest> request = null;
+        Response<ListTrafficDistributionGroupUsersResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTrafficDistributionGroupUsersRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listTrafficDistributionGroupUsersRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTrafficDistributionGroupUsers");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListTrafficDistributionGroupUsersResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListTrafficDistributionGroupUsersResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -13573,6 +13797,13 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * <p>
      * Updates the traffic distribution for a given traffic distribution group.
      * </p>
+     * <note>
+     * <p>
+     * You can change the <code>SignInConfig</code> only for a default <code>TrafficDistributionGroup</code>. If you
+     * call <code>UpdateTrafficDistribution</code> with a modified <code>SignInConfig</code> and a non-default
+     * <code>TrafficDistributionGroup</code>, an <code>InvalidRequestException</code> is returned.
+     * </p>
+     * </note>
      * <p>
      * For more information about updating a traffic distribution group, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/update-telephony-traffic-distribution.html">Update

@@ -1,3 +1,28 @@
+# __1.12.527__ __2023-08-10__
+## __AWS CloudTrail__
+  - ### Features
+    - Documentation updates for CloudTrail.
+
+## __AWS Secrets Manager__
+  - ### Features
+    - Add additional InvalidRequestException to list of possible exceptions for ListSecret.
+
+## __AWS Transfer Family__
+  - ### Features
+    - Documentation updates for AW Transfer Family
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release adds APIs to provision agents that are global / available in multiple AWS regions and distribute them across these regions by percentage.
+
+## __Amazon Omics__
+  - ### Features
+    - This release adds instanceType to GetRunTask & ListRunTasks responses.
+
+## __Elastic Load Balancing__
+  - ### Features
+    - This release enables configuring security groups for Network Load Balancers
+
 # __1.12.526__ __2023-08-09__
 ## __AWS Global Accelerator__
   - ### Features

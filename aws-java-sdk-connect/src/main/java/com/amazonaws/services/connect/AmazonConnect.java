@@ -376,6 +376,32 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Associates an agent with a traffic distribution group.
+     * </p>
+     * 
+     * @param associateTrafficDistributionGroupUserRequest
+     * @return Result of the AssociateTrafficDistributionGroupUser operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.AssociateTrafficDistributionGroupUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateTrafficDistributionGroupUser"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateTrafficDistributionGroupUserResult associateTrafficDistributionGroupUser(
+            AssociateTrafficDistributionGroupUserRequest associateTrafficDistributionGroupUserRequest);
+
+    /**
+     * <p>
      * Claims an available phone number to your Amazon Connect instance or traffic distribution group. You can call this
      * API only in the same Amazon Web Services Region where the Amazon Connect instance or traffic distribution group
      * was created.
@@ -2339,6 +2365,32 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Disassociates an agent from a traffic distribution group.
+     * </p>
+     * 
+     * @param disassociateTrafficDistributionGroupUserRequest
+     * @return Result of the DisassociateTrafficDistributionGroupUser operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DisassociateTrafficDistributionGroupUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateTrafficDistributionGroupUser"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateTrafficDistributionGroupUserResult disassociateTrafficDistributionGroupUser(
+            DisassociateTrafficDistributionGroupUserRequest disassociateTrafficDistributionGroupUserRequest);
+
+    /**
+     * <p>
      * Dismisses contacts from an agent’s CCP and returns the agent to an available state, which allows the agent to
      * receive a new routed contact. Contacts can only be dismissed if they are in a <code>MISSED</code>,
      * <code>ERROR</code>, <code>ENDED</code>, or <code>REJECTED</code> state in the <a
@@ -3075,6 +3127,22 @@ public interface AmazonConnect {
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/contact-center-phone-number.html">Set Up Phone
      * Numbers for Your Contact Center</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * When given an instance ARN, <code>ListPhoneNumbersV2</code> returns only the phone numbers claimed to the
+     * instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * When given a traffic distribution group ARN <code>ListPhoneNumbersV2</code> returns only the phone numbers
+     * claimed to the traffic distribution group.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
      * 
      * @param listPhoneNumbersV2Request
      * @return Result of the ListPhoneNumbersV2 operation returned by the service.
@@ -3404,6 +3472,29 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     ListTaskTemplatesResult listTaskTemplates(ListTaskTemplatesRequest listTaskTemplatesRequest);
+
+    /**
+     * <p>
+     * Lists traffic distribution group users.
+     * </p>
+     * 
+     * @param listTrafficDistributionGroupUsersRequest
+     * @return Result of the ListTrafficDistributionGroupUsers operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListTrafficDistributionGroupUsers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListTrafficDistributionGroupUsers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTrafficDistributionGroupUsersResult listTrafficDistributionGroupUsers(ListTrafficDistributionGroupUsersRequest listTrafficDistributionGroupUsersRequest);
 
     /**
      * <p>
@@ -5326,6 +5417,13 @@ public interface AmazonConnect {
      * <p>
      * Updates the traffic distribution for a given traffic distribution group.
      * </p>
+     * <note>
+     * <p>
+     * You can change the <code>SignInConfig</code> only for a default <code>TrafficDistributionGroup</code>. If you
+     * call <code>UpdateTrafficDistribution</code> with a modified <code>SignInConfig</code> and a non-default
+     * <code>TrafficDistributionGroup</code>, an <code>InvalidRequestException</code> is returned.
+     * </p>
+     * </note>
      * <p>
      * For more information about updating a traffic distribution group, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/update-telephony-traffic-distribution.html">Update

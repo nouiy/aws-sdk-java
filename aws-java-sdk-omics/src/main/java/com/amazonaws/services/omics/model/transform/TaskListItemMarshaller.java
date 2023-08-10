@@ -45,6 +45,8 @@ public class TaskListItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stopTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<Integer> GPUS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("gpus").build();
+    private static final MarshallingInfo<String> INSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceType").build();
 
     private static final TaskListItemMarshaller instance = new TaskListItemMarshaller();
 
@@ -71,6 +73,7 @@ public class TaskListItemMarshaller {
             protocolMarshaller.marshall(taskListItem.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(taskListItem.getStopTime(), STOPTIME_BINDING);
             protocolMarshaller.marshall(taskListItem.getGpus(), GPUS_BINDING);
+            protocolMarshaller.marshall(taskListItem.getInstanceType(), INSTANCETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

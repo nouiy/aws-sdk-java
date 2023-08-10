@@ -1217,6 +1217,31 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      * @return Result of the ListSecrets operation returned by the service.
      * @throws InvalidParameterException
      *         The parameter name or value is invalid.
+     * @throws InvalidRequestException
+     *         A parameter value is not valid for the current state of the resource.</p>
+     *         <p>
+     *         Possible causes:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The secret is scheduled for deletion.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to enable rotation on a secret that doesn't already have a Lambda function ARN configured and
+     *         you didn't include such an ARN as a parameter in this call.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> value is invalid.
      * @throws InternalServiceErrorException

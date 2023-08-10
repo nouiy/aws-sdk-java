@@ -82,6 +82,12 @@ public class TaskListItem implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer gpus;
+    /**
+     * <p>
+     * The instance type for a task.
+     * </p>
+     */
+    private String instanceType;
 
     /**
      * <p>
@@ -463,6 +469,46 @@ public class TaskListItem implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The instance type for a task.
+     * </p>
+     * 
+     * @param instanceType
+     *        The instance type for a task.
+     */
+
+    public void setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+    }
+
+    /**
+     * <p>
+     * The instance type for a task.
+     * </p>
+     * 
+     * @return The instance type for a task.
+     */
+
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
+     * <p>
+     * The instance type for a task.
+     * </p>
+     * 
+     * @param instanceType
+     *        The instance type for a task.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TaskListItem withInstanceType(String instanceType) {
+        setInstanceType(instanceType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -491,7 +537,9 @@ public class TaskListItem implements Serializable, Cloneable, StructuredPojo {
         if (getStopTime() != null)
             sb.append("StopTime: ").append(getStopTime()).append(",");
         if (getGpus() != null)
-            sb.append("Gpus: ").append(getGpus());
+            sb.append("Gpus: ").append(getGpus()).append(",");
+        if (getInstanceType() != null)
+            sb.append("InstanceType: ").append(getInstanceType());
         sb.append("}");
         return sb.toString();
     }
@@ -542,6 +590,10 @@ public class TaskListItem implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getGpus() != null && other.getGpus().equals(this.getGpus()) == false)
             return false;
+        if (other.getInstanceType() == null ^ this.getInstanceType() == null)
+            return false;
+        if (other.getInstanceType() != null && other.getInstanceType().equals(this.getInstanceType()) == false)
+            return false;
         return true;
     }
 
@@ -559,6 +611,7 @@ public class TaskListItem implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getStopTime() == null) ? 0 : getStopTime().hashCode());
         hashCode = prime * hashCode + ((getGpus() == null) ? 0 : getGpus().hashCode());
+        hashCode = prime * hashCode + ((getInstanceType() == null) ? 0 : getInstanceType().hashCode());
         return hashCode;
     }
 

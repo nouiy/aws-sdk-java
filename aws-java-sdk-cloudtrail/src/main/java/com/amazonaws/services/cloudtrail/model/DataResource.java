@@ -178,7 +178,17 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ManagedBlockchain::Network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::MedicalImaging::Datastore</code>
      * </p>
      * </li>
      * <li>
@@ -204,6 +214,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
      * </ul>
@@ -354,7 +374,17 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ManagedBlockchain::Network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::MedicalImaging::Datastore</code>
      * </p>
      * </li>
      * <li>
@@ -380,6 +410,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
      * </ul>
@@ -464,7 +504,17 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::ManagedBlockchain::Network</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::ManagedBlockchain::Node</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::MedicalImaging::Datastore</code>
      *        </p>
      *        </li>
      *        <li>
@@ -490,6 +540,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::S3Outposts::Object</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::VerifiedPermissions::PolicyStore</code>
      *        </p>
      *        </li>
      */
@@ -580,7 +640,17 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ManagedBlockchain::Network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::MedicalImaging::Datastore</code>
      * </p>
      * </li>
      * <li>
@@ -606,6 +676,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
      * </ul>
@@ -689,7 +769,17 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::ManagedBlockchain::Network</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::ManagedBlockchain::Node</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::MedicalImaging::Datastore</code>
      *         </p>
      *         </li>
      *         <li>
@@ -715,6 +805,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>AWS::S3Outposts::Object</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SSMMessages::ControlChannel</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::VerifiedPermissions::PolicyStore</code>
      *         </p>
      *         </li>
      */
@@ -805,7 +905,17 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ManagedBlockchain::Network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::MedicalImaging::Datastore</code>
      * </p>
      * </li>
      * <li>
@@ -831,6 +941,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
      * </ul>
@@ -915,7 +1035,17 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::ManagedBlockchain::Network</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::ManagedBlockchain::Node</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::MedicalImaging::Datastore</code>
      *        </p>
      *        </li>
      *        <li>
@@ -941,6 +1071,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::S3Outposts::Object</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::VerifiedPermissions::PolicyStore</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

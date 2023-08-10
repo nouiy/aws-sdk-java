@@ -1302,6 +1302,9 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
      * Deregisters the specified targets from the specified target group. After the targets are deregistered, they no
      * longer receive traffic from the load balancer.
      * </p>
+     * <p>
+     * Note: If the specified target does not exist, the action returns successfully.
+     * </p>
      * 
      * @param deregisterTargetsRequest
      * @return Result of the DeregisterTargets operation returned by the service.
@@ -2822,11 +2825,15 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Associates the specified security groups with the specified Application Load Balancer. The specified security
-     * groups override the previously associated security groups.
+     * Associates the specified security groups with the specified Application Load Balancer or Network Load Balancer.
+     * The specified security groups override the previously associated security groups.
      * </p>
      * <p>
-     * You can't specify a security group for a Network Load Balancer or Gateway Load Balancer.
+     * You can't perform this operation on a Network Load Balancer unless you specified a security group for the load
+     * balancer when you created it.
+     * </p>
+     * <p>
+     * You can't associate a security group with a Gateway Load Balancer.
      * </p>
      * 
      * @param setSecurityGroupsRequest

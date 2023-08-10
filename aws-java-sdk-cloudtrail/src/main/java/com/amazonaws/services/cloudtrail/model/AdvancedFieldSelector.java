@@ -166,7 +166,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ManagedBlockchain::Network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::MedicalImaging::Datastore</code>
      * </p>
      * </li>
      * <li>
@@ -192,6 +202,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
      * </ul>
@@ -358,6 +378,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -365,6 +396,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::MedicalImaging::Datastore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -427,6 +469,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:verifiedpermissions:&lt;region&gt;:&lt;account_ID&gt;:policy-store/&lt;policy_store_UUID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -616,7 +680,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ManagedBlockchain::Network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::MedicalImaging::Datastore</code>
      * </p>
      * </li>
      * <li>
@@ -642,6 +716,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
      * </ul>
@@ -808,6 +892,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -815,6 +910,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::MedicalImaging::Datastore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -877,6 +983,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:verifiedpermissions:&lt;region&gt;:&lt;account_ID&gt;:policy-store/&lt;policy_store_UUID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1019,7 +1147,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::ManagedBlockchain::Network</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::ManagedBlockchain::Node</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::MedicalImaging::Datastore</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1045,6 +1183,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::S3Outposts::Object</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::VerifiedPermissions::PolicyStore</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1211,6 +1359,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set
      *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -1218,6 +1377,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::MedicalImaging::Datastore</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1280,6 +1450,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:verifiedpermissions:&lt;region&gt;:&lt;account_ID&gt;:policy-store/&lt;policy_store_UUID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1428,7 +1620,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ManagedBlockchain::Network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::MedicalImaging::Datastore</code>
      * </p>
      * </li>
      * <li>
@@ -1454,6 +1656,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
      * </ul>
@@ -1620,6 +1832,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1627,6 +1850,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::MedicalImaging::Datastore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1689,6 +1923,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:verifiedpermissions:&lt;region&gt;:&lt;account_ID&gt;:policy-store/&lt;policy_store_UUID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1830,7 +2086,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::ManagedBlockchain::Network</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::ManagedBlockchain::Node</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::MedicalImaging::Datastore</code>
      *         </p>
      *         </li>
      *         <li>
@@ -1856,6 +2122,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>AWS::S3Outposts::Object</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SSMMessages::ControlChannel</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::VerifiedPermissions::PolicyStore</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -2022,6 +2298,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is
+     *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is
      *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -2029,6 +2316,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::MedicalImaging::Datastore</code>, and the operator is
+     *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -2092,6 +2390,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator
+     *         is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:verifiedpermissions:&lt;region&gt;:&lt;account_ID&gt;:policy-store/&lt;policy_store_UUID&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -2240,7 +2560,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ManagedBlockchain::Network</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Node</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::MedicalImaging::Datastore</code>
      * </p>
      * </li>
      * <li>
@@ -2266,6 +2596,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::VerifiedPermissions::PolicyStore</code>
      * </p>
      * </li>
      * </ul>
@@ -2432,6 +2772,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2439,6 +2790,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::MedicalImaging::Datastore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2501,6 +2863,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:verifiedpermissions:&lt;region&gt;:&lt;account_ID&gt;:policy-store/&lt;policy_store_UUID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2643,7 +3027,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::ManagedBlockchain::Network</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::ManagedBlockchain::Node</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::MedicalImaging::Datastore</code>
      *        </p>
      *        </li>
      *        <li>
@@ -2669,6 +3063,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::S3Outposts::Object</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::VerifiedPermissions::PolicyStore</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2835,6 +3239,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set
      *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -2842,6 +3257,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::MedicalImaging::Datastore</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2904,6 +3330,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SSMMessages::ControlChannel</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:verifiedpermissions:&lt;region&gt;:&lt;account_ID&gt;:policy-store/&lt;policy_store_UUID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>

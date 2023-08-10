@@ -84,6 +84,10 @@ public class TaskListItemJsonUnmarshaller implements Unmarshaller<TaskListItem, 
                     context.nextToken();
                     taskListItem.setGpus(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("instanceType", targetDepth)) {
+                    context.nextToken();
+                    taskListItem.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

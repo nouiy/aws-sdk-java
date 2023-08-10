@@ -305,11 +305,14 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
     /**
      * <p>
-     * Creates the connector, which captures the parameters for an outbound connection for the AS2 or SFTP protocol. The
-     * connector is required for sending files to an externally hosted AS2 or SFTP server. For more details about AS2
-     * connectors, see <a
+     * Creates the connector, which captures the parameters for a connection for the AS2 or SFTP protocol. For AS2, the
+     * connector is required for sending files to an externally hosted AS2 server. For SFTP, the connector is required
+     * when sending files to an SFTP server or receiving files from an SFTP server. For more details about connectors,
+     * see <a
      * href="https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html#configure-as2-connector"
-     * >Create AS2 connectors</a>.
+     * >Create AS2 connectors</a> and <a
+     * href="https://docs.aws.amazon.com/transfer/latest/userguide/configure-sftp-connector.html">Create SFTP
+     * connectors</a>.
      * </p>
      * <note>
      * <p>
@@ -3109,7 +3112,7 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
      * <ul>
      * <li>
      * <p>
-     * If you are transferring file from a partner's SFTP server to a Transfer Family server, you specify one or more
+     * If you are transferring file from a partner's SFTP server to Amazon Web Services storage, you specify one or more
      * <code>RetreiveFilePaths</code> to identify the files you want to transfer, and a <code>LocalDirectoryPath</code>
      * to specify the destination folder.
      * </p>

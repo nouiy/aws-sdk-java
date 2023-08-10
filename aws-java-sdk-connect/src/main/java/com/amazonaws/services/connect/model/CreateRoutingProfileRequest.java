@@ -80,8 +80,8 @@ public class CreateRoutingProfileRequest extends com.amazonaws.AmazonWebServiceR
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
-     * last inbound contact</i> or <i>longest idle time</i>.
+     * Whether agents with this routing profile will have their routing order calculated based on <i>longest idle
+     * time</i> or <i>time since their last inbound contact</i>.
      * </p>
      */
     private String agentAvailabilityTimer;
@@ -534,13 +534,13 @@ public class CreateRoutingProfileRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
-     * last inbound contact</i> or <i>longest idle time</i>.
+     * Whether agents with this routing profile will have their routing order calculated based on <i>longest idle
+     * time</i> or <i>time since their last inbound contact</i>.
      * </p>
      * 
      * @param agentAvailabilityTimer
-     *        Whether agents with this routing profile will have their routing order calculated based on <i>time since
-     *        their last inbound contact</i> or <i>longest idle time</i>.
+     *        Whether agents with this routing profile will have their routing order calculated based on <i>longest idle
+     *        time</i> or <i>time since their last inbound contact</i>.
      * @see AgentAvailabilityTimer
      */
 
@@ -550,12 +550,12 @@ public class CreateRoutingProfileRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
-     * last inbound contact</i> or <i>longest idle time</i>.
+     * Whether agents with this routing profile will have their routing order calculated based on <i>longest idle
+     * time</i> or <i>time since their last inbound contact</i>.
      * </p>
      * 
-     * @return Whether agents with this routing profile will have their routing order calculated based on <i>time since
-     *         their last inbound contact</i> or <i>longest idle time</i>.
+     * @return Whether agents with this routing profile will have their routing order calculated based on <i>longest
+     *         idle time</i> or <i>time since their last inbound contact</i>.
      * @see AgentAvailabilityTimer
      */
 
@@ -565,13 +565,13 @@ public class CreateRoutingProfileRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
-     * last inbound contact</i> or <i>longest idle time</i>.
+     * Whether agents with this routing profile will have their routing order calculated based on <i>longest idle
+     * time</i> or <i>time since their last inbound contact</i>.
      * </p>
      * 
      * @param agentAvailabilityTimer
-     *        Whether agents with this routing profile will have their routing order calculated based on <i>time since
-     *        their last inbound contact</i> or <i>longest idle time</i>.
+     *        Whether agents with this routing profile will have their routing order calculated based on <i>longest idle
+     *        time</i> or <i>time since their last inbound contact</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentAvailabilityTimer
      */
@@ -583,13 +583,13 @@ public class CreateRoutingProfileRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Whether agents with this routing profile will have their routing order calculated based on <i>time since their
-     * last inbound contact</i> or <i>longest idle time</i>.
+     * Whether agents with this routing profile will have their routing order calculated based on <i>longest idle
+     * time</i> or <i>time since their last inbound contact</i>.
      * </p>
      * 
      * @param agentAvailabilityTimer
-     *        Whether agents with this routing profile will have their routing order calculated based on <i>time since
-     *        their last inbound contact</i> or <i>longest idle time</i>.
+     *        Whether agents with this routing profile will have their routing order calculated based on <i>longest idle
+     *        time</i> or <i>time since their last inbound contact</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AgentAvailabilityTimer
      */
