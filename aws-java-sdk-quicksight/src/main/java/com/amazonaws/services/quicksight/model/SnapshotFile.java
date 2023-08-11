@@ -39,7 +39,7 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<SnapshotFileSheetSelection> sheetSelections;
     /**
      * <p>
-     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> and <code>PDF</code>.
+     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> or <code>PDF</code>.
      * </p>
      */
     private String formatType;
@@ -132,11 +132,11 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> and <code>PDF</code>.
+     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> or <code>PDF</code>.
      * </p>
      * 
      * @param formatType
-     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code> and
+     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code> or
      *        <code>PDF</code>.
      * @see SnapshotFileFormatType
      */
@@ -147,10 +147,10 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> and <code>PDF</code>.
+     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> or <code>PDF</code>.
      * </p>
      * 
-     * @return The format of the snapshot file to be generated. You can choose between <code>CSV</code> and
+     * @return The format of the snapshot file to be generated. You can choose between <code>CSV</code> or
      *         <code>PDF</code>.
      * @see SnapshotFileFormatType
      */
@@ -161,11 +161,11 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> and <code>PDF</code>.
+     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> or <code>PDF</code>.
      * </p>
      * 
      * @param formatType
-     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code> and
+     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code> or
      *        <code>PDF</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SnapshotFileFormatType
@@ -178,11 +178,11 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> and <code>PDF</code>.
+     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> or <code>PDF</code>.
      * </p>
      * 
      * @param formatType
-     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code> and
+     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code> or
      *        <code>PDF</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SnapshotFileFormatType

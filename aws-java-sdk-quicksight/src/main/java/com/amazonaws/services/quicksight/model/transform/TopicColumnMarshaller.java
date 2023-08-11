@@ -60,6 +60,8 @@ public class TopicColumnMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NeverAggregateInFilter").build();
     private static final MarshallingInfo<List> CELLVALUESYNONYMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CellValueSynonyms").build();
+    private static final MarshallingInfo<Boolean> NONADDITIVE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NonAdditive").build();
 
     private static final TopicColumnMarshaller instance = new TopicColumnMarshaller();
 
@@ -93,6 +95,7 @@ public class TopicColumnMarshaller {
             protocolMarshaller.marshall(topicColumn.getDefaultFormatting(), DEFAULTFORMATTING_BINDING);
             protocolMarshaller.marshall(topicColumn.getNeverAggregateInFilter(), NEVERAGGREGATEINFILTER_BINDING);
             protocolMarshaller.marshall(topicColumn.getCellValueSynonyms(), CELLVALUESYNONYMS_BINDING);
+            protocolMarshaller.marshall(topicColumn.getNonAdditive(), NONADDITIVE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -1,3 +1,28 @@
+# __1.12.528__ __2023-08-11__
+## __AWS Config__
+  - ### Features
+    - Updated ResourceType enum with new resource types onboarded by AWS Config in July 2023.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Amazon EC2 P5 instances, powered by the latest NVIDIA H100 Tensor Core GPUs, deliver the highest performance in EC2 for deep learning (DL) and HPC applications. M7i-flex and M7i instances are next-generation general purpose instances powered by custom 4th Generation Intel Xeon Scalable processors.
+
+## __Amazon QuickSight__
+  - ### Features
+    - New Authentication method for Account subscription - IAM Identity Center. Hierarchy layout support, default column width support and related style properties for pivot table visuals. Non-additive topic field aggregations for Topic API
+
+## __Amazon Simple Email Service__
+  - ### Features
+    - Doc only updates to include: 1) Clarified which part of an email address where it's okay to have Punycode when it contains non-ASCII characters for the SendRawEmail action and other actions where this is applicable. 2) Updated S3Action description with new MB max bucket size from 30 to 40.
+
+## __Amazon Simple Workflow Service__
+  - ### Features
+    - This release adds new API parameters to override workflow task list for workflow executions.
+
+## __AmplifyBackend__
+  - ### Features
+    - Adds sensitive trait to required input shapes.
+
 # __1.12.527__ __2023-08-10__
 ## __AWS CloudTrail__
   - ### Features

@@ -131,6 +131,12 @@ public class TopicCalculatedField implements Serializable, Cloneable, Structured
      * </p>
      */
     private java.util.List<CellValueSynonym> cellValueSynonyms;
+    /**
+     * <p>
+     * The non additive for the table style target.
+     * </p>
+     */
+    private Boolean nonAdditive;
 
     /**
      * <p>
@@ -1114,6 +1120,58 @@ public class TopicCalculatedField implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The non additive for the table style target.
+     * </p>
+     * 
+     * @param nonAdditive
+     *        The non additive for the table style target.
+     */
+
+    public void setNonAdditive(Boolean nonAdditive) {
+        this.nonAdditive = nonAdditive;
+    }
+
+    /**
+     * <p>
+     * The non additive for the table style target.
+     * </p>
+     * 
+     * @return The non additive for the table style target.
+     */
+
+    public Boolean getNonAdditive() {
+        return this.nonAdditive;
+    }
+
+    /**
+     * <p>
+     * The non additive for the table style target.
+     * </p>
+     * 
+     * @param nonAdditive
+     *        The non additive for the table style target.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TopicCalculatedField withNonAdditive(Boolean nonAdditive) {
+        setNonAdditive(nonAdditive);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The non additive for the table style target.
+     * </p>
+     * 
+     * @return The non additive for the table style target.
+     */
+
+    public Boolean isNonAdditive() {
+        return this.nonAdditive;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1156,7 +1214,9 @@ public class TopicCalculatedField implements Serializable, Cloneable, Structured
         if (getNeverAggregateInFilter() != null)
             sb.append("NeverAggregateInFilter: ").append(getNeverAggregateInFilter()).append(",");
         if (getCellValueSynonyms() != null)
-            sb.append("CellValueSynonyms: ").append(getCellValueSynonyms());
+            sb.append("CellValueSynonyms: ").append(getCellValueSynonyms()).append(",");
+        if (getNonAdditive() != null)
+            sb.append("NonAdditive: ").append(getNonAdditive());
         sb.append("}");
         return sb.toString();
     }
@@ -1235,6 +1295,10 @@ public class TopicCalculatedField implements Serializable, Cloneable, Structured
             return false;
         if (other.getCellValueSynonyms() != null && other.getCellValueSynonyms().equals(this.getCellValueSynonyms()) == false)
             return false;
+        if (other.getNonAdditive() == null ^ this.getNonAdditive() == null)
+            return false;
+        if (other.getNonAdditive() != null && other.getNonAdditive().equals(this.getNonAdditive()) == false)
+            return false;
         return true;
     }
 
@@ -1259,6 +1323,7 @@ public class TopicCalculatedField implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getNotAllowedAggregations() == null) ? 0 : getNotAllowedAggregations().hashCode());
         hashCode = prime * hashCode + ((getNeverAggregateInFilter() == null) ? 0 : getNeverAggregateInFilter().hashCode());
         hashCode = prime * hashCode + ((getCellValueSynonyms() == null) ? 0 : getCellValueSynonyms().hashCode());
+        hashCode = prime * hashCode + ((getNonAdditive() == null) ? 0 : getNonAdditive().hashCode());
         return hashCode;
     }
 

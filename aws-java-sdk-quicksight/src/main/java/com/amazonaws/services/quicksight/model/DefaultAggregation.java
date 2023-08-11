@@ -25,7 +25,12 @@ public enum DefaultAggregation {
     MIN("MIN"),
     COUNT("COUNT"),
     DISTINCT_COUNT("DISTINCT_COUNT"),
-    AVERAGE("AVERAGE");
+    AVERAGE("AVERAGE"),
+    MEDIAN("MEDIAN"),
+    STDEV("STDEV"),
+    STDEVP("STDEVP"),
+    VAR("VAR"),
+    VARP("VARP");
 
     private String value;
 

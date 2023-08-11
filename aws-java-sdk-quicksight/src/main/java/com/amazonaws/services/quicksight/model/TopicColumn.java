@@ -60,9 +60,7 @@ public class TopicColumn implements Serializable, Cloneable, StructuredPojo {
     private String columnDataRole;
     /**
      * <p>
-     * The type of aggregation that is performed on the column data when it's queried. Valid values for this structure
-     * are <code>SUM</code>, <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>, <code>DISTINCT_COUNT</code>, and
-     * <code>AVERAGE</code>.
+     * The type of aggregation that is performed on the column data when it's queried.
      * </p>
      */
     private String aggregation;
@@ -132,6 +130,12 @@ public class TopicColumn implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<CellValueSynonym> cellValueSynonyms;
+    /**
+     * <p>
+     * The non additive value for the column.
+     * </p>
+     */
+    private Boolean nonAdditive;
 
     /**
      * <p>
@@ -384,15 +388,11 @@ public class TopicColumn implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of aggregation that is performed on the column data when it's queried. Valid values for this structure
-     * are <code>SUM</code>, <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>, <code>DISTINCT_COUNT</code>, and
-     * <code>AVERAGE</code>.
+     * The type of aggregation that is performed on the column data when it's queried.
      * </p>
      * 
      * @param aggregation
-     *        The type of aggregation that is performed on the column data when it's queried. Valid values for this
-     *        structure are <code>SUM</code>, <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>,
-     *        <code>DISTINCT_COUNT</code>, and <code>AVERAGE</code>.
+     *        The type of aggregation that is performed on the column data when it's queried.
      * @see DefaultAggregation
      */
 
@@ -402,14 +402,10 @@ public class TopicColumn implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of aggregation that is performed on the column data when it's queried. Valid values for this structure
-     * are <code>SUM</code>, <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>, <code>DISTINCT_COUNT</code>, and
-     * <code>AVERAGE</code>.
+     * The type of aggregation that is performed on the column data when it's queried.
      * </p>
      * 
-     * @return The type of aggregation that is performed on the column data when it's queried. Valid values for this
-     *         structure are <code>SUM</code>, <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>,
-     *         <code>DISTINCT_COUNT</code>, and <code>AVERAGE</code>.
+     * @return The type of aggregation that is performed on the column data when it's queried.
      * @see DefaultAggregation
      */
 
@@ -419,15 +415,11 @@ public class TopicColumn implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of aggregation that is performed on the column data when it's queried. Valid values for this structure
-     * are <code>SUM</code>, <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>, <code>DISTINCT_COUNT</code>, and
-     * <code>AVERAGE</code>.
+     * The type of aggregation that is performed on the column data when it's queried.
      * </p>
      * 
      * @param aggregation
-     *        The type of aggregation that is performed on the column data when it's queried. Valid values for this
-     *        structure are <code>SUM</code>, <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>,
-     *        <code>DISTINCT_COUNT</code>, and <code>AVERAGE</code>.
+     *        The type of aggregation that is performed on the column data when it's queried.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DefaultAggregation
      */
@@ -439,15 +431,11 @@ public class TopicColumn implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of aggregation that is performed on the column data when it's queried. Valid values for this structure
-     * are <code>SUM</code>, <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>, <code>DISTINCT_COUNT</code>, and
-     * <code>AVERAGE</code>.
+     * The type of aggregation that is performed on the column data when it's queried.
      * </p>
      * 
      * @param aggregation
-     *        The type of aggregation that is performed on the column data when it's queried. Valid values for this
-     *        structure are <code>SUM</code>, <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>,
-     *        <code>DISTINCT_COUNT</code>, and <code>AVERAGE</code>.
+     *        The type of aggregation that is performed on the column data when it's queried.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DefaultAggregation
      */
@@ -1119,6 +1107,58 @@ public class TopicColumn implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The non additive value for the column.
+     * </p>
+     * 
+     * @param nonAdditive
+     *        The non additive value for the column.
+     */
+
+    public void setNonAdditive(Boolean nonAdditive) {
+        this.nonAdditive = nonAdditive;
+    }
+
+    /**
+     * <p>
+     * The non additive value for the column.
+     * </p>
+     * 
+     * @return The non additive value for the column.
+     */
+
+    public Boolean getNonAdditive() {
+        return this.nonAdditive;
+    }
+
+    /**
+     * <p>
+     * The non additive value for the column.
+     * </p>
+     * 
+     * @param nonAdditive
+     *        The non additive value for the column.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TopicColumn withNonAdditive(Boolean nonAdditive) {
+        setNonAdditive(nonAdditive);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The non additive value for the column.
+     * </p>
+     * 
+     * @return The non additive value for the column.
+     */
+
+    public Boolean isNonAdditive() {
+        return this.nonAdditive;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1161,7 +1201,9 @@ public class TopicColumn implements Serializable, Cloneable, StructuredPojo {
         if (getNeverAggregateInFilter() != null)
             sb.append("NeverAggregateInFilter: ").append(getNeverAggregateInFilter()).append(",");
         if (getCellValueSynonyms() != null)
-            sb.append("CellValueSynonyms: ").append(getCellValueSynonyms());
+            sb.append("CellValueSynonyms: ").append(getCellValueSynonyms()).append(",");
+        if (getNonAdditive() != null)
+            sb.append("NonAdditive: ").append(getNonAdditive());
         sb.append("}");
         return sb.toString();
     }
@@ -1240,6 +1282,10 @@ public class TopicColumn implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCellValueSynonyms() != null && other.getCellValueSynonyms().equals(this.getCellValueSynonyms()) == false)
             return false;
+        if (other.getNonAdditive() == null ^ this.getNonAdditive() == null)
+            return false;
+        if (other.getNonAdditive() != null && other.getNonAdditive().equals(this.getNonAdditive()) == false)
+            return false;
         return true;
     }
 
@@ -1264,6 +1310,7 @@ public class TopicColumn implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getDefaultFormatting() == null) ? 0 : getDefaultFormatting().hashCode());
         hashCode = prime * hashCode + ((getNeverAggregateInFilter() == null) ? 0 : getNeverAggregateInFilter().hashCode());
         hashCode = prime * hashCode + ((getCellValueSynonyms() == null) ? 0 : getCellValueSynonyms().hashCode());
+        hashCode = prime * hashCode + ((getNonAdditive() == null) ? 0 : getNonAdditive().hashCode());
         return hashCode;
     }
 
