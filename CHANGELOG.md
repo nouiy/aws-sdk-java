@@ -1,3 +1,12 @@
+# __1.12.531__ __2023-08-16__
+## __Amazon CloudWatch__
+  - ### Features
+    - Doc-only update to incorporate several doc bug fixes
+
+## __Amazon Lex Model Building V2__
+  - ### Features
+    - This release updates the Custom Vocabulary Weight field to support a value of 0.
+
 # __1.12.530__ __2023-08-15__
 ## __AWS Glue__
   - ### Features

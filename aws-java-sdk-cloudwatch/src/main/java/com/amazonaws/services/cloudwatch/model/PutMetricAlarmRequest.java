@@ -338,9 +338,74 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
     private String statistic;
     /**
      * <p>
-     * The percentile statistic for the metric specified in <code>MetricName</code>. Specify a value between p0.0 and
-     * p100. When you call <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must specify either
-     * <code>Statistic</code> or <code>ExtendedStatistic,</code> but not both.
+     * The extended statistic for the metric specified in <code>MetricName</code>. When you call
+     * <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must specify either <code>Statistic</code>
+     * or <code>ExtendedStatistic</code> but not both.
+     * </p>
+     * <p>
+     * If you specify <code>ExtendedStatistic</code>, the following are valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>p90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tm90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tc90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ts90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>wm90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IQM</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PR(<i>n</i>:<i>m</i>)</code> where n and m are values of the metric
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TC(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TS(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about these extended statistics, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html">CloudWatch
+     * statistics definitions</a>.
      * </p>
      */
     private String extendedStatistic;
@@ -497,7 +562,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
     private com.amazonaws.internal.SdkInternalList<MetricDataQuery> metrics;
     /**
      * <p>
-     * A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm.
+     * A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm. To be
+     * able to associate tags with the alarm when you create the alarm, you must have the
+     * <code>cloudwatch:TagResource</code> permission.
      * </p>
      * <p>
      * Tags can help you organize and categorize your resources. You can also use them to scope user permissions by
@@ -3056,15 +3123,144 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The percentile statistic for the metric specified in <code>MetricName</code>. Specify a value between p0.0 and
-     * p100. When you call <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must specify either
-     * <code>Statistic</code> or <code>ExtendedStatistic,</code> but not both.
+     * The extended statistic for the metric specified in <code>MetricName</code>. When you call
+     * <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must specify either <code>Statistic</code>
+     * or <code>ExtendedStatistic</code> but not both.
+     * </p>
+     * <p>
+     * If you specify <code>ExtendedStatistic</code>, the following are valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>p90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tm90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tc90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ts90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>wm90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IQM</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PR(<i>n</i>:<i>m</i>)</code> where n and m are values of the metric
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TC(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TS(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about these extended statistics, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html">CloudWatch
+     * statistics definitions</a>.
      * </p>
      * 
      * @param extendedStatistic
-     *        The percentile statistic for the metric specified in <code>MetricName</code>. Specify a value between p0.0
-     *        and p100. When you call <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must
-     *        specify either <code>Statistic</code> or <code>ExtendedStatistic,</code> but not both.
+     *        The extended statistic for the metric specified in <code>MetricName</code>. When you call
+     *        <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must specify either
+     *        <code>Statistic</code> or <code>ExtendedStatistic</code> but not both.</p>
+     *        <p>
+     *        If you specify <code>ExtendedStatistic</code>, the following are valid values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>p90</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>tm90</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>tc90</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ts90</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>wm90</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>IQM</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PR(<i>n</i>:<i>m</i>)</code> where n and m are values of the metric
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TC(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TS(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>WM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about these extended statistics, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html"
+     *        >CloudWatch statistics definitions</a>.
      */
 
     public void setExtendedStatistic(String extendedStatistic) {
@@ -3073,14 +3269,143 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The percentile statistic for the metric specified in <code>MetricName</code>. Specify a value between p0.0 and
-     * p100. When you call <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must specify either
-     * <code>Statistic</code> or <code>ExtendedStatistic,</code> but not both.
+     * The extended statistic for the metric specified in <code>MetricName</code>. When you call
+     * <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must specify either <code>Statistic</code>
+     * or <code>ExtendedStatistic</code> but not both.
+     * </p>
+     * <p>
+     * If you specify <code>ExtendedStatistic</code>, the following are valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>p90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tm90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tc90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ts90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>wm90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IQM</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PR(<i>n</i>:<i>m</i>)</code> where n and m are values of the metric
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TC(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TS(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about these extended statistics, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html">CloudWatch
+     * statistics definitions</a>.
      * </p>
      * 
-     * @return The percentile statistic for the metric specified in <code>MetricName</code>. Specify a value between
-     *         p0.0 and p100. When you call <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must
-     *         specify either <code>Statistic</code> or <code>ExtendedStatistic,</code> but not both.
+     * @return The extended statistic for the metric specified in <code>MetricName</code>. When you call
+     *         <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must specify either
+     *         <code>Statistic</code> or <code>ExtendedStatistic</code> but not both.</p>
+     *         <p>
+     *         If you specify <code>ExtendedStatistic</code>, the following are valid values:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>p90</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>tm90</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>tc90</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ts90</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>wm90</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>IQM</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>PR(<i>n</i>:<i>m</i>)</code> where n and m are values of the metric
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>TC(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>TM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>TS(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>WM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For more information about these extended statistics, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html"
+     *         >CloudWatch statistics definitions</a>.
      */
 
     public String getExtendedStatistic() {
@@ -3089,15 +3414,144 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The percentile statistic for the metric specified in <code>MetricName</code>. Specify a value between p0.0 and
-     * p100. When you call <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must specify either
-     * <code>Statistic</code> or <code>ExtendedStatistic,</code> but not both.
+     * The extended statistic for the metric specified in <code>MetricName</code>. When you call
+     * <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must specify either <code>Statistic</code>
+     * or <code>ExtendedStatistic</code> but not both.
+     * </p>
+     * <p>
+     * If you specify <code>ExtendedStatistic</code>, the following are valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>p90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tm90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>tc90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ts90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>wm90</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IQM</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PR(<i>n</i>:<i>m</i>)</code> where n and m are values of the metric
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TC(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TS(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about these extended statistics, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html">CloudWatch
+     * statistics definitions</a>.
      * </p>
      * 
      * @param extendedStatistic
-     *        The percentile statistic for the metric specified in <code>MetricName</code>. Specify a value between p0.0
-     *        and p100. When you call <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must
-     *        specify either <code>Statistic</code> or <code>ExtendedStatistic,</code> but not both.
+     *        The extended statistic for the metric specified in <code>MetricName</code>. When you call
+     *        <code>PutMetricAlarm</code> and specify a <code>MetricName</code>, you must specify either
+     *        <code>Statistic</code> or <code>ExtendedStatistic</code> but not both.</p>
+     *        <p>
+     *        If you specify <code>ExtendedStatistic</code>, the following are valid values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>p90</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>tm90</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>tc90</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ts90</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>wm90</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>IQM</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PR(<i>n</i>:<i>m</i>)</code> where n and m are values of the metric
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TC(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TS(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>WM(<i>X</i>%:<i>X</i>%)</code> where X is between 10 and 90 inclusive.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about these extended statistics, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html"
+     *        >CloudWatch statistics definitions</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4284,7 +4738,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm.
+     * A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm. To be
+     * able to associate tags with the alarm when you create the alarm, you must have the
+     * <code>cloudwatch:TagResource</code> permission.
      * </p>
      * <p>
      * Tags can help you organize and categorize your resources. You can also use them to scope user permissions by
@@ -4299,7 +4755,8 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @return A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an
-     *         alarm.</p>
+     *         alarm. To be able to associate tags with the alarm when you create the alarm, you must have the
+     *         <code>cloudwatch:TagResource</code> permission.</p>
      *         <p>
      *         Tags can help you organize and categorize your resources. You can also use them to scope user permissions
      *         by granting a user permission to access or change only resources with certain tag values.
@@ -4322,7 +4779,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm.
+     * A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm. To be
+     * able to associate tags with the alarm when you create the alarm, you must have the
+     * <code>cloudwatch:TagResource</code> permission.
      * </p>
      * <p>
      * Tags can help you organize and categorize your resources. You can also use them to scope user permissions by
@@ -4337,8 +4796,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param tags
-     *        A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an
-     *        alarm.</p>
+     *        A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm.
+     *        To be able to associate tags with the alarm when you create the alarm, you must have the
+     *        <code>cloudwatch:TagResource</code> permission.</p>
      *        <p>
      *        Tags can help you organize and categorize your resources. You can also use them to scope user permissions
      *        by granting a user permission to access or change only resources with certain tag values.
@@ -4363,7 +4823,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm.
+     * A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm. To be
+     * able to associate tags with the alarm when you create the alarm, you must have the
+     * <code>cloudwatch:TagResource</code> permission.
      * </p>
      * <p>
      * Tags can help you organize and categorize your resources. You can also use them to scope user permissions by
@@ -4383,8 +4845,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param tags
-     *        A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an
-     *        alarm.</p>
+     *        A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm.
+     *        To be able to associate tags with the alarm when you create the alarm, you must have the
+     *        <code>cloudwatch:TagResource</code> permission.</p>
      *        <p>
      *        Tags can help you organize and categorize your resources. You can also use them to scope user permissions
      *        by granting a user permission to access or change only resources with certain tag values.
@@ -4411,7 +4874,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm.
+     * A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm. To be
+     * able to associate tags with the alarm when you create the alarm, you must have the
+     * <code>cloudwatch:TagResource</code> permission.
      * </p>
      * <p>
      * Tags can help you organize and categorize your resources. You can also use them to scope user permissions by
@@ -4426,8 +4891,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param tags
-     *        A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an
-     *        alarm.</p>
+     *        A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm.
+     *        To be able to associate tags with the alarm when you create the alarm, you must have the
+     *        <code>cloudwatch:TagResource</code> permission.</p>
      *        <p>
      *        Tags can help you organize and categorize your resources. You can also use them to scope user permissions
      *        by granting a user permission to access or change only resources with certain tag values.
