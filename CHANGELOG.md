@@ -1,3 +1,12 @@
+# __1.12.532__ __2023-08-17__
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Adds support for SubnetConfigurations to allow users to select their own IPv4 and IPv6 addresses for Interface VPC endpoints
+
+## __Amazon GameLift__
+  - ### Features
+    - Amazon GameLift updates its instance types support.
+
 # __1.12.531__ __2023-08-16__
 ## __Amazon CloudWatch__
   - ### Features
