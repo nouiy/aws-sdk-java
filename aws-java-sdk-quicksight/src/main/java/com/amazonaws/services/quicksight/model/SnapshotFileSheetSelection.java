@@ -30,8 +30,8 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV and PDF
-     * format types.
+     * The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV, Excel, and
+     * PDF format types.
      * </p>
      */
     private String sheetId;
@@ -50,7 +50,7 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
      * <li>
      * <p>
      * <code>SELECTED_VISUALS</code> - Select the visual that you want to add to the snapshot. This value is required if
-     * the snapshot is a CSV.
+     * the snapshot is a CSV or Excel workbook.
      * </p>
      * </li>
      * </ul>
@@ -58,21 +58,24 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
     private String selectionScope;
     /**
      * <p>
-     * A list of visual IDs that are located in the selected sheet. This structure supports tables and pivot tables.
-     * This structure is required if you are generating a CSV. You can add a maximum of 1 visual ID to this structure.
+     * A structure that lists the IDs of the visuals in the selected sheet. Supported visual types are table, pivot
+     * table visuals. This value is required if you are generating a CSV or Excel workbook. This value supports a
+     * maximum of 1 visual ID for CSV and 5 visual IDs across up to 5 sheet selections for Excel. If you are generating
+     * an Excel workbook, the order of the visual IDs provided in this structure determines the order of the worksheets
+     * in the Excel file.
      * </p>
      */
     private java.util.List<String> visualIds;
 
     /**
      * <p>
-     * The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV and PDF
-     * format types.
+     * The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV, Excel, and
+     * PDF format types.
      * </p>
      * 
      * @param sheetId
-     *        The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV and
-     *        PDF format types.
+     *        The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV,
+     *        Excel, and PDF format types.
      */
 
     public void setSheetId(String sheetId) {
@@ -81,12 +84,12 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV and PDF
-     * format types.
+     * The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV, Excel, and
+     * PDF format types.
      * </p>
      * 
-     * @return The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV and
-     *         PDF format types.
+     * @return The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV,
+     *         Excel, and PDF format types.
      */
 
     public String getSheetId() {
@@ -95,13 +98,13 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV and PDF
-     * format types.
+     * The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV, Excel, and
+     * PDF format types.
      * </p>
      * 
      * @param sheetId
-     *        The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV and
-     *        PDF format types.
+     *        The sheet ID of the dashboard to generate the snapshot artifact from. This value is required for CSV,
+     *        Excel, and PDF format types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -125,7 +128,7 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
      * <li>
      * <p>
      * <code>SELECTED_VISUALS</code> - Select the visual that you want to add to the snapshot. This value is required if
-     * the snapshot is a CSV.
+     * the snapshot is a CSV or Excel workbook.
      * </p>
      * </li>
      * </ul>
@@ -143,7 +146,7 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
      *        <li>
      *        <p>
      *        <code>SELECTED_VISUALS</code> - Select the visual that you want to add to the snapshot. This value is
-     *        required if the snapshot is a CSV.
+     *        required if the snapshot is a CSV or Excel workbook.
      *        </p>
      *        </li>
      * @see SnapshotFileSheetSelectionScope
@@ -168,7 +171,7 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
      * <li>
      * <p>
      * <code>SELECTED_VISUALS</code> - Select the visual that you want to add to the snapshot. This value is required if
-     * the snapshot is a CSV.
+     * the snapshot is a CSV or Excel workbook.
      * </p>
      * </li>
      * </ul>
@@ -185,7 +188,7 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
      *         <li>
      *         <p>
      *         <code>SELECTED_VISUALS</code> - Select the visual that you want to add to the snapshot. This value is
-     *         required if the snapshot is a CSV.
+     *         required if the snapshot is a CSV or Excel workbook.
      *         </p>
      *         </li>
      * @see SnapshotFileSheetSelectionScope
@@ -210,7 +213,7 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
      * <li>
      * <p>
      * <code>SELECTED_VISUALS</code> - Select the visual that you want to add to the snapshot. This value is required if
-     * the snapshot is a CSV.
+     * the snapshot is a CSV or Excel workbook.
      * </p>
      * </li>
      * </ul>
@@ -228,7 +231,7 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
      *        <li>
      *        <p>
      *        <code>SELECTED_VISUALS</code> - Select the visual that you want to add to the snapshot. This value is
-     *        required if the snapshot is a CSV.
+     *        required if the snapshot is a CSV or Excel workbook.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -255,7 +258,7 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
      * <li>
      * <p>
      * <code>SELECTED_VISUALS</code> - Select the visual that you want to add to the snapshot. This value is required if
-     * the snapshot is a CSV.
+     * the snapshot is a CSV or Excel workbook.
      * </p>
      * </li>
      * </ul>
@@ -273,7 +276,7 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
      *        <li>
      *        <p>
      *        <code>SELECTED_VISUALS</code> - Select the visual that you want to add to the snapshot. This value is
-     *        required if the snapshot is a CSV.
+     *        required if the snapshot is a CSV or Excel workbook.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -287,13 +290,18 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * A list of visual IDs that are located in the selected sheet. This structure supports tables and pivot tables.
-     * This structure is required if you are generating a CSV. You can add a maximum of 1 visual ID to this structure.
+     * A structure that lists the IDs of the visuals in the selected sheet. Supported visual types are table, pivot
+     * table visuals. This value is required if you are generating a CSV or Excel workbook. This value supports a
+     * maximum of 1 visual ID for CSV and 5 visual IDs across up to 5 sheet selections for Excel. If you are generating
+     * an Excel workbook, the order of the visual IDs provided in this structure determines the order of the worksheets
+     * in the Excel file.
      * </p>
      * 
-     * @return A list of visual IDs that are located in the selected sheet. This structure supports tables and pivot
-     *         tables. This structure is required if you are generating a CSV. You can add a maximum of 1 visual ID to
-     *         this structure.
+     * @return A structure that lists the IDs of the visuals in the selected sheet. Supported visual types are table,
+     *         pivot table visuals. This value is required if you are generating a CSV or Excel workbook. This value
+     *         supports a maximum of 1 visual ID for CSV and 5 visual IDs across up to 5 sheet selections for Excel. If
+     *         you are generating an Excel workbook, the order of the visual IDs provided in this structure determines
+     *         the order of the worksheets in the Excel file.
      */
 
     public java.util.List<String> getVisualIds() {
@@ -302,14 +310,19 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * A list of visual IDs that are located in the selected sheet. This structure supports tables and pivot tables.
-     * This structure is required if you are generating a CSV. You can add a maximum of 1 visual ID to this structure.
+     * A structure that lists the IDs of the visuals in the selected sheet. Supported visual types are table, pivot
+     * table visuals. This value is required if you are generating a CSV or Excel workbook. This value supports a
+     * maximum of 1 visual ID for CSV and 5 visual IDs across up to 5 sheet selections for Excel. If you are generating
+     * an Excel workbook, the order of the visual IDs provided in this structure determines the order of the worksheets
+     * in the Excel file.
      * </p>
      * 
      * @param visualIds
-     *        A list of visual IDs that are located in the selected sheet. This structure supports tables and pivot
-     *        tables. This structure is required if you are generating a CSV. You can add a maximum of 1 visual ID to
-     *        this structure.
+     *        A structure that lists the IDs of the visuals in the selected sheet. Supported visual types are table,
+     *        pivot table visuals. This value is required if you are generating a CSV or Excel workbook. This value
+     *        supports a maximum of 1 visual ID for CSV and 5 visual IDs across up to 5 sheet selections for Excel. If
+     *        you are generating an Excel workbook, the order of the visual IDs provided in this structure determines
+     *        the order of the worksheets in the Excel file.
      */
 
     public void setVisualIds(java.util.Collection<String> visualIds) {
@@ -323,8 +336,11 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * A list of visual IDs that are located in the selected sheet. This structure supports tables and pivot tables.
-     * This structure is required if you are generating a CSV. You can add a maximum of 1 visual ID to this structure.
+     * A structure that lists the IDs of the visuals in the selected sheet. Supported visual types are table, pivot
+     * table visuals. This value is required if you are generating a CSV or Excel workbook. This value supports a
+     * maximum of 1 visual ID for CSV and 5 visual IDs across up to 5 sheet selections for Excel. If you are generating
+     * an Excel workbook, the order of the visual IDs provided in this structure determines the order of the worksheets
+     * in the Excel file.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -333,9 +349,11 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
      * </p>
      * 
      * @param visualIds
-     *        A list of visual IDs that are located in the selected sheet. This structure supports tables and pivot
-     *        tables. This structure is required if you are generating a CSV. You can add a maximum of 1 visual ID to
-     *        this structure.
+     *        A structure that lists the IDs of the visuals in the selected sheet. Supported visual types are table,
+     *        pivot table visuals. This value is required if you are generating a CSV or Excel workbook. This value
+     *        supports a maximum of 1 visual ID for CSV and 5 visual IDs across up to 5 sheet selections for Excel. If
+     *        you are generating an Excel workbook, the order of the visual IDs provided in this structure determines
+     *        the order of the worksheets in the Excel file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -351,14 +369,19 @@ public class SnapshotFileSheetSelection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * A list of visual IDs that are located in the selected sheet. This structure supports tables and pivot tables.
-     * This structure is required if you are generating a CSV. You can add a maximum of 1 visual ID to this structure.
+     * A structure that lists the IDs of the visuals in the selected sheet. Supported visual types are table, pivot
+     * table visuals. This value is required if you are generating a CSV or Excel workbook. This value supports a
+     * maximum of 1 visual ID for CSV and 5 visual IDs across up to 5 sheet selections for Excel. If you are generating
+     * an Excel workbook, the order of the visual IDs provided in this structure determines the order of the worksheets
+     * in the Excel file.
      * </p>
      * 
      * @param visualIds
-     *        A list of visual IDs that are located in the selected sheet. This structure supports tables and pivot
-     *        tables. This structure is required if you are generating a CSV. You can add a maximum of 1 visual ID to
-     *        this structure.
+     *        A structure that lists the IDs of the visuals in the selected sheet. Supported visual types are table,
+     *        pivot table visuals. This value is required if you are generating a CSV or Excel workbook. This value
+     *        supports a maximum of 1 visual ID for CSV and 5 visual IDs across up to 5 sheet selections for Excel. If
+     *        you are generating an Excel workbook, the order of the visual IDs provided in this structure determines
+     *        the order of the worksheets in the Excel file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

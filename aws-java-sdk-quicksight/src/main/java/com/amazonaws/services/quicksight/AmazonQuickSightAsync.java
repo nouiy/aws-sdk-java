@@ -5047,6 +5047,11 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      * </li>
      * <li>
      * <p>
+     * 1 Excel workbook
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * 5 CSVs
      * </p>
      * </li>
@@ -5074,6 +5079,11 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      * <li>
      * <p>
      * 1 paginated PDF
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 1 Excel workbook
      * </p>
      * </li>
      * <li>

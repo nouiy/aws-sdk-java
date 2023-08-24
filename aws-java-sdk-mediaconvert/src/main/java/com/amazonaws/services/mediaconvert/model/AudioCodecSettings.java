@@ -54,6 +54,8 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     private Eac3AtmosSettings eac3AtmosSettings;
     /** Required when you set Codec to the value EAC3. */
     private Eac3Settings eac3Settings;
+    /** Required when you set Codec, under AudioDescriptions>CodecSettings, to the value FLAC. */
+    private FlacSettings flacSettings;
     /** Required when you set Codec to the value MP2. */
     private Mp2Settings mp2Settings;
     /** Required when you set Codec, under AudioDescriptions>CodecSettings, to the value MP3. */
@@ -372,6 +374,40 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * Required when you set Codec, under AudioDescriptions>CodecSettings, to the value FLAC.
+     * 
+     * @param flacSettings
+     *        Required when you set Codec, under AudioDescriptions>CodecSettings, to the value FLAC.
+     */
+
+    public void setFlacSettings(FlacSettings flacSettings) {
+        this.flacSettings = flacSettings;
+    }
+
+    /**
+     * Required when you set Codec, under AudioDescriptions>CodecSettings, to the value FLAC.
+     * 
+     * @return Required when you set Codec, under AudioDescriptions>CodecSettings, to the value FLAC.
+     */
+
+    public FlacSettings getFlacSettings() {
+        return this.flacSettings;
+    }
+
+    /**
+     * Required when you set Codec, under AudioDescriptions>CodecSettings, to the value FLAC.
+     * 
+     * @param flacSettings
+     *        Required when you set Codec, under AudioDescriptions>CodecSettings, to the value FLAC.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudioCodecSettings withFlacSettings(FlacSettings flacSettings) {
+        setFlacSettings(flacSettings);
+        return this;
+    }
+
+    /**
      * Required when you set Codec to the value MP2.
      * 
      * @param mp2Settings
@@ -565,6 +601,8 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
             sb.append("Eac3AtmosSettings: ").append(getEac3AtmosSettings()).append(",");
         if (getEac3Settings() != null)
             sb.append("Eac3Settings: ").append(getEac3Settings()).append(",");
+        if (getFlacSettings() != null)
+            sb.append("FlacSettings: ").append(getFlacSettings()).append(",");
         if (getMp2Settings() != null)
             sb.append("Mp2Settings: ").append(getMp2Settings()).append(",");
         if (getMp3Settings() != null)
@@ -613,6 +651,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getEac3Settings() != null && other.getEac3Settings().equals(this.getEac3Settings()) == false)
             return false;
+        if (other.getFlacSettings() == null ^ this.getFlacSettings() == null)
+            return false;
+        if (other.getFlacSettings() != null && other.getFlacSettings().equals(this.getFlacSettings()) == false)
+            return false;
         if (other.getMp2Settings() == null ^ this.getMp2Settings() == null)
             return false;
         if (other.getMp2Settings() != null && other.getMp2Settings().equals(this.getMp2Settings()) == false)
@@ -647,6 +689,7 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getCodec() == null) ? 0 : getCodec().hashCode());
         hashCode = prime * hashCode + ((getEac3AtmosSettings() == null) ? 0 : getEac3AtmosSettings().hashCode());
         hashCode = prime * hashCode + ((getEac3Settings() == null) ? 0 : getEac3Settings().hashCode());
+        hashCode = prime * hashCode + ((getFlacSettings() == null) ? 0 : getFlacSettings().hashCode());
         hashCode = prime * hashCode + ((getMp2Settings() == null) ? 0 : getMp2Settings().hashCode());
         hashCode = prime * hashCode + ((getMp3Settings() == null) ? 0 : getMp3Settings().hashCode());
         hashCode = prime * hashCode + ((getOpusSettings() == null) ? 0 : getOpusSettings().hashCode());

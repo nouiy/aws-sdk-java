@@ -5111,6 +5111,8 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
      *         One or more resources can't be found.
      * @throws ThrottlingException
      *         Access is throttled.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> value isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
      *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
@@ -5186,6 +5188,8 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
      *         One or more resources can't be found.
      * @throws ThrottlingException
      *         Access is throttled.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> value isn't valid.
      * @throws UnsupportedUserEditionException
      *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
      *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
@@ -10044,6 +10048,11 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
      * <li>
      * <p>
      * 1 paginated PDF
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 1 Excel workbook
      * </p>
      * </li>
      * <li>

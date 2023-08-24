@@ -152,7 +152,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <b>Aurora MySQL</b>
      * </p>
      * <p>
-     * Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
+     * Examples: <code>5.7.mysql_aurora.2.12.0</code>, <code>8.0.mysql_aurora.3.04.0</code>
      * </p>
      */
     private String engineVersion;
@@ -331,10 +331,10 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The version of the database that the backup files were created from.
      * </p>
      * <p>
-     * MySQL versions 5.5, 5.6, and 5.7 are supported.
+     * MySQL versions 5.7 and 8.0 are supported.
      * </p>
      * <p>
-     * Example: <code>5.6.40</code>, <code>5.7.28</code>
+     * Example: <code>5.7.40</code>, <code>8.0.28</code>
      * </p>
      */
     private String sourceEngineVersion;
@@ -1305,7 +1305,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <b>Aurora MySQL</b>
      * </p>
      * <p>
-     * Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
+     * Examples: <code>5.7.mysql_aurora.2.12.0</code>, <code>8.0.mysql_aurora.3.04.0</code>
      * </p>
      * 
      * @param engineVersion
@@ -1321,7 +1321,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        <b>Aurora MySQL</b>
      *        </p>
      *        <p>
-     *        Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
+     *        Examples: <code>5.7.mysql_aurora.2.12.0</code>, <code>8.0.mysql_aurora.3.04.0</code>
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -1343,7 +1343,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <b>Aurora MySQL</b>
      * </p>
      * <p>
-     * Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
+     * Examples: <code>5.7.mysql_aurora.2.12.0</code>, <code>8.0.mysql_aurora.3.04.0</code>
      * </p>
      * 
      * @return The version number of the database engine to use.</p>
@@ -1358,7 +1358,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *         <b>Aurora MySQL</b>
      *         </p>
      *         <p>
-     *         Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
+     *         Examples: <code>5.7.mysql_aurora.2.12.0</code>, <code>8.0.mysql_aurora.3.04.0</code>
      */
 
     public String getEngineVersion() {
@@ -1380,7 +1380,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <b>Aurora MySQL</b>
      * </p>
      * <p>
-     * Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
+     * Examples: <code>5.7.mysql_aurora.2.12.0</code>, <code>8.0.mysql_aurora.3.04.0</code>
      * </p>
      * 
      * @param engineVersion
@@ -1396,7 +1396,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        <b>Aurora MySQL</b>
      *        </p>
      *        <p>
-     *        Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
+     *        Examples: <code>5.7.mysql_aurora.2.12.0</code>, <code>8.0.mysql_aurora.3.04.0</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2530,19 +2530,19 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The version of the database that the backup files were created from.
      * </p>
      * <p>
-     * MySQL versions 5.5, 5.6, and 5.7 are supported.
+     * MySQL versions 5.7 and 8.0 are supported.
      * </p>
      * <p>
-     * Example: <code>5.6.40</code>, <code>5.7.28</code>
+     * Example: <code>5.7.40</code>, <code>8.0.28</code>
      * </p>
      * 
      * @param sourceEngineVersion
      *        The version of the database that the backup files were created from.</p>
      *        <p>
-     *        MySQL versions 5.5, 5.6, and 5.7 are supported.
+     *        MySQL versions 5.7 and 8.0 are supported.
      *        </p>
      *        <p>
-     *        Example: <code>5.6.40</code>, <code>5.7.28</code>
+     *        Example: <code>5.7.40</code>, <code>8.0.28</code>
      */
 
     public void setSourceEngineVersion(String sourceEngineVersion) {
@@ -2554,18 +2554,18 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The version of the database that the backup files were created from.
      * </p>
      * <p>
-     * MySQL versions 5.5, 5.6, and 5.7 are supported.
+     * MySQL versions 5.7 and 8.0 are supported.
      * </p>
      * <p>
-     * Example: <code>5.6.40</code>, <code>5.7.28</code>
+     * Example: <code>5.7.40</code>, <code>8.0.28</code>
      * </p>
      * 
      * @return The version of the database that the backup files were created from.</p>
      *         <p>
-     *         MySQL versions 5.5, 5.6, and 5.7 are supported.
+     *         MySQL versions 5.7 and 8.0 are supported.
      *         </p>
      *         <p>
-     *         Example: <code>5.6.40</code>, <code>5.7.28</code>
+     *         Example: <code>5.7.40</code>, <code>8.0.28</code>
      */
 
     public String getSourceEngineVersion() {
@@ -2577,19 +2577,19 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The version of the database that the backup files were created from.
      * </p>
      * <p>
-     * MySQL versions 5.5, 5.6, and 5.7 are supported.
+     * MySQL versions 5.7 and 8.0 are supported.
      * </p>
      * <p>
-     * Example: <code>5.6.40</code>, <code>5.7.28</code>
+     * Example: <code>5.7.40</code>, <code>8.0.28</code>
      * </p>
      * 
      * @param sourceEngineVersion
      *        The version of the database that the backup files were created from.</p>
      *        <p>
-     *        MySQL versions 5.5, 5.6, and 5.7 are supported.
+     *        MySQL versions 5.7 and 8.0 are supported.
      *        </p>
      *        <p>
-     *        Example: <code>5.6.40</code>, <code>5.7.28</code>
+     *        Example: <code>5.7.40</code>, <code>8.0.28</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

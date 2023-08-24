@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum SnapshotFileFormatType {
 
     CSV("CSV"),
-    PDF("PDF");
+    PDF("PDF"),
+    EXCEL("EXCEL");
 
     private String value;
 

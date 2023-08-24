@@ -27,7 +27,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * >EntitiesDefinition</a> structure.
  * </p>
  * <p>
- * <code>{ "id": { "entityType": "Photo", "entityId": "VacationPhoto94.jpg" }, "Attributes": {}, "Parents": [ { "entityType": "Album", "entityId": "alice_folder" } ] }</code>
+ * <code>{ "identifier": { "entityType": "Photo", "entityId": "VacationPhoto94.jpg" }, "attributes": {}, "parents": [ { "entityType": "Album", "entityId": "alice_folder" } ] }</code>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/EntityItem" target="_top">AWS API

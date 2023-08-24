@@ -699,7 +699,23 @@ public enum InstanceType {
     M7iFlexXlarge("m7i-flex.xlarge"),
     M7iFlex2xlarge("m7i-flex.2xlarge"),
     M7iFlex4xlarge("m7i-flex.4xlarge"),
-    M7iFlex8xlarge("m7i-flex.8xlarge");
+    M7iFlex8xlarge("m7i-flex.8xlarge"),
+    M7aMedium("m7a.medium"),
+    M7aLarge("m7a.large"),
+    M7aXlarge("m7a.xlarge"),
+    M7a2xlarge("m7a.2xlarge"),
+    M7a4xlarge("m7a.4xlarge"),
+    M7a8xlarge("m7a.8xlarge"),
+    M7a12xlarge("m7a.12xlarge"),
+    M7a16xlarge("m7a.16xlarge"),
+    M7a24xlarge("m7a.24xlarge"),
+    M7a32xlarge("m7a.32xlarge"),
+    M7a48xlarge("m7a.48xlarge"),
+    M7aMetal48xl("m7a.metal-48xl"),
+    Hpc7a12xlarge("hpc7a.12xlarge"),
+    Hpc7a24xlarge("hpc7a.24xlarge"),
+    Hpc7a48xlarge("hpc7a.48xlarge"),
+    Hpc7a96xlarge("hpc7a.96xlarge");
 
     private String value;
 

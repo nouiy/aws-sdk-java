@@ -34,6 +34,13 @@ public class Av1Settings implements Serializable, Cloneable, StructuredPojo {
     /** Specify the Bit depth. You can choose 8-bit or 10-bit. */
     private String bitDepth;
     /**
+     * Film grain synthesis replaces film grain present in your content with similar quality synthesized AV1 film grain.
+     * We recommend that you choose Enabled to reduce the bandwidth of your QVBR quality level 5, 6, 7, or 8 outputs.
+     * For QVBR quality level 9 or 10 outputs we recommend that you keep the default value, Disabled. When you include
+     * Film grain synthesis, you cannot include the Noise reducer preprocessor.
+     */
+    private String filmGrainSynthesis;
+    /**
      * Use the Framerate setting to specify the frame rate for this output. If you want to keep the same frame rate as
      * the input video, choose Follow source. If you want to do frame rate conversion, choose a frame rate from the
      * dropdown list or choose Custom. The framerates shown in the dropdown list are decimal approximations of fractions.
@@ -218,6 +225,81 @@ public class Av1Settings implements Serializable, Cloneable, StructuredPojo {
 
     public Av1Settings withBitDepth(Av1BitDepth bitDepth) {
         this.bitDepth = bitDepth.toString();
+        return this;
+    }
+
+    /**
+     * Film grain synthesis replaces film grain present in your content with similar quality synthesized AV1 film grain.
+     * We recommend that you choose Enabled to reduce the bandwidth of your QVBR quality level 5, 6, 7, or 8 outputs.
+     * For QVBR quality level 9 or 10 outputs we recommend that you keep the default value, Disabled. When you include
+     * Film grain synthesis, you cannot include the Noise reducer preprocessor.
+     * 
+     * @param filmGrainSynthesis
+     *        Film grain synthesis replaces film grain present in your content with similar quality synthesized AV1 film
+     *        grain. We recommend that you choose Enabled to reduce the bandwidth of your QVBR quality level 5, 6, 7, or
+     *        8 outputs. For QVBR quality level 9 or 10 outputs we recommend that you keep the default value, Disabled.
+     *        When you include Film grain synthesis, you cannot include the Noise reducer preprocessor.
+     * @see Av1FilmGrainSynthesis
+     */
+
+    public void setFilmGrainSynthesis(String filmGrainSynthesis) {
+        this.filmGrainSynthesis = filmGrainSynthesis;
+    }
+
+    /**
+     * Film grain synthesis replaces film grain present in your content with similar quality synthesized AV1 film grain.
+     * We recommend that you choose Enabled to reduce the bandwidth of your QVBR quality level 5, 6, 7, or 8 outputs.
+     * For QVBR quality level 9 or 10 outputs we recommend that you keep the default value, Disabled. When you include
+     * Film grain synthesis, you cannot include the Noise reducer preprocessor.
+     * 
+     * @return Film grain synthesis replaces film grain present in your content with similar quality synthesized AV1
+     *         film grain. We recommend that you choose Enabled to reduce the bandwidth of your QVBR quality level 5, 6,
+     *         7, or 8 outputs. For QVBR quality level 9 or 10 outputs we recommend that you keep the default value,
+     *         Disabled. When you include Film grain synthesis, you cannot include the Noise reducer preprocessor.
+     * @see Av1FilmGrainSynthesis
+     */
+
+    public String getFilmGrainSynthesis() {
+        return this.filmGrainSynthesis;
+    }
+
+    /**
+     * Film grain synthesis replaces film grain present in your content with similar quality synthesized AV1 film grain.
+     * We recommend that you choose Enabled to reduce the bandwidth of your QVBR quality level 5, 6, 7, or 8 outputs.
+     * For QVBR quality level 9 or 10 outputs we recommend that you keep the default value, Disabled. When you include
+     * Film grain synthesis, you cannot include the Noise reducer preprocessor.
+     * 
+     * @param filmGrainSynthesis
+     *        Film grain synthesis replaces film grain present in your content with similar quality synthesized AV1 film
+     *        grain. We recommend that you choose Enabled to reduce the bandwidth of your QVBR quality level 5, 6, 7, or
+     *        8 outputs. For QVBR quality level 9 or 10 outputs we recommend that you keep the default value, Disabled.
+     *        When you include Film grain synthesis, you cannot include the Noise reducer preprocessor.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Av1FilmGrainSynthesis
+     */
+
+    public Av1Settings withFilmGrainSynthesis(String filmGrainSynthesis) {
+        setFilmGrainSynthesis(filmGrainSynthesis);
+        return this;
+    }
+
+    /**
+     * Film grain synthesis replaces film grain present in your content with similar quality synthesized AV1 film grain.
+     * We recommend that you choose Enabled to reduce the bandwidth of your QVBR quality level 5, 6, 7, or 8 outputs.
+     * For QVBR quality level 9 or 10 outputs we recommend that you keep the default value, Disabled. When you include
+     * Film grain synthesis, you cannot include the Noise reducer preprocessor.
+     * 
+     * @param filmGrainSynthesis
+     *        Film grain synthesis replaces film grain present in your content with similar quality synthesized AV1 film
+     *        grain. We recommend that you choose Enabled to reduce the bandwidth of your QVBR quality level 5, 6, 7, or
+     *        8 outputs. For QVBR quality level 9 or 10 outputs we recommend that you keep the default value, Disabled.
+     *        When you include Film grain synthesis, you cannot include the Noise reducer preprocessor.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Av1FilmGrainSynthesis
+     */
+
+    public Av1Settings withFilmGrainSynthesis(Av1FilmGrainSynthesis filmGrainSynthesis) {
+        this.filmGrainSynthesis = filmGrainSynthesis.toString();
         return this;
     }
 
@@ -930,6 +1012,8 @@ public class Av1Settings implements Serializable, Cloneable, StructuredPojo {
             sb.append("AdaptiveQuantization: ").append(getAdaptiveQuantization()).append(",");
         if (getBitDepth() != null)
             sb.append("BitDepth: ").append(getBitDepth()).append(",");
+        if (getFilmGrainSynthesis() != null)
+            sb.append("FilmGrainSynthesis: ").append(getFilmGrainSynthesis()).append(",");
         if (getFramerateControl() != null)
             sb.append("FramerateControl: ").append(getFramerateControl()).append(",");
         if (getFramerateConversionAlgorithm() != null)
@@ -973,6 +1057,10 @@ public class Av1Settings implements Serializable, Cloneable, StructuredPojo {
         if (other.getBitDepth() == null ^ this.getBitDepth() == null)
             return false;
         if (other.getBitDepth() != null && other.getBitDepth().equals(this.getBitDepth()) == false)
+            return false;
+        if (other.getFilmGrainSynthesis() == null ^ this.getFilmGrainSynthesis() == null)
+            return false;
+        if (other.getFilmGrainSynthesis() != null && other.getFilmGrainSynthesis().equals(this.getFilmGrainSynthesis()) == false)
             return false;
         if (other.getFramerateControl() == null ^ this.getFramerateControl() == null)
             return false;
@@ -1029,6 +1117,7 @@ public class Av1Settings implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getAdaptiveQuantization() == null) ? 0 : getAdaptiveQuantization().hashCode());
         hashCode = prime * hashCode + ((getBitDepth() == null) ? 0 : getBitDepth().hashCode());
+        hashCode = prime * hashCode + ((getFilmGrainSynthesis() == null) ? 0 : getFilmGrainSynthesis().hashCode());
         hashCode = prime * hashCode + ((getFramerateControl() == null) ? 0 : getFramerateControl().hashCode());
         hashCode = prime * hashCode + ((getFramerateConversionAlgorithm() == null) ? 0 : getFramerateConversionAlgorithm().hashCode());
         hashCode = prime * hashCode + ((getFramerateDenominator() == null) ? 0 : getFramerateDenominator().hashCode());

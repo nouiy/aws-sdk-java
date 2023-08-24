@@ -147,6 +147,12 @@ public interface AmazonVerifiedPermissions {
      * for this operation. The <code>CognitoUserPoolId</code> and <code>CognitoClientId</code> are defined by the Amazon
      * Cognito user pool.
      * </p>
+     * </note> <note>
+     * <p>
+     * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
+     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
+     * in the results of other Verified Permissions operations.
+     * </p>
      * </note>
      * 
      * @param createIdentitySourceRequest
@@ -291,6 +297,12 @@ public interface AmazonVerifiedPermissions {
      * Creating a policy causes it to be validated against the schema in the policy store. If the policy doesn't pass
      * validation, the operation fails and the policy isn't stored.
      * </p>
+     * </note> <note>
+     * <p>
+     * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
+     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
+     * in the results of other Verified Permissions operations.
+     * </p>
      * </note>
      * 
      * @param createPolicyRequest
@@ -418,6 +430,12 @@ public interface AmazonVerifiedPermissions {
      * Although <a href="https://docs.cedarpolicy.com/schema.html#namespace">Cedar supports multiple namespaces</a>,
      * Verified Permissions currently supports only one namespace per policy store.
      * </p>
+     * </note> <note>
+     * <p>
+     * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
+     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
+     * in the results of other Verified Permissions operations.
+     * </p>
      * </note>
      * 
      * @param createPolicyStoreRequest
@@ -542,6 +560,13 @@ public interface AmazonVerifiedPermissions {
      * identically to any other policy, except that it is dynamically linked to the template. If the template changes,
      * then any policies that are linked to that template are immediately updated as well.
      * </p>
+     * <note>
+     * <p>
+     * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
+     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
+     * in the results of other Verified Permissions operations.
+     * </p>
+     * </note>
      * 
      * @param createPolicyTemplateRequest
      * @return Result of the CreatePolicyTemplate operation returned by the service.
@@ -2503,6 +2528,13 @@ public interface AmazonVerifiedPermissions {
      * templates submitted after the schema change. Existing policies and templates are not re-evaluated against the
      * changed schema. If you later update a policy, then it is evaluated against the new schema at that time.
      * </p>
+     * <note>
+     * <p>
+     * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
+     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
+     * in the results of other Verified Permissions operations.
+     * </p>
+     * </note>
      * 
      * @param putSchemaRequest
      * @return Result of the PutSchema operation returned by the service.
@@ -2627,6 +2659,13 @@ public interface AmazonVerifiedPermissions {
      * Updates the specified identity source to use a new identity provider (IdP) source, or to change the mapping of
      * identities from the IdP to a different principal entity type.
      * </p>
+     * <note>
+     * <p>
+     * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
+     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
+     * in the results of other Verified Permissions operations.
+     * </p>
+     * </note>
      * 
      * @param updateIdentitySourceRequest
      * @return Result of the UpdateIdentitySource operation returned by the service.
@@ -2811,6 +2850,12 @@ public interface AmazonVerifiedPermissions {
      * </p>
      * </li>
      * </ul>
+     * </note> <note>
+     * <p>
+     * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
+     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
+     * in the results of other Verified Permissions operations.
+     * </p>
      * </note>
      * 
      * @param updatePolicyRequest
@@ -2935,6 +2980,13 @@ public interface AmazonVerifiedPermissions {
      * <p>
      * Modifies the validation setting for a policy store.
      * </p>
+     * <note>
+     * <p>
+     * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
+     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
+     * in the results of other Verified Permissions operations.
+     * </p>
+     * </note>
      * 
      * @param updatePolicyStoreRequest
      * @return Result of the UpdatePolicyStore operation returned by the service.
@@ -3063,7 +3115,13 @@ public interface AmazonVerifiedPermissions {
      * Changes you make to the policy template content are immediately reflected in authorization decisions that involve
      * all template-linked policies instantiated from this template.
      * </p>
-     * </important>
+     * </important> <note>
+     * <p>
+     * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
+     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
+     * in the results of other Verified Permissions operations.
+     * </p>
+     * </note>
      * 
      * @param updatePolicyTemplateRequest
      * @return Result of the UpdatePolicyTemplate operation returned by the service.

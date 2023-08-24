@@ -33,13 +33,14 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A list of <code>SnapshotFileSheetSelection</code> objects that contain information on the dashboard sheet that is
      * exported. These objects provide information about the snapshot artifacts that are generated during the job. This
-     * structure can hold a maximum of 5 CSV configurations or 1 configuration for PDF.
+     * structure can hold a maximum of 5 CSV configurations, 5 Excel configurations, or 1 configuration for PDF.
      * </p>
      */
     private java.util.List<SnapshotFileSheetSelection> sheetSelections;
     /**
      * <p>
-     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> or <code>PDF</code>.
+     * The format of the snapshot file to be generated. You can choose between <code>CSV</code>, <code>Excel</code>, or
+     * <code>PDF</code>.
      * </p>
      */
     private String formatType;
@@ -48,12 +49,13 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A list of <code>SnapshotFileSheetSelection</code> objects that contain information on the dashboard sheet that is
      * exported. These objects provide information about the snapshot artifacts that are generated during the job. This
-     * structure can hold a maximum of 5 CSV configurations or 1 configuration for PDF.
+     * structure can hold a maximum of 5 CSV configurations, 5 Excel configurations, or 1 configuration for PDF.
      * </p>
      * 
      * @return A list of <code>SnapshotFileSheetSelection</code> objects that contain information on the dashboard sheet
      *         that is exported. These objects provide information about the snapshot artifacts that are generated
-     *         during the job. This structure can hold a maximum of 5 CSV configurations or 1 configuration for PDF.
+     *         during the job. This structure can hold a maximum of 5 CSV configurations, 5 Excel configurations, or 1
+     *         configuration for PDF.
      */
 
     public java.util.List<SnapshotFileSheetSelection> getSheetSelections() {
@@ -64,13 +66,14 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A list of <code>SnapshotFileSheetSelection</code> objects that contain information on the dashboard sheet that is
      * exported. These objects provide information about the snapshot artifacts that are generated during the job. This
-     * structure can hold a maximum of 5 CSV configurations or 1 configuration for PDF.
+     * structure can hold a maximum of 5 CSV configurations, 5 Excel configurations, or 1 configuration for PDF.
      * </p>
      * 
      * @param sheetSelections
      *        A list of <code>SnapshotFileSheetSelection</code> objects that contain information on the dashboard sheet
      *        that is exported. These objects provide information about the snapshot artifacts that are generated during
-     *        the job. This structure can hold a maximum of 5 CSV configurations or 1 configuration for PDF.
+     *        the job. This structure can hold a maximum of 5 CSV configurations, 5 Excel configurations, or 1
+     *        configuration for PDF.
      */
 
     public void setSheetSelections(java.util.Collection<SnapshotFileSheetSelection> sheetSelections) {
@@ -86,7 +89,7 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A list of <code>SnapshotFileSheetSelection</code> objects that contain information on the dashboard sheet that is
      * exported. These objects provide information about the snapshot artifacts that are generated during the job. This
-     * structure can hold a maximum of 5 CSV configurations or 1 configuration for PDF.
+     * structure can hold a maximum of 5 CSV configurations, 5 Excel configurations, or 1 configuration for PDF.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -97,7 +100,8 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
      * @param sheetSelections
      *        A list of <code>SnapshotFileSheetSelection</code> objects that contain information on the dashboard sheet
      *        that is exported. These objects provide information about the snapshot artifacts that are generated during
-     *        the job. This structure can hold a maximum of 5 CSV configurations or 1 configuration for PDF.
+     *        the job. This structure can hold a maximum of 5 CSV configurations, 5 Excel configurations, or 1
+     *        configuration for PDF.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -115,13 +119,14 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A list of <code>SnapshotFileSheetSelection</code> objects that contain information on the dashboard sheet that is
      * exported. These objects provide information about the snapshot artifacts that are generated during the job. This
-     * structure can hold a maximum of 5 CSV configurations or 1 configuration for PDF.
+     * structure can hold a maximum of 5 CSV configurations, 5 Excel configurations, or 1 configuration for PDF.
      * </p>
      * 
      * @param sheetSelections
      *        A list of <code>SnapshotFileSheetSelection</code> objects that contain information on the dashboard sheet
      *        that is exported. These objects provide information about the snapshot artifacts that are generated during
-     *        the job. This structure can hold a maximum of 5 CSV configurations or 1 configuration for PDF.
+     *        the job. This structure can hold a maximum of 5 CSV configurations, 5 Excel configurations, or 1
+     *        configuration for PDF.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,12 +137,13 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> or <code>PDF</code>.
+     * The format of the snapshot file to be generated. You can choose between <code>CSV</code>, <code>Excel</code>, or
+     * <code>PDF</code>.
      * </p>
      * 
      * @param formatType
-     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code> or
-     *        <code>PDF</code>.
+     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code>,
+     *        <code>Excel</code>, or <code>PDF</code>.
      * @see SnapshotFileFormatType
      */
 
@@ -147,11 +153,12 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> or <code>PDF</code>.
+     * The format of the snapshot file to be generated. You can choose between <code>CSV</code>, <code>Excel</code>, or
+     * <code>PDF</code>.
      * </p>
      * 
-     * @return The format of the snapshot file to be generated. You can choose between <code>CSV</code> or
-     *         <code>PDF</code>.
+     * @return The format of the snapshot file to be generated. You can choose between <code>CSV</code>,
+     *         <code>Excel</code>, or <code>PDF</code>.
      * @see SnapshotFileFormatType
      */
 
@@ -161,12 +168,13 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> or <code>PDF</code>.
+     * The format of the snapshot file to be generated. You can choose between <code>CSV</code>, <code>Excel</code>, or
+     * <code>PDF</code>.
      * </p>
      * 
      * @param formatType
-     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code> or
-     *        <code>PDF</code>.
+     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code>,
+     *        <code>Excel</code>, or <code>PDF</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SnapshotFileFormatType
      */
@@ -178,12 +186,13 @@ public class SnapshotFile implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The format of the snapshot file to be generated. You can choose between <code>CSV</code> or <code>PDF</code>.
+     * The format of the snapshot file to be generated. You can choose between <code>CSV</code>, <code>Excel</code>, or
+     * <code>PDF</code>.
      * </p>
      * 
      * @param formatType
-     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code> or
-     *        <code>PDF</code>.
+     *        The format of the snapshot file to be generated. You can choose between <code>CSV</code>,
+     *        <code>Excel</code>, or <code>PDF</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SnapshotFileFormatType
      */

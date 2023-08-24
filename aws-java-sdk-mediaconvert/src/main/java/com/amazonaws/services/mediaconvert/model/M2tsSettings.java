@@ -161,6 +161,19 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
      */
     private Integer programNumber;
     /**
+     * Manually specify the initial PTS offset, in seconds, when you set PTS offset to Seconds. Enter an integer from 0
+     * to 3600. Leave blank to keep the default value 2.
+     */
+    private Integer ptsOffset;
+    /**
+     * Specify the initial presentation timestamp (PTS) offset for your transport stream output. To let MediaConvert
+     * automatically determine the initial PTS offset: Keep the default value, Auto. We recommend that you choose Auto
+     * for the widest player compatibility. The initial PTS will be at least two seconds and vary depending on your
+     * output's bitrate, HRD buffer size and HRD buffer initial fill percentage. To manually specify an initial PTS
+     * offset: Choose Seconds. Then specify the number of seconds with PTS offset.
+     */
+    private String ptsOffsetMode;
+    /**
      * When set to CBR, inserts null packets into transport stream to fill specified bitrate. When set to VBR, the
      * bitrate setting acts as the maximum bitrate, but the output will not be padded up to that bitrate.
      */
@@ -1704,6 +1717,133 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * Manually specify the initial PTS offset, in seconds, when you set PTS offset to Seconds. Enter an integer from 0
+     * to 3600. Leave blank to keep the default value 2.
+     * 
+     * @param ptsOffset
+     *        Manually specify the initial PTS offset, in seconds, when you set PTS offset to Seconds. Enter an integer
+     *        from 0 to 3600. Leave blank to keep the default value 2.
+     */
+
+    public void setPtsOffset(Integer ptsOffset) {
+        this.ptsOffset = ptsOffset;
+    }
+
+    /**
+     * Manually specify the initial PTS offset, in seconds, when you set PTS offset to Seconds. Enter an integer from 0
+     * to 3600. Leave blank to keep the default value 2.
+     * 
+     * @return Manually specify the initial PTS offset, in seconds, when you set PTS offset to Seconds. Enter an integer
+     *         from 0 to 3600. Leave blank to keep the default value 2.
+     */
+
+    public Integer getPtsOffset() {
+        return this.ptsOffset;
+    }
+
+    /**
+     * Manually specify the initial PTS offset, in seconds, when you set PTS offset to Seconds. Enter an integer from 0
+     * to 3600. Leave blank to keep the default value 2.
+     * 
+     * @param ptsOffset
+     *        Manually specify the initial PTS offset, in seconds, when you set PTS offset to Seconds. Enter an integer
+     *        from 0 to 3600. Leave blank to keep the default value 2.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public M2tsSettings withPtsOffset(Integer ptsOffset) {
+        setPtsOffset(ptsOffset);
+        return this;
+    }
+
+    /**
+     * Specify the initial presentation timestamp (PTS) offset for your transport stream output. To let MediaConvert
+     * automatically determine the initial PTS offset: Keep the default value, Auto. We recommend that you choose Auto
+     * for the widest player compatibility. The initial PTS will be at least two seconds and vary depending on your
+     * output's bitrate, HRD buffer size and HRD buffer initial fill percentage. To manually specify an initial PTS
+     * offset: Choose Seconds. Then specify the number of seconds with PTS offset.
+     * 
+     * @param ptsOffsetMode
+     *        Specify the initial presentation timestamp (PTS) offset for your transport stream output. To let
+     *        MediaConvert automatically determine the initial PTS offset: Keep the default value, Auto. We recommend
+     *        that you choose Auto for the widest player compatibility. The initial PTS will be at least two seconds and
+     *        vary depending on your output's bitrate, HRD buffer size and HRD buffer initial fill percentage. To
+     *        manually specify an initial PTS offset: Choose Seconds. Then specify the number of seconds with PTS
+     *        offset.
+     * @see TsPtsOffset
+     */
+
+    public void setPtsOffsetMode(String ptsOffsetMode) {
+        this.ptsOffsetMode = ptsOffsetMode;
+    }
+
+    /**
+     * Specify the initial presentation timestamp (PTS) offset for your transport stream output. To let MediaConvert
+     * automatically determine the initial PTS offset: Keep the default value, Auto. We recommend that you choose Auto
+     * for the widest player compatibility. The initial PTS will be at least two seconds and vary depending on your
+     * output's bitrate, HRD buffer size and HRD buffer initial fill percentage. To manually specify an initial PTS
+     * offset: Choose Seconds. Then specify the number of seconds with PTS offset.
+     * 
+     * @return Specify the initial presentation timestamp (PTS) offset for your transport stream output. To let
+     *         MediaConvert automatically determine the initial PTS offset: Keep the default value, Auto. We recommend
+     *         that you choose Auto for the widest player compatibility. The initial PTS will be at least two seconds
+     *         and vary depending on your output's bitrate, HRD buffer size and HRD buffer initial fill percentage. To
+     *         manually specify an initial PTS offset: Choose Seconds. Then specify the number of seconds with PTS
+     *         offset.
+     * @see TsPtsOffset
+     */
+
+    public String getPtsOffsetMode() {
+        return this.ptsOffsetMode;
+    }
+
+    /**
+     * Specify the initial presentation timestamp (PTS) offset for your transport stream output. To let MediaConvert
+     * automatically determine the initial PTS offset: Keep the default value, Auto. We recommend that you choose Auto
+     * for the widest player compatibility. The initial PTS will be at least two seconds and vary depending on your
+     * output's bitrate, HRD buffer size and HRD buffer initial fill percentage. To manually specify an initial PTS
+     * offset: Choose Seconds. Then specify the number of seconds with PTS offset.
+     * 
+     * @param ptsOffsetMode
+     *        Specify the initial presentation timestamp (PTS) offset for your transport stream output. To let
+     *        MediaConvert automatically determine the initial PTS offset: Keep the default value, Auto. We recommend
+     *        that you choose Auto for the widest player compatibility. The initial PTS will be at least two seconds and
+     *        vary depending on your output's bitrate, HRD buffer size and HRD buffer initial fill percentage. To
+     *        manually specify an initial PTS offset: Choose Seconds. Then specify the number of seconds with PTS
+     *        offset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TsPtsOffset
+     */
+
+    public M2tsSettings withPtsOffsetMode(String ptsOffsetMode) {
+        setPtsOffsetMode(ptsOffsetMode);
+        return this;
+    }
+
+    /**
+     * Specify the initial presentation timestamp (PTS) offset for your transport stream output. To let MediaConvert
+     * automatically determine the initial PTS offset: Keep the default value, Auto. We recommend that you choose Auto
+     * for the widest player compatibility. The initial PTS will be at least two seconds and vary depending on your
+     * output's bitrate, HRD buffer size and HRD buffer initial fill percentage. To manually specify an initial PTS
+     * offset: Choose Seconds. Then specify the number of seconds with PTS offset.
+     * 
+     * @param ptsOffsetMode
+     *        Specify the initial presentation timestamp (PTS) offset for your transport stream output. To let
+     *        MediaConvert automatically determine the initial PTS offset: Keep the default value, Auto. We recommend
+     *        that you choose Auto for the widest player compatibility. The initial PTS will be at least two seconds and
+     *        vary depending on your output's bitrate, HRD buffer size and HRD buffer initial fill percentage. To
+     *        manually specify an initial PTS offset: Choose Seconds. Then specify the number of seconds with PTS
+     *        offset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TsPtsOffset
+     */
+
+    public M2tsSettings withPtsOffsetMode(TsPtsOffset ptsOffsetMode) {
+        this.ptsOffsetMode = ptsOffsetMode.toString();
+        return this;
+    }
+
+    /**
      * When set to CBR, inserts null packets into transport stream to fill specified bitrate. When set to VBR, the
      * bitrate setting acts as the maximum bitrate, but the output will not be padded up to that bitrate.
      * 
@@ -2317,6 +2457,10 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
             sb.append("PrivateMetadataPid: ").append(getPrivateMetadataPid()).append(",");
         if (getProgramNumber() != null)
             sb.append("ProgramNumber: ").append(getProgramNumber()).append(",");
+        if (getPtsOffset() != null)
+            sb.append("PtsOffset: ").append(getPtsOffset()).append(",");
+        if (getPtsOffsetMode() != null)
+            sb.append("PtsOffsetMode: ").append(getPtsOffsetMode()).append(",");
         if (getRateMode() != null)
             sb.append("RateMode: ").append(getRateMode()).append(",");
         if (getScte35Esam() != null)
@@ -2467,6 +2611,14 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getProgramNumber() != null && other.getProgramNumber().equals(this.getProgramNumber()) == false)
             return false;
+        if (other.getPtsOffset() == null ^ this.getPtsOffset() == null)
+            return false;
+        if (other.getPtsOffset() != null && other.getPtsOffset().equals(this.getPtsOffset()) == false)
+            return false;
+        if (other.getPtsOffsetMode() == null ^ this.getPtsOffsetMode() == null)
+            return false;
+        if (other.getPtsOffsetMode() != null && other.getPtsOffsetMode().equals(this.getPtsOffsetMode()) == false)
+            return false;
         if (other.getRateMode() == null ^ this.getRateMode() == null)
             return false;
         if (other.getRateMode() != null && other.getRateMode().equals(this.getRateMode()) == false)
@@ -2544,6 +2696,8 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getPmtPid() == null) ? 0 : getPmtPid().hashCode());
         hashCode = prime * hashCode + ((getPrivateMetadataPid() == null) ? 0 : getPrivateMetadataPid().hashCode());
         hashCode = prime * hashCode + ((getProgramNumber() == null) ? 0 : getProgramNumber().hashCode());
+        hashCode = prime * hashCode + ((getPtsOffset() == null) ? 0 : getPtsOffset().hashCode());
+        hashCode = prime * hashCode + ((getPtsOffsetMode() == null) ? 0 : getPtsOffsetMode().hashCode());
         hashCode = prime * hashCode + ((getRateMode() == null) ? 0 : getRateMode().hashCode());
         hashCode = prime * hashCode + ((getScte35Esam() == null) ? 0 : getScte35Esam().hashCode());
         hashCode = prime * hashCode + ((getScte35Pid() == null) ? 0 : getScte35Pid().hashCode());
