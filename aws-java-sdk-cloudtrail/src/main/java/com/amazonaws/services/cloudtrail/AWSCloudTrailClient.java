@@ -217,6 +217,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                             new JsonErrorShapeMetadata().withErrorCode("OrganizationNotInAllFeaturesModeException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.OrganizationNotInAllFeaturesModeExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("S3BucketDoesNotExistException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.S3BucketDoesNotExistExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -1119,6 +1122,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
      *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
      *         then try the operation again.
+     * @throws ThrottlingException
+     *         This exception is thrown when the request rate exceeds the limit.
      * @sample AWSCloudTrail.CreateTrail
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CreateTrail" target="_top">AWS API
      *      Documentation</a>
@@ -1461,6 +1466,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
      *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
      *         then try the operation again.
+     * @throws ThrottlingException
+     *         This exception is thrown when the request rate exceeds the limit.
      * @throws InvalidHomeRegionException
      *         This exception is thrown when an operation is called on a trail from a Region other than the Region in
      *         which the trail was created.
@@ -2213,6 +2220,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         operation throws the exception <code>InsightNotEnabledException</code>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
+     * @throws ThrottlingException
+     *         This exception is thrown when the request rate exceeds the limit.
      * @sample AWSCloudTrail.GetInsightSelectors
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetInsightSelectors" target="_top">AWS
      *      API Documentation</a>
@@ -3553,6 +3562,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
      *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
      *         then try the operation again.
+     * @throws ThrottlingException
+     *         This exception is thrown when the request rate exceeds the limit.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -3714,6 +3725,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         event data store</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
+     * @throws ThrottlingException
+     *         This exception is thrown when the request rate exceeds the limit.
      * @sample AWSCloudTrail.PutInsightSelectors
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/PutInsightSelectors" target="_top">AWS
      *      API Documentation</a>
@@ -4413,6 +4426,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
      *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
      *         then try the operation again.
+     * @throws ThrottlingException
+     *         This exception is thrown when the request rate exceeds the limit.
      * @throws TrailNotFoundException
      *         This exception is thrown when the trail with the given name is not found.
      * @throws InvalidTrailNameException
@@ -4825,6 +4840,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
      *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
      *         then try the operation again.
+     * @throws ThrottlingException
+     *         This exception is thrown when the request rate exceeds the limit.
      * @throws InvalidHomeRegionException
      *         This exception is thrown when an operation is called on a trail from a Region other than the Region in
      *         which the trail was created.
@@ -5245,6 +5262,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
      *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
      *         then try the operation again.
+     * @throws ThrottlingException
+     *         This exception is thrown when the request rate exceeds the limit.
      * @throws InvalidParameterCombinationException
      *         This exception is thrown when the combination of parameters provided is not valid.
      * @throws InvalidHomeRegionException

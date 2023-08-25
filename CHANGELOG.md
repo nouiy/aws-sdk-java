@@ -1,3 +1,16 @@
+# __1.12.538__ __2023-08-25__
+## __AWS CloudTrail__
+  - ### Features
+    - Add ThrottlingException with error code 429 to handle CloudTrail Delegated Admin request rate exceeded on organization resources.
+
+## __Amazon CloudWatch__
+  - ### Features
+    - Doc-only update to get doc bug fixes into the SDK docs
+
+## __Amazon Detective__
+  - ### Features
+    - Added protections to interacting with fields containing customer information.
+
 # __1.12.537__ __2023-08-24__
 ## __AWS Elemental MediaConvert__
   - ### Features

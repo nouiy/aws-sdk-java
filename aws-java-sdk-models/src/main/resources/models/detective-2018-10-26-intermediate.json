@@ -2249,7 +2249,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "EmailAddress",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The Amazon Web Services account root user email address for the Amazon Web Services account.</p>\n@param emailAddress The Amazon Web Services account root user email address for the Amazon Web Services account.*/",
         "setterMethodName" : "setEmailAddress",
         "setterModel" : {
@@ -2390,7 +2390,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "EmailAddress",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The Amazon Web Services account root user email address for the Amazon Web Services account.</p>\n@param emailAddress The Amazon Web Services account root user email address for the Amazon Web Services account.*/",
           "setterMethodName" : "setEmailAddress",
           "setterModel" : {
@@ -5791,7 +5791,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "Message",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>Customized message text to include in the invitation email message to the invited member accounts.</p>\n@param message Customized message text to include in the invitation email message to the invited member accounts.*/",
         "setterMethodName" : "setMessage",
         "setterModel" : {
@@ -6378,7 +6378,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "Message",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>Customized message text to include in the invitation email message to the invited member accounts.</p>\n@param message Customized message text to include in the invitation email message to the invited member accounts.*/",
           "setterMethodName" : "setMessage",
           "setterModel" : {
@@ -17255,7 +17255,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "EmailAddress",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The Amazon Web Services account root user email address for the member account.</p>\n@param emailAddress The Amazon Web Services account root user email address for the member account.*/",
         "setterMethodName" : "setEmailAddress",
         "setterModel" : {
@@ -19031,7 +19031,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "EmailAddress",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The Amazon Web Services account root user email address for the member account.</p>\n@param emailAddress The Amazon Web Services account root user email address for the member account.*/",
           "setterMethodName" : "setEmailAddress",
           "setterModel" : {
