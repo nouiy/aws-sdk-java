@@ -101,6 +101,12 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String queryLogStatus;
+    /**
+     * <p>
+     * The default protected query result configuration as specified by the member who can receive results.
+     * </p>
+     */
+    private MembershipProtectedQueryResultConfiguration defaultResultConfiguration;
 
     /**
      * <p>
@@ -685,6 +691,46 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The default protected query result configuration as specified by the member who can receive results.
+     * </p>
+     * 
+     * @param defaultResultConfiguration
+     *        The default protected query result configuration as specified by the member who can receive results.
+     */
+
+    public void setDefaultResultConfiguration(MembershipProtectedQueryResultConfiguration defaultResultConfiguration) {
+        this.defaultResultConfiguration = defaultResultConfiguration;
+    }
+
+    /**
+     * <p>
+     * The default protected query result configuration as specified by the member who can receive results.
+     * </p>
+     * 
+     * @return The default protected query result configuration as specified by the member who can receive results.
+     */
+
+    public MembershipProtectedQueryResultConfiguration getDefaultResultConfiguration() {
+        return this.defaultResultConfiguration;
+    }
+
+    /**
+     * <p>
+     * The default protected query result configuration as specified by the member who can receive results.
+     * </p>
+     * 
+     * @param defaultResultConfiguration
+     *        The default protected query result configuration as specified by the member who can receive results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Membership withDefaultResultConfiguration(MembershipProtectedQueryResultConfiguration defaultResultConfiguration) {
+        setDefaultResultConfiguration(defaultResultConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -719,7 +765,9 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
         if (getMemberAbilities() != null)
             sb.append("MemberAbilities: ").append(getMemberAbilities()).append(",");
         if (getQueryLogStatus() != null)
-            sb.append("QueryLogStatus: ").append(getQueryLogStatus());
+            sb.append("QueryLogStatus: ").append(getQueryLogStatus()).append(",");
+        if (getDefaultResultConfiguration() != null)
+            sb.append("DefaultResultConfiguration: ").append(getDefaultResultConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -784,6 +832,10 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getQueryLogStatus() != null && other.getQueryLogStatus().equals(this.getQueryLogStatus()) == false)
             return false;
+        if (other.getDefaultResultConfiguration() == null ^ this.getDefaultResultConfiguration() == null)
+            return false;
+        if (other.getDefaultResultConfiguration() != null && other.getDefaultResultConfiguration().equals(this.getDefaultResultConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -804,6 +856,7 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getMemberAbilities() == null) ? 0 : getMemberAbilities().hashCode());
         hashCode = prime * hashCode + ((getQueryLogStatus() == null) ? 0 : getQueryLogStatus().hashCode());
+        hashCode = prime * hashCode + ((getDefaultResultConfiguration() == null) ? 0 : getDefaultResultConfiguration().hashCode());
         return hashCode;
     }
 

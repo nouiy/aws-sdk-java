@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,8 @@ public class CanvasAppSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelRegisterSettings").build();
     private static final MarshallingInfo<StructuredPojo> WORKSPACESETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkspaceSettings").build();
+    private static final MarshallingInfo<List> IDENTITYPROVIDEROAUTHSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdentityProviderOAuthSettings").build();
 
     private static final CanvasAppSettingsMarshaller instance = new CanvasAppSettingsMarshaller();
 
@@ -53,6 +56,7 @@ public class CanvasAppSettingsMarshaller {
             protocolMarshaller.marshall(canvasAppSettings.getTimeSeriesForecastingSettings(), TIMESERIESFORECASTINGSETTINGS_BINDING);
             protocolMarshaller.marshall(canvasAppSettings.getModelRegisterSettings(), MODELREGISTERSETTINGS_BINDING);
             protocolMarshaller.marshall(canvasAppSettings.getWorkspaceSettings(), WORKSPACESETTINGS_BINDING);
+            protocolMarshaller.marshall(canvasAppSettings.getIdentityProviderOAuthSettings(), IDENTITYPROVIDEROAUTHSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

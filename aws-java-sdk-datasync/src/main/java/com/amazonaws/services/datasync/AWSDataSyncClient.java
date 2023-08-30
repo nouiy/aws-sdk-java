@@ -1093,11 +1093,11 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Configures a task, which defines where and how DataSync transfers your data.
+     * Configures a transfer task, which defines where and how DataSync moves your data.
      * </p>
      * <p>
-     * A task includes a source location, a destination location, and the preferences for how and when you want to
-     * transfer your data (such as bandwidth limits, scheduling, among other options).
+     * A task includes a source location, destination location, and the options for how and when you want to transfer
+     * your data (such as bandwidth limits, scheduling, among other options).
      * </p>
      * <important>
      * <p>
@@ -1287,7 +1287,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Deletes an DataSync task.
+     * Deletes an DataSync transfer task.
      * </p>
      * 
      * @param deleteTaskRequest
@@ -2426,7 +2426,8 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Provides information about an DataSync transfer task that's running.
+     * Provides information about an execution of your DataSync task. You can use this operation to help monitor the
+     * progress of an ongoing transfer or check the results of the transfer.
      * </p>
      * 
      * @param describeTaskExecutionRequest
@@ -3170,7 +3171,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Starts an DataSync task. For each task, you can only run one task execution at a time.
+     * Starts an DataSync transfer task. For each task, you can only run one task execution at a time.
      * </p>
      * <p>
      * There are several phases to a task execution. For more information, see <a href=
@@ -3948,7 +3949,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Updates the metadata associated with a task.
+     * Updates the configuration of a DataSync transfer task.
      * </p>
      * 
      * @param updateTaskRequest
@@ -4008,13 +4009,13 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Modifies a running DataSync task.
+     * Updates the configuration of a running DataSync task execution.
      * </p>
      * <note>
      * <p>
      * Currently, the only <code>Option</code> that you can modify with <code>UpdateTaskExecution</code> is
      * <code> <a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_Options.html#DataSync-Type-Options-BytesPerSecond">BytesPerSecond</a> </code>
-     * , which throttles bandwidth for a running or queued task.
+     * , which throttles bandwidth for a running or queued task execution.
      * </p>
      * </note>
      * 

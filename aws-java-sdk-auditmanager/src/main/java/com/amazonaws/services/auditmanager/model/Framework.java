@@ -771,7 +771,7 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getComplianceType() != null)
-            sb.append("ComplianceType: ").append(getComplianceType()).append(",");
+            sb.append("ComplianceType: ").append("***Sensitive Data Redacted***").append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getLogo() != null)
@@ -779,15 +779,15 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
         if (getControlSources() != null)
             sb.append("ControlSources: ").append(getControlSources()).append(",");
         if (getControlSets() != null)
-            sb.append("ControlSets: ").append(getControlSets()).append(",");
+            sb.append("ControlSets: ").append("***Sensitive Data Redacted***").append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getLastUpdatedAt() != null)
             sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
         if (getCreatedBy() != null)
-            sb.append("CreatedBy: ").append(getCreatedBy()).append(",");
+            sb.append("CreatedBy: ").append("***Sensitive Data Redacted***").append(",");
         if (getLastUpdatedBy() != null)
-            sb.append("LastUpdatedBy: ").append(getLastUpdatedBy()).append(",");
+            sb.append("LastUpdatedBy: ").append("***Sensitive Data Redacted***").append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");

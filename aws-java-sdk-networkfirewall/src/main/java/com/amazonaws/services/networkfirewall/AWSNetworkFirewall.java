@@ -413,7 +413,7 @@ public interface AWSNetworkFirewall {
      * Manager certificate references that Network Firewall uses to decrypt and re-encrypt inbound traffic.
      * </p>
      * <p>
-     * After you create a TLS inspection configuration, you associate it with a firewall policy.
+     * After you create a TLS inspection configuration, you associate it with a new firewall policy.
      * </p>
      * <p>
      * To update the settings for a TLS inspection configuration, use <a>UpdateTLSInspectionConfiguration</a>.
@@ -458,6 +458,11 @@ public interface AWSNetworkFirewall {
      * @throws InternalServerErrorException
      *         Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem.
      *         Retry your request.
+     * @throws LimitExceededException
+     *         Unable to perform the operation because doing so would violate a limit setting.
+     * @throws InsufficientCapacityException
+     *         Amazon Web Services doesn't currently have enough available capacity to fulfill your request. Try your
+     *         request later.
      * @sample AWSNetworkFirewall.CreateTLSInspectionConfiguration
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/CreateTLSInspectionConfiguration"

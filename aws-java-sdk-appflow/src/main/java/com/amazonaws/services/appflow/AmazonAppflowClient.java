@@ -387,6 +387,8 @@ public class AmazonAppflowClient extends AmazonWebServiceClient implements Amazo
      *         An error occurred when authenticating with the connector endpoint.
      * @throws ConnectorServerException
      *         An error occurred when retrieving data from the connector endpoint.
+     * @throws AccessDeniedException
+     *         AppFlow/Requester has invalid or missing permissions.
      * @sample AmazonAppflow.CreateFlow
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/CreateFlow" target="_top">AWS API
      *      Documentation</a>
@@ -1831,6 +1833,8 @@ public class AmazonAppflowClient extends AmazonWebServiceClient implements Amazo
      *         An error occurred when retrieving data from the connector endpoint.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws AccessDeniedException
+     *         AppFlow/Requester has invalid or missing permissions.
      * @sample AmazonAppflow.UpdateFlow
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/UpdateFlow" target="_top">AWS API
      *      Documentation</a>

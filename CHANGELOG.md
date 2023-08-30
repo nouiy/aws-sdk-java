@@ -1,3 +1,40 @@
+# __1.12.541__ __2023-08-30__
+## __AWS App Runner__
+  - ### Features
+    - App Runner adds support for Bitbucket. You can now create App Runner connection that connects to your Bitbucket repositories and deploy App Runner service with the source code stored in a Bitbucket repository.
+
+## __AWS Audit Manager__
+  - ### Features
+    - This release marks some assessment metadata as sensitive. We added a sensitive trait to the following attributes: assessmentName, emailAddress, scope, createdBy, lastUpdatedBy, and userName.
+
+## __AWS Clean Rooms Service__
+  - ### Features
+    - This release decouples member abilities in a collaboration. With this change, the member who can run queries no longer needs to be the same as the member who can receive results.
+
+## __AWS DataSync__
+  - ### Features
+    - AWS DataSync introduces Task Reports, a new feature that provides detailed reports of data transfer operations for each task execution.
+
+## __AWS Network Firewall__
+  - ### Features
+    - Network Firewall increasing pagination token string length
+
+## __Amazon Appflow__
+  - ### Features
+    - Add SAP source connector parallel and pagination feature
+
+## __Amazon NeptuneData__
+  - ### Features
+    - Allows customers to execute data plane actions like bulk loading graphs, issuing graph queries using Gremlin and openCypher directly from the SDK.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Amazon SageMaker Canvas adds IdentityProviderOAuthSettings support for CanvasAppSettings
+
+## __PcaConnectorAd__
+  - ### Features
+    - The Connector for AD allows you to use a fully-managed AWS Private CA as a drop-in replacement for your self-managed enterprise CAs without local agents or proxy servers. Enterprises that use AD to manage Windows environments can reduce their private certificate authority (CA) costs and complexity.
+
 # __1.12.540__ __2023-08-29__
 ## __Amazon Cognito Identity Provider__
   - ### Features

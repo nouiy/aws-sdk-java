@@ -37,6 +37,10 @@ import java.util.concurrent.ExecutorService;
  * To learn more about Clean Rooms concepts, procedures, and best practices, see the <a
  * href="https://docs.aws.amazon.com/clean-rooms/latest/userguide/what-is.html">Clean Rooms User Guide</a>.
  * </p>
+ * <p>
+ * To learn more about SQL commands, functions, and conditions supported in Clean Rooms, see the <a
+ * href="https://docs.aws.amazon.com/clean-rooms/latest/sql-reference/sql-reference.html">Clean Rooms SQL Reference</a>.
+ * </p>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

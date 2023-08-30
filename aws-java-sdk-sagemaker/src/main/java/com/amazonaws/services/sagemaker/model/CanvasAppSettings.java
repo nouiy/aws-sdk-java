@@ -46,6 +46,12 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private WorkspaceSettings workspaceSettings;
+    /**
+     * <p>
+     * The settings for connecting to an external data source with OAuth.
+     * </p>
+     */
+    private java.util.List<IdentityProviderOAuthSetting> identityProviderOAuthSettings;
 
     /**
      * <p>
@@ -168,6 +174,76 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The settings for connecting to an external data source with OAuth.
+     * </p>
+     * 
+     * @return The settings for connecting to an external data source with OAuth.
+     */
+
+    public java.util.List<IdentityProviderOAuthSetting> getIdentityProviderOAuthSettings() {
+        return identityProviderOAuthSettings;
+    }
+
+    /**
+     * <p>
+     * The settings for connecting to an external data source with OAuth.
+     * </p>
+     * 
+     * @param identityProviderOAuthSettings
+     *        The settings for connecting to an external data source with OAuth.
+     */
+
+    public void setIdentityProviderOAuthSettings(java.util.Collection<IdentityProviderOAuthSetting> identityProviderOAuthSettings) {
+        if (identityProviderOAuthSettings == null) {
+            this.identityProviderOAuthSettings = null;
+            return;
+        }
+
+        this.identityProviderOAuthSettings = new java.util.ArrayList<IdentityProviderOAuthSetting>(identityProviderOAuthSettings);
+    }
+
+    /**
+     * <p>
+     * The settings for connecting to an external data source with OAuth.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setIdentityProviderOAuthSettings(java.util.Collection)} or
+     * {@link #withIdentityProviderOAuthSettings(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param identityProviderOAuthSettings
+     *        The settings for connecting to an external data source with OAuth.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CanvasAppSettings withIdentityProviderOAuthSettings(IdentityProviderOAuthSetting... identityProviderOAuthSettings) {
+        if (this.identityProviderOAuthSettings == null) {
+            setIdentityProviderOAuthSettings(new java.util.ArrayList<IdentityProviderOAuthSetting>(identityProviderOAuthSettings.length));
+        }
+        for (IdentityProviderOAuthSetting ele : identityProviderOAuthSettings) {
+            this.identityProviderOAuthSettings.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The settings for connecting to an external data source with OAuth.
+     * </p>
+     * 
+     * @param identityProviderOAuthSettings
+     *        The settings for connecting to an external data source with OAuth.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CanvasAppSettings withIdentityProviderOAuthSettings(java.util.Collection<IdentityProviderOAuthSetting> identityProviderOAuthSettings) {
+        setIdentityProviderOAuthSettings(identityProviderOAuthSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +260,9 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
         if (getModelRegisterSettings() != null)
             sb.append("ModelRegisterSettings: ").append(getModelRegisterSettings()).append(",");
         if (getWorkspaceSettings() != null)
-            sb.append("WorkspaceSettings: ").append(getWorkspaceSettings());
+            sb.append("WorkspaceSettings: ").append(getWorkspaceSettings()).append(",");
+        if (getIdentityProviderOAuthSettings() != null)
+            sb.append("IdentityProviderOAuthSettings: ").append(getIdentityProviderOAuthSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -212,6 +290,11 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getWorkspaceSettings() != null && other.getWorkspaceSettings().equals(this.getWorkspaceSettings()) == false)
             return false;
+        if (other.getIdentityProviderOAuthSettings() == null ^ this.getIdentityProviderOAuthSettings() == null)
+            return false;
+        if (other.getIdentityProviderOAuthSettings() != null
+                && other.getIdentityProviderOAuthSettings().equals(this.getIdentityProviderOAuthSettings()) == false)
+            return false;
         return true;
     }
 
@@ -223,6 +306,7 @@ public class CanvasAppSettings implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getTimeSeriesForecastingSettings() == null) ? 0 : getTimeSeriesForecastingSettings().hashCode());
         hashCode = prime * hashCode + ((getModelRegisterSettings() == null) ? 0 : getModelRegisterSettings().hashCode());
         hashCode = prime * hashCode + ((getWorkspaceSettings() == null) ? 0 : getWorkspaceSettings().hashCode());
+        hashCode = prime * hashCode + ((getIdentityProviderOAuthSettings() == null) ? 0 : getIdentityProviderOAuthSettings().hashCode());
         return hashCode;
     }
 

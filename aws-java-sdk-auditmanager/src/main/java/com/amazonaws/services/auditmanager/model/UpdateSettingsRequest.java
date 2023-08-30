@@ -512,9 +512,9 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getSnsTopic() != null)
             sb.append("SnsTopic: ").append(getSnsTopic()).append(",");
         if (getDefaultAssessmentReportsDestination() != null)
-            sb.append("DefaultAssessmentReportsDestination: ").append(getDefaultAssessmentReportsDestination()).append(",");
+            sb.append("DefaultAssessmentReportsDestination: ").append("***Sensitive Data Redacted***").append(",");
         if (getDefaultProcessOwners() != null)
-            sb.append("DefaultProcessOwners: ").append(getDefaultProcessOwners()).append(",");
+            sb.append("DefaultProcessOwners: ").append("***Sensitive Data Redacted***").append(",");
         if (getKmsKey() != null)
             sb.append("KmsKey: ").append(getKmsKey()).append(",");
         if (getEvidenceFinderEnabled() != null)

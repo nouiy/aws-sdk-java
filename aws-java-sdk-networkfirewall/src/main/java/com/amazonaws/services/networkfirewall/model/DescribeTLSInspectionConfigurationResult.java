@@ -50,7 +50,7 @@ public class DescribeTLSInspectionConfigurationResult extends com.amazonaws.Amaz
      * before sending it to its destination.
      * </p>
      * <p>
-     * To use a TLS inspection configuration, you add it to a Network Firewall firewall policy, then you apply the
+     * To use a TLS inspection configuration, you add it to a new Network Firewall firewall policy, then you apply the
      * firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect inbound traffic.
      * You can reference a TLS inspection configuration from more than one firewall policy, and you can use a firewall
      * policy in more than one firewall. For more information about using TLS inspection configurations, see <a
@@ -170,7 +170,7 @@ public class DescribeTLSInspectionConfigurationResult extends com.amazonaws.Amaz
      * before sending it to its destination.
      * </p>
      * <p>
-     * To use a TLS inspection configuration, you add it to a Network Firewall firewall policy, then you apply the
+     * To use a TLS inspection configuration, you add it to a new Network Firewall firewall policy, then you apply the
      * firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect inbound traffic.
      * You can reference a TLS inspection configuration from more than one firewall policy, and you can use a firewall
      * policy in more than one firewall. For more information about using TLS inspection configurations, see <a
@@ -187,10 +187,10 @@ public class DescribeTLSInspectionConfigurationResult extends com.amazonaws.Amaz
      *        traffic before sending it to its destination.
      *        </p>
      *        <p>
-     *        To use a TLS inspection configuration, you add it to a Network Firewall firewall policy, then you apply
-     *        the firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect inbound
-     *        traffic. You can reference a TLS inspection configuration from more than one firewall policy, and you can
-     *        use a firewall policy in more than one firewall. For more information about using TLS inspection
+     *        To use a TLS inspection configuration, you add it to a new Network Firewall firewall policy, then you
+     *        apply the firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect
+     *        inbound traffic. You can reference a TLS inspection configuration from more than one firewall policy, and
+     *        you can use a firewall policy in more than one firewall. For more information about using TLS inspection
      *        configurations, see <a
      *        href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html">Decrypting
      *        SSL/TLS traffic with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>.
@@ -211,7 +211,7 @@ public class DescribeTLSInspectionConfigurationResult extends com.amazonaws.Amaz
      * before sending it to its destination.
      * </p>
      * <p>
-     * To use a TLS inspection configuration, you add it to a Network Firewall firewall policy, then you apply the
+     * To use a TLS inspection configuration, you add it to a new Network Firewall firewall policy, then you apply the
      * firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect inbound traffic.
      * You can reference a TLS inspection configuration from more than one firewall policy, and you can use a firewall
      * policy in more than one firewall. For more information about using TLS inspection configurations, see <a
@@ -227,8 +227,8 @@ public class DescribeTLSInspectionConfigurationResult extends com.amazonaws.Amaz
      *         traffic before sending it to its destination.
      *         </p>
      *         <p>
-     *         To use a TLS inspection configuration, you add it to a Network Firewall firewall policy, then you apply
-     *         the firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect
+     *         To use a TLS inspection configuration, you add it to a new Network Firewall firewall policy, then you
+     *         apply the firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect
      *         inbound traffic. You can reference a TLS inspection configuration from more than one firewall policy, and
      *         you can use a firewall policy in more than one firewall. For more information about using TLS inspection
      *         configurations, see <a
@@ -251,7 +251,7 @@ public class DescribeTLSInspectionConfigurationResult extends com.amazonaws.Amaz
      * before sending it to its destination.
      * </p>
      * <p>
-     * To use a TLS inspection configuration, you add it to a Network Firewall firewall policy, then you apply the
+     * To use a TLS inspection configuration, you add it to a new Network Firewall firewall policy, then you apply the
      * firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect inbound traffic.
      * You can reference a TLS inspection configuration from more than one firewall policy, and you can use a firewall
      * policy in more than one firewall. For more information about using TLS inspection configurations, see <a
@@ -268,10 +268,10 @@ public class DescribeTLSInspectionConfigurationResult extends com.amazonaws.Amaz
      *        traffic before sending it to its destination.
      *        </p>
      *        <p>
-     *        To use a TLS inspection configuration, you add it to a Network Firewall firewall policy, then you apply
-     *        the firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect inbound
-     *        traffic. You can reference a TLS inspection configuration from more than one firewall policy, and you can
-     *        use a firewall policy in more than one firewall. For more information about using TLS inspection
+     *        To use a TLS inspection configuration, you add it to a new Network Firewall firewall policy, then you
+     *        apply the firewall policy to a firewall. Network Firewall acts as a proxy service to decrypt and inspect
+     *        inbound traffic. You can reference a TLS inspection configuration from more than one firewall policy, and
+     *        you can use a firewall policy in more than one firewall. For more information about using TLS inspection
      *        configurations, see <a
      *        href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html">Decrypting
      *        SSL/TLS traffic with TLS inspection configurations</a> in the <i>Network Firewall Developer Guide</i>.

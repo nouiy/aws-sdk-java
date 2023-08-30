@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.541-SNAPSHOT</version>
+    <version>1.12.541</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,18 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-neptunedata</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-pcaconnectorad</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-managedblockchainquery</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -2240,6 +2252,14 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>Amazon NeptuneData</title>
+                                  <packages>com.amazonaws.services.neptunedata*</packages>
+                              </group>
+                              <group>
+                                  <title>PcaConnectorAd</title>
+                                  <packages>com.amazonaws.services.pcaconnectorad*</packages>
+                              </group>
                               <group>
                                   <title>Amazon Managed Blockchain Query</title>
                                   <packages>com.amazonaws.services.managedblockchainquery*</packages>

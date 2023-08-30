@@ -378,7 +378,7 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * Manager certificate references that Network Firewall uses to decrypt and re-encrypt inbound traffic.
      * </p>
      * <p>
-     * After you create a TLS inspection configuration, you associate it with a firewall policy.
+     * After you create a TLS inspection configuration, you associate it with a new firewall policy.
      * </p>
      * <p>
      * To update the settings for a TLS inspection configuration, use <a>UpdateTLSInspectionConfiguration</a>.
@@ -414,7 +414,7 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * Manager certificate references that Network Firewall uses to decrypt and re-encrypt inbound traffic.
      * </p>
      * <p>
-     * After you create a TLS inspection configuration, you associate it with a firewall policy.
+     * After you create a TLS inspection configuration, you associate it with a new firewall policy.
      * </p>
      * <p>
      * To update the settings for a TLS inspection configuration, use <a>UpdateTLSInspectionConfiguration</a>.

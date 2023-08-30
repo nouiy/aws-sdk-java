@@ -204,9 +204,9 @@ public class ManualEvidence implements Serializable, Cloneable, StructuredPojo {
         if (getS3ResourcePath() != null)
             sb.append("S3ResourcePath: ").append(getS3ResourcePath()).append(",");
         if (getTextResponse() != null)
-            sb.append("TextResponse: ").append(getTextResponse()).append(",");
+            sb.append("TextResponse: ").append("***Sensitive Data Redacted***").append(",");
         if (getEvidenceFileName() != null)
-            sb.append("EvidenceFileName: ").append(getEvidenceFileName());
+            sb.append("EvidenceFileName: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

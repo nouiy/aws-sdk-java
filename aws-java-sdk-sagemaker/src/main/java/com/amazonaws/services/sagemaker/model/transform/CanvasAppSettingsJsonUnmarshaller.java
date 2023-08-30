@@ -60,6 +60,13 @@ public class CanvasAppSettingsJsonUnmarshaller implements Unmarshaller<CanvasApp
                     context.nextToken();
                     canvasAppSettings.setWorkspaceSettings(WorkspaceSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("IdentityProviderOAuthSettings", targetDepth)) {
+                    context.nextToken();
+                    canvasAppSettings.setIdentityProviderOAuthSettings(new ListUnmarshaller<IdentityProviderOAuthSetting>(
+                            IdentityProviderOAuthSettingJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

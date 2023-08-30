@@ -99,7 +99,7 @@ public class GetEvidenceFileUploadUrlRequest extends com.amazonaws.AmazonWebServ
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getFileName() != null)
-            sb.append("FileName: ").append(getFileName());
+            sb.append("FileName: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

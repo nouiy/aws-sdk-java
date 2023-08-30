@@ -467,7 +467,7 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
         if (getSourceFrequency() != null)
             sb.append("SourceFrequency: ").append(getSourceFrequency()).append(",");
         if (getTroubleshootingText() != null)
-            sb.append("TroubleshootingText: ").append(getTroubleshootingText());
+            sb.append("TroubleshootingText: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
