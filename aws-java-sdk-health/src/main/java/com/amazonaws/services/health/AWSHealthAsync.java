@@ -359,6 +359,41 @@ public interface AWSHealthAsync extends AWSHealth {
 
     /**
      * <p>
+     * Returns a list of entity aggregates for your Organizations that are affected by each of the specified events.
+     * </p>
+     * 
+     * @param describeEntityAggregatesForOrganizationRequest
+     * @return A Java Future containing the result of the DescribeEntityAggregatesForOrganization operation returned by
+     *         the service.
+     * @sample AWSHealthAsync.DescribeEntityAggregatesForOrganization
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeEntityAggregatesForOrganization"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEntityAggregatesForOrganizationResult> describeEntityAggregatesForOrganizationAsync(
+            DescribeEntityAggregatesForOrganizationRequest describeEntityAggregatesForOrganizationRequest);
+
+    /**
+     * <p>
+     * Returns a list of entity aggregates for your Organizations that are affected by each of the specified events.
+     * </p>
+     * 
+     * @param describeEntityAggregatesForOrganizationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeEntityAggregatesForOrganization operation returned by
+     *         the service.
+     * @sample AWSHealthAsyncHandler.DescribeEntityAggregatesForOrganization
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeEntityAggregatesForOrganization"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEntityAggregatesForOrganizationResult> describeEntityAggregatesForOrganizationAsync(
+            DescribeEntityAggregatesForOrganizationRequest describeEntityAggregatesForOrganizationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeEntityAggregatesForOrganizationRequest, DescribeEntityAggregatesForOrganizationResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the number of events of each event type (issue, scheduled change, and account notification). If no filter
      * is specified, the counts of all events in each category are returned.
      * </p>

@@ -375,7 +375,7 @@ public class TranslatePinDataRequest extends com.amazonaws.AmazonWebServiceReque
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getEncryptedPinBlock() != null)
-            sb.append("EncryptedPinBlock: ").append(getEncryptedPinBlock()).append(",");
+            sb.append("EncryptedPinBlock: ").append("***Sensitive Data Redacted***").append(",");
         if (getIncomingDukptAttributes() != null)
             sb.append("IncomingDukptAttributes: ").append(getIncomingDukptAttributes()).append(",");
         if (getIncomingKeyIdentifier() != null)

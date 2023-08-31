@@ -506,11 +506,11 @@ public class CreateCalculatedAttributeDefinitionResult extends com.amazonaws.Ama
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getAttributeDetails() != null)
-            sb.append("AttributeDetails: ").append(getAttributeDetails()).append(",");
+            sb.append("AttributeDetails: ").append("***Sensitive Data Redacted***").append(",");
         if (getConditions() != null)
-            sb.append("Conditions: ").append(getConditions()).append(",");
+            sb.append("Conditions: ").append("***Sensitive Data Redacted***").append(",");
         if (getStatistic() != null)
-            sb.append("Statistic: ").append(getStatistic()).append(",");
+            sb.append("Statistic: ").append("***Sensitive Data Redacted***").append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getLastUpdatedAt() != null)

@@ -510,11 +510,11 @@ public class UpdateCalculatedAttributeDefinitionResult extends com.amazonaws.Ama
         if (getLastUpdatedAt() != null)
             sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
         if (getStatistic() != null)
-            sb.append("Statistic: ").append(getStatistic()).append(",");
+            sb.append("Statistic: ").append("***Sensitive Data Redacted***").append(",");
         if (getConditions() != null)
-            sb.append("Conditions: ").append(getConditions()).append(",");
+            sb.append("Conditions: ").append("***Sensitive Data Redacted***").append(",");
         if (getAttributeDetails() != null)
-            sb.append("AttributeDetails: ").append(getAttributeDetails()).append(",");
+            sb.append("AttributeDetails: ").append("***Sensitive Data Redacted***").append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");

@@ -17474,7 +17474,7 @@
         "marshallingTargetClass" : "List",
         "marshallingType" : "LIST",
         "name" : "Admin",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>A list of groups from the SAML assertion attribute to grant the Grafana <code>Admin</code> role to.</p>\n@param admin A list of groups from the SAML assertion attribute to grant the Grafana <code>Admin</code> role to.*/",
         "setterMethodName" : "setAdmin",
         "setterModel" : {
@@ -17627,7 +17627,7 @@
         "marshallingTargetClass" : "List",
         "marshallingType" : "LIST",
         "name" : "Editor",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>A list of groups from the SAML assertion attribute to grant the Grafana <code>Editor</code> role to.</p>\n@param editor A list of groups from the SAML assertion attribute to grant the Grafana <code>Editor</code> role to.*/",
         "setterMethodName" : "setEditor",
         "setterModel" : {
@@ -17782,7 +17782,7 @@
           "marshallingTargetClass" : "List",
           "marshallingType" : "LIST",
           "name" : "Admin",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>A list of groups from the SAML assertion attribute to grant the Grafana <code>Admin</code> role to.</p>\n@param admin A list of groups from the SAML assertion attribute to grant the Grafana <code>Admin</code> role to.*/",
           "setterMethodName" : "setAdmin",
           "setterModel" : {
@@ -17936,7 +17936,7 @@
           "marshallingTargetClass" : "List",
           "marshallingType" : "LIST",
           "name" : "Editor",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>A list of groups from the SAML assertion attribute to grant the Grafana <code>Editor</code> role to.</p>\n@param editor A list of groups from the SAML assertion attribute to grant the Grafana <code>Editor</code> role to.*/",
           "setterMethodName" : "setEditor",
           "setterModel" : {

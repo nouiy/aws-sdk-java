@@ -451,6 +451,41 @@ public class AWSHealthAsyncClient extends AWSHealthClient implements AWSHealthAs
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeEntityAggregatesForOrganizationResult> describeEntityAggregatesForOrganizationAsync(
+            DescribeEntityAggregatesForOrganizationRequest request) {
+
+        return describeEntityAggregatesForOrganizationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEntityAggregatesForOrganizationResult> describeEntityAggregatesForOrganizationAsync(
+            final DescribeEntityAggregatesForOrganizationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeEntityAggregatesForOrganizationRequest, DescribeEntityAggregatesForOrganizationResult> asyncHandler) {
+        final DescribeEntityAggregatesForOrganizationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeEntityAggregatesForOrganizationResult>() {
+            @Override
+            public DescribeEntityAggregatesForOrganizationResult call() throws Exception {
+                DescribeEntityAggregatesForOrganizationResult result = null;
+
+                try {
+                    result = executeDescribeEntityAggregatesForOrganization(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeEventAggregatesResult> describeEventAggregatesAsync(DescribeEventAggregatesRequest request) {
 
         return describeEventAggregatesAsync(request, null);

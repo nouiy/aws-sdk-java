@@ -855,7 +855,8 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * A list of namespaced kernel parameters to set in the container. This parameter maps to <code>Sysctls</code> in
      * the <a href="https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate">Create a container</a> section
      * of the <a href="https://docs.docker.com/engine/api/v1.35/">Docker Remote API</a> and the <code>--sysctl</code>
-     * option to <a href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.
+     * option to <a href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>. For
+     * example, you can configure <code>net.ipv4.tcp_keepalive_time</code> setting to maintain longer lived connections.
      * </p>
      * <note>
      * <p>
@@ -864,6 +865,15 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * tasks that use the <code>awsvpc</code> network mode, the container that's started last determines which
      * <code>systemControls</code> parameters take effect. For tasks that use the <code>host</code> network mode, it
      * changes the container instance's namespaced kernel parameters as well as the containers.
+     * </p>
+     * </note> <note>
+     * <p>
+     * This parameter is not supported for Windows containers.
+     * </p>
+     * </note> <note>
+     * <p>
+     * This parameter is only supported for tasks that are hosted on Fargate if the tasks are using platform version
+     * <code>1.4.0</code> or later (Linux). This isn't supported for Windows containers on Fargate.
      * </p>
      * </note>
      */
@@ -7164,7 +7174,8 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * A list of namespaced kernel parameters to set in the container. This parameter maps to <code>Sysctls</code> in
      * the <a href="https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate">Create a container</a> section
      * of the <a href="https://docs.docker.com/engine/api/v1.35/">Docker Remote API</a> and the <code>--sysctl</code>
-     * option to <a href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.
+     * option to <a href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>. For
+     * example, you can configure <code>net.ipv4.tcp_keepalive_time</code> setting to maintain longer lived connections.
      * </p>
      * <note>
      * <p>
@@ -7174,6 +7185,15 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * <code>systemControls</code> parameters take effect. For tasks that use the <code>host</code> network mode, it
      * changes the container instance's namespaced kernel parameters as well as the containers.
      * </p>
+     * </note> <note>
+     * <p>
+     * This parameter is not supported for Windows containers.
+     * </p>
+     * </note> <note>
+     * <p>
+     * This parameter is only supported for tasks that are hosted on Fargate if the tasks are using platform version
+     * <code>1.4.0</code> or later (Linux). This isn't supported for Windows containers on Fargate.
+     * </p>
      * </note>
      * 
      * @return A list of namespaced kernel parameters to set in the container. This parameter maps to
@@ -7181,7 +7201,9 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *         href="https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate">Create a container</a> section
      *         of the <a href="https://docs.docker.com/engine/api/v1.35/">Docker Remote API</a> and the
      *         <code>--sysctl</code> option to <a
-     *         href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
+     *         href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>. For example,
+     *         you can configure <code>net.ipv4.tcp_keepalive_time</code> setting to maintain longer lived
+     *         connections.</p> <note>
      *         <p>
      *         We don't recommended that you specify network-related <code>systemControls</code> parameters for multiple
      *         containers in a single task that also uses either the <code>awsvpc</code> or <code>host</code> network
@@ -7189,6 +7211,15 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *         determines which <code>systemControls</code> parameters take effect. For tasks that use the
      *         <code>host</code> network mode, it changes the container instance's namespaced kernel parameters as well
      *         as the containers.
+     *         </p>
+     *         </note> <note>
+     *         <p>
+     *         This parameter is not supported for Windows containers.
+     *         </p>
+     *         </note> <note>
+     *         <p>
+     *         This parameter is only supported for tasks that are hosted on Fargate if the tasks are using platform
+     *         version <code>1.4.0</code> or later (Linux). This isn't supported for Windows containers on Fargate.
      *         </p>
      */
 
@@ -7204,7 +7235,8 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * A list of namespaced kernel parameters to set in the container. This parameter maps to <code>Sysctls</code> in
      * the <a href="https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate">Create a container</a> section
      * of the <a href="https://docs.docker.com/engine/api/v1.35/">Docker Remote API</a> and the <code>--sysctl</code>
-     * option to <a href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.
+     * option to <a href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>. For
+     * example, you can configure <code>net.ipv4.tcp_keepalive_time</code> setting to maintain longer lived connections.
      * </p>
      * <note>
      * <p>
@@ -7214,6 +7246,15 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * <code>systemControls</code> parameters take effect. For tasks that use the <code>host</code> network mode, it
      * changes the container instance's namespaced kernel parameters as well as the containers.
      * </p>
+     * </note> <note>
+     * <p>
+     * This parameter is not supported for Windows containers.
+     * </p>
+     * </note> <note>
+     * <p>
+     * This parameter is only supported for tasks that are hosted on Fargate if the tasks are using platform version
+     * <code>1.4.0</code> or later (Linux). This isn't supported for Windows containers on Fargate.
+     * </p>
      * </note>
      * 
      * @param systemControls
@@ -7222,7 +7263,9 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        href="https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate">Create a container</a> section
      *        of the <a href="https://docs.docker.com/engine/api/v1.35/">Docker Remote API</a> and the
      *        <code>--sysctl</code> option to <a
-     *        href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
+     *        href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>. For example,
+     *        you can configure <code>net.ipv4.tcp_keepalive_time</code> setting to maintain longer lived
+     *        connections.</p> <note>
      *        <p>
      *        We don't recommended that you specify network-related <code>systemControls</code> parameters for multiple
      *        containers in a single task that also uses either the <code>awsvpc</code> or <code>host</code> network
@@ -7230,6 +7273,15 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        determines which <code>systemControls</code> parameters take effect. For tasks that use the
      *        <code>host</code> network mode, it changes the container instance's namespaced kernel parameters as well
      *        as the containers.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        This parameter is not supported for Windows containers.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        This parameter is only supported for tasks that are hosted on Fargate if the tasks are using platform
+     *        version <code>1.4.0</code> or later (Linux). This isn't supported for Windows containers on Fargate.
      *        </p>
      */
 
@@ -7247,7 +7299,8 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * A list of namespaced kernel parameters to set in the container. This parameter maps to <code>Sysctls</code> in
      * the <a href="https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate">Create a container</a> section
      * of the <a href="https://docs.docker.com/engine/api/v1.35/">Docker Remote API</a> and the <code>--sysctl</code>
-     * option to <a href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.
+     * option to <a href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>. For
+     * example, you can configure <code>net.ipv4.tcp_keepalive_time</code> setting to maintain longer lived connections.
      * </p>
      * <note>
      * <p>
@@ -7256,6 +7309,15 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * tasks that use the <code>awsvpc</code> network mode, the container that's started last determines which
      * <code>systemControls</code> parameters take effect. For tasks that use the <code>host</code> network mode, it
      * changes the container instance's namespaced kernel parameters as well as the containers.
+     * </p>
+     * </note> <note>
+     * <p>
+     * This parameter is not supported for Windows containers.
+     * </p>
+     * </note> <note>
+     * <p>
+     * This parameter is only supported for tasks that are hosted on Fargate if the tasks are using platform version
+     * <code>1.4.0</code> or later (Linux). This isn't supported for Windows containers on Fargate.
      * </p>
      * </note>
      * <p>
@@ -7270,7 +7332,9 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        href="https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate">Create a container</a> section
      *        of the <a href="https://docs.docker.com/engine/api/v1.35/">Docker Remote API</a> and the
      *        <code>--sysctl</code> option to <a
-     *        href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
+     *        href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>. For example,
+     *        you can configure <code>net.ipv4.tcp_keepalive_time</code> setting to maintain longer lived
+     *        connections.</p> <note>
      *        <p>
      *        We don't recommended that you specify network-related <code>systemControls</code> parameters for multiple
      *        containers in a single task that also uses either the <code>awsvpc</code> or <code>host</code> network
@@ -7278,6 +7342,15 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        determines which <code>systemControls</code> parameters take effect. For tasks that use the
      *        <code>host</code> network mode, it changes the container instance's namespaced kernel parameters as well
      *        as the containers.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        This parameter is not supported for Windows containers.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        This parameter is only supported for tasks that are hosted on Fargate if the tasks are using platform
+     *        version <code>1.4.0</code> or later (Linux). This isn't supported for Windows containers on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -7297,7 +7370,8 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * A list of namespaced kernel parameters to set in the container. This parameter maps to <code>Sysctls</code> in
      * the <a href="https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate">Create a container</a> section
      * of the <a href="https://docs.docker.com/engine/api/v1.35/">Docker Remote API</a> and the <code>--sysctl</code>
-     * option to <a href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.
+     * option to <a href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>. For
+     * example, you can configure <code>net.ipv4.tcp_keepalive_time</code> setting to maintain longer lived connections.
      * </p>
      * <note>
      * <p>
@@ -7307,6 +7381,15 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * <code>systemControls</code> parameters take effect. For tasks that use the <code>host</code> network mode, it
      * changes the container instance's namespaced kernel parameters as well as the containers.
      * </p>
+     * </note> <note>
+     * <p>
+     * This parameter is not supported for Windows containers.
+     * </p>
+     * </note> <note>
+     * <p>
+     * This parameter is only supported for tasks that are hosted on Fargate if the tasks are using platform version
+     * <code>1.4.0</code> or later (Linux). This isn't supported for Windows containers on Fargate.
+     * </p>
      * </note>
      * 
      * @param systemControls
@@ -7315,7 +7398,9 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        href="https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate">Create a container</a> section
      *        of the <a href="https://docs.docker.com/engine/api/v1.35/">Docker Remote API</a> and the
      *        <code>--sysctl</code> option to <a
-     *        href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
+     *        href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>. For example,
+     *        you can configure <code>net.ipv4.tcp_keepalive_time</code> setting to maintain longer lived
+     *        connections.</p> <note>
      *        <p>
      *        We don't recommended that you specify network-related <code>systemControls</code> parameters for multiple
      *        containers in a single task that also uses either the <code>awsvpc</code> or <code>host</code> network
@@ -7323,6 +7408,15 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        determines which <code>systemControls</code> parameters take effect. For tasks that use the
      *        <code>host</code> network mode, it changes the container instance's namespaced kernel parameters as well
      *        as the containers.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        This parameter is not supported for Windows containers.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        This parameter is only supported for tasks that are hosted on Fargate if the tasks are using platform
+     *        version <code>1.4.0</code> or later (Linux). This isn't supported for Windows containers on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

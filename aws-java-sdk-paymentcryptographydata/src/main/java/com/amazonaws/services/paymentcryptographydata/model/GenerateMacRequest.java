@@ -229,7 +229,7 @@ public class GenerateMacRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getMacLength() != null)
             sb.append("MacLength: ").append(getMacLength()).append(",");
         if (getMessageData() != null)
-            sb.append("MessageData: ").append(getMessageData());
+            sb.append("MessageData: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

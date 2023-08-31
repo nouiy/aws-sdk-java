@@ -328,6 +328,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public AddTagsToResourceResult addTagsToResource(AddTagsToResourceRequest request) {
         request = beforeClientExecution(request);
         return executeAddTagsToResource(request);
@@ -403,6 +404,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateHapgResult createHapg(CreateHapgRequest request) {
         request = beforeClientExecution(request);
         return executeCreateHapg(request);
@@ -489,6 +491,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateHsmResult createHsm(CreateHsmRequest request) {
         request = beforeClientExecution(request);
         return executeCreateHsm(request);
@@ -563,6 +566,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateLunaClientResult createLunaClient(CreateLunaClientRequest request) {
         request = beforeClientExecution(request);
         return executeCreateLunaClient(request);
@@ -637,6 +641,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DeleteHapgResult deleteHapg(DeleteHapgRequest request) {
         request = beforeClientExecution(request);
         return executeDeleteHapg(request);
@@ -711,6 +716,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DeleteHsmResult deleteHsm(DeleteHsmRequest request) {
         request = beforeClientExecution(request);
         return executeDeleteHsm(request);
@@ -784,6 +790,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DeleteLunaClientResult deleteLunaClient(DeleteLunaClientRequest request) {
         request = beforeClientExecution(request);
         return executeDeleteLunaClient(request);
@@ -858,6 +865,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeHapgResult describeHapg(DescribeHapgRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeHapg(request);
@@ -932,6 +940,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeHsmResult describeHsm(DescribeHsmRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeHsm(request);
@@ -976,6 +985,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
     }
 
     @Override
+    @Deprecated
     public DescribeHsmResult describeHsm() {
         return describeHsm(new DescribeHsmRequest());
     }
@@ -1010,6 +1020,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeLunaClientResult describeLunaClient(DescribeLunaClientRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeLunaClient(request);
@@ -1054,6 +1065,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
     }
 
     @Override
+    @Deprecated
     public DescribeLunaClientResult describeLunaClient() {
         return describeLunaClient(new DescribeLunaClientRequest());
     }
@@ -1089,6 +1101,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public GetConfigResult getConfig(GetConfigRequest request) {
         request = beforeClientExecution(request);
         return executeGetConfig(request);
@@ -1163,6 +1176,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public ListAvailableZonesResult listAvailableZones(ListAvailableZonesRequest request) {
         request = beforeClientExecution(request);
         return executeListAvailableZones(request);
@@ -1207,6 +1221,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
     }
 
     @Override
+    @Deprecated
     public ListAvailableZonesResult listAvailableZones() {
         return listAvailableZones(new ListAvailableZonesRequest());
     }
@@ -1246,6 +1261,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListHapgsResult listHapgs(ListHapgsRequest request) {
         request = beforeClientExecution(request);
         return executeListHapgs(request);
@@ -1290,6 +1306,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
     }
 
     @Override
+    @Deprecated
     public ListHapgsResult listHapgs() {
         return listHapgs(new ListHapgsRequest());
     }
@@ -1329,6 +1346,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListHsmsResult listHsms(ListHsmsRequest request) {
         request = beforeClientExecution(request);
         return executeListHsms(request);
@@ -1373,6 +1391,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
     }
 
     @Override
+    @Deprecated
     public ListHsmsResult listHsms() {
         return listHsms(new ListHsmsRequest());
     }
@@ -1412,6 +1431,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListLunaClientsResult listLunaClients(ListLunaClientsRequest request) {
         request = beforeClientExecution(request);
         return executeListLunaClients(request);
@@ -1456,6 +1476,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
     }
 
     @Override
+    @Deprecated
     public ListLunaClientsResult listLunaClients() {
         return listLunaClients(new ListLunaClientsRequest());
     }
@@ -1490,6 +1511,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
         request = beforeClientExecution(request);
         return executeListTagsForResource(request);
@@ -1563,6 +1585,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ModifyHapgResult modifyHapg(ModifyHapgRequest request) {
         request = beforeClientExecution(request);
         return executeModifyHapg(request);
@@ -1644,6 +1667,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ModifyHsmResult modifyHsm(ModifyHsmRequest request) {
         request = beforeClientExecution(request);
         return executeModifyHsm(request);
@@ -1716,6 +1740,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ModifyLunaClientResult modifyLunaClient(ModifyLunaClientRequest request) {
         request = beforeClientExecution(request);
         return executeModifyLunaClient(request);
@@ -1793,6 +1818,7 @@ public class AWSCloudHSMClient extends AmazonWebServiceClient implements AWSClou
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public RemoveTagsFromResourceResult removeTagsFromResource(RemoveTagsFromResourceRequest request) {
         request = beforeClientExecution(request);
         return executeRemoveTagsFromResource(request);

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines the configuration settings for a vertial layout.
+ * Defines the configuration settings for a vertical layout.
  * </p>
  * 
  * @see <a

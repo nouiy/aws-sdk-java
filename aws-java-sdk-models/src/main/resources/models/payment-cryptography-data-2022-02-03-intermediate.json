@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -10581,7 +10581,7 @@
       "packageName" : "com.amazonaws.services.paymentcryptographydata.response",
       "requestSignerAware" : false,
       "requestSignerClassFqcn" : null,
-      "required" : [ "CipherText", "KeyArn", "KeyCheckValue" ],
+      "required" : [ "CipherText", "KeyArn" ],
       "shapeName" : "EncryptDataResult",
       "signerAware" : false,
       "signerType" : null,
@@ -12433,7 +12433,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "MessageData",
-        "c2jShape" : "HexLengthBetween2And4096",
+        "c2jShape" : "HexEvenLengthBetween2And4096",
         "deprecated" : false,
         "documentation" : "<p>The data for which a MAC is under generation.</p>",
         "endpointDiscoveryId" : false,
@@ -12473,7 +12473,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "MessageData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The data for which a MAC is under generation.</p>\n@param messageData The data for which a MAC is under generation.*/",
         "setterMethodName" : "setMessageData",
         "setterModel" : {
@@ -12714,7 +12714,7 @@
         },
         "MessageData" : {
           "c2jName" : "MessageData",
-          "c2jShape" : "HexLengthBetween2And4096",
+          "c2jShape" : "HexEvenLengthBetween2And4096",
           "deprecated" : false,
           "documentation" : "<p>The data for which a MAC is under generation.</p>",
           "endpointDiscoveryId" : false,
@@ -12754,7 +12754,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "MessageData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The data for which a MAC is under generation.</p>\n@param messageData The data for which a MAC is under generation.*/",
           "setterMethodName" : "setMessageData",
           "setterModel" : {
@@ -27017,7 +27017,7 @@
       },
       "members" : [ {
         "c2jName" : "EncryptedPinBlock",
-        "c2jShape" : "HexLengthBetween16And32",
+        "c2jShape" : "HexEvenLengthBetween16And32",
         "deprecated" : false,
         "documentation" : "<p>The encrypted PIN block data that Amazon Web Services Payment Cryptography translates.</p>",
         "endpointDiscoveryId" : false,
@@ -27057,7 +27057,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "EncryptedPinBlock",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The encrypted PIN block data that Amazon Web Services Payment Cryptography translates.</p>\n@param encryptedPinBlock The encrypted PIN block data that Amazon Web Services Payment Cryptography translates.*/",
         "setterMethodName" : "setEncryptedPinBlock",
         "setterModel" : {
@@ -27502,7 +27502,7 @@
       "membersAsMap" : {
         "EncryptedPinBlock" : {
           "c2jName" : "EncryptedPinBlock",
-          "c2jShape" : "HexLengthBetween16And32",
+          "c2jShape" : "HexEvenLengthBetween16And32",
           "deprecated" : false,
           "documentation" : "<p>The encrypted PIN block data that Amazon Web Services Payment Cryptography translates.</p>",
           "endpointDiscoveryId" : false,
@@ -27542,7 +27542,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "EncryptedPinBlock",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The encrypted PIN block data that Amazon Web Services Payment Cryptography translates.</p>\n@param encryptedPinBlock The encrypted PIN block data that Amazon Web Services Payment Cryptography translates.*/",
           "setterMethodName" : "setEncryptedPinBlock",
           "setterModel" : {
@@ -32581,7 +32581,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Mac",
-        "c2jShape" : "HexLengthBetween4And128",
+        "c2jShape" : "HexEvenLengthBetween4And128",
         "deprecated" : false,
         "documentation" : "<p>The MAC being verified.</p>",
         "endpointDiscoveryId" : false,
@@ -32621,7 +32621,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "Mac",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The MAC being verified.</p>\n@param mac The MAC being verified.*/",
         "setterMethodName" : "setMac",
         "setterModel" : {
@@ -32719,7 +32719,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "MessageData",
-        "c2jShape" : "HexLengthBetween2And4096",
+        "c2jShape" : "HexEvenLengthBetween2And4096",
         "deprecated" : false,
         "documentation" : "<p>The data on for which MAC is under verification.</p>",
         "endpointDiscoveryId" : false,
@@ -32759,7 +32759,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "MessageData",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The data on for which MAC is under verification.</p>\n@param messageData The data on for which MAC is under verification.*/",
         "setterMethodName" : "setMessageData",
         "setterModel" : {
@@ -32929,7 +32929,7 @@
         },
         "Mac" : {
           "c2jName" : "Mac",
-          "c2jShape" : "HexLengthBetween4And128",
+          "c2jShape" : "HexEvenLengthBetween4And128",
           "deprecated" : false,
           "documentation" : "<p>The MAC being verified.</p>",
           "endpointDiscoveryId" : false,
@@ -32969,7 +32969,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "Mac",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The MAC being verified.</p>\n@param mac The MAC being verified.*/",
           "setterMethodName" : "setMac",
           "setterModel" : {
@@ -33069,7 +33069,7 @@
         },
         "MessageData" : {
           "c2jName" : "MessageData",
-          "c2jShape" : "HexLengthBetween2And4096",
+          "c2jShape" : "HexEvenLengthBetween2And4096",
           "deprecated" : false,
           "documentation" : "<p>The data on for which MAC is under verification.</p>",
           "endpointDiscoveryId" : false,
@@ -33109,7 +33109,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "MessageData",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The data on for which MAC is under verification.</p>\n@param messageData The data on for which MAC is under verification.*/",
           "setterMethodName" : "setMessageData",
           "setterModel" : {

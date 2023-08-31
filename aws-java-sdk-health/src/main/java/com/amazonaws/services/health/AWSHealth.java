@@ -284,6 +284,20 @@ public interface AWSHealth {
 
     /**
      * <p>
+     * Returns a list of entity aggregates for your Organizations that are affected by each of the specified events.
+     * </p>
+     * 
+     * @param describeEntityAggregatesForOrganizationRequest
+     * @return Result of the DescribeEntityAggregatesForOrganization operation returned by the service.
+     * @sample AWSHealth.DescribeEntityAggregatesForOrganization
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeEntityAggregatesForOrganization"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeEntityAggregatesForOrganizationResult describeEntityAggregatesForOrganization(
+            DescribeEntityAggregatesForOrganizationRequest describeEntityAggregatesForOrganizationRequest);
+
+    /**
+     * <p>
      * Returns the number of events of each event type (issue, scheduled change, and account notification). If no filter
      * is specified, the counts of all events in each category are returned.
      * </p>

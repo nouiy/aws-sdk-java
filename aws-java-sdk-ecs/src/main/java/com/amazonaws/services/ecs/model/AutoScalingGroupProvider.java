@@ -36,7 +36,7 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
     private String autoScalingGroupArn;
     /**
      * <p>
-     * he managed scaling settings for the Auto Scaling group capacity provider.
+     * The managed scaling settings for the Auto Scaling group capacity provider.
      * </p>
      */
     private ManagedScaling managedScaling;
@@ -107,11 +107,11 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * he managed scaling settings for the Auto Scaling group capacity provider.
+     * The managed scaling settings for the Auto Scaling group capacity provider.
      * </p>
      * 
      * @param managedScaling
-     *        he managed scaling settings for the Auto Scaling group capacity provider.
+     *        The managed scaling settings for the Auto Scaling group capacity provider.
      */
 
     public void setManagedScaling(ManagedScaling managedScaling) {
@@ -120,10 +120,10 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * he managed scaling settings for the Auto Scaling group capacity provider.
+     * The managed scaling settings for the Auto Scaling group capacity provider.
      * </p>
      * 
-     * @return he managed scaling settings for the Auto Scaling group capacity provider.
+     * @return The managed scaling settings for the Auto Scaling group capacity provider.
      */
 
     public ManagedScaling getManagedScaling() {
@@ -132,11 +132,11 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * he managed scaling settings for the Auto Scaling group capacity provider.
+     * The managed scaling settings for the Auto Scaling group capacity provider.
      * </p>
      * 
      * @param managedScaling
-     *        he managed scaling settings for the Auto Scaling group capacity provider.
+     *        The managed scaling settings for the Auto Scaling group capacity provider.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

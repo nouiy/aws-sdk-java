@@ -281,11 +281,11 @@ public class VerifyMacRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (getKeyIdentifier() != null)
             sb.append("KeyIdentifier: ").append(getKeyIdentifier()).append(",");
         if (getMac() != null)
-            sb.append("Mac: ").append(getMac()).append(",");
+            sb.append("Mac: ").append("***Sensitive Data Redacted***").append(",");
         if (getMacLength() != null)
             sb.append("MacLength: ").append(getMacLength()).append(",");
         if (getMessageData() != null)
-            sb.append("MessageData: ").append(getMessageData()).append(",");
+            sb.append("MessageData: ").append("***Sensitive Data Redacted***").append(",");
         if (getVerificationAttributes() != null)
             sb.append("VerificationAttributes: ").append(getVerificationAttributes());
         sb.append("}");

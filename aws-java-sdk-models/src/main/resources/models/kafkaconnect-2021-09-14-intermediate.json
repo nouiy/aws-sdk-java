@@ -7850,7 +7850,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "connectorConfiguration",
-        "c2jShape" : "SyntheticCreateConnectorRequest__mapOf__string",
+        "c2jShape" : "__sensitive__mapOf__string",
         "deprecated" : false,
         "documentation" : "<p>A map of keys to values that represent the configuration for the connector.</p>",
         "endpointDiscoveryId" : false,
@@ -8849,7 +8849,7 @@
         },
         "ConnectorConfiguration" : {
           "c2jName" : "connectorConfiguration",
-          "c2jShape" : "SyntheticCreateConnectorRequest__mapOf__string",
+          "c2jShape" : "__sensitive__mapOf__string",
           "deprecated" : false,
           "documentation" : "<p>A map of keys to values that represent the configuration for the connector.</p>",
           "endpointDiscoveryId" : false,
@@ -11640,7 +11640,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "propertiesFileContent",
-        "c2jShape" : "SyntheticCreateWorkerConfigurationRequest__string",
+        "c2jShape" : "__sensitiveString",
         "deprecated" : false,
         "documentation" : "<p>Base64 encoded contents of connect-distributed.properties file.</p>",
         "endpointDiscoveryId" : false,
@@ -11851,7 +11851,7 @@
         },
         "PropertiesFileContent" : {
           "c2jName" : "propertiesFileContent",
-          "c2jShape" : "SyntheticCreateWorkerConfigurationRequest__string",
+          "c2jShape" : "__sensitiveString",
           "deprecated" : false,
           "documentation" : "<p>Base64 encoded contents of connect-distributed.properties file.</p>",
           "endpointDiscoveryId" : false,
@@ -17256,7 +17256,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "connectorConfiguration",
-        "c2jShape" : "SyntheticDescribeConnectorResponse__mapOf__string",
+        "c2jShape" : "__sensitive__mapOf__string",
         "deprecated" : false,
         "documentation" : "<p>A map of keys to values that represent the configuration for the connector.</p>",
         "endpointDiscoveryId" : false,
@@ -18601,7 +18601,7 @@
         },
         "ConnectorConfiguration" : {
           "c2jName" : "connectorConfiguration",
-          "c2jShape" : "SyntheticDescribeConnectorResponse__mapOf__string",
+          "c2jShape" : "__sensitive__mapOf__string",
           "deprecated" : false,
           "documentation" : "<p>A map of keys to values that represent the configuration for the connector.</p>",
           "endpointDiscoveryId" : false,
@@ -34556,7 +34556,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "propertiesFileContent",
-        "c2jShape" : "SyntheticWorkerConfigurationRevisionDescription__string",
+        "c2jShape" : "__sensitiveString",
         "deprecated" : false,
         "documentation" : "<p>Base64 encoded contents of the connect-distributed.properties file.</p>",
         "endpointDiscoveryId" : false,
@@ -34836,7 +34836,7 @@
         },
         "PropertiesFileContent" : {
           "c2jName" : "propertiesFileContent",
-          "c2jShape" : "SyntheticWorkerConfigurationRevisionDescription__string",
+          "c2jShape" : "__sensitiveString",
           "deprecated" : false,
           "documentation" : "<p>Base64 encoded contents of the connect-distributed.properties file.</p>",
           "endpointDiscoveryId" : false,

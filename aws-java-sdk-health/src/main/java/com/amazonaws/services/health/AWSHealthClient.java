@@ -653,6 +653,64 @@ public class AWSHealthClient extends AmazonWebServiceClient implements AWSHealth
 
     /**
      * <p>
+     * Returns a list of entity aggregates for your Organizations that are affected by each of the specified events.
+     * </p>
+     * 
+     * @param describeEntityAggregatesForOrganizationRequest
+     * @return Result of the DescribeEntityAggregatesForOrganization operation returned by the service.
+     * @sample AWSHealth.DescribeEntityAggregatesForOrganization
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/DescribeEntityAggregatesForOrganization"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeEntityAggregatesForOrganizationResult describeEntityAggregatesForOrganization(DescribeEntityAggregatesForOrganizationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeEntityAggregatesForOrganization(request);
+    }
+
+    @SdkInternalApi
+    final DescribeEntityAggregatesForOrganizationResult executeDescribeEntityAggregatesForOrganization(
+            DescribeEntityAggregatesForOrganizationRequest describeEntityAggregatesForOrganizationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeEntityAggregatesForOrganizationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeEntityAggregatesForOrganizationRequest> request = null;
+        Response<DescribeEntityAggregatesForOrganizationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeEntityAggregatesForOrganizationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeEntityAggregatesForOrganizationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Health");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeEntityAggregatesForOrganization");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeEntityAggregatesForOrganizationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DescribeEntityAggregatesForOrganizationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the number of events of each event type (issue, scheduled change, and account notification). If no filter
      * is specified, the counts of all events in each category are returned.
      * </p>
