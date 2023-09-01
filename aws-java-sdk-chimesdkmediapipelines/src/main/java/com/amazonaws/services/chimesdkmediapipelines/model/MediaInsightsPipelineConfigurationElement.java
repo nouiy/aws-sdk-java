@@ -86,7 +86,7 @@ public class MediaInsightsPipelineConfigurationElement implements Serializable, 
     private SnsTopicSinkConfiguration snsTopicSinkConfiguration;
     /**
      * <p>
-     * The configuration settings for the <code>VoiceEnhancementSinkConfiguration</code> element.
+     * The configuration settings for voice enhancement sink in a media insights pipeline configuration element.
      * </p>
      */
     private VoiceEnhancementSinkConfiguration voiceEnhancementSinkConfiguration;
@@ -492,11 +492,11 @@ public class MediaInsightsPipelineConfigurationElement implements Serializable, 
 
     /**
      * <p>
-     * The configuration settings for the <code>VoiceEnhancementSinkConfiguration</code> element.
+     * The configuration settings for voice enhancement sink in a media insights pipeline configuration element.
      * </p>
      * 
      * @param voiceEnhancementSinkConfiguration
-     *        The configuration settings for the <code>VoiceEnhancementSinkConfiguration</code> element.
+     *        The configuration settings for voice enhancement sink in a media insights pipeline configuration element.
      */
 
     public void setVoiceEnhancementSinkConfiguration(VoiceEnhancementSinkConfiguration voiceEnhancementSinkConfiguration) {
@@ -505,10 +505,10 @@ public class MediaInsightsPipelineConfigurationElement implements Serializable, 
 
     /**
      * <p>
-     * The configuration settings for the <code>VoiceEnhancementSinkConfiguration</code> element.
+     * The configuration settings for voice enhancement sink in a media insights pipeline configuration element.
      * </p>
      * 
-     * @return The configuration settings for the <code>VoiceEnhancementSinkConfiguration</code> element.
+     * @return The configuration settings for voice enhancement sink in a media insights pipeline configuration element.
      */
 
     public VoiceEnhancementSinkConfiguration getVoiceEnhancementSinkConfiguration() {
@@ -517,11 +517,11 @@ public class MediaInsightsPipelineConfigurationElement implements Serializable, 
 
     /**
      * <p>
-     * The configuration settings for the <code>VoiceEnhancementSinkConfiguration</code> element.
+     * The configuration settings for voice enhancement sink in a media insights pipeline configuration element.
      * </p>
      * 
      * @param voiceEnhancementSinkConfiguration
-     *        The configuration settings for the <code>VoiceEnhancementSinkConfiguration</code> element.
+     *        The configuration settings for voice enhancement sink in a media insights pipeline configuration element.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

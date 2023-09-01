@@ -732,16 +732,18 @@ public interface AmazonConnect {
      * Creates a new queue for the specified Amazon Connect instance.
      * </p>
      * <important>
+     * <ul>
+     * <li>
      * <p>
-     * If the number being used in the input is claimed to a traffic distribution group, and you are calling this API
-     * using an instance in the Amazon Web Services Region where the traffic distribution group was created, you can use
-     * either a full phone number ARN or UUID value for the <code>OutboundCallerIdNumberId</code> value of the <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_OutboundCallerConfig">OutboundCallerConfig</a>
-     * request body parameter. However, if the number is claimed to a traffic distribution group and you are calling
-     * this API using an instance in the alternate Amazon Web Services Region associated with the traffic distribution
-     * group, you must provide a full phone number ARN. If a UUID is provided in this scenario, you will receive a
-     * <code>ResourceNotFoundException</code>.
+     * If the phone number is claimed to a traffic distribution group that was created in the same Region as the Amazon
+     * Connect instance where you are calling this API, then you can use a full phone number ARN or a UUID for
+     * <code>OutboundCallerIdNumberId</code>. However, if the phone number is claimed to a traffic distribution group
+     * that is in one Region, and you are calling this API from an instance in another Amazon Web Services Region that
+     * is associated with the traffic distribution group, you must provide a full phone number ARN. If a UUID is
+     * provided in this scenario, you will receive a <code>ResourceNotFoundException</code>.
      * </p>
+     * </li>
+     * <li>
      * <p>
      * Only use the phone number ARN format that doesn't contain <code>instance</code> in the path, for example,
      * <code>arn:aws:connect:us-east-1:1234567890:phone-number/uuid</code>. This is the same ARN format that is returned
@@ -749,6 +751,16 @@ public interface AmazonConnect {
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbersV2.html">ListPhoneNumbersV2</a>
      * API.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you plan to use IAM policies to allow/deny access to this API for phone number resources claimed to a traffic
+     * distribution group, see <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_resource-level-policy-examples.html#allow-deny-queue-actions-replica-region"
+     * >Allow or Deny queue API actions for phone numbers in a replica Region</a>.
+     * </p>
+     * </li>
+     * </ul>
      * </important>
      * 
      * @param createQueueRequest
@@ -917,6 +929,16 @@ public interface AmazonConnect {
      * <p>
      * Creates a traffic distribution group given an Amazon Connect instance that has been replicated.
      * </p>
+     * <note>
+     * <p>
+     * You can change the <code>SignInConfig</code> distribution only for a default
+     * <code>TrafficDistributionGroup</code> (see the <code>IsDefault</code> parameter in the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_TrafficDistributionGroup.html"
+     * >TrafficDistributionGroup</a> data type). If you call <code>UpdateTrafficDistribution</code> with a modified
+     * <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
+     * <code>InvalidRequestException</code> is returned.
+     * </p>
+     * </note>
      * <p>
      * For more information about creating traffic distribution groups, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/setup-traffic-distribution-groups.html">Set up
@@ -1028,6 +1050,82 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     CreateUserHierarchyGroupResult createUserHierarchyGroup(CreateUserHierarchyGroupRequest createUserHierarchyGroupRequest);
+
+    /**
+     * <p>
+     * Creates a new view with the possible status of <code>SAVED</code> or <code>PUBLISHED</code>.
+     * </p>
+     * <p>
+     * The views will have a unique name for each connect instance.
+     * </p>
+     * <p>
+     * It performs basic content validation if the status is <code>SAVED</code> or full content validation if the status
+     * is set to <code>PUBLISHED</code>. An error is returned if validation fails. It associates either the
+     * <code>$SAVED</code> qualifier or both of the <code>$SAVED</code> and <code>$LATEST</code> qualifiers with the
+     * provided view content based on the status. The view is idempotent if ClientToken is provided.
+     * </p>
+     * 
+     * @param createViewRequest
+     * @return Result of the CreateView operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws DuplicateResourceException
+     *         A resource with the specified name already exists.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded.
+     * @throws TooManyRequestsException
+     *         Displayed when rate-related API limits are exceeded.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @sample AmazonConnect.CreateView
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateView" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateViewResult createView(CreateViewRequest createViewRequest);
+
+    /**
+     * <p>
+     * Publishes a new version of the view identifier.
+     * </p>
+     * <p>
+     * Versions are immutable and monotonically increasing.
+     * </p>
+     * <p>
+     * It returns the highest version if there is no change in content compared to that version. An error is displayed
+     * if the supplied ViewContentSha256 is different from the ViewContentSha256 of the <code>$LATEST</code> alias.
+     * </p>
+     * 
+     * @param createViewVersionRequest
+     * @return Result of the CreateViewVersion operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws TooManyRequestsException
+     *         Displayed when rate-related API limits are exceeded.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @sample AmazonConnect.CreateViewVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateViewVersion" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateViewVersionResult createViewVersion(CreateViewVersionRequest createViewVersionRequest);
 
     /**
      * <p>
@@ -1541,6 +1639,60 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteUserHierarchyGroupResult deleteUserHierarchyGroup(DeleteUserHierarchyGroupRequest deleteUserHierarchyGroupRequest);
+
+    /**
+     * <p>
+     * Deletes the view entirely. It deletes the view and all associated qualifiers (versions and aliases).
+     * </p>
+     * 
+     * @param deleteViewRequest
+     * @return Result of the DeleteView operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws TooManyRequestsException
+     *         Displayed when rate-related API limits are exceeded.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @sample AmazonConnect.DeleteView
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteView" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteViewResult deleteView(DeleteViewRequest deleteViewRequest);
+
+    /**
+     * <p>
+     * Deletes the particular version specified in <code>ViewVersion</code> identifier.
+     * </p>
+     * 
+     * @param deleteViewVersionRequest
+     * @return Result of the DeleteViewVersion operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws TooManyRequestsException
+     *         Displayed when rate-related API limits are exceeded.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @sample AmazonConnect.DeleteViewVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteViewVersion" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteViewVersionResult deleteViewVersion(DeleteViewVersionRequest deleteViewVersionRequest);
 
     /**
      * <p>
@@ -2102,6 +2254,43 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeUserHierarchyStructureResult describeUserHierarchyStructure(DescribeUserHierarchyStructureRequest describeUserHierarchyStructureRequest);
+
+    /**
+     * <p>
+     * Retrieves the view for the specified Amazon Connect instance and view identifier.
+     * </p>
+     * <p>
+     * The view identifier can be supplied as a ViewId or ARN.
+     * </p>
+     * <p>
+     * <code>$SAVED</code> needs to be supplied if a view is unpublished.
+     * </p>
+     * <p>
+     * The view identifier can contain an optional qualifier, for example, <code>&lt;view-id&gt;:$SAVED</code>, which is
+     * either an actual version number or an Amazon Connect managed qualifier <code>$SAVED | $LATEST</code>. If it is
+     * not supplied, then <code>$LATEST</code> is assumed for customer managed views and an error is returned if there
+     * is no published content available. Version 1 is assumed for Amazon Web Services managed views.
+     * </p>
+     * 
+     * @param describeViewRequest
+     * @return Result of the DescribeView operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws TooManyRequestsException
+     *         Displayed when rate-related API limits are exceeded.
+     * @sample AmazonConnect.DescribeView
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeView" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeViewResult describeView(DescribeViewRequest describeViewRequest);
 
     /**
      * <p>
@@ -3088,6 +3277,17 @@ public interface AmazonConnect {
      * Numbers for Your Contact Center</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
      * <important>
+     * <ul>
+     * <li>
+     * <p>
+     * We recommend using <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbersV2.html">ListPhoneNumbersV2</a>
+     * to return phone number types. ListPhoneNumbers doesn't support number types <code>UIFN</code>,
+     * <code>SHARED</code>, <code>THIRD_PARTY_TF</code>, and <code>THIRD_PARTY_DID</code>. While it returns numbers of
+     * those types, it incorrectly lists them as <code>TOLL_FREE</code> or <code>DID</code>.
+     * </p>
+     * </li>
+     * <li>
      * <p>
      * The phone number <code>Arn</code> value that is returned from each of the items in the <a href=
      * "https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbers.html#connect-ListPhoneNumbers-response-PhoneNumberSummaryList"
@@ -3096,6 +3296,8 @@ public interface AmazonConnect {
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbersV2.html">ListPhoneNumbersV2</a>
      * API. It returns the new phone number ARN that can be used to tag phone number resources.
      * </p>
+     * </li>
+     * </ul>
      * </important>
      * 
      * @param listPhoneNumbersRequest
@@ -3589,6 +3791,62 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     ListUsersResult listUsers(ListUsersRequest listUsersRequest);
+
+    /**
+     * <p>
+     * Returns all the available versions for the specified Amazon Connect instance and view identifier.
+     * </p>
+     * <p>
+     * Results will be sorted from highest to lowest.
+     * </p>
+     * 
+     * @param listViewVersionsRequest
+     * @return Result of the ListViewVersions operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws TooManyRequestsException
+     *         Displayed when rate-related API limits are exceeded.
+     * @sample AmazonConnect.ListViewVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListViewVersions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListViewVersionsResult listViewVersions(ListViewVersionsRequest listViewVersionsRequest);
+
+    /**
+     * <p>
+     * Returns views in the given instance.
+     * </p>
+     * <p>
+     * Results are sorted primarily by type, and secondarily by name.
+     * </p>
+     * 
+     * @param listViewsRequest
+     * @return Result of the ListViews operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws TooManyRequestsException
+     *         Displayed when rate-related API limits are exceeded.
+     * @sample AmazonConnect.ListViews
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListViews" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListViewsResult listViews(ListViewsRequest listViewsRequest);
 
     /**
      * <p>
@@ -4241,7 +4499,7 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * Ends the specified contact. This call does not work for the following initiation methods:
+     * Ends the specified contact. This call does not work for voice contacts that use the following initiation methods:
      * </p>
      * <ul>
      * <li>
@@ -4260,6 +4518,9 @@ public interface AmazonConnect {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Chat and task contacts, however, can be terminated in any state, regardless of initiation method.
+     * </p>
      * 
      * @param stopContactRequest
      * @return Result of the StopContact operation returned by the service.
@@ -4267,7 +4528,7 @@ public interface AmazonConnect {
      *         The request is not valid.
      * @throws ContactNotFoundException
      *         The contact with the specified ID is not active or does not exist. Applies to Voice calls only, not to
-     *         Chat, Task, or Voice Callback.
+     *         Chat or Task contacts.
      * @throws InvalidParameterException
      *         One or more of the specified parameters are not valid.
      * @throws ResourceNotFoundException
@@ -5100,16 +5361,18 @@ public interface AmazonConnect {
      * Updates the outbound caller ID name, number, and outbound whisper flow for a specified queue.
      * </p>
      * <important>
+     * <ul>
+     * <li>
      * <p>
-     * If the number being used in the input is claimed to a traffic distribution group, and you are calling this API
-     * using an instance in the Amazon Web Services Region where the traffic distribution group was created, you can use
-     * either a full phone number ARN or UUID value for the <code>OutboundCallerIdNumberId</code> value of the <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_OutboundCallerConfig">OutboundCallerConfig</a>
-     * request body parameter. However, if the number is claimed to a traffic distribution group and you are calling
-     * this API using an instance in the alternate Amazon Web Services Region associated with the traffic distribution
-     * group, you must provide a full phone number ARN. If a UUID is provided in this scenario, you will receive a
-     * <code>ResourceNotFoundException</code>.
+     * If the phone number is claimed to a traffic distribution group that was created in the same Region as the Amazon
+     * Connect instance where you are calling this API, then you can use a full phone number ARN or a UUID for
+     * <code>OutboundCallerIdNumberId</code>. However, if the phone number is claimed to a traffic distribution group
+     * that is in one Region, and you are calling this API from an instance in another Amazon Web Services Region that
+     * is associated with the traffic distribution group, you must provide a full phone number ARN. If a UUID is
+     * provided in this scenario, you will receive a <code>ResourceNotFoundException</code>.
      * </p>
+     * </li>
+     * <li>
      * <p>
      * Only use the phone number ARN format that doesn't contain <code>instance</code> in the path, for example,
      * <code>arn:aws:connect:us-east-1:1234567890:phone-number/uuid</code>. This is the same ARN format that is returned
@@ -5117,6 +5380,16 @@ public interface AmazonConnect {
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbersV2.html">ListPhoneNumbersV2</a>
      * API.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you plan to use IAM policies to allow/deny access to this API for phone number resources claimed to a traffic
+     * distribution group, see <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_resource-level-policy-examples.html#allow-deny-queue-actions-replica-region"
+     * >Allow or Deny queue API actions for phone numbers in a replica Region</a>.
+     * </p>
+     * </li>
+     * </ul>
      * </important>
      * 
      * @param updateQueueOutboundCallerConfigRequest
@@ -5419,9 +5692,12 @@ public interface AmazonConnect {
      * </p>
      * <note>
      * <p>
-     * You can change the <code>SignInConfig</code> only for a default <code>TrafficDistributionGroup</code>. If you
-     * call <code>UpdateTrafficDistribution</code> with a modified <code>SignInConfig</code> and a non-default
-     * <code>TrafficDistributionGroup</code>, an <code>InvalidRequestException</code> is returned.
+     * You can change the <code>SignInConfig</code> distribution only for a default
+     * <code>TrafficDistributionGroup</code> (see the <code>IsDefault</code> parameter in the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_TrafficDistributionGroup.html"
+     * >TrafficDistributionGroup</a> data type). If you call <code>UpdateTrafficDistribution</code> with a modified
+     * <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
+     * <code>InvalidRequestException</code> is returned.
      * </p>
      * </note>
      * <p>
@@ -5625,6 +5901,68 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateUserSecurityProfilesResult updateUserSecurityProfiles(UpdateUserSecurityProfilesRequest updateUserSecurityProfilesRequest);
+
+    /**
+     * <p>
+     * Updates the view content of the given view identifier in the specified Amazon Connect instance.
+     * </p>
+     * <p>
+     * It performs content validation if <code>Status</code> is set to <code>SAVED</code> and performs full content
+     * validation if <code>Status</code> is <code>PUBLISHED</code>. Note that the <code>$SAVED</code> alias' content
+     * will always be updated, but the <code>$LATEST</code> alias' content will only be updated if <code>Status</code>
+     * is <code>PUBLISHED</code>.
+     * </p>
+     * 
+     * @param updateViewContentRequest
+     * @return Result of the UpdateViewContent operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws TooManyRequestsException
+     *         Displayed when rate-related API limits are exceeded.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @sample AmazonConnect.UpdateViewContent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateViewContent" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateViewContentResult updateViewContent(UpdateViewContentRequest updateViewContentRequest);
+
+    /**
+     * <p>
+     * Updates the view metadata. Note that either <code>Name</code> or <code>Description</code> must be provided.
+     * </p>
+     * 
+     * @param updateViewMetadataRequest
+     * @return Result of the UpdateViewMetadata operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws TooManyRequestsException
+     *         Displayed when rate-related API limits are exceeded.
+     * @throws DuplicateResourceException
+     *         A resource with the specified name already exists.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @sample AmazonConnect.UpdateViewMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateViewMetadata" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateViewMetadataResult updateViewMetadata(UpdateViewMetadataRequest updateViewMetadataRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

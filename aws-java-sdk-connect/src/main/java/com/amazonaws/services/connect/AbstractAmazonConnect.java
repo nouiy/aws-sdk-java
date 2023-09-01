@@ -188,6 +188,16 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public CreateViewResult createView(CreateViewRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateViewVersionResult createViewVersion(CreateViewVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateVocabularyResult createVocabulary(CreateVocabularyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -284,6 +294,16 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DeleteUserHierarchyGroupResult deleteUserHierarchyGroup(DeleteUserHierarchyGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteViewResult deleteView(DeleteViewRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteViewVersionResult deleteViewVersion(DeleteViewVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -394,6 +414,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DescribeUserHierarchyStructureResult describeUserHierarchyStructure(DescribeUserHierarchyStructureRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeViewResult describeView(DescribeViewRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -679,6 +704,16 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public ListUsersResult listUsers(ListUsersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListViewVersionsResult listViewVersions(ListViewVersionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListViewsResult listViews(ListViewsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1024,6 +1059,16 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public UpdateUserSecurityProfilesResult updateUserSecurityProfiles(UpdateUserSecurityProfilesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateViewContentResult updateViewContent(UpdateViewContentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateViewMetadataResult updateViewMetadata(UpdateViewMetadataRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -423,6 +423,70 @@ public interface AmazonChimeSDKMediaPipelinesAsync extends AmazonChimeSDKMediaPi
 
     /**
      * <p>
+     * Retrieves the details of the specified speaker search task.
+     * </p>
+     * 
+     * @param getSpeakerSearchTaskRequest
+     * @return A Java Future containing the result of the GetSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.GetSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/GetSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSpeakerSearchTaskResult> getSpeakerSearchTaskAsync(GetSpeakerSearchTaskRequest getSpeakerSearchTaskRequest);
+
+    /**
+     * <p>
+     * Retrieves the details of the specified speaker search task.
+     * </p>
+     * 
+     * @param getSpeakerSearchTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.GetSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/GetSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSpeakerSearchTaskResult> getSpeakerSearchTaskAsync(GetSpeakerSearchTaskRequest getSpeakerSearchTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSpeakerSearchTaskRequest, GetSpeakerSearchTaskResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the details of a voice tone analysis task.
+     * </p>
+     * 
+     * @param getVoiceToneAnalysisTaskRequest
+     * @return A Java Future containing the result of the GetVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.GetVoiceToneAnalysisTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/GetVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVoiceToneAnalysisTaskResult> getVoiceToneAnalysisTaskAsync(GetVoiceToneAnalysisTaskRequest getVoiceToneAnalysisTaskRequest);
+
+    /**
+     * <p>
+     * Retrieves the details of a voice tone analysis task.
+     * </p>
+     * 
+     * @param getVoiceToneAnalysisTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.GetVoiceToneAnalysisTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/GetVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVoiceToneAnalysisTaskResult> getVoiceToneAnalysisTaskAsync(GetVoiceToneAnalysisTaskRequest getVoiceToneAnalysisTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<GetVoiceToneAnalysisTaskRequest, GetVoiceToneAnalysisTaskResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of media pipelines.
      * </p>
      * 
@@ -554,6 +618,170 @@ public interface AmazonChimeSDKMediaPipelinesAsync extends AmazonChimeSDKMediaPi
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts a speaker search task.
+     * </p>
+     * <important>
+     * <p>
+     * Before starting any speaker search tasks, you must provide all notices and obtain all consents from the speaker
+     * as required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * 
+     * @param startSpeakerSearchTaskRequest
+     * @return A Java Future containing the result of the StartSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.StartSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StartSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartSpeakerSearchTaskResult> startSpeakerSearchTaskAsync(StartSpeakerSearchTaskRequest startSpeakerSearchTaskRequest);
+
+    /**
+     * <p>
+     * Starts a speaker search task.
+     * </p>
+     * <important>
+     * <p>
+     * Before starting any speaker search tasks, you must provide all notices and obtain all consents from the speaker
+     * as required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * 
+     * @param startSpeakerSearchTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.StartSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StartSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartSpeakerSearchTaskResult> startSpeakerSearchTaskAsync(StartSpeakerSearchTaskRequest startSpeakerSearchTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<StartSpeakerSearchTaskRequest, StartSpeakerSearchTaskResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts a voice tone analysis task. For more information about voice tone analysis, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/dg/voice-analytics.html">Using Amazon Chime SDK voice
+     * analytics</a> in the <i>Amazon Chime SDK Developer Guide</i>.
+     * </p>
+     * <important>
+     * <p>
+     * Before starting any voice tone analysis tasks, you must provide all notices and obtain all consents from the
+     * speaker as required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * 
+     * @param startVoiceToneAnalysisTaskRequest
+     * @return A Java Future containing the result of the StartVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.StartVoiceToneAnalysisTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StartVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartVoiceToneAnalysisTaskResult> startVoiceToneAnalysisTaskAsync(
+            StartVoiceToneAnalysisTaskRequest startVoiceToneAnalysisTaskRequest);
+
+    /**
+     * <p>
+     * Starts a voice tone analysis task. For more information about voice tone analysis, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/dg/voice-analytics.html">Using Amazon Chime SDK voice
+     * analytics</a> in the <i>Amazon Chime SDK Developer Guide</i>.
+     * </p>
+     * <important>
+     * <p>
+     * Before starting any voice tone analysis tasks, you must provide all notices and obtain all consents from the
+     * speaker as required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * 
+     * @param startVoiceToneAnalysisTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.StartVoiceToneAnalysisTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StartVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartVoiceToneAnalysisTaskResult> startVoiceToneAnalysisTaskAsync(
+            StartVoiceToneAnalysisTaskRequest startVoiceToneAnalysisTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<StartVoiceToneAnalysisTaskRequest, StartVoiceToneAnalysisTaskResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stops a speaker search task.
+     * </p>
+     * 
+     * @param stopSpeakerSearchTaskRequest
+     * @return A Java Future containing the result of the StopSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.StopSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StopSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopSpeakerSearchTaskResult> stopSpeakerSearchTaskAsync(StopSpeakerSearchTaskRequest stopSpeakerSearchTaskRequest);
+
+    /**
+     * <p>
+     * Stops a speaker search task.
+     * </p>
+     * 
+     * @param stopSpeakerSearchTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.StopSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StopSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopSpeakerSearchTaskResult> stopSpeakerSearchTaskAsync(StopSpeakerSearchTaskRequest stopSpeakerSearchTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<StopSpeakerSearchTaskRequest, StopSpeakerSearchTaskResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stops a voice tone analysis task.
+     * </p>
+     * 
+     * @param stopVoiceToneAnalysisTaskRequest
+     * @return A Java Future containing the result of the StopVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.StopVoiceToneAnalysisTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StopVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopVoiceToneAnalysisTaskResult> stopVoiceToneAnalysisTaskAsync(
+            StopVoiceToneAnalysisTaskRequest stopVoiceToneAnalysisTaskRequest);
+
+    /**
+     * <p>
+     * Stops a voice tone analysis task.
+     * </p>
+     * 
+     * @param stopVoiceToneAnalysisTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.StopVoiceToneAnalysisTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StopVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopVoiceToneAnalysisTaskResult> stopVoiceToneAnalysisTaskAsync(
+            StopVoiceToneAnalysisTaskRequest stopVoiceToneAnalysisTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<StopVoiceToneAnalysisTaskRequest, StopVoiceToneAnalysisTaskResult> asyncHandler);
 
     /**
      * <p>

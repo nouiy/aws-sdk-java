@@ -689,6 +689,8 @@ public class AmazonChimeSDKMediaPipelinesClient extends AmazonWebServiceClient i
      *         One or more of the resources in the request does not exist in the system.
      * @throws UnauthorizedClientException
      *         The client is not currently authorized to make the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException
@@ -945,6 +947,147 @@ public class AmazonChimeSDKMediaPipelinesClient extends AmazonWebServiceClient i
 
             HttpResponseHandler<AmazonWebServiceResponse<GetMediaPipelineResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetMediaPipelineResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the details of the specified speaker search task.
+     * </p>
+     * 
+     * @param getSpeakerSearchTaskRequest
+     * @return Result of the GetSpeakerSearchTask operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.GetSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/GetSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetSpeakerSearchTaskResult getSpeakerSearchTask(GetSpeakerSearchTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSpeakerSearchTask(request);
+    }
+
+    @SdkInternalApi
+    final GetSpeakerSearchTaskResult executeGetSpeakerSearchTask(GetSpeakerSearchTaskRequest getSpeakerSearchTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSpeakerSearchTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSpeakerSearchTaskRequest> request = null;
+        Response<GetSpeakerSearchTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSpeakerSearchTaskRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getSpeakerSearchTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSpeakerSearchTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetSpeakerSearchTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetSpeakerSearchTaskResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the details of a voice tone analysis task.
+     * </p>
+     * 
+     * @param getVoiceToneAnalysisTaskRequest
+     * @return Result of the GetVoiceToneAnalysisTask operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.GetVoiceToneAnalysisTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/GetVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetVoiceToneAnalysisTaskResult getVoiceToneAnalysisTask(GetVoiceToneAnalysisTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetVoiceToneAnalysisTask(request);
+    }
+
+    @SdkInternalApi
+    final GetVoiceToneAnalysisTaskResult executeGetVoiceToneAnalysisTask(GetVoiceToneAnalysisTaskRequest getVoiceToneAnalysisTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getVoiceToneAnalysisTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetVoiceToneAnalysisTaskRequest> request = null;
+        Response<GetVoiceToneAnalysisTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetVoiceToneAnalysisTaskRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getVoiceToneAnalysisTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetVoiceToneAnalysisTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetVoiceToneAnalysisTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetVoiceToneAnalysisTaskResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1228,6 +1371,314 @@ public class AmazonChimeSDKMediaPipelinesClient extends AmazonWebServiceClient i
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts a speaker search task.
+     * </p>
+     * <important>
+     * <p>
+     * Before starting any speaker search tasks, you must provide all notices and obtain all consents from the speaker
+     * as required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * 
+     * @param startSpeakerSearchTaskRequest
+     * @return Result of the StartSpeakerSearchTask operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.StartSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StartSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartSpeakerSearchTaskResult startSpeakerSearchTask(StartSpeakerSearchTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartSpeakerSearchTask(request);
+    }
+
+    @SdkInternalApi
+    final StartSpeakerSearchTaskResult executeStartSpeakerSearchTask(StartSpeakerSearchTaskRequest startSpeakerSearchTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startSpeakerSearchTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartSpeakerSearchTaskRequest> request = null;
+        Response<StartSpeakerSearchTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartSpeakerSearchTaskRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startSpeakerSearchTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartSpeakerSearchTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartSpeakerSearchTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartSpeakerSearchTaskResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts a voice tone analysis task. For more information about voice tone analysis, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/dg/voice-analytics.html">Using Amazon Chime SDK voice
+     * analytics</a> in the <i>Amazon Chime SDK Developer Guide</i>.
+     * </p>
+     * <important>
+     * <p>
+     * Before starting any voice tone analysis tasks, you must provide all notices and obtain all consents from the
+     * speaker as required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * 
+     * @param startVoiceToneAnalysisTaskRequest
+     * @return Result of the StartVoiceToneAnalysisTask operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.StartVoiceToneAnalysisTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StartVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartVoiceToneAnalysisTaskResult startVoiceToneAnalysisTask(StartVoiceToneAnalysisTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartVoiceToneAnalysisTask(request);
+    }
+
+    @SdkInternalApi
+    final StartVoiceToneAnalysisTaskResult executeStartVoiceToneAnalysisTask(StartVoiceToneAnalysisTaskRequest startVoiceToneAnalysisTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startVoiceToneAnalysisTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartVoiceToneAnalysisTaskRequest> request = null;
+        Response<StartVoiceToneAnalysisTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartVoiceToneAnalysisTaskRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startVoiceToneAnalysisTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartVoiceToneAnalysisTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartVoiceToneAnalysisTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartVoiceToneAnalysisTaskResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Stops a speaker search task.
+     * </p>
+     * 
+     * @param stopSpeakerSearchTaskRequest
+     * @return Result of the StopSpeakerSearchTask operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.StopSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StopSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StopSpeakerSearchTaskResult stopSpeakerSearchTask(StopSpeakerSearchTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopSpeakerSearchTask(request);
+    }
+
+    @SdkInternalApi
+    final StopSpeakerSearchTaskResult executeStopSpeakerSearchTask(StopSpeakerSearchTaskRequest stopSpeakerSearchTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopSpeakerSearchTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopSpeakerSearchTaskRequest> request = null;
+        Response<StopSpeakerSearchTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopSpeakerSearchTaskRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(stopSpeakerSearchTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopSpeakerSearchTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopSpeakerSearchTaskResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new StopSpeakerSearchTaskResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Stops a voice tone analysis task.
+     * </p>
+     * 
+     * @param stopVoiceToneAnalysisTaskRequest
+     * @return Result of the StopVoiceToneAnalysisTask operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.StopVoiceToneAnalysisTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/StopVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StopVoiceToneAnalysisTaskResult stopVoiceToneAnalysisTask(StopVoiceToneAnalysisTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopVoiceToneAnalysisTask(request);
+    }
+
+    @SdkInternalApi
+    final StopVoiceToneAnalysisTaskResult executeStopVoiceToneAnalysisTask(StopVoiceToneAnalysisTaskRequest stopVoiceToneAnalysisTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopVoiceToneAnalysisTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopVoiceToneAnalysisTaskRequest> request = null;
+        Response<StopVoiceToneAnalysisTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopVoiceToneAnalysisTaskRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(stopVoiceToneAnalysisTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopVoiceToneAnalysisTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopVoiceToneAnalysisTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StopVoiceToneAnalysisTaskResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

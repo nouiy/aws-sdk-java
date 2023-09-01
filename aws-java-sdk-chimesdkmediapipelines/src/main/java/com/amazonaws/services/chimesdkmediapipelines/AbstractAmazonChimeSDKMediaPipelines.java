@@ -83,6 +83,16 @@ public class AbstractAmazonChimeSDKMediaPipelines implements AmazonChimeSDKMedia
     }
 
     @Override
+    public GetSpeakerSearchTaskResult getSpeakerSearchTask(GetSpeakerSearchTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetVoiceToneAnalysisTaskResult getVoiceToneAnalysisTask(GetVoiceToneAnalysisTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListMediaCapturePipelinesResult listMediaCapturePipelines(ListMediaCapturePipelinesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,6 +109,26 @@ public class AbstractAmazonChimeSDKMediaPipelines implements AmazonChimeSDKMedia
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartSpeakerSearchTaskResult startSpeakerSearchTask(StartSpeakerSearchTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartVoiceToneAnalysisTaskResult startVoiceToneAnalysisTask(StartVoiceToneAnalysisTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopSpeakerSearchTaskResult stopSpeakerSearchTask(StopSpeakerSearchTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopVoiceToneAnalysisTaskResult stopVoiceToneAnalysisTask(StopVoiceToneAnalysisTaskRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
