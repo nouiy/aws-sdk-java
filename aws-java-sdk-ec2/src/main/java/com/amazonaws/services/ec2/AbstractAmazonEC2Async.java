@@ -6289,6 +6289,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DisableImageBlockPublicAccessResult> disableImageBlockPublicAccessAsync(DisableImageBlockPublicAccessRequest request) {
+
+        return disableImageBlockPublicAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableImageBlockPublicAccessResult> disableImageBlockPublicAccessAsync(DisableImageBlockPublicAccessRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisableImageBlockPublicAccessRequest, DisableImageBlockPublicAccessResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableImageDeprecationResult> disableImageDeprecationAsync(DisableImageDeprecationRequest request) {
 
         return disableImageDeprecationAsync(request, null);
@@ -6649,6 +6662,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<EnableImageBlockPublicAccessResult> enableImageBlockPublicAccessAsync(EnableImageBlockPublicAccessRequest request) {
+
+        return enableImageBlockPublicAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableImageBlockPublicAccessResult> enableImageBlockPublicAccessAsync(EnableImageBlockPublicAccessRequest request,
+            com.amazonaws.handlers.AsyncHandler<EnableImageBlockPublicAccessRequest, EnableImageBlockPublicAccessResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<EnableImageDeprecationResult> enableImageDeprecationAsync(EnableImageDeprecationRequest request) {
 
         return enableImageDeprecationAsync(request, null);
@@ -6998,6 +7024,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     public java.util.concurrent.Future<GetHostReservationPurchasePreviewResult> getHostReservationPurchasePreviewAsync(
             GetHostReservationPurchasePreviewRequest request,
             com.amazonaws.handlers.AsyncHandler<GetHostReservationPurchasePreviewRequest, GetHostReservationPurchasePreviewResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetImageBlockPublicAccessStateResult> getImageBlockPublicAccessStateAsync(GetImageBlockPublicAccessStateRequest request) {
+
+        return getImageBlockPublicAccessStateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetImageBlockPublicAccessStateResult> getImageBlockPublicAccessStateAsync(GetImageBlockPublicAccessStateRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetImageBlockPublicAccessStateRequest, GetImageBlockPublicAccessStateResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

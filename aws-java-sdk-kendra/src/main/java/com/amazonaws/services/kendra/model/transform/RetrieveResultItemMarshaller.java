@@ -40,6 +40,8 @@ public class RetrieveResultItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DocumentURI").build();
     private static final MarshallingInfo<List> DOCUMENTATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DocumentAttributes").build();
+    private static final MarshallingInfo<StructuredPojo> SCOREATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScoreAttributes").build();
 
     private static final RetrieveResultItemMarshaller instance = new RetrieveResultItemMarshaller();
 
@@ -63,6 +65,7 @@ public class RetrieveResultItemMarshaller {
             protocolMarshaller.marshall(retrieveResultItem.getContent(), CONTENT_BINDING);
             protocolMarshaller.marshall(retrieveResultItem.getDocumentURI(), DOCUMENTURI_BINDING);
             protocolMarshaller.marshall(retrieveResultItem.getDocumentAttributes(), DOCUMENTATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(retrieveResultItem.getScoreAttributes(), SCOREATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

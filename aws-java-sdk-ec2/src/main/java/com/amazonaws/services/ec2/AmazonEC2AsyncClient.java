@@ -14039,6 +14039,40 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DisableImageBlockPublicAccessResult> disableImageBlockPublicAccessAsync(DisableImageBlockPublicAccessRequest request) {
+
+        return disableImageBlockPublicAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableImageBlockPublicAccessResult> disableImageBlockPublicAccessAsync(
+            final DisableImageBlockPublicAccessRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisableImageBlockPublicAccessRequest, DisableImageBlockPublicAccessResult> asyncHandler) {
+        final DisableImageBlockPublicAccessRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisableImageBlockPublicAccessResult>() {
+            @Override
+            public DisableImageBlockPublicAccessResult call() throws Exception {
+                DisableImageBlockPublicAccessResult result = null;
+
+                try {
+                    result = executeDisableImageBlockPublicAccess(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableImageDeprecationResult> disableImageDeprecationAsync(DisableImageDeprecationRequest request) {
 
         return disableImageDeprecationAsync(request, null);
@@ -14921,6 +14955,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<EnableImageBlockPublicAccessResult> enableImageBlockPublicAccessAsync(EnableImageBlockPublicAccessRequest request) {
+
+        return enableImageBlockPublicAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableImageBlockPublicAccessResult> enableImageBlockPublicAccessAsync(final EnableImageBlockPublicAccessRequest request,
+            final com.amazonaws.handlers.AsyncHandler<EnableImageBlockPublicAccessRequest, EnableImageBlockPublicAccessResult> asyncHandler) {
+        final EnableImageBlockPublicAccessRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<EnableImageBlockPublicAccessResult>() {
+            @Override
+            public EnableImageBlockPublicAccessResult call() throws Exception {
+                EnableImageBlockPublicAccessResult result = null;
+
+                try {
+                    result = executeEnableImageBlockPublicAccess(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<EnableImageDeprecationResult> enableImageDeprecationAsync(EnableImageDeprecationRequest request) {
 
         return enableImageDeprecationAsync(request, null);
@@ -15782,6 +15849,40 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeGetHostReservationPurchasePreview(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetImageBlockPublicAccessStateResult> getImageBlockPublicAccessStateAsync(GetImageBlockPublicAccessStateRequest request) {
+
+        return getImageBlockPublicAccessStateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetImageBlockPublicAccessStateResult> getImageBlockPublicAccessStateAsync(
+            final GetImageBlockPublicAccessStateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetImageBlockPublicAccessStateRequest, GetImageBlockPublicAccessStateResult> asyncHandler) {
+        final GetImageBlockPublicAccessStateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetImageBlockPublicAccessStateResult>() {
+            @Override
+            public GetImageBlockPublicAccessStateResult call() throws Exception {
+                GetImageBlockPublicAccessStateResult result = null;
+
+                try {
+                    result = executeGetImageBlockPublicAccessState(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

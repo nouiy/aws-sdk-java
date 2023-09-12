@@ -65,6 +65,13 @@ public class RetrieveResultItem implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private java.util.List<DocumentAttribute> documentAttributes;
+    /**
+     * <p>
+     * The confidence score bucket for a retrieved passage result. The confidence bucket provides a relative ranking
+     * that indicates how confident Amazon Kendra is that the response is relevant to the query.
+     * </p>
+     */
+    private ScoreAttributes scoreAttributes;
 
     /**
      * <p>
@@ -345,6 +352,52 @@ public class RetrieveResultItem implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The confidence score bucket for a retrieved passage result. The confidence bucket provides a relative ranking
+     * that indicates how confident Amazon Kendra is that the response is relevant to the query.
+     * </p>
+     * 
+     * @param scoreAttributes
+     *        The confidence score bucket for a retrieved passage result. The confidence bucket provides a relative
+     *        ranking that indicates how confident Amazon Kendra is that the response is relevant to the query.
+     */
+
+    public void setScoreAttributes(ScoreAttributes scoreAttributes) {
+        this.scoreAttributes = scoreAttributes;
+    }
+
+    /**
+     * <p>
+     * The confidence score bucket for a retrieved passage result. The confidence bucket provides a relative ranking
+     * that indicates how confident Amazon Kendra is that the response is relevant to the query.
+     * </p>
+     * 
+     * @return The confidence score bucket for a retrieved passage result. The confidence bucket provides a relative
+     *         ranking that indicates how confident Amazon Kendra is that the response is relevant to the query.
+     */
+
+    public ScoreAttributes getScoreAttributes() {
+        return this.scoreAttributes;
+    }
+
+    /**
+     * <p>
+     * The confidence score bucket for a retrieved passage result. The confidence bucket provides a relative ranking
+     * that indicates how confident Amazon Kendra is that the response is relevant to the query.
+     * </p>
+     * 
+     * @param scoreAttributes
+     *        The confidence score bucket for a retrieved passage result. The confidence bucket provides a relative
+     *        ranking that indicates how confident Amazon Kendra is that the response is relevant to the query.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetrieveResultItem withScoreAttributes(ScoreAttributes scoreAttributes) {
+        setScoreAttributes(scoreAttributes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -367,7 +420,9 @@ public class RetrieveResultItem implements Serializable, Cloneable, StructuredPo
         if (getDocumentURI() != null)
             sb.append("DocumentURI: ").append(getDocumentURI()).append(",");
         if (getDocumentAttributes() != null)
-            sb.append("DocumentAttributes: ").append(getDocumentAttributes());
+            sb.append("DocumentAttributes: ").append(getDocumentAttributes()).append(",");
+        if (getScoreAttributes() != null)
+            sb.append("ScoreAttributes: ").append(getScoreAttributes());
         sb.append("}");
         return sb.toString();
     }
@@ -406,6 +461,10 @@ public class RetrieveResultItem implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getDocumentAttributes() != null && other.getDocumentAttributes().equals(this.getDocumentAttributes()) == false)
             return false;
+        if (other.getScoreAttributes() == null ^ this.getScoreAttributes() == null)
+            return false;
+        if (other.getScoreAttributes() != null && other.getScoreAttributes().equals(this.getScoreAttributes()) == false)
+            return false;
         return true;
     }
 
@@ -420,6 +479,7 @@ public class RetrieveResultItem implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getContent() == null) ? 0 : getContent().hashCode());
         hashCode = prime * hashCode + ((getDocumentURI() == null) ? 0 : getDocumentURI().hashCode());
         hashCode = prime * hashCode + ((getDocumentAttributes() == null) ? 0 : getDocumentAttributes().hashCode());
+        hashCode = prime * hashCode + ((getScoreAttributes() == null) ? 0 : getScoreAttributes().hashCode());
         return hashCode;
     }
 

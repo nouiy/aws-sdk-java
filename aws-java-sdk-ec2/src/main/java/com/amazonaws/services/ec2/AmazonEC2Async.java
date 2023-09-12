@@ -17508,6 +17508,67 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Disables <i>block public access for AMIs</i> at the account level in the specified Amazon Web Services Region.
+     * This removes the <i>block public access</i> restriction from your account. With the restriction removed, you can
+     * publicly share your AMIs in the specified Amazon Web Services Region.
+     * </p>
+     * <p>
+     * The API can take up to 10 minutes to configure this setting. During this time, if you run <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetImageBlockPublicAccessState.html"
+     * >GetImageBlockPublicAccessState</a>, the response will be <code>block-new-sharing</code>. When the API has
+     * completed the configuration, the response will be <code>unblocked</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-intro.html#block-public-access-to-amis"
+     * >Block public access to your AMIs</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param disableImageBlockPublicAccessRequest
+     * @return A Java Future containing the result of the DisableImageBlockPublicAccess operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DisableImageBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableImageBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisableImageBlockPublicAccessResult> disableImageBlockPublicAccessAsync(
+            DisableImageBlockPublicAccessRequest disableImageBlockPublicAccessRequest);
+
+    /**
+     * <p>
+     * Disables <i>block public access for AMIs</i> at the account level in the specified Amazon Web Services Region.
+     * This removes the <i>block public access</i> restriction from your account. With the restriction removed, you can
+     * publicly share your AMIs in the specified Amazon Web Services Region.
+     * </p>
+     * <p>
+     * The API can take up to 10 minutes to configure this setting. During this time, if you run <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetImageBlockPublicAccessState.html"
+     * >GetImageBlockPublicAccessState</a>, the response will be <code>block-new-sharing</code>. When the API has
+     * completed the configuration, the response will be <code>unblocked</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-intro.html#block-public-access-to-amis"
+     * >Block public access to your AMIs</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param disableImageBlockPublicAccessRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisableImageBlockPublicAccess operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DisableImageBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableImageBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisableImageBlockPublicAccessResult> disableImageBlockPublicAccessAsync(
+            DisableImageBlockPublicAccessRequest disableImageBlockPublicAccessRequest,
+            com.amazonaws.handlers.AsyncHandler<DisableImageBlockPublicAccessRequest, DisableImageBlockPublicAccessResult> asyncHandler);
+
+    /**
+     * <p>
      * Cancels the deprecation of the specified AMI.
      * </p>
      * <p>
@@ -18652,6 +18713,67 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Enables <i>block public access for AMIs</i> at the account level in the specified Amazon Web Services Region.
+     * This prevents the public sharing of your AMIs. However, if you already have public AMIs, they will remain
+     * publicly available.
+     * </p>
+     * <p>
+     * The API can take up to 10 minutes to configure this setting. During this time, if you run <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetImageBlockPublicAccessState.html"
+     * >GetImageBlockPublicAccessState</a>, the response will be <code>unblocked</code>. When the API has completed the
+     * configuration, the response will be <code>block-new-sharing</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-intro.html#block-public-access-to-amis"
+     * >Block public access to your AMIs</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param enableImageBlockPublicAccessRequest
+     * @return A Java Future containing the result of the EnableImageBlockPublicAccess operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.EnableImageBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableImageBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<EnableImageBlockPublicAccessResult> enableImageBlockPublicAccessAsync(
+            EnableImageBlockPublicAccessRequest enableImageBlockPublicAccessRequest);
+
+    /**
+     * <p>
+     * Enables <i>block public access for AMIs</i> at the account level in the specified Amazon Web Services Region.
+     * This prevents the public sharing of your AMIs. However, if you already have public AMIs, they will remain
+     * publicly available.
+     * </p>
+     * <p>
+     * The API can take up to 10 minutes to configure this setting. During this time, if you run <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetImageBlockPublicAccessState.html"
+     * >GetImageBlockPublicAccessState</a>, the response will be <code>unblocked</code>. When the API has completed the
+     * configuration, the response will be <code>block-new-sharing</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-intro.html#block-public-access-to-amis"
+     * >Block public access to your AMIs</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param enableImageBlockPublicAccessRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the EnableImageBlockPublicAccess operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.EnableImageBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableImageBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<EnableImageBlockPublicAccessResult> enableImageBlockPublicAccessAsync(
+            EnableImageBlockPublicAccessRequest enableImageBlockPublicAccessRequest,
+            com.amazonaws.handlers.AsyncHandler<EnableImageBlockPublicAccessRequest, EnableImageBlockPublicAccessResult> asyncHandler);
+
+    /**
+     * <p>
      * Enables deprecation of the specified AMI at the specified date and time.
      * </p>
      * <p>
@@ -19759,6 +19881,53 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<GetHostReservationPurchasePreviewResult> getHostReservationPurchasePreviewAsync(
             GetHostReservationPurchasePreviewRequest getHostReservationPurchasePreviewRequest,
             com.amazonaws.handlers.AsyncHandler<GetHostReservationPurchasePreviewRequest, GetHostReservationPurchasePreviewResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the current state of <i>block public access for AMIs</i> at the account level in the specified Amazon Web
+     * Services Region.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-intro.html#block-public-access-to-amis"
+     * >Block public access to your AMIs</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param getImageBlockPublicAccessStateRequest
+     * @return A Java Future containing the result of the GetImageBlockPublicAccessState operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.GetImageBlockPublicAccessState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetImageBlockPublicAccessState"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetImageBlockPublicAccessStateResult> getImageBlockPublicAccessStateAsync(
+            GetImageBlockPublicAccessStateRequest getImageBlockPublicAccessStateRequest);
+
+    /**
+     * <p>
+     * Gets the current state of <i>block public access for AMIs</i> at the account level in the specified Amazon Web
+     * Services Region.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-intro.html#block-public-access-to-amis"
+     * >Block public access to your AMIs</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param getImageBlockPublicAccessStateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetImageBlockPublicAccessState operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.GetImageBlockPublicAccessState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetImageBlockPublicAccessState"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetImageBlockPublicAccessStateResult> getImageBlockPublicAccessStateAsync(
+            GetImageBlockPublicAccessStateRequest getImageBlockPublicAccessStateRequest,
+            com.amazonaws.handlers.AsyncHandler<GetImageBlockPublicAccessStateRequest, GetImageBlockPublicAccessStateResult> asyncHandler);
 
     /**
      * <p>

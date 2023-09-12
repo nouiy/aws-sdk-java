@@ -23826,6 +23826,75 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Disables <i>block public access for AMIs</i> at the account level in the specified Amazon Web Services Region.
+     * This removes the <i>block public access</i> restriction from your account. With the restriction removed, you can
+     * publicly share your AMIs in the specified Amazon Web Services Region.
+     * </p>
+     * <p>
+     * The API can take up to 10 minutes to configure this setting. During this time, if you run <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetImageBlockPublicAccessState.html"
+     * >GetImageBlockPublicAccessState</a>, the response will be <code>block-new-sharing</code>. When the API has
+     * completed the configuration, the response will be <code>unblocked</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-intro.html#block-public-access-to-amis"
+     * >Block public access to your AMIs</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param disableImageBlockPublicAccessRequest
+     * @return Result of the DisableImageBlockPublicAccess operation returned by the service.
+     * @sample AmazonEC2.DisableImageBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableImageBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisableImageBlockPublicAccessResult disableImageBlockPublicAccess(DisableImageBlockPublicAccessRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisableImageBlockPublicAccess(request);
+    }
+
+    @SdkInternalApi
+    final DisableImageBlockPublicAccessResult executeDisableImageBlockPublicAccess(DisableImageBlockPublicAccessRequest disableImageBlockPublicAccessRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disableImageBlockPublicAccessRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisableImageBlockPublicAccessRequest> request = null;
+        Response<DisableImageBlockPublicAccessResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisableImageBlockPublicAccessRequestMarshaller().marshall(super.beforeMarshalling(disableImageBlockPublicAccessRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisableImageBlockPublicAccess");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisableImageBlockPublicAccessResult> responseHandler = new StaxResponseHandler<DisableImageBlockPublicAccessResult>(
+                    new DisableImageBlockPublicAccessResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Cancels the deprecation of the specified AMI.
      * </p>
      * <p>
@@ -25438,6 +25507,75 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Enables <i>block public access for AMIs</i> at the account level in the specified Amazon Web Services Region.
+     * This prevents the public sharing of your AMIs. However, if you already have public AMIs, they will remain
+     * publicly available.
+     * </p>
+     * <p>
+     * The API can take up to 10 minutes to configure this setting. During this time, if you run <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetImageBlockPublicAccessState.html"
+     * >GetImageBlockPublicAccessState</a>, the response will be <code>unblocked</code>. When the API has completed the
+     * configuration, the response will be <code>block-new-sharing</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-intro.html#block-public-access-to-amis"
+     * >Block public access to your AMIs</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param enableImageBlockPublicAccessRequest
+     * @return Result of the EnableImageBlockPublicAccess operation returned by the service.
+     * @sample AmazonEC2.EnableImageBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableImageBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public EnableImageBlockPublicAccessResult enableImageBlockPublicAccess(EnableImageBlockPublicAccessRequest request) {
+        request = beforeClientExecution(request);
+        return executeEnableImageBlockPublicAccess(request);
+    }
+
+    @SdkInternalApi
+    final EnableImageBlockPublicAccessResult executeEnableImageBlockPublicAccess(EnableImageBlockPublicAccessRequest enableImageBlockPublicAccessRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(enableImageBlockPublicAccessRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<EnableImageBlockPublicAccessRequest> request = null;
+        Response<EnableImageBlockPublicAccessResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new EnableImageBlockPublicAccessRequestMarshaller().marshall(super.beforeMarshalling(enableImageBlockPublicAccessRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "EnableImageBlockPublicAccess");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<EnableImageBlockPublicAccessResult> responseHandler = new StaxResponseHandler<EnableImageBlockPublicAccessResult>(
+                    new EnableImageBlockPublicAccessResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Enables deprecation of the specified AMI at the specified date and time.
      * </p>
      * <p>
@@ -27018,6 +27156,68 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<GetHostReservationPurchasePreviewResult> responseHandler = new StaxResponseHandler<GetHostReservationPurchasePreviewResult>(
                     new GetHostReservationPurchasePreviewResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the current state of <i>block public access for AMIs</i> at the account level in the specified Amazon Web
+     * Services Region.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-intro.html#block-public-access-to-amis"
+     * >Block public access to your AMIs</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param getImageBlockPublicAccessStateRequest
+     * @return Result of the GetImageBlockPublicAccessState operation returned by the service.
+     * @sample AmazonEC2.GetImageBlockPublicAccessState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetImageBlockPublicAccessState"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetImageBlockPublicAccessStateResult getImageBlockPublicAccessState(GetImageBlockPublicAccessStateRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetImageBlockPublicAccessState(request);
+    }
+
+    @SdkInternalApi
+    final GetImageBlockPublicAccessStateResult executeGetImageBlockPublicAccessState(GetImageBlockPublicAccessStateRequest getImageBlockPublicAccessStateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getImageBlockPublicAccessStateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetImageBlockPublicAccessStateRequest> request = null;
+        Response<GetImageBlockPublicAccessStateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetImageBlockPublicAccessStateRequestMarshaller().marshall(super.beforeMarshalling(getImageBlockPublicAccessStateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetImageBlockPublicAccessState");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetImageBlockPublicAccessStateResult> responseHandler = new StaxResponseHandler<GetImageBlockPublicAccessStateResult>(
+                    new GetImageBlockPublicAccessStateResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

@@ -1,3 +1,16 @@
+# __1.12.549__ __2023-09-12__
+## __AWSKendraFrontendService__
+  - ### Features
+    - Amazon Kendra now supports confidence score buckets for retrieved passage results using the Retrieve API.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release adds support for restricting public sharing of AMIs through AMI Block Public Access
+
+## __Amazon EventBridge__
+  - ### Features
+    - Adds sensitive trait to various shapes in Jetstream Connections API model.
+
 # __1.12.548__ __2023-09-11__
 ## __AWS Elemental MediaLive__
   - ### Features
