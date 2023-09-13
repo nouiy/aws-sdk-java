@@ -37,6 +37,8 @@ public class UpdateLaunchConfigurationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("licensing").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<Boolean> POSTLAUNCHENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("postLaunchEnabled").build();
     private static final MarshallingInfo<String> SOURCESERVERID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceServerID").build();
     private static final MarshallingInfo<String> TARGETINSTANCETYPERIGHTSIZINGMETHOD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -63,6 +65,7 @@ public class UpdateLaunchConfigurationRequestMarshaller {
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getLaunchDisposition(), LAUNCHDISPOSITION_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getLicensing(), LICENSING_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(updateLaunchConfigurationRequest.getPostLaunchEnabled(), POSTLAUNCHENABLED_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getSourceServerID(), SOURCESERVERID_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getTargetInstanceTypeRightSizingMethod(), TARGETINSTANCETYPERIGHTSIZINGMETHOD_BINDING);
         } catch (Exception e) {

@@ -37,7 +37,8 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
-     * similar results.
+     * similar results. You must provide the value for either <code>autoEnableOrganizationMembers</code> or
+     * <code>autoEnable</code>.
      * </p>
      */
     @Deprecated
@@ -57,7 +58,11 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
     private java.util.List<OrganizationFeatureConfiguration> features;
     /**
      * <p>
-     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. You must
+     * provide a value for either <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
+     * </p>
+     * <p>
+     * Use one of the following configuration values for <code>autoEnableOrganizationMembers</code>:
      * </p>
      * <ul>
      * <li>
@@ -68,15 +73,18 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty enabled
-     * automatically. This includes <code>NEW</code> accounts that join the organization and accounts that may have been
-     * suspended or removed from the organization in GuardDuty.
+     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically. This
+     * includes <code>NEW</code> accounts that join the organization and accounts that may have been suspended or
+     * removed from the organization in GuardDuty.
+     * </p>
+     * <p>
+     * It may take up to 24 hours to update the configuration for all the member accounts.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
-     * organization. GuardDuty must be managed for each account individually by the administrator.
+     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
+     * organization. The administrator must manage GuardDuty for each account in the organization individually.
      * </p>
      * </li>
      * </ul>
@@ -129,14 +137,16 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
-     * similar results.
+     * similar results. You must provide the value for either <code>autoEnableOrganizationMembers</code> or
+     * <code>autoEnable</code>.
      * </p>
      * 
      * @param autoEnable
      *        Indicates whether to automatically enable member accounts in the organization.</p>
      *        <p>
      *        Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
-     *        achieve the similar results.
+     *        achieve the similar results. You must provide the value for either
+     *        <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
      */
     @Deprecated
     public void setAutoEnable(Boolean autoEnable) {
@@ -149,13 +159,15 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
-     * similar results.
+     * similar results. You must provide the value for either <code>autoEnableOrganizationMembers</code> or
+     * <code>autoEnable</code>.
      * </p>
      * 
      * @return Indicates whether to automatically enable member accounts in the organization.</p>
      *         <p>
      *         Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
-     *         achieve the similar results.
+     *         achieve the similar results. You must provide the value for either
+     *         <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
      */
     @Deprecated
     public Boolean getAutoEnable() {
@@ -168,14 +180,16 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
-     * similar results.
+     * similar results. You must provide the value for either <code>autoEnableOrganizationMembers</code> or
+     * <code>autoEnable</code>.
      * </p>
      * 
      * @param autoEnable
      *        Indicates whether to automatically enable member accounts in the organization.</p>
      *        <p>
      *        Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
-     *        achieve the similar results.
+     *        achieve the similar results. You must provide the value for either
+     *        <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated
@@ -190,13 +204,15 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
-     * similar results.
+     * similar results. You must provide the value for either <code>autoEnableOrganizationMembers</code> or
+     * <code>autoEnable</code>.
      * </p>
      * 
      * @return Indicates whether to automatically enable member accounts in the organization.</p>
      *         <p>
      *         Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
-     *         achieve the similar results.
+     *         achieve the similar results. You must provide the value for either
+     *         <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
      */
     @Deprecated
     public Boolean isAutoEnable() {
@@ -315,7 +331,11 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. You must
+     * provide a value for either <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
+     * </p>
+     * <p>
+     * Use one of the following configuration values for <code>autoEnableOrganizationMembers</code>:
      * </p>
      * <ul>
      * <li>
@@ -326,21 +346,29 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty enabled
-     * automatically. This includes <code>NEW</code> accounts that join the organization and accounts that may have been
-     * suspended or removed from the organization in GuardDuty.
+     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically. This
+     * includes <code>NEW</code> accounts that join the organization and accounts that may have been suspended or
+     * removed from the organization in GuardDuty.
+     * </p>
+     * <p>
+     * It may take up to 24 hours to update the configuration for all the member accounts.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
-     * organization. GuardDuty must be managed for each account individually by the administrator.
+     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
+     * organization. The administrator must manage GuardDuty for each account in the organization individually.
      * </p>
      * </li>
      * </ul>
      * 
      * @param autoEnableOrganizationMembers
-     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. </p>
+     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. You
+     *        must provide a value for either <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
+     *        </p>
+     *        <p>
+     *        Use one of the following configuration values for <code>autoEnableOrganizationMembers</code>:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -350,15 +378,18 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty
-     *        enabled automatically. This includes <code>NEW</code> accounts that join the organization and accounts
-     *        that may have been suspended or removed from the organization in GuardDuty.
+     *        <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically.
+     *        This includes <code>NEW</code> accounts that join the organization and accounts that may have been
+     *        suspended or removed from the organization in GuardDuty.
+     *        </p>
+     *        <p>
+     *        It may take up to 24 hours to update the configuration for all the member accounts.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
-     *        organization. GuardDuty must be managed for each account individually by the administrator.
+     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
+     *        organization. The administrator must manage GuardDuty for each account in the organization individually.
      *        </p>
      *        </li>
      * @see AutoEnableMembers
@@ -370,7 +401,11 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. You must
+     * provide a value for either <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
+     * </p>
+     * <p>
+     * Use one of the following configuration values for <code>autoEnableOrganizationMembers</code>:
      * </p>
      * <ul>
      * <li>
@@ -381,20 +416,27 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty enabled
-     * automatically. This includes <code>NEW</code> accounts that join the organization and accounts that may have been
-     * suspended or removed from the organization in GuardDuty.
+     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically. This
+     * includes <code>NEW</code> accounts that join the organization and accounts that may have been suspended or
+     * removed from the organization in GuardDuty.
+     * </p>
+     * <p>
+     * It may take up to 24 hours to update the configuration for all the member accounts.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
-     * organization. GuardDuty must be managed for each account individually by the administrator.
+     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
+     * organization. The administrator must manage GuardDuty for each account in the organization individually.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * @return Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. You
+     *         must provide a value for either <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
+     *         </p>
+     *         <p>
+     *         Use one of the following configuration values for <code>autoEnableOrganizationMembers</code>:
      *         </p>
      *         <ul>
      *         <li>
@@ -405,15 +447,18 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty
-     *         enabled automatically. This includes <code>NEW</code> accounts that join the organization and accounts
-     *         that may have been suspended or removed from the organization in GuardDuty.
+     *         <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically.
+     *         This includes <code>NEW</code> accounts that join the organization and accounts that may have been
+     *         suspended or removed from the organization in GuardDuty.
+     *         </p>
+     *         <p>
+     *         It may take up to 24 hours to update the configuration for all the member accounts.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
-     *         organization. GuardDuty must be managed for each account individually by the administrator.
+     *         <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
+     *         organization. The administrator must manage GuardDuty for each account in the organization individually.
      *         </p>
      *         </li>
      * @see AutoEnableMembers
@@ -425,7 +470,11 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. You must
+     * provide a value for either <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
+     * </p>
+     * <p>
+     * Use one of the following configuration values for <code>autoEnableOrganizationMembers</code>:
      * </p>
      * <ul>
      * <li>
@@ -436,21 +485,29 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty enabled
-     * automatically. This includes <code>NEW</code> accounts that join the organization and accounts that may have been
-     * suspended or removed from the organization in GuardDuty.
+     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically. This
+     * includes <code>NEW</code> accounts that join the organization and accounts that may have been suspended or
+     * removed from the organization in GuardDuty.
+     * </p>
+     * <p>
+     * It may take up to 24 hours to update the configuration for all the member accounts.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
-     * organization. GuardDuty must be managed for each account individually by the administrator.
+     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
+     * organization. The administrator must manage GuardDuty for each account in the organization individually.
      * </p>
      * </li>
      * </ul>
      * 
      * @param autoEnableOrganizationMembers
-     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. </p>
+     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. You
+     *        must provide a value for either <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
+     *        </p>
+     *        <p>
+     *        Use one of the following configuration values for <code>autoEnableOrganizationMembers</code>:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -460,15 +517,18 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty
-     *        enabled automatically. This includes <code>NEW</code> accounts that join the organization and accounts
-     *        that may have been suspended or removed from the organization in GuardDuty.
+     *        <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically.
+     *        This includes <code>NEW</code> accounts that join the organization and accounts that may have been
+     *        suspended or removed from the organization in GuardDuty.
+     *        </p>
+     *        <p>
+     *        It may take up to 24 hours to update the configuration for all the member accounts.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
-     *        organization. GuardDuty must be managed for each account individually by the administrator.
+     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
+     *        organization. The administrator must manage GuardDuty for each account in the organization individually.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -482,7 +542,11 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. You must
+     * provide a value for either <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
+     * </p>
+     * <p>
+     * Use one of the following configuration values for <code>autoEnableOrganizationMembers</code>:
      * </p>
      * <ul>
      * <li>
@@ -493,21 +557,29 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
-     * <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty enabled
-     * automatically. This includes <code>NEW</code> accounts that join the organization and accounts that may have been
-     * suspended or removed from the organization in GuardDuty.
+     * <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically. This
+     * includes <code>NEW</code> accounts that join the organization and accounts that may have been suspended or
+     * removed from the organization in GuardDuty.
+     * </p>
+     * <p>
+     * It may take up to 24 hours to update the configuration for all the member accounts.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
-     * organization. GuardDuty must be managed for each account individually by the administrator.
+     * <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
+     * organization. The administrator must manage GuardDuty for each account in the organization individually.
      * </p>
      * </li>
      * </ul>
      * 
      * @param autoEnableOrganizationMembers
-     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. </p>
+     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. You
+     *        must provide a value for either <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
+     *        </p>
+     *        <p>
+     *        Use one of the following configuration values for <code>autoEnableOrganizationMembers</code>:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -517,15 +589,18 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty
-     *        enabled automatically. This includes <code>NEW</code> accounts that join the organization and accounts
-     *        that may have been suspended or removed from the organization in GuardDuty.
+     *        <code>ALL</code>: Indicates that all accounts in the organization have GuardDuty enabled automatically.
+     *        This includes <code>NEW</code> accounts that join the organization and accounts that may have been
+     *        suspended or removed from the organization in GuardDuty.
+     *        </p>
+     *        <p>
+     *        It may take up to 24 hours to update the configuration for all the member accounts.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the
-     *        organization. GuardDuty must be managed for each account individually by the administrator.
+     *        <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any account in the
+     *        organization. The administrator must manage GuardDuty for each account in the organization individually.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

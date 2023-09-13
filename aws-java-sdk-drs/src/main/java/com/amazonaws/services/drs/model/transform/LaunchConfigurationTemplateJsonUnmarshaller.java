@@ -76,6 +76,10 @@ public class LaunchConfigurationTemplateJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     launchConfigurationTemplate.setLicensing(LicensingJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("postLaunchEnabled", targetDepth)) {
+                    context.nextToken();
+                    launchConfigurationTemplate.setPostLaunchEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     launchConfigurationTemplate.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context

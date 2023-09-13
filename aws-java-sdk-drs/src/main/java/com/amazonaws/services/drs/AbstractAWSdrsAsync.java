@@ -109,6 +109,19 @@ public class AbstractAWSdrsAsync extends AbstractAWSdrs implements AWSdrsAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteLaunchActionResult> deleteLaunchActionAsync(DeleteLaunchActionRequest request) {
+
+        return deleteLaunchActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLaunchActionResult> deleteLaunchActionAsync(DeleteLaunchActionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteLaunchActionRequest, DeleteLaunchActionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteLaunchConfigurationTemplateResult> deleteLaunchConfigurationTemplateAsync(
             DeleteLaunchConfigurationTemplateRequest request) {
 
@@ -392,6 +405,19 @@ public class AbstractAWSdrsAsync extends AbstractAWSdrs implements AWSdrsAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<ListLaunchActionsResult> listLaunchActionsAsync(ListLaunchActionsRequest request) {
+
+        return listLaunchActionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLaunchActionsResult> listLaunchActionsAsync(ListLaunchActionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListLaunchActionsRequest, ListLaunchActionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListStagingAccountsResult> listStagingAccountsAsync(ListStagingAccountsRequest request) {
 
         return listStagingAccountsAsync(request, null);
@@ -413,6 +439,19 @@ public class AbstractAWSdrsAsync extends AbstractAWSdrs implements AWSdrsAsync {
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutLaunchActionResult> putLaunchActionAsync(PutLaunchActionRequest request) {
+
+        return putLaunchActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutLaunchActionResult> putLaunchActionAsync(PutLaunchActionRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutLaunchActionRequest, PutLaunchActionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

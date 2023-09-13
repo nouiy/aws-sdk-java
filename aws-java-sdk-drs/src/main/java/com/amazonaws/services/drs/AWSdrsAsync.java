@@ -234,6 +234,37 @@ public interface AWSdrsAsync extends AWSdrs {
 
     /**
      * <p>
+     * Deletes a resource launch action.
+     * </p>
+     * 
+     * @param deleteLaunchActionRequest
+     * @return A Java Future containing the result of the DeleteLaunchAction operation returned by the service.
+     * @sample AWSdrsAsync.DeleteLaunchAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DeleteLaunchAction" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLaunchActionResult> deleteLaunchActionAsync(DeleteLaunchActionRequest deleteLaunchActionRequest);
+
+    /**
+     * <p>
+     * Deletes a resource launch action.
+     * </p>
+     * 
+     * @param deleteLaunchActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteLaunchAction operation returned by the service.
+     * @sample AWSdrsAsyncHandler.DeleteLaunchAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DeleteLaunchAction" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLaunchActionResult> deleteLaunchActionAsync(DeleteLaunchActionRequest deleteLaunchActionRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteLaunchActionRequest, DeleteLaunchActionResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a single Launch Configuration Template by ID.
      * </p>
      * 
@@ -961,6 +992,37 @@ public interface AWSdrsAsync extends AWSdrs {
 
     /**
      * <p>
+     * Lists resource launch actions.
+     * </p>
+     * 
+     * @param listLaunchActionsRequest
+     * @return A Java Future containing the result of the ListLaunchActions operation returned by the service.
+     * @sample AWSdrsAsync.ListLaunchActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/ListLaunchActions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListLaunchActionsResult> listLaunchActionsAsync(ListLaunchActionsRequest listLaunchActionsRequest);
+
+    /**
+     * <p>
+     * Lists resource launch actions.
+     * </p>
+     * 
+     * @param listLaunchActionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListLaunchActions operation returned by the service.
+     * @sample AWSdrsAsyncHandler.ListLaunchActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/ListLaunchActions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListLaunchActionsResult> listLaunchActionsAsync(ListLaunchActionsRequest listLaunchActionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListLaunchActionsRequest, ListLaunchActionsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns an array of staging accounts for existing extended source servers.
      * </p>
      * 
@@ -1020,6 +1082,37 @@ public interface AWSdrsAsync extends AWSdrs {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Puts a resource launch action.
+     * </p>
+     * 
+     * @param putLaunchActionRequest
+     * @return A Java Future containing the result of the PutLaunchAction operation returned by the service.
+     * @sample AWSdrsAsync.PutLaunchAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/PutLaunchAction" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutLaunchActionResult> putLaunchActionAsync(PutLaunchActionRequest putLaunchActionRequest);
+
+    /**
+     * <p>
+     * Puts a resource launch action.
+     * </p>
+     * 
+     * @param putLaunchActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutLaunchAction operation returned by the service.
+     * @sample AWSdrsAsyncHandler.PutLaunchAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/PutLaunchAction" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutLaunchActionResult> putLaunchActionAsync(PutLaunchActionRequest putLaunchActionRequest,
+            com.amazonaws.handlers.AsyncHandler<PutLaunchActionRequest, PutLaunchActionResult> asyncHandler);
 
     /**
      * <p>

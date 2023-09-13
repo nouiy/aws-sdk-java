@@ -79,6 +79,9 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * parameter is explicitly defined.
      * </p>
      * <p>
+     * Since Ubuntu 18.04 has ended standard support as of May 31, 2023, we recommend you choose Ubuntu 22.04.
+     * </p>
+     * <p>
      * <b>AMI aliases </b>
      * </p>
      * <ul>
@@ -430,6 +433,9 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * parameter is explicitly defined.
      * </p>
      * <p>
+     * Since Ubuntu 18.04 has ended standard support as of May 31, 2023, we recommend you choose Ubuntu 22.04.
+     * </p>
+     * <p>
      * <b>AMI aliases </b>
      * </p>
      * <ul>
@@ -492,6 +498,9 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        From December 31, 2023, the parameter for Amazon Linux will no longer be available when you specify an AMI
      *        for your instance. Amazon Linux 2 will then become the default AMI, which is used to launch your instance
      *        if no parameter is explicitly defined.
+     *        </p>
+     *        <p>
+     *        Since Ubuntu 18.04 has ended standard support as of May 31, 2023, we recommend you choose Ubuntu 22.04.
      *        </p>
      *        <p>
      *        <b>AMI aliases </b>
@@ -564,6 +573,9 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * parameter is explicitly defined.
      * </p>
      * <p>
+     * Since Ubuntu 18.04 has ended standard support as of May 31, 2023, we recommend you choose Ubuntu 22.04.
+     * </p>
+     * <p>
      * <b>AMI aliases </b>
      * </p>
      * <ul>
@@ -626,6 +638,9 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *         From December 31, 2023, the parameter for Amazon Linux will no longer be available when you specify an
      *         AMI for your instance. Amazon Linux 2 will then become the default AMI, which is used to launch your
      *         instance if no parameter is explicitly defined.
+     *         </p>
+     *         <p>
+     *         Since Ubuntu 18.04 has ended standard support as of May 31, 2023, we recommend you choose Ubuntu 22.04.
      *         </p>
      *         <p>
      *         <b>AMI aliases </b>
@@ -698,6 +713,9 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * parameter is explicitly defined.
      * </p>
      * <p>
+     * Since Ubuntu 18.04 has ended standard support as of May 31, 2023, we recommend you choose Ubuntu 22.04.
+     * </p>
+     * <p>
      * <b>AMI aliases </b>
      * </p>
      * <ul>
@@ -760,6 +778,9 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        From December 31, 2023, the parameter for Amazon Linux will no longer be available when you specify an AMI
      *        for your instance. Amazon Linux 2 will then become the default AMI, which is used to launch your instance
      *        if no parameter is explicitly defined.
+     *        </p>
+     *        <p>
+     *        Since Ubuntu 18.04 has ended standard support as of May 31, 2023, we recommend you choose Ubuntu 22.04.
      *        </p>
      *        <p>
      *        <b>AMI aliases </b>

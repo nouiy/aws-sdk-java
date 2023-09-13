@@ -199,6 +199,29 @@ public interface AWSdrs {
 
     /**
      * <p>
+     * Deletes a resource launch action.
+     * </p>
+     * 
+     * @param deleteLaunchActionRequest
+     * @return Result of the DeleteLaunchAction operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.DeleteLaunchAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DeleteLaunchAction" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteLaunchActionResult deleteLaunchAction(DeleteLaunchActionRequest deleteLaunchActionRequest);
+
+    /**
+     * <p>
      * Deletes a single Launch Configuration Template by ID.
      * </p>
      * 
@@ -695,6 +718,29 @@ public interface AWSdrs {
 
     /**
      * <p>
+     * Lists resource launch actions.
+     * </p>
+     * 
+     * @param listLaunchActionsRequest
+     * @return Result of the ListLaunchActions operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.ListLaunchActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/ListLaunchActions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListLaunchActionsResult listLaunchActions(ListLaunchActionsRequest listLaunchActionsRequest);
+
+    /**
+     * <p>
      * Returns an array of staging accounts for existing extended source servers.
      * </p>
      * 
@@ -738,6 +784,31 @@ public interface AWSdrs {
      *      Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Puts a resource launch action.
+     * </p>
+     * 
+     * @param putLaunchActionRequest
+     * @return Result of the PutLaunchAction operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.PutLaunchAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/PutLaunchAction" target="_top">AWS API
+     *      Documentation</a>
+     */
+    PutLaunchActionResult putLaunchAction(PutLaunchActionRequest putLaunchActionRequest);
 
     /**
      * <p>

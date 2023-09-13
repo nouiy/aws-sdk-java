@@ -21,6 +21,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Object specifying a participant token in a stage.
  * </p>
+ * <p>
+ * <b>Important</b>: Treat tokens as opaque; i.e., do not build functionality based on token contents. The format of
+ * tokens could change in the future.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/ParticipantToken" target="_top">AWS API
  *      Documentation</a>

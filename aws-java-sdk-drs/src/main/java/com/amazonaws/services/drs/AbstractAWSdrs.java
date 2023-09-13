@@ -58,6 +58,11 @@ public class AbstractAWSdrs implements AWSdrs {
     }
 
     @Override
+    public DeleteLaunchActionResult deleteLaunchAction(DeleteLaunchActionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteLaunchConfigurationTemplateResult deleteLaunchConfigurationTemplate(DeleteLaunchConfigurationTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -163,12 +168,22 @@ public class AbstractAWSdrs implements AWSdrs {
     }
 
     @Override
+    public ListLaunchActionsResult listLaunchActions(ListLaunchActionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListStagingAccountsResult listStagingAccounts(ListStagingAccountsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutLaunchActionResult putLaunchAction(PutLaunchActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

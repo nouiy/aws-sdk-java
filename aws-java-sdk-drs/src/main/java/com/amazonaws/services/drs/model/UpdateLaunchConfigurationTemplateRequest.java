@@ -63,6 +63,12 @@ public class UpdateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
     private Licensing licensing;
     /**
      * <p>
+     * Whether we want to activate post-launch actions.
+     * </p>
+     */
+    private Boolean postLaunchEnabled;
+    /**
+     * <p>
      * Target instance type right-sizing method.
      * </p>
      */
@@ -353,6 +359,58 @@ public class UpdateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
+     * Whether we want to activate post-launch actions.
+     * </p>
+     * 
+     * @param postLaunchEnabled
+     *        Whether we want to activate post-launch actions.
+     */
+
+    public void setPostLaunchEnabled(Boolean postLaunchEnabled) {
+        this.postLaunchEnabled = postLaunchEnabled;
+    }
+
+    /**
+     * <p>
+     * Whether we want to activate post-launch actions.
+     * </p>
+     * 
+     * @return Whether we want to activate post-launch actions.
+     */
+
+    public Boolean getPostLaunchEnabled() {
+        return this.postLaunchEnabled;
+    }
+
+    /**
+     * <p>
+     * Whether we want to activate post-launch actions.
+     * </p>
+     * 
+     * @param postLaunchEnabled
+     *        Whether we want to activate post-launch actions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateLaunchConfigurationTemplateRequest withPostLaunchEnabled(Boolean postLaunchEnabled) {
+        setPostLaunchEnabled(postLaunchEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether we want to activate post-launch actions.
+     * </p>
+     * 
+     * @return Whether we want to activate post-launch actions.
+     */
+
+    public Boolean isPostLaunchEnabled() {
+        return this.postLaunchEnabled;
+    }
+
+    /**
+     * <p>
      * Target instance type right-sizing method.
      * </p>
      * 
@@ -435,6 +493,8 @@ public class UpdateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
             sb.append("LaunchDisposition: ").append(getLaunchDisposition()).append(",");
         if (getLicensing() != null)
             sb.append("Licensing: ").append(getLicensing()).append(",");
+        if (getPostLaunchEnabled() != null)
+            sb.append("PostLaunchEnabled: ").append(getPostLaunchEnabled()).append(",");
         if (getTargetInstanceTypeRightSizingMethod() != null)
             sb.append("TargetInstanceTypeRightSizingMethod: ").append(getTargetInstanceTypeRightSizingMethod());
         sb.append("}");
@@ -476,6 +536,10 @@ public class UpdateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
             return false;
         if (other.getLicensing() != null && other.getLicensing().equals(this.getLicensing()) == false)
             return false;
+        if (other.getPostLaunchEnabled() == null ^ this.getPostLaunchEnabled() == null)
+            return false;
+        if (other.getPostLaunchEnabled() != null && other.getPostLaunchEnabled().equals(this.getPostLaunchEnabled()) == false)
+            return false;
         if (other.getTargetInstanceTypeRightSizingMethod() == null ^ this.getTargetInstanceTypeRightSizingMethod() == null)
             return false;
         if (other.getTargetInstanceTypeRightSizingMethod() != null
@@ -495,6 +559,7 @@ public class UpdateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
         hashCode = prime * hashCode + ((getLaunchConfigurationTemplateID() == null) ? 0 : getLaunchConfigurationTemplateID().hashCode());
         hashCode = prime * hashCode + ((getLaunchDisposition() == null) ? 0 : getLaunchDisposition().hashCode());
         hashCode = prime * hashCode + ((getLicensing() == null) ? 0 : getLicensing().hashCode());
+        hashCode = prime * hashCode + ((getPostLaunchEnabled() == null) ? 0 : getPostLaunchEnabled().hashCode());
         hashCode = prime * hashCode + ((getTargetInstanceTypeRightSizingMethod() == null) ? 0 : getTargetInstanceTypeRightSizingMethod().hashCode());
         return hashCode;
     }

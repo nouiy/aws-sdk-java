@@ -57,6 +57,12 @@ public class CreateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
     private Licensing licensing;
     /**
      * <p>
+     * Whether we want to activate post-launch actions.
+     * </p>
+     */
+    private Boolean postLaunchEnabled;
+    /**
+     * <p>
      * Request to associate tags during creation of a Launch Configuration Template.
      * </p>
      */
@@ -313,6 +319,58 @@ public class CreateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
+     * Whether we want to activate post-launch actions.
+     * </p>
+     * 
+     * @param postLaunchEnabled
+     *        Whether we want to activate post-launch actions.
+     */
+
+    public void setPostLaunchEnabled(Boolean postLaunchEnabled) {
+        this.postLaunchEnabled = postLaunchEnabled;
+    }
+
+    /**
+     * <p>
+     * Whether we want to activate post-launch actions.
+     * </p>
+     * 
+     * @return Whether we want to activate post-launch actions.
+     */
+
+    public Boolean getPostLaunchEnabled() {
+        return this.postLaunchEnabled;
+    }
+
+    /**
+     * <p>
+     * Whether we want to activate post-launch actions.
+     * </p>
+     * 
+     * @param postLaunchEnabled
+     *        Whether we want to activate post-launch actions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateLaunchConfigurationTemplateRequest withPostLaunchEnabled(Boolean postLaunchEnabled) {
+        setPostLaunchEnabled(postLaunchEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether we want to activate post-launch actions.
+     * </p>
+     * 
+     * @return Whether we want to activate post-launch actions.
+     */
+
+    public Boolean isPostLaunchEnabled() {
+        return this.postLaunchEnabled;
+    }
+
+    /**
+     * <p>
      * Request to associate tags during creation of a Launch Configuration Template.
      * </p>
      * 
@@ -461,6 +519,8 @@ public class CreateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
             sb.append("LaunchDisposition: ").append(getLaunchDisposition()).append(",");
         if (getLicensing() != null)
             sb.append("Licensing: ").append(getLicensing()).append(",");
+        if (getPostLaunchEnabled() != null)
+            sb.append("PostLaunchEnabled: ").append(getPostLaunchEnabled()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append("***Sensitive Data Redacted***").append(",");
         if (getTargetInstanceTypeRightSizingMethod() != null)
@@ -499,6 +559,10 @@ public class CreateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
             return false;
         if (other.getLicensing() != null && other.getLicensing().equals(this.getLicensing()) == false)
             return false;
+        if (other.getPostLaunchEnabled() == null ^ this.getPostLaunchEnabled() == null)
+            return false;
+        if (other.getPostLaunchEnabled() != null && other.getPostLaunchEnabled().equals(this.getPostLaunchEnabled()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -521,6 +585,7 @@ public class CreateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
         hashCode = prime * hashCode + ((getExportBucketArn() == null) ? 0 : getExportBucketArn().hashCode());
         hashCode = prime * hashCode + ((getLaunchDisposition() == null) ? 0 : getLaunchDisposition().hashCode());
         hashCode = prime * hashCode + ((getLicensing() == null) ? 0 : getLicensing().hashCode());
+        hashCode = prime * hashCode + ((getPostLaunchEnabled() == null) ? 0 : getPostLaunchEnabled().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getTargetInstanceTypeRightSizingMethod() == null) ? 0 : getTargetInstanceTypeRightSizingMethod().hashCode());
         return hashCode;

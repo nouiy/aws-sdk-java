@@ -276,6 +276,39 @@ public class AWSdrsAsyncClient extends AWSdrsClient implements AWSdrsAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteLaunchActionResult> deleteLaunchActionAsync(DeleteLaunchActionRequest request) {
+
+        return deleteLaunchActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLaunchActionResult> deleteLaunchActionAsync(final DeleteLaunchActionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteLaunchActionRequest, DeleteLaunchActionResult> asyncHandler) {
+        final DeleteLaunchActionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteLaunchActionResult>() {
+            @Override
+            public DeleteLaunchActionResult call() throws Exception {
+                DeleteLaunchActionResult result = null;
+
+                try {
+                    result = executeDeleteLaunchAction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteLaunchConfigurationTemplateResult> deleteLaunchConfigurationTemplateAsync(
             DeleteLaunchConfigurationTemplateRequest request) {
 
@@ -980,6 +1013,39 @@ public class AWSdrsAsyncClient extends AWSdrsClient implements AWSdrsAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<ListLaunchActionsResult> listLaunchActionsAsync(ListLaunchActionsRequest request) {
+
+        return listLaunchActionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLaunchActionsResult> listLaunchActionsAsync(final ListLaunchActionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListLaunchActionsRequest, ListLaunchActionsResult> asyncHandler) {
+        final ListLaunchActionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListLaunchActionsResult>() {
+            @Override
+            public ListLaunchActionsResult call() throws Exception {
+                ListLaunchActionsResult result = null;
+
+                try {
+                    result = executeListLaunchActions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListStagingAccountsResult> listStagingAccountsAsync(ListStagingAccountsRequest request) {
 
         return listStagingAccountsAsync(request, null);
@@ -1030,6 +1096,39 @@ public class AWSdrsAsyncClient extends AWSdrsClient implements AWSdrsAsync {
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutLaunchActionResult> putLaunchActionAsync(PutLaunchActionRequest request) {
+
+        return putLaunchActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutLaunchActionResult> putLaunchActionAsync(final PutLaunchActionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutLaunchActionRequest, PutLaunchActionResult> asyncHandler) {
+        final PutLaunchActionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutLaunchActionResult>() {
+            @Override
+            public PutLaunchActionResult call() throws Exception {
+                PutLaunchActionResult result = null;
+
+                try {
+                    result = executePutLaunchAction(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

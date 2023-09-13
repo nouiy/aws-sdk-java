@@ -61,6 +61,12 @@ public class GetLaunchConfigurationResult extends com.amazonaws.AmazonWebService
     private String name;
     /**
      * <p>
+     * Whether we want to activate post-launch actions for the Source Server.
+     * </p>
+     */
+    private Boolean postLaunchEnabled;
+    /**
+     * <p>
      * The ID of the Source Server for this launch configuration.
      * </p>
      */
@@ -358,6 +364,58 @@ public class GetLaunchConfigurationResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
+     * Whether we want to activate post-launch actions for the Source Server.
+     * </p>
+     * 
+     * @param postLaunchEnabled
+     *        Whether we want to activate post-launch actions for the Source Server.
+     */
+
+    public void setPostLaunchEnabled(Boolean postLaunchEnabled) {
+        this.postLaunchEnabled = postLaunchEnabled;
+    }
+
+    /**
+     * <p>
+     * Whether we want to activate post-launch actions for the Source Server.
+     * </p>
+     * 
+     * @return Whether we want to activate post-launch actions for the Source Server.
+     */
+
+    public Boolean getPostLaunchEnabled() {
+        return this.postLaunchEnabled;
+    }
+
+    /**
+     * <p>
+     * Whether we want to activate post-launch actions for the Source Server.
+     * </p>
+     * 
+     * @param postLaunchEnabled
+     *        Whether we want to activate post-launch actions for the Source Server.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetLaunchConfigurationResult withPostLaunchEnabled(Boolean postLaunchEnabled) {
+        setPostLaunchEnabled(postLaunchEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether we want to activate post-launch actions for the Source Server.
+     * </p>
+     * 
+     * @return Whether we want to activate post-launch actions for the Source Server.
+     */
+
+    public Boolean isPostLaunchEnabled() {
+        return this.postLaunchEnabled;
+    }
+
+    /**
+     * <p>
      * The ID of the Source Server for this launch configuration.
      * </p>
      * 
@@ -487,6 +545,8 @@ public class GetLaunchConfigurationResult extends com.amazonaws.AmazonWebService
             sb.append("Licensing: ").append(getLicensing()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getPostLaunchEnabled() != null)
+            sb.append("PostLaunchEnabled: ").append(getPostLaunchEnabled()).append(",");
         if (getSourceServerID() != null)
             sb.append("SourceServerID: ").append(getSourceServerID()).append(",");
         if (getTargetInstanceTypeRightSizingMethod() != null)
@@ -529,6 +589,10 @@ public class GetLaunchConfigurationResult extends com.amazonaws.AmazonWebService
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getPostLaunchEnabled() == null ^ this.getPostLaunchEnabled() == null)
+            return false;
+        if (other.getPostLaunchEnabled() != null && other.getPostLaunchEnabled().equals(this.getPostLaunchEnabled()) == false)
+            return false;
         if (other.getSourceServerID() == null ^ this.getSourceServerID() == null)
             return false;
         if (other.getSourceServerID() != null && other.getSourceServerID().equals(this.getSourceServerID()) == false)
@@ -552,6 +616,7 @@ public class GetLaunchConfigurationResult extends com.amazonaws.AmazonWebService
         hashCode = prime * hashCode + ((getLaunchDisposition() == null) ? 0 : getLaunchDisposition().hashCode());
         hashCode = prime * hashCode + ((getLicensing() == null) ? 0 : getLicensing().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getPostLaunchEnabled() == null) ? 0 : getPostLaunchEnabled().hashCode());
         hashCode = prime * hashCode + ((getSourceServerID() == null) ? 0 : getSourceServerID().hashCode());
         hashCode = prime * hashCode + ((getTargetInstanceTypeRightSizingMethod() == null) ? 0 : getTargetInstanceTypeRightSizingMethod().hashCode());
         return hashCode;

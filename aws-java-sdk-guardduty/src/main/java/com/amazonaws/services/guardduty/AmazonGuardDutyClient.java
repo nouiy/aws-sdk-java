@@ -1468,7 +1468,8 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Disables an Amazon Web Services account within the Organization as the GuardDuty delegated administrator.
+     * Removes the existing GuardDuty delegated administrator of the organization. Only the organization's management
+     * account can run this API operation.
      * </p>
      * 
      * @param disableOrganizationAdminAccountRequest
@@ -1695,8 +1696,8 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
      * </p>
      * <p>
      * With <code>autoEnableOrganizationMembers</code> configuration for your organization set to <code>ALL</code>,
-     * you'll receive an error if you attempt to disassociate a member account before removing them from your Amazon Web
-     * Services organization.
+     * you'll receive an error if you attempt to disassociate a member account before removing them from your
+     * organization.
      * </p>
      * 
      * @param disassociateMembersRequest
@@ -1755,7 +1756,8 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Enables an Amazon Web Services account within the organization as the GuardDuty delegated administrator.
+     * Designates an Amazon Web Services account within the organization as your GuardDuty delegated administrator. Only
+     * the organization's management account can run this API operation.
      * </p>
      * 
      * @param enableOrganizationAdminAccountRequest
@@ -1816,9 +1818,14 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Provides the details for the GuardDuty administrator account associated with the current GuardDuty member
-     * account.
+     * Provides the details of the GuardDuty administrator account associated with the current GuardDuty member account.
      * </p>
+     * <note>
+     * <p>
+     * If the organization's management account or a delegated administrator runs this API, it will return success (
+     * <code>HTTP 200</code>) but no content.
+     * </p>
+     * </note>
      * 
      * @param getAdministratorAccountRequest
      * @return Result of the GetAdministratorAccount operation returned by the service.
@@ -2736,10 +2743,10 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
     /**
      * <p>
      * Invites Amazon Web Services accounts to become members of an organization administered by the Amazon Web Services
-     * account that invokes this API. If you are using Amazon Web Services Organizations to manager your GuardDuty
-     * environment, this step is not needed. For more information, see <a
-     * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html">Managing accounts with Amazon
-     * Web Services Organizations</a>.
+     * account that invokes this API. If you are using organizations to manager your GuardDuty environment, this step is
+     * not needed. For more information, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html">Managing accounts with
+     * organizations</a>.
      * </p>
      * <p>
      * To invite Amazon Web Services accounts, the first step is to ensure that GuardDuty has been enabled in the
@@ -3235,7 +3242,8 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Lists the accounts configured as GuardDuty delegated administrators.
+     * Lists the accounts configured as GuardDuty delegated administrators. Only the organization's management account
+     * can run this API operation.
      * </p>
      * 
      * @param listOrganizationAdminAccountsRequest
@@ -3358,8 +3366,8 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
     /**
      * <p>
      * Lists tags for a resource. Tagging is currently supported for detectors, finding filters, IP sets, threat intel
-     * sets, and publishing destination, with a limit of 50 tags per each resource. When invoked, this operation returns
-     * all assigned tags for a given resource.
+     * sets, and publishing destination, with a limit of 50 tags per resource. When invoked, this operation returns all
+     * assigned tags for a given resource.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -4225,8 +4233,8 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Configures the delegated administrator account with the provided values. You must provide the value for either
-     * <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
+     * Configures the delegated administrator account with the provided values. You must provide a value for either
+     * <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>, but not both.
      * </p>
      * <p>
      * There might be regional differences because some data sources might not be available in all the Amazon Web

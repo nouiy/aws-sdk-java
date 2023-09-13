@@ -1,3 +1,36 @@
+# __1.12.550__ __2023-09-13__
+## __AWS Cloud9__
+  - ### Features
+    - Update to include information on Ubuntu 18 deprecation.
+
+## __AWS SimSpace Weaver__
+  - ### Features
+    - Edited the introductory text for the API reference.
+
+## __AWS X-Ray__
+  - ### Features
+    - Add StartTime field in GetTraceSummaries API response for each TraceSummary.
+
+## __Amazon CloudWatch Internet Monitor__
+  - ### Features
+    - This release updates the Amazon CloudWatch Internet Monitor API domain name.
+
+## __Amazon GuardDuty__
+  - ### Features
+    - Add `managementType` field to ListCoverage API response.
+
+## __Amazon Interactive Video Service RealTime__
+  - ### Features
+    - Doc only update that changes description for ParticipantToken.
+
+## __Amazon Kinesis Firehose__
+  - ### Features
+    - DocumentIdOptions has been added for the Amazon OpenSearch destination.
+
+## __Elastic Disaster Recovery Service__
+  - ### Features
+    - Updated existing APIs and added new ones to support using AWS Elastic Disaster Recovery post-launch actions. Added support for new regions.
+
 # __1.12.549__ __2023-09-12__
 ## __AWSKendraFrontendService__
   - ### Features

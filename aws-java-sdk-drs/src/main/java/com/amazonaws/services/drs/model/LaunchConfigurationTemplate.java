@@ -72,6 +72,12 @@ public class LaunchConfigurationTemplate implements Serializable, Cloneable, Str
     private Licensing licensing;
     /**
      * <p>
+     * Post-launch actions activated.
+     * </p>
+     */
+    private Boolean postLaunchEnabled;
+    /**
+     * <p>
      * Tags of the Launch Configuration Template.
      * </p>
      */
@@ -408,6 +414,58 @@ public class LaunchConfigurationTemplate implements Serializable, Cloneable, Str
 
     /**
      * <p>
+     * Post-launch actions activated.
+     * </p>
+     * 
+     * @param postLaunchEnabled
+     *        Post-launch actions activated.
+     */
+
+    public void setPostLaunchEnabled(Boolean postLaunchEnabled) {
+        this.postLaunchEnabled = postLaunchEnabled;
+    }
+
+    /**
+     * <p>
+     * Post-launch actions activated.
+     * </p>
+     * 
+     * @return Post-launch actions activated.
+     */
+
+    public Boolean getPostLaunchEnabled() {
+        return this.postLaunchEnabled;
+    }
+
+    /**
+     * <p>
+     * Post-launch actions activated.
+     * </p>
+     * 
+     * @param postLaunchEnabled
+     *        Post-launch actions activated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LaunchConfigurationTemplate withPostLaunchEnabled(Boolean postLaunchEnabled) {
+        setPostLaunchEnabled(postLaunchEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Post-launch actions activated.
+     * </p>
+     * 
+     * @return Post-launch actions activated.
+     */
+
+    public Boolean isPostLaunchEnabled() {
+        return this.postLaunchEnabled;
+    }
+
+    /**
+     * <p>
      * Tags of the Launch Configuration Template.
      * </p>
      * 
@@ -559,6 +617,8 @@ public class LaunchConfigurationTemplate implements Serializable, Cloneable, Str
             sb.append("LaunchDisposition: ").append(getLaunchDisposition()).append(",");
         if (getLicensing() != null)
             sb.append("Licensing: ").append(getLicensing()).append(",");
+        if (getPostLaunchEnabled() != null)
+            sb.append("PostLaunchEnabled: ").append(getPostLaunchEnabled()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append("***Sensitive Data Redacted***").append(",");
         if (getTargetInstanceTypeRightSizingMethod() != null)
@@ -606,6 +666,10 @@ public class LaunchConfigurationTemplate implements Serializable, Cloneable, Str
             return false;
         if (other.getLicensing() != null && other.getLicensing().equals(this.getLicensing()) == false)
             return false;
+        if (other.getPostLaunchEnabled() == null ^ this.getPostLaunchEnabled() == null)
+            return false;
+        if (other.getPostLaunchEnabled() != null && other.getPostLaunchEnabled().equals(this.getPostLaunchEnabled()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -630,6 +694,7 @@ public class LaunchConfigurationTemplate implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getLaunchConfigurationTemplateID() == null) ? 0 : getLaunchConfigurationTemplateID().hashCode());
         hashCode = prime * hashCode + ((getLaunchDisposition() == null) ? 0 : getLaunchDisposition().hashCode());
         hashCode = prime * hashCode + ((getLicensing() == null) ? 0 : getLicensing().hashCode());
+        hashCode = prime * hashCode + ((getPostLaunchEnabled() == null) ? 0 : getPostLaunchEnabled().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getTargetInstanceTypeRightSizingMethod() == null) ? 0 : getTargetInstanceTypeRightSizingMethod().hashCode());
         return hashCode;
