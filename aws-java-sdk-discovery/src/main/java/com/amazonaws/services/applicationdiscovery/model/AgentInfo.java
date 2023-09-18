@@ -568,7 +568,7 @@ public class AgentInfo implements Serializable, Cloneable, StructuredPojo {
         if (getHostName() != null)
             sb.append("HostName: ").append(getHostName()).append(",");
         if (getAgentNetworkInfoList() != null)
-            sb.append("AgentNetworkInfoList: ").append(getAgentNetworkInfoList()).append(",");
+            sb.append("AgentNetworkInfoList: ").append("***Sensitive Data Redacted***").append(",");
         if (getConnectorId() != null)
             sb.append("ConnectorId: ").append(getConnectorId()).append(",");
         if (getVersion() != null)

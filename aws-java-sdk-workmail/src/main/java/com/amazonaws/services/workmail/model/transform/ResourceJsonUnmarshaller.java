@@ -87,6 +87,11 @@ public class ResourceJsonUnmarshaller implements Unmarshaller<Resource, JsonUnma
                     context.nextToken();
                     resource.setDisabledDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("Description", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    resource.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (token == FIELD_NAME && !knownMember) {
                     context.nextToken();
                     com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);

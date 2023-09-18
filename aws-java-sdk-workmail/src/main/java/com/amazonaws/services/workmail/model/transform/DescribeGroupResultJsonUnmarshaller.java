@@ -82,6 +82,11 @@ public class DescribeGroupResultJsonUnmarshaller implements Unmarshaller<Describ
                     context.nextToken();
                     describeGroupResult.setDisabledDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("HiddenFromGlobalAddressList", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeGroupResult.setHiddenFromGlobalAddressList(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (token == FIELD_NAME && !knownMember) {
                     context.nextToken();
                     com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);

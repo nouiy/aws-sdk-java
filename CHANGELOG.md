@@ -1,3 +1,16 @@
+# __1.12.553__ __2023-09-18__
+## __AWS Application Discovery Service__
+  - ### Features
+    - Add sensitive protection for customer information
+
+## __Amazon Macie 2__
+  - ### Features
+    - This release changes the default managedDataIdentifierSelector setting for new classification jobs to RECOMMENDED. By default, new classification jobs now use the recommended set of managed data identifiers.
+
+## __Amazon WorkMail__
+  - ### Features
+    - This release includes four new APIs UpdateUser, UpdateGroup, ListGroupsForEntity and DescribeEntity, along with RemoteUsers and some enhancements to existing APIs.
+
 # __1.12.552__ __2023-09-15__
 ## __AWS DataSync__
   - ### Features

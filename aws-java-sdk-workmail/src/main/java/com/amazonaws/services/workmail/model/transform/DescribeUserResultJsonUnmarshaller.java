@@ -92,6 +92,81 @@ public class DescribeUserResultJsonUnmarshaller implements Unmarshaller<Describe
                     context.nextToken();
                     describeUserResult.setDisabledDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("MailboxProvisionedDate", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setMailboxProvisionedDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("MailboxDeprovisionedDate", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setMailboxDeprovisionedDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("FirstName", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setFirstName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LastName", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setLastName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("HiddenFromGlobalAddressList", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setHiddenFromGlobalAddressList(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("Initials", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setInitials(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Telephone", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setTelephone(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Street", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setStreet(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("JobTitle", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setJobTitle(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("City", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setCity(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Company", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setCompany(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ZipCode", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setZipCode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Department", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setDepartment(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Country", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setCountry(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Office", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeUserResult.setOffice(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (token == FIELD_NAME && !knownMember) {
                     context.nextToken();
                     com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);

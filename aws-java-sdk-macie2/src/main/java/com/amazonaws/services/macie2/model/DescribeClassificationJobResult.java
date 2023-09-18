@@ -171,7 +171,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * ALL (default) - Use all managed data identifiers.
+     * ALL - Use all managed data identifiers.
      * </p>
      * </li>
      * <li>
@@ -191,18 +191,17 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * RECOMMENDED - Use only the set of managed data identifiers that Amazon Web Services recommends for jobs.
+     * RECOMMENDED (default) - Use the recommended set of managed data identifiers.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * If this value is null, the job uses all managed data identifiers.
+     * If this value is null, the job uses the recommended set of managed data identifiers.
      * </p>
      * <p>
-     * If the job is a recurring job and this value is null, ALL, or EXCLUDE, each job run automatically uses new
-     * managed data identifiers that are released after the job was created or the preceding run ended. If this value is
-     * RECOMMENDED for a recurring job, each job run uses all the managed data identifiers that are in the recommended
-     * set when the run starts.
+     * If the job is a recurring job and this value is ALL or EXCLUDE, each job run automatically uses new managed data
+     * identifiers that are released. If this value is null or RECOMMENDED for a recurring job, each job run uses all
+     * the managed data identifiers that are in the recommended set when the run starts.
      * </p>
      * <p>
      * For information about individual managed data identifiers or to determine which ones are in the recommended set,
@@ -1410,7 +1409,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * ALL (default) - Use all managed data identifiers.
+     * ALL - Use all managed data identifiers.
      * </p>
      * </li>
      * <li>
@@ -1430,18 +1429,17 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * RECOMMENDED - Use only the set of managed data identifiers that Amazon Web Services recommends for jobs.
+     * RECOMMENDED (default) - Use the recommended set of managed data identifiers.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * If this value is null, the job uses all managed data identifiers.
+     * If this value is null, the job uses the recommended set of managed data identifiers.
      * </p>
      * <p>
-     * If the job is a recurring job and this value is null, ALL, or EXCLUDE, each job run automatically uses new
-     * managed data identifiers that are released after the job was created or the preceding run ended. If this value is
-     * RECOMMENDED for a recurring job, each job run uses all the managed data identifiers that are in the recommended
-     * set when the run starts.
+     * If the job is a recurring job and this value is ALL or EXCLUDE, each job run automatically uses new managed data
+     * identifiers that are released. If this value is null or RECOMMENDED for a recurring job, each job run uses all
+     * the managed data identifiers that are in the recommended set when the run starts.
      * </p>
      * <p>
      * For information about individual managed data identifiers or to determine which ones are in the recommended set,
@@ -1457,7 +1455,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *        <ul>
      *        <li>
      *        <p>
-     *        ALL (default) - Use all managed data identifiers.
+     *        ALL - Use all managed data identifiers.
      *        </p>
      *        </li>
      *        <li>
@@ -1478,18 +1476,17 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        RECOMMENDED - Use only the set of managed data identifiers that Amazon Web Services recommends for jobs.
+     *        RECOMMENDED (default) - Use the recommended set of managed data identifiers.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        If this value is null, the job uses all managed data identifiers.
+     *        If this value is null, the job uses the recommended set of managed data identifiers.
      *        </p>
      *        <p>
-     *        If the job is a recurring job and this value is null, ALL, or EXCLUDE, each job run automatically uses new
-     *        managed data identifiers that are released after the job was created or the preceding run ended. If this
-     *        value is RECOMMENDED for a recurring job, each job run uses all the managed data identifiers that are in
-     *        the recommended set when the run starts.
+     *        If the job is a recurring job and this value is ALL or EXCLUDE, each job run automatically uses new
+     *        managed data identifiers that are released. If this value is null or RECOMMENDED for a recurring job, each
+     *        job run uses all the managed data identifiers that are in the recommended set when the run starts.
      *        </p>
      *        <p>
      *        For information about individual managed data identifiers or to determine which ones are in the
@@ -1513,7 +1510,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * ALL (default) - Use all managed data identifiers.
+     * ALL - Use all managed data identifiers.
      * </p>
      * </li>
      * <li>
@@ -1533,18 +1530,17 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * RECOMMENDED - Use only the set of managed data identifiers that Amazon Web Services recommends for jobs.
+     * RECOMMENDED (default) - Use the recommended set of managed data identifiers.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * If this value is null, the job uses all managed data identifiers.
+     * If this value is null, the job uses the recommended set of managed data identifiers.
      * </p>
      * <p>
-     * If the job is a recurring job and this value is null, ALL, or EXCLUDE, each job run automatically uses new
-     * managed data identifiers that are released after the job was created or the preceding run ended. If this value is
-     * RECOMMENDED for a recurring job, each job run uses all the managed data identifiers that are in the recommended
-     * set when the run starts.
+     * If the job is a recurring job and this value is ALL or EXCLUDE, each job run automatically uses new managed data
+     * identifiers that are released. If this value is null or RECOMMENDED for a recurring job, each job run uses all
+     * the managed data identifiers that are in the recommended set when the run starts.
      * </p>
      * <p>
      * For information about individual managed data identifiers or to determine which ones are in the recommended set,
@@ -1559,7 +1555,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *         <ul>
      *         <li>
      *         <p>
-     *         ALL (default) - Use all managed data identifiers.
+     *         ALL - Use all managed data identifiers.
      *         </p>
      *         </li>
      *         <li>
@@ -1581,18 +1577,17 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *         </li>
      *         <li>
      *         <p>
-     *         RECOMMENDED - Use only the set of managed data identifiers that Amazon Web Services recommends for jobs.
+     *         RECOMMENDED (default) - Use the recommended set of managed data identifiers.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         If this value is null, the job uses all managed data identifiers.
+     *         If this value is null, the job uses the recommended set of managed data identifiers.
      *         </p>
      *         <p>
-     *         If the job is a recurring job and this value is null, ALL, or EXCLUDE, each job run automatically uses
-     *         new managed data identifiers that are released after the job was created or the preceding run ended. If
-     *         this value is RECOMMENDED for a recurring job, each job run uses all the managed data identifiers that
-     *         are in the recommended set when the run starts.
+     *         If the job is a recurring job and this value is ALL or EXCLUDE, each job run automatically uses new
+     *         managed data identifiers that are released. If this value is null or RECOMMENDED for a recurring job,
+     *         each job run uses all the managed data identifiers that are in the recommended set when the run starts.
      *         </p>
      *         <p>
      *         For information about individual managed data identifiers or to determine which ones are in the
@@ -1616,7 +1611,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * ALL (default) - Use all managed data identifiers.
+     * ALL - Use all managed data identifiers.
      * </p>
      * </li>
      * <li>
@@ -1636,18 +1631,17 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * RECOMMENDED - Use only the set of managed data identifiers that Amazon Web Services recommends for jobs.
+     * RECOMMENDED (default) - Use the recommended set of managed data identifiers.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * If this value is null, the job uses all managed data identifiers.
+     * If this value is null, the job uses the recommended set of managed data identifiers.
      * </p>
      * <p>
-     * If the job is a recurring job and this value is null, ALL, or EXCLUDE, each job run automatically uses new
-     * managed data identifiers that are released after the job was created or the preceding run ended. If this value is
-     * RECOMMENDED for a recurring job, each job run uses all the managed data identifiers that are in the recommended
-     * set when the run starts.
+     * If the job is a recurring job and this value is ALL or EXCLUDE, each job run automatically uses new managed data
+     * identifiers that are released. If this value is null or RECOMMENDED for a recurring job, each job run uses all
+     * the managed data identifiers that are in the recommended set when the run starts.
      * </p>
      * <p>
      * For information about individual managed data identifiers or to determine which ones are in the recommended set,
@@ -1663,7 +1657,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *        <ul>
      *        <li>
      *        <p>
-     *        ALL (default) - Use all managed data identifiers.
+     *        ALL - Use all managed data identifiers.
      *        </p>
      *        </li>
      *        <li>
@@ -1684,18 +1678,17 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        RECOMMENDED - Use only the set of managed data identifiers that Amazon Web Services recommends for jobs.
+     *        RECOMMENDED (default) - Use the recommended set of managed data identifiers.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        If this value is null, the job uses all managed data identifiers.
+     *        If this value is null, the job uses the recommended set of managed data identifiers.
      *        </p>
      *        <p>
-     *        If the job is a recurring job and this value is null, ALL, or EXCLUDE, each job run automatically uses new
-     *        managed data identifiers that are released after the job was created or the preceding run ended. If this
-     *        value is RECOMMENDED for a recurring job, each job run uses all the managed data identifiers that are in
-     *        the recommended set when the run starts.
+     *        If the job is a recurring job and this value is ALL or EXCLUDE, each job run automatically uses new
+     *        managed data identifiers that are released. If this value is null or RECOMMENDED for a recurring job, each
+     *        job run uses all the managed data identifiers that are in the recommended set when the run starts.
      *        </p>
      *        <p>
      *        For information about individual managed data identifiers or to determine which ones are in the
@@ -1721,7 +1714,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * ALL (default) - Use all managed data identifiers.
+     * ALL - Use all managed data identifiers.
      * </p>
      * </li>
      * <li>
@@ -1741,18 +1734,17 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * RECOMMENDED - Use only the set of managed data identifiers that Amazon Web Services recommends for jobs.
+     * RECOMMENDED (default) - Use the recommended set of managed data identifiers.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * If this value is null, the job uses all managed data identifiers.
+     * If this value is null, the job uses the recommended set of managed data identifiers.
      * </p>
      * <p>
-     * If the job is a recurring job and this value is null, ALL, or EXCLUDE, each job run automatically uses new
-     * managed data identifiers that are released after the job was created or the preceding run ended. If this value is
-     * RECOMMENDED for a recurring job, each job run uses all the managed data identifiers that are in the recommended
-     * set when the run starts.
+     * If the job is a recurring job and this value is ALL or EXCLUDE, each job run automatically uses new managed data
+     * identifiers that are released. If this value is null or RECOMMENDED for a recurring job, each job run uses all
+     * the managed data identifiers that are in the recommended set when the run starts.
      * </p>
      * <p>
      * For information about individual managed data identifiers or to determine which ones are in the recommended set,
@@ -1768,7 +1760,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *        <ul>
      *        <li>
      *        <p>
-     *        ALL (default) - Use all managed data identifiers.
+     *        ALL - Use all managed data identifiers.
      *        </p>
      *        </li>
      *        <li>
@@ -1789,18 +1781,17 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        RECOMMENDED - Use only the set of managed data identifiers that Amazon Web Services recommends for jobs.
+     *        RECOMMENDED (default) - Use the recommended set of managed data identifiers.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        If this value is null, the job uses all managed data identifiers.
+     *        If this value is null, the job uses the recommended set of managed data identifiers.
      *        </p>
      *        <p>
-     *        If the job is a recurring job and this value is null, ALL, or EXCLUDE, each job run automatically uses new
-     *        managed data identifiers that are released after the job was created or the preceding run ended. If this
-     *        value is RECOMMENDED for a recurring job, each job run uses all the managed data identifiers that are in
-     *        the recommended set when the run starts.
+     *        If the job is a recurring job and this value is ALL or EXCLUDE, each job run automatically uses new
+     *        managed data identifiers that are released. If this value is null or RECOMMENDED for a recurring job, each
+     *        job run uses all the managed data identifiers that are in the recommended set when the run starts.
      *        </p>
      *        <p>
      *        For information about individual managed data identifiers or to determine which ones are in the

@@ -97,6 +97,16 @@ public class DescribeOrganizationResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     describeOrganizationResult.setARN(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("MigrationAdmin", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeOrganizationResult.setMigrationAdmin(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("InteroperabilityEnabled", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeOrganizationResult.setInteroperabilityEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (token == FIELD_NAME && !knownMember) {
                     context.nextToken();
                     com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
