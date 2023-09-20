@@ -43,37 +43,28 @@ public class AssessmentSummaryJsonUnmarshaller implements Unmarshaller<Assessmen
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("antipatternReportS3Object", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assessmentSummary.setAntipatternReportS3Object(S3ObjectJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("antipatternReportStatus", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assessmentSummary.setAntipatternReportStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("antipatternReportStatusMessage", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assessmentSummary.setAntipatternReportStatusMessage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("lastAnalyzedTimestamp", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assessmentSummary.setLastAnalyzedTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
                 if (context.testExpression("listAntipatternSeveritySummary", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assessmentSummary.setListAntipatternSeveritySummary(new ListUnmarshaller<AntipatternSeveritySummary>(
                             AntipatternSeveritySummaryJsonUnmarshaller.getInstance())
@@ -81,7 +72,6 @@ public class AssessmentSummaryJsonUnmarshaller implements Unmarshaller<Assessmen
                     .unmarshall(context));
                 }
                 if (context.testExpression("listApplicationComponentStatusSummary", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assessmentSummary.setListApplicationComponentStatusSummary(new ListUnmarshaller<ApplicationComponentStatusSummary>(
                             ApplicationComponentStatusSummaryJsonUnmarshaller.getInstance())
@@ -89,7 +79,6 @@ public class AssessmentSummaryJsonUnmarshaller implements Unmarshaller<Assessmen
                     .unmarshall(context));
                 }
                 if (context.testExpression("listApplicationComponentStrategySummary", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assessmentSummary.setListApplicationComponentStrategySummary(new ListUnmarshaller<StrategySummary>(StrategySummaryJsonUnmarshaller
                             .getInstance())
@@ -97,7 +86,6 @@ public class AssessmentSummaryJsonUnmarshaller implements Unmarshaller<Assessmen
                     .unmarshall(context));
                 }
                 if (context.testExpression("listApplicationComponentSummary", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assessmentSummary.setListApplicationComponentSummary(new ListUnmarshaller<ApplicationComponentSummary>(
                             ApplicationComponentSummaryJsonUnmarshaller.getInstance())
@@ -105,29 +93,22 @@ public class AssessmentSummaryJsonUnmarshaller implements Unmarshaller<Assessmen
                     .unmarshall(context));
                 }
                 if (context.testExpression("listServerStatusSummary", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assessmentSummary.setListServerStatusSummary(new ListUnmarshaller<ServerStatusSummary>(ServerStatusSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("listServerStrategySummary", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assessmentSummary.setListServerStrategySummary(new ListUnmarshaller<StrategySummary>(StrategySummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("listServerSummary", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assessmentSummary.setListServerSummary(new ListUnmarshaller<ServerSummary>(ServerSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

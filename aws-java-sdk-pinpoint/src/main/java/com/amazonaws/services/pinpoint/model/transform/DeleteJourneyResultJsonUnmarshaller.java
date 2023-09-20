@@ -43,13 +43,9 @@ public class DeleteJourneyResultJsonUnmarshaller implements Unmarshaller<DeleteJ
             return deleteJourneyResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             deleteJourneyResult.setJourneyResponse(JourneyResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

@@ -43,17 +43,12 @@ public class BatchGetDocumentStatusResultJsonUnmarshaller implements Unmarshalle
             return batchGetDocumentStatusResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("Errors", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     batchGetDocumentStatusResult.setErrors(new ListUnmarshaller<BatchGetDocumentStatusResponseError>(
                             BatchGetDocumentStatusResponseErrorJsonUnmarshaller.getInstance())
@@ -61,15 +56,10 @@ public class BatchGetDocumentStatusResultJsonUnmarshaller implements Unmarshalle
                     .unmarshall(context));
                 }
                 if (context.testExpression("DocumentStatusList", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     batchGetDocumentStatusResult.setDocumentStatusList(new ListUnmarshaller<Status>(StatusJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -43,17 +43,12 @@ public class InferenceSpecificationJsonUnmarshaller implements Unmarshaller<Infe
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("Containers", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     inferenceSpecification.setContainers(new ListUnmarshaller<ModelPackageContainerDefinition>(ModelPackageContainerDefinitionJsonUnmarshaller
                             .getInstance())
@@ -61,36 +56,28 @@ public class InferenceSpecificationJsonUnmarshaller implements Unmarshaller<Infe
                     .unmarshall(context));
                 }
                 if (context.testExpression("SupportedTransformInstanceTypes", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     inferenceSpecification.setSupportedTransformInstanceTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("SupportedRealtimeInferenceInstanceTypes", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     inferenceSpecification.setSupportedRealtimeInferenceInstanceTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("SupportedContentTypes", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     inferenceSpecification.setSupportedContentTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("SupportedResponseMIMETypes", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     inferenceSpecification.setSupportedResponseMIMETypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

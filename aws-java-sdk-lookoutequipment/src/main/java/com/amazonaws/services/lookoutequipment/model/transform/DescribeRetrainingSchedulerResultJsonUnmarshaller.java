@@ -43,63 +43,46 @@ public class DescribeRetrainingSchedulerResultJsonUnmarshaller implements Unmars
             return describeRetrainingSchedulerResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("ModelName", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeRetrainingSchedulerResult.setModelName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("ModelArn", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeRetrainingSchedulerResult.setModelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("RetrainingStartDate", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeRetrainingSchedulerResult.setRetrainingStartDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
                 if (context.testExpression("RetrainingFrequency", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeRetrainingSchedulerResult.setRetrainingFrequency(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("LookbackWindow", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeRetrainingSchedulerResult.setLookbackWindow(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Status", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeRetrainingSchedulerResult.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("PromoteMode", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeRetrainingSchedulerResult.setPromoteMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("CreatedAt", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeRetrainingSchedulerResult.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
                 if (context.testExpression("UpdatedAt", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeRetrainingSchedulerResult.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

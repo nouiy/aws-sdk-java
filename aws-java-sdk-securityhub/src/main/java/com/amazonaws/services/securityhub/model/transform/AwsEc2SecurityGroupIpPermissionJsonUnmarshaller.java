@@ -43,32 +43,24 @@ public class AwsEc2SecurityGroupIpPermissionJsonUnmarshaller implements Unmarsha
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("IpProtocol", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsEc2SecurityGroupIpPermission.setIpProtocol(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("FromPort", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsEc2SecurityGroupIpPermission.setFromPort(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("ToPort", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsEc2SecurityGroupIpPermission.setToPort(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("UserIdGroupPairs", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsEc2SecurityGroupIpPermission.setUserIdGroupPairs(new ListUnmarshaller<AwsEc2SecurityGroupUserIdGroupPair>(
                             AwsEc2SecurityGroupUserIdGroupPairJsonUnmarshaller.getInstance())
@@ -76,7 +68,6 @@ public class AwsEc2SecurityGroupIpPermissionJsonUnmarshaller implements Unmarsha
                     .unmarshall(context));
                 }
                 if (context.testExpression("IpRanges", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsEc2SecurityGroupIpPermission.setIpRanges(new ListUnmarshaller<AwsEc2SecurityGroupIpRange>(AwsEc2SecurityGroupIpRangeJsonUnmarshaller
                             .getInstance())
@@ -84,7 +75,6 @@ public class AwsEc2SecurityGroupIpPermissionJsonUnmarshaller implements Unmarsha
                     .unmarshall(context));
                 }
                 if (context.testExpression("Ipv6Ranges", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsEc2SecurityGroupIpPermission.setIpv6Ranges(new ListUnmarshaller<AwsEc2SecurityGroupIpv6Range>(
                             AwsEc2SecurityGroupIpv6RangeJsonUnmarshaller.getInstance())
@@ -92,16 +82,11 @@ public class AwsEc2SecurityGroupIpPermissionJsonUnmarshaller implements Unmarsha
                     .unmarshall(context));
                 }
                 if (context.testExpression("PrefixListIds", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsEc2SecurityGroupIpPermission.setPrefixListIds(new ListUnmarshaller<AwsEc2SecurityGroupPrefixListId>(
                             AwsEc2SecurityGroupPrefixListIdJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

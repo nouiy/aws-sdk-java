@@ -43,13 +43,9 @@ public class GetChannelsResultJsonUnmarshaller implements Unmarshaller<GetChanne
             return getChannelsResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getChannelsResult.setChannelsResponse(ChannelsResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

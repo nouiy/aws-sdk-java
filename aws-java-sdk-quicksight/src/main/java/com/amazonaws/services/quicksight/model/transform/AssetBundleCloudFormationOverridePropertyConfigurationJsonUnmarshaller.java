@@ -44,24 +44,18 @@ public class AssetBundleCloudFormationOverridePropertyConfigurationJsonUnmarshal
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("ResourceIdOverrideConfiguration", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assetBundleCloudFormationOverridePropertyConfiguration
                             .setResourceIdOverrideConfiguration(AssetBundleExportJobResourceIdOverrideConfigurationJsonUnmarshaller.getInstance().unmarshall(
                                     context));
                 }
                 if (context.testExpression("VPCConnections", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assetBundleCloudFormationOverridePropertyConfiguration
                             .setVPCConnections(new ListUnmarshaller<AssetBundleExportJobVPCConnectionOverrideProperties>(
@@ -70,7 +64,6 @@ public class AssetBundleCloudFormationOverridePropertyConfigurationJsonUnmarshal
                             .unmarshall(context));
                 }
                 if (context.testExpression("RefreshSchedules", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assetBundleCloudFormationOverridePropertyConfiguration
                             .setRefreshSchedules(new ListUnmarshaller<AssetBundleExportJobRefreshScheduleOverrideProperties>(
@@ -79,7 +72,6 @@ public class AssetBundleCloudFormationOverridePropertyConfigurationJsonUnmarshal
                             .unmarshall(context));
                 }
                 if (context.testExpression("DataSources", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assetBundleCloudFormationOverridePropertyConfiguration
                             .setDataSources(new ListUnmarshaller<AssetBundleExportJobDataSourceOverrideProperties>(
@@ -88,7 +80,6 @@ public class AssetBundleCloudFormationOverridePropertyConfigurationJsonUnmarshal
                             .unmarshall(context));
                 }
                 if (context.testExpression("DataSets", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assetBundleCloudFormationOverridePropertyConfiguration.setDataSets(new ListUnmarshaller<AssetBundleExportJobDataSetOverrideProperties>(
                             AssetBundleExportJobDataSetOverridePropertiesJsonUnmarshaller.getInstance())
@@ -96,7 +87,6 @@ public class AssetBundleCloudFormationOverridePropertyConfigurationJsonUnmarshal
                     .unmarshall(context));
                 }
                 if (context.testExpression("Themes", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assetBundleCloudFormationOverridePropertyConfiguration.setThemes(new ListUnmarshaller<AssetBundleExportJobThemeOverrideProperties>(
                             AssetBundleExportJobThemeOverridePropertiesJsonUnmarshaller.getInstance())
@@ -104,7 +94,6 @@ public class AssetBundleCloudFormationOverridePropertyConfigurationJsonUnmarshal
                     .unmarshall(context));
                 }
                 if (context.testExpression("Analyses", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assetBundleCloudFormationOverridePropertyConfiguration.setAnalyses(new ListUnmarshaller<AssetBundleExportJobAnalysisOverrideProperties>(
                             AssetBundleExportJobAnalysisOverridePropertiesJsonUnmarshaller.getInstance())
@@ -112,16 +101,11 @@ public class AssetBundleCloudFormationOverridePropertyConfigurationJsonUnmarshal
                     .unmarshall(context));
                 }
                 if (context.testExpression("Dashboards", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     assetBundleCloudFormationOverridePropertyConfiguration.setDashboards(new ListUnmarshaller<AssetBundleExportJobDashboardOverrideProperties>(
                             AssetBundleExportJobDashboardOverridePropertiesJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -43,33 +43,38 @@ public class AutoScalingConfigurationSummaryJsonUnmarshaller implements Unmarsha
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("AutoScalingConfigurationArn", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     autoScalingConfigurationSummary.setAutoScalingConfigurationArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("AutoScalingConfigurationName", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     autoScalingConfigurationSummary.setAutoScalingConfigurationName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("AutoScalingConfigurationRevision", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     autoScalingConfigurationSummary.setAutoScalingConfigurationRevision(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
-                if (token == FIELD_NAME && !knownMember) {
+                if (context.testExpression("Status", targetDepth)) {
                     context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
+                    autoScalingConfigurationSummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CreatedAt", targetDepth)) {
+                    context.nextToken();
+                    autoScalingConfigurationSummary.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("HasAssociatedService", targetDepth)) {
+                    context.nextToken();
+                    autoScalingConfigurationSummary.setHasAssociatedService(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("IsDefault", targetDepth)) {
+                    context.nextToken();
+                    autoScalingConfigurationSummary.setIsDefault(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -43,17 +43,12 @@ public class ListFindingsMetricsResultJsonUnmarshaller implements Unmarshaller<L
             return listFindingsMetricsResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("findingsMetrics", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     listFindingsMetricsResult.setFindingsMetrics(new ListUnmarshaller<AccountFindingsMetric>(AccountFindingsMetricJsonUnmarshaller
                             .getInstance())
@@ -61,13 +56,8 @@ public class ListFindingsMetricsResultJsonUnmarshaller implements Unmarshaller<L
                     .unmarshall(context));
                 }
                 if (context.testExpression("nextToken", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     listFindingsMetricsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

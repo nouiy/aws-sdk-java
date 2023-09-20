@@ -43,13 +43,9 @@ public class UpdateComponentResultJsonUnmarshaller implements Unmarshaller<Updat
             return updateComponentResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             updateComponentResult.setEntity(ComponentJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

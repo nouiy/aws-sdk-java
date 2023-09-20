@@ -43,13 +43,9 @@ public class CreateVoiceTemplateResultJsonUnmarshaller implements Unmarshaller<C
             return createVoiceTemplateResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             createVoiceTemplateResult.setCreateTemplateMessageBody(CreateTemplateMessageBodyJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

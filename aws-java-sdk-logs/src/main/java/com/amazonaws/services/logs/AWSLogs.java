@@ -288,7 +288,7 @@ public interface AWSLogs {
 
     /**
      * <p>
-     * Creates a log group with the specified name. You can create up to 20,000 log groups per account.
+     * Creates a log group with the specified name. You can create up to 1,000,000 log groups per Region per account.
      * </p>
      * <p>
      * You must use the following guidelines when naming a log group:
@@ -1456,8 +1456,8 @@ public interface AWSLogs {
      * metric.
      * </p>
      * <p>
-     * CloudWatch Logs disables a metric filter if it generates 1,000 different name/value pairs for your specified
-     * dimensions within a certain amount of time. This helps to prevent accidental high charges.
+     * CloudWatch Logs might disable a metric filter if it generates 1,000 different name/value pairs for your specified
+     * dimensions within one hour.
      * </p>
      * <p>
      * You can also set up a billing alarm to alert you if your charges are higher than expected. For more information,
@@ -1555,6 +1555,12 @@ public interface AWSLogs {
      * deleted after the new retention date is reached. To make sure that log data is deleted permanently, keep a log
      * group at its lower retention setting until 72 hours after the previous retention period ends. Alternatively, wait
      * to change the retention setting until you confirm that the earlier log events are deleted.
+     * </p>
+     * <p>
+     * When log events reach their retention setting they are marked for deletion. After they are marked for deletion,
+     * they do not add to your archival storage costs anymore, even if they are not actually deleted until later. These
+     * log events marked for deletion are also not included when you use an API to retrieve the <code>storedBytes</code>
+     * value to see how many bytes a log group is storing.
      * </p>
      * </note>
      * 

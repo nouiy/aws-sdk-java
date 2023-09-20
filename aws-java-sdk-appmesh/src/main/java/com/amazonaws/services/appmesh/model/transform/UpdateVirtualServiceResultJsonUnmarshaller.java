@@ -43,13 +43,9 @@ public class UpdateVirtualServiceResultJsonUnmarshaller implements Unmarshaller<
             return updateVirtualServiceResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             updateVirtualServiceResult.setVirtualService(VirtualServiceDataJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

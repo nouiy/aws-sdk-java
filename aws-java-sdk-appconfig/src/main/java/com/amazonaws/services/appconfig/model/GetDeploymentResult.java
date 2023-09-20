@@ -155,6 +155,12 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      */
     private String kmsKeyIdentifier;
+    /**
+     * <p>
+     * A user-defined label for an AppConfig hosted configuration version.
+     * </p>
+     */
+    private String versionLabel;
 
     /**
      * <p>
@@ -1135,6 +1141,46 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <p>
+     * A user-defined label for an AppConfig hosted configuration version.
+     * </p>
+     * 
+     * @param versionLabel
+     *        A user-defined label for an AppConfig hosted configuration version.
+     */
+
+    public void setVersionLabel(String versionLabel) {
+        this.versionLabel = versionLabel;
+    }
+
+    /**
+     * <p>
+     * A user-defined label for an AppConfig hosted configuration version.
+     * </p>
+     * 
+     * @return A user-defined label for an AppConfig hosted configuration version.
+     */
+
+    public String getVersionLabel() {
+        return this.versionLabel;
+    }
+
+    /**
+     * <p>
+     * A user-defined label for an AppConfig hosted configuration version.
+     * </p>
+     * 
+     * @param versionLabel
+     *        A user-defined label for an AppConfig hosted configuration version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetDeploymentResult withVersionLabel(String versionLabel) {
+        setVersionLabel(versionLabel);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1187,7 +1233,9 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
         if (getKmsKeyArn() != null)
             sb.append("KmsKeyArn: ").append(getKmsKeyArn()).append(",");
         if (getKmsKeyIdentifier() != null)
-            sb.append("KmsKeyIdentifier: ").append(getKmsKeyIdentifier());
+            sb.append("KmsKeyIdentifier: ").append(getKmsKeyIdentifier()).append(",");
+        if (getVersionLabel() != null)
+            sb.append("VersionLabel: ").append(getVersionLabel());
         sb.append("}");
         return sb.toString();
     }
@@ -1286,6 +1334,10 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
             return false;
         if (other.getKmsKeyIdentifier() != null && other.getKmsKeyIdentifier().equals(this.getKmsKeyIdentifier()) == false)
             return false;
+        if (other.getVersionLabel() == null ^ this.getVersionLabel() == null)
+            return false;
+        if (other.getVersionLabel() != null && other.getVersionLabel().equals(this.getVersionLabel()) == false)
+            return false;
         return true;
     }
 
@@ -1315,6 +1367,7 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
         hashCode = prime * hashCode + ((getAppliedExtensions() == null) ? 0 : getAppliedExtensions().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyIdentifier() == null) ? 0 : getKmsKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getVersionLabel() == null) ? 0 : getVersionLabel().hashCode());
         return hashCode;
     }
 

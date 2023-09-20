@@ -43,13 +43,9 @@ public class GetPushTemplateResultJsonUnmarshaller implements Unmarshaller<GetPu
             return getPushTemplateResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getPushTemplateResult.setPushNotificationTemplateResponse(PushNotificationTemplateResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

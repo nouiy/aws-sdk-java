@@ -43,13 +43,9 @@ public class UpdateVirtualGatewayResultJsonUnmarshaller implements Unmarshaller<
             return updateVirtualGatewayResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             updateVirtualGatewayResult.setVirtualGateway(VirtualGatewayDataJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

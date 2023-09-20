@@ -43,13 +43,9 @@ public class UpdateEndpointResultJsonUnmarshaller implements Unmarshaller<Update
             return updateEndpointResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             updateEndpointResult.setMessageBody(MessageBodyJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

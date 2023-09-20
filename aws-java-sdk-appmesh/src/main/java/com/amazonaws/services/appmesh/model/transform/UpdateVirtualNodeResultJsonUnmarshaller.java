@@ -43,13 +43,9 @@ public class UpdateVirtualNodeResultJsonUnmarshaller implements Unmarshaller<Upd
             return updateVirtualNodeResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             updateVirtualNodeResult.setVirtualNode(VirtualNodeDataJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

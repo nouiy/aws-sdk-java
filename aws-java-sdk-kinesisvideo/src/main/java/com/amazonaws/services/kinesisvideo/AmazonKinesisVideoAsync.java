@@ -381,6 +381,13 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
             com.amazonaws.handlers.AsyncHandler<DescribeMappedResourceConfigurationRequest, DescribeMappedResourceConfigurationResult> asyncHandler);
 
     /**
+     * <important>
+     * <p>
+     * This API is related to <a
+     * href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/webrtc-ingestion.html">WebRTC
+     * Ingestion</a> and is only available in the <code>us-west-2</code> region.
+     * </p>
+     * </important>
      * <p>
      * Returns the most current information about the channel. Specify the <code>ChannelName</code> or
      * <code>ChannelARN</code> in the input.
@@ -397,6 +404,13 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
             DescribeMediaStorageConfigurationRequest describeMediaStorageConfigurationRequest);
 
     /**
+     * <important>
+     * <p>
+     * This API is related to <a
+     * href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/webrtc-ingestion.html">WebRTC
+     * Ingestion</a> and is only available in the <code>us-west-2</code> region.
+     * </p>
+     * </important>
      * <p>
      * Returns the most current information about the channel. Specify the <code>ChannelName</code> or
      * <code>ChannelARN</code> in the input.
@@ -819,6 +833,10 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
      * stream’s edge configuration and the Edge Agent will be retried for 15 minutes. After 15 minutes, the status will
      * transition into the <code>SYNC_FAILED</code> state.
      * </p>
+     * <p>
+     * To move an edge configuration from one device to another, use <a>DeleteEdgeConfiguration</a> to delete the
+     * current edge configuration. You can then invoke StartEdgeConfigurationUpdate with an updated Hub Device ARN.
+     * </p>
      * 
      * @param startEdgeConfigurationUpdateRequest
      * @return A Java Future containing the result of the StartEdgeConfigurationUpdate operation returned by the
@@ -845,6 +863,10 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
      * during the syncing process, a <code>ResourceInUseException</code> will be thrown. The connectivity of the
      * stream’s edge configuration and the Edge Agent will be retried for 15 minutes. After 15 minutes, the status will
      * transition into the <code>SYNC_FAILED</code> state.
+     * </p>
+     * <p>
+     * To move an edge configuration from one device to another, use <a>DeleteEdgeConfiguration</a> to delete the
+     * current edge configuration. You can then invoke StartEdgeConfigurationUpdate with an updated Hub Device ARN.
      * </p>
      * 
      * @param startEdgeConfigurationUpdateRequest
@@ -1155,6 +1177,13 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
             com.amazonaws.handlers.AsyncHandler<UpdateImageGenerationConfigurationRequest, UpdateImageGenerationConfigurationResult> asyncHandler);
 
     /**
+     * <important>
+     * <p>
+     * This API is related to <a
+     * href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/webrtc-ingestion.html">WebRTC
+     * Ingestion</a> and is only available in the <code>us-west-2</code> region.
+     * </p>
+     * </important>
      * <p>
      * Associates a <code>SignalingChannel</code> to a stream to store the media. There are two signaling modes that can
      * specified :
@@ -1191,6 +1220,13 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
             UpdateMediaStorageConfigurationRequest updateMediaStorageConfigurationRequest);
 
     /**
+     * <important>
+     * <p>
+     * This API is related to <a
+     * href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/webrtc-ingestion.html">WebRTC
+     * Ingestion</a> and is only available in the <code>us-west-2</code> region.
+     * </p>
+     * </important>
      * <p>
      * Associates a <code>SignalingChannel</code> to a stream to store the media. There are two signaling modes that can
      * specified :

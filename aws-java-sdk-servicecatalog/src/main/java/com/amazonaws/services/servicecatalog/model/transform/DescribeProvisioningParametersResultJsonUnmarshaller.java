@@ -43,17 +43,12 @@ public class DescribeProvisioningParametersResultJsonUnmarshaller implements Unm
             return describeProvisioningParametersResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("ProvisioningArtifactParameters", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeProvisioningParametersResult.setProvisioningArtifactParameters(new ListUnmarshaller<ProvisioningArtifactParameter>(
                             ProvisioningArtifactParameterJsonUnmarshaller.getInstance())
@@ -61,7 +56,6 @@ public class DescribeProvisioningParametersResultJsonUnmarshaller implements Unm
                     .unmarshall(context));
                 }
                 if (context.testExpression("ConstraintSummaries", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeProvisioningParametersResult.setConstraintSummaries(new ListUnmarshaller<ConstraintSummary>(ConstraintSummaryJsonUnmarshaller
                             .getInstance())
@@ -69,7 +63,6 @@ public class DescribeProvisioningParametersResultJsonUnmarshaller implements Unm
                     .unmarshall(context));
                 }
                 if (context.testExpression("UsageInstructions", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeProvisioningParametersResult.setUsageInstructions(new ListUnmarshaller<UsageInstruction>(UsageInstructionJsonUnmarshaller
                             .getInstance())
@@ -77,20 +70,17 @@ public class DescribeProvisioningParametersResultJsonUnmarshaller implements Unm
                     .unmarshall(context));
                 }
                 if (context.testExpression("TagOptions", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeProvisioningParametersResult.setTagOptions(new ListUnmarshaller<TagOptionSummary>(TagOptionSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("ProvisioningArtifactPreferences", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeProvisioningParametersResult.setProvisioningArtifactPreferences(ProvisioningArtifactPreferencesJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
                 if (context.testExpression("ProvisioningArtifactOutputs", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeProvisioningParametersResult.setProvisioningArtifactOutputs(new ListUnmarshaller<ProvisioningArtifactOutput>(
                             ProvisioningArtifactOutputJsonUnmarshaller.getInstance())
@@ -98,16 +88,11 @@ public class DescribeProvisioningParametersResultJsonUnmarshaller implements Unm
                     .unmarshall(context));
                 }
                 if (context.testExpression("ProvisioningArtifactOutputKeys", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeProvisioningParametersResult.setProvisioningArtifactOutputKeys(new ListUnmarshaller<ProvisioningArtifactOutput>(
                             ProvisioningArtifactOutputJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

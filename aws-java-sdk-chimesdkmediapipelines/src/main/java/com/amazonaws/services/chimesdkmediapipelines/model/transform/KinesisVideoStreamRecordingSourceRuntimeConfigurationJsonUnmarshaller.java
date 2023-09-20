@@ -44,17 +44,12 @@ public class KinesisVideoStreamRecordingSourceRuntimeConfigurationJsonUnmarshall
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("Streams", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     kinesisVideoStreamRecordingSourceRuntimeConfiguration.setStreams(new ListUnmarshaller<RecordingStreamConfiguration>(
                             RecordingStreamConfigurationJsonUnmarshaller.getInstance())
@@ -62,14 +57,9 @@ public class KinesisVideoStreamRecordingSourceRuntimeConfigurationJsonUnmarshall
                     .unmarshall(context));
                 }
                 if (context.testExpression("FragmentSelector", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     kinesisVideoStreamRecordingSourceRuntimeConfiguration.setFragmentSelector(FragmentSelectorJsonUnmarshaller.getInstance()
                             .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

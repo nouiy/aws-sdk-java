@@ -43,13 +43,9 @@ public class DescribeMeshResultJsonUnmarshaller implements Unmarshaller<Describe
             return describeMeshResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             describeMeshResult.setMesh(MeshDataJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

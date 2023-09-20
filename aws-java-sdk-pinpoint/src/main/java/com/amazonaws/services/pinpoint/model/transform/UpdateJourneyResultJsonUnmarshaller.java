@@ -43,13 +43,9 @@ public class UpdateJourneyResultJsonUnmarshaller implements Unmarshaller<UpdateJ
             return updateJourneyResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             updateJourneyResult.setJourneyResponse(JourneyResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

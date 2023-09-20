@@ -43,13 +43,9 @@ public class DeleteBaiduChannelResultJsonUnmarshaller implements Unmarshaller<De
             return deleteBaiduChannelResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             deleteBaiduChannelResult.setBaiduChannelResponse(BaiduChannelResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

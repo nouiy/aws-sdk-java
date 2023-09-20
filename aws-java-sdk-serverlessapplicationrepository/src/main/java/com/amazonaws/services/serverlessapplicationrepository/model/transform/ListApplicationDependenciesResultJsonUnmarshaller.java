@@ -43,17 +43,12 @@ public class ListApplicationDependenciesResultJsonUnmarshaller implements Unmars
             return listApplicationDependenciesResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("dependencies", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     listApplicationDependenciesResult.setDependencies(new ListUnmarshaller<ApplicationDependencySummary>(
                             ApplicationDependencySummaryJsonUnmarshaller.getInstance())
@@ -61,13 +56,8 @@ public class ListApplicationDependenciesResultJsonUnmarshaller implements Unmars
                     .unmarshall(context));
                 }
                 if (context.testExpression("nextToken", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     listApplicationDependenciesResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

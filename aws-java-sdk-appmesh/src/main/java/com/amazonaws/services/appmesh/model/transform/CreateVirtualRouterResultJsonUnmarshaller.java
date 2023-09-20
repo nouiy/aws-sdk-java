@@ -43,13 +43,9 @@ public class CreateVirtualRouterResultJsonUnmarshaller implements Unmarshaller<C
             return createVirtualRouterResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             createVirtualRouterResult.setVirtualRouter(VirtualRouterDataJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

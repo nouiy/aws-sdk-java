@@ -43,13 +43,9 @@ public class DeleteAdmChannelResultJsonUnmarshaller implements Unmarshaller<Dele
             return deleteAdmChannelResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             deleteAdmChannelResult.setADMChannelResponse(ADMChannelResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

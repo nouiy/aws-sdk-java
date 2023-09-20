@@ -43,13 +43,9 @@ public class DeleteVirtualNodeResultJsonUnmarshaller implements Unmarshaller<Del
             return deleteVirtualNodeResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             deleteVirtualNodeResult.setVirtualNode(VirtualNodeDataJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

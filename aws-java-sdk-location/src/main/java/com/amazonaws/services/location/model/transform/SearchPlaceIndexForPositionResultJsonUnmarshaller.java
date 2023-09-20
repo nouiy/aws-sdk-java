@@ -43,17 +43,12 @@ public class SearchPlaceIndexForPositionResultJsonUnmarshaller implements Unmars
             return searchPlaceIndexForPositionResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("Results", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     searchPlaceIndexForPositionResult.setResults(new ListUnmarshaller<SearchForPositionResult>(SearchForPositionResultJsonUnmarshaller
                             .getInstance())
@@ -61,13 +56,8 @@ public class SearchPlaceIndexForPositionResultJsonUnmarshaller implements Unmars
                     .unmarshall(context));
                 }
                 if (context.testExpression("Summary", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     searchPlaceIndexForPositionResult.setSummary(SearchPlaceIndexForPositionSummaryJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

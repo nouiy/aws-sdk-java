@@ -43,13 +43,9 @@ public class GetComponentResultJsonUnmarshaller implements Unmarshaller<GetCompo
             return getComponentResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getComponentResult.setComponent(ComponentJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

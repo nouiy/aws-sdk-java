@@ -43,17 +43,12 @@ public class ListDetectMitigationActionsTasksResultJsonUnmarshaller implements U
             return listDetectMitigationActionsTasksResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("tasks", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     listDetectMitigationActionsTasksResult.setTasks(new ListUnmarshaller<DetectMitigationActionsTaskSummary>(
                             DetectMitigationActionsTaskSummaryJsonUnmarshaller.getInstance())
@@ -61,13 +56,8 @@ public class ListDetectMitigationActionsTasksResultJsonUnmarshaller implements U
                     .unmarshall(context));
                 }
                 if (context.testExpression("nextToken", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     listDetectMitigationActionsTasksResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

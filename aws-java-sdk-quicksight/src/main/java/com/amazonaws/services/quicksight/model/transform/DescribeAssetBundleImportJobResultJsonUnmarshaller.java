@@ -45,22 +45,16 @@ public class DescribeAssetBundleImportJobResultJsonUnmarshaller implements Unmar
             return describeAssetBundleImportJobResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("JobStatus", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeAssetBundleImportJobResult.setJobStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Errors", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeAssetBundleImportJobResult.setErrors(new ListUnmarshaller<AssetBundleImportJobError>(AssetBundleImportJobErrorJsonUnmarshaller
                             .getInstance())
@@ -68,7 +62,6 @@ public class DescribeAssetBundleImportJobResultJsonUnmarshaller implements Unmar
                     .unmarshall(context));
                 }
                 if (context.testExpression("RollbackErrors", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeAssetBundleImportJobResult.setRollbackErrors(new ListUnmarshaller<AssetBundleImportJobError>(
                             AssetBundleImportJobErrorJsonUnmarshaller.getInstance())
@@ -76,50 +69,38 @@ public class DescribeAssetBundleImportJobResultJsonUnmarshaller implements Unmar
                     .unmarshall(context));
                 }
                 if (context.testExpression("Arn", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeAssetBundleImportJobResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("CreatedTime", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeAssetBundleImportJobResult.setCreatedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
                 if (context.testExpression("AssetBundleImportJobId", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeAssetBundleImportJobResult.setAssetBundleImportJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("AwsAccountId", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeAssetBundleImportJobResult.setAwsAccountId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("AssetBundleImportSource", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeAssetBundleImportJobResult.setAssetBundleImportSource(AssetBundleImportSourceDescriptionJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
                 if (context.testExpression("OverrideParameters", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeAssetBundleImportJobResult.setOverrideParameters(AssetBundleImportJobOverrideParametersJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
                 if (context.testExpression("FailureAction", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeAssetBundleImportJobResult.setFailureAction(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("RequestId", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeAssetBundleImportJobResult.setRequestId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

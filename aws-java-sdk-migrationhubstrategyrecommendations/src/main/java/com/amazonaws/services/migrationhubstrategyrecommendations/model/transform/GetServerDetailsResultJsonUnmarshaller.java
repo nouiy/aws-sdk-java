@@ -43,17 +43,12 @@ public class GetServerDetailsResultJsonUnmarshaller implements Unmarshaller<GetS
             return getServerDetailsResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("associatedApplications", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     getServerDetailsResult.setAssociatedApplications(new ListUnmarshaller<AssociatedApplication>(AssociatedApplicationJsonUnmarshaller
                             .getInstance())
@@ -61,18 +56,12 @@ public class GetServerDetailsResultJsonUnmarshaller implements Unmarshaller<GetS
                     .unmarshall(context));
                 }
                 if (context.testExpression("nextToken", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     getServerDetailsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("serverDetail", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     getServerDetailsResult.setServerDetail(ServerDetailJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

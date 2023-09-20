@@ -43,13 +43,9 @@ public class SendOTPMessageResultJsonUnmarshaller implements Unmarshaller<SendOT
             return sendOTPMessageResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             sendOTPMessageResult.setMessageResponse(MessageResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

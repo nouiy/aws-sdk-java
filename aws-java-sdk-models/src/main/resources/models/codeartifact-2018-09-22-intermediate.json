@@ -45040,6 +45040,9 @@
       }, {
         "name" : "Generic",
         "value" : "generic"
+      }, {
+        "name" : "Swift",
+        "value" : "swift"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.codeartifact.enum.PackageFormat",

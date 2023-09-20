@@ -43,13 +43,9 @@ public class GetSmsTemplateResultJsonUnmarshaller implements Unmarshaller<GetSms
             return getSmsTemplateResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getSmsTemplateResult.setSMSTemplateResponse(SMSTemplateResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

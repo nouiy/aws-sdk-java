@@ -43,13 +43,9 @@ public class GetImportJobsResultJsonUnmarshaller implements Unmarshaller<GetImpo
             return getImportJobsResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getImportJobsResult.setImportJobsResponse(ImportJobsResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

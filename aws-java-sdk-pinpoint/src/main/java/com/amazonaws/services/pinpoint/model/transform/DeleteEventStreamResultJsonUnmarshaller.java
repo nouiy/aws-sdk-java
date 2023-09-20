@@ -43,13 +43,9 @@ public class DeleteEventStreamResultJsonUnmarshaller implements Unmarshaller<Del
             return deleteEventStreamResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             deleteEventStreamResult.setEventStream(EventStreamJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

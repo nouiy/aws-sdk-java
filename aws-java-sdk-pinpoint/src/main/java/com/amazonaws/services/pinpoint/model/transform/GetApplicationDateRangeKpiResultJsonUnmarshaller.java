@@ -43,13 +43,9 @@ public class GetApplicationDateRangeKpiResultJsonUnmarshaller implements Unmarsh
             return getApplicationDateRangeKpiResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getApplicationDateRangeKpiResult.setApplicationDateRangeKpiResponse(ApplicationDateRangeKpiResponseJsonUnmarshaller.getInstance().unmarshall(
                     context));

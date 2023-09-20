@@ -43,13 +43,9 @@ public class UpdateApnsSandboxChannelResultJsonUnmarshaller implements Unmarshal
             return updateApnsSandboxChannelResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             updateApnsSandboxChannelResult.setAPNSSandboxChannelResponse(APNSSandboxChannelResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

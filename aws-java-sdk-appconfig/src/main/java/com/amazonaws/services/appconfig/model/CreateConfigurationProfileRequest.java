@@ -61,7 +61,13 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * For an Secrets Manager secret, specify the URI in the following format: <code>secrets-manager</code>://&lt;secret
+     * For an Amazon Web Services CodePipeline pipeline, specify the URI in the following format:
+     * <code>codepipeline</code>://&lt;pipeline name&gt;.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For an Secrets Manager secret, specify the URI in the following format: <code>secretsmanager</code>://&lt;secret
      * name&gt;.
      * </p>
      * </li>
@@ -260,7 +266,13 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * For an Secrets Manager secret, specify the URI in the following format: <code>secrets-manager</code>://&lt;secret
+     * For an Amazon Web Services CodePipeline pipeline, specify the URI in the following format:
+     * <code>codepipeline</code>://&lt;pipeline name&gt;.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For an Secrets Manager secret, specify the URI in the following format: <code>secretsmanager</code>://&lt;secret
      * name&gt;.
      * </p>
      * </li>
@@ -295,7 +307,13 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        For an Secrets Manager secret, specify the URI in the following format: <code>secrets-manager</code>
+     *        For an Amazon Web Services CodePipeline pipeline, specify the URI in the following format:
+     *        <code>codepipeline</code>://&lt;pipeline name&gt;.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For an Secrets Manager secret, specify the URI in the following format: <code>secretsmanager</code>
      *        ://&lt;secret name&gt;.
      *        </p>
      *        </li>
@@ -336,7 +354,13 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * For an Secrets Manager secret, specify the URI in the following format: <code>secrets-manager</code>://&lt;secret
+     * For an Amazon Web Services CodePipeline pipeline, specify the URI in the following format:
+     * <code>codepipeline</code>://&lt;pipeline name&gt;.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For an Secrets Manager secret, specify the URI in the following format: <code>secretsmanager</code>://&lt;secret
      * name&gt;.
      * </p>
      * </li>
@@ -370,7 +394,13 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
      *         </li>
      *         <li>
      *         <p>
-     *         For an Secrets Manager secret, specify the URI in the following format: <code>secrets-manager</code>
+     *         For an Amazon Web Services CodePipeline pipeline, specify the URI in the following format:
+     *         <code>codepipeline</code>://&lt;pipeline name&gt;.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For an Secrets Manager secret, specify the URI in the following format: <code>secretsmanager</code>
      *         ://&lt;secret name&gt;.
      *         </p>
      *         </li>
@@ -411,7 +441,13 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * For an Secrets Manager secret, specify the URI in the following format: <code>secrets-manager</code>://&lt;secret
+     * For an Amazon Web Services CodePipeline pipeline, specify the URI in the following format:
+     * <code>codepipeline</code>://&lt;pipeline name&gt;.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For an Secrets Manager secret, specify the URI in the following format: <code>secretsmanager</code>://&lt;secret
      * name&gt;.
      * </p>
      * </li>
@@ -446,7 +482,13 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        For an Secrets Manager secret, specify the URI in the following format: <code>secrets-manager</code>
+     *        For an Amazon Web Services CodePipeline pipeline, specify the URI in the following format:
+     *        <code>codepipeline</code>://&lt;pipeline name&gt;.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For an Secrets Manager secret, specify the URI in the following format: <code>secretsmanager</code>
      *        ://&lt;secret name&gt;.
      *        </p>
      *        </li>

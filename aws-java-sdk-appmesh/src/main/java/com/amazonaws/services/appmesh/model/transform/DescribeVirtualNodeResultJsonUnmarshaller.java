@@ -43,13 +43,9 @@ public class DescribeVirtualNodeResultJsonUnmarshaller implements Unmarshaller<D
             return describeVirtualNodeResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             describeVirtualNodeResult.setVirtualNode(VirtualNodeDataJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

@@ -43,17 +43,12 @@ public class DescribeInstanceInformationResultJsonUnmarshaller implements Unmars
             return describeInstanceInformationResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("InstanceInformationList", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeInstanceInformationResult.setInstanceInformationList(new ListUnmarshaller<InstanceInformation>(InstanceInformationJsonUnmarshaller
                             .getInstance())
@@ -61,13 +56,8 @@ public class DescribeInstanceInformationResultJsonUnmarshaller implements Unmars
                     .unmarshall(context));
                 }
                 if (context.testExpression("NextToken", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeInstanceInformationResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

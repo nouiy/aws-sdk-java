@@ -43,13 +43,9 @@ public class GetInAppTemplateResultJsonUnmarshaller implements Unmarshaller<GetI
             return getInAppTemplateResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getInAppTemplateResult.setInAppTemplateResponse(InAppTemplateResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

@@ -43,13 +43,9 @@ public class GetCodegenJobResultJsonUnmarshaller implements Unmarshaller<GetCode
             return getCodegenJobResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getCodegenJobResult.setJob(CodegenJobJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

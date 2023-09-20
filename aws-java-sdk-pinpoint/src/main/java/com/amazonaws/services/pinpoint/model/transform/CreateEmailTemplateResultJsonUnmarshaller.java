@@ -43,13 +43,9 @@ public class CreateEmailTemplateResultJsonUnmarshaller implements Unmarshaller<C
             return createEmailTemplateResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             createEmailTemplateResult.setCreateTemplateMessageBody(CreateTemplateMessageBodyJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

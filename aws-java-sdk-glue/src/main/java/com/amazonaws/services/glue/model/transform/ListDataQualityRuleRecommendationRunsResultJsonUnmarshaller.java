@@ -44,17 +44,12 @@ public class ListDataQualityRuleRecommendationRunsResultJsonUnmarshaller impleme
             return listDataQualityRuleRecommendationRunsResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("Runs", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     listDataQualityRuleRecommendationRunsResult.setRuns(new ListUnmarshaller<DataQualityRuleRecommendationRunDescription>(
                             DataQualityRuleRecommendationRunDescriptionJsonUnmarshaller.getInstance())
@@ -62,13 +57,8 @@ public class ListDataQualityRuleRecommendationRunsResultJsonUnmarshaller impleme
                     .unmarshall(context));
                 }
                 if (context.testExpression("NextToken", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     listDataQualityRuleRecommendationRunsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

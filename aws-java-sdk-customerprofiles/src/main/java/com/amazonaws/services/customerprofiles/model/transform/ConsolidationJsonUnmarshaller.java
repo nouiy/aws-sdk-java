@@ -43,17 +43,12 @@ public class ConsolidationJsonUnmarshaller implements Unmarshaller<Consolidation
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("MatchingAttributesList", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     consolidation.setMatchingAttributesList(new ListUnmarshaller<java.util.List<String>>(new ListUnmarshaller<String>(context
                             .getUnmarshaller(String.class))
@@ -61,10 +56,6 @@ public class ConsolidationJsonUnmarshaller implements Unmarshaller<Consolidation
                     )
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

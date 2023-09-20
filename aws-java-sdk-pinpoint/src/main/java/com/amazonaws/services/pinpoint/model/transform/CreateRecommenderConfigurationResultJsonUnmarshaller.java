@@ -43,13 +43,9 @@ public class CreateRecommenderConfigurationResultJsonUnmarshaller implements Unm
             return createRecommenderConfigurationResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             createRecommenderConfigurationResult.setRecommenderConfigurationResponse(RecommenderConfigurationResponseJsonUnmarshaller.getInstance().unmarshall(
                     context));

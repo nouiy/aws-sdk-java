@@ -43,17 +43,12 @@ public class ListParallelDataResultJsonUnmarshaller implements Unmarshaller<List
             return listParallelDataResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("ParallelDataPropertiesList", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     listParallelDataResult.setParallelDataPropertiesList(new ListUnmarshaller<ParallelDataProperties>(ParallelDataPropertiesJsonUnmarshaller
                             .getInstance())
@@ -61,13 +56,8 @@ public class ListParallelDataResultJsonUnmarshaller implements Unmarshaller<List
                     .unmarshall(context));
                 }
                 if (context.testExpression("NextToken", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     listParallelDataResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

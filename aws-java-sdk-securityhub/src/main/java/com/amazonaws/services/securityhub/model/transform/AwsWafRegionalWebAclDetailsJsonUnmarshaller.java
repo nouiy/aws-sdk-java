@@ -43,32 +43,24 @@ public class AwsWafRegionalWebAclDetailsJsonUnmarshaller implements Unmarshaller
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("DefaultAction", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsWafRegionalWebAclDetails.setDefaultAction(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("MetricName", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsWafRegionalWebAclDetails.setMetricName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Name", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsWafRegionalWebAclDetails.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("RulesList", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsWafRegionalWebAclDetails.setRulesList(new ListUnmarshaller<AwsWafRegionalWebAclRulesListDetails>(
                             AwsWafRegionalWebAclRulesListDetailsJsonUnmarshaller.getInstance())
@@ -76,13 +68,8 @@ public class AwsWafRegionalWebAclDetailsJsonUnmarshaller implements Unmarshaller
                     .unmarshall(context));
                 }
                 if (context.testExpression("WebAclId", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     awsWafRegionalWebAclDetails.setWebAclId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

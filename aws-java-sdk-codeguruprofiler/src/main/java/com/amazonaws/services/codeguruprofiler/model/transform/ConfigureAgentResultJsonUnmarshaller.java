@@ -43,13 +43,9 @@ public class ConfigureAgentResultJsonUnmarshaller implements Unmarshaller<Config
             return configureAgentResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             configureAgentResult.setConfiguration(AgentConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

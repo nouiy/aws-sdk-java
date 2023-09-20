@@ -43,13 +43,9 @@ public class ListTagsForResourceResultJsonUnmarshaller implements Unmarshaller<L
             return listTagsForResourceResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             listTagsForResourceResult.setTagsModel(TagsModelJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

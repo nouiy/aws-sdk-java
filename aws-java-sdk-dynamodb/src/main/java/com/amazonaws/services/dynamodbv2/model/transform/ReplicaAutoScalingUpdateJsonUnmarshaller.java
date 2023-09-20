@@ -43,22 +43,16 @@ public class ReplicaAutoScalingUpdateJsonUnmarshaller implements Unmarshaller<Re
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("RegionName", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     replicaAutoScalingUpdate.setRegionName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("ReplicaGlobalSecondaryIndexUpdates", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     replicaAutoScalingUpdate.setReplicaGlobalSecondaryIndexUpdates(new ListUnmarshaller<ReplicaGlobalSecondaryIndexAutoScalingUpdate>(
                             ReplicaGlobalSecondaryIndexAutoScalingUpdateJsonUnmarshaller.getInstance())
@@ -66,14 +60,9 @@ public class ReplicaAutoScalingUpdateJsonUnmarshaller implements Unmarshaller<Re
                     .unmarshall(context));
                 }
                 if (context.testExpression("ReplicaProvisionedReadCapacityAutoScalingUpdate", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     replicaAutoScalingUpdate.setReplicaProvisionedReadCapacityAutoScalingUpdate(AutoScalingSettingsUpdateJsonUnmarshaller.getInstance()
                             .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

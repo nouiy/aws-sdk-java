@@ -1,3 +1,36 @@
+# __1.12.555__ __2023-09-20__
+## __AWS App Runner__
+  - ### Features
+    - This release adds improvements for managing App Runner auto scaling configuration resources. New APIs: UpdateDefaultAutoScalingConfiguration and ListServicesForAutoScalingConfiguration. Updated API: DeleteAutoScalingConfiguration.
+
+## __AWS Cloud Map__
+  - ### Features
+    - Adds a new DiscoverInstancesRevision API and also adds InstanceRevision field to the DiscoverInstances API response.
+
+## __AWS SSO OIDC__
+  - ### Features
+    - Update FIPS endpoints in aws-us-gov.
+
+## __Amazon AppConfig__
+  - ### Features
+    - Enabling boto3 paginators for list APIs and adding documentation around ServiceQuotaExceededException errors
+
+## __Amazon CloudWatch Logs__
+  - ### Features
+    - Add ClientToken to QueryDefinition CFN Handler in CWL
+
+## __Amazon Kinesis Video Streams__
+  - ### Features
+    - Updated DescribeMediaStorageConfiguration, StartEdgeConfigurationUpdate, ImageGenerationConfiguration$SamplingInterval, and UpdateMediaStorageConfiguration to match AWS Docs.
+
+## __Amazon Simple Storage Service__
+  - ### Features
+    - Fix an issue where the SDK can fail to unmarshall response due to NumberFormatException
+
+## __CodeArtifact__
+  - ### Features
+    - Add support for the Swift package format.
+
 # __1.12.554__ __2023-09-19__
 ## __AWS Outposts__
   - ### Features

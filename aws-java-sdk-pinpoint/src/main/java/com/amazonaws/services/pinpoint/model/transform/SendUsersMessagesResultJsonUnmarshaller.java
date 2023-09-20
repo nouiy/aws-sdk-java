@@ -43,13 +43,9 @@ public class SendUsersMessagesResultJsonUnmarshaller implements Unmarshaller<Sen
             return sendUsersMessagesResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             sendUsersMessagesResult.setSendUsersMessageResponse(SendUsersMessageResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

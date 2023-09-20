@@ -43,13 +43,9 @@ public class DeleteApnsChannelResultJsonUnmarshaller implements Unmarshaller<Del
             return deleteApnsChannelResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             deleteApnsChannelResult.setAPNSChannelResponse(APNSChannelResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

@@ -43,22 +43,16 @@ public class AutomaticInputFailoverSettingsJsonUnmarshaller implements Unmarshal
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("errorClearTimeMsec", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     automaticInputFailoverSettings.setErrorClearTimeMsec(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("failoverConditions", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     automaticInputFailoverSettings.setFailoverConditions(new ListUnmarshaller<FailoverCondition>(FailoverConditionJsonUnmarshaller
                             .getInstance())
@@ -66,18 +60,12 @@ public class AutomaticInputFailoverSettingsJsonUnmarshaller implements Unmarshal
                     .unmarshall(context));
                 }
                 if (context.testExpression("inputPreference", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     automaticInputFailoverSettings.setInputPreference(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("secondaryInputId", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     automaticInputFailoverSettings.setSecondaryInputId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

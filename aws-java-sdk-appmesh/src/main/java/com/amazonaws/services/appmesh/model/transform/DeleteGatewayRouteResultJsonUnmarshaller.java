@@ -43,13 +43,9 @@ public class DeleteGatewayRouteResultJsonUnmarshaller implements Unmarshaller<De
             return deleteGatewayRouteResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             deleteGatewayRouteResult.setGatewayRoute(GatewayRouteDataJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

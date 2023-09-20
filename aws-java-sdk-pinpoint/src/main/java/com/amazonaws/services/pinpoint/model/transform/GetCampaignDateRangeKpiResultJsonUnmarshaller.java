@@ -43,13 +43,9 @@ public class GetCampaignDateRangeKpiResultJsonUnmarshaller implements Unmarshall
             return getCampaignDateRangeKpiResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getCampaignDateRangeKpiResult.setCampaignDateRangeKpiResponse(CampaignDateRangeKpiResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

@@ -43,13 +43,9 @@ public class GetApnsChannelResultJsonUnmarshaller implements Unmarshaller<GetApn
             return getApnsChannelResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getApnsChannelResult.setAPNSChannelResponse(APNSChannelResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

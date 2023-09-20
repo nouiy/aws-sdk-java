@@ -43,17 +43,12 @@ public class ConfigurationSummaryJsonUnmarshaller implements Unmarshaller<Config
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("ipAddressBasedRemoteInfoList", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     configurationSummary.setIpAddressBasedRemoteInfoList(new ListUnmarshaller<IPAddressBasedRemoteInfo>(
                             IPAddressBasedRemoteInfoJsonUnmarshaller.getInstance())
@@ -61,20 +56,17 @@ public class ConfigurationSummaryJsonUnmarshaller implements Unmarshaller<Config
                     .unmarshall(context));
                 }
                 if (context.testExpression("pipelineInfoList", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     configurationSummary.setPipelineInfoList(new ListUnmarshaller<PipelineInfo>(PipelineInfoJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("remoteSourceCodeAnalysisServerInfo", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     configurationSummary.setRemoteSourceCodeAnalysisServerInfo(RemoteSourceCodeAnalysisServerInfoJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
                 if (context.testExpression("vcenterBasedRemoteInfoList", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     configurationSummary.setVcenterBasedRemoteInfoList(new ListUnmarshaller<VcenterBasedRemoteInfo>(VcenterBasedRemoteInfoJsonUnmarshaller
                             .getInstance())
@@ -82,15 +74,10 @@ public class ConfigurationSummaryJsonUnmarshaller implements Unmarshaller<Config
                     .unmarshall(context));
                 }
                 if (context.testExpression("versionControlInfoList", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     configurationSummary.setVersionControlInfoList(new ListUnmarshaller<VersionControlInfo>(VersionControlInfoJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

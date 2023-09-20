@@ -43,17 +43,12 @@ public class BatchGetPreparedStatementResultJsonUnmarshaller implements Unmarsha
             return batchGetPreparedStatementResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("PreparedStatements", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     batchGetPreparedStatementResult.setPreparedStatements(new ListUnmarshaller<PreparedStatement>(PreparedStatementJsonUnmarshaller
                             .getInstance())
@@ -61,16 +56,11 @@ public class BatchGetPreparedStatementResultJsonUnmarshaller implements Unmarsha
                     .unmarshall(context));
                 }
                 if (context.testExpression("UnprocessedPreparedStatementNames", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     batchGetPreparedStatementResult.setUnprocessedPreparedStatementNames(new ListUnmarshaller<UnprocessedPreparedStatementName>(
                             UnprocessedPreparedStatementNameJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

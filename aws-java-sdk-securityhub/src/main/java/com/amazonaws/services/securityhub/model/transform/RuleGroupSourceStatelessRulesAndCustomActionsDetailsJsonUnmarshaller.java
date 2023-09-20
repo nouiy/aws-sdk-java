@@ -44,17 +44,12 @@ public class RuleGroupSourceStatelessRulesAndCustomActionsDetailsJsonUnmarshalle
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("CustomActions", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     ruleGroupSourceStatelessRulesAndCustomActionsDetails.setCustomActions(new ListUnmarshaller<RuleGroupSourceCustomActionsDetails>(
                             RuleGroupSourceCustomActionsDetailsJsonUnmarshaller.getInstance())
@@ -62,16 +57,11 @@ public class RuleGroupSourceStatelessRulesAndCustomActionsDetailsJsonUnmarshalle
                     .unmarshall(context));
                 }
                 if (context.testExpression("StatelessRules", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     ruleGroupSourceStatelessRulesAndCustomActionsDetails.setStatelessRules(new ListUnmarshaller<RuleGroupSourceStatelessRulesDetails>(
                             RuleGroupSourceStatelessRulesDetailsJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

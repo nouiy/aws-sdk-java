@@ -43,13 +43,9 @@ public class CreateAppResultJsonUnmarshaller implements Unmarshaller<CreateAppRe
             return createAppResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             createAppResult.setApplicationResponse(ApplicationResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

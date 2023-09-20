@@ -43,13 +43,9 @@ public class CreateInAppTemplateResultJsonUnmarshaller implements Unmarshaller<C
             return createInAppTemplateResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             createInAppTemplateResult.setTemplateCreateMessageBody(TemplateCreateMessageBodyJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

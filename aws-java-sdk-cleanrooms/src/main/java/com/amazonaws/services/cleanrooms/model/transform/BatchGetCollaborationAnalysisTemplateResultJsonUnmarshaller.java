@@ -44,17 +44,12 @@ public class BatchGetCollaborationAnalysisTemplateResultJsonUnmarshaller impleme
             return batchGetCollaborationAnalysisTemplateResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("collaborationAnalysisTemplates", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     batchGetCollaborationAnalysisTemplateResult.setCollaborationAnalysisTemplates(new ListUnmarshaller<CollaborationAnalysisTemplate>(
                             CollaborationAnalysisTemplateJsonUnmarshaller.getInstance())
@@ -62,16 +57,11 @@ public class BatchGetCollaborationAnalysisTemplateResultJsonUnmarshaller impleme
                     .unmarshall(context));
                 }
                 if (context.testExpression("errors", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     batchGetCollaborationAnalysisTemplateResult.setErrors(new ListUnmarshaller<BatchGetCollaborationAnalysisTemplateError>(
                             BatchGetCollaborationAnalysisTemplateErrorJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

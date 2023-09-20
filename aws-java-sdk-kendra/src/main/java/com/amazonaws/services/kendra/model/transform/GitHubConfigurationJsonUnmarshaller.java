@@ -43,101 +43,82 @@ public class GitHubConfigurationJsonUnmarshaller implements Unmarshaller<GitHubC
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("SaaSConfiguration", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setSaaSConfiguration(SaaSConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("OnPremiseConfiguration", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setOnPremiseConfiguration(OnPremiseConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("Type", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("SecretArn", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setSecretArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("UseChangeLog", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setUseChangeLog(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("GitHubDocumentCrawlProperties", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setGitHubDocumentCrawlProperties(GitHubDocumentCrawlPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("RepositoryFilter", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setRepositoryFilter(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("InclusionFolderNamePatterns", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setInclusionFolderNamePatterns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("InclusionFileTypePatterns", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setInclusionFileTypePatterns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("InclusionFileNamePatterns", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setInclusionFileNamePatterns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("ExclusionFolderNamePatterns", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setExclusionFolderNamePatterns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("ExclusionFileTypePatterns", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setExclusionFileTypePatterns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("ExclusionFileNamePatterns", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setExclusionFileNamePatterns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("VpcConfiguration", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setVpcConfiguration(DataSourceVpcConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("GitHubRepositoryConfigurationFieldMappings", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setGitHubRepositoryConfigurationFieldMappings(new ListUnmarshaller<DataSourceToIndexFieldMapping>(
                             DataSourceToIndexFieldMappingJsonUnmarshaller.getInstance())
@@ -145,7 +126,6 @@ public class GitHubConfigurationJsonUnmarshaller implements Unmarshaller<GitHubC
                     .unmarshall(context));
                 }
                 if (context.testExpression("GitHubCommitConfigurationFieldMappings", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setGitHubCommitConfigurationFieldMappings(new ListUnmarshaller<DataSourceToIndexFieldMapping>(
                             DataSourceToIndexFieldMappingJsonUnmarshaller.getInstance())
@@ -153,7 +133,6 @@ public class GitHubConfigurationJsonUnmarshaller implements Unmarshaller<GitHubC
                     .unmarshall(context));
                 }
                 if (context.testExpression("GitHubIssueDocumentConfigurationFieldMappings", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setGitHubIssueDocumentConfigurationFieldMappings(new ListUnmarshaller<DataSourceToIndexFieldMapping>(
                             DataSourceToIndexFieldMappingJsonUnmarshaller.getInstance())
@@ -161,7 +140,6 @@ public class GitHubConfigurationJsonUnmarshaller implements Unmarshaller<GitHubC
                     .unmarshall(context));
                 }
                 if (context.testExpression("GitHubIssueCommentConfigurationFieldMappings", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setGitHubIssueCommentConfigurationFieldMappings(new ListUnmarshaller<DataSourceToIndexFieldMapping>(
                             DataSourceToIndexFieldMappingJsonUnmarshaller.getInstance())
@@ -169,7 +147,6 @@ public class GitHubConfigurationJsonUnmarshaller implements Unmarshaller<GitHubC
                     .unmarshall(context));
                 }
                 if (context.testExpression("GitHubIssueAttachmentConfigurationFieldMappings", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setGitHubIssueAttachmentConfigurationFieldMappings(new ListUnmarshaller<DataSourceToIndexFieldMapping>(
                             DataSourceToIndexFieldMappingJsonUnmarshaller.getInstance())
@@ -177,7 +154,6 @@ public class GitHubConfigurationJsonUnmarshaller implements Unmarshaller<GitHubC
                     .unmarshall(context));
                 }
                 if (context.testExpression("GitHubPullRequestCommentConfigurationFieldMappings", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setGitHubPullRequestCommentConfigurationFieldMappings(new ListUnmarshaller<DataSourceToIndexFieldMapping>(
                             DataSourceToIndexFieldMappingJsonUnmarshaller.getInstance())
@@ -185,7 +161,6 @@ public class GitHubConfigurationJsonUnmarshaller implements Unmarshaller<GitHubC
                     .unmarshall(context));
                 }
                 if (context.testExpression("GitHubPullRequestDocumentConfigurationFieldMappings", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setGitHubPullRequestDocumentConfigurationFieldMappings(new ListUnmarshaller<DataSourceToIndexFieldMapping>(
                             DataSourceToIndexFieldMappingJsonUnmarshaller.getInstance())
@@ -193,16 +168,11 @@ public class GitHubConfigurationJsonUnmarshaller implements Unmarshaller<GitHubC
                     .unmarshall(context));
                 }
                 if (context.testExpression("GitHubPullRequestDocumentAttachmentConfigurationFieldMappings", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     gitHubConfiguration.setGitHubPullRequestDocumentAttachmentConfigurationFieldMappings(new ListUnmarshaller<DataSourceToIndexFieldMapping>(
                             DataSourceToIndexFieldMappingJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -43,13 +43,9 @@ public class UpdateBaiduChannelResultJsonUnmarshaller implements Unmarshaller<Up
             return updateBaiduChannelResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             updateBaiduChannelResult.setBaiduChannelResponse(BaiduChannelResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

@@ -43,13 +43,9 @@ public class GetRecommenderConfigurationsResultJsonUnmarshaller implements Unmar
             return getRecommenderConfigurationsResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getRecommenderConfigurationsResult.setListRecommenderConfigurationsResponse(ListRecommenderConfigurationsResponseJsonUnmarshaller.getInstance()
                     .unmarshall(context));

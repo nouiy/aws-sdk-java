@@ -43,24 +43,18 @@ public class AnalyticsUtteranceResultJsonUnmarshaller implements Unmarshaller<An
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("binKeys", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     analyticsUtteranceResult.setBinKeys(new ListUnmarshaller<AnalyticsBinKey>(AnalyticsBinKeyJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }
                 if (context.testExpression("groupByKeys", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     analyticsUtteranceResult.setGroupByKeys(new ListUnmarshaller<AnalyticsUtteranceGroupByKey>(AnalyticsUtteranceGroupByKeyJsonUnmarshaller
                             .getInstance())
@@ -68,7 +62,6 @@ public class AnalyticsUtteranceResultJsonUnmarshaller implements Unmarshaller<An
                     .unmarshall(context));
                 }
                 if (context.testExpression("metricsResults", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     analyticsUtteranceResult.setMetricsResults(new ListUnmarshaller<AnalyticsUtteranceMetricResult>(
                             AnalyticsUtteranceMetricResultJsonUnmarshaller.getInstance())
@@ -76,16 +69,11 @@ public class AnalyticsUtteranceResultJsonUnmarshaller implements Unmarshaller<An
                     .unmarshall(context));
                 }
                 if (context.testExpression("attributeResults", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     analyticsUtteranceResult.setAttributeResults(new ListUnmarshaller<AnalyticsUtteranceAttributeResult>(
                             AnalyticsUtteranceAttributeResultJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

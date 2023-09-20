@@ -43,133 +43,102 @@ public class DescribeUserResultJsonUnmarshaller implements Unmarshaller<Describe
             return describeUserResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("UserId", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setUserId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Name", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Email", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setEmail(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("DisplayName", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setDisplayName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("State", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("UserRole", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setUserRole(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("EnabledDate", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setEnabledDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
                 if (context.testExpression("DisabledDate", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setDisabledDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
                 if (context.testExpression("MailboxProvisionedDate", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setMailboxProvisionedDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
                 if (context.testExpression("MailboxDeprovisionedDate", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setMailboxDeprovisionedDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
                 if (context.testExpression("FirstName", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setFirstName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("LastName", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setLastName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("HiddenFromGlobalAddressList", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setHiddenFromGlobalAddressList(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("Initials", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setInitials(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Telephone", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setTelephone(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Street", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setStreet(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("JobTitle", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setJobTitle(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("City", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setCity(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Company", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setCompany(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("ZipCode", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setZipCode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Department", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setDepartment(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Country", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setCountry(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Office", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     describeUserResult.setOffice(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

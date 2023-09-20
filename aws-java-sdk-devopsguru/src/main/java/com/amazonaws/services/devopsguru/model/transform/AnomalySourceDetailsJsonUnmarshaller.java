@@ -43,17 +43,12 @@ public class AnomalySourceDetailsJsonUnmarshaller implements Unmarshaller<Anomal
             return null;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
 
-            knownMember = false;
-
             if (token == FIELD_NAME || token == START_OBJECT) {
                 if (context.testExpression("CloudWatchMetrics", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     anomalySourceDetails.setCloudWatchMetrics(new ListUnmarshaller<CloudWatchMetricsDetail>(CloudWatchMetricsDetailJsonUnmarshaller
                             .getInstance())
@@ -61,16 +56,11 @@ public class AnomalySourceDetailsJsonUnmarshaller implements Unmarshaller<Anomal
                     .unmarshall(context));
                 }
                 if (context.testExpression("PerformanceInsightsMetrics", targetDepth)) {
-                    knownMember = true;
                     context.nextToken();
                     anomalySourceDetails.setPerformanceInsightsMetrics(new ListUnmarshaller<PerformanceInsightsMetricsDetail>(
                             PerformanceInsightsMetricsDetailJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (token == FIELD_NAME && !knownMember) {
-                    context.nextToken();
-                    com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

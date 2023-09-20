@@ -43,13 +43,9 @@ public class DeleteEmailTemplateResultJsonUnmarshaller implements Unmarshaller<D
             return deleteEmailTemplateResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             deleteEmailTemplateResult.setMessageBody(MessageBodyJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

@@ -43,13 +43,9 @@ public class GetSegmentVersionsResultJsonUnmarshaller implements Unmarshaller<Ge
             return getSegmentVersionsResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getSegmentVersionsResult.setSegmentsResponse(SegmentsResponseJsonUnmarshaller.getInstance().unmarshall(context));
             token = context.nextToken();

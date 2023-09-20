@@ -43,13 +43,9 @@ public class GetJourneyRunExecutionMetricsResultJsonUnmarshaller implements Unma
             return getJourneyRunExecutionMetricsResult;
         }
 
-        boolean knownMember;
-
         while (true) {
             if (token == null)
                 break;
-
-            knownMember = false;
 
             getJourneyRunExecutionMetricsResult.setJourneyRunExecutionMetricsResponse(JourneyRunExecutionMetricsResponseJsonUnmarshaller.getInstance()
                     .unmarshall(context));
