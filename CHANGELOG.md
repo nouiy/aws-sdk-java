@@ -1,3 +1,40 @@
+# __1.12.558__ __2023-09-26__
+## __AWS App Runner__
+  - ### Features
+    - This release allows an App Runner customer to specify a custom source directory to run the build & start command. This change allows App Runner to support monorepo based repositories
+
+## __AWS CodeDeploy__
+  - ### Features
+    - CodeDeploy now supports In-place and Blue/Green EC2 deployments with multiple Classic Load Balancers and multiple Target Groups.
+
+## __AWS Lake Formation__
+  - ### Features
+    - This release adds three new API support "CreateLakeFormationOptIn", "DeleteLakeFormationOptIn" and "ListLakeFormationOptIns", and also updates the corresponding documentation.
+
+## __Amazon AppIntegrations Service__
+  - ### Features
+    - The Amazon AppIntegrations service adds a set of APIs (in preview) to manage third party applications to be used in Amazon Connect agent workspace.
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release updates a set of Amazon Connect APIs that provides the ability to integrate third party applications in the Amazon Connect agent workspace.
+
+## __Amazon DynamoDB__
+  - ### Features
+    - Amazon DynamoDB now supports Incremental Export as an enhancement to the existing Export Table
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - The release includes AWS verified access to support FIPs compliance in North America regions
+
+## __Amazon Pinpoint__
+  - ### Features
+    - Update documentation for RemoveAttributes to more accurately reflect its behavior when attributes are deleted.
+
+## __Amazon Simple Storage Service__
+  - ### Features
+    - This release adds a new field COMPLETED to the ReplicationStatus Enum. You can now use this field to validate the replication status of S3 objects using the AWS SDK.
+
 # __1.12.557__ __2023-09-25__
 ## __AWS Amplify UI Builder__
   - ### Features

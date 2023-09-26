@@ -11670,6 +11670,10 @@ public interface AmazonEC2 {
      * the output describes the security group rules that were not revoked.
      * </p>
      * <p>
+     * For a non-default VPC, if the values you specify do not match the existing rule's values, an
+     * <code>InvalidPermission.NotFound</code> client error is returned, and no rules are revoked.
+     * </p>
+     * <p>
      * Amazon Web Services recommends that you describe the security group to verify that the rules were removed.
      * </p>
      * <p>

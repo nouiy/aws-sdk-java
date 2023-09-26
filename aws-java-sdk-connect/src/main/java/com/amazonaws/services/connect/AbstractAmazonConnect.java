@@ -663,6 +663,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public ListSecurityProfileApplicationsResult listSecurityProfileApplications(ListSecurityProfileApplicationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListSecurityProfilePermissionsResult listSecurityProfilePermissions(ListSecurityProfilePermissionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

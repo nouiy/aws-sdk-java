@@ -34,8 +34,8 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
      * <note>
      * <p>
      * Prior to the release of <a
-     * href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-yyyy-mm-dd-asc-improvements.html">Managing
-     * auto scaling</a>, the name <code>DefaultConfiguration</code> was reserved.
+     * href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-2023-09-22-auto-scale-config.html">Auto scale
+     * configuration enhancements</a>, the name <code>DefaultConfiguration</code> was reserved.
      * </p>
      * <p>
      * This restriction is no longer in place. You can now manage <code>DefaultConfiguration</code> the same way you
@@ -122,8 +122,8 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
      * <note>
      * <p>
      * Prior to the release of <a
-     * href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-yyyy-mm-dd-asc-improvements.html">Managing
-     * auto scaling</a>, the name <code>DefaultConfiguration</code> was reserved.
+     * href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-2023-09-22-auto-scale-config.html">Auto scale
+     * configuration enhancements</a>, the name <code>DefaultConfiguration</code> was reserved.
      * </p>
      * <p>
      * This restriction is no longer in place. You can now manage <code>DefaultConfiguration</code> the same way you
@@ -162,8 +162,8 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
      *        subsequent calls, App Runner creates incremental revisions of the configuration.</p> <note>
      *        <p>
      *        Prior to the release of <a
-     *        href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-yyyy-mm-dd-asc-improvements.html"
-     *        >Managing auto scaling</a>, the name <code>DefaultConfiguration</code> was reserved.
+     *        href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-2023-09-22-auto-scale-config.html"
+     *        >Auto scale configuration enhancements</a>, the name <code>DefaultConfiguration</code> was reserved.
      *        </p>
      *        <p>
      *        This restriction is no longer in place. You can now manage <code>DefaultConfiguration</code> the same way
@@ -210,8 +210,8 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
      * <note>
      * <p>
      * Prior to the release of <a
-     * href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-yyyy-mm-dd-asc-improvements.html">Managing
-     * auto scaling</a>, the name <code>DefaultConfiguration</code> was reserved.
+     * href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-2023-09-22-auto-scale-config.html">Auto scale
+     * configuration enhancements</a>, the name <code>DefaultConfiguration</code> was reserved.
      * </p>
      * <p>
      * This restriction is no longer in place. You can now manage <code>DefaultConfiguration</code> the same way you
@@ -249,8 +249,8 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
      *         subsequent calls, App Runner creates incremental revisions of the configuration.</p> <note>
      *         <p>
      *         Prior to the release of <a
-     *         href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-yyyy-mm-dd-asc-improvements.html"
-     *         >Managing auto scaling</a>, the name <code>DefaultConfiguration</code> was reserved.
+     *         href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-2023-09-22-auto-scale-config.html"
+     *         >Auto scale configuration enhancements</a>, the name <code>DefaultConfiguration</code> was reserved.
      *         </p>
      *         <p>
      *         This restriction is no longer in place. You can now manage <code>DefaultConfiguration</code> the same way
@@ -297,8 +297,8 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
      * <note>
      * <p>
      * Prior to the release of <a
-     * href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-yyyy-mm-dd-asc-improvements.html">Managing
-     * auto scaling</a>, the name <code>DefaultConfiguration</code> was reserved.
+     * href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-2023-09-22-auto-scale-config.html">Auto scale
+     * configuration enhancements</a>, the name <code>DefaultConfiguration</code> was reserved.
      * </p>
      * <p>
      * This restriction is no longer in place. You can now manage <code>DefaultConfiguration</code> the same way you
@@ -337,8 +337,8 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
      *        subsequent calls, App Runner creates incremental revisions of the configuration.</p> <note>
      *        <p>
      *        Prior to the release of <a
-     *        href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-yyyy-mm-dd-asc-improvements.html"
-     *        >Managing auto scaling</a>, the name <code>DefaultConfiguration</code> was reserved.
+     *        href="https://docs.aws.amazon.com/apprunner/latest/relnotes/release-2023-09-22-auto-scale-config.html"
+     *        >Auto scale configuration enhancements</a>, the name <code>DefaultConfiguration</code> was reserved.
      *        </p>
      *        <p>
      *        This restriction is no longer in place. You can now manage <code>DefaultConfiguration</code> the same way

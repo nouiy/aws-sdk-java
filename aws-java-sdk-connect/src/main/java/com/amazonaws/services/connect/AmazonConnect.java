@@ -3572,6 +3572,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Returns a list of third party applications in a specific security profile.
+     * </p>
+     * 
+     * @param listSecurityProfileApplicationsRequest
+     * @return Result of the ListSecurityProfileApplications operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListSecurityProfileApplications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListSecurityProfileApplications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListSecurityProfileApplicationsResult listSecurityProfileApplications(ListSecurityProfileApplicationsRequest listSecurityProfileApplicationsRequest);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>

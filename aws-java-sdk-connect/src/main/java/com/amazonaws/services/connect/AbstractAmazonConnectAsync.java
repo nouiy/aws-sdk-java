@@ -1693,6 +1693,21 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListSecurityProfileApplicationsResult> listSecurityProfileApplicationsAsync(
+            ListSecurityProfileApplicationsRequest request) {
+
+        return listSecurityProfileApplicationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSecurityProfileApplicationsResult> listSecurityProfileApplicationsAsync(
+            ListSecurityProfileApplicationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListSecurityProfileApplicationsRequest, ListSecurityProfileApplicationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSecurityProfilePermissionsResult> listSecurityProfilePermissionsAsync(ListSecurityProfilePermissionsRequest request) {
 
         return listSecurityProfilePermissionsAsync(request, null);

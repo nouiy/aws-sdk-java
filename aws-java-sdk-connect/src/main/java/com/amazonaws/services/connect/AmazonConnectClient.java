@@ -9158,6 +9158,74 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Returns a list of third party applications in a specific security profile.
+     * </p>
+     * 
+     * @param listSecurityProfileApplicationsRequest
+     * @return Result of the ListSecurityProfileApplications operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListSecurityProfileApplications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListSecurityProfileApplications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListSecurityProfileApplicationsResult listSecurityProfileApplications(ListSecurityProfileApplicationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListSecurityProfileApplications(request);
+    }
+
+    @SdkInternalApi
+    final ListSecurityProfileApplicationsResult executeListSecurityProfileApplications(
+            ListSecurityProfileApplicationsRequest listSecurityProfileApplicationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listSecurityProfileApplicationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListSecurityProfileApplicationsRequest> request = null;
+        Response<ListSecurityProfileApplicationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListSecurityProfileApplicationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listSecurityProfileApplicationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListSecurityProfileApplications");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListSecurityProfileApplicationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListSecurityProfileApplicationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>

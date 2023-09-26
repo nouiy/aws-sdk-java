@@ -4302,6 +4302,41 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<ListSecurityProfileApplicationsResult> listSecurityProfileApplicationsAsync(
+            ListSecurityProfileApplicationsRequest request) {
+
+        return listSecurityProfileApplicationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSecurityProfileApplicationsResult> listSecurityProfileApplicationsAsync(
+            final ListSecurityProfileApplicationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSecurityProfileApplicationsRequest, ListSecurityProfileApplicationsResult> asyncHandler) {
+        final ListSecurityProfileApplicationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSecurityProfileApplicationsResult>() {
+            @Override
+            public ListSecurityProfileApplicationsResult call() throws Exception {
+                ListSecurityProfileApplicationsResult result = null;
+
+                try {
+                    result = executeListSecurityProfileApplications(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSecurityProfilePermissionsResult> listSecurityProfilePermissionsAsync(ListSecurityProfilePermissionsRequest request) {
 
         return listSecurityProfilePermissionsAsync(request, null);

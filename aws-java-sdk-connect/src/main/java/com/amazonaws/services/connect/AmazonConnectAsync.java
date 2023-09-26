@@ -5035,6 +5035,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Returns a list of third party applications in a specific security profile.
+     * </p>
+     * 
+     * @param listSecurityProfileApplicationsRequest
+     * @return A Java Future containing the result of the ListSecurityProfileApplications operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.ListSecurityProfileApplications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListSecurityProfileApplications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSecurityProfileApplicationsResult> listSecurityProfileApplicationsAsync(
+            ListSecurityProfileApplicationsRequest listSecurityProfileApplicationsRequest);
+
+    /**
+     * <p>
+     * Returns a list of third party applications in a specific security profile.
+     * </p>
+     * 
+     * @param listSecurityProfileApplicationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListSecurityProfileApplications operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.ListSecurityProfileApplications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListSecurityProfileApplications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSecurityProfileApplicationsResult> listSecurityProfileApplicationsAsync(
+            ListSecurityProfileApplicationsRequest listSecurityProfileApplicationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListSecurityProfileApplicationsRequest, ListSecurityProfileApplicationsResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
