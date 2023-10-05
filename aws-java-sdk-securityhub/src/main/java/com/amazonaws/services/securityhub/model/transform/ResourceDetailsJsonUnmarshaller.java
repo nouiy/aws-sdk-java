@@ -412,6 +412,34 @@ public class ResourceDetailsJsonUnmarshaller implements Unmarshaller<ResourceDet
                     context.nextToken();
                     resourceDetails.setAwsAthenaWorkGroup(AwsAthenaWorkGroupDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AwsEventsEventbus", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsEventsEventbus(AwsEventsEventbusDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsDmsEndpoint", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsDmsEndpoint(AwsDmsEndpointDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsEventsEndpoint", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsEventsEndpoint(AwsEventsEndpointDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsDmsReplicationTask", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsDmsReplicationTask(AwsDmsReplicationTaskDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsDmsReplicationInstance", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsDmsReplicationInstance(AwsDmsReplicationInstanceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsRoute53HostedZone", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsRoute53HostedZone(AwsRoute53HostedZoneDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsMskCluster", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsMskCluster(AwsMskClusterDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

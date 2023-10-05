@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides in-depth details about the error. These details include the possible causes of the errors and
+ * Describes in-depth details about the error. These details include the possible causes of the error and
  * troubleshooting information.
  * </p>
  * 

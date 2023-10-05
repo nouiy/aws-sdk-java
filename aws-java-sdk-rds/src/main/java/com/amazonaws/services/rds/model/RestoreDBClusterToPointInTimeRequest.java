@@ -141,8 +141,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     private java.util.Date restoreToTime;
     /**
      * <p>
-     * A value that indicates whether to restore the DB cluster to the latest restorable backup time. By default, the DB
-     * cluster isn't restored to the latest restorable backup time.
+     * Specifies whether to restore the DB cluster to the latest restorable backup time. By default, the DB cluster
+     * isn't restored to the latest restorable backup time.
      * </p>
      * <p>
      * Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
@@ -243,8 +243,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     private String kmsKeyId;
     /**
      * <p>
-     * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping isn't enabled.
+     * Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     * database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information, see <a
@@ -362,8 +362,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     private String dBClusterParameterGroupName;
     /**
      * <p>
-     * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
-     * deletion protection is enabled. By default, deletion protection isn't enabled.
+     * Specifies whether to enable deletion protection for the DB cluster. The database can't be deleted when deletion
+     * protection is enabled. By default, deletion protection isn't enabled.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -372,8 +372,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     private Boolean deletionProtection;
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the restored DB cluster to snapshots of the restored DB
-     * cluster. The default is not to copy them.
+     * Specifies whether to copy all tags from the restored DB cluster to snapshots of the restored DB cluster. The
+     * default is not to copy them.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -382,7 +382,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     private Boolean copyTagsToSnapshot;
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this
+     * The Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this
      * operation.
      * </p>
      * <p>
@@ -398,7 +398,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     private String domain;
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to be used when making API calls to the Directory Service.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -449,7 +449,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * Valid Values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
      * clusters)
      * </p>
      * <p>
@@ -462,7 +462,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     private String storageType;
     /**
      * <p>
-     * A value that indicates whether the DB cluster is publicly accessible.
+     * Specifies whether the DB cluster is publicly accessible.
      * </p>
      * <p>
      * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
@@ -540,7 +540,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * The network type of the DB cluster.
      * </p>
      * <p>
-     * Valid values:
+     * Valid Values:
      * </p>
      * <ul>
      * <li>
@@ -1260,8 +1260,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to restore the DB cluster to the latest restorable backup time. By default, the DB
-     * cluster isn't restored to the latest restorable backup time.
+     * Specifies whether to restore the DB cluster to the latest restorable backup time. By default, the DB cluster
+     * isn't restored to the latest restorable backup time.
      * </p>
      * <p>
      * Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
@@ -1271,8 +1271,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param useLatestRestorableTime
-     *        A value that indicates whether to restore the DB cluster to the latest restorable backup time. By default,
-     *        the DB cluster isn't restored to the latest restorable backup time.</p>
+     *        Specifies whether to restore the DB cluster to the latest restorable backup time. By default, the DB
+     *        cluster isn't restored to the latest restorable backup time.</p>
      *        <p>
      *        Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
      *        </p>
@@ -1286,8 +1286,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to restore the DB cluster to the latest restorable backup time. By default, the DB
-     * cluster isn't restored to the latest restorable backup time.
+     * Specifies whether to restore the DB cluster to the latest restorable backup time. By default, the DB cluster
+     * isn't restored to the latest restorable backup time.
      * </p>
      * <p>
      * Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
@@ -1296,8 +1296,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
-     * @return A value that indicates whether to restore the DB cluster to the latest restorable backup time. By
-     *         default, the DB cluster isn't restored to the latest restorable backup time.</p>
+     * @return Specifies whether to restore the DB cluster to the latest restorable backup time. By default, the DB
+     *         cluster isn't restored to the latest restorable backup time.</p>
      *         <p>
      *         Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
      *         </p>
@@ -1311,8 +1311,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to restore the DB cluster to the latest restorable backup time. By default, the DB
-     * cluster isn't restored to the latest restorable backup time.
+     * Specifies whether to restore the DB cluster to the latest restorable backup time. By default, the DB cluster
+     * isn't restored to the latest restorable backup time.
      * </p>
      * <p>
      * Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
@@ -1322,8 +1322,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param useLatestRestorableTime
-     *        A value that indicates whether to restore the DB cluster to the latest restorable backup time. By default,
-     *        the DB cluster isn't restored to the latest restorable backup time.</p>
+     *        Specifies whether to restore the DB cluster to the latest restorable backup time. By default, the DB
+     *        cluster isn't restored to the latest restorable backup time.</p>
      *        <p>
      *        Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
      *        </p>
@@ -1339,8 +1339,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to restore the DB cluster to the latest restorable backup time. By default, the DB
-     * cluster isn't restored to the latest restorable backup time.
+     * Specifies whether to restore the DB cluster to the latest restorable backup time. By default, the DB cluster
+     * isn't restored to the latest restorable backup time.
      * </p>
      * <p>
      * Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
@@ -1349,8 +1349,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
-     * @return A value that indicates whether to restore the DB cluster to the latest restorable backup time. By
-     *         default, the DB cluster isn't restored to the latest restorable backup time.</p>
+     * @return Specifies whether to restore the DB cluster to the latest restorable backup time. By default, the DB
+     *         cluster isn't restored to the latest restorable backup time.</p>
      *         <p>
      *         Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
      *         </p>
@@ -1984,8 +1984,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping isn't enabled.
+     * Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     * database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information, see <a
@@ -1997,8 +1997,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param enableIAMDatabaseAuthentication
-     *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
+     *        Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts
+     *        to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
@@ -2014,8 +2014,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping isn't enabled.
+     * Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     * database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information, see <a
@@ -2026,8 +2026,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Valid for: Aurora DB clusters only
      * </p>
      * 
-     * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
+     * @return Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts
+     *         to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
@@ -2043,8 +2043,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping isn't enabled.
+     * Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     * database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information, see <a
@@ -2056,8 +2056,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param enableIAMDatabaseAuthentication
-     *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
+     *        Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts
+     *        to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
@@ -2075,8 +2075,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping isn't enabled.
+     * Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     * database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information, see <a
@@ -2087,8 +2087,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Valid for: Aurora DB clusters only
      * </p>
      * 
-     * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
+     * @return Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts
+     *         to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
@@ -2843,16 +2843,16 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
-     * deletion protection is enabled. By default, deletion protection isn't enabled.
+     * Specifies whether to enable deletion protection for the DB cluster. The database can't be deleted when deletion
+     * protection is enabled. By default, deletion protection isn't enabled.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
      * @param deletionProtection
-     *        A value that indicates whether the DB cluster has deletion protection enabled. The database can't be
-     *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled.</p>
+     *        Specifies whether to enable deletion protection for the DB cluster. The database can't be deleted when
+     *        deletion protection is enabled. By default, deletion protection isn't enabled.</p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
@@ -2863,15 +2863,15 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
-     * deletion protection is enabled. By default, deletion protection isn't enabled.
+     * Specifies whether to enable deletion protection for the DB cluster. The database can't be deleted when deletion
+     * protection is enabled. By default, deletion protection isn't enabled.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
-     * @return A value that indicates whether the DB cluster has deletion protection enabled. The database can't be
-     *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled.</p>
+     * @return Specifies whether to enable deletion protection for the DB cluster. The database can't be deleted when
+     *         deletion protection is enabled. By default, deletion protection isn't enabled.</p>
      *         <p>
      *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
@@ -2882,16 +2882,16 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
-     * deletion protection is enabled. By default, deletion protection isn't enabled.
+     * Specifies whether to enable deletion protection for the DB cluster. The database can't be deleted when deletion
+     * protection is enabled. By default, deletion protection isn't enabled.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
      * @param deletionProtection
-     *        A value that indicates whether the DB cluster has deletion protection enabled. The database can't be
-     *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled.</p>
+     *        Specifies whether to enable deletion protection for the DB cluster. The database can't be deleted when
+     *        deletion protection is enabled. By default, deletion protection isn't enabled.</p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2904,15 +2904,15 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
-     * deletion protection is enabled. By default, deletion protection isn't enabled.
+     * Specifies whether to enable deletion protection for the DB cluster. The database can't be deleted when deletion
+     * protection is enabled. By default, deletion protection isn't enabled.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
-     * @return A value that indicates whether the DB cluster has deletion protection enabled. The database can't be
-     *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled.</p>
+     * @return Specifies whether to enable deletion protection for the DB cluster. The database can't be deleted when
+     *         deletion protection is enabled. By default, deletion protection isn't enabled.</p>
      *         <p>
      *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
@@ -2923,16 +2923,16 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the restored DB cluster to snapshots of the restored DB
-     * cluster. The default is not to copy them.
+     * Specifies whether to copy all tags from the restored DB cluster to snapshots of the restored DB cluster. The
+     * default is not to copy them.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
      * @param copyTagsToSnapshot
-     *        A value that indicates whether to copy all tags from the restored DB cluster to snapshots of the restored
-     *        DB cluster. The default is not to copy them.</p>
+     *        Specifies whether to copy all tags from the restored DB cluster to snapshots of the restored DB cluster.
+     *        The default is not to copy them.</p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
@@ -2943,15 +2943,15 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the restored DB cluster to snapshots of the restored DB
-     * cluster. The default is not to copy them.
+     * Specifies whether to copy all tags from the restored DB cluster to snapshots of the restored DB cluster. The
+     * default is not to copy them.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
-     * @return A value that indicates whether to copy all tags from the restored DB cluster to snapshots of the restored
-     *         DB cluster. The default is not to copy them.</p>
+     * @return Specifies whether to copy all tags from the restored DB cluster to snapshots of the restored DB cluster.
+     *         The default is not to copy them.</p>
      *         <p>
      *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
@@ -2962,16 +2962,16 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the restored DB cluster to snapshots of the restored DB
-     * cluster. The default is not to copy them.
+     * Specifies whether to copy all tags from the restored DB cluster to snapshots of the restored DB cluster. The
+     * default is not to copy them.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
      * @param copyTagsToSnapshot
-     *        A value that indicates whether to copy all tags from the restored DB cluster to snapshots of the restored
-     *        DB cluster. The default is not to copy them.</p>
+     *        Specifies whether to copy all tags from the restored DB cluster to snapshots of the restored DB cluster.
+     *        The default is not to copy them.</p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2984,15 +2984,15 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the restored DB cluster to snapshots of the restored DB
-     * cluster. The default is not to copy them.
+     * Specifies whether to copy all tags from the restored DB cluster to snapshots of the restored DB cluster. The
+     * default is not to copy them.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
-     * @return A value that indicates whether to copy all tags from the restored DB cluster to snapshots of the restored
-     *         DB cluster. The default is not to copy them.</p>
+     * @return Specifies whether to copy all tags from the restored DB cluster to snapshots of the restored DB cluster.
+     *         The default is not to copy them.</p>
      *         <p>
      *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
@@ -3003,7 +3003,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this
+     * The Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this
      * operation.
      * </p>
      * <p>
@@ -3017,8 +3017,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param domain
-     *        Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior
-     *        to this operation.</p>
+     *        The Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this
+     *        operation.</p>
      *        <p>
      *        For Amazon Aurora DB clusters, Amazon RDS can use Kerberos Authentication to authenticate users that
      *        connect to the DB cluster. For more information, see <a
@@ -3035,7 +3035,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this
+     * The Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this
      * operation.
      * </p>
      * <p>
@@ -3048,8 +3048,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Valid for: Aurora DB clusters only
      * </p>
      * 
-     * @return Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior
-     *         to this operation.</p>
+     * @return The Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this
+     *         operation.</p>
      *         <p>
      *         For Amazon Aurora DB clusters, Amazon RDS can use Kerberos Authentication to authenticate users that
      *         connect to the DB cluster. For more information, see <a
@@ -3066,7 +3066,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this
+     * The Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this
      * operation.
      * </p>
      * <p>
@@ -3080,8 +3080,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param domain
-     *        Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior
-     *        to this operation.</p>
+     *        The Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this
+     *        operation.</p>
      *        <p>
      *        For Amazon Aurora DB clusters, Amazon RDS can use Kerberos Authentication to authenticate users that
      *        connect to the DB cluster. For more information, see <a
@@ -3100,14 +3100,14 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to be used when making API calls to the Directory Service.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
      * </p>
      * 
      * @param domainIAMRoleName
-     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *        The name of the IAM role to be used when making API calls to the Directory Service.</p>
      *        <p>
      *        Valid for: Aurora DB clusters only
      */
@@ -3118,13 +3118,13 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to be used when making API calls to the Directory Service.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
      * </p>
      * 
-     * @return Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     * @return The name of the IAM role to be used when making API calls to the Directory Service.</p>
      *         <p>
      *         Valid for: Aurora DB clusters only
      */
@@ -3135,14 +3135,14 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to be used when making API calls to the Directory Service.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
      * </p>
      * 
      * @param domainIAMRoleName
-     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *        The name of the IAM role to be used when making API calls to the Directory Service.</p>
      *        <p>
      *        Valid for: Aurora DB clusters only
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3386,7 +3386,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * Valid Values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
      * clusters)
      * </p>
      * <p>
@@ -3402,7 +3402,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      *        </p>
      *        <p>
-     *        Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
+     *        Valid Values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
      *        (Multi-AZ DB clusters)
      *        </p>
      *        <p>
@@ -3424,7 +3424,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * Valid Values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
      * clusters)
      * </p>
      * <p>
@@ -3439,7 +3439,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *         When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      *         </p>
      *         <p>
-     *         Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
+     *         Valid Values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
      *         (Multi-AZ DB clusters)
      *         </p>
      *         <p>
@@ -3461,7 +3461,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * Valid Values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
      * clusters)
      * </p>
      * <p>
@@ -3477,7 +3477,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      *        </p>
      *        <p>
-     *        Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
+     *        Valid Values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
      *        (Multi-AZ DB clusters)
      *        </p>
      *        <p>
@@ -3495,7 +3495,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether the DB cluster is publicly accessible.
+     * Specifies whether the DB cluster is publicly accessible.
      * </p>
      * <p>
      * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
@@ -3548,7 +3548,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param publiclyAccessible
-     *        A value that indicates whether the DB cluster is publicly accessible.</p>
+     *        Specifies whether the DB cluster is publicly accessible.</p>
      *        <p>
      *        When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
      *        IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
@@ -3607,7 +3607,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether the DB cluster is publicly accessible.
+     * Specifies whether the DB cluster is publicly accessible.
      * </p>
      * <p>
      * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
@@ -3659,7 +3659,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Valid for: Multi-AZ DB clusters only
      * </p>
      * 
-     * @return A value that indicates whether the DB cluster is publicly accessible.</p>
+     * @return Specifies whether the DB cluster is publicly accessible.</p>
      *         <p>
      *         When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
      *         IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
@@ -3718,7 +3718,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether the DB cluster is publicly accessible.
+     * Specifies whether the DB cluster is publicly accessible.
      * </p>
      * <p>
      * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
@@ -3771,7 +3771,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param publiclyAccessible
-     *        A value that indicates whether the DB cluster is publicly accessible.</p>
+     *        Specifies whether the DB cluster is publicly accessible.</p>
      *        <p>
      *        When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
      *        IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
@@ -3832,7 +3832,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * A value that indicates whether the DB cluster is publicly accessible.
+     * Specifies whether the DB cluster is publicly accessible.
      * </p>
      * <p>
      * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
@@ -3884,7 +3884,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Valid for: Multi-AZ DB clusters only
      * </p>
      * 
-     * @return A value that indicates whether the DB cluster is publicly accessible.</p>
+     * @return Specifies whether the DB cluster is publicly accessible.</p>
      *         <p>
      *         When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
      *         IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
@@ -4081,7 +4081,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * The network type of the DB cluster.
      * </p>
      * <p>
-     * Valid values:
+     * Valid Values:
      * </p>
      * <ul>
      * <li>
@@ -4112,7 +4112,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * @param networkType
      *        The network type of the DB cluster.</p>
      *        <p>
-     *        Valid values:
+     *        Valid Values:
      *        </p>
      *        <ul>
      *        <li>
@@ -4149,7 +4149,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * The network type of the DB cluster.
      * </p>
      * <p>
-     * Valid values:
+     * Valid Values:
      * </p>
      * <ul>
      * <li>
@@ -4179,7 +4179,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * 
      * @return The network type of the DB cluster.</p>
      *         <p>
-     *         Valid values:
+     *         Valid Values:
      *         </p>
      *         <ul>
      *         <li>
@@ -4216,7 +4216,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * The network type of the DB cluster.
      * </p>
      * <p>
-     * Valid values:
+     * Valid Values:
      * </p>
      * <ul>
      * <li>
@@ -4247,7 +4247,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * @param networkType
      *        The network type of the DB cluster.</p>
      *        <p>
-     *        Valid values:
+     *        Valid Values:
      *        </p>
      *        <ul>
      *        <li>

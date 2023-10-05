@@ -113,6 +113,12 @@ public class GetReadSetMetadataResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      */
     private String creationType;
+    /**
+     * <p>
+     * The entity tag (ETag) is a hash of the object meant to represent its semantic content.
+     * </p>
+     */
+    private ETag etag;
 
     /**
      * <p>
@@ -772,6 +778,46 @@ public class GetReadSetMetadataResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * The entity tag (ETag) is a hash of the object meant to represent its semantic content.
+     * </p>
+     * 
+     * @param etag
+     *        The entity tag (ETag) is a hash of the object meant to represent its semantic content.
+     */
+
+    public void setEtag(ETag etag) {
+        this.etag = etag;
+    }
+
+    /**
+     * <p>
+     * The entity tag (ETag) is a hash of the object meant to represent its semantic content.
+     * </p>
+     * 
+     * @return The entity tag (ETag) is a hash of the object meant to represent its semantic content.
+     */
+
+    public ETag getEtag() {
+        return this.etag;
+    }
+
+    /**
+     * <p>
+     * The entity tag (ETag) is a hash of the object meant to represent its semantic content.
+     * </p>
+     * 
+     * @param etag
+     *        The entity tag (ETag) is a hash of the object meant to represent its semantic content.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetReadSetMetadataResult withEtag(ETag etag) {
+        setEtag(etag);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -812,7 +858,9 @@ public class GetReadSetMetadataResult extends com.amazonaws.AmazonWebServiceResu
         if (getStatusMessage() != null)
             sb.append("StatusMessage: ").append(getStatusMessage()).append(",");
         if (getCreationType() != null)
-            sb.append("CreationType: ").append(getCreationType());
+            sb.append("CreationType: ").append(getCreationType()).append(",");
+        if (getEtag() != null)
+            sb.append("Etag: ").append(getEtag());
         sb.append("}");
         return sb.toString();
     }
@@ -887,6 +935,10 @@ public class GetReadSetMetadataResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getCreationType() != null && other.getCreationType().equals(this.getCreationType()) == false)
             return false;
+        if (other.getEtag() == null ^ this.getEtag() == null)
+            return false;
+        if (other.getEtag() != null && other.getEtag().equals(this.getEtag()) == false)
+            return false;
         return true;
     }
 
@@ -910,6 +962,7 @@ public class GetReadSetMetadataResult extends com.amazonaws.AmazonWebServiceResu
         hashCode = prime * hashCode + ((getFiles() == null) ? 0 : getFiles().hashCode());
         hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getCreationType() == null) ? 0 : getCreationType().hashCode());
+        hashCode = prime * hashCode + ((getEtag() == null) ? 0 : getEtag().hashCode());
         return hashCode;
     }
 

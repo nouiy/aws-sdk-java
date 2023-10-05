@@ -424,7 +424,7 @@ public class DBCluster implements Serializable, Cloneable {
     private String globalWriteForwardingStatus;
     /**
      * <p>
-     * Specifies whether write forwarding is enabled for a secondary cluster in an Aurora global database. Because write
+     * Indicates whether write forwarding is enabled for a secondary cluster in an Aurora global database. Because write
      * forwarding takes time to enable, check the value of <code>GlobalWriteForwardingStatus</code> to confirm that the
      * request has completed before using the write forwarding feature for this cluster.
      * </p>
@@ -618,7 +618,7 @@ public class DBCluster implements Serializable, Cloneable {
     private java.util.Date iOOptimizedNextAllowedModificationTime;
     /**
      * <p>
-     * Specifies whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or is in
+     * Indicates whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or is in
      * the process of enabling it.
      * </p>
      */
@@ -3618,13 +3618,13 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether write forwarding is enabled for a secondary cluster in an Aurora global database. Because write
+     * Indicates whether write forwarding is enabled for a secondary cluster in an Aurora global database. Because write
      * forwarding takes time to enable, check the value of <code>GlobalWriteForwardingStatus</code> to confirm that the
      * request has completed before using the write forwarding feature for this cluster.
      * </p>
      * 
      * @param globalWriteForwardingRequested
-     *        Specifies whether write forwarding is enabled for a secondary cluster in an Aurora global database.
+     *        Indicates whether write forwarding is enabled for a secondary cluster in an Aurora global database.
      *        Because write forwarding takes time to enable, check the value of <code>GlobalWriteForwardingStatus</code>
      *        to confirm that the request has completed before using the write forwarding feature for this cluster.
      */
@@ -3635,12 +3635,12 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether write forwarding is enabled for a secondary cluster in an Aurora global database. Because write
+     * Indicates whether write forwarding is enabled for a secondary cluster in an Aurora global database. Because write
      * forwarding takes time to enable, check the value of <code>GlobalWriteForwardingStatus</code> to confirm that the
      * request has completed before using the write forwarding feature for this cluster.
      * </p>
      * 
-     * @return Specifies whether write forwarding is enabled for a secondary cluster in an Aurora global database.
+     * @return Indicates whether write forwarding is enabled for a secondary cluster in an Aurora global database.
      *         Because write forwarding takes time to enable, check the value of
      *         <code>GlobalWriteForwardingStatus</code> to confirm that the request has completed before using the write
      *         forwarding feature for this cluster.
@@ -3652,13 +3652,13 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether write forwarding is enabled for a secondary cluster in an Aurora global database. Because write
+     * Indicates whether write forwarding is enabled for a secondary cluster in an Aurora global database. Because write
      * forwarding takes time to enable, check the value of <code>GlobalWriteForwardingStatus</code> to confirm that the
      * request has completed before using the write forwarding feature for this cluster.
      * </p>
      * 
      * @param globalWriteForwardingRequested
-     *        Specifies whether write forwarding is enabled for a secondary cluster in an Aurora global database.
+     *        Indicates whether write forwarding is enabled for a secondary cluster in an Aurora global database.
      *        Because write forwarding takes time to enable, check the value of <code>GlobalWriteForwardingStatus</code>
      *        to confirm that the request has completed before using the write forwarding feature for this cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3671,12 +3671,12 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether write forwarding is enabled for a secondary cluster in an Aurora global database. Because write
+     * Indicates whether write forwarding is enabled for a secondary cluster in an Aurora global database. Because write
      * forwarding takes time to enable, check the value of <code>GlobalWriteForwardingStatus</code> to confirm that the
      * request has completed before using the write forwarding feature for this cluster.
      * </p>
      * 
-     * @return Specifies whether write forwarding is enabled for a secondary cluster in an Aurora global database.
+     * @return Indicates whether write forwarding is enabled for a secondary cluster in an Aurora global database.
      *         Because write forwarding takes time to enable, check the value of
      *         <code>GlobalWriteForwardingStatus</code> to confirm that the request has completed before using the write
      *         forwarding feature for this cluster.
@@ -4932,12 +4932,12 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or is in
+     * Indicates whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or is in
      * the process of enabling it.
      * </p>
      * 
      * @param localWriteForwardingStatus
-     *        Specifies whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or
+     *        Indicates whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or
      *        is in the process of enabling it.
      * @see LocalWriteForwardingStatus
      */
@@ -4948,11 +4948,11 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or is in
+     * Indicates whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or is in
      * the process of enabling it.
      * </p>
      * 
-     * @return Specifies whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested,
+     * @return Indicates whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested,
      *         or is in the process of enabling it.
      * @see LocalWriteForwardingStatus
      */
@@ -4963,12 +4963,12 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or is in
+     * Indicates whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or is in
      * the process of enabling it.
      * </p>
      * 
      * @param localWriteForwardingStatus
-     *        Specifies whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or
+     *        Indicates whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or
      *        is in the process of enabling it.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LocalWriteForwardingStatus
@@ -4981,12 +4981,12 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or is in
+     * Indicates whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or is in
      * the process of enabling it.
      * </p>
      * 
      * @param localWriteForwardingStatus
-     *        Specifies whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or
+     *        Indicates whether an Aurora DB cluster has in-cluster write forwarding enabled, not enabled, requested, or
      *        is in the process of enabling it.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LocalWriteForwardingStatus

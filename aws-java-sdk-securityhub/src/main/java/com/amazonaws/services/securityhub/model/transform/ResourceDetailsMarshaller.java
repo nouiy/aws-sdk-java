@@ -209,6 +209,20 @@ public class ResourceDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsStepFunctionStateMachine").build();
     private static final MarshallingInfo<StructuredPojo> AWSATHENAWORKGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsAthenaWorkGroup").build();
+    private static final MarshallingInfo<StructuredPojo> AWSEVENTSEVENTBUS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEventsEventbus").build();
+    private static final MarshallingInfo<StructuredPojo> AWSDMSENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsDmsEndpoint").build();
+    private static final MarshallingInfo<StructuredPojo> AWSEVENTSENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEventsEndpoint").build();
+    private static final MarshallingInfo<StructuredPojo> AWSDMSREPLICATIONTASK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsDmsReplicationTask").build();
+    private static final MarshallingInfo<StructuredPojo> AWSDMSREPLICATIONINSTANCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsDmsReplicationInstance").build();
+    private static final MarshallingInfo<StructuredPojo> AWSROUTE53HOSTEDZONE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsRoute53HostedZone").build();
+    private static final MarshallingInfo<StructuredPojo> AWSMSKCLUSTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsMskCluster").build();
 
     private static final ResourceDetailsMarshaller instance = new ResourceDetailsMarshaller();
 
@@ -316,6 +330,13 @@ public class ResourceDetailsMarshaller {
             protocolMarshaller.marshall(resourceDetails.getAwsGuardDutyDetector(), AWSGUARDDUTYDETECTOR_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsStepFunctionStateMachine(), AWSSTEPFUNCTIONSTATEMACHINE_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsAthenaWorkGroup(), AWSATHENAWORKGROUP_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsEventsEventbus(), AWSEVENTSEVENTBUS_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsDmsEndpoint(), AWSDMSENDPOINT_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsEventsEndpoint(), AWSEVENTSENDPOINT_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsDmsReplicationTask(), AWSDMSREPLICATIONTASK_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsDmsReplicationInstance(), AWSDMSREPLICATIONINSTANCE_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsRoute53HostedZone(), AWSROUTE53HOSTEDZONE_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsMskCluster(), AWSMSKCLUSTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

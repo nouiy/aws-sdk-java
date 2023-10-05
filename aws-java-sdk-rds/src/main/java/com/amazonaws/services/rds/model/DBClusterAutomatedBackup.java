@@ -94,8 +94,8 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
     private String status;
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      */
     private Boolean iAMDatabaseAuthenticationEnabled;
@@ -107,7 +107,7 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
     private java.util.Date clusterCreateTime;
     /**
      * <p>
-     * Specifies whether the source DB cluster is encrypted.
+     * Indicates whether the source DB cluster is encrypted.
      * </p>
      */
     private Boolean storageEncrypted;
@@ -637,13 +637,13 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
      * @param iAMDatabaseAuthenticationEnabled
-     *        True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *        is enabled, and otherwise false.
+     *        Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     *        accounts is enabled.
      */
 
     public void setIAMDatabaseAuthenticationEnabled(Boolean iAMDatabaseAuthenticationEnabled) {
@@ -652,12 +652,12 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
-     * @return True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *         is enabled, and otherwise false.
+     * @return Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     *         database accounts is enabled.
      */
 
     public Boolean getIAMDatabaseAuthenticationEnabled() {
@@ -666,13 +666,13 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
      * @param iAMDatabaseAuthenticationEnabled
-     *        True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *        is enabled, and otherwise false.
+     *        Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     *        accounts is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -683,12 +683,12 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
-     * @return True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *         is enabled, and otherwise false.
+     * @return Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     *         database accounts is enabled.
      */
 
     public Boolean isIAMDatabaseAuthenticationEnabled() {
@@ -737,11 +737,11 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the source DB cluster is encrypted.
+     * Indicates whether the source DB cluster is encrypted.
      * </p>
      * 
      * @param storageEncrypted
-     *        Specifies whether the source DB cluster is encrypted.
+     *        Indicates whether the source DB cluster is encrypted.
      */
 
     public void setStorageEncrypted(Boolean storageEncrypted) {
@@ -750,10 +750,10 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the source DB cluster is encrypted.
+     * Indicates whether the source DB cluster is encrypted.
      * </p>
      * 
-     * @return Specifies whether the source DB cluster is encrypted.
+     * @return Indicates whether the source DB cluster is encrypted.
      */
 
     public Boolean getStorageEncrypted() {
@@ -762,11 +762,11 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the source DB cluster is encrypted.
+     * Indicates whether the source DB cluster is encrypted.
      * </p>
      * 
      * @param storageEncrypted
-     *        Specifies whether the source DB cluster is encrypted.
+     *        Indicates whether the source DB cluster is encrypted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -777,10 +777,10 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the source DB cluster is encrypted.
+     * Indicates whether the source DB cluster is encrypted.
      * </p>
      * 
-     * @return Specifies whether the source DB cluster is encrypted.
+     * @return Indicates whether the source DB cluster is encrypted.
      */
 
     public Boolean isStorageEncrypted() {

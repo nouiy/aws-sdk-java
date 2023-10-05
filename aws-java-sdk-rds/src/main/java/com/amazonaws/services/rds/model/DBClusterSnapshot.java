@@ -31,49 +31,49 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
+     * The list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> availabilityZones;
     /**
      * <p>
-     * Specifies the identifier for the DB cluster snapshot.
+     * The identifier for the DB cluster snapshot.
      * </p>
      */
     private String dBClusterSnapshotIdentifier;
     /**
      * <p>
-     * Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
+     * The DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
      * </p>
      */
     private String dBClusterIdentifier;
     /**
      * <p>
-     * Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
+     * The time when the snapshot was taken, in Universal Coordinated Time (UTC).
      * </p>
      */
     private java.util.Date snapshotCreateTime;
     /**
      * <p>
-     * Specifies the name of the database engine for this DB cluster snapshot.
+     * The name of the database engine for this DB cluster snapshot.
      * </p>
      */
     private String engine;
     /**
      * <p>
-     * Provides the engine mode of the database engine for this DB cluster snapshot.
+     * The engine mode of the database engine for this DB cluster snapshot.
      * </p>
      */
     private String engineMode;
     /**
      * <p>
-     * Specifies the allocated storage size in gibibytes (GiB).
+     * The allocated storage size of the DB cluster snapshot in gibibytes (GiB).
      * </p>
      */
     private Integer allocatedStorage;
     /**
      * <p>
-     * Specifies the status of this DB cluster snapshot. Valid statuses are the following:
+     * The status of this DB cluster snapshot. Valid statuses are the following:
      * </p>
      * <ul>
      * <li>
@@ -96,55 +96,55 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
     private String status;
     /**
      * <p>
-     * Specifies the port that the DB cluster was listening on at the time of the snapshot.
+     * The port that the DB cluster was listening on at the time of the snapshot.
      * </p>
      */
     private Integer port;
     /**
      * <p>
-     * Provides the VPC ID associated with the DB cluster snapshot.
+     * The VPC ID associated with the DB cluster snapshot.
      * </p>
      */
     private String vpcId;
     /**
      * <p>
-     * Specifies the time when the DB cluster was created, in Universal Coordinated Time (UTC).
+     * The time when the DB cluster was created, in Universal Coordinated Time (UTC).
      * </p>
      */
     private java.util.Date clusterCreateTime;
     /**
      * <p>
-     * Provides the master username for this DB cluster snapshot.
+     * The master username for this DB cluster snapshot.
      * </p>
      */
     private String masterUsername;
     /**
      * <p>
-     * Provides the version of the database engine for this DB cluster snapshot.
+     * The version of the database engine for this DB cluster snapshot.
      * </p>
      */
     private String engineVersion;
     /**
      * <p>
-     * Provides the license model information for this DB cluster snapshot.
+     * The license model information for this DB cluster snapshot.
      * </p>
      */
     private String licenseModel;
     /**
      * <p>
-     * Provides the type of the DB cluster snapshot.
+     * The type of the DB cluster snapshot.
      * </p>
      */
     private String snapshotType;
     /**
      * <p>
-     * Specifies the percentage of the estimated data that has been transferred.
+     * The percentage of the estimated data that has been transferred.
      * </p>
      */
     private Integer percentProgress;
     /**
      * <p>
-     * Specifies whether the DB cluster snapshot is encrypted.
+     * Indicates whether the DB cluster snapshot is encrypted.
      * </p>
      */
     private Boolean storageEncrypted;
@@ -160,7 +160,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
     private String kmsKeyId;
     /**
      * <p>
-     * Specifies the Amazon Resource Name (ARN) for the DB cluster snapshot.
+     * The Amazon Resource Name (ARN) for the DB cluster snapshot.
      * </p>
      */
     private String dBClusterSnapshotArn;
@@ -173,8 +173,8 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
     private String sourceDBClusterSnapshotArn;
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      */
     private Boolean iAMDatabaseAuthenticationEnabled;
@@ -197,17 +197,17 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
     private String storageType;
     /**
      * <p>
-     * Specifies the resource ID of the DB cluster that this DB cluster snapshot was created from.
+     * The resource ID of the DB cluster that this DB cluster snapshot was created from.
      * </p>
      */
     private String dbClusterResourceId;
 
     /**
      * <p>
-     * Provides the list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
+     * The list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
      * </p>
      * 
-     * @return Provides the list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
+     * @return The list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
      */
 
     public java.util.List<String> getAvailabilityZones() {
@@ -219,11 +219,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
+     * The list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
      * </p>
      * 
      * @param availabilityZones
-     *        Provides the list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
+     *        The list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
      */
 
     public void setAvailabilityZones(java.util.Collection<String> availabilityZones) {
@@ -237,7 +237,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
+     * The list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -246,7 +246,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
      * </p>
      * 
      * @param availabilityZones
-     *        Provides the list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
+     *        The list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -262,11 +262,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
+     * The list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
      * </p>
      * 
      * @param availabilityZones
-     *        Provides the list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
+     *        The list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -277,11 +277,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the identifier for the DB cluster snapshot.
+     * The identifier for the DB cluster snapshot.
      * </p>
      * 
      * @param dBClusterSnapshotIdentifier
-     *        Specifies the identifier for the DB cluster snapshot.
+     *        The identifier for the DB cluster snapshot.
      */
 
     public void setDBClusterSnapshotIdentifier(String dBClusterSnapshotIdentifier) {
@@ -290,10 +290,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the identifier for the DB cluster snapshot.
+     * The identifier for the DB cluster snapshot.
      * </p>
      * 
-     * @return Specifies the identifier for the DB cluster snapshot.
+     * @return The identifier for the DB cluster snapshot.
      */
 
     public String getDBClusterSnapshotIdentifier() {
@@ -302,11 +302,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the identifier for the DB cluster snapshot.
+     * The identifier for the DB cluster snapshot.
      * </p>
      * 
      * @param dBClusterSnapshotIdentifier
-     *        Specifies the identifier for the DB cluster snapshot.
+     *        The identifier for the DB cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -317,11 +317,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
+     * The DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
      * </p>
      * 
      * @param dBClusterIdentifier
-     *        Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
+     *        The DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
      */
 
     public void setDBClusterIdentifier(String dBClusterIdentifier) {
@@ -330,10 +330,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
+     * The DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
      * </p>
      * 
-     * @return Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
+     * @return The DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
      */
 
     public String getDBClusterIdentifier() {
@@ -342,11 +342,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
+     * The DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
      * </p>
      * 
      * @param dBClusterIdentifier
-     *        Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
+     *        The DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -357,11 +357,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
+     * The time when the snapshot was taken, in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param snapshotCreateTime
-     *        Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
+     *        The time when the snapshot was taken, in Universal Coordinated Time (UTC).
      */
 
     public void setSnapshotCreateTime(java.util.Date snapshotCreateTime) {
@@ -370,10 +370,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
+     * The time when the snapshot was taken, in Universal Coordinated Time (UTC).
      * </p>
      * 
-     * @return Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
+     * @return The time when the snapshot was taken, in Universal Coordinated Time (UTC).
      */
 
     public java.util.Date getSnapshotCreateTime() {
@@ -382,11 +382,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
+     * The time when the snapshot was taken, in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param snapshotCreateTime
-     *        Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
+     *        The time when the snapshot was taken, in Universal Coordinated Time (UTC).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -397,11 +397,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the name of the database engine for this DB cluster snapshot.
+     * The name of the database engine for this DB cluster snapshot.
      * </p>
      * 
      * @param engine
-     *        Specifies the name of the database engine for this DB cluster snapshot.
+     *        The name of the database engine for this DB cluster snapshot.
      */
 
     public void setEngine(String engine) {
@@ -410,10 +410,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the name of the database engine for this DB cluster snapshot.
+     * The name of the database engine for this DB cluster snapshot.
      * </p>
      * 
-     * @return Specifies the name of the database engine for this DB cluster snapshot.
+     * @return The name of the database engine for this DB cluster snapshot.
      */
 
     public String getEngine() {
@@ -422,11 +422,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the name of the database engine for this DB cluster snapshot.
+     * The name of the database engine for this DB cluster snapshot.
      * </p>
      * 
      * @param engine
-     *        Specifies the name of the database engine for this DB cluster snapshot.
+     *        The name of the database engine for this DB cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -437,11 +437,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the engine mode of the database engine for this DB cluster snapshot.
+     * The engine mode of the database engine for this DB cluster snapshot.
      * </p>
      * 
      * @param engineMode
-     *        Provides the engine mode of the database engine for this DB cluster snapshot.
+     *        The engine mode of the database engine for this DB cluster snapshot.
      */
 
     public void setEngineMode(String engineMode) {
@@ -450,10 +450,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the engine mode of the database engine for this DB cluster snapshot.
+     * The engine mode of the database engine for this DB cluster snapshot.
      * </p>
      * 
-     * @return Provides the engine mode of the database engine for this DB cluster snapshot.
+     * @return The engine mode of the database engine for this DB cluster snapshot.
      */
 
     public String getEngineMode() {
@@ -462,11 +462,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the engine mode of the database engine for this DB cluster snapshot.
+     * The engine mode of the database engine for this DB cluster snapshot.
      * </p>
      * 
      * @param engineMode
-     *        Provides the engine mode of the database engine for this DB cluster snapshot.
+     *        The engine mode of the database engine for this DB cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -477,11 +477,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the allocated storage size in gibibytes (GiB).
+     * The allocated storage size of the DB cluster snapshot in gibibytes (GiB).
      * </p>
      * 
      * @param allocatedStorage
-     *        Specifies the allocated storage size in gibibytes (GiB).
+     *        The allocated storage size of the DB cluster snapshot in gibibytes (GiB).
      */
 
     public void setAllocatedStorage(Integer allocatedStorage) {
@@ -490,10 +490,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the allocated storage size in gibibytes (GiB).
+     * The allocated storage size of the DB cluster snapshot in gibibytes (GiB).
      * </p>
      * 
-     * @return Specifies the allocated storage size in gibibytes (GiB).
+     * @return The allocated storage size of the DB cluster snapshot in gibibytes (GiB).
      */
 
     public Integer getAllocatedStorage() {
@@ -502,11 +502,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the allocated storage size in gibibytes (GiB).
+     * The allocated storage size of the DB cluster snapshot in gibibytes (GiB).
      * </p>
      * 
      * @param allocatedStorage
-     *        Specifies the allocated storage size in gibibytes (GiB).
+     *        The allocated storage size of the DB cluster snapshot in gibibytes (GiB).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -517,7 +517,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the status of this DB cluster snapshot. Valid statuses are the following:
+     * The status of this DB cluster snapshot. Valid statuses are the following:
      * </p>
      * <ul>
      * <li>
@@ -538,7 +538,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
      * </ul>
      * 
      * @param status
-     *        Specifies the status of this DB cluster snapshot. Valid statuses are the following:</p>
+     *        The status of this DB cluster snapshot. Valid statuses are the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -563,7 +563,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the status of this DB cluster snapshot. Valid statuses are the following:
+     * The status of this DB cluster snapshot. Valid statuses are the following:
      * </p>
      * <ul>
      * <li>
@@ -583,7 +583,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
      * </li>
      * </ul>
      * 
-     * @return Specifies the status of this DB cluster snapshot. Valid statuses are the following:</p>
+     * @return The status of this DB cluster snapshot. Valid statuses are the following:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -608,7 +608,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the status of this DB cluster snapshot. Valid statuses are the following:
+     * The status of this DB cluster snapshot. Valid statuses are the following:
      * </p>
      * <ul>
      * <li>
@@ -629,7 +629,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
      * </ul>
      * 
      * @param status
-     *        Specifies the status of this DB cluster snapshot. Valid statuses are the following:</p>
+     *        The status of this DB cluster snapshot. Valid statuses are the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -656,11 +656,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the port that the DB cluster was listening on at the time of the snapshot.
+     * The port that the DB cluster was listening on at the time of the snapshot.
      * </p>
      * 
      * @param port
-     *        Specifies the port that the DB cluster was listening on at the time of the snapshot.
+     *        The port that the DB cluster was listening on at the time of the snapshot.
      */
 
     public void setPort(Integer port) {
@@ -669,10 +669,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the port that the DB cluster was listening on at the time of the snapshot.
+     * The port that the DB cluster was listening on at the time of the snapshot.
      * </p>
      * 
-     * @return Specifies the port that the DB cluster was listening on at the time of the snapshot.
+     * @return The port that the DB cluster was listening on at the time of the snapshot.
      */
 
     public Integer getPort() {
@@ -681,11 +681,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the port that the DB cluster was listening on at the time of the snapshot.
+     * The port that the DB cluster was listening on at the time of the snapshot.
      * </p>
      * 
      * @param port
-     *        Specifies the port that the DB cluster was listening on at the time of the snapshot.
+     *        The port that the DB cluster was listening on at the time of the snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -696,11 +696,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the VPC ID associated with the DB cluster snapshot.
+     * The VPC ID associated with the DB cluster snapshot.
      * </p>
      * 
      * @param vpcId
-     *        Provides the VPC ID associated with the DB cluster snapshot.
+     *        The VPC ID associated with the DB cluster snapshot.
      */
 
     public void setVpcId(String vpcId) {
@@ -709,10 +709,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the VPC ID associated with the DB cluster snapshot.
+     * The VPC ID associated with the DB cluster snapshot.
      * </p>
      * 
-     * @return Provides the VPC ID associated with the DB cluster snapshot.
+     * @return The VPC ID associated with the DB cluster snapshot.
      */
 
     public String getVpcId() {
@@ -721,11 +721,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the VPC ID associated with the DB cluster snapshot.
+     * The VPC ID associated with the DB cluster snapshot.
      * </p>
      * 
      * @param vpcId
-     *        Provides the VPC ID associated with the DB cluster snapshot.
+     *        The VPC ID associated with the DB cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -736,11 +736,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the time when the DB cluster was created, in Universal Coordinated Time (UTC).
+     * The time when the DB cluster was created, in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param clusterCreateTime
-     *        Specifies the time when the DB cluster was created, in Universal Coordinated Time (UTC).
+     *        The time when the DB cluster was created, in Universal Coordinated Time (UTC).
      */
 
     public void setClusterCreateTime(java.util.Date clusterCreateTime) {
@@ -749,10 +749,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the time when the DB cluster was created, in Universal Coordinated Time (UTC).
+     * The time when the DB cluster was created, in Universal Coordinated Time (UTC).
      * </p>
      * 
-     * @return Specifies the time when the DB cluster was created, in Universal Coordinated Time (UTC).
+     * @return The time when the DB cluster was created, in Universal Coordinated Time (UTC).
      */
 
     public java.util.Date getClusterCreateTime() {
@@ -761,11 +761,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the time when the DB cluster was created, in Universal Coordinated Time (UTC).
+     * The time when the DB cluster was created, in Universal Coordinated Time (UTC).
      * </p>
      * 
      * @param clusterCreateTime
-     *        Specifies the time when the DB cluster was created, in Universal Coordinated Time (UTC).
+     *        The time when the DB cluster was created, in Universal Coordinated Time (UTC).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -776,11 +776,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the master username for this DB cluster snapshot.
+     * The master username for this DB cluster snapshot.
      * </p>
      * 
      * @param masterUsername
-     *        Provides the master username for this DB cluster snapshot.
+     *        The master username for this DB cluster snapshot.
      */
 
     public void setMasterUsername(String masterUsername) {
@@ -789,10 +789,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the master username for this DB cluster snapshot.
+     * The master username for this DB cluster snapshot.
      * </p>
      * 
-     * @return Provides the master username for this DB cluster snapshot.
+     * @return The master username for this DB cluster snapshot.
      */
 
     public String getMasterUsername() {
@@ -801,11 +801,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the master username for this DB cluster snapshot.
+     * The master username for this DB cluster snapshot.
      * </p>
      * 
      * @param masterUsername
-     *        Provides the master username for this DB cluster snapshot.
+     *        The master username for this DB cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -816,11 +816,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the version of the database engine for this DB cluster snapshot.
+     * The version of the database engine for this DB cluster snapshot.
      * </p>
      * 
      * @param engineVersion
-     *        Provides the version of the database engine for this DB cluster snapshot.
+     *        The version of the database engine for this DB cluster snapshot.
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -829,10 +829,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the version of the database engine for this DB cluster snapshot.
+     * The version of the database engine for this DB cluster snapshot.
      * </p>
      * 
-     * @return Provides the version of the database engine for this DB cluster snapshot.
+     * @return The version of the database engine for this DB cluster snapshot.
      */
 
     public String getEngineVersion() {
@@ -841,11 +841,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the version of the database engine for this DB cluster snapshot.
+     * The version of the database engine for this DB cluster snapshot.
      * </p>
      * 
      * @param engineVersion
-     *        Provides the version of the database engine for this DB cluster snapshot.
+     *        The version of the database engine for this DB cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -856,11 +856,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the license model information for this DB cluster snapshot.
+     * The license model information for this DB cluster snapshot.
      * </p>
      * 
      * @param licenseModel
-     *        Provides the license model information for this DB cluster snapshot.
+     *        The license model information for this DB cluster snapshot.
      */
 
     public void setLicenseModel(String licenseModel) {
@@ -869,10 +869,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the license model information for this DB cluster snapshot.
+     * The license model information for this DB cluster snapshot.
      * </p>
      * 
-     * @return Provides the license model information for this DB cluster snapshot.
+     * @return The license model information for this DB cluster snapshot.
      */
 
     public String getLicenseModel() {
@@ -881,11 +881,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the license model information for this DB cluster snapshot.
+     * The license model information for this DB cluster snapshot.
      * </p>
      * 
      * @param licenseModel
-     *        Provides the license model information for this DB cluster snapshot.
+     *        The license model information for this DB cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -896,11 +896,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the type of the DB cluster snapshot.
+     * The type of the DB cluster snapshot.
      * </p>
      * 
      * @param snapshotType
-     *        Provides the type of the DB cluster snapshot.
+     *        The type of the DB cluster snapshot.
      */
 
     public void setSnapshotType(String snapshotType) {
@@ -909,10 +909,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the type of the DB cluster snapshot.
+     * The type of the DB cluster snapshot.
      * </p>
      * 
-     * @return Provides the type of the DB cluster snapshot.
+     * @return The type of the DB cluster snapshot.
      */
 
     public String getSnapshotType() {
@@ -921,11 +921,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the type of the DB cluster snapshot.
+     * The type of the DB cluster snapshot.
      * </p>
      * 
      * @param snapshotType
-     *        Provides the type of the DB cluster snapshot.
+     *        The type of the DB cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -936,11 +936,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the percentage of the estimated data that has been transferred.
+     * The percentage of the estimated data that has been transferred.
      * </p>
      * 
      * @param percentProgress
-     *        Specifies the percentage of the estimated data that has been transferred.
+     *        The percentage of the estimated data that has been transferred.
      */
 
     public void setPercentProgress(Integer percentProgress) {
@@ -949,10 +949,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the percentage of the estimated data that has been transferred.
+     * The percentage of the estimated data that has been transferred.
      * </p>
      * 
-     * @return Specifies the percentage of the estimated data that has been transferred.
+     * @return The percentage of the estimated data that has been transferred.
      */
 
     public Integer getPercentProgress() {
@@ -961,11 +961,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the percentage of the estimated data that has been transferred.
+     * The percentage of the estimated data that has been transferred.
      * </p>
      * 
      * @param percentProgress
-     *        Specifies the percentage of the estimated data that has been transferred.
+     *        The percentage of the estimated data that has been transferred.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -976,11 +976,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the DB cluster snapshot is encrypted.
+     * Indicates whether the DB cluster snapshot is encrypted.
      * </p>
      * 
      * @param storageEncrypted
-     *        Specifies whether the DB cluster snapshot is encrypted.
+     *        Indicates whether the DB cluster snapshot is encrypted.
      */
 
     public void setStorageEncrypted(Boolean storageEncrypted) {
@@ -989,10 +989,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the DB cluster snapshot is encrypted.
+     * Indicates whether the DB cluster snapshot is encrypted.
      * </p>
      * 
-     * @return Specifies whether the DB cluster snapshot is encrypted.
+     * @return Indicates whether the DB cluster snapshot is encrypted.
      */
 
     public Boolean getStorageEncrypted() {
@@ -1001,11 +1001,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the DB cluster snapshot is encrypted.
+     * Indicates whether the DB cluster snapshot is encrypted.
      * </p>
      * 
      * @param storageEncrypted
-     *        Specifies whether the DB cluster snapshot is encrypted.
+     *        Indicates whether the DB cluster snapshot is encrypted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1016,10 +1016,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the DB cluster snapshot is encrypted.
+     * Indicates whether the DB cluster snapshot is encrypted.
      * </p>
      * 
-     * @return Specifies whether the DB cluster snapshot is encrypted.
+     * @return Indicates whether the DB cluster snapshot is encrypted.
      */
 
     public Boolean isStorageEncrypted() {
@@ -1092,11 +1092,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the Amazon Resource Name (ARN) for the DB cluster snapshot.
+     * The Amazon Resource Name (ARN) for the DB cluster snapshot.
      * </p>
      * 
      * @param dBClusterSnapshotArn
-     *        Specifies the Amazon Resource Name (ARN) for the DB cluster snapshot.
+     *        The Amazon Resource Name (ARN) for the DB cluster snapshot.
      */
 
     public void setDBClusterSnapshotArn(String dBClusterSnapshotArn) {
@@ -1105,10 +1105,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the Amazon Resource Name (ARN) for the DB cluster snapshot.
+     * The Amazon Resource Name (ARN) for the DB cluster snapshot.
      * </p>
      * 
-     * @return Specifies the Amazon Resource Name (ARN) for the DB cluster snapshot.
+     * @return The Amazon Resource Name (ARN) for the DB cluster snapshot.
      */
 
     public String getDBClusterSnapshotArn() {
@@ -1117,11 +1117,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the Amazon Resource Name (ARN) for the DB cluster snapshot.
+     * The Amazon Resource Name (ARN) for the DB cluster snapshot.
      * </p>
      * 
      * @param dBClusterSnapshotArn
-     *        Specifies the Amazon Resource Name (ARN) for the DB cluster snapshot.
+     *        The Amazon Resource Name (ARN) for the DB cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1178,13 +1178,13 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
      * @param iAMDatabaseAuthenticationEnabled
-     *        True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *        is enabled, and otherwise false.
+     *        Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     *        accounts is enabled.
      */
 
     public void setIAMDatabaseAuthenticationEnabled(Boolean iAMDatabaseAuthenticationEnabled) {
@@ -1193,12 +1193,12 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
-     * @return True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *         is enabled, and otherwise false.
+     * @return Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     *         database accounts is enabled.
      */
 
     public Boolean getIAMDatabaseAuthenticationEnabled() {
@@ -1207,13 +1207,13 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
      * @param iAMDatabaseAuthenticationEnabled
-     *        True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *        is enabled, and otherwise false.
+     *        Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     *        accounts is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1224,12 +1224,12 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
-     * @return True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *         is enabled, and otherwise false.
+     * @return Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     *         database accounts is enabled.
      */
 
     public Boolean isIAMDatabaseAuthenticationEnabled() {
@@ -1388,11 +1388,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the resource ID of the DB cluster that this DB cluster snapshot was created from.
+     * The resource ID of the DB cluster that this DB cluster snapshot was created from.
      * </p>
      * 
      * @param dbClusterResourceId
-     *        Specifies the resource ID of the DB cluster that this DB cluster snapshot was created from.
+     *        The resource ID of the DB cluster that this DB cluster snapshot was created from.
      */
 
     public void setDbClusterResourceId(String dbClusterResourceId) {
@@ -1401,10 +1401,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the resource ID of the DB cluster that this DB cluster snapshot was created from.
+     * The resource ID of the DB cluster that this DB cluster snapshot was created from.
      * </p>
      * 
-     * @return Specifies the resource ID of the DB cluster that this DB cluster snapshot was created from.
+     * @return The resource ID of the DB cluster that this DB cluster snapshot was created from.
      */
 
     public String getDbClusterResourceId() {
@@ -1413,11 +1413,11 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the resource ID of the DB cluster that this DB cluster snapshot was created from.
+     * The resource ID of the DB cluster that this DB cluster snapshot was created from.
      * </p>
      * 
      * @param dbClusterResourceId
-     *        Specifies the resource ID of the DB cluster that this DB cluster snapshot was created from.
+     *        The resource ID of the DB cluster that this DB cluster snapshot was created from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

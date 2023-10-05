@@ -44,10 +44,10 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     private String dBClusterIdentifier;
     /**
      * <p>
-     * A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster is
-     * deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot
-     * is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is
-     * created. By default, this parameter is disabled.
+     * Specifies whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted. If skip
+     * is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot is created before
+     * the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is created. By default,
+     * this parameter is disabled.
      * </p>
      * <note>
      * <p>
@@ -92,9 +92,8 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     private String finalDBSnapshotIdentifier;
     /**
      * <p>
-     * A value that indicates whether to remove automated backups immediately after the DB cluster is deleted. This
-     * parameter isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
-     * deleted.
+     * Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter isn't
+     * case-sensitive. The default is to remove automated backups immediately after the DB cluster is deleted.
      * </p>
      */
     private Boolean deleteAutomatedBackups;
@@ -198,10 +197,10 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster is
-     * deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot
-     * is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is
-     * created. By default, this parameter is disabled.
+     * Specifies whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted. If skip
+     * is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot is created before
+     * the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is created. By default,
+     * this parameter is disabled.
      * </p>
      * <note>
      * <p>
@@ -211,10 +210,10 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * 
      * @param skipFinalSnapshot
-     *        A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster
-     *        is deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster
-     *        snapshot is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster
-     *        snapshot is created. By default, this parameter is disabled.</p> <note>
+     *        Specifies whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted. If
+     *        skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot is
+     *        created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is
+     *        created. By default, this parameter is disabled.</p> <note>
      *        <p>
      *        You must specify a <code>FinalDBSnapshotIdentifier</code> parameter if <code>SkipFinalSnapshot</code> is
      *        disabled.
@@ -227,10 +226,10 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster is
-     * deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot
-     * is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is
-     * created. By default, this parameter is disabled.
+     * Specifies whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted. If skip
+     * is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot is created before
+     * the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is created. By default,
+     * this parameter is disabled.
      * </p>
      * <note>
      * <p>
@@ -239,10 +238,10 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </note>
      * 
-     * @return A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster
-     *         is deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB
-     *         cluster snapshot is created before the DB cluster is deleted. By default, skip isn't specified, and the
-     *         DB cluster snapshot is created. By default, this parameter is disabled.</p> <note>
+     * @return Specifies whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted.
+     *         If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot
+     *         is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster
+     *         snapshot is created. By default, this parameter is disabled.</p> <note>
      *         <p>
      *         You must specify a <code>FinalDBSnapshotIdentifier</code> parameter if <code>SkipFinalSnapshot</code> is
      *         disabled.
@@ -255,10 +254,10 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster is
-     * deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot
-     * is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is
-     * created. By default, this parameter is disabled.
+     * Specifies whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted. If skip
+     * is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot is created before
+     * the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is created. By default,
+     * this parameter is disabled.
      * </p>
      * <note>
      * <p>
@@ -268,10 +267,10 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * 
      * @param skipFinalSnapshot
-     *        A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster
-     *        is deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster
-     *        snapshot is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster
-     *        snapshot is created. By default, this parameter is disabled.</p> <note>
+     *        Specifies whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted. If
+     *        skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot is
+     *        created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is
+     *        created. By default, this parameter is disabled.</p> <note>
      *        <p>
      *        You must specify a <code>FinalDBSnapshotIdentifier</code> parameter if <code>SkipFinalSnapshot</code> is
      *        disabled.
@@ -286,10 +285,10 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster is
-     * deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot
-     * is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is
-     * created. By default, this parameter is disabled.
+     * Specifies whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted. If skip
+     * is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot is created before
+     * the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is created. By default,
+     * this parameter is disabled.
      * </p>
      * <note>
      * <p>
@@ -298,10 +297,10 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </note>
      * 
-     * @return A value that indicates whether to skip the creation of a final DB cluster snapshot before the DB cluster
-     *         is deleted. If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB
-     *         cluster snapshot is created before the DB cluster is deleted. By default, skip isn't specified, and the
-     *         DB cluster snapshot is created. By default, this parameter is disabled.</p> <note>
+     * @return Specifies whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted.
+     *         If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot
+     *         is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster
+     *         snapshot is created. By default, this parameter is disabled.</p> <note>
      *         <p>
      *         You must specify a <code>FinalDBSnapshotIdentifier</code> parameter if <code>SkipFinalSnapshot</code> is
      *         disabled.
@@ -510,15 +509,14 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to remove automated backups immediately after the DB cluster is deleted. This
-     * parameter isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
-     * deleted.
+     * Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter isn't
+     * case-sensitive. The default is to remove automated backups immediately after the DB cluster is deleted.
      * </p>
      * 
      * @param deleteAutomatedBackups
-     *        A value that indicates whether to remove automated backups immediately after the DB cluster is deleted.
-     *        This parameter isn't case-sensitive. The default is to remove automated backups immediately after the DB
-     *        cluster is deleted.
+     *        Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter
+     *        isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
+     *        deleted.
      */
 
     public void setDeleteAutomatedBackups(Boolean deleteAutomatedBackups) {
@@ -527,14 +525,13 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to remove automated backups immediately after the DB cluster is deleted. This
-     * parameter isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
-     * deleted.
+     * Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter isn't
+     * case-sensitive. The default is to remove automated backups immediately after the DB cluster is deleted.
      * </p>
      * 
-     * @return A value that indicates whether to remove automated backups immediately after the DB cluster is deleted.
-     *         This parameter isn't case-sensitive. The default is to remove automated backups immediately after the DB
-     *         cluster is deleted.
+     * @return Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter
+     *         isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
+     *         deleted.
      */
 
     public Boolean getDeleteAutomatedBackups() {
@@ -543,15 +540,14 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to remove automated backups immediately after the DB cluster is deleted. This
-     * parameter isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
-     * deleted.
+     * Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter isn't
+     * case-sensitive. The default is to remove automated backups immediately after the DB cluster is deleted.
      * </p>
      * 
      * @param deleteAutomatedBackups
-     *        A value that indicates whether to remove automated backups immediately after the DB cluster is deleted.
-     *        This parameter isn't case-sensitive. The default is to remove automated backups immediately after the DB
-     *        cluster is deleted.
+     *        Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter
+     *        isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
+     *        deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -562,14 +558,13 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to remove automated backups immediately after the DB cluster is deleted. This
-     * parameter isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
-     * deleted.
+     * Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter isn't
+     * case-sensitive. The default is to remove automated backups immediately after the DB cluster is deleted.
      * </p>
      * 
-     * @return A value that indicates whether to remove automated backups immediately after the DB cluster is deleted.
-     *         This parameter isn't case-sensitive. The default is to remove automated backups immediately after the DB
-     *         cluster is deleted.
+     * @return Specifies whether to remove automated backups immediately after the DB cluster is deleted. This parameter
+     *         isn't case-sensitive. The default is to remove automated backups immediately after the DB cluster is
+     *         deleted.
      */
 
     public Boolean isDeleteAutomatedBackups() {

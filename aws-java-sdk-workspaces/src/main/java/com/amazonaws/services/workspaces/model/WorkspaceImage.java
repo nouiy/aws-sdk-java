@@ -100,7 +100,8 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
     private UpdateResult updates;
     /**
      * <p>
-     * The details of the error returned for the image.
+     * Additional details of the error returned for the image, including the possible causes of the errors and
+     * troubleshooting information.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ErrorDetails> errorDetails;
@@ -615,10 +616,12 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The details of the error returned for the image.
+     * Additional details of the error returned for the image, including the possible causes of the errors and
+     * troubleshooting information.
      * </p>
      * 
-     * @return The details of the error returned for the image.
+     * @return Additional details of the error returned for the image, including the possible causes of the errors and
+     *         troubleshooting information.
      */
 
     public java.util.List<ErrorDetails> getErrorDetails() {
@@ -630,11 +633,13 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The details of the error returned for the image.
+     * Additional details of the error returned for the image, including the possible causes of the errors and
+     * troubleshooting information.
      * </p>
      * 
      * @param errorDetails
-     *        The details of the error returned for the image.
+     *        Additional details of the error returned for the image, including the possible causes of the errors and
+     *        troubleshooting information.
      */
 
     public void setErrorDetails(java.util.Collection<ErrorDetails> errorDetails) {
@@ -648,7 +653,8 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The details of the error returned for the image.
+     * Additional details of the error returned for the image, including the possible causes of the errors and
+     * troubleshooting information.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -657,7 +663,8 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param errorDetails
-     *        The details of the error returned for the image.
+     *        Additional details of the error returned for the image, including the possible causes of the errors and
+     *        troubleshooting information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -673,11 +680,13 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The details of the error returned for the image.
+     * Additional details of the error returned for the image, including the possible causes of the errors and
+     * troubleshooting information.
      * </p>
      * 
      * @param errorDetails
-     *        The details of the error returned for the image.
+     *        Additional details of the error returned for the image, including the possible causes of the errors and
+     *        troubleshooting information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

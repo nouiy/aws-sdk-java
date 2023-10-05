@@ -91,7 +91,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
     private Boolean supportsStorageEncryption;
     /**
      * <p>
-     * Indicates the storage type for a DB instance.
+     * The storage type for a DB instance.
      * </p>
      */
     private String storageType;
@@ -115,7 +115,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
     private Boolean supportsIAMDatabaseAuthentication;
     /**
      * <p>
-     * True if a DB instance supports Performance Insights, otherwise false.
+     * Indicates whether a DB instance supports Performance Insights.
      * </p>
      */
     private Boolean supportsPerformanceInsights;
@@ -169,19 +169,20 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> supportedEngineModes;
     /**
      * <p>
-     * Whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance class.
+     * Indicates whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance
+     * class.
      * </p>
      */
     private Boolean supportsStorageAutoscaling;
     /**
      * <p>
-     * Whether a DB instance supports Kerberos Authentication.
+     * Indicates whether a DB instance supports Kerberos Authentication.
      * </p>
      */
     private Boolean supportsKerberosAuthentication;
     /**
      * <p>
-     * Whether a DB instance supports RDS on Outposts.
+     * Indicates whether a DB instance supports RDS on Outposts.
      * </p>
      * <p>
      * For more information about RDS on Outposts, see <a
@@ -200,14 +201,13 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> supportedActivityStreamModes;
     /**
      * <p>
-     * A value that indicates whether you can use Aurora global databases with a specific combination of other DB engine
-     * attributes.
+     * Indicates whether you can use Aurora global databases with a specific combination of other DB engine attributes.
      * </p>
      */
     private Boolean supportsGlobalDatabases;
     /**
      * <p>
-     * Whether DB instances can be configured as a Multi-AZ DB cluster.
+     * Indicates whether DB instances can be configured as a Multi-AZ DB cluster.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -744,11 +744,11 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the storage type for a DB instance.
+     * The storage type for a DB instance.
      * </p>
      * 
      * @param storageType
-     *        Indicates the storage type for a DB instance.
+     *        The storage type for a DB instance.
      */
 
     public void setStorageType(String storageType) {
@@ -757,10 +757,10 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the storage type for a DB instance.
+     * The storage type for a DB instance.
      * </p>
      * 
-     * @return Indicates the storage type for a DB instance.
+     * @return The storage type for a DB instance.
      */
 
     public String getStorageType() {
@@ -769,11 +769,11 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the storage type for a DB instance.
+     * The storage type for a DB instance.
      * </p>
      * 
      * @param storageType
-     *        Indicates the storage type for a DB instance.
+     *        The storage type for a DB instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -940,11 +940,11 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if a DB instance supports Performance Insights, otherwise false.
+     * Indicates whether a DB instance supports Performance Insights.
      * </p>
      * 
      * @param supportsPerformanceInsights
-     *        True if a DB instance supports Performance Insights, otherwise false.
+     *        Indicates whether a DB instance supports Performance Insights.
      */
 
     public void setSupportsPerformanceInsights(Boolean supportsPerformanceInsights) {
@@ -953,10 +953,10 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if a DB instance supports Performance Insights, otherwise false.
+     * Indicates whether a DB instance supports Performance Insights.
      * </p>
      * 
-     * @return True if a DB instance supports Performance Insights, otherwise false.
+     * @return Indicates whether a DB instance supports Performance Insights.
      */
 
     public Boolean getSupportsPerformanceInsights() {
@@ -965,11 +965,11 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if a DB instance supports Performance Insights, otherwise false.
+     * Indicates whether a DB instance supports Performance Insights.
      * </p>
      * 
      * @param supportsPerformanceInsights
-     *        True if a DB instance supports Performance Insights, otherwise false.
+     *        Indicates whether a DB instance supports Performance Insights.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -980,10 +980,10 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if a DB instance supports Performance Insights, otherwise false.
+     * Indicates whether a DB instance supports Performance Insights.
      * </p>
      * 
-     * @return True if a DB instance supports Performance Insights, otherwise false.
+     * @return Indicates whether a DB instance supports Performance Insights.
      */
 
     public Boolean isSupportsPerformanceInsights() {
@@ -1378,12 +1378,13 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance class.
+     * Indicates whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance
+     * class.
      * </p>
      * 
      * @param supportsStorageAutoscaling
-     *        Whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance
-     *        class.
+     *        Indicates whether Amazon RDS can automatically scale storage for DB instances that use the specified DB
+     *        instance class.
      */
 
     public void setSupportsStorageAutoscaling(Boolean supportsStorageAutoscaling) {
@@ -1392,11 +1393,12 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance class.
+     * Indicates whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance
+     * class.
      * </p>
      * 
-     * @return Whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance
-     *         class.
+     * @return Indicates whether Amazon RDS can automatically scale storage for DB instances that use the specified DB
+     *         instance class.
      */
 
     public Boolean getSupportsStorageAutoscaling() {
@@ -1405,12 +1407,13 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance class.
+     * Indicates whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance
+     * class.
      * </p>
      * 
      * @param supportsStorageAutoscaling
-     *        Whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance
-     *        class.
+     *        Indicates whether Amazon RDS can automatically scale storage for DB instances that use the specified DB
+     *        instance class.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1421,11 +1424,12 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance class.
+     * Indicates whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance
+     * class.
      * </p>
      * 
-     * @return Whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance
-     *         class.
+     * @return Indicates whether Amazon RDS can automatically scale storage for DB instances that use the specified DB
+     *         instance class.
      */
 
     public Boolean isSupportsStorageAutoscaling() {
@@ -1434,11 +1438,11 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether a DB instance supports Kerberos Authentication.
+     * Indicates whether a DB instance supports Kerberos Authentication.
      * </p>
      * 
      * @param supportsKerberosAuthentication
-     *        Whether a DB instance supports Kerberos Authentication.
+     *        Indicates whether a DB instance supports Kerberos Authentication.
      */
 
     public void setSupportsKerberosAuthentication(Boolean supportsKerberosAuthentication) {
@@ -1447,10 +1451,10 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether a DB instance supports Kerberos Authentication.
+     * Indicates whether a DB instance supports Kerberos Authentication.
      * </p>
      * 
-     * @return Whether a DB instance supports Kerberos Authentication.
+     * @return Indicates whether a DB instance supports Kerberos Authentication.
      */
 
     public Boolean getSupportsKerberosAuthentication() {
@@ -1459,11 +1463,11 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether a DB instance supports Kerberos Authentication.
+     * Indicates whether a DB instance supports Kerberos Authentication.
      * </p>
      * 
      * @param supportsKerberosAuthentication
-     *        Whether a DB instance supports Kerberos Authentication.
+     *        Indicates whether a DB instance supports Kerberos Authentication.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1474,10 +1478,10 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether a DB instance supports Kerberos Authentication.
+     * Indicates whether a DB instance supports Kerberos Authentication.
      * </p>
      * 
-     * @return Whether a DB instance supports Kerberos Authentication.
+     * @return Indicates whether a DB instance supports Kerberos Authentication.
      */
 
     public Boolean isSupportsKerberosAuthentication() {
@@ -1486,7 +1490,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether a DB instance supports RDS on Outposts.
+     * Indicates whether a DB instance supports RDS on Outposts.
      * </p>
      * <p>
      * For more information about RDS on Outposts, see <a
@@ -1495,7 +1499,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * </p>
      * 
      * @param outpostCapable
-     *        Whether a DB instance supports RDS on Outposts.</p>
+     *        Indicates whether a DB instance supports RDS on Outposts.</p>
      *        <p>
      *        For more information about RDS on Outposts, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Amazon RDS on Amazon
@@ -1508,7 +1512,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether a DB instance supports RDS on Outposts.
+     * Indicates whether a DB instance supports RDS on Outposts.
      * </p>
      * <p>
      * For more information about RDS on Outposts, see <a
@@ -1516,7 +1520,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * Services Outposts</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
-     * @return Whether a DB instance supports RDS on Outposts.</p>
+     * @return Indicates whether a DB instance supports RDS on Outposts.</p>
      *         <p>
      *         For more information about RDS on Outposts, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Amazon RDS on Amazon
@@ -1529,7 +1533,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether a DB instance supports RDS on Outposts.
+     * Indicates whether a DB instance supports RDS on Outposts.
      * </p>
      * <p>
      * For more information about RDS on Outposts, see <a
@@ -1538,7 +1542,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * </p>
      * 
      * @param outpostCapable
-     *        Whether a DB instance supports RDS on Outposts.</p>
+     *        Indicates whether a DB instance supports RDS on Outposts.</p>
      *        <p>
      *        For more information about RDS on Outposts, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Amazon RDS on Amazon
@@ -1553,7 +1557,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether a DB instance supports RDS on Outposts.
+     * Indicates whether a DB instance supports RDS on Outposts.
      * </p>
      * <p>
      * For more information about RDS on Outposts, see <a
@@ -1561,7 +1565,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * Services Outposts</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
-     * @return Whether a DB instance supports RDS on Outposts.</p>
+     * @return Indicates whether a DB instance supports RDS on Outposts.</p>
      *         <p>
      *         For more information about RDS on Outposts, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Amazon RDS on Amazon
@@ -1663,13 +1667,12 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates whether you can use Aurora global databases with a specific combination of other DB engine
-     * attributes.
+     * Indicates whether you can use Aurora global databases with a specific combination of other DB engine attributes.
      * </p>
      * 
      * @param supportsGlobalDatabases
-     *        A value that indicates whether you can use Aurora global databases with a specific combination of other DB
-     *        engine attributes.
+     *        Indicates whether you can use Aurora global databases with a specific combination of other DB engine
+     *        attributes.
      */
 
     public void setSupportsGlobalDatabases(Boolean supportsGlobalDatabases) {
@@ -1678,12 +1681,11 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates whether you can use Aurora global databases with a specific combination of other DB engine
-     * attributes.
+     * Indicates whether you can use Aurora global databases with a specific combination of other DB engine attributes.
      * </p>
      * 
-     * @return A value that indicates whether you can use Aurora global databases with a specific combination of other
-     *         DB engine attributes.
+     * @return Indicates whether you can use Aurora global databases with a specific combination of other DB engine
+     *         attributes.
      */
 
     public Boolean getSupportsGlobalDatabases() {
@@ -1692,13 +1694,12 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates whether you can use Aurora global databases with a specific combination of other DB engine
-     * attributes.
+     * Indicates whether you can use Aurora global databases with a specific combination of other DB engine attributes.
      * </p>
      * 
      * @param supportsGlobalDatabases
-     *        A value that indicates whether you can use Aurora global databases with a specific combination of other DB
-     *        engine attributes.
+     *        Indicates whether you can use Aurora global databases with a specific combination of other DB engine
+     *        attributes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1709,12 +1710,11 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates whether you can use Aurora global databases with a specific combination of other DB engine
-     * attributes.
+     * Indicates whether you can use Aurora global databases with a specific combination of other DB engine attributes.
      * </p>
      * 
-     * @return A value that indicates whether you can use Aurora global databases with a specific combination of other
-     *         DB engine attributes.
+     * @return Indicates whether you can use Aurora global databases with a specific combination of other DB engine
+     *         attributes.
      */
 
     public Boolean isSupportsGlobalDatabases() {
@@ -1723,7 +1723,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether DB instances can be configured as a Multi-AZ DB cluster.
+     * Indicates whether DB instances can be configured as a Multi-AZ DB cluster.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -1732,7 +1732,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * </p>
      * 
      * @param supportsClusters
-     *        Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
+     *        Indicates whether DB instances can be configured as a Multi-AZ DB cluster.</p>
      *        <p>
      *        For more information on Multi-AZ DB clusters, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
@@ -1745,7 +1745,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether DB instances can be configured as a Multi-AZ DB cluster.
+     * Indicates whether DB instances can be configured as a Multi-AZ DB cluster.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -1753,7 +1753,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
-     * @return Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
+     * @return Indicates whether DB instances can be configured as a Multi-AZ DB cluster.</p>
      *         <p>
      *         For more information on Multi-AZ DB clusters, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html">
@@ -1766,7 +1766,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether DB instances can be configured as a Multi-AZ DB cluster.
+     * Indicates whether DB instances can be configured as a Multi-AZ DB cluster.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -1775,7 +1775,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * </p>
      * 
      * @param supportsClusters
-     *        Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
+     *        Indicates whether DB instances can be configured as a Multi-AZ DB cluster.</p>
      *        <p>
      *        For more information on Multi-AZ DB clusters, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
@@ -1790,7 +1790,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether DB instances can be configured as a Multi-AZ DB cluster.
+     * Indicates whether DB instances can be configured as a Multi-AZ DB cluster.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -1798,7 +1798,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
-     * @return Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
+     * @return Indicates whether DB instances can be configured as a Multi-AZ DB cluster.</p>
      *         <p>
      *         For more information on Multi-AZ DB clusters, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html">

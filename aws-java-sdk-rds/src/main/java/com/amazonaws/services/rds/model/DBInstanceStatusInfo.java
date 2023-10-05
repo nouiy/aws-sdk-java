@@ -34,13 +34,14 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
     private String statusType;
     /**
      * <p>
-     * Boolean value that is true if the instance is operating normally, or false if the instance is in an error state.
+     * A Boolean value that is true if the instance is operating normally, or false if the instance is in an error
+     * state.
      * </p>
      */
     private Boolean normal;
     /**
      * <p>
-     * Status of the DB instance. For a StatusType of read replica, the values can be replicating, replication stop
+     * The status of the DB instance. For a StatusType of read replica, the values can be replicating, replication stop
      * point set, replication stop point reached, error, stopped, or terminated.
      * </p>
      */
@@ -95,12 +96,13 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Boolean value that is true if the instance is operating normally, or false if the instance is in an error state.
+     * A Boolean value that is true if the instance is operating normally, or false if the instance is in an error
+     * state.
      * </p>
      * 
      * @param normal
-     *        Boolean value that is true if the instance is operating normally, or false if the instance is in an error
-     *        state.
+     *        A Boolean value that is true if the instance is operating normally, or false if the instance is in an
+     *        error state.
      */
 
     public void setNormal(Boolean normal) {
@@ -109,11 +111,12 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Boolean value that is true if the instance is operating normally, or false if the instance is in an error state.
+     * A Boolean value that is true if the instance is operating normally, or false if the instance is in an error
+     * state.
      * </p>
      * 
-     * @return Boolean value that is true if the instance is operating normally, or false if the instance is in an error
-     *         state.
+     * @return A Boolean value that is true if the instance is operating normally, or false if the instance is in an
+     *         error state.
      */
 
     public Boolean getNormal() {
@@ -122,12 +125,13 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Boolean value that is true if the instance is operating normally, or false if the instance is in an error state.
+     * A Boolean value that is true if the instance is operating normally, or false if the instance is in an error
+     * state.
      * </p>
      * 
      * @param normal
-     *        Boolean value that is true if the instance is operating normally, or false if the instance is in an error
-     *        state.
+     *        A Boolean value that is true if the instance is operating normally, or false if the instance is in an
+     *        error state.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +142,12 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Boolean value that is true if the instance is operating normally, or false if the instance is in an error state.
+     * A Boolean value that is true if the instance is operating normally, or false if the instance is in an error
+     * state.
      * </p>
      * 
-     * @return Boolean value that is true if the instance is operating normally, or false if the instance is in an error
-     *         state.
+     * @return A Boolean value that is true if the instance is operating normally, or false if the instance is in an
+     *         error state.
      */
 
     public Boolean isNormal() {
@@ -151,13 +156,13 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Status of the DB instance. For a StatusType of read replica, the values can be replicating, replication stop
+     * The status of the DB instance. For a StatusType of read replica, the values can be replicating, replication stop
      * point set, replication stop point reached, error, stopped, or terminated.
      * </p>
      * 
      * @param status
-     *        Status of the DB instance. For a StatusType of read replica, the values can be replicating, replication
-     *        stop point set, replication stop point reached, error, stopped, or terminated.
+     *        The status of the DB instance. For a StatusType of read replica, the values can be replicating,
+     *        replication stop point set, replication stop point reached, error, stopped, or terminated.
      */
 
     public void setStatus(String status) {
@@ -166,12 +171,12 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Status of the DB instance. For a StatusType of read replica, the values can be replicating, replication stop
+     * The status of the DB instance. For a StatusType of read replica, the values can be replicating, replication stop
      * point set, replication stop point reached, error, stopped, or terminated.
      * </p>
      * 
-     * @return Status of the DB instance. For a StatusType of read replica, the values can be replicating, replication
-     *         stop point set, replication stop point reached, error, stopped, or terminated.
+     * @return The status of the DB instance. For a StatusType of read replica, the values can be replicating,
+     *         replication stop point set, replication stop point reached, error, stopped, or terminated.
      */
 
     public String getStatus() {
@@ -180,13 +185,13 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Status of the DB instance. For a StatusType of read replica, the values can be replicating, replication stop
+     * The status of the DB instance. For a StatusType of read replica, the values can be replicating, replication stop
      * point set, replication stop point reached, error, stopped, or terminated.
      * </p>
      * 
      * @param status
-     *        Status of the DB instance. For a StatusType of read replica, the values can be replicating, replication
-     *        stop point set, replication stop point reached, error, stopped, or terminated.
+     *        The status of the DB instance. For a StatusType of read replica, the values can be replicating,
+     *        replication stop point set, replication stop point reached, error, stopped, or terminated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

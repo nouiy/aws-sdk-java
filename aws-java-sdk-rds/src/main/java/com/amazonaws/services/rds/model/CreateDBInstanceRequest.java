@@ -607,7 +607,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can include any printable ASCII character except "/", """, or "@".
+     * Can include any printable ASCII character except "/",
+     * """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes) character.
      * </p>
      * </li>
      * </ul>
@@ -2207,7 +2208,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        </li> <li>
      *        <p>
-     *        Can include any printable ASCII character except "/", """, or "@".
+     *        Can include any printable ASCII character except "/",
+     *        """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes)
+     *        character.
      *        </p>
      *        </li>
      *        </ul>
@@ -5650,7 +5653,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can include any printable ASCII character except "/", """, or "@".
+     * Can include any printable ASCII character except "/",
+     * """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes) character.
      * </p>
      * </li>
      * </ul>
@@ -5702,7 +5706,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Can include any printable ASCII character except "/", """, or "@".
+     *        Can include any printable ASCII character except "/",
+     *        """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes)
+     *        character.
      *        </p>
      *        </li>
      *        </ul>
@@ -5760,7 +5766,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can include any printable ASCII character except "/", """, or "@".
+     * Can include any printable ASCII character except "/",
+     * """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes) character.
      * </p>
      * </li>
      * </ul>
@@ -5811,7 +5818,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         <li>
      *         <p>
-     *         Can include any printable ASCII character except "/", """, or "@".
+     *         Can include any printable ASCII character except "/",
+     *         """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes)
+     *         character.
      *         </p>
      *         </li>
      *         </ul>
@@ -5869,7 +5878,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can include any printable ASCII character except "/", """, or "@".
+     * Can include any printable ASCII character except "/",
+     * """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes) character.
      * </p>
      * </li>
      * </ul>
@@ -5921,7 +5931,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Can include any printable ASCII character except "/", """, or "@".
+     *        Can include any printable ASCII character except "/",
+     *        """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes)
+     *        character.
      *        </p>
      *        </li>
      *        </ul>

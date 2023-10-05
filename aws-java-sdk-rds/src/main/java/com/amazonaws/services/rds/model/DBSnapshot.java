@@ -160,7 +160,7 @@ public class DBSnapshot implements Serializable, Cloneable {
     private String tdeCredentialArn;
     /**
      * <p>
-     * Specifies whether the DB snapshot is encrypted.
+     * Indicates whether the DB snapshot is encrypted.
      * </p>
      */
     private Boolean encrypted;
@@ -189,8 +189,8 @@ public class DBSnapshot implements Serializable, Cloneable {
     private String timezone;
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      */
     private Boolean iAMDatabaseAuthenticationEnabled;
@@ -1114,11 +1114,11 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the DB snapshot is encrypted.
+     * Indicates whether the DB snapshot is encrypted.
      * </p>
      * 
      * @param encrypted
-     *        Specifies whether the DB snapshot is encrypted.
+     *        Indicates whether the DB snapshot is encrypted.
      */
 
     public void setEncrypted(Boolean encrypted) {
@@ -1127,10 +1127,10 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the DB snapshot is encrypted.
+     * Indicates whether the DB snapshot is encrypted.
      * </p>
      * 
-     * @return Specifies whether the DB snapshot is encrypted.
+     * @return Indicates whether the DB snapshot is encrypted.
      */
 
     public Boolean getEncrypted() {
@@ -1139,11 +1139,11 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the DB snapshot is encrypted.
+     * Indicates whether the DB snapshot is encrypted.
      * </p>
      * 
      * @param encrypted
-     *        Specifies whether the DB snapshot is encrypted.
+     *        Indicates whether the DB snapshot is encrypted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1154,10 +1154,10 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the DB snapshot is encrypted.
+     * Indicates whether the DB snapshot is encrypted.
      * </p>
      * 
-     * @return Specifies whether the DB snapshot is encrypted.
+     * @return Indicates whether the DB snapshot is encrypted.
      */
 
     public Boolean isEncrypted() {
@@ -1319,13 +1319,13 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
      * @param iAMDatabaseAuthenticationEnabled
-     *        True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *        is enabled, and otherwise false.
+     *        Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     *        accounts is enabled.
      */
 
     public void setIAMDatabaseAuthenticationEnabled(Boolean iAMDatabaseAuthenticationEnabled) {
@@ -1334,12 +1334,12 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
-     * @return True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *         is enabled, and otherwise false.
+     * @return Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     *         database accounts is enabled.
      */
 
     public Boolean getIAMDatabaseAuthenticationEnabled() {
@@ -1348,13 +1348,13 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
      * @param iAMDatabaseAuthenticationEnabled
-     *        True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *        is enabled, and otherwise false.
+     *        Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     *        accounts is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1365,12 +1365,12 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled, and otherwise false.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
-     * @return True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *         is enabled, and otherwise false.
+     * @return Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     *         database accounts is enabled.
      */
 
     public Boolean isIAMDatabaseAuthenticationEnabled() {

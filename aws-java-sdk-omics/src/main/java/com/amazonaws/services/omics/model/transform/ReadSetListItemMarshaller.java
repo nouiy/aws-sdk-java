@@ -55,6 +55,8 @@ public class ReadSetListItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("statusMessage").build();
     private static final MarshallingInfo<String> CREATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationType").build();
+    private static final MarshallingInfo<StructuredPojo> ETAG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("etag").build();
 
     private static final ReadSetListItemMarshaller instance = new ReadSetListItemMarshaller();
 
@@ -86,6 +88,7 @@ public class ReadSetListItemMarshaller {
             protocolMarshaller.marshall(readSetListItem.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(readSetListItem.getStatusMessage(), STATUSMESSAGE_BINDING);
             protocolMarshaller.marshall(readSetListItem.getCreationType(), CREATIONTYPE_BINDING);
+            protocolMarshaller.marshall(readSetListItem.getEtag(), ETAG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

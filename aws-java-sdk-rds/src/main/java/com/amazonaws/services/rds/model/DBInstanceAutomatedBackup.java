@@ -55,19 +55,19 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
     private String dBInstanceIdentifier;
     /**
      * <p>
-     * Earliest and latest time an instance can be restored to.
+     * The earliest and latest time a DB instance can be restored to.
      * </p>
      */
     private RestoreWindow restoreWindow;
     /**
      * <p>
-     * Specifies the allocated storage size in gibibytes (GiB).
+     * The allocated storage size for the the automated backup in gibibytes (GiB).
      * </p>
      */
     private Integer allocatedStorage;
     /**
      * <p>
-     * Provides a list of status information for an automated backup:
+     * A list of status information for an automated backup:
      * </p>
      * <ul>
      * <li>
@@ -111,13 +111,13 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
     private String availabilityZone;
     /**
      * <p>
-     * Provides the VPC ID associated with the DB instance.
+     * The VPC ID associated with the DB instance.
      * </p>
      */
     private String vpcId;
     /**
      * <p>
-     * Provides the date and time that the DB instance was created.
+     * The date and time when the DB instance was created.
      * </p>
      */
     private java.util.Date instanceCreateTime;
@@ -141,7 +141,7 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
     private String engineVersion;
     /**
      * <p>
-     * License model information for the automated backup.
+     * The license model information for the automated backup.
      * </p>
      */
     private String licenseModel;
@@ -166,13 +166,13 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
     private String tdeCredentialArn;
     /**
      * <p>
-     * Specifies whether the automated backup is encrypted.
+     * Indicates whether the automated backup is encrypted.
      * </p>
      */
     private Boolean encrypted;
     /**
      * <p>
-     * Specifies the storage type associated with the automated backup.
+     * The storage type associated with the automated backup.
      * </p>
      */
     private String storageType;
@@ -220,13 +220,13 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<DBInstanceAutomatedBackupsReplication> dBInstanceAutomatedBackupsReplications;
     /**
      * <p>
-     * Specifies where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services Region.
+     * The location where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services Region.
      * </p>
      */
     private String backupTarget;
     /**
      * <p>
-     * Specifies the storage throughput for the automated backup.
+     * The storage throughput for the automated backup.
      * </p>
      */
     private Integer storageThroughput;
@@ -411,11 +411,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Earliest and latest time an instance can be restored to.
+     * The earliest and latest time a DB instance can be restored to.
      * </p>
      * 
      * @param restoreWindow
-     *        Earliest and latest time an instance can be restored to.
+     *        The earliest and latest time a DB instance can be restored to.
      */
 
     public void setRestoreWindow(RestoreWindow restoreWindow) {
@@ -424,10 +424,10 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Earliest and latest time an instance can be restored to.
+     * The earliest and latest time a DB instance can be restored to.
      * </p>
      * 
-     * @return Earliest and latest time an instance can be restored to.
+     * @return The earliest and latest time a DB instance can be restored to.
      */
 
     public RestoreWindow getRestoreWindow() {
@@ -436,11 +436,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Earliest and latest time an instance can be restored to.
+     * The earliest and latest time a DB instance can be restored to.
      * </p>
      * 
      * @param restoreWindow
-     *        Earliest and latest time an instance can be restored to.
+     *        The earliest and latest time a DB instance can be restored to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -451,11 +451,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the allocated storage size in gibibytes (GiB).
+     * The allocated storage size for the the automated backup in gibibytes (GiB).
      * </p>
      * 
      * @param allocatedStorage
-     *        Specifies the allocated storage size in gibibytes (GiB).
+     *        The allocated storage size for the the automated backup in gibibytes (GiB).
      */
 
     public void setAllocatedStorage(Integer allocatedStorage) {
@@ -464,10 +464,10 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the allocated storage size in gibibytes (GiB).
+     * The allocated storage size for the the automated backup in gibibytes (GiB).
      * </p>
      * 
-     * @return Specifies the allocated storage size in gibibytes (GiB).
+     * @return The allocated storage size for the the automated backup in gibibytes (GiB).
      */
 
     public Integer getAllocatedStorage() {
@@ -476,11 +476,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the allocated storage size in gibibytes (GiB).
+     * The allocated storage size for the the automated backup in gibibytes (GiB).
      * </p>
      * 
      * @param allocatedStorage
-     *        Specifies the allocated storage size in gibibytes (GiB).
+     *        The allocated storage size for the the automated backup in gibibytes (GiB).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -491,7 +491,7 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides a list of status information for an automated backup:
+     * A list of status information for an automated backup:
      * </p>
      * <ul>
      * <li>
@@ -512,7 +512,7 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
      * </ul>
      * 
      * @param status
-     *        Provides a list of status information for an automated backup:</p>
+     *        A list of status information for an automated backup:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -538,7 +538,7 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides a list of status information for an automated backup:
+     * A list of status information for an automated backup:
      * </p>
      * <ul>
      * <li>
@@ -558,7 +558,7 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
      * </li>
      * </ul>
      * 
-     * @return Provides a list of status information for an automated backup:</p>
+     * @return A list of status information for an automated backup:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -584,7 +584,7 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides a list of status information for an automated backup:
+     * A list of status information for an automated backup:
      * </p>
      * <ul>
      * <li>
@@ -605,7 +605,7 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
      * </ul>
      * 
      * @param status
-     *        Provides a list of status information for an automated backup:</p>
+     *        A list of status information for an automated backup:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -764,11 +764,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the VPC ID associated with the DB instance.
+     * The VPC ID associated with the DB instance.
      * </p>
      * 
      * @param vpcId
-     *        Provides the VPC ID associated with the DB instance.
+     *        The VPC ID associated with the DB instance.
      */
 
     public void setVpcId(String vpcId) {
@@ -777,10 +777,10 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the VPC ID associated with the DB instance.
+     * The VPC ID associated with the DB instance.
      * </p>
      * 
-     * @return Provides the VPC ID associated with the DB instance.
+     * @return The VPC ID associated with the DB instance.
      */
 
     public String getVpcId() {
@@ -789,11 +789,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the VPC ID associated with the DB instance.
+     * The VPC ID associated with the DB instance.
      * </p>
      * 
      * @param vpcId
-     *        Provides the VPC ID associated with the DB instance.
+     *        The VPC ID associated with the DB instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -804,11 +804,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the date and time that the DB instance was created.
+     * The date and time when the DB instance was created.
      * </p>
      * 
      * @param instanceCreateTime
-     *        Provides the date and time that the DB instance was created.
+     *        The date and time when the DB instance was created.
      */
 
     public void setInstanceCreateTime(java.util.Date instanceCreateTime) {
@@ -817,10 +817,10 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the date and time that the DB instance was created.
+     * The date and time when the DB instance was created.
      * </p>
      * 
-     * @return Provides the date and time that the DB instance was created.
+     * @return The date and time when the DB instance was created.
      */
 
     public java.util.Date getInstanceCreateTime() {
@@ -829,11 +829,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the date and time that the DB instance was created.
+     * The date and time when the DB instance was created.
      * </p>
      * 
      * @param instanceCreateTime
-     *        Provides the date and time that the DB instance was created.
+     *        The date and time when the DB instance was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -964,11 +964,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * License model information for the automated backup.
+     * The license model information for the automated backup.
      * </p>
      * 
      * @param licenseModel
-     *        License model information for the automated backup.
+     *        The license model information for the automated backup.
      */
 
     public void setLicenseModel(String licenseModel) {
@@ -977,10 +977,10 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * License model information for the automated backup.
+     * The license model information for the automated backup.
      * </p>
      * 
-     * @return License model information for the automated backup.
+     * @return The license model information for the automated backup.
      */
 
     public String getLicenseModel() {
@@ -989,11 +989,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * License model information for the automated backup.
+     * The license model information for the automated backup.
      * </p>
      * 
      * @param licenseModel
-     *        License model information for the automated backup.
+     *        The license model information for the automated backup.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1130,11 +1130,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the automated backup is encrypted.
+     * Indicates whether the automated backup is encrypted.
      * </p>
      * 
      * @param encrypted
-     *        Specifies whether the automated backup is encrypted.
+     *        Indicates whether the automated backup is encrypted.
      */
 
     public void setEncrypted(Boolean encrypted) {
@@ -1143,10 +1143,10 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the automated backup is encrypted.
+     * Indicates whether the automated backup is encrypted.
      * </p>
      * 
-     * @return Specifies whether the automated backup is encrypted.
+     * @return Indicates whether the automated backup is encrypted.
      */
 
     public Boolean getEncrypted() {
@@ -1155,11 +1155,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the automated backup is encrypted.
+     * Indicates whether the automated backup is encrypted.
      * </p>
      * 
      * @param encrypted
-     *        Specifies whether the automated backup is encrypted.
+     *        Indicates whether the automated backup is encrypted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1170,10 +1170,10 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the automated backup is encrypted.
+     * Indicates whether the automated backup is encrypted.
      * </p>
      * 
-     * @return Specifies whether the automated backup is encrypted.
+     * @return Indicates whether the automated backup is encrypted.
      */
 
     public Boolean isEncrypted() {
@@ -1182,11 +1182,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the storage type associated with the automated backup.
+     * The storage type associated with the automated backup.
      * </p>
      * 
      * @param storageType
-     *        Specifies the storage type associated with the automated backup.
+     *        The storage type associated with the automated backup.
      */
 
     public void setStorageType(String storageType) {
@@ -1195,10 +1195,10 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the storage type associated with the automated backup.
+     * The storage type associated with the automated backup.
      * </p>
      * 
-     * @return Specifies the storage type associated with the automated backup.
+     * @return The storage type associated with the automated backup.
      */
 
     public String getStorageType() {
@@ -1207,11 +1207,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the storage type associated with the automated backup.
+     * The storage type associated with the automated backup.
      * </p>
      * 
      * @param storageType
-     *        Specifies the storage type associated with the automated backup.
+     *        The storage type associated with the automated backup.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1549,11 +1549,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services Region.
+     * The location where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services Region.
      * </p>
      * 
      * @param backupTarget
-     *        Specifies where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services
+     *        The location where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services
      *        Region.
      */
 
@@ -1563,10 +1563,10 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services Region.
+     * The location where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services Region.
      * </p>
      * 
-     * @return Specifies where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services
+     * @return The location where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services
      *         Region.
      */
 
@@ -1576,11 +1576,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services Region.
+     * The location where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services Region.
      * </p>
      * 
      * @param backupTarget
-     *        Specifies where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services
+     *        The location where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services
      *        Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1592,11 +1592,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the storage throughput for the automated backup.
+     * The storage throughput for the automated backup.
      * </p>
      * 
      * @param storageThroughput
-     *        Specifies the storage throughput for the automated backup.
+     *        The storage throughput for the automated backup.
      */
 
     public void setStorageThroughput(Integer storageThroughput) {
@@ -1605,10 +1605,10 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the storage throughput for the automated backup.
+     * The storage throughput for the automated backup.
      * </p>
      * 
-     * @return Specifies the storage throughput for the automated backup.
+     * @return The storage throughput for the automated backup.
      */
 
     public Integer getStorageThroughput() {
@@ -1617,11 +1617,11 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the storage throughput for the automated backup.
+     * The storage throughput for the automated backup.
      * </p>
      * 
      * @param storageThroughput
-     *        Specifies the storage throughput for the automated backup.
+     *        The storage throughput for the automated backup.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -315,8 +315,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private Integer port;
     /**
      * <p>
-     * A value that indicates whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ
-     * deployment, you can't set the <code>AvailabilityZone</code> parameter.
+     * Specifies whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ deployment, you
+     * can't set the <code>AvailabilityZone</code> parameter.
      * </p>
      */
     private Boolean multiAZ;
@@ -330,8 +330,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private String engineVersion;
     /**
      * <p>
-     * A value that indicates whether minor engine upgrades are applied automatically to the DB instance during the
-     * maintenance window. By default, minor engine upgrades are not applied automatically.
+     * Specifies whether to automatically apply minor engine upgrades to the DB instance during the maintenance window.
+     * By default, minor engine upgrades are not applied automatically.
      * </p>
      */
     private Boolean autoMinorVersionUpgrade;
@@ -359,7 +359,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private String optionGroupName;
     /**
      * <p>
-     * A value that indicates whether the DB instance is publicly accessible.
+     * Specifies whether the DB instance is publicly accessible.
      * </p>
      * <p>
      * When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
@@ -389,7 +389,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
      * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
@@ -402,7 +402,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private String storageType;
     /**
      * <p>
-     * A value that indicates whether the new DB instance is encrypted or not.
+     * Specifies whether the new DB instance is encrypted or not.
      * </p>
      */
     private Boolean storageEncrypted;
@@ -424,8 +424,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private String kmsKeyId;
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the DB instance to snapshots of the DB instance. By default,
-     * tags are not copied.
+     * Specifies whether to copy all tags from the DB instance to snapshots of the DB instance. By default, tags are not
+     * copied.
      * </p>
      */
     private Boolean copyTagsToSnapshot;
@@ -462,8 +462,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private String monitoringRoleArn;
     /**
      * <p>
-     * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping isn't enabled.
+     * Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     * database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information about IAM database authentication, see <a
@@ -514,7 +514,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private String s3IngestionRoleArn;
     /**
      * <p>
-     * A value that indicates whether to enable Performance Insights for the DB instance.
+     * Specifies whether to enable Performance Insights for the DB instance.
      * </p>
      * <p>
      * For more information, see <a
@@ -605,14 +605,14 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private com.amazonaws.internal.SdkInternalList<ProcessorFeature> processorFeatures;
     /**
      * <p>
-     * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
+     * Specifies whether the DB instance class of the DB instance uses its default processor features.
      * </p>
      */
     private Boolean useDefaultProcessorFeatures;
     /**
      * <p>
-     * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
+     * Specifies whether to enable deletion protection for the DB instance. The database can't be deleted when deletion
+     * protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
@@ -634,7 +634,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The network type of the DB instance.
      * </p>
      * <p>
-     * Valid values:
+     * Valid Values:
      * </p>
      * <ul>
      * <li>
@@ -671,7 +671,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private Integer storageThroughput;
     /**
      * <p>
-     * A value that indicates whether to manage the master user password with Amazon Web Services Secrets Manager.
+     * Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.
      * </p>
      * <p>
      * For more information, see <a
@@ -2542,13 +2542,13 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ
-     * deployment, you can't set the <code>AvailabilityZone</code> parameter.
+     * Specifies whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ deployment, you
+     * can't set the <code>AvailabilityZone</code> parameter.
      * </p>
      * 
      * @param multiAZ
-     *        A value that indicates whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ
-     *        deployment, you can't set the <code>AvailabilityZone</code> parameter.
+     *        Specifies whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ deployment,
+     *        you can't set the <code>AvailabilityZone</code> parameter.
      */
 
     public void setMultiAZ(Boolean multiAZ) {
@@ -2557,12 +2557,12 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ
-     * deployment, you can't set the <code>AvailabilityZone</code> parameter.
+     * Specifies whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ deployment, you
+     * can't set the <code>AvailabilityZone</code> parameter.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ
-     *         deployment, you can't set the <code>AvailabilityZone</code> parameter.
+     * @return Specifies whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ deployment,
+     *         you can't set the <code>AvailabilityZone</code> parameter.
      */
 
     public Boolean getMultiAZ() {
@@ -2571,13 +2571,13 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ
-     * deployment, you can't set the <code>AvailabilityZone</code> parameter.
+     * Specifies whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ deployment, you
+     * can't set the <code>AvailabilityZone</code> parameter.
      * </p>
      * 
      * @param multiAZ
-     *        A value that indicates whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ
-     *        deployment, you can't set the <code>AvailabilityZone</code> parameter.
+     *        Specifies whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ deployment,
+     *        you can't set the <code>AvailabilityZone</code> parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2588,12 +2588,12 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ
-     * deployment, you can't set the <code>AvailabilityZone</code> parameter.
+     * Specifies whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ deployment, you
+     * can't set the <code>AvailabilityZone</code> parameter.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ
-     *         deployment, you can't set the <code>AvailabilityZone</code> parameter.
+     * @return Specifies whether the DB instance is a Multi-AZ deployment. If the DB instance is a Multi-AZ deployment,
+     *         you can't set the <code>AvailabilityZone</code> parameter.
      */
 
     public Boolean isMultiAZ() {
@@ -2654,13 +2654,13 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether minor engine upgrades are applied automatically to the DB instance during the
-     * maintenance window. By default, minor engine upgrades are not applied automatically.
+     * Specifies whether to automatically apply minor engine upgrades to the DB instance during the maintenance window.
+     * By default, minor engine upgrades are not applied automatically.
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        A value that indicates whether minor engine upgrades are applied automatically to the DB instance during
-     *        the maintenance window. By default, minor engine upgrades are not applied automatically.
+     *        Specifies whether to automatically apply minor engine upgrades to the DB instance during the maintenance
+     *        window. By default, minor engine upgrades are not applied automatically.
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -2669,12 +2669,12 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether minor engine upgrades are applied automatically to the DB instance during the
-     * maintenance window. By default, minor engine upgrades are not applied automatically.
+     * Specifies whether to automatically apply minor engine upgrades to the DB instance during the maintenance window.
+     * By default, minor engine upgrades are not applied automatically.
      * </p>
      * 
-     * @return A value that indicates whether minor engine upgrades are applied automatically to the DB instance during
-     *         the maintenance window. By default, minor engine upgrades are not applied automatically.
+     * @return Specifies whether to automatically apply minor engine upgrades to the DB instance during the maintenance
+     *         window. By default, minor engine upgrades are not applied automatically.
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -2683,13 +2683,13 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether minor engine upgrades are applied automatically to the DB instance during the
-     * maintenance window. By default, minor engine upgrades are not applied automatically.
+     * Specifies whether to automatically apply minor engine upgrades to the DB instance during the maintenance window.
+     * By default, minor engine upgrades are not applied automatically.
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        A value that indicates whether minor engine upgrades are applied automatically to the DB instance during
-     *        the maintenance window. By default, minor engine upgrades are not applied automatically.
+     *        Specifies whether to automatically apply minor engine upgrades to the DB instance during the maintenance
+     *        window. By default, minor engine upgrades are not applied automatically.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2700,12 +2700,12 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether minor engine upgrades are applied automatically to the DB instance during the
-     * maintenance window. By default, minor engine upgrades are not applied automatically.
+     * Specifies whether to automatically apply minor engine upgrades to the DB instance during the maintenance window.
+     * By default, minor engine upgrades are not applied automatically.
      * </p>
      * 
-     * @return A value that indicates whether minor engine upgrades are applied automatically to the DB instance during
-     *         the maintenance window. By default, minor engine upgrades are not applied automatically.
+     * @return Specifies whether to automatically apply minor engine upgrades to the DB instance during the maintenance
+     *         window. By default, minor engine upgrades are not applied automatically.
      */
 
     public Boolean isAutoMinorVersionUpgrade() {
@@ -2858,7 +2858,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance is publicly accessible.
+     * Specifies whether the DB instance is publicly accessible.
      * </p>
      * <p>
      * When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
@@ -2875,7 +2875,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param publiclyAccessible
-     *        A value that indicates whether the DB instance is publicly accessible.</p>
+     *        Specifies whether the DB instance is publicly accessible.</p>
      *        <p>
      *        When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
      *        IP address from within the DB instance's virtual private cloud (VPC). It resolves to the public IP address
@@ -2897,7 +2897,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance is publicly accessible.
+     * Specifies whether the DB instance is publicly accessible.
      * </p>
      * <p>
      * When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
@@ -2913,7 +2913,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * For more information, see <a>CreateDBInstance</a>.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance is publicly accessible.</p>
+     * @return Specifies whether the DB instance is publicly accessible.</p>
      *         <p>
      *         When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the
      *         private IP address from within the DB instance's virtual private cloud (VPC). It resolves to the public
@@ -2935,7 +2935,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance is publicly accessible.
+     * Specifies whether the DB instance is publicly accessible.
      * </p>
      * <p>
      * When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
@@ -2952,7 +2952,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param publiclyAccessible
-     *        A value that indicates whether the DB instance is publicly accessible.</p>
+     *        Specifies whether the DB instance is publicly accessible.</p>
      *        <p>
      *        When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
      *        IP address from within the DB instance's virtual private cloud (VPC). It resolves to the public IP address
@@ -2976,7 +2976,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance is publicly accessible.
+     * Specifies whether the DB instance is publicly accessible.
      * </p>
      * <p>
      * When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
@@ -2992,7 +2992,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * For more information, see <a>CreateDBInstance</a>.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance is publicly accessible.</p>
+     * @return Specifies whether the DB instance is publicly accessible.</p>
      *         <p>
      *         When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the
      *         private IP address from within the DB instance's virtual private cloud (VPC). It resolves to the public
@@ -3106,7 +3106,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
      * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
@@ -3119,7 +3119,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * @param storageType
      *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
-     *        Valid values: <code>gp2 | gp3 | io1 | standard</code>
+     *        Valid Values: <code>gp2 | gp3 | io1 | standard</code>
      *        </p>
      *        <p>
      *        If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
@@ -3138,7 +3138,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
      * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
@@ -3150,7 +3150,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * 
      * @return Specifies the storage type to be associated with the DB instance.</p>
      *         <p>
-     *         Valid values: <code>gp2 | gp3 | io1 | standard</code>
+     *         Valid Values: <code>gp2 | gp3 | io1 | standard</code>
      *         </p>
      *         <p>
      *         If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
@@ -3169,7 +3169,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
      * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
@@ -3182,7 +3182,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * @param storageType
      *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
-     *        Valid values: <code>gp2 | gp3 | io1 | standard</code>
+     *        Valid Values: <code>gp2 | gp3 | io1 | standard</code>
      *        </p>
      *        <p>
      *        If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
@@ -3200,11 +3200,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the new DB instance is encrypted or not.
+     * Specifies whether the new DB instance is encrypted or not.
      * </p>
      * 
      * @param storageEncrypted
-     *        A value that indicates whether the new DB instance is encrypted or not.
+     *        Specifies whether the new DB instance is encrypted or not.
      */
 
     public void setStorageEncrypted(Boolean storageEncrypted) {
@@ -3213,10 +3213,10 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the new DB instance is encrypted or not.
+     * Specifies whether the new DB instance is encrypted or not.
      * </p>
      * 
-     * @return A value that indicates whether the new DB instance is encrypted or not.
+     * @return Specifies whether the new DB instance is encrypted or not.
      */
 
     public Boolean getStorageEncrypted() {
@@ -3225,11 +3225,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the new DB instance is encrypted or not.
+     * Specifies whether the new DB instance is encrypted or not.
      * </p>
      * 
      * @param storageEncrypted
-     *        A value that indicates whether the new DB instance is encrypted or not.
+     *        Specifies whether the new DB instance is encrypted or not.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3240,10 +3240,10 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the new DB instance is encrypted or not.
+     * Specifies whether the new DB instance is encrypted or not.
      * </p>
      * 
-     * @return A value that indicates whether the new DB instance is encrypted or not.
+     * @return Specifies whether the new DB instance is encrypted or not.
      */
 
     public Boolean isStorageEncrypted() {
@@ -3349,13 +3349,13 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the DB instance to snapshots of the DB instance. By default,
-     * tags are not copied.
+     * Specifies whether to copy all tags from the DB instance to snapshots of the DB instance. By default, tags are not
+     * copied.
      * </p>
      * 
      * @param copyTagsToSnapshot
-     *        A value that indicates whether to copy all tags from the DB instance to snapshots of the DB instance. By
-     *        default, tags are not copied.
+     *        Specifies whether to copy all tags from the DB instance to snapshots of the DB instance. By default, tags
+     *        are not copied.
      */
 
     public void setCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
@@ -3364,12 +3364,12 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the DB instance to snapshots of the DB instance. By default,
-     * tags are not copied.
+     * Specifies whether to copy all tags from the DB instance to snapshots of the DB instance. By default, tags are not
+     * copied.
      * </p>
      * 
-     * @return A value that indicates whether to copy all tags from the DB instance to snapshots of the DB instance. By
-     *         default, tags are not copied.
+     * @return Specifies whether to copy all tags from the DB instance to snapshots of the DB instance. By default, tags
+     *         are not copied.
      */
 
     public Boolean getCopyTagsToSnapshot() {
@@ -3378,13 +3378,13 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the DB instance to snapshots of the DB instance. By default,
-     * tags are not copied.
+     * Specifies whether to copy all tags from the DB instance to snapshots of the DB instance. By default, tags are not
+     * copied.
      * </p>
      * 
      * @param copyTagsToSnapshot
-     *        A value that indicates whether to copy all tags from the DB instance to snapshots of the DB instance. By
-     *        default, tags are not copied.
+     *        Specifies whether to copy all tags from the DB instance to snapshots of the DB instance. By default, tags
+     *        are not copied.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3395,12 +3395,12 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the DB instance to snapshots of the DB instance. By default,
-     * tags are not copied.
+     * Specifies whether to copy all tags from the DB instance to snapshots of the DB instance. By default, tags are not
+     * copied.
      * </p>
      * 
-     * @return A value that indicates whether to copy all tags from the DB instance to snapshots of the DB instance. By
-     *         default, tags are not copied.
+     * @return Specifies whether to copy all tags from the DB instance to snapshots of the DB instance. By default, tags
+     *         are not copied.
      */
 
     public Boolean isCopyTagsToSnapshot() {
@@ -3597,8 +3597,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping isn't enabled.
+     * Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     * database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information about IAM database authentication, see <a
@@ -3607,8 +3607,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param enableIAMDatabaseAuthentication
-     *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
+     *        Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts
+     *        to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
      *        For more information about IAM database authentication, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
@@ -3621,8 +3621,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping isn't enabled.
+     * Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     * database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information about IAM database authentication, see <a
@@ -3630,8 +3630,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
-     * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
+     * @return Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts
+     *         to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
      *         For more information about IAM database authentication, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
@@ -3644,8 +3644,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping isn't enabled.
+     * Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     * database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information about IAM database authentication, see <a
@@ -3654,8 +3654,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param enableIAMDatabaseAuthentication
-     *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
+     *        Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts
+     *        to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
      *        For more information about IAM database authentication, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
@@ -3670,8 +3670,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping isn't enabled.
+     * Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     * database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information about IAM database authentication, see <a
@@ -3679,8 +3679,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
-     * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
+     * @return Specifies whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts
+     *         to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
      *         For more information about IAM database authentication, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
@@ -3947,7 +3947,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to enable Performance Insights for the DB instance.
+     * Specifies whether to enable Performance Insights for the DB instance.
      * </p>
      * <p>
      * For more information, see <a
@@ -3956,7 +3956,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param enablePerformanceInsights
-     *        A value that indicates whether to enable Performance Insights for the DB instance.</p>
+     *        Specifies whether to enable Performance Insights for the DB instance.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
@@ -3969,7 +3969,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to enable Performance Insights for the DB instance.
+     * Specifies whether to enable Performance Insights for the DB instance.
      * </p>
      * <p>
      * For more information, see <a
@@ -3977,7 +3977,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Insights</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
-     * @return A value that indicates whether to enable Performance Insights for the DB instance.</p>
+     * @return Specifies whether to enable Performance Insights for the DB instance.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
@@ -3990,7 +3990,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to enable Performance Insights for the DB instance.
+     * Specifies whether to enable Performance Insights for the DB instance.
      * </p>
      * <p>
      * For more information, see <a
@@ -3999,7 +3999,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param enablePerformanceInsights
-     *        A value that indicates whether to enable Performance Insights for the DB instance.</p>
+     *        Specifies whether to enable Performance Insights for the DB instance.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
@@ -4014,7 +4014,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to enable Performance Insights for the DB instance.
+     * Specifies whether to enable Performance Insights for the DB instance.
      * </p>
      * <p>
      * For more information, see <a
@@ -4022,7 +4022,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Insights</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
-     * @return A value that indicates whether to enable Performance Insights for the DB instance.</p>
+     * @return Specifies whether to enable Performance Insights for the DB instance.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
@@ -4603,12 +4603,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
+     * Specifies whether the DB instance class of the DB instance uses its default processor features.
      * </p>
      * 
      * @param useDefaultProcessorFeatures
-     *        A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *        features.
+     *        Specifies whether the DB instance class of the DB instance uses its default processor features.
      */
 
     public void setUseDefaultProcessorFeatures(Boolean useDefaultProcessorFeatures) {
@@ -4617,11 +4616,10 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
+     * Specifies whether the DB instance class of the DB instance uses its default processor features.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *         features.
+     * @return Specifies whether the DB instance class of the DB instance uses its default processor features.
      */
 
     public Boolean getUseDefaultProcessorFeatures() {
@@ -4630,12 +4628,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
+     * Specifies whether the DB instance class of the DB instance uses its default processor features.
      * </p>
      * 
      * @param useDefaultProcessorFeatures
-     *        A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *        features.
+     *        Specifies whether the DB instance class of the DB instance uses its default processor features.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4646,11 +4643,10 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
+     * Specifies whether the DB instance class of the DB instance uses its default processor features.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *         features.
+     * @return Specifies whether the DB instance class of the DB instance uses its default processor features.
      */
 
     public Boolean isUseDefaultProcessorFeatures() {
@@ -4659,17 +4655,16 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
+     * Specifies whether to enable deletion protection for the DB instance. The database can't be deleted when deletion
+     * protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
      * @param deletionProtection
-     *        A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
+     *        Specifies whether to enable deletion protection for the DB instance. The database can't be deleted when
+     *        deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *        Instance</a>.
      */
 
@@ -4679,16 +4674,15 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
+     * Specifies whether to enable deletion protection for the DB instance. The database can't be deleted when deletion
+     * protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
-     *         information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
+     * @return Specifies whether to enable deletion protection for the DB instance. The database can't be deleted when
+     *         deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see
+     *         <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *         Instance</a>.
      */
 
@@ -4698,17 +4692,16 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
+     * Specifies whether to enable deletion protection for the DB instance. The database can't be deleted when deletion
+     * protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
      * @param deletionProtection
-     *        A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
+     *        Specifies whether to enable deletion protection for the DB instance. The database can't be deleted when
+     *        deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *        Instance</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -4720,16 +4713,15 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
+     * Specifies whether to enable deletion protection for the DB instance. The database can't be deleted when deletion
+     * protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
-     *         information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
+     * @return Specifies whether to enable deletion protection for the DB instance. The database can't be deleted when
+     *         deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see
+     *         <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *         Instance</a>.
      */
 
@@ -4815,7 +4807,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The network type of the DB instance.
      * </p>
      * <p>
-     * Valid values:
+     * Valid Values:
      * </p>
      * <ul>
      * <li>
@@ -4843,7 +4835,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * @param networkType
      *        The network type of the DB instance.</p>
      *        <p>
-     *        Valid values:
+     *        Valid Values:
      *        </p>
      *        <ul>
      *        <li>
@@ -4877,7 +4869,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The network type of the DB instance.
      * </p>
      * <p>
-     * Valid values:
+     * Valid Values:
      * </p>
      * <ul>
      * <li>
@@ -4904,7 +4896,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * 
      * @return The network type of the DB instance.</p>
      *         <p>
-     *         Valid values:
+     *         Valid Values:
      *         </p>
      *         <ul>
      *         <li>
@@ -4938,7 +4930,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The network type of the DB instance.
      * </p>
      * <p>
-     * Valid values:
+     * Valid Values:
      * </p>
      * <ul>
      * <li>
@@ -4966,7 +4958,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * @param networkType
      *        The network type of the DB instance.</p>
      *        <p>
-     *        Valid values:
+     *        Valid Values:
      *        </p>
      *        <ul>
      *        <li>
@@ -5054,7 +5046,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to manage the master user password with Amazon Web Services Secrets Manager.
+     * Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.
      * </p>
      * <p>
      * For more information, see <a
@@ -5074,8 +5066,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </ul>
      * 
      * @param manageMasterUserPassword
-     *        A value that indicates whether to manage the master user password with Amazon Web Services Secrets
-     *        Manager.</p>
+     *        Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management
@@ -5099,7 +5090,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to manage the master user password with Amazon Web Services Secrets Manager.
+     * Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.
      * </p>
      * <p>
      * For more information, see <a
@@ -5118,8 +5109,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </li>
      * </ul>
      * 
-     * @return A value that indicates whether to manage the master user password with Amazon Web Services Secrets
-     *         Manager.</p>
+     * @return Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password
@@ -5143,7 +5133,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to manage the master user password with Amazon Web Services Secrets Manager.
+     * Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.
      * </p>
      * <p>
      * For more information, see <a
@@ -5163,8 +5153,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </ul>
      * 
      * @param manageMasterUserPassword
-     *        A value that indicates whether to manage the master user password with Amazon Web Services Secrets
-     *        Manager.</p>
+     *        Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management
@@ -5190,7 +5179,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A value that indicates whether to manage the master user password with Amazon Web Services Secrets Manager.
+     * Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.
      * </p>
      * <p>
      * For more information, see <a
@@ -5209,8 +5198,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </li>
      * </ul>
      * 
-     * @return A value that indicates whether to manage the master user password with Amazon Web Services Secrets
-     *         Manager.</p>
+     * @return Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password

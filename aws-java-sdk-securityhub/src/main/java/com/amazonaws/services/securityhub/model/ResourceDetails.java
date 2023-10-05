@@ -595,6 +595,55 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private AwsAthenaWorkGroupDetails awsAthenaWorkGroup;
+    /**
+     * <p>
+     * Provides details about Amazon EventBridge event bus for an endpoint. An event bus is a router that receives
+     * events and delivers them to zero or more destinations, or targets.
+     * </p>
+     */
+    private AwsEventsEventbusDetails awsEventsEventbus;
+    /**
+     * <p>
+     * Provides details about an Database Migration Service (DMS) endpoint. An endpoint provides connection, data store
+     * type, and location information about your data store.
+     * </p>
+     */
+    private AwsDmsEndpointDetails awsDmsEndpoint;
+    /**
+     * <p>
+     * Provides details about an Amazon EventBridge global endpoint. The endpoint can improve your application’s
+     * availability by making it Regional-fault tolerant.
+     * </p>
+     */
+    private AwsEventsEndpointDetails awsEventsEndpoint;
+    /**
+     * <p>
+     * Provides details about an DMS replication task. A replication task moves a set of data from the source endpoint
+     * to the target endpoint.
+     * </p>
+     */
+    private AwsDmsReplicationTaskDetails awsDmsReplicationTask;
+    /**
+     * <p>
+     * Provides details about an DMS replication instance. DMS uses a replication instance to connect to your source
+     * data store, read the source data, and format the data for consumption by the target data store.
+     * </p>
+     */
+    private AwsDmsReplicationInstanceDetails awsDmsReplicationInstance;
+    /**
+     * <p>
+     * Provides details about an Amazon Route 53 hosted zone, including the four name servers assigned to the hosted
+     * zone. A hosted zone represents a collection of records that can be managed together, belonging to a single parent
+     * domain name.
+     * </p>
+     */
+    private AwsRoute53HostedZoneDetails awsRoute53HostedZone;
+    /**
+     * <p>
+     * Provides details about an Amazon Managed Streaming for Apache Kafka (Amazon MSK) cluster.
+     * </p>
+     */
+    private AwsMskClusterDetails awsMskCluster;
 
     /**
      * <p>
@@ -4355,6 +4404,328 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Provides details about Amazon EventBridge event bus for an endpoint. An event bus is a router that receives
+     * events and delivers them to zero or more destinations, or targets.
+     * </p>
+     * 
+     * @param awsEventsEventbus
+     *        Provides details about Amazon EventBridge event bus for an endpoint. An event bus is a router that
+     *        receives events and delivers them to zero or more destinations, or targets.
+     */
+
+    public void setAwsEventsEventbus(AwsEventsEventbusDetails awsEventsEventbus) {
+        this.awsEventsEventbus = awsEventsEventbus;
+    }
+
+    /**
+     * <p>
+     * Provides details about Amazon EventBridge event bus for an endpoint. An event bus is a router that receives
+     * events and delivers them to zero or more destinations, or targets.
+     * </p>
+     * 
+     * @return Provides details about Amazon EventBridge event bus for an endpoint. An event bus is a router that
+     *         receives events and delivers them to zero or more destinations, or targets.
+     */
+
+    public AwsEventsEventbusDetails getAwsEventsEventbus() {
+        return this.awsEventsEventbus;
+    }
+
+    /**
+     * <p>
+     * Provides details about Amazon EventBridge event bus for an endpoint. An event bus is a router that receives
+     * events and delivers them to zero or more destinations, or targets.
+     * </p>
+     * 
+     * @param awsEventsEventbus
+     *        Provides details about Amazon EventBridge event bus for an endpoint. An event bus is a router that
+     *        receives events and delivers them to zero or more destinations, or targets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsEventsEventbus(AwsEventsEventbusDetails awsEventsEventbus) {
+        setAwsEventsEventbus(awsEventsEventbus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Database Migration Service (DMS) endpoint. An endpoint provides connection, data store
+     * type, and location information about your data store.
+     * </p>
+     * 
+     * @param awsDmsEndpoint
+     *        Provides details about an Database Migration Service (DMS) endpoint. An endpoint provides connection, data
+     *        store type, and location information about your data store.
+     */
+
+    public void setAwsDmsEndpoint(AwsDmsEndpointDetails awsDmsEndpoint) {
+        this.awsDmsEndpoint = awsDmsEndpoint;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Database Migration Service (DMS) endpoint. An endpoint provides connection, data store
+     * type, and location information about your data store.
+     * </p>
+     * 
+     * @return Provides details about an Database Migration Service (DMS) endpoint. An endpoint provides connection,
+     *         data store type, and location information about your data store.
+     */
+
+    public AwsDmsEndpointDetails getAwsDmsEndpoint() {
+        return this.awsDmsEndpoint;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Database Migration Service (DMS) endpoint. An endpoint provides connection, data store
+     * type, and location information about your data store.
+     * </p>
+     * 
+     * @param awsDmsEndpoint
+     *        Provides details about an Database Migration Service (DMS) endpoint. An endpoint provides connection, data
+     *        store type, and location information about your data store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsDmsEndpoint(AwsDmsEndpointDetails awsDmsEndpoint) {
+        setAwsDmsEndpoint(awsDmsEndpoint);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon EventBridge global endpoint. The endpoint can improve your application’s
+     * availability by making it Regional-fault tolerant.
+     * </p>
+     * 
+     * @param awsEventsEndpoint
+     *        Provides details about an Amazon EventBridge global endpoint. The endpoint can improve your application’s
+     *        availability by making it Regional-fault tolerant.
+     */
+
+    public void setAwsEventsEndpoint(AwsEventsEndpointDetails awsEventsEndpoint) {
+        this.awsEventsEndpoint = awsEventsEndpoint;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon EventBridge global endpoint. The endpoint can improve your application’s
+     * availability by making it Regional-fault tolerant.
+     * </p>
+     * 
+     * @return Provides details about an Amazon EventBridge global endpoint. The endpoint can improve your application’s
+     *         availability by making it Regional-fault tolerant.
+     */
+
+    public AwsEventsEndpointDetails getAwsEventsEndpoint() {
+        return this.awsEventsEndpoint;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon EventBridge global endpoint. The endpoint can improve your application’s
+     * availability by making it Regional-fault tolerant.
+     * </p>
+     * 
+     * @param awsEventsEndpoint
+     *        Provides details about an Amazon EventBridge global endpoint. The endpoint can improve your application’s
+     *        availability by making it Regional-fault tolerant.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsEventsEndpoint(AwsEventsEndpointDetails awsEventsEndpoint) {
+        setAwsEventsEndpoint(awsEventsEndpoint);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an DMS replication task. A replication task moves a set of data from the source endpoint
+     * to the target endpoint.
+     * </p>
+     * 
+     * @param awsDmsReplicationTask
+     *        Provides details about an DMS replication task. A replication task moves a set of data from the source
+     *        endpoint to the target endpoint.
+     */
+
+    public void setAwsDmsReplicationTask(AwsDmsReplicationTaskDetails awsDmsReplicationTask) {
+        this.awsDmsReplicationTask = awsDmsReplicationTask;
+    }
+
+    /**
+     * <p>
+     * Provides details about an DMS replication task. A replication task moves a set of data from the source endpoint
+     * to the target endpoint.
+     * </p>
+     * 
+     * @return Provides details about an DMS replication task. A replication task moves a set of data from the source
+     *         endpoint to the target endpoint.
+     */
+
+    public AwsDmsReplicationTaskDetails getAwsDmsReplicationTask() {
+        return this.awsDmsReplicationTask;
+    }
+
+    /**
+     * <p>
+     * Provides details about an DMS replication task. A replication task moves a set of data from the source endpoint
+     * to the target endpoint.
+     * </p>
+     * 
+     * @param awsDmsReplicationTask
+     *        Provides details about an DMS replication task. A replication task moves a set of data from the source
+     *        endpoint to the target endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsDmsReplicationTask(AwsDmsReplicationTaskDetails awsDmsReplicationTask) {
+        setAwsDmsReplicationTask(awsDmsReplicationTask);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an DMS replication instance. DMS uses a replication instance to connect to your source
+     * data store, read the source data, and format the data for consumption by the target data store.
+     * </p>
+     * 
+     * @param awsDmsReplicationInstance
+     *        Provides details about an DMS replication instance. DMS uses a replication instance to connect to your
+     *        source data store, read the source data, and format the data for consumption by the target data store.
+     */
+
+    public void setAwsDmsReplicationInstance(AwsDmsReplicationInstanceDetails awsDmsReplicationInstance) {
+        this.awsDmsReplicationInstance = awsDmsReplicationInstance;
+    }
+
+    /**
+     * <p>
+     * Provides details about an DMS replication instance. DMS uses a replication instance to connect to your source
+     * data store, read the source data, and format the data for consumption by the target data store.
+     * </p>
+     * 
+     * @return Provides details about an DMS replication instance. DMS uses a replication instance to connect to your
+     *         source data store, read the source data, and format the data for consumption by the target data store.
+     */
+
+    public AwsDmsReplicationInstanceDetails getAwsDmsReplicationInstance() {
+        return this.awsDmsReplicationInstance;
+    }
+
+    /**
+     * <p>
+     * Provides details about an DMS replication instance. DMS uses a replication instance to connect to your source
+     * data store, read the source data, and format the data for consumption by the target data store.
+     * </p>
+     * 
+     * @param awsDmsReplicationInstance
+     *        Provides details about an DMS replication instance. DMS uses a replication instance to connect to your
+     *        source data store, read the source data, and format the data for consumption by the target data store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsDmsReplicationInstance(AwsDmsReplicationInstanceDetails awsDmsReplicationInstance) {
+        setAwsDmsReplicationInstance(awsDmsReplicationInstance);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon Route 53 hosted zone, including the four name servers assigned to the hosted
+     * zone. A hosted zone represents a collection of records that can be managed together, belonging to a single parent
+     * domain name.
+     * </p>
+     * 
+     * @param awsRoute53HostedZone
+     *        Provides details about an Amazon Route 53 hosted zone, including the four name servers assigned to the
+     *        hosted zone. A hosted zone represents a collection of records that can be managed together, belonging to a
+     *        single parent domain name.
+     */
+
+    public void setAwsRoute53HostedZone(AwsRoute53HostedZoneDetails awsRoute53HostedZone) {
+        this.awsRoute53HostedZone = awsRoute53HostedZone;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon Route 53 hosted zone, including the four name servers assigned to the hosted
+     * zone. A hosted zone represents a collection of records that can be managed together, belonging to a single parent
+     * domain name.
+     * </p>
+     * 
+     * @return Provides details about an Amazon Route 53 hosted zone, including the four name servers assigned to the
+     *         hosted zone. A hosted zone represents a collection of records that can be managed together, belonging to
+     *         a single parent domain name.
+     */
+
+    public AwsRoute53HostedZoneDetails getAwsRoute53HostedZone() {
+        return this.awsRoute53HostedZone;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon Route 53 hosted zone, including the four name servers assigned to the hosted
+     * zone. A hosted zone represents a collection of records that can be managed together, belonging to a single parent
+     * domain name.
+     * </p>
+     * 
+     * @param awsRoute53HostedZone
+     *        Provides details about an Amazon Route 53 hosted zone, including the four name servers assigned to the
+     *        hosted zone. A hosted zone represents a collection of records that can be managed together, belonging to a
+     *        single parent domain name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsRoute53HostedZone(AwsRoute53HostedZoneDetails awsRoute53HostedZone) {
+        setAwsRoute53HostedZone(awsRoute53HostedZone);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon Managed Streaming for Apache Kafka (Amazon MSK) cluster.
+     * </p>
+     * 
+     * @param awsMskCluster
+     *        Provides details about an Amazon Managed Streaming for Apache Kafka (Amazon MSK) cluster.
+     */
+
+    public void setAwsMskCluster(AwsMskClusterDetails awsMskCluster) {
+        this.awsMskCluster = awsMskCluster;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon Managed Streaming for Apache Kafka (Amazon MSK) cluster.
+     * </p>
+     * 
+     * @return Provides details about an Amazon Managed Streaming for Apache Kafka (Amazon MSK) cluster.
+     */
+
+    public AwsMskClusterDetails getAwsMskCluster() {
+        return this.awsMskCluster;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon Managed Streaming for Apache Kafka (Amazon MSK) cluster.
+     * </p>
+     * 
+     * @param awsMskCluster
+     *        Provides details about an Amazon Managed Streaming for Apache Kafka (Amazon MSK) cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsMskCluster(AwsMskClusterDetails awsMskCluster) {
+        setAwsMskCluster(awsMskCluster);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4545,7 +4916,21 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         if (getAwsStepFunctionStateMachine() != null)
             sb.append("AwsStepFunctionStateMachine: ").append(getAwsStepFunctionStateMachine()).append(",");
         if (getAwsAthenaWorkGroup() != null)
-            sb.append("AwsAthenaWorkGroup: ").append(getAwsAthenaWorkGroup());
+            sb.append("AwsAthenaWorkGroup: ").append(getAwsAthenaWorkGroup()).append(",");
+        if (getAwsEventsEventbus() != null)
+            sb.append("AwsEventsEventbus: ").append(getAwsEventsEventbus()).append(",");
+        if (getAwsDmsEndpoint() != null)
+            sb.append("AwsDmsEndpoint: ").append(getAwsDmsEndpoint()).append(",");
+        if (getAwsEventsEndpoint() != null)
+            sb.append("AwsEventsEndpoint: ").append(getAwsEventsEndpoint()).append(",");
+        if (getAwsDmsReplicationTask() != null)
+            sb.append("AwsDmsReplicationTask: ").append(getAwsDmsReplicationTask()).append(",");
+        if (getAwsDmsReplicationInstance() != null)
+            sb.append("AwsDmsReplicationInstance: ").append(getAwsDmsReplicationInstance()).append(",");
+        if (getAwsRoute53HostedZone() != null)
+            sb.append("AwsRoute53HostedZone: ").append(getAwsRoute53HostedZone()).append(",");
+        if (getAwsMskCluster() != null)
+            sb.append("AwsMskCluster: ").append(getAwsMskCluster());
         sb.append("}");
         return sb.toString();
     }
@@ -4926,6 +5311,34 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getAwsAthenaWorkGroup() != null && other.getAwsAthenaWorkGroup().equals(this.getAwsAthenaWorkGroup()) == false)
             return false;
+        if (other.getAwsEventsEventbus() == null ^ this.getAwsEventsEventbus() == null)
+            return false;
+        if (other.getAwsEventsEventbus() != null && other.getAwsEventsEventbus().equals(this.getAwsEventsEventbus()) == false)
+            return false;
+        if (other.getAwsDmsEndpoint() == null ^ this.getAwsDmsEndpoint() == null)
+            return false;
+        if (other.getAwsDmsEndpoint() != null && other.getAwsDmsEndpoint().equals(this.getAwsDmsEndpoint()) == false)
+            return false;
+        if (other.getAwsEventsEndpoint() == null ^ this.getAwsEventsEndpoint() == null)
+            return false;
+        if (other.getAwsEventsEndpoint() != null && other.getAwsEventsEndpoint().equals(this.getAwsEventsEndpoint()) == false)
+            return false;
+        if (other.getAwsDmsReplicationTask() == null ^ this.getAwsDmsReplicationTask() == null)
+            return false;
+        if (other.getAwsDmsReplicationTask() != null && other.getAwsDmsReplicationTask().equals(this.getAwsDmsReplicationTask()) == false)
+            return false;
+        if (other.getAwsDmsReplicationInstance() == null ^ this.getAwsDmsReplicationInstance() == null)
+            return false;
+        if (other.getAwsDmsReplicationInstance() != null && other.getAwsDmsReplicationInstance().equals(this.getAwsDmsReplicationInstance()) == false)
+            return false;
+        if (other.getAwsRoute53HostedZone() == null ^ this.getAwsRoute53HostedZone() == null)
+            return false;
+        if (other.getAwsRoute53HostedZone() != null && other.getAwsRoute53HostedZone().equals(this.getAwsRoute53HostedZone()) == false)
+            return false;
+        if (other.getAwsMskCluster() == null ^ this.getAwsMskCluster() == null)
+            return false;
+        if (other.getAwsMskCluster() != null && other.getAwsMskCluster().equals(this.getAwsMskCluster()) == false)
+            return false;
         return true;
     }
 
@@ -5024,6 +5437,13 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getAwsGuardDutyDetector() == null) ? 0 : getAwsGuardDutyDetector().hashCode());
         hashCode = prime * hashCode + ((getAwsStepFunctionStateMachine() == null) ? 0 : getAwsStepFunctionStateMachine().hashCode());
         hashCode = prime * hashCode + ((getAwsAthenaWorkGroup() == null) ? 0 : getAwsAthenaWorkGroup().hashCode());
+        hashCode = prime * hashCode + ((getAwsEventsEventbus() == null) ? 0 : getAwsEventsEventbus().hashCode());
+        hashCode = prime * hashCode + ((getAwsDmsEndpoint() == null) ? 0 : getAwsDmsEndpoint().hashCode());
+        hashCode = prime * hashCode + ((getAwsEventsEndpoint() == null) ? 0 : getAwsEventsEndpoint().hashCode());
+        hashCode = prime * hashCode + ((getAwsDmsReplicationTask() == null) ? 0 : getAwsDmsReplicationTask().hashCode());
+        hashCode = prime * hashCode + ((getAwsDmsReplicationInstance() == null) ? 0 : getAwsDmsReplicationInstance().hashCode());
+        hashCode = prime * hashCode + ((getAwsRoute53HostedZone() == null) ? 0 : getAwsRoute53HostedZone().hashCode());
+        hashCode = prime * hashCode + ((getAwsMskCluster() == null) ? 0 : getAwsMskCluster().hashCode());
         return hashCode;
     }
 

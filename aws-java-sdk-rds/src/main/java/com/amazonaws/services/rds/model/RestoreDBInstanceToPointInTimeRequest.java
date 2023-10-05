@@ -580,7 +580,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
     private com.amazonaws.internal.SdkInternalList<ProcessorFeature> processorFeatures;
     /**
      * <p>
-     * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
+     * Specifies whether the DB instance class of the DB instance uses its default processor features.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -4592,15 +4592,14 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
+     * Specifies whether the DB instance class of the DB instance uses its default processor features.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param useDefaultProcessorFeatures
-     *        A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *        features.</p>
+     *        Specifies whether the DB instance class of the DB instance uses its default processor features.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      */
@@ -4611,14 +4610,13 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
+     * Specifies whether the DB instance class of the DB instance uses its default processor features.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *         features.</p>
+     * @return Specifies whether the DB instance class of the DB instance uses its default processor features.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
      */
@@ -4629,15 +4627,14 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
+     * Specifies whether the DB instance class of the DB instance uses its default processor features.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param useDefaultProcessorFeatures
-     *        A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *        features.</p>
+     *        Specifies whether the DB instance class of the DB instance uses its default processor features.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -4650,14 +4647,13 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
+     * Specifies whether the DB instance class of the DB instance uses its default processor features.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *         features.</p>
+     * @return Specifies whether the DB instance class of the DB instance uses its default processor features.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
      */

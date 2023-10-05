@@ -59,7 +59,7 @@ public class PendingModifiedValues implements Serializable, Cloneable {
     private Integer backupRetentionPeriod;
     /**
      * <p>
-     * A value that indicates that the Single-AZ DB instance will change to a Multi-AZ deployment.
+     * Indicates whether the Single-AZ DB instance will change to a Multi-AZ deployment.
      * </p>
      */
     private Boolean multiAZ;
@@ -126,8 +126,8 @@ public class PendingModifiedValues implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<ProcessorFeature> processorFeatures;
     /**
      * <p>
-     * Whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      */
     private Boolean iAMDatabaseAuthenticationEnabled;
@@ -361,11 +361,11 @@ public class PendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates that the Single-AZ DB instance will change to a Multi-AZ deployment.
+     * Indicates whether the Single-AZ DB instance will change to a Multi-AZ deployment.
      * </p>
      * 
      * @param multiAZ
-     *        A value that indicates that the Single-AZ DB instance will change to a Multi-AZ deployment.
+     *        Indicates whether the Single-AZ DB instance will change to a Multi-AZ deployment.
      */
 
     public void setMultiAZ(Boolean multiAZ) {
@@ -374,10 +374,10 @@ public class PendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates that the Single-AZ DB instance will change to a Multi-AZ deployment.
+     * Indicates whether the Single-AZ DB instance will change to a Multi-AZ deployment.
      * </p>
      * 
-     * @return A value that indicates that the Single-AZ DB instance will change to a Multi-AZ deployment.
+     * @return Indicates whether the Single-AZ DB instance will change to a Multi-AZ deployment.
      */
 
     public Boolean getMultiAZ() {
@@ -386,11 +386,11 @@ public class PendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates that the Single-AZ DB instance will change to a Multi-AZ deployment.
+     * Indicates whether the Single-AZ DB instance will change to a Multi-AZ deployment.
      * </p>
      * 
      * @param multiAZ
-     *        A value that indicates that the Single-AZ DB instance will change to a Multi-AZ deployment.
+     *        Indicates whether the Single-AZ DB instance will change to a Multi-AZ deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -401,10 +401,10 @@ public class PendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates that the Single-AZ DB instance will change to a Multi-AZ deployment.
+     * Indicates whether the Single-AZ DB instance will change to a Multi-AZ deployment.
      * </p>
      * 
-     * @return A value that indicates that the Single-AZ DB instance will change to a Multi-AZ deployment.
+     * @return Indicates whether the Single-AZ DB instance will change to a Multi-AZ deployment.
      */
 
     public Boolean isMultiAZ() {
@@ -852,13 +852,13 @@ public class PendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
      * @param iAMDatabaseAuthenticationEnabled
-     *        Whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *        is enabled.
+     *        Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     *        accounts is enabled.
      */
 
     public void setIAMDatabaseAuthenticationEnabled(Boolean iAMDatabaseAuthenticationEnabled) {
@@ -867,12 +867,12 @@ public class PendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
-     * @return Whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *         is enabled.
+     * @return Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     *         database accounts is enabled.
      */
 
     public Boolean getIAMDatabaseAuthenticationEnabled() {
@@ -881,13 +881,13 @@ public class PendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
      * @param iAMDatabaseAuthenticationEnabled
-     *        Whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *        is enabled.
+     *        Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     *        accounts is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -898,12 +898,12 @@ public class PendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is
-     * enabled.
+     * Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database
+     * accounts is enabled.
      * </p>
      * 
-     * @return Whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
-     *         is enabled.
+     * @return Indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to
+     *         database accounts is enabled.
      */
 
     public Boolean isIAMDatabaseAuthenticationEnabled() {

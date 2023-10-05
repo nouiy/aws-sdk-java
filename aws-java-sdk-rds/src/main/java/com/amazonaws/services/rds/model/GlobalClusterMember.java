@@ -41,15 +41,14 @@ public class GlobalClusterMember implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> readers;
     /**
      * <p>
-     * Specifies whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for the
+     * Indicates whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for the
      * global cluster with which it is associated.
      * </p>
      */
     private Boolean isWriter;
     /**
      * <p>
-     * Specifies whether a secondary cluster in the global cluster has write forwarding enabled, not enabled, or is in
-     * the process of enabling it.
+     * The status of write forwarding for a secondary cluster in the global cluster.
      * </p>
      */
     private String globalWriteForwardingStatus;
@@ -175,12 +174,12 @@ public class GlobalClusterMember implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for the
+     * Indicates whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for the
      * global cluster with which it is associated.
      * </p>
      * 
      * @param isWriter
-     *        Specifies whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for
+     *        Indicates whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for
      *        the global cluster with which it is associated.
      */
 
@@ -190,11 +189,11 @@ public class GlobalClusterMember implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for the
+     * Indicates whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for the
      * global cluster with which it is associated.
      * </p>
      * 
-     * @return Specifies whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for
+     * @return Indicates whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for
      *         the global cluster with which it is associated.
      */
 
@@ -204,12 +203,12 @@ public class GlobalClusterMember implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for the
+     * Indicates whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for the
      * global cluster with which it is associated.
      * </p>
      * 
      * @param isWriter
-     *        Specifies whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for
+     *        Indicates whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for
      *        the global cluster with which it is associated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -221,11 +220,11 @@ public class GlobalClusterMember implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for the
+     * Indicates whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for the
      * global cluster with which it is associated.
      * </p>
      * 
-     * @return Specifies whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for
+     * @return Indicates whether the Aurora DB cluster is the primary cluster (that is, has read-write capability) for
      *         the global cluster with which it is associated.
      */
 
@@ -235,13 +234,11 @@ public class GlobalClusterMember implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether a secondary cluster in the global cluster has write forwarding enabled, not enabled, or is in
-     * the process of enabling it.
+     * The status of write forwarding for a secondary cluster in the global cluster.
      * </p>
      * 
      * @param globalWriteForwardingStatus
-     *        Specifies whether a secondary cluster in the global cluster has write forwarding enabled, not enabled, or
-     *        is in the process of enabling it.
+     *        The status of write forwarding for a secondary cluster in the global cluster.
      * @see WriteForwardingStatus
      */
 
@@ -251,12 +248,10 @@ public class GlobalClusterMember implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether a secondary cluster in the global cluster has write forwarding enabled, not enabled, or is in
-     * the process of enabling it.
+     * The status of write forwarding for a secondary cluster in the global cluster.
      * </p>
      * 
-     * @return Specifies whether a secondary cluster in the global cluster has write forwarding enabled, not enabled, or
-     *         is in the process of enabling it.
+     * @return The status of write forwarding for a secondary cluster in the global cluster.
      * @see WriteForwardingStatus
      */
 
@@ -266,13 +261,11 @@ public class GlobalClusterMember implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether a secondary cluster in the global cluster has write forwarding enabled, not enabled, or is in
-     * the process of enabling it.
+     * The status of write forwarding for a secondary cluster in the global cluster.
      * </p>
      * 
      * @param globalWriteForwardingStatus
-     *        Specifies whether a secondary cluster in the global cluster has write forwarding enabled, not enabled, or
-     *        is in the process of enabling it.
+     *        The status of write forwarding for a secondary cluster in the global cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WriteForwardingStatus
      */
@@ -284,13 +277,11 @@ public class GlobalClusterMember implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies whether a secondary cluster in the global cluster has write forwarding enabled, not enabled, or is in
-     * the process of enabling it.
+     * The status of write forwarding for a secondary cluster in the global cluster.
      * </p>
      * 
      * @param globalWriteForwardingStatus
-     *        Specifies whether a secondary cluster in the global cluster has write forwarding enabled, not enabled, or
-     *        is in the process of enabling it.
+     *        The status of write forwarding for a secondary cluster in the global cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WriteForwardingStatus
      */

@@ -104,6 +104,10 @@ public class ReadSetListItemJsonUnmarshaller implements Unmarshaller<ReadSetList
                     context.nextToken();
                     readSetListItem.setCreationType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("etag", targetDepth)) {
+                    context.nextToken();
+                    readSetListItem.setEtag(ETagJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
