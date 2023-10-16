@@ -33,6 +33,8 @@ public class UpdateLaunchConfigurationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("copyTags").build();
     private static final MarshallingInfo<String> LAUNCHDISPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchDisposition").build();
+    private static final MarshallingInfo<StructuredPojo> LAUNCHINTOINSTANCEPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchIntoInstanceProperties").build();
     private static final MarshallingInfo<StructuredPojo> LICENSING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("licensing").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -63,6 +65,7 @@ public class UpdateLaunchConfigurationRequestMarshaller {
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getCopyPrivateIp(), COPYPRIVATEIP_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getCopyTags(), COPYTAGS_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getLaunchDisposition(), LAUNCHDISPOSITION_BINDING);
+            protocolMarshaller.marshall(updateLaunchConfigurationRequest.getLaunchIntoInstanceProperties(), LAUNCHINTOINSTANCEPROPERTIES_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getLicensing(), LICENSING_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getPostLaunchEnabled(), POSTLAUNCHENABLED_BINDING);

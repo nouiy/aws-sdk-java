@@ -1636,7 +1636,7 @@ public interface AmazonRedshift {
 
     /**
      * <p>
-     * Contains information for custom domain associations for a cluster.
+     * Contains information about custom domain associations for a cluster.
      * </p>
      * 
      * @param describeCustomDomainAssociationsRequest

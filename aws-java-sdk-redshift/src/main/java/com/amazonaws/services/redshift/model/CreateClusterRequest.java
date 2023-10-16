@@ -183,6 +183,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The password associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
+     * You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     * </p>
+     * <p>
      * Constraints:
      * </p>
      * <ul>
@@ -534,6 +537,22 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String loadSampleData;
+    /**
+     * <p>
+     * If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You can't
+     * use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     * <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses <code>MasterUserPassword</code> for
+     * the admin user account's password.
+     * </p>
+     */
+    private Boolean manageMasterPassword;
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     * </p>
+     */
+    private String masterPasswordSecretKmsKeyId;
 
     /**
      * <p>
@@ -1463,6 +1482,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The password associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
+     * You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     * </p>
+     * <p>
      * Constraints:
      * </p>
      * <ul>
@@ -1496,6 +1518,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @param masterUserPassword
      *        The password associated with the admin user account for the cluster that is being created.</p>
+     *        <p>
+     *        You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     *        </p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -1537,6 +1562,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The password associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
+     * You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     * </p>
+     * <p>
      * Constraints:
      * </p>
      * <ul>
@@ -1569,6 +1597,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </ul>
      * 
      * @return The password associated with the admin user account for the cluster that is being created.</p>
+     *         <p>
+     *         You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     *         </p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -1610,6 +1641,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The password associated with the admin user account for the cluster that is being created.
      * </p>
      * <p>
+     * You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     * </p>
+     * <p>
      * Constraints:
      * </p>
      * <ul>
@@ -1643,6 +1677,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @param masterUserPassword
      *        The password associated with the admin user account for the cluster that is being created.</p>
+     *        <p>
+     *        You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     *        </p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -3948,6 +3985,128 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You can't
+     * use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     * <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses <code>MasterUserPassword</code> for
+     * the admin user account's password.
+     * </p>
+     * 
+     * @param manageMasterPassword
+     *        If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You
+     *        can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     *        <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses
+     *        <code>MasterUserPassword</code> for the admin user account's password.
+     */
+
+    public void setManageMasterPassword(Boolean manageMasterPassword) {
+        this.manageMasterPassword = manageMasterPassword;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You can't
+     * use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     * <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses <code>MasterUserPassword</code> for
+     * the admin user account's password.
+     * </p>
+     * 
+     * @return If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials.
+     *         You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     *         <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses
+     *         <code>MasterUserPassword</code> for the admin user account's password.
+     */
+
+    public Boolean getManageMasterPassword() {
+        return this.manageMasterPassword;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You can't
+     * use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     * <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses <code>MasterUserPassword</code> for
+     * the admin user account's password.
+     * </p>
+     * 
+     * @param manageMasterPassword
+     *        If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You
+     *        can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     *        <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses
+     *        <code>MasterUserPassword</code> for the admin user account's password.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateClusterRequest withManageMasterPassword(Boolean manageMasterPassword) {
+        setManageMasterPassword(manageMasterPassword);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You can't
+     * use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     * <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses <code>MasterUserPassword</code> for
+     * the admin user account's password.
+     * </p>
+     * 
+     * @return If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials.
+     *         You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     *         <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses
+     *         <code>MasterUserPassword</code> for the admin user account's password.
+     */
+
+    public Boolean isManageMasterPassword() {
+        return this.manageMasterPassword;
+    }
+
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     * </p>
+     * 
+     * @param masterPasswordSecretKmsKeyId
+     *        The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials
+     *        secret. You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     */
+
+    public void setMasterPasswordSecretKmsKeyId(String masterPasswordSecretKmsKeyId) {
+        this.masterPasswordSecretKmsKeyId = masterPasswordSecretKmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     * </p>
+     * 
+     * @return The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials
+     *         secret. You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     */
+
+    public String getMasterPasswordSecretKmsKeyId() {
+        return this.masterPasswordSecretKmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     * </p>
+     * 
+     * @param masterPasswordSecretKmsKeyId
+     *        The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials
+     *        secret. You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateClusterRequest withMasterPasswordSecretKmsKeyId(String masterPasswordSecretKmsKeyId) {
+        setMasterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3970,7 +4129,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getMasterUsername() != null)
             sb.append("MasterUsername: ").append(getMasterUsername()).append(",");
         if (getMasterUserPassword() != null)
-            sb.append("MasterUserPassword: ").append(getMasterUserPassword()).append(",");
+            sb.append("MasterUserPassword: ").append("***Sensitive Data Redacted***").append(",");
         if (getClusterSecurityGroups() != null)
             sb.append("ClusterSecurityGroups: ").append(getClusterSecurityGroups()).append(",");
         if (getVpcSecurityGroupIds() != null)
@@ -4026,7 +4185,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getDefaultIamRoleArn() != null)
             sb.append("DefaultIamRoleArn: ").append(getDefaultIamRoleArn()).append(",");
         if (getLoadSampleData() != null)
-            sb.append("LoadSampleData: ").append(getLoadSampleData());
+            sb.append("LoadSampleData: ").append(getLoadSampleData()).append(",");
+        if (getManageMasterPassword() != null)
+            sb.append("ManageMasterPassword: ").append(getManageMasterPassword()).append(",");
+        if (getMasterPasswordSecretKmsKeyId() != null)
+            sb.append("MasterPasswordSecretKmsKeyId: ").append(getMasterPasswordSecretKmsKeyId());
         sb.append("}");
         return sb.toString();
     }
@@ -4180,6 +4343,14 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getLoadSampleData() != null && other.getLoadSampleData().equals(this.getLoadSampleData()) == false)
             return false;
+        if (other.getManageMasterPassword() == null ^ this.getManageMasterPassword() == null)
+            return false;
+        if (other.getManageMasterPassword() != null && other.getManageMasterPassword().equals(this.getManageMasterPassword()) == false)
+            return false;
+        if (other.getMasterPasswordSecretKmsKeyId() == null ^ this.getMasterPasswordSecretKmsKeyId() == null)
+            return false;
+        if (other.getMasterPasswordSecretKmsKeyId() != null && other.getMasterPasswordSecretKmsKeyId().equals(this.getMasterPasswordSecretKmsKeyId()) == false)
+            return false;
         return true;
     }
 
@@ -4222,6 +4393,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getAquaConfigurationStatus() == null) ? 0 : getAquaConfigurationStatus().hashCode());
         hashCode = prime * hashCode + ((getDefaultIamRoleArn() == null) ? 0 : getDefaultIamRoleArn().hashCode());
         hashCode = prime * hashCode + ((getLoadSampleData() == null) ? 0 : getLoadSampleData().hashCode());
+        hashCode = prime * hashCode + ((getManageMasterPassword() == null) ? 0 : getManageMasterPassword().hashCode());
+        hashCode = prime * hashCode + ((getMasterPasswordSecretKmsKeyId() == null) ? 0 : getMasterPasswordSecretKmsKeyId().hashCode());
         return hashCode;
     }
 

@@ -126,6 +126,9 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the time of the request and the completion of the request, the <code>MasterUserPassword</code> element exists in
      * the <code>PendingModifiedValues</code> element of the operation response.
      * </p>
+     * <p>
+     * You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     * </p>
      * <note>
      * <p>
      * Operations never return the password, so this operation provides a way to regain access to the admin user account
@@ -401,6 +404,22 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private Integer port;
+    /**
+     * <p>
+     * If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You can't
+     * use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     * <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses <code>MasterUserPassword</code> for
+     * the admin user account's password.
+     * </p>
+     */
+    private Boolean manageMasterPassword;
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     * </p>
+     */
+    private String masterPasswordSecretKmsKeyId;
 
     /**
      * <p>
@@ -1098,6 +1117,9 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the time of the request and the completion of the request, the <code>MasterUserPassword</code> element exists in
      * the <code>PendingModifiedValues</code> element of the operation response.
      * </p>
+     * <p>
+     * You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     * </p>
      * <note>
      * <p>
      * Operations never return the password, so this operation provides a way to regain access to the admin user account
@@ -1142,7 +1164,11 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * @param masterUserPassword
      *        The new password for the cluster admin user. This change is asynchronously applied as soon as possible.
      *        Between the time of the request and the completion of the request, the <code>MasterUserPassword</code>
-     *        element exists in the <code>PendingModifiedValues</code> element of the operation response. </p> <note>
+     *        element exists in the <code>PendingModifiedValues</code> element of the operation response. </p>
+     *        <p>
+     *        You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     *        </p>
+     *        <note>
      *        <p>
      *        Operations never return the password, so this operation provides a way to regain access to the admin user
      *        account for a cluster if the password is lost.
@@ -1193,6 +1219,9 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the time of the request and the completion of the request, the <code>MasterUserPassword</code> element exists in
      * the <code>PendingModifiedValues</code> element of the operation response.
      * </p>
+     * <p>
+     * You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     * </p>
      * <note>
      * <p>
      * Operations never return the password, so this operation provides a way to regain access to the admin user account
@@ -1236,7 +1265,11 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @return The new password for the cluster admin user. This change is asynchronously applied as soon as possible.
      *         Between the time of the request and the completion of the request, the <code>MasterUserPassword</code>
-     *         element exists in the <code>PendingModifiedValues</code> element of the operation response. </p> <note>
+     *         element exists in the <code>PendingModifiedValues</code> element of the operation response. </p>
+     *         <p>
+     *         You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     *         </p>
+     *         <note>
      *         <p>
      *         Operations never return the password, so this operation provides a way to regain access to the admin user
      *         account for a cluster if the password is lost.
@@ -1287,6 +1320,9 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the time of the request and the completion of the request, the <code>MasterUserPassword</code> element exists in
      * the <code>PendingModifiedValues</code> element of the operation response.
      * </p>
+     * <p>
+     * You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     * </p>
      * <note>
      * <p>
      * Operations never return the password, so this operation provides a way to regain access to the admin user account
@@ -1331,7 +1367,11 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * @param masterUserPassword
      *        The new password for the cluster admin user. This change is asynchronously applied as soon as possible.
      *        Between the time of the request and the completion of the request, the <code>MasterUserPassword</code>
-     *        element exists in the <code>PendingModifiedValues</code> element of the operation response. </p> <note>
+     *        element exists in the <code>PendingModifiedValues</code> element of the operation response. </p>
+     *        <p>
+     *        You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is <code>true</code>.
+     *        </p>
+     *        <note>
      *        <p>
      *        Operations never return the password, so this operation provides a way to regain access to the admin user
      *        account for a cluster if the password is lost.
@@ -2920,6 +2960,128 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You can't
+     * use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     * <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses <code>MasterUserPassword</code> for
+     * the admin user account's password.
+     * </p>
+     * 
+     * @param manageMasterPassword
+     *        If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You
+     *        can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     *        <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses
+     *        <code>MasterUserPassword</code> for the admin user account's password.
+     */
+
+    public void setManageMasterPassword(Boolean manageMasterPassword) {
+        this.manageMasterPassword = manageMasterPassword;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You can't
+     * use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     * <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses <code>MasterUserPassword</code> for
+     * the admin user account's password.
+     * </p>
+     * 
+     * @return If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials.
+     *         You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     *         <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses
+     *         <code>MasterUserPassword</code> for the admin user account's password.
+     */
+
+    public Boolean getManageMasterPassword() {
+        return this.manageMasterPassword;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You can't
+     * use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     * <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses <code>MasterUserPassword</code> for
+     * the admin user account's password.
+     * </p>
+     * 
+     * @param manageMasterPassword
+     *        If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You
+     *        can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     *        <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses
+     *        <code>MasterUserPassword</code> for the admin user account's password.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyClusterRequest withManageMasterPassword(Boolean manageMasterPassword) {
+        setManageMasterPassword(manageMasterPassword);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials. You can't
+     * use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     * <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses <code>MasterUserPassword</code> for
+     * the admin user account's password.
+     * </p>
+     * 
+     * @return If <code>true</code>, Amazon Redshift uses Secrets Manager to manage this cluster's admin credentials.
+     *         You can't use <code>MasterUserPassword</code> if <code>ManageMasterPassword</code> is true. If
+     *         <code>ManageMasterPassword</code> is false or not set, Amazon Redshift uses
+     *         <code>MasterUserPassword</code> for the admin user account's password.
+     */
+
+    public Boolean isManageMasterPassword() {
+        return this.manageMasterPassword;
+    }
+
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     * </p>
+     * 
+     * @param masterPasswordSecretKmsKeyId
+     *        The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials
+     *        secret. You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     */
+
+    public void setMasterPasswordSecretKmsKeyId(String masterPasswordSecretKmsKeyId) {
+        this.masterPasswordSecretKmsKeyId = masterPasswordSecretKmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     * </p>
+     * 
+     * @return The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials
+     *         secret. You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     */
+
+    public String getMasterPasswordSecretKmsKeyId() {
+        return this.masterPasswordSecretKmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     * </p>
+     * 
+     * @param masterPasswordSecretKmsKeyId
+     *        The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials
+     *        secret. You can only use this parameter if <code>ManageMasterPassword</code> is true.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyClusterRequest withMasterPasswordSecretKmsKeyId(String masterPasswordSecretKmsKeyId) {
+        setMasterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2944,7 +3106,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getVpcSecurityGroupIds() != null)
             sb.append("VpcSecurityGroupIds: ").append(getVpcSecurityGroupIds()).append(",");
         if (getMasterUserPassword() != null)
-            sb.append("MasterUserPassword: ").append(getMasterUserPassword()).append(",");
+            sb.append("MasterUserPassword: ").append("***Sensitive Data Redacted***").append(",");
         if (getClusterParameterGroupName() != null)
             sb.append("ClusterParameterGroupName: ").append(getClusterParameterGroupName()).append(",");
         if (getAutomatedSnapshotRetentionPeriod() != null)
@@ -2980,7 +3142,11 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getAvailabilityZone() != null)
             sb.append("AvailabilityZone: ").append(getAvailabilityZone()).append(",");
         if (getPort() != null)
-            sb.append("Port: ").append(getPort());
+            sb.append("Port: ").append(getPort()).append(",");
+        if (getManageMasterPassword() != null)
+            sb.append("ManageMasterPassword: ").append(getManageMasterPassword()).append(",");
+        if (getMasterPasswordSecretKmsKeyId() != null)
+            sb.append("MasterPasswordSecretKmsKeyId: ").append(getMasterPasswordSecretKmsKeyId());
         sb.append("}");
         return sb.toString();
     }
@@ -3098,6 +3264,14 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getPort() != null && other.getPort().equals(this.getPort()) == false)
             return false;
+        if (other.getManageMasterPassword() == null ^ this.getManageMasterPassword() == null)
+            return false;
+        if (other.getManageMasterPassword() != null && other.getManageMasterPassword().equals(this.getManageMasterPassword()) == false)
+            return false;
+        if (other.getMasterPasswordSecretKmsKeyId() == null ^ this.getMasterPasswordSecretKmsKeyId() == null)
+            return false;
+        if (other.getMasterPasswordSecretKmsKeyId() != null && other.getMasterPasswordSecretKmsKeyId().equals(this.getMasterPasswordSecretKmsKeyId()) == false)
+            return false;
         return true;
     }
 
@@ -3131,6 +3305,8 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getAvailabilityZoneRelocation() == null) ? 0 : getAvailabilityZoneRelocation().hashCode());
         hashCode = prime * hashCode + ((getAvailabilityZone() == null) ? 0 : getAvailabilityZone().hashCode());
         hashCode = prime * hashCode + ((getPort() == null) ? 0 : getPort().hashCode());
+        hashCode = prime * hashCode + ((getManageMasterPassword() == null) ? 0 : getManageMasterPassword().hashCode());
+        hashCode = prime * hashCode + ((getMasterPasswordSecretKmsKeyId() == null) ? 0 : getMasterPasswordSecretKmsKeyId().hashCode());
         return hashCode;
     }
 

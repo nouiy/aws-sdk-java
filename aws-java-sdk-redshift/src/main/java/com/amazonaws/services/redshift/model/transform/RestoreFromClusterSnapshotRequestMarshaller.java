@@ -207,6 +207,14 @@ public class RestoreFromClusterSnapshotRequestMarshaller implements Marshaller<R
             request.addParameter("Encrypted", StringUtils.fromBoolean(restoreFromClusterSnapshotRequest.getEncrypted()));
         }
 
+        if (restoreFromClusterSnapshotRequest.getManageMasterPassword() != null) {
+            request.addParameter("ManageMasterPassword", StringUtils.fromBoolean(restoreFromClusterSnapshotRequest.getManageMasterPassword()));
+        }
+
+        if (restoreFromClusterSnapshotRequest.getMasterPasswordSecretKmsKeyId() != null) {
+            request.addParameter("MasterPasswordSecretKmsKeyId", StringUtils.fromString(restoreFromClusterSnapshotRequest.getMasterPasswordSecretKmsKeyId()));
+        }
+
         return request;
     }
 

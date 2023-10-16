@@ -41,6 +41,19 @@ public class AbstractAmazonManagedBlockchainQueryAsync extends AbstractAmazonMan
     }
 
     @Override
+    public java.util.concurrent.Future<GetAssetContractResult> getAssetContractAsync(GetAssetContractRequest request) {
+
+        return getAssetContractAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAssetContractResult> getAssetContractAsync(GetAssetContractRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAssetContractRequest, GetAssetContractResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetTokenBalanceResult> getTokenBalanceAsync(GetTokenBalanceRequest request) {
 
         return getTokenBalanceAsync(request, null);
@@ -62,6 +75,19 @@ public class AbstractAmazonManagedBlockchainQueryAsync extends AbstractAmazonMan
     @Override
     public java.util.concurrent.Future<GetTransactionResult> getTransactionAsync(GetTransactionRequest request,
             com.amazonaws.handlers.AsyncHandler<GetTransactionRequest, GetTransactionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetContractsResult> listAssetContractsAsync(ListAssetContractsRequest request) {
+
+        return listAssetContractsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetContractsResult> listAssetContractsAsync(ListAssetContractsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAssetContractsRequest, ListAssetContractsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

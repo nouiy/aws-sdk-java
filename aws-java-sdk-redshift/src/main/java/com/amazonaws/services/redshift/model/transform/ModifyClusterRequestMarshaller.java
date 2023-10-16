@@ -162,6 +162,14 @@ public class ModifyClusterRequestMarshaller implements Marshaller<Request<Modify
             request.addParameter("Port", StringUtils.fromInteger(modifyClusterRequest.getPort()));
         }
 
+        if (modifyClusterRequest.getManageMasterPassword() != null) {
+            request.addParameter("ManageMasterPassword", StringUtils.fromBoolean(modifyClusterRequest.getManageMasterPassword()));
+        }
+
+        if (modifyClusterRequest.getMasterPasswordSecretKmsKeyId() != null) {
+            request.addParameter("MasterPasswordSecretKmsKeyId", StringUtils.fromString(modifyClusterRequest.getMasterPasswordSecretKmsKeyId()));
+        }
+
         return request;
     }
 

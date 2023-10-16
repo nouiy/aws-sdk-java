@@ -50,6 +50,41 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
 
     /**
      * <p>
+     * Creates an <code>IdMappingWorkflow</code> object which stores the configuration of the data processing job to be
+     * run. Each <code>IdMappingWorkflow</code> must have a unique workflow name. To modify an existing workflow, use
+     * the <code>UpdateIdMappingWorkflow</code> API.
+     * </p>
+     * 
+     * @param createIdMappingWorkflowRequest
+     * @return A Java Future containing the result of the CreateIdMappingWorkflow operation returned by the service.
+     * @sample AWSEntityResolutionAsync.CreateIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/CreateIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIdMappingWorkflowResult> createIdMappingWorkflowAsync(CreateIdMappingWorkflowRequest createIdMappingWorkflowRequest);
+
+    /**
+     * <p>
+     * Creates an <code>IdMappingWorkflow</code> object which stores the configuration of the data processing job to be
+     * run. Each <code>IdMappingWorkflow</code> must have a unique workflow name. To modify an existing workflow, use
+     * the <code>UpdateIdMappingWorkflow</code> API.
+     * </p>
+     * 
+     * @param createIdMappingWorkflowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateIdMappingWorkflow operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.CreateIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/CreateIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIdMappingWorkflowResult> createIdMappingWorkflowAsync(CreateIdMappingWorkflowRequest createIdMappingWorkflowRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateIdMappingWorkflowRequest, CreateIdMappingWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a <code>MatchingWorkflow</code> object which stores the configuration of the data processing job to be
      * run. It is important to note that there should not be a pre-existing <code>MatchingWorkflow</code> with the same
      * name. To modify an existing workflow, utilize the <code>UpdateMatchingWorkflow</code> API.
@@ -120,6 +155,39 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
 
     /**
      * <p>
+     * Deletes the <code>IdMappingWorkflow</code> with a given name. This operation will succeed even if a workflow with
+     * the given name does not exist.
+     * </p>
+     * 
+     * @param deleteIdMappingWorkflowRequest
+     * @return A Java Future containing the result of the DeleteIdMappingWorkflow operation returned by the service.
+     * @sample AWSEntityResolutionAsync.DeleteIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeleteIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIdMappingWorkflowResult> deleteIdMappingWorkflowAsync(DeleteIdMappingWorkflowRequest deleteIdMappingWorkflowRequest);
+
+    /**
+     * <p>
+     * Deletes the <code>IdMappingWorkflow</code> with a given name. This operation will succeed even if a workflow with
+     * the given name does not exist.
+     * </p>
+     * 
+     * @param deleteIdMappingWorkflowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteIdMappingWorkflow operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.DeleteIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeleteIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIdMappingWorkflowResult> deleteIdMappingWorkflowAsync(DeleteIdMappingWorkflowRequest deleteIdMappingWorkflowRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteIdMappingWorkflowRequest, DeleteIdMappingWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the <code>MatchingWorkflow</code> with a given name. This operation will succeed even if a workflow with
      * the given name does not exist.
      * </p>
@@ -154,8 +222,8 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
     /**
      * <p>
      * Deletes the <code>SchemaMapping</code> with a given name. This operation will succeed even if a schema with the
-     * given name does not exist. This operation will fail if there is a <code>DataIntegrationWorkflow</code> object
-     * that references the <code>SchemaMapping</code> in the workflow's <code>InputSourceConfig</code>.
+     * given name does not exist. This operation will fail if there is a <code>MatchingWorkflow</code> object that
+     * references the <code>SchemaMapping</code> in the workflow's <code>InputSourceConfig</code>.
      * </p>
      * 
      * @param deleteSchemaMappingRequest
@@ -169,8 +237,8 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
     /**
      * <p>
      * Deletes the <code>SchemaMapping</code> with a given name. This operation will succeed even if a schema with the
-     * given name does not exist. This operation will fail if there is a <code>DataIntegrationWorkflow</code> object
-     * that references the <code>SchemaMapping</code> in the workflow's <code>InputSourceConfig</code>.
+     * given name does not exist. This operation will fail if there is a <code>MatchingWorkflow</code> object that
+     * references the <code>SchemaMapping</code> in the workflow's <code>InputSourceConfig</code>.
      * </p>
      * 
      * @param deleteSchemaMappingRequest
@@ -185,6 +253,68 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
      */
     java.util.concurrent.Future<DeleteSchemaMappingResult> deleteSchemaMappingAsync(DeleteSchemaMappingRequest deleteSchemaMappingRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteSchemaMappingRequest, DeleteSchemaMappingResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the status, metrics, and errors (if there are any) that are associated with a job.
+     * </p>
+     * 
+     * @param getIdMappingJobRequest
+     * @return A Java Future containing the result of the GetIdMappingJob operation returned by the service.
+     * @sample AWSEntityResolutionAsync.GetIdMappingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdMappingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIdMappingJobResult> getIdMappingJobAsync(GetIdMappingJobRequest getIdMappingJobRequest);
+
+    /**
+     * <p>
+     * Gets the status, metrics, and errors (if there are any) that are associated with a job.
+     * </p>
+     * 
+     * @param getIdMappingJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIdMappingJob operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.GetIdMappingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdMappingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIdMappingJobResult> getIdMappingJobAsync(GetIdMappingJobRequest getIdMappingJobRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIdMappingJobRequest, GetIdMappingJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the <code>IdMappingWorkflow</code> with a given name, if it exists.
+     * </p>
+     * 
+     * @param getIdMappingWorkflowRequest
+     * @return A Java Future containing the result of the GetIdMappingWorkflow operation returned by the service.
+     * @sample AWSEntityResolutionAsync.GetIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIdMappingWorkflowResult> getIdMappingWorkflowAsync(GetIdMappingWorkflowRequest getIdMappingWorkflowRequest);
+
+    /**
+     * <p>
+     * Returns the <code>IdMappingWorkflow</code> with a given name, if it exists.
+     * </p>
+     * 
+     * @param getIdMappingWorkflowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIdMappingWorkflow operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.GetIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIdMappingWorkflowResult> getIdMappingWorkflowAsync(GetIdMappingWorkflowRequest getIdMappingWorkflowRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIdMappingWorkflowRequest, GetIdMappingWorkflowResult> asyncHandler);
 
     /**
      * <p>
@@ -312,6 +442,70 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
 
     /**
      * <p>
+     * Lists all ID mapping jobs for a given workflow.
+     * </p>
+     * 
+     * @param listIdMappingJobsRequest
+     * @return A Java Future containing the result of the ListIdMappingJobs operation returned by the service.
+     * @sample AWSEntityResolutionAsync.ListIdMappingJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdMappingJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdMappingJobsResult> listIdMappingJobsAsync(ListIdMappingJobsRequest listIdMappingJobsRequest);
+
+    /**
+     * <p>
+     * Lists all ID mapping jobs for a given workflow.
+     * </p>
+     * 
+     * @param listIdMappingJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListIdMappingJobs operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.ListIdMappingJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdMappingJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdMappingJobsResult> listIdMappingJobsAsync(ListIdMappingJobsRequest listIdMappingJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListIdMappingJobsRequest, ListIdMappingJobsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of all the <code>IdMappingWorkflows</code> that have been created for an Amazon Web Services
+     * account.
+     * </p>
+     * 
+     * @param listIdMappingWorkflowsRequest
+     * @return A Java Future containing the result of the ListIdMappingWorkflows operation returned by the service.
+     * @sample AWSEntityResolutionAsync.ListIdMappingWorkflows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdMappingWorkflows"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdMappingWorkflowsResult> listIdMappingWorkflowsAsync(ListIdMappingWorkflowsRequest listIdMappingWorkflowsRequest);
+
+    /**
+     * <p>
+     * Returns a list of all the <code>IdMappingWorkflows</code> that have been created for an Amazon Web Services
+     * account.
+     * </p>
+     * 
+     * @param listIdMappingWorkflowsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListIdMappingWorkflows operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.ListIdMappingWorkflows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdMappingWorkflows"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdMappingWorkflowsResult> listIdMappingWorkflowsAsync(ListIdMappingWorkflowsRequest listIdMappingWorkflowsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListIdMappingWorkflowsRequest, ListIdMappingWorkflowsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists all jobs for a given workflow.
      * </p>
      * 
@@ -376,6 +570,37 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
 
     /**
      * <p>
+     * Returns a list of all the <code>ProviderServices</code> that are available in this Amazon Web Services Region.
+     * </p>
+     * 
+     * @param listProviderServicesRequest
+     * @return A Java Future containing the result of the ListProviderServices operation returned by the service.
+     * @sample AWSEntityResolutionAsync.ListProviderServices
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListProviderServices"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListProviderServicesResult> listProviderServicesAsync(ListProviderServicesRequest listProviderServicesRequest);
+
+    /**
+     * <p>
+     * Returns a list of all the <code>ProviderServices</code> that are available in this Amazon Web Services Region.
+     * </p>
+     * 
+     * @param listProviderServicesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListProviderServices operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.ListProviderServices
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListProviderServices"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListProviderServicesResult> listProviderServicesAsync(ListProviderServicesRequest listProviderServicesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListProviderServicesRequest, ListProviderServicesResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of all the <code>SchemaMappings</code> that have been created for an Amazon Web Services account.
      * </p>
      * 
@@ -437,6 +662,39 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts the <code>IdMappingJob</code> of a workflow. The workflow must have previously been created using the
+     * <code>CreateIdMappingWorkflow</code> endpoint.
+     * </p>
+     * 
+     * @param startIdMappingJobRequest
+     * @return A Java Future containing the result of the StartIdMappingJob operation returned by the service.
+     * @sample AWSEntityResolutionAsync.StartIdMappingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/StartIdMappingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartIdMappingJobResult> startIdMappingJobAsync(StartIdMappingJobRequest startIdMappingJobRequest);
+
+    /**
+     * <p>
+     * Starts the <code>IdMappingJob</code> of a workflow. The workflow must have previously been created using the
+     * <code>CreateIdMappingWorkflow</code> endpoint.
+     * </p>
+     * 
+     * @param startIdMappingJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartIdMappingJob operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.StartIdMappingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/StartIdMappingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartIdMappingJobResult> startIdMappingJobAsync(StartIdMappingJobRequest startIdMappingJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StartIdMappingJobRequest, StartIdMappingJobResult> asyncHandler);
 
     /**
      * <p>
@@ -551,6 +809,41 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
 
     /**
      * <p>
+     * Updates an existing <code>IdMappingWorkflow</code>. This method is identical to
+     * <code>CreateIdMappingWorkflow</code>, except it uses an HTTP <code>PUT</code> request instead of a
+     * <code>POST</code> request, and the <code>IdMappingWorkflow</code> must already exist for the method to succeed.
+     * </p>
+     * 
+     * @param updateIdMappingWorkflowRequest
+     * @return A Java Future containing the result of the UpdateIdMappingWorkflow operation returned by the service.
+     * @sample AWSEntityResolutionAsync.UpdateIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIdMappingWorkflowResult> updateIdMappingWorkflowAsync(UpdateIdMappingWorkflowRequest updateIdMappingWorkflowRequest);
+
+    /**
+     * <p>
+     * Updates an existing <code>IdMappingWorkflow</code>. This method is identical to
+     * <code>CreateIdMappingWorkflow</code>, except it uses an HTTP <code>PUT</code> request instead of a
+     * <code>POST</code> request, and the <code>IdMappingWorkflow</code> must already exist for the method to succeed.
+     * </p>
+     * 
+     * @param updateIdMappingWorkflowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateIdMappingWorkflow operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.UpdateIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIdMappingWorkflowResult> updateIdMappingWorkflowAsync(UpdateIdMappingWorkflowRequest updateIdMappingWorkflowRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateIdMappingWorkflowRequest, UpdateIdMappingWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates an existing <code>MatchingWorkflow</code>. This method is identical to
      * <code>CreateMatchingWorkflow</code>, except it uses an HTTP <code>PUT</code> request instead of a
      * <code>POST</code> request, and the <code>MatchingWorkflow</code> must already exist for the method to succeed.
@@ -583,5 +876,48 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
      */
     java.util.concurrent.Future<UpdateMatchingWorkflowResult> updateMatchingWorkflowAsync(UpdateMatchingWorkflowRequest updateMatchingWorkflowRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateMatchingWorkflowRequest, UpdateMatchingWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a schema mapping.
+     * </p>
+     * <note>
+     * <p>
+     * A schema is immutable if it is being used by a workflow. Therefore, you can't update a schema mapping if it's
+     * associated with a workflow.
+     * </p>
+     * </note>
+     * 
+     * @param updateSchemaMappingRequest
+     * @return A Java Future containing the result of the UpdateSchemaMapping operation returned by the service.
+     * @sample AWSEntityResolutionAsync.UpdateSchemaMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateSchemaMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSchemaMappingResult> updateSchemaMappingAsync(UpdateSchemaMappingRequest updateSchemaMappingRequest);
+
+    /**
+     * <p>
+     * Updates a schema mapping.
+     * </p>
+     * <note>
+     * <p>
+     * A schema is immutable if it is being used by a workflow. Therefore, you can't update a schema mapping if it's
+     * associated with a workflow.
+     * </p>
+     * </note>
+     * 
+     * @param updateSchemaMappingRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSchemaMapping operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.UpdateSchemaMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateSchemaMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSchemaMappingResult> updateSchemaMappingAsync(UpdateSchemaMappingRequest updateSchemaMappingRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSchemaMappingRequest, UpdateSchemaMappingResult> asyncHandler);
 
 }

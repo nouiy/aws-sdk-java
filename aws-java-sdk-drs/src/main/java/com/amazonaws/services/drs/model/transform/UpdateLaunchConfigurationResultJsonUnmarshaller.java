@@ -64,6 +64,11 @@ public class UpdateLaunchConfigurationResultJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     updateLaunchConfigurationResult.setLaunchDisposition(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("launchIntoInstanceProperties", targetDepth)) {
+                    context.nextToken();
+                    updateLaunchConfigurationResult.setLaunchIntoInstanceProperties(LaunchIntoInstancePropertiesJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
                 if (context.testExpression("licensing", targetDepth)) {
                     context.nextToken();
                     updateLaunchConfigurationResult.setLicensing(LicensingJsonUnmarshaller.getInstance().unmarshall(context));

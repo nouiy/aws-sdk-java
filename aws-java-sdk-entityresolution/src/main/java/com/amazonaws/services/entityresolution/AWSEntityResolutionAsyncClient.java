@@ -92,6 +92,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
     }
 
     @Override
+    public java.util.concurrent.Future<CreateIdMappingWorkflowResult> createIdMappingWorkflowAsync(CreateIdMappingWorkflowRequest request) {
+
+        return createIdMappingWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIdMappingWorkflowResult> createIdMappingWorkflowAsync(final CreateIdMappingWorkflowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateIdMappingWorkflowRequest, CreateIdMappingWorkflowResult> asyncHandler) {
+        final CreateIdMappingWorkflowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateIdMappingWorkflowResult>() {
+            @Override
+            public CreateIdMappingWorkflowResult call() throws Exception {
+                CreateIdMappingWorkflowResult result = null;
+
+                try {
+                    result = executeCreateIdMappingWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateMatchingWorkflowResult> createMatchingWorkflowAsync(CreateMatchingWorkflowRequest request) {
 
         return createMatchingWorkflowAsync(request, null);
@@ -158,6 +191,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteIdMappingWorkflowResult> deleteIdMappingWorkflowAsync(DeleteIdMappingWorkflowRequest request) {
+
+        return deleteIdMappingWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdMappingWorkflowResult> deleteIdMappingWorkflowAsync(final DeleteIdMappingWorkflowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteIdMappingWorkflowRequest, DeleteIdMappingWorkflowResult> asyncHandler) {
+        final DeleteIdMappingWorkflowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteIdMappingWorkflowResult>() {
+            @Override
+            public DeleteIdMappingWorkflowResult call() throws Exception {
+                DeleteIdMappingWorkflowResult result = null;
+
+                try {
+                    result = executeDeleteIdMappingWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteMatchingWorkflowResult> deleteMatchingWorkflowAsync(DeleteMatchingWorkflowRequest request) {
 
         return deleteMatchingWorkflowAsync(request, null);
@@ -208,6 +274,72 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
 
                 try {
                     result = executeDeleteSchemaMapping(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdMappingJobResult> getIdMappingJobAsync(GetIdMappingJobRequest request) {
+
+        return getIdMappingJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdMappingJobResult> getIdMappingJobAsync(final GetIdMappingJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetIdMappingJobRequest, GetIdMappingJobResult> asyncHandler) {
+        final GetIdMappingJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetIdMappingJobResult>() {
+            @Override
+            public GetIdMappingJobResult call() throws Exception {
+                GetIdMappingJobResult result = null;
+
+                try {
+                    result = executeGetIdMappingJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdMappingWorkflowResult> getIdMappingWorkflowAsync(GetIdMappingWorkflowRequest request) {
+
+        return getIdMappingWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdMappingWorkflowResult> getIdMappingWorkflowAsync(final GetIdMappingWorkflowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetIdMappingWorkflowRequest, GetIdMappingWorkflowResult> asyncHandler) {
+        final GetIdMappingWorkflowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetIdMappingWorkflowResult>() {
+            @Override
+            public GetIdMappingWorkflowResult call() throws Exception {
+                GetIdMappingWorkflowResult result = null;
+
+                try {
+                    result = executeGetIdMappingWorkflow(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -356,6 +488,72 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
     }
 
     @Override
+    public java.util.concurrent.Future<ListIdMappingJobsResult> listIdMappingJobsAsync(ListIdMappingJobsRequest request) {
+
+        return listIdMappingJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdMappingJobsResult> listIdMappingJobsAsync(final ListIdMappingJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListIdMappingJobsRequest, ListIdMappingJobsResult> asyncHandler) {
+        final ListIdMappingJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListIdMappingJobsResult>() {
+            @Override
+            public ListIdMappingJobsResult call() throws Exception {
+                ListIdMappingJobsResult result = null;
+
+                try {
+                    result = executeListIdMappingJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdMappingWorkflowsResult> listIdMappingWorkflowsAsync(ListIdMappingWorkflowsRequest request) {
+
+        return listIdMappingWorkflowsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdMappingWorkflowsResult> listIdMappingWorkflowsAsync(final ListIdMappingWorkflowsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListIdMappingWorkflowsRequest, ListIdMappingWorkflowsResult> asyncHandler) {
+        final ListIdMappingWorkflowsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListIdMappingWorkflowsResult>() {
+            @Override
+            public ListIdMappingWorkflowsResult call() throws Exception {
+                ListIdMappingWorkflowsResult result = null;
+
+                try {
+                    result = executeListIdMappingWorkflows(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListMatchingJobsResult> listMatchingJobsAsync(ListMatchingJobsRequest request) {
 
         return listMatchingJobsAsync(request, null);
@@ -422,6 +620,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
     }
 
     @Override
+    public java.util.concurrent.Future<ListProviderServicesResult> listProviderServicesAsync(ListProviderServicesRequest request) {
+
+        return listProviderServicesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProviderServicesResult> listProviderServicesAsync(final ListProviderServicesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListProviderServicesRequest, ListProviderServicesResult> asyncHandler) {
+        final ListProviderServicesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListProviderServicesResult>() {
+            @Override
+            public ListProviderServicesResult call() throws Exception {
+                ListProviderServicesResult result = null;
+
+                try {
+                    result = executeListProviderServices(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSchemaMappingsResult> listSchemaMappingsAsync(ListSchemaMappingsRequest request) {
 
         return listSchemaMappingsAsync(request, null);
@@ -472,6 +703,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartIdMappingJobResult> startIdMappingJobAsync(StartIdMappingJobRequest request) {
+
+        return startIdMappingJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartIdMappingJobResult> startIdMappingJobAsync(final StartIdMappingJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartIdMappingJobRequest, StartIdMappingJobResult> asyncHandler) {
+        final StartIdMappingJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartIdMappingJobResult>() {
+            @Override
+            public StartIdMappingJobResult call() throws Exception {
+                StartIdMappingJobResult result = null;
+
+                try {
+                    result = executeStartIdMappingJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -587,6 +851,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateIdMappingWorkflowResult> updateIdMappingWorkflowAsync(UpdateIdMappingWorkflowRequest request) {
+
+        return updateIdMappingWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdMappingWorkflowResult> updateIdMappingWorkflowAsync(final UpdateIdMappingWorkflowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateIdMappingWorkflowRequest, UpdateIdMappingWorkflowResult> asyncHandler) {
+        final UpdateIdMappingWorkflowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateIdMappingWorkflowResult>() {
+            @Override
+            public UpdateIdMappingWorkflowResult call() throws Exception {
+                UpdateIdMappingWorkflowResult result = null;
+
+                try {
+                    result = executeUpdateIdMappingWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateMatchingWorkflowResult> updateMatchingWorkflowAsync(UpdateMatchingWorkflowRequest request) {
 
         return updateMatchingWorkflowAsync(request, null);
@@ -604,6 +901,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
 
                 try {
                     result = executeUpdateMatchingWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSchemaMappingResult> updateSchemaMappingAsync(UpdateSchemaMappingRequest request) {
+
+        return updateSchemaMappingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSchemaMappingResult> updateSchemaMappingAsync(final UpdateSchemaMappingRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateSchemaMappingRequest, UpdateSchemaMappingResult> asyncHandler) {
+        final UpdateSchemaMappingRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateSchemaMappingResult>() {
+            @Override
+            public UpdateSchemaMappingResult call() throws Exception {
+                UpdateSchemaMappingResult result = null;
+
+                try {
+                    result = executeUpdateSchemaMapping(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

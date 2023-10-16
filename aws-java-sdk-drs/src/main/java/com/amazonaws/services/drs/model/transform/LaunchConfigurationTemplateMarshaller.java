@@ -41,6 +41,8 @@ public class LaunchConfigurationTemplateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchConfigurationTemplateID").build();
     private static final MarshallingInfo<String> LAUNCHDISPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchDisposition").build();
+    private static final MarshallingInfo<Boolean> LAUNCHINTOSOURCEINSTANCE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchIntoSourceInstance").build();
     private static final MarshallingInfo<StructuredPojo> LICENSING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("licensing").build();
     private static final MarshallingInfo<Boolean> POSTLAUNCHENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
@@ -72,6 +74,7 @@ public class LaunchConfigurationTemplateMarshaller {
             protocolMarshaller.marshall(launchConfigurationTemplate.getExportBucketArn(), EXPORTBUCKETARN_BINDING);
             protocolMarshaller.marshall(launchConfigurationTemplate.getLaunchConfigurationTemplateID(), LAUNCHCONFIGURATIONTEMPLATEID_BINDING);
             protocolMarshaller.marshall(launchConfigurationTemplate.getLaunchDisposition(), LAUNCHDISPOSITION_BINDING);
+            protocolMarshaller.marshall(launchConfigurationTemplate.getLaunchIntoSourceInstance(), LAUNCHINTOSOURCEINSTANCE_BINDING);
             protocolMarshaller.marshall(launchConfigurationTemplate.getLicensing(), LICENSING_BINDING);
             protocolMarshaller.marshall(launchConfigurationTemplate.getPostLaunchEnabled(), POSTLAUNCHENABLED_BINDING);
             protocolMarshaller.marshall(launchConfigurationTemplate.getTags(), TAGS_BINDING);

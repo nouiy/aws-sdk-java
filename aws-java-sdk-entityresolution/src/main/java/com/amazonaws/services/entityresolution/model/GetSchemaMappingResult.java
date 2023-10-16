@@ -37,6 +37,12 @@ public class GetSchemaMappingResult extends com.amazonaws.AmazonWebServiceResult
     private String description;
     /**
      * <p>
+     * Specifies whether the schema mapping has been applied to a workflow.
+     * </p>
+     */
+    private Boolean hasWorkflows;
+    /**
+     * <p>
      * A list of <code>MappedInputFields</code>. Each <code>MappedInputField</code> corresponds to a column the source
      * data table, and contains column name plus additional information Venice uses for matching.
      * </p>
@@ -145,6 +151,58 @@ public class GetSchemaMappingResult extends com.amazonaws.AmazonWebServiceResult
     public GetSchemaMappingResult withDescription(String description) {
         setDescription(description);
         return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the schema mapping has been applied to a workflow.
+     * </p>
+     * 
+     * @param hasWorkflows
+     *        Specifies whether the schema mapping has been applied to a workflow.
+     */
+
+    public void setHasWorkflows(Boolean hasWorkflows) {
+        this.hasWorkflows = hasWorkflows;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the schema mapping has been applied to a workflow.
+     * </p>
+     * 
+     * @return Specifies whether the schema mapping has been applied to a workflow.
+     */
+
+    public Boolean getHasWorkflows() {
+        return this.hasWorkflows;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the schema mapping has been applied to a workflow.
+     * </p>
+     * 
+     * @param hasWorkflows
+     *        Specifies whether the schema mapping has been applied to a workflow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSchemaMappingResult withHasWorkflows(Boolean hasWorkflows) {
+        setHasWorkflows(hasWorkflows);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the schema mapping has been applied to a workflow.
+     * </p>
+     * 
+     * @return Specifies whether the schema mapping has been applied to a workflow.
+     */
+
+    public Boolean isHasWorkflows() {
+        return this.hasWorkflows;
     }
 
     /**
@@ -429,6 +487,8 @@ public class GetSchemaMappingResult extends com.amazonaws.AmazonWebServiceResult
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getHasWorkflows() != null)
+            sb.append("HasWorkflows: ").append(getHasWorkflows()).append(",");
         if (getMappedInputFields() != null)
             sb.append("MappedInputFields: ").append(getMappedInputFields()).append(",");
         if (getSchemaArn() != null)
@@ -461,6 +521,10 @@ public class GetSchemaMappingResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getHasWorkflows() == null ^ this.getHasWorkflows() == null)
+            return false;
+        if (other.getHasWorkflows() != null && other.getHasWorkflows().equals(this.getHasWorkflows()) == false)
+            return false;
         if (other.getMappedInputFields() == null ^ this.getMappedInputFields() == null)
             return false;
         if (other.getMappedInputFields() != null && other.getMappedInputFields().equals(this.getMappedInputFields()) == false)
@@ -491,6 +555,7 @@ public class GetSchemaMappingResult extends com.amazonaws.AmazonWebServiceResult
 
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getHasWorkflows() == null) ? 0 : getHasWorkflows().hashCode());
         hashCode = prime * hashCode + ((getMappedInputFields() == null) ? 0 : getMappedInputFields().hashCode());
         hashCode = prime * hashCode + ((getSchemaArn() == null) ? 0 : getSchemaArn().hashCode());
         hashCode = prime * hashCode + ((getSchemaName() == null) ? 0 : getSchemaName().hashCode());

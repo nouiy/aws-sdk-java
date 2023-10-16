@@ -49,6 +49,13 @@ public class TokenIdentifier implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The unique identifier of the token.
      * </p>
+     * <note>
+     * <p>
+     * You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for the
+     * native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64 character
+     * hexadecimal <code>tokenid</code> format.
+     * </p>
+     * </note>
      */
     private String tokenId;
 
@@ -155,9 +162,21 @@ public class TokenIdentifier implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The unique identifier of the token.
      * </p>
+     * <note>
+     * <p>
+     * You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for the
+     * native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64 character
+     * hexadecimal <code>tokenid</code> format.
+     * </p>
+     * </note>
      * 
      * @param tokenId
-     *        The unique identifier of the token.
+     *        The unique identifier of the token.</p> <note>
+     *        <p>
+     *        You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for
+     *        the native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64
+     *        character hexadecimal <code>tokenid</code> format.
+     *        </p>
      */
 
     public void setTokenId(String tokenId) {
@@ -168,8 +187,20 @@ public class TokenIdentifier implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The unique identifier of the token.
      * </p>
+     * <note>
+     * <p>
+     * You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for the
+     * native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64 character
+     * hexadecimal <code>tokenid</code> format.
+     * </p>
+     * </note>
      * 
-     * @return The unique identifier of the token.
+     * @return The unique identifier of the token.</p> <note>
+     *         <p>
+     *         You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for
+     *         the native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64
+     *         character hexadecimal <code>tokenid</code> format.
+     *         </p>
      */
 
     public String getTokenId() {
@@ -180,9 +211,21 @@ public class TokenIdentifier implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The unique identifier of the token.
      * </p>
+     * <note>
+     * <p>
+     * You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for the
+     * native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64 character
+     * hexadecimal <code>tokenid</code> format.
+     * </p>
+     * </note>
      * 
      * @param tokenId
-     *        The unique identifier of the token.
+     *        The unique identifier of the token.</p> <note>
+     *        <p>
+     *        You must specify this container with <code>btc</code> for the native BTC token, and <code>eth</code> for
+     *        the native ETH token. For all other token types you must specify the <code>tokenId</code> in the 64
+     *        character hexadecimal <code>tokenid</code> format.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

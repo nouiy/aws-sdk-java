@@ -16,17 +16,17 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Status of SkipUnavailable param for outbound connection.
+ * The status of <code>SkipUnavailable</code> setting for the outbound connection.
  * </p>
  * <ul>
  * <li>
  * <p>
- * <b>ENABLED</b> - The SkipUnavailable param is enabled for the connection.
+ * <b>ENABLED</b> - The <code>SkipUnavailable</code> setting is enabled for the connection.
  * </p>
  * </li>
  * <li>
  * <p>
- * <b>DISABLED</b> - The SkipUnavailable param is disabled for the connection.
+ * <b>DISABLED</b> - The <code>SkipUnavailable</code> setting is disabled for the connection.
  * </p>
  * </li>
  * </ul>

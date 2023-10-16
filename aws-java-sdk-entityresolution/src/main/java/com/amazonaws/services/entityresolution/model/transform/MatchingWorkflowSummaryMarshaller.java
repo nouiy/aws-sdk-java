@@ -29,6 +29,8 @@ public class MatchingWorkflowSummaryMarshaller {
 
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> RESOLUTIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resolutionType").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> WORKFLOWARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -53,6 +55,7 @@ public class MatchingWorkflowSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(matchingWorkflowSummary.getCreatedAt(), CREATEDAT_BINDING);
+            protocolMarshaller.marshall(matchingWorkflowSummary.getResolutionType(), RESOLUTIONTYPE_BINDING);
             protocolMarshaller.marshall(matchingWorkflowSummary.getUpdatedAt(), UPDATEDAT_BINDING);
             protocolMarshaller.marshall(matchingWorkflowSummary.getWorkflowArn(), WORKFLOWARN_BINDING);
             protocolMarshaller.marshall(matchingWorkflowSummary.getWorkflowName(), WORKFLOWNAME_BINDING);

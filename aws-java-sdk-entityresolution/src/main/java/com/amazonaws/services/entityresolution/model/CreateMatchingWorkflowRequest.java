@@ -72,7 +72,7 @@ public class CreateMatchingWorkflowRequest extends com.amazonaws.AmazonWebServic
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * The name of the workflow. There cannot be multiple <code>DataIntegrationWorkflows</code> with the same name.
+     * The name of the workflow. There can't be multiple <code>MatchingWorkflows</code> with the same name.
      * </p>
      */
     private String workflowName;
@@ -469,12 +469,11 @@ public class CreateMatchingWorkflowRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the workflow. There cannot be multiple <code>DataIntegrationWorkflows</code> with the same name.
+     * The name of the workflow. There can't be multiple <code>MatchingWorkflows</code> with the same name.
      * </p>
      * 
      * @param workflowName
-     *        The name of the workflow. There cannot be multiple <code>DataIntegrationWorkflows</code> with the same
-     *        name.
+     *        The name of the workflow. There can't be multiple <code>MatchingWorkflows</code> with the same name.
      */
 
     public void setWorkflowName(String workflowName) {
@@ -483,11 +482,10 @@ public class CreateMatchingWorkflowRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the workflow. There cannot be multiple <code>DataIntegrationWorkflows</code> with the same name.
+     * The name of the workflow. There can't be multiple <code>MatchingWorkflows</code> with the same name.
      * </p>
      * 
-     * @return The name of the workflow. There cannot be multiple <code>DataIntegrationWorkflows</code> with the same
-     *         name.
+     * @return The name of the workflow. There can't be multiple <code>MatchingWorkflows</code> with the same name.
      */
 
     public String getWorkflowName() {
@@ -496,12 +494,11 @@ public class CreateMatchingWorkflowRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the workflow. There cannot be multiple <code>DataIntegrationWorkflows</code> with the same name.
+     * The name of the workflow. There can't be multiple <code>MatchingWorkflows</code> with the same name.
      * </p>
      * 
      * @param workflowName
-     *        The name of the workflow. There cannot be multiple <code>DataIntegrationWorkflows</code> with the same
-     *        name.
+     *        The name of the workflow. There can't be multiple <code>MatchingWorkflows</code> with the same name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

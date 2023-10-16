@@ -542,6 +542,18 @@ public class Cluster implements Serializable, Cloneable {
      * </p>
      */
     private java.util.Date customDomainCertificateExpiryDate;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) for the cluster's admin user credentials secret.
+     * </p>
+     */
+    private String masterPasswordSecretArn;
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * </p>
+     */
+    private String masterPasswordSecretKmsKeyId;
 
     /**
      * <p>
@@ -4228,6 +4240,89 @@ public class Cluster implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) for the cluster's admin user credentials secret.
+     * </p>
+     * 
+     * @param masterPasswordSecretArn
+     *        The Amazon Resource Name (ARN) for the cluster's admin user credentials secret.
+     */
+
+    public void setMasterPasswordSecretArn(String masterPasswordSecretArn) {
+        this.masterPasswordSecretArn = masterPasswordSecretArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) for the cluster's admin user credentials secret.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) for the cluster's admin user credentials secret.
+     */
+
+    public String getMasterPasswordSecretArn() {
+        return this.masterPasswordSecretArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) for the cluster's admin user credentials secret.
+     * </p>
+     * 
+     * @param masterPasswordSecretArn
+     *        The Amazon Resource Name (ARN) for the cluster's admin user credentials secret.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withMasterPasswordSecretArn(String masterPasswordSecretArn) {
+        setMasterPasswordSecretArn(masterPasswordSecretArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * </p>
+     * 
+     * @param masterPasswordSecretKmsKeyId
+     *        The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials
+     *        secret.
+     */
+
+    public void setMasterPasswordSecretKmsKeyId(String masterPasswordSecretKmsKeyId) {
+        this.masterPasswordSecretKmsKeyId = masterPasswordSecretKmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * </p>
+     * 
+     * @return The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials
+     *         secret.
+     */
+
+    public String getMasterPasswordSecretKmsKeyId() {
+        return this.masterPasswordSecretKmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials secret.
+     * </p>
+     * 
+     * @param masterPasswordSecretKmsKeyId
+     *        The ID of the Key Management Service (KMS) key used to encrypt and store the cluster's admin credentials
+     *        secret.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withMasterPasswordSecretKmsKeyId(String masterPasswordSecretKmsKeyId) {
+        setMasterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4348,7 +4443,11 @@ public class Cluster implements Serializable, Cloneable {
         if (getCustomDomainCertificateArn() != null)
             sb.append("CustomDomainCertificateArn: ").append(getCustomDomainCertificateArn()).append(",");
         if (getCustomDomainCertificateExpiryDate() != null)
-            sb.append("CustomDomainCertificateExpiryDate: ").append(getCustomDomainCertificateExpiryDate());
+            sb.append("CustomDomainCertificateExpiryDate: ").append(getCustomDomainCertificateExpiryDate()).append(",");
+        if (getMasterPasswordSecretArn() != null)
+            sb.append("MasterPasswordSecretArn: ").append(getMasterPasswordSecretArn()).append(",");
+        if (getMasterPasswordSecretKmsKeyId() != null)
+            sb.append("MasterPasswordSecretKmsKeyId: ").append(getMasterPasswordSecretKmsKeyId());
         sb.append("}");
         return sb.toString();
     }
@@ -4592,6 +4691,14 @@ public class Cluster implements Serializable, Cloneable {
         if (other.getCustomDomainCertificateExpiryDate() != null
                 && other.getCustomDomainCertificateExpiryDate().equals(this.getCustomDomainCertificateExpiryDate()) == false)
             return false;
+        if (other.getMasterPasswordSecretArn() == null ^ this.getMasterPasswordSecretArn() == null)
+            return false;
+        if (other.getMasterPasswordSecretArn() != null && other.getMasterPasswordSecretArn().equals(this.getMasterPasswordSecretArn()) == false)
+            return false;
+        if (other.getMasterPasswordSecretKmsKeyId() == null ^ this.getMasterPasswordSecretKmsKeyId() == null)
+            return false;
+        if (other.getMasterPasswordSecretKmsKeyId() != null && other.getMasterPasswordSecretKmsKeyId().equals(this.getMasterPasswordSecretKmsKeyId()) == false)
+            return false;
         return true;
     }
 
@@ -4655,6 +4762,8 @@ public class Cluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getCustomDomainName() == null) ? 0 : getCustomDomainName().hashCode());
         hashCode = prime * hashCode + ((getCustomDomainCertificateArn() == null) ? 0 : getCustomDomainCertificateArn().hashCode());
         hashCode = prime * hashCode + ((getCustomDomainCertificateExpiryDate() == null) ? 0 : getCustomDomainCertificateExpiryDate().hashCode());
+        hashCode = prime * hashCode + ((getMasterPasswordSecretArn() == null) ? 0 : getMasterPasswordSecretArn().hashCode());
+        hashCode = prime * hashCode + ((getMasterPasswordSecretKmsKeyId() == null) ? 0 : getMasterPasswordSecretKmsKeyId().hashCode());
         return hashCode;
     }
 

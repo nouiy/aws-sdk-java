@@ -44,7 +44,7 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The blockchain network where the transaction occured.
+     * The blockchain network where the transaction occurred.
      * </p>
      */
     private String network;
@@ -162,11 +162,11 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The blockchain network where the transaction occured.
+     * The blockchain network where the transaction occurred.
      * </p>
      * 
      * @param network
-     *        The blockchain network where the transaction occured.
+     *        The blockchain network where the transaction occurred.
      * @see QueryNetwork
      */
 
@@ -176,10 +176,10 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The blockchain network where the transaction occured.
+     * The blockchain network where the transaction occurred.
      * </p>
      * 
-     * @return The blockchain network where the transaction occured.
+     * @return The blockchain network where the transaction occurred.
      * @see QueryNetwork
      */
 
@@ -189,11 +189,11 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The blockchain network where the transaction occured.
+     * The blockchain network where the transaction occurred.
      * </p>
      * 
      * @param network
-     *        The blockchain network where the transaction occured.
+     *        The blockchain network where the transaction occurred.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryNetwork
      */
@@ -205,11 +205,11 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The blockchain network where the transaction occured.
+     * The blockchain network where the transaction occurred.
      * </p>
      * 
      * @param network
-     *        The blockchain network where the transaction occured.
+     *        The blockchain network where the transaction occurred.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryNetwork
      */

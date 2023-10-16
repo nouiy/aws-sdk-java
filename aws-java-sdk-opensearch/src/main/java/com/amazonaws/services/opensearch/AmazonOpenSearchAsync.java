@@ -1625,7 +1625,7 @@ public interface AmazonOpenSearchAsync extends AmazonOpenSearch {
 
     /**
      * <p>
-     * Modifies the cluster configuration of the specified Amazon OpenSearch Service domain.sl
+     * Modifies the cluster configuration of the specified Amazon OpenSearch Service domain.
      * </p>
      * 
      * @param updateDomainConfigRequest
@@ -1637,7 +1637,7 @@ public interface AmazonOpenSearchAsync extends AmazonOpenSearch {
 
     /**
      * <p>
-     * Modifies the cluster configuration of the specified Amazon OpenSearch Service domain.sl
+     * Modifies the cluster configuration of the specified Amazon OpenSearch Service domain.
      * </p>
      * 
      * @param updateDomainConfigRequest

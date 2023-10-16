@@ -40,7 +40,7 @@ public class CreateSchemaMappingRequest extends com.amazonaws.AmazonWebServiceRe
     private java.util.List<SchemaInputAttribute> mappedInputFields;
     /**
      * <p>
-     * The name of the schema. There cannot be multiple <code>SchemaMappings</code> with the same name.
+     * The name of the schema. There can't be multiple <code>SchemaMappings</code> with the same name.
      * </p>
      */
     private String schemaName;
@@ -175,11 +175,11 @@ public class CreateSchemaMappingRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the schema. There cannot be multiple <code>SchemaMappings</code> with the same name.
+     * The name of the schema. There can't be multiple <code>SchemaMappings</code> with the same name.
      * </p>
      * 
      * @param schemaName
-     *        The name of the schema. There cannot be multiple <code>SchemaMappings</code> with the same name.
+     *        The name of the schema. There can't be multiple <code>SchemaMappings</code> with the same name.
      */
 
     public void setSchemaName(String schemaName) {
@@ -188,10 +188,10 @@ public class CreateSchemaMappingRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the schema. There cannot be multiple <code>SchemaMappings</code> with the same name.
+     * The name of the schema. There can't be multiple <code>SchemaMappings</code> with the same name.
      * </p>
      * 
-     * @return The name of the schema. There cannot be multiple <code>SchemaMappings</code> with the same name.
+     * @return The name of the schema. There can't be multiple <code>SchemaMappings</code> with the same name.
      */
 
     public String getSchemaName() {
@@ -200,11 +200,11 @@ public class CreateSchemaMappingRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the schema. There cannot be multiple <code>SchemaMappings</code> with the same name.
+     * The name of the schema. There can't be multiple <code>SchemaMappings</code> with the same name.
      * </p>
      * 
      * @param schemaName
-     *        The name of the schema. There cannot be multiple <code>SchemaMappings</code> with the same name.
+     *        The name of the schema. There can't be multiple <code>SchemaMappings</code> with the same name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,6 +30,12 @@ public class ResolutionTechniques implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * The properties of the provider service.
+     * </p>
+     */
+    private ProviderProperties providerProperties;
+    /**
+     * <p>
      * The type of matching. There are two types of matching: <code>RULE_MATCHING</code> and <code>ML_MATCHING</code>.
      * </p>
      */
@@ -41,6 +47,46 @@ public class ResolutionTechniques implements Serializable, Cloneable, Structured
      * </p>
      */
     private RuleBasedProperties ruleBasedProperties;
+
+    /**
+     * <p>
+     * The properties of the provider service.
+     * </p>
+     * 
+     * @param providerProperties
+     *        The properties of the provider service.
+     */
+
+    public void setProviderProperties(ProviderProperties providerProperties) {
+        this.providerProperties = providerProperties;
+    }
+
+    /**
+     * <p>
+     * The properties of the provider service.
+     * </p>
+     * 
+     * @return The properties of the provider service.
+     */
+
+    public ProviderProperties getProviderProperties() {
+        return this.providerProperties;
+    }
+
+    /**
+     * <p>
+     * The properties of the provider service.
+     * </p>
+     * 
+     * @param providerProperties
+     *        The properties of the provider service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResolutionTechniques withProviderProperties(ProviderProperties providerProperties) {
+        setProviderProperties(providerProperties);
+        return this;
+    }
 
     /**
      * <p>
@@ -163,6 +209,8 @@ public class ResolutionTechniques implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getProviderProperties() != null)
+            sb.append("ProviderProperties: ").append(getProviderProperties()).append(",");
         if (getResolutionType() != null)
             sb.append("ResolutionType: ").append(getResolutionType()).append(",");
         if (getRuleBasedProperties() != null)
@@ -181,6 +229,10 @@ public class ResolutionTechniques implements Serializable, Cloneable, Structured
         if (obj instanceof ResolutionTechniques == false)
             return false;
         ResolutionTechniques other = (ResolutionTechniques) obj;
+        if (other.getProviderProperties() == null ^ this.getProviderProperties() == null)
+            return false;
+        if (other.getProviderProperties() != null && other.getProviderProperties().equals(this.getProviderProperties()) == false)
+            return false;
         if (other.getResolutionType() == null ^ this.getResolutionType() == null)
             return false;
         if (other.getResolutionType() != null && other.getResolutionType().equals(this.getResolutionType()) == false)
@@ -197,6 +249,7 @@ public class ResolutionTechniques implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getProviderProperties() == null) ? 0 : getProviderProperties().hashCode());
         hashCode = prime * hashCode + ((getResolutionType() == null) ? 0 : getResolutionType().hashCode());
         hashCode = prime * hashCode + ((getRuleBasedProperties() == null) ? 0 : getRuleBasedProperties().hashCode());
         return hashCode;

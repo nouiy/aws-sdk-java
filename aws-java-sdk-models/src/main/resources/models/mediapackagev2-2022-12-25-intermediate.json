@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -1734,7 +1734,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Description",
-        "c2jShape" : "String",
+        "c2jShape" : "ResourceDescription",
         "deprecated" : false,
         "documentation" : "<p>Any descriptive information that you want to add to the channel group for future identification purposes.</p>",
         "endpointDiscoveryId" : false,
@@ -2015,7 +2015,7 @@
         },
         "Description" : {
           "c2jName" : "Description",
-          "c2jShape" : "String",
+          "c2jShape" : "ResourceDescription",
           "deprecated" : false,
           "documentation" : "<p>Any descriptive information that you want to add to the channel group for future identification purposes.</p>",
           "endpointDiscoveryId" : false,
@@ -2543,7 +2543,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Description",
-        "c2jShape" : "String",
+        "c2jShape" : "ResourceDescription",
         "deprecated" : false,
         "documentation" : "<p>Any descriptive information that you want to add to the channel for future identification purposes.</p>",
         "endpointDiscoveryId" : false,
@@ -2894,7 +2894,7 @@
         },
         "Description" : {
           "c2jName" : "Description",
-          "c2jShape" : "String",
+          "c2jShape" : "ResourceDescription",
           "deprecated" : false,
           "documentation" : "<p>Any descriptive information that you want to add to the channel for future identification purposes.</p>",
           "endpointDiscoveryId" : false,
@@ -4532,7 +4532,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Description",
-        "c2jShape" : "String",
+        "c2jShape" : "ResourceDescription",
         "deprecated" : false,
         "documentation" : "<p>The description for your channel group.</p>",
         "endpointDiscoveryId" : false,
@@ -4966,7 +4966,7 @@
         },
         "Description" : {
           "c2jName" : "Description",
-          "c2jShape" : "String",
+          "c2jShape" : "ResourceDescription",
           "deprecated" : false,
           "documentation" : "<p>The description for your channel group.</p>",
           "endpointDiscoveryId" : false,
@@ -6630,7 +6630,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Description",
-        "c2jShape" : "String",
+        "c2jShape" : "ResourceDescription",
         "deprecated" : false,
         "documentation" : "<p>The description for your channel.</p>",
         "endpointDiscoveryId" : false,
@@ -7287,7 +7287,7 @@
         },
         "Description" : {
           "c2jName" : "Description",
-          "c2jShape" : "String",
+          "c2jShape" : "ResourceDescription",
           "deprecated" : false,
           "documentation" : "<p>The description for your channel.</p>",
           "endpointDiscoveryId" : false,
@@ -17526,7 +17526,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Description",
-        "c2jShape" : "String",
+        "c2jShape" : "ResourceDescription",
         "deprecated" : false,
         "documentation" : "<p>The description for your channel group.</p>",
         "endpointDiscoveryId" : false,
@@ -17960,7 +17960,7 @@
         },
         "Description" : {
           "c2jName" : "Description",
-          "c2jShape" : "String",
+          "c2jShape" : "ResourceDescription",
           "deprecated" : false,
           "documentation" : "<p>The description for your channel group.</p>",
           "endpointDiscoveryId" : false,
@@ -18832,7 +18832,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Policy",
-        "c2jShape" : "String",
+        "c2jShape" : "PolicyText",
         "deprecated" : false,
         "documentation" : "<p>The policy assigned to the channel.</p>",
         "endpointDiscoveryId" : false,
@@ -19043,7 +19043,7 @@
         },
         "Policy" : {
           "c2jName" : "Policy",
-          "c2jShape" : "String",
+          "c2jShape" : "PolicyText",
           "deprecated" : false,
           "documentation" : "<p>The policy assigned to the channel.</p>",
           "endpointDiscoveryId" : false,
@@ -19828,7 +19828,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Description",
-        "c2jShape" : "String",
+        "c2jShape" : "ResourceDescription",
         "deprecated" : false,
         "documentation" : "<p>The description for your channel.</p>",
         "endpointDiscoveryId" : false,
@@ -20485,7 +20485,7 @@
         },
         "Description" : {
           "c2jName" : "Description",
-          "c2jShape" : "String",
+          "c2jShape" : "ResourceDescription",
           "deprecated" : false,
           "documentation" : "<p>The description for your channel.</p>",
           "endpointDiscoveryId" : false,
@@ -23200,7 +23200,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "ChannelGroupName",
-        "c2jShape" : "String",
+        "c2jShape" : "ResourceName",
         "deprecated" : false,
         "documentation" : "<p>The name that describes the channel group. The name is the primary identifier for the channel group, and must be unique for your account in the AWS Region.</p>",
         "endpointDiscoveryId" : false,
@@ -23269,7 +23269,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "ChannelName",
-        "c2jShape" : "String",
+        "c2jShape" : "ResourceName",
         "deprecated" : false,
         "documentation" : "<p>The name that describes the channel. The name is the primary identifier for the channel, and must be unique for your account in the AWS Region and channel group.</p>",
         "endpointDiscoveryId" : false,
@@ -23338,7 +23338,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "OriginEndpointName",
-        "c2jShape" : "String",
+        "c2jShape" : "ResourceName",
         "deprecated" : false,
         "documentation" : "<p>The name that describes the origin endpoint. The name is the primary identifier for the origin endpoint, and and must be unique for your account in the AWS Region and channel.</p>",
         "endpointDiscoveryId" : false,
@@ -23407,7 +23407,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Policy",
-        "c2jShape" : "String",
+        "c2jShape" : "PolicyText",
         "deprecated" : false,
         "documentation" : "<p>The policy assigned to the origin endpoint.</p>",
         "endpointDiscoveryId" : false,
@@ -23478,7 +23478,7 @@
       "membersAsMap" : {
         "ChannelGroupName" : {
           "c2jName" : "ChannelGroupName",
-          "c2jShape" : "String",
+          "c2jShape" : "ResourceName",
           "deprecated" : false,
           "documentation" : "<p>The name that describes the channel group. The name is the primary identifier for the channel group, and must be unique for your account in the AWS Region.</p>",
           "endpointDiscoveryId" : false,
@@ -23548,7 +23548,7 @@
         },
         "ChannelName" : {
           "c2jName" : "ChannelName",
-          "c2jShape" : "String",
+          "c2jShape" : "ResourceName",
           "deprecated" : false,
           "documentation" : "<p>The name that describes the channel. The name is the primary identifier for the channel, and must be unique for your account in the AWS Region and channel group.</p>",
           "endpointDiscoveryId" : false,
@@ -23618,7 +23618,7 @@
         },
         "OriginEndpointName" : {
           "c2jName" : "OriginEndpointName",
-          "c2jShape" : "String",
+          "c2jShape" : "ResourceName",
           "deprecated" : false,
           "documentation" : "<p>The name that describes the origin endpoint. The name is the primary identifier for the origin endpoint, and and must be unique for your account in the AWS Region and channel.</p>",
           "endpointDiscoveryId" : false,
@@ -23688,7 +23688,7 @@
         },
         "Policy" : {
           "c2jName" : "Policy",
-          "c2jShape" : "String",
+          "c2jShape" : "PolicyText",
           "deprecated" : false,
           "documentation" : "<p>The policy assigned to the origin endpoint.</p>",
           "endpointDiscoveryId" : false,
@@ -39034,7 +39034,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Description",
-        "c2jShape" : "String",
+        "c2jShape" : "ResourceDescription",
         "deprecated" : false,
         "documentation" : "<p>The description for your channel group.</p>",
         "endpointDiscoveryId" : false,
@@ -39468,7 +39468,7 @@
         },
         "Description" : {
           "c2jName" : "Description",
-          "c2jShape" : "String",
+          "c2jShape" : "ResourceDescription",
           "deprecated" : false,
           "documentation" : "<p>The description for your channel group.</p>",
           "endpointDiscoveryId" : false,
@@ -40686,7 +40686,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Description",
-        "c2jShape" : "String",
+        "c2jShape" : "ResourceDescription",
         "deprecated" : false,
         "documentation" : "<p>The description for your channel.</p>",
         "endpointDiscoveryId" : false,
@@ -41343,7 +41343,7 @@
         },
         "Description" : {
           "c2jName" : "Description",
-          "c2jShape" : "String",
+          "c2jShape" : "ResourceDescription",
           "deprecated" : false,
           "documentation" : "<p>The description for your channel.</p>",
           "endpointDiscoveryId" : false,

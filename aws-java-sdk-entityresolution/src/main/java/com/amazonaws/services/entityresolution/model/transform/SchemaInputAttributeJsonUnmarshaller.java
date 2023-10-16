@@ -60,6 +60,10 @@ public class SchemaInputAttributeJsonUnmarshaller implements Unmarshaller<Schema
                     context.nextToken();
                     schemaInputAttribute.setMatchKey(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("subType", targetDepth)) {
+                    context.nextToken();
+                    schemaInputAttribute.setSubType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
                     schemaInputAttribute.setType(context.getUnmarshaller(String.class).unmarshall(context));

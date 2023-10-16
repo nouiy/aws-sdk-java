@@ -39,8 +39,8 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
 
     /**
      * <p>
-     * Gets the token balance for a batch of tokens by using the <code>GetTokenBalance</code> action for every token in
-     * the request.
+     * Gets the token balance for a batch of tokens by using the <code>BatchGetTokenBalance</code> action for every
+     * token in the request.
      * </p>
      * <note>
      * <p>
@@ -58,8 +58,8 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
 
     /**
      * <p>
-     * Gets the token balance for a batch of tokens by using the <code>GetTokenBalance</code> action for every token in
-     * the request.
+     * Gets the token balance for a batch of tokens by using the <code>BatchGetTokenBalance</code> action for every
+     * token in the request.
      * </p>
      * <note>
      * <p>
@@ -79,6 +79,67 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
      */
     java.util.concurrent.Future<BatchGetTokenBalanceResult> batchGetTokenBalanceAsync(BatchGetTokenBalanceRequest batchGetTokenBalanceRequest,
             com.amazonaws.handlers.AsyncHandler<BatchGetTokenBalanceRequest, BatchGetTokenBalanceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the information about a specific contract deployed on the blockchain.
+     * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * The Bitcoin blockchain networks do not support this operation.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Metadata is currently only available for some <code>ERC-20</code> contracts. Metadata will be available for
+     * additional contracts in the future.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param getAssetContractRequest
+     * @return A Java Future containing the result of the GetAssetContract operation returned by the service.
+     * @sample AmazonManagedBlockchainQueryAsync.GetAssetContract
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/GetAssetContract"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAssetContractResult> getAssetContractAsync(GetAssetContractRequest getAssetContractRequest);
+
+    /**
+     * <p>
+     * Gets the information about a specific contract deployed on the blockchain.
+     * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * The Bitcoin blockchain networks do not support this operation.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Metadata is currently only available for some <code>ERC-20</code> contracts. Metadata will be available for
+     * additional contracts in the future.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param getAssetContractRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAssetContract operation returned by the service.
+     * @sample AmazonManagedBlockchainQueryAsyncHandler.GetAssetContract
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/GetAssetContract"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAssetContractResult> getAssetContractAsync(GetAssetContractRequest getAssetContractRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAssetContractRequest, GetAssetContractResult> asyncHandler);
 
     /**
      * <p>
@@ -156,12 +217,51 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
 
     /**
      * <p>
-     * This action returns the following for a given a blockchain network:
+     * Lists all the contracts for a given contract type deployed by an address (either a contract address or a wallet
+     * address).
+     * </p>
+     * <p>
+     * The Bitcoin blockchain networks do not support this operation.
+     * </p>
+     * 
+     * @param listAssetContractsRequest
+     * @return A Java Future containing the result of the ListAssetContracts operation returned by the service.
+     * @sample AmazonManagedBlockchainQueryAsync.ListAssetContracts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/ListAssetContracts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssetContractsResult> listAssetContractsAsync(ListAssetContractsRequest listAssetContractsRequest);
+
+    /**
+     * <p>
+     * Lists all the contracts for a given contract type deployed by an address (either a contract address or a wallet
+     * address).
+     * </p>
+     * <p>
+     * The Bitcoin blockchain networks do not support this operation.
+     * </p>
+     * 
+     * @param listAssetContractsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAssetContracts operation returned by the service.
+     * @sample AmazonManagedBlockchainQueryAsyncHandler.ListAssetContracts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/ListAssetContracts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssetContractsResult> listAssetContractsAsync(ListAssetContractsRequest listAssetContractsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAssetContractsRequest, ListAssetContractsResult> asyncHandler);
+
+    /**
+     * <p>
+     * This action returns the following for a given blockchain network:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Lists all token balances owned by an address (either a contact address or a wallet address).
+     * Lists all token balances owned by an address (either a contract address or a wallet address).
      * </p>
      * </li>
      * <li>
@@ -191,12 +291,12 @@ public interface AmazonManagedBlockchainQueryAsync extends AmazonManagedBlockcha
 
     /**
      * <p>
-     * This action returns the following for a given a blockchain network:
+     * This action returns the following for a given blockchain network:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Lists all token balances owned by an address (either a contact address or a wallet address).
+     * Lists all token balances owned by an address (either a contract address or a wallet address).
      * </p>
      * </li>
      * <li>

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Cross cluster search specific connection properties.
+ * Cross-cluster search specific connection properties.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -27,18 +27,24 @@ public class CrossClusterSearchConnectionProperties implements Serializable, Clo
 
     /**
      * <p>
-     * Status of SkipUnavailable param for outbound connection.
+     * The status of the <code>SkipUnavailable</code> setting for the outbound connection. This feature allows you to
+     * specify some clusters as optional and ensure that your cross-cluster queries return partial results despite
+     * failures on one or more remote clusters.
      * </p>
      */
     private String skipUnavailable;
 
     /**
      * <p>
-     * Status of SkipUnavailable param for outbound connection.
+     * The status of the <code>SkipUnavailable</code> setting for the outbound connection. This feature allows you to
+     * specify some clusters as optional and ensure that your cross-cluster queries return partial results despite
+     * failures on one or more remote clusters.
      * </p>
      * 
      * @param skipUnavailable
-     *        Status of SkipUnavailable param for outbound connection.
+     *        The status of the <code>SkipUnavailable</code> setting for the outbound connection. This feature allows
+     *        you to specify some clusters as optional and ensure that your cross-cluster queries return partial results
+     *        despite failures on one or more remote clusters.
      * @see SkipUnavailableStatus
      */
 
@@ -48,10 +54,14 @@ public class CrossClusterSearchConnectionProperties implements Serializable, Clo
 
     /**
      * <p>
-     * Status of SkipUnavailable param for outbound connection.
+     * The status of the <code>SkipUnavailable</code> setting for the outbound connection. This feature allows you to
+     * specify some clusters as optional and ensure that your cross-cluster queries return partial results despite
+     * failures on one or more remote clusters.
      * </p>
      * 
-     * @return Status of SkipUnavailable param for outbound connection.
+     * @return The status of the <code>SkipUnavailable</code> setting for the outbound connection. This feature allows
+     *         you to specify some clusters as optional and ensure that your cross-cluster queries return partial
+     *         results despite failures on one or more remote clusters.
      * @see SkipUnavailableStatus
      */
 
@@ -61,11 +71,15 @@ public class CrossClusterSearchConnectionProperties implements Serializable, Clo
 
     /**
      * <p>
-     * Status of SkipUnavailable param for outbound connection.
+     * The status of the <code>SkipUnavailable</code> setting for the outbound connection. This feature allows you to
+     * specify some clusters as optional and ensure that your cross-cluster queries return partial results despite
+     * failures on one or more remote clusters.
      * </p>
      * 
      * @param skipUnavailable
-     *        Status of SkipUnavailable param for outbound connection.
+     *        The status of the <code>SkipUnavailable</code> setting for the outbound connection. This feature allows
+     *        you to specify some clusters as optional and ensure that your cross-cluster queries return partial results
+     *        despite failures on one or more remote clusters.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SkipUnavailableStatus
      */
@@ -77,11 +91,15 @@ public class CrossClusterSearchConnectionProperties implements Serializable, Clo
 
     /**
      * <p>
-     * Status of SkipUnavailable param for outbound connection.
+     * The status of the <code>SkipUnavailable</code> setting for the outbound connection. This feature allows you to
+     * specify some clusters as optional and ensure that your cross-cluster queries return partial results despite
+     * failures on one or more remote clusters.
      * </p>
      * 
      * @param skipUnavailable
-     *        Status of SkipUnavailable param for outbound connection.
+     *        The status of the <code>SkipUnavailable</code> setting for the outbound connection. This feature allows
+     *        you to specify some clusters as optional and ensure that your cross-cluster queries return partial results
+     *        despite failures on one or more remote clusters.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SkipUnavailableStatus
      */

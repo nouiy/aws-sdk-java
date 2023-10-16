@@ -37,6 +37,13 @@ public class MatchingWorkflowSummary implements Serializable, Cloneable, Structu
     private java.util.Date createdAt;
     /**
      * <p>
+     * The method that has been specified for data matching, either using matching provided by Entity Resolution or
+     * through a provider service.
+     * </p>
+     */
+    private String resolutionType;
+    /**
+     * <p>
      * The timestamp of when the workflow was last updated.
      * </p>
      */
@@ -91,6 +98,73 @@ public class MatchingWorkflowSummary implements Serializable, Cloneable, Structu
 
     public MatchingWorkflowSummary withCreatedAt(java.util.Date createdAt) {
         setCreatedAt(createdAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The method that has been specified for data matching, either using matching provided by Entity Resolution or
+     * through a provider service.
+     * </p>
+     * 
+     * @param resolutionType
+     *        The method that has been specified for data matching, either using matching provided by Entity Resolution
+     *        or through a provider service.
+     * @see ResolutionType
+     */
+
+    public void setResolutionType(String resolutionType) {
+        this.resolutionType = resolutionType;
+    }
+
+    /**
+     * <p>
+     * The method that has been specified for data matching, either using matching provided by Entity Resolution or
+     * through a provider service.
+     * </p>
+     * 
+     * @return The method that has been specified for data matching, either using matching provided by Entity Resolution
+     *         or through a provider service.
+     * @see ResolutionType
+     */
+
+    public String getResolutionType() {
+        return this.resolutionType;
+    }
+
+    /**
+     * <p>
+     * The method that has been specified for data matching, either using matching provided by Entity Resolution or
+     * through a provider service.
+     * </p>
+     * 
+     * @param resolutionType
+     *        The method that has been specified for data matching, either using matching provided by Entity Resolution
+     *        or through a provider service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResolutionType
+     */
+
+    public MatchingWorkflowSummary withResolutionType(String resolutionType) {
+        setResolutionType(resolutionType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The method that has been specified for data matching, either using matching provided by Entity Resolution or
+     * through a provider service.
+     * </p>
+     * 
+     * @param resolutionType
+     *        The method that has been specified for data matching, either using matching provided by Entity Resolution
+     *        or through a provider service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResolutionType
+     */
+
+    public MatchingWorkflowSummary withResolutionType(ResolutionType resolutionType) {
+        this.resolutionType = resolutionType.toString();
         return this;
     }
 
@@ -228,6 +302,8 @@ public class MatchingWorkflowSummary implements Serializable, Cloneable, Structu
         sb.append("{");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getResolutionType() != null)
+            sb.append("ResolutionType: ").append(getResolutionType()).append(",");
         if (getUpdatedAt() != null)
             sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
         if (getWorkflowArn() != null)
@@ -252,6 +328,10 @@ public class MatchingWorkflowSummary implements Serializable, Cloneable, Structu
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
             return false;
+        if (other.getResolutionType() == null ^ this.getResolutionType() == null)
+            return false;
+        if (other.getResolutionType() != null && other.getResolutionType().equals(this.getResolutionType()) == false)
+            return false;
         if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
             return false;
         if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
@@ -273,6 +353,7 @@ public class MatchingWorkflowSummary implements Serializable, Cloneable, Structu
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getResolutionType() == null) ? 0 : getResolutionType().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getWorkflowArn() == null) ? 0 : getWorkflowArn().hashCode());
         hashCode = prime * hashCode + ((getWorkflowName() == null) ? 0 : getWorkflowName().hashCode());

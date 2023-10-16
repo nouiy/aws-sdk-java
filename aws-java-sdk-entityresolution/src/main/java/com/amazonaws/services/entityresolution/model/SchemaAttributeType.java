@@ -38,7 +38,8 @@ public enum SchemaAttributeType {
     EMAIL_ADDRESS("EMAIL_ADDRESS"),
     UNIQUE_ID("UNIQUE_ID"),
     DATE("DATE"),
-    STRING("STRING");
+    STRING("STRING"),
+    PROVIDER_ID("PROVIDER_ID");
 
     private String value;
 

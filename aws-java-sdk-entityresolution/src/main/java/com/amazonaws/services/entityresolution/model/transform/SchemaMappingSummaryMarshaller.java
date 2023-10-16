@@ -29,6 +29,8 @@ public class SchemaMappingSummaryMarshaller {
 
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<Boolean> HASWORKFLOWS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hasWorkflows").build();
     private static final MarshallingInfo<String> SCHEMAARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("schemaArn").build();
     private static final MarshallingInfo<String> SCHEMANAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -53,6 +55,7 @@ public class SchemaMappingSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(schemaMappingSummary.getCreatedAt(), CREATEDAT_BINDING);
+            protocolMarshaller.marshall(schemaMappingSummary.getHasWorkflows(), HASWORKFLOWS_BINDING);
             protocolMarshaller.marshall(schemaMappingSummary.getSchemaArn(), SCHEMAARN_BINDING);
             protocolMarshaller.marshall(schemaMappingSummary.getSchemaName(), SCHEMANAME_BINDING);
             protocolMarshaller.marshall(schemaMappingSummary.getUpdatedAt(), UPDATEDAT_BINDING);

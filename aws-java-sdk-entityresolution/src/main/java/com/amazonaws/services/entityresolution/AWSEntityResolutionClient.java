@@ -165,6 +165,82 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Creates an <code>IdMappingWorkflow</code> object which stores the configuration of the data processing job to be
+     * run. Each <code>IdMappingWorkflow</code> must have a unique workflow name. To modify an existing workflow, use
+     * the <code>UpdateIdMappingWorkflow</code> API.
+     * </p>
+     * 
+     * @param createIdMappingWorkflowRequest
+     * @return Result of the CreateIdMappingWorkflow operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ExceedsLimitException
+     *         The request was rejected because it attempted to create resources beyond the current Entity Resolution
+     *         account limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.CreateIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/CreateIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateIdMappingWorkflowResult createIdMappingWorkflow(CreateIdMappingWorkflowRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateIdMappingWorkflow(request);
+    }
+
+    @SdkInternalApi
+    final CreateIdMappingWorkflowResult executeCreateIdMappingWorkflow(CreateIdMappingWorkflowRequest createIdMappingWorkflowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createIdMappingWorkflowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateIdMappingWorkflowRequest> request = null;
+        Response<CreateIdMappingWorkflowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateIdMappingWorkflowRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createIdMappingWorkflowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateIdMappingWorkflow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateIdMappingWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateIdMappingWorkflowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a <code>MatchingWorkflow</code> object which stores the configuration of the data processing job to be
      * run. It is important to note that there should not be a pre-existing <code>MatchingWorkflow</code> with the same
      * name. To modify an existing workflow, utilize the <code>UpdateMatchingWorkflow</code> API.
@@ -314,6 +390,74 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Deletes the <code>IdMappingWorkflow</code> with a given name. This operation will succeed even if a workflow with
+     * the given name does not exist.
+     * </p>
+     * 
+     * @param deleteIdMappingWorkflowRequest
+     * @return Result of the DeleteIdMappingWorkflow operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.DeleteIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeleteIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteIdMappingWorkflowResult deleteIdMappingWorkflow(DeleteIdMappingWorkflowRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteIdMappingWorkflow(request);
+    }
+
+    @SdkInternalApi
+    final DeleteIdMappingWorkflowResult executeDeleteIdMappingWorkflow(DeleteIdMappingWorkflowRequest deleteIdMappingWorkflowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteIdMappingWorkflowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteIdMappingWorkflowRequest> request = null;
+        Response<DeleteIdMappingWorkflowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteIdMappingWorkflowRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteIdMappingWorkflowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteIdMappingWorkflow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteIdMappingWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteIdMappingWorkflowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the <code>MatchingWorkflow</code> with a given name. This operation will succeed even if a workflow with
      * the given name does not exist.
      * </p>
@@ -382,8 +526,8 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
     /**
      * <p>
      * Deletes the <code>SchemaMapping</code> with a given name. This operation will succeed even if a schema with the
-     * given name does not exist. This operation will fail if there is a <code>DataIntegrationWorkflow</code> object
-     * that references the <code>SchemaMapping</code> in the workflow's <code>InputSourceConfig</code>.
+     * given name does not exist. This operation will fail if there is a <code>MatchingWorkflow</code> object that
+     * references the <code>SchemaMapping</code> in the workflow's <code>InputSourceConfig</code>.
      * </p>
      * 
      * @param deleteSchemaMappingRequest
@@ -440,6 +584,140 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteSchemaMappingResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteSchemaMappingResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the status, metrics, and errors (if there are any) that are associated with a job.
+     * </p>
+     * 
+     * @param getIdMappingJobRequest
+     * @return Result of the GetIdMappingJob operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.GetIdMappingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdMappingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetIdMappingJobResult getIdMappingJob(GetIdMappingJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIdMappingJob(request);
+    }
+
+    @SdkInternalApi
+    final GetIdMappingJobResult executeGetIdMappingJob(GetIdMappingJobRequest getIdMappingJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIdMappingJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIdMappingJobRequest> request = null;
+        Response<GetIdMappingJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIdMappingJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getIdMappingJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIdMappingJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetIdMappingJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetIdMappingJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the <code>IdMappingWorkflow</code> with a given name, if it exists.
+     * </p>
+     * 
+     * @param getIdMappingWorkflowRequest
+     * @return Result of the GetIdMappingWorkflow operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.GetIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetIdMappingWorkflowResult getIdMappingWorkflow(GetIdMappingWorkflowRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIdMappingWorkflow(request);
+    }
+
+    @SdkInternalApi
+    final GetIdMappingWorkflowResult executeGetIdMappingWorkflow(GetIdMappingWorkflowRequest getIdMappingWorkflowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIdMappingWorkflowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIdMappingWorkflowRequest> request = null;
+        Response<GetIdMappingWorkflowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIdMappingWorkflowRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getIdMappingWorkflowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIdMappingWorkflow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetIdMappingWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetIdMappingWorkflowResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -720,6 +998,140 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Lists all ID mapping jobs for a given workflow.
+     * </p>
+     * 
+     * @param listIdMappingJobsRequest
+     * @return Result of the ListIdMappingJobs operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.ListIdMappingJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdMappingJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListIdMappingJobsResult listIdMappingJobs(ListIdMappingJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListIdMappingJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListIdMappingJobsResult executeListIdMappingJobs(ListIdMappingJobsRequest listIdMappingJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listIdMappingJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListIdMappingJobsRequest> request = null;
+        Response<ListIdMappingJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListIdMappingJobsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listIdMappingJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListIdMappingJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListIdMappingJobsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListIdMappingJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of all the <code>IdMappingWorkflows</code> that have been created for an Amazon Web Services
+     * account.
+     * </p>
+     * 
+     * @param listIdMappingWorkflowsRequest
+     * @return Result of the ListIdMappingWorkflows operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.ListIdMappingWorkflows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdMappingWorkflows"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListIdMappingWorkflowsResult listIdMappingWorkflows(ListIdMappingWorkflowsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListIdMappingWorkflows(request);
+    }
+
+    @SdkInternalApi
+    final ListIdMappingWorkflowsResult executeListIdMappingWorkflows(ListIdMappingWorkflowsRequest listIdMappingWorkflowsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listIdMappingWorkflowsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListIdMappingWorkflowsRequest> request = null;
+        Response<ListIdMappingWorkflowsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListIdMappingWorkflowsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listIdMappingWorkflowsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListIdMappingWorkflows");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListIdMappingWorkflowsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListIdMappingWorkflowsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists all jobs for a given workflow.
      * </p>
      * 
@@ -854,6 +1266,71 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Returns a list of all the <code>ProviderServices</code> that are available in this Amazon Web Services Region.
+     * </p>
+     * 
+     * @param listProviderServicesRequest
+     * @return Result of the ListProviderServices operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.ListProviderServices
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListProviderServices"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListProviderServicesResult listProviderServices(ListProviderServicesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListProviderServices(request);
+    }
+
+    @SdkInternalApi
+    final ListProviderServicesResult executeListProviderServices(ListProviderServicesRequest listProviderServicesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listProviderServicesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListProviderServicesRequest> request = null;
+        Response<ListProviderServicesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListProviderServicesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listProviderServicesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListProviderServices");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListProviderServicesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListProviderServicesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of all the <code>SchemaMappings</code> that have been created for an Amazon Web Services account.
      * </p>
      * 
@@ -971,6 +1448,81 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts the <code>IdMappingJob</code> of a workflow. The workflow must have previously been created using the
+     * <code>CreateIdMappingWorkflow</code> endpoint.
+     * </p>
+     * 
+     * @param startIdMappingJobRequest
+     * @return Result of the StartIdMappingJob operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ExceedsLimitException
+     *         The request was rejected because it attempted to create resources beyond the current Entity Resolution
+     *         account limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.StartIdMappingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/StartIdMappingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartIdMappingJobResult startIdMappingJob(StartIdMappingJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartIdMappingJob(request);
+    }
+
+    @SdkInternalApi
+    final StartIdMappingJobResult executeStartIdMappingJob(StartIdMappingJobRequest startIdMappingJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startIdMappingJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartIdMappingJobRequest> request = null;
+        Response<StartIdMappingJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartIdMappingJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startIdMappingJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartIdMappingJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartIdMappingJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartIdMappingJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1189,6 +1741,77 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Updates an existing <code>IdMappingWorkflow</code>. This method is identical to
+     * <code>CreateIdMappingWorkflow</code>, except it uses an HTTP <code>PUT</code> request instead of a
+     * <code>POST</code> request, and the <code>IdMappingWorkflow</code> must already exist for the method to succeed.
+     * </p>
+     * 
+     * @param updateIdMappingWorkflowRequest
+     * @return Result of the UpdateIdMappingWorkflow operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.UpdateIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateIdMappingWorkflowResult updateIdMappingWorkflow(UpdateIdMappingWorkflowRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateIdMappingWorkflow(request);
+    }
+
+    @SdkInternalApi
+    final UpdateIdMappingWorkflowResult executeUpdateIdMappingWorkflow(UpdateIdMappingWorkflowRequest updateIdMappingWorkflowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateIdMappingWorkflowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateIdMappingWorkflowRequest> request = null;
+        Response<UpdateIdMappingWorkflowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateIdMappingWorkflowRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateIdMappingWorkflowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateIdMappingWorkflow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateIdMappingWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateIdMappingWorkflowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates an existing <code>MatchingWorkflow</code>. This method is identical to
      * <code>CreateMatchingWorkflow</code>, except it uses an HTTP <code>PUT</code> request instead of a
      * <code>POST</code> request, and the <code>MatchingWorkflow</code> must already exist for the method to succeed.
@@ -1247,6 +1870,83 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
             HttpResponseHandler<AmazonWebServiceResponse<UpdateMatchingWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateMatchingWorkflowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates a schema mapping.
+     * </p>
+     * <note>
+     * <p>
+     * A schema is immutable if it is being used by a workflow. Therefore, you can't update a schema mapping if it's
+     * associated with a workflow.
+     * </p>
+     * </note>
+     * 
+     * @param updateSchemaMappingRequest
+     * @return Result of the UpdateSchemaMapping operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.UpdateSchemaMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateSchemaMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateSchemaMappingResult updateSchemaMapping(UpdateSchemaMappingRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateSchemaMapping(request);
+    }
+
+    @SdkInternalApi
+    final UpdateSchemaMappingResult executeUpdateSchemaMapping(UpdateSchemaMappingRequest updateSchemaMappingRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateSchemaMappingRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateSchemaMappingRequest> request = null;
+        Response<UpdateSchemaMappingResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateSchemaMappingRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateSchemaMappingRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateSchemaMapping");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateSchemaMappingResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateSchemaMappingResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -37,6 +37,8 @@ public class UpdateLaunchConfigurationTemplateRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchConfigurationTemplateID").build();
     private static final MarshallingInfo<String> LAUNCHDISPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchDisposition").build();
+    private static final MarshallingInfo<Boolean> LAUNCHINTOSOURCEINSTANCE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchIntoSourceInstance").build();
     private static final MarshallingInfo<StructuredPojo> LICENSING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("licensing").build();
     private static final MarshallingInfo<Boolean> POSTLAUNCHENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
@@ -65,6 +67,7 @@ public class UpdateLaunchConfigurationTemplateRequestMarshaller {
             protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getExportBucketArn(), EXPORTBUCKETARN_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getLaunchConfigurationTemplateID(), LAUNCHCONFIGURATIONTEMPLATEID_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getLaunchDisposition(), LAUNCHDISPOSITION_BINDING);
+            protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getLaunchIntoSourceInstance(), LAUNCHINTOSOURCEINSTANCE_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getLicensing(), LICENSING_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getPostLaunchEnabled(), POSTLAUNCHENABLED_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getTargetInstanceTypeRightSizingMethod(),

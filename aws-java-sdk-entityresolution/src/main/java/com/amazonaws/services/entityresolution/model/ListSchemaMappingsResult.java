@@ -25,7 +25,7 @@ public class ListSchemaMappingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The pagination token from the previous <code>ListDomains</code> API call.
+     * The pagination token from the previous API call.
      * </p>
      */
     private String nextToken;
@@ -39,11 +39,11 @@ public class ListSchemaMappingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The pagination token from the previous <code>ListDomains</code> API call.
+     * The pagination token from the previous API call.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token from the previous <code>ListDomains</code> API call.
+     *        The pagination token from the previous API call.
      */
 
     public void setNextToken(String nextToken) {
@@ -52,10 +52,10 @@ public class ListSchemaMappingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The pagination token from the previous <code>ListDomains</code> API call.
+     * The pagination token from the previous API call.
      * </p>
      * 
-     * @return The pagination token from the previous <code>ListDomains</code> API call.
+     * @return The pagination token from the previous API call.
      */
 
     public String getNextToken() {
@@ -64,11 +64,11 @@ public class ListSchemaMappingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The pagination token from the previous <code>ListDomains</code> API call.
+     * The pagination token from the previous API call.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token from the previous <code>ListDomains</code> API call.
+     *        The pagination token from the previous API call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

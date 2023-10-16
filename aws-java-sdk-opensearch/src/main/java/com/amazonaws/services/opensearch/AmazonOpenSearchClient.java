@@ -3363,7 +3363,7 @@ public class AmazonOpenSearchClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Modifies the cluster configuration of the specified Amazon OpenSearch Service domain.sl
+     * Modifies the cluster configuration of the specified Amazon OpenSearch Service domain.
      * </p>
      * 
      * @param updateDomainConfigRequest

@@ -36,7 +36,7 @@ public class ListTokenBalancesRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The contract address or a token identifier on the blockchain network by which to filter the request. You must
-     * specify the contractAddress property of this container when listing tokens minted by a contract.
+     * specify the <code>contractAddress</code> property of this container when listing tokens minted by a contract.
      * </p>
      * <note>
      * <p>
@@ -113,7 +113,7 @@ public class ListTokenBalancesRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The contract address or a token identifier on the blockchain network by which to filter the request. You must
-     * specify the contractAddress property of this container when listing tokens minted by a contract.
+     * specify the <code>contractAddress</code> property of this container when listing tokens minted by a contract.
      * </p>
      * <note>
      * <p>
@@ -123,8 +123,8 @@ public class ListTokenBalancesRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param tokenFilter
      *        The contract address or a token identifier on the blockchain network by which to filter the request. You
-     *        must specify the contractAddress property of this container when listing tokens minted by a contract.</p>
-     *        <note>
+     *        must specify the <code>contractAddress</code> property of this container when listing tokens minted by a
+     *        contract.</p> <note>
      *        <p>
      *        You must always specify the network property of this container when using this operation.
      *        </p>
@@ -137,7 +137,7 @@ public class ListTokenBalancesRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The contract address or a token identifier on the blockchain network by which to filter the request. You must
-     * specify the contractAddress property of this container when listing tokens minted by a contract.
+     * specify the <code>contractAddress</code> property of this container when listing tokens minted by a contract.
      * </p>
      * <note>
      * <p>
@@ -146,8 +146,8 @@ public class ListTokenBalancesRequest extends com.amazonaws.AmazonWebServiceRequ
      * </note>
      * 
      * @return The contract address or a token identifier on the blockchain network by which to filter the request. You
-     *         must specify the contractAddress property of this container when listing tokens minted by a contract.</p>
-     *         <note>
+     *         must specify the <code>contractAddress</code> property of this container when listing tokens minted by a
+     *         contract.</p> <note>
      *         <p>
      *         You must always specify the network property of this container when using this operation.
      *         </p>
@@ -160,7 +160,7 @@ public class ListTokenBalancesRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The contract address or a token identifier on the blockchain network by which to filter the request. You must
-     * specify the contractAddress property of this container when listing tokens minted by a contract.
+     * specify the <code>contractAddress</code> property of this container when listing tokens minted by a contract.
      * </p>
      * <note>
      * <p>
@@ -170,8 +170,8 @@ public class ListTokenBalancesRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param tokenFilter
      *        The contract address or a token identifier on the blockchain network by which to filter the request. You
-     *        must specify the contractAddress property of this container when listing tokens minted by a contract.</p>
-     *        <note>
+     *        must specify the <code>contractAddress</code> property of this container when listing tokens minted by a
+     *        contract.</p> <note>
      *        <p>
      *        You must always specify the network property of this container when using this operation.
      *        </p>

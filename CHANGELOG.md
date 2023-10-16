@@ -1,3 +1,48 @@
+# __1.12.567__ __2023-10-16__
+## __AWS CloudFormation__
+  - ### Features
+    - SDK and documentation updates for UpdateReplacePolicy
+
+## __AWS Elemental MediaPackage v2__
+  - ### Features
+    - This release allows customers to manage MediaPackage v2 resource using CloudFormation.
+
+## __AWS EntityResolution__
+  - ### Features
+    - This launch expands our matching techniques to include provider-based matching to help customer match, link, and enhance records with minimal data movement. With data service providers, we have removed the need for customers to build bespoke integrations,.
+
+## __AWS Transfer Family__
+  - ### Features
+    - Documentation updates for AWS Transfer Family
+
+## __AWS X-Ray__
+  - ### Features
+    - This releases enhances GetTraceSummaries API to support new TimeRangeType Service to query trace summaries by segment end time.
+
+## __Amazon Managed Blockchain Query__
+  - ### Features
+    - This release introduces two new APIs: GetAssetContract and ListAssetContracts. This release also adds support for Bitcoin Testnet.
+
+## __Amazon OpenSearch Service__
+  - ### Features
+    - This release allows customers to list and associate optional plugin packages with compatible Amazon OpenSearch Service clusters for enhanced functionality.
+
+## __Amazon Redshift__
+  - ### Features
+    - Added support for managing credentials of provisioned cluster admin using AWS Secrets Manager.
+
+## __Amazon Simple Email Service__
+  - ### Features
+    - This release provides enhanced visibility into your SES identity verification status. This will offer you more actionable insights, enabling you to promptly address any verification-related issues.
+
+## __Elastic Disaster Recovery Service__
+  - ### Features
+    - Updated exsiting API to allow AWS Elastic Disaster Recovery support of launching recovery into existing EC2 instances.
+
+## __Redshift Serverless__
+  - ### Features
+    - Added support for managing credentials of serverless namespace admin using AWS Secrets Manager.
+
 # __1.12.566__ __2023-10-12__
 ## __AWS Audit Manager__
   - ### Features

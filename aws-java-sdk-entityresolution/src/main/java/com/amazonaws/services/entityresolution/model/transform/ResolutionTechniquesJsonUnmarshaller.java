@@ -48,6 +48,10 @@ public class ResolutionTechniquesJsonUnmarshaller implements Unmarshaller<Resolu
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("providerProperties", targetDepth)) {
+                    context.nextToken();
+                    resolutionTechniques.setProviderProperties(ProviderPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("resolutionType", targetDepth)) {
                     context.nextToken();
                     resolutionTechniques.setResolutionType(context.getUnmarshaller(String.class).unmarshall(context));

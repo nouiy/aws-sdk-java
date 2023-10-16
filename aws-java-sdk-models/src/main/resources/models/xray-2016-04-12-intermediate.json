@@ -29955,12 +29955,12 @@
         "c2jName" : "TimeRangeType",
         "c2jShape" : "TimeRangeType",
         "deprecated" : false,
-        "documentation" : "<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>",
+        "documentation" : "<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>",
         "endpointDiscoveryId" : false,
         "enumType" : "TimeRangeType",
-        "fluentSetterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId or Event time.\n@return Returns a reference to this object so that method calls can be chained together.\n@see TimeRangeType*/",
+        "fluentSetterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).\n@return Returns a reference to this object so that method calls can be chained together.\n@see TimeRangeType*/",
         "fluentSetterMethodName" : "withTimeRangeType",
-        "getterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>\n@return A parameter to indicate whether to query trace summaries by TraceId or Event time.\n@see TimeRangeType*/",
+        "getterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>\n@return A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).\n@see TimeRangeType*/",
         "getterMethodName" : "getTimeRangeType",
         "getterModel" : {
           "returnType" : "String",
@@ -29994,7 +29994,7 @@
         "marshallingType" : "STRING",
         "name" : "TimeRangeType",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId or Event time.\n@see TimeRangeType*/",
+        "setterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).\n@see TimeRangeType*/",
         "setterMethodName" : "setTimeRangeType",
         "setterModel" : {
           "timestampFormat" : null,
@@ -30009,13 +30009,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId or Event time.\n@return Returns a reference to this object so that method calls can be chained together.\n@see TimeRangeType*/",
+        "varargSetterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).\n@return Returns a reference to this object so that method calls can be chained together.\n@see TimeRangeType*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "timeRangeType",
           "variableType" : "String",
-          "documentation" : "<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>",
+          "documentation" : "<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -30722,12 +30722,12 @@
           "c2jName" : "TimeRangeType",
           "c2jShape" : "TimeRangeType",
           "deprecated" : false,
-          "documentation" : "<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>",
+          "documentation" : "<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>",
           "endpointDiscoveryId" : false,
           "enumType" : "TimeRangeType",
-          "fluentSetterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId or Event time.\n@return Returns a reference to this object so that method calls can be chained together.\n@see TimeRangeType*/",
+          "fluentSetterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).\n@return Returns a reference to this object so that method calls can be chained together.\n@see TimeRangeType*/",
           "fluentSetterMethodName" : "withTimeRangeType",
-          "getterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>\n@return A parameter to indicate whether to query trace summaries by TraceId or Event time.\n@see TimeRangeType*/",
+          "getterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>\n@return A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).\n@see TimeRangeType*/",
           "getterMethodName" : "getTimeRangeType",
           "getterModel" : {
             "returnType" : "String",
@@ -30761,7 +30761,7 @@
           "marshallingType" : "STRING",
           "name" : "TimeRangeType",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId or Event time.\n@see TimeRangeType*/",
+          "setterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).\n@see TimeRangeType*/",
           "setterMethodName" : "setTimeRangeType",
           "setterModel" : {
             "timestampFormat" : null,
@@ -30776,13 +30776,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId or Event time.\n@return Returns a reference to this object so that method calls can be chained together.\n@see TimeRangeType*/",
+          "varargSetterDocumentation" : "/**<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>\n@param timeRangeType A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).\n@return Returns a reference to this object so that method calls can be chained together.\n@see TimeRangeType*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "timeRangeType",
             "variableType" : "String",
-            "documentation" : "<p>A parameter to indicate whether to query trace summaries by TraceId or Event time.</p>",
+            "documentation" : "<p>A parameter to indicate whether to query trace summaries by TraceId, Event (trace update time), or Service (segment end time).</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -62768,6 +62768,9 @@
       }, {
         "name" : "Event",
         "value" : "Event"
+      }, {
+        "name" : "Service",
+        "value" : "Service"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.xray.enum.TimeRangeType",

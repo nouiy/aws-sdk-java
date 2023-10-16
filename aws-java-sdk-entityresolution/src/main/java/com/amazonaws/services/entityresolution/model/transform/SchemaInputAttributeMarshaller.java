@@ -33,6 +33,8 @@ public class SchemaInputAttributeMarshaller {
             .marshallLocationName("groupName").build();
     private static final MarshallingInfo<String> MATCHKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("matchKey").build();
+    private static final MarshallingInfo<String> SUBTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("subType").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
 
@@ -55,6 +57,7 @@ public class SchemaInputAttributeMarshaller {
             protocolMarshaller.marshall(schemaInputAttribute.getFieldName(), FIELDNAME_BINDING);
             protocolMarshaller.marshall(schemaInputAttribute.getGroupName(), GROUPNAME_BINDING);
             protocolMarshaller.marshall(schemaInputAttribute.getMatchKey(), MATCHKEY_BINDING);
+            protocolMarshaller.marshall(schemaInputAttribute.getSubType(), SUBTYPE_BINDING);
             protocolMarshaller.marshall(schemaInputAttribute.getType(), TYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

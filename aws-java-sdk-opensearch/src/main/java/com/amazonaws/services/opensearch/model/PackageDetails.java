@@ -81,6 +81,19 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private ErrorDetails errorDetails;
+    /**
+     * <p>
+     * Version of OpenSearch or Elasticsearch, in the format Elasticsearch_X.Y or OpenSearch_X.Y. Defaults to the latest
+     * version of OpenSearch.
+     * </p>
+     */
+    private String engineVersion;
+    /**
+     * <p>
+     * If the package is a <code>ZIP-PLUGIN</code> package, additional information about plugin properties.
+     * </p>
+     */
+    private PluginProperties availablePluginProperties;
 
     /**
      * <p>
@@ -497,6 +510,92 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Version of OpenSearch or Elasticsearch, in the format Elasticsearch_X.Y or OpenSearch_X.Y. Defaults to the latest
+     * version of OpenSearch.
+     * </p>
+     * 
+     * @param engineVersion
+     *        Version of OpenSearch or Elasticsearch, in the format Elasticsearch_X.Y or OpenSearch_X.Y. Defaults to the
+     *        latest version of OpenSearch.
+     */
+
+    public void setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+    }
+
+    /**
+     * <p>
+     * Version of OpenSearch or Elasticsearch, in the format Elasticsearch_X.Y or OpenSearch_X.Y. Defaults to the latest
+     * version of OpenSearch.
+     * </p>
+     * 
+     * @return Version of OpenSearch or Elasticsearch, in the format Elasticsearch_X.Y or OpenSearch_X.Y. Defaults to
+     *         the latest version of OpenSearch.
+     */
+
+    public String getEngineVersion() {
+        return this.engineVersion;
+    }
+
+    /**
+     * <p>
+     * Version of OpenSearch or Elasticsearch, in the format Elasticsearch_X.Y or OpenSearch_X.Y. Defaults to the latest
+     * version of OpenSearch.
+     * </p>
+     * 
+     * @param engineVersion
+     *        Version of OpenSearch or Elasticsearch, in the format Elasticsearch_X.Y or OpenSearch_X.Y. Defaults to the
+     *        latest version of OpenSearch.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PackageDetails withEngineVersion(String engineVersion) {
+        setEngineVersion(engineVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If the package is a <code>ZIP-PLUGIN</code> package, additional information about plugin properties.
+     * </p>
+     * 
+     * @param availablePluginProperties
+     *        If the package is a <code>ZIP-PLUGIN</code> package, additional information about plugin properties.
+     */
+
+    public void setAvailablePluginProperties(PluginProperties availablePluginProperties) {
+        this.availablePluginProperties = availablePluginProperties;
+    }
+
+    /**
+     * <p>
+     * If the package is a <code>ZIP-PLUGIN</code> package, additional information about plugin properties.
+     * </p>
+     * 
+     * @return If the package is a <code>ZIP-PLUGIN</code> package, additional information about plugin properties.
+     */
+
+    public PluginProperties getAvailablePluginProperties() {
+        return this.availablePluginProperties;
+    }
+
+    /**
+     * <p>
+     * If the package is a <code>ZIP-PLUGIN</code> package, additional information about plugin properties.
+     * </p>
+     * 
+     * @param availablePluginProperties
+     *        If the package is a <code>ZIP-PLUGIN</code> package, additional information about plugin properties.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PackageDetails withAvailablePluginProperties(PluginProperties availablePluginProperties) {
+        setAvailablePluginProperties(availablePluginProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -525,7 +624,11 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
         if (getAvailablePackageVersion() != null)
             sb.append("AvailablePackageVersion: ").append(getAvailablePackageVersion()).append(",");
         if (getErrorDetails() != null)
-            sb.append("ErrorDetails: ").append(getErrorDetails());
+            sb.append("ErrorDetails: ").append(getErrorDetails()).append(",");
+        if (getEngineVersion() != null)
+            sb.append("EngineVersion: ").append(getEngineVersion()).append(",");
+        if (getAvailablePluginProperties() != null)
+            sb.append("AvailablePluginProperties: ").append(getAvailablePluginProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -576,6 +679,14 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getErrorDetails() != null && other.getErrorDetails().equals(this.getErrorDetails()) == false)
             return false;
+        if (other.getEngineVersion() == null ^ this.getEngineVersion() == null)
+            return false;
+        if (other.getEngineVersion() != null && other.getEngineVersion().equals(this.getEngineVersion()) == false)
+            return false;
+        if (other.getAvailablePluginProperties() == null ^ this.getAvailablePluginProperties() == null)
+            return false;
+        if (other.getAvailablePluginProperties() != null && other.getAvailablePluginProperties().equals(this.getAvailablePluginProperties()) == false)
+            return false;
         return true;
     }
 
@@ -593,6 +704,8 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getAvailablePackageVersion() == null) ? 0 : getAvailablePackageVersion().hashCode());
         hashCode = prime * hashCode + ((getErrorDetails() == null) ? 0 : getErrorDetails().hashCode());
+        hashCode = prime * hashCode + ((getEngineVersion() == null) ? 0 : getEngineVersion().hashCode());
+        hashCode = prime * hashCode + ((getAvailablePluginProperties() == null) ? 0 : getAvailablePluginProperties().hashCode());
         return hashCode;
     }
 

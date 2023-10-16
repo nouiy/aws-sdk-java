@@ -49,6 +49,12 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
     private String launchDisposition;
     /**
      * <p>
+     * Launch into existing instance properties.
+     * </p>
+     */
+    private LaunchIntoInstanceProperties launchIntoInstanceProperties;
+    /**
+     * <p>
      * The licensing configuration to be used for this launch configuration.
      * </p>
      */
@@ -279,6 +285,46 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     public UpdateLaunchConfigurationResult withLaunchDisposition(LaunchDisposition launchDisposition) {
         this.launchDisposition = launchDisposition.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Launch into existing instance properties.
+     * </p>
+     * 
+     * @param launchIntoInstanceProperties
+     *        Launch into existing instance properties.
+     */
+
+    public void setLaunchIntoInstanceProperties(LaunchIntoInstanceProperties launchIntoInstanceProperties) {
+        this.launchIntoInstanceProperties = launchIntoInstanceProperties;
+    }
+
+    /**
+     * <p>
+     * Launch into existing instance properties.
+     * </p>
+     * 
+     * @return Launch into existing instance properties.
+     */
+
+    public LaunchIntoInstanceProperties getLaunchIntoInstanceProperties() {
+        return this.launchIntoInstanceProperties;
+    }
+
+    /**
+     * <p>
+     * Launch into existing instance properties.
+     * </p>
+     * 
+     * @param launchIntoInstanceProperties
+     *        Launch into existing instance properties.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateLaunchConfigurationResult withLaunchIntoInstanceProperties(LaunchIntoInstanceProperties launchIntoInstanceProperties) {
+        setLaunchIntoInstanceProperties(launchIntoInstanceProperties);
         return this;
     }
 
@@ -541,6 +587,8 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
             sb.append("Ec2LaunchTemplateID: ").append(getEc2LaunchTemplateID()).append(",");
         if (getLaunchDisposition() != null)
             sb.append("LaunchDisposition: ").append(getLaunchDisposition()).append(",");
+        if (getLaunchIntoInstanceProperties() != null)
+            sb.append("LaunchIntoInstanceProperties: ").append(getLaunchIntoInstanceProperties()).append(",");
         if (getLicensing() != null)
             sb.append("Licensing: ").append(getLicensing()).append(",");
         if (getName() != null)
@@ -581,6 +629,10 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getLaunchDisposition() != null && other.getLaunchDisposition().equals(this.getLaunchDisposition()) == false)
             return false;
+        if (other.getLaunchIntoInstanceProperties() == null ^ this.getLaunchIntoInstanceProperties() == null)
+            return false;
+        if (other.getLaunchIntoInstanceProperties() != null && other.getLaunchIntoInstanceProperties().equals(this.getLaunchIntoInstanceProperties()) == false)
+            return false;
         if (other.getLicensing() == null ^ this.getLicensing() == null)
             return false;
         if (other.getLicensing() != null && other.getLicensing().equals(this.getLicensing()) == false)
@@ -614,6 +666,7 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getCopyTags() == null) ? 0 : getCopyTags().hashCode());
         hashCode = prime * hashCode + ((getEc2LaunchTemplateID() == null) ? 0 : getEc2LaunchTemplateID().hashCode());
         hashCode = prime * hashCode + ((getLaunchDisposition() == null) ? 0 : getLaunchDisposition().hashCode());
+        hashCode = prime * hashCode + ((getLaunchIntoInstanceProperties() == null) ? 0 : getLaunchIntoInstanceProperties().hashCode());
         hashCode = prime * hashCode + ((getLicensing() == null) ? 0 : getLicensing().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getPostLaunchEnabled() == null) ? 0 : getPostLaunchEnabled().hashCode());

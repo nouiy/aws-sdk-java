@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum QueryNetwork {
 
     ETHEREUM_MAINNET("ETHEREUM_MAINNET"),
-    BITCOIN_MAINNET("BITCOIN_MAINNET");
+    BITCOIN_MAINNET("BITCOIN_MAINNET"),
+    BITCOIN_TESTNET("BITCOIN_TESTNET");
 
     private String value;
 

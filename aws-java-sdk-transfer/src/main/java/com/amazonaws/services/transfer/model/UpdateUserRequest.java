@@ -35,7 +35,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <note>
      * <p>
      * The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     * <code>LOGICAL</code>.
+     * <code>PATH</code>.
      * </p>
      * </note>
      */
@@ -159,7 +159,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <note>
      * <p>
      * The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     * <code>LOGICAL</code>.
+     * <code>PATH</code>.
      * </p>
      * </note>
      * 
@@ -171,7 +171,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <note>
      *        <p>
      *        The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     *        <code>LOGICAL</code>.
+     *        <code>PATH</code>.
      *        </p>
      */
 
@@ -189,7 +189,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <note>
      * <p>
      * The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     * <code>LOGICAL</code>.
+     * <code>PATH</code>.
      * </p>
      * </note>
      * 
@@ -200,7 +200,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         <note>
      *         <p>
      *         The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     *         <code>LOGICAL</code>.
+     *         <code>PATH</code>.
      *         </p>
      */
 
@@ -218,7 +218,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <note>
      * <p>
      * The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     * <code>LOGICAL</code>.
+     * <code>PATH</code>.
      * </p>
      * </note>
      * 
@@ -230,7 +230,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <note>
      *        <p>
      *        The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     *        <code>LOGICAL</code>.
+     *        <code>PATH</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

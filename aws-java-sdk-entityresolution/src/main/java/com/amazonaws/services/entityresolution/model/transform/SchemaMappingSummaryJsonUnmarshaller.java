@@ -52,6 +52,10 @@ public class SchemaMappingSummaryJsonUnmarshaller implements Unmarshaller<Schema
                     context.nextToken();
                     schemaMappingSummary.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("hasWorkflows", targetDepth)) {
+                    context.nextToken();
+                    schemaMappingSummary.setHasWorkflows(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("schemaArn", targetDepth)) {
                     context.nextToken();
                     schemaMappingSummary.setSchemaArn(context.getUnmarshaller(String.class).unmarshall(context));

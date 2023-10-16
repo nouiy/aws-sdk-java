@@ -52,6 +52,10 @@ public class MatchingWorkflowSummaryJsonUnmarshaller implements Unmarshaller<Mat
                     context.nextToken();
                     matchingWorkflowSummary.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("resolutionType", targetDepth)) {
+                    context.nextToken();
+                    matchingWorkflowSummary.setResolutionType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("updatedAt", targetDepth)) {
                     context.nextToken();
                     matchingWorkflowSummary.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

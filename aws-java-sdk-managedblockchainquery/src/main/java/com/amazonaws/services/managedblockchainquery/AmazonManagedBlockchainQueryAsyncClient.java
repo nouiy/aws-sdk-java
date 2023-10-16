@@ -114,6 +114,39 @@ public class AmazonManagedBlockchainQueryAsyncClient extends AmazonManagedBlockc
     }
 
     @Override
+    public java.util.concurrent.Future<GetAssetContractResult> getAssetContractAsync(GetAssetContractRequest request) {
+
+        return getAssetContractAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAssetContractResult> getAssetContractAsync(final GetAssetContractRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAssetContractRequest, GetAssetContractResult> asyncHandler) {
+        final GetAssetContractRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAssetContractResult>() {
+            @Override
+            public GetAssetContractResult call() throws Exception {
+                GetAssetContractResult result = null;
+
+                try {
+                    result = executeGetAssetContract(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetTokenBalanceResult> getTokenBalanceAsync(GetTokenBalanceRequest request) {
 
         return getTokenBalanceAsync(request, null);
@@ -164,6 +197,39 @@ public class AmazonManagedBlockchainQueryAsyncClient extends AmazonManagedBlockc
 
                 try {
                     result = executeGetTransaction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetContractsResult> listAssetContractsAsync(ListAssetContractsRequest request) {
+
+        return listAssetContractsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetContractsResult> listAssetContractsAsync(final ListAssetContractsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAssetContractsRequest, ListAssetContractsResult> asyncHandler) {
+        final ListAssetContractsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAssetContractsResult>() {
+            @Override
+            public ListAssetContractsResult call() throws Exception {
+                ListAssetContractsResult result = null;
+
+                try {
+                    result = executeListAssetContracts(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -44,7 +44,7 @@ public class ListedUser implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     * <code>LOGICAL</code>.
+     * <code>PATH</code>.
      * </p>
      * </note>
      */
@@ -150,7 +150,7 @@ public class ListedUser implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     * <code>LOGICAL</code>.
+     * <code>PATH</code>.
      * </p>
      * </note>
      * 
@@ -162,7 +162,7 @@ public class ListedUser implements Serializable, Cloneable, StructuredPojo {
      *        <note>
      *        <p>
      *        The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     *        <code>LOGICAL</code>.
+     *        <code>PATH</code>.
      *        </p>
      */
 
@@ -180,7 +180,7 @@ public class ListedUser implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     * <code>LOGICAL</code>.
+     * <code>PATH</code>.
      * </p>
      * </note>
      * 
@@ -191,7 +191,7 @@ public class ListedUser implements Serializable, Cloneable, StructuredPojo {
      *         <note>
      *         <p>
      *         The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     *         <code>LOGICAL</code>.
+     *         <code>PATH</code>.
      *         </p>
      */
 
@@ -209,7 +209,7 @@ public class ListedUser implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     * <code>LOGICAL</code>.
+     * <code>PATH</code>.
      * </p>
      * </note>
      * 
@@ -221,7 +221,7 @@ public class ListedUser implements Serializable, Cloneable, StructuredPojo {
      *        <note>
      *        <p>
      *        The <code>HomeDirectory</code> parameter is only used if <code>HomeDirectoryType</code> is set to
-     *        <code>LOGICAL</code>.
+     *        <code>PATH</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -59,6 +59,38 @@ public interface AWSEntityResolution {
 
     /**
      * <p>
+     * Creates an <code>IdMappingWorkflow</code> object which stores the configuration of the data processing job to be
+     * run. Each <code>IdMappingWorkflow</code> must have a unique workflow name. To modify an existing workflow, use
+     * the <code>UpdateIdMappingWorkflow</code> API.
+     * </p>
+     * 
+     * @param createIdMappingWorkflowRequest
+     * @return Result of the CreateIdMappingWorkflow operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ExceedsLimitException
+     *         The request was rejected because it attempted to create resources beyond the current Entity Resolution
+     *         account limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.CreateIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/CreateIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateIdMappingWorkflowResult createIdMappingWorkflow(CreateIdMappingWorkflowRequest createIdMappingWorkflowRequest);
+
+    /**
+     * <p>
      * Creates a <code>MatchingWorkflow</code> object which stores the configuration of the data processing job to be
      * run. It is important to note that there should not be a pre-existing <code>MatchingWorkflow</code> with the same
      * name. To modify an existing workflow, utilize the <code>UpdateMatchingWorkflow</code> API.
@@ -123,6 +155,30 @@ public interface AWSEntityResolution {
 
     /**
      * <p>
+     * Deletes the <code>IdMappingWorkflow</code> with a given name. This operation will succeed even if a workflow with
+     * the given name does not exist.
+     * </p>
+     * 
+     * @param deleteIdMappingWorkflowRequest
+     * @return Result of the DeleteIdMappingWorkflow operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.DeleteIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeleteIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteIdMappingWorkflowResult deleteIdMappingWorkflow(DeleteIdMappingWorkflowRequest deleteIdMappingWorkflowRequest);
+
+    /**
+     * <p>
      * Deletes the <code>MatchingWorkflow</code> with a given name. This operation will succeed even if a workflow with
      * the given name does not exist.
      * </p>
@@ -148,8 +204,8 @@ public interface AWSEntityResolution {
     /**
      * <p>
      * Deletes the <code>SchemaMapping</code> with a given name. This operation will succeed even if a schema with the
-     * given name does not exist. This operation will fail if there is a <code>DataIntegrationWorkflow</code> object
-     * that references the <code>SchemaMapping</code> in the workflow's <code>InputSourceConfig</code>.
+     * given name does not exist. This operation will fail if there is a <code>MatchingWorkflow</code> object that
+     * references the <code>SchemaMapping</code> in the workflow's <code>InputSourceConfig</code>.
      * </p>
      * 
      * @param deleteSchemaMappingRequest
@@ -173,6 +229,56 @@ public interface AWSEntityResolution {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteSchemaMappingResult deleteSchemaMapping(DeleteSchemaMappingRequest deleteSchemaMappingRequest);
+
+    /**
+     * <p>
+     * Gets the status, metrics, and errors (if there are any) that are associated with a job.
+     * </p>
+     * 
+     * @param getIdMappingJobRequest
+     * @return Result of the GetIdMappingJob operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.GetIdMappingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdMappingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetIdMappingJobResult getIdMappingJob(GetIdMappingJobRequest getIdMappingJobRequest);
+
+    /**
+     * <p>
+     * Returns the <code>IdMappingWorkflow</code> with a given name, if it exists.
+     * </p>
+     * 
+     * @param getIdMappingWorkflowRequest
+     * @return Result of the GetIdMappingWorkflow operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.GetIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetIdMappingWorkflowResult getIdMappingWorkflow(GetIdMappingWorkflowRequest getIdMappingWorkflowRequest);
 
     /**
      * <p>
@@ -276,6 +382,55 @@ public interface AWSEntityResolution {
 
     /**
      * <p>
+     * Lists all ID mapping jobs for a given workflow.
+     * </p>
+     * 
+     * @param listIdMappingJobsRequest
+     * @return Result of the ListIdMappingJobs operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.ListIdMappingJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdMappingJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListIdMappingJobsResult listIdMappingJobs(ListIdMappingJobsRequest listIdMappingJobsRequest);
+
+    /**
+     * <p>
+     * Returns a list of all the <code>IdMappingWorkflows</code> that have been created for an Amazon Web Services
+     * account.
+     * </p>
+     * 
+     * @param listIdMappingWorkflowsRequest
+     * @return Result of the ListIdMappingWorkflows operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.ListIdMappingWorkflows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdMappingWorkflows"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListIdMappingWorkflowsResult listIdMappingWorkflows(ListIdMappingWorkflowsRequest listIdMappingWorkflowsRequest);
+
+    /**
+     * <p>
      * Lists all jobs for a given workflow.
      * </p>
      * 
@@ -325,6 +480,29 @@ public interface AWSEntityResolution {
 
     /**
      * <p>
+     * Returns a list of all the <code>ProviderServices</code> that are available in this Amazon Web Services Region.
+     * </p>
+     * 
+     * @param listProviderServicesRequest
+     * @return Result of the ListProviderServices operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.ListProviderServices
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListProviderServices"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListProviderServicesResult listProviderServices(ListProviderServicesRequest listProviderServicesRequest);
+
+    /**
+     * <p>
      * Returns a list of all the <code>SchemaMappings</code> that have been created for an Amazon Web Services account.
      * </p>
      * 
@@ -367,6 +545,39 @@ public interface AWSEntityResolution {
      *      target="_top">AWS API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Starts the <code>IdMappingJob</code> of a workflow. The workflow must have previously been created using the
+     * <code>CreateIdMappingWorkflow</code> endpoint.
+     * </p>
+     * 
+     * @param startIdMappingJobRequest
+     * @return Result of the StartIdMappingJob operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ExceedsLimitException
+     *         The request was rejected because it attempted to create resources beyond the current Entity Resolution
+     *         account limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.StartIdMappingJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/StartIdMappingJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartIdMappingJobResult startIdMappingJob(StartIdMappingJobRequest startIdMappingJobRequest);
 
     /**
      * <p>
@@ -450,6 +661,33 @@ public interface AWSEntityResolution {
 
     /**
      * <p>
+     * Updates an existing <code>IdMappingWorkflow</code>. This method is identical to
+     * <code>CreateIdMappingWorkflow</code>, except it uses an HTTP <code>PUT</code> request instead of a
+     * <code>POST</code> request, and the <code>IdMappingWorkflow</code> must already exist for the method to succeed.
+     * </p>
+     * 
+     * @param updateIdMappingWorkflowRequest
+     * @return Result of the UpdateIdMappingWorkflow operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.UpdateIdMappingWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateIdMappingWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateIdMappingWorkflowResult updateIdMappingWorkflow(UpdateIdMappingWorkflowRequest updateIdMappingWorkflowRequest);
+
+    /**
+     * <p>
      * Updates an existing <code>MatchingWorkflow</code>. This method is identical to
      * <code>CreateMatchingWorkflow</code>, except it uses an HTTP <code>PUT</code> request instead of a
      * <code>POST</code> request, and the <code>MatchingWorkflow</code> must already exist for the method to succeed.
@@ -474,6 +712,41 @@ public interface AWSEntityResolution {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateMatchingWorkflowResult updateMatchingWorkflow(UpdateMatchingWorkflowRequest updateMatchingWorkflowRequest);
+
+    /**
+     * <p>
+     * Updates a schema mapping.
+     * </p>
+     * <note>
+     * <p>
+     * A schema is immutable if it is being used by a workflow. Therefore, you can't update a schema mapping if it's
+     * associated with a workflow.
+     * </p>
+     * </note>
+     * 
+     * @param updateSchemaMappingRequest
+     * @return Result of the UpdateSchemaMapping operation returned by the service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. Example:
+     *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
+     *         <code>HTTP Status Code: 400</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.UpdateSchemaMapping
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateSchemaMapping"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateSchemaMappingResult updateSchemaMapping(UpdateSchemaMappingRequest updateSchemaMappingRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ResolutionTechniquesMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> PROVIDERPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("providerProperties").build();
     private static final MarshallingInfo<String> RESOLUTIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resolutionType").build();
     private static final MarshallingInfo<StructuredPojo> RULEBASEDPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -48,6 +50,7 @@ public class ResolutionTechniquesMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(resolutionTechniques.getProviderProperties(), PROVIDERPROPERTIES_BINDING);
             protocolMarshaller.marshall(resolutionTechniques.getResolutionType(), RESOLUTIONTYPE_BINDING);
             protocolMarshaller.marshall(resolutionTechniques.getRuleBasedProperties(), RULEBASEDPROPERTIES_BINDING);
         } catch (Exception e) {

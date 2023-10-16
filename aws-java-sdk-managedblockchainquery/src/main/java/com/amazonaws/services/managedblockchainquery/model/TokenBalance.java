@@ -59,7 +59,7 @@ public class TokenBalance implements Serializable, Cloneable, StructuredPojo {
     private BlockchainInstant atBlockchainInstant;
     /**
      * <p>
-     * The <code>timestamp</code> of the last transaction at which the balance for the token in the wallet was updated.
+     * The <code>Timestamp</code> of the last transaction at which the balance for the token in the wallet was updated.
      * </p>
      */
     private BlockchainInstant lastUpdatedTime;
@@ -253,11 +253,11 @@ public class TokenBalance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <code>timestamp</code> of the last transaction at which the balance for the token in the wallet was updated.
+     * The <code>Timestamp</code> of the last transaction at which the balance for the token in the wallet was updated.
      * </p>
      * 
      * @param lastUpdatedTime
-     *        The <code>timestamp</code> of the last transaction at which the balance for the token in the wallet was
+     *        The <code>Timestamp</code> of the last transaction at which the balance for the token in the wallet was
      *        updated.
      */
 
@@ -267,10 +267,10 @@ public class TokenBalance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <code>timestamp</code> of the last transaction at which the balance for the token in the wallet was updated.
+     * The <code>Timestamp</code> of the last transaction at which the balance for the token in the wallet was updated.
      * </p>
      * 
-     * @return The <code>timestamp</code> of the last transaction at which the balance for the token in the wallet was
+     * @return The <code>Timestamp</code> of the last transaction at which the balance for the token in the wallet was
      *         updated.
      */
 
@@ -280,11 +280,11 @@ public class TokenBalance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <code>timestamp</code> of the last transaction at which the balance for the token in the wallet was updated.
+     * The <code>Timestamp</code> of the last transaction at which the balance for the token in the wallet was updated.
      * </p>
      * 
      * @param lastUpdatedTime
-     *        The <code>timestamp</code> of the last transaction at which the balance for the token in the wallet was
+     *        The <code>Timestamp</code> of the last transaction at which the balance for the token in the wallet was
      *        updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

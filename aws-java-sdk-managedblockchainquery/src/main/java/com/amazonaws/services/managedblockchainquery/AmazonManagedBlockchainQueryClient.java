@@ -87,20 +87,20 @@ public class AmazonManagedBlockchainQueryClient extends AmazonWebServiceClient i
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.managedblockchainquery.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.managedblockchainquery.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.managedblockchainquery.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.managedblockchainquery.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.managedblockchainquery.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.managedblockchainquery.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.managedblockchainquery.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.managedblockchainquery.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.managedblockchainquery.model.AmazonManagedBlockchainQueryException.class));
 
     public static AmazonManagedBlockchainQueryClientBuilder builder() {
@@ -153,8 +153,8 @@ public class AmazonManagedBlockchainQueryClient extends AmazonWebServiceClient i
 
     /**
      * <p>
-     * Gets the token balance for a batch of tokens by using the <code>GetTokenBalance</code> action for every token in
-     * the request.
+     * Gets the token balance for a batch of tokens by using the <code>BatchGetTokenBalance</code> action for every
+     * token in the request.
      * </p>
      * <note>
      * <p>
@@ -216,6 +216,90 @@ public class AmazonManagedBlockchainQueryClient extends AmazonWebServiceClient i
 
             HttpResponseHandler<AmazonWebServiceResponse<BatchGetTokenBalanceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new BatchGetTokenBalanceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the information about a specific contract deployed on the blockchain.
+     * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * The Bitcoin blockchain networks do not support this operation.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Metadata is currently only available for some <code>ERC-20</code> contracts. Metadata will be available for
+     * additional contracts in the future.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param getAssetContractRequest
+     * @return Result of the GetAssetContract operation returned by the service.
+     * @throws ThrottlingException
+     *         The request or operation couldn't be performed because a service is throttling requests. The most common
+     *         source of throttling errors is when you create resources that exceed your service limit for this resource
+     *         type. Request a limit increase or delete unused resources, if possible.
+     * @throws ValidationException
+     *         The resource passed is invalid.
+     * @throws ResourceNotFoundException
+     *         The resource was not found.
+     * @throws AccessDeniedException
+     *         The Amazon Web Services account doesn’t have access to this resource.
+     * @throws InternalServerException
+     *         The request processing has failed because of an internal error in the service.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded for this resource.
+     * @sample AmazonManagedBlockchainQuery.GetAssetContract
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/GetAssetContract"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetAssetContractResult getAssetContract(GetAssetContractRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAssetContract(request);
+    }
+
+    @SdkInternalApi
+    final GetAssetContractResult executeGetAssetContract(GetAssetContractRequest getAssetContractRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAssetContractRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAssetContractRequest> request = null;
+        Response<GetAssetContractResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAssetContractRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getAssetContractRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ManagedBlockchain Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAssetContract");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetAssetContractResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetAssetContractResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -372,12 +456,83 @@ public class AmazonManagedBlockchainQueryClient extends AmazonWebServiceClient i
 
     /**
      * <p>
-     * This action returns the following for a given a blockchain network:
+     * Lists all the contracts for a given contract type deployed by an address (either a contract address or a wallet
+     * address).
+     * </p>
+     * <p>
+     * The Bitcoin blockchain networks do not support this operation.
+     * </p>
+     * 
+     * @param listAssetContractsRequest
+     * @return Result of the ListAssetContracts operation returned by the service.
+     * @throws ThrottlingException
+     *         The request or operation couldn't be performed because a service is throttling requests. The most common
+     *         source of throttling errors is when you create resources that exceed your service limit for this resource
+     *         type. Request a limit increase or delete unused resources, if possible.
+     * @throws ValidationException
+     *         The resource passed is invalid.
+     * @throws AccessDeniedException
+     *         The Amazon Web Services account doesn’t have access to this resource.
+     * @throws InternalServerException
+     *         The request processing has failed because of an internal error in the service.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded for this resource.
+     * @sample AmazonManagedBlockchainQuery.ListAssetContracts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/ListAssetContracts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAssetContractsResult listAssetContracts(ListAssetContractsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAssetContracts(request);
+    }
+
+    @SdkInternalApi
+    final ListAssetContractsResult executeListAssetContracts(ListAssetContractsRequest listAssetContractsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAssetContractsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAssetContractsRequest> request = null;
+        Response<ListAssetContractsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAssetContractsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listAssetContractsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ManagedBlockchain Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAssetContracts");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAssetContractsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListAssetContractsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This action returns the following for a given blockchain network:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Lists all token balances owned by an address (either a contact address or a wallet address).
+     * Lists all token balances owned by an address (either a contract address or a wallet address).
      * </p>
      * </li>
      * <li>

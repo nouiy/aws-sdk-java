@@ -27,17 +27,17 @@ public class BatchGetTokenBalanceRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An array of <code>GetTokenBalanceInput</code> objects whose balance is being requested.
+     * An array of <code>BatchGetTokenBalanceInputItem</code> objects whose balance is being requested.
      * </p>
      */
     private java.util.List<BatchGetTokenBalanceInputItem> getTokenBalanceInputs;
 
     /**
      * <p>
-     * An array of <code>GetTokenBalanceInput</code> objects whose balance is being requested.
+     * An array of <code>BatchGetTokenBalanceInputItem</code> objects whose balance is being requested.
      * </p>
      * 
-     * @return An array of <code>GetTokenBalanceInput</code> objects whose balance is being requested.
+     * @return An array of <code>BatchGetTokenBalanceInputItem</code> objects whose balance is being requested.
      */
 
     public java.util.List<BatchGetTokenBalanceInputItem> getGetTokenBalanceInputs() {
@@ -46,11 +46,11 @@ public class BatchGetTokenBalanceRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An array of <code>GetTokenBalanceInput</code> objects whose balance is being requested.
+     * An array of <code>BatchGetTokenBalanceInputItem</code> objects whose balance is being requested.
      * </p>
      * 
      * @param getTokenBalanceInputs
-     *        An array of <code>GetTokenBalanceInput</code> objects whose balance is being requested.
+     *        An array of <code>BatchGetTokenBalanceInputItem</code> objects whose balance is being requested.
      */
 
     public void setGetTokenBalanceInputs(java.util.Collection<BatchGetTokenBalanceInputItem> getTokenBalanceInputs) {
@@ -64,7 +64,7 @@ public class BatchGetTokenBalanceRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An array of <code>GetTokenBalanceInput</code> objects whose balance is being requested.
+     * An array of <code>BatchGetTokenBalanceInputItem</code> objects whose balance is being requested.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -73,7 +73,7 @@ public class BatchGetTokenBalanceRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param getTokenBalanceInputs
-     *        An array of <code>GetTokenBalanceInput</code> objects whose balance is being requested.
+     *        An array of <code>BatchGetTokenBalanceInputItem</code> objects whose balance is being requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class BatchGetTokenBalanceRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An array of <code>GetTokenBalanceInput</code> objects whose balance is being requested.
+     * An array of <code>BatchGetTokenBalanceInputItem</code> objects whose balance is being requested.
      * </p>
      * 
      * @param getTokenBalanceInputs
-     *        An array of <code>GetTokenBalanceInput</code> objects whose balance is being requested.
+     *        An array of <code>BatchGetTokenBalanceInputItem</code> objects whose balance is being requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

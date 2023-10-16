@@ -33,12 +33,22 @@ public class AbstractAmazonManagedBlockchainQuery implements AmazonManagedBlockc
     }
 
     @Override
+    public GetAssetContractResult getAssetContract(GetAssetContractRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetTokenBalanceResult getTokenBalance(GetTokenBalanceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public GetTransactionResult getTransaction(GetTransactionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAssetContractsResult listAssetContracts(ListAssetContractsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

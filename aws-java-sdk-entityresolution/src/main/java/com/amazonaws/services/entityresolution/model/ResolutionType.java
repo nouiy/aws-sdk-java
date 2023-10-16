@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ResolutionType {
 
     RULE_MATCHING("RULE_MATCHING"),
-    ML_MATCHING("ML_MATCHING");
+    ML_MATCHING("ML_MATCHING"),
+    PROVIDER("PROVIDER");
 
     private String value;
 

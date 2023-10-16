@@ -56,6 +56,10 @@ public class GetSchemaMappingResultJsonUnmarshaller implements Unmarshaller<GetS
                     context.nextToken();
                     getSchemaMappingResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("hasWorkflows", targetDepth)) {
+                    context.nextToken();
+                    getSchemaMappingResult.setHasWorkflows(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("mappedInputFields", targetDepth)) {
                     context.nextToken();
                     getSchemaMappingResult.setMappedInputFields(new ListUnmarshaller<SchemaInputAttribute>(SchemaInputAttributeJsonUnmarshaller.getInstance())

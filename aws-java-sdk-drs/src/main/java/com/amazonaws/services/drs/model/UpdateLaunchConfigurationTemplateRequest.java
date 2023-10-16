@@ -57,6 +57,13 @@ public class UpdateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
     private String launchDisposition;
     /**
      * <p>
+     * DRS will set the 'launch into instance ID' of any source server when performing a drill, recovery or failback to
+     * the previous region or availability zone, using the instance ID of the source instance.
+     * </p>
+     */
+    private Boolean launchIntoSourceInstance;
+    /**
+     * <p>
      * Licensing.
      * </p>
      */
@@ -319,6 +326,66 @@ public class UpdateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
+     * DRS will set the 'launch into instance ID' of any source server when performing a drill, recovery or failback to
+     * the previous region or availability zone, using the instance ID of the source instance.
+     * </p>
+     * 
+     * @param launchIntoSourceInstance
+     *        DRS will set the 'launch into instance ID' of any source server when performing a drill, recovery or
+     *        failback to the previous region or availability zone, using the instance ID of the source instance.
+     */
+
+    public void setLaunchIntoSourceInstance(Boolean launchIntoSourceInstance) {
+        this.launchIntoSourceInstance = launchIntoSourceInstance;
+    }
+
+    /**
+     * <p>
+     * DRS will set the 'launch into instance ID' of any source server when performing a drill, recovery or failback to
+     * the previous region or availability zone, using the instance ID of the source instance.
+     * </p>
+     * 
+     * @return DRS will set the 'launch into instance ID' of any source server when performing a drill, recovery or
+     *         failback to the previous region or availability zone, using the instance ID of the source instance.
+     */
+
+    public Boolean getLaunchIntoSourceInstance() {
+        return this.launchIntoSourceInstance;
+    }
+
+    /**
+     * <p>
+     * DRS will set the 'launch into instance ID' of any source server when performing a drill, recovery or failback to
+     * the previous region or availability zone, using the instance ID of the source instance.
+     * </p>
+     * 
+     * @param launchIntoSourceInstance
+     *        DRS will set the 'launch into instance ID' of any source server when performing a drill, recovery or
+     *        failback to the previous region or availability zone, using the instance ID of the source instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateLaunchConfigurationTemplateRequest withLaunchIntoSourceInstance(Boolean launchIntoSourceInstance) {
+        setLaunchIntoSourceInstance(launchIntoSourceInstance);
+        return this;
+    }
+
+    /**
+     * <p>
+     * DRS will set the 'launch into instance ID' of any source server when performing a drill, recovery or failback to
+     * the previous region or availability zone, using the instance ID of the source instance.
+     * </p>
+     * 
+     * @return DRS will set the 'launch into instance ID' of any source server when performing a drill, recovery or
+     *         failback to the previous region or availability zone, using the instance ID of the source instance.
+     */
+
+    public Boolean isLaunchIntoSourceInstance() {
+        return this.launchIntoSourceInstance;
+    }
+
+    /**
+     * <p>
      * Licensing.
      * </p>
      * 
@@ -491,6 +558,8 @@ public class UpdateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
             sb.append("LaunchConfigurationTemplateID: ").append(getLaunchConfigurationTemplateID()).append(",");
         if (getLaunchDisposition() != null)
             sb.append("LaunchDisposition: ").append(getLaunchDisposition()).append(",");
+        if (getLaunchIntoSourceInstance() != null)
+            sb.append("LaunchIntoSourceInstance: ").append(getLaunchIntoSourceInstance()).append(",");
         if (getLicensing() != null)
             sb.append("Licensing: ").append(getLicensing()).append(",");
         if (getPostLaunchEnabled() != null)
@@ -532,6 +601,10 @@ public class UpdateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
             return false;
         if (other.getLaunchDisposition() != null && other.getLaunchDisposition().equals(this.getLaunchDisposition()) == false)
             return false;
+        if (other.getLaunchIntoSourceInstance() == null ^ this.getLaunchIntoSourceInstance() == null)
+            return false;
+        if (other.getLaunchIntoSourceInstance() != null && other.getLaunchIntoSourceInstance().equals(this.getLaunchIntoSourceInstance()) == false)
+            return false;
         if (other.getLicensing() == null ^ this.getLicensing() == null)
             return false;
         if (other.getLicensing() != null && other.getLicensing().equals(this.getLicensing()) == false)
@@ -558,6 +631,7 @@ public class UpdateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
         hashCode = prime * hashCode + ((getExportBucketArn() == null) ? 0 : getExportBucketArn().hashCode());
         hashCode = prime * hashCode + ((getLaunchConfigurationTemplateID() == null) ? 0 : getLaunchConfigurationTemplateID().hashCode());
         hashCode = prime * hashCode + ((getLaunchDisposition() == null) ? 0 : getLaunchDisposition().hashCode());
+        hashCode = prime * hashCode + ((getLaunchIntoSourceInstance() == null) ? 0 : getLaunchIntoSourceInstance().hashCode());
         hashCode = prime * hashCode + ((getLicensing() == null) ? 0 : getLicensing().hashCode());
         hashCode = prime * hashCode + ((getPostLaunchEnabled() == null) ? 0 : getPostLaunchEnabled().hashCode());
         hashCode = prime * hashCode + ((getTargetInstanceTypeRightSizingMethod() == null) ? 0 : getTargetInstanceTypeRightSizingMethod().hashCode());

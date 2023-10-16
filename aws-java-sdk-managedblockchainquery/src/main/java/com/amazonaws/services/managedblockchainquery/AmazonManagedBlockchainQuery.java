@@ -48,8 +48,8 @@ public interface AmazonManagedBlockchainQuery {
 
     /**
      * <p>
-     * Gets the token balance for a batch of tokens by using the <code>GetTokenBalance</code> action for every token in
-     * the request.
+     * Gets the token balance for a batch of tokens by using the <code>BatchGetTokenBalance</code> action for every
+     * token in the request.
      * </p>
      * <note>
      * <p>
@@ -78,6 +78,48 @@ public interface AmazonManagedBlockchainQuery {
      *      target="_top">AWS API Documentation</a>
      */
     BatchGetTokenBalanceResult batchGetTokenBalance(BatchGetTokenBalanceRequest batchGetTokenBalanceRequest);
+
+    /**
+     * <p>
+     * Gets the information about a specific contract deployed on the blockchain.
+     * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * The Bitcoin blockchain networks do not support this operation.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Metadata is currently only available for some <code>ERC-20</code> contracts. Metadata will be available for
+     * additional contracts in the future.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param getAssetContractRequest
+     * @return Result of the GetAssetContract operation returned by the service.
+     * @throws ThrottlingException
+     *         The request or operation couldn't be performed because a service is throttling requests. The most common
+     *         source of throttling errors is when you create resources that exceed your service limit for this resource
+     *         type. Request a limit increase or delete unused resources, if possible.
+     * @throws ValidationException
+     *         The resource passed is invalid.
+     * @throws ResourceNotFoundException
+     *         The resource was not found.
+     * @throws AccessDeniedException
+     *         The Amazon Web Services account doesn’t have access to this resource.
+     * @throws InternalServerException
+     *         The request processing has failed because of an internal error in the service.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded for this resource.
+     * @sample AmazonManagedBlockchainQuery.GetAssetContract
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/GetAssetContract"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetAssetContractResult getAssetContract(GetAssetContractRequest getAssetContractRequest);
 
     /**
      * <p>
@@ -141,12 +183,41 @@ public interface AmazonManagedBlockchainQuery {
 
     /**
      * <p>
-     * This action returns the following for a given a blockchain network:
+     * Lists all the contracts for a given contract type deployed by an address (either a contract address or a wallet
+     * address).
+     * </p>
+     * <p>
+     * The Bitcoin blockchain networks do not support this operation.
+     * </p>
+     * 
+     * @param listAssetContractsRequest
+     * @return Result of the ListAssetContracts operation returned by the service.
+     * @throws ThrottlingException
+     *         The request or operation couldn't be performed because a service is throttling requests. The most common
+     *         source of throttling errors is when you create resources that exceed your service limit for this resource
+     *         type. Request a limit increase or delete unused resources, if possible.
+     * @throws ValidationException
+     *         The resource passed is invalid.
+     * @throws AccessDeniedException
+     *         The Amazon Web Services account doesn’t have access to this resource.
+     * @throws InternalServerException
+     *         The request processing has failed because of an internal error in the service.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded for this resource.
+     * @sample AmazonManagedBlockchainQuery.ListAssetContracts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/ListAssetContracts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListAssetContractsResult listAssetContracts(ListAssetContractsRequest listAssetContractsRequest);
+
+    /**
+     * <p>
+     * This action returns the following for a given blockchain network:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Lists all token balances owned by an address (either a contact address or a wallet address).
+     * Lists all token balances owned by an address (either a contract address or a wallet address).
      * </p>
      * </li>
      * <li>

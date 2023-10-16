@@ -28,6 +28,11 @@ public class AbstractAWSEntityResolution implements AWSEntityResolution {
     }
 
     @Override
+    public CreateIdMappingWorkflowResult createIdMappingWorkflow(CreateIdMappingWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateMatchingWorkflowResult createMatchingWorkflow(CreateMatchingWorkflowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -38,12 +43,27 @@ public class AbstractAWSEntityResolution implements AWSEntityResolution {
     }
 
     @Override
+    public DeleteIdMappingWorkflowResult deleteIdMappingWorkflow(DeleteIdMappingWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteMatchingWorkflowResult deleteMatchingWorkflow(DeleteMatchingWorkflowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DeleteSchemaMappingResult deleteSchemaMapping(DeleteSchemaMappingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetIdMappingJobResult getIdMappingJob(GetIdMappingJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetIdMappingWorkflowResult getIdMappingWorkflow(GetIdMappingWorkflowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -68,6 +88,16 @@ public class AbstractAWSEntityResolution implements AWSEntityResolution {
     }
 
     @Override
+    public ListIdMappingJobsResult listIdMappingJobs(ListIdMappingJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListIdMappingWorkflowsResult listIdMappingWorkflows(ListIdMappingWorkflowsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListMatchingJobsResult listMatchingJobs(ListMatchingJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -78,12 +108,22 @@ public class AbstractAWSEntityResolution implements AWSEntityResolution {
     }
 
     @Override
+    public ListProviderServicesResult listProviderServices(ListProviderServicesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListSchemaMappingsResult listSchemaMappings(ListSchemaMappingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartIdMappingJobResult startIdMappingJob(StartIdMappingJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -103,7 +143,17 @@ public class AbstractAWSEntityResolution implements AWSEntityResolution {
     }
 
     @Override
+    public UpdateIdMappingWorkflowResult updateIdMappingWorkflow(UpdateIdMappingWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateMatchingWorkflowResult updateMatchingWorkflow(UpdateMatchingWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSchemaMappingResult updateSchemaMapping(UpdateSchemaMappingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

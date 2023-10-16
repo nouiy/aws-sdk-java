@@ -37,6 +37,12 @@ public class SchemaMappingSummary implements Serializable, Cloneable, Structured
     private java.util.Date createdAt;
     /**
      * <p>
+     * Specifies whether the schema mapping has been applied to a workflow.
+     * </p>
+     */
+    private Boolean hasWorkflows;
+    /**
+     * <p>
      * The ARN (Amazon Resource Name) that Entity Resolution generated for the <code>SchemaMapping</code>.
      * </p>
      */
@@ -92,6 +98,58 @@ public class SchemaMappingSummary implements Serializable, Cloneable, Structured
     public SchemaMappingSummary withCreatedAt(java.util.Date createdAt) {
         setCreatedAt(createdAt);
         return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the schema mapping has been applied to a workflow.
+     * </p>
+     * 
+     * @param hasWorkflows
+     *        Specifies whether the schema mapping has been applied to a workflow.
+     */
+
+    public void setHasWorkflows(Boolean hasWorkflows) {
+        this.hasWorkflows = hasWorkflows;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the schema mapping has been applied to a workflow.
+     * </p>
+     * 
+     * @return Specifies whether the schema mapping has been applied to a workflow.
+     */
+
+    public Boolean getHasWorkflows() {
+        return this.hasWorkflows;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the schema mapping has been applied to a workflow.
+     * </p>
+     * 
+     * @param hasWorkflows
+     *        Specifies whether the schema mapping has been applied to a workflow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SchemaMappingSummary withHasWorkflows(Boolean hasWorkflows) {
+        setHasWorkflows(hasWorkflows);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the schema mapping has been applied to a workflow.
+     * </p>
+     * 
+     * @return Specifies whether the schema mapping has been applied to a workflow.
+     */
+
+    public Boolean isHasWorkflows() {
+        return this.hasWorkflows;
     }
 
     /**
@@ -228,6 +286,8 @@ public class SchemaMappingSummary implements Serializable, Cloneable, Structured
         sb.append("{");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getHasWorkflows() != null)
+            sb.append("HasWorkflows: ").append(getHasWorkflows()).append(",");
         if (getSchemaArn() != null)
             sb.append("SchemaArn: ").append(getSchemaArn()).append(",");
         if (getSchemaName() != null)
@@ -252,6 +312,10 @@ public class SchemaMappingSummary implements Serializable, Cloneable, Structured
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
             return false;
+        if (other.getHasWorkflows() == null ^ this.getHasWorkflows() == null)
+            return false;
+        if (other.getHasWorkflows() != null && other.getHasWorkflows().equals(this.getHasWorkflows()) == false)
+            return false;
         if (other.getSchemaArn() == null ^ this.getSchemaArn() == null)
             return false;
         if (other.getSchemaArn() != null && other.getSchemaArn().equals(this.getSchemaArn()) == false)
@@ -273,6 +337,7 @@ public class SchemaMappingSummary implements Serializable, Cloneable, Structured
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getHasWorkflows() == null) ? 0 : getHasWorkflows().hashCode());
         hashCode = prime * hashCode + ((getSchemaArn() == null) ? 0 : getSchemaArn().hashCode());
         hashCode = prime * hashCode + ((getSchemaName() == null) ? 0 : getSchemaName().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
