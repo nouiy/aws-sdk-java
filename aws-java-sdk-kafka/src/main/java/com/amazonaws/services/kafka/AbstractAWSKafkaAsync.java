@@ -92,6 +92,19 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
     }
 
     @Override
+    public java.util.concurrent.Future<CreateReplicatorResult> createReplicatorAsync(CreateReplicatorRequest request) {
+
+        return createReplicatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateReplicatorResult> createReplicatorAsync(CreateReplicatorRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateReplicatorRequest, CreateReplicatorResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateVpcConnectionResult> createVpcConnectionAsync(CreateVpcConnectionRequest request) {
 
         return createVpcConnectionAsync(request, null);
@@ -139,6 +152,19 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
     @Override
     public java.util.concurrent.Future<DeleteConfigurationResult> deleteConfigurationAsync(DeleteConfigurationRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteConfigurationRequest, DeleteConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteReplicatorResult> deleteReplicatorAsync(DeleteReplicatorRequest request) {
+
+        return deleteReplicatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteReplicatorResult> deleteReplicatorAsync(DeleteReplicatorRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteReplicatorRequest, DeleteReplicatorResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -230,6 +256,19 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
     @Override
     public java.util.concurrent.Future<DescribeConfigurationRevisionResult> describeConfigurationRevisionAsync(DescribeConfigurationRevisionRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeConfigurationRevisionRequest, DescribeConfigurationRevisionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeReplicatorResult> describeReplicatorAsync(DescribeReplicatorRequest request) {
+
+        return describeReplicatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeReplicatorResult> describeReplicatorAsync(DescribeReplicatorRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeReplicatorRequest, DescribeReplicatorResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -399,6 +438,19 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
     @Override
     public java.util.concurrent.Future<ListNodesResult> listNodesAsync(ListNodesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListNodesRequest, ListNodesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListReplicatorsResult> listReplicatorsAsync(ListReplicatorsRequest request) {
+
+        return listReplicatorsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListReplicatorsResult> listReplicatorsAsync(ListReplicatorsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListReplicatorsRequest, ListReplicatorsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -607,6 +659,19 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
     @Override
     public java.util.concurrent.Future<UpdateMonitoringResult> updateMonitoringAsync(UpdateMonitoringRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateMonitoringRequest, UpdateMonitoringResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateReplicationInfoResult> updateReplicationInfoAsync(UpdateReplicationInfoRequest request) {
+
+        return updateReplicationInfoAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateReplicationInfoResult> updateReplicationInfoAsync(UpdateReplicationInfoRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateReplicationInfoRequest, UpdateReplicationInfoResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

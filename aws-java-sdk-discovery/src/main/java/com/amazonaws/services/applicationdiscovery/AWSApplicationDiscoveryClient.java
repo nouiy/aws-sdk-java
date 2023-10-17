@@ -1721,6 +1721,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param startContinuousExportRequest
      * @return Result of the StartContinuousExport operation returned by the service.
      * @throws ConflictErrorException
+     *         Conflict error.
      * @throws AuthorizationErrorException
      *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException

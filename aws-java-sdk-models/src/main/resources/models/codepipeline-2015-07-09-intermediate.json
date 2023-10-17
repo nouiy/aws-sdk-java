@@ -1597,7 +1597,7 @@
       "asyncReturnType" : "RetryStageExecutionResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Resumes the pipeline execution by retrying the last failed actions in a stage. You can retry a stage immediately if any of the actions in the stage fail. When you retry, all actions that are still in progress continue working, and failed actions are triggered again.</p>",
+      "documentation" : "<p>You can retry a stage that has failed without having to run a pipeline again from the beginning. You do this by either retrying the failed actions in a stage or by retrying all actions in the stage starting from the first action in the stage. When you retry the failed actions in a stage, all actions that are still in progress continue working, and failed actions are triggered again. When you retry a failed stage from the first action in the stage, the stage cannot have any actions in progress. Before a stage can be retried, it must either have all actions failed or some actions failed and some succeeded.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -61624,12 +61624,12 @@
         "c2jName" : "retryMode",
         "c2jShape" : "StageRetryMode",
         "deprecated" : false,
-        "documentation" : "<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>",
+        "documentation" : "<p>The scope of the retry attempt.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : "StageRetryMode",
-        "fluentSetterDocumentation" : "/**<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>\n@param retryMode The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StageRetryMode*/",
+        "fluentSetterDocumentation" : "/**<p>The scope of the retry attempt.</p>\n@param retryMode The scope of the retry attempt.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StageRetryMode*/",
         "fluentSetterMethodName" : "withRetryMode",
-        "getterDocumentation" : "/**<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>\n@return The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.\n@see StageRetryMode*/",
+        "getterDocumentation" : "/**<p>The scope of the retry attempt.</p>\n@return The scope of the retry attempt.\n@see StageRetryMode*/",
         "getterMethodName" : "getRetryMode",
         "getterModel" : {
           "returnType" : "String",
@@ -61663,7 +61663,7 @@
         "marshallingType" : "STRING",
         "name" : "RetryMode",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>\n@param retryMode The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.\n@see StageRetryMode*/",
+        "setterDocumentation" : "/**<p>The scope of the retry attempt.</p>\n@param retryMode The scope of the retry attempt.\n@see StageRetryMode*/",
         "setterMethodName" : "setRetryMode",
         "setterModel" : {
           "timestampFormat" : null,
@@ -61678,13 +61678,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>\n@param retryMode The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StageRetryMode*/",
+        "varargSetterDocumentation" : "/**<p>The scope of the retry attempt.</p>\n@param retryMode The scope of the retry attempt.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StageRetryMode*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "retryMode",
           "variableType" : "String",
-          "documentation" : "<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>",
+          "documentation" : "<p>The scope of the retry attempt.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -61835,12 +61835,12 @@
           "c2jName" : "retryMode",
           "c2jShape" : "StageRetryMode",
           "deprecated" : false,
-          "documentation" : "<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>",
+          "documentation" : "<p>The scope of the retry attempt.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : "StageRetryMode",
-          "fluentSetterDocumentation" : "/**<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>\n@param retryMode The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StageRetryMode*/",
+          "fluentSetterDocumentation" : "/**<p>The scope of the retry attempt.</p>\n@param retryMode The scope of the retry attempt.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StageRetryMode*/",
           "fluentSetterMethodName" : "withRetryMode",
-          "getterDocumentation" : "/**<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>\n@return The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.\n@see StageRetryMode*/",
+          "getterDocumentation" : "/**<p>The scope of the retry attempt.</p>\n@return The scope of the retry attempt.\n@see StageRetryMode*/",
           "getterMethodName" : "getRetryMode",
           "getterModel" : {
             "returnType" : "String",
@@ -61874,7 +61874,7 @@
           "marshallingType" : "STRING",
           "name" : "RetryMode",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>\n@param retryMode The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.\n@see StageRetryMode*/",
+          "setterDocumentation" : "/**<p>The scope of the retry attempt.</p>\n@param retryMode The scope of the retry attempt.\n@see StageRetryMode*/",
           "setterMethodName" : "setRetryMode",
           "setterModel" : {
             "timestampFormat" : null,
@@ -61889,13 +61889,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>\n@param retryMode The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StageRetryMode*/",
+          "varargSetterDocumentation" : "/**<p>The scope of the retry attempt.</p>\n@param retryMode The scope of the retry attempt.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StageRetryMode*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "retryMode",
             "variableType" : "String",
-            "documentation" : "<p>The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.</p>",
+            "documentation" : "<p>The scope of the retry attempt.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -64885,6 +64885,9 @@
       "enums" : [ {
         "name" : "FAILED_ACTIONS",
         "value" : "FAILED_ACTIONS"
+      }, {
+        "name" : "ALL_ACTIONS",
+        "value" : "ALL_ACTIONS"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.codepipeline.enum.StageRetryMode",

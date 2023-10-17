@@ -1,3 +1,36 @@
+# __1.12.568__ __2023-10-17__
+## __AWS Application Discovery Service__
+  - ### Features
+    - This release introduces three new APIs: StartBatchDeleteConfigurationTask, DescribeBatchDeleteConfigurationTask, and BatchDeleteAgents.
+
+## __AWS CodePipeline__
+  - ### Features
+    - Add retryMode ALL_ACTIONS to RetryStageExecution API that retries a failed stage starting from first action in the stage
+
+## __AWS Global Accelerator__
+  - ### Features
+    - Fixed error where ListCustomRoutingEndpointGroups did not have a paginator
+
+## __AWS Route53 Recovery Control Config__
+  - ### Features
+    - Adds permissions for GetResourcePolicy to support returning details about AWS Resource Access Manager resource policies for shared resources.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - Documentation only updates to address Amazon ECS tickets.
+
+## __Amazon GuardDuty__
+  - ### Features
+    - Add domainWithSuffix finding field to dnsRequestAction
+
+## __Managed Streaming for Kafka__
+  - ### Features
+    - AWS Managed Streaming for Kafka is launching MSK Replicator, a new feature that enables customers to reliably replicate data across Amazon MSK clusters in same or different AWS regions. You can now use SDK to create, list, describe, delete, update, and manage tags of MSK Replicators.
+
+## __Route53 Recovery Cluster__
+  - ### Features
+    - Adds Owner field to ListRoutingControls API.
+
 # __1.12.567__ __2023-10-16__
 ## __AWS CloudFormation__
   - ### Features

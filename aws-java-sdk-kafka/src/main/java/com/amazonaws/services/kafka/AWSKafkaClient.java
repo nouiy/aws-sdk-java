@@ -80,6 +80,9 @@ public class AWSKafkaClient extends AmazonWebServiceClient implements AWSKafka {
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ForbiddenException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.kafka.model.transform.ForbiddenExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kafka.model.transform.NotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -91,9 +94,6 @@ public class AWSKafkaClient extends AmazonWebServiceClient implements AWSKafka {
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceUnavailableException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kafka.model.transform.ServiceUnavailableExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ForbiddenException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.kafka.model.transform.ForbiddenExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("TooManyRequestsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kafka.model.transform.TooManyRequestsExceptionUnmarshaller.getInstance()))
@@ -578,6 +578,79 @@ public class AWSKafkaClient extends AmazonWebServiceClient implements AWSKafka {
 
     /**
      * <p>
+     * Creates the replicator.
+     * </p>
+     * 
+     * @param createReplicatorRequest
+     *        Creates a replicator using the specified configuration.
+     * @return Result of the CreateReplicator operation returned by the service.
+     * @throws BadRequestException
+     *         HTTP Status Code 400: Bad request due to incorrect input. Correct your request and then retry it.
+     * @throws UnauthorizedException
+     *         HTTP Status Code 401: Unauthorized request. The provided credentials couldn't be validated.
+     * @throws InternalServerErrorException
+     *         HTTP Status Code 500: Unexpected internal server error. Retrying your request might resolve the issue.
+     * @throws ForbiddenException
+     *         HTTP Status Code 403: Access forbidden. Correct your credentials and then retry your request.
+     * @throws NotFoundException
+     *         HTTP Status Code 404: Resource not found due to incorrect input. Correct your request and then retry it.
+     * @throws ServiceUnavailableException
+     *         HTTP Status Code 503: Service Unavailable. Retrying your request in some time might resolve the issue.
+     * @throws TooManyRequestsException
+     *         HTTP Status Code 429: Limit exceeded. Resource limit reached.
+     * @throws ConflictException
+     *         HTTP Status Code 409: Conflict. This replicator name already exists. Retry your request with another
+     *         name.
+     * @sample AWSKafka.CreateReplicator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/CreateReplicator" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateReplicatorResult createReplicator(CreateReplicatorRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateReplicator(request);
+    }
+
+    @SdkInternalApi
+    final CreateReplicatorResult executeCreateReplicator(CreateReplicatorRequest createReplicatorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createReplicatorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateReplicatorRequest> request = null;
+        Response<CreateReplicatorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateReplicatorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createReplicatorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kafka");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateReplicator");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateReplicatorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateReplicatorResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a new MSK VPC connection.
      * </p>
      * 
@@ -858,6 +931,75 @@ public class AWSKafkaClient extends AmazonWebServiceClient implements AWSKafka {
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a replicator.
+     * </p>
+     * 
+     * @param deleteReplicatorRequest
+     * @return Result of the DeleteReplicator operation returned by the service.
+     * @throws BadRequestException
+     *         HTTP Status Code 400: Bad request due to incorrect input. Correct your request and then retry it.
+     * @throws UnauthorizedException
+     *         HTTP Status Code 401: Unauthorized request. The provided credentials couldn't be validated.
+     * @throws InternalServerErrorException
+     *         HTTP Status Code 500: Unexpected internal server error. Retrying your request might resolve the issue.
+     * @throws ForbiddenException
+     *         HTTP Status Code 403: Access forbidden. Correct your credentials and then retry your request.
+     * @throws NotFoundException
+     *         HTTP Status Code 404: Resource not found due to incorrect input. Correct your request and then retry it.
+     * @throws ServiceUnavailableException
+     *         HTTP Status Code 503: Service Unavailable. Retrying your request in some time might resolve the issue.
+     * @throws TooManyRequestsException
+     *         HTTP Status Code 429: Limit exceeded. Resource limit reached.
+     * @sample AWSKafka.DeleteReplicator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/DeleteReplicator" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteReplicatorResult deleteReplicator(DeleteReplicatorRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteReplicator(request);
+    }
+
+    @SdkInternalApi
+    final DeleteReplicatorResult executeDeleteReplicator(DeleteReplicatorRequest deleteReplicatorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteReplicatorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteReplicatorRequest> request = null;
+        Response<DeleteReplicatorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteReplicatorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteReplicatorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kafka");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteReplicator");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteReplicatorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteReplicatorResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1402,6 +1544,75 @@ public class AWSKafkaClient extends AmazonWebServiceClient implements AWSKafka {
             HttpResponseHandler<AmazonWebServiceResponse<DescribeConfigurationRevisionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DescribeConfigurationRevisionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes a replicator.
+     * </p>
+     * 
+     * @param describeReplicatorRequest
+     * @return Result of the DescribeReplicator operation returned by the service.
+     * @throws BadRequestException
+     *         HTTP Status Code 400: Bad request due to incorrect input. Correct your request and then retry it.
+     * @throws UnauthorizedException
+     *         HTTP Status Code 401: Unauthorized request. The provided credentials couldn't be validated.
+     * @throws InternalServerErrorException
+     *         HTTP Status Code 500: Unexpected internal server error. Retrying your request might resolve the issue.
+     * @throws ForbiddenException
+     *         HTTP Status Code 403: Access forbidden. Correct your credentials and then retry your request.
+     * @throws NotFoundException
+     *         HTTP Status Code 404: Resource not found due to incorrect input. Correct your request and then retry it.
+     * @throws ServiceUnavailableException
+     *         HTTP Status Code 503: Service Unavailable. Retrying your request in some time might resolve the issue.
+     * @throws TooManyRequestsException
+     *         HTTP Status Code 429: Limit exceeded. Resource limit reached.
+     * @sample AWSKafka.DescribeReplicator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/DescribeReplicator" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeReplicatorResult describeReplicator(DescribeReplicatorRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeReplicator(request);
+    }
+
+    @SdkInternalApi
+    final DescribeReplicatorResult executeDescribeReplicator(DescribeReplicatorRequest describeReplicatorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeReplicatorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeReplicatorRequest> request = null;
+        Response<DescribeReplicatorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeReplicatorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeReplicatorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kafka");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeReplicator");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeReplicatorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeReplicatorResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2401,6 +2612,75 @@ public class AWSKafkaClient extends AmazonWebServiceClient implements AWSKafka {
 
             HttpResponseHandler<AmazonWebServiceResponse<ListNodesResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListNodesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the replicators.
+     * </p>
+     * 
+     * @param listReplicatorsRequest
+     * @return Result of the ListReplicators operation returned by the service.
+     * @throws BadRequestException
+     *         HTTP Status Code 400: Bad request due to incorrect input. Correct your request and then retry it.
+     * @throws UnauthorizedException
+     *         HTTP Status Code 401: Unauthorized request. The provided credentials couldn't be validated.
+     * @throws InternalServerErrorException
+     *         HTTP Status Code 500: Unexpected internal server error. Retrying your request might resolve the issue.
+     * @throws ForbiddenException
+     *         HTTP Status Code 403: Access forbidden. Correct your credentials and then retry your request.
+     * @throws NotFoundException
+     *         HTTP Status Code 404: Resource not found due to incorrect input. Correct your request and then retry it.
+     * @throws ServiceUnavailableException
+     *         HTTP Status Code 503: Service Unavailable. Retrying your request in some time might resolve the issue.
+     * @throws TooManyRequestsException
+     *         HTTP Status Code 429: Limit exceeded. Resource limit reached.
+     * @sample AWSKafka.ListReplicators
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListReplicators" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListReplicatorsResult listReplicators(ListReplicatorsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListReplicators(request);
+    }
+
+    @SdkInternalApi
+    final ListReplicatorsResult executeListReplicators(ListReplicatorsRequest listReplicatorsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listReplicatorsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListReplicatorsRequest> request = null;
+        Response<ListReplicatorsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListReplicatorsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listReplicatorsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kafka");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListReplicators");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListReplicatorsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListReplicatorsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3622,6 +3902,77 @@ public class AWSKafkaClient extends AmazonWebServiceClient implements AWSKafka {
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateMonitoringResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateMonitoringResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates replication info of a replicator.
+     * </p>
+     * 
+     * @param updateReplicationInfoRequest
+     *        Update information relating to replication between a given source and target Kafka cluster.
+     * @return Result of the UpdateReplicationInfo operation returned by the service.
+     * @throws BadRequestException
+     *         HTTP Status Code 400: Bad request due to incorrect input. Correct your request and then retry it.
+     * @throws UnauthorizedException
+     *         HTTP Status Code 401: Unauthorized request. The provided credentials couldn't be validated.
+     * @throws InternalServerErrorException
+     *         HTTP Status Code 500: Unexpected internal server error. Retrying your request might resolve the issue.
+     * @throws ForbiddenException
+     *         HTTP Status Code 403: Access forbidden. Correct your credentials and then retry your request.
+     * @throws NotFoundException
+     *         HTTP Status Code 404: Resource not found due to incorrect input. Correct your request and then retry it.
+     * @throws ServiceUnavailableException
+     *         HTTP Status Code 503: Service Unavailable. Retrying your request in some time might resolve the issue.
+     * @throws TooManyRequestsException
+     *         HTTP Status Code 429: Limit exceeded. Resource limit reached.
+     * @sample AWSKafka.UpdateReplicationInfo
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateReplicationInfo" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UpdateReplicationInfoResult updateReplicationInfo(UpdateReplicationInfoRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateReplicationInfo(request);
+    }
+
+    @SdkInternalApi
+    final UpdateReplicationInfoResult executeUpdateReplicationInfo(UpdateReplicationInfoRequest updateReplicationInfoRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateReplicationInfoRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateReplicationInfoRequest> request = null;
+        Response<UpdateReplicationInfoResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateReplicationInfoRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateReplicationInfoRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kafka");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateReplicationInfo");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateReplicationInfoResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateReplicationInfoResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

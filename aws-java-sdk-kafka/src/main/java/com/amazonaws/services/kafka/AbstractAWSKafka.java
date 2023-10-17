@@ -53,6 +53,11 @@ public class AbstractAWSKafka implements AWSKafka {
     }
 
     @Override
+    public CreateReplicatorResult createReplicator(CreateReplicatorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateVpcConnectionResult createVpcConnection(CreateVpcConnectionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -69,6 +74,11 @@ public class AbstractAWSKafka implements AWSKafka {
 
     @Override
     public DeleteConfigurationResult deleteConfiguration(DeleteConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteReplicatorResult deleteReplicator(DeleteReplicatorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -104,6 +114,11 @@ public class AbstractAWSKafka implements AWSKafka {
 
     @Override
     public DescribeConfigurationRevisionResult describeConfigurationRevision(DescribeConfigurationRevisionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeReplicatorResult describeReplicator(DescribeReplicatorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -169,6 +184,11 @@ public class AbstractAWSKafka implements AWSKafka {
 
     @Override
     public ListNodesResult listNodes(ListNodesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListReplicatorsResult listReplicators(ListReplicatorsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -249,6 +269,11 @@ public class AbstractAWSKafka implements AWSKafka {
 
     @Override
     public UpdateMonitoringResult updateMonitoring(UpdateMonitoringRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateReplicationInfoResult updateReplicationInfo(UpdateReplicationInfoRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

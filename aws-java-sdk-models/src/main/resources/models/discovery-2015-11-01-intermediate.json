@@ -1087,7 +1087,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ConflictErrorException",
-        "documentation" : "<p/>",
+        "documentation" : "<p>Conflict error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AuthorizationErrorException",
@@ -6536,7 +6536,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "<p>Conflict error.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ConflictErrorException",
