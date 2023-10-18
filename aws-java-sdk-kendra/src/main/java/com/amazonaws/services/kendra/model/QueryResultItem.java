@@ -120,6 +120,12 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private TableExcerpt tableExcerpt;
+    /**
+     * <p>
+     * Provides details about a collapsed group of search results.
+     * </p>
+     */
+    private CollapsedResultDetail collapsedResultDetail;
 
     /**
      * <p>
@@ -799,6 +805,46 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Provides details about a collapsed group of search results.
+     * </p>
+     * 
+     * @param collapsedResultDetail
+     *        Provides details about a collapsed group of search results.
+     */
+
+    public void setCollapsedResultDetail(CollapsedResultDetail collapsedResultDetail) {
+        this.collapsedResultDetail = collapsedResultDetail;
+    }
+
+    /**
+     * <p>
+     * Provides details about a collapsed group of search results.
+     * </p>
+     * 
+     * @return Provides details about a collapsed group of search results.
+     */
+
+    public CollapsedResultDetail getCollapsedResultDetail() {
+        return this.collapsedResultDetail;
+    }
+
+    /**
+     * <p>
+     * Provides details about a collapsed group of search results.
+     * </p>
+     * 
+     * @param collapsedResultDetail
+     *        Provides details about a collapsed group of search results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryResultItem withCollapsedResultDetail(CollapsedResultDetail collapsedResultDetail) {
+        setCollapsedResultDetail(collapsedResultDetail);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -833,7 +879,9 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
         if (getFeedbackToken() != null)
             sb.append("FeedbackToken: ").append(getFeedbackToken()).append(",");
         if (getTableExcerpt() != null)
-            sb.append("TableExcerpt: ").append(getTableExcerpt());
+            sb.append("TableExcerpt: ").append(getTableExcerpt()).append(",");
+        if (getCollapsedResultDetail() != null)
+            sb.append("CollapsedResultDetail: ").append(getCollapsedResultDetail());
         sb.append("}");
         return sb.toString();
     }
@@ -896,6 +944,10 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getTableExcerpt() != null && other.getTableExcerpt().equals(this.getTableExcerpt()) == false)
             return false;
+        if (other.getCollapsedResultDetail() == null ^ this.getCollapsedResultDetail() == null)
+            return false;
+        if (other.getCollapsedResultDetail() != null && other.getCollapsedResultDetail().equals(this.getCollapsedResultDetail()) == false)
+            return false;
         return true;
     }
 
@@ -916,6 +968,7 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getScoreAttributes() == null) ? 0 : getScoreAttributes().hashCode());
         hashCode = prime * hashCode + ((getFeedbackToken() == null) ? 0 : getFeedbackToken().hashCode());
         hashCode = prime * hashCode + ((getTableExcerpt() == null) ? 0 : getTableExcerpt().hashCode());
+        hashCode = prime * hashCode + ((getCollapsedResultDetail() == null) ? 0 : getCollapsedResultDetail().hashCode());
         return hashCode;
     }
 

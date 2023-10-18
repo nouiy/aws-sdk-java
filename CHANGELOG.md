@@ -1,3 +1,24 @@
+# __1.12.569__ __2023-10-18__
+## __AWS Cloud9__
+  - ### Features
+    - Update to imageId parameter behavior and dates updated.
+
+## __AWSKendraFrontendService__
+  - ### Features
+    - Changes for a new feature in Amazon Kendra's Query API to Collapse/Expand query results
+
+## __Amazon Connect Wisdom Service__
+  - ### Features
+    - This release adds an max limit of 25 recommendation ids for NotifyRecommendationsReceived API.
+
+## __Amazon DynamoDB__
+  - ### Features
+    - Updating descriptions for several APIs.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - This release adds support for upgrading the storage file system configuration on the DB instance using a blue/green deployment or a read replica.
+
 # __1.12.568__ __2023-10-17__
 ## __AWS Application Discovery Service__
   - ### Features

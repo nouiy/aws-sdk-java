@@ -46,8 +46,8 @@ public class IncrementalExportSpecification implements Serializable, Cloneable, 
     private java.util.Date exportToTime;
     /**
      * <p>
-     * Choice of whether to output the previous item image prior to the start time of the incremental export. Valid
-     * values are <code>NEW_AND_OLD_IMAGES</code> and <code>NEW_IMAGES</code>.
+     * The view type that was chosen for the export. Valid values are <code>NEW_AND_OLD_IMAGES</code> and
+     * <code>NEW_IMAGES</code>. The default value is <code>NEW_AND_OLD_IMAGES</code>.
      * </p>
      */
     private String exportViewType;
@@ -158,13 +158,13 @@ public class IncrementalExportSpecification implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Choice of whether to output the previous item image prior to the start time of the incremental export. Valid
-     * values are <code>NEW_AND_OLD_IMAGES</code> and <code>NEW_IMAGES</code>.
+     * The view type that was chosen for the export. Valid values are <code>NEW_AND_OLD_IMAGES</code> and
+     * <code>NEW_IMAGES</code>. The default value is <code>NEW_AND_OLD_IMAGES</code>.
      * </p>
      * 
      * @param exportViewType
-     *        Choice of whether to output the previous item image prior to the start time of the incremental export.
-     *        Valid values are <code>NEW_AND_OLD_IMAGES</code> and <code>NEW_IMAGES</code>.
+     *        The view type that was chosen for the export. Valid values are <code>NEW_AND_OLD_IMAGES</code> and
+     *        <code>NEW_IMAGES</code>. The default value is <code>NEW_AND_OLD_IMAGES</code>.
      * @see ExportViewType
      */
 
@@ -174,12 +174,12 @@ public class IncrementalExportSpecification implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Choice of whether to output the previous item image prior to the start time of the incremental export. Valid
-     * values are <code>NEW_AND_OLD_IMAGES</code> and <code>NEW_IMAGES</code>.
+     * The view type that was chosen for the export. Valid values are <code>NEW_AND_OLD_IMAGES</code> and
+     * <code>NEW_IMAGES</code>. The default value is <code>NEW_AND_OLD_IMAGES</code>.
      * </p>
      * 
-     * @return Choice of whether to output the previous item image prior to the start time of the incremental export.
-     *         Valid values are <code>NEW_AND_OLD_IMAGES</code> and <code>NEW_IMAGES</code>.
+     * @return The view type that was chosen for the export. Valid values are <code>NEW_AND_OLD_IMAGES</code> and
+     *         <code>NEW_IMAGES</code>. The default value is <code>NEW_AND_OLD_IMAGES</code>.
      * @see ExportViewType
      */
 
@@ -189,13 +189,13 @@ public class IncrementalExportSpecification implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Choice of whether to output the previous item image prior to the start time of the incremental export. Valid
-     * values are <code>NEW_AND_OLD_IMAGES</code> and <code>NEW_IMAGES</code>.
+     * The view type that was chosen for the export. Valid values are <code>NEW_AND_OLD_IMAGES</code> and
+     * <code>NEW_IMAGES</code>. The default value is <code>NEW_AND_OLD_IMAGES</code>.
      * </p>
      * 
      * @param exportViewType
-     *        Choice of whether to output the previous item image prior to the start time of the incremental export.
-     *        Valid values are <code>NEW_AND_OLD_IMAGES</code> and <code>NEW_IMAGES</code>.
+     *        The view type that was chosen for the export. Valid values are <code>NEW_AND_OLD_IMAGES</code> and
+     *        <code>NEW_IMAGES</code>. The default value is <code>NEW_AND_OLD_IMAGES</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportViewType
      */
@@ -207,13 +207,13 @@ public class IncrementalExportSpecification implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Choice of whether to output the previous item image prior to the start time of the incremental export. Valid
-     * values are <code>NEW_AND_OLD_IMAGES</code> and <code>NEW_IMAGES</code>.
+     * The view type that was chosen for the export. Valid values are <code>NEW_AND_OLD_IMAGES</code> and
+     * <code>NEW_IMAGES</code>. The default value is <code>NEW_AND_OLD_IMAGES</code>.
      * </p>
      * 
      * @param exportViewType
-     *        Choice of whether to output the previous item image prior to the start time of the incremental export.
-     *        Valid values are <code>NEW_AND_OLD_IMAGES</code> and <code>NEW_IMAGES</code>.
+     *        The view type that was chosen for the export. Valid values are <code>NEW_AND_OLD_IMAGES</code> and
+     *        <code>NEW_IMAGES</code>. The default value is <code>NEW_AND_OLD_IMAGES</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportViewType
      */

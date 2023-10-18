@@ -853,6 +853,13 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      */
     private Boolean dedicatedLogVolume;
+    /**
+     * <p>
+     * Whether to upgrade the storage file system configuration on the read replica. This option migrates the read
+     * replica from the old storage file system layout to the preferred layout.
+     * </p>
+     */
+    private Boolean upgradeStorageConfig;
     /** The region where the source instance is located. */
     private String sourceRegion;
 
@@ -6521,6 +6528,66 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Whether to upgrade the storage file system configuration on the read replica. This option migrates the read
+     * replica from the old storage file system layout to the preferred layout.
+     * </p>
+     * 
+     * @param upgradeStorageConfig
+     *        Whether to upgrade the storage file system configuration on the read replica. This option migrates the
+     *        read replica from the old storage file system layout to the preferred layout.
+     */
+
+    public void setUpgradeStorageConfig(Boolean upgradeStorageConfig) {
+        this.upgradeStorageConfig = upgradeStorageConfig;
+    }
+
+    /**
+     * <p>
+     * Whether to upgrade the storage file system configuration on the read replica. This option migrates the read
+     * replica from the old storage file system layout to the preferred layout.
+     * </p>
+     * 
+     * @return Whether to upgrade the storage file system configuration on the read replica. This option migrates the
+     *         read replica from the old storage file system layout to the preferred layout.
+     */
+
+    public Boolean getUpgradeStorageConfig() {
+        return this.upgradeStorageConfig;
+    }
+
+    /**
+     * <p>
+     * Whether to upgrade the storage file system configuration on the read replica. This option migrates the read
+     * replica from the old storage file system layout to the preferred layout.
+     * </p>
+     * 
+     * @param upgradeStorageConfig
+     *        Whether to upgrade the storage file system configuration on the read replica. This option migrates the
+     *        read replica from the old storage file system layout to the preferred layout.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceReadReplicaRequest withUpgradeStorageConfig(Boolean upgradeStorageConfig) {
+        setUpgradeStorageConfig(upgradeStorageConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether to upgrade the storage file system configuration on the read replica. This option migrates the read
+     * replica from the old storage file system layout to the preferred layout.
+     * </p>
+     * 
+     * @return Whether to upgrade the storage file system configuration on the read replica. This option migrates the
+     *         read replica from the old storage file system layout to the preferred layout.
+     */
+
+    public Boolean isUpgradeStorageConfig() {
+        return this.upgradeStorageConfig;
+    }
+
+    /**
      * The region where the source instance is located.
      * 
      * @param sourceRegion
@@ -6652,6 +6719,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
             sb.append("SourceDBClusterIdentifier: ").append(getSourceDBClusterIdentifier()).append(",");
         if (getDedicatedLogVolume() != null)
             sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume()).append(",");
+        if (getUpgradeStorageConfig() != null)
+            sb.append("UpgradeStorageConfig: ").append(getUpgradeStorageConfig()).append(",");
         if (getSourceRegion() != null)
             sb.append("SourceRegion: ").append(getSourceRegion());
         sb.append("}");
@@ -6842,6 +6911,10 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getDedicatedLogVolume() != null && other.getDedicatedLogVolume().equals(this.getDedicatedLogVolume()) == false)
             return false;
+        if (other.getUpgradeStorageConfig() == null ^ this.getUpgradeStorageConfig() == null)
+            return false;
+        if (other.getUpgradeStorageConfig() != null && other.getUpgradeStorageConfig().equals(this.getUpgradeStorageConfig()) == false)
+            return false;
         if (other.getSourceRegion() == null ^ this.getSourceRegion() == null)
             return false;
         if (other.getSourceRegion() != null && other.getSourceRegion().equals(this.getSourceRegion()) == false)
@@ -6897,6 +6970,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
         hashCode = prime * hashCode + ((getAllocatedStorage() == null) ? 0 : getAllocatedStorage().hashCode());
         hashCode = prime * hashCode + ((getSourceDBClusterIdentifier() == null) ? 0 : getSourceDBClusterIdentifier().hashCode());
         hashCode = prime * hashCode + ((getDedicatedLogVolume() == null) ? 0 : getDedicatedLogVolume().hashCode());
+        hashCode = prime * hashCode + ((getUpgradeStorageConfig() == null) ? 0 : getUpgradeStorageConfig().hashCode());
         hashCode = prime * hashCode + ((getSourceRegion() == null) ? 0 : getSourceRegion().hashCode());
         return hashCode;
     }

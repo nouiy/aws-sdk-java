@@ -160,9 +160,8 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
     private Long itemCount;
     /**
      * <p>
-     * Choice of whether to execute as a full export or incremental export. Valid values are <code>FULL_EXPORT</code> or
-     * <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is provided, the
-     * <code>IncrementalExportSpecification</code> must also be used.
+     * The type of export that was performed. Valid values are <code>FULL_EXPORT</code> or
+     * <code>INCREMENTAL_EXPORT</code>.
      * </p>
      */
     private String exportType;
@@ -1112,15 +1111,13 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Choice of whether to execute as a full export or incremental export. Valid values are <code>FULL_EXPORT</code> or
-     * <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is provided, the
-     * <code>IncrementalExportSpecification</code> must also be used.
+     * The type of export that was performed. Valid values are <code>FULL_EXPORT</code> or
+     * <code>INCREMENTAL_EXPORT</code>.
      * </p>
      * 
      * @param exportType
-     *        Choice of whether to execute as a full export or incremental export. Valid values are
-     *        <code>FULL_EXPORT</code> or <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is
-     *        provided, the <code>IncrementalExportSpecification</code> must also be used.
+     *        The type of export that was performed. Valid values are <code>FULL_EXPORT</code> or
+     *        <code>INCREMENTAL_EXPORT</code>.
      * @see ExportType
      */
 
@@ -1130,14 +1127,12 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Choice of whether to execute as a full export or incremental export. Valid values are <code>FULL_EXPORT</code> or
-     * <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is provided, the
-     * <code>IncrementalExportSpecification</code> must also be used.
+     * The type of export that was performed. Valid values are <code>FULL_EXPORT</code> or
+     * <code>INCREMENTAL_EXPORT</code>.
      * </p>
      * 
-     * @return Choice of whether to execute as a full export or incremental export. Valid values are
-     *         <code>FULL_EXPORT</code> or <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is
-     *         provided, the <code>IncrementalExportSpecification</code> must also be used.
+     * @return The type of export that was performed. Valid values are <code>FULL_EXPORT</code> or
+     *         <code>INCREMENTAL_EXPORT</code>.
      * @see ExportType
      */
 
@@ -1147,15 +1142,13 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Choice of whether to execute as a full export or incremental export. Valid values are <code>FULL_EXPORT</code> or
-     * <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is provided, the
-     * <code>IncrementalExportSpecification</code> must also be used.
+     * The type of export that was performed. Valid values are <code>FULL_EXPORT</code> or
+     * <code>INCREMENTAL_EXPORT</code>.
      * </p>
      * 
      * @param exportType
-     *        Choice of whether to execute as a full export or incremental export. Valid values are
-     *        <code>FULL_EXPORT</code> or <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is
-     *        provided, the <code>IncrementalExportSpecification</code> must also be used.
+     *        The type of export that was performed. Valid values are <code>FULL_EXPORT</code> or
+     *        <code>INCREMENTAL_EXPORT</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportType
      */
@@ -1167,15 +1160,13 @@ public class ExportDescription implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Choice of whether to execute as a full export or incremental export. Valid values are <code>FULL_EXPORT</code> or
-     * <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is provided, the
-     * <code>IncrementalExportSpecification</code> must also be used.
+     * The type of export that was performed. Valid values are <code>FULL_EXPORT</code> or
+     * <code>INCREMENTAL_EXPORT</code>.
      * </p>
      * 
      * @param exportType
-     *        Choice of whether to execute as a full export or incremental export. Valid values are
-     *        <code>FULL_EXPORT</code> or <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is
-     *        provided, the <code>IncrementalExportSpecification</code> must also be used.
+     *        The type of export that was performed. Valid values are <code>FULL_EXPORT</code> or
+     *        <code>INCREMENTAL_EXPORT</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportType
      */

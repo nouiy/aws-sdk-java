@@ -106,9 +106,9 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
     private String exportFormat;
     /**
      * <p>
-     * Choice of whether to execute as a full export or incremental export. Valid values are <code>FULL_EXPORT</code> or
-     * <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is provided, the
-     * <code>IncrementalExportSpecification</code> must also be used.
+     * Choice of whether to execute as a full export or incremental export. Valid values are FULL_EXPORT or
+     * INCREMENTAL_EXPORT. The default value is FULL_EXPORT. If INCREMENTAL_EXPORT is provided, the
+     * IncrementalExportSpecification must also be used.
      * </p>
      */
     private String exportType;
@@ -693,15 +693,15 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Choice of whether to execute as a full export or incremental export. Valid values are <code>FULL_EXPORT</code> or
-     * <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is provided, the
-     * <code>IncrementalExportSpecification</code> must also be used.
+     * Choice of whether to execute as a full export or incremental export. Valid values are FULL_EXPORT or
+     * INCREMENTAL_EXPORT. The default value is FULL_EXPORT. If INCREMENTAL_EXPORT is provided, the
+     * IncrementalExportSpecification must also be used.
      * </p>
      * 
      * @param exportType
-     *        Choice of whether to execute as a full export or incremental export. Valid values are
-     *        <code>FULL_EXPORT</code> or <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is
-     *        provided, the <code>IncrementalExportSpecification</code> must also be used.
+     *        Choice of whether to execute as a full export or incremental export. Valid values are FULL_EXPORT or
+     *        INCREMENTAL_EXPORT. The default value is FULL_EXPORT. If INCREMENTAL_EXPORT is provided, the
+     *        IncrementalExportSpecification must also be used.
      * @see ExportType
      */
 
@@ -711,14 +711,14 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Choice of whether to execute as a full export or incremental export. Valid values are <code>FULL_EXPORT</code> or
-     * <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is provided, the
-     * <code>IncrementalExportSpecification</code> must also be used.
+     * Choice of whether to execute as a full export or incremental export. Valid values are FULL_EXPORT or
+     * INCREMENTAL_EXPORT. The default value is FULL_EXPORT. If INCREMENTAL_EXPORT is provided, the
+     * IncrementalExportSpecification must also be used.
      * </p>
      * 
-     * @return Choice of whether to execute as a full export or incremental export. Valid values are
-     *         <code>FULL_EXPORT</code> or <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is
-     *         provided, the <code>IncrementalExportSpecification</code> must also be used.
+     * @return Choice of whether to execute as a full export or incremental export. Valid values are FULL_EXPORT or
+     *         INCREMENTAL_EXPORT. The default value is FULL_EXPORT. If INCREMENTAL_EXPORT is provided, the
+     *         IncrementalExportSpecification must also be used.
      * @see ExportType
      */
 
@@ -728,15 +728,15 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Choice of whether to execute as a full export or incremental export. Valid values are <code>FULL_EXPORT</code> or
-     * <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is provided, the
-     * <code>IncrementalExportSpecification</code> must also be used.
+     * Choice of whether to execute as a full export or incremental export. Valid values are FULL_EXPORT or
+     * INCREMENTAL_EXPORT. The default value is FULL_EXPORT. If INCREMENTAL_EXPORT is provided, the
+     * IncrementalExportSpecification must also be used.
      * </p>
      * 
      * @param exportType
-     *        Choice of whether to execute as a full export or incremental export. Valid values are
-     *        <code>FULL_EXPORT</code> or <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is
-     *        provided, the <code>IncrementalExportSpecification</code> must also be used.
+     *        Choice of whether to execute as a full export or incremental export. Valid values are FULL_EXPORT or
+     *        INCREMENTAL_EXPORT. The default value is FULL_EXPORT. If INCREMENTAL_EXPORT is provided, the
+     *        IncrementalExportSpecification must also be used.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportType
      */
@@ -748,15 +748,15 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Choice of whether to execute as a full export or incremental export. Valid values are <code>FULL_EXPORT</code> or
-     * <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is provided, the
-     * <code>IncrementalExportSpecification</code> must also be used.
+     * Choice of whether to execute as a full export or incremental export. Valid values are FULL_EXPORT or
+     * INCREMENTAL_EXPORT. The default value is FULL_EXPORT. If INCREMENTAL_EXPORT is provided, the
+     * IncrementalExportSpecification must also be used.
      * </p>
      * 
      * @param exportType
-     *        Choice of whether to execute as a full export or incremental export. Valid values are
-     *        <code>FULL_EXPORT</code> or <code>INCREMENTAL_EXPORT</code>. If <code>INCREMENTAL_EXPORT</code> is
-     *        provided, the <code>IncrementalExportSpecification</code> must also be used.
+     *        Choice of whether to execute as a full export or incremental export. Valid values are FULL_EXPORT or
+     *        INCREMENTAL_EXPORT. The default value is FULL_EXPORT. If INCREMENTAL_EXPORT is provided, the
+     *        IncrementalExportSpecification must also be used.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportType
      */

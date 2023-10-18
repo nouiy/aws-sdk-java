@@ -709,6 +709,16 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      */
     private Boolean dedicatedLogVolume;
+    /**
+     * <p>
+     * Indicates whether an upgrade is recommended for the storage file system configuration on the DB instance. To
+     * migrate to the preferred configuration, you can either create a blue/green deployment, or create a read replica
+     * from the DB instance. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.UpgradeFileSystem"
+     * >Upgrading the storage file system for a DB instance</a>.
+     * </p>
+     */
+    private Boolean isStorageConfigUpgradeAvailable;
 
     /**
      * <p>
@@ -5862,6 +5872,90 @@ public class DBInstance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether an upgrade is recommended for the storage file system configuration on the DB instance. To
+     * migrate to the preferred configuration, you can either create a blue/green deployment, or create a read replica
+     * from the DB instance. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.UpgradeFileSystem"
+     * >Upgrading the storage file system for a DB instance</a>.
+     * </p>
+     * 
+     * @param isStorageConfigUpgradeAvailable
+     *        Indicates whether an upgrade is recommended for the storage file system configuration on the DB instance.
+     *        To migrate to the preferred configuration, you can either create a blue/green deployment, or create a read
+     *        replica from the DB instance. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.UpgradeFileSystem"
+     *        >Upgrading the storage file system for a DB instance</a>.
+     */
+
+    public void setIsStorageConfigUpgradeAvailable(Boolean isStorageConfigUpgradeAvailable) {
+        this.isStorageConfigUpgradeAvailable = isStorageConfigUpgradeAvailable;
+    }
+
+    /**
+     * <p>
+     * Indicates whether an upgrade is recommended for the storage file system configuration on the DB instance. To
+     * migrate to the preferred configuration, you can either create a blue/green deployment, or create a read replica
+     * from the DB instance. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.UpgradeFileSystem"
+     * >Upgrading the storage file system for a DB instance</a>.
+     * </p>
+     * 
+     * @return Indicates whether an upgrade is recommended for the storage file system configuration on the DB instance.
+     *         To migrate to the preferred configuration, you can either create a blue/green deployment, or create a
+     *         read replica from the DB instance. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.UpgradeFileSystem"
+     *         >Upgrading the storage file system for a DB instance</a>.
+     */
+
+    public Boolean getIsStorageConfigUpgradeAvailable() {
+        return this.isStorageConfigUpgradeAvailable;
+    }
+
+    /**
+     * <p>
+     * Indicates whether an upgrade is recommended for the storage file system configuration on the DB instance. To
+     * migrate to the preferred configuration, you can either create a blue/green deployment, or create a read replica
+     * from the DB instance. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.UpgradeFileSystem"
+     * >Upgrading the storage file system for a DB instance</a>.
+     * </p>
+     * 
+     * @param isStorageConfigUpgradeAvailable
+     *        Indicates whether an upgrade is recommended for the storage file system configuration on the DB instance.
+     *        To migrate to the preferred configuration, you can either create a blue/green deployment, or create a read
+     *        replica from the DB instance. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.UpgradeFileSystem"
+     *        >Upgrading the storage file system for a DB instance</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBInstance withIsStorageConfigUpgradeAvailable(Boolean isStorageConfigUpgradeAvailable) {
+        setIsStorageConfigUpgradeAvailable(isStorageConfigUpgradeAvailable);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether an upgrade is recommended for the storage file system configuration on the DB instance. To
+     * migrate to the preferred configuration, you can either create a blue/green deployment, or create a read replica
+     * from the DB instance. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.UpgradeFileSystem"
+     * >Upgrading the storage file system for a DB instance</a>.
+     * </p>
+     * 
+     * @return Indicates whether an upgrade is recommended for the storage file system configuration on the DB instance.
+     *         To migrate to the preferred configuration, you can either create a blue/green deployment, or create a
+     *         read replica from the DB instance. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.UpgradeFileSystem"
+     *         >Upgrading the storage file system for a DB instance</a>.
+     */
+
+    public Boolean isStorageConfigUpgradeAvailable() {
+        return this.isStorageConfigUpgradeAvailable;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -6038,7 +6132,9 @@ public class DBInstance implements Serializable, Cloneable {
         if (getPercentProgress() != null)
             sb.append("PercentProgress: ").append(getPercentProgress()).append(",");
         if (getDedicatedLogVolume() != null)
-            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume());
+            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume()).append(",");
+        if (getIsStorageConfigUpgradeAvailable() != null)
+            sb.append("IsStorageConfigUpgradeAvailable: ").append(getIsStorageConfigUpgradeAvailable());
         sb.append("}");
         return sb.toString();
     }
@@ -6395,6 +6491,11 @@ public class DBInstance implements Serializable, Cloneable {
             return false;
         if (other.getDedicatedLogVolume() != null && other.getDedicatedLogVolume().equals(this.getDedicatedLogVolume()) == false)
             return false;
+        if (other.getIsStorageConfigUpgradeAvailable() == null ^ this.getIsStorageConfigUpgradeAvailable() == null)
+            return false;
+        if (other.getIsStorageConfigUpgradeAvailable() != null
+                && other.getIsStorageConfigUpgradeAvailable().equals(this.getIsStorageConfigUpgradeAvailable()) == false)
+            return false;
         return true;
     }
 
@@ -6487,6 +6588,7 @@ public class DBInstance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getReadReplicaSourceDBClusterIdentifier() == null) ? 0 : getReadReplicaSourceDBClusterIdentifier().hashCode());
         hashCode = prime * hashCode + ((getPercentProgress() == null) ? 0 : getPercentProgress().hashCode());
         hashCode = prime * hashCode + ((getDedicatedLogVolume() == null) ? 0 : getDedicatedLogVolume().hashCode());
+        hashCode = prime * hashCode + ((getIsStorageConfigUpgradeAvailable() == null) ? 0 : getIsStorageConfigUpgradeAvailable().hashCode());
         return hashCode;
     }
 

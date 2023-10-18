@@ -283,6 +283,10 @@ public class CreateDBInstanceReadReplicaRequestMarshaller implements
             request.addParameter("DedicatedLogVolume", StringUtils.fromBoolean(createDBInstanceReadReplicaRequest.getDedicatedLogVolume()));
         }
 
+        if (createDBInstanceReadReplicaRequest.getUpgradeStorageConfig() != null) {
+            request.addParameter("UpgradeStorageConfig", StringUtils.fromBoolean(createDBInstanceReadReplicaRequest.getUpgradeStorageConfig()));
+        }
+
         if (createDBInstanceReadReplicaRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBInstanceReadReplicaRequest.getSourceRegion()));
         }

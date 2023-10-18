@@ -111,6 +111,20 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     private SortingConfiguration sortingConfiguration;
     /**
      * <p>
+     * Provides configuration information to determine how the results of a query are sorted.
+     * </p>
+     * <p>
+     * You can set upto 3 fields that Amazon Kendra should sort the results on, and specify whether the results should
+     * be sorted in ascending or descending order. The sort field quota can be increased.
+     * </p>
+     * <p>
+     * If you don't provide a sorting configuration, the results are sorted by the relevance that Amazon Kendra
+     * determines for the result. In the case of ties in sorting the results, the results are sorted by relevance.
+     * </p>
+     */
+    private java.util.List<SortingConfiguration> sortingConfigurations;
+    /**
+     * <p>
      * The user context token or user and group information.
      * </p>
      */
@@ -129,6 +143,13 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </p>
      */
     private SpellCorrectionConfiguration spellCorrectionConfiguration;
+    /**
+     * <p>
+     * Provides configuration to determine how to group results by document attribute value, and how to display them
+     * (collapsed or expanded) under a designated primary document for each group.
+     * </p>
+     */
+    private CollapseConfiguration collapseConfiguration;
 
     /**
      * <p>
@@ -803,6 +824,140 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
+     * Provides configuration information to determine how the results of a query are sorted.
+     * </p>
+     * <p>
+     * You can set upto 3 fields that Amazon Kendra should sort the results on, and specify whether the results should
+     * be sorted in ascending or descending order. The sort field quota can be increased.
+     * </p>
+     * <p>
+     * If you don't provide a sorting configuration, the results are sorted by the relevance that Amazon Kendra
+     * determines for the result. In the case of ties in sorting the results, the results are sorted by relevance.
+     * </p>
+     * 
+     * @return Provides configuration information to determine how the results of a query are sorted.</p>
+     *         <p>
+     *         You can set upto 3 fields that Amazon Kendra should sort the results on, and specify whether the results
+     *         should be sorted in ascending or descending order. The sort field quota can be increased.
+     *         </p>
+     *         <p>
+     *         If you don't provide a sorting configuration, the results are sorted by the relevance that Amazon Kendra
+     *         determines for the result. In the case of ties in sorting the results, the results are sorted by
+     *         relevance.
+     */
+
+    public java.util.List<SortingConfiguration> getSortingConfigurations() {
+        return sortingConfigurations;
+    }
+
+    /**
+     * <p>
+     * Provides configuration information to determine how the results of a query are sorted.
+     * </p>
+     * <p>
+     * You can set upto 3 fields that Amazon Kendra should sort the results on, and specify whether the results should
+     * be sorted in ascending or descending order. The sort field quota can be increased.
+     * </p>
+     * <p>
+     * If you don't provide a sorting configuration, the results are sorted by the relevance that Amazon Kendra
+     * determines for the result. In the case of ties in sorting the results, the results are sorted by relevance.
+     * </p>
+     * 
+     * @param sortingConfigurations
+     *        Provides configuration information to determine how the results of a query are sorted.</p>
+     *        <p>
+     *        You can set upto 3 fields that Amazon Kendra should sort the results on, and specify whether the results
+     *        should be sorted in ascending or descending order. The sort field quota can be increased.
+     *        </p>
+     *        <p>
+     *        If you don't provide a sorting configuration, the results are sorted by the relevance that Amazon Kendra
+     *        determines for the result. In the case of ties in sorting the results, the results are sorted by
+     *        relevance.
+     */
+
+    public void setSortingConfigurations(java.util.Collection<SortingConfiguration> sortingConfigurations) {
+        if (sortingConfigurations == null) {
+            this.sortingConfigurations = null;
+            return;
+        }
+
+        this.sortingConfigurations = new java.util.ArrayList<SortingConfiguration>(sortingConfigurations);
+    }
+
+    /**
+     * <p>
+     * Provides configuration information to determine how the results of a query are sorted.
+     * </p>
+     * <p>
+     * You can set upto 3 fields that Amazon Kendra should sort the results on, and specify whether the results should
+     * be sorted in ascending or descending order. The sort field quota can be increased.
+     * </p>
+     * <p>
+     * If you don't provide a sorting configuration, the results are sorted by the relevance that Amazon Kendra
+     * determines for the result. In the case of ties in sorting the results, the results are sorted by relevance.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSortingConfigurations(java.util.Collection)} or
+     * {@link #withSortingConfigurations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param sortingConfigurations
+     *        Provides configuration information to determine how the results of a query are sorted.</p>
+     *        <p>
+     *        You can set upto 3 fields that Amazon Kendra should sort the results on, and specify whether the results
+     *        should be sorted in ascending or descending order. The sort field quota can be increased.
+     *        </p>
+     *        <p>
+     *        If you don't provide a sorting configuration, the results are sorted by the relevance that Amazon Kendra
+     *        determines for the result. In the case of ties in sorting the results, the results are sorted by
+     *        relevance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryRequest withSortingConfigurations(SortingConfiguration... sortingConfigurations) {
+        if (this.sortingConfigurations == null) {
+            setSortingConfigurations(new java.util.ArrayList<SortingConfiguration>(sortingConfigurations.length));
+        }
+        for (SortingConfiguration ele : sortingConfigurations) {
+            this.sortingConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides configuration information to determine how the results of a query are sorted.
+     * </p>
+     * <p>
+     * You can set upto 3 fields that Amazon Kendra should sort the results on, and specify whether the results should
+     * be sorted in ascending or descending order. The sort field quota can be increased.
+     * </p>
+     * <p>
+     * If you don't provide a sorting configuration, the results are sorted by the relevance that Amazon Kendra
+     * determines for the result. In the case of ties in sorting the results, the results are sorted by relevance.
+     * </p>
+     * 
+     * @param sortingConfigurations
+     *        Provides configuration information to determine how the results of a query are sorted.</p>
+     *        <p>
+     *        You can set upto 3 fields that Amazon Kendra should sort the results on, and specify whether the results
+     *        should be sorted in ascending or descending order. The sort field quota can be increased.
+     *        </p>
+     *        <p>
+     *        If you don't provide a sorting configuration, the results are sorted by the relevance that Amazon Kendra
+     *        determines for the result. In the case of ties in sorting the results, the results are sorted by
+     *        relevance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryRequest withSortingConfigurations(java.util.Collection<SortingConfiguration> sortingConfigurations) {
+        setSortingConfigurations(sortingConfigurations);
+        return this;
+    }
+
+    /**
+     * <p>
      * The user context token or user and group information.
      * </p>
      * 
@@ -934,6 +1089,52 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     }
 
     /**
+     * <p>
+     * Provides configuration to determine how to group results by document attribute value, and how to display them
+     * (collapsed or expanded) under a designated primary document for each group.
+     * </p>
+     * 
+     * @param collapseConfiguration
+     *        Provides configuration to determine how to group results by document attribute value, and how to display
+     *        them (collapsed or expanded) under a designated primary document for each group.
+     */
+
+    public void setCollapseConfiguration(CollapseConfiguration collapseConfiguration) {
+        this.collapseConfiguration = collapseConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides configuration to determine how to group results by document attribute value, and how to display them
+     * (collapsed or expanded) under a designated primary document for each group.
+     * </p>
+     * 
+     * @return Provides configuration to determine how to group results by document attribute value, and how to display
+     *         them (collapsed or expanded) under a designated primary document for each group.
+     */
+
+    public CollapseConfiguration getCollapseConfiguration() {
+        return this.collapseConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides configuration to determine how to group results by document attribute value, and how to display them
+     * (collapsed or expanded) under a designated primary document for each group.
+     * </p>
+     * 
+     * @param collapseConfiguration
+     *        Provides configuration to determine how to group results by document attribute value, and how to display
+     *        them (collapsed or expanded) under a designated primary document for each group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryRequest withCollapseConfiguration(CollapseConfiguration collapseConfiguration) {
+        setCollapseConfiguration(collapseConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -965,12 +1166,16 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
             sb.append("PageSize: ").append(getPageSize()).append(",");
         if (getSortingConfiguration() != null)
             sb.append("SortingConfiguration: ").append(getSortingConfiguration()).append(",");
+        if (getSortingConfigurations() != null)
+            sb.append("SortingConfigurations: ").append(getSortingConfigurations()).append(",");
         if (getUserContext() != null)
             sb.append("UserContext: ").append(getUserContext()).append(",");
         if (getVisitorId() != null)
             sb.append("VisitorId: ").append(getVisitorId()).append(",");
         if (getSpellCorrectionConfiguration() != null)
-            sb.append("SpellCorrectionConfiguration: ").append(getSpellCorrectionConfiguration());
+            sb.append("SpellCorrectionConfiguration: ").append(getSpellCorrectionConfiguration()).append(",");
+        if (getCollapseConfiguration() != null)
+            sb.append("CollapseConfiguration: ").append(getCollapseConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1026,6 +1231,10 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
             return false;
         if (other.getSortingConfiguration() != null && other.getSortingConfiguration().equals(this.getSortingConfiguration()) == false)
             return false;
+        if (other.getSortingConfigurations() == null ^ this.getSortingConfigurations() == null)
+            return false;
+        if (other.getSortingConfigurations() != null && other.getSortingConfigurations().equals(this.getSortingConfigurations()) == false)
+            return false;
         if (other.getUserContext() == null ^ this.getUserContext() == null)
             return false;
         if (other.getUserContext() != null && other.getUserContext().equals(this.getUserContext()) == false)
@@ -1037,6 +1246,10 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
         if (other.getSpellCorrectionConfiguration() == null ^ this.getSpellCorrectionConfiguration() == null)
             return false;
         if (other.getSpellCorrectionConfiguration() != null && other.getSpellCorrectionConfiguration().equals(this.getSpellCorrectionConfiguration()) == false)
+            return false;
+        if (other.getCollapseConfiguration() == null ^ this.getCollapseConfiguration() == null)
+            return false;
+        if (other.getCollapseConfiguration() != null && other.getCollapseConfiguration().equals(this.getCollapseConfiguration()) == false)
             return false;
         return true;
     }
@@ -1056,9 +1269,11 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
         hashCode = prime * hashCode + ((getPageNumber() == null) ? 0 : getPageNumber().hashCode());
         hashCode = prime * hashCode + ((getPageSize() == null) ? 0 : getPageSize().hashCode());
         hashCode = prime * hashCode + ((getSortingConfiguration() == null) ? 0 : getSortingConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getSortingConfigurations() == null) ? 0 : getSortingConfigurations().hashCode());
         hashCode = prime * hashCode + ((getUserContext() == null) ? 0 : getUserContext().hashCode());
         hashCode = prime * hashCode + ((getVisitorId() == null) ? 0 : getVisitorId().hashCode());
         hashCode = prime * hashCode + ((getSpellCorrectionConfiguration() == null) ? 0 : getSpellCorrectionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getCollapseConfiguration() == null) ? 0 : getCollapseConfiguration().hashCode());
         return hashCode;
     }
 

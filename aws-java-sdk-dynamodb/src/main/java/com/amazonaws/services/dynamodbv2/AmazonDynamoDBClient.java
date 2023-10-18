@@ -2919,6 +2919,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         There is a user error, such as an invalid data format.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         There is an ongoing <code>TransactWriteItems</code> operation that conflicts with a concurrent
+     *         <code>TransactWriteItems</code> request. In this case the <code>TransactWriteItems</code> operation fails
+     *         with a <code>TransactionCanceledException</code>.
+     *         </p>
+     *         </li>
      *         </ul>
      *         <p>
      *         DynamoDB cancels a <code>TransactGetItems</code> request under the following circumstances:
@@ -5007,6 +5014,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         There is a user error, such as an invalid data format.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         There is an ongoing <code>TransactWriteItems</code> operation that conflicts with a concurrent
+     *         <code>TransactWriteItems</code> request. In this case the <code>TransactWriteItems</code> operation fails
+     *         with a <code>TransactionCanceledException</code>.
+     *         </p>
+     *         </li>
      *         </ul>
      *         <p>
      *         DynamoDB cancels a <code>TransactGetItems</code> request under the following circumstances:
@@ -5455,6 +5469,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         <li>
      *         <p>
      *         There is a user error, such as an invalid data format.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         There is an ongoing <code>TransactWriteItems</code> operation that conflicts with a concurrent
+     *         <code>TransactWriteItems</code> request. In this case the <code>TransactWriteItems</code> operation fails
+     *         with a <code>TransactionCanceledException</code>.
      *         </p>
      *         </li>
      *         </ul>
