@@ -522,6 +522,19 @@ public class AbstractAmazonRekognitionAsync extends AbstractAmazonRekognition im
     }
 
     @Override
+    public java.util.concurrent.Future<GetMediaAnalysisJobResult> getMediaAnalysisJobAsync(GetMediaAnalysisJobRequest request) {
+
+        return getMediaAnalysisJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMediaAnalysisJobResult> getMediaAnalysisJobAsync(GetMediaAnalysisJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetMediaAnalysisJobRequest, GetMediaAnalysisJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPersonTrackingResult> getPersonTrackingAsync(GetPersonTrackingRequest request) {
 
         return getPersonTrackingAsync(request, null);
@@ -621,6 +634,19 @@ public class AbstractAmazonRekognitionAsync extends AbstractAmazonRekognition im
     @Override
     public java.util.concurrent.Future<ListFacesResult> listFacesAsync(ListFacesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListFacesRequest, ListFacesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMediaAnalysisJobsResult> listMediaAnalysisJobsAsync(ListMediaAnalysisJobsRequest request) {
+
+        return listMediaAnalysisJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMediaAnalysisJobsResult> listMediaAnalysisJobsAsync(ListMediaAnalysisJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListMediaAnalysisJobsRequest, ListMediaAnalysisJobsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -816,6 +842,19 @@ public class AbstractAmazonRekognitionAsync extends AbstractAmazonRekognition im
     @Override
     public java.util.concurrent.Future<StartLabelDetectionResult> startLabelDetectionAsync(StartLabelDetectionRequest request,
             com.amazonaws.handlers.AsyncHandler<StartLabelDetectionRequest, StartLabelDetectionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartMediaAnalysisJobResult> startMediaAnalysisJobAsync(StartMediaAnalysisJobRequest request) {
+
+        return startMediaAnalysisJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartMediaAnalysisJobResult> startMediaAnalysisJobAsync(StartMediaAnalysisJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartMediaAnalysisJobRequest, StartMediaAnalysisJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

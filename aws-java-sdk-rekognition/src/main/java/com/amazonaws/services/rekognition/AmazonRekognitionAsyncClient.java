@@ -1919,6 +1919,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetMediaAnalysisJobResult> getMediaAnalysisJobAsync(GetMediaAnalysisJobRequest request) {
+
+        return getMediaAnalysisJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMediaAnalysisJobResult> getMediaAnalysisJobAsync(final GetMediaAnalysisJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetMediaAnalysisJobRequest, GetMediaAnalysisJobResult> asyncHandler) {
+        final GetMediaAnalysisJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetMediaAnalysisJobResult>() {
+            @Override
+            public GetMediaAnalysisJobResult call() throws Exception {
+                GetMediaAnalysisJobResult result = null;
+
+                try {
+                    result = executeGetMediaAnalysisJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPersonTrackingResult> getPersonTrackingAsync(GetPersonTrackingRequest request) {
 
         return getPersonTrackingAsync(request, null);
@@ -2167,6 +2200,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
 
                 try {
                     result = executeListFaces(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMediaAnalysisJobsResult> listMediaAnalysisJobsAsync(ListMediaAnalysisJobsRequest request) {
+
+        return listMediaAnalysisJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMediaAnalysisJobsResult> listMediaAnalysisJobsAsync(final ListMediaAnalysisJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListMediaAnalysisJobsRequest, ListMediaAnalysisJobsResult> asyncHandler) {
+        final ListMediaAnalysisJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListMediaAnalysisJobsResult>() {
+            @Override
+            public ListMediaAnalysisJobsResult call() throws Exception {
+                ListMediaAnalysisJobsResult result = null;
+
+                try {
+                    result = executeListMediaAnalysisJobs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2662,6 +2728,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
 
                 try {
                     result = executeStartLabelDetection(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartMediaAnalysisJobResult> startMediaAnalysisJobAsync(StartMediaAnalysisJobRequest request) {
+
+        return startMediaAnalysisJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartMediaAnalysisJobResult> startMediaAnalysisJobAsync(final StartMediaAnalysisJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartMediaAnalysisJobRequest, StartMediaAnalysisJobResult> asyncHandler) {
+        final StartMediaAnalysisJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartMediaAnalysisJobResult>() {
+            @Override
+            public StartMediaAnalysisJobResult call() throws Exception {
+                StartMediaAnalysisJobResult result = null;
+
+                try {
+                    result = executeStartMediaAnalysisJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

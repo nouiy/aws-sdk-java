@@ -229,6 +229,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
     }
 
     @Override
+    public GetMediaAnalysisJobResult getMediaAnalysisJob(GetMediaAnalysisJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetPersonTrackingResult getPersonTracking(GetPersonTrackingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -265,6 +270,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
 
     @Override
     public ListFacesResult listFaces(ListFacesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListMediaAnalysisJobsResult listMediaAnalysisJobs(ListMediaAnalysisJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -340,6 +350,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
 
     @Override
     public StartLabelDetectionResult startLabelDetection(StartLabelDetectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartMediaAnalysisJobResult startMediaAnalysisJob(StartMediaAnalysisJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

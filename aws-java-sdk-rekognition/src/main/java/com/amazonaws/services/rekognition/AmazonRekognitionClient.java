@@ -550,6 +550,9 @@ public class AmazonRekognitionClient extends AmazonWebServiceClient implements A
                             new JsonErrorShapeMetadata().withErrorCode("ImageTooLargeException").withExceptionUnmarshaller(
                                     com.amazonaws.services.rekognition.model.transform.ImageTooLargeExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidManifestException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.rekognition.model.transform.InvalidManifestExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerError").withExceptionUnmarshaller(
                                     com.amazonaws.services.rekognition.model.transform.InternalServerErrorExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.rekognition.model.AmazonRekognitionException.class));
@@ -4405,6 +4408,73 @@ public class AmazonRekognitionClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Retrieves the results for a given media analysis job. Takes a <code>JobId</code> returned by
+     * StartMediaAnalysisJob.
+     * </p>
+     * 
+     * @param getMediaAnalysisJobRequest
+     * @return Result of the GetMediaAnalysisJob operation returned by the service.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform the action.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request cannot be found.
+     * @throws InternalServerErrorException
+     *         Amazon Rekognition experienced a service issue. Try your call again.
+     * @throws InvalidParameterException
+     *         Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Rekognition.
+     * @throws ThrottlingException
+     *         Amazon Rekognition is temporarily unable to process the request. Try your call again.
+     * @sample AmazonRekognition.GetMediaAnalysisJob
+     */
+    @Override
+    public GetMediaAnalysisJobResult getMediaAnalysisJob(GetMediaAnalysisJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetMediaAnalysisJob(request);
+    }
+
+    @SdkInternalApi
+    final GetMediaAnalysisJobResult executeGetMediaAnalysisJob(GetMediaAnalysisJobRequest getMediaAnalysisJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getMediaAnalysisJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetMediaAnalysisJobRequest> request = null;
+        Response<GetMediaAnalysisJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetMediaAnalysisJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getMediaAnalysisJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Rekognition");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetMediaAnalysisJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetMediaAnalysisJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetMediaAnalysisJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets the path tracking results of a Amazon Rekognition Video analysis started by <a>StartPersonTracking</a>.
      * </p>
      * <p>
@@ -5227,6 +5297,73 @@ public class AmazonRekognitionClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<ListFacesResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListFacesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of media analysis jobs. Results are sorted by <code>CreationTimestamp</code> in descending order.
+     * </p>
+     * 
+     * @param listMediaAnalysisJobsRequest
+     * @return Result of the ListMediaAnalysisJobs operation returned by the service.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform the action.
+     * @throws InternalServerErrorException
+     *         Amazon Rekognition experienced a service issue. Try your call again.
+     * @throws InvalidParameterException
+     *         Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+     * @throws InvalidPaginationTokenException
+     *         Pagination token in the request is not valid.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Rekognition.
+     * @throws ThrottlingException
+     *         Amazon Rekognition is temporarily unable to process the request. Try your call again.
+     * @sample AmazonRekognition.ListMediaAnalysisJobs
+     */
+    @Override
+    public ListMediaAnalysisJobsResult listMediaAnalysisJobs(ListMediaAnalysisJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListMediaAnalysisJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListMediaAnalysisJobsResult executeListMediaAnalysisJobs(ListMediaAnalysisJobsRequest listMediaAnalysisJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listMediaAnalysisJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListMediaAnalysisJobsRequest> request = null;
+        Response<ListMediaAnalysisJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListMediaAnalysisJobsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listMediaAnalysisJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Rekognition");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListMediaAnalysisJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListMediaAnalysisJobsResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new ListMediaAnalysisJobsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -6559,6 +6696,89 @@ public class AmazonRekognitionClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<StartLabelDetectionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartLabelDetectionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Initiates a new media analysis job. Accepts a manifest file in an Amazon S3 bucket. The output is a manifest file
+     * and a summary of the manifest stored in the Amazon S3 bucket.
+     * </p>
+     * 
+     * @param startMediaAnalysisJobRequest
+     * @return Result of the StartMediaAnalysisJob operation returned by the service.
+     * @throws InternalServerErrorException
+     *         Amazon Rekognition experienced a service issue. Try your call again.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform the action.
+     * @throws InvalidParameterException
+     *         Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+     * @throws InvalidManifestException
+     *         Indicates that a provided manifest file is empty or larger than the allowed limit.
+     * @throws InvalidS3ObjectException
+     *         Amazon Rekognition is unable to access the S3 object specified in the request.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request cannot be found.
+     * @throws ResourceNotReadyException
+     *         The requested resource isn't ready. For example, this exception occurs when you call
+     *         <code>DetectCustomLabels</code> with a model version that isn't deployed.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Rekognition.
+     * @throws LimitExceededException
+     *         An Amazon Rekognition service limit was exceeded. For example, if you start too many jobs concurrently,
+     *         subsequent calls to start operations (ex: <code>StartLabelDetection</code>) will raise a
+     *         <code>LimitExceededException</code> exception (HTTP status code: 400) until the number of concurrently
+     *         running jobs is below the Amazon Rekognition service limit.
+     * @throws ThrottlingException
+     *         Amazon Rekognition is temporarily unable to process the request. Try your call again.
+     * @throws IdempotentParameterMismatchException
+     *         A <code>ClientRequestToken</code> input parameter was reused with an operation, but at least one of the
+     *         other input parameters is different from the previous call to the operation.
+     * @sample AmazonRekognition.StartMediaAnalysisJob
+     */
+    @Override
+    public StartMediaAnalysisJobResult startMediaAnalysisJob(StartMediaAnalysisJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartMediaAnalysisJob(request);
+    }
+
+    @SdkInternalApi
+    final StartMediaAnalysisJobResult executeStartMediaAnalysisJob(StartMediaAnalysisJobRequest startMediaAnalysisJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startMediaAnalysisJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartMediaAnalysisJobRequest> request = null;
+        Response<StartMediaAnalysisJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartMediaAnalysisJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startMediaAnalysisJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Rekognition");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartMediaAnalysisJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartMediaAnalysisJobResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new StartMediaAnalysisJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -73,6 +73,14 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
     private String namespaceName;
     /**
      * <p>
+     * The patch version of your Amazon Redshift Serverless workgroup. For more information about patch versions, see <a
+     * href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions for Amazon
+     * Redshift</a>.
+     * </p>
+     */
+    private String patchVersion;
+    /**
+     * <p>
      * The custom port to use when connecting to a workgroup. Valid port ranges are 5431-5455 and 8191-8215. The default
      * is 5439.
      * </p>
@@ -120,6 +128,14 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String workgroupName;
+    /**
+     * <p>
+     * The Amazon Redshift Serverless version of your workgroup. For more information about Amazon Redshift Serverless
+     * versions, see<a href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions
+     * for Amazon Redshift</a>.
+     * </p>
+     */
+    private String workgroupVersion;
 
     /**
      * <p>
@@ -456,6 +472,58 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
 
     public Workgroup withNamespaceName(String namespaceName) {
         setNamespaceName(namespaceName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The patch version of your Amazon Redshift Serverless workgroup. For more information about patch versions, see <a
+     * href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions for Amazon
+     * Redshift</a>.
+     * </p>
+     * 
+     * @param patchVersion
+     *        The patch version of your Amazon Redshift Serverless workgroup. For more information about patch versions,
+     *        see <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions for
+     *        Amazon Redshift</a>.
+     */
+
+    public void setPatchVersion(String patchVersion) {
+        this.patchVersion = patchVersion;
+    }
+
+    /**
+     * <p>
+     * The patch version of your Amazon Redshift Serverless workgroup. For more information about patch versions, see <a
+     * href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions for Amazon
+     * Redshift</a>.
+     * </p>
+     * 
+     * @return The patch version of your Amazon Redshift Serverless workgroup. For more information about patch
+     *         versions, see <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster
+     *         versions for Amazon Redshift</a>.
+     */
+
+    public String getPatchVersion() {
+        return this.patchVersion;
+    }
+
+    /**
+     * <p>
+     * The patch version of your Amazon Redshift Serverless workgroup. For more information about patch versions, see <a
+     * href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions for Amazon
+     * Redshift</a>.
+     * </p>
+     * 
+     * @param patchVersion
+     *        The patch version of your Amazon Redshift Serverless workgroup. For more information about patch versions,
+     *        see <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions for
+     *        Amazon Redshift</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workgroup withPatchVersion(String patchVersion) {
+        setPatchVersion(patchVersion);
         return this;
     }
 
@@ -877,6 +945,61 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Amazon Redshift Serverless version of your workgroup. For more information about Amazon Redshift Serverless
+     * versions, see<a href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions
+     * for Amazon Redshift</a>.
+     * </p>
+     * 
+     * @param workgroupVersion
+     *        The Amazon Redshift Serverless version of your workgroup. For more information about Amazon Redshift
+     *        Serverless versions, see<a
+     *        href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions for Amazon
+     *        Redshift</a>.
+     */
+
+    public void setWorkgroupVersion(String workgroupVersion) {
+        this.workgroupVersion = workgroupVersion;
+    }
+
+    /**
+     * <p>
+     * The Amazon Redshift Serverless version of your workgroup. For more information about Amazon Redshift Serverless
+     * versions, see<a href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions
+     * for Amazon Redshift</a>.
+     * </p>
+     * 
+     * @return The Amazon Redshift Serverless version of your workgroup. For more information about Amazon Redshift
+     *         Serverless versions, see<a
+     *         href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions for Amazon
+     *         Redshift</a>.
+     */
+
+    public String getWorkgroupVersion() {
+        return this.workgroupVersion;
+    }
+
+    /**
+     * <p>
+     * The Amazon Redshift Serverless version of your workgroup. For more information about Amazon Redshift Serverless
+     * versions, see<a href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions
+     * for Amazon Redshift</a>.
+     * </p>
+     * 
+     * @param workgroupVersion
+     *        The Amazon Redshift Serverless version of your workgroup. For more information about Amazon Redshift
+     *        Serverless versions, see<a
+     *        href="https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html">Cluster versions for Amazon
+     *        Redshift</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workgroup withWorkgroupVersion(String workgroupVersion) {
+        setWorkgroupVersion(workgroupVersion);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -900,6 +1023,8 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
             sb.append("EnhancedVpcRouting: ").append(getEnhancedVpcRouting()).append(",");
         if (getNamespaceName() != null)
             sb.append("NamespaceName: ").append(getNamespaceName()).append(",");
+        if (getPatchVersion() != null)
+            sb.append("PatchVersion: ").append(getPatchVersion()).append(",");
         if (getPort() != null)
             sb.append("Port: ").append(getPort()).append(",");
         if (getPubliclyAccessible() != null)
@@ -915,7 +1040,9 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
         if (getWorkgroupId() != null)
             sb.append("WorkgroupId: ").append(getWorkgroupId()).append(",");
         if (getWorkgroupName() != null)
-            sb.append("WorkgroupName: ").append(getWorkgroupName());
+            sb.append("WorkgroupName: ").append(getWorkgroupName()).append(",");
+        if (getWorkgroupVersion() != null)
+            sb.append("WorkgroupVersion: ").append(getWorkgroupVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -954,6 +1081,10 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getNamespaceName() != null && other.getNamespaceName().equals(this.getNamespaceName()) == false)
             return false;
+        if (other.getPatchVersion() == null ^ this.getPatchVersion() == null)
+            return false;
+        if (other.getPatchVersion() != null && other.getPatchVersion().equals(this.getPatchVersion()) == false)
+            return false;
         if (other.getPort() == null ^ this.getPort() == null)
             return false;
         if (other.getPort() != null && other.getPort().equals(this.getPort()) == false)
@@ -986,6 +1117,10 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getWorkgroupName() != null && other.getWorkgroupName().equals(this.getWorkgroupName()) == false)
             return false;
+        if (other.getWorkgroupVersion() == null ^ this.getWorkgroupVersion() == null)
+            return false;
+        if (other.getWorkgroupVersion() != null && other.getWorkgroupVersion().equals(this.getWorkgroupVersion()) == false)
+            return false;
         return true;
     }
 
@@ -1000,6 +1135,7 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());
         hashCode = prime * hashCode + ((getEnhancedVpcRouting() == null) ? 0 : getEnhancedVpcRouting().hashCode());
         hashCode = prime * hashCode + ((getNamespaceName() == null) ? 0 : getNamespaceName().hashCode());
+        hashCode = prime * hashCode + ((getPatchVersion() == null) ? 0 : getPatchVersion().hashCode());
         hashCode = prime * hashCode + ((getPort() == null) ? 0 : getPort().hashCode());
         hashCode = prime * hashCode + ((getPubliclyAccessible() == null) ? 0 : getPubliclyAccessible().hashCode());
         hashCode = prime * hashCode + ((getSecurityGroupIds() == null) ? 0 : getSecurityGroupIds().hashCode());
@@ -1008,6 +1144,7 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getWorkgroupArn() == null) ? 0 : getWorkgroupArn().hashCode());
         hashCode = prime * hashCode + ((getWorkgroupId() == null) ? 0 : getWorkgroupId().hashCode());
         hashCode = prime * hashCode + ((getWorkgroupName() == null) ? 0 : getWorkgroupName().hashCode());
+        hashCode = prime * hashCode + ((getWorkgroupVersion() == null) ? 0 : getWorkgroupVersion().hashCode());
         return hashCode;
     }
 

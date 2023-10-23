@@ -74,6 +74,10 @@ public class WorkgroupJsonUnmarshaller implements Unmarshaller<Workgroup, JsonUn
                     context.nextToken();
                     workgroup.setNamespaceName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("patchVersion", targetDepth)) {
+                    context.nextToken();
+                    workgroup.setPatchVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("port", targetDepth)) {
                     context.nextToken();
                     workgroup.setPort(context.getUnmarshaller(Integer.class).unmarshall(context));
@@ -109,6 +113,10 @@ public class WorkgroupJsonUnmarshaller implements Unmarshaller<Workgroup, JsonUn
                 if (context.testExpression("workgroupName", targetDepth)) {
                     context.nextToken();
                     workgroup.setWorkgroupName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("workgroupVersion", targetDepth)) {
+                    context.nextToken();
+                    workgroup.setWorkgroupVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

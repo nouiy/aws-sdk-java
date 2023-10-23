@@ -3386,6 +3386,35 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
+     * Retrieves the results for a given media analysis job. Takes a <code>JobId</code> returned by
+     * StartMediaAnalysisJob.
+     * </p>
+     * 
+     * @param getMediaAnalysisJobRequest
+     * @return A Java Future containing the result of the GetMediaAnalysisJob operation returned by the service.
+     * @sample AmazonRekognitionAsync.GetMediaAnalysisJob
+     */
+    java.util.concurrent.Future<GetMediaAnalysisJobResult> getMediaAnalysisJobAsync(GetMediaAnalysisJobRequest getMediaAnalysisJobRequest);
+
+    /**
+     * <p>
+     * Retrieves the results for a given media analysis job. Takes a <code>JobId</code> returned by
+     * StartMediaAnalysisJob.
+     * </p>
+     * 
+     * @param getMediaAnalysisJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetMediaAnalysisJob operation returned by the service.
+     * @sample AmazonRekognitionAsyncHandler.GetMediaAnalysisJob
+     */
+    java.util.concurrent.Future<GetMediaAnalysisJobResult> getMediaAnalysisJobAsync(GetMediaAnalysisJobRequest getMediaAnalysisJobRequest,
+            com.amazonaws.handlers.AsyncHandler<GetMediaAnalysisJobRequest, GetMediaAnalysisJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets the path tracking results of a Amazon Rekognition Video analysis started by <a>StartPersonTracking</a>.
      * </p>
      * <p>
@@ -4139,6 +4168,33 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      */
     java.util.concurrent.Future<ListFacesResult> listFacesAsync(ListFacesRequest listFacesRequest,
             com.amazonaws.handlers.AsyncHandler<ListFacesRequest, ListFacesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of media analysis jobs. Results are sorted by <code>CreationTimestamp</code> in descending order.
+     * </p>
+     * 
+     * @param listMediaAnalysisJobsRequest
+     * @return A Java Future containing the result of the ListMediaAnalysisJobs operation returned by the service.
+     * @sample AmazonRekognitionAsync.ListMediaAnalysisJobs
+     */
+    java.util.concurrent.Future<ListMediaAnalysisJobsResult> listMediaAnalysisJobsAsync(ListMediaAnalysisJobsRequest listMediaAnalysisJobsRequest);
+
+    /**
+     * <p>
+     * Returns a list of media analysis jobs. Results are sorted by <code>CreationTimestamp</code> in descending order.
+     * </p>
+     * 
+     * @param listMediaAnalysisJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMediaAnalysisJobs operation returned by the service.
+     * @sample AmazonRekognitionAsyncHandler.ListMediaAnalysisJobs
+     */
+    java.util.concurrent.Future<ListMediaAnalysisJobsResult> listMediaAnalysisJobsAsync(ListMediaAnalysisJobsRequest listMediaAnalysisJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMediaAnalysisJobsRequest, ListMediaAnalysisJobsResult> asyncHandler);
 
     /**
      * <note>
@@ -5022,6 +5078,35 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      */
     java.util.concurrent.Future<StartLabelDetectionResult> startLabelDetectionAsync(StartLabelDetectionRequest startLabelDetectionRequest,
             com.amazonaws.handlers.AsyncHandler<StartLabelDetectionRequest, StartLabelDetectionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Initiates a new media analysis job. Accepts a manifest file in an Amazon S3 bucket. The output is a manifest file
+     * and a summary of the manifest stored in the Amazon S3 bucket.
+     * </p>
+     * 
+     * @param startMediaAnalysisJobRequest
+     * @return A Java Future containing the result of the StartMediaAnalysisJob operation returned by the service.
+     * @sample AmazonRekognitionAsync.StartMediaAnalysisJob
+     */
+    java.util.concurrent.Future<StartMediaAnalysisJobResult> startMediaAnalysisJobAsync(StartMediaAnalysisJobRequest startMediaAnalysisJobRequest);
+
+    /**
+     * <p>
+     * Initiates a new media analysis job. Accepts a manifest file in an Amazon S3 bucket. The output is a manifest file
+     * and a summary of the manifest stored in the Amazon S3 bucket.
+     * </p>
+     * 
+     * @param startMediaAnalysisJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartMediaAnalysisJob operation returned by the service.
+     * @sample AmazonRekognitionAsyncHandler.StartMediaAnalysisJob
+     */
+    java.util.concurrent.Future<StartMediaAnalysisJobResult> startMediaAnalysisJobAsync(StartMediaAnalysisJobRequest startMediaAnalysisJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StartMediaAnalysisJobRequest, StartMediaAnalysisJobResult> asyncHandler);
 
     /**
      * <p>

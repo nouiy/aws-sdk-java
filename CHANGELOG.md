@@ -1,3 +1,20 @@
+# __1.12.572__ __2023-10-23__
+## __AWS Marketplace Commerce Analytics__
+  - ### Features
+    - The StartSupportDataExport operation has been deprecated as part of the Product Support Connection deprecation. As of December 2022, Product Support Connection is no longer supported.
+
+## __AWS Network Manager__
+  - ### Features
+    - This release adds API support for Tunnel-less Connect (NoEncap Protocol) for AWS Cloud WAN
+
+## __Amazon Rekognition__
+  - ### Features
+    - Amazon Rekognition introduces StartMediaAnalysisJob, GetMediaAnalysisJob, and ListMediaAnalysisJobs operations to run a bulk analysis of images with a Detect Moderation model.
+
+## __Redshift Serverless__
+  - ### Features
+    - This release adds support for customers to see the patch version and workgroup version in Amazon Redshift Serverless.
+
 # __1.12.571__ __2023-10-20__
 ## __AWS Application Discovery Service__
   - ### Features

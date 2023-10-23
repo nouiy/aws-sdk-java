@@ -40,6 +40,8 @@ public class WorkgroupMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enhancedVpcRouting").build();
     private static final MarshallingInfo<String> NAMESPACENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("namespaceName").build();
+    private static final MarshallingInfo<String> PATCHVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("patchVersion").build();
     private static final MarshallingInfo<Integer> PORT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("port").build();
     private static final MarshallingInfo<Boolean> PUBLICLYACCESSIBLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
@@ -56,6 +58,8 @@ public class WorkgroupMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workgroupId").build();
     private static final MarshallingInfo<String> WORKGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workgroupName").build();
+    private static final MarshallingInfo<String> WORKGROUPVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workgroupVersion").build();
 
     private static final WorkgroupMarshaller instance = new WorkgroupMarshaller();
 
@@ -79,6 +83,7 @@ public class WorkgroupMarshaller {
             protocolMarshaller.marshall(workgroup.getEndpoint(), ENDPOINT_BINDING);
             protocolMarshaller.marshall(workgroup.getEnhancedVpcRouting(), ENHANCEDVPCROUTING_BINDING);
             protocolMarshaller.marshall(workgroup.getNamespaceName(), NAMESPACENAME_BINDING);
+            protocolMarshaller.marshall(workgroup.getPatchVersion(), PATCHVERSION_BINDING);
             protocolMarshaller.marshall(workgroup.getPort(), PORT_BINDING);
             protocolMarshaller.marshall(workgroup.getPubliclyAccessible(), PUBLICLYACCESSIBLE_BINDING);
             protocolMarshaller.marshall(workgroup.getSecurityGroupIds(), SECURITYGROUPIDS_BINDING);
@@ -87,6 +92,7 @@ public class WorkgroupMarshaller {
             protocolMarshaller.marshall(workgroup.getWorkgroupArn(), WORKGROUPARN_BINDING);
             protocolMarshaller.marshall(workgroup.getWorkgroupId(), WORKGROUPID_BINDING);
             protocolMarshaller.marshall(workgroup.getWorkgroupName(), WORKGROUPNAME_BINDING);
+            protocolMarshaller.marshall(workgroup.getWorkgroupVersion(), WORKGROUPVERSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
