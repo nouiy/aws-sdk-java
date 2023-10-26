@@ -292,13 +292,12 @@ public class AmazonConnectCasesClient extends AmazonWebServiceClient implements 
      * Creates a case in the specified Cases domain. Case system and custom fields are taken as an array id/value pairs
      * with a declared data types.
      * </p>
-     * <note>
      * <p>
      * The following fields are required when creating a case:
      * </p>
      * 
      * <pre>
-     * <code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;customer_id&lt;/code&gt; - You must provide the full customer profile ARN in this format: &lt;code&gt;arn:aws:profile:your AWS Region:your AWS account ID:domains/profiles domain name/profiles/profile ID&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;title&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt; </code>
+     * <code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;customer_id&lt;/code&gt; - You must provide the full customer profile ARN in this format: &lt;code&gt;arn:aws:profile:your_AWS_Region:your_AWS_account ID:domains/your_profiles_domain_name/profiles/profile_ID&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;title&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; </code>
      * </pre>
      * 
      * @param createCaseRequest
@@ -1642,7 +1641,9 @@ public class AmazonConnectCasesClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * API for adding case event publishing configuration
+     * Adds case event publishing configuration. For a complete list of fields you can add to the event message, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/case-fields.html">Create case fields</a> in the
+     * <i>Amazon Connect Administrator Guide</i>
      * </p>
      * 
      * @param putCaseEventConfigurationRequest
