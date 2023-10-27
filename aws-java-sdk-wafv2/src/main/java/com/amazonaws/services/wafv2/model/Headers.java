@@ -55,8 +55,14 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
     private HeaderMatchPattern matchPattern;
     /**
      * <p>
-     * The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF
+     * The parts of the headers to match with the rule inspection criteria. If you specify <code>ALL</code>, WAF
      * inspects both keys and values.
+     * </p>
+     * <p>
+     * <code>All</code> does not require a match to be found in the keys and a match to be found in the values. It
+     * requires a match to be found in the keys or the values or both. To require a match in the keys and in the values,
+     * use a logical <code>AND</code> statement to combine two match rules, one that inspects the keys and another that
+     * inspects the values.
      * </p>
      */
     private String matchScope;
@@ -172,13 +178,24 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF
+     * The parts of the headers to match with the rule inspection criteria. If you specify <code>ALL</code>, WAF
      * inspects both keys and values.
+     * </p>
+     * <p>
+     * <code>All</code> does not require a match to be found in the keys and a match to be found in the values. It
+     * requires a match to be found in the keys or the values or both. To require a match in the keys and in the values,
+     * use a logical <code>AND</code> statement to combine two match rules, one that inspects the keys and another that
+     * inspects the values.
      * </p>
      * 
      * @param matchScope
-     *        The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF
-     *        inspects both keys and values.
+     *        The parts of the headers to match with the rule inspection criteria. If you specify <code>ALL</code>, WAF
+     *        inspects both keys and values. </p>
+     *        <p>
+     *        <code>All</code> does not require a match to be found in the keys and a match to be found in the values.
+     *        It requires a match to be found in the keys or the values or both. To require a match in the keys and in
+     *        the values, use a logical <code>AND</code> statement to combine two match rules, one that inspects the
+     *        keys and another that inspects the values.
      * @see MapMatchScope
      */
 
@@ -188,12 +205,23 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF
+     * The parts of the headers to match with the rule inspection criteria. If you specify <code>ALL</code>, WAF
      * inspects both keys and values.
      * </p>
+     * <p>
+     * <code>All</code> does not require a match to be found in the keys and a match to be found in the values. It
+     * requires a match to be found in the keys or the values or both. To require a match in the keys and in the values,
+     * use a logical <code>AND</code> statement to combine two match rules, one that inspects the keys and another that
+     * inspects the values.
+     * </p>
      * 
-     * @return The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF
-     *         inspects both keys and values.
+     * @return The parts of the headers to match with the rule inspection criteria. If you specify <code>ALL</code>, WAF
+     *         inspects both keys and values. </p>
+     *         <p>
+     *         <code>All</code> does not require a match to be found in the keys and a match to be found in the values.
+     *         It requires a match to be found in the keys or the values or both. To require a match in the keys and in
+     *         the values, use a logical <code>AND</code> statement to combine two match rules, one that inspects the
+     *         keys and another that inspects the values.
      * @see MapMatchScope
      */
 
@@ -203,13 +231,24 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF
+     * The parts of the headers to match with the rule inspection criteria. If you specify <code>ALL</code>, WAF
      * inspects both keys and values.
+     * </p>
+     * <p>
+     * <code>All</code> does not require a match to be found in the keys and a match to be found in the values. It
+     * requires a match to be found in the keys or the values or both. To require a match in the keys and in the values,
+     * use a logical <code>AND</code> statement to combine two match rules, one that inspects the keys and another that
+     * inspects the values.
      * </p>
      * 
      * @param matchScope
-     *        The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF
-     *        inspects both keys and values.
+     *        The parts of the headers to match with the rule inspection criteria. If you specify <code>ALL</code>, WAF
+     *        inspects both keys and values. </p>
+     *        <p>
+     *        <code>All</code> does not require a match to be found in the keys and a match to be found in the values.
+     *        It requires a match to be found in the keys or the values or both. To require a match in the keys and in
+     *        the values, use a logical <code>AND</code> statement to combine two match rules, one that inspects the
+     *        keys and another that inspects the values.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MapMatchScope
      */
@@ -221,13 +260,24 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF
+     * The parts of the headers to match with the rule inspection criteria. If you specify <code>ALL</code>, WAF
      * inspects both keys and values.
+     * </p>
+     * <p>
+     * <code>All</code> does not require a match to be found in the keys and a match to be found in the values. It
+     * requires a match to be found in the keys or the values or both. To require a match in the keys and in the values,
+     * use a logical <code>AND</code> statement to combine two match rules, one that inspects the keys and another that
+     * inspects the values.
      * </p>
      * 
      * @param matchScope
-     *        The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF
-     *        inspects both keys and values.
+     *        The parts of the headers to match with the rule inspection criteria. If you specify <code>ALL</code>, WAF
+     *        inspects both keys and values. </p>
+     *        <p>
+     *        <code>All</code> does not require a match to be found in the keys and a match to be found in the values.
+     *        It requires a match to be found in the keys or the values or both. To require a match in the keys and in
+     *        the values, use a logical <code>AND</code> statement to combine two match rules, one that inspects the
+     *        keys and another that inspects the values.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MapMatchScope
      */

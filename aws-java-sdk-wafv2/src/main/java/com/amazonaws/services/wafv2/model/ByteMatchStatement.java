@@ -68,9 +68,8 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
-     * contains the ordered list of header names, from the headers in the web request, and then matches against that
-     * string.
+     * <code>HeaderOrder</code>: The list of header names to match for. WAF creates a string that contains the ordered
+     * list of header names, from the headers in the web request, and then matches against that string.
      * </p>
      * </li>
      * </ul>
@@ -209,9 +208,8 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
-     * contains the ordered list of header names, from the headers in the web request, and then matches against that
-     * string.
+     * <code>HeaderOrder</code>: The list of header names to match for. WAF creates a string that contains the ordered
+     * list of header names, from the headers in the web request, and then matches against that string.
      * </p>
      * </li>
      * </ul>
@@ -283,9 +281,8 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
-     *        contains the ordered list of header names, from the headers in the web request, and then matches against
-     *        that string.
+     *        <code>HeaderOrder</code>: The list of header names to match for. WAF creates a string that contains the
+     *        ordered list of header names, from the headers in the web request, and then matches against that string.
      *        </p>
      *        </li>
      *        </ul>
@@ -354,9 +351,8 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
-     * contains the ordered list of header names, from the headers in the web request, and then matches against that
-     * string.
+     * <code>HeaderOrder</code>: The list of header names to match for. WAF creates a string that contains the ordered
+     * list of header names, from the headers in the web request, and then matches against that string.
      * </p>
      * </li>
      * </ul>
@@ -424,9 +420,8 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      *         </li>
      *         <li>
      *         <p>
-     *         <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string
-     *         that contains the ordered list of header names, from the headers in the web request, and then matches
-     *         against that string.
+     *         <code>HeaderOrder</code>: The list of header names to match for. WAF creates a string that contains the
+     *         ordered list of header names, from the headers in the web request, and then matches against that string.
      *         </p>
      *         </li>
      *         </ul>
@@ -495,9 +490,8 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
-     * contains the ordered list of header names, from the headers in the web request, and then matches against that
-     * string.
+     * <code>HeaderOrder</code>: The list of header names to match for. WAF creates a string that contains the ordered
+     * list of header names, from the headers in the web request, and then matches against that string.
      * </p>
      * </li>
      * </ul>
@@ -569,9 +563,8 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
-     *        contains the ordered list of header names, from the headers in the web request, and then matches against
-     *        that string.
+     *        <code>HeaderOrder</code>: The list of header names to match for. WAF creates a string that contains the
+     *        ordered list of header names, from the headers in the web request, and then matches against that string.
      *        </p>
      *        </li>
      *        </ul>

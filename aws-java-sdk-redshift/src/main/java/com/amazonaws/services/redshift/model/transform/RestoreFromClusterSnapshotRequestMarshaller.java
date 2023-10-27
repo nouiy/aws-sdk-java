@@ -215,6 +215,10 @@ public class RestoreFromClusterSnapshotRequestMarshaller implements Marshaller<R
             request.addParameter("MasterPasswordSecretKmsKeyId", StringUtils.fromString(restoreFromClusterSnapshotRequest.getMasterPasswordSecretKmsKeyId()));
         }
 
+        if (restoreFromClusterSnapshotRequest.getIpAddressType() != null) {
+            request.addParameter("IpAddressType", StringUtils.fromString(restoreFromClusterSnapshotRequest.getIpAddressType()));
+        }
+
         return request;
     }
 

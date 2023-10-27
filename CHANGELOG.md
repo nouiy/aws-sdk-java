@@ -1,3 +1,24 @@
+# __1.12.576__ __2023-10-27__
+## __AWS WAFV2__
+  - ### Features
+    - Updates the descriptions for the calls that manage web ACL associations, to provide information for customer-managed IAM policies.
+
+## __Amazon EMR__
+  - ### Features
+    - Updated CreateCluster API request and DescribeCluster API responses to include EbsRootVolumeIops, and EbsRootVolumeThroughput attributes that specify the user configured root volume IOPS and throughput for Amazon EBS root device volume. This feature will be available from Amazon EMR releases 6.15.0
+
+## __Amazon Neptune__
+  - ### Features
+    - Update TdeCredentialPassword type to SensitiveString
+
+## __Amazon Pinpoint__
+  - ### Features
+    - Updated documentation to describe the case insensitivity for EndpointIds.
+
+## __Amazon Redshift__
+  - ### Features
+    - added support to create a dual stack cluster
+
 # __1.12.575__ __2023-10-26__
 ## __AWS Network Firewall__
   - ### Features

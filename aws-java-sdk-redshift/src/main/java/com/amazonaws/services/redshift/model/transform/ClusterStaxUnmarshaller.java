@@ -369,6 +369,11 @@ public class ClusterStaxUnmarshaller implements Unmarshaller<Cluster, StaxUnmars
                     cluster.setMasterPasswordSecretKmsKeyId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("IpAddressType", targetDepth)) {
+                    cluster.setIpAddressType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return cluster;

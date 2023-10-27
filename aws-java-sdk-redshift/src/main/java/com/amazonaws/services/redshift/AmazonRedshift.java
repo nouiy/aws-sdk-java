@@ -485,6 +485,9 @@ public interface AmazonRedshift {
      *         The retention period specified is either in the past or is not a valid value.</p>
      *         <p>
      *         The value must be either -1 or an integer between 1 and 3,653.
+     * @throws Ipv6CidrBlockNotFoundException
+     *         There are no subnets in your VPC with associated IPv6 CIDR blocks. To use dual-stack mode, associate an
+     *         IPv6 CIDR block with each subnet in your VPC.
      * @sample AmazonRedshift.CreateCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateCluster" target="_top">AWS API
      *      Documentation</a>
@@ -2709,6 +2712,9 @@ public interface AmazonRedshift {
      *         The requested operation isn't supported.
      * @throws CustomCnameAssociationException
      *         An error occurred when an attempt was made to change the custom domain association.
+     * @throws Ipv6CidrBlockNotFoundException
+     *         There are no subnets in your VPC with associated IPv6 CIDR blocks. To use dual-stack mode, associate an
+     *         IPv6 CIDR block with each subnet in your VPC.
      * @sample AmazonRedshift.ModifyCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyCluster" target="_top">AWS API
      *      Documentation</a>
@@ -3377,6 +3383,9 @@ public interface AmazonRedshift {
      *         User already has a reservation with the given identifier.
      * @throws UnsupportedOperationException
      *         The requested operation isn't supported.
+     * @throws Ipv6CidrBlockNotFoundException
+     *         There are no subnets in your VPC with associated IPv6 CIDR blocks. To use dual-stack mode, associate an
+     *         IPv6 CIDR block with each subnet in your VPC.
      * @sample AmazonRedshift.RestoreFromClusterSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RestoreFromClusterSnapshot"
      *      target="_top">AWS API Documentation</a>

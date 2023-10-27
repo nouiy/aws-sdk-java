@@ -31,8 +31,8 @@ public class GetBlockPublicAccessConfigurationResult extends com.amazonaws.Amazo
      * public access is enabled, security groups associated with the cluster cannot have rules that allow inbound
      * traffic from 0.0.0.0/0 or ::/0 on a port, unless the port is specified as an exception using
      * <code>PermittedPublicSecurityGroupRuleRanges</code> in the <code>BlockPublicAccessConfiguration</code>. By
-     * default, Port 22 (SSH) is an exception, and public access is allowed on this port. You can change this by
-     * updating the block public access configuration to remove the exception.
+     * default, Port 22 (SSH) is an exception, and public access is allowed on this port. To change this, update the
+     * block public access configuration to remove the exception.
      * </p>
      * <note>
      * <p>
@@ -61,8 +61,8 @@ public class GetBlockPublicAccessConfigurationResult extends com.amazonaws.Amazo
      * public access is enabled, security groups associated with the cluster cannot have rules that allow inbound
      * traffic from 0.0.0.0/0 or ::/0 on a port, unless the port is specified as an exception using
      * <code>PermittedPublicSecurityGroupRuleRanges</code> in the <code>BlockPublicAccessConfiguration</code>. By
-     * default, Port 22 (SSH) is an exception, and public access is allowed on this port. You can change this by
-     * updating the block public access configuration to remove the exception.
+     * default, Port 22 (SSH) is an exception, and public access is allowed on this port. To change this, update the
+     * block public access configuration to remove the exception.
      * </p>
      * <note>
      * <p>
@@ -79,8 +79,8 @@ public class GetBlockPublicAccessConfigurationResult extends com.amazonaws.Amazo
      *        If block public access is enabled, security groups associated with the cluster cannot have rules that
      *        allow inbound traffic from 0.0.0.0/0 or ::/0 on a port, unless the port is specified as an exception using
      *        <code>PermittedPublicSecurityGroupRuleRanges</code> in the <code>BlockPublicAccessConfiguration</code>. By
-     *        default, Port 22 (SSH) is an exception, and public access is allowed on this port. You can change this by
-     *        updating the block public access configuration to remove the exception.</p> <note>
+     *        default, Port 22 (SSH) is an exception, and public access is allowed on this port. To change this, update
+     *        the block public access configuration to remove the exception.</p> <note>
      *        <p>
      *        For accounts that created clusters in a Region before November 25, 2019, block public access is disabled
      *        by default in that Region. To use this feature, you must manually enable and configure it. For accounts
@@ -100,8 +100,8 @@ public class GetBlockPublicAccessConfigurationResult extends com.amazonaws.Amazo
      * public access is enabled, security groups associated with the cluster cannot have rules that allow inbound
      * traffic from 0.0.0.0/0 or ::/0 on a port, unless the port is specified as an exception using
      * <code>PermittedPublicSecurityGroupRuleRanges</code> in the <code>BlockPublicAccessConfiguration</code>. By
-     * default, Port 22 (SSH) is an exception, and public access is allowed on this port. You can change this by
-     * updating the block public access configuration to remove the exception.
+     * default, Port 22 (SSH) is an exception, and public access is allowed on this port. To change this, update the
+     * block public access configuration to remove the exception.
      * </p>
      * <note>
      * <p>
@@ -118,8 +118,8 @@ public class GetBlockPublicAccessConfigurationResult extends com.amazonaws.Amazo
      *         allow inbound traffic from 0.0.0.0/0 or ::/0 on a port, unless the port is specified as an exception
      *         using <code>PermittedPublicSecurityGroupRuleRanges</code> in the
      *         <code>BlockPublicAccessConfiguration</code>. By default, Port 22 (SSH) is an exception, and public access
-     *         is allowed on this port. You can change this by updating the block public access configuration to remove
-     *         the exception.</p> <note>
+     *         is allowed on this port. To change this, update the block public access configuration to remove the
+     *         exception.</p> <note>
      *         <p>
      *         For accounts that created clusters in a Region before November 25, 2019, block public access is disabled
      *         by default in that Region. To use this feature, you must manually enable and configure it. For accounts
@@ -139,8 +139,8 @@ public class GetBlockPublicAccessConfigurationResult extends com.amazonaws.Amazo
      * public access is enabled, security groups associated with the cluster cannot have rules that allow inbound
      * traffic from 0.0.0.0/0 or ::/0 on a port, unless the port is specified as an exception using
      * <code>PermittedPublicSecurityGroupRuleRanges</code> in the <code>BlockPublicAccessConfiguration</code>. By
-     * default, Port 22 (SSH) is an exception, and public access is allowed on this port. You can change this by
-     * updating the block public access configuration to remove the exception.
+     * default, Port 22 (SSH) is an exception, and public access is allowed on this port. To change this, update the
+     * block public access configuration to remove the exception.
      * </p>
      * <note>
      * <p>
@@ -157,8 +157,8 @@ public class GetBlockPublicAccessConfigurationResult extends com.amazonaws.Amazo
      *        If block public access is enabled, security groups associated with the cluster cannot have rules that
      *        allow inbound traffic from 0.0.0.0/0 or ::/0 on a port, unless the port is specified as an exception using
      *        <code>PermittedPublicSecurityGroupRuleRanges</code> in the <code>BlockPublicAccessConfiguration</code>. By
-     *        default, Port 22 (SSH) is an exception, and public access is allowed on this port. You can change this by
-     *        updating the block public access configuration to remove the exception.</p> <note>
+     *        default, Port 22 (SSH) is an exception, and public access is allowed on this port. To change this, update
+     *        the block public access configuration to remove the exception.</p> <note>
      *        <p>
      *        For accounts that created clusters in a Region before November 25, 2019, block public access is disabled
      *        by default in that Region. To use this feature, you must manually enable and configure it. For accounts

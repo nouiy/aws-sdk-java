@@ -420,6 +420,12 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String masterPasswordSecretKmsKeyId;
+    /**
+     * <p>
+     * The IP address types that the cluster supports. Possible values are <code>ipv4</code> and <code>dualstack</code>.
+     * </p>
+     */
+    private String ipAddressType;
 
     /**
      * <p>
@@ -3082,6 +3088,49 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The IP address types that the cluster supports. Possible values are <code>ipv4</code> and <code>dualstack</code>.
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The IP address types that the cluster supports. Possible values are <code>ipv4</code> and
+     *        <code>dualstack</code>.
+     */
+
+    public void setIpAddressType(String ipAddressType) {
+        this.ipAddressType = ipAddressType;
+    }
+
+    /**
+     * <p>
+     * The IP address types that the cluster supports. Possible values are <code>ipv4</code> and <code>dualstack</code>.
+     * </p>
+     * 
+     * @return The IP address types that the cluster supports. Possible values are <code>ipv4</code> and
+     *         <code>dualstack</code>.
+     */
+
+    public String getIpAddressType() {
+        return this.ipAddressType;
+    }
+
+    /**
+     * <p>
+     * The IP address types that the cluster supports. Possible values are <code>ipv4</code> and <code>dualstack</code>.
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The IP address types that the cluster supports. Possible values are <code>ipv4</code> and
+     *        <code>dualstack</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyClusterRequest withIpAddressType(String ipAddressType) {
+        setIpAddressType(ipAddressType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3146,7 +3195,9 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getManageMasterPassword() != null)
             sb.append("ManageMasterPassword: ").append(getManageMasterPassword()).append(",");
         if (getMasterPasswordSecretKmsKeyId() != null)
-            sb.append("MasterPasswordSecretKmsKeyId: ").append(getMasterPasswordSecretKmsKeyId());
+            sb.append("MasterPasswordSecretKmsKeyId: ").append(getMasterPasswordSecretKmsKeyId()).append(",");
+        if (getIpAddressType() != null)
+            sb.append("IpAddressType: ").append(getIpAddressType());
         sb.append("}");
         return sb.toString();
     }
@@ -3272,6 +3323,10 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getMasterPasswordSecretKmsKeyId() != null && other.getMasterPasswordSecretKmsKeyId().equals(this.getMasterPasswordSecretKmsKeyId()) == false)
             return false;
+        if (other.getIpAddressType() == null ^ this.getIpAddressType() == null)
+            return false;
+        if (other.getIpAddressType() != null && other.getIpAddressType().equals(this.getIpAddressType()) == false)
+            return false;
         return true;
     }
 
@@ -3307,6 +3362,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getPort() == null) ? 0 : getPort().hashCode());
         hashCode = prime * hashCode + ((getManageMasterPassword() == null) ? 0 : getManageMasterPassword().hashCode());
         hashCode = prime * hashCode + ((getMasterPasswordSecretKmsKeyId() == null) ? 0 : getMasterPasswordSecretKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getIpAddressType() == null) ? 0 : getIpAddressType().hashCode());
         return hashCode;
     }
 

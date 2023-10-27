@@ -57,7 +57,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
     /**
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -122,7 +122,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      * </p>
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -358,7 +358,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
     /**
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -368,7 +368,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @return <p>
-     *         The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding
+     *         The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding
      *         5.0.x versions.
      *         </p>
      *         </note>
@@ -387,7 +387,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
     /**
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -398,8 +398,8 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      * 
      * @param instanceFleets
      *        <p>
-     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
-     *        versions.
+     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding
+     *        5.0.x versions.
      *        </p>
      *        </note>
      *        <p>
@@ -419,7 +419,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
     /**
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -435,8 +435,8 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      * 
      * @param instanceFleets
      *        <p>
-     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
-     *        versions.
+     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding
+     *        5.0.x versions.
      *        </p>
      *        </note>
      *        <p>
@@ -458,7 +458,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
     /**
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -469,8 +469,8 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      * 
      * @param instanceFleets
      *        <p>
-     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
-     *        versions.
+     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding
+     *        5.0.x versions.
      *        </p>
      *        </note>
      *        <p>
@@ -835,7 +835,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      * </p>
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -843,7 +843,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      * @return Applies to clusters that use the instance fleet configuration. When multiple Amazon EC2 subnet IDs are
      *         specified, Amazon EMR evaluates them and launches instances in the optimal subnet.</p> <note>
      *         <p>
-     *         The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding
+     *         The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding
      *         5.0.x versions.
      *         </p>
      */
@@ -862,7 +862,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      * </p>
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -871,8 +871,8 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      *        Applies to clusters that use the instance fleet configuration. When multiple Amazon EC2 subnet IDs are
      *        specified, Amazon EMR evaluates them and launches instances in the optimal subnet.</p> <note>
      *        <p>
-     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
-     *        versions.
+     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding
+     *        5.0.x versions.
      *        </p>
      */
 
@@ -892,7 +892,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      * </p>
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -906,8 +906,8 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      *        Applies to clusters that use the instance fleet configuration. When multiple Amazon EC2 subnet IDs are
      *        specified, Amazon EMR evaluates them and launches instances in the optimal subnet.</p> <note>
      *        <p>
-     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
-     *        versions.
+     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding
+     *        5.0.x versions.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -929,7 +929,7 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      * </p>
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -938,8 +938,8 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
      *        Applies to clusters that use the instance fleet configuration. When multiple Amazon EC2 subnet IDs are
      *        specified, Amazon EMR evaluates them and launches instances in the optimal subnet.</p> <note>
      *        <p>
-     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
-     *        versions.
+     *        The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding
+     *        5.0.x versions.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

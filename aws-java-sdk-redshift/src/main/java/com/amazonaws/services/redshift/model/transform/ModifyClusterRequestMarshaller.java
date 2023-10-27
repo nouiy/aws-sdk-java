@@ -170,6 +170,10 @@ public class ModifyClusterRequestMarshaller implements Marshaller<Request<Modify
             request.addParameter("MasterPasswordSecretKmsKeyId", StringUtils.fromString(modifyClusterRequest.getMasterPasswordSecretKmsKeyId()));
         }
 
+        if (modifyClusterRequest.getIpAddressType() != null) {
+            request.addParameter("IpAddressType", StringUtils.fromString(modifyClusterRequest.getIpAddressType()));
+        }
+
         return request;
     }
 

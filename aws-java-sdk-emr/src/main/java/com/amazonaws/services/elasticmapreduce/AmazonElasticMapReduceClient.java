@@ -298,7 +298,7 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
      * </p>
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x.
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x.
      * </p>
      * </note>
      * 
@@ -562,10 +562,10 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
-     * Cancels a pending step or steps in a running cluster. Available only in Amazon EMR versions 4.8.0 and later,
+     * Cancels a pending step or steps in a running cluster. Available only in Amazon EMR versions 4.8.0 and higher,
      * excluding version 5.0.0. A maximum of 256 steps are allowed in each CancelSteps request. CancelSteps is
      * idempotent but asynchronous; it does not guarantee that a step will be canceled, even if the request is
-     * successfully submitted. When you use Amazon EMR releases 5.28.0 and later, you can cancel steps that are in a
+     * successfully submitted. When you use Amazon EMR releases 5.28.0 and higher, you can cancel steps that are in a
      * <code>PENDING</code> or <code>RUNNING</code> state. In earlier versions of Amazon EMR, you can only cancel steps
      * that are in a <code>PENDING</code> state.
      * </p>
@@ -1884,7 +1884,7 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
      * </p>
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -2562,7 +2562,7 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
      * </p>
      * <note>
      * <p>
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions.
      * </p>
      * </note>
@@ -2746,7 +2746,7 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
     /**
      * <note>
      * <p>
-     * Auto-termination is supported in Amazon EMR releases 5.30.0 and 6.1.0 and later. For more information, see <a
+     * Auto-termination is supported in Amazon EMR releases 5.30.0 and 6.1.0 and higher. For more information, see <a
      * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-auto-termination-policy.html">Using an
      * auto-termination policy</a>.
      * </p>
@@ -3200,7 +3200,7 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
      * </p>
      * <note>
      * <p>
-     * The instance fleets configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x
+     * The instance fleets configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x
      * versions. The RunJobFlow request can contain InstanceFleets parameters or InstanceGroups parameters, but not
      * both.
      * </p>

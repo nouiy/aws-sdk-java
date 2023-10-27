@@ -230,6 +230,10 @@ public class CreateClusterRequestMarshaller implements Marshaller<Request<Create
             request.addParameter("MasterPasswordSecretKmsKeyId", StringUtils.fromString(createClusterRequest.getMasterPasswordSecretKmsKeyId()));
         }
 
+        if (createClusterRequest.getIpAddressType() != null) {
+            request.addParameter("IpAddressType", StringUtils.fromString(createClusterRequest.getIpAddressType()));
+        }
+
         return request;
     }
 
