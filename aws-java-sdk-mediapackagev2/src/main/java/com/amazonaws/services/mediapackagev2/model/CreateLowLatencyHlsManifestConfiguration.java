@@ -70,6 +70,8 @@ public class CreateLowLatencyHlsManifestConfiguration implements Serializable, C
      */
     private Integer programDateTimeIntervalSeconds;
 
+    private FilterConfiguration filterConfiguration;
+
     /**
      * <p>
      * A short short string that's appended to the endpoint URL. The manifest name creates a unique path to this
@@ -338,6 +340,32 @@ public class CreateLowLatencyHlsManifestConfiguration implements Serializable, C
     }
 
     /**
+     * @param filterConfiguration
+     */
+
+    public void setFilterConfiguration(FilterConfiguration filterConfiguration) {
+        this.filterConfiguration = filterConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public FilterConfiguration getFilterConfiguration() {
+        return this.filterConfiguration;
+    }
+
+    /**
+     * @param filterConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateLowLatencyHlsManifestConfiguration withFilterConfiguration(FilterConfiguration filterConfiguration) {
+        setFilterConfiguration(filterConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -358,7 +386,9 @@ public class CreateLowLatencyHlsManifestConfiguration implements Serializable, C
         if (getManifestWindowSeconds() != null)
             sb.append("ManifestWindowSeconds: ").append(getManifestWindowSeconds()).append(",");
         if (getProgramDateTimeIntervalSeconds() != null)
-            sb.append("ProgramDateTimeIntervalSeconds: ").append(getProgramDateTimeIntervalSeconds());
+            sb.append("ProgramDateTimeIntervalSeconds: ").append(getProgramDateTimeIntervalSeconds()).append(",");
+        if (getFilterConfiguration() != null)
+            sb.append("FilterConfiguration: ").append(getFilterConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -394,6 +424,10 @@ public class CreateLowLatencyHlsManifestConfiguration implements Serializable, C
         if (other.getProgramDateTimeIntervalSeconds() != null
                 && other.getProgramDateTimeIntervalSeconds().equals(this.getProgramDateTimeIntervalSeconds()) == false)
             return false;
+        if (other.getFilterConfiguration() == null ^ this.getFilterConfiguration() == null)
+            return false;
+        if (other.getFilterConfiguration() != null && other.getFilterConfiguration().equals(this.getFilterConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -407,6 +441,7 @@ public class CreateLowLatencyHlsManifestConfiguration implements Serializable, C
         hashCode = prime * hashCode + ((getScteHls() == null) ? 0 : getScteHls().hashCode());
         hashCode = prime * hashCode + ((getManifestWindowSeconds() == null) ? 0 : getManifestWindowSeconds().hashCode());
         hashCode = prime * hashCode + ((getProgramDateTimeIntervalSeconds() == null) ? 0 : getProgramDateTimeIntervalSeconds().hashCode());
+        hashCode = prime * hashCode + ((getFilterConfiguration() == null) ? 0 : getFilterConfiguration().hashCode());
         return hashCode;
     }
 

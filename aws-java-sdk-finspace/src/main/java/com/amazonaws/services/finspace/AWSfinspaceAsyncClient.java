@@ -1031,6 +1031,41 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateKxClusterCodeConfigurationResult> updateKxClusterCodeConfigurationAsync(
+            UpdateKxClusterCodeConfigurationRequest request) {
+
+        return updateKxClusterCodeConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKxClusterCodeConfigurationResult> updateKxClusterCodeConfigurationAsync(
+            final UpdateKxClusterCodeConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateKxClusterCodeConfigurationRequest, UpdateKxClusterCodeConfigurationResult> asyncHandler) {
+        final UpdateKxClusterCodeConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateKxClusterCodeConfigurationResult>() {
+            @Override
+            public UpdateKxClusterCodeConfigurationResult call() throws Exception {
+                UpdateKxClusterCodeConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateKxClusterCodeConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateKxClusterDatabasesResult> updateKxClusterDatabasesAsync(UpdateKxClusterDatabasesRequest request) {
 
         return updateKxClusterDatabasesAsync(request, null);

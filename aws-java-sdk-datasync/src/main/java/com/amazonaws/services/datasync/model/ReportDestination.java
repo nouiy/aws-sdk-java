@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Specifies where DataSync uploads your <a
- * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html">task report</a>.
+ * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">task report</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ReportDestination" target="_top">AWS API

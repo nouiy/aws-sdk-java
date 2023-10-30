@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * The configuration that allows you to choose how you want to update the databases on a cluster. Depending on the
- * option you choose, you can reduce the time it takes to update the database changesets on to a cluster.
+ * option you choose, you can reduce the time it takes to update the cluster.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/KxDeploymentConfiguration" target="_top">AWS
@@ -36,14 +36,19 @@ public class KxDeploymentConfiguration implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * ROLLING – This options loads the updated database by stopping the exiting q process and starting a new q process
-     * with updated configuration.
+     * ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process with
+     * updated configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * NO_RESTART – This option loads the updated database on the running q process without stopping it. This option is
-     * quicker as it reduces the turn around time to update a kdb database changeset configuration on a cluster.
+     * NO_RESTART – This option updates the cluster without stopping the running q process. It is only available for
+     * <code>HDB</code> type cluster. This option is quicker as it reduces the turn around time to update configuration
+     * on a cluster.
+     * </p>
+     * <p>
+     * With this deployment mode, you cannot update the <code>initializationScript</code> and
+     * <code>commandLineArguments</code> parameters.
      * </p>
      * </li>
      * </ul>
@@ -57,14 +62,19 @@ public class KxDeploymentConfiguration implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * ROLLING – This options loads the updated database by stopping the exiting q process and starting a new q process
-     * with updated configuration.
+     * ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process with
+     * updated configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * NO_RESTART – This option loads the updated database on the running q process without stopping it. This option is
-     * quicker as it reduces the turn around time to update a kdb database changeset configuration on a cluster.
+     * NO_RESTART – This option updates the cluster without stopping the running q process. It is only available for
+     * <code>HDB</code> type cluster. This option is quicker as it reduces the turn around time to update configuration
+     * on a cluster.
+     * </p>
+     * <p>
+     * With this deployment mode, you cannot update the <code>initializationScript</code> and
+     * <code>commandLineArguments</code> parameters.
      * </p>
      * </li>
      * </ul>
@@ -74,15 +84,19 @@ public class KxDeploymentConfiguration implements Serializable, Cloneable, Struc
      *        <ul>
      *        <li>
      *        <p>
-     *        ROLLING – This options loads the updated database by stopping the exiting q process and starting a new q
-     *        process with updated configuration.
+     *        ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process
+     *        with updated configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        NO_RESTART – This option loads the updated database on the running q process without stopping it. This
-     *        option is quicker as it reduces the turn around time to update a kdb database changeset configuration on a
-     *        cluster.
+     *        NO_RESTART – This option updates the cluster without stopping the running q process. It is only available
+     *        for <code>HDB</code> type cluster. This option is quicker as it reduces the turn around time to update
+     *        configuration on a cluster.
+     *        </p>
+     *        <p>
+     *        With this deployment mode, you cannot update the <code>initializationScript</code> and
+     *        <code>commandLineArguments</code> parameters.
      *        </p>
      *        </li>
      * @see KxDeploymentStrategy
@@ -99,14 +113,19 @@ public class KxDeploymentConfiguration implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * ROLLING – This options loads the updated database by stopping the exiting q process and starting a new q process
-     * with updated configuration.
+     * ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process with
+     * updated configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * NO_RESTART – This option loads the updated database on the running q process without stopping it. This option is
-     * quicker as it reduces the turn around time to update a kdb database changeset configuration on a cluster.
+     * NO_RESTART – This option updates the cluster without stopping the running q process. It is only available for
+     * <code>HDB</code> type cluster. This option is quicker as it reduces the turn around time to update configuration
+     * on a cluster.
+     * </p>
+     * <p>
+     * With this deployment mode, you cannot update the <code>initializationScript</code> and
+     * <code>commandLineArguments</code> parameters.
      * </p>
      * </li>
      * </ul>
@@ -115,15 +134,19 @@ public class KxDeploymentConfiguration implements Serializable, Cloneable, Struc
      *         <ul>
      *         <li>
      *         <p>
-     *         ROLLING – This options loads the updated database by stopping the exiting q process and starting a new q
-     *         process with updated configuration.
+     *         ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process
+     *         with updated configuration.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         NO_RESTART – This option loads the updated database on the running q process without stopping it. This
-     *         option is quicker as it reduces the turn around time to update a kdb database changeset configuration on
-     *         a cluster.
+     *         NO_RESTART – This option updates the cluster without stopping the running q process. It is only available
+     *         for <code>HDB</code> type cluster. This option is quicker as it reduces the turn around time to update
+     *         configuration on a cluster.
+     *         </p>
+     *         <p>
+     *         With this deployment mode, you cannot update the <code>initializationScript</code> and
+     *         <code>commandLineArguments</code> parameters.
      *         </p>
      *         </li>
      * @see KxDeploymentStrategy
@@ -140,14 +163,19 @@ public class KxDeploymentConfiguration implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * ROLLING – This options loads the updated database by stopping the exiting q process and starting a new q process
-     * with updated configuration.
+     * ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process with
+     * updated configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * NO_RESTART – This option loads the updated database on the running q process without stopping it. This option is
-     * quicker as it reduces the turn around time to update a kdb database changeset configuration on a cluster.
+     * NO_RESTART – This option updates the cluster without stopping the running q process. It is only available for
+     * <code>HDB</code> type cluster. This option is quicker as it reduces the turn around time to update configuration
+     * on a cluster.
+     * </p>
+     * <p>
+     * With this deployment mode, you cannot update the <code>initializationScript</code> and
+     * <code>commandLineArguments</code> parameters.
      * </p>
      * </li>
      * </ul>
@@ -157,15 +185,19 @@ public class KxDeploymentConfiguration implements Serializable, Cloneable, Struc
      *        <ul>
      *        <li>
      *        <p>
-     *        ROLLING – This options loads the updated database by stopping the exiting q process and starting a new q
-     *        process with updated configuration.
+     *        ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process
+     *        with updated configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        NO_RESTART – This option loads the updated database on the running q process without stopping it. This
-     *        option is quicker as it reduces the turn around time to update a kdb database changeset configuration on a
-     *        cluster.
+     *        NO_RESTART – This option updates the cluster without stopping the running q process. It is only available
+     *        for <code>HDB</code> type cluster. This option is quicker as it reduces the turn around time to update
+     *        configuration on a cluster.
+     *        </p>
+     *        <p>
+     *        With this deployment mode, you cannot update the <code>initializationScript</code> and
+     *        <code>commandLineArguments</code> parameters.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -184,14 +216,19 @@ public class KxDeploymentConfiguration implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * ROLLING – This options loads the updated database by stopping the exiting q process and starting a new q process
-     * with updated configuration.
+     * ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process with
+     * updated configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * NO_RESTART – This option loads the updated database on the running q process without stopping it. This option is
-     * quicker as it reduces the turn around time to update a kdb database changeset configuration on a cluster.
+     * NO_RESTART – This option updates the cluster without stopping the running q process. It is only available for
+     * <code>HDB</code> type cluster. This option is quicker as it reduces the turn around time to update configuration
+     * on a cluster.
+     * </p>
+     * <p>
+     * With this deployment mode, you cannot update the <code>initializationScript</code> and
+     * <code>commandLineArguments</code> parameters.
      * </p>
      * </li>
      * </ul>
@@ -201,15 +238,19 @@ public class KxDeploymentConfiguration implements Serializable, Cloneable, Struc
      *        <ul>
      *        <li>
      *        <p>
-     *        ROLLING – This options loads the updated database by stopping the exiting q process and starting a new q
-     *        process with updated configuration.
+     *        ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process
+     *        with updated configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        NO_RESTART – This option loads the updated database on the running q process without stopping it. This
-     *        option is quicker as it reduces the turn around time to update a kdb database changeset configuration on a
-     *        cluster.
+     *        NO_RESTART – This option updates the cluster without stopping the running q process. It is only available
+     *        for <code>HDB</code> type cluster. This option is quicker as it reduces the turn around time to update
+     *        configuration on a cluster.
+     *        </p>
+     *        <p>
+     *        With this deployment mode, you cannot update the <code>initializationScript</code> and
+     *        <code>commandLineArguments</code> parameters.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

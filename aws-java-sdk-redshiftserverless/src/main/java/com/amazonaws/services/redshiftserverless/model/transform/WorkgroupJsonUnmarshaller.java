@@ -62,6 +62,18 @@ public class WorkgroupJsonUnmarshaller implements Unmarshaller<Workgroup, JsonUn
                     context.nextToken();
                     workgroup.setCreationDate(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("customDomainCertificateArn", targetDepth)) {
+                    context.nextToken();
+                    workgroup.setCustomDomainCertificateArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("customDomainCertificateExpiryTime", targetDepth)) {
+                    context.nextToken();
+                    workgroup.setCustomDomainCertificateExpiryTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("customDomainName", targetDepth)) {
+                    context.nextToken();
+                    workgroup.setCustomDomainName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("endpoint", targetDepth)) {
                     context.nextToken();
                     workgroup.setEndpoint(EndpointJsonUnmarshaller.getInstance().unmarshall(context));

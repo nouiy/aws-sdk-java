@@ -361,6 +361,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("ExportTaskNotFound", new ExportTaskNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new ExportTaskNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IntegrationNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("IntegrationNotFoundFault", new IntegrationNotFoundExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new IntegrationNotFoundExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("InvalidRestoreFault") == null) {
             exceptionUnmarshallersMap.put("InvalidRestoreFault", new InvalidRestoreExceptionUnmarshaller());
         }
@@ -425,6 +429,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("CustomDBEngineVersionNotFoundFault", new CustomDBEngineVersionNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new CustomDBEngineVersionNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IntegrationConflictOperationFault") == null) {
+            exceptionUnmarshallersMap.put("IntegrationConflictOperationFault", new IntegrationConflictOperationExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new IntegrationConflictOperationExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("InsufficientDBInstanceCapacity") == null) {
             exceptionUnmarshallersMap.put("InsufficientDBInstanceCapacity", new InsufficientDBInstanceCapacityExceptionUnmarshaller());
         }
@@ -653,6 +661,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("DBClusterRoleQuotaExceeded", new DBClusterRoleQuotaExceededExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new DBClusterRoleQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IntegrationQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("IntegrationQuotaExceededFault", new IntegrationQuotaExceededExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new IntegrationQuotaExceededExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("SNSInvalidTopic") == null) {
             exceptionUnmarshallersMap.put("SNSInvalidTopic", new SNSInvalidTopicExceptionUnmarshaller());
         }
@@ -737,6 +749,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("GlobalClusterNotFoundFault", new GlobalClusterNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new GlobalClusterNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IntegrationAlreadyExistsFault") == null) {
+            exceptionUnmarshallersMap.put("IntegrationAlreadyExistsFault", new IntegrationAlreadyExistsExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new IntegrationAlreadyExistsExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("InvalidEventSubscriptionState") == null) {
             exceptionUnmarshallersMap.put("InvalidEventSubscriptionState", new InvalidEventSubscriptionStateExceptionUnmarshaller());
         }
@@ -809,6 +825,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("DBClusterAlreadyExistsFault", new DBClusterAlreadyExistsExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new DBClusterAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidIntegrationStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidIntegrationStateFault", new InvalidIntegrationStateExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new InvalidIntegrationStateExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("InvalidDBProxyStateFault") == null) {
             exceptionUnmarshallersMap.put("InvalidDBProxyStateFault", new InvalidDBProxyStateExceptionUnmarshaller());
         }
@@ -1098,6 +1118,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         specified Amazon Web Services Region.
      * @throws BlueGreenDeploymentNotFoundException
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
+     * @throws IntegrationNotFoundException
+     *         The specified integration could not be found.
      * @sample AmazonRDS.AddTagsToResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/AddTagsToResource" target="_top">AWS API
      *      Documentation</a>
@@ -3174,6 +3196,78 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Creates a zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.html">Working with Amazon Aurora
+     * zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param createIntegrationRequest
+     * @return Result of the CreateIntegration operation returned by the service.
+     * @throws DBClusterNotFoundException
+     *         <code>DBClusterIdentifier</code> doesn't refer to an existing DB cluster.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @throws IntegrationAlreadyExistsException
+     *         The integration you are trying to create already exists.
+     * @throws IntegrationQuotaExceededException
+     *         You can't crate any more zero-ETL integrations because the quota has been reached.
+     * @throws KMSKeyNotAccessibleException
+     *         An error occurred accessing an Amazon Web Services KMS key.
+     * @throws IntegrationConflictOperationException
+     *         A conflicting conditional operation is currently in progress against this resource. Typically occurs when
+     *         there are multiple requests being made to the same resource at the same time, and these requests conflict
+     *         with each other.
+     * @sample AmazonRDS.CreateIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateIntegration" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateIntegrationResult createIntegration(CreateIntegrationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateIntegration(request);
+    }
+
+    @SdkInternalApi
+    final CreateIntegrationResult executeCreateIntegration(CreateIntegrationRequest createIntegrationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createIntegrationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateIntegrationRequest> request = null;
+        Response<CreateIntegrationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateIntegrationRequestMarshaller().marshall(super.beforeMarshalling(createIntegrationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateIntegration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateIntegrationResult> responseHandler = new StaxResponseHandler<CreateIntegrationResult>(
+                    new CreateIntegrationResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a new option group. You can create up to 20 option groups.
      * </p>
      * <p>
@@ -4424,6 +4518,72 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             }
 
             StaxResponseHandler<GlobalCluster> responseHandler = new StaxResponseHandler<GlobalCluster>(new GlobalClusterStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.deleting.html">Deleting Amazon Aurora
+     * zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User Guide</i>
+     * </p>
+     * 
+     * @param deleteIntegrationRequest
+     * @return Result of the DeleteIntegration operation returned by the service.
+     * @throws IntegrationNotFoundException
+     *         The specified integration could not be found.
+     * @throws IntegrationConflictOperationException
+     *         A conflicting conditional operation is currently in progress against this resource. Typically occurs when
+     *         there are multiple requests being made to the same resource at the same time, and these requests conflict
+     *         with each other.
+     * @throws InvalidIntegrationStateException
+     *         The integration is in an invalid state and can't perform the requested operation.
+     * @sample AmazonRDS.DeleteIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteIntegration" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteIntegrationResult deleteIntegration(DeleteIntegrationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteIntegration(request);
+    }
+
+    @SdkInternalApi
+    final DeleteIntegrationResult executeDeleteIntegration(DeleteIntegrationRequest deleteIntegrationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteIntegrationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteIntegrationRequest> request = null;
+        Response<DeleteIntegrationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteIntegrationRequestMarshaller().marshall(super.beforeMarshalling(deleteIntegrationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteIntegration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteIntegrationResult> responseHandler = new StaxResponseHandler<DeleteIntegrationResult>(
+                    new DeleteIntegrationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -6693,6 +6853,67 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Describe one or more zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.describingmonitoring.html">Viewing
+     * and monitoring Amazon Aurora zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User
+     * Guide</i>
+     * </p>
+     * 
+     * @param describeIntegrationsRequest
+     * @return Result of the DescribeIntegrations operation returned by the service.
+     * @throws IntegrationNotFoundException
+     *         The specified integration could not be found.
+     * @sample AmazonRDS.DescribeIntegrations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeIntegrations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeIntegrationsResult describeIntegrations(DescribeIntegrationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeIntegrations(request);
+    }
+
+    @SdkInternalApi
+    final DescribeIntegrationsResult executeDescribeIntegrations(DescribeIntegrationsRequest describeIntegrationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeIntegrationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeIntegrationsRequest> request = null;
+        Response<DescribeIntegrationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeIntegrationsRequestMarshaller().marshall(super.beforeMarshalling(describeIntegrationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeIntegrations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeIntegrationsResult> responseHandler = new StaxResponseHandler<DescribeIntegrationsResult>(
+                    new DescribeIntegrationsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes all available options.
      * </p>
      * 
@@ -7501,6 +7722,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         specified Amazon Web Services Region.
      * @throws BlueGreenDeploymentNotFoundException
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
+     * @throws IntegrationNotFoundException
+     *         The specified integration could not be found.
      * @sample AmazonRDS.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ListTagsForResource" target="_top">AWS API
      *      Documentation</a>
@@ -9722,6 +9945,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         specified Amazon Web Services Region.
      * @throws BlueGreenDeploymentNotFoundException
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
+     * @throws IntegrationNotFoundException
+     *         The specified integration could not be found.
      * @sample AmazonRDS.RemoveTagsFromResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RemoveTagsFromResource" target="_top">AWS API
      *      Documentation</a>

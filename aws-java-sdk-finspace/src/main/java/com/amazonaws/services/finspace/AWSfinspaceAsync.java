@@ -941,6 +941,45 @@ public interface AWSfinspaceAsync extends AWSfinspace {
 
     /**
      * <p>
+     * Allows you to update code configuration on a running cluster. By using this API you can update the code, the
+     * initialization script path, and the command line arguments for a specific cluster. The configuration that you
+     * want to update will override any existing configurations on the cluster.
+     * </p>
+     * 
+     * @param updateKxClusterCodeConfigurationRequest
+     * @return A Java Future containing the result of the UpdateKxClusterCodeConfiguration operation returned by the
+     *         service.
+     * @sample AWSfinspaceAsync.UpdateKxClusterCodeConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxClusterCodeConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKxClusterCodeConfigurationResult> updateKxClusterCodeConfigurationAsync(
+            UpdateKxClusterCodeConfigurationRequest updateKxClusterCodeConfigurationRequest);
+
+    /**
+     * <p>
+     * Allows you to update code configuration on a running cluster. By using this API you can update the code, the
+     * initialization script path, and the command line arguments for a specific cluster. The configuration that you
+     * want to update will override any existing configurations on the cluster.
+     * </p>
+     * 
+     * @param updateKxClusterCodeConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateKxClusterCodeConfiguration operation returned by the
+     *         service.
+     * @sample AWSfinspaceAsyncHandler.UpdateKxClusterCodeConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxClusterCodeConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKxClusterCodeConfigurationResult> updateKxClusterCodeConfigurationAsync(
+            UpdateKxClusterCodeConfigurationRequest updateKxClusterCodeConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateKxClusterCodeConfigurationRequest, UpdateKxClusterCodeConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates the databases mounted on a kdb cluster, which includes the <code>changesetId</code> and all the dbPaths
      * to be cached. This API does not allow you to change a database name or add a database if you created a cluster
      * without one.

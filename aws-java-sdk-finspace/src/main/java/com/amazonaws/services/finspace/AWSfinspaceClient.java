@@ -2066,6 +2066,80 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
     /**
      * <p>
+     * Allows you to update code configuration on a running cluster. By using this API you can update the code, the
+     * initialization script path, and the command line arguments for a specific cluster. The configuration that you
+     * want to update will override any existing configurations on the cluster.
+     * </p>
+     * 
+     * @param updateKxClusterCodeConfigurationRequest
+     * @return Result of the UpdateKxClusterCodeConfiguration operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.UpdateKxClusterCodeConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxClusterCodeConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateKxClusterCodeConfigurationResult updateKxClusterCodeConfiguration(UpdateKxClusterCodeConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateKxClusterCodeConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateKxClusterCodeConfigurationResult executeUpdateKxClusterCodeConfiguration(
+            UpdateKxClusterCodeConfigurationRequest updateKxClusterCodeConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateKxClusterCodeConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateKxClusterCodeConfigurationRequest> request = null;
+        Response<UpdateKxClusterCodeConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateKxClusterCodeConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateKxClusterCodeConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateKxClusterCodeConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateKxClusterCodeConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateKxClusterCodeConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates the databases mounted on a kdb cluster, which includes the <code>changesetId</code> and all the dbPaths
      * to be cached. This API does not allow you to change a database name or add a database if you created a cluster
      * without one.

@@ -37,6 +37,8 @@ public class CreateLowLatencyHlsManifestConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ManifestWindowSeconds").build();
     private static final MarshallingInfo<Integer> PROGRAMDATETIMEINTERVALSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProgramDateTimeIntervalSeconds").build();
+    private static final MarshallingInfo<StructuredPojo> FILTERCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterConfiguration").build();
 
     private static final CreateLowLatencyHlsManifestConfigurationMarshaller instance = new CreateLowLatencyHlsManifestConfigurationMarshaller();
 
@@ -59,6 +61,7 @@ public class CreateLowLatencyHlsManifestConfigurationMarshaller {
             protocolMarshaller.marshall(createLowLatencyHlsManifestConfiguration.getScteHls(), SCTEHLS_BINDING);
             protocolMarshaller.marshall(createLowLatencyHlsManifestConfiguration.getManifestWindowSeconds(), MANIFESTWINDOWSECONDS_BINDING);
             protocolMarshaller.marshall(createLowLatencyHlsManifestConfiguration.getProgramDateTimeIntervalSeconds(), PROGRAMDATETIMEINTERVALSECONDS_BINDING);
+            protocolMarshaller.marshall(createLowLatencyHlsManifestConfiguration.getFilterConfiguration(), FILTERCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

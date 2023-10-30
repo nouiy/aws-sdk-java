@@ -34,6 +34,12 @@ public class WorkgroupMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configParameters").build();
     private static final MarshallingInfo<java.util.Date> CREATIONDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationDate").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> CUSTOMDOMAINCERTIFICATEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customDomainCertificateArn").build();
+    private static final MarshallingInfo<java.util.Date> CUSTOMDOMAINCERTIFICATEEXPIRYTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customDomainCertificateExpiryTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> CUSTOMDOMAINNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customDomainName").build();
     private static final MarshallingInfo<StructuredPojo> ENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endpoint").build();
     private static final MarshallingInfo<Boolean> ENHANCEDVPCROUTING_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
@@ -80,6 +86,9 @@ public class WorkgroupMarshaller {
             protocolMarshaller.marshall(workgroup.getBaseCapacity(), BASECAPACITY_BINDING);
             protocolMarshaller.marshall(workgroup.getConfigParameters(), CONFIGPARAMETERS_BINDING);
             protocolMarshaller.marshall(workgroup.getCreationDate(), CREATIONDATE_BINDING);
+            protocolMarshaller.marshall(workgroup.getCustomDomainCertificateArn(), CUSTOMDOMAINCERTIFICATEARN_BINDING);
+            protocolMarshaller.marshall(workgroup.getCustomDomainCertificateExpiryTime(), CUSTOMDOMAINCERTIFICATEEXPIRYTIME_BINDING);
+            protocolMarshaller.marshall(workgroup.getCustomDomainName(), CUSTOMDOMAINNAME_BINDING);
             protocolMarshaller.marshall(workgroup.getEndpoint(), ENDPOINT_BINDING);
             protocolMarshaller.marshall(workgroup.getEnhancedVpcRouting(), ENHANCEDVPCROUTING_BINDING);
             protocolMarshaller.marshall(workgroup.getNamespaceName(), NAMESPACENAME_BINDING);

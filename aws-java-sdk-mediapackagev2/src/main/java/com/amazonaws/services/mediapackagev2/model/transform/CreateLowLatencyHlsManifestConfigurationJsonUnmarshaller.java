@@ -69,6 +69,10 @@ public class CreateLowLatencyHlsManifestConfigurationJsonUnmarshaller implements
                     context.nextToken();
                     createLowLatencyHlsManifestConfiguration.setProgramDateTimeIntervalSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("FilterConfiguration", targetDepth)) {
+                    context.nextToken();
+                    createLowLatencyHlsManifestConfiguration.setFilterConfiguration(FilterConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

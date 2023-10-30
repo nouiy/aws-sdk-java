@@ -1,3 +1,44 @@
+# __1.12.577__ __2023-10-30__
+## __AWS Data Exchange__
+  - ### Features
+    - We added a new API action: SendDataSetNotification.
+
+## __AWS DataSync__
+  - ### Features
+    - Platform version changes to support AL1 deprecation initiative.
+
+## __AWS Elemental MediaPackage v2__
+  - ### Features
+    - This feature allows customers to create a combination of manifest filtering, startover and time delay configuration that applies to all egress requests by default.
+
+## __AWS Resilience Hub__
+  - ### Features
+    - Introduced the ability to filter applications by their last assessment date and time and have included metrics for the application's estimated workload Recovery Time Objective (RTO) and estimated workload Recovery Point Objective (RPO).
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release adds InstanceId field for phone number APIs.
+
+## __Amazon Connect Wisdom Service__
+  - ### Features
+    - This release added necessary API documents on creating a Wisdom knowledge base to integrate with S3.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - This release launches the CreateIntegration, DeleteIntegration, and DescribeIntegrations APIs to manage zero-ETL Integrations.
+
+## __Amazon S3 on Outposts__
+  - ### Features
+    - Updated ListOutpostsWithS3 API response to include S3OutpostArn for use with AWS RAM.
+
+## __FinSpace User Environment Management service__
+  - ### Features
+    - Introducing new API UpdateKxClusterCodeConfiguration, introducing new cache types for clusters and introducing new deployment modes for updating clusters.
+
+## __Redshift Serverless__
+  - ### Features
+    - Added support for custom domain names for Amazon Redshift Serverless workgroups. This feature enables customers to create a custom domain name and use ACM to generate fully secure connections to it.
+
 # __1.12.576__ __2023-10-27__
 ## __AWS WAFV2__
   - ### Features

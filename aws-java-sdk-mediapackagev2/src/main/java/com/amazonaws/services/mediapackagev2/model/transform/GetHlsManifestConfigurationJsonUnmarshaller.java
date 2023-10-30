@@ -72,6 +72,10 @@ public class GetHlsManifestConfigurationJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     getHlsManifestConfiguration.setScteHls(ScteHlsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("FilterConfiguration", targetDepth)) {
+                    context.nextToken();
+                    getHlsManifestConfiguration.setFilterConfiguration(FilterConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

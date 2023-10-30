@@ -73,9 +73,9 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * Specifies the user who has the permissions to access files, folders, and metadata in your file system.
      * </p>
      * <p>
-     * For information about choosing a user with sufficient permissions, see <a href=
+     * For information about choosing a user with the right level of access for your transfer, see <a href=
      * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
-     * >Required permissions</a>.
+     * >required permissions</a> for FSx for Windows File Server locations.
      * </p>
      */
     private String user;
@@ -83,11 +83,25 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * Specifies the name of the Windows domain that the FSx for Windows File Server belongs to.
      * </p>
+     * <p>
+     * If you have multiple domains in your environment, configuring this parameter makes sure that DataSync connects to
+     * the right file server.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     * >required permissions</a> for FSx for Windows File Server locations.
+     * </p>
      */
     private String domain;
     /**
      * <p>
      * Specifies the password of the user who has the permissions to access files and folders in the file system.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     * >required permissions</a> for FSx for Windows File Server locations.
      * </p>
      */
     private String password;
@@ -464,17 +478,17 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * Specifies the user who has the permissions to access files, folders, and metadata in your file system.
      * </p>
      * <p>
-     * For information about choosing a user with sufficient permissions, see <a href=
+     * For information about choosing a user with the right level of access for your transfer, see <a href=
      * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
-     * >Required permissions</a>.
+     * >required permissions</a> for FSx for Windows File Server locations.
      * </p>
      * 
      * @param user
      *        Specifies the user who has the permissions to access files, folders, and metadata in your file system.</p>
      *        <p>
-     *        For information about choosing a user with sufficient permissions, see <a href=
+     *        For information about choosing a user with the right level of access for your transfer, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
-     *        >Required permissions</a>.
+     *        >required permissions</a> for FSx for Windows File Server locations.
      */
 
     public void setUser(String user) {
@@ -486,17 +500,17 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * Specifies the user who has the permissions to access files, folders, and metadata in your file system.
      * </p>
      * <p>
-     * For information about choosing a user with sufficient permissions, see <a href=
+     * For information about choosing a user with the right level of access for your transfer, see <a href=
      * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
-     * >Required permissions</a>.
+     * >required permissions</a> for FSx for Windows File Server locations.
      * </p>
      * 
      * @return Specifies the user who has the permissions to access files, folders, and metadata in your file
      *         system.</p>
      *         <p>
-     *         For information about choosing a user with sufficient permissions, see <a href=
+     *         For information about choosing a user with the right level of access for your transfer, see <a href=
      *         "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
-     *         >Required permissions</a>.
+     *         >required permissions</a> for FSx for Windows File Server locations.
      */
 
     public String getUser() {
@@ -508,17 +522,17 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * Specifies the user who has the permissions to access files, folders, and metadata in your file system.
      * </p>
      * <p>
-     * For information about choosing a user with sufficient permissions, see <a href=
+     * For information about choosing a user with the right level of access for your transfer, see <a href=
      * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
-     * >Required permissions</a>.
+     * >required permissions</a> for FSx for Windows File Server locations.
      * </p>
      * 
      * @param user
      *        Specifies the user who has the permissions to access files, folders, and metadata in your file system.</p>
      *        <p>
-     *        For information about choosing a user with sufficient permissions, see <a href=
+     *        For information about choosing a user with the right level of access for your transfer, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
-     *        >Required permissions</a>.
+     *        >required permissions</a> for FSx for Windows File Server locations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -531,9 +545,26 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * Specifies the name of the Windows domain that the FSx for Windows File Server belongs to.
      * </p>
+     * <p>
+     * If you have multiple domains in your environment, configuring this parameter makes sure that DataSync connects to
+     * the right file server.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     * >required permissions</a> for FSx for Windows File Server locations.
+     * </p>
      * 
      * @param domain
-     *        Specifies the name of the Windows domain that the FSx for Windows File Server belongs to.
+     *        Specifies the name of the Windows domain that the FSx for Windows File Server belongs to.</p>
+     *        <p>
+     *        If you have multiple domains in your environment, configuring this parameter makes sure that DataSync
+     *        connects to the right file server.
+     *        </p>
+     *        <p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     *        >required permissions</a> for FSx for Windows File Server locations.
      */
 
     public void setDomain(String domain) {
@@ -544,8 +575,25 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * Specifies the name of the Windows domain that the FSx for Windows File Server belongs to.
      * </p>
+     * <p>
+     * If you have multiple domains in your environment, configuring this parameter makes sure that DataSync connects to
+     * the right file server.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     * >required permissions</a> for FSx for Windows File Server locations.
+     * </p>
      * 
-     * @return Specifies the name of the Windows domain that the FSx for Windows File Server belongs to.
+     * @return Specifies the name of the Windows domain that the FSx for Windows File Server belongs to.</p>
+     *         <p>
+     *         If you have multiple domains in your environment, configuring this parameter makes sure that DataSync
+     *         connects to the right file server.
+     *         </p>
+     *         <p>
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     *         >required permissions</a> for FSx for Windows File Server locations.
      */
 
     public String getDomain() {
@@ -556,9 +604,26 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * Specifies the name of the Windows domain that the FSx for Windows File Server belongs to.
      * </p>
+     * <p>
+     * If you have multiple domains in your environment, configuring this parameter makes sure that DataSync connects to
+     * the right file server.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     * >required permissions</a> for FSx for Windows File Server locations.
+     * </p>
      * 
      * @param domain
-     *        Specifies the name of the Windows domain that the FSx for Windows File Server belongs to.
+     *        Specifies the name of the Windows domain that the FSx for Windows File Server belongs to.</p>
+     *        <p>
+     *        If you have multiple domains in your environment, configuring this parameter makes sure that DataSync
+     *        connects to the right file server.
+     *        </p>
+     *        <p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     *        >required permissions</a> for FSx for Windows File Server locations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -571,9 +636,19 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * Specifies the password of the user who has the permissions to access files and folders in the file system.
      * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     * >required permissions</a> for FSx for Windows File Server locations.
+     * </p>
      * 
      * @param password
-     *        Specifies the password of the user who has the permissions to access files and folders in the file system.
+     *        Specifies the password of the user who has the permissions to access files and folders in the file
+     *        system.</p>
+     *        <p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     *        >required permissions</a> for FSx for Windows File Server locations.
      */
 
     public void setPassword(String password) {
@@ -584,9 +659,18 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * Specifies the password of the user who has the permissions to access files and folders in the file system.
      * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     * >required permissions</a> for FSx for Windows File Server locations.
+     * </p>
      * 
      * @return Specifies the password of the user who has the permissions to access files and folders in the file
-     *         system.
+     *         system.</p>
+     *         <p>
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     *         >required permissions</a> for FSx for Windows File Server locations.
      */
 
     public String getPassword() {
@@ -597,9 +681,19 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * Specifies the password of the user who has the permissions to access files and folders in the file system.
      * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     * >required permissions</a> for FSx for Windows File Server locations.
+     * </p>
      * 
      * @param password
-     *        Specifies the password of the user who has the permissions to access files and folders in the file system.
+     *        Specifies the password of the user who has the permissions to access files and folders in the file
+     *        system.</p>
+     *        <p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-windows-location-permissions"
+     *        >required permissions</a> for FSx for Windows File Server locations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

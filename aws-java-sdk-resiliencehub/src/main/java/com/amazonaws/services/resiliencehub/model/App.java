@@ -33,7 +33,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      */
     private String appArn;
@@ -51,7 +51,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
     private String complianceStatus;
     /**
      * <p>
-     * Timestamp for when the app was created.
+     * Date and time when the app was created.
      * </p>
      */
     private java.util.Date creationTime;
@@ -76,7 +76,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<EventSubscription> eventSubscriptions;
     /**
      * <p>
-     * Timestamp for the most recent compliance evaluation.
+     * Date and time the most recent compliance evaluation.
      * </p>
      */
     private java.util.Date lastAppComplianceEvaluationTime;
@@ -88,7 +88,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date lastDriftEvaluationTime;
     /**
      * <p>
-     * Timestamp for the most recent resiliency score evaluation.
+     * Date and time the most recent resiliency score evaluation.
      * </p>
      */
     private java.util.Date lastResiliencyScoreEvaluationTime;
@@ -110,7 +110,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      * Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      */
     private String policyArn;
@@ -120,6 +120,18 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Double resiliencyScore;
+    /**
+     * <p>
+     * Recovery Point Objective (RPO) in seconds.
+     * </p>
+     */
+    private Integer rpoInSecs;
+    /**
+     * <p>
+     * Recovery Time Objective (RTO) in seconds.
+     * </p>
+     */
+    private Integer rtoInSecs;
     /**
      * <p>
      * Status of the application.
@@ -139,7 +151,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      * 
      * @param appArn
@@ -147,7 +159,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     *        (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      */
 
     public void setAppArn(String appArn) {
@@ -159,14 +171,14 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      * 
      * @return Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *         (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     *         (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      */
 
     public String getAppArn() {
@@ -178,7 +190,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      * 
      * @param appArn
@@ -186,7 +198,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     *        (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -315,11 +327,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Timestamp for when the app was created.
+     * Date and time when the app was created.
      * </p>
      * 
      * @param creationTime
-     *        Timestamp for when the app was created.
+     *        Date and time when the app was created.
      */
 
     public void setCreationTime(java.util.Date creationTime) {
@@ -328,10 +340,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Timestamp for when the app was created.
+     * Date and time when the app was created.
      * </p>
      * 
-     * @return Timestamp for when the app was created.
+     * @return Date and time when the app was created.
      */
 
     public java.util.Date getCreationTime() {
@@ -340,11 +352,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Timestamp for when the app was created.
+     * Date and time when the app was created.
      * </p>
      * 
      * @param creationTime
-     *        Timestamp for when the app was created.
+     *        Date and time when the app was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -536,11 +548,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Timestamp for the most recent compliance evaluation.
+     * Date and time the most recent compliance evaluation.
      * </p>
      * 
      * @param lastAppComplianceEvaluationTime
-     *        Timestamp for the most recent compliance evaluation.
+     *        Date and time the most recent compliance evaluation.
      */
 
     public void setLastAppComplianceEvaluationTime(java.util.Date lastAppComplianceEvaluationTime) {
@@ -549,10 +561,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Timestamp for the most recent compliance evaluation.
+     * Date and time the most recent compliance evaluation.
      * </p>
      * 
-     * @return Timestamp for the most recent compliance evaluation.
+     * @return Date and time the most recent compliance evaluation.
      */
 
     public java.util.Date getLastAppComplianceEvaluationTime() {
@@ -561,11 +573,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Timestamp for the most recent compliance evaluation.
+     * Date and time the most recent compliance evaluation.
      * </p>
      * 
      * @param lastAppComplianceEvaluationTime
-     *        Timestamp for the most recent compliance evaluation.
+     *        Date and time the most recent compliance evaluation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -616,11 +628,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Timestamp for the most recent resiliency score evaluation.
+     * Date and time the most recent resiliency score evaluation.
      * </p>
      * 
      * @param lastResiliencyScoreEvaluationTime
-     *        Timestamp for the most recent resiliency score evaluation.
+     *        Date and time the most recent resiliency score evaluation.
      */
 
     public void setLastResiliencyScoreEvaluationTime(java.util.Date lastResiliencyScoreEvaluationTime) {
@@ -629,10 +641,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Timestamp for the most recent resiliency score evaluation.
+     * Date and time the most recent resiliency score evaluation.
      * </p>
      * 
-     * @return Timestamp for the most recent resiliency score evaluation.
+     * @return Date and time the most recent resiliency score evaluation.
      */
 
     public java.util.Date getLastResiliencyScoreEvaluationTime() {
@@ -641,11 +653,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Timestamp for the most recent resiliency score evaluation.
+     * Date and time the most recent resiliency score evaluation.
      * </p>
      * 
      * @param lastResiliencyScoreEvaluationTime
-     *        Timestamp for the most recent resiliency score evaluation.
+     *        Date and time the most recent resiliency score evaluation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -745,7 +757,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      * Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      * 
      * @param policyArn
@@ -753,7 +765,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/
      *        <code>policy-id</code>. For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     *        (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      */
 
     public void setPolicyArn(String policyArn) {
@@ -765,14 +777,14 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      * Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      * 
      * @return Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/
      *         <code>policy-id</code>. For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *         (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     *         (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      */
 
     public String getPolicyArn() {
@@ -784,7 +796,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      * Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      * 
      * @param policyArn
@@ -792,7 +804,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/
      *        <code>policy-id</code>. For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     *        (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -838,6 +850,86 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     public App withResiliencyScore(Double resiliencyScore) {
         setResiliencyScore(resiliencyScore);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Recovery Point Objective (RPO) in seconds.
+     * </p>
+     * 
+     * @param rpoInSecs
+     *        Recovery Point Objective (RPO) in seconds.
+     */
+
+    public void setRpoInSecs(Integer rpoInSecs) {
+        this.rpoInSecs = rpoInSecs;
+    }
+
+    /**
+     * <p>
+     * Recovery Point Objective (RPO) in seconds.
+     * </p>
+     * 
+     * @return Recovery Point Objective (RPO) in seconds.
+     */
+
+    public Integer getRpoInSecs() {
+        return this.rpoInSecs;
+    }
+
+    /**
+     * <p>
+     * Recovery Point Objective (RPO) in seconds.
+     * </p>
+     * 
+     * @param rpoInSecs
+     *        Recovery Point Objective (RPO) in seconds.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public App withRpoInSecs(Integer rpoInSecs) {
+        setRpoInSecs(rpoInSecs);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Recovery Time Objective (RTO) in seconds.
+     * </p>
+     * 
+     * @param rtoInSecs
+     *        Recovery Time Objective (RTO) in seconds.
+     */
+
+    public void setRtoInSecs(Integer rtoInSecs) {
+        this.rtoInSecs = rtoInSecs;
+    }
+
+    /**
+     * <p>
+     * Recovery Time Objective (RTO) in seconds.
+     * </p>
+     * 
+     * @return Recovery Time Objective (RTO) in seconds.
+     */
+
+    public Integer getRtoInSecs() {
+        return this.rtoInSecs;
+    }
+
+    /**
+     * <p>
+     * Recovery Time Objective (RTO) in seconds.
+     * </p>
+     * 
+     * @param rtoInSecs
+     *        Recovery Time Objective (RTO) in seconds.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public App withRtoInSecs(Integer rtoInSecs) {
+        setRtoInSecs(rtoInSecs);
         return this;
     }
 
@@ -1014,6 +1106,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
             sb.append("PolicyArn: ").append(getPolicyArn()).append(",");
         if (getResiliencyScore() != null)
             sb.append("ResiliencyScore: ").append(getResiliencyScore()).append(",");
+        if (getRpoInSecs() != null)
+            sb.append("RpoInSecs: ").append(getRpoInSecs()).append(",");
+        if (getRtoInSecs() != null)
+            sb.append("RtoInSecs: ").append(getRtoInSecs()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getTags() != null)
@@ -1090,6 +1186,14 @@ public class App implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getResiliencyScore() != null && other.getResiliencyScore().equals(this.getResiliencyScore()) == false)
             return false;
+        if (other.getRpoInSecs() == null ^ this.getRpoInSecs() == null)
+            return false;
+        if (other.getRpoInSecs() != null && other.getRpoInSecs().equals(this.getRpoInSecs()) == false)
+            return false;
+        if (other.getRtoInSecs() == null ^ this.getRtoInSecs() == null)
+            return false;
+        if (other.getRtoInSecs() != null && other.getRtoInSecs().equals(this.getRtoInSecs()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
@@ -1120,6 +1224,8 @@ public class App implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getPermissionModel() == null) ? 0 : getPermissionModel().hashCode());
         hashCode = prime * hashCode + ((getPolicyArn() == null) ? 0 : getPolicyArn().hashCode());
         hashCode = prime * hashCode + ((getResiliencyScore() == null) ? 0 : getResiliencyScore().hashCode());
+        hashCode = prime * hashCode + ((getRpoInSecs() == null) ? 0 : getRpoInSecs().hashCode());
+        hashCode = prime * hashCode + ((getRtoInSecs() == null) ? 0 : getRtoInSecs().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

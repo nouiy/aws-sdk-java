@@ -30,10 +30,16 @@ public class ListAppsRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      */
     private String appArn;
+    /**
+     * <p>
+     * Indicates the lower limit of the range that is used to filter applications based on their last assessment times.
+     * </p>
+     */
+    private java.util.Date fromLastAssessmentTime;
     /**
      * <p>
      * Maximum number of results to include in the response. If more results exist than the specified
@@ -54,13 +60,28 @@ public class ListAppsRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The application list is sorted based on the values of <code>lastAppComplianceEvaluationTime</code> field. By
+     * default, application list is sorted in ascending order. To sort the appliation list in descending order, set this
+     * field to <code>True</code>.
+     * </p>
+     */
+    private Boolean reverseOrder;
+    /**
+     * <p>
+     * Indicates the upper limit of the range that is used to filter the applications based on their last assessment
+     * times.
+     * </p>
+     */
+    private java.util.Date toLastAssessmentTime;
 
     /**
      * <p>
      * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      * 
      * @param appArn
@@ -68,7 +89,7 @@ public class ListAppsRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     *        (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      */
 
     public void setAppArn(String appArn) {
@@ -80,14 +101,14 @@ public class ListAppsRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      * 
      * @return Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *         (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     *         (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      */
 
     public String getAppArn() {
@@ -99,7 +120,7 @@ public class ListAppsRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     * Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * </p>
      * 
      * @param appArn
@@ -107,12 +128,55 @@ public class ListAppsRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
+     *        (ARNs)</a> in the <i>Amazon Web Services General Reference</i> guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ListAppsRequest withAppArn(String appArn) {
         setAppArn(appArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the lower limit of the range that is used to filter applications based on their last assessment times.
+     * </p>
+     * 
+     * @param fromLastAssessmentTime
+     *        Indicates the lower limit of the range that is used to filter applications based on their last assessment
+     *        times.
+     */
+
+    public void setFromLastAssessmentTime(java.util.Date fromLastAssessmentTime) {
+        this.fromLastAssessmentTime = fromLastAssessmentTime;
+    }
+
+    /**
+     * <p>
+     * Indicates the lower limit of the range that is used to filter applications based on their last assessment times.
+     * </p>
+     * 
+     * @return Indicates the lower limit of the range that is used to filter applications based on their last assessment
+     *         times.
+     */
+
+    public java.util.Date getFromLastAssessmentTime() {
+        return this.fromLastAssessmentTime;
+    }
+
+    /**
+     * <p>
+     * Indicates the lower limit of the range that is used to filter applications based on their last assessment times.
+     * </p>
+     * 
+     * @param fromLastAssessmentTime
+     *        Indicates the lower limit of the range that is used to filter applications based on their last assessment
+     *        times.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListAppsRequest withFromLastAssessmentTime(java.util.Date fromLastAssessmentTime) {
+        setFromLastAssessmentTime(fromLastAssessmentTime);
         return this;
     }
 
@@ -249,6 +313,120 @@ public class ListAppsRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
+     * <p>
+     * The application list is sorted based on the values of <code>lastAppComplianceEvaluationTime</code> field. By
+     * default, application list is sorted in ascending order. To sort the appliation list in descending order, set this
+     * field to <code>True</code>.
+     * </p>
+     * 
+     * @param reverseOrder
+     *        The application list is sorted based on the values of <code>lastAppComplianceEvaluationTime</code> field.
+     *        By default, application list is sorted in ascending order. To sort the appliation list in descending
+     *        order, set this field to <code>True</code>.
+     */
+
+    public void setReverseOrder(Boolean reverseOrder) {
+        this.reverseOrder = reverseOrder;
+    }
+
+    /**
+     * <p>
+     * The application list is sorted based on the values of <code>lastAppComplianceEvaluationTime</code> field. By
+     * default, application list is sorted in ascending order. To sort the appliation list in descending order, set this
+     * field to <code>True</code>.
+     * </p>
+     * 
+     * @return The application list is sorted based on the values of <code>lastAppComplianceEvaluationTime</code> field.
+     *         By default, application list is sorted in ascending order. To sort the appliation list in descending
+     *         order, set this field to <code>True</code>.
+     */
+
+    public Boolean getReverseOrder() {
+        return this.reverseOrder;
+    }
+
+    /**
+     * <p>
+     * The application list is sorted based on the values of <code>lastAppComplianceEvaluationTime</code> field. By
+     * default, application list is sorted in ascending order. To sort the appliation list in descending order, set this
+     * field to <code>True</code>.
+     * </p>
+     * 
+     * @param reverseOrder
+     *        The application list is sorted based on the values of <code>lastAppComplianceEvaluationTime</code> field.
+     *        By default, application list is sorted in ascending order. To sort the appliation list in descending
+     *        order, set this field to <code>True</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListAppsRequest withReverseOrder(Boolean reverseOrder) {
+        setReverseOrder(reverseOrder);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The application list is sorted based on the values of <code>lastAppComplianceEvaluationTime</code> field. By
+     * default, application list is sorted in ascending order. To sort the appliation list in descending order, set this
+     * field to <code>True</code>.
+     * </p>
+     * 
+     * @return The application list is sorted based on the values of <code>lastAppComplianceEvaluationTime</code> field.
+     *         By default, application list is sorted in ascending order. To sort the appliation list in descending
+     *         order, set this field to <code>True</code>.
+     */
+
+    public Boolean isReverseOrder() {
+        return this.reverseOrder;
+    }
+
+    /**
+     * <p>
+     * Indicates the upper limit of the range that is used to filter the applications based on their last assessment
+     * times.
+     * </p>
+     * 
+     * @param toLastAssessmentTime
+     *        Indicates the upper limit of the range that is used to filter the applications based on their last
+     *        assessment times.
+     */
+
+    public void setToLastAssessmentTime(java.util.Date toLastAssessmentTime) {
+        this.toLastAssessmentTime = toLastAssessmentTime;
+    }
+
+    /**
+     * <p>
+     * Indicates the upper limit of the range that is used to filter the applications based on their last assessment
+     * times.
+     * </p>
+     * 
+     * @return Indicates the upper limit of the range that is used to filter the applications based on their last
+     *         assessment times.
+     */
+
+    public java.util.Date getToLastAssessmentTime() {
+        return this.toLastAssessmentTime;
+    }
+
+    /**
+     * <p>
+     * Indicates the upper limit of the range that is used to filter the applications based on their last assessment
+     * times.
+     * </p>
+     * 
+     * @param toLastAssessmentTime
+     *        Indicates the upper limit of the range that is used to filter the applications based on their last
+     *        assessment times.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListAppsRequest withToLastAssessmentTime(java.util.Date toLastAssessmentTime) {
+        setToLastAssessmentTime(toLastAssessmentTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -262,12 +440,18 @@ public class ListAppsRequest extends com.amazonaws.AmazonWebServiceRequest imple
         sb.append("{");
         if (getAppArn() != null)
             sb.append("AppArn: ").append(getAppArn()).append(",");
+        if (getFromLastAssessmentTime() != null)
+            sb.append("FromLastAssessmentTime: ").append(getFromLastAssessmentTime()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getReverseOrder() != null)
+            sb.append("ReverseOrder: ").append(getReverseOrder()).append(",");
+        if (getToLastAssessmentTime() != null)
+            sb.append("ToLastAssessmentTime: ").append(getToLastAssessmentTime());
         sb.append("}");
         return sb.toString();
     }
@@ -286,6 +470,10 @@ public class ListAppsRequest extends com.amazonaws.AmazonWebServiceRequest imple
             return false;
         if (other.getAppArn() != null && other.getAppArn().equals(this.getAppArn()) == false)
             return false;
+        if (other.getFromLastAssessmentTime() == null ^ this.getFromLastAssessmentTime() == null)
+            return false;
+        if (other.getFromLastAssessmentTime() != null && other.getFromLastAssessmentTime().equals(this.getFromLastAssessmentTime()) == false)
+            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
@@ -298,6 +486,14 @@ public class ListAppsRequest extends com.amazonaws.AmazonWebServiceRequest imple
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getReverseOrder() == null ^ this.getReverseOrder() == null)
+            return false;
+        if (other.getReverseOrder() != null && other.getReverseOrder().equals(this.getReverseOrder()) == false)
+            return false;
+        if (other.getToLastAssessmentTime() == null ^ this.getToLastAssessmentTime() == null)
+            return false;
+        if (other.getToLastAssessmentTime() != null && other.getToLastAssessmentTime().equals(this.getToLastAssessmentTime()) == false)
+            return false;
         return true;
     }
 
@@ -307,9 +503,12 @@ public class ListAppsRequest extends com.amazonaws.AmazonWebServiceRequest imple
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAppArn() == null) ? 0 : getAppArn().hashCode());
+        hashCode = prime * hashCode + ((getFromLastAssessmentTime() == null) ? 0 : getFromLastAssessmentTime().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getReverseOrder() == null) ? 0 : getReverseOrder().hashCode());
+        hashCode = prime * hashCode + ((getToLastAssessmentTime() == null) ? 0 : getToLastAssessmentTime().hashCode());
         return hashCode;
     }
 

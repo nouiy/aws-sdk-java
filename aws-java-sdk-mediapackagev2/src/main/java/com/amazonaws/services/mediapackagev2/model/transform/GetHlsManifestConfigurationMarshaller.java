@@ -39,6 +39,8 @@ public class GetHlsManifestConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProgramDateTimeIntervalSeconds").build();
     private static final MarshallingInfo<StructuredPojo> SCTEHLS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScteHls").build();
+    private static final MarshallingInfo<StructuredPojo> FILTERCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterConfiguration").build();
 
     private static final GetHlsManifestConfigurationMarshaller instance = new GetHlsManifestConfigurationMarshaller();
 
@@ -62,6 +64,7 @@ public class GetHlsManifestConfigurationMarshaller {
             protocolMarshaller.marshall(getHlsManifestConfiguration.getManifestWindowSeconds(), MANIFESTWINDOWSECONDS_BINDING);
             protocolMarshaller.marshall(getHlsManifestConfiguration.getProgramDateTimeIntervalSeconds(), PROGRAMDATETIMEINTERVALSECONDS_BINDING);
             protocolMarshaller.marshall(getHlsManifestConfiguration.getScteHls(), SCTEHLS_BINDING);
+            protocolMarshaller.marshall(getHlsManifestConfiguration.getFilterConfiguration(), FILTERCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

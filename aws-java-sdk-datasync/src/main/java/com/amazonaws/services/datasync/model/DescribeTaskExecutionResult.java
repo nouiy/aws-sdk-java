@@ -147,13 +147,20 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * The number of files, objects, and directories that DataSync verified during your transfer.
      * </p>
+     * <note>
+     * <p>
+     * When you configure your task to <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html">verify only
+     * the data that's transferred</a>, DataSync doesn't verify directories in some situations or files that fail to
+     * transfer.
+     * </p>
+     * </note>
      */
     private Long filesVerified;
     /**
      * <p>
      * Indicates whether DataSync generated a complete <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html">task report</a> for your
-     * transfer.
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">task report</a> for your transfer.
      * </p>
      */
     private ReportResult reportResult;
@@ -1036,9 +1043,23 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * The number of files, objects, and directories that DataSync verified during your transfer.
      * </p>
+     * <note>
+     * <p>
+     * When you configure your task to <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html">verify only
+     * the data that's transferred</a>, DataSync doesn't verify directories in some situations or files that fail to
+     * transfer.
+     * </p>
+     * </note>
      * 
      * @param filesVerified
-     *        The number of files, objects, and directories that DataSync verified during your transfer.
+     *        The number of files, objects, and directories that DataSync verified during your transfer.</p> <note>
+     *        <p>
+     *        When you configure your task to <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html"
+     *        >verify only the data that's transferred</a>, DataSync doesn't verify directories in some situations or
+     *        files that fail to transfer.
+     *        </p>
      */
 
     public void setFilesVerified(Long filesVerified) {
@@ -1049,8 +1070,22 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * The number of files, objects, and directories that DataSync verified during your transfer.
      * </p>
+     * <note>
+     * <p>
+     * When you configure your task to <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html">verify only
+     * the data that's transferred</a>, DataSync doesn't verify directories in some situations or files that fail to
+     * transfer.
+     * </p>
+     * </note>
      * 
-     * @return The number of files, objects, and directories that DataSync verified during your transfer.
+     * @return The number of files, objects, and directories that DataSync verified during your transfer.</p> <note>
+     *         <p>
+     *         When you configure your task to <a
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html"
+     *         >verify only the data that's transferred</a>, DataSync doesn't verify directories in some situations or
+     *         files that fail to transfer.
+     *         </p>
      */
 
     public Long getFilesVerified() {
@@ -1061,9 +1096,23 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * The number of files, objects, and directories that DataSync verified during your transfer.
      * </p>
+     * <note>
+     * <p>
+     * When you configure your task to <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html">verify only
+     * the data that's transferred</a>, DataSync doesn't verify directories in some situations or files that fail to
+     * transfer.
+     * </p>
+     * </note>
      * 
      * @param filesVerified
-     *        The number of files, objects, and directories that DataSync verified during your transfer.
+     *        The number of files, objects, and directories that DataSync verified during your transfer.</p> <note>
+     *        <p>
+     *        When you configure your task to <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html"
+     *        >verify only the data that's transferred</a>, DataSync doesn't verify directories in some situations or
+     *        files that fail to transfer.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1075,14 +1124,13 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Indicates whether DataSync generated a complete <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html">task report</a> for your
-     * transfer.
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">task report</a> for your transfer.
      * </p>
      * 
      * @param reportResult
      *        Indicates whether DataSync generated a complete <a
-     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html">task report</a>
-     *        for your transfer.
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">task report</a> for your
+     *        transfer.
      */
 
     public void setReportResult(ReportResult reportResult) {
@@ -1092,13 +1140,12 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Indicates whether DataSync generated a complete <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html">task report</a> for your
-     * transfer.
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">task report</a> for your transfer.
      * </p>
      * 
      * @return Indicates whether DataSync generated a complete <a
-     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html">task report</a>
-     *         for your transfer.
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">task report</a> for your
+     *         transfer.
      */
 
     public ReportResult getReportResult() {
@@ -1108,14 +1155,13 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Indicates whether DataSync generated a complete <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html">task report</a> for your
-     * transfer.
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">task report</a> for your transfer.
      * </p>
      * 
      * @param reportResult
      *        Indicates whether DataSync generated a complete <a
-     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html">task report</a>
-     *        for your transfer.
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">task report</a> for your
+     *        transfer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

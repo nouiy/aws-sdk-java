@@ -1668,6 +1668,41 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
+     * Creates a zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.html">Working with Amazon Aurora
+     * zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param createIntegrationRequest
+     * @return A Java Future containing the result of the CreateIntegration operation returned by the service.
+     * @sample AmazonRDSAsync.CreateIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateIntegration" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIntegrationResult> createIntegrationAsync(CreateIntegrationRequest createIntegrationRequest);
+
+    /**
+     * <p>
+     * Creates a zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.html">Working with Amazon Aurora
+     * zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param createIntegrationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateIntegration operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.CreateIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateIntegration" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIntegrationResult> createIntegrationAsync(CreateIntegrationRequest createIntegrationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateIntegrationRequest, CreateIntegrationResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new option group. You can create up to 20 option groups.
      * </p>
      * <p>
@@ -2565,6 +2600,41 @@ public interface AmazonRDSAsync extends AmazonRDS {
      */
     java.util.concurrent.Future<GlobalCluster> deleteGlobalClusterAsync(DeleteGlobalClusterRequest deleteGlobalClusterRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteGlobalClusterRequest, GlobalCluster> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.deleting.html">Deleting Amazon Aurora
+     * zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User Guide</i>
+     * </p>
+     * 
+     * @param deleteIntegrationRequest
+     * @return A Java Future containing the result of the DeleteIntegration operation returned by the service.
+     * @sample AmazonRDSAsync.DeleteIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteIntegration" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIntegrationResult> deleteIntegrationAsync(DeleteIntegrationRequest deleteIntegrationRequest);
+
+    /**
+     * <p>
+     * Deletes a zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.deleting.html">Deleting Amazon Aurora
+     * zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User Guide</i>
+     * </p>
+     * 
+     * @param deleteIntegrationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteIntegration operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.DeleteIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteIntegration" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIntegrationResult> deleteIntegrationAsync(DeleteIntegrationRequest deleteIntegrationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteIntegrationRequest, DeleteIntegrationResult> asyncHandler);
 
     /**
      * <p>
@@ -4259,6 +4329,43 @@ public interface AmazonRDSAsync extends AmazonRDS {
      */
     java.util.concurrent.Future<DescribeGlobalClustersResult> describeGlobalClustersAsync(DescribeGlobalClustersRequest describeGlobalClustersRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeGlobalClustersRequest, DescribeGlobalClustersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describe one or more zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.describingmonitoring.html">Viewing
+     * and monitoring Amazon Aurora zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User
+     * Guide</i>
+     * </p>
+     * 
+     * @param describeIntegrationsRequest
+     * @return A Java Future containing the result of the DescribeIntegrations operation returned by the service.
+     * @sample AmazonRDSAsync.DescribeIntegrations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeIntegrations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIntegrationsResult> describeIntegrationsAsync(DescribeIntegrationsRequest describeIntegrationsRequest);
+
+    /**
+     * <p>
+     * Describe one or more zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.describingmonitoring.html">Viewing
+     * and monitoring Amazon Aurora zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User
+     * Guide</i>
+     * </p>
+     * 
+     * @param describeIntegrationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeIntegrations operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.DescribeIntegrations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeIntegrations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIntegrationsResult> describeIntegrationsAsync(DescribeIntegrationsRequest describeIntegrationsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeIntegrationsRequest, DescribeIntegrationsResult> asyncHandler);
 
     /**
      * <p>

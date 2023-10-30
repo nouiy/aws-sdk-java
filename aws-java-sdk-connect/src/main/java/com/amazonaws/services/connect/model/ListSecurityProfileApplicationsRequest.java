@@ -27,20 +27,22 @@ public class ListSecurityProfileApplicationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The security profile identifier.
+     * The identifier for the security profle.
      * </p>
      */
     private String securityProfileId;
     /**
      * <p>
-     * The instance identifier.
+     * The identifier of the Amazon Connect instance. You can <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in
+     * the Amazon Resource Name (ARN) of the instance.
      * </p>
      */
     private String instanceId;
     /**
      * <p>
-     * The token for the next set of results. The next set of results can be retrieved by using the token value returned
-     * in the previous response when making the next request.
+     * The token for the next set of results. Use the value returned in the previous response in the next request to
+     * retrieve the next set of results.
      * </p>
      */
     private String nextToken;
@@ -53,11 +55,11 @@ public class ListSecurityProfileApplicationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The security profile identifier.
+     * The identifier for the security profle.
      * </p>
      * 
      * @param securityProfileId
-     *        The security profile identifier.
+     *        The identifier for the security profle.
      */
 
     public void setSecurityProfileId(String securityProfileId) {
@@ -66,10 +68,10 @@ public class ListSecurityProfileApplicationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The security profile identifier.
+     * The identifier for the security profle.
      * </p>
      * 
-     * @return The security profile identifier.
+     * @return The identifier for the security profle.
      */
 
     public String getSecurityProfileId() {
@@ -78,11 +80,11 @@ public class ListSecurityProfileApplicationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The security profile identifier.
+     * The identifier for the security profle.
      * </p>
      * 
      * @param securityProfileId
-     *        The security profile identifier.
+     *        The identifier for the security profle.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +95,15 @@ public class ListSecurityProfileApplicationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The instance identifier.
+     * The identifier of the Amazon Connect instance. You can <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in
+     * the Amazon Resource Name (ARN) of the instance.
      * </p>
      * 
      * @param instanceId
-     *        The instance identifier.
+     *        The identifier of the Amazon Connect instance. You can <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance
+     *        ID</a> in the Amazon Resource Name (ARN) of the instance.
      */
 
     public void setInstanceId(String instanceId) {
@@ -106,10 +112,14 @@ public class ListSecurityProfileApplicationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The instance identifier.
+     * The identifier of the Amazon Connect instance. You can <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in
+     * the Amazon Resource Name (ARN) of the instance.
      * </p>
      * 
-     * @return The instance identifier.
+     * @return The identifier of the Amazon Connect instance. You can <a
+     *         href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance
+     *         ID</a> in the Amazon Resource Name (ARN) of the instance.
      */
 
     public String getInstanceId() {
@@ -118,11 +128,15 @@ public class ListSecurityProfileApplicationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The instance identifier.
+     * The identifier of the Amazon Connect instance. You can <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in
+     * the Amazon Resource Name (ARN) of the instance.
      * </p>
      * 
      * @param instanceId
-     *        The instance identifier.
+     *        The identifier of the Amazon Connect instance. You can <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance
+     *        ID</a> in the Amazon Resource Name (ARN) of the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,13 +147,13 @@ public class ListSecurityProfileApplicationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The token for the next set of results. The next set of results can be retrieved by using the token value returned
-     * in the previous response when making the next request.
+     * The token for the next set of results. Use the value returned in the previous response in the next request to
+     * retrieve the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The token for the next set of results. The next set of results can be retrieved by using the token value
-     *        returned in the previous response when making the next request.
+     *        The token for the next set of results. Use the value returned in the previous response in the next request
+     *        to retrieve the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -148,12 +162,12 @@ public class ListSecurityProfileApplicationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The token for the next set of results. The next set of results can be retrieved by using the token value returned
-     * in the previous response when making the next request.
+     * The token for the next set of results. Use the value returned in the previous response in the next request to
+     * retrieve the next set of results.
      * </p>
      * 
-     * @return The token for the next set of results. The next set of results can be retrieved by using the token value
-     *         returned in the previous response when making the next request.
+     * @return The token for the next set of results. Use the value returned in the previous response in the next
+     *         request to retrieve the next set of results.
      */
 
     public String getNextToken() {
@@ -162,13 +176,13 @@ public class ListSecurityProfileApplicationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The token for the next set of results. The next set of results can be retrieved by using the token value returned
-     * in the previous response when making the next request.
+     * The token for the next set of results. Use the value returned in the previous response in the next request to
+     * retrieve the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The token for the next set of results. The next set of results can be retrieved by using the token value
-     *        returned in the previous response when making the next request.
+     *        The token for the next set of results. Use the value returned in the previous response in the next request
+     *        to retrieve the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

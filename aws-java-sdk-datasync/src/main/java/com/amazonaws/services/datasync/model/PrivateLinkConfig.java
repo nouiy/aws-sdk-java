@@ -19,8 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies how your DataSync agent connects to Amazon Web Services using a virtual private cloud (VPC) service
- * endpoint. An agent that uses a VPC endpoint isn't accessible over the public internet.
+ * Specifies how your DataSync agent connects to Amazon Web Services using a <a href=
+ * "https://docs.aws.amazon.com/datasync/latest/userguide/choose-service-endpoint.html#choose-service-endpoint-vpc"
+ * >virtual private cloud (VPC) service endpoint</a>. An agent that uses a VPC endpoint isn't accessible over the public
+ * internet.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/PrivateLinkConfig" target="_top">AWS API

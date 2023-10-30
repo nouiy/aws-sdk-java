@@ -29,14 +29,13 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of the third party application's metadata.
+     * A list of the third-party application's metadata.
      * </p>
      */
     private java.util.List<Application> applications;
     /**
      * <p>
-     * The token for the next set of results. The next set of results can be retrieved by using the token value returned
-     * in the previous response when making the next request.
+     * If there are additional results, this is the token for the next set of results.
      * </p>
      */
     private String nextToken;
@@ -46,12 +45,12 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of the third party application's metadata.
+     * A list of the third-party application's metadata.
      * </p>
      * 
      * @return This API is in preview release for Amazon Connect and is subject to change.</p>
      *         <p>
-     *         A list of the third party application's metadata.
+     *         A list of the third-party application's metadata.
      */
 
     public java.util.List<Application> getApplications() {
@@ -63,13 +62,13 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of the third party application's metadata.
+     * A list of the third-party application's metadata.
      * </p>
      * 
      * @param applications
      *        This API is in preview release for Amazon Connect and is subject to change.</p>
      *        <p>
-     *        A list of the third party application's metadata.
+     *        A list of the third-party application's metadata.
      */
 
     public void setApplications(java.util.Collection<Application> applications) {
@@ -86,7 +85,7 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of the third party application's metadata.
+     * A list of the third-party application's metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -97,7 +96,7 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
      * @param applications
      *        This API is in preview release for Amazon Connect and is subject to change.</p>
      *        <p>
-     *        A list of the third party application's metadata.
+     *        A list of the third-party application's metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -116,13 +115,13 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of the third party application's metadata.
+     * A list of the third-party application's metadata.
      * </p>
      * 
      * @param applications
      *        This API is in preview release for Amazon Connect and is subject to change.</p>
      *        <p>
-     *        A list of the third party application's metadata.
+     *        A list of the third-party application's metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,13 +132,11 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The token for the next set of results. The next set of results can be retrieved by using the token value returned
-     * in the previous response when making the next request.
+     * If there are additional results, this is the token for the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The token for the next set of results. The next set of results can be retrieved by using the token value
-     *        returned in the previous response when making the next request.
+     *        If there are additional results, this is the token for the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -148,12 +145,10 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The token for the next set of results. The next set of results can be retrieved by using the token value returned
-     * in the previous response when making the next request.
+     * If there are additional results, this is the token for the next set of results.
      * </p>
      * 
-     * @return The token for the next set of results. The next set of results can be retrieved by using the token value
-     *         returned in the previous response when making the next request.
+     * @return If there are additional results, this is the token for the next set of results.
      */
 
     public String getNextToken() {
@@ -162,13 +157,11 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The token for the next set of results. The next set of results can be retrieved by using the token value returned
-     * in the previous response when making the next request.
+     * If there are additional results, this is the token for the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The token for the next set of results. The next set of results can be retrieved by using the token value
-     *        returned in the previous response when making the next request.
+     *        If there are additional results, this is the token for the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -54,6 +54,24 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date creationDate;
     /**
      * <p>
+     * The custom domain name’s certificate Amazon resource name (ARN).
+     * </p>
+     */
+    private String customDomainCertificateArn;
+    /**
+     * <p>
+     * The expiration time for the certificate.
+     * </p>
+     */
+    private java.util.Date customDomainCertificateExpiryTime;
+    /**
+     * <p>
+     * The custom domain name associated with the workgroup.
+     * </p>
+     */
+    private String customDomainName;
+    /**
+     * <p>
      * The endpoint that is created from the workgroup.
      * </p>
      */
@@ -332,6 +350,126 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
 
     public Workgroup withCreationDate(java.util.Date creationDate) {
         setCreationDate(creationDate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The custom domain name’s certificate Amazon resource name (ARN).
+     * </p>
+     * 
+     * @param customDomainCertificateArn
+     *        The custom domain name’s certificate Amazon resource name (ARN).
+     */
+
+    public void setCustomDomainCertificateArn(String customDomainCertificateArn) {
+        this.customDomainCertificateArn = customDomainCertificateArn;
+    }
+
+    /**
+     * <p>
+     * The custom domain name’s certificate Amazon resource name (ARN).
+     * </p>
+     * 
+     * @return The custom domain name’s certificate Amazon resource name (ARN).
+     */
+
+    public String getCustomDomainCertificateArn() {
+        return this.customDomainCertificateArn;
+    }
+
+    /**
+     * <p>
+     * The custom domain name’s certificate Amazon resource name (ARN).
+     * </p>
+     * 
+     * @param customDomainCertificateArn
+     *        The custom domain name’s certificate Amazon resource name (ARN).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workgroup withCustomDomainCertificateArn(String customDomainCertificateArn) {
+        setCustomDomainCertificateArn(customDomainCertificateArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The expiration time for the certificate.
+     * </p>
+     * 
+     * @param customDomainCertificateExpiryTime
+     *        The expiration time for the certificate.
+     */
+
+    public void setCustomDomainCertificateExpiryTime(java.util.Date customDomainCertificateExpiryTime) {
+        this.customDomainCertificateExpiryTime = customDomainCertificateExpiryTime;
+    }
+
+    /**
+     * <p>
+     * The expiration time for the certificate.
+     * </p>
+     * 
+     * @return The expiration time for the certificate.
+     */
+
+    public java.util.Date getCustomDomainCertificateExpiryTime() {
+        return this.customDomainCertificateExpiryTime;
+    }
+
+    /**
+     * <p>
+     * The expiration time for the certificate.
+     * </p>
+     * 
+     * @param customDomainCertificateExpiryTime
+     *        The expiration time for the certificate.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workgroup withCustomDomainCertificateExpiryTime(java.util.Date customDomainCertificateExpiryTime) {
+        setCustomDomainCertificateExpiryTime(customDomainCertificateExpiryTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The custom domain name associated with the workgroup.
+     * </p>
+     * 
+     * @param customDomainName
+     *        The custom domain name associated with the workgroup.
+     */
+
+    public void setCustomDomainName(String customDomainName) {
+        this.customDomainName = customDomainName;
+    }
+
+    /**
+     * <p>
+     * The custom domain name associated with the workgroup.
+     * </p>
+     * 
+     * @return The custom domain name associated with the workgroup.
+     */
+
+    public String getCustomDomainName() {
+        return this.customDomainName;
+    }
+
+    /**
+     * <p>
+     * The custom domain name associated with the workgroup.
+     * </p>
+     * 
+     * @param customDomainName
+     *        The custom domain name associated with the workgroup.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workgroup withCustomDomainName(String customDomainName) {
+        setCustomDomainName(customDomainName);
         return this;
     }
 
@@ -1017,6 +1155,12 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
             sb.append("ConfigParameters: ").append(getConfigParameters()).append(",");
         if (getCreationDate() != null)
             sb.append("CreationDate: ").append(getCreationDate()).append(",");
+        if (getCustomDomainCertificateArn() != null)
+            sb.append("CustomDomainCertificateArn: ").append(getCustomDomainCertificateArn()).append(",");
+        if (getCustomDomainCertificateExpiryTime() != null)
+            sb.append("CustomDomainCertificateExpiryTime: ").append(getCustomDomainCertificateExpiryTime()).append(",");
+        if (getCustomDomainName() != null)
+            sb.append("CustomDomainName: ").append(getCustomDomainName()).append(",");
         if (getEndpoint() != null)
             sb.append("Endpoint: ").append(getEndpoint()).append(",");
         if (getEnhancedVpcRouting() != null)
@@ -1068,6 +1212,19 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
         if (other.getCreationDate() == null ^ this.getCreationDate() == null)
             return false;
         if (other.getCreationDate() != null && other.getCreationDate().equals(this.getCreationDate()) == false)
+            return false;
+        if (other.getCustomDomainCertificateArn() == null ^ this.getCustomDomainCertificateArn() == null)
+            return false;
+        if (other.getCustomDomainCertificateArn() != null && other.getCustomDomainCertificateArn().equals(this.getCustomDomainCertificateArn()) == false)
+            return false;
+        if (other.getCustomDomainCertificateExpiryTime() == null ^ this.getCustomDomainCertificateExpiryTime() == null)
+            return false;
+        if (other.getCustomDomainCertificateExpiryTime() != null
+                && other.getCustomDomainCertificateExpiryTime().equals(this.getCustomDomainCertificateExpiryTime()) == false)
+            return false;
+        if (other.getCustomDomainName() == null ^ this.getCustomDomainName() == null)
+            return false;
+        if (other.getCustomDomainName() != null && other.getCustomDomainName().equals(this.getCustomDomainName()) == false)
             return false;
         if (other.getEndpoint() == null ^ this.getEndpoint() == null)
             return false;
@@ -1132,6 +1289,9 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getBaseCapacity() == null) ? 0 : getBaseCapacity().hashCode());
         hashCode = prime * hashCode + ((getConfigParameters() == null) ? 0 : getConfigParameters().hashCode());
         hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
+        hashCode = prime * hashCode + ((getCustomDomainCertificateArn() == null) ? 0 : getCustomDomainCertificateArn().hashCode());
+        hashCode = prime * hashCode + ((getCustomDomainCertificateExpiryTime() == null) ? 0 : getCustomDomainCertificateExpiryTime().hashCode());
+        hashCode = prime * hashCode + ((getCustomDomainName() == null) ? 0 : getCustomDomainName().hashCode());
         hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());
         hashCode = prime * hashCode + ((getEnhancedVpcRouting() == null) ? 0 : getEnhancedVpcRouting().hashCode());
         hashCode = prime * hashCode + ((getNamespaceName() == null) ? 0 : getNamespaceName().hashCode());

@@ -91,6 +91,12 @@ public class UpgradeTarget implements Serializable, Cloneable {
      * </p>
      */
     private Boolean supportsLocalWriteForwarding;
+    /**
+     * <p>
+     * Indicates whether the DB engine version supports Aurora zero-ETL integrations with Amazon Redshift.
+     * </p>
+     */
+    private Boolean supportsIntegrations;
 
     /**
      * <p>
@@ -642,6 +648,58 @@ public class UpgradeTarget implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether the DB engine version supports Aurora zero-ETL integrations with Amazon Redshift.
+     * </p>
+     * 
+     * @param supportsIntegrations
+     *        Indicates whether the DB engine version supports Aurora zero-ETL integrations with Amazon Redshift.
+     */
+
+    public void setSupportsIntegrations(Boolean supportsIntegrations) {
+        this.supportsIntegrations = supportsIntegrations;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the DB engine version supports Aurora zero-ETL integrations with Amazon Redshift.
+     * </p>
+     * 
+     * @return Indicates whether the DB engine version supports Aurora zero-ETL integrations with Amazon Redshift.
+     */
+
+    public Boolean getSupportsIntegrations() {
+        return this.supportsIntegrations;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the DB engine version supports Aurora zero-ETL integrations with Amazon Redshift.
+     * </p>
+     * 
+     * @param supportsIntegrations
+     *        Indicates whether the DB engine version supports Aurora zero-ETL integrations with Amazon Redshift.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpgradeTarget withSupportsIntegrations(Boolean supportsIntegrations) {
+        setSupportsIntegrations(supportsIntegrations);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the DB engine version supports Aurora zero-ETL integrations with Amazon Redshift.
+     * </p>
+     * 
+     * @return Indicates whether the DB engine version supports Aurora zero-ETL integrations with Amazon Redshift.
+     */
+
+    public Boolean isSupportsIntegrations() {
+        return this.supportsIntegrations;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -672,7 +730,9 @@ public class UpgradeTarget implements Serializable, Cloneable {
         if (getSupportsBabelfish() != null)
             sb.append("SupportsBabelfish: ").append(getSupportsBabelfish()).append(",");
         if (getSupportsLocalWriteForwarding() != null)
-            sb.append("SupportsLocalWriteForwarding: ").append(getSupportsLocalWriteForwarding());
+            sb.append("SupportsLocalWriteForwarding: ").append(getSupportsLocalWriteForwarding()).append(",");
+        if (getSupportsIntegrations() != null)
+            sb.append("SupportsIntegrations: ").append(getSupportsIntegrations());
         sb.append("}");
         return sb.toString();
     }
@@ -727,6 +787,10 @@ public class UpgradeTarget implements Serializable, Cloneable {
             return false;
         if (other.getSupportsLocalWriteForwarding() != null && other.getSupportsLocalWriteForwarding().equals(this.getSupportsLocalWriteForwarding()) == false)
             return false;
+        if (other.getSupportsIntegrations() == null ^ this.getSupportsIntegrations() == null)
+            return false;
+        if (other.getSupportsIntegrations() != null && other.getSupportsIntegrations().equals(this.getSupportsIntegrations()) == false)
+            return false;
         return true;
     }
 
@@ -745,6 +809,7 @@ public class UpgradeTarget implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getSupportsGlobalDatabases() == null) ? 0 : getSupportsGlobalDatabases().hashCode());
         hashCode = prime * hashCode + ((getSupportsBabelfish() == null) ? 0 : getSupportsBabelfish().hashCode());
         hashCode = prime * hashCode + ((getSupportsLocalWriteForwarding() == null) ? 0 : getSupportsLocalWriteForwarding().hashCode());
+        hashCode = prime * hashCode + ((getSupportsIntegrations() == null) ? 0 : getSupportsIntegrations().hashCode());
         return hashCode;
     }
 

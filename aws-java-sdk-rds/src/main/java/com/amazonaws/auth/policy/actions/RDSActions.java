@@ -83,6 +83,8 @@ public enum RDSActions implements Action {
     CreateEventSubscription("rds:CreateEventSubscription"),
     /** Action for the CreateGlobalCluster operation. */
     CreateGlobalCluster("rds:CreateGlobalCluster"),
+    /** Action for the CreateIntegration operation. */
+    CreateIntegration("rds:CreateIntegration"),
     /** Action for the CreateOptionGroup operation. */
     CreateOptionGroup("rds:CreateOptionGroup"),
     /** Action for the DeleteBlueGreenDeployment operation. */
@@ -119,6 +121,8 @@ public enum RDSActions implements Action {
     DeleteEventSubscription("rds:DeleteEventSubscription"),
     /** Action for the DeleteGlobalCluster operation. */
     DeleteGlobalCluster("rds:DeleteGlobalCluster"),
+    /** Action for the DeleteIntegration operation. */
+    DeleteIntegration("rds:DeleteIntegration"),
     /** Action for the DeleteOptionGroup operation. */
     DeleteOptionGroup("rds:DeleteOptionGroup"),
     /** Action for the DeregisterDBProxyTargets operation. */
@@ -187,6 +191,8 @@ public enum RDSActions implements Action {
     DescribeExportTasks("rds:DescribeExportTasks"),
     /** Action for the DescribeGlobalClusters operation. */
     DescribeGlobalClusters("rds:DescribeGlobalClusters"),
+    /** Action for the DescribeIntegrations operation. */
+    DescribeIntegrations("rds:DescribeIntegrations"),
     /** Action for the DescribeOptionGroupOptions operation. */
     DescribeOptionGroupOptions("rds:DescribeOptionGroupOptions"),
     /** Action for the DescribeOptionGroups operation. */

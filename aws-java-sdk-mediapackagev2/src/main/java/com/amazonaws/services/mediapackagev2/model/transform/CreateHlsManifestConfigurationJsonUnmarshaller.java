@@ -68,6 +68,10 @@ public class CreateHlsManifestConfigurationJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     createHlsManifestConfiguration.setProgramDateTimeIntervalSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("FilterConfiguration", targetDepth)) {
+                    context.nextToken();
+                    createHlsManifestConfiguration.setFilterConfiguration(FilterConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

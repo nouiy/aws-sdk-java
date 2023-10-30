@@ -405,6 +405,21 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateKxClusterCodeConfigurationResult> updateKxClusterCodeConfigurationAsync(
+            UpdateKxClusterCodeConfigurationRequest request) {
+
+        return updateKxClusterCodeConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKxClusterCodeConfigurationResult> updateKxClusterCodeConfigurationAsync(
+            UpdateKxClusterCodeConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateKxClusterCodeConfigurationRequest, UpdateKxClusterCodeConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateKxClusterDatabasesResult> updateKxClusterDatabasesAsync(UpdateKxClusterDatabasesRequest request) {
 
         return updateKxClusterDatabasesAsync(request, null);

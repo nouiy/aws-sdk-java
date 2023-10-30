@@ -198,10 +198,12 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Creates an endpoint for an Amazon FSx for NetApp ONTAP file system that DataSync can access for a transfer. For
-     * more information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-ontap-location.html">Creating a location for
-     * FSx for ONTAP</a>.
+     * Creates an endpoint for an Amazon FSx for NetApp ONTAP file system that DataSync can use for a data transfer.
+     * </p>
+     * <p>
+     * Before you begin, make sure that you understand how DataSync <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-ontap-location.html#create-ontap-location-access"
+     * >accesses an FSx for ONTAP file system</a>.
      * </p>
      * 
      * @param createLocationFsxOntapRequest
@@ -244,7 +246,13 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Creates an endpoint for an Amazon FSx for Windows File Server file system.
+     * Creates an endpoint for an Amazon FSx for Windows File Server file system that DataSync can use for a data
+     * transfer.
+     * </p>
+     * <p>
+     * Before you begin, make sure that you understand how DataSync <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#create-fsx-location-access"
+     * >accesses an FSx for Windows File Server</a>.
      * </p>
      * 
      * @param createLocationFsxWindowsRequest
@@ -426,9 +434,13 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Deletes an agent. To specify which agent to delete, use the Amazon Resource Name (ARN) of the agent in your
-     * request. The operation disassociates the agent from your Amazon Web Services account. However, it doesn't delete
-     * the agent virtual machine (VM) from your on-premises environment.
+     * Removes an DataSync agent resource from your Amazon Web Services account.
+     * </p>
+     * <p>
+     * Keep in mind that this operation (which can't be undone) doesn't remove the agent's virtual machine (VM) or
+     * Amazon EC2 instance from your storage environment. For next steps, you can delete the VM or instance from your
+     * storage environment or reuse it to <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/activate-agent.html">activate a new agent</a>.
      * </p>
      * 
      * @param deleteAgentRequest
@@ -482,7 +494,7 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Returns metadata about an DataSync agent, such as its name, endpoint type, and status.
+     * Returns information about an DataSync agent, such as its name, service endpoint type, and status.
      * </p>
      * 
      * @param describeAgentRequest
@@ -1115,7 +1127,7 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Updates the name of an agent.
+     * Updates the name of an DataSync agent.
      * </p>
      * 
      * @param updateAgentRequest
@@ -1227,10 +1239,8 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Updates some of the parameters of a previously created location for Server Message Block (SMB) file system
-     * access. For information about creating an SMB location, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html">Creating a location for
-     * SMB</a>.
+     * Updates some of the parameters of a Server Message Block (SMB) file server location that you can use for DataSync
+     * transfers.
      * </p>
      * 
      * @param updateLocationSmbRequest

@@ -57,6 +57,10 @@ public class AppMarshaller {
             .marshallLocationName("policyArn").build();
     private static final MarshallingInfo<Double> RESILIENCYSCORE_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resiliencyScore").build();
+    private static final MarshallingInfo<Integer> RPOINSECS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rpoInSecs").build();
+    private static final MarshallingInfo<Integer> RTOINSECS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rtoInSecs").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -92,6 +96,8 @@ public class AppMarshaller {
             protocolMarshaller.marshall(app.getPermissionModel(), PERMISSIONMODEL_BINDING);
             protocolMarshaller.marshall(app.getPolicyArn(), POLICYARN_BINDING);
             protocolMarshaller.marshall(app.getResiliencyScore(), RESILIENCYSCORE_BINDING);
+            protocolMarshaller.marshall(app.getRpoInSecs(), RPOINSECS_BINDING);
+            protocolMarshaller.marshall(app.getRtoInSecs(), RTOINSECS_BINDING);
             protocolMarshaller.marshall(app.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(app.getTags(), TAGS_BINDING);
         } catch (Exception e) {

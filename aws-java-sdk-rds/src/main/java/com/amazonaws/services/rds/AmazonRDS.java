@@ -257,6 +257,8 @@ public interface AmazonRDS {
      *         specified Amazon Web Services Region.
      * @throws BlueGreenDeploymentNotFoundException
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
+     * @throws IntegrationNotFoundException
+     *         The specified integration could not be found.
      * @sample AmazonRDS.AddTagsToResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/AddTagsToResource" target="_top">AWS API
      *      Documentation</a>
@@ -1231,6 +1233,35 @@ public interface AmazonRDS {
 
     /**
      * <p>
+     * Creates a zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.html">Working with Amazon Aurora
+     * zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param createIntegrationRequest
+     * @return Result of the CreateIntegration operation returned by the service.
+     * @throws DBClusterNotFoundException
+     *         <code>DBClusterIdentifier</code> doesn't refer to an existing DB cluster.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @throws IntegrationAlreadyExistsException
+     *         The integration you are trying to create already exists.
+     * @throws IntegrationQuotaExceededException
+     *         You can't crate any more zero-ETL integrations because the quota has been reached.
+     * @throws KMSKeyNotAccessibleException
+     *         An error occurred accessing an Amazon Web Services KMS key.
+     * @throws IntegrationConflictOperationException
+     *         A conflicting conditional operation is currently in progress against this resource. Typically occurs when
+     *         there are multiple requests being made to the same resource at the same time, and these requests conflict
+     *         with each other.
+     * @sample AmazonRDS.CreateIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateIntegration" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateIntegrationResult createIntegration(CreateIntegrationRequest createIntegrationRequest);
+
+    /**
+     * <p>
      * Creates a new option group. You can create up to 20 option groups.
      * </p>
      * <p>
@@ -1725,6 +1756,29 @@ public interface AmazonRDS {
      *      Documentation</a>
      */
     GlobalCluster deleteGlobalCluster(DeleteGlobalClusterRequest deleteGlobalClusterRequest);
+
+    /**
+     * <p>
+     * Deletes a zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.deleting.html">Deleting Amazon Aurora
+     * zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User Guide</i>
+     * </p>
+     * 
+     * @param deleteIntegrationRequest
+     * @return Result of the DeleteIntegration operation returned by the service.
+     * @throws IntegrationNotFoundException
+     *         The specified integration could not be found.
+     * @throws IntegrationConflictOperationException
+     *         A conflicting conditional operation is currently in progress against this resource. Typically occurs when
+     *         there are multiple requests being made to the same resource at the same time, and these requests conflict
+     *         with each other.
+     * @throws InvalidIntegrationStateException
+     *         The integration is in an invalid state and can't perform the requested operation.
+     * @sample AmazonRDS.DeleteIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteIntegration" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteIntegrationResult deleteIntegration(DeleteIntegrationRequest deleteIntegrationRequest);
 
     /**
      * <p>
@@ -2547,6 +2601,24 @@ public interface AmazonRDS {
 
     /**
      * <p>
+     * Describe one or more zero-ETL integration with Amazon Redshift. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.describingmonitoring.html">Viewing
+     * and monitoring Amazon Aurora zero-ETL integrations with Amazon Redshift</a> in the <i>Amazon Aurora User
+     * Guide</i>
+     * </p>
+     * 
+     * @param describeIntegrationsRequest
+     * @return Result of the DescribeIntegrations operation returned by the service.
+     * @throws IntegrationNotFoundException
+     *         The specified integration could not be found.
+     * @sample AmazonRDS.DescribeIntegrations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeIntegrations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeIntegrationsResult describeIntegrations(DescribeIntegrationsRequest describeIntegrationsRequest);
+
+    /**
+     * <p>
      * Describes all available options.
      * </p>
      * 
@@ -2890,6 +2962,8 @@ public interface AmazonRDS {
      *         specified Amazon Web Services Region.
      * @throws BlueGreenDeploymentNotFoundException
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
+     * @throws IntegrationNotFoundException
+     *         The specified integration could not be found.
      * @sample AmazonRDS.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ListTagsForResource" target="_top">AWS API
      *      Documentation</a>
@@ -3833,6 +3907,8 @@ public interface AmazonRDS {
      *         specified Amazon Web Services Region.
      * @throws BlueGreenDeploymentNotFoundException
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
+     * @throws IntegrationNotFoundException
+     *         The specified integration could not be found.
      * @sample AmazonRDS.RemoveTagsFromResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RemoveTagsFromResource" target="_top">AWS API
      *      Documentation</a>

@@ -1159,6 +1159,8 @@ public class AWSMediaPackageV2Client extends AmazonWebServiceClient implements A
      *         more information, see Access Management in the IAM User Guide.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ResourceNotFoundException
+     *         The specified resource doesn't exist.
      * @sample AWSMediaPackageV2.ListChannels
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediapackagev2-2022-12-25/ListChannels" target="_top">AWS
      *      API Documentation</a>

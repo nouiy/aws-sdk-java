@@ -184,6 +184,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public CreateIntegrationResult createIntegration(CreateIntegrationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public OptionGroup createOptionGroup(CreateOptionGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -270,6 +275,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public GlobalCluster deleteGlobalCluster(DeleteGlobalClusterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteIntegrationResult deleteIntegration(DeleteIntegrationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -515,6 +525,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public DescribeGlobalClustersResult describeGlobalClusters(DescribeGlobalClustersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeIntegrationsResult describeIntegrations(DescribeIntegrationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

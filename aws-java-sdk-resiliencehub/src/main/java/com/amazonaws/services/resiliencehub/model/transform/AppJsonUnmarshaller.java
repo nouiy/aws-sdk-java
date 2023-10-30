@@ -106,6 +106,14 @@ public class AppJsonUnmarshaller implements Unmarshaller<App, JsonUnmarshallerCo
                     context.nextToken();
                     app.setResiliencyScore(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
+                if (context.testExpression("rpoInSecs", targetDepth)) {
+                    context.nextToken();
+                    app.setRpoInSecs(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("rtoInSecs", targetDepth)) {
+                    context.nextToken();
+                    app.setRtoInSecs(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
                     app.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

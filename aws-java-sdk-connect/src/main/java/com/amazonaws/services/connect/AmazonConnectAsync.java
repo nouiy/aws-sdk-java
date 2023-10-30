@@ -35,7 +35,7 @@ import com.amazonaws.services.connect.model.*;
  * </p>
  * <p>
  * There are limits to the number of Amazon Connect resources that you can create. There are also limits to the number
- * of requests that you can make per second. For more information, seeP98941055 <a
+ * of requests that you can make per second. For more information, see <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
  * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
  * </p>
@@ -5069,7 +5069,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Returns a list of third party applications in a specific security profile.
+     * Returns a list of third-party applications in a specific security profile.
      * </p>
      * 
      * @param listSecurityProfileApplicationsRequest
@@ -5084,7 +5084,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Returns a list of third party applications in a specific security profile.
+     * Returns a list of third-party applications in a specific security profile.
      * </p>
      * 
      * @param listSecurityProfileApplicationsRequest
@@ -5708,7 +5708,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
     /**
      * <p>
      * When a contact is being recorded, and the recording has been suspended using SuspendContactRecording, this API
-     * resumes recording the call or screen.
+     * resumes recording whatever recording is selected in the flow configuration: call, screen, or both. If only call
+     * recording or only screen recording is enabled, then it would resume.
      * </p>
      * <p>
      * Voice and screen recordings are supported.
@@ -5725,7 +5726,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
     /**
      * <p>
      * When a contact is being recorded, and the recording has been suspended using SuspendContactRecording, this API
-     * resumes recording the call or screen.
+     * resumes recording whatever recording is selected in the flow configuration: call, screen, or both. If only call
+     * recording or only screen recording is enabled, then it would resume.
      * </p>
      * <p>
      * Voice and screen recordings are supported.
@@ -6772,9 +6774,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * When a contact is being recorded, this API suspends recording the call or screen. For example, you might suspend
-     * the call or screen recording while collecting sensitive information, such as a credit card number. Then use
-     * ResumeContactRecording to restart recording.
+     * When a contact is being recorded, this API suspends recording whatever is selected in the flow configuration:
+     * call, screen, or both. If only call recording or only screen recording is enabled, then it would be suspended.
+     * For example, you might suspend the screen recording while collecting sensitive information, such as a credit card
+     * number. Then use ResumeContactRecording to restart recording the screen.
      * </p>
      * <p>
      * The period of time that the recording is suspended is filled with silence in the final recording.
@@ -6793,9 +6796,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * When a contact is being recorded, this API suspends recording the call or screen. For example, you might suspend
-     * the call or screen recording while collecting sensitive information, such as a credit card number. Then use
-     * ResumeContactRecording to restart recording.
+     * When a contact is being recorded, this API suspends recording whatever is selected in the flow configuration:
+     * call, screen, or both. If only call recording or only screen recording is enabled, then it would be suspended.
+     * For example, you might suspend the screen recording while collecting sensitive information, such as a credit card
+     * number. Then use ResumeContactRecording to restart recording the screen.
      * </p>
      * <p>
      * The period of time that the recording is suspended is filled with silence in the final recording.

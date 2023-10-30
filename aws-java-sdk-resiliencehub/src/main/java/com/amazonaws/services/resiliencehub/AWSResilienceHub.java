@@ -46,8 +46,11 @@ public interface AWSResilienceHub {
 
     /**
      * <p>
-     * Adds the resource mapping for the draft application version. You can also update an existing resource mapping to
-     * a new physical resource.
+     * Adds the source of resource-maps to the draft version of an application. During assessment, Resilience Hub will
+     * use these resource-maps to resolve the latest physical ID for each resource in the application template. For more
+     * information about different types of resources suported by Resilience Hub and how to add them in your
+     * application, see <a href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/how-app-manage.html">Step
+     * 2: How is your application managed?</a> in the Resilience Hub User Guide.
      * </p>
      * 
      * @param addDraftAppVersionResourceMappingsRequest
@@ -266,6 +269,15 @@ public interface AWSResilienceHub {
      * <p>
      * Creates a resiliency policy for an application.
      * </p>
+     * <note>
+     * <p>
+     * Resilience Hub allows you to provide a value of zero for <code>rtoInSecs</code> and <code>rpoInSecs</code> of
+     * your resiliency policy. But, while assessing your application, the lowest possible assessment result is near
+     * zero. Hence, if you provide value zero for <code>rtoInSecs</code> and <code>rpoInSecs</code>, the estimated
+     * workload RTO and estimated workload RPO result will be near zero and the <b>Compliance status</b> for your
+     * application will be set to <b>Policy breached</b>.
+     * </p>
+     * </note>
      * 
      * @param createResiliencyPolicyRequest
      * @return Result of the CreateResiliencyPolicy operation returned by the service.
@@ -1615,6 +1627,15 @@ public interface AWSResilienceHub {
      * <p>
      * Updates a resiliency policy.
      * </p>
+     * <note>
+     * <p>
+     * Resilience Hub allows you to provide a value of zero for <code>rtoInSecs</code> and <code>rpoInSecs</code> of
+     * your resiliency policy. But, while assessing your application, the lowest possible assessment result is near
+     * zero. Hence, if you provide value zero for <code>rtoInSecs</code> and <code>rpoInSecs</code>, the estimated
+     * workload RTO and estimated workload RPO result will be near zero and the <b>Compliance status</b> for your
+     * application will be set to <b>Policy breached</b>.
+     * </p>
+     * </note>
      * 
      * @param updateResiliencyPolicyRequest
      * @return Result of the UpdateResiliencyPolicy operation returned by the service.

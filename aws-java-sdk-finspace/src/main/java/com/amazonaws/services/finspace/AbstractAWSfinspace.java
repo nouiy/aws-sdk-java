@@ -173,6 +173,11 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    public UpdateKxClusterCodeConfigurationResult updateKxClusterCodeConfiguration(UpdateKxClusterCodeConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateKxClusterDatabasesResult updateKxClusterDatabases(UpdateKxClusterDatabasesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

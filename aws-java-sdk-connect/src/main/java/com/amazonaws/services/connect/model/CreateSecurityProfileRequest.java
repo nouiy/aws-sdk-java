@@ -79,7 +79,7 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of third party applications that the security profile will give access to.
+     * A list of third-party applications that the security profile will give access to.
      * </p>
      */
     private java.util.List<Application> applications;
@@ -535,12 +535,12 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of third party applications that the security profile will give access to.
+     * A list of third-party applications that the security profile will give access to.
      * </p>
      * 
      * @return This API is in preview release for Amazon Connect and is subject to change.</p>
      *         <p>
-     *         A list of third party applications that the security profile will give access to.
+     *         A list of third-party applications that the security profile will give access to.
      */
 
     public java.util.List<Application> getApplications() {
@@ -552,13 +552,13 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of third party applications that the security profile will give access to.
+     * A list of third-party applications that the security profile will give access to.
      * </p>
      * 
      * @param applications
      *        This API is in preview release for Amazon Connect and is subject to change.</p>
      *        <p>
-     *        A list of third party applications that the security profile will give access to.
+     *        A list of third-party applications that the security profile will give access to.
      */
 
     public void setApplications(java.util.Collection<Application> applications) {
@@ -575,7 +575,7 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of third party applications that the security profile will give access to.
+     * A list of third-party applications that the security profile will give access to.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -586,7 +586,7 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * @param applications
      *        This API is in preview release for Amazon Connect and is subject to change.</p>
      *        <p>
-     *        A list of third party applications that the security profile will give access to.
+     *        A list of third-party applications that the security profile will give access to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -605,13 +605,13 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of third party applications that the security profile will give access to.
+     * A list of third-party applications that the security profile will give access to.
      * </p>
      * 
      * @param applications
      *        This API is in preview release for Amazon Connect and is subject to change.</p>
      *        <p>
-     *        A list of third party applications that the security profile will give access to.
+     *        A list of third-party applications that the security profile will give access to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

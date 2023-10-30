@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Specifies the Amazon S3 bucket where DataSync uploads your <a
- * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html">task report</a>.
+ * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">task report</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ReportDestinationS3" target="_top">AWS API
@@ -44,8 +44,8 @@ public class ReportDestinationS3 implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to your
-     * S3 bucket. For more information, see <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
+     * S3 bucket. For more information, see <a
+     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/task-reports.html"
      * >Allowing DataSync to upload a task report to an Amazon S3 bucket</a>.
      * </p>
      */
@@ -134,15 +134,15 @@ public class ReportDestinationS3 implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to your
-     * S3 bucket. For more information, see <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
+     * S3 bucket. For more information, see <a
+     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/task-reports.html"
      * >Allowing DataSync to upload a task report to an Amazon S3 bucket</a>.
      * </p>
      * 
      * @param bucketAccessRoleArn
      *        Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to
      *        your S3 bucket. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
+     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/task-reports.html"
      *        >Allowing DataSync to upload a task report to an Amazon S3 bucket</a>.
      */
 
@@ -153,14 +153,14 @@ public class ReportDestinationS3 implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to your
-     * S3 bucket. For more information, see <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
+     * S3 bucket. For more information, see <a
+     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/task-reports.html"
      * >Allowing DataSync to upload a task report to an Amazon S3 bucket</a>.
      * </p>
      * 
      * @return Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report
      *         to your S3 bucket. For more information, see <a href=
-     *         "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
+     *         "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/task-reports.html"
      *         >Allowing DataSync to upload a task report to an Amazon S3 bucket</a>.
      */
 
@@ -171,15 +171,15 @@ public class ReportDestinationS3 implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to your
-     * S3 bucket. For more information, see <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
+     * S3 bucket. For more information, see <a
+     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/task-reports.html"
      * >Allowing DataSync to upload a task report to an Amazon S3 bucket</a>.
      * </p>
      * 
      * @param bucketAccessRoleArn
      *        Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to
      *        your S3 bucket. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
+     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/task-reports.html"
      *        >Allowing DataSync to upload a task report to an Amazon S3 bucket</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

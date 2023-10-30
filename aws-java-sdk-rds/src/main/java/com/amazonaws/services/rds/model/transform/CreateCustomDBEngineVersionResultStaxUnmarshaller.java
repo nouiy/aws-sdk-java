@@ -249,6 +249,11 @@ public class CreateCustomDBEngineVersionResultStaxUnmarshaller implements Unmars
                     createCustomDBEngineVersionResult.setSupportsLocalWriteForwarding(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("SupportsIntegrations", targetDepth)) {
+                    createCustomDBEngineVersionResult.setSupportsIntegrations(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return createCustomDBEngineVersionResult;

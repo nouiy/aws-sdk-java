@@ -150,9 +150,8 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
     private java.util.List<FilterRule> includes;
     /**
      * <p>
-     * The configuration of your task report. For more information, see <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
-     * >Creating a task report</a>.
+     * The configuration of your task report. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
      * </p>
      */
     private TaskReportConfig taskReportConfig;
@@ -1115,15 +1114,13 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The configuration of your task report. For more information, see <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
-     * >Creating a task report</a>.
+     * The configuration of your task report. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
      * </p>
      * 
      * @param taskReportConfig
-     *        The configuration of your task report. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
-     *        >Creating a task report</a>.
+     *        The configuration of your task report. For more information, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
      */
 
     public void setTaskReportConfig(TaskReportConfig taskReportConfig) {
@@ -1132,14 +1129,13 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The configuration of your task report. For more information, see <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
-     * >Creating a task report</a>.
+     * The configuration of your task report. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
      * </p>
      * 
-     * @return The configuration of your task report. For more information, see <a href=
-     *         "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
-     *         >Creating a task report</a>.
+     * @return The configuration of your task report. For more information, see <a
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task
+     *         report</a>.
      */
 
     public TaskReportConfig getTaskReportConfig() {
@@ -1148,15 +1144,13 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The configuration of your task report. For more information, see <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
-     * >Creating a task report</a>.
+     * The configuration of your task report. For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
      * </p>
      * 
      * @param taskReportConfig
-     *        The configuration of your task report. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html"
-     *        >Creating a task report</a>.
+     *        The configuration of your task report. For more information, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Creating a task report</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

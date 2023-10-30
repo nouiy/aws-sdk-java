@@ -23,8 +23,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * transfer.
  * </p>
  * <p>
- * For more information, see <a
- * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html">Task reports</a>.
+ * For more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">Task
+ * reports</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/TaskReportConfig" target="_top">AWS API
@@ -36,7 +36,7 @@ public class TaskReportConfig implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Specifies the Amazon S3 bucket where DataSync uploads your task report. For more information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html#task-report-access">Task
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html#task-report-access">Task
      * reports</a>.
      * </p>
      */
@@ -103,13 +103,13 @@ public class TaskReportConfig implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Specifies the Amazon S3 bucket where DataSync uploads your task report. For more information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html#task-report-access">Task
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html#task-report-access">Task
      * reports</a>.
      * </p>
      * 
      * @param destination
-     *        Specifies the Amazon S3 bucket where DataSync uploads your task report. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html#task-report-access">Task
+     *        Specifies the Amazon S3 bucket where DataSync uploads your task report. For more information, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html#task-report-access">Task
      *        reports</a>.
      */
 
@@ -120,14 +120,13 @@ public class TaskReportConfig implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Specifies the Amazon S3 bucket where DataSync uploads your task report. For more information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html#task-report-access">Task
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html#task-report-access">Task
      * reports</a>.
      * </p>
      * 
      * @return Specifies the Amazon S3 bucket where DataSync uploads your task report. For more information, see <a
-     *         href=
-     *         "https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html#task-report-access"
-     *         >Task reports</a>.
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html#task-report-access">Task
+     *         reports</a>.
      */
 
     public ReportDestination getDestination() {
@@ -137,13 +136,13 @@ public class TaskReportConfig implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Specifies the Amazon S3 bucket where DataSync uploads your task report. For more information, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html#task-report-access">Task
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html#task-report-access">Task
      * reports</a>.
      * </p>
      * 
      * @param destination
-     *        Specifies the Amazon S3 bucket where DataSync uploads your task report. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html#task-report-access">Task
+     *        Specifies the Amazon S3 bucket where DataSync uploads your task report. For more information, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html#task-report-access">Task
      *        reports</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

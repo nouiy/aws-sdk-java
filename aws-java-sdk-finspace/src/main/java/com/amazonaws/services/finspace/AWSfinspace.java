@@ -732,6 +732,35 @@ public interface AWSfinspace {
 
     /**
      * <p>
+     * Allows you to update code configuration on a running cluster. By using this API you can update the code, the
+     * initialization script path, and the command line arguments for a specific cluster. The configuration that you
+     * want to update will override any existing configurations on the cluster.
+     * </p>
+     * 
+     * @param updateKxClusterCodeConfigurationRequest
+     * @return Result of the UpdateKxClusterCodeConfiguration operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.UpdateKxClusterCodeConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxClusterCodeConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateKxClusterCodeConfigurationResult updateKxClusterCodeConfiguration(UpdateKxClusterCodeConfigurationRequest updateKxClusterCodeConfigurationRequest);
+
+    /**
+     * <p>
      * Updates the databases mounted on a kdb cluster, which includes the <code>changesetId</code> and all the dbPaths
      * to be cached. This API does not allow you to change a database name or add a database if you created a cluster
      * without one.

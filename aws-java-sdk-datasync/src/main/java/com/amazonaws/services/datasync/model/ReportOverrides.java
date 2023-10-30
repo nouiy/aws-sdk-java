@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * The level of detail included in each aspect of your DataSync <a
- * href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html">task report</a>.
+ * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html">task report</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ReportOverrides" target="_top">AWS API

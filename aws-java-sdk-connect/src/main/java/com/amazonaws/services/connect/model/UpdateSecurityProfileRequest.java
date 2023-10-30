@@ -70,7 +70,7 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of the third party application's metadata.
+     * A list of the third-party application's metadata.
      * </p>
      */
     private java.util.List<Application> applications;
@@ -436,12 +436,12 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of the third party application's metadata.
+     * A list of the third-party application's metadata.
      * </p>
      * 
      * @return This API is in preview release for Amazon Connect and is subject to change.</p>
      *         <p>
-     *         A list of the third party application's metadata.
+     *         A list of the third-party application's metadata.
      */
 
     public java.util.List<Application> getApplications() {
@@ -453,13 +453,13 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of the third party application's metadata.
+     * A list of the third-party application's metadata.
      * </p>
      * 
      * @param applications
      *        This API is in preview release for Amazon Connect and is subject to change.</p>
      *        <p>
-     *        A list of the third party application's metadata.
+     *        A list of the third-party application's metadata.
      */
 
     public void setApplications(java.util.Collection<Application> applications) {
@@ -476,7 +476,7 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of the third party application's metadata.
+     * A list of the third-party application's metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -487,7 +487,7 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * @param applications
      *        This API is in preview release for Amazon Connect and is subject to change.</p>
      *        <p>
-     *        A list of the third party application's metadata.
+     *        A list of the third-party application's metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -506,13 +506,13 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * A list of the third party application's metadata.
+     * A list of the third-party application's metadata.
      * </p>
      * 
      * @param applications
      *        This API is in preview release for Amazon Connect and is subject to change.</p>
      *        <p>
-     *        A list of the third party application's metadata.
+     *        A list of the third-party application's metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
