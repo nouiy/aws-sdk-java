@@ -1392,11 +1392,11 @@ public class GameSession implements Serializable, Cloneable, StructuredPojo {
         if (getGameProperties() != null)
             sb.append("GameProperties: ").append(getGameProperties()).append(",");
         if (getIpAddress() != null)
-            sb.append("IpAddress: ").append(getIpAddress()).append(",");
+            sb.append("IpAddress: ").append("***Sensitive Data Redacted***").append(",");
         if (getDnsName() != null)
             sb.append("DnsName: ").append(getDnsName()).append(",");
         if (getPort() != null)
-            sb.append("Port: ").append(getPort()).append(",");
+            sb.append("Port: ").append("***Sensitive Data Redacted***").append(",");
         if (getPlayerSessionCreationPolicy() != null)
             sb.append("PlayerSessionCreationPolicy: ").append(getPlayerSessionCreationPolicy()).append(",");
         if (getCreatorId() != null)

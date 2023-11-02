@@ -333,7 +333,7 @@ public class RegisterComputeRequest extends com.amazonaws.AmazonWebServiceReques
         if (getDnsName() != null)
             sb.append("DnsName: ").append(getDnsName()).append(",");
         if (getIpAddress() != null)
-            sb.append("IpAddress: ").append(getIpAddress()).append(",");
+            sb.append("IpAddress: ").append("***Sensitive Data Redacted***").append(",");
         if (getLocation() != null)
             sb.append("Location: ").append(getLocation());
         sb.append("}");

@@ -326,6 +326,14 @@ public class CodeGenConfigurationNodeJsonUnmarshaller implements Unmarshaller<Co
                     context.nextToken();
                     codeGenConfigurationNode.setSnowflakeTarget(SnowflakeTargetJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ConnectorDataSource", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setConnectorDataSource(ConnectorDataSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ConnectorDataTarget", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setConnectorDataTarget(ConnectorDataTargetJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

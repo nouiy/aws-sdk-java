@@ -310,7 +310,7 @@ public class InstanceAccess implements Serializable, Cloneable, StructuredPojo {
         if (getInstanceId() != null)
             sb.append("InstanceId: ").append(getInstanceId()).append(",");
         if (getIpAddress() != null)
-            sb.append("IpAddress: ").append(getIpAddress()).append(",");
+            sb.append("IpAddress: ").append("***Sensitive Data Redacted***").append(",");
         if (getOperatingSystem() != null)
             sb.append("OperatingSystem: ").append(getOperatingSystem()).append(",");
         if (getCredentials() != null)

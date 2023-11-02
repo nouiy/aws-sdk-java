@@ -1651,11 +1651,11 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
         if (getEndTime() != null)
             sb.append("EndTime: ").append(getEndTime()).append(",");
         if (getIpAddress() != null)
-            sb.append("IpAddress: ").append(getIpAddress()).append(",");
+            sb.append("IpAddress: ").append("***Sensitive Data Redacted***").append(",");
         if (getDnsName() != null)
             sb.append("DnsName: ").append(getDnsName()).append(",");
         if (getPort() != null)
-            sb.append("Port: ").append(getPort()).append(",");
+            sb.append("Port: ").append("***Sensitive Data Redacted***").append(",");
         if (getPlacedPlayerSessions() != null)
             sb.append("PlacedPlayerSessions: ").append(getPlacedPlayerSessions()).append(",");
         if (getGameSessionData() != null)

@@ -455,6 +455,18 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
      * </p>
      */
     private SnowflakeTarget snowflakeTarget;
+    /**
+     * <p>
+     * Specifies a source generated with standard connection options.
+     * </p>
+     */
+    private ConnectorDataSource connectorDataSource;
+    /**
+     * <p>
+     * Specifies a target generated with standard connection options.
+     * </p>
+     */
+    private ConnectorDataTarget connectorDataTarget;
 
     /**
      * <p>
@@ -3305,6 +3317,86 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies a source generated with standard connection options.
+     * </p>
+     * 
+     * @param connectorDataSource
+     *        Specifies a source generated with standard connection options.
+     */
+
+    public void setConnectorDataSource(ConnectorDataSource connectorDataSource) {
+        this.connectorDataSource = connectorDataSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a source generated with standard connection options.
+     * </p>
+     * 
+     * @return Specifies a source generated with standard connection options.
+     */
+
+    public ConnectorDataSource getConnectorDataSource() {
+        return this.connectorDataSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a source generated with standard connection options.
+     * </p>
+     * 
+     * @param connectorDataSource
+     *        Specifies a source generated with standard connection options.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withConnectorDataSource(ConnectorDataSource connectorDataSource) {
+        setConnectorDataSource(connectorDataSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a target generated with standard connection options.
+     * </p>
+     * 
+     * @param connectorDataTarget
+     *        Specifies a target generated with standard connection options.
+     */
+
+    public void setConnectorDataTarget(ConnectorDataTarget connectorDataTarget) {
+        this.connectorDataTarget = connectorDataTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target generated with standard connection options.
+     * </p>
+     * 
+     * @return Specifies a target generated with standard connection options.
+     */
+
+    public ConnectorDataTarget getConnectorDataTarget() {
+        return this.connectorDataTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target generated with standard connection options.
+     * </p>
+     * 
+     * @param connectorDataTarget
+     *        Specifies a target generated with standard connection options.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withConnectorDataTarget(ConnectorDataTarget connectorDataTarget) {
+        setConnectorDataTarget(connectorDataTarget);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3453,7 +3545,11 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         if (getSnowflakeSource() != null)
             sb.append("SnowflakeSource: ").append(getSnowflakeSource()).append(",");
         if (getSnowflakeTarget() != null)
-            sb.append("SnowflakeTarget: ").append(getSnowflakeTarget());
+            sb.append("SnowflakeTarget: ").append(getSnowflakeTarget()).append(",");
+        if (getConnectorDataSource() != null)
+            sb.append("ConnectorDataSource: ").append(getConnectorDataSource()).append(",");
+        if (getConnectorDataTarget() != null)
+            sb.append("ConnectorDataTarget: ").append(getConnectorDataTarget());
         sb.append("}");
         return sb.toString();
     }
@@ -3747,6 +3843,14 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
             return false;
         if (other.getSnowflakeTarget() != null && other.getSnowflakeTarget().equals(this.getSnowflakeTarget()) == false)
             return false;
+        if (other.getConnectorDataSource() == null ^ this.getConnectorDataSource() == null)
+            return false;
+        if (other.getConnectorDataSource() != null && other.getConnectorDataSource().equals(this.getConnectorDataSource()) == false)
+            return false;
+        if (other.getConnectorDataTarget() == null ^ this.getConnectorDataTarget() == null)
+            return false;
+        if (other.getConnectorDataTarget() != null && other.getConnectorDataTarget().equals(this.getConnectorDataTarget()) == false)
+            return false;
         return true;
     }
 
@@ -3824,6 +3928,8 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getRecipe() == null) ? 0 : getRecipe().hashCode());
         hashCode = prime * hashCode + ((getSnowflakeSource() == null) ? 0 : getSnowflakeSource().hashCode());
         hashCode = prime * hashCode + ((getSnowflakeTarget() == null) ? 0 : getSnowflakeTarget().hashCode());
+        hashCode = prime * hashCode + ((getConnectorDataSource() == null) ? 0 : getConnectorDataSource().hashCode());
+        hashCode = prime * hashCode + ((getConnectorDataTarget() == null) ? 0 : getConnectorDataTarget().hashCode());
         return hashCode;
     }
 

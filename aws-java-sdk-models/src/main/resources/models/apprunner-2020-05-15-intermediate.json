@@ -29133,6 +29133,56 @@
       },
       "wrapper" : false
     },
+    "IpAddressType" : {
+      "c2jName" : "IpAddressType",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : [ {
+        "name" : "IPV4",
+        "value" : "IPV4"
+      }, {
+        "name" : "DUAL_STACK",
+        "value" : "DUAL_STACK"
+      } ],
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.apprunner.enum.IpAddressType",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.apprunner.enum",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "IpAddressType",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "IpAddressType",
+        "variableName" : "ipAddressType",
+        "variableType" : "IpAddressType",
+        "documentation" : null,
+        "simpleType" : "IpAddressType",
+        "variableSetterType" : "IpAddressType"
+      },
+      "wrapper" : false
+    },
     "ListAutoScalingConfigurationsRequest" : {
       "c2jName" : "ListAutoScalingConfigurationsRequest",
       "customization" : {
@@ -37810,6 +37860,75 @@
           "variableSetterType" : "IngressConfiguration"
         },
         "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "IpAddressType",
+        "c2jShape" : "IpAddressType",
+        "deprecated" : false,
+        "documentation" : "<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>",
+        "endpointDiscoveryId" : false,
+        "enumType" : "IpAddressType",
+        "fluentSetterDocumentation" : "/**<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>\n@param ipAddressType App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p>\n@return Returns a reference to this object so that method calls can be chained together.\n@see IpAddressType*/",
+        "fluentSetterMethodName" : "withIpAddressType",
+        "getterDocumentation" : "/**<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>\n@return App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p>\n@see IpAddressType*/",
+        "getterMethodName" : "getIpAddressType",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "IpAddressType",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "IpAddressType",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "IpAddressType",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>\n@param ipAddressType App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p>\n@see IpAddressType*/",
+        "setterMethodName" : "setIpAddressType",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ipAddressType",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>\n@param ipAddressType App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p>\n@return Returns a reference to this object so that method calls can be chained together.\n@see IpAddressType*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ipAddressType",
+          "variableType" : "String",
+          "documentation" : "<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
       } ],
       "membersAsMap" : {
         "EgressConfiguration" : {
@@ -37949,6 +38068,76 @@
             "documentation" : "<p>Network configuration settings for inbound message traffic.</p>",
             "simpleType" : "IngressConfiguration",
             "variableSetterType" : "IngressConfiguration"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "IpAddressType" : {
+          "c2jName" : "IpAddressType",
+          "c2jShape" : "IpAddressType",
+          "deprecated" : false,
+          "documentation" : "<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>",
+          "endpointDiscoveryId" : false,
+          "enumType" : "IpAddressType",
+          "fluentSetterDocumentation" : "/**<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>\n@param ipAddressType App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p>\n@return Returns a reference to this object so that method calls can be chained together.\n@see IpAddressType*/",
+          "fluentSetterMethodName" : "withIpAddressType",
+          "getterDocumentation" : "/**<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>\n@return App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p>\n@see IpAddressType*/",
+          "getterMethodName" : "getIpAddressType",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "IpAddressType",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "IpAddressType",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "IpAddressType",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>\n@param ipAddressType App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p>\n@see IpAddressType*/",
+          "setterMethodName" : "setIpAddressType",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ipAddressType",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>\n@param ipAddressType App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p>\n@return Returns a reference to this object so that method calls can be chained together.\n@see IpAddressType*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ipAddressType",
+            "variableType" : "String",
+            "documentation" : "<p>App Runner provides you with the option to choose between <i>Internet Protocol version 4 (IPv4)</i> and <i>dual-stack</i> (IPv4 and IPv6) for your incoming public network configuration. This is an optional parameter. If you do not specify an <code>IpAddressType</code>, it defaults to select IPv4.</p> <note> <p> Currently, App Runner supports dual-stack for only Public endpoint. Only IPv4 is supported for Private endpoint. If you update a service that's using dual-stack Public endpoint to a Private endpoint, your App Runner service will default to support only IPv4 for Private endpoint and fail to receive traffic originating from IPv6 endpoint. </p> </note>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
           },
           "xmlNameSpaceUri" : null
         }

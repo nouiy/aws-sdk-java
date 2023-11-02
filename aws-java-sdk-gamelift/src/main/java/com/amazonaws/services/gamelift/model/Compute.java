@@ -697,7 +697,7 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
         if (getComputeArn() != null)
             sb.append("ComputeArn: ").append(getComputeArn()).append(",");
         if (getIpAddress() != null)
-            sb.append("IpAddress: ").append(getIpAddress()).append(",");
+            sb.append("IpAddress: ").append("***Sensitive Data Redacted***").append(",");
         if (getDnsName() != null)
             sb.append("DnsName: ").append(getDnsName()).append(",");
         if (getComputeStatus() != null)

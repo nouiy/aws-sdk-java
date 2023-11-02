@@ -1,3 +1,28 @@
+# __1.12.580__ __2023-11-02__
+## __AWS App Runner__
+  - ### Features
+    - AWS App Runner now supports using dual-stack address type for the public endpoint of your incoming traffic.
+
+## __AWS Glue__
+  - ### Features
+    - This release introduces Google BigQuery Source and Target in AWS Glue CodeGenConfigurationNode.
+
+## __AWS Network Firewall__
+  - ### Features
+    - This release introduces the stateless rule analyzer, which enables you to analyze your stateless rules for asymmetric routing.
+
+## __Amazon Connect Service__
+  - ### Features
+    - GetMetricDataV2 API: Update to include new metrics PERCENT_NON_TALK_TIME, PERCENT_TALK_TIME, PERCENT_TALK_TIME_AGENT, PERCENT_TALK_TIME_CUSTOMER
+
+## __Amazon GameLift__
+  - ### Features
+    - Amazon GameLift adds support for shared credentials, which allows applications that are deployed on managed EC2 fleets to interact with other AWS resources.
+
+## __Amazon QuickSight__
+  - ### Features
+    - Got confirmed from qmeixua@ about custom week features, and tested locally with aws cli and java sdk that the subtypes are showing up.
+
 # __1.12.579__ __2023-11-01__
 ## __AWS Global Accelerator__
   - ### Features

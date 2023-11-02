@@ -645,6 +645,54 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
      * </dd>
+     * <dt>PERCENT_NON_TALK_TIME</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME_AGENT</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
      * <dt>SERVICE_LEVEL</dt>
      * <dd>
      * <p>
@@ -2477,6 +2525,54 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
      * </dd>
+     * <dt>PERCENT_NON_TALK_TIME</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME_AGENT</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
      * <dt>SERVICE_LEVEL</dt>
      * <dd>
      * <p>
@@ -2973,6 +3069,54 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <dd>
      *         <p>
      *         Unit: Seconds
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         </dd>
+     *         <dt>PERCENT_NON_TALK_TIME</dt>
+     *         <dd>
+     *         <p>
+     *         This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *         </p>
+     *         <p>
+     *         Unit: Percentage
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         </dd>
+     *         <dt>PERCENT_TALK_TIME</dt>
+     *         <dd>
+     *         <p>
+     *         This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *         </p>
+     *         <p>
+     *         Unit: Percentage
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         </dd>
+     *         <dt>PERCENT_TALK_TIME_AGENT</dt>
+     *         <dd>
+     *         <p>
+     *         This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *         </p>
+     *         <p>
+     *         Unit: Percentage
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *         </p>
+     *         </dd>
+     *         <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
+     *         <dd>
+     *         <p>
+     *         This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *         </p>
+     *         <p>
+     *         Unit: Percentage
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
@@ -3486,6 +3630,54 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
      * </dd>
+     * <dt>PERCENT_NON_TALK_TIME</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME_AGENT</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
      * <dt>SERVICE_LEVEL</dt>
      * <dd>
      * <p>
@@ -3983,6 +4175,54 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <dd>
      *        <p>
      *        Unit: Seconds
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_NON_TALK_TIME</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_TALK_TIME</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_TALK_TIME_AGENT</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
@@ -4501,6 +4741,54 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
      * </dd>
+     * <dt>PERCENT_NON_TALK_TIME</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME_AGENT</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
      * <dt>SERVICE_LEVEL</dt>
      * <dd>
      * <p>
@@ -5003,6 +5291,54 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <dd>
      *        <p>
      *        Unit: Seconds
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_NON_TALK_TIME</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_TALK_TIME</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_TALK_TIME_AGENT</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
@@ -5523,6 +5859,54 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
      * </p>
      * </dd>
+     * <dt>PERCENT_NON_TALK_TIME</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME_AGENT</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
+     * <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
+     * <dd>
+     * <p>
+     * This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     * </p>
+     * <p>
+     * Unit: Percentage
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     * </p>
+     * </dd>
      * <dt>SERVICE_LEVEL</dt>
      * <dd>
      * <p>
@@ -6020,6 +6404,54 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <dd>
      *        <p>
      *        Unit: Seconds
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_NON_TALK_TIME</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_TALK_TIME</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_TALK_TIME_AGENT</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy
+     *        </p>
+     *        </dd>
+     *        <dt>PERCENT_TALK_TIME_CUSTOMER</dt>
+     *        <dd>
+     *        <p>
+     *        This metric is available only for contacts analyzed by Contact Lens conversational analytics.
+     *        </p>
+     *        <p>
+     *        Unit: Percentage
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy

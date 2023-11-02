@@ -54,8 +54,8 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>ALERT</b> - Permits the packets to go to the intended destination and sends an alert log message, if alert
-     * logging is configured in the <a>Firewall</a> <a>LoggingConfiguration</a>.
+     * <b>ALERT</b> - Sends an alert log message, if alert logging is configured in the <a>Firewall</a>
+     * <a>LoggingConfiguration</a>.
      * </p>
      * <p>
      * You can use this action to test a rule that you intend to use to drop traffic. You can enable the rule with
@@ -102,8 +102,8 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>ALERT</b> - Permits the packets to go to the intended destination and sends an alert log message, if alert
-     * logging is configured in the <a>Firewall</a> <a>LoggingConfiguration</a>.
+     * <b>ALERT</b> - Sends an alert log message, if alert logging is configured in the <a>Firewall</a>
+     * <a>LoggingConfiguration</a>.
      * </p>
      * <p>
      * You can use this action to test a rule that you intend to use to drop traffic. You can enable the rule with
@@ -134,8 +134,8 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>ALERT</b> - Permits the packets to go to the intended destination and sends an alert log message, if
-     *        alert logging is configured in the <a>Firewall</a> <a>LoggingConfiguration</a>.
+     *        <b>ALERT</b> - Sends an alert log message, if alert logging is configured in the <a>Firewall</a>
+     *        <a>LoggingConfiguration</a>.
      *        </p>
      *        <p>
      *        You can use this action to test a rule that you intend to use to drop traffic. You can enable the rule
@@ -173,8 +173,8 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>ALERT</b> - Permits the packets to go to the intended destination and sends an alert log message, if alert
-     * logging is configured in the <a>Firewall</a> <a>LoggingConfiguration</a>.
+     * <b>ALERT</b> - Sends an alert log message, if alert logging is configured in the <a>Firewall</a>
+     * <a>LoggingConfiguration</a>.
      * </p>
      * <p>
      * You can use this action to test a rule that you intend to use to drop traffic. You can enable the rule with
@@ -204,8 +204,8 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <b>ALERT</b> - Permits the packets to go to the intended destination and sends an alert log message, if
-     *         alert logging is configured in the <a>Firewall</a> <a>LoggingConfiguration</a>.
+     *         <b>ALERT</b> - Sends an alert log message, if alert logging is configured in the <a>Firewall</a>
+     *         <a>LoggingConfiguration</a>.
      *         </p>
      *         <p>
      *         You can use this action to test a rule that you intend to use to drop traffic. You can enable the rule
@@ -243,8 +243,8 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>ALERT</b> - Permits the packets to go to the intended destination and sends an alert log message, if alert
-     * logging is configured in the <a>Firewall</a> <a>LoggingConfiguration</a>.
+     * <b>ALERT</b> - Sends an alert log message, if alert logging is configured in the <a>Firewall</a>
+     * <a>LoggingConfiguration</a>.
      * </p>
      * <p>
      * You can use this action to test a rule that you intend to use to drop traffic. You can enable the rule with
@@ -275,8 +275,8 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>ALERT</b> - Permits the packets to go to the intended destination and sends an alert log message, if
-     *        alert logging is configured in the <a>Firewall</a> <a>LoggingConfiguration</a>.
+     *        <b>ALERT</b> - Sends an alert log message, if alert logging is configured in the <a>Firewall</a>
+     *        <a>LoggingConfiguration</a>.
      *        </p>
      *        <p>
      *        You can use this action to test a rule that you intend to use to drop traffic. You can enable the rule
@@ -316,8 +316,8 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>ALERT</b> - Permits the packets to go to the intended destination and sends an alert log message, if alert
-     * logging is configured in the <a>Firewall</a> <a>LoggingConfiguration</a>.
+     * <b>ALERT</b> - Sends an alert log message, if alert logging is configured in the <a>Firewall</a>
+     * <a>LoggingConfiguration</a>.
      * </p>
      * <p>
      * You can use this action to test a rule that you intend to use to drop traffic. You can enable the rule with
@@ -348,8 +348,8 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>ALERT</b> - Permits the packets to go to the intended destination and sends an alert log message, if
-     *        alert logging is configured in the <a>Firewall</a> <a>LoggingConfiguration</a>.
+     *        <b>ALERT</b> - Sends an alert log message, if alert logging is configured in the <a>Firewall</a>
+     *        <a>LoggingConfiguration</a>.
      *        </p>
      *        <p>
      *        You can use this action to test a rule that you intend to use to drop traffic. You can enable the rule

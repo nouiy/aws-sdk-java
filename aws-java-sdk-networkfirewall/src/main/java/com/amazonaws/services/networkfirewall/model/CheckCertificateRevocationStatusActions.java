@@ -44,14 +44,13 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      * </li>
      * <li>
      * <p>
-     * <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     * <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can immediately
-     * establish a new session. Network Firewall then fails closed and drops all subsequent traffic. <code>REJECT</code>
-     * is available only for TCP traffic.
+     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the connection
+     * and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP traffic.
      * </p>
      * </li>
      * </ul>
@@ -72,14 +71,13 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      * </li>
      * <li>
      * <p>
-     * <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     * <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can immediately
-     * establish a new session. Network Firewall then fails closed and drops all subsequent traffic. <code>REJECT</code>
-     * is available only for TCP traffic.
+     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the connection
+     * and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP traffic.
      * </p>
      * </li>
      * </ul>
@@ -100,14 +98,13 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      * </li>
      * <li>
      * <p>
-     * <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     * <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can immediately
-     * establish a new session. Network Firewall then fails closed and drops all subsequent traffic. <code>REJECT</code>
-     * is available only for TCP traffic.
+     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the connection
+     * and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP traffic.
      * </p>
      * </li>
      * </ul>
@@ -124,14 +121,14 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      *        </li>
      *        <li>
      *        <p>
-     *        <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     *        <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can
-     *        immediately establish a new session. Network Firewall then fails closed and drops all subsequent traffic.
-     *        <code>REJECT</code> is available only for TCP traffic.
+     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the
+     *        connection and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP
+     *        traffic.
      *        </p>
      *        </li>
      * @see RevocationCheckAction
@@ -155,14 +152,13 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      * </li>
      * <li>
      * <p>
-     * <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     * <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can immediately
-     * establish a new session. Network Firewall then fails closed and drops all subsequent traffic. <code>REJECT</code>
-     * is available only for TCP traffic.
+     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the connection
+     * and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP traffic.
      * </p>
      * </li>
      * </ul>
@@ -178,14 +174,14 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      *         </li>
      *         <li>
      *         <p>
-     *         <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     *         <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can
-     *         immediately establish a new session. Network Firewall then fails closed and drops all subsequent traffic.
-     *         <code>REJECT</code> is available only for TCP traffic.
+     *         <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the
+     *         connection and drops subsequent packets for that connection. <code>REJECT</code> is available only for
+     *         TCP traffic.
      *         </p>
      *         </li>
      * @see RevocationCheckAction
@@ -209,14 +205,13 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      * </li>
      * <li>
      * <p>
-     * <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     * <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can immediately
-     * establish a new session. Network Firewall then fails closed and drops all subsequent traffic. <code>REJECT</code>
-     * is available only for TCP traffic.
+     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the connection
+     * and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP traffic.
      * </p>
      * </li>
      * </ul>
@@ -233,14 +228,14 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      *        </li>
      *        <li>
      *        <p>
-     *        <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     *        <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can
-     *        immediately establish a new session. Network Firewall then fails closed and drops all subsequent traffic.
-     *        <code>REJECT</code> is available only for TCP traffic.
+     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the
+     *        connection and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP
+     *        traffic.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -266,14 +261,13 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      * </li>
      * <li>
      * <p>
-     * <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     * <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can immediately
-     * establish a new session. Network Firewall then fails closed and drops all subsequent traffic. <code>REJECT</code>
-     * is available only for TCP traffic.
+     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the connection
+     * and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP traffic.
      * </p>
      * </li>
      * </ul>
@@ -290,14 +284,14 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      *        </li>
      *        <li>
      *        <p>
-     *        <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     *        <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can
-     *        immediately establish a new session. Network Firewall then fails closed and drops all subsequent traffic.
-     *        <code>REJECT</code> is available only for TCP traffic.
+     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the
+     *        connection and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP
+     *        traffic.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -324,14 +318,13 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      * </li>
      * <li>
      * <p>
-     * <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     * <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can immediately
-     * establish a new session. Network Firewall then fails closed and drops all subsequent traffic. <code>REJECT</code>
-     * is available only for TCP traffic.
+     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the connection
+     * and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP traffic.
      * </p>
      * </li>
      * </ul>
@@ -350,14 +343,14 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      *        </li>
      *        <li>
      *        <p>
-     *        <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     *        <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can
-     *        immediately establish a new session. Network Firewall then fails closed and drops all subsequent traffic.
-     *        <code>REJECT</code> is available only for TCP traffic.
+     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the
+     *        connection and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP
+     *        traffic.
      *        </p>
      *        </li>
      * @see RevocationCheckAction
@@ -382,14 +375,13 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      * </li>
      * <li>
      * <p>
-     * <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     * <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can immediately
-     * establish a new session. Network Firewall then fails closed and drops all subsequent traffic. <code>REJECT</code>
-     * is available only for TCP traffic.
+     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the connection
+     * and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP traffic.
      * </p>
      * </li>
      * </ul>
@@ -407,14 +399,14 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      *         </li>
      *         <li>
      *         <p>
-     *         <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     *         <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can
-     *         immediately establish a new session. Network Firewall then fails closed and drops all subsequent traffic.
-     *         <code>REJECT</code> is available only for TCP traffic.
+     *         <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the
+     *         connection and drops subsequent packets for that connection. <code>REJECT</code> is available only for
+     *         TCP traffic.
      *         </p>
      *         </li>
      * @see RevocationCheckAction
@@ -439,14 +431,13 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      * </li>
      * <li>
      * <p>
-     * <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     * <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can immediately
-     * establish a new session. Network Firewall then fails closed and drops all subsequent traffic. <code>REJECT</code>
-     * is available only for TCP traffic.
+     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the connection
+     * and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP traffic.
      * </p>
      * </li>
      * </ul>
@@ -465,14 +456,14 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      *        </li>
      *        <li>
      *        <p>
-     *        <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     *        <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can
-     *        immediately establish a new session. Network Firewall then fails closed and drops all subsequent traffic.
-     *        <code>REJECT</code> is available only for TCP traffic.
+     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the
+     *        connection and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP
+     *        traffic.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -499,14 +490,13 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      * </li>
      * <li>
      * <p>
-     * <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     * <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can immediately
-     * establish a new session. Network Firewall then fails closed and drops all subsequent traffic. <code>REJECT</code>
-     * is available only for TCP traffic.
+     * <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the connection
+     * and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP traffic.
      * </p>
      * </li>
      * </ul>
@@ -525,14 +515,14 @@ public class CheckCertificateRevocationStatusActions implements Serializable, Cl
      *        </li>
      *        <li>
      *        <p>
-     *        <b>DROP</b> - Network Firewall fails closed and drops all subsequent traffic.
+     *        <b>DROP</b> - Network Firewall closes the connection and drops subsequent packets for that connection.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client so that the client can
-     *        immediately establish a new session. Network Firewall then fails closed and drops all subsequent traffic.
-     *        <code>REJECT</code> is available only for TCP traffic.
+     *        <b>REJECT</b> - Network Firewall sends a TCP reject packet back to your client. The service closes the
+     *        connection and drops subsequent packets for that connection. <code>REJECT</code> is available only for TCP
+     *        traffic.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

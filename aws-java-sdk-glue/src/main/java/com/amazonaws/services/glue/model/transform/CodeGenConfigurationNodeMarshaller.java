@@ -165,6 +165,10 @@ public class CodeGenConfigurationNodeMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SnowflakeSource").build();
     private static final MarshallingInfo<StructuredPojo> SNOWFLAKETARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SnowflakeTarget").build();
+    private static final MarshallingInfo<StructuredPojo> CONNECTORDATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConnectorDataSource").build();
+    private static final MarshallingInfo<StructuredPojo> CONNECTORDATATARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConnectorDataTarget").build();
 
     private static final CodeGenConfigurationNodeMarshaller instance = new CodeGenConfigurationNodeMarshaller();
 
@@ -251,6 +255,8 @@ public class CodeGenConfigurationNodeMarshaller {
             protocolMarshaller.marshall(codeGenConfigurationNode.getRecipe(), RECIPE_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getSnowflakeSource(), SNOWFLAKESOURCE_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getSnowflakeTarget(), SNOWFLAKETARGET_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getConnectorDataSource(), CONNECTORDATASOURCE_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getConnectorDataTarget(), CONNECTORDATATARGET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
