@@ -318,6 +318,21 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePersistentContactAssociationResult> createPersistentContactAssociationAsync(
+            CreatePersistentContactAssociationRequest request) {
+
+        return createPersistentContactAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePersistentContactAssociationResult> createPersistentContactAssociationAsync(
+            CreatePersistentContactAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreatePersistentContactAssociationRequest, CreatePersistentContactAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest request) {
 
         return createPromptAsync(request, null);

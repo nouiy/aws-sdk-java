@@ -1,3 +1,20 @@
+# __1.12.581__ __2023-11-03__
+## __AWS Config__
+  - ### Features
+    - Updated ResourceType enum with new resource types onboarded by AWS Config in October 2023.
+
+## __AWS IoT Wireless__
+  - ### Features
+    - Added LoRaWAN version 1.0.4 support
+
+## __AWS Launch Wizard__
+  - ### Features
+    - AWS Launch Wizard is a service that helps reduce the time it takes to deploy applications to the cloud while providing a guided deployment experience.
+
+## __Amazon Connect Service__
+  - ### Features
+    - Amazon Connect Chat introduces Create Persistent Contact Association API, allowing customers to choose when to resume previous conversations from previous chats, eliminating the need to repeat themselves and allowing agents to provide personalized service with access to entire conversation history.
+
 # __1.12.580__ __2023-11-02__
 ## __AWS App Runner__
   - ### Features

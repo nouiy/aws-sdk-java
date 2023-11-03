@@ -138,6 +138,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public CreatePersistentContactAssociationResult createPersistentContactAssociation(CreatePersistentContactAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreatePromptResult createPrompt(CreatePromptRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

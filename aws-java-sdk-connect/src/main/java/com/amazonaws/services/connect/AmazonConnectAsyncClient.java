@@ -822,6 +822,41 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePersistentContactAssociationResult> createPersistentContactAssociationAsync(
+            CreatePersistentContactAssociationRequest request) {
+
+        return createPersistentContactAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePersistentContactAssociationResult> createPersistentContactAssociationAsync(
+            final CreatePersistentContactAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreatePersistentContactAssociationRequest, CreatePersistentContactAssociationResult> asyncHandler) {
+        final CreatePersistentContactAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreatePersistentContactAssociationResult>() {
+            @Override
+            public CreatePersistentContactAssociationResult call() throws Exception {
+                CreatePersistentContactAssociationResult result = null;
+
+                try {
+                    result = executeCreatePersistentContactAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest request) {
 
         return createPromptAsync(request, null);

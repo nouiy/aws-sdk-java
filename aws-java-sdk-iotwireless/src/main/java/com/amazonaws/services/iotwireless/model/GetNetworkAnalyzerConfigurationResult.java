@@ -27,7 +27,7 @@ public class GetNetworkAnalyzerConfigurationResult extends com.amazonaws.AmazonW
     private TraceContent traceContent;
     /**
      * <p>
-     * List of wireless gateway resources that have been added to the network analyzer configuration.
+     * List of wireless device resources that have been added to the network analyzer configuration.
      * </p>
      */
     private java.util.List<String> wirelessDevices;
@@ -82,10 +82,10 @@ public class GetNetworkAnalyzerConfigurationResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * List of wireless gateway resources that have been added to the network analyzer configuration.
+     * List of wireless device resources that have been added to the network analyzer configuration.
      * </p>
      * 
-     * @return List of wireless gateway resources that have been added to the network analyzer configuration.
+     * @return List of wireless device resources that have been added to the network analyzer configuration.
      */
 
     public java.util.List<String> getWirelessDevices() {
@@ -94,11 +94,11 @@ public class GetNetworkAnalyzerConfigurationResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * List of wireless gateway resources that have been added to the network analyzer configuration.
+     * List of wireless device resources that have been added to the network analyzer configuration.
      * </p>
      * 
      * @param wirelessDevices
-     *        List of wireless gateway resources that have been added to the network analyzer configuration.
+     *        List of wireless device resources that have been added to the network analyzer configuration.
      */
 
     public void setWirelessDevices(java.util.Collection<String> wirelessDevices) {
@@ -112,7 +112,7 @@ public class GetNetworkAnalyzerConfigurationResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * List of wireless gateway resources that have been added to the network analyzer configuration.
+     * List of wireless device resources that have been added to the network analyzer configuration.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -121,7 +121,7 @@ public class GetNetworkAnalyzerConfigurationResult extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param wirelessDevices
-     *        List of wireless gateway resources that have been added to the network analyzer configuration.
+     *        List of wireless device resources that have been added to the network analyzer configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -137,11 +137,11 @@ public class GetNetworkAnalyzerConfigurationResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * List of wireless gateway resources that have been added to the network analyzer configuration.
+     * List of wireless device resources that have been added to the network analyzer configuration.
      * </p>
      * 
      * @param wirelessDevices
-     *        List of wireless gateway resources that have been added to the network analyzer configuration.
+     *        List of wireless device resources that have been added to the network analyzer configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

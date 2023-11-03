@@ -724,6 +724,34 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Enables rehydration of chats for the lifespan of a contact. For more information about chat rehydration, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html">Enable persistent chat</a> in
+     * the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param createPersistentContactAssociationRequest
+     * @return Result of the CreatePersistentContactAssociation operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.CreatePersistentContactAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreatePersistentContactAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreatePersistentContactAssociationResult createPersistentContactAssociation(
+            CreatePersistentContactAssociationRequest createPersistentContactAssociationRequest);
+
+    /**
+     * <p>
      * Creates a prompt. For more information about prompts, such as supported file types and maximum length, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/prompts.html">Create prompts</a> in the <i>Amazon
      * Connect Administrator's Guide</i>.

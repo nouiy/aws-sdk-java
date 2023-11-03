@@ -68,7 +68,7 @@ public class UpdateNetworkAnalyzerConfigurationRequest extends com.amazonaws.Ama
     /**
      * <p>
      * Multicast group resources to remove from the network analyzer configuration. Provide the
-     * <code>MulticastGroupId</code> of the resource to remove in the input array.
+     * <code>MulticastGroupId</code> of the resources to remove in the input array.
      * </p>
      */
     private java.util.List<String> multicastGroupsToRemove;
@@ -544,11 +544,11 @@ public class UpdateNetworkAnalyzerConfigurationRequest extends com.amazonaws.Ama
     /**
      * <p>
      * Multicast group resources to remove from the network analyzer configuration. Provide the
-     * <code>MulticastGroupId</code> of the resource to remove in the input array.
+     * <code>MulticastGroupId</code> of the resources to remove in the input array.
      * </p>
      * 
      * @return Multicast group resources to remove from the network analyzer configuration. Provide the
-     *         <code>MulticastGroupId</code> of the resource to remove in the input array.
+     *         <code>MulticastGroupId</code> of the resources to remove in the input array.
      */
 
     public java.util.List<String> getMulticastGroupsToRemove() {
@@ -558,12 +558,12 @@ public class UpdateNetworkAnalyzerConfigurationRequest extends com.amazonaws.Ama
     /**
      * <p>
      * Multicast group resources to remove from the network analyzer configuration. Provide the
-     * <code>MulticastGroupId</code> of the resource to remove in the input array.
+     * <code>MulticastGroupId</code> of the resources to remove in the input array.
      * </p>
      * 
      * @param multicastGroupsToRemove
      *        Multicast group resources to remove from the network analyzer configuration. Provide the
-     *        <code>MulticastGroupId</code> of the resource to remove in the input array.
+     *        <code>MulticastGroupId</code> of the resources to remove in the input array.
      */
 
     public void setMulticastGroupsToRemove(java.util.Collection<String> multicastGroupsToRemove) {
@@ -578,7 +578,7 @@ public class UpdateNetworkAnalyzerConfigurationRequest extends com.amazonaws.Ama
     /**
      * <p>
      * Multicast group resources to remove from the network analyzer configuration. Provide the
-     * <code>MulticastGroupId</code> of the resource to remove in the input array.
+     * <code>MulticastGroupId</code> of the resources to remove in the input array.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -588,7 +588,7 @@ public class UpdateNetworkAnalyzerConfigurationRequest extends com.amazonaws.Ama
      * 
      * @param multicastGroupsToRemove
      *        Multicast group resources to remove from the network analyzer configuration. Provide the
-     *        <code>MulticastGroupId</code> of the resource to remove in the input array.
+     *        <code>MulticastGroupId</code> of the resources to remove in the input array.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -605,12 +605,12 @@ public class UpdateNetworkAnalyzerConfigurationRequest extends com.amazonaws.Ama
     /**
      * <p>
      * Multicast group resources to remove from the network analyzer configuration. Provide the
-     * <code>MulticastGroupId</code> of the resource to remove in the input array.
+     * <code>MulticastGroupId</code> of the resources to remove in the input array.
      * </p>
      * 
      * @param multicastGroupsToRemove
      *        Multicast group resources to remove from the network analyzer configuration. Provide the
-     *        <code>MulticastGroupId</code> of the resource to remove in the input array.
+     *        <code>MulticastGroupId</code> of the resources to remove in the input array.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

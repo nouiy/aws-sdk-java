@@ -960,6 +960,45 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Enables rehydration of chats for the lifespan of a contact. For more information about chat rehydration, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html">Enable persistent chat</a> in
+     * the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param createPersistentContactAssociationRequest
+     * @return A Java Future containing the result of the CreatePersistentContactAssociation operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.CreatePersistentContactAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreatePersistentContactAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePersistentContactAssociationResult> createPersistentContactAssociationAsync(
+            CreatePersistentContactAssociationRequest createPersistentContactAssociationRequest);
+
+    /**
+     * <p>
+     * Enables rehydration of chats for the lifespan of a contact. For more information about chat rehydration, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html">Enable persistent chat</a> in
+     * the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param createPersistentContactAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePersistentContactAssociation operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.CreatePersistentContactAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreatePersistentContactAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePersistentContactAssociationResult> createPersistentContactAssociationAsync(
+            CreatePersistentContactAssociationRequest createPersistentContactAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePersistentContactAssociationRequest, CreatePersistentContactAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a prompt. For more information about prompts, such as supported file types and maximum length, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/prompts.html">Create prompts</a> in the <i>Amazon
      * Connect Administrator's Guide</i>.

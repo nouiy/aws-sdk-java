@@ -391,7 +391,24 @@ public enum ResourceType {
     AWSAPSRuleGroupsNamespace("AWS::APS::RuleGroupsNamespace"),
     AWSCodeGuruProfilerProfilingGroup("AWS::CodeGuruProfiler::ProfilingGroup"),
     AWSRoute53ResolverResolverQueryLoggingConfig("AWS::Route53Resolver::ResolverQueryLoggingConfig"),
-    AWSBatchSchedulingPolicy("AWS::Batch::SchedulingPolicy");
+    AWSBatchSchedulingPolicy("AWS::Batch::SchedulingPolicy"),
+    AWSACMPCACertificateAuthorityActivation("AWS::ACMPCA::CertificateAuthorityActivation"),
+    AWSAppMeshGatewayRoute("AWS::AppMesh::GatewayRoute"),
+    AWSAppMeshMesh("AWS::AppMesh::Mesh"),
+    AWSConnectInstance("AWS::Connect::Instance"),
+    AWSConnectQuickConnect("AWS::Connect::QuickConnect"),
+    AWSEC2CarrierGateway("AWS::EC2::CarrierGateway"),
+    AWSEC2IPAMPool("AWS::EC2::IPAMPool"),
+    AWSEC2TransitGatewayConnect("AWS::EC2::TransitGatewayConnect"),
+    AWSEC2TransitGatewayMulticastDomain("AWS::EC2::TransitGatewayMulticastDomain"),
+    AWSECSCapacityProvider("AWS::ECS::CapacityProvider"),
+    AWSIAMInstanceProfile("AWS::IAM::InstanceProfile"),
+    AWSIoTCACertificate("AWS::IoT::CACertificate"),
+    AWSIoTTwinMakerSyncJob("AWS::IoTTwinMaker::SyncJob"),
+    AWSKafkaConnectConnector("AWS::KafkaConnect::Connector"),
+    AWSLambdaCodeSigningConfig("AWS::Lambda::CodeSigningConfig"),
+    AWSNetworkManagerConnectPeer("AWS::NetworkManager::ConnectPeer"),
+    AWSResourceExplorer2Index("AWS::ResourceExplorer2::Index");
 
     private String value;
 
