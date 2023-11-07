@@ -537,6 +537,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("DBInstanceNotFound", new DBInstanceNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new DBInstanceNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TenantDatabaseQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("TenantDatabaseQuotaExceeded", new TenantDatabaseQuotaExceededExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new TenantDatabaseQuotaExceededExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("DBProxyAlreadyExistsFault") == null) {
             exceptionUnmarshallersMap.put("DBProxyAlreadyExistsFault", new DBProxyAlreadyExistsExceptionUnmarshaller());
         }
@@ -589,6 +593,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("InvalidDBSubnetGroupFault", new InvalidDBSubnetGroupExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new InvalidDBSubnetGroupExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBSnapshotTenantDatabaseNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("DBSnapshotTenantDatabaseNotFoundFault", new DBSnapshotTenantDatabaseNotFoundExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new DBSnapshotTenantDatabaseNotFoundExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("OptionGroupNotFoundFault") == null) {
             exceptionUnmarshallersMap.put("OptionGroupNotFoundFault", new OptionGroupNotFoundExceptionUnmarshaller());
         }
@@ -785,6 +793,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("CustomDBEngineVersionQuotaExceededFault", new CustomDBEngineVersionQuotaExceededExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new CustomDBEngineVersionQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TenantDatabaseNotFound") == null) {
+            exceptionUnmarshallersMap.put("TenantDatabaseNotFound", new TenantDatabaseNotFoundExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new TenantDatabaseNotFoundExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("DBClusterParameterGroupNotFound") == null) {
             exceptionUnmarshallersMap.put("DBClusterParameterGroupNotFound", new DBClusterParameterGroupNotFoundExceptionUnmarshaller());
         }
@@ -793,6 +805,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("DBProxyQuotaExceededFault", new DBProxyQuotaExceededExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new DBProxyQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TenantDatabaseAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("TenantDatabaseAlreadyExists", new TenantDatabaseAlreadyExistsExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new TenantDatabaseAlreadyExistsExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("ExportTaskAlreadyExists") == null) {
             exceptionUnmarshallersMap.put("ExportTaskAlreadyExists", new ExportTaskAlreadyExistsExceptionUnmarshaller());
         }
@@ -1120,6 +1136,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
      * @throws IntegrationNotFoundException
      *         The specified integration could not be found.
+     * @throws TenantDatabaseNotFoundException
+     *         The specified tenant database wasn't found in the DB instance.
+     * @throws DBSnapshotTenantDatabaseNotFoundException
+     *         The specified snapshot tenant database wasn't found.
      * @sample AmazonRDS.AddTagsToResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/AddTagsToResource" target="_top">AWS API
      *      Documentation</a>
@@ -2429,6 +2449,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         <code>DUAL</code>.
      * @throws CertificateNotFoundException
      *         <code>CertificateIdentifier</code> doesn't refer to an existing certificate.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
      * @sample AmazonRDS.CreateDBInstance
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBInstance" target="_top">AWS API
      *      Documentation</a>
@@ -2553,6 +2575,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws NetworkTypeNotSupportedException
      *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
      *         <code>DUAL</code>.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
      * @sample AmazonRDS.CreateDBInstanceReadReplica
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBInstanceReadReplica"
      *      target="_top">AWS API Documentation</a>
@@ -3317,6 +3341,71 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             }
 
             StaxResponseHandler<OptionGroup> responseHandler = new StaxResponseHandler<OptionGroup>(new OptionGroupStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a tenant database in a DB instance that uses the multi-tenant configuration. Only RDS for Oracle
+     * container database (CDB) instances are supported.
+     * </p>
+     * 
+     * @param createTenantDatabaseRequest
+     * @return Result of the CreateTenantDatabase operation returned by the service.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @throws InvalidDBInstanceStateException
+     *         The DB instance isn't in a valid state.
+     * @throws TenantDatabaseAlreadyExistsException
+     *         You attempted to either create a tenant database that already exists or modify a tenant database to use
+     *         the name of an existing tenant database.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
+     * @sample AmazonRDS.CreateTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public TenantDatabase createTenantDatabase(CreateTenantDatabaseRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateTenantDatabase(request);
+    }
+
+    @SdkInternalApi
+    final TenantDatabase executeCreateTenantDatabase(CreateTenantDatabaseRequest createTenantDatabaseRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createTenantDatabaseRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateTenantDatabaseRequest> request = null;
+        Response<TenantDatabase> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateTenantDatabaseRequestMarshaller().marshall(super.beforeMarshalling(createTenantDatabaseRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateTenantDatabase");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<TenantDatabase> responseHandler = new StaxResponseHandler<TenantDatabase>(new TenantDatabaseStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -4644,6 +4733,71 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
             StaxResponseHandler<DeleteOptionGroupResult> responseHandler = new StaxResponseHandler<DeleteOptionGroupResult>(
                     new DeleteOptionGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a tenant database from your DB instance. This command only applies to RDS for Oracle container database
+     * (CDB) instances.
+     * </p>
+     * <p>
+     * You can't delete a tenant database when it is the only tenant in the DB instance.
+     * </p>
+     * 
+     * @param deleteTenantDatabaseRequest
+     * @return Result of the DeleteTenantDatabase operation returned by the service.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @throws TenantDatabaseNotFoundException
+     *         The specified tenant database wasn't found in the DB instance.
+     * @throws InvalidDBInstanceStateException
+     *         The DB instance isn't in a valid state.
+     * @sample AmazonRDS.DeleteTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public TenantDatabase deleteTenantDatabase(DeleteTenantDatabaseRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteTenantDatabase(request);
+    }
+
+    @SdkInternalApi
+    final TenantDatabase executeDeleteTenantDatabase(DeleteTenantDatabaseRequest deleteTenantDatabaseRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteTenantDatabaseRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteTenantDatabaseRequest> request = null;
+        Response<TenantDatabase> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteTenantDatabaseRequestMarshaller().marshall(super.beforeMarshalling(deleteTenantDatabaseRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteTenantDatabase");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<TenantDatabase> responseHandler = new StaxResponseHandler<TenantDatabase>(new TenantDatabaseStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -6269,6 +6423,71 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Describes the tenant databases that exist in a DB snapshot. This command only applies to RDS for Oracle DB
+     * instances in the multi-tenant configuration.
+     * </p>
+     * <p>
+     * You can use this command to inspect the tenant databases within a snapshot before restoring it. You can't
+     * directly interact with the tenant databases in a DB snapshot. If you restore a snapshot that was taken from DB
+     * instance using the multi-tenant configuration, you restore all its tenant databases.
+     * </p>
+     * 
+     * @param describeDBSnapshotTenantDatabasesRequest
+     * @return Result of the DescribeDBSnapshotTenantDatabases operation returned by the service.
+     * @throws DBSnapshotNotFoundException
+     *         <code>DBSnapshotIdentifier</code> doesn't refer to an existing DB snapshot.
+     * @sample AmazonRDS.DescribeDBSnapshotTenantDatabases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBSnapshotTenantDatabases"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeDBSnapshotTenantDatabasesResult describeDBSnapshotTenantDatabases(DescribeDBSnapshotTenantDatabasesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDBSnapshotTenantDatabases(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDBSnapshotTenantDatabasesResult executeDescribeDBSnapshotTenantDatabases(
+            DescribeDBSnapshotTenantDatabasesRequest describeDBSnapshotTenantDatabasesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDBSnapshotTenantDatabasesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDBSnapshotTenantDatabasesRequest> request = null;
+        Response<DescribeDBSnapshotTenantDatabasesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDBSnapshotTenantDatabasesRequestMarshaller().marshall(super.beforeMarshalling(describeDBSnapshotTenantDatabasesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDBSnapshotTenantDatabases");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeDBSnapshotTenantDatabasesResult> responseHandler = new StaxResponseHandler<DescribeDBSnapshotTenantDatabasesResult>(
+                    new DescribeDBSnapshotTenantDatabasesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns information about DB snapshots. This API action supports pagination.
      * </p>
      * 
@@ -7351,6 +7570,65 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Describes the tenant databases in a DB instance that uses the multi-tenant configuration. Only RDS for Oracle CDB
+     * instances are supported.
+     * </p>
+     * 
+     * @param describeTenantDatabasesRequest
+     * @return Result of the DescribeTenantDatabases operation returned by the service.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @sample AmazonRDS.DescribeTenantDatabases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeTenantDatabases" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeTenantDatabasesResult describeTenantDatabases(DescribeTenantDatabasesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeTenantDatabases(request);
+    }
+
+    @SdkInternalApi
+    final DescribeTenantDatabasesResult executeDescribeTenantDatabases(DescribeTenantDatabasesRequest describeTenantDatabasesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeTenantDatabasesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeTenantDatabasesRequest> request = null;
+        Response<DescribeTenantDatabasesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeTenantDatabasesRequestMarshaller().marshall(super.beforeMarshalling(describeTenantDatabasesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeTenantDatabases");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeTenantDatabasesResult> responseHandler = new StaxResponseHandler<DescribeTenantDatabasesResult>(
+                    new DescribeTenantDatabasesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * You can call <code>DescribeValidDBInstanceModifications</code> to learn what modifications you can make to your
      * DB instance. You can use this information when you call <code>ModifyDBInstance</code>.
      * </p>
@@ -7724,6 +8002,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
      * @throws IntegrationNotFoundException
      *         The specified integration could not be found.
+     * @throws TenantDatabaseNotFoundException
+     *         The specified tenant database wasn't found in the DB instance.
+     * @throws DBSnapshotTenantDatabaseNotFoundException
+     *         The specified snapshot tenant database wasn't found.
      * @sample AmazonRDS.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ListTagsForResource" target="_top">AWS API
      *      Documentation</a>
@@ -8496,6 +8778,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws NetworkTypeNotSupportedException
      *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
      *         <code>DUAL</code>.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
      * @sample AmazonRDS.ModifyDBInstance
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBInstance" target="_top">AWS API
      *      Documentation</a>
@@ -9230,6 +9514,71 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Modifies an existing tenant database in a DB instance. You can change the tenant database name or the master user
+     * password. This operation is supported only for RDS for Oracle CDB instances using the multi-tenant configuration.
+     * </p>
+     * 
+     * @param modifyTenantDatabaseRequest
+     * @return Result of the ModifyTenantDatabase operation returned by the service.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @throws TenantDatabaseNotFoundException
+     *         The specified tenant database wasn't found in the DB instance.
+     * @throws TenantDatabaseAlreadyExistsException
+     *         You attempted to either create a tenant database that already exists or modify a tenant database to use
+     *         the name of an existing tenant database.
+     * @throws InvalidDBInstanceStateException
+     *         The DB instance isn't in a valid state.
+     * @sample AmazonRDS.ModifyTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public TenantDatabase modifyTenantDatabase(ModifyTenantDatabaseRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyTenantDatabase(request);
+    }
+
+    @SdkInternalApi
+    final TenantDatabase executeModifyTenantDatabase(ModifyTenantDatabaseRequest modifyTenantDatabaseRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyTenantDatabaseRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyTenantDatabaseRequest> request = null;
+        Response<TenantDatabase> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyTenantDatabaseRequestMarshaller().marshall(super.beforeMarshalling(modifyTenantDatabaseRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyTenantDatabase");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<TenantDatabase> responseHandler = new StaxResponseHandler<TenantDatabase>(new TenantDatabaseStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Promotes a read replica DB instance to a standalone DB instance.
      * </p>
      * <note>
@@ -9947,6 +10296,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
      * @throws IntegrationNotFoundException
      *         The specified integration could not be found.
+     * @throws TenantDatabaseNotFoundException
+     *         The specified tenant database wasn't found in the DB instance.
+     * @throws DBSnapshotTenantDatabaseNotFoundException
+     *         The specified snapshot tenant database wasn't found.
      * @sample AmazonRDS.RemoveTagsFromResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RemoveTagsFromResource" target="_top">AWS API
      *      Documentation</a>
@@ -10572,6 +10925,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         <code>DUAL</code>.
      * @throws DBClusterSnapshotNotFoundException
      *         <code>DBClusterSnapshotIdentifier</code> doesn't refer to an existing DB cluster snapshot.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
      * @sample AmazonRDS.RestoreDBInstanceFromDBSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceFromDBSnapshot"
      *      target="_top">AWS API Documentation</a>
@@ -10799,6 +11154,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws NetworkTypeNotSupportedException
      *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
      *         <code>DUAL</code>.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
      * @sample AmazonRDS.RestoreDBInstanceToPointInTime
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceToPointInTime"
      *      target="_top">AWS API Documentation</a>

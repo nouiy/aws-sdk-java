@@ -34,8 +34,7 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
     private String statusType;
     /**
      * <p>
-     * A Boolean value that is true if the instance is operating normally, or false if the instance is in an error
-     * state.
+     * Indicates whether the instance is operating normally (TRUE) or is in an error state (FALSE).
      * </p>
      */
     private Boolean normal;
@@ -96,13 +95,11 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A Boolean value that is true if the instance is operating normally, or false if the instance is in an error
-     * state.
+     * Indicates whether the instance is operating normally (TRUE) or is in an error state (FALSE).
      * </p>
      * 
      * @param normal
-     *        A Boolean value that is true if the instance is operating normally, or false if the instance is in an
-     *        error state.
+     *        Indicates whether the instance is operating normally (TRUE) or is in an error state (FALSE).
      */
 
     public void setNormal(Boolean normal) {
@@ -111,12 +108,10 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A Boolean value that is true if the instance is operating normally, or false if the instance is in an error
-     * state.
+     * Indicates whether the instance is operating normally (TRUE) or is in an error state (FALSE).
      * </p>
      * 
-     * @return A Boolean value that is true if the instance is operating normally, or false if the instance is in an
-     *         error state.
+     * @return Indicates whether the instance is operating normally (TRUE) or is in an error state (FALSE).
      */
 
     public Boolean getNormal() {
@@ -125,13 +120,11 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A Boolean value that is true if the instance is operating normally, or false if the instance is in an error
-     * state.
+     * Indicates whether the instance is operating normally (TRUE) or is in an error state (FALSE).
      * </p>
      * 
      * @param normal
-     *        A Boolean value that is true if the instance is operating normally, or false if the instance is in an
-     *        error state.
+     *        Indicates whether the instance is operating normally (TRUE) or is in an error state (FALSE).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,12 +135,10 @@ public class DBInstanceStatusInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A Boolean value that is true if the instance is operating normally, or false if the instance is in an error
-     * state.
+     * Indicates whether the instance is operating normally (TRUE) or is in an error state (FALSE).
      * </p>
      * 
-     * @return A Boolean value that is true if the instance is operating normally, or false if the instance is in an
-     *         error state.
+     * @return Indicates whether the instance is operating normally (TRUE) or is in an error state (FALSE).
      */
 
     public Boolean isNormal() {

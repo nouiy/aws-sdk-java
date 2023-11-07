@@ -255,6 +255,13 @@ public class DBSnapshot implements Serializable, Cloneable {
      * </p>
      */
     private Boolean dedicatedLogVolume;
+    /**
+     * <p>
+     * Indicates whether the snapshot is of a DB instance using the multi-tenant configuration (TRUE) or the
+     * single-tenant configuration (FALSE).
+     * </p>
+     */
+    private Boolean multiTenant;
 
     /**
      * <p>
@@ -1872,6 +1879,66 @@ public class DBSnapshot implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether the snapshot is of a DB instance using the multi-tenant configuration (TRUE) or the
+     * single-tenant configuration (FALSE).
+     * </p>
+     * 
+     * @param multiTenant
+     *        Indicates whether the snapshot is of a DB instance using the multi-tenant configuration (TRUE) or the
+     *        single-tenant configuration (FALSE).
+     */
+
+    public void setMultiTenant(Boolean multiTenant) {
+        this.multiTenant = multiTenant;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the snapshot is of a DB instance using the multi-tenant configuration (TRUE) or the
+     * single-tenant configuration (FALSE).
+     * </p>
+     * 
+     * @return Indicates whether the snapshot is of a DB instance using the multi-tenant configuration (TRUE) or the
+     *         single-tenant configuration (FALSE).
+     */
+
+    public Boolean getMultiTenant() {
+        return this.multiTenant;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the snapshot is of a DB instance using the multi-tenant configuration (TRUE) or the
+     * single-tenant configuration (FALSE).
+     * </p>
+     * 
+     * @param multiTenant
+     *        Indicates whether the snapshot is of a DB instance using the multi-tenant configuration (TRUE) or the
+     *        single-tenant configuration (FALSE).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBSnapshot withMultiTenant(Boolean multiTenant) {
+        setMultiTenant(multiTenant);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the snapshot is of a DB instance using the multi-tenant configuration (TRUE) or the
+     * single-tenant configuration (FALSE).
+     * </p>
+     * 
+     * @return Indicates whether the snapshot is of a DB instance using the multi-tenant configuration (TRUE) or the
+     *         single-tenant configuration (FALSE).
+     */
+
+    public Boolean isMultiTenant() {
+        return this.multiTenant;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1952,7 +2019,9 @@ public class DBSnapshot implements Serializable, Cloneable {
         if (getDBSystemId() != null)
             sb.append("DBSystemId: ").append(getDBSystemId()).append(",");
         if (getDedicatedLogVolume() != null)
-            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume());
+            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume()).append(",");
+        if (getMultiTenant() != null)
+            sb.append("MultiTenant: ").append(getMultiTenant());
         sb.append("}");
         return sb.toString();
     }
@@ -2108,6 +2177,10 @@ public class DBSnapshot implements Serializable, Cloneable {
             return false;
         if (other.getDedicatedLogVolume() != null && other.getDedicatedLogVolume().equals(this.getDedicatedLogVolume()) == false)
             return false;
+        if (other.getMultiTenant() == null ^ this.getMultiTenant() == null)
+            return false;
+        if (other.getMultiTenant() != null && other.getMultiTenant().equals(this.getMultiTenant()) == false)
+            return false;
         return true;
     }
 
@@ -2151,6 +2224,7 @@ public class DBSnapshot implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         hashCode = prime * hashCode + ((getDBSystemId() == null) ? 0 : getDBSystemId().hashCode());
         hashCode = prime * hashCode + ((getDedicatedLogVolume() == null) ? 0 : getDedicatedLogVolume().hashCode());
+        hashCode = prime * hashCode + ((getMultiTenant() == null) ? 0 : getMultiTenant().hashCode());
         return hashCode;
     }
 

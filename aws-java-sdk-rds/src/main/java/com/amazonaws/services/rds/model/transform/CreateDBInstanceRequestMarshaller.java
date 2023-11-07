@@ -361,6 +361,10 @@ public class CreateDBInstanceRequestMarshaller implements Marshaller<Request<Cre
             request.addParameter("DedicatedLogVolume", StringUtils.fromBoolean(createDBInstanceRequest.getDedicatedLogVolume()));
         }
 
+        if (createDBInstanceRequest.getMultiTenant() != null) {
+            request.addParameter("MultiTenant", StringUtils.fromBoolean(createDBInstanceRequest.getMultiTenant()));
+        }
+
         return request;
     }
 

@@ -358,6 +358,10 @@ public class ModifyDBInstanceRequestMarshaller implements Marshaller<Request<Mod
             request.addParameter("DedicatedLogVolume", StringUtils.fromBoolean(modifyDBInstanceRequest.getDedicatedLogVolume()));
         }
 
+        if (modifyDBInstanceRequest.getMultiTenant() != null) {
+            request.addParameter("MultiTenant", StringUtils.fromBoolean(modifyDBInstanceRequest.getMultiTenant()));
+        }
+
         return request;
     }
 

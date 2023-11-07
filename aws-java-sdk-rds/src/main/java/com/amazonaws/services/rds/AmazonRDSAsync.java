@@ -1740,6 +1740,39 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
+     * Creates a tenant database in a DB instance that uses the multi-tenant configuration. Only RDS for Oracle
+     * container database (CDB) instances are supported.
+     * </p>
+     * 
+     * @param createTenantDatabaseRequest
+     * @return A Java Future containing the result of the CreateTenantDatabase operation returned by the service.
+     * @sample AmazonRDSAsync.CreateTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TenantDatabase> createTenantDatabaseAsync(CreateTenantDatabaseRequest createTenantDatabaseRequest);
+
+    /**
+     * <p>
+     * Creates a tenant database in a DB instance that uses the multi-tenant configuration. Only RDS for Oracle
+     * container database (CDB) instances are supported.
+     * </p>
+     * 
+     * @param createTenantDatabaseRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateTenantDatabase operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.CreateTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TenantDatabase> createTenantDatabaseAsync(CreateTenantDatabaseRequest createTenantDatabaseRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateTenantDatabaseRequest, TenantDatabase> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a blue/green deployment.
      * </p>
      * <p>
@@ -2666,6 +2699,45 @@ public interface AmazonRDSAsync extends AmazonRDS {
      */
     java.util.concurrent.Future<DeleteOptionGroupResult> deleteOptionGroupAsync(DeleteOptionGroupRequest deleteOptionGroupRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteOptionGroupRequest, DeleteOptionGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a tenant database from your DB instance. This command only applies to RDS for Oracle container database
+     * (CDB) instances.
+     * </p>
+     * <p>
+     * You can't delete a tenant database when it is the only tenant in the DB instance.
+     * </p>
+     * 
+     * @param deleteTenantDatabaseRequest
+     * @return A Java Future containing the result of the DeleteTenantDatabase operation returned by the service.
+     * @sample AmazonRDSAsync.DeleteTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TenantDatabase> deleteTenantDatabaseAsync(DeleteTenantDatabaseRequest deleteTenantDatabaseRequest);
+
+    /**
+     * <p>
+     * Deletes a tenant database from your DB instance. This command only applies to RDS for Oracle container database
+     * (CDB) instances.
+     * </p>
+     * <p>
+     * You can't delete a tenant database when it is the only tenant in the DB instance.
+     * </p>
+     * 
+     * @param deleteTenantDatabaseRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteTenantDatabase operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.DeleteTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TenantDatabase> deleteTenantDatabaseAsync(DeleteTenantDatabaseRequest deleteTenantDatabaseRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteTenantDatabaseRequest, TenantDatabase> asyncHandler);
 
     /**
      * <p>
@@ -3878,6 +3950,53 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
+     * Describes the tenant databases that exist in a DB snapshot. This command only applies to RDS for Oracle DB
+     * instances in the multi-tenant configuration.
+     * </p>
+     * <p>
+     * You can use this command to inspect the tenant databases within a snapshot before restoring it. You can't
+     * directly interact with the tenant databases in a DB snapshot. If you restore a snapshot that was taken from DB
+     * instance using the multi-tenant configuration, you restore all its tenant databases.
+     * </p>
+     * 
+     * @param describeDBSnapshotTenantDatabasesRequest
+     * @return A Java Future containing the result of the DescribeDBSnapshotTenantDatabases operation returned by the
+     *         service.
+     * @sample AmazonRDSAsync.DescribeDBSnapshotTenantDatabases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBSnapshotTenantDatabases"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDBSnapshotTenantDatabasesResult> describeDBSnapshotTenantDatabasesAsync(
+            DescribeDBSnapshotTenantDatabasesRequest describeDBSnapshotTenantDatabasesRequest);
+
+    /**
+     * <p>
+     * Describes the tenant databases that exist in a DB snapshot. This command only applies to RDS for Oracle DB
+     * instances in the multi-tenant configuration.
+     * </p>
+     * <p>
+     * You can use this command to inspect the tenant databases within a snapshot before restoring it. You can't
+     * directly interact with the tenant databases in a DB snapshot. If you restore a snapshot that was taken from DB
+     * instance using the multi-tenant configuration, you restore all its tenant databases.
+     * </p>
+     * 
+     * @param describeDBSnapshotTenantDatabasesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDBSnapshotTenantDatabases operation returned by the
+     *         service.
+     * @sample AmazonRDSAsyncHandler.DescribeDBSnapshotTenantDatabases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBSnapshotTenantDatabases"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDBSnapshotTenantDatabasesResult> describeDBSnapshotTenantDatabasesAsync(
+            DescribeDBSnapshotTenantDatabasesRequest describeDBSnapshotTenantDatabasesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDBSnapshotTenantDatabasesRequest, DescribeDBSnapshotTenantDatabasesResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns information about DB snapshots. This API action supports pagination.
      * </p>
      * 
@@ -4685,6 +4804,39 @@ public interface AmazonRDSAsync extends AmazonRDS {
      */
     java.util.concurrent.Future<DescribeSourceRegionsResult> describeSourceRegionsAsync(DescribeSourceRegionsRequest describeSourceRegionsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeSourceRegionsRequest, DescribeSourceRegionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the tenant databases in a DB instance that uses the multi-tenant configuration. Only RDS for Oracle CDB
+     * instances are supported.
+     * </p>
+     * 
+     * @param describeTenantDatabasesRequest
+     * @return A Java Future containing the result of the DescribeTenantDatabases operation returned by the service.
+     * @sample AmazonRDSAsync.DescribeTenantDatabases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeTenantDatabases" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTenantDatabasesResult> describeTenantDatabasesAsync(DescribeTenantDatabasesRequest describeTenantDatabasesRequest);
+
+    /**
+     * <p>
+     * Describes the tenant databases in a DB instance that uses the multi-tenant configuration. Only RDS for Oracle CDB
+     * instances are supported.
+     * </p>
+     * 
+     * @param describeTenantDatabasesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeTenantDatabases operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.DescribeTenantDatabases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeTenantDatabases" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTenantDatabasesResult> describeTenantDatabasesAsync(DescribeTenantDatabasesRequest describeTenantDatabasesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeTenantDatabasesRequest, DescribeTenantDatabasesResult> asyncHandler);
 
     /**
      * <p>
@@ -6085,6 +6237,39 @@ public interface AmazonRDSAsync extends AmazonRDS {
      */
     java.util.concurrent.Future<OptionGroup> modifyOptionGroupAsync(ModifyOptionGroupRequest modifyOptionGroupRequest,
             com.amazonaws.handlers.AsyncHandler<ModifyOptionGroupRequest, OptionGroup> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies an existing tenant database in a DB instance. You can change the tenant database name or the master user
+     * password. This operation is supported only for RDS for Oracle CDB instances using the multi-tenant configuration.
+     * </p>
+     * 
+     * @param modifyTenantDatabaseRequest
+     * @return A Java Future containing the result of the ModifyTenantDatabase operation returned by the service.
+     * @sample AmazonRDSAsync.ModifyTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TenantDatabase> modifyTenantDatabaseAsync(ModifyTenantDatabaseRequest modifyTenantDatabaseRequest);
+
+    /**
+     * <p>
+     * Modifies an existing tenant database in a DB instance. You can change the tenant database name or the master user
+     * password. This operation is supported only for RDS for Oracle CDB instances using the multi-tenant configuration.
+     * </p>
+     * 
+     * @param modifyTenantDatabaseRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyTenantDatabase operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.ModifyTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TenantDatabase> modifyTenantDatabaseAsync(ModifyTenantDatabaseRequest modifyTenantDatabaseRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyTenantDatabaseRequest, TenantDatabase> asyncHandler);
 
     /**
      * <p>

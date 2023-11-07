@@ -194,6 +194,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public TenantDatabase createTenantDatabase(CreateTenantDatabaseRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteBlueGreenDeploymentResult deleteBlueGreenDeployment(DeleteBlueGreenDeploymentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -285,6 +290,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public DeleteOptionGroupResult deleteOptionGroup(DeleteOptionGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TenantDatabase deleteTenantDatabase(DeleteTenantDatabaseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -459,6 +469,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public DescribeDBSnapshotTenantDatabasesResult describeDBSnapshotTenantDatabases(DescribeDBSnapshotTenantDatabasesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeDBSnapshotsResult describeDBSnapshots(DescribeDBSnapshotsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -589,6 +604,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public DescribeTenantDatabasesResult describeTenantDatabases(DescribeTenantDatabasesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ValidDBInstanceModificationsMessage describeValidDBInstanceModifications(DescribeValidDBInstanceModificationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -710,6 +730,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public OptionGroup modifyOptionGroup(ModifyOptionGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TenantDatabase modifyTenantDatabase(ModifyTenantDatabaseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

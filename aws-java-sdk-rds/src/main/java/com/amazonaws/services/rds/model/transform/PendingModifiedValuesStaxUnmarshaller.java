@@ -154,6 +154,11 @@ public class PendingModifiedValuesStaxUnmarshaller implements Unmarshaller<Pendi
                     pendingModifiedValues.setDedicatedLogVolume(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("MultiTenant", targetDepth)) {
+                    pendingModifiedValues.setMultiTenant(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return pendingModifiedValues;

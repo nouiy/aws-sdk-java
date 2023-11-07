@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : {
       "SendApiAsset" : {
@@ -69739,7 +69739,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Comment",
-        "c2jShape" : "__stringMin0Max16384",
+        "c2jShape" : "__stringMin0Max4096",
         "deprecated" : false,
         "documentation" : "<p>Free-form text field for providers to add information about their notifications.</p>",
         "endpointDiscoveryId" : false,
@@ -70087,7 +70087,7 @@
         },
         "Comment" : {
           "c2jName" : "Comment",
-          "c2jShape" : "__stringMin0Max16384",
+          "c2jShape" : "__stringMin0Max4096",
           "deprecated" : false,
           "documentation" : "<p>Free-form text field for providers to add information about their notifications.</p>",
           "endpointDiscoveryId" : false,

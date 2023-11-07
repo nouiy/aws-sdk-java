@@ -85,8 +85,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you are modifying the DB instance class and upgrading the engine version at the same time, the currently
      * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
-     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
-     * the engine version.
+     * error. In this case, first run the operation to upgrade the engine version, and then run it again to modify the
+     * DB instance class.
      * </p>
      * </li>
      * </ul>
@@ -479,8 +479,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you are upgrading the engine version and modifying the DB instance class at the same time, the currently
      * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
-     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
-     * the engine version.
+     * error. In this case, first run the operation to upgrade the engine version, and then run it again to modify the
+     * DB instance class.
      * </p>
      * </li>
      * </ul>
@@ -1439,6 +1439,26 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private Boolean dedicatedLogVolume;
+    /**
+     * <p>
+     * Specifies whether the to convert your DB instance from the single-tenant conﬁguration to the multi-tenant
+     * conﬁguration. This parameter is supported only for RDS for Oracle CDB instances.
+     * </p>
+     * <p>
+     * During the conversion, RDS creates an initial tenant database and associates the DB name, master user name,
+     * character set, and national character set metadata with this database. The tags associated with the instance also
+     * propagate to the initial tenant database. You can add more tenant databases to your DB instance by using the
+     * <code>CreateTenantDatabase</code> operation.
+     * </p>
+     * <important>
+     * <p>
+     * The conversion to the multi-tenant configuration is permanent and irreversible, so you can't later convert back
+     * to the single-tenant configuration. When you specify this parameter, you must also specify
+     * <code>ApplyImmediately</code>.
+     * </p>
+     * </important>
+     */
+    private Boolean multiTenant;
 
     /**
      * Default constructor for ModifyDBInstanceRequest object. Callers should use the setter or fluent setter (with...)
@@ -1678,8 +1698,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you are modifying the DB instance class and upgrading the engine version at the same time, the currently
      * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
-     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
-     * the engine version.
+     * error. In this case, first run the operation to upgrade the engine version, and then run it again to modify the
+     * DB instance class.
      * </p>
      * </li>
      * </ul>
@@ -1711,8 +1731,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        If you are modifying the DB instance class and upgrading the engine version at the same time, the
      *        currently running engine version must be supported on the specified DB instance class. Otherwise, the
-     *        operation returns an error. In this case, first run the operation to modify the DB instance class, and
-     *        then run it again to upgrade the engine version.
+     *        operation returns an error. In this case, first run the operation to upgrade the engine version, and then
+     *        run it again to modify the DB instance class.
      *        </p>
      *        </li>
      */
@@ -1750,8 +1770,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you are modifying the DB instance class and upgrading the engine version at the same time, the currently
      * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
-     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
-     * the engine version.
+     * error. In this case, first run the operation to upgrade the engine version, and then run it again to modify the
+     * DB instance class.
      * </p>
      * </li>
      * </ul>
@@ -1782,8 +1802,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         If you are modifying the DB instance class and upgrading the engine version at the same time, the
      *         currently running engine version must be supported on the specified DB instance class. Otherwise, the
-     *         operation returns an error. In this case, first run the operation to modify the DB instance class, and
-     *         then run it again to upgrade the engine version.
+     *         operation returns an error. In this case, first run the operation to upgrade the engine version, and then
+     *         run it again to modify the DB instance class.
      *         </p>
      *         </li>
      */
@@ -1821,8 +1841,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you are modifying the DB instance class and upgrading the engine version at the same time, the currently
      * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
-     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
-     * the engine version.
+     * error. In this case, first run the operation to upgrade the engine version, and then run it again to modify the
+     * DB instance class.
      * </p>
      * </li>
      * </ul>
@@ -1854,8 +1874,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        If you are modifying the DB instance class and upgrading the engine version at the same time, the
      *        currently running engine version must be supported on the specified DB instance class. Otherwise, the
-     *        operation returns an error. In this case, first run the operation to modify the DB instance class, and
-     *        then run it again to upgrade the engine version.
+     *        operation returns an error. In this case, first run the operation to upgrade the engine version, and then
+     *        run it again to modify the DB instance class.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -4241,8 +4261,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you are upgrading the engine version and modifying the DB instance class at the same time, the currently
      * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
-     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
-     * the engine version.
+     * error. In this case, first run the operation to upgrade the engine version, and then run it again to modify the
+     * DB instance class.
      * </p>
      * </li>
      * </ul>
@@ -4277,8 +4297,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        If you are upgrading the engine version and modifying the DB instance class at the same time, the
      *        currently running engine version must be supported on the specified DB instance class. Otherwise, the
-     *        operation returns an error. In this case, first run the operation to modify the DB instance class, and
-     *        then run it again to upgrade the engine version.
+     *        operation returns an error. In this case, first run the operation to upgrade the engine version, and then
+     *        run it again to modify the DB instance class.
      *        </p>
      *        </li>
      */
@@ -4319,8 +4339,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you are upgrading the engine version and modifying the DB instance class at the same time, the currently
      * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
-     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
-     * the engine version.
+     * error. In this case, first run the operation to upgrade the engine version, and then run it again to modify the
+     * DB instance class.
      * </p>
      * </li>
      * </ul>
@@ -4354,8 +4374,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         If you are upgrading the engine version and modifying the DB instance class at the same time, the
      *         currently running engine version must be supported on the specified DB instance class. Otherwise, the
-     *         operation returns an error. In this case, first run the operation to modify the DB instance class, and
-     *         then run it again to upgrade the engine version.
+     *         operation returns an error. In this case, first run the operation to upgrade the engine version, and then
+     *         run it again to modify the DB instance class.
      *         </p>
      *         </li>
      */
@@ -4396,8 +4416,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you are upgrading the engine version and modifying the DB instance class at the same time, the currently
      * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
-     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
-     * the engine version.
+     * error. In this case, first run the operation to upgrade the engine version, and then run it again to modify the
+     * DB instance class.
      * </p>
      * </li>
      * </ul>
@@ -4432,8 +4452,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        If you are upgrading the engine version and modifying the DB instance class at the same time, the
      *        currently running engine version must be supported on the specified DB instance class. Otherwise, the
-     *        operation returns an error. In this case, first run the operation to modify the DB instance class, and
-     *        then run it again to upgrade the engine version.
+     *        operation returns an error. In this case, first run the operation to upgrade the engine version, and then
+     *        run it again to modify the DB instance class.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -10950,6 +10970,166 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Specifies whether the to convert your DB instance from the single-tenant conﬁguration to the multi-tenant
+     * conﬁguration. This parameter is supported only for RDS for Oracle CDB instances.
+     * </p>
+     * <p>
+     * During the conversion, RDS creates an initial tenant database and associates the DB name, master user name,
+     * character set, and national character set metadata with this database. The tags associated with the instance also
+     * propagate to the initial tenant database. You can add more tenant databases to your DB instance by using the
+     * <code>CreateTenantDatabase</code> operation.
+     * </p>
+     * <important>
+     * <p>
+     * The conversion to the multi-tenant configuration is permanent and irreversible, so you can't later convert back
+     * to the single-tenant configuration. When you specify this parameter, you must also specify
+     * <code>ApplyImmediately</code>.
+     * </p>
+     * </important>
+     * 
+     * @param multiTenant
+     *        Specifies whether the to convert your DB instance from the single-tenant conﬁguration to the multi-tenant
+     *        conﬁguration. This parameter is supported only for RDS for Oracle CDB instances.</p>
+     *        <p>
+     *        During the conversion, RDS creates an initial tenant database and associates the DB name, master user
+     *        name, character set, and national character set metadata with this database. The tags associated with the
+     *        instance also propagate to the initial tenant database. You can add more tenant databases to your DB
+     *        instance by using the <code>CreateTenantDatabase</code> operation.
+     *        </p>
+     *        <important>
+     *        <p>
+     *        The conversion to the multi-tenant configuration is permanent and irreversible, so you can't later convert
+     *        back to the single-tenant configuration. When you specify this parameter, you must also specify
+     *        <code>ApplyImmediately</code>.
+     *        </p>
+     */
+
+    public void setMultiTenant(Boolean multiTenant) {
+        this.multiTenant = multiTenant;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the to convert your DB instance from the single-tenant conﬁguration to the multi-tenant
+     * conﬁguration. This parameter is supported only for RDS for Oracle CDB instances.
+     * </p>
+     * <p>
+     * During the conversion, RDS creates an initial tenant database and associates the DB name, master user name,
+     * character set, and national character set metadata with this database. The tags associated with the instance also
+     * propagate to the initial tenant database. You can add more tenant databases to your DB instance by using the
+     * <code>CreateTenantDatabase</code> operation.
+     * </p>
+     * <important>
+     * <p>
+     * The conversion to the multi-tenant configuration is permanent and irreversible, so you can't later convert back
+     * to the single-tenant configuration. When you specify this parameter, you must also specify
+     * <code>ApplyImmediately</code>.
+     * </p>
+     * </important>
+     * 
+     * @return Specifies whether the to convert your DB instance from the single-tenant conﬁguration to the multi-tenant
+     *         conﬁguration. This parameter is supported only for RDS for Oracle CDB instances.</p>
+     *         <p>
+     *         During the conversion, RDS creates an initial tenant database and associates the DB name, master user
+     *         name, character set, and national character set metadata with this database. The tags associated with the
+     *         instance also propagate to the initial tenant database. You can add more tenant databases to your DB
+     *         instance by using the <code>CreateTenantDatabase</code> operation.
+     *         </p>
+     *         <important>
+     *         <p>
+     *         The conversion to the multi-tenant configuration is permanent and irreversible, so you can't later
+     *         convert back to the single-tenant configuration. When you specify this parameter, you must also specify
+     *         <code>ApplyImmediately</code>.
+     *         </p>
+     */
+
+    public Boolean getMultiTenant() {
+        return this.multiTenant;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the to convert your DB instance from the single-tenant conﬁguration to the multi-tenant
+     * conﬁguration. This parameter is supported only for RDS for Oracle CDB instances.
+     * </p>
+     * <p>
+     * During the conversion, RDS creates an initial tenant database and associates the DB name, master user name,
+     * character set, and national character set metadata with this database. The tags associated with the instance also
+     * propagate to the initial tenant database. You can add more tenant databases to your DB instance by using the
+     * <code>CreateTenantDatabase</code> operation.
+     * </p>
+     * <important>
+     * <p>
+     * The conversion to the multi-tenant configuration is permanent and irreversible, so you can't later convert back
+     * to the single-tenant configuration. When you specify this parameter, you must also specify
+     * <code>ApplyImmediately</code>.
+     * </p>
+     * </important>
+     * 
+     * @param multiTenant
+     *        Specifies whether the to convert your DB instance from the single-tenant conﬁguration to the multi-tenant
+     *        conﬁguration. This parameter is supported only for RDS for Oracle CDB instances.</p>
+     *        <p>
+     *        During the conversion, RDS creates an initial tenant database and associates the DB name, master user
+     *        name, character set, and national character set metadata with this database. The tags associated with the
+     *        instance also propagate to the initial tenant database. You can add more tenant databases to your DB
+     *        instance by using the <code>CreateTenantDatabase</code> operation.
+     *        </p>
+     *        <important>
+     *        <p>
+     *        The conversion to the multi-tenant configuration is permanent and irreversible, so you can't later convert
+     *        back to the single-tenant configuration. When you specify this parameter, you must also specify
+     *        <code>ApplyImmediately</code>.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyDBInstanceRequest withMultiTenant(Boolean multiTenant) {
+        setMultiTenant(multiTenant);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the to convert your DB instance from the single-tenant conﬁguration to the multi-tenant
+     * conﬁguration. This parameter is supported only for RDS for Oracle CDB instances.
+     * </p>
+     * <p>
+     * During the conversion, RDS creates an initial tenant database and associates the DB name, master user name,
+     * character set, and national character set metadata with this database. The tags associated with the instance also
+     * propagate to the initial tenant database. You can add more tenant databases to your DB instance by using the
+     * <code>CreateTenantDatabase</code> operation.
+     * </p>
+     * <important>
+     * <p>
+     * The conversion to the multi-tenant configuration is permanent and irreversible, so you can't later convert back
+     * to the single-tenant configuration. When you specify this parameter, you must also specify
+     * <code>ApplyImmediately</code>.
+     * </p>
+     * </important>
+     * 
+     * @return Specifies whether the to convert your DB instance from the single-tenant conﬁguration to the multi-tenant
+     *         conﬁguration. This parameter is supported only for RDS for Oracle CDB instances.</p>
+     *         <p>
+     *         During the conversion, RDS creates an initial tenant database and associates the DB name, master user
+     *         name, character set, and national character set metadata with this database. The tags associated with the
+     *         instance also propagate to the initial tenant database. You can add more tenant databases to your DB
+     *         instance by using the <code>CreateTenantDatabase</code> operation.
+     *         </p>
+     *         <important>
+     *         <p>
+     *         The conversion to the multi-tenant configuration is permanent and irreversible, so you can't later
+     *         convert back to the single-tenant configuration. When you specify this parameter, you must also specify
+     *         <code>ApplyImmediately</code>.
+     *         </p>
+     */
+
+    public Boolean isMultiTenant() {
+        return this.multiTenant;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -11078,7 +11258,9 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         if (getEngine() != null)
             sb.append("Engine: ").append(getEngine()).append(",");
         if (getDedicatedLogVolume() != null)
-            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume());
+            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume()).append(",");
+        if (getMultiTenant() != null)
+            sb.append("MultiTenant: ").append(getMultiTenant());
         sb.append("}");
         return sb.toString();
     }
@@ -11333,6 +11515,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getDedicatedLogVolume() != null && other.getDedicatedLogVolume().equals(this.getDedicatedLogVolume()) == false)
             return false;
+        if (other.getMultiTenant() == null ^ this.getMultiTenant() == null)
+            return false;
+        if (other.getMultiTenant() != null && other.getMultiTenant().equals(this.getMultiTenant()) == false)
+            return false;
         return true;
     }
 
@@ -11400,6 +11586,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getMasterUserSecretKmsKeyId() == null) ? 0 : getMasterUserSecretKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getEngine() == null) ? 0 : getEngine().hashCode());
         hashCode = prime * hashCode + ((getDedicatedLogVolume() == null) ? 0 : getDedicatedLogVolume().hashCode());
+        hashCode = prime * hashCode + ((getMultiTenant() == null) ? 0 : getMultiTenant().hashCode());
         return hashCode;
     }
 

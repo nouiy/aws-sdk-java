@@ -242,6 +242,13 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
      * </p>
      */
     private Boolean dedicatedLogVolume;
+    /**
+     * <p>
+     * Specifies whether the automatic backup is for a DB instance in the multi-tenant configuration (TRUE) or the
+     * single-tenant configuration (FALSE).
+     * </p>
+     */
+    private Boolean multiTenant;
 
     /**
      * <p>
@@ -1729,6 +1736,66 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Specifies whether the automatic backup is for a DB instance in the multi-tenant configuration (TRUE) or the
+     * single-tenant configuration (FALSE).
+     * </p>
+     * 
+     * @param multiTenant
+     *        Specifies whether the automatic backup is for a DB instance in the multi-tenant configuration (TRUE) or
+     *        the single-tenant configuration (FALSE).
+     */
+
+    public void setMultiTenant(Boolean multiTenant) {
+        this.multiTenant = multiTenant;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the automatic backup is for a DB instance in the multi-tenant configuration (TRUE) or the
+     * single-tenant configuration (FALSE).
+     * </p>
+     * 
+     * @return Specifies whether the automatic backup is for a DB instance in the multi-tenant configuration (TRUE) or
+     *         the single-tenant configuration (FALSE).
+     */
+
+    public Boolean getMultiTenant() {
+        return this.multiTenant;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the automatic backup is for a DB instance in the multi-tenant configuration (TRUE) or the
+     * single-tenant configuration (FALSE).
+     * </p>
+     * 
+     * @param multiTenant
+     *        Specifies whether the automatic backup is for a DB instance in the multi-tenant configuration (TRUE) or
+     *        the single-tenant configuration (FALSE).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBInstanceAutomatedBackup withMultiTenant(Boolean multiTenant) {
+        setMultiTenant(multiTenant);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the automatic backup is for a DB instance in the multi-tenant configuration (TRUE) or the
+     * single-tenant configuration (FALSE).
+     * </p>
+     * 
+     * @return Specifies whether the automatic backup is for a DB instance in the multi-tenant configuration (TRUE) or
+     *         the single-tenant configuration (FALSE).
+     */
+
+    public Boolean isMultiTenant() {
+        return this.multiTenant;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1799,7 +1866,9 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
         if (getAwsBackupRecoveryPointArn() != null)
             sb.append("AwsBackupRecoveryPointArn: ").append(getAwsBackupRecoveryPointArn()).append(",");
         if (getDedicatedLogVolume() != null)
-            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume());
+            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume()).append(",");
+        if (getMultiTenant() != null)
+            sb.append("MultiTenant: ").append(getMultiTenant());
         sb.append("}");
         return sb.toString();
     }
@@ -1937,6 +2006,10 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
             return false;
         if (other.getDedicatedLogVolume() != null && other.getDedicatedLogVolume().equals(this.getDedicatedLogVolume()) == false)
             return false;
+        if (other.getMultiTenant() == null ^ this.getMultiTenant() == null)
+            return false;
+        if (other.getMultiTenant() != null && other.getMultiTenant().equals(this.getMultiTenant()) == false)
+            return false;
         return true;
     }
 
@@ -1975,6 +2048,7 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         hashCode = prime * hashCode + ((getAwsBackupRecoveryPointArn() == null) ? 0 : getAwsBackupRecoveryPointArn().hashCode());
         hashCode = prime * hashCode + ((getDedicatedLogVolume() == null) ? 0 : getDedicatedLogVolume().hashCode());
+        hashCode = prime * hashCode + ((getMultiTenant() == null) ? 0 : getMultiTenant().hashCode());
         return hashCode;
     }
 

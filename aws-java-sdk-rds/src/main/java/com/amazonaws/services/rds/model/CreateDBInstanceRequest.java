@@ -1866,6 +1866,30 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private Boolean dedicatedLogVolume;
+    /**
+     * <p>
+     * Specifies whether to use the multi-tenant configuration or the single-tenant configuration (default). This
+     * parameter only applies to RDS for Oracle container database (CDB) engines.
+     * </p>
+     * <p>
+     * Note the following restrictions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The DB engine that you specify in the request must support the multi-tenant configuration. If you attempt to
+     * enable the multi-tenant configuration on a DB engine that doesn't support it, the request fails.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify the multi-tenant configuration when you create your DB instance, you can't later modify this DB
+     * instance to use the single-tenant configuration.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private Boolean multiTenant;
 
     /**
      * Default constructor for CreateDBInstanceRequest object. Callers should use the setter or fluent setter (with...)
@@ -14188,6 +14212,198 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Specifies whether to use the multi-tenant configuration or the single-tenant configuration (default). This
+     * parameter only applies to RDS for Oracle container database (CDB) engines.
+     * </p>
+     * <p>
+     * Note the following restrictions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The DB engine that you specify in the request must support the multi-tenant configuration. If you attempt to
+     * enable the multi-tenant configuration on a DB engine that doesn't support it, the request fails.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify the multi-tenant configuration when you create your DB instance, you can't later modify this DB
+     * instance to use the single-tenant configuration.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param multiTenant
+     *        Specifies whether to use the multi-tenant configuration or the single-tenant configuration (default). This
+     *        parameter only applies to RDS for Oracle container database (CDB) engines.</p>
+     *        <p>
+     *        Note the following restrictions:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The DB engine that you specify in the request must support the multi-tenant configuration. If you attempt
+     *        to enable the multi-tenant configuration on a DB engine that doesn't support it, the request fails.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify the multi-tenant configuration when you create your DB instance, you can't later modify
+     *        this DB instance to use the single-tenant configuration.
+     *        </p>
+     *        </li>
+     */
+
+    public void setMultiTenant(Boolean multiTenant) {
+        this.multiTenant = multiTenant;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to use the multi-tenant configuration or the single-tenant configuration (default). This
+     * parameter only applies to RDS for Oracle container database (CDB) engines.
+     * </p>
+     * <p>
+     * Note the following restrictions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The DB engine that you specify in the request must support the multi-tenant configuration. If you attempt to
+     * enable the multi-tenant configuration on a DB engine that doesn't support it, the request fails.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify the multi-tenant configuration when you create your DB instance, you can't later modify this DB
+     * instance to use the single-tenant configuration.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Specifies whether to use the multi-tenant configuration or the single-tenant configuration (default).
+     *         This parameter only applies to RDS for Oracle container database (CDB) engines.</p>
+     *         <p>
+     *         Note the following restrictions:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The DB engine that you specify in the request must support the multi-tenant configuration. If you attempt
+     *         to enable the multi-tenant configuration on a DB engine that doesn't support it, the request fails.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify the multi-tenant configuration when you create your DB instance, you can't later modify
+     *         this DB instance to use the single-tenant configuration.
+     *         </p>
+     *         </li>
+     */
+
+    public Boolean getMultiTenant() {
+        return this.multiTenant;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to use the multi-tenant configuration or the single-tenant configuration (default). This
+     * parameter only applies to RDS for Oracle container database (CDB) engines.
+     * </p>
+     * <p>
+     * Note the following restrictions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The DB engine that you specify in the request must support the multi-tenant configuration. If you attempt to
+     * enable the multi-tenant configuration on a DB engine that doesn't support it, the request fails.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify the multi-tenant configuration when you create your DB instance, you can't later modify this DB
+     * instance to use the single-tenant configuration.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param multiTenant
+     *        Specifies whether to use the multi-tenant configuration or the single-tenant configuration (default). This
+     *        parameter only applies to RDS for Oracle container database (CDB) engines.</p>
+     *        <p>
+     *        Note the following restrictions:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The DB engine that you specify in the request must support the multi-tenant configuration. If you attempt
+     *        to enable the multi-tenant configuration on a DB engine that doesn't support it, the request fails.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify the multi-tenant configuration when you create your DB instance, you can't later modify
+     *        this DB instance to use the single-tenant configuration.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceRequest withMultiTenant(Boolean multiTenant) {
+        setMultiTenant(multiTenant);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to use the multi-tenant configuration or the single-tenant configuration (default). This
+     * parameter only applies to RDS for Oracle container database (CDB) engines.
+     * </p>
+     * <p>
+     * Note the following restrictions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The DB engine that you specify in the request must support the multi-tenant configuration. If you attempt to
+     * enable the multi-tenant configuration on a DB engine that doesn't support it, the request fails.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify the multi-tenant configuration when you create your DB instance, you can't later modify this DB
+     * instance to use the single-tenant configuration.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Specifies whether to use the multi-tenant configuration or the single-tenant configuration (default).
+     *         This parameter only applies to RDS for Oracle container database (CDB) engines.</p>
+     *         <p>
+     *         Note the following restrictions:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The DB engine that you specify in the request must support the multi-tenant configuration. If you attempt
+     *         to enable the multi-tenant configuration on a DB engine that doesn't support it, the request fails.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify the multi-tenant configuration when you create your DB instance, you can't later modify
+     *         this DB instance to use the single-tenant configuration.
+     *         </p>
+     *         </li>
+     */
+
+    public Boolean isMultiTenant() {
+        return this.multiTenant;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -14320,7 +14536,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         if (getDBSystemId() != null)
             sb.append("DBSystemId: ").append(getDBSystemId()).append(",");
         if (getDedicatedLogVolume() != null)
-            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume());
+            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume()).append(",");
+        if (getMultiTenant() != null)
+            sb.append("MultiTenant: ").append(getMultiTenant());
         sb.append("}");
         return sb.toString();
     }
@@ -14581,6 +14799,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getDedicatedLogVolume() != null && other.getDedicatedLogVolume().equals(this.getDedicatedLogVolume()) == false)
             return false;
+        if (other.getMultiTenant() == null ^ this.getMultiTenant() == null)
+            return false;
+        if (other.getMultiTenant() != null && other.getMultiTenant().equals(this.getMultiTenant()) == false)
+            return false;
         return true;
     }
 
@@ -14650,6 +14872,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getCACertificateIdentifier() == null) ? 0 : getCACertificateIdentifier().hashCode());
         hashCode = prime * hashCode + ((getDBSystemId() == null) ? 0 : getDBSystemId().hashCode());
         hashCode = prime * hashCode + ((getDedicatedLogVolume() == null) ? 0 : getDedicatedLogVolume().hashCode());
+        hashCode = prime * hashCode + ((getMultiTenant() == null) ? 0 : getMultiTenant().hashCode());
         return hashCode;
     }
 

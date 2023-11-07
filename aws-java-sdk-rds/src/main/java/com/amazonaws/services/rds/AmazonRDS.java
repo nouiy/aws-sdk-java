@@ -259,6 +259,10 @@ public interface AmazonRDS {
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
      * @throws IntegrationNotFoundException
      *         The specified integration could not be found.
+     * @throws TenantDatabaseNotFoundException
+     *         The specified tenant database wasn't found in the DB instance.
+     * @throws DBSnapshotTenantDatabaseNotFoundException
+     *         The specified snapshot tenant database wasn't found.
      * @sample AmazonRDS.AddTagsToResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/AddTagsToResource" target="_top">AWS API
      *      Documentation</a>
@@ -887,6 +891,8 @@ public interface AmazonRDS {
      *         <code>DUAL</code>.
      * @throws CertificateNotFoundException
      *         <code>CertificateIdentifier</code> doesn't refer to an existing certificate.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
      * @sample AmazonRDS.CreateDBInstance
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBInstance" target="_top">AWS API
      *      Documentation</a>
@@ -969,6 +975,8 @@ public interface AmazonRDS {
      * @throws NetworkTypeNotSupportedException
      *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
      *         <code>DUAL</code>.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
      * @sample AmazonRDS.CreateDBInstanceReadReplica
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBInstanceReadReplica"
      *      target="_top">AWS API Documentation</a>
@@ -1279,6 +1287,29 @@ public interface AmazonRDS {
      *      Documentation</a>
      */
     OptionGroup createOptionGroup(CreateOptionGroupRequest createOptionGroupRequest);
+
+    /**
+     * <p>
+     * Creates a tenant database in a DB instance that uses the multi-tenant configuration. Only RDS for Oracle
+     * container database (CDB) instances are supported.
+     * </p>
+     * 
+     * @param createTenantDatabaseRequest
+     * @return Result of the CreateTenantDatabase operation returned by the service.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @throws InvalidDBInstanceStateException
+     *         The DB instance isn't in a valid state.
+     * @throws TenantDatabaseAlreadyExistsException
+     *         You attempted to either create a tenant database that already exists or modify a tenant database to use
+     *         the name of an existing tenant database.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
+     * @sample AmazonRDS.CreateTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    TenantDatabase createTenantDatabase(CreateTenantDatabaseRequest createTenantDatabaseRequest);
 
     /**
      * <p>
@@ -1796,6 +1827,29 @@ public interface AmazonRDS {
      *      Documentation</a>
      */
     DeleteOptionGroupResult deleteOptionGroup(DeleteOptionGroupRequest deleteOptionGroupRequest);
+
+    /**
+     * <p>
+     * Deletes a tenant database from your DB instance. This command only applies to RDS for Oracle container database
+     * (CDB) instances.
+     * </p>
+     * <p>
+     * You can't delete a tenant database when it is the only tenant in the DB instance.
+     * </p>
+     * 
+     * @param deleteTenantDatabaseRequest
+     * @return Result of the DeleteTenantDatabase operation returned by the service.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @throws TenantDatabaseNotFoundException
+     *         The specified tenant database wasn't found in the DB instance.
+     * @throws InvalidDBInstanceStateException
+     *         The DB instance isn't in a valid state.
+     * @sample AmazonRDS.DeleteTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    TenantDatabase deleteTenantDatabase(DeleteTenantDatabaseRequest deleteTenantDatabaseRequest);
 
     /**
      * <p>
@@ -2394,6 +2448,27 @@ public interface AmazonRDS {
 
     /**
      * <p>
+     * Describes the tenant databases that exist in a DB snapshot. This command only applies to RDS for Oracle DB
+     * instances in the multi-tenant configuration.
+     * </p>
+     * <p>
+     * You can use this command to inspect the tenant databases within a snapshot before restoring it. You can't
+     * directly interact with the tenant databases in a DB snapshot. If you restore a snapshot that was taken from DB
+     * instance using the multi-tenant configuration, you restore all its tenant databases.
+     * </p>
+     * 
+     * @param describeDBSnapshotTenantDatabasesRequest
+     * @return Result of the DescribeDBSnapshotTenantDatabases operation returned by the service.
+     * @throws DBSnapshotNotFoundException
+     *         <code>DBSnapshotIdentifier</code> doesn't refer to an existing DB snapshot.
+     * @sample AmazonRDS.DescribeDBSnapshotTenantDatabases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBSnapshotTenantDatabases"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeDBSnapshotTenantDatabasesResult describeDBSnapshotTenantDatabases(DescribeDBSnapshotTenantDatabasesRequest describeDBSnapshotTenantDatabasesRequest);
+
+    /**
+     * <p>
      * Returns information about DB snapshots. This API action supports pagination.
      * </p>
      * 
@@ -2760,6 +2835,22 @@ public interface AmazonRDS {
 
     /**
      * <p>
+     * Describes the tenant databases in a DB instance that uses the multi-tenant configuration. Only RDS for Oracle CDB
+     * instances are supported.
+     * </p>
+     * 
+     * @param describeTenantDatabasesRequest
+     * @return Result of the DescribeTenantDatabases operation returned by the service.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @sample AmazonRDS.DescribeTenantDatabases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeTenantDatabases" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeTenantDatabasesResult describeTenantDatabases(DescribeTenantDatabasesRequest describeTenantDatabasesRequest);
+
+    /**
+     * <p>
      * You can call <code>DescribeValidDBInstanceModifications</code> to learn what modifications you can make to your
      * DB instance. You can use this information when you call <code>ModifyDBInstance</code>.
      * </p>
@@ -2964,6 +3055,10 @@ public interface AmazonRDS {
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
      * @throws IntegrationNotFoundException
      *         The specified integration could not be found.
+     * @throws TenantDatabaseNotFoundException
+     *         The specified tenant database wasn't found in the DB instance.
+     * @throws DBSnapshotTenantDatabaseNotFoundException
+     *         The specified snapshot tenant database wasn't found.
      * @sample AmazonRDS.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ListTagsForResource" target="_top">AWS API
      *      Documentation</a>
@@ -3350,6 +3445,8 @@ public interface AmazonRDS {
      * @throws NetworkTypeNotSupportedException
      *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
      *         <code>DUAL</code>.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
      * @sample AmazonRDS.ModifyDBInstance
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBInstance" target="_top">AWS API
      *      Documentation</a>
@@ -3615,6 +3712,29 @@ public interface AmazonRDS {
      *      Documentation</a>
      */
     OptionGroup modifyOptionGroup(ModifyOptionGroupRequest modifyOptionGroupRequest);
+
+    /**
+     * <p>
+     * Modifies an existing tenant database in a DB instance. You can change the tenant database name or the master user
+     * password. This operation is supported only for RDS for Oracle CDB instances using the multi-tenant configuration.
+     * </p>
+     * 
+     * @param modifyTenantDatabaseRequest
+     * @return Result of the ModifyTenantDatabase operation returned by the service.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @throws TenantDatabaseNotFoundException
+     *         The specified tenant database wasn't found in the DB instance.
+     * @throws TenantDatabaseAlreadyExistsException
+     *         You attempted to either create a tenant database that already exists or modify a tenant database to use
+     *         the name of an existing tenant database.
+     * @throws InvalidDBInstanceStateException
+     *         The DB instance isn't in a valid state.
+     * @sample AmazonRDS.ModifyTenantDatabase
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyTenantDatabase" target="_top">AWS API
+     *      Documentation</a>
+     */
+    TenantDatabase modifyTenantDatabase(ModifyTenantDatabaseRequest modifyTenantDatabaseRequest);
 
     /**
      * <p>
@@ -3909,6 +4029,10 @@ public interface AmazonRDS {
      *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
      * @throws IntegrationNotFoundException
      *         The specified integration could not be found.
+     * @throws TenantDatabaseNotFoundException
+     *         The specified tenant database wasn't found in the DB instance.
+     * @throws DBSnapshotTenantDatabaseNotFoundException
+     *         The specified snapshot tenant database wasn't found.
      * @sample AmazonRDS.RemoveTagsFromResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RemoveTagsFromResource" target="_top">AWS API
      *      Documentation</a>
@@ -4279,6 +4403,8 @@ public interface AmazonRDS {
      *         <code>DUAL</code>.
      * @throws DBClusterSnapshotNotFoundException
      *         <code>DBClusterSnapshotIdentifier</code> doesn't refer to an existing DB cluster snapshot.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
      * @sample AmazonRDS.RestoreDBInstanceFromDBSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceFromDBSnapshot"
      *      target="_top">AWS API Documentation</a>
@@ -4422,6 +4548,8 @@ public interface AmazonRDS {
      * @throws NetworkTypeNotSupportedException
      *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
      *         <code>DUAL</code>.
+     * @throws TenantDatabaseQuotaExceededException
+     *         You attempted to create more tenant databases than are permitted in your Amazon Web Services account.
      * @sample AmazonRDS.RestoreDBInstanceToPointInTime
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceToPointInTime"
      *      target="_top">AWS API Documentation</a>

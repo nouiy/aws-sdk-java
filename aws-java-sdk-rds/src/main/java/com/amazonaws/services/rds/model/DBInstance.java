@@ -76,9 +76,9 @@ public class DBInstance implements Serializable, Cloneable {
     private String masterUsername;
     /**
      * <p>
-     * Contains the initial database name that you provided (if required) when you created the DB instance. This name is
-     * returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather
-     * than the CDB.
+     * The initial database name that you provided (if required) when you created the DB instance. This name is returned
+     * for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather than the
+     * CDB.
      * </p>
      */
     private String dBName;
@@ -719,6 +719,13 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      */
     private Boolean isStorageConfigUpgradeAvailable;
+    /**
+     * <p>
+     * Specifies whether the DB instance is in the multi-tenant configuration (TRUE) or the single-tenant configuration
+     * (FALSE).
+     * </p>
+     */
+    private Boolean multiTenant;
 
     /**
      * <p>
@@ -989,15 +996,15 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Contains the initial database name that you provided (if required) when you created the DB instance. This name is
-     * returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather
-     * than the CDB.
+     * The initial database name that you provided (if required) when you created the DB instance. This name is returned
+     * for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather than the
+     * CDB.
      * </p>
      * 
      * @param dBName
-     *        Contains the initial database name that you provided (if required) when you created the DB instance. This
-     *        name is returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies
-     *        the PDB rather than the CDB.
+     *        The initial database name that you provided (if required) when you created the DB instance. This name is
+     *        returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB
+     *        rather than the CDB.
      */
 
     public void setDBName(String dBName) {
@@ -1006,14 +1013,14 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Contains the initial database name that you provided (if required) when you created the DB instance. This name is
-     * returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather
-     * than the CDB.
+     * The initial database name that you provided (if required) when you created the DB instance. This name is returned
+     * for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather than the
+     * CDB.
      * </p>
      * 
-     * @return Contains the initial database name that you provided (if required) when you created the DB instance. This
-     *         name is returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name
-     *         identifies the PDB rather than the CDB.
+     * @return The initial database name that you provided (if required) when you created the DB instance. This name is
+     *         returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the
+     *         PDB rather than the CDB.
      */
 
     public String getDBName() {
@@ -1022,15 +1029,15 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Contains the initial database name that you provided (if required) when you created the DB instance. This name is
-     * returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather
-     * than the CDB.
+     * The initial database name that you provided (if required) when you created the DB instance. This name is returned
+     * for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB rather than the
+     * CDB.
      * </p>
      * 
      * @param dBName
-     *        Contains the initial database name that you provided (if required) when you created the DB instance. This
-     *        name is returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies
-     *        the PDB rather than the CDB.
+     *        The initial database name that you provided (if required) when you created the DB instance. This name is
+     *        returned for the life of your DB instance. For an RDS for Oracle CDB instance, the name identifies the PDB
+     *        rather than the CDB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -5956,6 +5963,66 @@ public class DBInstance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Specifies whether the DB instance is in the multi-tenant configuration (TRUE) or the single-tenant configuration
+     * (FALSE).
+     * </p>
+     * 
+     * @param multiTenant
+     *        Specifies whether the DB instance is in the multi-tenant configuration (TRUE) or the single-tenant
+     *        configuration (FALSE).
+     */
+
+    public void setMultiTenant(Boolean multiTenant) {
+        this.multiTenant = multiTenant;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the DB instance is in the multi-tenant configuration (TRUE) or the single-tenant configuration
+     * (FALSE).
+     * </p>
+     * 
+     * @return Specifies whether the DB instance is in the multi-tenant configuration (TRUE) or the single-tenant
+     *         configuration (FALSE).
+     */
+
+    public Boolean getMultiTenant() {
+        return this.multiTenant;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the DB instance is in the multi-tenant configuration (TRUE) or the single-tenant configuration
+     * (FALSE).
+     * </p>
+     * 
+     * @param multiTenant
+     *        Specifies whether the DB instance is in the multi-tenant configuration (TRUE) or the single-tenant
+     *        configuration (FALSE).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBInstance withMultiTenant(Boolean multiTenant) {
+        setMultiTenant(multiTenant);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the DB instance is in the multi-tenant configuration (TRUE) or the single-tenant configuration
+     * (FALSE).
+     * </p>
+     * 
+     * @return Specifies whether the DB instance is in the multi-tenant configuration (TRUE) or the single-tenant
+     *         configuration (FALSE).
+     */
+
+    public Boolean isMultiTenant() {
+        return this.multiTenant;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -6134,7 +6201,9 @@ public class DBInstance implements Serializable, Cloneable {
         if (getDedicatedLogVolume() != null)
             sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume()).append(",");
         if (getIsStorageConfigUpgradeAvailable() != null)
-            sb.append("IsStorageConfigUpgradeAvailable: ").append(getIsStorageConfigUpgradeAvailable());
+            sb.append("IsStorageConfigUpgradeAvailable: ").append(getIsStorageConfigUpgradeAvailable()).append(",");
+        if (getMultiTenant() != null)
+            sb.append("MultiTenant: ").append(getMultiTenant());
         sb.append("}");
         return sb.toString();
     }
@@ -6496,6 +6565,10 @@ public class DBInstance implements Serializable, Cloneable {
         if (other.getIsStorageConfigUpgradeAvailable() != null
                 && other.getIsStorageConfigUpgradeAvailable().equals(this.getIsStorageConfigUpgradeAvailable()) == false)
             return false;
+        if (other.getMultiTenant() == null ^ this.getMultiTenant() == null)
+            return false;
+        if (other.getMultiTenant() != null && other.getMultiTenant().equals(this.getMultiTenant()) == false)
+            return false;
         return true;
     }
 
@@ -6589,6 +6662,7 @@ public class DBInstance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getPercentProgress() == null) ? 0 : getPercentProgress().hashCode());
         hashCode = prime * hashCode + ((getDedicatedLogVolume() == null) ? 0 : getDedicatedLogVolume().hashCode());
         hashCode = prime * hashCode + ((getIsStorageConfigUpgradeAvailable() == null) ? 0 : getIsStorageConfigUpgradeAvailable().hashCode());
+        hashCode = prime * hashCode + ((getMultiTenant() == null) ? 0 : getMultiTenant().hashCode());
         return hashCode;
     }
 

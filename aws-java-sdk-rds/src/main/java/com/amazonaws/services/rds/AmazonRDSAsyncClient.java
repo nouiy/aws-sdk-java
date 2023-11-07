@@ -1348,6 +1348,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
     }
 
     @Override
+    public java.util.concurrent.Future<TenantDatabase> createTenantDatabaseAsync(CreateTenantDatabaseRequest request) {
+
+        return createTenantDatabaseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TenantDatabase> createTenantDatabaseAsync(final CreateTenantDatabaseRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateTenantDatabaseRequest, TenantDatabase> asyncHandler) {
+        final CreateTenantDatabaseRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<TenantDatabase>() {
+            @Override
+            public TenantDatabase call() throws Exception {
+                TenantDatabase result = null;
+
+                try {
+                    result = executeCreateTenantDatabase(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteBlueGreenDeploymentResult> deleteBlueGreenDeploymentAsync(DeleteBlueGreenDeploymentRequest request) {
 
         return deleteBlueGreenDeploymentAsync(request, null);
@@ -1960,6 +1993,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
 
                 try {
                     result = executeDeleteOptionGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<TenantDatabase> deleteTenantDatabaseAsync(DeleteTenantDatabaseRequest request) {
+
+        return deleteTenantDatabaseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TenantDatabase> deleteTenantDatabaseAsync(final DeleteTenantDatabaseRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteTenantDatabaseRequest, TenantDatabase> asyncHandler) {
+        final DeleteTenantDatabaseRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<TenantDatabase>() {
+            @Override
+            public TenantDatabase call() throws Exception {
+                TenantDatabase result = null;
+
+                try {
+                    result = executeDeleteTenantDatabase(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3007,6 +3073,41 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeDBSnapshotTenantDatabasesResult> describeDBSnapshotTenantDatabasesAsync(
+            DescribeDBSnapshotTenantDatabasesRequest request) {
+
+        return describeDBSnapshotTenantDatabasesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDBSnapshotTenantDatabasesResult> describeDBSnapshotTenantDatabasesAsync(
+            final DescribeDBSnapshotTenantDatabasesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDBSnapshotTenantDatabasesRequest, DescribeDBSnapshotTenantDatabasesResult> asyncHandler) {
+        final DescribeDBSnapshotTenantDatabasesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDBSnapshotTenantDatabasesResult>() {
+            @Override
+            public DescribeDBSnapshotTenantDatabasesResult call() throws Exception {
+                DescribeDBSnapshotTenantDatabasesResult result = null;
+
+                try {
+                    result = executeDescribeDBSnapshotTenantDatabases(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDBSnapshotsResult> describeDBSnapshotsAsync(DescribeDBSnapshotsRequest request) {
 
         return describeDBSnapshotsAsync(request, null);
@@ -3767,6 +3868,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
 
                 try {
                     result = executeDescribeSourceRegions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTenantDatabasesResult> describeTenantDatabasesAsync(DescribeTenantDatabasesRequest request) {
+
+        return describeTenantDatabasesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTenantDatabasesResult> describeTenantDatabasesAsync(final DescribeTenantDatabasesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTenantDatabasesRequest, DescribeTenantDatabasesResult> asyncHandler) {
+        final DescribeTenantDatabasesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTenantDatabasesResult>() {
+            @Override
+            public DescribeTenantDatabasesResult call() throws Exception {
+                DescribeTenantDatabasesResult result = null;
+
+                try {
+                    result = executeDescribeTenantDatabases(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -4586,6 +4720,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
 
                 try {
                     result = executeModifyOptionGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<TenantDatabase> modifyTenantDatabaseAsync(ModifyTenantDatabaseRequest request) {
+
+        return modifyTenantDatabaseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TenantDatabase> modifyTenantDatabaseAsync(final ModifyTenantDatabaseRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ModifyTenantDatabaseRequest, TenantDatabase> asyncHandler) {
+        final ModifyTenantDatabaseRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<TenantDatabase>() {
+            @Override
+            public TenantDatabase call() throws Exception {
+                TenantDatabase result = null;
+
+                try {
+                    result = executeModifyTenantDatabase(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

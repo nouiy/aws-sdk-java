@@ -87,6 +87,8 @@ public enum RDSActions implements Action {
     CreateIntegration("rds:CreateIntegration"),
     /** Action for the CreateOptionGroup operation. */
     CreateOptionGroup("rds:CreateOptionGroup"),
+    /** Action for the CreateTenantDatabase operation. */
+    CreateTenantDatabase("rds:CreateTenantDatabase"),
     /** Action for the DeleteBlueGreenDeployment operation. */
     DeleteBlueGreenDeployment("rds:DeleteBlueGreenDeployment"),
     /** Action for the DeleteCustomDBEngineVersion operation. */
@@ -125,6 +127,8 @@ public enum RDSActions implements Action {
     DeleteIntegration("rds:DeleteIntegration"),
     /** Action for the DeleteOptionGroup operation. */
     DeleteOptionGroup("rds:DeleteOptionGroup"),
+    /** Action for the DeleteTenantDatabase operation. */
+    DeleteTenantDatabase("rds:DeleteTenantDatabase"),
     /** Action for the DeregisterDBProxyTargets operation. */
     DeregisterDBProxyTargets("rds:DeregisterDBProxyTargets"),
     /** Action for the DescribeAccountAttributes operation. */
@@ -173,6 +177,8 @@ public enum RDSActions implements Action {
     DescribeDBSecurityGroups("rds:DescribeDBSecurityGroups"),
     /** Action for the DescribeDBSnapshotAttributes operation. */
     DescribeDBSnapshotAttributes("rds:DescribeDBSnapshotAttributes"),
+    /** Action for the DescribeDBSnapshotTenantDatabases operation. */
+    DescribeDBSnapshotTenantDatabases("rds:DescribeDBSnapshotTenantDatabases"),
     /** Action for the DescribeDBSnapshots operation. */
     DescribeDBSnapshots("rds:DescribeDBSnapshots"),
     /** Action for the DescribeDBSubnetGroups operation. */
@@ -207,6 +213,8 @@ public enum RDSActions implements Action {
     DescribeReservedDBInstancesOfferings("rds:DescribeReservedDBInstancesOfferings"),
     /** Action for the DescribeSourceRegions operation. */
     DescribeSourceRegions("rds:DescribeSourceRegions"),
+    /** Action for the DescribeTenantDatabases operation. */
+    DescribeTenantDatabases("rds:DescribeTenantDatabases"),
     /** Action for the DescribeValidDBInstanceModifications operation. */
     DescribeValidDBInstanceModifications("rds:DescribeValidDBInstanceModifications"),
     /** Action for the DownloadDBLogFilePortion operation. */
@@ -255,6 +263,8 @@ public enum RDSActions implements Action {
     ModifyGlobalCluster("rds:ModifyGlobalCluster"),
     /** Action for the ModifyOptionGroup operation. */
     ModifyOptionGroup("rds:ModifyOptionGroup"),
+    /** Action for the ModifyTenantDatabase operation. */
+    ModifyTenantDatabase("rds:ModifyTenantDatabase"),
     /** Action for the PromoteReadReplica operation. */
     PromoteReadReplica("rds:PromoteReadReplica"),
     /** Action for the PromoteReadReplicaDBCluster operation. */
