@@ -2971,7 +2971,10 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
     /**
      * <p>
      * Invokes a Lambda function. You can invoke a function synchronously (and wait for the response), or
-     * asynchronously. To invoke a function asynchronously, set <code>InvocationType</code> to <code>Event</code>.
+     * asynchronously. By default, Lambda invokes your function synchronously (i.e. the<code>InvocationType</code> is
+     * <code>RequestResponse</code>). To invoke a function asynchronously, set <code>InvocationType</code> to
+     * <code>Event</code>. Lambda passes the <code>ClientContext</code> object to your function for synchronous
+     * invocations only.
      * </p>
      * <p>
      * For <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-sync.html">synchronous invocation</a>,
@@ -3154,6 +3157,12 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
      * <p>
      * Invokes a function asynchronously.
      * </p>
+     * <note>
+     * <p>
+     * If you do use the InvokeAsync action, note that it doesn't support the use of X-Ray active tracing. Trace ID is
+     * not propagated to the function, even if X-Ray active tracing is turned on.
+     * </p>
+     * </note>
      * 
      * @param invokeAsyncRequest
      * @return Result of the InvokeAsync operation returned by the service.

@@ -82,6 +82,10 @@ public class WorkgroupJsonUnmarshaller implements Unmarshaller<Workgroup, JsonUn
                     context.nextToken();
                     workgroup.setEnhancedVpcRouting(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("maxCapacity", targetDepth)) {
+                    context.nextToken();
+                    workgroup.setMaxCapacity(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("namespaceName", targetDepth)) {
                     context.nextToken();
                     workgroup.setNamespaceName(context.getUnmarshaller(String.class).unmarshall(context));

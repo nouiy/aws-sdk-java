@@ -231,6 +231,37 @@ public interface AmazonSQS {
      *         The specified action violates a limit. For example, <code>ReceiveMessage</code> returns this error if the
      *         maximum number of in flight messages is reached and <code>AddPermission</code> returns this error if the
      *         maximum number of permissions for the queue is reached.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
      * @sample AmazonSQS.AddPermission
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/AddPermission" target="_top">AWS API
      *      Documentation</a>
@@ -278,6 +309,33 @@ public interface AmazonSQS {
      * @return Result of the CancelMessageMoveTask operation returned by the service.
      * @throws ResourceNotFoundException
      *         One or more specified resources don't exist.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
      * @throws UnsupportedOperationException
      *         Error code 400. Unsupported operation.
      * @sample AmazonSQS.CancelMessageMoveTask
@@ -362,6 +420,37 @@ public interface AmazonSQS {
      *         The specified message isn't in flight.
      * @throws ReceiptHandleIsInvalidException
      *         The specified receipt handle isn't valid.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
      * @sample AmazonSQS.ChangeMessageVisibility
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ChangeMessageVisibility" target="_top">AWS
      *      API Documentation</a>
@@ -399,6 +488,37 @@ public interface AmazonSQS {
      *         Two or more batch entries in the request have the same <code>Id</code>.
      * @throws InvalidBatchEntryIdException
      *         The <code>Id</code> of a batch entry in a batch request doesn't abide by the specification.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
      * @sample AmazonSQS.ChangeMessageVisibilityBatch
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ChangeMessageVisibilityBatch"
      *      target="_top">AWS API Documentation</a>
@@ -486,6 +606,39 @@ public interface AmazonSQS {
      * @throws QueueNameExistsException
      *         A queue with this name already exists. Amazon SQS returns this error only if the request includes
      *         attributes whose values differ from those of the existing queue.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidAttributeNameException
+     *         The specified attribute doesn't exist.
+     * @throws InvalidAttributeValueException
+     *         A queue attribute value is invalid.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
      * @sample AmazonSQS.CreateQueue
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/CreateQueue" target="_top">AWS API
      *      Documentation</a>
@@ -530,6 +683,37 @@ public interface AmazonSQS {
      *         The specified receipt handle isn't valid for the current version.
      * @throws ReceiptHandleIsInvalidException
      *         The specified receipt handle isn't valid.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
      * @sample AmazonSQS.DeleteMessage
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/DeleteMessage" target="_top">AWS API
      *      Documentation</a>
@@ -566,6 +750,37 @@ public interface AmazonSQS {
      *         Two or more batch entries in the request have the same <code>Id</code>.
      * @throws InvalidBatchEntryIdException
      *         The <code>Id</code> of a batch entry in a batch request doesn't abide by the specification.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
      * @sample AmazonSQS.DeleteMessageBatch
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/DeleteMessageBatch" target="_top">AWS API
      *      Documentation</a>
@@ -610,6 +825,37 @@ public interface AmazonSQS {
      * 
      * @param deleteQueueRequest
      * @return Result of the DeleteQueue operation returned by the service.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
      * @sample AmazonSQS.DeleteQueue
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/DeleteQueue" target="_top">AWS API
      *      Documentation</a>
@@ -639,6 +885,37 @@ public interface AmazonSQS {
      * @return Result of the GetQueueAttributes operation returned by the service.
      * @throws InvalidAttributeNameException
      *         The specified attribute doesn't exist.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
      * @sample AmazonSQS.GetQueueAttributes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/GetQueueAttributes" target="_top">AWS API
      *      Documentation</a>
@@ -666,8 +943,37 @@ public interface AmazonSQS {
      * 
      * @param getQueueUrlRequest
      * @return Result of the GetQueueUrl operation returned by the service.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
      * @throws QueueDoesNotExistException
      *         The specified queue doesn't exist.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
      * @sample AmazonSQS.GetQueueUrl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/GetQueueUrl" target="_top">AWS API
      *      Documentation</a>
@@ -704,6 +1010,35 @@ public interface AmazonSQS {
      * @return Result of the ListDeadLetterSourceQueues operation returned by the service.
      * @throws QueueDoesNotExistException
      *         The specified queue doesn't exist.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
      * @sample AmazonSQS.ListDeadLetterSourceQueues
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ListDeadLetterSourceQueues" target="_top">AWS
      *      API Documentation</a>
@@ -742,6 +1077,33 @@ public interface AmazonSQS {
      * @return Result of the ListMessageMoveTasks operation returned by the service.
      * @throws ResourceNotFoundException
      *         One or more specified resources don't exist.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
      * @throws UnsupportedOperationException
      *         Error code 400. Unsupported operation.
      * @sample AmazonSQS.ListMessageMoveTasks
@@ -766,6 +1128,37 @@ public interface AmazonSQS {
      * 
      * @param listQueueTagsRequest
      * @return Result of the ListQueueTags operation returned by the service.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
      * @sample AmazonSQS.ListQueueTags
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ListQueueTags" target="_top">AWS API
      *      Documentation</a>
@@ -802,6 +1195,35 @@ public interface AmazonSQS {
      * 
      * @param listQueuesRequest
      * @return Result of the ListQueues operation returned by the service.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
      * @sample AmazonSQS.ListQueues
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ListQueues" target="_top">AWS API
      *      Documentation</a>
@@ -852,6 +1274,35 @@ public interface AmazonSQS {
      * @throws PurgeQueueInProgressException
      *         Indicates that the specified queue previously received a <code>PurgeQueue</code> request within the last
      *         60 seconds (the time it can take to delete the messages in the queue).
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
      * @sample AmazonSQS.PurgeQueue
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/PurgeQueue" target="_top">AWS API
      *      Documentation</a>
@@ -935,10 +1386,67 @@ public interface AmazonSQS {
      * 
      * @param receiveMessageRequest
      * @return Result of the ReceiveMessage operation returned by the service.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
      * @throws OverLimitException
      *         The specified action violates a limit. For example, <code>ReceiveMessage</code> returns this error if the
      *         maximum number of in flight messages is reached and <code>AddPermission</code> returns this error if the
      *         maximum number of permissions for the queue is reached.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws KmsDisabledException
+     *         The request was denied due to request throttling.
+     * @throws KmsInvalidStateException
+     *         The request was rejected because the state of the specified resource is not valid for this request.
+     * @throws KmsNotFoundException
+     *         The request was rejected because the specified entity or resource could not be found.
+     * @throws KmsOptInRequiredException
+     *         The request was rejected because the specified key policy isn't syntactically or semantically correct.
+     * @throws KmsThrottledException
+     *         Amazon Web Services KMS throttles requests for the following conditions.
+     * @throws KmsAccessDeniedException
+     *         The caller doesn't have the required KMS access.
+     * @throws KmsInvalidKeyUsageException
+     *         The request was rejected for one of the following reasons:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The KeyUsage value of the KMS key is incompatible with the API operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The encryption algorithm or signing algorithm specified for the operation is incompatible with the type
+     *         of key material in the KMS key (KeySpec).
+     *         </p>
+     *         </li>
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
      * @sample AmazonSQS.ReceiveMessage
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ReceiveMessage" target="_top">AWS API
      *      Documentation</a>
@@ -981,6 +1489,37 @@ public interface AmazonSQS {
      * 
      * @param removePermissionRequest
      * @return Result of the RemovePermission operation returned by the service.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
      * @sample AmazonSQS.RemovePermission
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/RemovePermission" target="_top">AWS API
      *      Documentation</a>
@@ -1018,6 +1557,61 @@ public interface AmazonSQS {
      *         The message contains characters outside the allowed set.
      * @throws UnsupportedOperationException
      *         Error code 400. Unsupported operation.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws KmsDisabledException
+     *         The request was denied due to request throttling.
+     * @throws KmsInvalidStateException
+     *         The request was rejected because the state of the specified resource is not valid for this request.
+     * @throws KmsNotFoundException
+     *         The request was rejected because the specified entity or resource could not be found.
+     * @throws KmsOptInRequiredException
+     *         The request was rejected because the specified key policy isn't syntactically or semantically correct.
+     * @throws KmsThrottledException
+     *         Amazon Web Services KMS throttles requests for the following conditions.
+     * @throws KmsAccessDeniedException
+     *         The caller doesn't have the required KMS access.
+     * @throws KmsInvalidKeyUsageException
+     *         The request was rejected for one of the following reasons:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The KeyUsage value of the KMS key is incompatible with the API operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The encryption algorithm or signing algorithm specified for the operation is incompatible with the type
+     *         of key material in the KMS key (KeySpec).
+     *         </p>
+     *         </li>
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
      * @sample AmazonSQS.SendMessage
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/SendMessage" target="_top">AWS API
      *      Documentation</a>
@@ -1079,6 +1673,61 @@ public interface AmazonSQS {
      *         The <code>Id</code> of a batch entry in a batch request doesn't abide by the specification.
      * @throws UnsupportedOperationException
      *         Error code 400. Unsupported operation.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws KmsDisabledException
+     *         The request was denied due to request throttling.
+     * @throws KmsInvalidStateException
+     *         The request was rejected because the state of the specified resource is not valid for this request.
+     * @throws KmsNotFoundException
+     *         The request was rejected because the specified entity or resource could not be found.
+     * @throws KmsOptInRequiredException
+     *         The request was rejected because the specified key policy isn't syntactically or semantically correct.
+     * @throws KmsThrottledException
+     *         Amazon Web Services KMS throttles requests for the following conditions.
+     * @throws KmsAccessDeniedException
+     *         The caller doesn't have the required KMS access.
+     * @throws KmsInvalidKeyUsageException
+     *         The request was rejected for one of the following reasons:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The KeyUsage value of the KMS key is incompatible with the API operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The encryption algorithm or signing algorithm specified for the operation is incompatible with the type
+     *         of key material in the KMS key (KeySpec).
+     *         </p>
+     *         </li>
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
      * @sample AmazonSQS.SendMessageBatch
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/SendMessageBatch" target="_top">AWS API
      *      Documentation</a>
@@ -1128,6 +1777,43 @@ public interface AmazonSQS {
      * @return Result of the SetQueueAttributes operation returned by the service.
      * @throws InvalidAttributeNameException
      *         The specified attribute doesn't exist.
+     * @throws InvalidAttributeValueException
+     *         A queue attribute value is invalid.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @throws OverLimitException
+     *         The specified action violates a limit. For example, <code>ReceiveMessage</code> returns this error if the
+     *         maximum number of in flight messages is reached and <code>AddPermission</code> returns this error if the
+     *         maximum number of permissions for the queue is reached.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
      * @sample AmazonSQS.SetQueueAttributes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/SetQueueAttributes" target="_top">AWS API
      *      Documentation</a>
@@ -1179,6 +1865,33 @@ public interface AmazonSQS {
      * @return Result of the StartMessageMoveTask operation returned by the service.
      * @throws ResourceNotFoundException
      *         One or more specified resources don't exist.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
      * @throws UnsupportedOperationException
      *         Error code 400. Unsupported operation.
      * @sample AmazonSQS.StartMessageMoveTask
@@ -1233,6 +1946,37 @@ public interface AmazonSQS {
      * 
      * @param tagQueueRequest
      * @return Result of the TagQueue operation returned by the service.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
      * @sample AmazonSQS.TagQueue
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/TagQueue" target="_top">AWS API
      *      Documentation</a>
@@ -1262,6 +2006,37 @@ public interface AmazonSQS {
      * 
      * @param untagQueueRequest
      * @return Result of the UntagQueue operation returned by the service.
+     * @throws InvalidAddressException
+     *         The <code>accountId</code> is invalid.
+     * @throws RequestThrottledException
+     *         The request was denied due to request throttling.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The rate of requests per second exceeds the Amazon Web Services KMS request quota for an account and
+     *         Region.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A burst or sustained high rate of requests to change the state of the same KMS key. This condition is
+     *         often known as a "hot key."
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Requests for operations on KMS keys in a Amazon Web Services CloudHSM key store might be throttled at a
+     *         lower-than-expected rate when the Amazon Web Services CloudHSM cluster associated with the Amazon Web
+     *         Services CloudHSM key store is processing numerous commands, including those unrelated to the Amazon Web
+     *         Services CloudHSM key store.
+     *         </p>
+     *         </li>
+     * @throws QueueDoesNotExistException
+     *         The specified queue doesn't exist.
+     * @throws InvalidSecurityException
+     *         When the request to a queue is not HTTPS and SigV4.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
      * @sample AmazonSQS.UntagQueue
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/UntagQueue" target="_top">AWS API
      *      Documentation</a>

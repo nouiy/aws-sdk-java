@@ -305,6 +305,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.dnsRequestAction.domainWithSuffix
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.networkConnectionAction.blocked
      * </p>
      * </li>
@@ -365,7 +370,22 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.kubernetesApiCallAction.namespace
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.kubernetesApiCallAction.requestUri
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.kubernetesApiCallAction.statusCode
      * </p>
      * </li>
      * <li>
@@ -1041,6 +1061,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.dnsRequestAction.domainWithSuffix
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.networkConnectionAction.blocked
      * </p>
      * </li>
@@ -1101,7 +1126,22 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.kubernetesApiCallAction.namespace
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.kubernetesApiCallAction.requestUri
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.kubernetesApiCallAction.statusCode
      * </p>
      * </li>
      * <li>
@@ -1515,6 +1555,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
+     *        service.action.dnsRequestAction.domainWithSuffix
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        service.action.networkConnectionAction.blocked
      *        </p>
      *        </li>
@@ -1575,7 +1620,22 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
+     *        service.action.kubernetesApiCallAction.namespace
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        service.action.kubernetesApiCallAction.requestUri
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        service.action.kubernetesApiCallAction.statusCode
      *        </p>
      *        </li>
      *        <li>
@@ -1995,6 +2055,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.dnsRequestAction.domainWithSuffix
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.networkConnectionAction.blocked
      * </p>
      * </li>
@@ -2055,7 +2120,22 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.kubernetesApiCallAction.namespace
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.kubernetesApiCallAction.requestUri
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.kubernetesApiCallAction.statusCode
      * </p>
      * </li>
      * <li>
@@ -2468,6 +2548,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         <li>
      *         <p>
+     *         service.action.dnsRequestAction.domainWithSuffix
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         service.action.networkConnectionAction.blocked
      *         </p>
      *         </li>
@@ -2528,7 +2613,22 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         <li>
      *         <p>
+     *         service.action.kubernetesApiCallAction.namespace
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         service.action.kubernetesApiCallAction.requestUri
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         service.action.kubernetesApiCallAction.statusCode
      *         </p>
      *         </li>
      *         <li>
@@ -2948,6 +3048,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.dnsRequestAction.domainWithSuffix
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.networkConnectionAction.blocked
      * </p>
      * </li>
@@ -3008,7 +3113,22 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.kubernetesApiCallAction.namespace
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.kubernetesApiCallAction.requestUri
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * service.action.kubernetesApiCallAction.statusCode
      * </p>
      * </li>
      * <li>
@@ -3422,6 +3542,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
+     *        service.action.dnsRequestAction.domainWithSuffix
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        service.action.networkConnectionAction.blocked
      *        </p>
      *        </li>
@@ -3482,7 +3607,22 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
+     *        service.action.kubernetesApiCallAction.namespace
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        service.action.kubernetesApiCallAction.requestUri
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        service.action.kubernetesApiCallAction.statusCode
      *        </p>
      *        </li>
      *        <li>

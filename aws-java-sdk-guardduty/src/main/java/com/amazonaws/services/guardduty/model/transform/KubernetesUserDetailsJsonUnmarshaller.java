@@ -68,6 +68,10 @@ public class KubernetesUserDetailsJsonUnmarshaller implements Unmarshaller<Kuber
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("impersonatedUser", targetDepth)) {
+                    context.nextToken();
+                    kubernetesUserDetails.setImpersonatedUser(ImpersonatedUserJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

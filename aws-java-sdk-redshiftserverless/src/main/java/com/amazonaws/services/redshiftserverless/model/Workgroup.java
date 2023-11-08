@@ -85,6 +85,13 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
     private Boolean enhancedVpcRouting;
     /**
      * <p>
+     * The maximum data-warehouse capacity Amazon Redshift Serverless uses to serve queries. The max capacity is
+     * specified in RPUs.
+     * </p>
+     */
+    private Integer maxCapacity;
+    /**
+     * <p>
      * The namespace the workgroup is associated with.
      * </p>
      */
@@ -571,6 +578,52 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
 
     public Boolean isEnhancedVpcRouting() {
         return this.enhancedVpcRouting;
+    }
+
+    /**
+     * <p>
+     * The maximum data-warehouse capacity Amazon Redshift Serverless uses to serve queries. The max capacity is
+     * specified in RPUs.
+     * </p>
+     * 
+     * @param maxCapacity
+     *        The maximum data-warehouse capacity Amazon Redshift Serverless uses to serve queries. The max capacity is
+     *        specified in RPUs.
+     */
+
+    public void setMaxCapacity(Integer maxCapacity) {
+        this.maxCapacity = maxCapacity;
+    }
+
+    /**
+     * <p>
+     * The maximum data-warehouse capacity Amazon Redshift Serverless uses to serve queries. The max capacity is
+     * specified in RPUs.
+     * </p>
+     * 
+     * @return The maximum data-warehouse capacity Amazon Redshift Serverless uses to serve queries. The max capacity is
+     *         specified in RPUs.
+     */
+
+    public Integer getMaxCapacity() {
+        return this.maxCapacity;
+    }
+
+    /**
+     * <p>
+     * The maximum data-warehouse capacity Amazon Redshift Serverless uses to serve queries. The max capacity is
+     * specified in RPUs.
+     * </p>
+     * 
+     * @param maxCapacity
+     *        The maximum data-warehouse capacity Amazon Redshift Serverless uses to serve queries. The max capacity is
+     *        specified in RPUs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workgroup withMaxCapacity(Integer maxCapacity) {
+        setMaxCapacity(maxCapacity);
+        return this;
     }
 
     /**
@@ -1165,6 +1218,8 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
             sb.append("Endpoint: ").append(getEndpoint()).append(",");
         if (getEnhancedVpcRouting() != null)
             sb.append("EnhancedVpcRouting: ").append(getEnhancedVpcRouting()).append(",");
+        if (getMaxCapacity() != null)
+            sb.append("MaxCapacity: ").append(getMaxCapacity()).append(",");
         if (getNamespaceName() != null)
             sb.append("NamespaceName: ").append(getNamespaceName()).append(",");
         if (getPatchVersion() != null)
@@ -1234,6 +1289,10 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEnhancedVpcRouting() != null && other.getEnhancedVpcRouting().equals(this.getEnhancedVpcRouting()) == false)
             return false;
+        if (other.getMaxCapacity() == null ^ this.getMaxCapacity() == null)
+            return false;
+        if (other.getMaxCapacity() != null && other.getMaxCapacity().equals(this.getMaxCapacity()) == false)
+            return false;
         if (other.getNamespaceName() == null ^ this.getNamespaceName() == null)
             return false;
         if (other.getNamespaceName() != null && other.getNamespaceName().equals(this.getNamespaceName()) == false)
@@ -1294,6 +1353,7 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCustomDomainName() == null) ? 0 : getCustomDomainName().hashCode());
         hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());
         hashCode = prime * hashCode + ((getEnhancedVpcRouting() == null) ? 0 : getEnhancedVpcRouting().hashCode());
+        hashCode = prime * hashCode + ((getMaxCapacity() == null) ? 0 : getMaxCapacity().hashCode());
         hashCode = prime * hashCode + ((getNamespaceName() == null) ? 0 : getNamespaceName().hashCode());
         hashCode = prime * hashCode + ((getPatchVersion() == null) ? 0 : getPatchVersion().hashCode());
         hashCode = prime * hashCode + ((getPort() == null) ? 0 : getPort().hashCode());

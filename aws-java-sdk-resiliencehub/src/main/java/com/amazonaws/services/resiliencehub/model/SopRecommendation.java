@@ -66,6 +66,12 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
     private String recommendationId;
     /**
      * <p>
+     * Status of the recommended standard operating procedure.
+     * </p>
+     */
+    private String recommendationStatus;
+    /**
+     * <p>
      * Reference identifier for the SOP recommendation.
      * </p>
      */
@@ -349,6 +355,65 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
+     * Status of the recommended standard operating procedure.
+     * </p>
+     * 
+     * @param recommendationStatus
+     *        Status of the recommended standard operating procedure.
+     * @see RecommendationStatus
+     */
+
+    public void setRecommendationStatus(String recommendationStatus) {
+        this.recommendationStatus = recommendationStatus;
+    }
+
+    /**
+     * <p>
+     * Status of the recommended standard operating procedure.
+     * </p>
+     * 
+     * @return Status of the recommended standard operating procedure.
+     * @see RecommendationStatus
+     */
+
+    public String getRecommendationStatus() {
+        return this.recommendationStatus;
+    }
+
+    /**
+     * <p>
+     * Status of the recommended standard operating procedure.
+     * </p>
+     * 
+     * @param recommendationStatus
+     *        Status of the recommended standard operating procedure.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RecommendationStatus
+     */
+
+    public SopRecommendation withRecommendationStatus(String recommendationStatus) {
+        setRecommendationStatus(recommendationStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Status of the recommended standard operating procedure.
+     * </p>
+     * 
+     * @param recommendationStatus
+     *        Status of the recommended standard operating procedure.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RecommendationStatus
+     */
+
+    public SopRecommendation withRecommendationStatus(RecommendationStatus recommendationStatus) {
+        this.recommendationStatus = recommendationStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * Reference identifier for the SOP recommendation.
      * </p>
      * 
@@ -470,6 +535,8 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
             sb.append("Prerequisite: ").append(getPrerequisite()).append(",");
         if (getRecommendationId() != null)
             sb.append("RecommendationId: ").append(getRecommendationId()).append(",");
+        if (getRecommendationStatus() != null)
+            sb.append("RecommendationStatus: ").append(getRecommendationStatus()).append(",");
         if (getReferenceId() != null)
             sb.append("ReferenceId: ").append(getReferenceId()).append(",");
         if (getServiceType() != null)
@@ -512,6 +579,10 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getRecommendationId() != null && other.getRecommendationId().equals(this.getRecommendationId()) == false)
             return false;
+        if (other.getRecommendationStatus() == null ^ this.getRecommendationStatus() == null)
+            return false;
+        if (other.getRecommendationStatus() != null && other.getRecommendationStatus().equals(this.getRecommendationStatus()) == false)
+            return false;
         if (other.getReferenceId() == null ^ this.getReferenceId() == null)
             return false;
         if (other.getReferenceId() != null && other.getReferenceId().equals(this.getReferenceId()) == false)
@@ -534,6 +605,7 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getPrerequisite() == null) ? 0 : getPrerequisite().hashCode());
         hashCode = prime * hashCode + ((getRecommendationId() == null) ? 0 : getRecommendationId().hashCode());
+        hashCode = prime * hashCode + ((getRecommendationStatus() == null) ? 0 : getRecommendationStatus().hashCode());
         hashCode = prime * hashCode + ((getReferenceId() == null) ? 0 : getReferenceId().hashCode());
         hashCode = prime * hashCode + ((getServiceType() == null) ? 0 : getServiceType().hashCode());
         return hashCode;

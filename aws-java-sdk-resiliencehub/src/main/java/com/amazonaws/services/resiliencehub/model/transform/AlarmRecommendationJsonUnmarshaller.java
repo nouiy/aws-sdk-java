@@ -80,6 +80,10 @@ public class AlarmRecommendationJsonUnmarshaller implements Unmarshaller<AlarmRe
                     context.nextToken();
                     alarmRecommendation.setRecommendationId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("recommendationStatus", targetDepth)) {
+                    context.nextToken();
+                    alarmRecommendation.setRecommendationStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("referenceId", targetDepth)) {
                     context.nextToken();
                     alarmRecommendation.setReferenceId(context.getUnmarshaller(String.class).unmarshall(context));

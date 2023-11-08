@@ -178,6 +178,18 @@ public class GetRunResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
      * </p>
      */
     private RunLogLocation logLocation;
+    /**
+     * <p>
+     * The universally unique identifier for a run.
+     * </p>
+     */
+    private String uuid;
+    /**
+     * <p>
+     * The destination for workflow outputs.
+     * </p>
+     */
+    private String runOutputUri;
 
     /**
      * <p>
@@ -1371,6 +1383,86 @@ public class GetRunResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
     }
 
     /**
+     * <p>
+     * The universally unique identifier for a run.
+     * </p>
+     * 
+     * @param uuid
+     *        The universally unique identifier for a run.
+     */
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+    /**
+     * <p>
+     * The universally unique identifier for a run.
+     * </p>
+     * 
+     * @return The universally unique identifier for a run.
+     */
+
+    public String getUuid() {
+        return this.uuid;
+    }
+
+    /**
+     * <p>
+     * The universally unique identifier for a run.
+     * </p>
+     * 
+     * @param uuid
+     *        The universally unique identifier for a run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetRunResult withUuid(String uuid) {
+        setUuid(uuid);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The destination for workflow outputs.
+     * </p>
+     * 
+     * @param runOutputUri
+     *        The destination for workflow outputs.
+     */
+
+    public void setRunOutputUri(String runOutputUri) {
+        this.runOutputUri = runOutputUri;
+    }
+
+    /**
+     * <p>
+     * The destination for workflow outputs.
+     * </p>
+     * 
+     * @return The destination for workflow outputs.
+     */
+
+    public String getRunOutputUri() {
+        return this.runOutputUri;
+    }
+
+    /**
+     * <p>
+     * The destination for workflow outputs.
+     * </p>
+     * 
+     * @param runOutputUri
+     *        The destination for workflow outputs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetRunResult withRunOutputUri(String runOutputUri) {
+        setRunOutputUri(runOutputUri);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1433,7 +1525,11 @@ public class GetRunResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
         if (getFailureReason() != null)
             sb.append("FailureReason: ").append(getFailureReason()).append(",");
         if (getLogLocation() != null)
-            sb.append("LogLocation: ").append(getLogLocation());
+            sb.append("LogLocation: ").append(getLogLocation()).append(",");
+        if (getUuid() != null)
+            sb.append("Uuid: ").append(getUuid()).append(",");
+        if (getRunOutputUri() != null)
+            sb.append("RunOutputUri: ").append(getRunOutputUri());
         sb.append("}");
         return sb.toString();
     }
@@ -1552,6 +1648,14 @@ public class GetRunResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
             return false;
         if (other.getLogLocation() != null && other.getLogLocation().equals(this.getLogLocation()) == false)
             return false;
+        if (other.getUuid() == null ^ this.getUuid() == null)
+            return false;
+        if (other.getUuid() != null && other.getUuid().equals(this.getUuid()) == false)
+            return false;
+        if (other.getRunOutputUri() == null ^ this.getRunOutputUri() == null)
+            return false;
+        if (other.getRunOutputUri() != null && other.getRunOutputUri().equals(this.getRunOutputUri()) == false)
+            return false;
         return true;
     }
 
@@ -1586,6 +1690,8 @@ public class GetRunResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
         hashCode = prime * hashCode + ((getRetentionMode() == null) ? 0 : getRetentionMode().hashCode());
         hashCode = prime * hashCode + ((getFailureReason() == null) ? 0 : getFailureReason().hashCode());
         hashCode = prime * hashCode + ((getLogLocation() == null) ? 0 : getLogLocation().hashCode());
+        hashCode = prime * hashCode + ((getUuid() == null) ? 0 : getUuid().hashCode());
+        hashCode = prime * hashCode + ((getRunOutputUri() == null) ? 0 : getRunOutputUri().hashCode());
         return hashCode;
     }
 

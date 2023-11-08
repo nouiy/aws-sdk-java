@@ -59,9 +59,18 @@ public class PermissionModel implements Serializable, Cloneable, StructuredPojo 
      * assessment.
      * </p>
      * <note>
+     * <ul>
+     * <li>
      * <p>
      * You must have <code>iam:passRole</code> permission for this role while creating or updating the application.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Currently, <code>invokerRoleName</code> accepts only <code>[A-Za-z0-9_+=,.@-]</code> characters.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      */
     private String invokerRoleName;
@@ -278,19 +287,37 @@ public class PermissionModel implements Serializable, Cloneable, StructuredPojo 
      * assessment.
      * </p>
      * <note>
+     * <ul>
+     * <li>
      * <p>
      * You must have <code>iam:passRole</code> permission for this role while creating or updating the application.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Currently, <code>invokerRoleName</code> accepts only <code>[A-Za-z0-9_+=,.@-]</code> characters.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param invokerRoleName
      *        Existing Amazon Web Services IAM role name in the primary Amazon Web Services account that will be assumed
      *        by Resilience Hub Service Principle to obtain a read-only access to your application resources while
      *        running an assessment.</p> <note>
+     *        <ul>
+     *        <li>
      *        <p>
      *        You must have <code>iam:passRole</code> permission for this role while creating or updating the
      *        application.
      *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Currently, <code>invokerRoleName</code> accepts only <code>[A-Za-z0-9_+=,.@-]</code> characters.
+     *        </p>
+     *        </li>
+     *        </ul>
      */
 
     public void setInvokerRoleName(String invokerRoleName) {
@@ -304,18 +331,36 @@ public class PermissionModel implements Serializable, Cloneable, StructuredPojo 
      * assessment.
      * </p>
      * <note>
+     * <ul>
+     * <li>
      * <p>
      * You must have <code>iam:passRole</code> permission for this role while creating or updating the application.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Currently, <code>invokerRoleName</code> accepts only <code>[A-Za-z0-9_+=,.@-]</code> characters.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @return Existing Amazon Web Services IAM role name in the primary Amazon Web Services account that will be
      *         assumed by Resilience Hub Service Principle to obtain a read-only access to your application resources
      *         while running an assessment.</p> <note>
+     *         <ul>
+     *         <li>
      *         <p>
      *         You must have <code>iam:passRole</code> permission for this role while creating or updating the
      *         application.
      *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Currently, <code>invokerRoleName</code> accepts only <code>[A-Za-z0-9_+=,.@-]</code> characters.
+     *         </p>
+     *         </li>
+     *         </ul>
      */
 
     public String getInvokerRoleName() {
@@ -329,19 +374,37 @@ public class PermissionModel implements Serializable, Cloneable, StructuredPojo 
      * assessment.
      * </p>
      * <note>
+     * <ul>
+     * <li>
      * <p>
      * You must have <code>iam:passRole</code> permission for this role while creating or updating the application.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Currently, <code>invokerRoleName</code> accepts only <code>[A-Za-z0-9_+=,.@-]</code> characters.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param invokerRoleName
      *        Existing Amazon Web Services IAM role name in the primary Amazon Web Services account that will be assumed
      *        by Resilience Hub Service Principle to obtain a read-only access to your application resources while
      *        running an assessment.</p> <note>
+     *        <ul>
+     *        <li>
      *        <p>
      *        You must have <code>iam:passRole</code> permission for this role while creating or updating the
      *        application.
      *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Currently, <code>invokerRoleName</code> accepts only <code>[A-Za-z0-9_+=,.@-]</code> characters.
+     *        </p>
+     *        </li>
+     *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

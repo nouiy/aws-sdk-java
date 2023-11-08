@@ -141,13 +141,16 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
     /**
      * <p>
-     * Reserved for future use.
+     * The ARN of a CEV to use as a source for creating a new CEV. You can specify a different Amazon Machine Imagine
+     * (AMI) by using either <code>Source</code> or <code>UseAwsProvidedLatestImage</code>. You can't specify a
+     * different JSON manifest when you specify <code>SourceCustomDbEngineVersionIdentifier</code>.
      * </p>
      */
     private String sourceCustomDbEngineVersionIdentifier;
     /**
      * <p>
-     * Reserved for future use.
+     * Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV. If you specify
+     * <code>UseAwsProvidedLatestImage</code>, you can't also specify <code>ImageId</code>.
      * </p>
      */
     private Boolean useAwsProvidedLatestImage;
@@ -910,11 +913,15 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Reserved for future use.
+     * The ARN of a CEV to use as a source for creating a new CEV. You can specify a different Amazon Machine Imagine
+     * (AMI) by using either <code>Source</code> or <code>UseAwsProvidedLatestImage</code>. You can't specify a
+     * different JSON manifest when you specify <code>SourceCustomDbEngineVersionIdentifier</code>.
      * </p>
      * 
      * @param sourceCustomDbEngineVersionIdentifier
-     *        Reserved for future use.
+     *        The ARN of a CEV to use as a source for creating a new CEV. You can specify a different Amazon Machine
+     *        Imagine (AMI) by using either <code>Source</code> or <code>UseAwsProvidedLatestImage</code>. You can't
+     *        specify a different JSON manifest when you specify <code>SourceCustomDbEngineVersionIdentifier</code>.
      */
 
     public void setSourceCustomDbEngineVersionIdentifier(String sourceCustomDbEngineVersionIdentifier) {
@@ -923,10 +930,14 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Reserved for future use.
+     * The ARN of a CEV to use as a source for creating a new CEV. You can specify a different Amazon Machine Imagine
+     * (AMI) by using either <code>Source</code> or <code>UseAwsProvidedLatestImage</code>. You can't specify a
+     * different JSON manifest when you specify <code>SourceCustomDbEngineVersionIdentifier</code>.
      * </p>
      * 
-     * @return Reserved for future use.
+     * @return The ARN of a CEV to use as a source for creating a new CEV. You can specify a different Amazon Machine
+     *         Imagine (AMI) by using either <code>Source</code> or <code>UseAwsProvidedLatestImage</code>. You can't
+     *         specify a different JSON manifest when you specify <code>SourceCustomDbEngineVersionIdentifier</code>.
      */
 
     public String getSourceCustomDbEngineVersionIdentifier() {
@@ -935,11 +946,15 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Reserved for future use.
+     * The ARN of a CEV to use as a source for creating a new CEV. You can specify a different Amazon Machine Imagine
+     * (AMI) by using either <code>Source</code> or <code>UseAwsProvidedLatestImage</code>. You can't specify a
+     * different JSON manifest when you specify <code>SourceCustomDbEngineVersionIdentifier</code>.
      * </p>
      * 
      * @param sourceCustomDbEngineVersionIdentifier
-     *        Reserved for future use.
+     *        The ARN of a CEV to use as a source for creating a new CEV. You can specify a different Amazon Machine
+     *        Imagine (AMI) by using either <code>Source</code> or <code>UseAwsProvidedLatestImage</code>. You can't
+     *        specify a different JSON manifest when you specify <code>SourceCustomDbEngineVersionIdentifier</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -950,11 +965,13 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Reserved for future use.
+     * Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV. If you specify
+     * <code>UseAwsProvidedLatestImage</code>, you can't also specify <code>ImageId</code>.
      * </p>
      * 
      * @param useAwsProvidedLatestImage
-     *        Reserved for future use.
+     *        Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV. If you
+     *        specify <code>UseAwsProvidedLatestImage</code>, you can't also specify <code>ImageId</code>.
      */
 
     public void setUseAwsProvidedLatestImage(Boolean useAwsProvidedLatestImage) {
@@ -963,10 +980,12 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Reserved for future use.
+     * Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV. If you specify
+     * <code>UseAwsProvidedLatestImage</code>, you can't also specify <code>ImageId</code>.
      * </p>
      * 
-     * @return Reserved for future use.
+     * @return Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV. If you
+     *         specify <code>UseAwsProvidedLatestImage</code>, you can't also specify <code>ImageId</code>.
      */
 
     public Boolean getUseAwsProvidedLatestImage() {
@@ -975,11 +994,13 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Reserved for future use.
+     * Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV. If you specify
+     * <code>UseAwsProvidedLatestImage</code>, you can't also specify <code>ImageId</code>.
      * </p>
      * 
      * @param useAwsProvidedLatestImage
-     *        Reserved for future use.
+     *        Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV. If you
+     *        specify <code>UseAwsProvidedLatestImage</code>, you can't also specify <code>ImageId</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -990,10 +1011,12 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Reserved for future use.
+     * Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV. If you specify
+     * <code>UseAwsProvidedLatestImage</code>, you can't also specify <code>ImageId</code>.
      * </p>
      * 
-     * @return Reserved for future use.
+     * @return Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV. If you
+     *         specify <code>UseAwsProvidedLatestImage</code>, you can't also specify <code>ImageId</code>.
      */
 
     public Boolean isUseAwsProvidedLatestImage() {

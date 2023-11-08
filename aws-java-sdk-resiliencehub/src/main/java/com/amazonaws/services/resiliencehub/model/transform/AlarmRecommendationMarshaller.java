@@ -42,6 +42,8 @@ public class AlarmRecommendationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("prerequisite").build();
     private static final MarshallingInfo<String> RECOMMENDATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationId").build();
+    private static final MarshallingInfo<String> RECOMMENDATIONSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationStatus").build();
     private static final MarshallingInfo<String> REFERENCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("referenceId").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -70,6 +72,7 @@ public class AlarmRecommendationMarshaller {
             protocolMarshaller.marshall(alarmRecommendation.getName(), NAME_BINDING);
             protocolMarshaller.marshall(alarmRecommendation.getPrerequisite(), PREREQUISITE_BINDING);
             protocolMarshaller.marshall(alarmRecommendation.getRecommendationId(), RECOMMENDATIONID_BINDING);
+            protocolMarshaller.marshall(alarmRecommendation.getRecommendationStatus(), RECOMMENDATIONSTATUS_BINDING);
             protocolMarshaller.marshall(alarmRecommendation.getReferenceId(), REFERENCEID_BINDING);
             protocolMarshaller.marshall(alarmRecommendation.getType(), TYPE_BINDING);
         } catch (Exception e) {

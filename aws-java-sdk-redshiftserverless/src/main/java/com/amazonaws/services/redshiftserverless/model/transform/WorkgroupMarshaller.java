@@ -44,6 +44,8 @@ public class WorkgroupMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endpoint").build();
     private static final MarshallingInfo<Boolean> ENHANCEDVPCROUTING_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enhancedVpcRouting").build();
+    private static final MarshallingInfo<Integer> MAXCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxCapacity").build();
     private static final MarshallingInfo<String> NAMESPACENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("namespaceName").build();
     private static final MarshallingInfo<String> PATCHVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -91,6 +93,7 @@ public class WorkgroupMarshaller {
             protocolMarshaller.marshall(workgroup.getCustomDomainName(), CUSTOMDOMAINNAME_BINDING);
             protocolMarshaller.marshall(workgroup.getEndpoint(), ENDPOINT_BINDING);
             protocolMarshaller.marshall(workgroup.getEnhancedVpcRouting(), ENHANCEDVPCROUTING_BINDING);
+            protocolMarshaller.marshall(workgroup.getMaxCapacity(), MAXCAPACITY_BINDING);
             protocolMarshaller.marshall(workgroup.getNamespaceName(), NAMESPACENAME_BINDING);
             protocolMarshaller.marshall(workgroup.getPatchVersion(), PATCHVERSION_BINDING);
             protocolMarshaller.marshall(workgroup.getPort(), PORT_BINDING);
