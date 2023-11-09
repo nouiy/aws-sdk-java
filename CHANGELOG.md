@@ -1,3 +1,8 @@
+# __1.12.585__ __2023-11-09__
+## __Amazon Simple Queue Service__
+  - ### Features
+    - This release enables customers to call SQS using AWS JSON-1.0 protocol and bug fix.
+
 # __1.12.584__ __2023-11-08__
 ## __AWS DataSync__
   - ### Features

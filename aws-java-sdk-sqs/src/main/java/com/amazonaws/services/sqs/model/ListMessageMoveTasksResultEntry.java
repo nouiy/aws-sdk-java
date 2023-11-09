@@ -145,7 +145,6 @@ public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable,
      * @param status
      *        The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED,
      *        and FAILED.
-     * @see TaskStatus
      */
 
     public void setStatus(String status) {
@@ -160,7 +159,6 @@ public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable,
      * 
      * @return The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED,
      *         and FAILED.
-     * @see TaskStatus
      */
 
     public String getStatus() {
@@ -177,29 +175,10 @@ public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable,
      *        The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED,
      *        and FAILED.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see TaskStatus
      */
 
     public ListMessageMoveTasksResultEntry withStatus(String status) {
         setStatus(status);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and
-     * FAILED.
-     * </p>
-     * 
-     * @param status
-     *        The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED,
-     *        and FAILED.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see TaskStatus
-     */
-
-    public ListMessageMoveTasksResultEntry withStatus(TaskStatus status) {
-        this.status = status.toString();
         return this;
     }
 

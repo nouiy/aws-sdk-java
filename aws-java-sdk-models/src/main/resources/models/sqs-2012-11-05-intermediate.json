@@ -13218,14 +13218,14 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "Status",
-        "c2jShape" : "TaskStatus",
+        "c2jShape" : "String",
         "deprecated" : false,
         "documentation" : "<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>",
         "endpointDiscoveryId" : false,
-        "enumType" : "TaskStatus",
-        "fluentSetterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@return Returns a reference to this object so that method calls can be chained together.\n@see TaskStatus*/",
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withStatus",
-        "getterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@return The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@see TaskStatus*/",
+        "getterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@return The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.*/",
         "getterMethodName" : "getStatus",
         "getterModel" : {
           "returnType" : "String",
@@ -13259,7 +13259,7 @@
         "marshallingType" : "STRING",
         "name" : "Status",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@see TaskStatus*/",
+        "setterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.*/",
         "setterMethodName" : "setStatus",
         "setterModel" : {
           "timestampFormat" : null,
@@ -13274,7 +13274,7 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@return Returns a reference to this object so that method calls can be chained together.\n@see TaskStatus*/",
+        "varargSetterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
@@ -14262,14 +14262,14 @@
         },
         "Status" : {
           "c2jName" : "Status",
-          "c2jShape" : "TaskStatus",
+          "c2jShape" : "String",
           "deprecated" : false,
           "documentation" : "<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>",
           "endpointDiscoveryId" : false,
-          "enumType" : "TaskStatus",
-          "fluentSetterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@return Returns a reference to this object so that method calls can be chained together.\n@see TaskStatus*/",
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withStatus",
-          "getterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@return The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@see TaskStatus*/",
+          "getterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@return The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.*/",
           "getterMethodName" : "getStatus",
           "getterModel" : {
             "returnType" : "String",
@@ -14303,7 +14303,7 @@
           "marshallingType" : "STRING",
           "name" : "Status",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@see TaskStatus*/",
+          "setterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.*/",
           "setterMethodName" : "setStatus",
           "setterModel" : {
             "timestampFormat" : null,
@@ -14318,7 +14318,7 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@return Returns a reference to this object so that method calls can be chained together.\n@see TaskStatus*/",
+          "varargSetterDocumentation" : "/**<p>The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.</p>\n@param status The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and FAILED.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
@@ -30098,65 +30098,6 @@
         "documentation" : null,
         "simpleType" : "TagQueueResult",
         "variableSetterType" : "TagQueueResult"
-      },
-      "wrapper" : false
-    },
-    "TaskStatus" : {
-      "c2jName" : "TaskStatus",
-      "customization" : {
-        "artificialResultWrapper" : null,
-        "skipGeneratingMarshaller" : false,
-        "skipGeneratingModelClass" : false,
-        "skipGeneratingUnmarshaller" : false
-      },
-      "deprecated" : false,
-      "documentation" : "",
-      "endpointDiscoveryMembers" : null,
-      "enums" : [ {
-        "name" : "RUNNING",
-        "value" : "RUNNING"
-      }, {
-        "name" : "FAILED",
-        "value" : "FAILED"
-      }, {
-        "name" : "CANCELLING",
-        "value" : "CANCELLING"
-      }, {
-        "name" : "CANCELLED",
-        "value" : "CANCELLED"
-      }, {
-        "name" : "COMPLETED",
-        "value" : "COMPLETED"
-      } ],
-      "errorCode" : null,
-      "fullyQualifiedName" : "com.amazonaws.services.sqs.enum.TaskStatus",
-      "hasHeaderMember" : false,
-      "hasPayloadMember" : false,
-      "hasRequiresLengthMember" : false,
-      "hasStatusCodeMember" : false,
-      "hasStreamingMember" : false,
-      "marshaller" : null,
-      "members" : null,
-      "membersAsMap" : { },
-      "packageName" : "com.amazonaws.services.sqs.enum",
-      "requestSignerAware" : false,
-      "requestSignerClassFqcn" : null,
-      "required" : [ ],
-      "shapeName" : "TaskStatus",
-      "signerAware" : false,
-      "signerType" : null,
-      "unmarshaller" : {
-        "flattened" : false,
-        "resultWrapper" : null
-      },
-      "variable" : {
-        "timestampFormat" : null,
-        "variableDeclarationType" : "TaskStatus",
-        "variableName" : "taskStatus",
-        "variableType" : "TaskStatus",
-        "documentation" : null,
-        "simpleType" : "TaskStatus",
-        "variableSetterType" : "TaskStatus"
       },
       "wrapper" : false
     },
