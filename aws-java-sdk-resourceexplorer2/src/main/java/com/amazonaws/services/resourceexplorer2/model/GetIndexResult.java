@@ -641,7 +641,7 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
+            sb.append("Tags: ").append("***Sensitive Data Redacted***").append(",");
         if (getType() != null)
             sb.append("Type: ").append(getType());
         sb.append("}");

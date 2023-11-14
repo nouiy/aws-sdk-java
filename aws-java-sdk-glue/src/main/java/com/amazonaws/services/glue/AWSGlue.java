@@ -315,6 +315,21 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Returns the configuration for the specified table optimizers.
+     * </p>
+     * 
+     * @param batchGetTableOptimizerRequest
+     * @return Result of the BatchGetTableOptimizer operation returned by the service.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @sample AWSGlue.BatchGetTableOptimizer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetTableOptimizer" target="_top">AWS
+     *      API Documentation</a>
+     */
+    BatchGetTableOptimizerResult batchGetTableOptimizer(BatchGetTableOptimizerRequest batchGetTableOptimizerRequest);
+
+    /**
+     * <p>
      * Returns a list of resource metadata for a given list of trigger names. After calling the
      * <code>ListTriggers</code> operation, you can call this operation to access the data to which you have been
      * granted permissions. This operation supports all IAM permissions, including permission conditions that uses tags.
@@ -1010,6 +1025,30 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Creates a new table optimizer for a specific function. <code>compaction</code> is the only currently supported
+     * optimizer type.
+     * </p>
+     * 
+     * @param createTableOptimizerRequest
+     * @return Result of the CreateTableOptimizer operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @sample AWSGlue.CreateTableOptimizer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateTableOptimizer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateTableOptimizerResult createTableOptimizer(CreateTableOptimizerRequest createTableOptimizerRequest);
+
+    /**
+     * <p>
      * Creates a new trigger.
      * </p>
      * 
@@ -1598,6 +1637,28 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     DeleteTableResult deleteTable(DeleteTableRequest deleteTableRequest);
+
+    /**
+     * <p>
+     * Deletes an optimizer and all associated metadata for a table. The optimization will no longer be performed on the
+     * table.
+     * </p>
+     * 
+     * @param deleteTableOptimizerRequest
+     * @return Result of the DeleteTableOptimizer operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @sample AWSGlue.DeleteTableOptimizer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteTableOptimizer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteTableOptimizerResult deleteTableOptimizer(DeleteTableOptimizerRequest deleteTableOptimizerRequest);
 
     /**
      * <p>
@@ -2811,6 +2872,27 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Returns the configuration of all optimizers associated with a specified table.
+     * </p>
+     * 
+     * @param getTableOptimizerRequest
+     * @return Result of the GetTableOptimizer operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @sample AWSGlue.GetTableOptimizer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTableOptimizer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetTableOptimizerResult getTableOptimizer(GetTableOptimizerRequest getTableOptimizerRequest);
+
+    /**
+     * <p>
      * Retrieves a specified version of a table.
      * </p>
      * 
@@ -3565,6 +3647,27 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Lists the history of previous optimizer runs for a specific table.
+     * </p>
+     * 
+     * @param listTableOptimizerRunsRequest
+     * @return Result of the ListTableOptimizerRuns operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @sample AWSGlue.ListTableOptimizerRuns
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListTableOptimizerRuns" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListTableOptimizerRunsResult listTableOptimizerRuns(ListTableOptimizerRunsRequest listTableOptimizerRunsRequest);
+
+    /**
+     * <p>
      * Retrieves the names of all trigger resources in this Amazon Web Services account, or the resources with the
      * specified tag. This operation allows you to see which resources are available in your account, and their names.
      * </p>
@@ -3981,6 +4084,9 @@ public interface AWSGlue {
      * Starts a recommendation run that is used to generate rules when you don't know what rules to write. Glue Data
      * Quality analyzes the data and comes up with recommendations for a potential ruleset. You can then triage the
      * ruleset and modify the generated ruleset to your liking.
+     * </p>
+     * <p>
+     * Recommendation runs are automatically deleted after 90 days.
      * </p>
      * 
      * @param startDataQualityRuleRecommendationRunRequest
@@ -4872,6 +4978,27 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     UpdateTableResult updateTable(UpdateTableRequest updateTableRequest);
+
+    /**
+     * <p>
+     * Updates the configuration for an existing table optimizer.
+     * </p>
+     * 
+     * @param updateTableOptimizerRequest
+     * @return Result of the UpdateTableOptimizer operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @sample AWSGlue.UpdateTableOptimizer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateTableOptimizer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateTableOptimizerResult updateTableOptimizer(UpdateTableOptimizerRequest updateTableOptimizerRequest);
 
     /**
      * <p>

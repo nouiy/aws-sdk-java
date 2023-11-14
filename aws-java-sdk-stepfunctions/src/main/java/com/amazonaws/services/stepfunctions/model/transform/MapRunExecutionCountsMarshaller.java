@@ -43,6 +43,10 @@ public class MapRunExecutionCountsMarshaller {
             .marshallLocationName("total").build();
     private static final MarshallingInfo<Long> RESULTSWRITTEN_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resultsWritten").build();
+    private static final MarshallingInfo<Long> FAILURESNOTREDRIVABLE_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failuresNotRedrivable").build();
+    private static final MarshallingInfo<Long> PENDINGREDRIVE_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pendingRedrive").build();
 
     private static final MapRunExecutionCountsMarshaller instance = new MapRunExecutionCountsMarshaller();
 
@@ -68,6 +72,8 @@ public class MapRunExecutionCountsMarshaller {
             protocolMarshaller.marshall(mapRunExecutionCounts.getAborted(), ABORTED_BINDING);
             protocolMarshaller.marshall(mapRunExecutionCounts.getTotal(), TOTAL_BINDING);
             protocolMarshaller.marshall(mapRunExecutionCounts.getResultsWritten(), RESULTSWRITTEN_BINDING);
+            protocolMarshaller.marshall(mapRunExecutionCounts.getFailuresNotRedrivable(), FAILURESNOTREDRIVABLE_BINDING);
+            protocolMarshaller.marshall(mapRunExecutionCounts.getPendingRedrive(), PENDINGREDRIVE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

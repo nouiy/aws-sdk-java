@@ -1001,6 +1001,29 @@ public interface AWSBackup {
 
     /**
      * <p>
+     * This is a request for a summary of backup jobs created or running within the most recent 30 days. You can include
+     * parameters AccountID, State, ResourceType, MessageCategory, AggregationPeriod, MaxResults, or NextToken to filter
+     * results.
+     * </p>
+     * <p>
+     * This request returns a summary that contains Region, Account, State, ResourceType, MessageCategory, StartTime,
+     * EndTime, and Count of included jobs.
+     * </p>
+     * 
+     * @param listBackupJobSummariesRequest
+     * @return Result of the ListBackupJobSummaries operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.ListBackupJobSummaries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListBackupJobSummaries" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListBackupJobSummariesResult listBackupJobSummaries(ListBackupJobSummariesRequest listBackupJobSummariesRequest);
+
+    /**
+     * <p>
      * Returns a list of existing backup jobs for an authenticated account for the last 30 days. For a longer period of
      * time, consider using these <a
      * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">monitoring tools</a>.
@@ -1126,6 +1149,29 @@ public interface AWSBackup {
      *      Documentation</a>
      */
     ListBackupVaultsResult listBackupVaults(ListBackupVaultsRequest listBackupVaultsRequest);
+
+    /**
+     * <p>
+     * This request obtains a list of copy jobs created or running within the the most recent 30 days. You can include
+     * parameters AccountID, State, ResourceType, MessageCategory, AggregationPeriod, MaxResults, or NextToken to filter
+     * results.
+     * </p>
+     * <p>
+     * This request returns a summary that contains Region, Account, State, RestourceType, MessageCategory, StartTime,
+     * EndTime, and Count of included jobs.
+     * </p>
+     * 
+     * @param listCopyJobSummariesRequest
+     * @return Result of the ListCopyJobSummaries operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.ListCopyJobSummaries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListCopyJobSummaries" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListCopyJobSummariesResult listCopyJobSummaries(ListCopyJobSummariesRequest listCopyJobSummariesRequest);
 
     /**
      * <p>
@@ -1319,6 +1365,28 @@ public interface AWSBackup {
      *      Documentation</a>
      */
     ListReportPlansResult listReportPlans(ListReportPlansRequest listReportPlansRequest);
+
+    /**
+     * <p>
+     * This request obtains a summary of restore jobs created or running within the the most recent 30 days. You can
+     * include parameters AccountID, State, ResourceType, AggregationPeriod, MaxResults, or NextToken to filter results.
+     * </p>
+     * <p>
+     * This request returns a summary that contains Region, Account, State, RestourceType, MessageCategory, StartTime,
+     * EndTime, and Count of included jobs.
+     * </p>
+     * 
+     * @param listRestoreJobSummariesRequest
+     * @return Result of the ListRestoreJobSummaries operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.ListRestoreJobSummaries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreJobSummaries" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListRestoreJobSummariesResult listRestoreJobSummaries(ListRestoreJobSummariesRequest listRestoreJobSummariesRequest);
 
     /**
      * <p>

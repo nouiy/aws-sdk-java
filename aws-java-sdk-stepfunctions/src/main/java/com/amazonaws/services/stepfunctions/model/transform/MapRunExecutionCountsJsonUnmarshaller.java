@@ -80,6 +80,14 @@ public class MapRunExecutionCountsJsonUnmarshaller implements Unmarshaller<MapRu
                     context.nextToken();
                     mapRunExecutionCounts.setResultsWritten(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("failuresNotRedrivable", targetDepth)) {
+                    context.nextToken();
+                    mapRunExecutionCounts.setFailuresNotRedrivable(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("pendingRedrive", targetDepth)) {
+                    context.nextToken();
+                    mapRunExecutionCounts.setPendingRedrive(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -92,7 +92,8 @@ public interface AWSResourceExplorer2 {
      *         and try again.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.AssociateDefaultView
@@ -117,7 +118,8 @@ public interface AWSResourceExplorer2 {
      *         The principal making the request isn't permitted to perform the operation.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.BatchGetView
@@ -200,11 +202,20 @@ public interface AWSResourceExplorer2 {
      *         You provided an invalid value for one of the operation's parameters. Check the syntax for the operation,
      *         and try again.
      * @throws ConflictException
-     *         The request failed because either you specified parameters that didn’t match the original request, or you
-     *         attempted to create a view with a name that already exists in this Amazon Web Services Region.
+     *         If you attempted to create a view, then the request failed because either you specified parameters that
+     *         didn’t match the original request, or you attempted to create a view with a name that already exists in
+     *         this Amazon Web Services Region.</p>
+     *         <p>
+     *         If you attempted to create an index, then the request failed because either you specified parameters that
+     *         didn't match the original request, or an index already exists in the current Amazon Web Services Region.
+     *         </p>
+     *         <p>
+     *         If you attempted to update an index type to <code>AGGREGATOR</code>, then the request failed because you
+     *         already have an <code>AGGREGATOR</code> index in a different Amazon Web Services Region.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.CreateIndex
@@ -236,15 +247,24 @@ public interface AWSResourceExplorer2 {
      *         You provided an invalid value for one of the operation's parameters. Check the syntax for the operation,
      *         and try again.
      * @throws ConflictException
-     *         The request failed because either you specified parameters that didn’t match the original request, or you
-     *         attempted to create a view with a name that already exists in this Amazon Web Services Region.
+     *         If you attempted to create a view, then the request failed because either you specified parameters that
+     *         didn’t match the original request, or you attempted to create a view with a name that already exists in
+     *         this Amazon Web Services Region.</p>
+     *         <p>
+     *         If you attempted to create an index, then the request failed because either you specified parameters that
+     *         didn't match the original request, or an index already exists in the current Amazon Web Services Region.
+     *         </p>
+     *         <p>
+     *         If you attempted to update an index type to <code>AGGREGATOR</code>, then the request failed because you
+     *         already have an <code>AGGREGATOR</code> index in a different Amazon Web Services Region.
      * @throws ServiceQuotaExceededException
      *         The request failed because it exceeds a service quota.
      * @throws UnauthorizedException
      *         The principal making the request isn't permitted to perform the operation.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.CreateView
@@ -281,7 +301,8 @@ public interface AWSResourceExplorer2 {
      *         and try again.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.DeleteIndex
@@ -314,7 +335,8 @@ public interface AWSResourceExplorer2 {
      *         The principal making the request isn't permitted to perform the operation.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.DeleteView
@@ -336,6 +358,9 @@ public interface AWSResourceExplorer2 {
      * 
      * @param disassociateDefaultViewRequest
      * @return Result of the DisassociateDefaultView operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         You specified a resource that doesn't exist. Check the ID or ARN that you used to identity the resource,
+     *         and try again.
      * @throws InternalServerException
      *         The request failed because of internal service error. Try your request again later.
      * @throws ValidationException
@@ -343,7 +368,8 @@ public interface AWSResourceExplorer2 {
      *         and try again.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.DisassociateDefaultView
@@ -351,6 +377,34 @@ public interface AWSResourceExplorer2 {
      *      target="_top">AWS API Documentation</a>
      */
     DisassociateDefaultViewResult disassociateDefaultView(DisassociateDefaultViewRequest disassociateDefaultViewRequest);
+
+    /**
+     * <p>
+     * Retrieves the status of your account's Amazon Web Services service access, and validates the service linked role
+     * required to access the multi-account search feature. Only the management account or a delegated administrator
+     * with service access enabled can invoke this API call.
+     * </p>
+     * 
+     * @param getAccountLevelServiceConfigurationRequest
+     * @return Result of the GetAccountLevelServiceConfiguration operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         You specified a resource that doesn't exist. Check the ID or ARN that you used to identity the resource,
+     *         and try again.
+     * @throws InternalServerException
+     *         The request failed because of internal service error. Try your request again later.
+     * @throws ThrottlingException
+     *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
+     * @throws AccessDeniedException
+     *         The credentials that you used to call this operation don't have the minimum required permissions.
+     * @sample AWSResourceExplorer2.GetAccountLevelServiceConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/resource-explorer-2-2022-07-28/GetAccountLevelServiceConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetAccountLevelServiceConfigurationResult getAccountLevelServiceConfiguration(
+            GetAccountLevelServiceConfigurationRequest getAccountLevelServiceConfigurationRequest);
 
     /**
      * <p>
@@ -370,7 +424,8 @@ public interface AWSResourceExplorer2 {
      *         and try again.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.GetDefaultView
@@ -397,7 +452,8 @@ public interface AWSResourceExplorer2 {
      *         and try again.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.GetIndex
@@ -425,7 +481,8 @@ public interface AWSResourceExplorer2 {
      *         The principal making the request isn't permitted to perform the operation.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.GetView
@@ -449,7 +506,8 @@ public interface AWSResourceExplorer2 {
      *         and try again.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.ListIndexes
@@ -457,6 +515,32 @@ public interface AWSResourceExplorer2 {
      *      target="_top">AWS API Documentation</a>
      */
     ListIndexesResult listIndexes(ListIndexesRequest listIndexesRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of a member's indexes in all Amazon Web Services Regions that are currently collecting resource
+     * information for Amazon Web Services Resource Explorer. Only the management account or a delegated administrator
+     * with service access enabled can invoke this API call.
+     * </p>
+     * 
+     * @param listIndexesForMembersRequest
+     * @return Result of the ListIndexesForMembers operation returned by the service.
+     * @throws InternalServerException
+     *         The request failed because of internal service error. Try your request again later.
+     * @throws ValidationException
+     *         You provided an invalid value for one of the operation's parameters. Check the syntax for the operation,
+     *         and try again.
+     * @throws ThrottlingException
+     *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
+     * @throws AccessDeniedException
+     *         The credentials that you used to call this operation don't have the minimum required permissions.
+     * @sample AWSResourceExplorer2.ListIndexesForMembers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/resource-explorer-2-2022-07-28/ListIndexesForMembers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListIndexesForMembersResult listIndexesForMembers(ListIndexesForMembersRequest listIndexesForMembersRequest);
 
     /**
      * <p>
@@ -472,7 +556,8 @@ public interface AWSResourceExplorer2 {
      *         and try again.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.ListSupportedResourceTypes
@@ -500,7 +585,8 @@ public interface AWSResourceExplorer2 {
      *         The principal making the request isn't permitted to perform the operation.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.ListTagsForResource
@@ -532,7 +618,8 @@ public interface AWSResourceExplorer2 {
      *         and try again.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.ListViews
@@ -577,7 +664,8 @@ public interface AWSResourceExplorer2 {
      *         The principal making the request isn't permitted to perform the operation.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.Search
@@ -599,13 +687,22 @@ public interface AWSResourceExplorer2 {
      *         You provided an invalid value for one of the operation's parameters. Check the syntax for the operation,
      *         and try again.
      * @throws ConflictException
-     *         The request failed because either you specified parameters that didn’t match the original request, or you
-     *         attempted to create a view with a name that already exists in this Amazon Web Services Region.
+     *         If you attempted to create a view, then the request failed because either you specified parameters that
+     *         didn’t match the original request, or you attempted to create a view with a name that already exists in
+     *         this Amazon Web Services Region.</p>
+     *         <p>
+     *         If you attempted to create an index, then the request failed because either you specified parameters that
+     *         didn't match the original request, or an index already exists in the current Amazon Web Services Region.
+     *         </p>
+     *         <p>
+     *         If you attempted to update an index type to <code>AGGREGATOR</code>, then the request failed because you
+     *         already have an <code>AGGREGATOR</code> index in a different Amazon Web Services Region.
      * @throws UnauthorizedException
      *         The principal making the request isn't permitted to perform the operation.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.TagResource
@@ -633,7 +730,8 @@ public interface AWSResourceExplorer2 {
      *         The principal making the request isn't permitted to perform the operation.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.UntagResource
@@ -716,13 +814,22 @@ public interface AWSResourceExplorer2 {
      *         You provided an invalid value for one of the operation's parameters. Check the syntax for the operation,
      *         and try again.
      * @throws ConflictException
-     *         The request failed because either you specified parameters that didn’t match the original request, or you
-     *         attempted to create a view with a name that already exists in this Amazon Web Services Region.
+     *         If you attempted to create a view, then the request failed because either you specified parameters that
+     *         didn’t match the original request, or you attempted to create a view with a name that already exists in
+     *         this Amazon Web Services Region.</p>
+     *         <p>
+     *         If you attempted to create an index, then the request failed because either you specified parameters that
+     *         didn't match the original request, or an index already exists in the current Amazon Web Services Region.
+     *         </p>
+     *         <p>
+     *         If you attempted to update an index type to <code>AGGREGATOR</code>, then the request failed because you
+     *         already have an <code>AGGREGATOR</code> index in a different Amazon Web Services Region.
      * @throws ServiceQuotaExceededException
      *         The request failed because it exceeds a service quota.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.UpdateIndexType
@@ -750,7 +857,8 @@ public interface AWSResourceExplorer2 {
      *         The principal making the request isn't permitted to perform the operation.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
+     *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/quotas.html">Quotas for Resource
+     *         Explorer</a>.
      * @throws AccessDeniedException
      *         The credentials that you used to call this operation don't have the minimum required permissions.
      * @sample AWSResourceExplorer2.UpdateView

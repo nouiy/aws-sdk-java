@@ -88,6 +88,14 @@ public class ExecutionListItemJsonUnmarshaller implements Unmarshaller<Execution
                     context.nextToken();
                     executionListItem.setStateMachineAliasArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("redriveCount", targetDepth)) {
+                    context.nextToken();
+                    executionListItem.setRedriveCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("redriveDate", targetDepth)) {
+                    context.nextToken();
+                    executionListItem.setRedriveDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

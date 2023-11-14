@@ -35,6 +35,8 @@ public class UpdatePipeRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Enrichment").build();
     private static final MarshallingInfo<StructuredPojo> ENRICHMENTPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnrichmentParameters").build();
+    private static final MarshallingInfo<StructuredPojo> LOGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogConfiguration").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("Name").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -66,6 +68,7 @@ public class UpdatePipeRequestMarshaller {
             protocolMarshaller.marshall(updatePipeRequest.getDesiredState(), DESIREDSTATE_BINDING);
             protocolMarshaller.marshall(updatePipeRequest.getEnrichment(), ENRICHMENT_BINDING);
             protocolMarshaller.marshall(updatePipeRequest.getEnrichmentParameters(), ENRICHMENTPARAMETERS_BINDING);
+            protocolMarshaller.marshall(updatePipeRequest.getLogConfiguration(), LOGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updatePipeRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(updatePipeRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(updatePipeRequest.getSourceParameters(), SOURCEPARAMETERS_BINDING);

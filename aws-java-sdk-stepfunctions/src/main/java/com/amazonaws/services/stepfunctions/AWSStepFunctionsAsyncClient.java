@@ -49,6 +49,13 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * information about Step Functions, see the <i> <a
  * href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">Step Functions Developer Guide</a> </i>.
  * </p>
+ * <important>
+ * <p>
+ * If you use the Step Functions API actions using Amazon Web Services SDK integrations, make sure the API actions are
+ * in camel case and parameter names are in Pascal case. For example, you could use Step Functions API action
+ * <code>startSyncExecution</code> and specify its parameter as <code>StateMachineArn</code>.
+ * </p>
+ * </important>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -1017,6 +1024,39 @@ public class AWSStepFunctionsAsyncClient extends AWSStepFunctionsClient implemen
 
                 try {
                     result = executePublishStateMachineVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RedriveExecutionResult> redriveExecutionAsync(RedriveExecutionRequest request) {
+
+        return redriveExecutionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RedriveExecutionResult> redriveExecutionAsync(final RedriveExecutionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RedriveExecutionRequest, RedriveExecutionResult> asyncHandler) {
+        final RedriveExecutionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RedriveExecutionResult>() {
+            @Override
+            public RedriveExecutionResult call() throws Exception {
+                RedriveExecutionResult result = null;
+
+                try {
+                    result = executeRedriveExecution(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

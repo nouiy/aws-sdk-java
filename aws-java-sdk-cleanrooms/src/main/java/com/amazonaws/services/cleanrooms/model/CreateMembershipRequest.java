@@ -33,7 +33,7 @@ public class CreateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
     private String collaborationIdentifier;
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      */
     private String queryLogStatus;
@@ -51,6 +51,19 @@ public class CreateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private MembershipProtectedQueryResultConfiguration defaultResultConfiguration;
+    /**
+     * <p>
+     * The payment responsibilities accepted by the collaboration member.
+     * </p>
+     * <p>
+     * Not required if the collaboration member has the member ability to run queries.
+     * </p>
+     * <p>
+     * Required if the collaboration member doesn't have the member ability to run queries but is configured as a payer
+     * by the collaboration creator.
+     * </p>
+     */
+    private MembershipPaymentConfiguration paymentConfiguration;
 
     /**
      * <p>
@@ -94,11 +107,11 @@ public class CreateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
      * @param queryLogStatus
-     *        An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     *        An indicator as to whether query logging has been enabled or disabled for the membership.
      * @see MembershipQueryLogStatus
      */
 
@@ -108,10 +121,10 @@ public class CreateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
-     * @return An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * @return An indicator as to whether query logging has been enabled or disabled for the membership.
      * @see MembershipQueryLogStatus
      */
 
@@ -121,11 +134,11 @@ public class CreateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
      * @param queryLogStatus
-     *        An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     *        An indicator as to whether query logging has been enabled or disabled for the membership.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MembershipQueryLogStatus
      */
@@ -137,11 +150,11 @@ public class CreateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
      * @param queryLogStatus
-     *        An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     *        An indicator as to whether query logging has been enabled or disabled for the membership.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MembershipQueryLogStatus
      */
@@ -272,6 +285,85 @@ public class CreateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The payment responsibilities accepted by the collaboration member.
+     * </p>
+     * <p>
+     * Not required if the collaboration member has the member ability to run queries.
+     * </p>
+     * <p>
+     * Required if the collaboration member doesn't have the member ability to run queries but is configured as a payer
+     * by the collaboration creator.
+     * </p>
+     * 
+     * @param paymentConfiguration
+     *        The payment responsibilities accepted by the collaboration member.</p>
+     *        <p>
+     *        Not required if the collaboration member has the member ability to run queries.
+     *        </p>
+     *        <p>
+     *        Required if the collaboration member doesn't have the member ability to run queries but is configured as a
+     *        payer by the collaboration creator.
+     */
+
+    public void setPaymentConfiguration(MembershipPaymentConfiguration paymentConfiguration) {
+        this.paymentConfiguration = paymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The payment responsibilities accepted by the collaboration member.
+     * </p>
+     * <p>
+     * Not required if the collaboration member has the member ability to run queries.
+     * </p>
+     * <p>
+     * Required if the collaboration member doesn't have the member ability to run queries but is configured as a payer
+     * by the collaboration creator.
+     * </p>
+     * 
+     * @return The payment responsibilities accepted by the collaboration member.</p>
+     *         <p>
+     *         Not required if the collaboration member has the member ability to run queries.
+     *         </p>
+     *         <p>
+     *         Required if the collaboration member doesn't have the member ability to run queries but is configured as
+     *         a payer by the collaboration creator.
+     */
+
+    public MembershipPaymentConfiguration getPaymentConfiguration() {
+        return this.paymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The payment responsibilities accepted by the collaboration member.
+     * </p>
+     * <p>
+     * Not required if the collaboration member has the member ability to run queries.
+     * </p>
+     * <p>
+     * Required if the collaboration member doesn't have the member ability to run queries but is configured as a payer
+     * by the collaboration creator.
+     * </p>
+     * 
+     * @param paymentConfiguration
+     *        The payment responsibilities accepted by the collaboration member.</p>
+     *        <p>
+     *        Not required if the collaboration member has the member ability to run queries.
+     *        </p>
+     *        <p>
+     *        Required if the collaboration member doesn't have the member ability to run queries but is configured as a
+     *        payer by the collaboration creator.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateMembershipRequest withPaymentConfiguration(MembershipPaymentConfiguration paymentConfiguration) {
+        setPaymentConfiguration(paymentConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -290,7 +382,9 @@ public class CreateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getDefaultResultConfiguration() != null)
-            sb.append("DefaultResultConfiguration: ").append(getDefaultResultConfiguration());
+            sb.append("DefaultResultConfiguration: ").append(getDefaultResultConfiguration()).append(",");
+        if (getPaymentConfiguration() != null)
+            sb.append("PaymentConfiguration: ").append(getPaymentConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -321,6 +415,10 @@ public class CreateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getDefaultResultConfiguration() != null && other.getDefaultResultConfiguration().equals(this.getDefaultResultConfiguration()) == false)
             return false;
+        if (other.getPaymentConfiguration() == null ^ this.getPaymentConfiguration() == null)
+            return false;
+        if (other.getPaymentConfiguration() != null && other.getPaymentConfiguration().equals(this.getPaymentConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -333,6 +431,7 @@ public class CreateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getQueryLogStatus() == null) ? 0 : getQueryLogStatus().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getDefaultResultConfiguration() == null) ? 0 : getDefaultResultConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getPaymentConfiguration() == null) ? 0 : getPaymentConfiguration().hashCode());
         return hashCode;
     }
 

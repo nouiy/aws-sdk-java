@@ -163,6 +163,115 @@ public class DescribeExecutionResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      */
     private String stateMachineAliasArn;
+    /**
+     * <p>
+     * The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     */
+    private Integer redriveCount;
+    /**
+     * <p>
+     * The date the execution was last redriven. If you have not yet redriven an execution, the <code>redriveDate</code>
+     * is null.
+     * </p>
+     * <p>
+     * The <code>redriveDate</code> is unavailable if you redrive a Map Run that starts child workflow executions of
+     * type <code>EXPRESS</code>.
+     * </p>
+     */
+    private java.util.Date redriveDate;
+    /**
+     * <p>
+     * Indicates whether or not an execution can be redriven at a given point in time.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For executions of type <code>STANDARD</code>, <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code> if
+     * calling the <a>RedriveExecution</a> API action would return the <code>ExecutionNotRedrivable</code> error.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>STANDARD</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>EXPRESS</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * <p>
+     * You can redrive failed or timed out <code>EXPRESS</code> workflows <i>only if</i> they're a part of a Map Run.
+     * When you <a href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redrive</a> the Map
+     * Run, these workflows are restarted using the <a>StartExecution</a> API action.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String redriveStatus;
+    /**
+     * <p>
+     * When <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code>, <code>redriveStatusReason</code> specifies the
+     * reason why an execution cannot be redriven.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For executions of type <code>STANDARD</code>, or for a Distributed Map that includes child workflows of type
+     * <code>STANDARD</code>, <code>redriveStatusReason</code> can include one of the following reasons:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>State machine is in DELETING status</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution is RUNNING and cannot be redriven</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution is SUCCEEDED and cannot be redriven</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution was started before the launch of RedriveExecution</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution history event limit exceeded</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution has exceeded the max execution time</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution redrivable period exceeded</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     * <code>redriveStatusReason</code> is only returned if the child workflows are not redrivable. This happens when
+     * the child workflow executions have completed successfully.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String redriveStatusReason;
 
     /**
      * <p>
@@ -1107,6 +1216,804 @@ public class DescribeExecutionResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     * 
+     * @param redriveCount
+     *        The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     *        <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending
+     *        to be redriven.
+     */
+
+    public void setRedriveCount(Integer redriveCount) {
+        this.redriveCount = redriveCount;
+    }
+
+    /**
+     * <p>
+     * The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     * 
+     * @return The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     *         <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are
+     *         pending to be redriven.
+     */
+
+    public Integer getRedriveCount() {
+        return this.redriveCount;
+    }
+
+    /**
+     * <p>
+     * The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     * 
+     * @param redriveCount
+     *        The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     *        <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending
+     *        to be redriven.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeExecutionResult withRedriveCount(Integer redriveCount) {
+        setRedriveCount(redriveCount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date the execution was last redriven. If you have not yet redriven an execution, the <code>redriveDate</code>
+     * is null.
+     * </p>
+     * <p>
+     * The <code>redriveDate</code> is unavailable if you redrive a Map Run that starts child workflow executions of
+     * type <code>EXPRESS</code>.
+     * </p>
+     * 
+     * @param redriveDate
+     *        The date the execution was last redriven. If you have not yet redriven an execution, the
+     *        <code>redriveDate</code> is null.</p>
+     *        <p>
+     *        The <code>redriveDate</code> is unavailable if you redrive a Map Run that starts child workflow executions
+     *        of type <code>EXPRESS</code>.
+     */
+
+    public void setRedriveDate(java.util.Date redriveDate) {
+        this.redriveDate = redriveDate;
+    }
+
+    /**
+     * <p>
+     * The date the execution was last redriven. If you have not yet redriven an execution, the <code>redriveDate</code>
+     * is null.
+     * </p>
+     * <p>
+     * The <code>redriveDate</code> is unavailable if you redrive a Map Run that starts child workflow executions of
+     * type <code>EXPRESS</code>.
+     * </p>
+     * 
+     * @return The date the execution was last redriven. If you have not yet redriven an execution, the
+     *         <code>redriveDate</code> is null.</p>
+     *         <p>
+     *         The <code>redriveDate</code> is unavailable if you redrive a Map Run that starts child workflow
+     *         executions of type <code>EXPRESS</code>.
+     */
+
+    public java.util.Date getRedriveDate() {
+        return this.redriveDate;
+    }
+
+    /**
+     * <p>
+     * The date the execution was last redriven. If you have not yet redriven an execution, the <code>redriveDate</code>
+     * is null.
+     * </p>
+     * <p>
+     * The <code>redriveDate</code> is unavailable if you redrive a Map Run that starts child workflow executions of
+     * type <code>EXPRESS</code>.
+     * </p>
+     * 
+     * @param redriveDate
+     *        The date the execution was last redriven. If you have not yet redriven an execution, the
+     *        <code>redriveDate</code> is null.</p>
+     *        <p>
+     *        The <code>redriveDate</code> is unavailable if you redrive a Map Run that starts child workflow executions
+     *        of type <code>EXPRESS</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeExecutionResult withRedriveDate(java.util.Date redriveDate) {
+        setRedriveDate(redriveDate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether or not an execution can be redriven at a given point in time.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For executions of type <code>STANDARD</code>, <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code> if
+     * calling the <a>RedriveExecution</a> API action would return the <code>ExecutionNotRedrivable</code> error.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>STANDARD</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>EXPRESS</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * <p>
+     * You can redrive failed or timed out <code>EXPRESS</code> workflows <i>only if</i> they're a part of a Map Run.
+     * When you <a href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redrive</a> the Map
+     * Run, these workflows are restarted using the <a>StartExecution</a> API action.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param redriveStatus
+     *        Indicates whether or not an execution can be redriven at a given point in time.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For executions of type <code>STANDARD</code>, <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code> if
+     *        calling the <a>RedriveExecution</a> API action would return the <code>ExecutionNotRedrivable</code> error.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For a Distributed Map that includes child workflows of type <code>STANDARD</code>,
+     *        <code>redriveStatus</code> indicates whether or not the Map Run can redrive child workflow executions.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     *        <code>redriveStatus</code> indicates whether or not the Map Run can redrive child workflow executions.
+     *        </p>
+     *        <p>
+     *        You can redrive failed or timed out <code>EXPRESS</code> workflows <i>only if</i> they're a part of a Map
+     *        Run. When you <a
+     *        href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redrive</a> the Map Run,
+     *        these workflows are restarted using the <a>StartExecution</a> API action.
+     *        </p>
+     *        </li>
+     * @see ExecutionRedriveStatus
+     */
+
+    public void setRedriveStatus(String redriveStatus) {
+        this.redriveStatus = redriveStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates whether or not an execution can be redriven at a given point in time.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For executions of type <code>STANDARD</code>, <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code> if
+     * calling the <a>RedriveExecution</a> API action would return the <code>ExecutionNotRedrivable</code> error.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>STANDARD</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>EXPRESS</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * <p>
+     * You can redrive failed or timed out <code>EXPRESS</code> workflows <i>only if</i> they're a part of a Map Run.
+     * When you <a href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redrive</a> the Map
+     * Run, these workflows are restarted using the <a>StartExecution</a> API action.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Indicates whether or not an execution can be redriven at a given point in time.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For executions of type <code>STANDARD</code>, <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code>
+     *         if calling the <a>RedriveExecution</a> API action would return the <code>ExecutionNotRedrivable</code>
+     *         error.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For a Distributed Map that includes child workflows of type <code>STANDARD</code>,
+     *         <code>redriveStatus</code> indicates whether or not the Map Run can redrive child workflow executions.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     *         <code>redriveStatus</code> indicates whether or not the Map Run can redrive child workflow executions.
+     *         </p>
+     *         <p>
+     *         You can redrive failed or timed out <code>EXPRESS</code> workflows <i>only if</i> they're a part of a Map
+     *         Run. When you <a
+     *         href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redrive</a> the Map Run,
+     *         these workflows are restarted using the <a>StartExecution</a> API action.
+     *         </p>
+     *         </li>
+     * @see ExecutionRedriveStatus
+     */
+
+    public String getRedriveStatus() {
+        return this.redriveStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates whether or not an execution can be redriven at a given point in time.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For executions of type <code>STANDARD</code>, <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code> if
+     * calling the <a>RedriveExecution</a> API action would return the <code>ExecutionNotRedrivable</code> error.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>STANDARD</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>EXPRESS</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * <p>
+     * You can redrive failed or timed out <code>EXPRESS</code> workflows <i>only if</i> they're a part of a Map Run.
+     * When you <a href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redrive</a> the Map
+     * Run, these workflows are restarted using the <a>StartExecution</a> API action.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param redriveStatus
+     *        Indicates whether or not an execution can be redriven at a given point in time.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For executions of type <code>STANDARD</code>, <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code> if
+     *        calling the <a>RedriveExecution</a> API action would return the <code>ExecutionNotRedrivable</code> error.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For a Distributed Map that includes child workflows of type <code>STANDARD</code>,
+     *        <code>redriveStatus</code> indicates whether or not the Map Run can redrive child workflow executions.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     *        <code>redriveStatus</code> indicates whether or not the Map Run can redrive child workflow executions.
+     *        </p>
+     *        <p>
+     *        You can redrive failed or timed out <code>EXPRESS</code> workflows <i>only if</i> they're a part of a Map
+     *        Run. When you <a
+     *        href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redrive</a> the Map Run,
+     *        these workflows are restarted using the <a>StartExecution</a> API action.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionRedriveStatus
+     */
+
+    public DescribeExecutionResult withRedriveStatus(String redriveStatus) {
+        setRedriveStatus(redriveStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether or not an execution can be redriven at a given point in time.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For executions of type <code>STANDARD</code>, <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code> if
+     * calling the <a>RedriveExecution</a> API action would return the <code>ExecutionNotRedrivable</code> error.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>STANDARD</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>EXPRESS</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * <p>
+     * You can redrive failed or timed out <code>EXPRESS</code> workflows <i>only if</i> they're a part of a Map Run.
+     * When you <a href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redrive</a> the Map
+     * Run, these workflows are restarted using the <a>StartExecution</a> API action.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param redriveStatus
+     *        Indicates whether or not an execution can be redriven at a given point in time.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For executions of type <code>STANDARD</code>, <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code> if
+     *        calling the <a>RedriveExecution</a> API action would return the <code>ExecutionNotRedrivable</code> error.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For a Distributed Map that includes child workflows of type <code>STANDARD</code>,
+     *        <code>redriveStatus</code> indicates whether or not the Map Run can redrive child workflow executions.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     *        <code>redriveStatus</code> indicates whether or not the Map Run can redrive child workflow executions.
+     *        </p>
+     *        <p>
+     *        You can redrive failed or timed out <code>EXPRESS</code> workflows <i>only if</i> they're a part of a Map
+     *        Run. When you <a
+     *        href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redrive</a> the Map Run,
+     *        these workflows are restarted using the <a>StartExecution</a> API action.
+     *        </p>
+     *        </li>
+     * @see ExecutionRedriveStatus
+     */
+
+    public void setRedriveStatus(ExecutionRedriveStatus redriveStatus) {
+        withRedriveStatus(redriveStatus);
+    }
+
+    /**
+     * <p>
+     * Indicates whether or not an execution can be redriven at a given point in time.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For executions of type <code>STANDARD</code>, <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code> if
+     * calling the <a>RedriveExecution</a> API action would return the <code>ExecutionNotRedrivable</code> error.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>STANDARD</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>EXPRESS</code>, <code>redriveStatus</code>
+     * indicates whether or not the Map Run can redrive child workflow executions.
+     * </p>
+     * <p>
+     * You can redrive failed or timed out <code>EXPRESS</code> workflows <i>only if</i> they're a part of a Map Run.
+     * When you <a href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redrive</a> the Map
+     * Run, these workflows are restarted using the <a>StartExecution</a> API action.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param redriveStatus
+     *        Indicates whether or not an execution can be redriven at a given point in time.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For executions of type <code>STANDARD</code>, <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code> if
+     *        calling the <a>RedriveExecution</a> API action would return the <code>ExecutionNotRedrivable</code> error.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For a Distributed Map that includes child workflows of type <code>STANDARD</code>,
+     *        <code>redriveStatus</code> indicates whether or not the Map Run can redrive child workflow executions.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     *        <code>redriveStatus</code> indicates whether or not the Map Run can redrive child workflow executions.
+     *        </p>
+     *        <p>
+     *        You can redrive failed or timed out <code>EXPRESS</code> workflows <i>only if</i> they're a part of a Map
+     *        Run. When you <a
+     *        href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redrive</a> the Map Run,
+     *        these workflows are restarted using the <a>StartExecution</a> API action.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionRedriveStatus
+     */
+
+    public DescribeExecutionResult withRedriveStatus(ExecutionRedriveStatus redriveStatus) {
+        this.redriveStatus = redriveStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * When <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code>, <code>redriveStatusReason</code> specifies the
+     * reason why an execution cannot be redriven.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For executions of type <code>STANDARD</code>, or for a Distributed Map that includes child workflows of type
+     * <code>STANDARD</code>, <code>redriveStatusReason</code> can include one of the following reasons:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>State machine is in DELETING status</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution is RUNNING and cannot be redriven</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution is SUCCEEDED and cannot be redriven</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution was started before the launch of RedriveExecution</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution history event limit exceeded</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution has exceeded the max execution time</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution redrivable period exceeded</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     * <code>redriveStatusReason</code> is only returned if the child workflows are not redrivable. This happens when
+     * the child workflow executions have completed successfully.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param redriveStatusReason
+     *        When <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code>, <code>redriveStatusReason</code> specifies
+     *        the reason why an execution cannot be redriven.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For executions of type <code>STANDARD</code>, or for a Distributed Map that includes child workflows of
+     *        type <code>STANDARD</code>, <code>redriveStatusReason</code> can include one of the following reasons:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>State machine is in DELETING status</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution is RUNNING and cannot be redriven</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution is SUCCEEDED and cannot be redriven</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution was started before the launch of RedriveExecution</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution history event limit exceeded</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution has exceeded the max execution time</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution redrivable period exceeded</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     *        <code>redriveStatusReason</code> is only returned if the child workflows are not redrivable. This happens
+     *        when the child workflow executions have completed successfully.
+     *        </p>
+     *        </li>
+     */
+
+    public void setRedriveStatusReason(String redriveStatusReason) {
+        this.redriveStatusReason = redriveStatusReason;
+    }
+
+    /**
+     * <p>
+     * When <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code>, <code>redriveStatusReason</code> specifies the
+     * reason why an execution cannot be redriven.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For executions of type <code>STANDARD</code>, or for a Distributed Map that includes child workflows of type
+     * <code>STANDARD</code>, <code>redriveStatusReason</code> can include one of the following reasons:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>State machine is in DELETING status</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution is RUNNING and cannot be redriven</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution is SUCCEEDED and cannot be redriven</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution was started before the launch of RedriveExecution</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution history event limit exceeded</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution has exceeded the max execution time</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution redrivable period exceeded</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     * <code>redriveStatusReason</code> is only returned if the child workflows are not redrivable. This happens when
+     * the child workflow executions have completed successfully.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return When <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code>, <code>redriveStatusReason</code>
+     *         specifies the reason why an execution cannot be redriven.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For executions of type <code>STANDARD</code>, or for a Distributed Map that includes child workflows of
+     *         type <code>STANDARD</code>, <code>redriveStatusReason</code> can include one of the following reasons:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>State machine is in DELETING status</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Execution is RUNNING and cannot be redriven</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Execution is SUCCEEDED and cannot be redriven</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Execution was started before the launch of RedriveExecution</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Execution history event limit exceeded</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Execution has exceeded the max execution time</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Execution redrivable period exceeded</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     *         <code>redriveStatusReason</code> is only returned if the child workflows are not redrivable. This happens
+     *         when the child workflow executions have completed successfully.
+     *         </p>
+     *         </li>
+     */
+
+    public String getRedriveStatusReason() {
+        return this.redriveStatusReason;
+    }
+
+    /**
+     * <p>
+     * When <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code>, <code>redriveStatusReason</code> specifies the
+     * reason why an execution cannot be redriven.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For executions of type <code>STANDARD</code>, or for a Distributed Map that includes child workflows of type
+     * <code>STANDARD</code>, <code>redriveStatusReason</code> can include one of the following reasons:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>State machine is in DELETING status</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution is RUNNING and cannot be redriven</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution is SUCCEEDED and cannot be redriven</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution was started before the launch of RedriveExecution</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution history event limit exceeded</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution has exceeded the max execution time</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Execution redrivable period exceeded</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     * <code>redriveStatusReason</code> is only returned if the child workflows are not redrivable. This happens when
+     * the child workflow executions have completed successfully.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param redriveStatusReason
+     *        When <code>redriveStatus</code> is <code>NOT_REDRIVABLE</code>, <code>redriveStatusReason</code> specifies
+     *        the reason why an execution cannot be redriven.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For executions of type <code>STANDARD</code>, or for a Distributed Map that includes child workflows of
+     *        type <code>STANDARD</code>, <code>redriveStatusReason</code> can include one of the following reasons:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>State machine is in DELETING status</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution is RUNNING and cannot be redriven</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution is SUCCEEDED and cannot be redriven</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution was started before the launch of RedriveExecution</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution history event limit exceeded</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution has exceeded the max execution time</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Execution redrivable period exceeded</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For a Distributed Map that includes child workflows of type <code>EXPRESS</code>,
+     *        <code>redriveStatusReason</code> is only returned if the child workflows are not redrivable. This happens
+     *        when the child workflow executions have completed successfully.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeExecutionResult withRedriveStatusReason(String redriveStatusReason) {
+        setRedriveStatusReason(redriveStatusReason);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1149,7 +2056,15 @@ public class DescribeExecutionResult extends com.amazonaws.AmazonWebServiceResul
         if (getStateMachineVersionArn() != null)
             sb.append("StateMachineVersionArn: ").append(getStateMachineVersionArn()).append(",");
         if (getStateMachineAliasArn() != null)
-            sb.append("StateMachineAliasArn: ").append(getStateMachineAliasArn());
+            sb.append("StateMachineAliasArn: ").append(getStateMachineAliasArn()).append(",");
+        if (getRedriveCount() != null)
+            sb.append("RedriveCount: ").append(getRedriveCount()).append(",");
+        if (getRedriveDate() != null)
+            sb.append("RedriveDate: ").append(getRedriveDate()).append(",");
+        if (getRedriveStatus() != null)
+            sb.append("RedriveStatus: ").append(getRedriveStatus()).append(",");
+        if (getRedriveStatusReason() != null)
+            sb.append("RedriveStatusReason: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -1228,6 +2143,22 @@ public class DescribeExecutionResult extends com.amazonaws.AmazonWebServiceResul
             return false;
         if (other.getStateMachineAliasArn() != null && other.getStateMachineAliasArn().equals(this.getStateMachineAliasArn()) == false)
             return false;
+        if (other.getRedriveCount() == null ^ this.getRedriveCount() == null)
+            return false;
+        if (other.getRedriveCount() != null && other.getRedriveCount().equals(this.getRedriveCount()) == false)
+            return false;
+        if (other.getRedriveDate() == null ^ this.getRedriveDate() == null)
+            return false;
+        if (other.getRedriveDate() != null && other.getRedriveDate().equals(this.getRedriveDate()) == false)
+            return false;
+        if (other.getRedriveStatus() == null ^ this.getRedriveStatus() == null)
+            return false;
+        if (other.getRedriveStatus() != null && other.getRedriveStatus().equals(this.getRedriveStatus()) == false)
+            return false;
+        if (other.getRedriveStatusReason() == null ^ this.getRedriveStatusReason() == null)
+            return false;
+        if (other.getRedriveStatusReason() != null && other.getRedriveStatusReason().equals(this.getRedriveStatusReason()) == false)
+            return false;
         return true;
     }
 
@@ -1252,6 +2183,10 @@ public class DescribeExecutionResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getCause() == null) ? 0 : getCause().hashCode());
         hashCode = prime * hashCode + ((getStateMachineVersionArn() == null) ? 0 : getStateMachineVersionArn().hashCode());
         hashCode = prime * hashCode + ((getStateMachineAliasArn() == null) ? 0 : getStateMachineAliasArn().hashCode());
+        hashCode = prime * hashCode + ((getRedriveCount() == null) ? 0 : getRedriveCount().hashCode());
+        hashCode = prime * hashCode + ((getRedriveDate() == null) ? 0 : getRedriveDate().hashCode());
+        hashCode = prime * hashCode + ((getRedriveStatus() == null) ? 0 : getRedriveStatus().hashCode());
+        hashCode = prime * hashCode + ((getRedriveStatusReason() == null) ? 0 : getRedriveStatusReason().hashCode());
         return hashCode;
     }
 

@@ -21,6 +21,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * The parameters required to set up a target for your pipe.
  * </p>
+ * <p>
+ * For more information about pipe target parameters, including how to use dynamic path parameters, see <a
+ * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html">Target parameters</a> in
+ * the <i>Amazon EventBridge User Guide</i>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pipes-2015-10-07/PipeTargetParameters" target="_top">AWS API
  *      Documentation</a>
@@ -64,11 +69,14 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
      * more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript Object Notation (JSON)
      * Data Interchange Format</a>.
      * </p>
+     * <p>
+     * To remove an input template, specify an empty string.
+     * </p>
      */
     private String inputTemplate;
     /**
      * <p>
-     * The parameters for using a Kinesis stream as a source.
+     * The parameters for using a Kinesis stream as a target.
      * </p>
      */
     private PipeTargetKinesisStreamParameters kinesisStreamParameters;
@@ -81,7 +89,7 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
     /**
      * <p>
      * These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift
-     * Data API ExecuteStatement.
+     * Data API BatchExecuteStatement.
      * </p>
      */
     private PipeTargetRedshiftDataParameters redshiftDataParameters;
@@ -93,7 +101,7 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
     private PipeTargetSageMakerPipelineParameters sageMakerPipelineParameters;
     /**
      * <p>
-     * The parameters for using a Amazon SQS stream as a source.
+     * The parameters for using a Amazon SQS stream as a target.
      * </p>
      */
     private PipeTargetSqsQueueParameters sqsQueueParameters;
@@ -313,11 +321,16 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
      * more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript Object Notation (JSON)
      * Data Interchange Format</a>.
      * </p>
+     * <p>
+     * To remove an input template, specify an empty string.
+     * </p>
      * 
      * @param inputTemplate
      *        Valid JSON text passed to the target. In this case, nothing from the event itself is passed to the target.
      *        For more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript Object
-     *        Notation (JSON) Data Interchange Format</a>.
+     *        Notation (JSON) Data Interchange Format</a>.</p>
+     *        <p>
+     *        To remove an input template, specify an empty string.
      */
 
     public void setInputTemplate(String inputTemplate) {
@@ -330,10 +343,15 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
      * more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript Object Notation (JSON)
      * Data Interchange Format</a>.
      * </p>
+     * <p>
+     * To remove an input template, specify an empty string.
+     * </p>
      * 
      * @return Valid JSON text passed to the target. In this case, nothing from the event itself is passed to the
      *         target. For more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript
-     *         Object Notation (JSON) Data Interchange Format</a>.
+     *         Object Notation (JSON) Data Interchange Format</a>.</p>
+     *         <p>
+     *         To remove an input template, specify an empty string.
      */
 
     public String getInputTemplate() {
@@ -346,11 +364,16 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
      * more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript Object Notation (JSON)
      * Data Interchange Format</a>.
      * </p>
+     * <p>
+     * To remove an input template, specify an empty string.
+     * </p>
      * 
      * @param inputTemplate
      *        Valid JSON text passed to the target. In this case, nothing from the event itself is passed to the target.
      *        For more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript Object
-     *        Notation (JSON) Data Interchange Format</a>.
+     *        Notation (JSON) Data Interchange Format</a>.</p>
+     *        <p>
+     *        To remove an input template, specify an empty string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -361,11 +384,11 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The parameters for using a Kinesis stream as a source.
+     * The parameters for using a Kinesis stream as a target.
      * </p>
      * 
      * @param kinesisStreamParameters
-     *        The parameters for using a Kinesis stream as a source.
+     *        The parameters for using a Kinesis stream as a target.
      */
 
     public void setKinesisStreamParameters(PipeTargetKinesisStreamParameters kinesisStreamParameters) {
@@ -374,10 +397,10 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The parameters for using a Kinesis stream as a source.
+     * The parameters for using a Kinesis stream as a target.
      * </p>
      * 
-     * @return The parameters for using a Kinesis stream as a source.
+     * @return The parameters for using a Kinesis stream as a target.
      */
 
     public PipeTargetKinesisStreamParameters getKinesisStreamParameters() {
@@ -386,11 +409,11 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The parameters for using a Kinesis stream as a source.
+     * The parameters for using a Kinesis stream as a target.
      * </p>
      * 
      * @param kinesisStreamParameters
-     *        The parameters for using a Kinesis stream as a source.
+     *        The parameters for using a Kinesis stream as a target.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -442,12 +465,12 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
     /**
      * <p>
      * These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift
-     * Data API ExecuteStatement.
+     * Data API BatchExecuteStatement.
      * </p>
      * 
      * @param redshiftDataParameters
      *        These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon
-     *        Redshift Data API ExecuteStatement.
+     *        Redshift Data API BatchExecuteStatement.
      */
 
     public void setRedshiftDataParameters(PipeTargetRedshiftDataParameters redshiftDataParameters) {
@@ -457,11 +480,11 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
     /**
      * <p>
      * These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift
-     * Data API ExecuteStatement.
+     * Data API BatchExecuteStatement.
      * </p>
      * 
      * @return These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon
-     *         Redshift Data API ExecuteStatement.
+     *         Redshift Data API BatchExecuteStatement.
      */
 
     public PipeTargetRedshiftDataParameters getRedshiftDataParameters() {
@@ -471,12 +494,12 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
     /**
      * <p>
      * These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift
-     * Data API ExecuteStatement.
+     * Data API BatchExecuteStatement.
      * </p>
      * 
      * @param redshiftDataParameters
      *        These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon
-     *        Redshift Data API ExecuteStatement.
+     *        Redshift Data API BatchExecuteStatement.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -527,11 +550,11 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The parameters for using a Amazon SQS stream as a source.
+     * The parameters for using a Amazon SQS stream as a target.
      * </p>
      * 
      * @param sqsQueueParameters
-     *        The parameters for using a Amazon SQS stream as a source.
+     *        The parameters for using a Amazon SQS stream as a target.
      */
 
     public void setSqsQueueParameters(PipeTargetSqsQueueParameters sqsQueueParameters) {
@@ -540,10 +563,10 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The parameters for using a Amazon SQS stream as a source.
+     * The parameters for using a Amazon SQS stream as a target.
      * </p>
      * 
-     * @return The parameters for using a Amazon SQS stream as a source.
+     * @return The parameters for using a Amazon SQS stream as a target.
      */
 
     public PipeTargetSqsQueueParameters getSqsQueueParameters() {
@@ -552,11 +575,11 @@ public class PipeTargetParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The parameters for using a Amazon SQS stream as a source.
+     * The parameters for using a Amazon SQS stream as a target.
      * </p>
      * 
      * @param sqsQueueParameters
-     *        The parameters for using a Amazon SQS stream as a source.
+     *        The parameters for using a Amazon SQS stream as a target.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

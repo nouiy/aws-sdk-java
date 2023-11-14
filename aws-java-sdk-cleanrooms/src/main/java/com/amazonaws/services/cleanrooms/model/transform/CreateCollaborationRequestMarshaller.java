@@ -45,6 +45,8 @@ public class CreateCollaborationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("queryLogStatus").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> CREATORPAYMENTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creatorPaymentConfiguration").build();
 
     private static final CreateCollaborationRequestMarshaller instance = new CreateCollaborationRequestMarshaller();
 
@@ -70,6 +72,7 @@ public class CreateCollaborationRequestMarshaller {
             protocolMarshaller.marshall(createCollaborationRequest.getDataEncryptionMetadata(), DATAENCRYPTIONMETADATA_BINDING);
             protocolMarshaller.marshall(createCollaborationRequest.getQueryLogStatus(), QUERYLOGSTATUS_BINDING);
             protocolMarshaller.marshall(createCollaborationRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createCollaborationRequest.getCreatorPaymentConfiguration(), CREATORPAYMENTCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

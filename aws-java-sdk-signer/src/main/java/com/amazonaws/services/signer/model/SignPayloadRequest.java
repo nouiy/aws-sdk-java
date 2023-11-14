@@ -45,7 +45,7 @@ public class SignPayloadRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.nio.ByteBuffer payload;
     /**
      * <p>
-     * Payload content type
+     * Payload content type. The single valid type is <code>application/vnd.cncf.notary.payload.v1+json</code>.
      * </p>
      */
     private String payloadFormat;
@@ -199,11 +199,11 @@ public class SignPayloadRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Payload content type
+     * Payload content type. The single valid type is <code>application/vnd.cncf.notary.payload.v1+json</code>.
      * </p>
      * 
      * @param payloadFormat
-     *        Payload content type
+     *        Payload content type. The single valid type is <code>application/vnd.cncf.notary.payload.v1+json</code>.
      */
 
     public void setPayloadFormat(String payloadFormat) {
@@ -212,10 +212,10 @@ public class SignPayloadRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Payload content type
+     * Payload content type. The single valid type is <code>application/vnd.cncf.notary.payload.v1+json</code>.
      * </p>
      * 
-     * @return Payload content type
+     * @return Payload content type. The single valid type is <code>application/vnd.cncf.notary.payload.v1+json</code>.
      */
 
     public String getPayloadFormat() {
@@ -224,11 +224,11 @@ public class SignPayloadRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Payload content type
+     * Payload content type. The single valid type is <code>application/vnd.cncf.notary.payload.v1+json</code>.
      * </p>
      * 
      * @param payloadFormat
-     *        Payload content type
+     *        Payload content type. The single valid type is <code>application/vnd.cncf.notary.payload.v1+json</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

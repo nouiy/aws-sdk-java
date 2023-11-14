@@ -57,6 +57,24 @@ public class GetRevocationStatusRequest extends com.amazonaws.AmazonWebServiceRe
      * A certificate identifier consists of a subject certificate TBS hash (signed by the parent CA) combined with a
      * parent CA TBS hash (signed by the parent CA’s CA). Root certificates are defined as their own CA.
      * </p>
+     * <p>
+     * The following example shows how to calculate a hash for this parameter using OpenSSL commands:
+     * </p>
+     * <p>
+     * <code>openssl asn1parse -in childCert.pem -strparse 4 -out childCert.tbs</code>
+     * </p>
+     * <p>
+     * <code>openssl sha384 &lt; childCert.tbs -binary &gt; childCertTbsHash</code>
+     * </p>
+     * <p>
+     * <code>openssl asn1parse -in parentCert.pem -strparse 4 -out parentCert.tbs</code>
+     * </p>
+     * <p>
+     * <code>openssl sha384 &lt; parentCert.tbs -binary &gt; parentCertTbsHash xxd -p childCertTbsHash &gt; certificateHash.hex xxd -p parentCertTbsHash &gt;&gt; certificateHash.hex</code>
+     * </p>
+     * <p>
+     * <code>cat certificateHash.hex | tr -d '\n'</code>
+     * </p>
      */
     private java.util.List<String> certificateHashes;
 
@@ -228,11 +246,47 @@ public class GetRevocationStatusRequest extends com.amazonaws.AmazonWebServiceRe
      * A certificate identifier consists of a subject certificate TBS hash (signed by the parent CA) combined with a
      * parent CA TBS hash (signed by the parent CA’s CA). Root certificates are defined as their own CA.
      * </p>
+     * <p>
+     * The following example shows how to calculate a hash for this parameter using OpenSSL commands:
+     * </p>
+     * <p>
+     * <code>openssl asn1parse -in childCert.pem -strparse 4 -out childCert.tbs</code>
+     * </p>
+     * <p>
+     * <code>openssl sha384 &lt; childCert.tbs -binary &gt; childCertTbsHash</code>
+     * </p>
+     * <p>
+     * <code>openssl asn1parse -in parentCert.pem -strparse 4 -out parentCert.tbs</code>
+     * </p>
+     * <p>
+     * <code>openssl sha384 &lt; parentCert.tbs -binary &gt; parentCertTbsHash xxd -p childCertTbsHash &gt; certificateHash.hex xxd -p parentCertTbsHash &gt;&gt; certificateHash.hex</code>
+     * </p>
+     * <p>
+     * <code>cat certificateHash.hex | tr -d '\n'</code>
+     * </p>
      * 
      * @return A list of composite signed hashes that identify certificates.</p>
      *         <p>
      *         A certificate identifier consists of a subject certificate TBS hash (signed by the parent CA) combined
      *         with a parent CA TBS hash (signed by the parent CA’s CA). Root certificates are defined as their own CA.
+     *         </p>
+     *         <p>
+     *         The following example shows how to calculate a hash for this parameter using OpenSSL commands:
+     *         </p>
+     *         <p>
+     *         <code>openssl asn1parse -in childCert.pem -strparse 4 -out childCert.tbs</code>
+     *         </p>
+     *         <p>
+     *         <code>openssl sha384 &lt; childCert.tbs -binary &gt; childCertTbsHash</code>
+     *         </p>
+     *         <p>
+     *         <code>openssl asn1parse -in parentCert.pem -strparse 4 -out parentCert.tbs</code>
+     *         </p>
+     *         <p>
+     *         <code>openssl sha384 &lt; parentCert.tbs -binary &gt; parentCertTbsHash xxd -p childCertTbsHash &gt; certificateHash.hex xxd -p parentCertTbsHash &gt;&gt; certificateHash.hex</code>
+     *         </p>
+     *         <p>
+     *         <code>cat certificateHash.hex | tr -d '\n'</code>
      */
 
     public java.util.List<String> getCertificateHashes() {
@@ -247,12 +301,48 @@ public class GetRevocationStatusRequest extends com.amazonaws.AmazonWebServiceRe
      * A certificate identifier consists of a subject certificate TBS hash (signed by the parent CA) combined with a
      * parent CA TBS hash (signed by the parent CA’s CA). Root certificates are defined as their own CA.
      * </p>
+     * <p>
+     * The following example shows how to calculate a hash for this parameter using OpenSSL commands:
+     * </p>
+     * <p>
+     * <code>openssl asn1parse -in childCert.pem -strparse 4 -out childCert.tbs</code>
+     * </p>
+     * <p>
+     * <code>openssl sha384 &lt; childCert.tbs -binary &gt; childCertTbsHash</code>
+     * </p>
+     * <p>
+     * <code>openssl asn1parse -in parentCert.pem -strparse 4 -out parentCert.tbs</code>
+     * </p>
+     * <p>
+     * <code>openssl sha384 &lt; parentCert.tbs -binary &gt; parentCertTbsHash xxd -p childCertTbsHash &gt; certificateHash.hex xxd -p parentCertTbsHash &gt;&gt; certificateHash.hex</code>
+     * </p>
+     * <p>
+     * <code>cat certificateHash.hex | tr -d '\n'</code>
+     * </p>
      * 
      * @param certificateHashes
      *        A list of composite signed hashes that identify certificates.</p>
      *        <p>
      *        A certificate identifier consists of a subject certificate TBS hash (signed by the parent CA) combined
      *        with a parent CA TBS hash (signed by the parent CA’s CA). Root certificates are defined as their own CA.
+     *        </p>
+     *        <p>
+     *        The following example shows how to calculate a hash for this parameter using OpenSSL commands:
+     *        </p>
+     *        <p>
+     *        <code>openssl asn1parse -in childCert.pem -strparse 4 -out childCert.tbs</code>
+     *        </p>
+     *        <p>
+     *        <code>openssl sha384 &lt; childCert.tbs -binary &gt; childCertTbsHash</code>
+     *        </p>
+     *        <p>
+     *        <code>openssl asn1parse -in parentCert.pem -strparse 4 -out parentCert.tbs</code>
+     *        </p>
+     *        <p>
+     *        <code>openssl sha384 &lt; parentCert.tbs -binary &gt; parentCertTbsHash xxd -p childCertTbsHash &gt; certificateHash.hex xxd -p parentCertTbsHash &gt;&gt; certificateHash.hex</code>
+     *        </p>
+     *        <p>
+     *        <code>cat certificateHash.hex | tr -d '\n'</code>
      */
 
     public void setCertificateHashes(java.util.Collection<String> certificateHashes) {
@@ -273,6 +363,24 @@ public class GetRevocationStatusRequest extends com.amazonaws.AmazonWebServiceRe
      * parent CA TBS hash (signed by the parent CA’s CA). Root certificates are defined as their own CA.
      * </p>
      * <p>
+     * The following example shows how to calculate a hash for this parameter using OpenSSL commands:
+     * </p>
+     * <p>
+     * <code>openssl asn1parse -in childCert.pem -strparse 4 -out childCert.tbs</code>
+     * </p>
+     * <p>
+     * <code>openssl sha384 &lt; childCert.tbs -binary &gt; childCertTbsHash</code>
+     * </p>
+     * <p>
+     * <code>openssl asn1parse -in parentCert.pem -strparse 4 -out parentCert.tbs</code>
+     * </p>
+     * <p>
+     * <code>openssl sha384 &lt; parentCert.tbs -binary &gt; parentCertTbsHash xxd -p childCertTbsHash &gt; certificateHash.hex xxd -p parentCertTbsHash &gt;&gt; certificateHash.hex</code>
+     * </p>
+     * <p>
+     * <code>cat certificateHash.hex | tr -d '\n'</code>
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCertificateHashes(java.util.Collection)} or {@link #withCertificateHashes(java.util.Collection)} if
      * you want to override the existing values.
@@ -283,6 +391,24 @@ public class GetRevocationStatusRequest extends com.amazonaws.AmazonWebServiceRe
      *        <p>
      *        A certificate identifier consists of a subject certificate TBS hash (signed by the parent CA) combined
      *        with a parent CA TBS hash (signed by the parent CA’s CA). Root certificates are defined as their own CA.
+     *        </p>
+     *        <p>
+     *        The following example shows how to calculate a hash for this parameter using OpenSSL commands:
+     *        </p>
+     *        <p>
+     *        <code>openssl asn1parse -in childCert.pem -strparse 4 -out childCert.tbs</code>
+     *        </p>
+     *        <p>
+     *        <code>openssl sha384 &lt; childCert.tbs -binary &gt; childCertTbsHash</code>
+     *        </p>
+     *        <p>
+     *        <code>openssl asn1parse -in parentCert.pem -strparse 4 -out parentCert.tbs</code>
+     *        </p>
+     *        <p>
+     *        <code>openssl sha384 &lt; parentCert.tbs -binary &gt; parentCertTbsHash xxd -p childCertTbsHash &gt; certificateHash.hex xxd -p parentCertTbsHash &gt;&gt; certificateHash.hex</code>
+     *        </p>
+     *        <p>
+     *        <code>cat certificateHash.hex | tr -d '\n'</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -304,12 +430,48 @@ public class GetRevocationStatusRequest extends com.amazonaws.AmazonWebServiceRe
      * A certificate identifier consists of a subject certificate TBS hash (signed by the parent CA) combined with a
      * parent CA TBS hash (signed by the parent CA’s CA). Root certificates are defined as their own CA.
      * </p>
+     * <p>
+     * The following example shows how to calculate a hash for this parameter using OpenSSL commands:
+     * </p>
+     * <p>
+     * <code>openssl asn1parse -in childCert.pem -strparse 4 -out childCert.tbs</code>
+     * </p>
+     * <p>
+     * <code>openssl sha384 &lt; childCert.tbs -binary &gt; childCertTbsHash</code>
+     * </p>
+     * <p>
+     * <code>openssl asn1parse -in parentCert.pem -strparse 4 -out parentCert.tbs</code>
+     * </p>
+     * <p>
+     * <code>openssl sha384 &lt; parentCert.tbs -binary &gt; parentCertTbsHash xxd -p childCertTbsHash &gt; certificateHash.hex xxd -p parentCertTbsHash &gt;&gt; certificateHash.hex</code>
+     * </p>
+     * <p>
+     * <code>cat certificateHash.hex | tr -d '\n'</code>
+     * </p>
      * 
      * @param certificateHashes
      *        A list of composite signed hashes that identify certificates.</p>
      *        <p>
      *        A certificate identifier consists of a subject certificate TBS hash (signed by the parent CA) combined
      *        with a parent CA TBS hash (signed by the parent CA’s CA). Root certificates are defined as their own CA.
+     *        </p>
+     *        <p>
+     *        The following example shows how to calculate a hash for this parameter using OpenSSL commands:
+     *        </p>
+     *        <p>
+     *        <code>openssl asn1parse -in childCert.pem -strparse 4 -out childCert.tbs</code>
+     *        </p>
+     *        <p>
+     *        <code>openssl sha384 &lt; childCert.tbs -binary &gt; childCertTbsHash</code>
+     *        </p>
+     *        <p>
+     *        <code>openssl asn1parse -in parentCert.pem -strparse 4 -out parentCert.tbs</code>
+     *        </p>
+     *        <p>
+     *        <code>openssl sha384 &lt; parentCert.tbs -binary &gt; parentCertTbsHash xxd -p childCertTbsHash &gt; certificateHash.hex xxd -p parentCertTbsHash &gt;&gt; certificateHash.hex</code>
+     *        </p>
+     *        <p>
+     *        <code>cat certificateHash.hex | tr -d '\n'</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

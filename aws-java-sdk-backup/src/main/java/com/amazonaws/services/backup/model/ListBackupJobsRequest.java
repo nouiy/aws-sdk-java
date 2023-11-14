@@ -167,6 +167,17 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private String byParentJobId;
+    /**
+     * <p>
+     * This returns a list of backup jobs for the specified message category.
+     * </p>
+     * <p>
+     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
+     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     */
+    private String byMessageCategory;
 
     /**
      * <p>
@@ -1091,6 +1102,76 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * This returns a list of backup jobs for the specified message category.
+     * </p>
+     * <p>
+     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
+     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     * 
+     * @param byMessageCategory
+     *        This returns a list of backup jobs for the specified message category.</p>
+     *        <p>
+     *        Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
+     *        <code>InvalidParameters</code>. See <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     *        MessageCategory strings.
+     */
+
+    public void setByMessageCategory(String byMessageCategory) {
+        this.byMessageCategory = byMessageCategory;
+    }
+
+    /**
+     * <p>
+     * This returns a list of backup jobs for the specified message category.
+     * </p>
+     * <p>
+     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
+     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     * 
+     * @return This returns a list of backup jobs for the specified message category.</p>
+     *         <p>
+     *         Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
+     *         <code>InvalidParameters</code>. See <a
+     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list
+     *         of MessageCategory strings.
+     */
+
+    public String getByMessageCategory() {
+        return this.byMessageCategory;
+    }
+
+    /**
+     * <p>
+     * This returns a list of backup jobs for the specified message category.
+     * </p>
+     * <p>
+     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
+     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     * 
+     * @param byMessageCategory
+     *        This returns a list of backup jobs for the specified message category.</p>
+     *        <p>
+     *        Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
+     *        <code>InvalidParameters</code>. See <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     *        MessageCategory strings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListBackupJobsRequest withByMessageCategory(String byMessageCategory) {
+        setByMessageCategory(byMessageCategory);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1125,7 +1206,9 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getByCompleteBefore() != null)
             sb.append("ByCompleteBefore: ").append(getByCompleteBefore()).append(",");
         if (getByParentJobId() != null)
-            sb.append("ByParentJobId: ").append(getByParentJobId());
+            sb.append("ByParentJobId: ").append(getByParentJobId()).append(",");
+        if (getByMessageCategory() != null)
+            sb.append("ByMessageCategory: ").append(getByMessageCategory());
         sb.append("}");
         return sb.toString();
     }
@@ -1188,6 +1271,10 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getByParentJobId() != null && other.getByParentJobId().equals(this.getByParentJobId()) == false)
             return false;
+        if (other.getByMessageCategory() == null ^ this.getByMessageCategory() == null)
+            return false;
+        if (other.getByMessageCategory() != null && other.getByMessageCategory().equals(this.getByMessageCategory()) == false)
+            return false;
         return true;
     }
 
@@ -1208,6 +1295,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getByCompleteAfter() == null) ? 0 : getByCompleteAfter().hashCode());
         hashCode = prime * hashCode + ((getByCompleteBefore() == null) ? 0 : getByCompleteBefore().hashCode());
         hashCode = prime * hashCode + ((getByParentJobId() == null) ? 0 : getByParentJobId().hashCode());
+        hashCode = prime * hashCode + ((getByMessageCategory() == null) ? 0 : getByMessageCategory().hashCode());
         return hashCode;
     }
 

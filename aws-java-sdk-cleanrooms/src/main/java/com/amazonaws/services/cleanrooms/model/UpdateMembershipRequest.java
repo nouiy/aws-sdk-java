@@ -33,7 +33,7 @@ public class UpdateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
     private String membershipIdentifier;
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      */
     private String queryLogStatus;
@@ -86,11 +86,11 @@ public class UpdateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
      * @param queryLogStatus
-     *        An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     *        An indicator as to whether query logging has been enabled or disabled for the membership.
      * @see MembershipQueryLogStatus
      */
 
@@ -100,10 +100,10 @@ public class UpdateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
-     * @return An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * @return An indicator as to whether query logging has been enabled or disabled for the membership.
      * @see MembershipQueryLogStatus
      */
 
@@ -113,11 +113,11 @@ public class UpdateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
      * @param queryLogStatus
-     *        An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     *        An indicator as to whether query logging has been enabled or disabled for the membership.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MembershipQueryLogStatus
      */
@@ -129,11 +129,11 @@ public class UpdateMembershipRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
      * @param queryLogStatus
-     *        An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     *        An indicator as to whether query logging has been enabled or disabled for the membership.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MembershipQueryLogStatus
      */

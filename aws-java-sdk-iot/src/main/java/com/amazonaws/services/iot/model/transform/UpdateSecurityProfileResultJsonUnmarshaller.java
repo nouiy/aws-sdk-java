@@ -96,6 +96,10 @@ public class UpdateSecurityProfileResultJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     updateSecurityProfileResult.setLastModifiedDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("metricsExportConfig", targetDepth)) {
+                    context.nextToken();
+                    updateSecurityProfileResult.setMetricsExportConfig(MetricsExportConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

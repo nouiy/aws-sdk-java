@@ -88,6 +88,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public BatchGetTableOptimizerResult batchGetTableOptimizer(BatchGetTableOptimizerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchGetTriggersResult batchGetTriggers(BatchGetTriggersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -223,6 +228,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public CreateTableOptimizerResult createTableOptimizer(CreateTableOptimizerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateTriggerResult createTrigger(CreateTriggerRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -339,6 +349,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public DeleteTableResult deleteTable(DeleteTableRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteTableOptimizerResult deleteTableOptimizer(DeleteTableOptimizerRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -613,6 +628,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public GetTableOptimizerResult getTableOptimizer(GetTableOptimizerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetTableVersionResult getTableVersion(GetTableVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -769,6 +789,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public ListStatementsResult listStatements(ListStatementsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTableOptimizerRunsResult listTableOptimizerRuns(ListTableOptimizerRunsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1019,6 +1044,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public UpdateTableResult updateTable(UpdateTableRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateTableOptimizerResult updateTableOptimizer(UpdateTableOptimizerRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

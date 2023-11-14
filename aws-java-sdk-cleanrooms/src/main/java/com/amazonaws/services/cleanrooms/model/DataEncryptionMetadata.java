@@ -30,42 +30,42 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether encrypted tables can contain cleartext data (true) or are to cryptographically process every
-     * column (false).
+     * Indicates whether encrypted tables can contain cleartext data (<code>TRUE</code>) or are to cryptographically
+     * process every column (<code>FALSE</code>).
      * </p>
      */
     private Boolean allowCleartext;
     /**
      * <p>
-     * Indicates whether Fingerprint columns can contain duplicate entries (true) or are to contain only non-repeated
-     * values (false).
+     * Indicates whether Fingerprint columns can contain duplicate entries (<code>TRUE</code>) or are to contain only
+     * non-repeated values (<code>FALSE</code>).
      * </p>
      */
     private Boolean allowDuplicates;
     /**
      * <p>
-     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name (true)
-     * or can only be joined on Fingerprint columns of the same name (false).
+     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name (
+     * <code>TRUE</code>) or can only be joined on Fingerprint columns of the same name (<code>FALSE</code>).
      * </p>
      */
     private Boolean allowJoinsOnColumnsWithDifferentNames;
     /**
      * <p>
-     * Indicates whether NULL values are to be copied as NULL to encrypted tables (true) or cryptographically processed
-     * (false).
+     * Indicates whether NULL values are to be copied as NULL to encrypted tables (<code>TRUE</code>) or
+     * cryptographically processed (<code>FALSE</code>).
      * </p>
      */
     private Boolean preserveNulls;
 
     /**
      * <p>
-     * Indicates whether encrypted tables can contain cleartext data (true) or are to cryptographically process every
-     * column (false).
+     * Indicates whether encrypted tables can contain cleartext data (<code>TRUE</code>) or are to cryptographically
+     * process every column (<code>FALSE</code>).
      * </p>
      * 
      * @param allowCleartext
-     *        Indicates whether encrypted tables can contain cleartext data (true) or are to cryptographically process
-     *        every column (false).
+     *        Indicates whether encrypted tables can contain cleartext data (<code>TRUE</code>) or are to
+     *        cryptographically process every column (<code>FALSE</code>).
      */
 
     public void setAllowCleartext(Boolean allowCleartext) {
@@ -74,12 +74,12 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether encrypted tables can contain cleartext data (true) or are to cryptographically process every
-     * column (false).
+     * Indicates whether encrypted tables can contain cleartext data (<code>TRUE</code>) or are to cryptographically
+     * process every column (<code>FALSE</code>).
      * </p>
      * 
-     * @return Indicates whether encrypted tables can contain cleartext data (true) or are to cryptographically process
-     *         every column (false).
+     * @return Indicates whether encrypted tables can contain cleartext data (<code>TRUE</code>) or are to
+     *         cryptographically process every column (<code>FALSE</code>).
      */
 
     public Boolean getAllowCleartext() {
@@ -88,13 +88,13 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether encrypted tables can contain cleartext data (true) or are to cryptographically process every
-     * column (false).
+     * Indicates whether encrypted tables can contain cleartext data (<code>TRUE</code>) or are to cryptographically
+     * process every column (<code>FALSE</code>).
      * </p>
      * 
      * @param allowCleartext
-     *        Indicates whether encrypted tables can contain cleartext data (true) or are to cryptographically process
-     *        every column (false).
+     *        Indicates whether encrypted tables can contain cleartext data (<code>TRUE</code>) or are to
+     *        cryptographically process every column (<code>FALSE</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -105,12 +105,12 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether encrypted tables can contain cleartext data (true) or are to cryptographically process every
-     * column (false).
+     * Indicates whether encrypted tables can contain cleartext data (<code>TRUE</code>) or are to cryptographically
+     * process every column (<code>FALSE</code>).
      * </p>
      * 
-     * @return Indicates whether encrypted tables can contain cleartext data (true) or are to cryptographically process
-     *         every column (false).
+     * @return Indicates whether encrypted tables can contain cleartext data (<code>TRUE</code>) or are to
+     *         cryptographically process every column (<code>FALSE</code>).
      */
 
     public Boolean isAllowCleartext() {
@@ -119,13 +119,13 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether Fingerprint columns can contain duplicate entries (true) or are to contain only non-repeated
-     * values (false).
+     * Indicates whether Fingerprint columns can contain duplicate entries (<code>TRUE</code>) or are to contain only
+     * non-repeated values (<code>FALSE</code>).
      * </p>
      * 
      * @param allowDuplicates
-     *        Indicates whether Fingerprint columns can contain duplicate entries (true) or are to contain only
-     *        non-repeated values (false).
+     *        Indicates whether Fingerprint columns can contain duplicate entries (<code>TRUE</code>) or are to contain
+     *        only non-repeated values (<code>FALSE</code>).
      */
 
     public void setAllowDuplicates(Boolean allowDuplicates) {
@@ -134,12 +134,12 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether Fingerprint columns can contain duplicate entries (true) or are to contain only non-repeated
-     * values (false).
+     * Indicates whether Fingerprint columns can contain duplicate entries (<code>TRUE</code>) or are to contain only
+     * non-repeated values (<code>FALSE</code>).
      * </p>
      * 
-     * @return Indicates whether Fingerprint columns can contain duplicate entries (true) or are to contain only
-     *         non-repeated values (false).
+     * @return Indicates whether Fingerprint columns can contain duplicate entries (<code>TRUE</code>) or are to contain
+     *         only non-repeated values (<code>FALSE</code>).
      */
 
     public Boolean getAllowDuplicates() {
@@ -148,13 +148,13 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether Fingerprint columns can contain duplicate entries (true) or are to contain only non-repeated
-     * values (false).
+     * Indicates whether Fingerprint columns can contain duplicate entries (<code>TRUE</code>) or are to contain only
+     * non-repeated values (<code>FALSE</code>).
      * </p>
      * 
      * @param allowDuplicates
-     *        Indicates whether Fingerprint columns can contain duplicate entries (true) or are to contain only
-     *        non-repeated values (false).
+     *        Indicates whether Fingerprint columns can contain duplicate entries (<code>TRUE</code>) or are to contain
+     *        only non-repeated values (<code>FALSE</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,12 +165,12 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether Fingerprint columns can contain duplicate entries (true) or are to contain only non-repeated
-     * values (false).
+     * Indicates whether Fingerprint columns can contain duplicate entries (<code>TRUE</code>) or are to contain only
+     * non-repeated values (<code>FALSE</code>).
      * </p>
      * 
-     * @return Indicates whether Fingerprint columns can contain duplicate entries (true) or are to contain only
-     *         non-repeated values (false).
+     * @return Indicates whether Fingerprint columns can contain duplicate entries (<code>TRUE</code>) or are to contain
+     *         only non-repeated values (<code>FALSE</code>).
      */
 
     public Boolean isAllowDuplicates() {
@@ -179,13 +179,13 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name (true)
-     * or can only be joined on Fingerprint columns of the same name (false).
+     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name (
+     * <code>TRUE</code>) or can only be joined on Fingerprint columns of the same name (<code>FALSE</code>).
      * </p>
      * 
      * @param allowJoinsOnColumnsWithDifferentNames
      *        Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name
-     *        (true) or can only be joined on Fingerprint columns of the same name (false).
+     *        (<code>TRUE</code>) or can only be joined on Fingerprint columns of the same name (<code>FALSE</code>).
      */
 
     public void setAllowJoinsOnColumnsWithDifferentNames(Boolean allowJoinsOnColumnsWithDifferentNames) {
@@ -194,12 +194,12 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name (true)
-     * or can only be joined on Fingerprint columns of the same name (false).
+     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name (
+     * <code>TRUE</code>) or can only be joined on Fingerprint columns of the same name (<code>FALSE</code>).
      * </p>
      * 
      * @return Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name
-     *         (true) or can only be joined on Fingerprint columns of the same name (false).
+     *         (<code>TRUE</code>) or can only be joined on Fingerprint columns of the same name (<code>FALSE</code>).
      */
 
     public Boolean getAllowJoinsOnColumnsWithDifferentNames() {
@@ -208,13 +208,13 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name (true)
-     * or can only be joined on Fingerprint columns of the same name (false).
+     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name (
+     * <code>TRUE</code>) or can only be joined on Fingerprint columns of the same name (<code>FALSE</code>).
      * </p>
      * 
      * @param allowJoinsOnColumnsWithDifferentNames
      *        Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name
-     *        (true) or can only be joined on Fingerprint columns of the same name (false).
+     *        (<code>TRUE</code>) or can only be joined on Fingerprint columns of the same name (<code>FALSE</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -225,12 +225,12 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name (true)
-     * or can only be joined on Fingerprint columns of the same name (false).
+     * Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name (
+     * <code>TRUE</code>) or can only be joined on Fingerprint columns of the same name (<code>FALSE</code>).
      * </p>
      * 
      * @return Indicates whether Fingerprint columns can be joined on any other Fingerprint column with a different name
-     *         (true) or can only be joined on Fingerprint columns of the same name (false).
+     *         (<code>TRUE</code>) or can only be joined on Fingerprint columns of the same name (<code>FALSE</code>).
      */
 
     public Boolean isAllowJoinsOnColumnsWithDifferentNames() {
@@ -239,13 +239,13 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether NULL values are to be copied as NULL to encrypted tables (true) or cryptographically processed
-     * (false).
+     * Indicates whether NULL values are to be copied as NULL to encrypted tables (<code>TRUE</code>) or
+     * cryptographically processed (<code>FALSE</code>).
      * </p>
      * 
      * @param preserveNulls
-     *        Indicates whether NULL values are to be copied as NULL to encrypted tables (true) or cryptographically
-     *        processed (false).
+     *        Indicates whether NULL values are to be copied as NULL to encrypted tables (<code>TRUE</code>) or
+     *        cryptographically processed (<code>FALSE</code>).
      */
 
     public void setPreserveNulls(Boolean preserveNulls) {
@@ -254,12 +254,12 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether NULL values are to be copied as NULL to encrypted tables (true) or cryptographically processed
-     * (false).
+     * Indicates whether NULL values are to be copied as NULL to encrypted tables (<code>TRUE</code>) or
+     * cryptographically processed (<code>FALSE</code>).
      * </p>
      * 
-     * @return Indicates whether NULL values are to be copied as NULL to encrypted tables (true) or cryptographically
-     *         processed (false).
+     * @return Indicates whether NULL values are to be copied as NULL to encrypted tables (<code>TRUE</code>) or
+     *         cryptographically processed (<code>FALSE</code>).
      */
 
     public Boolean getPreserveNulls() {
@@ -268,13 +268,13 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether NULL values are to be copied as NULL to encrypted tables (true) or cryptographically processed
-     * (false).
+     * Indicates whether NULL values are to be copied as NULL to encrypted tables (<code>TRUE</code>) or
+     * cryptographically processed (<code>FALSE</code>).
      * </p>
      * 
      * @param preserveNulls
-     *        Indicates whether NULL values are to be copied as NULL to encrypted tables (true) or cryptographically
-     *        processed (false).
+     *        Indicates whether NULL values are to be copied as NULL to encrypted tables (<code>TRUE</code>) or
+     *        cryptographically processed (<code>FALSE</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -285,12 +285,12 @@ public class DataEncryptionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Indicates whether NULL values are to be copied as NULL to encrypted tables (true) or cryptographically processed
-     * (false).
+     * Indicates whether NULL values are to be copied as NULL to encrypted tables (<code>TRUE</code>) or
+     * cryptographically processed (<code>FALSE</code>).
      * </p>
      * 
-     * @return Indicates whether NULL values are to be copied as NULL to encrypted tables (true) or cryptographically
-     *         processed (false).
+     * @return Indicates whether NULL values are to be copied as NULL to encrypted tables (<code>TRUE</code>) or
+     *         cryptographically processed (<code>FALSE</code>).
      */
 
     public Boolean isPreserveNulls() {

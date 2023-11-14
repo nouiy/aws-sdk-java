@@ -45,6 +45,13 @@ import com.amazonaws.services.stepfunctions.model.*;
  * information about Step Functions, see the <i> <a
  * href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">Step Functions Developer Guide</a> </i>.
  * </p>
+ * <important>
+ * <p>
+ * If you use the Step Functions API actions using Amazon Web Services SDK integrations, make sure the API actions are
+ * in camel case and parameter names are in Pascal case. For example, you could use Step Functions API action
+ * <code>startSyncExecution</code> and specify its parameter as <code>StateMachineArn</code>.
+ * </p>
+ * </important>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSStepFunctions {
@@ -318,8 +325,9 @@ public interface AWSStepFunctions {
 
     /**
      * <p>
-     * Deletes a state machine. This is an asynchronous operation: It sets the state machine's status to
-     * <code>DELETING</code> and begins the deletion process.
+     * Deletes a state machine. This is an asynchronous operation. It sets the state machine's status to
+     * <code>DELETING</code> and begins the deletion process. A state machine is deleted only when all its executions
+     * are completed. On the next state transition, the state machine's executions are terminated.
      * </p>
      * <p>
      * A qualified state machine ARN can either refer to a <i>Distributed Map state</i> defined within a state machine,
@@ -510,8 +518,10 @@ public interface AWSStepFunctions {
     /**
      * <p>
      * Provides information about a state machine execution, such as the state machine associated with the execution,
-     * the execution input and output, and relevant execution metadata. Use this API action to return the Map Run Amazon
-     * Resource Name (ARN) if the execution was dispatched by a Map Run.
+     * the execution input and output, and relevant execution metadata. If you've <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-executions.html">redriven</a> an execution,
+     * you can use this API action to return information about the redrives of that execution. In addition, you can use
+     * this API action to return the Map Run Amazon Resource Name (ARN) if the execution was dispatched by a Map Run.
      * </p>
      * <p>
      * If you specify a version or alias ARN when you call the <a>StartExecution</a> API action,
@@ -524,7 +534,7 @@ public interface AWSStepFunctions {
      * </p>
      * </note>
      * <p>
-     * Executions of an <code>EXPRESS</code> state machinearen't supported by <code>DescribeExecution</code> unless a
+     * Executions of an <code>EXPRESS</code> state machine aren't supported by <code>DescribeExecution</code> unless a
      * Map Run dispatched them.
      * </p>
      * 
@@ -542,7 +552,9 @@ public interface AWSStepFunctions {
 
     /**
      * <p>
-     * Provides information about a Map Run's configuration, progress, and results. For more information, see <a
+     * Provides information about a Map Run's configuration, progress, and results. If you've <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">redriven</a> a Map Run, this API
+     * action also returns information about the redrives of that Map Run. For more information, see <a
      * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-examine-map-run.html">Examining Map Run</a>
      * in the <i>Step Functions Developer Guide</i>.
      * </p>
@@ -803,6 +815,8 @@ public interface AWSStepFunctions {
      * <p>
      * Lists all executions of a state machine or a Map Run. You can list all executions related to a state machine by
      * specifying a state machine Amazon Resource Name (ARN), or those related to a Map Run by specifying a Map Run ARN.
+     * Using this API action, you can also list all <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-executions.html">redriven</a> executions.
      * </p>
      * <p>
      * You can also provide a state machine <a
@@ -1086,17 +1100,107 @@ public interface AWSStepFunctions {
 
     /**
      * <p>
-     * Used by activity workers and task states using the <a
+     * Restarts unsuccessful executions of Standard workflows that didn't complete successfully in the last 14 days.
+     * These include failed, aborted, or timed out executions. When you <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-executions.html">redrive</a> an execution, it
+     * continues the failed execution from the unsuccessful step and uses the same input. Step Functions preserves the
+     * results and execution history of the successful steps, and doesn't rerun these steps when you redrive an
+     * execution. Redriven executions use the same state machine definition and execution ARN as the original execution
+     * attempt.
+     * </p>
+     * <p>
+     * For workflows that include an <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-map-state.html">Inline Map</a>
+     * or <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-parallel-state.html">Parallel
+     * </a> state, <code>RedriveExecution</code> API action reschedules and redrives only the iterations and branches
+     * that failed or aborted.
+     * </p>
+     * <p>
+     * To redrive a workflow that includes a Distributed Map state with failed child workflow executions, you must
+     * redrive the <a href=
+     * "https://docs.aws.amazon.com/step-functions/latest/dg/use-dist-map-orchestrate-large-scale-parallel-workloads.html#dist-map-orchestrate-parallel-workloads-key-terms"
+     * >parent workflow</a>. The parent workflow redrives all the unsuccessful states, including Distributed Map.
+     * </p>
+     * <note>
+     * <p>
+     * This API action is not supported by <code>EXPRESS</code> state machines.
+     * </p>
+     * <p>
+     * However, you can restart the unsuccessful executions of Express child workflows in a Distributed Map by redriving
+     * its Map Run. When you redrive a Map Run, the Express child workflows are rerun using the <a>StartExecution</a>
+     * API action. For more information, see <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/redrive-map-run.html">Redriving Map Runs</a>.
+     * </p>
+     * </note>
+     * <p>
+     * You can redrive executions if your original execution meets the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The execution status isn't <code>SUCCEEDED</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Your workflow execution has not exceeded the redrivable period of 14 days. Redrivable period refers to the time
+     * during which you can redrive a given execution. This period starts from the day a state machine completes its
+     * execution.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The workflow execution has not exceeded the maximum open time of one year. For more information about state
+     * machine quotas, see <a href=
+     * "https://docs.aws.amazon.com/step-functions/latest/dg/limits-overview.html#service-limits-state-machine-executions"
+     * >Quotas related to state machine executions</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The execution event history count is less than 24,999. Redriven executions append their event history to the
+     * existing event history. Make sure your workflow execution contains less than 24,999 events to accommodate the
+     * <code>ExecutionRedriven</code> history event and at least one other history event.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param redriveExecutionRequest
+     * @return Result of the RedriveExecution operation returned by the service.
+     * @throws ExecutionDoesNotExistException
+     *         The specified execution does not exist.
+     * @throws ExecutionNotRedrivableException
+     *         The execution Amazon Resource Name (ARN) that you specified for <code>executionArn</code> cannot be
+     *         redriven.
+     * @throws ExecutionLimitExceededException
+     *         The maximum number of running executions has been reached. Running executions must end or be stopped
+     *         before a new execution can be started.
+     * @throws InvalidArnException
+     *         The provided Amazon Resource Name (ARN) is not valid.
+     * @sample AWSStepFunctions.RedriveExecution
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/RedriveExecution" target="_top">AWS API
+     *      Documentation</a>
+     */
+    RedriveExecutionResult redriveExecution(RedriveExecutionRequest redriveExecutionRequest);
+
+    /**
+     * <p>
+     * Used by activity workers, Task states using the <a
      * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token"
-     * >callback</a> pattern to report that the task identified by the <code>taskToken</code> failed.
+     * >callback</a> pattern, and optionally Task states using the <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-sync">job run</a>
+     * pattern to report that the task identified by the <code>taskToken</code> failed.
      * </p>
      * 
      * @param sendTaskFailureRequest
      * @return Result of the SendTaskFailure operation returned by the service.
      * @throws TaskDoesNotExistException
+     *         The activity does not exist.
      * @throws InvalidTokenException
      *         The provided token is not valid.
      * @throws TaskTimedOutException
+     *         The task token has either expired or the task associated with the token has already been closed.
      * @sample AWSStepFunctions.SendTaskFailure
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/SendTaskFailure" target="_top">AWS API
      *      Documentation</a>
@@ -1105,14 +1209,16 @@ public interface AWSStepFunctions {
 
     /**
      * <p>
-     * Used by activity workers and task states using the <a
+     * Used by activity workers and Task states using the <a
      * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token"
-     * >callback</a> pattern to report to Step Functions that the task represented by the specified
-     * <code>taskToken</code> is still making progress. This action resets the <code>Heartbeat</code> clock. The
-     * <code>Heartbeat</code> threshold is specified in the state machine's Amazon States Language definition (
-     * <code>HeartbeatSeconds</code>). This action does not in itself create an event in the execution history. However,
-     * if the task times out, the execution history contains an <code>ActivityTimedOut</code> entry for activities, or a
-     * <code>TaskTimedOut</code> entry for for tasks using the <a
+     * >callback</a> pattern, and optionally Task states using the <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-sync">job run</a>
+     * pattern to report to Step Functions that the task represented by the specified <code>taskToken</code> is still
+     * making progress. This action resets the <code>Heartbeat</code> clock. The <code>Heartbeat</code> threshold is
+     * specified in the state machine's Amazon States Language definition (<code>HeartbeatSeconds</code>). This action
+     * does not in itself create an event in the execution history. However, if the task times out, the execution
+     * history contains an <code>ActivityTimedOut</code> entry for activities, or a <code>TaskTimedOut</code> entry for
+     * tasks using the <a
      * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-sync">job run</a> or
      * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token">
      * callback</a> pattern.
@@ -1128,9 +1234,11 @@ public interface AWSStepFunctions {
      * @param sendTaskHeartbeatRequest
      * @return Result of the SendTaskHeartbeat operation returned by the service.
      * @throws TaskDoesNotExistException
+     *         The activity does not exist.
      * @throws InvalidTokenException
      *         The provided token is not valid.
      * @throws TaskTimedOutException
+     *         The task token has either expired or the task associated with the token has already been closed.
      * @sample AWSStepFunctions.SendTaskHeartbeat
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/SendTaskHeartbeat" target="_top">AWS API
      *      Documentation</a>
@@ -1139,19 +1247,23 @@ public interface AWSStepFunctions {
 
     /**
      * <p>
-     * Used by activity workers and task states using the <a
+     * Used by activity workers, Task states using the <a
      * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token"
-     * >callback</a> pattern to report that the task identified by the <code>taskToken</code> completed successfully.
+     * >callback</a> pattern, and optionally Task states using the <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-sync">job run</a>
+     * pattern to report that the task identified by the <code>taskToken</code> completed successfully.
      * </p>
      * 
      * @param sendTaskSuccessRequest
      * @return Result of the SendTaskSuccess operation returned by the service.
      * @throws TaskDoesNotExistException
+     *         The activity does not exist.
      * @throws InvalidOutputException
      *         The provided JSON output data is not valid.
      * @throws InvalidTokenException
      *         The provided token is not valid.
      * @throws TaskTimedOutException
+     *         The task token has either expired or the task associated with the token has already been closed.
      * @sample AWSStepFunctions.SendTaskSuccess
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/SendTaskSuccess" target="_top">AWS API
      *      Documentation</a>

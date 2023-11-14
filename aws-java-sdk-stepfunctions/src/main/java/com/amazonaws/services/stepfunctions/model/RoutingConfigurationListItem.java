@@ -42,8 +42,8 @@ public class RoutingConfigurationListItem implements Serializable, Cloneable, St
     private String stateMachineVersionArn;
     /**
      * <p>
-     * The percentage of traffic you want to route to the second state machine version. The sum of the weights in the
-     * routing configuration must be equal to 100.
+     * The percentage of traffic you want to route to a state machine version. The sum of the weights in the routing
+     * configuration must be equal to 100.
      * </p>
      */
     private Integer weight;
@@ -112,13 +112,13 @@ public class RoutingConfigurationListItem implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The percentage of traffic you want to route to the second state machine version. The sum of the weights in the
-     * routing configuration must be equal to 100.
+     * The percentage of traffic you want to route to a state machine version. The sum of the weights in the routing
+     * configuration must be equal to 100.
      * </p>
      * 
      * @param weight
-     *        The percentage of traffic you want to route to the second state machine version. The sum of the weights in
-     *        the routing configuration must be equal to 100.
+     *        The percentage of traffic you want to route to a state machine version. The sum of the weights in the
+     *        routing configuration must be equal to 100.
      */
 
     public void setWeight(Integer weight) {
@@ -127,12 +127,12 @@ public class RoutingConfigurationListItem implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The percentage of traffic you want to route to the second state machine version. The sum of the weights in the
-     * routing configuration must be equal to 100.
+     * The percentage of traffic you want to route to a state machine version. The sum of the weights in the routing
+     * configuration must be equal to 100.
      * </p>
      * 
-     * @return The percentage of traffic you want to route to the second state machine version. The sum of the weights
-     *         in the routing configuration must be equal to 100.
+     * @return The percentage of traffic you want to route to a state machine version. The sum of the weights in the
+     *         routing configuration must be equal to 100.
      */
 
     public Integer getWeight() {
@@ -141,13 +141,13 @@ public class RoutingConfigurationListItem implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The percentage of traffic you want to route to the second state machine version. The sum of the weights in the
-     * routing configuration must be equal to 100.
+     * The percentage of traffic you want to route to a state machine version. The sum of the weights in the routing
+     * configuration must be equal to 100.
      * </p>
      * 
      * @param weight
-     *        The percentage of traffic you want to route to the second state machine version. The sum of the weights in
-     *        the routing configuration must be equal to 100.
+     *        The percentage of traffic you want to route to a state machine version. The sum of the weights in the
+     *        routing configuration must be equal to 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

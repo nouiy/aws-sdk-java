@@ -63,6 +63,11 @@ public class AbstractAWSResourceExplorer2 implements AWSResourceExplorer2 {
     }
 
     @Override
+    public GetAccountLevelServiceConfigurationResult getAccountLevelServiceConfiguration(GetAccountLevelServiceConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetDefaultViewResult getDefaultView(GetDefaultViewRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -79,6 +84,11 @@ public class AbstractAWSResourceExplorer2 implements AWSResourceExplorer2 {
 
     @Override
     public ListIndexesResult listIndexes(ListIndexesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListIndexesForMembersResult listIndexesForMembers(ListIndexesForMembersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

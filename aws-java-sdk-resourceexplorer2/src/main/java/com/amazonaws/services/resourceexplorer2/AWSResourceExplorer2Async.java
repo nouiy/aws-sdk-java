@@ -478,6 +478,47 @@ public interface AWSResourceExplorer2Async extends AWSResourceExplorer2 {
 
     /**
      * <p>
+     * Retrieves the status of your account's Amazon Web Services service access, and validates the service linked role
+     * required to access the multi-account search feature. Only the management account or a delegated administrator
+     * with service access enabled can invoke this API call.
+     * </p>
+     * 
+     * @param getAccountLevelServiceConfigurationRequest
+     * @return A Java Future containing the result of the GetAccountLevelServiceConfiguration operation returned by the
+     *         service.
+     * @sample AWSResourceExplorer2Async.GetAccountLevelServiceConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/resource-explorer-2-2022-07-28/GetAccountLevelServiceConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccountLevelServiceConfigurationResult> getAccountLevelServiceConfigurationAsync(
+            GetAccountLevelServiceConfigurationRequest getAccountLevelServiceConfigurationRequest);
+
+    /**
+     * <p>
+     * Retrieves the status of your account's Amazon Web Services service access, and validates the service linked role
+     * required to access the multi-account search feature. Only the management account or a delegated administrator
+     * with service access enabled can invoke this API call.
+     * </p>
+     * 
+     * @param getAccountLevelServiceConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAccountLevelServiceConfiguration operation returned by the
+     *         service.
+     * @sample AWSResourceExplorer2AsyncHandler.GetAccountLevelServiceConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/resource-explorer-2-2022-07-28/GetAccountLevelServiceConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccountLevelServiceConfigurationResult> getAccountLevelServiceConfigurationAsync(
+            GetAccountLevelServiceConfigurationRequest getAccountLevelServiceConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAccountLevelServiceConfigurationRequest, GetAccountLevelServiceConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the Amazon Resource Name (ARN) of the view that is the default for the Amazon Web Services Region in
      * which you call this operation. You can then call <a>GetView</a> to retrieve the details of that view.
      * </p>
@@ -605,6 +646,41 @@ public interface AWSResourceExplorer2Async extends AWSResourceExplorer2 {
      */
     java.util.concurrent.Future<ListIndexesResult> listIndexesAsync(ListIndexesRequest listIndexesRequest,
             com.amazonaws.handlers.AsyncHandler<ListIndexesRequest, ListIndexesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a list of a member's indexes in all Amazon Web Services Regions that are currently collecting resource
+     * information for Amazon Web Services Resource Explorer. Only the management account or a delegated administrator
+     * with service access enabled can invoke this API call.
+     * </p>
+     * 
+     * @param listIndexesForMembersRequest
+     * @return A Java Future containing the result of the ListIndexesForMembers operation returned by the service.
+     * @sample AWSResourceExplorer2Async.ListIndexesForMembers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/resource-explorer-2-2022-07-28/ListIndexesForMembers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIndexesForMembersResult> listIndexesForMembersAsync(ListIndexesForMembersRequest listIndexesForMembersRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of a member's indexes in all Amazon Web Services Regions that are currently collecting resource
+     * information for Amazon Web Services Resource Explorer. Only the management account or a delegated administrator
+     * with service access enabled can invoke this API call.
+     * </p>
+     * 
+     * @param listIndexesForMembersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListIndexesForMembers operation returned by the service.
+     * @sample AWSResourceExplorer2AsyncHandler.ListIndexesForMembers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/resource-explorer-2-2022-07-28/ListIndexesForMembers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIndexesForMembersResult> listIndexesForMembersAsync(ListIndexesForMembersRequest listIndexesForMembersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListIndexesForMembersRequest, ListIndexesForMembersResult> asyncHandler);
 
     /**
      * <p>

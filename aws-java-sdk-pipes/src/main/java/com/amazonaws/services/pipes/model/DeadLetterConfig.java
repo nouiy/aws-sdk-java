@@ -30,18 +30,29 @@ public class DeadLetterConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.
+     * The ARN of the specified target for the dead-letter queue.
+     * </p>
+     * <p>
+     * For Amazon Kinesis stream and Amazon DynamoDB stream sources, specify either an Amazon SNS topic or Amazon SQS
+     * queue ARN.
      * </p>
      */
     private String arn;
 
     /**
      * <p>
-     * The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.
+     * The ARN of the specified target for the dead-letter queue.
+     * </p>
+     * <p>
+     * For Amazon Kinesis stream and Amazon DynamoDB stream sources, specify either an Amazon SNS topic or Amazon SQS
+     * queue ARN.
      * </p>
      * 
      * @param arn
-     *        The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.
+     *        The ARN of the specified target for the dead-letter queue. </p>
+     *        <p>
+     *        For Amazon Kinesis stream and Amazon DynamoDB stream sources, specify either an Amazon SNS topic or Amazon
+     *        SQS queue ARN.
      */
 
     public void setArn(String arn) {
@@ -50,10 +61,17 @@ public class DeadLetterConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.
+     * The ARN of the specified target for the dead-letter queue.
+     * </p>
+     * <p>
+     * For Amazon Kinesis stream and Amazon DynamoDB stream sources, specify either an Amazon SNS topic or Amazon SQS
+     * queue ARN.
      * </p>
      * 
-     * @return The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.
+     * @return The ARN of the specified target for the dead-letter queue. </p>
+     *         <p>
+     *         For Amazon Kinesis stream and Amazon DynamoDB stream sources, specify either an Amazon SNS topic or
+     *         Amazon SQS queue ARN.
      */
 
     public String getArn() {
@@ -62,11 +80,18 @@ public class DeadLetterConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.
+     * The ARN of the specified target for the dead-letter queue.
+     * </p>
+     * <p>
+     * For Amazon Kinesis stream and Amazon DynamoDB stream sources, specify either an Amazon SNS topic or Amazon SQS
+     * queue ARN.
      * </p>
      * 
      * @param arn
-     *        The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.
+     *        The ARN of the specified target for the dead-letter queue. </p>
+     *        <p>
+     *        For Amazon Kinesis stream and Amazon DynamoDB stream sources, specify either an Amazon SNS topic or Amazon
+     *        SQS queue ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

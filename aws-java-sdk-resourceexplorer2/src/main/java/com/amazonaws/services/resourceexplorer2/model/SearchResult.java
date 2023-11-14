@@ -34,6 +34,7 @@ public class SearchResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
      * If present, indicates that more output is available than is included in the current response. Use this value in
      * the <code>NextToken</code> request parameter in a subsequent call to the operation to get the next part of the
      * output. You should repeat this until the <code>NextToken</code> response element comes back as <code>null</code>.
+     * The pagination tokens expire after 24 hours.
      * </p>
      */
     private String nextToken;
@@ -96,13 +97,14 @@ public class SearchResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
      * If present, indicates that more output is available than is included in the current response. Use this value in
      * the <code>NextToken</code> request parameter in a subsequent call to the operation to get the next part of the
      * output. You should repeat this until the <code>NextToken</code> response element comes back as <code>null</code>.
+     * The pagination tokens expire after 24 hours.
      * </p>
      * 
      * @param nextToken
      *        If present, indicates that more output is available than is included in the current response. Use this
      *        value in the <code>NextToken</code> request parameter in a subsequent call to the operation to get the
      *        next part of the output. You should repeat this until the <code>NextToken</code> response element comes
-     *        back as <code>null</code>.
+     *        back as <code>null</code>. The pagination tokens expire after 24 hours.
      */
 
     public void setNextToken(String nextToken) {
@@ -114,12 +116,13 @@ public class SearchResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
      * If present, indicates that more output is available than is included in the current response. Use this value in
      * the <code>NextToken</code> request parameter in a subsequent call to the operation to get the next part of the
      * output. You should repeat this until the <code>NextToken</code> response element comes back as <code>null</code>.
+     * The pagination tokens expire after 24 hours.
      * </p>
      * 
      * @return If present, indicates that more output is available than is included in the current response. Use this
      *         value in the <code>NextToken</code> request parameter in a subsequent call to the operation to get the
      *         next part of the output. You should repeat this until the <code>NextToken</code> response element comes
-     *         back as <code>null</code>.
+     *         back as <code>null</code>. The pagination tokens expire after 24 hours.
      */
 
     public String getNextToken() {
@@ -131,13 +134,14 @@ public class SearchResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
      * If present, indicates that more output is available than is included in the current response. Use this value in
      * the <code>NextToken</code> request parameter in a subsequent call to the operation to get the next part of the
      * output. You should repeat this until the <code>NextToken</code> response element comes back as <code>null</code>.
+     * The pagination tokens expire after 24 hours.
      * </p>
      * 
      * @param nextToken
      *        If present, indicates that more output is available than is included in the current response. Use this
      *        value in the <code>NextToken</code> request parameter in a subsequent call to the operation to get the
      *        next part of the output. You should repeat this until the <code>NextToken</code> response element comes
-     *        back as <code>null</code>.
+     *        back as <code>null</code>. The pagination tokens expire after 24 hours.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

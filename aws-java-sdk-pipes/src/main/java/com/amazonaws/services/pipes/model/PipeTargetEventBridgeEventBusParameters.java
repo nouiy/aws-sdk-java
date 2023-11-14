@@ -39,11 +39,6 @@ public class PipeTargetEventBridgeEventBusParameters implements Serializable, Cl
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
      * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
-     * <important>
-     * <p>
-     * When using Java, you must include <code>auth-crt</code> on the class path.
-     * </p>
-     * </important>
      */
     private String endpointId;
     /**
@@ -116,19 +111,10 @@ public class PipeTargetEventBridgeEventBusParameters implements Serializable, Cl
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
      * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
-     * <important>
-     * <p>
-     * When using Java, you must include <code>auth-crt</code> on the class path.
-     * </p>
-     * </important>
      * 
      * @param endpointId
      *        The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.</p>
-     *        <important>
-     *        <p>
-     *        When using Java, you must include <code>auth-crt</code> on the class path.
-     *        </p>
+     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      */
 
     public void setEndpointId(String endpointId) {
@@ -140,18 +126,9 @@ public class PipeTargetEventBridgeEventBusParameters implements Serializable, Cl
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
      * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
-     * <important>
-     * <p>
-     * When using Java, you must include <code>auth-crt</code> on the class path.
-     * </p>
-     * </important>
      * 
      * @return The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *         https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.</p>
-     *         <important>
-     *         <p>
-     *         When using Java, you must include <code>auth-crt</code> on the class path.
-     *         </p>
+     *         https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      */
 
     public String getEndpointId() {
@@ -163,19 +140,10 @@ public class PipeTargetEventBridgeEventBusParameters implements Serializable, Cl
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
      * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
-     * <important>
-     * <p>
-     * When using Java, you must include <code>auth-crt</code> on the class path.
-     * </p>
-     * </important>
      * 
      * @param endpointId
      *        The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.</p>
-     *        <important>
-     *        <p>
-     *        When using Java, you must include <code>auth-crt</code> on the class path.
-     *        </p>
+     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

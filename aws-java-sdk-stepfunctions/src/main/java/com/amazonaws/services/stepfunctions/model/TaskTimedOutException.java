@@ -15,7 +15,9 @@ package com.amazonaws.services.stepfunctions.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The task token has either expired or the task associated with the token has already been closed.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class TaskTimedOutException extends com.amazonaws.services.stepfunctions.model.AWSStepFunctionsException {

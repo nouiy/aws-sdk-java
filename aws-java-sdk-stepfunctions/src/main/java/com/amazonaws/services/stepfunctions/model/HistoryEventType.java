@@ -78,7 +78,9 @@ public enum HistoryEventType {
     MapRunAborted("MapRunAborted"),
     MapRunFailed("MapRunFailed"),
     MapRunStarted("MapRunStarted"),
-    MapRunSucceeded("MapRunSucceeded");
+    MapRunSucceeded("MapRunSucceeded"),
+    ExecutionRedriven("ExecutionRedriven"),
+    MapRunRedriven("MapRunRedriven");
 
     private String value;
 

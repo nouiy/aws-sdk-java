@@ -128,6 +128,12 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
     private ExecutionTimedOutEventDetails executionTimedOutEventDetails;
     /**
      * <p>
+     * Contains details about the redrive attempt of an execution.
+     * </p>
+     */
+    private ExecutionRedrivenEventDetails executionRedrivenEventDetails;
+    /**
+     * <p>
      * Contains details about Map state that was started.
      * </p>
      */
@@ -193,6 +199,12 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private MapRunFailedEventDetails mapRunFailedEventDetails;
+    /**
+     * <p>
+     * Contains details about the redrive attempt of a Map Run.
+     * </p>
+     */
+    private MapRunRedrivenEventDetails mapRunRedrivenEventDetails;
 
     /**
      * <p>
@@ -1009,6 +1021,46 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Contains details about the redrive attempt of an execution.
+     * </p>
+     * 
+     * @param executionRedrivenEventDetails
+     *        Contains details about the redrive attempt of an execution.
+     */
+
+    public void setExecutionRedrivenEventDetails(ExecutionRedrivenEventDetails executionRedrivenEventDetails) {
+        this.executionRedrivenEventDetails = executionRedrivenEventDetails;
+    }
+
+    /**
+     * <p>
+     * Contains details about the redrive attempt of an execution.
+     * </p>
+     * 
+     * @return Contains details about the redrive attempt of an execution.
+     */
+
+    public ExecutionRedrivenEventDetails getExecutionRedrivenEventDetails() {
+        return this.executionRedrivenEventDetails;
+    }
+
+    /**
+     * <p>
+     * Contains details about the redrive attempt of an execution.
+     * </p>
+     * 
+     * @param executionRedrivenEventDetails
+     *        Contains details about the redrive attempt of an execution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HistoryEvent withExecutionRedrivenEventDetails(ExecutionRedrivenEventDetails executionRedrivenEventDetails) {
+        setExecutionRedrivenEventDetails(executionRedrivenEventDetails);
+        return this;
+    }
+
+    /**
+     * <p>
      * Contains details about Map state that was started.
      * </p>
      * 
@@ -1530,6 +1582,46 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains details about the redrive attempt of a Map Run.
+     * </p>
+     * 
+     * @param mapRunRedrivenEventDetails
+     *        Contains details about the redrive attempt of a Map Run.
+     */
+
+    public void setMapRunRedrivenEventDetails(MapRunRedrivenEventDetails mapRunRedrivenEventDetails) {
+        this.mapRunRedrivenEventDetails = mapRunRedrivenEventDetails;
+    }
+
+    /**
+     * <p>
+     * Contains details about the redrive attempt of a Map Run.
+     * </p>
+     * 
+     * @return Contains details about the redrive attempt of a Map Run.
+     */
+
+    public MapRunRedrivenEventDetails getMapRunRedrivenEventDetails() {
+        return this.mapRunRedrivenEventDetails;
+    }
+
+    /**
+     * <p>
+     * Contains details about the redrive attempt of a Map Run.
+     * </p>
+     * 
+     * @param mapRunRedrivenEventDetails
+     *        Contains details about the redrive attempt of a Map Run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HistoryEvent withMapRunRedrivenEventDetails(MapRunRedrivenEventDetails mapRunRedrivenEventDetails) {
+        setMapRunRedrivenEventDetails(mapRunRedrivenEventDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1587,6 +1679,8 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
             sb.append("ExecutionAbortedEventDetails: ").append(getExecutionAbortedEventDetails()).append(",");
         if (getExecutionTimedOutEventDetails() != null)
             sb.append("ExecutionTimedOutEventDetails: ").append(getExecutionTimedOutEventDetails()).append(",");
+        if (getExecutionRedrivenEventDetails() != null)
+            sb.append("ExecutionRedrivenEventDetails: ").append(getExecutionRedrivenEventDetails()).append(",");
         if (getMapStateStartedEventDetails() != null)
             sb.append("MapStateStartedEventDetails: ").append(getMapStateStartedEventDetails()).append(",");
         if (getMapIterationStartedEventDetails() != null)
@@ -1616,7 +1710,9 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
         if (getMapRunStartedEventDetails() != null)
             sb.append("MapRunStartedEventDetails: ").append(getMapRunStartedEventDetails()).append(",");
         if (getMapRunFailedEventDetails() != null)
-            sb.append("MapRunFailedEventDetails: ").append(getMapRunFailedEventDetails());
+            sb.append("MapRunFailedEventDetails: ").append(getMapRunFailedEventDetails()).append(",");
+        if (getMapRunRedrivenEventDetails() != null)
+            sb.append("MapRunRedrivenEventDetails: ").append(getMapRunRedrivenEventDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -1728,6 +1824,11 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
         if (other.getExecutionTimedOutEventDetails() != null
                 && other.getExecutionTimedOutEventDetails().equals(this.getExecutionTimedOutEventDetails()) == false)
             return false;
+        if (other.getExecutionRedrivenEventDetails() == null ^ this.getExecutionRedrivenEventDetails() == null)
+            return false;
+        if (other.getExecutionRedrivenEventDetails() != null
+                && other.getExecutionRedrivenEventDetails().equals(this.getExecutionRedrivenEventDetails()) == false)
+            return false;
         if (other.getMapStateStartedEventDetails() == null ^ this.getMapStateStartedEventDetails() == null)
             return false;
         if (other.getMapStateStartedEventDetails() != null && other.getMapStateStartedEventDetails().equals(this.getMapStateStartedEventDetails()) == false)
@@ -1798,6 +1899,10 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMapRunFailedEventDetails() != null && other.getMapRunFailedEventDetails().equals(this.getMapRunFailedEventDetails()) == false)
             return false;
+        if (other.getMapRunRedrivenEventDetails() == null ^ this.getMapRunRedrivenEventDetails() == null)
+            return false;
+        if (other.getMapRunRedrivenEventDetails() != null && other.getMapRunRedrivenEventDetails().equals(this.getMapRunRedrivenEventDetails()) == false)
+            return false;
         return true;
     }
 
@@ -1829,6 +1934,7 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getExecutionSucceededEventDetails() == null) ? 0 : getExecutionSucceededEventDetails().hashCode());
         hashCode = prime * hashCode + ((getExecutionAbortedEventDetails() == null) ? 0 : getExecutionAbortedEventDetails().hashCode());
         hashCode = prime * hashCode + ((getExecutionTimedOutEventDetails() == null) ? 0 : getExecutionTimedOutEventDetails().hashCode());
+        hashCode = prime * hashCode + ((getExecutionRedrivenEventDetails() == null) ? 0 : getExecutionRedrivenEventDetails().hashCode());
         hashCode = prime * hashCode + ((getMapStateStartedEventDetails() == null) ? 0 : getMapStateStartedEventDetails().hashCode());
         hashCode = prime * hashCode + ((getMapIterationStartedEventDetails() == null) ? 0 : getMapIterationStartedEventDetails().hashCode());
         hashCode = prime * hashCode + ((getMapIterationSucceededEventDetails() == null) ? 0 : getMapIterationSucceededEventDetails().hashCode());
@@ -1844,6 +1950,7 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStateExitedEventDetails() == null) ? 0 : getStateExitedEventDetails().hashCode());
         hashCode = prime * hashCode + ((getMapRunStartedEventDetails() == null) ? 0 : getMapRunStartedEventDetails().hashCode());
         hashCode = prime * hashCode + ((getMapRunFailedEventDetails() == null) ? 0 : getMapRunFailedEventDetails().hashCode());
+        hashCode = prime * hashCode + ((getMapRunRedrivenEventDetails() == null) ? 0 : getMapRunRedrivenEventDetails().hashCode());
         return hashCode;
     }
 

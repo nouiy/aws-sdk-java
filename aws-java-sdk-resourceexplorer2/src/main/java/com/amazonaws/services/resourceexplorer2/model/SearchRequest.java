@@ -46,6 +46,7 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
      * The parameter for receiving additional results if you receive a <code>NextToken</code> response in a previous
      * request. A <code>NextToken</code> response indicates that more output is available. Set this parameter to the
      * value of the previous call's <code>NextToken</code> response to indicate where the output should continue from.
+     * The pagination tokens expire after 24 hours.
      * </p>
      */
     private String nextToken;
@@ -181,13 +182,14 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
      * The parameter for receiving additional results if you receive a <code>NextToken</code> response in a previous
      * request. A <code>NextToken</code> response indicates that more output is available. Set this parameter to the
      * value of the previous call's <code>NextToken</code> response to indicate where the output should continue from.
+     * The pagination tokens expire after 24 hours.
      * </p>
      * 
      * @param nextToken
      *        The parameter for receiving additional results if you receive a <code>NextToken</code> response in a
      *        previous request. A <code>NextToken</code> response indicates that more output is available. Set this
      *        parameter to the value of the previous call's <code>NextToken</code> response to indicate where the output
-     *        should continue from.
+     *        should continue from. The pagination tokens expire after 24 hours.
      */
 
     public void setNextToken(String nextToken) {
@@ -199,12 +201,13 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
      * The parameter for receiving additional results if you receive a <code>NextToken</code> response in a previous
      * request. A <code>NextToken</code> response indicates that more output is available. Set this parameter to the
      * value of the previous call's <code>NextToken</code> response to indicate where the output should continue from.
+     * The pagination tokens expire after 24 hours.
      * </p>
      * 
      * @return The parameter for receiving additional results if you receive a <code>NextToken</code> response in a
      *         previous request. A <code>NextToken</code> response indicates that more output is available. Set this
      *         parameter to the value of the previous call's <code>NextToken</code> response to indicate where the
-     *         output should continue from.
+     *         output should continue from. The pagination tokens expire after 24 hours.
      */
 
     public String getNextToken() {
@@ -216,13 +219,14 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
      * The parameter for receiving additional results if you receive a <code>NextToken</code> response in a previous
      * request. A <code>NextToken</code> response indicates that more output is available. Set this parameter to the
      * value of the previous call's <code>NextToken</code> response to indicate where the output should continue from.
+     * The pagination tokens expire after 24 hours.
      * </p>
      * 
      * @param nextToken
      *        The parameter for receiving additional results if you receive a <code>NextToken</code> response in a
      *        previous request. A <code>NextToken</code> response indicates that more output is available. Set this
      *        parameter to the value of the previous call's <code>NextToken</code> response to indicate where the output
-     *        should continue from.
+     *        should continue from. The pagination tokens expire after 24 hours.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

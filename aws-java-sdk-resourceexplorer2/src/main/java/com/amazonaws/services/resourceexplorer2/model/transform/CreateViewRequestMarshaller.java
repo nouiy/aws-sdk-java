@@ -38,6 +38,8 @@ public class CreateViewRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Filters").build();
     private static final MarshallingInfo<List> INCLUDEDPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncludedProperties").build();
+    private static final MarshallingInfo<String> SCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Scope").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<String> VIEWNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -62,6 +64,7 @@ public class CreateViewRequestMarshaller {
             protocolMarshaller.marshall(createViewRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createViewRequest.getFilters(), FILTERS_BINDING);
             protocolMarshaller.marshall(createViewRequest.getIncludedProperties(), INCLUDEDPROPERTIES_BINDING);
+            protocolMarshaller.marshall(createViewRequest.getScope(), SCOPE_BINDING);
             protocolMarshaller.marshall(createViewRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createViewRequest.getViewName(), VIEWNAME_BINDING);
         } catch (Exception e) {

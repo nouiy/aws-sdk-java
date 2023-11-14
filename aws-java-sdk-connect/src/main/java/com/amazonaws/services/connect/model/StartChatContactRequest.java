@@ -123,6 +123,27 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
      * </note>
      */
     private String relatedContactId;
+    /**
+     * <p>
+     * A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     * attributes are standard Amazon Connect attributes. They can be accessed in flows.
+     * </p>
+     * <p>
+     * Attribute keys can include only alphanumeric, -, and _.
+     * </p>
+     * <p>
+     * This field can be used to show channel subtype, such as <code>connect:Guide</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The types <code>application/vnd.amazonaws.connect.message.interactive</code> and
+     * <code>application/vnd.amazonaws.connect.message.interactive.response</code> must be present in the
+     * SupportedMessagingContentTypes field of this API in order to set <code>SegmentAttributes</code> as {
+     * <code> "connect:Subtype": {"valueString" : "connect:Guide" }}</code>.
+     * </p>
+     * </note>
+     */
+    private java.util.Map<String, SegmentAttributeValue> segmentAttributes;
 
     /**
      * <p>
@@ -846,6 +867,161 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     * attributes are standard Amazon Connect attributes. They can be accessed in flows.
+     * </p>
+     * <p>
+     * Attribute keys can include only alphanumeric, -, and _.
+     * </p>
+     * <p>
+     * This field can be used to show channel subtype, such as <code>connect:Guide</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The types <code>application/vnd.amazonaws.connect.message.interactive</code> and
+     * <code>application/vnd.amazonaws.connect.message.interactive.response</code> must be present in the
+     * SupportedMessagingContentTypes field of this API in order to set <code>SegmentAttributes</code> as {
+     * <code> "connect:Subtype": {"valueString" : "connect:Guide" }}</code>.
+     * </p>
+     * </note>
+     * 
+     * @return A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     *         attributes are standard Amazon Connect attributes. They can be accessed in flows.</p>
+     *         <p>
+     *         Attribute keys can include only alphanumeric, -, and _.
+     *         </p>
+     *         <p>
+     *         This field can be used to show channel subtype, such as <code>connect:Guide</code>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         The types <code>application/vnd.amazonaws.connect.message.interactive</code> and
+     *         <code>application/vnd.amazonaws.connect.message.interactive.response</code> must be present in the
+     *         SupportedMessagingContentTypes field of this API in order to set <code>SegmentAttributes</code> as {
+     *         <code> "connect:Subtype": {"valueString" : "connect:Guide" }}</code>.
+     *         </p>
+     */
+
+    public java.util.Map<String, SegmentAttributeValue> getSegmentAttributes() {
+        return segmentAttributes;
+    }
+
+    /**
+     * <p>
+     * A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     * attributes are standard Amazon Connect attributes. They can be accessed in flows.
+     * </p>
+     * <p>
+     * Attribute keys can include only alphanumeric, -, and _.
+     * </p>
+     * <p>
+     * This field can be used to show channel subtype, such as <code>connect:Guide</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The types <code>application/vnd.amazonaws.connect.message.interactive</code> and
+     * <code>application/vnd.amazonaws.connect.message.interactive.response</code> must be present in the
+     * SupportedMessagingContentTypes field of this API in order to set <code>SegmentAttributes</code> as {
+     * <code> "connect:Subtype": {"valueString" : "connect:Guide" }}</code>.
+     * </p>
+     * </note>
+     * 
+     * @param segmentAttributes
+     *        A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     *        attributes are standard Amazon Connect attributes. They can be accessed in flows.</p>
+     *        <p>
+     *        Attribute keys can include only alphanumeric, -, and _.
+     *        </p>
+     *        <p>
+     *        This field can be used to show channel subtype, such as <code>connect:Guide</code>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        The types <code>application/vnd.amazonaws.connect.message.interactive</code> and
+     *        <code>application/vnd.amazonaws.connect.message.interactive.response</code> must be present in the
+     *        SupportedMessagingContentTypes field of this API in order to set <code>SegmentAttributes</code> as {
+     *        <code> "connect:Subtype": {"valueString" : "connect:Guide" }}</code>.
+     *        </p>
+     */
+
+    public void setSegmentAttributes(java.util.Map<String, SegmentAttributeValue> segmentAttributes) {
+        this.segmentAttributes = segmentAttributes;
+    }
+
+    /**
+     * <p>
+     * A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     * attributes are standard Amazon Connect attributes. They can be accessed in flows.
+     * </p>
+     * <p>
+     * Attribute keys can include only alphanumeric, -, and _.
+     * </p>
+     * <p>
+     * This field can be used to show channel subtype, such as <code>connect:Guide</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The types <code>application/vnd.amazonaws.connect.message.interactive</code> and
+     * <code>application/vnd.amazonaws.connect.message.interactive.response</code> must be present in the
+     * SupportedMessagingContentTypes field of this API in order to set <code>SegmentAttributes</code> as {
+     * <code> "connect:Subtype": {"valueString" : "connect:Guide" }}</code>.
+     * </p>
+     * </note>
+     * 
+     * @param segmentAttributes
+     *        A set of system defined key-value pairs stored on individual contact segments using an attribute map. The
+     *        attributes are standard Amazon Connect attributes. They can be accessed in flows.</p>
+     *        <p>
+     *        Attribute keys can include only alphanumeric, -, and _.
+     *        </p>
+     *        <p>
+     *        This field can be used to show channel subtype, such as <code>connect:Guide</code>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        The types <code>application/vnd.amazonaws.connect.message.interactive</code> and
+     *        <code>application/vnd.amazonaws.connect.message.interactive.response</code> must be present in the
+     *        SupportedMessagingContentTypes field of this API in order to set <code>SegmentAttributes</code> as {
+     *        <code> "connect:Subtype": {"valueString" : "connect:Guide" }}</code>.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartChatContactRequest withSegmentAttributes(java.util.Map<String, SegmentAttributeValue> segmentAttributes) {
+        setSegmentAttributes(segmentAttributes);
+        return this;
+    }
+
+    /**
+     * Add a single SegmentAttributes entry
+     *
+     * @see StartChatContactRequest#withSegmentAttributes
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartChatContactRequest addSegmentAttributesEntry(String key, SegmentAttributeValue value) {
+        if (null == this.segmentAttributes) {
+            this.segmentAttributes = new java.util.HashMap<String, SegmentAttributeValue>();
+        }
+        if (this.segmentAttributes.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.segmentAttributes.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into SegmentAttributes.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartChatContactRequest clearSegmentAttributesEntries() {
+        this.segmentAttributes = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -876,7 +1052,9 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
         if (getPersistentChat() != null)
             sb.append("PersistentChat: ").append(getPersistentChat()).append(",");
         if (getRelatedContactId() != null)
-            sb.append("RelatedContactId: ").append(getRelatedContactId());
+            sb.append("RelatedContactId: ").append(getRelatedContactId()).append(",");
+        if (getSegmentAttributes() != null)
+            sb.append("SegmentAttributes: ").append(getSegmentAttributes());
         sb.append("}");
         return sb.toString();
     }
@@ -932,6 +1110,10 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getRelatedContactId() != null && other.getRelatedContactId().equals(this.getRelatedContactId()) == false)
             return false;
+        if (other.getSegmentAttributes() == null ^ this.getSegmentAttributes() == null)
+            return false;
+        if (other.getSegmentAttributes() != null && other.getSegmentAttributes().equals(this.getSegmentAttributes()) == false)
+            return false;
         return true;
     }
 
@@ -950,6 +1132,7 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getSupportedMessagingContentTypes() == null) ? 0 : getSupportedMessagingContentTypes().hashCode());
         hashCode = prime * hashCode + ((getPersistentChat() == null) ? 0 : getPersistentChat().hashCode());
         hashCode = prime * hashCode + ((getRelatedContactId() == null) ? 0 : getRelatedContactId().hashCode());
+        hashCode = prime * hashCode + ((getSegmentAttributes() == null) ? 0 : getSegmentAttributes().hashCode());
         return hashCode;
     }
 

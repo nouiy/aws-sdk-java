@@ -162,6 +162,24 @@ public class ListCopyJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private String byParentJobId;
+    /**
+     * <p>
+     * This parameter returns the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example accepted strings include <code>AccessDenied</code>, <code>Success</code>, and
+     * <code>InvalidParameters</code>. See <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * accepted MessageCategory strings.
+     * </p>
+     * <p>
+     * The the value ANY returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     * </p>
+     */
+    private String byMessageCategory;
 
     /**
      * <p>
@@ -1056,6 +1074,115 @@ public class ListCopyJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * This parameter returns the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example accepted strings include <code>AccessDenied</code>, <code>Success</code>, and
+     * <code>InvalidParameters</code>. See <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * accepted MessageCategory strings.
+     * </p>
+     * <p>
+     * The the value ANY returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     * </p>
+     * 
+     * @param byMessageCategory
+     *        This parameter returns the job count for the specified message category.</p>
+     *        <p>
+     *        Example accepted strings include <code>AccessDenied</code>, <code>Success</code>, and
+     *        <code>InvalidParameters</code>. See <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     *        accepted MessageCategory strings.
+     *        </p>
+     *        <p>
+     *        The the value ANY returns count of all message categories.
+     *        </p>
+     *        <p>
+     *        <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     */
+
+    public void setByMessageCategory(String byMessageCategory) {
+        this.byMessageCategory = byMessageCategory;
+    }
+
+    /**
+     * <p>
+     * This parameter returns the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example accepted strings include <code>AccessDenied</code>, <code>Success</code>, and
+     * <code>InvalidParameters</code>. See <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * accepted MessageCategory strings.
+     * </p>
+     * <p>
+     * The the value ANY returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     * </p>
+     * 
+     * @return This parameter returns the job count for the specified message category.</p>
+     *         <p>
+     *         Example accepted strings include <code>AccessDenied</code>, <code>Success</code>, and
+     *         <code>InvalidParameters</code>. See <a
+     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list
+     *         of accepted MessageCategory strings.
+     *         </p>
+     *         <p>
+     *         The the value ANY returns count of all message categories.
+     *         </p>
+     *         <p>
+     *         <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     */
+
+    public String getByMessageCategory() {
+        return this.byMessageCategory;
+    }
+
+    /**
+     * <p>
+     * This parameter returns the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example accepted strings include <code>AccessDenied</code>, <code>Success</code>, and
+     * <code>InvalidParameters</code>. See <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * accepted MessageCategory strings.
+     * </p>
+     * <p>
+     * The the value ANY returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     * </p>
+     * 
+     * @param byMessageCategory
+     *        This parameter returns the job count for the specified message category.</p>
+     *        <p>
+     *        Example accepted strings include <code>AccessDenied</code>, <code>Success</code>, and
+     *        <code>InvalidParameters</code>. See <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     *        accepted MessageCategory strings.
+     *        </p>
+     *        <p>
+     *        The the value ANY returns count of all message categories.
+     *        </p>
+     *        <p>
+     *        <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListCopyJobsRequest withByMessageCategory(String byMessageCategory) {
+        setByMessageCategory(byMessageCategory);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1090,7 +1217,9 @@ public class ListCopyJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getByCompleteAfter() != null)
             sb.append("ByCompleteAfter: ").append(getByCompleteAfter()).append(",");
         if (getByParentJobId() != null)
-            sb.append("ByParentJobId: ").append(getByParentJobId());
+            sb.append("ByParentJobId: ").append(getByParentJobId()).append(",");
+        if (getByMessageCategory() != null)
+            sb.append("ByMessageCategory: ").append(getByMessageCategory());
         sb.append("}");
         return sb.toString();
     }
@@ -1153,6 +1282,10 @@ public class ListCopyJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getByParentJobId() != null && other.getByParentJobId().equals(this.getByParentJobId()) == false)
             return false;
+        if (other.getByMessageCategory() == null ^ this.getByMessageCategory() == null)
+            return false;
+        if (other.getByMessageCategory() != null && other.getByMessageCategory().equals(this.getByMessageCategory()) == false)
+            return false;
         return true;
     }
 
@@ -1173,6 +1306,7 @@ public class ListCopyJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getByCompleteBefore() == null) ? 0 : getByCompleteBefore().hashCode());
         hashCode = prime * hashCode + ((getByCompleteAfter() == null) ? 0 : getByCompleteAfter().hashCode());
         hashCode = prime * hashCode + ((getByParentJobId() == null) ? 0 : getByParentJobId().hashCode());
+        hashCode = prime * hashCode + ((getByMessageCategory() == null) ? 0 : getByMessageCategory().hashCode());
         return hashCode;
     }
 

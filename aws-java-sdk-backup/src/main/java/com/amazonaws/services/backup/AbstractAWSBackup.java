@@ -228,6 +228,11 @@ public class AbstractAWSBackup implements AWSBackup {
     }
 
     @Override
+    public ListBackupJobSummariesResult listBackupJobSummaries(ListBackupJobSummariesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListBackupJobsResult listBackupJobs(ListBackupJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -254,6 +259,11 @@ public class AbstractAWSBackup implements AWSBackup {
 
     @Override
     public ListBackupVaultsResult listBackupVaults(ListBackupVaultsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCopyJobSummariesResult listCopyJobSummaries(ListCopyJobSummariesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -304,6 +314,11 @@ public class AbstractAWSBackup implements AWSBackup {
 
     @Override
     public ListReportPlansResult listReportPlans(ListReportPlansRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListRestoreJobSummariesResult listRestoreJobSummaries(ListRestoreJobSummariesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

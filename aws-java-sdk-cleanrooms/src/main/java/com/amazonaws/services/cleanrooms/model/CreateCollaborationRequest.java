@@ -75,6 +75,16 @@ public class CreateCollaborationRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The collaboration creator's payment responsibilities set by the collaboration creator.
+     * </p>
+     * <p>
+     * If the collaboration creator hasn't specified anyone as the member paying for query compute costs, then the
+     * member who can query is the default payer.
+     * </p>
+     */
+    private PaymentConfiguration creatorPaymentConfiguration;
 
     /**
      * <p>
@@ -544,6 +554,67 @@ public class CreateCollaborationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The collaboration creator's payment responsibilities set by the collaboration creator.
+     * </p>
+     * <p>
+     * If the collaboration creator hasn't specified anyone as the member paying for query compute costs, then the
+     * member who can query is the default payer.
+     * </p>
+     * 
+     * @param creatorPaymentConfiguration
+     *        The collaboration creator's payment responsibilities set by the collaboration creator. </p>
+     *        <p>
+     *        If the collaboration creator hasn't specified anyone as the member paying for query compute costs, then
+     *        the member who can query is the default payer.
+     */
+
+    public void setCreatorPaymentConfiguration(PaymentConfiguration creatorPaymentConfiguration) {
+        this.creatorPaymentConfiguration = creatorPaymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The collaboration creator's payment responsibilities set by the collaboration creator.
+     * </p>
+     * <p>
+     * If the collaboration creator hasn't specified anyone as the member paying for query compute costs, then the
+     * member who can query is the default payer.
+     * </p>
+     * 
+     * @return The collaboration creator's payment responsibilities set by the collaboration creator. </p>
+     *         <p>
+     *         If the collaboration creator hasn't specified anyone as the member paying for query compute costs, then
+     *         the member who can query is the default payer.
+     */
+
+    public PaymentConfiguration getCreatorPaymentConfiguration() {
+        return this.creatorPaymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The collaboration creator's payment responsibilities set by the collaboration creator.
+     * </p>
+     * <p>
+     * If the collaboration creator hasn't specified anyone as the member paying for query compute costs, then the
+     * member who can query is the default payer.
+     * </p>
+     * 
+     * @param creatorPaymentConfiguration
+     *        The collaboration creator's payment responsibilities set by the collaboration creator. </p>
+     *        <p>
+     *        If the collaboration creator hasn't specified anyone as the member paying for query compute costs, then
+     *        the member who can query is the default payer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCollaborationRequest withCreatorPaymentConfiguration(PaymentConfiguration creatorPaymentConfiguration) {
+        setCreatorPaymentConfiguration(creatorPaymentConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -570,7 +641,9 @@ public class CreateCollaborationRequest extends com.amazonaws.AmazonWebServiceRe
         if (getQueryLogStatus() != null)
             sb.append("QueryLogStatus: ").append(getQueryLogStatus()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getCreatorPaymentConfiguration() != null)
+            sb.append("CreatorPaymentConfiguration: ").append(getCreatorPaymentConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -617,6 +690,10 @@ public class CreateCollaborationRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getCreatorPaymentConfiguration() == null ^ this.getCreatorPaymentConfiguration() == null)
+            return false;
+        if (other.getCreatorPaymentConfiguration() != null && other.getCreatorPaymentConfiguration().equals(this.getCreatorPaymentConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -633,6 +710,7 @@ public class CreateCollaborationRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getDataEncryptionMetadata() == null) ? 0 : getDataEncryptionMetadata().hashCode());
         hashCode = prime * hashCode + ((getQueryLogStatus() == null) ? 0 : getQueryLogStatus().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getCreatorPaymentConfiguration() == null) ? 0 : getCreatorPaymentConfiguration().hashCode());
         return hashCode;
     }
 

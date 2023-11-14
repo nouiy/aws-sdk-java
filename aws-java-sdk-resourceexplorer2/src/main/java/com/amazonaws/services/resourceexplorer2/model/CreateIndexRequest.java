@@ -30,7 +30,7 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * This value helps ensure idempotency. Resource Explorer uses this value to prevent the accidental creation of
      * duplicate versions. We recommend that you generate a <a
      * href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type value</a> to ensure the uniqueness of
-     * your views.
+     * your index.
      * </p>
      */
     private String clientToken;
@@ -47,14 +47,14 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * This value helps ensure idempotency. Resource Explorer uses this value to prevent the accidental creation of
      * duplicate versions. We recommend that you generate a <a
      * href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type value</a> to ensure the uniqueness of
-     * your views.
+     * your index.
      * </p>
      * 
      * @param clientToken
      *        This value helps ensure idempotency. Resource Explorer uses this value to prevent the accidental creation
      *        of duplicate versions. We recommend that you generate a <a
      *        href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type value</a> to ensure the
-     *        uniqueness of your views.
+     *        uniqueness of your index.
      */
 
     public void setClientToken(String clientToken) {
@@ -66,13 +66,13 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * This value helps ensure idempotency. Resource Explorer uses this value to prevent the accidental creation of
      * duplicate versions. We recommend that you generate a <a
      * href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type value</a> to ensure the uniqueness of
-     * your views.
+     * your index.
      * </p>
      * 
      * @return This value helps ensure idempotency. Resource Explorer uses this value to prevent the accidental creation
      *         of duplicate versions. We recommend that you generate a <a
      *         href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type value</a> to ensure the
-     *         uniqueness of your views.
+     *         uniqueness of your index.
      */
 
     public String getClientToken() {
@@ -84,14 +84,14 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * This value helps ensure idempotency. Resource Explorer uses this value to prevent the accidental creation of
      * duplicate versions. We recommend that you generate a <a
      * href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type value</a> to ensure the uniqueness of
-     * your views.
+     * your index.
      * </p>
      * 
      * @param clientToken
      *        This value helps ensure idempotency. Resource Explorer uses this value to prevent the accidental creation
      *        of duplicate versions. We recommend that you generate a <a
      *        href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type value</a> to ensure the
-     *        uniqueness of your views.
+     *        uniqueness of your index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -189,7 +189,7 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

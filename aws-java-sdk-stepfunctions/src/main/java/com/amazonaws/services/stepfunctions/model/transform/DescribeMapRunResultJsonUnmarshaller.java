@@ -88,6 +88,14 @@ public class DescribeMapRunResultJsonUnmarshaller implements Unmarshaller<Descri
                     context.nextToken();
                     describeMapRunResult.setExecutionCounts(MapRunExecutionCountsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("redriveCount", targetDepth)) {
+                    context.nextToken();
+                    describeMapRunResult.setRedriveCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("redriveDate", targetDepth)) {
+                    context.nextToken();
+                    describeMapRunResult.setRedriveDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

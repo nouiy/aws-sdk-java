@@ -150,6 +150,10 @@ public class DescribeBackupJobResultJsonUnmarshaller implements Unmarshaller<Des
                     context.nextToken();
                     describeBackupJobResult.setResourceName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("MessageCategory", targetDepth)) {
+                    context.nextToken();
+                    describeBackupJobResult.setMessageCategory(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

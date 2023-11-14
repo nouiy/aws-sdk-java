@@ -157,7 +157,7 @@ public class GetViewResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
+            sb.append("Tags: ").append("***Sensitive Data Redacted***").append(",");
         if (getView() != null)
             sb.append("View: ").append(getView());
         sb.append("}");

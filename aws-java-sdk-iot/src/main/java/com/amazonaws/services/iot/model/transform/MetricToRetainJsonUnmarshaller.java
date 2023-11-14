@@ -56,6 +56,10 @@ public class MetricToRetainJsonUnmarshaller implements Unmarshaller<MetricToReta
                     context.nextToken();
                     metricToRetain.setMetricDimension(MetricDimensionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("exportMetric", targetDepth)) {
+                    context.nextToken();
+                    metricToRetain.setExportMetric(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

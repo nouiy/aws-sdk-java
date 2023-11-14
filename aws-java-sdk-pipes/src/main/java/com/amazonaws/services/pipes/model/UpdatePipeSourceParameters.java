@@ -42,7 +42,14 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
     private UpdatePipeSourceDynamoDBStreamParameters dynamoDBStreamParameters;
     /**
      * <p>
-     * The collection of event patterns used to filter events. For more information, see <a
+     * The collection of event patterns used to filter events.
+     * </p>
+     * <p>
+     * To remove a filter, specify a <code>FilterCriteria</code> object with an empty array of <code>Filter</code>
+     * objects.
+     * </p>
+     * <p>
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events and
      * Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
@@ -161,13 +168,26 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The collection of event patterns used to filter events. For more information, see <a
+     * The collection of event patterns used to filter events.
+     * </p>
+     * <p>
+     * To remove a filter, specify a <code>FilterCriteria</code> object with an empty array of <code>Filter</code>
+     * objects.
+     * </p>
+     * <p>
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events and
      * Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      * 
      * @param filterCriteria
-     *        The collection of event patterns used to filter events. For more information, see <a
+     *        The collection of event patterns used to filter events.</p>
+     *        <p>
+     *        To remove a filter, specify a <code>FilterCriteria</code> object with an empty array of
+     *        <code>Filter</code> objects.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events
      *        and Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      */
@@ -178,12 +198,25 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The collection of event patterns used to filter events. For more information, see <a
+     * The collection of event patterns used to filter events.
+     * </p>
+     * <p>
+     * To remove a filter, specify a <code>FilterCriteria</code> object with an empty array of <code>Filter</code>
+     * objects.
+     * </p>
+     * <p>
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events and
      * Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      * 
-     * @return The collection of event patterns used to filter events. For more information, see <a
+     * @return The collection of event patterns used to filter events.</p>
+     *         <p>
+     *         To remove a filter, specify a <code>FilterCriteria</code> object with an empty array of
+     *         <code>Filter</code> objects.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
      *         href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html"
      *         >Events and Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      */
@@ -194,13 +227,26 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The collection of event patterns used to filter events. For more information, see <a
+     * The collection of event patterns used to filter events.
+     * </p>
+     * <p>
+     * To remove a filter, specify a <code>FilterCriteria</code> object with an empty array of <code>Filter</code>
+     * objects.
+     * </p>
+     * <p>
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events and
      * Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      * 
      * @param filterCriteria
-     *        The collection of event patterns used to filter events. For more information, see <a
+     *        The collection of event patterns used to filter events.</p>
+     *        <p>
+     *        To remove a filter, specify a <code>FilterCriteria</code> object with an empty array of
+     *        <code>Filter</code> objects.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html">Events
      *        and Event Patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

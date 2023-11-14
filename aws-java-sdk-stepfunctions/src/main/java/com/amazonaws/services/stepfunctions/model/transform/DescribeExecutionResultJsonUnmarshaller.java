@@ -112,6 +112,22 @@ public class DescribeExecutionResultJsonUnmarshaller implements Unmarshaller<Des
                     context.nextToken();
                     describeExecutionResult.setStateMachineAliasArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("redriveCount", targetDepth)) {
+                    context.nextToken();
+                    describeExecutionResult.setRedriveCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("redriveDate", targetDepth)) {
+                    context.nextToken();
+                    describeExecutionResult.setRedriveDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("redriveStatus", targetDepth)) {
+                    context.nextToken();
+                    describeExecutionResult.setRedriveStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("redriveStatusReason", targetDepth)) {
+                    context.nextToken();
+                    describeExecutionResult.setRedriveStatusReason(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

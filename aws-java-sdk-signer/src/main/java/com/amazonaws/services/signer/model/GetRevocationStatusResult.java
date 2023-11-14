@@ -25,20 +25,20 @@ public class GetRevocationStatusResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of revoked entities (including one or more of the signing profile ARN, signing job ID, and certificate
-     * hash) supplied as input to the API.
+     * A list of revoked entities (including zero or more of the signing profile ARN, signing job ARN, and certificate
+     * hashes) supplied as input to the API.
      * </p>
      */
     private java.util.List<String> revokedEntities;
 
     /**
      * <p>
-     * A list of revoked entities (including one or more of the signing profile ARN, signing job ID, and certificate
-     * hash) supplied as input to the API.
+     * A list of revoked entities (including zero or more of the signing profile ARN, signing job ARN, and certificate
+     * hashes) supplied as input to the API.
      * </p>
      * 
-     * @return A list of revoked entities (including one or more of the signing profile ARN, signing job ID, and
-     *         certificate hash) supplied as input to the API.
+     * @return A list of revoked entities (including zero or more of the signing profile ARN, signing job ARN, and
+     *         certificate hashes) supplied as input to the API.
      */
 
     public java.util.List<String> getRevokedEntities() {
@@ -47,13 +47,13 @@ public class GetRevocationStatusResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of revoked entities (including one or more of the signing profile ARN, signing job ID, and certificate
-     * hash) supplied as input to the API.
+     * A list of revoked entities (including zero or more of the signing profile ARN, signing job ARN, and certificate
+     * hashes) supplied as input to the API.
      * </p>
      * 
      * @param revokedEntities
-     *        A list of revoked entities (including one or more of the signing profile ARN, signing job ID, and
-     *        certificate hash) supplied as input to the API.
+     *        A list of revoked entities (including zero or more of the signing profile ARN, signing job ARN, and
+     *        certificate hashes) supplied as input to the API.
      */
 
     public void setRevokedEntities(java.util.Collection<String> revokedEntities) {
@@ -67,8 +67,8 @@ public class GetRevocationStatusResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of revoked entities (including one or more of the signing profile ARN, signing job ID, and certificate
-     * hash) supplied as input to the API.
+     * A list of revoked entities (including zero or more of the signing profile ARN, signing job ARN, and certificate
+     * hashes) supplied as input to the API.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,8 +77,8 @@ public class GetRevocationStatusResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param revokedEntities
-     *        A list of revoked entities (including one or more of the signing profile ARN, signing job ID, and
-     *        certificate hash) supplied as input to the API.
+     *        A list of revoked entities (including zero or more of the signing profile ARN, signing job ARN, and
+     *        certificate hashes) supplied as input to the API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,13 +94,13 @@ public class GetRevocationStatusResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of revoked entities (including one or more of the signing profile ARN, signing job ID, and certificate
-     * hash) supplied as input to the API.
+     * A list of revoked entities (including zero or more of the signing profile ARN, signing job ARN, and certificate
+     * hashes) supplied as input to the API.
      * </p>
      * 
      * @param revokedEntities
-     *        A list of revoked entities (including one or more of the signing profile ARN, signing job ID, and
-     *        certificate hash) supplied as input to the API.
+     *        A list of revoked entities (including zero or more of the signing profile ARN, signing job ARN, and
+     *        certificate hashes) supplied as input to the API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

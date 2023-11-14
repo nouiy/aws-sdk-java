@@ -83,6 +83,10 @@ public class StartExecutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * Limits Related to State Machine Executions</a> in the <i>Step Functions Developer Guide</i>.
      * </p>
      * <p>
+     * If you don't provide a name for the execution, Step Functions automatically generates a universally unique
+     * identifier (UUID) as the execution name.
+     * </p>
+     * <p>
      * A name must <i>not</i> contain:
      * </p>
      * <ul>
@@ -454,6 +458,10 @@ public class StartExecutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * Limits Related to State Machine Executions</a> in the <i>Step Functions Developer Guide</i>.
      * </p>
      * <p>
+     * If you don't provide a name for the execution, Step Functions automatically generates a universally unique
+     * identifier (UUID) as the execution name.
+     * </p>
+     * <p>
      * A name must <i>not</i> contain:
      * </p>
      * <ul>
@@ -492,6 +500,10 @@ public class StartExecutionRequest extends com.amazonaws.AmazonWebServiceRequest
      *        state machine for 90 days. For more information, see <a href=
      *        "https://docs.aws.amazon.com/step-functions/latest/dg/limits.html#service-limits-state-machine-executions"
      *        > Limits Related to State Machine Executions</a> in the <i>Step Functions Developer Guide</i>.</p>
+     *        <p>
+     *        If you don't provide a name for the execution, Step Functions automatically generates a universally unique
+     *        identifier (UUID) as the execution name.
+     *        </p>
      *        <p>
      *        A name must <i>not</i> contain:
      *        </p>
@@ -538,6 +550,10 @@ public class StartExecutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * Limits Related to State Machine Executions</a> in the <i>Step Functions Developer Guide</i>.
      * </p>
      * <p>
+     * If you don't provide a name for the execution, Step Functions automatically generates a universally unique
+     * identifier (UUID) as the execution name.
+     * </p>
+     * <p>
      * A name must <i>not</i> contain:
      * </p>
      * <ul>
@@ -575,6 +591,10 @@ public class StartExecutionRequest extends com.amazonaws.AmazonWebServiceRequest
      *         and state machine for 90 days. For more information, see <a href=
      *         "https://docs.aws.amazon.com/step-functions/latest/dg/limits.html#service-limits-state-machine-executions"
      *         > Limits Related to State Machine Executions</a> in the <i>Step Functions Developer Guide</i>.</p>
+     *         <p>
+     *         If you don't provide a name for the execution, Step Functions automatically generates a universally
+     *         unique identifier (UUID) as the execution name.
+     *         </p>
      *         <p>
      *         A name must <i>not</i> contain:
      *         </p>
@@ -621,6 +641,10 @@ public class StartExecutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * Limits Related to State Machine Executions</a> in the <i>Step Functions Developer Guide</i>.
      * </p>
      * <p>
+     * If you don't provide a name for the execution, Step Functions automatically generates a universally unique
+     * identifier (UUID) as the execution name.
+     * </p>
+     * <p>
      * A name must <i>not</i> contain:
      * </p>
      * <ul>
@@ -659,6 +683,10 @@ public class StartExecutionRequest extends com.amazonaws.AmazonWebServiceRequest
      *        state machine for 90 days. For more information, see <a href=
      *        "https://docs.aws.amazon.com/step-functions/latest/dg/limits.html#service-limits-state-machine-executions"
      *        > Limits Related to State Machine Executions</a> in the <i>Step Functions Developer Guide</i>.</p>
+     *        <p>
+     *        If you don't provide a name for the execution, Step Functions automatically generates a universally unique
+     *        identifier (UUID) as the execution name.
+     *        </p>
      *        <p>
      *        A name must <i>not</i> contain:
      *        </p>

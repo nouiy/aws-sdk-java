@@ -334,6 +334,41 @@ public class AWSResourceExplorer2AsyncClient extends AWSResourceExplorer2Client 
     }
 
     @Override
+    public java.util.concurrent.Future<GetAccountLevelServiceConfigurationResult> getAccountLevelServiceConfigurationAsync(
+            GetAccountLevelServiceConfigurationRequest request) {
+
+        return getAccountLevelServiceConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccountLevelServiceConfigurationResult> getAccountLevelServiceConfigurationAsync(
+            final GetAccountLevelServiceConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAccountLevelServiceConfigurationRequest, GetAccountLevelServiceConfigurationResult> asyncHandler) {
+        final GetAccountLevelServiceConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAccountLevelServiceConfigurationResult>() {
+            @Override
+            public GetAccountLevelServiceConfigurationResult call() throws Exception {
+                GetAccountLevelServiceConfigurationResult result = null;
+
+                try {
+                    result = executeGetAccountLevelServiceConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDefaultViewResult> getDefaultViewAsync(GetDefaultViewRequest request) {
 
         return getDefaultViewAsync(request, null);
@@ -450,6 +485,39 @@ public class AWSResourceExplorer2AsyncClient extends AWSResourceExplorer2Client 
 
                 try {
                     result = executeListIndexes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIndexesForMembersResult> listIndexesForMembersAsync(ListIndexesForMembersRequest request) {
+
+        return listIndexesForMembersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIndexesForMembersResult> listIndexesForMembersAsync(final ListIndexesForMembersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListIndexesForMembersRequest, ListIndexesForMembersResult> asyncHandler) {
+        final ListIndexesForMembersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListIndexesForMembersResult>() {
+            @Override
+            public ListIndexesForMembersResult call() throws Exception {
+                ListIndexesForMembersResult result = null;
+
+                try {
+                    result = executeListIndexesForMembers(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

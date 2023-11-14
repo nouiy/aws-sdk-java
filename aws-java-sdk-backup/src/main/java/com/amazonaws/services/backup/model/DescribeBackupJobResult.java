@@ -193,6 +193,17 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      */
     private String resourceName;
+    /**
+     * <p>
+     * This is the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
+     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     */
+    private String messageCategory;
 
     /**
      * <p>
@@ -1402,6 +1413,76 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * This is the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
+     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     * 
+     * @param messageCategory
+     *        This is the job count for the specified message category.</p>
+     *        <p>
+     *        Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
+     *        <code>InvalidParameters</code>. See <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     *        MessageCategory strings.
+     */
+
+    public void setMessageCategory(String messageCategory) {
+        this.messageCategory = messageCategory;
+    }
+
+    /**
+     * <p>
+     * This is the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
+     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     * 
+     * @return This is the job count for the specified message category.</p>
+     *         <p>
+     *         Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
+     *         <code>InvalidParameters</code>. See <a
+     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list
+     *         of MessageCategory strings.
+     */
+
+    public String getMessageCategory() {
+        return this.messageCategory;
+    }
+
+    /**
+     * <p>
+     * This is the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
+     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     * 
+     * @param messageCategory
+     *        This is the job count for the specified message category.</p>
+     *        <p>
+     *        Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
+     *        <code>InvalidParameters</code>. See <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     *        MessageCategory strings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeBackupJobResult withMessageCategory(String messageCategory) {
+        setMessageCategory(messageCategory);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1462,7 +1543,9 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
         if (getChildJobsInState() != null)
             sb.append("ChildJobsInState: ").append(getChildJobsInState()).append(",");
         if (getResourceName() != null)
-            sb.append("ResourceName: ").append(getResourceName());
+            sb.append("ResourceName: ").append(getResourceName()).append(",");
+        if (getMessageCategory() != null)
+            sb.append("MessageCategory: ").append(getMessageCategory());
         sb.append("}");
         return sb.toString();
     }
@@ -1577,6 +1660,10 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
             return false;
         if (other.getResourceName() != null && other.getResourceName().equals(this.getResourceName()) == false)
             return false;
+        if (other.getMessageCategory() == null ^ this.getMessageCategory() == null)
+            return false;
+        if (other.getMessageCategory() != null && other.getMessageCategory().equals(this.getMessageCategory()) == false)
+            return false;
         return true;
     }
 
@@ -1610,6 +1697,7 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getNumberOfChildJobs() == null) ? 0 : getNumberOfChildJobs().hashCode());
         hashCode = prime * hashCode + ((getChildJobsInState() == null) ? 0 : getChildJobsInState().hashCode());
         hashCode = prime * hashCode + ((getResourceName() == null) ? 0 : getResourceName().hashCode());
+        hashCode = prime * hashCode + ((getMessageCategory() == null) ? 0 : getMessageCategory().hashCode());
         return hashCode;
     }
 

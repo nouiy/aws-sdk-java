@@ -37,8 +37,7 @@ public class SignPayloadResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String jobOwner;
     /**
      * <p>
-     * Information including the signing profile ARN and the signing job ID. Clients use metadata to signature records,
-     * for example, as annotations added to the signature manifest inside an OCI registry.
+     * Information including the signing profile ARN and the signing job ID.
      * </p>
      */
     private java.util.Map<String, String> metadata;
@@ -131,12 +130,10 @@ public class SignPayloadResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Information including the signing profile ARN and the signing job ID. Clients use metadata to signature records,
-     * for example, as annotations added to the signature manifest inside an OCI registry.
+     * Information including the signing profile ARN and the signing job ID.
      * </p>
      * 
-     * @return Information including the signing profile ARN and the signing job ID. Clients use metadata to signature
-     *         records, for example, as annotations added to the signature manifest inside an OCI registry.
+     * @return Information including the signing profile ARN and the signing job ID.
      */
 
     public java.util.Map<String, String> getMetadata() {
@@ -145,13 +142,11 @@ public class SignPayloadResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Information including the signing profile ARN and the signing job ID. Clients use metadata to signature records,
-     * for example, as annotations added to the signature manifest inside an OCI registry.
+     * Information including the signing profile ARN and the signing job ID.
      * </p>
      * 
      * @param metadata
-     *        Information including the signing profile ARN and the signing job ID. Clients use metadata to signature
-     *        records, for example, as annotations added to the signature manifest inside an OCI registry.
+     *        Information including the signing profile ARN and the signing job ID.
      */
 
     public void setMetadata(java.util.Map<String, String> metadata) {
@@ -160,13 +155,11 @@ public class SignPayloadResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Information including the signing profile ARN and the signing job ID. Clients use metadata to signature records,
-     * for example, as annotations added to the signature manifest inside an OCI registry.
+     * Information including the signing profile ARN and the signing job ID.
      * </p>
      * 
      * @param metadata
-     *        Information including the signing profile ARN and the signing job ID. Clients use metadata to signature
-     *        records, for example, as annotations added to the signature manifest inside an OCI registry.
+     *        Information including the signing profile ARN and the signing job ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

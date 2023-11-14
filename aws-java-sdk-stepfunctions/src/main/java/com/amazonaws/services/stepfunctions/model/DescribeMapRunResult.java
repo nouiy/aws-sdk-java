@@ -85,6 +85,21 @@ public class DescribeMapRunResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      */
     private MapRunExecutionCounts executionCounts;
+    /**
+     * <p>
+     * The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     */
+    private Integer redriveCount;
+    /**
+     * <p>
+     * The date a Map Run was last redriven. If you have not yet redriven a Map Run, the <code>redriveDate</code> is
+     * null.
+     * </p>
+     */
+    private java.util.Date redriveDate;
 
     /**
      * <p>
@@ -524,6 +539,104 @@ public class DescribeMapRunResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
+     * <p>
+     * The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     * 
+     * @param redriveCount
+     *        The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
+     *        <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending
+     *        to be redriven.
+     */
+
+    public void setRedriveCount(Integer redriveCount) {
+        this.redriveCount = redriveCount;
+    }
+
+    /**
+     * <p>
+     * The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     * 
+     * @return The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
+     *         <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are
+     *         pending to be redriven.
+     */
+
+    public Integer getRedriveCount() {
+        return this.redriveCount;
+    }
+
+    /**
+     * <p>
+     * The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     * 
+     * @param redriveCount
+     *        The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
+     *        <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending
+     *        to be redriven.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeMapRunResult withRedriveCount(Integer redriveCount) {
+        setRedriveCount(redriveCount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date a Map Run was last redriven. If you have not yet redriven a Map Run, the <code>redriveDate</code> is
+     * null.
+     * </p>
+     * 
+     * @param redriveDate
+     *        The date a Map Run was last redriven. If you have not yet redriven a Map Run, the <code>redriveDate</code>
+     *        is null.
+     */
+
+    public void setRedriveDate(java.util.Date redriveDate) {
+        this.redriveDate = redriveDate;
+    }
+
+    /**
+     * <p>
+     * The date a Map Run was last redriven. If you have not yet redriven a Map Run, the <code>redriveDate</code> is
+     * null.
+     * </p>
+     * 
+     * @return The date a Map Run was last redriven. If you have not yet redriven a Map Run, the
+     *         <code>redriveDate</code> is null.
+     */
+
+    public java.util.Date getRedriveDate() {
+        return this.redriveDate;
+    }
+
+    /**
+     * <p>
+     * The date a Map Run was last redriven. If you have not yet redriven a Map Run, the <code>redriveDate</code> is
+     * null.
+     * </p>
+     * 
+     * @param redriveDate
+     *        The date a Map Run was last redriven. If you have not yet redriven a Map Run, the <code>redriveDate</code>
+     *        is null.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeMapRunResult withRedriveDate(java.util.Date redriveDate) {
+        setRedriveDate(redriveDate);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -554,7 +667,11 @@ public class DescribeMapRunResult extends com.amazonaws.AmazonWebServiceResult<c
         if (getItemCounts() != null)
             sb.append("ItemCounts: ").append(getItemCounts()).append(",");
         if (getExecutionCounts() != null)
-            sb.append("ExecutionCounts: ").append(getExecutionCounts());
+            sb.append("ExecutionCounts: ").append(getExecutionCounts()).append(",");
+        if (getRedriveCount() != null)
+            sb.append("RedriveCount: ").append(getRedriveCount()).append(",");
+        if (getRedriveDate() != null)
+            sb.append("RedriveDate: ").append(getRedriveDate());
         sb.append("}");
         return sb.toString();
     }
@@ -609,6 +726,14 @@ public class DescribeMapRunResult extends com.amazonaws.AmazonWebServiceResult<c
             return false;
         if (other.getExecutionCounts() != null && other.getExecutionCounts().equals(this.getExecutionCounts()) == false)
             return false;
+        if (other.getRedriveCount() == null ^ this.getRedriveCount() == null)
+            return false;
+        if (other.getRedriveCount() != null && other.getRedriveCount().equals(this.getRedriveCount()) == false)
+            return false;
+        if (other.getRedriveDate() == null ^ this.getRedriveDate() == null)
+            return false;
+        if (other.getRedriveDate() != null && other.getRedriveDate().equals(this.getRedriveDate()) == false)
+            return false;
         return true;
     }
 
@@ -627,6 +752,8 @@ public class DescribeMapRunResult extends com.amazonaws.AmazonWebServiceResult<c
         hashCode = prime * hashCode + ((getToleratedFailureCount() == null) ? 0 : getToleratedFailureCount().hashCode());
         hashCode = prime * hashCode + ((getItemCounts() == null) ? 0 : getItemCounts().hashCode());
         hashCode = prime * hashCode + ((getExecutionCounts() == null) ? 0 : getExecutionCounts().hashCode());
+        hashCode = prime * hashCode + ((getRedriveCount() == null) ? 0 : getRedriveCount().hashCode());
+        hashCode = prime * hashCode + ((getRedriveDate() == null) ? 0 : getRedriveDate().hashCode());
         return hashCode;
     }
 

@@ -71,6 +71,13 @@ public class CreateViewRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private java.util.List<IncludedProperty> includedProperties;
     /**
      * <p>
+     * The root ARN of the account, an organizational unit (OU), or an organization ARN. If left empty, the default is
+     * account.
+     * </p>
+     */
+    private String scope;
+    /**
+     * <p>
      * Tag key and value pairs that are attached to the view.
      * </p>
      */
@@ -398,6 +405,52 @@ public class CreateViewRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
+     * The root ARN of the account, an organizational unit (OU), or an organization ARN. If left empty, the default is
+     * account.
+     * </p>
+     * 
+     * @param scope
+     *        The root ARN of the account, an organizational unit (OU), or an organization ARN. If left empty, the
+     *        default is account.
+     */
+
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
+
+    /**
+     * <p>
+     * The root ARN of the account, an organizational unit (OU), or an organization ARN. If left empty, the default is
+     * account.
+     * </p>
+     * 
+     * @return The root ARN of the account, an organizational unit (OU), or an organization ARN. If left empty, the
+     *         default is account.
+     */
+
+    public String getScope() {
+        return this.scope;
+    }
+
+    /**
+     * <p>
+     * The root ARN of the account, an organizational unit (OU), or an organization ARN. If left empty, the default is
+     * account.
+     * </p>
+     * 
+     * @param scope
+     *        The root ARN of the account, an organizational unit (OU), or an organization ARN. If left empty, the
+     *        default is account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateViewRequest withScope(String scope) {
+        setScope(scope);
+        return this;
+    }
+
+    /**
+     * <p>
      * Tag key and value pairs that are attached to the view.
      * </p>
      * 
@@ -543,8 +596,10 @@ public class CreateViewRequest extends com.amazonaws.AmazonWebServiceRequest imp
             sb.append("Filters: ").append("***Sensitive Data Redacted***").append(",");
         if (getIncludedProperties() != null)
             sb.append("IncludedProperties: ").append(getIncludedProperties()).append(",");
+        if (getScope() != null)
+            sb.append("Scope: ").append(getScope()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
+            sb.append("Tags: ").append("***Sensitive Data Redacted***").append(",");
         if (getViewName() != null)
             sb.append("ViewName: ").append(getViewName());
         sb.append("}");
@@ -573,6 +628,10 @@ public class CreateViewRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getIncludedProperties() != null && other.getIncludedProperties().equals(this.getIncludedProperties()) == false)
             return false;
+        if (other.getScope() == null ^ this.getScope() == null)
+            return false;
+        if (other.getScope() != null && other.getScope().equals(this.getScope()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -592,6 +651,7 @@ public class CreateViewRequest extends com.amazonaws.AmazonWebServiceRequest imp
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getFilters() == null) ? 0 : getFilters().hashCode());
         hashCode = prime * hashCode + ((getIncludedProperties() == null) ? 0 : getIncludedProperties().hashCode());
+        hashCode = prime * hashCode + ((getScope() == null) ? 0 : getScope().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getViewName() == null) ? 0 : getViewName().hashCode());
         return hashCode;

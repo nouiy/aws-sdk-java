@@ -119,6 +119,21 @@ public class AbstractAWSResourceExplorer2Async extends AbstractAWSResourceExplor
     }
 
     @Override
+    public java.util.concurrent.Future<GetAccountLevelServiceConfigurationResult> getAccountLevelServiceConfigurationAsync(
+            GetAccountLevelServiceConfigurationRequest request) {
+
+        return getAccountLevelServiceConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccountLevelServiceConfigurationResult> getAccountLevelServiceConfigurationAsync(
+            GetAccountLevelServiceConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAccountLevelServiceConfigurationRequest, GetAccountLevelServiceConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDefaultViewResult> getDefaultViewAsync(GetDefaultViewRequest request) {
 
         return getDefaultViewAsync(request, null);
@@ -166,6 +181,19 @@ public class AbstractAWSResourceExplorer2Async extends AbstractAWSResourceExplor
     @Override
     public java.util.concurrent.Future<ListIndexesResult> listIndexesAsync(ListIndexesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListIndexesRequest, ListIndexesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIndexesForMembersResult> listIndexesForMembersAsync(ListIndexesForMembersRequest request) {
+
+        return listIndexesForMembersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIndexesForMembersResult> listIndexesForMembersAsync(ListIndexesForMembersRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListIndexesForMembersRequest, ListIndexesForMembersResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

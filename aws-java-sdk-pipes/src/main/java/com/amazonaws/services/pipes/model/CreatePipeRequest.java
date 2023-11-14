@@ -51,6 +51,12 @@ public class CreatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private PipeEnrichmentParameters enrichmentParameters;
     /**
      * <p>
+     * The logging configuration settings for the pipe.
+     * </p>
+     */
+    private PipeLogConfigurationParameters logConfiguration;
+    /**
+     * <p>
      * The name of the pipe.
      * </p>
      */
@@ -88,6 +94,11 @@ public class CreatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The parameters required to set up a target for your pipe.
+     * </p>
+     * <p>
+     * For more information about pipe target parameters, including how to use dynamic path parameters, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html">Target parameters</a>
+     * in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      */
     private PipeTargetParameters targetParameters;
@@ -268,6 +279,46 @@ public class CreatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     public CreatePipeRequest withEnrichmentParameters(PipeEnrichmentParameters enrichmentParameters) {
         setEnrichmentParameters(enrichmentParameters);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The logging configuration settings for the pipe.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The logging configuration settings for the pipe.
+     */
+
+    public void setLogConfiguration(PipeLogConfigurationParameters logConfiguration) {
+        this.logConfiguration = logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The logging configuration settings for the pipe.
+     * </p>
+     * 
+     * @return The logging configuration settings for the pipe.
+     */
+
+    public PipeLogConfigurationParameters getLogConfiguration() {
+        return this.logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The logging configuration settings for the pipe.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The logging configuration settings for the pipe.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreatePipeRequest withLogConfiguration(PipeLogConfigurationParameters logConfiguration) {
+        setLogConfiguration(logConfiguration);
         return this;
     }
 
@@ -543,9 +594,18 @@ public class CreatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The parameters required to set up a target for your pipe.
      * </p>
+     * <p>
+     * For more information about pipe target parameters, including how to use dynamic path parameters, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html">Target parameters</a>
+     * in the <i>Amazon EventBridge User Guide</i>.
+     * </p>
      * 
      * @param targetParameters
-     *        The parameters required to set up a target for your pipe.
+     *        The parameters required to set up a target for your pipe.</p>
+     *        <p>
+     *        For more information about pipe target parameters, including how to use dynamic path parameters, see <a
+     *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html">Target
+     *        parameters</a> in the <i>Amazon EventBridge User Guide</i>.
      */
 
     public void setTargetParameters(PipeTargetParameters targetParameters) {
@@ -556,8 +616,17 @@ public class CreatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The parameters required to set up a target for your pipe.
      * </p>
+     * <p>
+     * For more information about pipe target parameters, including how to use dynamic path parameters, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html">Target parameters</a>
+     * in the <i>Amazon EventBridge User Guide</i>.
+     * </p>
      * 
-     * @return The parameters required to set up a target for your pipe.
+     * @return The parameters required to set up a target for your pipe.</p>
+     *         <p>
+     *         For more information about pipe target parameters, including how to use dynamic path parameters, see <a
+     *         href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html">Target
+     *         parameters</a> in the <i>Amazon EventBridge User Guide</i>.
      */
 
     public PipeTargetParameters getTargetParameters() {
@@ -568,9 +637,18 @@ public class CreatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The parameters required to set up a target for your pipe.
      * </p>
+     * <p>
+     * For more information about pipe target parameters, including how to use dynamic path parameters, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html">Target parameters</a>
+     * in the <i>Amazon EventBridge User Guide</i>.
+     * </p>
      * 
      * @param targetParameters
-     *        The parameters required to set up a target for your pipe.
+     *        The parameters required to set up a target for your pipe.</p>
+     *        <p>
+     *        For more information about pipe target parameters, including how to use dynamic path parameters, see <a
+     *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html">Target
+     *        parameters</a> in the <i>Amazon EventBridge User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -599,6 +677,8 @@ public class CreatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
             sb.append("Enrichment: ").append(getEnrichment()).append(",");
         if (getEnrichmentParameters() != null)
             sb.append("EnrichmentParameters: ").append(getEnrichmentParameters()).append(",");
+        if (getLogConfiguration() != null)
+            sb.append("LogConfiguration: ").append(getLogConfiguration()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getRoleArn() != null)
@@ -643,6 +723,10 @@ public class CreatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getEnrichmentParameters() != null && other.getEnrichmentParameters().equals(this.getEnrichmentParameters()) == false)
             return false;
+        if (other.getLogConfiguration() == null ^ this.getLogConfiguration() == null)
+            return false;
+        if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
+            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
@@ -683,6 +767,7 @@ public class CreatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
         hashCode = prime * hashCode + ((getDesiredState() == null) ? 0 : getDesiredState().hashCode());
         hashCode = prime * hashCode + ((getEnrichment() == null) ? 0 : getEnrichment().hashCode());
         hashCode = prime * hashCode + ((getEnrichmentParameters() == null) ? 0 : getEnrichmentParameters().hashCode());
+        hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getSource() == null) ? 0 : getSource().hashCode());

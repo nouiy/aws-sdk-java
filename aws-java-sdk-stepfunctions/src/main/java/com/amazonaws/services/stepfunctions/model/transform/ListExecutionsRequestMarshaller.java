@@ -37,6 +37,8 @@ public class ListExecutionsRequestMarshaller {
             .marshallLocationName("nextToken").build();
     private static final MarshallingInfo<String> MAPRUNARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("mapRunArn").build();
+    private static final MarshallingInfo<String> REDRIVEFILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("redriveFilter").build();
 
     private static final ListExecutionsRequestMarshaller instance = new ListExecutionsRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class ListExecutionsRequestMarshaller {
             protocolMarshaller.marshall(listExecutionsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listExecutionsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listExecutionsRequest.getMapRunArn(), MAPRUNARN_BINDING);
+            protocolMarshaller.marshall(listExecutionsRequest.getRedriveFilter(), REDRIVEFILTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

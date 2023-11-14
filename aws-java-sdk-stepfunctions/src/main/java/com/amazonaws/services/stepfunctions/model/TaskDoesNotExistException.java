@@ -15,7 +15,9 @@ package com.amazonaws.services.stepfunctions.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The activity does not exist.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class TaskDoesNotExistException extends com.amazonaws.services.stepfunctions.model.AWSStepFunctionsException {

@@ -46,6 +46,9 @@ public class PipeEnrichmentParameters implements Serializable, Cloneable, Struct
      * enrichment. For more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript Object
      * Notation (JSON) Data Interchange Format</a>.
      * </p>
+     * <p>
+     * To remove an input template, specify an empty string.
+     * </p>
      */
     private String inputTemplate;
 
@@ -131,11 +134,16 @@ public class PipeEnrichmentParameters implements Serializable, Cloneable, Struct
      * enrichment. For more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript Object
      * Notation (JSON) Data Interchange Format</a>.
      * </p>
+     * <p>
+     * To remove an input template, specify an empty string.
+     * </p>
      * 
      * @param inputTemplate
      *        Valid JSON text passed to the enrichment. In this case, nothing from the event itself is passed to the
      *        enrichment. For more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript
-     *        Object Notation (JSON) Data Interchange Format</a>.
+     *        Object Notation (JSON) Data Interchange Format</a>.</p>
+     *        <p>
+     *        To remove an input template, specify an empty string.
      */
 
     public void setInputTemplate(String inputTemplate) {
@@ -148,10 +156,15 @@ public class PipeEnrichmentParameters implements Serializable, Cloneable, Struct
      * enrichment. For more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript Object
      * Notation (JSON) Data Interchange Format</a>.
      * </p>
+     * <p>
+     * To remove an input template, specify an empty string.
+     * </p>
      * 
      * @return Valid JSON text passed to the enrichment. In this case, nothing from the event itself is passed to the
      *         enrichment. For more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript
-     *         Object Notation (JSON) Data Interchange Format</a>.
+     *         Object Notation (JSON) Data Interchange Format</a>.</p>
+     *         <p>
+     *         To remove an input template, specify an empty string.
      */
 
     public String getInputTemplate() {
@@ -164,11 +177,16 @@ public class PipeEnrichmentParameters implements Serializable, Cloneable, Struct
      * enrichment. For more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript Object
      * Notation (JSON) Data Interchange Format</a>.
      * </p>
+     * <p>
+     * To remove an input template, specify an empty string.
+     * </p>
      * 
      * @param inputTemplate
      *        Valid JSON text passed to the enrichment. In this case, nothing from the event itself is passed to the
      *        enrichment. For more information, see <a href="http://www.rfc-editor.org/rfc/rfc7159.txt">The JavaScript
-     *        Object Notation (JSON) Data Interchange Format</a>.
+     *        Object Notation (JSON) Data Interchange Format</a>.</p>
+     *        <p>
+     *        To remove an input template, specify an empty string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

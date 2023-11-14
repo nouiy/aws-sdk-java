@@ -62,6 +62,10 @@ public class MemberSpecificationJsonUnmarshaller implements Unmarshaller<MemberS
                     context.nextToken();
                     memberSpecification.setDisplayName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("paymentConfiguration", targetDepth)) {
+                    context.nextToken();
+                    memberSpecification.setPaymentConfiguration(PaymentConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

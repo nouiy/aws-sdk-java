@@ -63,6 +63,12 @@ public class Behavior implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Boolean suppressAlerts;
+    /**
+     * <p>
+     * Value indicates exporting metrics related to the behavior when it is true.
+     * </p>
+     */
+    private Boolean exportMetric;
 
     /**
      * <p>
@@ -322,6 +328,58 @@ public class Behavior implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Value indicates exporting metrics related to the behavior when it is true.
+     * </p>
+     * 
+     * @param exportMetric
+     *        Value indicates exporting metrics related to the behavior when it is true.
+     */
+
+    public void setExportMetric(Boolean exportMetric) {
+        this.exportMetric = exportMetric;
+    }
+
+    /**
+     * <p>
+     * Value indicates exporting metrics related to the behavior when it is true.
+     * </p>
+     * 
+     * @return Value indicates exporting metrics related to the behavior when it is true.
+     */
+
+    public Boolean getExportMetric() {
+        return this.exportMetric;
+    }
+
+    /**
+     * <p>
+     * Value indicates exporting metrics related to the behavior when it is true.
+     * </p>
+     * 
+     * @param exportMetric
+     *        Value indicates exporting metrics related to the behavior when it is true.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Behavior withExportMetric(Boolean exportMetric) {
+        setExportMetric(exportMetric);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Value indicates exporting metrics related to the behavior when it is true.
+     * </p>
+     * 
+     * @return Value indicates exporting metrics related to the behavior when it is true.
+     */
+
+    public Boolean isExportMetric() {
+        return this.exportMetric;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -342,7 +400,9 @@ public class Behavior implements Serializable, Cloneable, StructuredPojo {
         if (getCriteria() != null)
             sb.append("Criteria: ").append(getCriteria()).append(",");
         if (getSuppressAlerts() != null)
-            sb.append("SuppressAlerts: ").append(getSuppressAlerts());
+            sb.append("SuppressAlerts: ").append(getSuppressAlerts()).append(",");
+        if (getExportMetric() != null)
+            sb.append("ExportMetric: ").append(getExportMetric());
         sb.append("}");
         return sb.toString();
     }
@@ -377,6 +437,10 @@ public class Behavior implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSuppressAlerts() != null && other.getSuppressAlerts().equals(this.getSuppressAlerts()) == false)
             return false;
+        if (other.getExportMetric() == null ^ this.getExportMetric() == null)
+            return false;
+        if (other.getExportMetric() != null && other.getExportMetric().equals(this.getExportMetric()) == false)
+            return false;
         return true;
     }
 
@@ -390,6 +454,7 @@ public class Behavior implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMetricDimension() == null) ? 0 : getMetricDimension().hashCode());
         hashCode = prime * hashCode + ((getCriteria() == null) ? 0 : getCriteria().hashCode());
         hashCode = prime * hashCode + ((getSuppressAlerts() == null) ? 0 : getSuppressAlerts().hashCode());
+        hashCode = prime * hashCode + ((getExportMetric() == null) ? 0 : getExportMetric().hashCode());
         return hashCode;
     }
 

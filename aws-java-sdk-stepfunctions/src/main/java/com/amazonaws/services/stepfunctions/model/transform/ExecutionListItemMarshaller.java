@@ -47,6 +47,10 @@ public class ExecutionListItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stateMachineVersionArn").build();
     private static final MarshallingInfo<String> STATEMACHINEALIASARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stateMachineAliasArn").build();
+    private static final MarshallingInfo<Integer> REDRIVECOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("redriveCount").build();
+    private static final MarshallingInfo<java.util.Date> REDRIVEDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("redriveDate").timestampFormat("unixTimestamp").build();
 
     private static final ExecutionListItemMarshaller instance = new ExecutionListItemMarshaller();
 
@@ -74,6 +78,8 @@ public class ExecutionListItemMarshaller {
             protocolMarshaller.marshall(executionListItem.getItemCount(), ITEMCOUNT_BINDING);
             protocolMarshaller.marshall(executionListItem.getStateMachineVersionArn(), STATEMACHINEVERSIONARN_BINDING);
             protocolMarshaller.marshall(executionListItem.getStateMachineAliasArn(), STATEMACHINEALIASARN_BINDING);
+            protocolMarshaller.marshall(executionListItem.getRedriveCount(), REDRIVECOUNT_BINDING);
+            protocolMarshaller.marshall(executionListItem.getRedriveDate(), REDRIVEDATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

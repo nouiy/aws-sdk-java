@@ -80,6 +80,10 @@ public class DescribePipeResultJsonUnmarshaller implements Unmarshaller<Describe
                     context.nextToken();
                     describePipeResult.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("LogConfiguration", targetDepth)) {
+                    context.nextToken();
+                    describePipeResult.setLogConfiguration(PipeLogConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Name", targetDepth)) {
                     context.nextToken();
                     describePipeResult.setName(context.getUnmarshaller(String.class).unmarshall(context));

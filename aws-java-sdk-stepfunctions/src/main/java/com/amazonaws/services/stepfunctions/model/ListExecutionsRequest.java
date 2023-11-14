@@ -79,6 +79,23 @@ public class ListExecutionsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private String mapRunArn;
+    /**
+     * <p>
+     * Sets a filter to list executions based on whether or not they have been redriven.
+     * </p>
+     * <p>
+     * For a Distributed Map, <code>redriveFilter</code> sets a filter to list child workflow executions based on
+     * whether or not they have been redriven.
+     * </p>
+     * <p>
+     * If you do not provide a <code>redriveFilter</code>, Step Functions returns a list of both redriven and
+     * non-redriven executions.
+     * </p>
+     * <p>
+     * If you provide a state machine ARN in <code>redriveFilter</code>, the API returns a validation exception.
+     * </p>
+     */
+    private String redriveFilter;
 
     /**
      * <p>
@@ -455,6 +472,184 @@ public class ListExecutionsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Sets a filter to list executions based on whether or not they have been redriven.
+     * </p>
+     * <p>
+     * For a Distributed Map, <code>redriveFilter</code> sets a filter to list child workflow executions based on
+     * whether or not they have been redriven.
+     * </p>
+     * <p>
+     * If you do not provide a <code>redriveFilter</code>, Step Functions returns a list of both redriven and
+     * non-redriven executions.
+     * </p>
+     * <p>
+     * If you provide a state machine ARN in <code>redriveFilter</code>, the API returns a validation exception.
+     * </p>
+     * 
+     * @param redriveFilter
+     *        Sets a filter to list executions based on whether or not they have been redriven.</p>
+     *        <p>
+     *        For a Distributed Map, <code>redriveFilter</code> sets a filter to list child workflow executions based on
+     *        whether or not they have been redriven.
+     *        </p>
+     *        <p>
+     *        If you do not provide a <code>redriveFilter</code>, Step Functions returns a list of both redriven and
+     *        non-redriven executions.
+     *        </p>
+     *        <p>
+     *        If you provide a state machine ARN in <code>redriveFilter</code>, the API returns a validation exception.
+     * @see ExecutionRedriveFilter
+     */
+
+    public void setRedriveFilter(String redriveFilter) {
+        this.redriveFilter = redriveFilter;
+    }
+
+    /**
+     * <p>
+     * Sets a filter to list executions based on whether or not they have been redriven.
+     * </p>
+     * <p>
+     * For a Distributed Map, <code>redriveFilter</code> sets a filter to list child workflow executions based on
+     * whether or not they have been redriven.
+     * </p>
+     * <p>
+     * If you do not provide a <code>redriveFilter</code>, Step Functions returns a list of both redriven and
+     * non-redriven executions.
+     * </p>
+     * <p>
+     * If you provide a state machine ARN in <code>redriveFilter</code>, the API returns a validation exception.
+     * </p>
+     * 
+     * @return Sets a filter to list executions based on whether or not they have been redriven.</p>
+     *         <p>
+     *         For a Distributed Map, <code>redriveFilter</code> sets a filter to list child workflow executions based
+     *         on whether or not they have been redriven.
+     *         </p>
+     *         <p>
+     *         If you do not provide a <code>redriveFilter</code>, Step Functions returns a list of both redriven and
+     *         non-redriven executions.
+     *         </p>
+     *         <p>
+     *         If you provide a state machine ARN in <code>redriveFilter</code>, the API returns a validation exception.
+     * @see ExecutionRedriveFilter
+     */
+
+    public String getRedriveFilter() {
+        return this.redriveFilter;
+    }
+
+    /**
+     * <p>
+     * Sets a filter to list executions based on whether or not they have been redriven.
+     * </p>
+     * <p>
+     * For a Distributed Map, <code>redriveFilter</code> sets a filter to list child workflow executions based on
+     * whether or not they have been redriven.
+     * </p>
+     * <p>
+     * If you do not provide a <code>redriveFilter</code>, Step Functions returns a list of both redriven and
+     * non-redriven executions.
+     * </p>
+     * <p>
+     * If you provide a state machine ARN in <code>redriveFilter</code>, the API returns a validation exception.
+     * </p>
+     * 
+     * @param redriveFilter
+     *        Sets a filter to list executions based on whether or not they have been redriven.</p>
+     *        <p>
+     *        For a Distributed Map, <code>redriveFilter</code> sets a filter to list child workflow executions based on
+     *        whether or not they have been redriven.
+     *        </p>
+     *        <p>
+     *        If you do not provide a <code>redriveFilter</code>, Step Functions returns a list of both redriven and
+     *        non-redriven executions.
+     *        </p>
+     *        <p>
+     *        If you provide a state machine ARN in <code>redriveFilter</code>, the API returns a validation exception.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionRedriveFilter
+     */
+
+    public ListExecutionsRequest withRedriveFilter(String redriveFilter) {
+        setRedriveFilter(redriveFilter);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Sets a filter to list executions based on whether or not they have been redriven.
+     * </p>
+     * <p>
+     * For a Distributed Map, <code>redriveFilter</code> sets a filter to list child workflow executions based on
+     * whether or not they have been redriven.
+     * </p>
+     * <p>
+     * If you do not provide a <code>redriveFilter</code>, Step Functions returns a list of both redriven and
+     * non-redriven executions.
+     * </p>
+     * <p>
+     * If you provide a state machine ARN in <code>redriveFilter</code>, the API returns a validation exception.
+     * </p>
+     * 
+     * @param redriveFilter
+     *        Sets a filter to list executions based on whether or not they have been redriven.</p>
+     *        <p>
+     *        For a Distributed Map, <code>redriveFilter</code> sets a filter to list child workflow executions based on
+     *        whether or not they have been redriven.
+     *        </p>
+     *        <p>
+     *        If you do not provide a <code>redriveFilter</code>, Step Functions returns a list of both redriven and
+     *        non-redriven executions.
+     *        </p>
+     *        <p>
+     *        If you provide a state machine ARN in <code>redriveFilter</code>, the API returns a validation exception.
+     * @see ExecutionRedriveFilter
+     */
+
+    public void setRedriveFilter(ExecutionRedriveFilter redriveFilter) {
+        withRedriveFilter(redriveFilter);
+    }
+
+    /**
+     * <p>
+     * Sets a filter to list executions based on whether or not they have been redriven.
+     * </p>
+     * <p>
+     * For a Distributed Map, <code>redriveFilter</code> sets a filter to list child workflow executions based on
+     * whether or not they have been redriven.
+     * </p>
+     * <p>
+     * If you do not provide a <code>redriveFilter</code>, Step Functions returns a list of both redriven and
+     * non-redriven executions.
+     * </p>
+     * <p>
+     * If you provide a state machine ARN in <code>redriveFilter</code>, the API returns a validation exception.
+     * </p>
+     * 
+     * @param redriveFilter
+     *        Sets a filter to list executions based on whether or not they have been redriven.</p>
+     *        <p>
+     *        For a Distributed Map, <code>redriveFilter</code> sets a filter to list child workflow executions based on
+     *        whether or not they have been redriven.
+     *        </p>
+     *        <p>
+     *        If you do not provide a <code>redriveFilter</code>, Step Functions returns a list of both redriven and
+     *        non-redriven executions.
+     *        </p>
+     *        <p>
+     *        If you provide a state machine ARN in <code>redriveFilter</code>, the API returns a validation exception.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionRedriveFilter
+     */
+
+    public ListExecutionsRequest withRedriveFilter(ExecutionRedriveFilter redriveFilter) {
+        this.redriveFilter = redriveFilter.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -475,7 +670,9 @@ public class ListExecutionsRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMapRunArn() != null)
-            sb.append("MapRunArn: ").append(getMapRunArn());
+            sb.append("MapRunArn: ").append(getMapRunArn()).append(",");
+        if (getRedriveFilter() != null)
+            sb.append("RedriveFilter: ").append(getRedriveFilter());
         sb.append("}");
         return sb.toString();
     }
@@ -510,6 +707,10 @@ public class ListExecutionsRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getMapRunArn() != null && other.getMapRunArn().equals(this.getMapRunArn()) == false)
             return false;
+        if (other.getRedriveFilter() == null ^ this.getRedriveFilter() == null)
+            return false;
+        if (other.getRedriveFilter() != null && other.getRedriveFilter().equals(this.getRedriveFilter()) == false)
+            return false;
         return true;
     }
 
@@ -523,6 +724,7 @@ public class ListExecutionsRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMapRunArn() == null) ? 0 : getMapRunArn().hashCode());
+        hashCode = prime * hashCode + ((getRedriveFilter() == null) ? 0 : getRedriveFilter().hashCode());
         return hashCode;
     }
 

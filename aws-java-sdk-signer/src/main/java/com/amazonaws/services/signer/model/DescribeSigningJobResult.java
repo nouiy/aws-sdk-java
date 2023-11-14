@@ -123,7 +123,7 @@ public class DescribeSigningJobResult extends com.amazonaws.AmazonWebServiceResu
     private SigningJobRevocationRecord revocationRecord;
     /**
      * <p>
-     * Name of the S3 bucket where the signed code image is saved by code signing.
+     * Name of the S3 bucket where the signed code image is saved by AWS Signer.
      * </p>
      */
     private SignedObject signedObject;
@@ -841,11 +841,11 @@ public class DescribeSigningJobResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Name of the S3 bucket where the signed code image is saved by code signing.
+     * Name of the S3 bucket where the signed code image is saved by AWS Signer.
      * </p>
      * 
      * @param signedObject
-     *        Name of the S3 bucket where the signed code image is saved by code signing.
+     *        Name of the S3 bucket where the signed code image is saved by AWS Signer.
      */
 
     public void setSignedObject(SignedObject signedObject) {
@@ -854,10 +854,10 @@ public class DescribeSigningJobResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Name of the S3 bucket where the signed code image is saved by code signing.
+     * Name of the S3 bucket where the signed code image is saved by AWS Signer.
      * </p>
      * 
-     * @return Name of the S3 bucket where the signed code image is saved by code signing.
+     * @return Name of the S3 bucket where the signed code image is saved by AWS Signer.
      */
 
     public SignedObject getSignedObject() {
@@ -866,11 +866,11 @@ public class DescribeSigningJobResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Name of the S3 bucket where the signed code image is saved by code signing.
+     * Name of the S3 bucket where the signed code image is saved by AWS Signer.
      * </p>
      * 
      * @param signedObject
-     *        Name of the S3 bucket where the signed code image is saved by code signing.
+     *        Name of the S3 bucket where the signed code image is saved by AWS Signer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

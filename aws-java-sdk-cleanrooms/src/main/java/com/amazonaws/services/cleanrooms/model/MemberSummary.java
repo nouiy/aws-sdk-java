@@ -37,7 +37,7 @@ public class MemberSummary implements Serializable, Cloneable, StructuredPojo {
     private String accountId;
     /**
      * <p>
-     * The status of the member. Valid values are `INVITED`, `ACTIVE`, `LEFT`, and `REMOVED`.
+     * The status of the member.
      * </p>
      */
     private String status;
@@ -77,6 +77,12 @@ public class MemberSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String membershipArn;
+    /**
+     * <p>
+     * The collaboration member's payment responsibilities set by the collaboration creator.
+     * </p>
+     */
+    private PaymentConfiguration paymentConfiguration;
 
     /**
      * <p>
@@ -126,11 +132,11 @@ public class MemberSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the member. Valid values are `INVITED`, `ACTIVE`, `LEFT`, and `REMOVED`.
+     * The status of the member.
      * </p>
      * 
      * @param status
-     *        The status of the member. Valid values are `INVITED`, `ACTIVE`, `LEFT`, and `REMOVED`.
+     *        The status of the member.
      * @see MemberStatus
      */
 
@@ -140,10 +146,10 @@ public class MemberSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the member. Valid values are `INVITED`, `ACTIVE`, `LEFT`, and `REMOVED`.
+     * The status of the member.
      * </p>
      * 
-     * @return The status of the member. Valid values are `INVITED`, `ACTIVE`, `LEFT`, and `REMOVED`.
+     * @return The status of the member.
      * @see MemberStatus
      */
 
@@ -153,11 +159,11 @@ public class MemberSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the member. Valid values are `INVITED`, `ACTIVE`, `LEFT`, and `REMOVED`.
+     * The status of the member.
      * </p>
      * 
      * @param status
-     *        The status of the member. Valid values are `INVITED`, `ACTIVE`, `LEFT`, and `REMOVED`.
+     *        The status of the member.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MemberStatus
      */
@@ -169,11 +175,11 @@ public class MemberSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the member. Valid values are `INVITED`, `ACTIVE`, `LEFT`, and `REMOVED`.
+     * The status of the member.
      * </p>
      * 
      * @param status
-     *        The status of the member. Valid values are `INVITED`, `ACTIVE`, `LEFT`, and `REMOVED`.
+     *        The status of the member.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MemberStatus
      */
@@ -482,6 +488,46 @@ public class MemberSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The collaboration member's payment responsibilities set by the collaboration creator.
+     * </p>
+     * 
+     * @param paymentConfiguration
+     *        The collaboration member's payment responsibilities set by the collaboration creator.
+     */
+
+    public void setPaymentConfiguration(PaymentConfiguration paymentConfiguration) {
+        this.paymentConfiguration = paymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The collaboration member's payment responsibilities set by the collaboration creator.
+     * </p>
+     * 
+     * @return The collaboration member's payment responsibilities set by the collaboration creator.
+     */
+
+    public PaymentConfiguration getPaymentConfiguration() {
+        return this.paymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The collaboration member's payment responsibilities set by the collaboration creator.
+     * </p>
+     * 
+     * @param paymentConfiguration
+     *        The collaboration member's payment responsibilities set by the collaboration creator.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MemberSummary withPaymentConfiguration(PaymentConfiguration paymentConfiguration) {
+        setPaymentConfiguration(paymentConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -508,7 +554,9 @@ public class MemberSummary implements Serializable, Cloneable, StructuredPojo {
         if (getMembershipId() != null)
             sb.append("MembershipId: ").append(getMembershipId()).append(",");
         if (getMembershipArn() != null)
-            sb.append("MembershipArn: ").append(getMembershipArn());
+            sb.append("MembershipArn: ").append(getMembershipArn()).append(",");
+        if (getPaymentConfiguration() != null)
+            sb.append("PaymentConfiguration: ").append(getPaymentConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -555,6 +603,10 @@ public class MemberSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMembershipArn() != null && other.getMembershipArn().equals(this.getMembershipArn()) == false)
             return false;
+        if (other.getPaymentConfiguration() == null ^ this.getPaymentConfiguration() == null)
+            return false;
+        if (other.getPaymentConfiguration() != null && other.getPaymentConfiguration().equals(this.getPaymentConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -571,6 +623,7 @@ public class MemberSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         hashCode = prime * hashCode + ((getMembershipId() == null) ? 0 : getMembershipId().hashCode());
         hashCode = prime * hashCode + ((getMembershipArn() == null) ? 0 : getMembershipArn().hashCode());
+        hashCode = prime * hashCode + ((getPaymentConfiguration() == null) ? 0 : getPaymentConfiguration().hashCode());
         return hashCode;
     }
 

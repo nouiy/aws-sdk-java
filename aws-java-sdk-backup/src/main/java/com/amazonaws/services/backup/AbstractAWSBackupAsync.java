@@ -555,6 +555,19 @@ public class AbstractAWSBackupAsync extends AbstractAWSBackup implements AWSBack
     }
 
     @Override
+    public java.util.concurrent.Future<ListBackupJobSummariesResult> listBackupJobSummariesAsync(ListBackupJobSummariesRequest request) {
+
+        return listBackupJobSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBackupJobSummariesResult> listBackupJobSummariesAsync(ListBackupJobSummariesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListBackupJobSummariesRequest, ListBackupJobSummariesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListBackupJobsResult> listBackupJobsAsync(ListBackupJobsRequest request) {
 
         return listBackupJobsAsync(request, null);
@@ -628,6 +641,19 @@ public class AbstractAWSBackupAsync extends AbstractAWSBackup implements AWSBack
     @Override
     public java.util.concurrent.Future<ListBackupVaultsResult> listBackupVaultsAsync(ListBackupVaultsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListBackupVaultsRequest, ListBackupVaultsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCopyJobSummariesResult> listCopyJobSummariesAsync(ListCopyJobSummariesRequest request) {
+
+        return listCopyJobSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCopyJobSummariesResult> listCopyJobSummariesAsync(ListCopyJobSummariesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListCopyJobSummariesRequest, ListCopyJobSummariesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -762,6 +788,19 @@ public class AbstractAWSBackupAsync extends AbstractAWSBackup implements AWSBack
     @Override
     public java.util.concurrent.Future<ListReportPlansResult> listReportPlansAsync(ListReportPlansRequest request,
             com.amazonaws.handlers.AsyncHandler<ListReportPlansRequest, ListReportPlansResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRestoreJobSummariesResult> listRestoreJobSummariesAsync(ListRestoreJobSummariesRequest request) {
+
+        return listRestoreJobSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRestoreJobSummariesResult> listRestoreJobSummariesAsync(ListRestoreJobSummariesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListRestoreJobSummariesRequest, ListRestoreJobSummariesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -3524,6 +3524,10 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
      * href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-authorization.html">Authorization</a> for
      * information about authorizing control plane actions.
      * </p>
+     * <p>
+     * If the <code>ThingGroup</code> that you create has the exact same attributes as an existing
+     * <code>ThingGroup</code>, you will get a 200 success response.
+     * </p>
      * </note>
      * <p>
      * Requires permission to access the <a href=

@@ -85,7 +85,7 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date updateTime;
     /**
      * <p>
-     * The status of the membership. Valid values are `ACTIVE`, `REMOVED`, and `COLLABORATION_DELETED`.
+     * The status of the membership.
      * </p>
      */
     private String status;
@@ -97,7 +97,7 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> memberAbilities;
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      */
     private String queryLogStatus;
@@ -107,6 +107,12 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private MembershipProtectedQueryResultConfiguration defaultResultConfiguration;
+    /**
+     * <p>
+     * The payment responsibilities accepted by the collaboration member.
+     * </p>
+     */
+    private MembershipPaymentConfiguration paymentConfiguration;
 
     /**
      * <p>
@@ -476,11 +482,11 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the membership. Valid values are `ACTIVE`, `REMOVED`, and `COLLABORATION_DELETED`.
+     * The status of the membership.
      * </p>
      * 
      * @param status
-     *        The status of the membership. Valid values are `ACTIVE`, `REMOVED`, and `COLLABORATION_DELETED`.
+     *        The status of the membership.
      * @see MembershipStatus
      */
 
@@ -490,10 +496,10 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the membership. Valid values are `ACTIVE`, `REMOVED`, and `COLLABORATION_DELETED`.
+     * The status of the membership.
      * </p>
      * 
-     * @return The status of the membership. Valid values are `ACTIVE`, `REMOVED`, and `COLLABORATION_DELETED`.
+     * @return The status of the membership.
      * @see MembershipStatus
      */
 
@@ -503,11 +509,11 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the membership. Valid values are `ACTIVE`, `REMOVED`, and `COLLABORATION_DELETED`.
+     * The status of the membership.
      * </p>
      * 
      * @param status
-     *        The status of the membership. Valid values are `ACTIVE`, `REMOVED`, and `COLLABORATION_DELETED`.
+     *        The status of the membership.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MembershipStatus
      */
@@ -519,11 +525,11 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the membership. Valid values are `ACTIVE`, `REMOVED`, and `COLLABORATION_DELETED`.
+     * The status of the membership.
      * </p>
      * 
      * @param status
-     *        The status of the membership. Valid values are `ACTIVE`, `REMOVED`, and `COLLABORATION_DELETED`.
+     *        The status of the membership.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MembershipStatus
      */
@@ -633,11 +639,11 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
      * @param queryLogStatus
-     *        An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     *        An indicator as to whether query logging has been enabled or disabled for the membership.
      * @see MembershipQueryLogStatus
      */
 
@@ -647,10 +653,10 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
-     * @return An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * @return An indicator as to whether query logging has been enabled or disabled for the membership.
      * @see MembershipQueryLogStatus
      */
 
@@ -660,11 +666,11 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
      * @param queryLogStatus
-     *        An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     *        An indicator as to whether query logging has been enabled or disabled for the membership.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MembershipQueryLogStatus
      */
@@ -676,11 +682,11 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     * An indicator as to whether query logging has been enabled or disabled for the membership.
      * </p>
      * 
      * @param queryLogStatus
-     *        An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     *        An indicator as to whether query logging has been enabled or disabled for the membership.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MembershipQueryLogStatus
      */
@@ -731,6 +737,46 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The payment responsibilities accepted by the collaboration member.
+     * </p>
+     * 
+     * @param paymentConfiguration
+     *        The payment responsibilities accepted by the collaboration member.
+     */
+
+    public void setPaymentConfiguration(MembershipPaymentConfiguration paymentConfiguration) {
+        this.paymentConfiguration = paymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The payment responsibilities accepted by the collaboration member.
+     * </p>
+     * 
+     * @return The payment responsibilities accepted by the collaboration member.
+     */
+
+    public MembershipPaymentConfiguration getPaymentConfiguration() {
+        return this.paymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The payment responsibilities accepted by the collaboration member.
+     * </p>
+     * 
+     * @param paymentConfiguration
+     *        The payment responsibilities accepted by the collaboration member.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Membership withPaymentConfiguration(MembershipPaymentConfiguration paymentConfiguration) {
+        setPaymentConfiguration(paymentConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -767,7 +813,9 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
         if (getQueryLogStatus() != null)
             sb.append("QueryLogStatus: ").append(getQueryLogStatus()).append(",");
         if (getDefaultResultConfiguration() != null)
-            sb.append("DefaultResultConfiguration: ").append(getDefaultResultConfiguration());
+            sb.append("DefaultResultConfiguration: ").append(getDefaultResultConfiguration()).append(",");
+        if (getPaymentConfiguration() != null)
+            sb.append("PaymentConfiguration: ").append(getPaymentConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -836,6 +884,10 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDefaultResultConfiguration() != null && other.getDefaultResultConfiguration().equals(this.getDefaultResultConfiguration()) == false)
             return false;
+        if (other.getPaymentConfiguration() == null ^ this.getPaymentConfiguration() == null)
+            return false;
+        if (other.getPaymentConfiguration() != null && other.getPaymentConfiguration().equals(this.getPaymentConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -857,6 +909,7 @@ public class Membership implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMemberAbilities() == null) ? 0 : getMemberAbilities().hashCode());
         hashCode = prime * hashCode + ((getQueryLogStatus() == null) ? 0 : getQueryLogStatus().hashCode());
         hashCode = prime * hashCode + ((getDefaultResultConfiguration() == null) ? 0 : getDefaultResultConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getPaymentConfiguration() == null) ? 0 : getPaymentConfiguration().hashCode());
         return hashCode;
     }
 

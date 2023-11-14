@@ -194,6 +194,23 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String resourceName;
+    /**
+     * <p>
+     * This parameter is the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example strings include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>. See
+     * <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     * <p>
+     * The the value ANY returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     * </p>
+     */
+    private String messageCategory;
 
     /**
      * <p>
@@ -1343,6 +1360,112 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * This parameter is the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example strings include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>. See
+     * <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     * <p>
+     * The the value ANY returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     * </p>
+     * 
+     * @param messageCategory
+     *        This parameter is the job count for the specified message category.</p>
+     *        <p>
+     *        Example strings include <code>AccessDenied</code>, <code>Success</code>, and
+     *        <code>InvalidParameters</code>. See <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     *        MessageCategory strings.
+     *        </p>
+     *        <p>
+     *        The the value ANY returns count of all message categories.
+     *        </p>
+     *        <p>
+     *        <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     */
+
+    public void setMessageCategory(String messageCategory) {
+        this.messageCategory = messageCategory;
+    }
+
+    /**
+     * <p>
+     * This parameter is the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example strings include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>. See
+     * <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     * <p>
+     * The the value ANY returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     * </p>
+     * 
+     * @return This parameter is the job count for the specified message category.</p>
+     *         <p>
+     *         Example strings include <code>AccessDenied</code>, <code>Success</code>, and
+     *         <code>InvalidParameters</code>. See <a
+     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list
+     *         of MessageCategory strings.
+     *         </p>
+     *         <p>
+     *         The the value ANY returns count of all message categories.
+     *         </p>
+     *         <p>
+     *         <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     */
+
+    public String getMessageCategory() {
+        return this.messageCategory;
+    }
+
+    /**
+     * <p>
+     * This parameter is the job count for the specified message category.
+     * </p>
+     * <p>
+     * Example strings include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>. See
+     * <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * MessageCategory strings.
+     * </p>
+     * <p>
+     * The the value ANY returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     * </p>
+     * 
+     * @param messageCategory
+     *        This parameter is the job count for the specified message category.</p>
+     *        <p>
+     *        Example strings include <code>AccessDenied</code>, <code>Success</code>, and
+     *        <code>InvalidParameters</code>. See <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     *        MessageCategory strings.
+     *        </p>
+     *        <p>
+     *        The the value ANY returns count of all message categories.
+     *        </p>
+     *        <p>
+     *        <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BackupJob withMessageCategory(String messageCategory) {
+        setMessageCategory(messageCategory);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1399,7 +1522,9 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
         if (getIsParent() != null)
             sb.append("IsParent: ").append(getIsParent()).append(",");
         if (getResourceName() != null)
-            sb.append("ResourceName: ").append(getResourceName());
+            sb.append("ResourceName: ").append(getResourceName()).append(",");
+        if (getMessageCategory() != null)
+            sb.append("MessageCategory: ").append(getMessageCategory());
         sb.append("}");
         return sb.toString();
     }
@@ -1506,6 +1631,10 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getResourceName() != null && other.getResourceName().equals(this.getResourceName()) == false)
             return false;
+        if (other.getMessageCategory() == null ^ this.getMessageCategory() == null)
+            return false;
+        if (other.getMessageCategory() != null && other.getMessageCategory().equals(this.getMessageCategory()) == false)
+            return false;
         return true;
     }
 
@@ -1537,6 +1666,7 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getParentJobId() == null) ? 0 : getParentJobId().hashCode());
         hashCode = prime * hashCode + ((getIsParent() == null) ? 0 : getIsParent().hashCode());
         hashCode = prime * hashCode + ((getResourceName() == null) ? 0 : getResourceName().hashCode());
+        hashCode = prime * hashCode + ((getMessageCategory() == null) ? 0 : getMessageCategory().hashCode());
         return hashCode;
     }
 

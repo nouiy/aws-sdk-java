@@ -1407,6 +1407,39 @@ public class AWSBackupAsyncClient extends AWSBackupClient implements AWSBackupAs
     }
 
     @Override
+    public java.util.concurrent.Future<ListBackupJobSummariesResult> listBackupJobSummariesAsync(ListBackupJobSummariesRequest request) {
+
+        return listBackupJobSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBackupJobSummariesResult> listBackupJobSummariesAsync(final ListBackupJobSummariesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListBackupJobSummariesRequest, ListBackupJobSummariesResult> asyncHandler) {
+        final ListBackupJobSummariesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListBackupJobSummariesResult>() {
+            @Override
+            public ListBackupJobSummariesResult call() throws Exception {
+                ListBackupJobSummariesResult result = null;
+
+                try {
+                    result = executeListBackupJobSummaries(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListBackupJobsResult> listBackupJobsAsync(ListBackupJobsRequest request) {
 
         return listBackupJobsAsync(request, null);
@@ -1589,6 +1622,39 @@ public class AWSBackupAsyncClient extends AWSBackupClient implements AWSBackupAs
 
                 try {
                     result = executeListBackupVaults(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCopyJobSummariesResult> listCopyJobSummariesAsync(ListCopyJobSummariesRequest request) {
+
+        return listCopyJobSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCopyJobSummariesResult> listCopyJobSummariesAsync(final ListCopyJobSummariesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCopyJobSummariesRequest, ListCopyJobSummariesResult> asyncHandler) {
+        final ListCopyJobSummariesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCopyJobSummariesResult>() {
+            @Override
+            public ListCopyJobSummariesResult call() throws Exception {
+                ListCopyJobSummariesResult result = null;
+
+                try {
+                    result = executeListCopyJobSummaries(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1924,6 +1990,39 @@ public class AWSBackupAsyncClient extends AWSBackupClient implements AWSBackupAs
 
                 try {
                     result = executeListReportPlans(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRestoreJobSummariesResult> listRestoreJobSummariesAsync(ListRestoreJobSummariesRequest request) {
+
+        return listRestoreJobSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRestoreJobSummariesResult> listRestoreJobSummariesAsync(final ListRestoreJobSummariesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListRestoreJobSummariesRequest, ListRestoreJobSummariesResult> asyncHandler) {
+        final ListRestoreJobSummariesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListRestoreJobSummariesResult>() {
+            @Override
+            public ListRestoreJobSummariesResult call() throws Exception {
+                ListRestoreJobSummariesResult result = null;
+
+                try {
+                    result = executeListRestoreJobSummaries(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

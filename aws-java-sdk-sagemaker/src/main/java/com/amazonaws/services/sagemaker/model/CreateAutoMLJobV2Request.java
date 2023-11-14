@@ -124,8 +124,8 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * candidates to be trained and evaluated. Instead, using your dataset, Autopilot directly fine-tunes your target
      * model to enhance a default objective metric, the cross-entropy loss. After fine-tuning a language model, you can
      * evaluate the quality of its generated text using different metrics. For a list of the available metrics, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning LLMs
-     * in Autopilot</a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-llms-finetuning-metrics.html">Metrics for
+     * fine-tuning LLMs in Autopilot</a>.
      * </p>
      * </li>
      * </ul>
@@ -793,8 +793,8 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * candidates to be trained and evaluated. Instead, using your dataset, Autopilot directly fine-tunes your target
      * model to enhance a default objective metric, the cross-entropy loss. After fine-tuning a language model, you can
      * evaluate the quality of its generated text using different metrics. For a list of the available metrics, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning LLMs
-     * in Autopilot</a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-llms-finetuning-metrics.html">Metrics for
+     * fine-tuning LLMs in Autopilot</a>.
      * </p>
      * </li>
      * </ul>
@@ -821,8 +821,8 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        fine-tunes your target model to enhance a default objective metric, the cross-entropy loss. After
      *        fine-tuning a language model, you can evaluate the quality of its generated text using different metrics.
      *        For a list of the available metrics, see <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning
-     *        LLMs in Autopilot</a>.
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-llms-finetuning-metrics.html">Metrics for
+     *        fine-tuning LLMs in Autopilot</a>.
      *        </p>
      *        </li>
      *        </ul>
@@ -855,8 +855,8 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * candidates to be trained and evaluated. Instead, using your dataset, Autopilot directly fine-tunes your target
      * model to enhance a default objective metric, the cross-entropy loss. After fine-tuning a language model, you can
      * evaluate the quality of its generated text using different metrics. For a list of the available metrics, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning LLMs
-     * in Autopilot</a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-llms-finetuning-metrics.html">Metrics for
+     * fine-tuning LLMs in Autopilot</a>.
      * </p>
      * </li>
      * </ul>
@@ -882,7 +882,7 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *         fine-tunes your target model to enhance a default objective metric, the cross-entropy loss. After
      *         fine-tuning a language model, you can evaluate the quality of its generated text using different metrics.
      *         For a list of the available metrics, see <a
-     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-llms-finetuning-metrics.html">Metrics for
      *         fine-tuning LLMs in Autopilot</a>.
      *         </p>
      *         </li>
@@ -916,8 +916,8 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * candidates to be trained and evaluated. Instead, using your dataset, Autopilot directly fine-tunes your target
      * model to enhance a default objective metric, the cross-entropy loss. After fine-tuning a language model, you can
      * evaluate the quality of its generated text using different metrics. For a list of the available metrics, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning LLMs
-     * in Autopilot</a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-llms-finetuning-metrics.html">Metrics for
+     * fine-tuning LLMs in Autopilot</a>.
      * </p>
      * </li>
      * </ul>
@@ -944,8 +944,8 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        fine-tunes your target model to enhance a default objective metric, the cross-entropy loss. After
      *        fine-tuning a language model, you can evaluate the quality of its generated text using different metrics.
      *        For a list of the available metrics, see <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning
-     *        LLMs in Autopilot</a>.
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-llms-finetuning-metrics.html">Metrics for
+     *        fine-tuning LLMs in Autopilot</a>.
      *        </p>
      *        </li>
      *        </ul>

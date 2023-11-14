@@ -44,6 +44,8 @@ public class MemberSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("membershipId").build();
     private static final MarshallingInfo<String> MEMBERSHIPARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("membershipArn").build();
+    private static final MarshallingInfo<StructuredPojo> PAYMENTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("paymentConfiguration").build();
 
     private static final MemberSummaryMarshaller instance = new MemberSummaryMarshaller();
 
@@ -69,6 +71,7 @@ public class MemberSummaryMarshaller {
             protocolMarshaller.marshall(memberSummary.getUpdateTime(), UPDATETIME_BINDING);
             protocolMarshaller.marshall(memberSummary.getMembershipId(), MEMBERSHIPID_BINDING);
             protocolMarshaller.marshall(memberSummary.getMembershipArn(), MEMBERSHIPARN_BINDING);
+            protocolMarshaller.marshall(memberSummary.getPaymentConfiguration(), PAYMENTCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

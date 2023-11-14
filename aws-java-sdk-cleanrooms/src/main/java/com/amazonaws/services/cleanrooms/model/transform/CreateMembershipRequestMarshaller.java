@@ -37,6 +37,8 @@ public class CreateMembershipRequestMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<StructuredPojo> DEFAULTRESULTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("defaultResultConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> PAYMENTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("paymentConfiguration").build();
 
     private static final CreateMembershipRequestMarshaller instance = new CreateMembershipRequestMarshaller();
 
@@ -58,6 +60,7 @@ public class CreateMembershipRequestMarshaller {
             protocolMarshaller.marshall(createMembershipRequest.getQueryLogStatus(), QUERYLOGSTATUS_BINDING);
             protocolMarshaller.marshall(createMembershipRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createMembershipRequest.getDefaultResultConfiguration(), DEFAULTRESULTCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createMembershipRequest.getPaymentConfiguration(), PAYMENTCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

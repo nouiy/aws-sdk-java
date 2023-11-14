@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift
- * Data API ExecuteStatement.
+ * Data API BatchExecuteStatement.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pipes-2015-10-07/PipeTargetRedshiftDataParameters"
@@ -43,7 +43,8 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
     private String dbUser;
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using SageMaker.
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
+     * Manager.
      * </p>
      */
     private String secretManagerArn;
@@ -148,12 +149,13 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
 
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using SageMaker.
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
+     * Manager.
      * </p>
      * 
      * @param secretManagerArn
      *        The name or ARN of the secret that enables access to the database. Required when authenticating using
-     *        SageMaker.
+     *        Secrets Manager.
      */
 
     public void setSecretManagerArn(String secretManagerArn) {
@@ -162,11 +164,12 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
 
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using SageMaker.
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
+     * Manager.
      * </p>
      * 
      * @return The name or ARN of the secret that enables access to the database. Required when authenticating using
-     *         SageMaker.
+     *         Secrets Manager.
      */
 
     public String getSecretManagerArn() {
@@ -175,12 +178,13 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
 
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using SageMaker.
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
+     * Manager.
      * </p>
      * 
      * @param secretManagerArn
      *        The name or ARN of the secret that enables access to the database. Required when authenticating using
-     *        SageMaker.
+     *        Secrets Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

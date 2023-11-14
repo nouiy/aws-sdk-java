@@ -52,6 +52,8 @@ public class StartChatContactRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PersistentChat").build();
     private static final MarshallingInfo<String> RELATEDCONTACTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RelatedContactId").build();
+    private static final MarshallingInfo<Map> SEGMENTATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SegmentAttributes").build();
 
     private static final StartChatContactRequestMarshaller instance = new StartChatContactRequestMarshaller();
 
@@ -79,6 +81,7 @@ public class StartChatContactRequestMarshaller {
             protocolMarshaller.marshall(startChatContactRequest.getSupportedMessagingContentTypes(), SUPPORTEDMESSAGINGCONTENTTYPES_BINDING);
             protocolMarshaller.marshall(startChatContactRequest.getPersistentChat(), PERSISTENTCHAT_BINDING);
             protocolMarshaller.marshall(startChatContactRequest.getRelatedContactId(), RELATEDCONTACTID_BINDING);
+            protocolMarshaller.marshall(startChatContactRequest.getSegmentAttributes(), SEGMENTATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

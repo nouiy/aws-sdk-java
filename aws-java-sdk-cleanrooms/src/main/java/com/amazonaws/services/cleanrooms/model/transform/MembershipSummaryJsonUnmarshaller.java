@@ -94,6 +94,10 @@ public class MembershipSummaryJsonUnmarshaller implements Unmarshaller<Membershi
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("paymentConfiguration", targetDepth)) {
+                    context.nextToken();
+                    membershipSummary.setPaymentConfiguration(MembershipPaymentConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

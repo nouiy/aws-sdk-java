@@ -153,6 +153,11 @@ public class AbstractAWSStepFunctions implements AWSStepFunctions {
     }
 
     @Override
+    public RedriveExecutionResult redriveExecution(RedriveExecutionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SendTaskFailureResult sendTaskFailure(SendTaskFailureRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

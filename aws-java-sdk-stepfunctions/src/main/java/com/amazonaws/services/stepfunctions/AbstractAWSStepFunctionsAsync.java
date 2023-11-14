@@ -329,6 +329,19 @@ public class AbstractAWSStepFunctionsAsync extends AbstractAWSStepFunctions impl
     }
 
     @Override
+    public java.util.concurrent.Future<RedriveExecutionResult> redriveExecutionAsync(RedriveExecutionRequest request) {
+
+        return redriveExecutionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RedriveExecutionResult> redriveExecutionAsync(RedriveExecutionRequest request,
+            com.amazonaws.handlers.AsyncHandler<RedriveExecutionRequest, RedriveExecutionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SendTaskFailureResult> sendTaskFailureAsync(SendTaskFailureRequest request) {
 
         return sendTaskFailureAsync(request, null);

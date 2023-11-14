@@ -137,6 +137,20 @@ public class ExecutionListItem implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String stateMachineAliasArn;
+    /**
+     * <p>
+     * The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     */
+    private Integer redriveCount;
+    /**
+     * <p>
+     * The date the execution was last redriven.
+     * </p>
+     */
+    private java.util.Date redriveDate;
 
     /**
      * <p>
@@ -857,6 +871,98 @@ public class ExecutionListItem implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     * 
+     * @param redriveCount
+     *        The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     *        <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending
+     *        to be redriven.
+     */
+
+    public void setRedriveCount(Integer redriveCount) {
+        this.redriveCount = redriveCount;
+    }
+
+    /**
+     * <p>
+     * The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     * 
+     * @return The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     *         <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are
+     *         pending to be redriven.
+     */
+
+    public Integer getRedriveCount() {
+        return this.redriveCount;
+    }
+
+    /**
+     * <p>
+     * The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
+     * redriven.
+     * </p>
+     * 
+     * @param redriveCount
+     *        The number of times you've redriven an execution. If you have not yet redriven an execution, the
+     *        <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending
+     *        to be redriven.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExecutionListItem withRedriveCount(Integer redriveCount) {
+        setRedriveCount(redriveCount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date the execution was last redriven.
+     * </p>
+     * 
+     * @param redriveDate
+     *        The date the execution was last redriven.
+     */
+
+    public void setRedriveDate(java.util.Date redriveDate) {
+        this.redriveDate = redriveDate;
+    }
+
+    /**
+     * <p>
+     * The date the execution was last redriven.
+     * </p>
+     * 
+     * @return The date the execution was last redriven.
+     */
+
+    public java.util.Date getRedriveDate() {
+        return this.redriveDate;
+    }
+
+    /**
+     * <p>
+     * The date the execution was last redriven.
+     * </p>
+     * 
+     * @param redriveDate
+     *        The date the execution was last redriven.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExecutionListItem withRedriveDate(java.util.Date redriveDate) {
+        setRedriveDate(redriveDate);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -887,7 +993,11 @@ public class ExecutionListItem implements Serializable, Cloneable, StructuredPoj
         if (getStateMachineVersionArn() != null)
             sb.append("StateMachineVersionArn: ").append(getStateMachineVersionArn()).append(",");
         if (getStateMachineAliasArn() != null)
-            sb.append("StateMachineAliasArn: ").append(getStateMachineAliasArn());
+            sb.append("StateMachineAliasArn: ").append(getStateMachineAliasArn()).append(",");
+        if (getRedriveCount() != null)
+            sb.append("RedriveCount: ").append(getRedriveCount()).append(",");
+        if (getRedriveDate() != null)
+            sb.append("RedriveDate: ").append(getRedriveDate());
         sb.append("}");
         return sb.toString();
     }
@@ -942,6 +1052,14 @@ public class ExecutionListItem implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getStateMachineAliasArn() != null && other.getStateMachineAliasArn().equals(this.getStateMachineAliasArn()) == false)
             return false;
+        if (other.getRedriveCount() == null ^ this.getRedriveCount() == null)
+            return false;
+        if (other.getRedriveCount() != null && other.getRedriveCount().equals(this.getRedriveCount()) == false)
+            return false;
+        if (other.getRedriveDate() == null ^ this.getRedriveDate() == null)
+            return false;
+        if (other.getRedriveDate() != null && other.getRedriveDate().equals(this.getRedriveDate()) == false)
+            return false;
         return true;
     }
 
@@ -960,6 +1078,8 @@ public class ExecutionListItem implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getItemCount() == null) ? 0 : getItemCount().hashCode());
         hashCode = prime * hashCode + ((getStateMachineVersionArn() == null) ? 0 : getStateMachineVersionArn().hashCode());
         hashCode = prime * hashCode + ((getStateMachineAliasArn() == null) ? 0 : getStateMachineAliasArn().hashCode());
+        hashCode = prime * hashCode + ((getRedriveCount() == null) ? 0 : getRedriveCount().hashCode());
+        hashCode = prime * hashCode + ((getRedriveDate() == null) ? 0 : getRedriveDate().hashCode());
         return hashCode;
     }
 

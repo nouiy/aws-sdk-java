@@ -80,6 +80,21 @@ public class MapRunItemCounts implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private Long resultsWritten;
+    /**
+     * <p>
+     * The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> items in child workflow
+     * executions that cannot be redriven because the execution status of those child workflows is terminal. For
+     * example, if your execution event history contains 25,000 entries, or the <code>toleratedFailureCount</code> or
+     * <code>toleratedFailurePercentage</code> for the Distributed Map has exceeded.
+     * </p>
+     */
+    private Long failuresNotRedrivable;
+    /**
+     * <p>
+     * The number of unsuccessful items in child workflow executions currently waiting to be redriven.
+     * </p>
+     */
+    private Long pendingRedrive;
 
     /**
      * <p>
@@ -423,6 +438,107 @@ public class MapRunItemCounts implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> items in child workflow
+     * executions that cannot be redriven because the execution status of those child workflows is terminal. For
+     * example, if your execution event history contains 25,000 entries, or the <code>toleratedFailureCount</code> or
+     * <code>toleratedFailurePercentage</code> for the Distributed Map has exceeded.
+     * </p>
+     * 
+     * @param failuresNotRedrivable
+     *        The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> items in child workflow
+     *        executions that cannot be redriven because the execution status of those child workflows is terminal. For
+     *        example, if your execution event history contains 25,000 entries, or the
+     *        <code>toleratedFailureCount</code> or <code>toleratedFailurePercentage</code> for the Distributed Map has
+     *        exceeded.
+     */
+
+    public void setFailuresNotRedrivable(Long failuresNotRedrivable) {
+        this.failuresNotRedrivable = failuresNotRedrivable;
+    }
+
+    /**
+     * <p>
+     * The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> items in child workflow
+     * executions that cannot be redriven because the execution status of those child workflows is terminal. For
+     * example, if your execution event history contains 25,000 entries, or the <code>toleratedFailureCount</code> or
+     * <code>toleratedFailurePercentage</code> for the Distributed Map has exceeded.
+     * </p>
+     * 
+     * @return The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> items in child
+     *         workflow executions that cannot be redriven because the execution status of those child workflows is
+     *         terminal. For example, if your execution event history contains 25,000 entries, or the
+     *         <code>toleratedFailureCount</code> or <code>toleratedFailurePercentage</code> for the Distributed Map has
+     *         exceeded.
+     */
+
+    public Long getFailuresNotRedrivable() {
+        return this.failuresNotRedrivable;
+    }
+
+    /**
+     * <p>
+     * The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> items in child workflow
+     * executions that cannot be redriven because the execution status of those child workflows is terminal. For
+     * example, if your execution event history contains 25,000 entries, or the <code>toleratedFailureCount</code> or
+     * <code>toleratedFailurePercentage</code> for the Distributed Map has exceeded.
+     * </p>
+     * 
+     * @param failuresNotRedrivable
+     *        The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> items in child workflow
+     *        executions that cannot be redriven because the execution status of those child workflows is terminal. For
+     *        example, if your execution event history contains 25,000 entries, or the
+     *        <code>toleratedFailureCount</code> or <code>toleratedFailurePercentage</code> for the Distributed Map has
+     *        exceeded.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MapRunItemCounts withFailuresNotRedrivable(Long failuresNotRedrivable) {
+        setFailuresNotRedrivable(failuresNotRedrivable);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of unsuccessful items in child workflow executions currently waiting to be redriven.
+     * </p>
+     * 
+     * @param pendingRedrive
+     *        The number of unsuccessful items in child workflow executions currently waiting to be redriven.
+     */
+
+    public void setPendingRedrive(Long pendingRedrive) {
+        this.pendingRedrive = pendingRedrive;
+    }
+
+    /**
+     * <p>
+     * The number of unsuccessful items in child workflow executions currently waiting to be redriven.
+     * </p>
+     * 
+     * @return The number of unsuccessful items in child workflow executions currently waiting to be redriven.
+     */
+
+    public Long getPendingRedrive() {
+        return this.pendingRedrive;
+    }
+
+    /**
+     * <p>
+     * The number of unsuccessful items in child workflow executions currently waiting to be redriven.
+     * </p>
+     * 
+     * @param pendingRedrive
+     *        The number of unsuccessful items in child workflow executions currently waiting to be redriven.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MapRunItemCounts withPendingRedrive(Long pendingRedrive) {
+        setPendingRedrive(pendingRedrive);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -449,7 +565,11 @@ public class MapRunItemCounts implements Serializable, Cloneable, StructuredPojo
         if (getTotal() != null)
             sb.append("Total: ").append(getTotal()).append(",");
         if (getResultsWritten() != null)
-            sb.append("ResultsWritten: ").append(getResultsWritten());
+            sb.append("ResultsWritten: ").append(getResultsWritten()).append(",");
+        if (getFailuresNotRedrivable() != null)
+            sb.append("FailuresNotRedrivable: ").append(getFailuresNotRedrivable()).append(",");
+        if (getPendingRedrive() != null)
+            sb.append("PendingRedrive: ").append(getPendingRedrive());
         sb.append("}");
         return sb.toString();
     }
@@ -496,6 +616,14 @@ public class MapRunItemCounts implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getResultsWritten() != null && other.getResultsWritten().equals(this.getResultsWritten()) == false)
             return false;
+        if (other.getFailuresNotRedrivable() == null ^ this.getFailuresNotRedrivable() == null)
+            return false;
+        if (other.getFailuresNotRedrivable() != null && other.getFailuresNotRedrivable().equals(this.getFailuresNotRedrivable()) == false)
+            return false;
+        if (other.getPendingRedrive() == null ^ this.getPendingRedrive() == null)
+            return false;
+        if (other.getPendingRedrive() != null && other.getPendingRedrive().equals(this.getPendingRedrive()) == false)
+            return false;
         return true;
     }
 
@@ -512,6 +640,8 @@ public class MapRunItemCounts implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getAborted() == null) ? 0 : getAborted().hashCode());
         hashCode = prime * hashCode + ((getTotal() == null) ? 0 : getTotal().hashCode());
         hashCode = prime * hashCode + ((getResultsWritten() == null) ? 0 : getResultsWritten().hashCode());
+        hashCode = prime * hashCode + ((getFailuresNotRedrivable() == null) ? 0 : getFailuresNotRedrivable().hashCode());
+        hashCode = prime * hashCode + ((getPendingRedrive() == null) ? 0 : getPendingRedrive().hashCode());
         return hashCode;
     }
 

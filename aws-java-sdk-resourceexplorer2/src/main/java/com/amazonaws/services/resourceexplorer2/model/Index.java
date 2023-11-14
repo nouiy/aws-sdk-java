@@ -57,14 +57,15 @@ public class Index implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>LOCAL</b> – The index contains information about resources from only the same Amazon Web Services Region.
+     * <code>LOCAL</code> – The index contains information about resources from only the same Amazon Web Services
+     * Region.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AGGREGATOR</b> – Resource Explorer replicates copies of the indexed information about resources in all other
-     * Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the aggregator
-     * index to include resources from all Regions in the account where Resource Explorer is turned on.
+     * <code>AGGREGATOR</code> – Resource Explorer replicates copies of the indexed information about resources in all
+     * other Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the
+     * aggregator index to include resources from all Regions in the account where Resource Explorer is turned on.
      * </p>
      * </li>
      * </ul>
@@ -164,14 +165,15 @@ public class Index implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>LOCAL</b> – The index contains information about resources from only the same Amazon Web Services Region.
+     * <code>LOCAL</code> – The index contains information about resources from only the same Amazon Web Services
+     * Region.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AGGREGATOR</b> – Resource Explorer replicates copies of the indexed information about resources in all other
-     * Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the aggregator
-     * index to include resources from all Regions in the account where Resource Explorer is turned on.
+     * <code>AGGREGATOR</code> – Resource Explorer replicates copies of the indexed information about resources in all
+     * other Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the
+     * aggregator index to include resources from all Regions in the account where Resource Explorer is turned on.
      * </p>
      * </li>
      * </ul>
@@ -181,16 +183,16 @@ public class Index implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>LOCAL</b> – The index contains information about resources from only the same Amazon Web Services
+     *        <code>LOCAL</code> – The index contains information about resources from only the same Amazon Web Services
      *        Region.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AGGREGATOR</b> – Resource Explorer replicates copies of the indexed information about resources in all
-     *        other Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the
-     *        aggregator index to include resources from all Regions in the account where Resource Explorer is turned
-     *        on.
+     *        <code>AGGREGATOR</code> – Resource Explorer replicates copies of the indexed information about resources
+     *        in all other Amazon Web Services Regions to the aggregator index. This lets search results in the Region
+     *        with the aggregator index to include resources from all Regions in the account where Resource Explorer is
+     *        turned on.
      *        </p>
      *        </li>
      * @see IndexType
@@ -207,14 +209,15 @@ public class Index implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>LOCAL</b> – The index contains information about resources from only the same Amazon Web Services Region.
+     * <code>LOCAL</code> – The index contains information about resources from only the same Amazon Web Services
+     * Region.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AGGREGATOR</b> – Resource Explorer replicates copies of the indexed information about resources in all other
-     * Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the aggregator
-     * index to include resources from all Regions in the account where Resource Explorer is turned on.
+     * <code>AGGREGATOR</code> – Resource Explorer replicates copies of the indexed information about resources in all
+     * other Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the
+     * aggregator index to include resources from all Regions in the account where Resource Explorer is turned on.
      * </p>
      * </li>
      * </ul>
@@ -223,15 +226,15 @@ public class Index implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>LOCAL</b> – The index contains information about resources from only the same Amazon Web Services
-     *         Region.
+     *         <code>LOCAL</code> – The index contains information about resources from only the same Amazon Web
+     *         Services Region.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>AGGREGATOR</b> – Resource Explorer replicates copies of the indexed information about resources in all
-     *         other Amazon Web Services Regions to the aggregator index. This lets search results in the Region with
-     *         the aggregator index to include resources from all Regions in the account where Resource Explorer is
+     *         <code>AGGREGATOR</code> – Resource Explorer replicates copies of the indexed information about resources
+     *         in all other Amazon Web Services Regions to the aggregator index. This lets search results in the Region
+     *         with the aggregator index to include resources from all Regions in the account where Resource Explorer is
      *         turned on.
      *         </p>
      *         </li>
@@ -249,14 +252,15 @@ public class Index implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>LOCAL</b> – The index contains information about resources from only the same Amazon Web Services Region.
+     * <code>LOCAL</code> – The index contains information about resources from only the same Amazon Web Services
+     * Region.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AGGREGATOR</b> – Resource Explorer replicates copies of the indexed information about resources in all other
-     * Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the aggregator
-     * index to include resources from all Regions in the account where Resource Explorer is turned on.
+     * <code>AGGREGATOR</code> – Resource Explorer replicates copies of the indexed information about resources in all
+     * other Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the
+     * aggregator index to include resources from all Regions in the account where Resource Explorer is turned on.
      * </p>
      * </li>
      * </ul>
@@ -266,16 +270,16 @@ public class Index implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>LOCAL</b> – The index contains information about resources from only the same Amazon Web Services
+     *        <code>LOCAL</code> – The index contains information about resources from only the same Amazon Web Services
      *        Region.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AGGREGATOR</b> – Resource Explorer replicates copies of the indexed information about resources in all
-     *        other Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the
-     *        aggregator index to include resources from all Regions in the account where Resource Explorer is turned
-     *        on.
+     *        <code>AGGREGATOR</code> – Resource Explorer replicates copies of the indexed information about resources
+     *        in all other Amazon Web Services Regions to the aggregator index. This lets search results in the Region
+     *        with the aggregator index to include resources from all Regions in the account where Resource Explorer is
+     *        turned on.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -294,14 +298,15 @@ public class Index implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>LOCAL</b> – The index contains information about resources from only the same Amazon Web Services Region.
+     * <code>LOCAL</code> – The index contains information about resources from only the same Amazon Web Services
+     * Region.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>AGGREGATOR</b> – Resource Explorer replicates copies of the indexed information about resources in all other
-     * Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the aggregator
-     * index to include resources from all Regions in the account where Resource Explorer is turned on.
+     * <code>AGGREGATOR</code> – Resource Explorer replicates copies of the indexed information about resources in all
+     * other Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the
+     * aggregator index to include resources from all Regions in the account where Resource Explorer is turned on.
      * </p>
      * </li>
      * </ul>
@@ -311,16 +316,16 @@ public class Index implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>LOCAL</b> – The index contains information about resources from only the same Amazon Web Services
+     *        <code>LOCAL</code> – The index contains information about resources from only the same Amazon Web Services
      *        Region.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AGGREGATOR</b> – Resource Explorer replicates copies of the indexed information about resources in all
-     *        other Amazon Web Services Regions to the aggregator index. This lets search results in the Region with the
-     *        aggregator index to include resources from all Regions in the account where Resource Explorer is turned
-     *        on.
+     *        <code>AGGREGATOR</code> – Resource Explorer replicates copies of the indexed information about resources
+     *        in all other Amazon Web Services Regions to the aggregator index. This lets search results in the Region
+     *        with the aggregator index to include resources from all Regions in the account where Resource Explorer is
+     *        turned on.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

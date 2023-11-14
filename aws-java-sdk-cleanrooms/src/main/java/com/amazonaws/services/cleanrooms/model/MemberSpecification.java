@@ -47,6 +47,16 @@ public class MemberSpecification implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private String displayName;
+    /**
+     * <p>
+     * The collaboration member's payment responsibilities set by the collaboration creator.
+     * </p>
+     * <p>
+     * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute costs, then the member
+     * who can query is the default payer.
+     * </p>
+     */
+    private PaymentConfiguration paymentConfiguration;
 
     /**
      * <p>
@@ -233,6 +243,67 @@ public class MemberSpecification implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The collaboration member's payment responsibilities set by the collaboration creator.
+     * </p>
+     * <p>
+     * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute costs, then the member
+     * who can query is the default payer.
+     * </p>
+     * 
+     * @param paymentConfiguration
+     *        The collaboration member's payment responsibilities set by the collaboration creator. </p>
+     *        <p>
+     *        If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute costs, then the
+     *        member who can query is the default payer.
+     */
+
+    public void setPaymentConfiguration(PaymentConfiguration paymentConfiguration) {
+        this.paymentConfiguration = paymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The collaboration member's payment responsibilities set by the collaboration creator.
+     * </p>
+     * <p>
+     * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute costs, then the member
+     * who can query is the default payer.
+     * </p>
+     * 
+     * @return The collaboration member's payment responsibilities set by the collaboration creator. </p>
+     *         <p>
+     *         If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute costs, then
+     *         the member who can query is the default payer.
+     */
+
+    public PaymentConfiguration getPaymentConfiguration() {
+        return this.paymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The collaboration member's payment responsibilities set by the collaboration creator.
+     * </p>
+     * <p>
+     * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute costs, then the member
+     * who can query is the default payer.
+     * </p>
+     * 
+     * @param paymentConfiguration
+     *        The collaboration member's payment responsibilities set by the collaboration creator. </p>
+     *        <p>
+     *        If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute costs, then the
+     *        member who can query is the default payer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MemberSpecification withPaymentConfiguration(PaymentConfiguration paymentConfiguration) {
+        setPaymentConfiguration(paymentConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -249,7 +320,9 @@ public class MemberSpecification implements Serializable, Cloneable, StructuredP
         if (getMemberAbilities() != null)
             sb.append("MemberAbilities: ").append(getMemberAbilities()).append(",");
         if (getDisplayName() != null)
-            sb.append("DisplayName: ").append(getDisplayName());
+            sb.append("DisplayName: ").append(getDisplayName()).append(",");
+        if (getPaymentConfiguration() != null)
+            sb.append("PaymentConfiguration: ").append(getPaymentConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -276,6 +349,10 @@ public class MemberSpecification implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getDisplayName() != null && other.getDisplayName().equals(this.getDisplayName()) == false)
             return false;
+        if (other.getPaymentConfiguration() == null ^ this.getPaymentConfiguration() == null)
+            return false;
+        if (other.getPaymentConfiguration() != null && other.getPaymentConfiguration().equals(this.getPaymentConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -287,6 +364,7 @@ public class MemberSpecification implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
         hashCode = prime * hashCode + ((getMemberAbilities() == null) ? 0 : getMemberAbilities().hashCode());
         hashCode = prime * hashCode + ((getDisplayName() == null) ? 0 : getDisplayName().hashCode());
+        hashCode = prime * hashCode + ((getPaymentConfiguration() == null) ? 0 : getPaymentConfiguration().hashCode());
         return hashCode;
     }
 

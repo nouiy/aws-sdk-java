@@ -38,6 +38,11 @@ public class ThingGroupIndexingConfiguration implements Serializable, Cloneable,
      * href="https://docs.aws.amazon.com/iot/latest/developerguide/managing-fleet-index.html#managed-field">Managed
      * fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * You can't modify managed fields by updating fleet indexing configuration.
+     * </p>
+     * </note>
      */
     private java.util.List<Field> managedFields;
     /**
@@ -117,11 +122,19 @@ public class ThingGroupIndexingConfiguration implements Serializable, Cloneable,
      * href="https://docs.aws.amazon.com/iot/latest/developerguide/managing-fleet-index.html#managed-field">Managed
      * fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * You can't modify managed fields by updating fleet indexing configuration.
+     * </p>
+     * </note>
      * 
      * @return Contains fields that are indexed and whose types are already known by the Fleet Indexing service. This is
      *         an optional field. For more information, see <a
      *         href="https://docs.aws.amazon.com/iot/latest/developerguide/managing-fleet-index.html#managed-field"
-     *         >Managed fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.
+     *         >Managed fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.</p> <note>
+     *         <p>
+     *         You can't modify managed fields by updating fleet indexing configuration.
+     *         </p>
      */
 
     public java.util.List<Field> getManagedFields() {
@@ -135,12 +148,20 @@ public class ThingGroupIndexingConfiguration implements Serializable, Cloneable,
      * href="https://docs.aws.amazon.com/iot/latest/developerguide/managing-fleet-index.html#managed-field">Managed
      * fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * You can't modify managed fields by updating fleet indexing configuration.
+     * </p>
+     * </note>
      * 
      * @param managedFields
      *        Contains fields that are indexed and whose types are already known by the Fleet Indexing service. This is
      *        an optional field. For more information, see <a
      *        href="https://docs.aws.amazon.com/iot/latest/developerguide/managing-fleet-index.html#managed-field"
-     *        >Managed fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.
+     *        >Managed fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.</p> <note>
+     *        <p>
+     *        You can't modify managed fields by updating fleet indexing configuration.
+     *        </p>
      */
 
     public void setManagedFields(java.util.Collection<Field> managedFields) {
@@ -159,6 +180,11 @@ public class ThingGroupIndexingConfiguration implements Serializable, Cloneable,
      * href="https://docs.aws.amazon.com/iot/latest/developerguide/managing-fleet-index.html#managed-field">Managed
      * fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * You can't modify managed fields by updating fleet indexing configuration.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setManagedFields(java.util.Collection)} or {@link #withManagedFields(java.util.Collection)} if you want
@@ -169,7 +195,10 @@ public class ThingGroupIndexingConfiguration implements Serializable, Cloneable,
      *        Contains fields that are indexed and whose types are already known by the Fleet Indexing service. This is
      *        an optional field. For more information, see <a
      *        href="https://docs.aws.amazon.com/iot/latest/developerguide/managing-fleet-index.html#managed-field"
-     *        >Managed fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.
+     *        >Managed fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.</p> <note>
+     *        <p>
+     *        You can't modify managed fields by updating fleet indexing configuration.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -190,12 +219,20 @@ public class ThingGroupIndexingConfiguration implements Serializable, Cloneable,
      * href="https://docs.aws.amazon.com/iot/latest/developerguide/managing-fleet-index.html#managed-field">Managed
      * fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * You can't modify managed fields by updating fleet indexing configuration.
+     * </p>
+     * </note>
      * 
      * @param managedFields
      *        Contains fields that are indexed and whose types are already known by the Fleet Indexing service. This is
      *        an optional field. For more information, see <a
      *        href="https://docs.aws.amazon.com/iot/latest/developerguide/managing-fleet-index.html#managed-field"
-     *        >Managed fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.
+     *        >Managed fields</a> in the <i>Amazon Web Services IoT Core Developer Guide</i>.</p> <note>
+     *        <p>
+     *        You can't modify managed fields by updating fleet indexing configuration.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

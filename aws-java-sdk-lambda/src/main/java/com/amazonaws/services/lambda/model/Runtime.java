@@ -53,7 +53,8 @@ public enum Runtime {
     Ruby32("ruby3.2"),
     Python311("python3.11"),
     Nodejs20X("nodejs20.x"),
-    ProvidedAl2023("provided.al2023");
+    ProvidedAl2023("provided.al2023"),
+    Python312("python3.12");
 
     private String value;
 

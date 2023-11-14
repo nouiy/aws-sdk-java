@@ -24,7 +24,8 @@ public enum ExecutionStatus {
     SUCCEEDED("SUCCEEDED"),
     FAILED("FAILED"),
     TIMED_OUT("TIMED_OUT"),
-    ABORTED("ABORTED");
+    ABORTED("ABORTED"),
+    PENDING_REDRIVE("PENDING_REDRIVE");
 
     private String value;
 

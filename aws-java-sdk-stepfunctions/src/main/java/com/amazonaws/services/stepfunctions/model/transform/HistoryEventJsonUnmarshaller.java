@@ -140,6 +140,10 @@ public class HistoryEventJsonUnmarshaller implements Unmarshaller<HistoryEvent, 
                     context.nextToken();
                     historyEvent.setExecutionTimedOutEventDetails(ExecutionTimedOutEventDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("executionRedrivenEventDetails", targetDepth)) {
+                    context.nextToken();
+                    historyEvent.setExecutionRedrivenEventDetails(ExecutionRedrivenEventDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("mapStateStartedEventDetails", targetDepth)) {
                     context.nextToken();
                     historyEvent.setMapStateStartedEventDetails(MapStateStartedEventDetailsJsonUnmarshaller.getInstance().unmarshall(context));
@@ -201,6 +205,10 @@ public class HistoryEventJsonUnmarshaller implements Unmarshaller<HistoryEvent, 
                 if (context.testExpression("mapRunFailedEventDetails", targetDepth)) {
                     context.nextToken();
                     historyEvent.setMapRunFailedEventDetails(MapRunFailedEventDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("mapRunRedrivenEventDetails", targetDepth)) {
+                    context.nextToken();
+                    historyEvent.setMapRunRedrivenEventDetails(MapRunRedrivenEventDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

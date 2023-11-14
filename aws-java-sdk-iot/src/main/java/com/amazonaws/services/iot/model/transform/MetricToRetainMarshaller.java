@@ -31,6 +31,8 @@ public class MetricToRetainMarshaller {
             .marshallLocationName("metric").build();
     private static final MarshallingInfo<StructuredPojo> METRICDIMENSION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metricDimension").build();
+    private static final MarshallingInfo<Boolean> EXPORTMETRIC_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("exportMetric").build();
 
     private static final MetricToRetainMarshaller instance = new MetricToRetainMarshaller();
 
@@ -50,6 +52,7 @@ public class MetricToRetainMarshaller {
         try {
             protocolMarshaller.marshall(metricToRetain.getMetric(), METRIC_BINDING);
             protocolMarshaller.marshall(metricToRetain.getMetricDimension(), METRICDIMENSION_BINDING);
+            protocolMarshaller.marshall(metricToRetain.getExportMetric(), EXPORTMETRIC_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
