@@ -95,6 +95,12 @@ public class CreateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
     private String namespaceName;
     /**
      * <p>
+     * The ARN for the Redshift application that integrates with IAM Identity Center.
+     * </p>
+     */
+    private String redshiftIdcApplicationArn;
+    /**
+     * <p>
      * A list of tag instances.
      * </p>
      */
@@ -657,6 +663,46 @@ public class CreateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
+     * The ARN for the Redshift application that integrates with IAM Identity Center.
+     * </p>
+     * 
+     * @param redshiftIdcApplicationArn
+     *        The ARN for the Redshift application that integrates with IAM Identity Center.
+     */
+
+    public void setRedshiftIdcApplicationArn(String redshiftIdcApplicationArn) {
+        this.redshiftIdcApplicationArn = redshiftIdcApplicationArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the Redshift application that integrates with IAM Identity Center.
+     * </p>
+     * 
+     * @return The ARN for the Redshift application that integrates with IAM Identity Center.
+     */
+
+    public String getRedshiftIdcApplicationArn() {
+        return this.redshiftIdcApplicationArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the Redshift application that integrates with IAM Identity Center.
+     * </p>
+     * 
+     * @param redshiftIdcApplicationArn
+     *        The ARN for the Redshift application that integrates with IAM Identity Center.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateNamespaceRequest withRedshiftIdcApplicationArn(String redshiftIdcApplicationArn) {
+        setRedshiftIdcApplicationArn(redshiftIdcApplicationArn);
+        return this;
+    }
+
+    /**
+     * <p>
      * A list of tag instances.
      * </p>
      * 
@@ -757,6 +803,8 @@ public class CreateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
             sb.append("ManageAdminPassword: ").append(getManageAdminPassword()).append(",");
         if (getNamespaceName() != null)
             sb.append("NamespaceName: ").append(getNamespaceName()).append(",");
+        if (getRedshiftIdcApplicationArn() != null)
+            sb.append("RedshiftIdcApplicationArn: ").append(getRedshiftIdcApplicationArn()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -813,6 +861,10 @@ public class CreateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getNamespaceName() != null && other.getNamespaceName().equals(this.getNamespaceName()) == false)
             return false;
+        if (other.getRedshiftIdcApplicationArn() == null ^ this.getRedshiftIdcApplicationArn() == null)
+            return false;
+        if (other.getRedshiftIdcApplicationArn() != null && other.getRedshiftIdcApplicationArn().equals(this.getRedshiftIdcApplicationArn()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -835,6 +887,7 @@ public class CreateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getLogExports() == null) ? 0 : getLogExports().hashCode());
         hashCode = prime * hashCode + ((getManageAdminPassword() == null) ? 0 : getManageAdminPassword().hashCode());
         hashCode = prime * hashCode + ((getNamespaceName() == null) ? 0 : getNamespaceName().hashCode());
+        hashCode = prime * hashCode + ((getRedshiftIdcApplicationArn() == null) ? 0 : getRedshiftIdcApplicationArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

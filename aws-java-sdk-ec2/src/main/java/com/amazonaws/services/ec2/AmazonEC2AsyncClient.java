@@ -1046,6 +1046,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateIpamByoasnResult> associateIpamByoasnAsync(AssociateIpamByoasnRequest request) {
+
+        return associateIpamByoasnAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateIpamByoasnResult> associateIpamByoasnAsync(final AssociateIpamByoasnRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateIpamByoasnRequest, AssociateIpamByoasnResult> asyncHandler) {
+        final AssociateIpamByoasnRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateIpamByoasnResult>() {
+            @Override
+            public AssociateIpamByoasnResult call() throws Exception {
+                AssociateIpamByoasnResult result = null;
+
+                try {
+                    result = executeAssociateIpamByoasn(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateIpamResourceDiscoveryResult> associateIpamResourceDiscoveryAsync(AssociateIpamResourceDiscoveryRequest request) {
 
         return associateIpamResourceDiscoveryAsync(request, null);
@@ -7496,6 +7529,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DeprovisionIpamByoasnResult> deprovisionIpamByoasnAsync(DeprovisionIpamByoasnRequest request) {
+
+        return deprovisionIpamByoasnAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeprovisionIpamByoasnResult> deprovisionIpamByoasnAsync(final DeprovisionIpamByoasnRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeprovisionIpamByoasnRequest, DeprovisionIpamByoasnResult> asyncHandler) {
+        final DeprovisionIpamByoasnRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeprovisionIpamByoasnResult>() {
+            @Override
+            public DeprovisionIpamByoasnResult call() throws Exception {
+                DeprovisionIpamByoasnResult result = null;
+
+                try {
+                    result = executeDeprovisionIpamByoasn(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeprovisionIpamPoolCidrResult> deprovisionIpamPoolCidrAsync(DeprovisionIpamPoolCidrRequest request) {
 
         return deprovisionIpamPoolCidrAsync(request, null);
@@ -9982,6 +10048,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
             com.amazonaws.handlers.AsyncHandler<DescribeInternetGatewaysRequest, DescribeInternetGatewaysResult> asyncHandler) {
 
         return describeInternetGatewaysAsync(new DescribeInternetGatewaysRequest(), asyncHandler);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpamByoasnResult> describeIpamByoasnAsync(DescribeIpamByoasnRequest request) {
+
+        return describeIpamByoasnAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpamByoasnResult> describeIpamByoasnAsync(final DescribeIpamByoasnRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeIpamByoasnRequest, DescribeIpamByoasnResult> asyncHandler) {
+        final DescribeIpamByoasnRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeIpamByoasnResult>() {
+            @Override
+            public DescribeIpamByoasnResult call() throws Exception {
+                DescribeIpamByoasnResult result = null;
+
+                try {
+                    result = executeDescribeIpamByoasn(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
     }
 
     @Override
@@ -14650,6 +14749,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateIpamByoasnResult> disassociateIpamByoasnAsync(DisassociateIpamByoasnRequest request) {
+
+        return disassociateIpamByoasnAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateIpamByoasnResult> disassociateIpamByoasnAsync(final DisassociateIpamByoasnRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateIpamByoasnRequest, DisassociateIpamByoasnResult> asyncHandler) {
+        final DisassociateIpamByoasnRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateIpamByoasnResult>() {
+            @Override
+            public DisassociateIpamByoasnResult call() throws Exception {
+                DisassociateIpamByoasnResult result = null;
+
+                try {
+                    result = executeDisassociateIpamByoasn(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateIpamResourceDiscoveryResult> disassociateIpamResourceDiscoveryAsync(
             DisassociateIpamResourceDiscoveryRequest request) {
 
@@ -16253,6 +16385,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeGetIpamDiscoveredAccounts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIpamDiscoveredPublicAddressesResult> getIpamDiscoveredPublicAddressesAsync(
+            GetIpamDiscoveredPublicAddressesRequest request) {
+
+        return getIpamDiscoveredPublicAddressesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIpamDiscoveredPublicAddressesResult> getIpamDiscoveredPublicAddressesAsync(
+            final GetIpamDiscoveredPublicAddressesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetIpamDiscoveredPublicAddressesRequest, GetIpamDiscoveredPublicAddressesResult> asyncHandler) {
+        final GetIpamDiscoveredPublicAddressesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetIpamDiscoveredPublicAddressesResult>() {
+            @Override
+            public GetIpamDiscoveredPublicAddressesResult call() throws Exception {
+                GetIpamDiscoveredPublicAddressesResult result = null;
+
+                try {
+                    result = executeGetIpamDiscoveredPublicAddresses(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -19833,6 +20000,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeProvisionByoipCidr(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ProvisionIpamByoasnResult> provisionIpamByoasnAsync(ProvisionIpamByoasnRequest request) {
+
+        return provisionIpamByoasnAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ProvisionIpamByoasnResult> provisionIpamByoasnAsync(final ProvisionIpamByoasnRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ProvisionIpamByoasnRequest, ProvisionIpamByoasnResult> asyncHandler) {
+        final ProvisionIpamByoasnRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ProvisionIpamByoasnResult>() {
+            @Override
+            public ProvisionIpamByoasnResult call() throws Exception {
+                ProvisionIpamByoasnResult result = null;
+
+                try {
+                    result = executeProvisionIpamByoasn(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

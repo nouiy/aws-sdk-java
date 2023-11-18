@@ -232,6 +232,72 @@ public class AmazonInternetMonitorAsyncClient extends AmazonInternetMonitorClien
     }
 
     @Override
+    public java.util.concurrent.Future<GetQueryResultsResult> getQueryResultsAsync(GetQueryResultsRequest request) {
+
+        return getQueryResultsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQueryResultsResult> getQueryResultsAsync(final GetQueryResultsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetQueryResultsRequest, GetQueryResultsResult> asyncHandler) {
+        final GetQueryResultsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetQueryResultsResult>() {
+            @Override
+            public GetQueryResultsResult call() throws Exception {
+                GetQueryResultsResult result = null;
+
+                try {
+                    result = executeGetQueryResults(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQueryStatusResult> getQueryStatusAsync(GetQueryStatusRequest request) {
+
+        return getQueryStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQueryStatusResult> getQueryStatusAsync(final GetQueryStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetQueryStatusRequest, GetQueryStatusResult> asyncHandler) {
+        final GetQueryStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetQueryStatusResult>() {
+            @Override
+            public GetQueryStatusResult call() throws Exception {
+                GetQueryStatusResult result = null;
+
+                try {
+                    result = executeGetQueryStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListHealthEventsResult> listHealthEventsAsync(ListHealthEventsRequest request) {
 
         return listHealthEventsAsync(request, null);
@@ -315,6 +381,72 @@ public class AmazonInternetMonitorAsyncClient extends AmazonInternetMonitorClien
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartQueryResult> startQueryAsync(StartQueryRequest request) {
+
+        return startQueryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartQueryResult> startQueryAsync(final StartQueryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartQueryRequest, StartQueryResult> asyncHandler) {
+        final StartQueryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartQueryResult>() {
+            @Override
+            public StartQueryResult call() throws Exception {
+                StartQueryResult result = null;
+
+                try {
+                    result = executeStartQuery(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopQueryResult> stopQueryAsync(StopQueryRequest request) {
+
+        return stopQueryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopQueryResult> stopQueryAsync(final StopQueryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopQueryRequest, StopQueryResult> asyncHandler) {
+        final StopQueryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopQueryResult>() {
+            @Override
+            public StopQueryResult call() throws Exception {
+                StopQueryResult result = null;
+
+                try {
+                    result = executeStopQuery(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

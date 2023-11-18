@@ -245,6 +245,37 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
 
     /**
      * <p>
+     * Creates a Wisdom quick response.
+     * </p>
+     * 
+     * @param createQuickResponseRequest
+     * @return A Java Future containing the result of the CreateQuickResponse operation returned by the service.
+     * @sample AmazonConnectWisdomAsync.CreateQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/CreateQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateQuickResponseResult> createQuickResponseAsync(CreateQuickResponseRequest createQuickResponseRequest);
+
+    /**
+     * <p>
+     * Creates a Wisdom quick response.
+     * </p>
+     * 
+     * @param createQuickResponseRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateQuickResponse operation returned by the service.
+     * @sample AmazonConnectWisdomAsyncHandler.CreateQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/CreateQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateQuickResponseResult> createQuickResponseAsync(CreateQuickResponseRequest createQuickResponseRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateQuickResponseRequest, CreateQuickResponseResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a session. A session is a contextual container used for generating recommendations. Amazon Connect
      * creates a new Wisdom session for each contact on which Wisdom is enabled.
      * </p>
@@ -373,6 +404,37 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
 
     /**
      * <p>
+     * Deletes the quick response import job.
+     * </p>
+     * 
+     * @param deleteImportJobRequest
+     * @return A Java Future containing the result of the DeleteImportJob operation returned by the service.
+     * @sample AmazonConnectWisdomAsync.DeleteImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/DeleteImportJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteImportJobResult> deleteImportJobAsync(DeleteImportJobRequest deleteImportJobRequest);
+
+    /**
+     * <p>
+     * Deletes the quick response import job.
+     * </p>
+     * 
+     * @param deleteImportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteImportJob operation returned by the service.
+     * @sample AmazonConnectWisdomAsyncHandler.DeleteImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/DeleteImportJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteImportJobResult> deleteImportJobAsync(DeleteImportJobRequest deleteImportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteImportJobRequest, DeleteImportJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the knowledge base.
      * </p>
      * <note>
@@ -425,6 +487,37 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
      */
     java.util.concurrent.Future<DeleteKnowledgeBaseResult> deleteKnowledgeBaseAsync(DeleteKnowledgeBaseRequest deleteKnowledgeBaseRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteKnowledgeBaseRequest, DeleteKnowledgeBaseResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a quick response.
+     * </p>
+     * 
+     * @param deleteQuickResponseRequest
+     * @return A Java Future containing the result of the DeleteQuickResponse operation returned by the service.
+     * @sample AmazonConnectWisdomAsync.DeleteQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/DeleteQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteQuickResponseResult> deleteQuickResponseAsync(DeleteQuickResponseRequest deleteQuickResponseRequest);
+
+    /**
+     * <p>
+     * Deletes a quick response.
+     * </p>
+     * 
+     * @param deleteQuickResponseRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteQuickResponse operation returned by the service.
+     * @sample AmazonConnectWisdomAsyncHandler.DeleteQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/DeleteQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteQuickResponseResult> deleteQuickResponseAsync(DeleteQuickResponseRequest deleteQuickResponseRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteQuickResponseRequest, DeleteQuickResponseResult> asyncHandler);
 
     /**
      * <p>
@@ -552,6 +645,37 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
 
     /**
      * <p>
+     * Retrieves the started import job.
+     * </p>
+     * 
+     * @param getImportJobRequest
+     * @return A Java Future containing the result of the GetImportJob operation returned by the service.
+     * @sample AmazonConnectWisdomAsync.GetImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/GetImportJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetImportJobResult> getImportJobAsync(GetImportJobRequest getImportJobRequest);
+
+    /**
+     * <p>
+     * Retrieves the started import job.
+     * </p>
+     * 
+     * @param getImportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetImportJob operation returned by the service.
+     * @sample AmazonConnectWisdomAsyncHandler.GetImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/GetImportJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetImportJobResult> getImportJobAsync(GetImportJobRequest getImportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<GetImportJobRequest, GetImportJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves information about the knowledge base.
      * </p>
      * 
@@ -580,6 +704,37 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
      */
     java.util.concurrent.Future<GetKnowledgeBaseResult> getKnowledgeBaseAsync(GetKnowledgeBaseRequest getKnowledgeBaseRequest,
             com.amazonaws.handlers.AsyncHandler<GetKnowledgeBaseRequest, GetKnowledgeBaseResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the quick response.
+     * </p>
+     * 
+     * @param getQuickResponseRequest
+     * @return A Java Future containing the result of the GetQuickResponse operation returned by the service.
+     * @sample AmazonConnectWisdomAsync.GetQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/GetQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetQuickResponseResult> getQuickResponseAsync(GetQuickResponseRequest getQuickResponseRequest);
+
+    /**
+     * <p>
+     * Retrieves the quick response.
+     * </p>
+     * 
+     * @param getQuickResponseRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetQuickResponse operation returned by the service.
+     * @sample AmazonConnectWisdomAsyncHandler.GetQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/GetQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetQuickResponseResult> getQuickResponseAsync(GetQuickResponseRequest getQuickResponseRequest,
+            com.amazonaws.handlers.AsyncHandler<GetQuickResponseRequest, GetQuickResponseResult> asyncHandler);
 
     /**
      * <p>
@@ -752,6 +907,37 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
 
     /**
      * <p>
+     * Lists information about import jobs.
+     * </p>
+     * 
+     * @param listImportJobsRequest
+     * @return A Java Future containing the result of the ListImportJobs operation returned by the service.
+     * @sample AmazonConnectWisdomAsync.ListImportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/ListImportJobs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListImportJobsResult> listImportJobsAsync(ListImportJobsRequest listImportJobsRequest);
+
+    /**
+     * <p>
+     * Lists information about import jobs.
+     * </p>
+     * 
+     * @param listImportJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListImportJobs operation returned by the service.
+     * @sample AmazonConnectWisdomAsyncHandler.ListImportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/ListImportJobs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListImportJobsResult> listImportJobsAsync(ListImportJobsRequest listImportJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListImportJobsRequest, ListImportJobsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the knowledge bases.
      * </p>
      * 
@@ -780,6 +966,37 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
      */
     java.util.concurrent.Future<ListKnowledgeBasesResult> listKnowledgeBasesAsync(ListKnowledgeBasesRequest listKnowledgeBasesRequest,
             com.amazonaws.handlers.AsyncHandler<ListKnowledgeBasesRequest, ListKnowledgeBasesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists information about quick response.
+     * </p>
+     * 
+     * @param listQuickResponsesRequest
+     * @return A Java Future containing the result of the ListQuickResponses operation returned by the service.
+     * @sample AmazonConnectWisdomAsync.ListQuickResponses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/ListQuickResponses" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListQuickResponsesResult> listQuickResponsesAsync(ListQuickResponsesRequest listQuickResponsesRequest);
+
+    /**
+     * <p>
+     * Lists information about quick response.
+     * </p>
+     * 
+     * @param listQuickResponsesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListQuickResponses operation returned by the service.
+     * @sample AmazonConnectWisdomAsyncHandler.ListQuickResponses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/ListQuickResponses" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListQuickResponsesResult> listQuickResponsesAsync(ListQuickResponsesRequest listQuickResponsesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListQuickResponsesRequest, ListQuickResponsesResult> asyncHandler);
 
     /**
      * <p>
@@ -954,6 +1171,37 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
 
     /**
      * <p>
+     * Searches existing Wisdom quick responses in a Wisdom knowledge base.
+     * </p>
+     * 
+     * @param searchQuickResponsesRequest
+     * @return A Java Future containing the result of the SearchQuickResponses operation returned by the service.
+     * @sample AmazonConnectWisdomAsync.SearchQuickResponses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/SearchQuickResponses" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchQuickResponsesResult> searchQuickResponsesAsync(SearchQuickResponsesRequest searchQuickResponsesRequest);
+
+    /**
+     * <p>
+     * Searches existing Wisdom quick responses in a Wisdom knowledge base.
+     * </p>
+     * 
+     * @param searchQuickResponsesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchQuickResponses operation returned by the service.
+     * @sample AmazonConnectWisdomAsyncHandler.SearchQuickResponses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/SearchQuickResponses" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchQuickResponsesResult> searchQuickResponsesAsync(SearchQuickResponsesRequest searchQuickResponsesRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchQuickResponsesRequest, SearchQuickResponsesResult> asyncHandler);
+
+    /**
+     * <p>
      * Searches for sessions.
      * </p>
      * 
@@ -1023,6 +1271,61 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
      */
     java.util.concurrent.Future<StartContentUploadResult> startContentUploadAsync(StartContentUploadRequest startContentUploadRequest,
             com.amazonaws.handlers.AsyncHandler<StartContentUploadRequest, StartContentUploadResult> asyncHandler);
+
+    /**
+     * <p>
+     * Start an asynchronous job to import Wisdom resources from an uploaded source file. Before calling this API, use
+     * <a
+     * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_StartContentUpload.html">StartContentUpload</a>
+     * to upload an asset that contains the resource data.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For importing Wisdom quick responses, you need to upload a csv file including the quick responses. For
+     * information about how to format the csv file for importing quick responses, see <a
+     * href="https://docs.aws.amazon.com/console/connect/quick-responses/add-data">Import quick responses</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param startImportJobRequest
+     * @return A Java Future containing the result of the StartImportJob operation returned by the service.
+     * @sample AmazonConnectWisdomAsync.StartImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/StartImportJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartImportJobResult> startImportJobAsync(StartImportJobRequest startImportJobRequest);
+
+    /**
+     * <p>
+     * Start an asynchronous job to import Wisdom resources from an uploaded source file. Before calling this API, use
+     * <a
+     * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_StartContentUpload.html">StartContentUpload</a>
+     * to upload an asset that contains the resource data.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For importing Wisdom quick responses, you need to upload a csv file including the quick responses. For
+     * information about how to format the csv file for importing quick responses, see <a
+     * href="https://docs.aws.amazon.com/console/connect/quick-responses/add-data">Import quick responses</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param startImportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartImportJob operation returned by the service.
+     * @sample AmazonConnectWisdomAsyncHandler.StartImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/StartImportJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartImportJobResult> startImportJobAsync(StartImportJobRequest startImportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StartImportJobRequest, StartImportJobResult> asyncHandler);
 
     /**
      * <p>
@@ -1157,5 +1460,36 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
     java.util.concurrent.Future<UpdateKnowledgeBaseTemplateUriResult> updateKnowledgeBaseTemplateUriAsync(
             UpdateKnowledgeBaseTemplateUriRequest updateKnowledgeBaseTemplateUriRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateKnowledgeBaseTemplateUriRequest, UpdateKnowledgeBaseTemplateUriResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an existing Wisdom quick response.
+     * </p>
+     * 
+     * @param updateQuickResponseRequest
+     * @return A Java Future containing the result of the UpdateQuickResponse operation returned by the service.
+     * @sample AmazonConnectWisdomAsync.UpdateQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/UpdateQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateQuickResponseResult> updateQuickResponseAsync(UpdateQuickResponseRequest updateQuickResponseRequest);
+
+    /**
+     * <p>
+     * Updates an existing Wisdom quick response.
+     * </p>
+     * 
+     * @param updateQuickResponseRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateQuickResponse operation returned by the service.
+     * @sample AmazonConnectWisdomAsyncHandler.UpdateQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/UpdateQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateQuickResponseResult> updateQuickResponseAsync(UpdateQuickResponseRequest updateQuickResponseRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateQuickResponseRequest, UpdateQuickResponseResult> asyncHandler);
 
 }

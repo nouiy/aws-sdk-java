@@ -28,6 +28,11 @@ public class AbstractAmazonVerifiedPermissions implements AmazonVerifiedPermissi
     }
 
     @Override
+    public BatchIsAuthorizedResult batchIsAuthorized(BatchIsAuthorizedRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateIdentitySourceResult createIdentitySource(CreateIdentitySourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

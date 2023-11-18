@@ -244,6 +244,10 @@ public class RestoreDBClusterToPointInTimeRequestMarshaller implements
                     request.addParameter("RdsCustomClusterConfiguration.TransitGatewayMulticastDomainId",
                             StringUtils.fromString(rdsCustomClusterConfiguration.getTransitGatewayMulticastDomainId()));
                 }
+
+                if (rdsCustomClusterConfiguration.getReplicaMode() != null) {
+                    request.addParameter("RdsCustomClusterConfiguration.ReplicaMode", StringUtils.fromString(rdsCustomClusterConfiguration.getReplicaMode()));
+                }
             }
         }
 

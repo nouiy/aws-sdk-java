@@ -22,10 +22,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Contains information about an action for a request for which an authorization decision is made.
  * </p>
  * <p>
- * This data type is used as an request parameter to the <a
- * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorized.html">IsAuthorized</a> and
- * <a href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorizedWithToken.html">
- * IsAuthorizedWithToken</a> operations.
+ * This data type is used as a request parameter to the <a
+ * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorized.html">IsAuthorized</a>, <a
+ * href
+ * ="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_BatchIsAuthorized.html">BatchIsAuthorized
+ * </a>, and <a
+ * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorizedWithToken.html"
+ * >IsAuthorizedWithToken</a> operations.
  * </p>
  * <p>
  * Example: <code>{ "actionId": "&lt;action name&gt;", "actionType": "Action" }</code>

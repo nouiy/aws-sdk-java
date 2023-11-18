@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <note>
  * <p>
- * Amazon EMR releases 4.x or higher.
+ * Amazon EMR releases 4.x or later.
  * </p>
  * </note>
  * <p>

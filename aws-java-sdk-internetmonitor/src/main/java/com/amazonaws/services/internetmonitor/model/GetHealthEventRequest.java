@@ -33,7 +33,7 @@ public class GetHealthEventRequest extends com.amazonaws.AmazonWebServiceRequest
     private String monitorName;
     /**
      * <p>
-     * The internally generated identifier of a health event. Because <code>EventID</code> contains the forward slash
+     * The internally-generated identifier of a health event. Because <code>EventID</code> contains the forward slash
      * (“/”) character, you must URL-encode the <code>EventID</code> field in the request URL.
      * </p>
      */
@@ -81,12 +81,12 @@ public class GetHealthEventRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The internally generated identifier of a health event. Because <code>EventID</code> contains the forward slash
+     * The internally-generated identifier of a health event. Because <code>EventID</code> contains the forward slash
      * (“/”) character, you must URL-encode the <code>EventID</code> field in the request URL.
      * </p>
      * 
      * @param eventId
-     *        The internally generated identifier of a health event. Because <code>EventID</code> contains the forward
+     *        The internally-generated identifier of a health event. Because <code>EventID</code> contains the forward
      *        slash (“/”) character, you must URL-encode the <code>EventID</code> field in the request URL.
      */
 
@@ -96,11 +96,11 @@ public class GetHealthEventRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The internally generated identifier of a health event. Because <code>EventID</code> contains the forward slash
+     * The internally-generated identifier of a health event. Because <code>EventID</code> contains the forward slash
      * (“/”) character, you must URL-encode the <code>EventID</code> field in the request URL.
      * </p>
      * 
-     * @return The internally generated identifier of a health event. Because <code>EventID</code> contains the forward
+     * @return The internally-generated identifier of a health event. Because <code>EventID</code> contains the forward
      *         slash (“/”) character, you must URL-encode the <code>EventID</code> field in the request URL.
      */
 
@@ -110,12 +110,12 @@ public class GetHealthEventRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The internally generated identifier of a health event. Because <code>EventID</code> contains the forward slash
+     * The internally-generated identifier of a health event. Because <code>EventID</code> contains the forward slash
      * (“/”) character, you must URL-encode the <code>EventID</code> field in the request URL.
      * </p>
      * 
      * @param eventId
-     *        The internally generated identifier of a health event. Because <code>EventID</code> contains the forward
+     *        The internally-generated identifier of a health event. Because <code>EventID</code> contains the forward
      *        slash (“/”) character, you must URL-encode the <code>EventID</code> field in the request URL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

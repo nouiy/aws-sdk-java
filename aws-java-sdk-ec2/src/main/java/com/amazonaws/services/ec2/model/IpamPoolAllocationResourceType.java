@@ -23,7 +23,8 @@ public enum IpamPoolAllocationResourceType {
     IpamPool("ipam-pool"),
     Vpc("vpc"),
     Ec2PublicIpv4Pool("ec2-public-ipv4-pool"),
-    Custom("custom");
+    Custom("custom"),
+    Subnet("subnet");
 
     private String value;
 

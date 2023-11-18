@@ -236,6 +236,140 @@ public interface AmazonInternetMonitorAsync extends AmazonInternetMonitor {
 
     /**
      * <p>
+     * Return the data for a query with the Amazon CloudWatch Internet Monitor query interface. Specify the query that
+     * you want to return results for by providing a <code>QueryId</code> and a monitor name.
+     * </p>
+     * <p>
+     * For more information about using the query interface, including examples, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-view-cw-tools-cwim-query.html"
+     * >Using the Amazon CloudWatch Internet Monitor query interface</a> in the Amazon CloudWatch Internet Monitor User
+     * Guide.
+     * </p>
+     * 
+     * @param getQueryResultsRequest
+     * @return A Java Future containing the result of the GetQueryResults operation returned by the service.
+     * @sample AmazonInternetMonitorAsync.GetQueryResults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetQueryResults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryResultsResult> getQueryResultsAsync(GetQueryResultsRequest getQueryResultsRequest);
+
+    /**
+     * <p>
+     * Return the data for a query with the Amazon CloudWatch Internet Monitor query interface. Specify the query that
+     * you want to return results for by providing a <code>QueryId</code> and a monitor name.
+     * </p>
+     * <p>
+     * For more information about using the query interface, including examples, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-view-cw-tools-cwim-query.html"
+     * >Using the Amazon CloudWatch Internet Monitor query interface</a> in the Amazon CloudWatch Internet Monitor User
+     * Guide.
+     * </p>
+     * 
+     * @param getQueryResultsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetQueryResults operation returned by the service.
+     * @sample AmazonInternetMonitorAsyncHandler.GetQueryResults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetQueryResults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryResultsResult> getQueryResultsAsync(GetQueryResultsRequest getQueryResultsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetQueryResultsRequest, GetQueryResultsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the current status of a query for the Amazon CloudWatch Internet Monitor query interface, for a specified
+     * query ID and monitor. When you run a query, check the status to make sure that the query has
+     * <code>SUCCEEDED</code> before you review the results.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>QUEUED</code>: The query is scheduled to run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RUNNING</code>: The query is in progress but not complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SUCCEEDED</code>: The query completed sucessfully.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FAILED</code>: The query failed due to an error.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCELED</code>: The query was canceled.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getQueryStatusRequest
+     * @return A Java Future containing the result of the GetQueryStatus operation returned by the service.
+     * @sample AmazonInternetMonitorAsync.GetQueryStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetQueryStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryStatusResult> getQueryStatusAsync(GetQueryStatusRequest getQueryStatusRequest);
+
+    /**
+     * <p>
+     * Returns the current status of a query for the Amazon CloudWatch Internet Monitor query interface, for a specified
+     * query ID and monitor. When you run a query, check the status to make sure that the query has
+     * <code>SUCCEEDED</code> before you review the results.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>QUEUED</code>: The query is scheduled to run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RUNNING</code>: The query is in progress but not complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SUCCEEDED</code>: The query completed sucessfully.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FAILED</code>: The query failed due to an error.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCELED</code>: The query was canceled.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getQueryStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetQueryStatus operation returned by the service.
+     * @sample AmazonInternetMonitorAsyncHandler.GetQueryStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetQueryStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryStatusResult> getQueryStatusAsync(GetQueryStatusRequest getQueryStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<GetQueryStatusRequest, GetQueryStatusResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists all health events for a monitor in Amazon CloudWatch Internet Monitor. Returns information for health
      * events including the event start and end time and the status.
      * </p>
@@ -342,6 +476,86 @@ public interface AmazonInternetMonitorAsync extends AmazonInternetMonitor {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Start a query to return data for a specific query type for the Amazon CloudWatch Internet Monitor query
+     * interface. Specify a time period for the data that you want returned by using <code>StartTime</code> and
+     * <code>EndTime</code>. You filter the query results to return by providing parameters that you specify with
+     * <code>FilterParameters</code>.
+     * </p>
+     * <p>
+     * For more information about using the query interface, including examples, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-view-cw-tools-cwim-query.html"
+     * >Using the Amazon CloudWatch Internet Monitor query interface</a> in the Amazon CloudWatch Internet Monitor User
+     * Guide.
+     * </p>
+     * 
+     * @param startQueryRequest
+     * @return A Java Future containing the result of the StartQuery operation returned by the service.
+     * @sample AmazonInternetMonitorAsync.StartQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/StartQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartQueryResult> startQueryAsync(StartQueryRequest startQueryRequest);
+
+    /**
+     * <p>
+     * Start a query to return data for a specific query type for the Amazon CloudWatch Internet Monitor query
+     * interface. Specify a time period for the data that you want returned by using <code>StartTime</code> and
+     * <code>EndTime</code>. You filter the query results to return by providing parameters that you specify with
+     * <code>FilterParameters</code>.
+     * </p>
+     * <p>
+     * For more information about using the query interface, including examples, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-view-cw-tools-cwim-query.html"
+     * >Using the Amazon CloudWatch Internet Monitor query interface</a> in the Amazon CloudWatch Internet Monitor User
+     * Guide.
+     * </p>
+     * 
+     * @param startQueryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartQuery operation returned by the service.
+     * @sample AmazonInternetMonitorAsyncHandler.StartQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/StartQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartQueryResult> startQueryAsync(StartQueryRequest startQueryRequest,
+            com.amazonaws.handlers.AsyncHandler<StartQueryRequest, StartQueryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stop a query that is progress for a specific monitor.
+     * </p>
+     * 
+     * @param stopQueryRequest
+     * @return A Java Future containing the result of the StopQuery operation returned by the service.
+     * @sample AmazonInternetMonitorAsync.StopQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/StopQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StopQueryResult> stopQueryAsync(StopQueryRequest stopQueryRequest);
+
+    /**
+     * <p>
+     * Stop a query that is progress for a specific monitor.
+     * </p>
+     * 
+     * @param stopQueryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopQuery operation returned by the service.
+     * @sample AmazonInternetMonitorAsyncHandler.StopQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/StopQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StopQueryResult> stopQueryAsync(StopQueryRequest stopQueryRequest,
+            com.amazonaws.handlers.AsyncHandler<StopQueryRequest, StopQueryResult> asyncHandler);
 
     /**
      * <p>

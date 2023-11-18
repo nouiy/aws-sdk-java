@@ -238,6 +238,10 @@ public class CreateClusterRequestMarshaller implements Marshaller<Request<Create
             request.addParameter("MultiAZ", StringUtils.fromBoolean(createClusterRequest.getMultiAZ()));
         }
 
+        if (createClusterRequest.getRedshiftIdcApplicationArn() != null) {
+            request.addParameter("RedshiftIdcApplicationArn", StringUtils.fromString(createClusterRequest.getRedshiftIdcApplicationArn()));
+        }
+
         return request;
     }
 

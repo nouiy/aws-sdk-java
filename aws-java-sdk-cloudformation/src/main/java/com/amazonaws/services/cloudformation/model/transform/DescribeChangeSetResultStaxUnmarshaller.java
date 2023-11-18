@@ -169,6 +169,11 @@ public class DescribeChangeSetResultStaxUnmarshaller implements Unmarshaller<Des
                     describeChangeSetResult.setOnStackFailure(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ImportExistingResources", targetDepth)) {
+                    describeChangeSetResult.setImportExistingResources(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return describeChangeSetResult;

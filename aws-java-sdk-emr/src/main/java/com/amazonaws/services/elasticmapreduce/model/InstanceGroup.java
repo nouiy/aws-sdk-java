@@ -88,7 +88,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <note>
      * <p>
-     * Amazon EMR releases 4.x or higher.
+     * Amazon EMR releases 4.x or later.
      * </p>
      * </note>
      * <p>
@@ -591,7 +591,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <note>
      * <p>
-     * Amazon EMR releases 4.x or higher.
+     * Amazon EMR releases 4.x or later.
      * </p>
      * </note>
      * <p>
@@ -600,7 +600,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @return <p>
-     *         Amazon EMR releases 4.x or higher.
+     *         Amazon EMR releases 4.x or later.
      *         </p>
      *         </note>
      *         <p>
@@ -618,7 +618,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <note>
      * <p>
-     * Amazon EMR releases 4.x or higher.
+     * Amazon EMR releases 4.x or later.
      * </p>
      * </note>
      * <p>
@@ -628,7 +628,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param configurations
      *        <p>
-     *        Amazon EMR releases 4.x or higher.
+     *        Amazon EMR releases 4.x or later.
      *        </p>
      *        </note>
      *        <p>
@@ -648,7 +648,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <note>
      * <p>
-     * Amazon EMR releases 4.x or higher.
+     * Amazon EMR releases 4.x or later.
      * </p>
      * </note>
      * <p>
@@ -663,7 +663,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param configurations
      *        <p>
-     *        Amazon EMR releases 4.x or higher.
+     *        Amazon EMR releases 4.x or later.
      *        </p>
      *        </note>
      *        <p>
@@ -685,7 +685,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <note>
      * <p>
-     * Amazon EMR releases 4.x or higher.
+     * Amazon EMR releases 4.x or later.
      * </p>
      * </note>
      * <p>
@@ -695,7 +695,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param configurations
      *        <p>
-     *        Amazon EMR releases 4.x or higher.
+     *        Amazon EMR releases 4.x or later.
      *        </p>
      *        </note>
      *        <p>

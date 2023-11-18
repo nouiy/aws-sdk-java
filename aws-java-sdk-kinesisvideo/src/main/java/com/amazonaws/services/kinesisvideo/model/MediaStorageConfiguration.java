@@ -21,6 +21,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * A structure that encapsulates, or contains, the media storage configuration properties.
  * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * If <code>StorageStatus</code> is enabled, the data will be stored in the <code>StreamARN</code> provided. In order
+ * for WebRTC Ingestion to work, the stream must have data retention enabled.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * If <code>StorageStatus</code> is disabled, no data will be stored, and the <code>StreamARN</code> parameter will not
+ * be needed.
+ * </p>
+ * </li>
+ * </ul>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/MediaStorageConfiguration"
  *      target="_top">AWS API Documentation</a>
@@ -30,7 +44,7 @@ public class MediaStorageConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the stream
+     * The Amazon Resource Name (ARN) of the stream.
      * </p>
      */
     private String streamARN;
@@ -43,11 +57,11 @@ public class MediaStorageConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the stream
+     * The Amazon Resource Name (ARN) of the stream.
      * </p>
      * 
      * @param streamARN
-     *        The Amazon Resource Name (ARN) of the stream
+     *        The Amazon Resource Name (ARN) of the stream.
      */
 
     public void setStreamARN(String streamARN) {
@@ -56,10 +70,10 @@ public class MediaStorageConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the stream
+     * The Amazon Resource Name (ARN) of the stream.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the stream
+     * @return The Amazon Resource Name (ARN) of the stream.
      */
 
     public String getStreamARN() {
@@ -68,11 +82,11 @@ public class MediaStorageConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the stream
+     * The Amazon Resource Name (ARN) of the stream.
      * </p>
      * 
      * @param streamARN
-     *        The Amazon Resource Name (ARN) of the stream
+     *        The Amazon Resource Name (ARN) of the stream.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

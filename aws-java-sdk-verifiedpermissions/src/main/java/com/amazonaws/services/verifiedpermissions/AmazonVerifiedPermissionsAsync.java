@@ -107,6 +107,69 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
 
     /**
      * <p>
+     * Makes a series of decisions about multiple authorization requests for one principal or resource. Each request
+     * contains the equivalent content of an <code>IsAuthorized</code> request: principal, action, resource, and
+     * context. Either the <code>principal</code> or the <code>resource</code> parameter must be identical across all
+     * requests. For example, Verified Permissions won't evaluate a pair of requests where <code>bob</code> views
+     * <code>photo1</code> and <code>alice</code> views <code>photo2</code>. Authorization of <code>bob</code> to view
+     * <code>photo1</code> and <code>photo2</code>, or <code>bob</code> and <code>alice</code> to view
+     * <code>photo1</code>, are valid batches.
+     * </p>
+     * <p>
+     * The request is evaluated against all policies in the specified policy store that match the entities that you
+     * declare. The result of the decisions is a series of <code>Allow</code> or <code>Deny</code> responses, along with
+     * the IDs of the policies that produced each decision.
+     * </p>
+     * <p>
+     * The <code>entities</code> of a <code>BatchIsAuthorized</code> API request can contain up to 100 principals and up
+     * to 100 resources. The <code>requests</code> of a <code>BatchIsAuthorized</code> API request can contain up to 30
+     * requests.
+     * </p>
+     * 
+     * @param batchIsAuthorizedRequest
+     * @return A Java Future containing the result of the BatchIsAuthorized operation returned by the service.
+     * @sample AmazonVerifiedPermissionsAsync.BatchIsAuthorized
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/BatchIsAuthorized"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchIsAuthorizedResult> batchIsAuthorizedAsync(BatchIsAuthorizedRequest batchIsAuthorizedRequest);
+
+    /**
+     * <p>
+     * Makes a series of decisions about multiple authorization requests for one principal or resource. Each request
+     * contains the equivalent content of an <code>IsAuthorized</code> request: principal, action, resource, and
+     * context. Either the <code>principal</code> or the <code>resource</code> parameter must be identical across all
+     * requests. For example, Verified Permissions won't evaluate a pair of requests where <code>bob</code> views
+     * <code>photo1</code> and <code>alice</code> views <code>photo2</code>. Authorization of <code>bob</code> to view
+     * <code>photo1</code> and <code>photo2</code>, or <code>bob</code> and <code>alice</code> to view
+     * <code>photo1</code>, are valid batches.
+     * </p>
+     * <p>
+     * The request is evaluated against all policies in the specified policy store that match the entities that you
+     * declare. The result of the decisions is a series of <code>Allow</code> or <code>Deny</code> responses, along with
+     * the IDs of the policies that produced each decision.
+     * </p>
+     * <p>
+     * The <code>entities</code> of a <code>BatchIsAuthorized</code> API request can contain up to 100 principals and up
+     * to 100 resources. The <code>requests</code> of a <code>BatchIsAuthorized</code> API request can contain up to 30
+     * requests.
+     * </p>
+     * 
+     * @param batchIsAuthorizedRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchIsAuthorized operation returned by the service.
+     * @sample AmazonVerifiedPermissionsAsyncHandler.BatchIsAuthorized
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/BatchIsAuthorized"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchIsAuthorizedResult> batchIsAuthorizedAsync(BatchIsAuthorizedRequest batchIsAuthorizedRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchIsAuthorizedRequest, BatchIsAuthorizedResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a reference to an Amazon Cognito user pool as an external identity provider (IdP).
      * </p>
      * <p>

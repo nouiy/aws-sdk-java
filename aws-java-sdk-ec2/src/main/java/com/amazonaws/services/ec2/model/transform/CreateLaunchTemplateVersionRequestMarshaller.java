@@ -344,6 +344,28 @@ public class CreateLaunchTemplateVersionRequestMarshaller implements
                             }
                         }
                     }
+
+                    ConnectionTrackingSpecificationRequest connectionTrackingSpecification = requestLaunchTemplateDataNetworkInterfacesListValue
+                            .getConnectionTrackingSpecification();
+                    if (connectionTrackingSpecification != null) {
+
+                        if (connectionTrackingSpecification.getTcpEstablishedTimeout() != null) {
+                            request.addParameter("LaunchTemplateData.NetworkInterface." + networkInterfacesListIndex
+                                    + ".ConnectionTrackingSpecification.TcpEstablishedTimeout",
+                                    StringUtils.fromInteger(connectionTrackingSpecification.getTcpEstablishedTimeout()));
+                        }
+
+                        if (connectionTrackingSpecification.getUdpStreamTimeout() != null) {
+                            request.addParameter("LaunchTemplateData.NetworkInterface." + networkInterfacesListIndex
+                                    + ".ConnectionTrackingSpecification.UdpStreamTimeout",
+                                    StringUtils.fromInteger(connectionTrackingSpecification.getUdpStreamTimeout()));
+                        }
+
+                        if (connectionTrackingSpecification.getUdpTimeout() != null) {
+                            request.addParameter("LaunchTemplateData.NetworkInterface." + networkInterfacesListIndex
+                                    + ".ConnectionTrackingSpecification.UdpTimeout", StringUtils.fromInteger(connectionTrackingSpecification.getUdpTimeout()));
+                        }
+                    }
                     networkInterfacesListIndex++;
                 }
             }

@@ -52,6 +52,10 @@ public class QueryRuntimeStatisticsTimelineJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     queryRuntimeStatisticsTimeline.setQueryQueueTimeInMillis(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("ServicePreProcessingTimeInMillis", targetDepth)) {
+                    context.nextToken();
+                    queryRuntimeStatisticsTimeline.setServicePreProcessingTimeInMillis(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
                 if (context.testExpression("QueryPlanningTimeInMillis", targetDepth)) {
                     context.nextToken();
                     queryRuntimeStatisticsTimeline.setQueryPlanningTimeInMillis(context.getUnmarshaller(Long.class).unmarshall(context));

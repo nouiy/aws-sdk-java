@@ -100,6 +100,26 @@ public class PipelineJsonUnmarshaller implements Unmarshaller<Pipeline, JsonUnma
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("BufferOptions", targetDepth)) {
+                    context.nextToken();
+                    pipeline.setBufferOptions(BufferOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("EncryptionAtRestOptions", targetDepth)) {
+                    context.nextToken();
+                    pipeline.setEncryptionAtRestOptions(EncryptionAtRestOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ServiceVpcEndpoints", targetDepth)) {
+                    context.nextToken();
+                    pipeline.setServiceVpcEndpoints(new ListUnmarshaller<ServiceVpcEndpoint>(ServiceVpcEndpointJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("Tags", targetDepth)) {
+                    context.nextToken();
+                    pipeline.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

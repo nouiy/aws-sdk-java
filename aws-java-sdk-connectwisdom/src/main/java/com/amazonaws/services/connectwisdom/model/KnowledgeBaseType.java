@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum KnowledgeBaseType {
 
     EXTERNAL("EXTERNAL"),
-    CUSTOM("CUSTOM");
+    CUSTOM("CUSTOM"),
+    QUICK_RESPONSES("QUICK_RESPONSES");
 
     private String value;
 

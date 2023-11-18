@@ -109,6 +109,16 @@ public class ScheduleActionSettingsJsonUnmarshaller implements Unmarshaller<Sche
                     scheduleActionSettings.setStaticImageDeactivateSettings(StaticImageDeactivateScheduleActionSettingsJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
+                if (context.testExpression("staticImageOutputActivateSettings", targetDepth)) {
+                    context.nextToken();
+                    scheduleActionSettings.setStaticImageOutputActivateSettings(StaticImageOutputActivateScheduleActionSettingsJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
+                if (context.testExpression("staticImageOutputDeactivateSettings", targetDepth)) {
+                    context.nextToken();
+                    scheduleActionSettings.setStaticImageOutputDeactivateSettings(StaticImageOutputDeactivateScheduleActionSettingsJsonUnmarshaller
+                            .getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

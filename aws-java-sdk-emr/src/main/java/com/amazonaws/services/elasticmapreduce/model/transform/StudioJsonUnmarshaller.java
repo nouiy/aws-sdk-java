@@ -120,6 +120,22 @@ public class StudioJsonUnmarshaller implements Unmarshaller<Studio, JsonUnmarsha
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("IdcInstanceArn", targetDepth)) {
+                    context.nextToken();
+                    studio.setIdcInstanceArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("TrustedIdentityPropagationEnabled", targetDepth)) {
+                    context.nextToken();
+                    studio.setTrustedIdentityPropagationEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("IdcUserAssignment", targetDepth)) {
+                    context.nextToken();
+                    studio.setIdcUserAssignment(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("EncryptionKeyArn", targetDepth)) {
+                    context.nextToken();
+                    studio.setEncryptionKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

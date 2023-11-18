@@ -66,6 +66,18 @@ public class CreatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
     private VpcOptions vpcOptions;
     /**
      * <p>
+     * Key-value pairs to configure persistent buffering for the pipeline.
+     * </p>
+     */
+    private BufferOptions bufferOptions;
+    /**
+     * <p>
+     * Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     * </p>
+     */
+    private EncryptionAtRestOptions encryptionAtRestOptions;
+    /**
+     * <p>
      * List of tags to add to the pipeline upon creation.
      * </p>
      */
@@ -334,6 +346,86 @@ public class CreatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
+     * Key-value pairs to configure persistent buffering for the pipeline.
+     * </p>
+     * 
+     * @param bufferOptions
+     *        Key-value pairs to configure persistent buffering for the pipeline.
+     */
+
+    public void setBufferOptions(BufferOptions bufferOptions) {
+        this.bufferOptions = bufferOptions;
+    }
+
+    /**
+     * <p>
+     * Key-value pairs to configure persistent buffering for the pipeline.
+     * </p>
+     * 
+     * @return Key-value pairs to configure persistent buffering for the pipeline.
+     */
+
+    public BufferOptions getBufferOptions() {
+        return this.bufferOptions;
+    }
+
+    /**
+     * <p>
+     * Key-value pairs to configure persistent buffering for the pipeline.
+     * </p>
+     * 
+     * @param bufferOptions
+     *        Key-value pairs to configure persistent buffering for the pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreatePipelineRequest withBufferOptions(BufferOptions bufferOptions) {
+        setBufferOptions(bufferOptions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     * </p>
+     * 
+     * @param encryptionAtRestOptions
+     *        Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     */
+
+    public void setEncryptionAtRestOptions(EncryptionAtRestOptions encryptionAtRestOptions) {
+        this.encryptionAtRestOptions = encryptionAtRestOptions;
+    }
+
+    /**
+     * <p>
+     * Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     * </p>
+     * 
+     * @return Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     */
+
+    public EncryptionAtRestOptions getEncryptionAtRestOptions() {
+        return this.encryptionAtRestOptions;
+    }
+
+    /**
+     * <p>
+     * Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     * </p>
+     * 
+     * @param encryptionAtRestOptions
+     *        Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreatePipelineRequest withEncryptionAtRestOptions(EncryptionAtRestOptions encryptionAtRestOptions) {
+        setEncryptionAtRestOptions(encryptionAtRestOptions);
+        return this;
+    }
+
+    /**
+     * <p>
      * List of tags to add to the pipeline upon creation.
      * </p>
      * 
@@ -426,6 +518,10 @@ public class CreatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
             sb.append("LogPublishingOptions: ").append(getLogPublishingOptions()).append(",");
         if (getVpcOptions() != null)
             sb.append("VpcOptions: ").append(getVpcOptions()).append(",");
+        if (getBufferOptions() != null)
+            sb.append("BufferOptions: ").append(getBufferOptions()).append(",");
+        if (getEncryptionAtRestOptions() != null)
+            sb.append("EncryptionAtRestOptions: ").append(getEncryptionAtRestOptions()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -466,6 +562,14 @@ public class CreatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getVpcOptions() != null && other.getVpcOptions().equals(this.getVpcOptions()) == false)
             return false;
+        if (other.getBufferOptions() == null ^ this.getBufferOptions() == null)
+            return false;
+        if (other.getBufferOptions() != null && other.getBufferOptions().equals(this.getBufferOptions()) == false)
+            return false;
+        if (other.getEncryptionAtRestOptions() == null ^ this.getEncryptionAtRestOptions() == null)
+            return false;
+        if (other.getEncryptionAtRestOptions() != null && other.getEncryptionAtRestOptions().equals(this.getEncryptionAtRestOptions()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -484,6 +588,8 @@ public class CreatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getPipelineConfigurationBody() == null) ? 0 : getPipelineConfigurationBody().hashCode());
         hashCode = prime * hashCode + ((getLogPublishingOptions() == null) ? 0 : getLogPublishingOptions().hashCode());
         hashCode = prime * hashCode + ((getVpcOptions() == null) ? 0 : getVpcOptions().hashCode());
+        hashCode = prime * hashCode + ((getBufferOptions() == null) ? 0 : getBufferOptions().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionAtRestOptions() == null) ? 0 : getEncryptionAtRestOptions().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

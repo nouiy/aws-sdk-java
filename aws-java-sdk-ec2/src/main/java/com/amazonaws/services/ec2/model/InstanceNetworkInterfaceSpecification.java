@@ -201,6 +201,15 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * </p>
      */
     private EnaSrdSpecificationRequest enaSrdSpecification;
+    /**
+     * <p>
+     * A security group connection tracking specification that enables you to set the timeout for connection tracking on
+     * an Elastic network interface. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
+     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     */
+    private ConnectionTrackingSpecificationRequest connectionTrackingSpecification;
 
     /**
      * <p>
@@ -1590,6 +1599,64 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
     }
 
     /**
+     * <p>
+     * A security group connection tracking specification that enables you to set the timeout for connection tracking on
+     * an Elastic network interface. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
+     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param connectionTrackingSpecification
+     *        A security group connection tracking specification that enables you to set the timeout for connection
+     *        tracking on an Elastic network interface. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
+     *        >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     */
+
+    public void setConnectionTrackingSpecification(ConnectionTrackingSpecificationRequest connectionTrackingSpecification) {
+        this.connectionTrackingSpecification = connectionTrackingSpecification;
+    }
+
+    /**
+     * <p>
+     * A security group connection tracking specification that enables you to set the timeout for connection tracking on
+     * an Elastic network interface. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
+     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @return A security group connection tracking specification that enables you to set the timeout for connection
+     *         tracking on an Elastic network interface. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
+     *         >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     */
+
+    public ConnectionTrackingSpecificationRequest getConnectionTrackingSpecification() {
+        return this.connectionTrackingSpecification;
+    }
+
+    /**
+     * <p>
+     * A security group connection tracking specification that enables you to set the timeout for connection tracking on
+     * an Elastic network interface. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
+     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param connectionTrackingSpecification
+     *        A security group connection tracking specification that enables you to set the timeout for connection
+     *        tracking on an Elastic network interface. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
+     *        >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstanceNetworkInterfaceSpecification withConnectionTrackingSpecification(ConnectionTrackingSpecificationRequest connectionTrackingSpecification) {
+        setConnectionTrackingSpecification(connectionTrackingSpecification);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1642,7 +1709,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
         if (getPrimaryIpv6() != null)
             sb.append("PrimaryIpv6: ").append(getPrimaryIpv6()).append(",");
         if (getEnaSrdSpecification() != null)
-            sb.append("EnaSrdSpecification: ").append(getEnaSrdSpecification());
+            sb.append("EnaSrdSpecification: ").append(getEnaSrdSpecification()).append(",");
+        if (getConnectionTrackingSpecification() != null)
+            sb.append("ConnectionTrackingSpecification: ").append(getConnectionTrackingSpecification());
         sb.append("}");
         return sb.toString();
     }
@@ -1742,6 +1811,11 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
             return false;
         if (other.getEnaSrdSpecification() != null && other.getEnaSrdSpecification().equals(this.getEnaSrdSpecification()) == false)
             return false;
+        if (other.getConnectionTrackingSpecification() == null ^ this.getConnectionTrackingSpecification() == null)
+            return false;
+        if (other.getConnectionTrackingSpecification() != null
+                && other.getConnectionTrackingSpecification().equals(this.getConnectionTrackingSpecification()) == false)
+            return false;
         return true;
     }
 
@@ -1771,6 +1845,7 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
         hashCode = prime * hashCode + ((getIpv6PrefixCount() == null) ? 0 : getIpv6PrefixCount().hashCode());
         hashCode = prime * hashCode + ((getPrimaryIpv6() == null) ? 0 : getPrimaryIpv6().hashCode());
         hashCode = prime * hashCode + ((getEnaSrdSpecification() == null) ? 0 : getEnaSrdSpecification().hashCode());
+        hashCode = prime * hashCode + ((getConnectionTrackingSpecification() == null) ? 0 : getConnectionTrackingSpecification().hashCode());
         return hashCode;
     }
 

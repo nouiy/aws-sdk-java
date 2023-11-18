@@ -60,6 +60,11 @@ public class NetworkInterfaceStaxUnmarshaller implements Unmarshaller<NetworkInt
                     continue;
                 }
 
+                if (context.testExpression("connectionTrackingConfiguration", targetDepth)) {
+                    networkInterface.setConnectionTrackingConfiguration(ConnectionTrackingConfigurationStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("description", targetDepth)) {
                     networkInterface.setDescription(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

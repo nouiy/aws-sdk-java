@@ -1708,6 +1708,71 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Associates your Autonomous System Number (ASN) with a BYOIP CIDR that you own in the same Amazon Web Services
+     * Region. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * <p>
+     * After the association succeeds, the ASN is eligible for advertisement. You can view the association with <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeByoipCidrs.html">DescribeByoipCidrs</a>.
+     * You can advertise the CIDR with <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AdvertiseByoipCidr.html">AdvertiseByoipCidr</a>.
+     * </p>
+     * 
+     * @param associateIpamByoasnRequest
+     * @return Result of the AssociateIpamByoasn operation returned by the service.
+     * @sample AmazonEC2.AssociateIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public AssociateIpamByoasnResult associateIpamByoasn(AssociateIpamByoasnRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateIpamByoasn(request);
+    }
+
+    @SdkInternalApi
+    final AssociateIpamByoasnResult executeAssociateIpamByoasn(AssociateIpamByoasnRequest associateIpamByoasnRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateIpamByoasnRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateIpamByoasnRequest> request = null;
+        Response<AssociateIpamByoasnResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateIpamByoasnRequestMarshaller().marshall(super.beforeMarshalling(associateIpamByoasnRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateIpamByoasn");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<AssociateIpamByoasnResult> responseHandler = new StaxResponseHandler<AssociateIpamByoasnResult>(
+                    new AssociateIpamByoasnResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Associates an IPAM resource discovery with an Amazon VPC IPAM. A resource discovery is an IPAM component that
      * enables IPAM to manage and monitor resources that belong to the owning account.
      * </p>
@@ -1904,8 +1969,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Associates a CIDR block with your subnet. You can only associate a single IPv6 CIDR block with your subnet. An
-     * IPv6 CIDR block must have a prefix length of /64.
+     * Associates a CIDR block with your subnet. You can only associate a single IPv6 CIDR block with your subnet.
      * </p>
      * 
      * @param associateSubnetCidrBlockRequest
@@ -2140,12 +2204,6 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     }
 
     /**
-     * <note>
-     * <p>
-     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
-     * your account manager.
-     * </p>
-     * </note>
      * <p>
      * Associates a branch network interface with a trunk network interface.
      * </p>
@@ -2212,8 +2270,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Associates a CIDR block with your VPC. You can associate a secondary IPv4 CIDR block, an Amazon-provided IPv6
      * CIDR block, or an IPv6 CIDR block from an IPv6 address pool that you provisioned through bring your own IP
-     * addresses (<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">BYOIP</a>). The IPv6 CIDR
-     * block size is fixed at /56.
+     * addresses (<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">BYOIP</a>).
      * </p>
      * <p>
      * You must specify one of the following in the request: an IPv4 CIDR block, an IPv6 pool, or an Amazon-provided
@@ -7277,7 +7334,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * If you've associated an IPv6 CIDR block with your VPC, you can associate an IPv6 CIDR block with a subnet when
-     * you create it. The allowed block size for an IPv6 subnet is a /64 netmask.
+     * you create it.
      * </p>
      * <p>
      * If you add more than one subnet to a VPC, they're set up in a star topology with a logical router in the middle.
@@ -8730,8 +8787,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * You can optionally request an IPv6 CIDR block for the VPC. You can request an Amazon-provided IPv6 CIDR block
-     * from Amazon's pool of IPv6 addresses, or an IPv6 CIDR block from an IPv6 address pool that you provisioned
-     * through bring your own IP addresses (<a
+     * from Amazon's pool of IPv6 addresses or an IPv6 CIDR block from an IPv6 address pool that you provisioned through
+     * bring your own IP addresses (<a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">BYOIP</a>).
      * </p>
      * <p>
@@ -13703,6 +13760,67 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Deprovisions your Autonomous System Number (ASN) from your Amazon Web Services account. This action can only be
+     * called after any BYOIP CIDR associations are removed from your Amazon Web Services account with <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DisassociateIpamByoasn.html"
+     * >DisassociateIpamByoasn</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param deprovisionIpamByoasnRequest
+     * @return Result of the DeprovisionIpamByoasn operation returned by the service.
+     * @sample AmazonEC2.DeprovisionIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeprovisionIpamByoasnResult deprovisionIpamByoasn(DeprovisionIpamByoasnRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeprovisionIpamByoasn(request);
+    }
+
+    @SdkInternalApi
+    final DeprovisionIpamByoasnResult executeDeprovisionIpamByoasn(DeprovisionIpamByoasnRequest deprovisionIpamByoasnRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deprovisionIpamByoasnRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeprovisionIpamByoasnRequest> request = null;
+        Response<DeprovisionIpamByoasnResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeprovisionIpamByoasnRequestMarshaller().marshall(super.beforeMarshalling(deprovisionIpamByoasnRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeprovisionIpamByoasn");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeprovisionIpamByoasnResult> responseHandler = new StaxResponseHandler<DeprovisionIpamByoasnResult>(
+                    new DeprovisionIpamByoasnResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deprovision a CIDR provisioned from an IPAM pool. If you deprovision a CIDR from a pool that has a source pool,
      * the CIDR is recycled back into the source pool. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/depro-pool-cidr-ipam.html">Deprovision pool CIDRs</a> in the
@@ -17655,6 +17773,65 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     @Override
     public DescribeInternetGatewaysResult describeInternetGateways() {
         return describeInternetGateways(new DescribeInternetGatewaysRequest());
+    }
+
+    /**
+     * <p>
+     * Describes your Autonomous System Numbers (ASNs), their provisioning statuses, and the BYOIP CIDRs with which they
+     * are associated. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param describeIpamByoasnRequest
+     * @return Result of the DescribeIpamByoasn operation returned by the service.
+     * @sample AmazonEC2.DescribeIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeIpamByoasnResult describeIpamByoasn(DescribeIpamByoasnRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeIpamByoasn(request);
+    }
+
+    @SdkInternalApi
+    final DescribeIpamByoasnResult executeDescribeIpamByoasn(DescribeIpamByoasnRequest describeIpamByoasnRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeIpamByoasnRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeIpamByoasnRequest> request = null;
+        Response<DescribeIpamByoasnResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeIpamByoasnRequestMarshaller().marshall(super.beforeMarshalling(describeIpamByoasnRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeIpamByoasn");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeIpamByoasnResult> responseHandler = new StaxResponseHandler<DescribeIpamByoasnResult>(
+                    new DescribeIpamByoasnResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -21959,12 +22136,6 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     }
 
     /**
-     * <note>
-     * <p>
-     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
-     * your account manager.
-     * </p>
-     * </note>
      * <p>
      * Describes one or more network interface trunk associations.
      * </p>
@@ -25038,6 +25209,65 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Remove the association between your Autonomous System Number (ASN) and your BYOIP CIDR. You may want to use this
+     * action to disassociate an ASN from a CIDR or if you want to swap ASNs. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param disassociateIpamByoasnRequest
+     * @return Result of the DisassociateIpamByoasn operation returned by the service.
+     * @sample AmazonEC2.DisassociateIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DisassociateIpamByoasnResult disassociateIpamByoasn(DisassociateIpamByoasnRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateIpamByoasn(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateIpamByoasnResult executeDisassociateIpamByoasn(DisassociateIpamByoasnRequest disassociateIpamByoasnRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateIpamByoasnRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateIpamByoasnRequest> request = null;
+        Response<DisassociateIpamByoasnResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateIpamByoasnRequestMarshaller().marshall(super.beforeMarshalling(disassociateIpamByoasnRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateIpamByoasn");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisassociateIpamByoasnResult> responseHandler = new StaxResponseHandler<DisassociateIpamByoasnResult>(
+                    new DisassociateIpamByoasnResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Disassociates a resource discovery from an Amazon VPC IPAM. A resource discovery is an IPAM component that
      * enables IPAM to manage and monitor resources that belong to the owning account.
      * </p>
@@ -25458,12 +25688,6 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     }
 
     /**
-     * <note>
-     * <p>
-     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
-     * your account manager.
-     * </p>
-     * </note>
      * <p>
      * Removes an association between a branch network interface with a trunk network interface.
      * </p>
@@ -28017,6 +28241,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<GetIpamDiscoveredAccountsResult> responseHandler = new StaxResponseHandler<GetIpamDiscoveredAccountsResult>(
                     new GetIpamDiscoveredAccountsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the public IP addresses that have been discovered by IPAM.
+     * </p>
+     * 
+     * @param getIpamDiscoveredPublicAddressesRequest
+     * @return Result of the GetIpamDiscoveredPublicAddresses operation returned by the service.
+     * @sample AmazonEC2.GetIpamDiscoveredPublicAddresses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamDiscoveredPublicAddresses"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetIpamDiscoveredPublicAddressesResult getIpamDiscoveredPublicAddresses(GetIpamDiscoveredPublicAddressesRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIpamDiscoveredPublicAddresses(request);
+    }
+
+    @SdkInternalApi
+    final GetIpamDiscoveredPublicAddressesResult executeGetIpamDiscoveredPublicAddresses(
+            GetIpamDiscoveredPublicAddressesRequest getIpamDiscoveredPublicAddressesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIpamDiscoveredPublicAddressesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIpamDiscoveredPublicAddressesRequest> request = null;
+        Response<GetIpamDiscoveredPublicAddressesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIpamDiscoveredPublicAddressesRequestMarshaller().marshall(super.beforeMarshalling(getIpamDiscoveredPublicAddressesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIpamDiscoveredPublicAddresses");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetIpamDiscoveredPublicAddressesResult> responseHandler = new StaxResponseHandler<GetIpamDiscoveredPublicAddressesResult>(
+                    new GetIpamDiscoveredPublicAddressesResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -34653,6 +34934,65 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<ProvisionByoipCidrResult> responseHandler = new StaxResponseHandler<ProvisionByoipCidrResult>(
                     new ProvisionByoipCidrResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provisions your Autonomous System Number (ASN) for use in your Amazon Web Services account. This action requires
+     * authorization context for Amazon to bring the ASN to an Amazon Web Services account. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param provisionIpamByoasnRequest
+     * @return Result of the ProvisionIpamByoasn operation returned by the service.
+     * @sample AmazonEC2.ProvisionIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ProvisionIpamByoasnResult provisionIpamByoasn(ProvisionIpamByoasnRequest request) {
+        request = beforeClientExecution(request);
+        return executeProvisionIpamByoasn(request);
+    }
+
+    @SdkInternalApi
+    final ProvisionIpamByoasnResult executeProvisionIpamByoasn(ProvisionIpamByoasnRequest provisionIpamByoasnRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(provisionIpamByoasnRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ProvisionIpamByoasnRequest> request = null;
+        Response<ProvisionIpamByoasnResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ProvisionIpamByoasnRequestMarshaller().marshall(super.beforeMarshalling(provisionIpamByoasnRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ProvisionIpamByoasn");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ProvisionIpamByoasnResult> responseHandler = new StaxResponseHandler<ProvisionIpamByoasnResult>(
+                    new ProvisionIpamByoasnResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

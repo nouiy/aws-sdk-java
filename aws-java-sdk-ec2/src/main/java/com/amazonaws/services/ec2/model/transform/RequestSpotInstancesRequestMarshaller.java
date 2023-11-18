@@ -371,6 +371,28 @@ public class RequestSpotInstancesRequestMarshaller implements Marshaller<Request
                             }
                         }
                     }
+
+                    ConnectionTrackingSpecificationRequest connectionTrackingSpecification = launchSpecificationNetworkInterfacesListValue
+                            .getConnectionTrackingSpecification();
+                    if (connectionTrackingSpecification != null) {
+
+                        if (connectionTrackingSpecification.getTcpEstablishedTimeout() != null) {
+                            request.addParameter("LaunchSpecification.NetworkInterface." + networkInterfacesListIndex
+                                    + ".ConnectionTrackingSpecification.TcpEstablishedTimeout",
+                                    StringUtils.fromInteger(connectionTrackingSpecification.getTcpEstablishedTimeout()));
+                        }
+
+                        if (connectionTrackingSpecification.getUdpStreamTimeout() != null) {
+                            request.addParameter("LaunchSpecification.NetworkInterface." + networkInterfacesListIndex
+                                    + ".ConnectionTrackingSpecification.UdpStreamTimeout",
+                                    StringUtils.fromInteger(connectionTrackingSpecification.getUdpStreamTimeout()));
+                        }
+
+                        if (connectionTrackingSpecification.getUdpTimeout() != null) {
+                            request.addParameter("LaunchSpecification.NetworkInterface." + networkInterfacesListIndex
+                                    + ".ConnectionTrackingSpecification.UdpTimeout", StringUtils.fromInteger(connectionTrackingSpecification.getUdpTimeout()));
+                        }
+                    }
                     networkInterfacesListIndex++;
                 }
             }

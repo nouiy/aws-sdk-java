@@ -149,6 +149,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     }
 
     @Override
+    public RedshiftIdcApplication createRedshiftIdcApplication(CreateRedshiftIdcApplicationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateScheduledActionResult createScheduledAction(CreateScheduledActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -235,6 +240,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
 
     @Override
     public DeletePartnerResult deletePartner(DeletePartnerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteRedshiftIdcApplicationResult deleteRedshiftIdcApplication(DeleteRedshiftIdcApplicationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -469,6 +479,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     }
 
     @Override
+    public DescribeRedshiftIdcApplicationsResult describeRedshiftIdcApplications(DescribeRedshiftIdcApplicationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeReservedNodeExchangeStatusResult describeReservedNodeExchangeStatus(DescribeReservedNodeExchangeStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -666,6 +681,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
 
     @Override
     public EventSubscription modifyEventSubscription(ModifyEventSubscriptionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RedshiftIdcApplication modifyRedshiftIdcApplication(ModifyRedshiftIdcApplicationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

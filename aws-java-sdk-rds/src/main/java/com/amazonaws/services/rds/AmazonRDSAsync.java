@@ -464,6 +464,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * Copies the specified DB cluster parameter group.
      * </p>
+     * <note>
+     * <p>
+     * You can't copy a default DB cluster parameter group. Instead, create a new custom DB cluster parameter group,
+     * which copies the default parameters and values for the specified DB cluster parameter group family.
+     * </p>
+     * </note>
      * 
      * @param copyDBClusterParameterGroupRequest
      * @return A Java Future containing the result of the CopyDBClusterParameterGroup operation returned by the service.
@@ -477,6 +483,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * Copies the specified DB cluster parameter group.
      * </p>
+     * <note>
+     * <p>
+     * You can't copy a default DB cluster parameter group. Instead, create a new custom DB cluster parameter group,
+     * which copies the default parameters and values for the specified DB cluster parameter group family.
+     * </p>
+     * </note>
      * 
      * @param copyDBClusterParameterGroupRequest
      * @param asyncHandler
@@ -629,6 +641,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * Copies the specified DB parameter group.
      * </p>
+     * <note>
+     * <p>
+     * You can't copy a default DB parameter group. Instead, create a new custom DB parameter group, which copies the
+     * default parameters and values for the specified DB parameter group family.
+     * </p>
+     * </note>
      * 
      * @param copyDBParameterGroupRequest
      * @return A Java Future containing the result of the CopyDBParameterGroup operation returned by the service.
@@ -642,6 +660,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * Copies the specified DB parameter group.
      * </p>
+     * <note>
+     * <p>
+     * You can't copy a default DB parameter group. Instead, create a new custom DB parameter group, which copies the
+     * default parameters and values for the specified DB parameter group family.
+     * </p>
+     * </note>
      * 
      * @param copyDBParameterGroupRequest
      * @param asyncHandler

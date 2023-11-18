@@ -793,7 +793,7 @@ public interface AmazonCloudFormationAsync extends AmazonCloudFormation {
      * Returns the inputs for the change set and a list of changes that CloudFormation will make if you execute the
      * change set. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html"
-     * >Updating Stacks Using Change Sets</a> in the CloudFormation User Guide.
+     * >Updating Stacks Using Change Sets</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param describeChangeSetRequest
@@ -810,7 +810,7 @@ public interface AmazonCloudFormationAsync extends AmazonCloudFormation {
      * Returns the inputs for the change set and a list of changes that CloudFormation will make if you execute the
      * change set. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html"
-     * >Updating Stacks Using Change Sets</a> in the CloudFormation User Guide.
+     * >Updating Stacks Using Change Sets</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param describeChangeSetRequest
@@ -1032,7 +1032,7 @@ public interface AmazonCloudFormationAsync extends AmazonCloudFormation {
      * Returns all stack related events for a specified stack in reverse chronological order. For more information about
      * a stack's event history, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/concept-stack.html">Stacks</a> in the
-     * CloudFormation User Guide.
+     * <i>CloudFormation User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -1055,7 +1055,7 @@ public interface AmazonCloudFormationAsync extends AmazonCloudFormation {
      * Returns all stack related events for a specified stack in reverse chronological order. For more information about
      * a stack's event history, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/concept-stack.html">Stacks</a> in the
-     * CloudFormation User Guide.
+     * <i>CloudFormation User Guide</i>.
      * </p>
      * <note>
      * <p>

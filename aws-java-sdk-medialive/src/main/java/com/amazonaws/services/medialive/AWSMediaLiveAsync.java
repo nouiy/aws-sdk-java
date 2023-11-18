@@ -675,7 +675,7 @@ public interface AWSMediaLiveAsync extends AWSMediaLive {
             com.amazonaws.handlers.AsyncHandler<DeleteTagsRequest, DeleteTagsResult> asyncHandler);
 
     /**
-     * Get account configuration
+     * Describe account configuration
      * 
      * @param describeAccountConfigurationRequest
      *        Placeholder documentation for DescribeAccountConfigurationRequest
@@ -689,7 +689,7 @@ public interface AWSMediaLiveAsync extends AWSMediaLive {
             DescribeAccountConfigurationRequest describeAccountConfigurationRequest);
 
     /**
-     * Get account configuration
+     * Describe account configuration
      * 
      * @param describeAccountConfigurationRequest
      *        Placeholder documentation for DescribeAccountConfigurationRequest

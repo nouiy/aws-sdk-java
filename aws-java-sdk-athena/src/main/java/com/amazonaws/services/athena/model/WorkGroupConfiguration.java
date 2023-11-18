@@ -92,7 +92,8 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
     private String additionalConfiguration;
     /**
      * <p>
-     * Role used in a session for accessing the user's resources.
+     * Role used in a Spark session for accessing the user's resources. This property applies only to Spark-enabled
+     * workgroups.
      * </p>
      */
     private String executionRole;
@@ -548,11 +549,13 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Role used in a session for accessing the user's resources.
+     * Role used in a Spark session for accessing the user's resources. This property applies only to Spark-enabled
+     * workgroups.
      * </p>
      * 
      * @param executionRole
-     *        Role used in a session for accessing the user's resources.
+     *        Role used in a Spark session for accessing the user's resources. This property applies only to
+     *        Spark-enabled workgroups.
      */
 
     public void setExecutionRole(String executionRole) {
@@ -561,10 +564,12 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Role used in a session for accessing the user's resources.
+     * Role used in a Spark session for accessing the user's resources. This property applies only to Spark-enabled
+     * workgroups.
      * </p>
      * 
-     * @return Role used in a session for accessing the user's resources.
+     * @return Role used in a Spark session for accessing the user's resources. This property applies only to
+     *         Spark-enabled workgroups.
      */
 
     public String getExecutionRole() {
@@ -573,11 +578,13 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Role used in a session for accessing the user's resources.
+     * Role used in a Spark session for accessing the user's resources. This property applies only to Spark-enabled
+     * workgroups.
      * </p>
      * 
      * @param executionRole
-     *        Role used in a session for accessing the user's resources.
+     *        Role used in a Spark session for accessing the user's resources. This property applies only to
+     *        Spark-enabled workgroups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -63,6 +63,19 @@ public class AllocateIpamPoolCidrRequestMarshaller implements Marshaller<Request
             request.addParameter("PreviewNextCidr", StringUtils.fromBoolean(allocateIpamPoolCidrRequest.getPreviewNextCidr()));
         }
 
+        com.amazonaws.internal.SdkInternalList<String> allocateIpamPoolCidrRequestAllowedCidrsList = (com.amazonaws.internal.SdkInternalList<String>) allocateIpamPoolCidrRequest
+                .getAllowedCidrs();
+        if (!allocateIpamPoolCidrRequestAllowedCidrsList.isEmpty() || !allocateIpamPoolCidrRequestAllowedCidrsList.isAutoConstruct()) {
+            int allowedCidrsListIndex = 1;
+
+            for (String allocateIpamPoolCidrRequestAllowedCidrsListValue : allocateIpamPoolCidrRequestAllowedCidrsList) {
+                if (allocateIpamPoolCidrRequestAllowedCidrsListValue != null) {
+                    request.addParameter("AllowedCidr." + allowedCidrsListIndex, StringUtils.fromString(allocateIpamPoolCidrRequestAllowedCidrsListValue));
+                }
+                allowedCidrsListIndex++;
+            }
+        }
+
         com.amazonaws.internal.SdkInternalList<String> allocateIpamPoolCidrRequestDisallowedCidrsList = (com.amazonaws.internal.SdkInternalList<String>) allocateIpamPoolCidrRequest
                 .getDisallowedCidrs();
         if (!allocateIpamPoolCidrRequestDisallowedCidrsList.isEmpty() || !allocateIpamPoolCidrRequestDisallowedCidrsList.isAutoConstruct()) {

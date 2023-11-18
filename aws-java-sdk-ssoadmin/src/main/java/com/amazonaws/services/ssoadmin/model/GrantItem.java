@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+ * A structure that defines a single grant and its configuration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/GrantItem" target="_top">AWS API
@@ -30,24 +30,24 @@ public class GrantItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * The configuration structure for the selected grant.
      * </p>
      */
     private Grant grant;
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * The type of the selected grant.
      * </p>
      */
     private String grantType;
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * The configuration structure for the selected grant.
      * </p>
      * 
      * @param grant
-     *        ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     *        The configuration structure for the selected grant.
      */
 
     public void setGrant(Grant grant) {
@@ -56,10 +56,10 @@ public class GrantItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * The configuration structure for the selected grant.
      * </p>
      * 
-     * @return ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * @return The configuration structure for the selected grant.
      */
 
     public Grant getGrant() {
@@ -68,11 +68,11 @@ public class GrantItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * The configuration structure for the selected grant.
      * </p>
      * 
      * @param grant
-     *        ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     *        The configuration structure for the selected grant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class GrantItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * The type of the selected grant.
      * </p>
      * 
      * @param grantType
-     *        ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     *        The type of the selected grant.
      * @see GrantType
      */
 
@@ -97,10 +97,10 @@ public class GrantItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * The type of the selected grant.
      * </p>
      * 
-     * @return ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * @return The type of the selected grant.
      * @see GrantType
      */
 
@@ -110,11 +110,11 @@ public class GrantItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * The type of the selected grant.
      * </p>
      * 
      * @param grantType
-     *        ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     *        The type of the selected grant.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GrantType
      */
@@ -126,11 +126,11 @@ public class GrantItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * The type of the selected grant.
      * </p>
      * 
      * @param grantType
-     *        ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     *        The type of the selected grant.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GrantType
      */

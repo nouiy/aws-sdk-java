@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.592-SNAPSHOT</version>
+    <version>1.12.592</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,12 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-trustedadvisor</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-launchwizard</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -1300,12 +1306,6 @@
         <version>${awsjavasdk.version}</version>
     </dependency>
     <dependency>
-        <artifactId>aws-java-sdk-macie</artifactId>
-        <groupId>com.amazonaws</groupId>
-        <optional>false</optional>
-        <version>${awsjavasdk.version}</version>
-    </dependency>
-    <dependency>
         <artifactId>aws-java-sdk-eks</artifactId>
         <groupId>com.amazonaws</groupId>
         <optional>false</optional>
@@ -2271,6 +2271,10 @@
                           </taglets>
                           <groups>
                               <group>
+                                  <title>TrustedAdvisor Public API</title>
+                                  <packages>com.amazonaws.services.trustedadvisor*</packages>
+                              </group>
+                              <group>
                                   <title>AWS Launch Wizard</title>
                                   <packages>com.amazonaws.services.launchwizard*</packages>
                               </group>
@@ -3129,10 +3133,6 @@
                               <group>
                                   <title>Amazon Data Lifecycle Manager</title>
                                   <packages>com.amazonaws.services.dlm*</packages>
-                              </group>
-                              <group>
-                                  <title>Amazon Macie</title>
-                                  <packages>com.amazonaws.services.macie*</packages>
                               </group>
                               <group>
                                   <title>Amazon Elastic Container Service for Kubernetes</title>

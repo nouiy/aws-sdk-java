@@ -182,6 +182,88 @@ public interface AmazonInternetMonitor {
 
     /**
      * <p>
+     * Return the data for a query with the Amazon CloudWatch Internet Monitor query interface. Specify the query that
+     * you want to return results for by providing a <code>QueryId</code> and a monitor name.
+     * </p>
+     * <p>
+     * For more information about using the query interface, including examples, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-view-cw-tools-cwim-query.html"
+     * >Using the Amazon CloudWatch Internet Monitor query interface</a> in the Amazon CloudWatch Internet Monitor User
+     * Guide.
+     * </p>
+     * 
+     * @param getQueryResultsRequest
+     * @return Result of the GetQueryResults operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws LimitExceededException
+     *         The request exceeded a service quota.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.GetQueryResults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetQueryResults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetQueryResultsResult getQueryResults(GetQueryResultsRequest getQueryResultsRequest);
+
+    /**
+     * <p>
+     * Returns the current status of a query for the Amazon CloudWatch Internet Monitor query interface, for a specified
+     * query ID and monitor. When you run a query, check the status to make sure that the query has
+     * <code>SUCCEEDED</code> before you review the results.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>QUEUED</code>: The query is scheduled to run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RUNNING</code>: The query is in progress but not complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SUCCEEDED</code>: The query completed sucessfully.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FAILED</code>: The query failed due to an error.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCELED</code>: The query was canceled.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getQueryStatusRequest
+     * @return Result of the GetQueryStatus operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws LimitExceededException
+     *         The request exceeded a service quota.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.GetQueryStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetQueryStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetQueryStatusResult getQueryStatus(GetQueryStatusRequest getQueryStatusRequest);
+
+    /**
+     * <p>
      * Lists all health events for a monitor in Amazon CloudWatch Internet Monitor. Returns information for health
      * events including the event start and end time and the status.
      * </p>
@@ -252,6 +334,61 @@ public interface AmazonInternetMonitor {
      *      target="_top">AWS API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Start a query to return data for a specific query type for the Amazon CloudWatch Internet Monitor query
+     * interface. Specify a time period for the data that you want returned by using <code>StartTime</code> and
+     * <code>EndTime</code>. You filter the query results to return by providing parameters that you specify with
+     * <code>FilterParameters</code>.
+     * </p>
+     * <p>
+     * For more information about using the query interface, including examples, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-view-cw-tools-cwim-query.html"
+     * >Using the Amazon CloudWatch Internet Monitor query interface</a> in the Amazon CloudWatch Internet Monitor User
+     * Guide.
+     * </p>
+     * 
+     * @param startQueryRequest
+     * @return Result of the StartQuery operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws LimitExceededException
+     *         The request exceeded a service quota.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.StartQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/StartQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StartQueryResult startQuery(StartQueryRequest startQueryRequest);
+
+    /**
+     * <p>
+     * Stop a query that is progress for a specific monitor.
+     * </p>
+     * 
+     * @param stopQueryRequest
+     * @return Result of the StopQuery operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws LimitExceededException
+     *         The request exceeded a service quota.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.StopQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/StopQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StopQueryResult stopQuery(StopQueryRequest stopQueryRequest);
 
     /**
      * <p>

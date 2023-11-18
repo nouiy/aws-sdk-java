@@ -48,6 +48,8 @@ public class CreateNamespaceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("manageAdminPassword").build();
     private static final MarshallingInfo<String> NAMESPACENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("namespaceName").build();
+    private static final MarshallingInfo<String> REDSHIFTIDCAPPLICATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("redshiftIdcApplicationArn").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -77,6 +79,7 @@ public class CreateNamespaceRequestMarshaller {
             protocolMarshaller.marshall(createNamespaceRequest.getLogExports(), LOGEXPORTS_BINDING);
             protocolMarshaller.marshall(createNamespaceRequest.getManageAdminPassword(), MANAGEADMINPASSWORD_BINDING);
             protocolMarshaller.marshall(createNamespaceRequest.getNamespaceName(), NAMESPACENAME_BINDING);
+            protocolMarshaller.marshall(createNamespaceRequest.getRedshiftIdcApplicationArn(), REDSHIFTIDCAPPLICATIONARN_BINDING);
             protocolMarshaller.marshall(createNamespaceRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -69,7 +69,7 @@ public class InstanceGroupConfig implements Serializable, Cloneable, StructuredP
     /**
      * <note>
      * <p>
-     * Amazon EMR releases 4.x or higher.
+     * Amazon EMR releases 4.x or later.
      * </p>
      * </note>
      * <p>
@@ -461,7 +461,7 @@ public class InstanceGroupConfig implements Serializable, Cloneable, StructuredP
     /**
      * <note>
      * <p>
-     * Amazon EMR releases 4.x or higher.
+     * Amazon EMR releases 4.x or later.
      * </p>
      * </note>
      * <p>
@@ -470,7 +470,7 @@ public class InstanceGroupConfig implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @return <p>
-     *         Amazon EMR releases 4.x or higher.
+     *         Amazon EMR releases 4.x or later.
      *         </p>
      *         </note>
      *         <p>
@@ -488,7 +488,7 @@ public class InstanceGroupConfig implements Serializable, Cloneable, StructuredP
     /**
      * <note>
      * <p>
-     * Amazon EMR releases 4.x or higher.
+     * Amazon EMR releases 4.x or later.
      * </p>
      * </note>
      * <p>
@@ -498,7 +498,7 @@ public class InstanceGroupConfig implements Serializable, Cloneable, StructuredP
      * 
      * @param configurations
      *        <p>
-     *        Amazon EMR releases 4.x or higher.
+     *        Amazon EMR releases 4.x or later.
      *        </p>
      *        </note>
      *        <p>
@@ -518,7 +518,7 @@ public class InstanceGroupConfig implements Serializable, Cloneable, StructuredP
     /**
      * <note>
      * <p>
-     * Amazon EMR releases 4.x or higher.
+     * Amazon EMR releases 4.x or later.
      * </p>
      * </note>
      * <p>
@@ -533,7 +533,7 @@ public class InstanceGroupConfig implements Serializable, Cloneable, StructuredP
      * 
      * @param configurations
      *        <p>
-     *        Amazon EMR releases 4.x or higher.
+     *        Amazon EMR releases 4.x or later.
      *        </p>
      *        </note>
      *        <p>
@@ -555,7 +555,7 @@ public class InstanceGroupConfig implements Serializable, Cloneable, StructuredP
     /**
      * <note>
      * <p>
-     * Amazon EMR releases 4.x or higher.
+     * Amazon EMR releases 4.x or later.
      * </p>
      * </note>
      * <p>
@@ -565,7 +565,7 @@ public class InstanceGroupConfig implements Serializable, Cloneable, StructuredP
      * 
      * @param configurations
      *        <p>
-     *        Amazon EMR releases 4.x or higher.
+     *        Amazon EMR releases 4.x or later.
      *        </p>
      *        </note>
      *        <p>

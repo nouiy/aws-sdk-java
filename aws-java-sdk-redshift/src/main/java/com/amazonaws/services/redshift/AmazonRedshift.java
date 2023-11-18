@@ -494,6 +494,8 @@ public interface AmazonRedshift {
      *         IPv6 CIDR block with each subnet in your VPC.
      * @throws UnsupportedOperationException
      *         The requested operation isn't supported.
+     * @throws RedshiftIdcApplicationNotExistsException
+     *         The application you attempted to find doesn't exist.
      * @sample AmazonRedshift.CreateCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateCluster" target="_top">AWS API
      *      Documentation</a>
@@ -812,6 +814,30 @@ public interface AmazonRedshift {
      *      target="_top">AWS API Documentation</a>
      */
     HsmConfiguration createHsmConfiguration(CreateHsmConfigurationRequest createHsmConfigurationRequest);
+
+    /**
+     * <p>
+     * Creates an Amazon Redshift application for use with IAM Identity Center.
+     * </p>
+     * 
+     * @param createRedshiftIdcApplicationRequest
+     * @return Result of the CreateRedshiftIdcApplication operation returned by the service.
+     * @throws RedshiftIdcApplicationAlreadyExistsException
+     *         The application you attempted to add already exists.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws DependentServiceAccessDeniedException
+     *         A dependent service denied access for the integration.
+     * @throws RedshiftIdcApplicationQuotaExceededException
+     *         The maximum number of Redshift IAM Identity Center applications was exceeded.
+     * @sample AmazonRedshift.CreateRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    RedshiftIdcApplication createRedshiftIdcApplication(CreateRedshiftIdcApplicationRequest createRedshiftIdcApplicationRequest);
 
     /**
      * <p>
@@ -1249,6 +1275,28 @@ public interface AmazonRedshift {
      *      Documentation</a>
      */
     DeletePartnerResult deletePartner(DeletePartnerRequest deletePartnerRequest);
+
+    /**
+     * <p>
+     * Deletes an Amazon Redshift IAM Identity Center application.
+     * </p>
+     * 
+     * @param deleteRedshiftIdcApplicationRequest
+     * @return Result of the DeleteRedshiftIdcApplication operation returned by the service.
+     * @throws RedshiftIdcApplicationNotExistsException
+     *         The application you attempted to find doesn't exist.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws DependentServiceAccessDeniedException
+     *         A dependent service denied access for the integration.
+     * @sample AmazonRedshift.DeleteRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteRedshiftIdcApplicationResult deleteRedshiftIdcApplication(DeleteRedshiftIdcApplicationRequest deleteRedshiftIdcApplicationRequest);
 
     /**
      * <p>
@@ -2040,6 +2088,28 @@ public interface AmazonRedshift {
      *      Documentation</a>
      */
     DescribePartnersResult describePartners(DescribePartnersRequest describePartnersRequest);
+
+    /**
+     * <p>
+     * Lists the Amazon Redshift IAM Identity Center applications.
+     * </p>
+     * 
+     * @param describeRedshiftIdcApplicationsRequest
+     * @return Result of the DescribeRedshiftIdcApplications operation returned by the service.
+     * @throws RedshiftIdcApplicationNotExistsException
+     *         The application you attempted to find doesn't exist.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws DependentServiceAccessDeniedException
+     *         A dependent service denied access for the integration.
+     * @sample AmazonRedshift.DescribeRedshiftIdcApplications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeRedshiftIdcApplications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeRedshiftIdcApplicationsResult describeRedshiftIdcApplications(DescribeRedshiftIdcApplicationsRequest describeRedshiftIdcApplicationsRequest);
 
     /**
      * <p>
@@ -3008,6 +3078,28 @@ public interface AmazonRedshift {
      *      target="_top">AWS API Documentation</a>
      */
     EventSubscription modifyEventSubscription(ModifyEventSubscriptionRequest modifyEventSubscriptionRequest);
+
+    /**
+     * <p>
+     * Changes an existing Amazon Redshift IAM Identity Center application.
+     * </p>
+     * 
+     * @param modifyRedshiftIdcApplicationRequest
+     * @return Result of the ModifyRedshiftIdcApplication operation returned by the service.
+     * @throws RedshiftIdcApplicationNotExistsException
+     *         The application you attempted to find doesn't exist.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws DependentServiceAccessDeniedException
+     *         A dependent service denied access for the integration.
+     * @sample AmazonRedshift.ModifyRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    RedshiftIdcApplication modifyRedshiftIdcApplication(ModifyRedshiftIdcApplicationRequest modifyRedshiftIdcApplicationRequest);
 
     /**
      * <p>

@@ -67,6 +67,13 @@ public class QueryExecutionStatistics implements Serializable, Cloneable, Struct
     private Long queryQueueTimeInMillis;
     /**
      * <p>
+     * The number of milliseconds that Athena took to preprocess the query before submitting the query to the query
+     * engine.
+     * </p>
+     */
+    private Long servicePreProcessingTimeInMillis;
+    /**
+     * <p>
      * The number of milliseconds that Athena took to plan the query processing flow. This includes the time spent
      * retrieving table partitions from the data source. Note that because the query engine performs the query planning,
      * query planning time is a subset of engine processing time.
@@ -325,6 +332,52 @@ public class QueryExecutionStatistics implements Serializable, Cloneable, Struct
 
     /**
      * <p>
+     * The number of milliseconds that Athena took to preprocess the query before submitting the query to the query
+     * engine.
+     * </p>
+     * 
+     * @param servicePreProcessingTimeInMillis
+     *        The number of milliseconds that Athena took to preprocess the query before submitting the query to the
+     *        query engine.
+     */
+
+    public void setServicePreProcessingTimeInMillis(Long servicePreProcessingTimeInMillis) {
+        this.servicePreProcessingTimeInMillis = servicePreProcessingTimeInMillis;
+    }
+
+    /**
+     * <p>
+     * The number of milliseconds that Athena took to preprocess the query before submitting the query to the query
+     * engine.
+     * </p>
+     * 
+     * @return The number of milliseconds that Athena took to preprocess the query before submitting the query to the
+     *         query engine.
+     */
+
+    public Long getServicePreProcessingTimeInMillis() {
+        return this.servicePreProcessingTimeInMillis;
+    }
+
+    /**
+     * <p>
+     * The number of milliseconds that Athena took to preprocess the query before submitting the query to the query
+     * engine.
+     * </p>
+     * 
+     * @param servicePreProcessingTimeInMillis
+     *        The number of milliseconds that Athena took to preprocess the query before submitting the query to the
+     *        query engine.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryExecutionStatistics withServicePreProcessingTimeInMillis(Long servicePreProcessingTimeInMillis) {
+        setServicePreProcessingTimeInMillis(servicePreProcessingTimeInMillis);
+        return this;
+    }
+
+    /**
+     * <p>
      * The number of milliseconds that Athena took to plan the query processing flow. This includes the time spent
      * retrieving table partitions from the data source. Note that because the query engine performs the query planning,
      * query planning time is a subset of engine processing time.
@@ -483,6 +536,8 @@ public class QueryExecutionStatistics implements Serializable, Cloneable, Struct
             sb.append("TotalExecutionTimeInMillis: ").append(getTotalExecutionTimeInMillis()).append(",");
         if (getQueryQueueTimeInMillis() != null)
             sb.append("QueryQueueTimeInMillis: ").append(getQueryQueueTimeInMillis()).append(",");
+        if (getServicePreProcessingTimeInMillis() != null)
+            sb.append("ServicePreProcessingTimeInMillis: ").append(getServicePreProcessingTimeInMillis()).append(",");
         if (getQueryPlanningTimeInMillis() != null)
             sb.append("QueryPlanningTimeInMillis: ").append(getQueryPlanningTimeInMillis()).append(",");
         if (getServiceProcessingTimeInMillis() != null)
@@ -523,6 +578,11 @@ public class QueryExecutionStatistics implements Serializable, Cloneable, Struct
             return false;
         if (other.getQueryQueueTimeInMillis() != null && other.getQueryQueueTimeInMillis().equals(this.getQueryQueueTimeInMillis()) == false)
             return false;
+        if (other.getServicePreProcessingTimeInMillis() == null ^ this.getServicePreProcessingTimeInMillis() == null)
+            return false;
+        if (other.getServicePreProcessingTimeInMillis() != null
+                && other.getServicePreProcessingTimeInMillis().equals(this.getServicePreProcessingTimeInMillis()) == false)
+            return false;
         if (other.getQueryPlanningTimeInMillis() == null ^ this.getQueryPlanningTimeInMillis() == null)
             return false;
         if (other.getQueryPlanningTimeInMillis() != null && other.getQueryPlanningTimeInMillis().equals(this.getQueryPlanningTimeInMillis()) == false)
@@ -549,6 +609,7 @@ public class QueryExecutionStatistics implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getDataManifestLocation() == null) ? 0 : getDataManifestLocation().hashCode());
         hashCode = prime * hashCode + ((getTotalExecutionTimeInMillis() == null) ? 0 : getTotalExecutionTimeInMillis().hashCode());
         hashCode = prime * hashCode + ((getQueryQueueTimeInMillis() == null) ? 0 : getQueryQueueTimeInMillis().hashCode());
+        hashCode = prime * hashCode + ((getServicePreProcessingTimeInMillis() == null) ? 0 : getServicePreProcessingTimeInMillis().hashCode());
         hashCode = prime * hashCode + ((getQueryPlanningTimeInMillis() == null) ? 0 : getQueryPlanningTimeInMillis().hashCode());
         hashCode = prime * hashCode + ((getServiceProcessingTimeInMillis() == null) ? 0 : getServiceProcessingTimeInMillis().hashCode());
         hashCode = prime * hashCode + ((getResultReuseInformation() == null) ? 0 : getResultReuseInformation().hashCode());

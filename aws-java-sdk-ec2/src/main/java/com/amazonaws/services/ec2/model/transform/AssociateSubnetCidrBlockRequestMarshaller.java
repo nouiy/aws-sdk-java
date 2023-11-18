@@ -48,6 +48,14 @@ public class AssociateSubnetCidrBlockRequestMarshaller implements Marshaller<Req
             request.addParameter("SubnetId", StringUtils.fromString(associateSubnetCidrBlockRequest.getSubnetId()));
         }
 
+        if (associateSubnetCidrBlockRequest.getIpv6IpamPoolId() != null) {
+            request.addParameter("Ipv6IpamPoolId", StringUtils.fromString(associateSubnetCidrBlockRequest.getIpv6IpamPoolId()));
+        }
+
+        if (associateSubnetCidrBlockRequest.getIpv6NetmaskLength() != null) {
+            request.addParameter("Ipv6NetmaskLength", StringUtils.fromInteger(associateSubnetCidrBlockRequest.getIpv6NetmaskLength()));
+        }
+
         return request;
     }
 

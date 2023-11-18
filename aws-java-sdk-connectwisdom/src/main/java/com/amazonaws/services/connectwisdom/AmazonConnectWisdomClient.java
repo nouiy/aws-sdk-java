@@ -82,6 +82,9 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("RequestTimeoutException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.connectwisdom.model.transform.RequestTimeoutExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connectwisdom.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -465,6 +468,74 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Creates a Wisdom quick response.
+     * </p>
+     * 
+     * @param createQuickResponseRequest
+     * @return Result of the CreateQuickResponse operation returned by the service.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. For example,
+     *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
+     *         conflicting resource (usually with the same name) is being created or mutated.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws ServiceQuotaExceededException
+     *         You've exceeded your service quota. To perform the requested action, remove some of the relevant
+     *         resources, or use service quotas to request a service quota increase.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonConnectWisdom.CreateQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/CreateQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateQuickResponseResult createQuickResponse(CreateQuickResponseRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateQuickResponse(request);
+    }
+
+    @SdkInternalApi
+    final CreateQuickResponseResult executeCreateQuickResponse(CreateQuickResponseRequest createQuickResponseRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createQuickResponseRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateQuickResponseRequest> request = null;
+        Response<CreateQuickResponseResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateQuickResponseRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createQuickResponseRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Wisdom");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateQuickResponse");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateQuickResponseResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateQuickResponseResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a session. A session is a contextual container used for generating recommendations. Amazon Connect
      * creates a new Wisdom session for each contact on which Wisdom is enabled.
      * </p>
@@ -714,6 +785,71 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Deletes the quick response import job.
+     * </p>
+     * 
+     * @param deleteImportJobRequest
+     * @return Result of the DeleteImportJob operation returned by the service.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. For example,
+     *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
+     *         conflicting resource (usually with the same name) is being created or mutated.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonConnectWisdom.DeleteImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/DeleteImportJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteImportJobResult deleteImportJob(DeleteImportJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteImportJob(request);
+    }
+
+    @SdkInternalApi
+    final DeleteImportJobResult executeDeleteImportJob(DeleteImportJobRequest deleteImportJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteImportJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteImportJobRequest> request = null;
+        Response<DeleteImportJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteImportJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteImportJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Wisdom");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteImportJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteImportJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteImportJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the knowledge base.
      * </p>
      * <note>
@@ -779,6 +915,67 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteKnowledgeBaseResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteKnowledgeBaseResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a quick response.
+     * </p>
+     * 
+     * @param deleteQuickResponseRequest
+     * @return Result of the DeleteQuickResponse operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonConnectWisdom.DeleteQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/DeleteQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteQuickResponseResult deleteQuickResponse(DeleteQuickResponseRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteQuickResponse(request);
+    }
+
+    @SdkInternalApi
+    final DeleteQuickResponseResult executeDeleteQuickResponse(DeleteQuickResponseRequest deleteQuickResponseRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteQuickResponseRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteQuickResponseRequest> request = null;
+        Response<DeleteQuickResponseResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteQuickResponseRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteQuickResponseRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Wisdom");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteQuickResponse");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteQuickResponseResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteQuickResponseResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1037,6 +1234,67 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Retrieves the started import job.
+     * </p>
+     * 
+     * @param getImportJobRequest
+     * @return Result of the GetImportJob operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonConnectWisdom.GetImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/GetImportJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetImportJobResult getImportJob(GetImportJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetImportJob(request);
+    }
+
+    @SdkInternalApi
+    final GetImportJobResult executeGetImportJob(GetImportJobRequest getImportJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getImportJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetImportJobRequest> request = null;
+        Response<GetImportJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetImportJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getImportJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Wisdom");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetImportJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetImportJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetImportJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves information about the knowledge base.
      * </p>
      * 
@@ -1086,6 +1344,67 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
 
             HttpResponseHandler<AmazonWebServiceResponse<GetKnowledgeBaseResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetKnowledgeBaseResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the quick response.
+     * </p>
+     * 
+     * @param getQuickResponseRequest
+     * @return Result of the GetQuickResponse operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonConnectWisdom.GetQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/GetQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetQuickResponseResult getQuickResponse(GetQuickResponseRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetQuickResponse(request);
+    }
+
+    @SdkInternalApi
+    final GetQuickResponseResult executeGetQuickResponse(GetQuickResponseRequest getQuickResponseRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getQuickResponseRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetQuickResponseRequest> request = null;
+        Response<GetQuickResponseResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetQuickResponseRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getQuickResponseRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Wisdom");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetQuickResponse");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetQuickResponseResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetQuickResponseResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1409,6 +1728,65 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Lists information about import jobs.
+     * </p>
+     * 
+     * @param listImportJobsRequest
+     * @return Result of the ListImportJobs operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonConnectWisdom.ListImportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/ListImportJobs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListImportJobsResult listImportJobs(ListImportJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListImportJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListImportJobsResult executeListImportJobs(ListImportJobsRequest listImportJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listImportJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListImportJobsRequest> request = null;
+        Response<ListImportJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListImportJobsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listImportJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Wisdom");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListImportJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListImportJobsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListImportJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists the knowledge bases.
      * </p>
      * 
@@ -1456,6 +1834,67 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
 
             HttpResponseHandler<AmazonWebServiceResponse<ListKnowledgeBasesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListKnowledgeBasesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists information about quick response.
+     * </p>
+     * 
+     * @param listQuickResponsesRequest
+     * @return Result of the ListQuickResponses operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonConnectWisdom.ListQuickResponses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/ListQuickResponses" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListQuickResponsesResult listQuickResponses(ListQuickResponsesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListQuickResponses(request);
+    }
+
+    @SdkInternalApi
+    final ListQuickResponsesResult executeListQuickResponses(ListQuickResponsesRequest listQuickResponsesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listQuickResponsesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListQuickResponsesRequest> request = null;
+        Response<ListQuickResponsesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListQuickResponsesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listQuickResponsesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Wisdom");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListQuickResponses");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListQuickResponsesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListQuickResponsesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1597,6 +2036,10 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * 
      * @param queryAssistantRequest
      * @return Result of the QueryAssistant operation returned by the service.
+     * @throws RequestTimeoutException
+     *         The request reached the service more than 15 minutes after the date stamp on the request or more than 15
+     *         minutes after the request expiration date (such as for pre-signed URLs), or the date stamp on the request
+     *         is more than 15 minutes in the future.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
@@ -1777,6 +2220,71 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Searches existing Wisdom quick responses in a Wisdom knowledge base.
+     * </p>
+     * 
+     * @param searchQuickResponsesRequest
+     * @return Result of the SearchQuickResponses operation returned by the service.
+     * @throws RequestTimeoutException
+     *         The request reached the service more than 15 minutes after the date stamp on the request or more than 15
+     *         minutes after the request expiration date (such as for pre-signed URLs), or the date stamp on the request
+     *         is more than 15 minutes in the future.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonConnectWisdom.SearchQuickResponses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/SearchQuickResponses" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public SearchQuickResponsesResult searchQuickResponses(SearchQuickResponsesRequest request) {
+        request = beforeClientExecution(request);
+        return executeSearchQuickResponses(request);
+    }
+
+    @SdkInternalApi
+    final SearchQuickResponsesResult executeSearchQuickResponses(SearchQuickResponsesRequest searchQuickResponsesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(searchQuickResponsesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SearchQuickResponsesRequest> request = null;
+        Response<SearchQuickResponsesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SearchQuickResponsesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(searchQuickResponsesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Wisdom");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SearchQuickResponses");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SearchQuickResponsesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new SearchQuickResponsesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Searches for sessions.
      * </p>
      * 
@@ -1892,6 +2400,86 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
 
             HttpResponseHandler<AmazonWebServiceResponse<StartContentUploadResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartContentUploadResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Start an asynchronous job to import Wisdom resources from an uploaded source file. Before calling this API, use
+     * <a
+     * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_StartContentUpload.html">StartContentUpload</a>
+     * to upload an asset that contains the resource data.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For importing Wisdom quick responses, you need to upload a csv file including the quick responses. For
+     * information about how to format the csv file for importing quick responses, see <a
+     * href="https://docs.aws.amazon.com/console/connect/quick-responses/add-data">Import quick responses</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param startImportJobRequest
+     * @return Result of the StartImportJob operation returned by the service.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. For example,
+     *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
+     *         conflicting resource (usually with the same name) is being created or mutated.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws ServiceQuotaExceededException
+     *         You've exceeded your service quota. To perform the requested action, remove some of the relevant
+     *         resources, or use service quotas to request a service quota increase.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonConnectWisdom.StartImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/StartImportJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StartImportJobResult startImportJob(StartImportJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartImportJob(request);
+    }
+
+    @SdkInternalApi
+    final StartImportJobResult executeStartImportJob(StartImportJobRequest startImportJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startImportJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartImportJobRequest> request = null;
+        Response<StartImportJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartImportJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startImportJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Wisdom");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartImportJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartImportJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartImportJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2138,6 +2726,74 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
             HttpResponseHandler<AmazonWebServiceResponse<UpdateKnowledgeBaseTemplateUriResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateKnowledgeBaseTemplateUriResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an existing Wisdom quick response.
+     * </p>
+     * 
+     * @param updateQuickResponseRequest
+     * @return Result of the UpdateQuickResponse operation returned by the service.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource. For example,
+     *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
+     *         conflicting resource (usually with the same name) is being created or mutated.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws PreconditionFailedException
+     *         The provided <code>revisionId</code> does not match, indicating the content has been modified since it
+     *         was last read.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonConnectWisdom.UpdateQuickResponse
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/UpdateQuickResponse" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateQuickResponseResult updateQuickResponse(UpdateQuickResponseRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateQuickResponse(request);
+    }
+
+    @SdkInternalApi
+    final UpdateQuickResponseResult executeUpdateQuickResponse(UpdateQuickResponseRequest updateQuickResponseRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateQuickResponseRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateQuickResponseRequest> request = null;
+        Response<UpdateQuickResponseResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateQuickResponseRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateQuickResponseRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Wisdom");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateQuickResponse");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateQuickResponseResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateQuickResponseResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

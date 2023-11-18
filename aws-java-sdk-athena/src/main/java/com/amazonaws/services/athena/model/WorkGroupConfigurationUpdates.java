@@ -99,7 +99,8 @@ public class WorkGroupConfigurationUpdates implements Serializable, Cloneable, S
     private String additionalConfiguration;
     /**
      * <p>
-     * Contains the ARN of the execution role for the workgroup
+     * The ARN of the execution role used to access user resources. This property applies only to Spark-enabled
+     * workgroups.
      * </p>
      */
     private String executionRole;
@@ -635,11 +636,13 @@ public class WorkGroupConfigurationUpdates implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Contains the ARN of the execution role for the workgroup
+     * The ARN of the execution role used to access user resources. This property applies only to Spark-enabled
+     * workgroups.
      * </p>
      * 
      * @param executionRole
-     *        Contains the ARN of the execution role for the workgroup
+     *        The ARN of the execution role used to access user resources. This property applies only to Spark-enabled
+     *        workgroups.
      */
 
     public void setExecutionRole(String executionRole) {
@@ -648,10 +651,12 @@ public class WorkGroupConfigurationUpdates implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Contains the ARN of the execution role for the workgroup
+     * The ARN of the execution role used to access user resources. This property applies only to Spark-enabled
+     * workgroups.
      * </p>
      * 
-     * @return Contains the ARN of the execution role for the workgroup
+     * @return The ARN of the execution role used to access user resources. This property applies only to Spark-enabled
+     *         workgroups.
      */
 
     public String getExecutionRole() {
@@ -660,11 +665,13 @@ public class WorkGroupConfigurationUpdates implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Contains the ARN of the execution role for the workgroup
+     * The ARN of the execution role used to access user resources. This property applies only to Spark-enabled
+     * workgroups.
      * </p>
      * 
      * @param executionRole
-     *        Contains the ARN of the execution role for the workgroup
+     *        The ARN of the execution role used to access user resources. This property applies only to Spark-enabled
+     *        workgroups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

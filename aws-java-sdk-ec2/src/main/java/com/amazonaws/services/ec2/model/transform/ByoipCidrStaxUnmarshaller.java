@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.ec2.model.transform;
 
+import java.util.ArrayList;
+
 import javax.xml.stream.events.XMLEvent;
 import javax.annotation.Generated;
 
@@ -50,6 +52,16 @@ public class ByoipCidrStaxUnmarshaller implements Unmarshaller<ByoipCidr, StaxUn
 
                 if (context.testExpression("description", targetDepth)) {
                     byoipCidr.setDescription(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("asnAssociationSet", targetDepth)) {
+                    byoipCidr.withAsnAssociations(new ArrayList<AsnAssociation>());
+                    continue;
+                }
+
+                if (context.testExpression("asnAssociationSet/item", targetDepth)) {
+                    byoipCidr.withAsnAssociations(AsnAssociationStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
 

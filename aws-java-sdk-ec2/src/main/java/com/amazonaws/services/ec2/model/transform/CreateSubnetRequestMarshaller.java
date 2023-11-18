@@ -103,6 +103,22 @@ public class CreateSubnetRequestMarshaller implements Marshaller<Request<CreateS
             request.addParameter("Ipv6Native", StringUtils.fromBoolean(createSubnetRequest.getIpv6Native()));
         }
 
+        if (createSubnetRequest.getIpv4IpamPoolId() != null) {
+            request.addParameter("Ipv4IpamPoolId", StringUtils.fromString(createSubnetRequest.getIpv4IpamPoolId()));
+        }
+
+        if (createSubnetRequest.getIpv4NetmaskLength() != null) {
+            request.addParameter("Ipv4NetmaskLength", StringUtils.fromInteger(createSubnetRequest.getIpv4NetmaskLength()));
+        }
+
+        if (createSubnetRequest.getIpv6IpamPoolId() != null) {
+            request.addParameter("Ipv6IpamPoolId", StringUtils.fromString(createSubnetRequest.getIpv6IpamPoolId()));
+        }
+
+        if (createSubnetRequest.getIpv6NetmaskLength() != null) {
+            request.addParameter("Ipv6NetmaskLength", StringUtils.fromInteger(createSubnetRequest.getIpv6NetmaskLength()));
+        }
+
         return request;
     }
 

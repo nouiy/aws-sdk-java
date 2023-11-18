@@ -112,12 +112,6 @@ public class DataCatalog implements Serializable, Cloneable, StructuredPojo {
      * exists in your account, of which you can have only one and cannot modify.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Queries that specify a Glue Data Catalog other than the default <code>AwsDataCatalog</code> must be run on Athena
-     * engine version 2.
-     * </p>
-     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -340,12 +334,6 @@ public class DataCatalog implements Serializable, Cloneable, StructuredPojo {
      * exists in your account, of which you can have only one and cannot modify.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Queries that specify a Glue Data Catalog other than the default <code>AwsDataCatalog</code> must be run on Athena
-     * engine version 2.
-     * </p>
-     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -403,12 +391,6 @@ public class DataCatalog implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         The <code>GLUE</code> data catalog type also applies to the default <code>AwsDataCatalog</code> that
      *         already exists in your account, of which you can have only one and cannot modify.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         Queries that specify a Glue Data Catalog other than the default <code>AwsDataCatalog</code> must be run
-     *         on Athena engine version 2.
      *         </p>
      *         </li>
      *         </ul>
@@ -476,12 +458,6 @@ public class DataCatalog implements Serializable, Cloneable, StructuredPojo {
      * exists in your account, of which you can have only one and cannot modify.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Queries that specify a Glue Data Catalog other than the default <code>AwsDataCatalog</code> must be run on Athena
-     * engine version 2.
-     * </p>
-     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -540,12 +516,6 @@ public class DataCatalog implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The <code>GLUE</code> data catalog type also applies to the default <code>AwsDataCatalog</code> that
      *        already exists in your account, of which you can have only one and cannot modify.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Queries that specify a Glue Data Catalog other than the default <code>AwsDataCatalog</code> must be run on
-     *        Athena engine version 2.
      *        </p>
      *        </li>
      *        </ul>
@@ -613,12 +583,6 @@ public class DataCatalog implements Serializable, Cloneable, StructuredPojo {
      * exists in your account, of which you can have only one and cannot modify.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Queries that specify a Glue Data Catalog other than the default <code>AwsDataCatalog</code> must be run on Athena
-     * engine version 2.
-     * </p>
-     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -677,12 +641,6 @@ public class DataCatalog implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The <code>GLUE</code> data catalog type also applies to the default <code>AwsDataCatalog</code> that
      *        already exists in your account, of which you can have only one and cannot modify.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Queries that specify a Glue Data Catalog other than the default <code>AwsDataCatalog</code> must be run on
-     *        Athena engine version 2.
      *        </p>
      *        </li>
      *        </ul>

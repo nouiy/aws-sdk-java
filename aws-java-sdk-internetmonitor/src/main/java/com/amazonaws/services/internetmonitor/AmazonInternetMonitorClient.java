@@ -470,6 +470,172 @@ public class AmazonInternetMonitorClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Return the data for a query with the Amazon CloudWatch Internet Monitor query interface. Specify the query that
+     * you want to return results for by providing a <code>QueryId</code> and a monitor name.
+     * </p>
+     * <p>
+     * For more information about using the query interface, including examples, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-view-cw-tools-cwim-query.html"
+     * >Using the Amazon CloudWatch Internet Monitor query interface</a> in the Amazon CloudWatch Internet Monitor User
+     * Guide.
+     * </p>
+     * 
+     * @param getQueryResultsRequest
+     * @return Result of the GetQueryResults operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws LimitExceededException
+     *         The request exceeded a service quota.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.GetQueryResults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetQueryResults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetQueryResultsResult getQueryResults(GetQueryResultsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetQueryResults(request);
+    }
+
+    @SdkInternalApi
+    final GetQueryResultsResult executeGetQueryResults(GetQueryResultsRequest getQueryResultsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getQueryResultsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetQueryResultsRequest> request = null;
+        Response<GetQueryResultsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetQueryResultsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getQueryResultsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "InternetMonitor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetQueryResults");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetQueryResultsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetQueryResultsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the current status of a query for the Amazon CloudWatch Internet Monitor query interface, for a specified
+     * query ID and monitor. When you run a query, check the status to make sure that the query has
+     * <code>SUCCEEDED</code> before you review the results.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>QUEUED</code>: The query is scheduled to run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RUNNING</code>: The query is in progress but not complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SUCCEEDED</code>: The query completed sucessfully.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FAILED</code>: The query failed due to an error.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CANCELED</code>: The query was canceled.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getQueryStatusRequest
+     * @return Result of the GetQueryStatus operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws LimitExceededException
+     *         The request exceeded a service quota.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.GetQueryStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/GetQueryStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetQueryStatusResult getQueryStatus(GetQueryStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetQueryStatus(request);
+    }
+
+    @SdkInternalApi
+    final GetQueryStatusResult executeGetQueryStatus(GetQueryStatusRequest getQueryStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getQueryStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetQueryStatusRequest> request = null;
+        Response<GetQueryStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetQueryStatusRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getQueryStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "InternetMonitor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetQueryStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetQueryStatusResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetQueryStatusResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists all health events for a monitor in Amazon CloudWatch Internet Monitor. Returns information for health
      * events including the event start and end time and the status.
      * </p>
@@ -657,6 +823,145 @@ public class AmazonInternetMonitorClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Start a query to return data for a specific query type for the Amazon CloudWatch Internet Monitor query
+     * interface. Specify a time period for the data that you want returned by using <code>StartTime</code> and
+     * <code>EndTime</code>. You filter the query results to return by providing parameters that you specify with
+     * <code>FilterParameters</code>.
+     * </p>
+     * <p>
+     * For more information about using the query interface, including examples, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-view-cw-tools-cwim-query.html"
+     * >Using the Amazon CloudWatch Internet Monitor query interface</a> in the Amazon CloudWatch Internet Monitor User
+     * Guide.
+     * </p>
+     * 
+     * @param startQueryRequest
+     * @return Result of the StartQuery operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws LimitExceededException
+     *         The request exceeded a service quota.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.StartQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/StartQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StartQueryResult startQuery(StartQueryRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartQuery(request);
+    }
+
+    @SdkInternalApi
+    final StartQueryResult executeStartQuery(StartQueryRequest startQueryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startQueryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartQueryRequest> request = null;
+        Response<StartQueryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartQueryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startQueryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "InternetMonitor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartQuery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartQueryResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartQueryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Stop a query that is progress for a specific monitor.
+     * </p>
+     * 
+     * @param stopQueryRequest
+     * @return Result of the StopQuery operation returned by the service.
+     * @throws InternalServerException
+     *         An internal error occurred.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permission to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws LimitExceededException
+     *         The request exceeded a service quota.
+     * @throws ValidationException
+     *         Invalid request.
+     * @sample AmazonInternetMonitor.StopQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/StopQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StopQueryResult stopQuery(StopQueryRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopQuery(request);
+    }
+
+    @SdkInternalApi
+    final StopQueryResult executeStopQuery(StopQueryRequest stopQueryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopQueryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopQueryRequest> request = null;
+        Response<StopQueryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopQueryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(stopQueryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "InternetMonitor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopQuery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopQueryResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new StopQueryResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

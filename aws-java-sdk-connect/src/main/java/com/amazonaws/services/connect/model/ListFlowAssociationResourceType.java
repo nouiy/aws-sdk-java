@@ -20,7 +20,6 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ListFlowAssociationResourceType {
 
-    SMS_PHONE_NUMBER("SMS_PHONE_NUMBER"),
     VOICE_PHONE_NUMBER("VOICE_PHONE_NUMBER");
 
     private String value;

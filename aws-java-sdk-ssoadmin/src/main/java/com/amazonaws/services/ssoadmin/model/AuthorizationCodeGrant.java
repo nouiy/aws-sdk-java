@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+ * A structure that defines configuration settings for an application that supports the OAuth 2.0 Authorization Code
+ * Grant.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/AuthorizationCodeGrant" target="_top">AWS
@@ -30,17 +31,17 @@ public class AuthorizationCodeGrant implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * A list of URIs that are valid locations to redirect a user's browser after the user is authorized.
      * </p>
      */
     private java.util.List<String> redirectUris;
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * A list of URIs that are valid locations to redirect a user's browser after the user is authorized.
      * </p>
      * 
-     * @return ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * @return A list of URIs that are valid locations to redirect a user's browser after the user is authorized.
      */
 
     public java.util.List<String> getRedirectUris() {
@@ -49,11 +50,11 @@ public class AuthorizationCodeGrant implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * A list of URIs that are valid locations to redirect a user's browser after the user is authorized.
      * </p>
      * 
      * @param redirectUris
-     *        ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     *        A list of URIs that are valid locations to redirect a user's browser after the user is authorized.
      */
 
     public void setRedirectUris(java.util.Collection<String> redirectUris) {
@@ -67,7 +68,7 @@ public class AuthorizationCodeGrant implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * A list of URIs that are valid locations to redirect a user's browser after the user is authorized.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -76,7 +77,7 @@ public class AuthorizationCodeGrant implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param redirectUris
-     *        ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     *        A list of URIs that are valid locations to redirect a user's browser after the user is authorized.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +93,11 @@ public class AuthorizationCodeGrant implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * A list of URIs that are valid locations to redirect a user's browser after the user is authorized.
      * </p>
      * 
      * @param redirectUris
-     *        ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     *        A list of URIs that are valid locations to redirect a user's browser after the user is authorized.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -48,6 +48,16 @@ public class AbstractAmazonInternetMonitor implements AmazonInternetMonitor {
     }
 
     @Override
+    public GetQueryResultsResult getQueryResults(GetQueryResultsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetQueryStatusResult getQueryStatus(GetQueryStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListHealthEventsResult listHealthEvents(ListHealthEventsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -59,6 +69,16 @@ public class AbstractAmazonInternetMonitor implements AmazonInternetMonitor {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartQueryResult startQuery(StartQueryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopQueryResult stopQuery(StopQueryRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

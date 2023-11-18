@@ -126,10 +126,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>STRICT_FAILURE_TOLERANCE</code>: Dynamically lowers the concurrency level to ensure the number of failed
-     * accounts never exceeds the <code>FailureToleranceCount</code> +1. StackSets will set the actual concurrency of
-     * your deployment as the minimum value between the <code>MaxConcurrentCount</code> and the
-     * <code>FailureToleranceCount</code> +1. This is the default behavior.
+     * <code>STRICT_FAILURE_TOLERANCE</code>: This option dynamically lowers the concurrency level to ensure the number
+     * of failed accounts never exceeds the value of <code>FailureToleranceCount</code> +1. The initial actual
+     * concurrency is set to the lower of either the value of the <code>MaxConcurrentCount</code>, or the value of
+     * <code>MaxConcurrentCount</code> +1. The actual concurrency is then reduced proportionally by the number of
+     * failures. This is the default behavior.
      * </p>
      * <p>
      * If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is similar.
@@ -137,8 +138,10 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>SOFT_FAILURE_TOLERANCE</code>: Always run at the concurrency level set by the user in the
-     * <code>MaxConcurrentCount</code> or <code>MaxConcurrentPercentage</code>, regardless of the number of failures.
+     * <code>SOFT_FAILURE_TOLERANCE</code>: This option decouples <code>FailureToleranceCount</code> from the actual
+     * concurrency. This allows stack set operations to run at the concurrency level set by the
+     * <code>MaxConcurrentCount</code> value, or <code>MaxConcurrentPercentage</code>, regardless of the number of
+     * failures.
      * </p>
      * </li>
      * </ul>
@@ -754,10 +757,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>STRICT_FAILURE_TOLERANCE</code>: Dynamically lowers the concurrency level to ensure the number of failed
-     * accounts never exceeds the <code>FailureToleranceCount</code> +1. StackSets will set the actual concurrency of
-     * your deployment as the minimum value between the <code>MaxConcurrentCount</code> and the
-     * <code>FailureToleranceCount</code> +1. This is the default behavior.
+     * <code>STRICT_FAILURE_TOLERANCE</code>: This option dynamically lowers the concurrency level to ensure the number
+     * of failed accounts never exceeds the value of <code>FailureToleranceCount</code> +1. The initial actual
+     * concurrency is set to the lower of either the value of the <code>MaxConcurrentCount</code>, or the value of
+     * <code>MaxConcurrentCount</code> +1. The actual concurrency is then reduced proportionally by the number of
+     * failures. This is the default behavior.
      * </p>
      * <p>
      * If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is similar.
@@ -765,8 +769,10 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>SOFT_FAILURE_TOLERANCE</code>: Always run at the concurrency level set by the user in the
-     * <code>MaxConcurrentCount</code> or <code>MaxConcurrentPercentage</code>, regardless of the number of failures.
+     * <code>SOFT_FAILURE_TOLERANCE</code>: This option decouples <code>FailureToleranceCount</code> from the actual
+     * concurrency. This allows stack set operations to run at the concurrency level set by the
+     * <code>MaxConcurrentCount</code> value, or <code>MaxConcurrentPercentage</code>, regardless of the number of
+     * failures.
      * </p>
      * </li>
      * </ul>
@@ -776,10 +782,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>STRICT_FAILURE_TOLERANCE</code>: Dynamically lowers the concurrency level to ensure the number of
-     *        failed accounts never exceeds the <code>FailureToleranceCount</code> +1. StackSets will set the actual
-     *        concurrency of your deployment as the minimum value between the <code>MaxConcurrentCount</code> and the
-     *        <code>FailureToleranceCount</code> +1. This is the default behavior.
+     *        <code>STRICT_FAILURE_TOLERANCE</code>: This option dynamically lowers the concurrency level to ensure the
+     *        number of failed accounts never exceeds the value of <code>FailureToleranceCount</code> +1. The initial
+     *        actual concurrency is set to the lower of either the value of the <code>MaxConcurrentCount</code>, or the
+     *        value of <code>MaxConcurrentCount</code> +1. The actual concurrency is then reduced proportionally by the
+     *        number of failures. This is the default behavior.
      *        </p>
      *        <p>
      *        If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is similar.
@@ -787,9 +794,10 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SOFT_FAILURE_TOLERANCE</code>: Always run at the concurrency level set by the user in the
-     *        <code>MaxConcurrentCount</code> or <code>MaxConcurrentPercentage</code>, regardless of the number of
-     *        failures.
+     *        <code>SOFT_FAILURE_TOLERANCE</code>: This option decouples <code>FailureToleranceCount</code> from the
+     *        actual concurrency. This allows stack set operations to run at the concurrency level set by the
+     *        <code>MaxConcurrentCount</code> value, or <code>MaxConcurrentPercentage</code>, regardless of the number
+     *        of failures.
      *        </p>
      *        </li>
      * @see ConcurrencyMode
@@ -806,10 +814,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>STRICT_FAILURE_TOLERANCE</code>: Dynamically lowers the concurrency level to ensure the number of failed
-     * accounts never exceeds the <code>FailureToleranceCount</code> +1. StackSets will set the actual concurrency of
-     * your deployment as the minimum value between the <code>MaxConcurrentCount</code> and the
-     * <code>FailureToleranceCount</code> +1. This is the default behavior.
+     * <code>STRICT_FAILURE_TOLERANCE</code>: This option dynamically lowers the concurrency level to ensure the number
+     * of failed accounts never exceeds the value of <code>FailureToleranceCount</code> +1. The initial actual
+     * concurrency is set to the lower of either the value of the <code>MaxConcurrentCount</code>, or the value of
+     * <code>MaxConcurrentCount</code> +1. The actual concurrency is then reduced proportionally by the number of
+     * failures. This is the default behavior.
      * </p>
      * <p>
      * If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is similar.
@@ -817,8 +826,10 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>SOFT_FAILURE_TOLERANCE</code>: Always run at the concurrency level set by the user in the
-     * <code>MaxConcurrentCount</code> or <code>MaxConcurrentPercentage</code>, regardless of the number of failures.
+     * <code>SOFT_FAILURE_TOLERANCE</code>: This option decouples <code>FailureToleranceCount</code> from the actual
+     * concurrency. This allows stack set operations to run at the concurrency level set by the
+     * <code>MaxConcurrentCount</code> value, or <code>MaxConcurrentPercentage</code>, regardless of the number of
+     * failures.
      * </p>
      * </li>
      * </ul>
@@ -827,10 +838,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>STRICT_FAILURE_TOLERANCE</code>: Dynamically lowers the concurrency level to ensure the number of
-     *         failed accounts never exceeds the <code>FailureToleranceCount</code> +1. StackSets will set the actual
-     *         concurrency of your deployment as the minimum value between the <code>MaxConcurrentCount</code> and the
-     *         <code>FailureToleranceCount</code> +1. This is the default behavior.
+     *         <code>STRICT_FAILURE_TOLERANCE</code>: This option dynamically lowers the concurrency level to ensure the
+     *         number of failed accounts never exceeds the value of <code>FailureToleranceCount</code> +1. The initial
+     *         actual concurrency is set to the lower of either the value of the <code>MaxConcurrentCount</code>, or the
+     *         value of <code>MaxConcurrentCount</code> +1. The actual concurrency is then reduced proportionally by the
+     *         number of failures. This is the default behavior.
      *         </p>
      *         <p>
      *         If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is similar.
@@ -838,9 +850,10 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>SOFT_FAILURE_TOLERANCE</code>: Always run at the concurrency level set by the user in the
-     *         <code>MaxConcurrentCount</code> or <code>MaxConcurrentPercentage</code>, regardless of the number of
-     *         failures.
+     *         <code>SOFT_FAILURE_TOLERANCE</code>: This option decouples <code>FailureToleranceCount</code> from the
+     *         actual concurrency. This allows stack set operations to run at the concurrency level set by the
+     *         <code>MaxConcurrentCount</code> value, or <code>MaxConcurrentPercentage</code>, regardless of the number
+     *         of failures.
      *         </p>
      *         </li>
      * @see ConcurrencyMode
@@ -857,10 +870,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>STRICT_FAILURE_TOLERANCE</code>: Dynamically lowers the concurrency level to ensure the number of failed
-     * accounts never exceeds the <code>FailureToleranceCount</code> +1. StackSets will set the actual concurrency of
-     * your deployment as the minimum value between the <code>MaxConcurrentCount</code> and the
-     * <code>FailureToleranceCount</code> +1. This is the default behavior.
+     * <code>STRICT_FAILURE_TOLERANCE</code>: This option dynamically lowers the concurrency level to ensure the number
+     * of failed accounts never exceeds the value of <code>FailureToleranceCount</code> +1. The initial actual
+     * concurrency is set to the lower of either the value of the <code>MaxConcurrentCount</code>, or the value of
+     * <code>MaxConcurrentCount</code> +1. The actual concurrency is then reduced proportionally by the number of
+     * failures. This is the default behavior.
      * </p>
      * <p>
      * If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is similar.
@@ -868,8 +882,10 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>SOFT_FAILURE_TOLERANCE</code>: Always run at the concurrency level set by the user in the
-     * <code>MaxConcurrentCount</code> or <code>MaxConcurrentPercentage</code>, regardless of the number of failures.
+     * <code>SOFT_FAILURE_TOLERANCE</code>: This option decouples <code>FailureToleranceCount</code> from the actual
+     * concurrency. This allows stack set operations to run at the concurrency level set by the
+     * <code>MaxConcurrentCount</code> value, or <code>MaxConcurrentPercentage</code>, regardless of the number of
+     * failures.
      * </p>
      * </li>
      * </ul>
@@ -879,10 +895,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>STRICT_FAILURE_TOLERANCE</code>: Dynamically lowers the concurrency level to ensure the number of
-     *        failed accounts never exceeds the <code>FailureToleranceCount</code> +1. StackSets will set the actual
-     *        concurrency of your deployment as the minimum value between the <code>MaxConcurrentCount</code> and the
-     *        <code>FailureToleranceCount</code> +1. This is the default behavior.
+     *        <code>STRICT_FAILURE_TOLERANCE</code>: This option dynamically lowers the concurrency level to ensure the
+     *        number of failed accounts never exceeds the value of <code>FailureToleranceCount</code> +1. The initial
+     *        actual concurrency is set to the lower of either the value of the <code>MaxConcurrentCount</code>, or the
+     *        value of <code>MaxConcurrentCount</code> +1. The actual concurrency is then reduced proportionally by the
+     *        number of failures. This is the default behavior.
      *        </p>
      *        <p>
      *        If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is similar.
@@ -890,9 +907,10 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SOFT_FAILURE_TOLERANCE</code>: Always run at the concurrency level set by the user in the
-     *        <code>MaxConcurrentCount</code> or <code>MaxConcurrentPercentage</code>, regardless of the number of
-     *        failures.
+     *        <code>SOFT_FAILURE_TOLERANCE</code>: This option decouples <code>FailureToleranceCount</code> from the
+     *        actual concurrency. This allows stack set operations to run at the concurrency level set by the
+     *        <code>MaxConcurrentCount</code> value, or <code>MaxConcurrentPercentage</code>, regardless of the number
+     *        of failures.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -911,10 +929,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>STRICT_FAILURE_TOLERANCE</code>: Dynamically lowers the concurrency level to ensure the number of failed
-     * accounts never exceeds the <code>FailureToleranceCount</code> +1. StackSets will set the actual concurrency of
-     * your deployment as the minimum value between the <code>MaxConcurrentCount</code> and the
-     * <code>FailureToleranceCount</code> +1. This is the default behavior.
+     * <code>STRICT_FAILURE_TOLERANCE</code>: This option dynamically lowers the concurrency level to ensure the number
+     * of failed accounts never exceeds the value of <code>FailureToleranceCount</code> +1. The initial actual
+     * concurrency is set to the lower of either the value of the <code>MaxConcurrentCount</code>, or the value of
+     * <code>MaxConcurrentCount</code> +1. The actual concurrency is then reduced proportionally by the number of
+     * failures. This is the default behavior.
      * </p>
      * <p>
      * If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is similar.
@@ -922,8 +941,10 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>SOFT_FAILURE_TOLERANCE</code>: Always run at the concurrency level set by the user in the
-     * <code>MaxConcurrentCount</code> or <code>MaxConcurrentPercentage</code>, regardless of the number of failures.
+     * <code>SOFT_FAILURE_TOLERANCE</code>: This option decouples <code>FailureToleranceCount</code> from the actual
+     * concurrency. This allows stack set operations to run at the concurrency level set by the
+     * <code>MaxConcurrentCount</code> value, or <code>MaxConcurrentPercentage</code>, regardless of the number of
+     * failures.
      * </p>
      * </li>
      * </ul>
@@ -933,10 +954,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>STRICT_FAILURE_TOLERANCE</code>: Dynamically lowers the concurrency level to ensure the number of
-     *        failed accounts never exceeds the <code>FailureToleranceCount</code> +1. StackSets will set the actual
-     *        concurrency of your deployment as the minimum value between the <code>MaxConcurrentCount</code> and the
-     *        <code>FailureToleranceCount</code> +1. This is the default behavior.
+     *        <code>STRICT_FAILURE_TOLERANCE</code>: This option dynamically lowers the concurrency level to ensure the
+     *        number of failed accounts never exceeds the value of <code>FailureToleranceCount</code> +1. The initial
+     *        actual concurrency is set to the lower of either the value of the <code>MaxConcurrentCount</code>, or the
+     *        value of <code>MaxConcurrentCount</code> +1. The actual concurrency is then reduced proportionally by the
+     *        number of failures. This is the default behavior.
      *        </p>
      *        <p>
      *        If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is similar.
@@ -944,9 +966,10 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SOFT_FAILURE_TOLERANCE</code>: Always run at the concurrency level set by the user in the
-     *        <code>MaxConcurrentCount</code> or <code>MaxConcurrentPercentage</code>, regardless of the number of
-     *        failures.
+     *        <code>SOFT_FAILURE_TOLERANCE</code>: This option decouples <code>FailureToleranceCount</code> from the
+     *        actual concurrency. This allows stack set operations to run at the concurrency level set by the
+     *        <code>MaxConcurrentCount</code> value, or <code>MaxConcurrentPercentage</code>, regardless of the number
+     *        of failures.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

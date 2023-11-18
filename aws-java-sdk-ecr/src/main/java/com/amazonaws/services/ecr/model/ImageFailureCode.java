@@ -26,7 +26,10 @@ public enum ImageFailureCode {
     ImageNotFound("ImageNotFound"),
     MissingDigestAndTag("MissingDigestAndTag"),
     ImageReferencedByManifestList("ImageReferencedByManifestList"),
-    KmsError("KmsError");
+    KmsError("KmsError"),
+    UpstreamAccessDenied("UpstreamAccessDenied"),
+    UpstreamTooManyRequests("UpstreamTooManyRequests"),
+    UpstreamUnavailable("UpstreamUnavailable");
 
     private String value;
 

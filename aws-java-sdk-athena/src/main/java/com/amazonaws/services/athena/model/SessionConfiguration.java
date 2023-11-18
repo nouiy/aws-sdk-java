@@ -30,7 +30,8 @@ public class SessionConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the execution role used for the session.
+     * The ARN of the execution role used in a Spark session to access user resources. This property applies only to
+     * Spark-enabled workgroups.
      * </p>
      */
     private String executionRole;
@@ -51,11 +52,13 @@ public class SessionConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the execution role used for the session.
+     * The ARN of the execution role used in a Spark session to access user resources. This property applies only to
+     * Spark-enabled workgroups.
      * </p>
      * 
      * @param executionRole
-     *        The ARN of the execution role used for the session.
+     *        The ARN of the execution role used in a Spark session to access user resources. This property applies only
+     *        to Spark-enabled workgroups.
      */
 
     public void setExecutionRole(String executionRole) {
@@ -64,10 +67,12 @@ public class SessionConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the execution role used for the session.
+     * The ARN of the execution role used in a Spark session to access user resources. This property applies only to
+     * Spark-enabled workgroups.
      * </p>
      * 
-     * @return The ARN of the execution role used for the session.
+     * @return The ARN of the execution role used in a Spark session to access user resources. This property applies
+     *         only to Spark-enabled workgroups.
      */
 
     public String getExecutionRole() {
@@ -76,11 +81,13 @@ public class SessionConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the execution role used for the session.
+     * The ARN of the execution role used in a Spark session to access user resources. This property applies only to
+     * Spark-enabled workgroups.
      * </p>
      * 
      * @param executionRole
-     *        The ARN of the execution role used for the session.
+     *        The ARN of the execution role used in a Spark session to access user resources. This property applies only
+     *        to Spark-enabled workgroups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

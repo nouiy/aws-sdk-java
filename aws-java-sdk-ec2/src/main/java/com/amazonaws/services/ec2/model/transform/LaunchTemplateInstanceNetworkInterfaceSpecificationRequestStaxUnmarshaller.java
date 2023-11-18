@@ -184,6 +184,12 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequestStaxUnmar
                             .unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ConnectionTrackingSpecification", targetDepth)) {
+                    launchTemplateInstanceNetworkInterfaceSpecificationRequest
+                            .setConnectionTrackingSpecification(ConnectionTrackingSpecificationRequestStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return launchTemplateInstanceNetworkInterfaceSpecificationRequest;

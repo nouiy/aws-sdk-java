@@ -553,6 +553,19 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<UpdatePullThroughCacheRuleResult> updatePullThroughCacheRuleAsync(UpdatePullThroughCacheRuleRequest request) {
+
+        return updatePullThroughCacheRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePullThroughCacheRuleResult> updatePullThroughCacheRuleAsync(UpdatePullThroughCacheRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdatePullThroughCacheRuleRequest, UpdatePullThroughCacheRuleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UploadLayerPartResult> uploadLayerPartAsync(UploadLayerPartRequest request) {
 
         return uploadLayerPartAsync(request, null);
@@ -561,6 +574,19 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     @Override
     public java.util.concurrent.Future<UploadLayerPartResult> uploadLayerPartAsync(UploadLayerPartRequest request,
             com.amazonaws.handlers.AsyncHandler<UploadLayerPartRequest, UploadLayerPartResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ValidatePullThroughCacheRuleResult> validatePullThroughCacheRuleAsync(ValidatePullThroughCacheRuleRequest request) {
+
+        return validatePullThroughCacheRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ValidatePullThroughCacheRuleResult> validatePullThroughCacheRuleAsync(ValidatePullThroughCacheRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<ValidatePullThroughCacheRuleRequest, ValidatePullThroughCacheRuleResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

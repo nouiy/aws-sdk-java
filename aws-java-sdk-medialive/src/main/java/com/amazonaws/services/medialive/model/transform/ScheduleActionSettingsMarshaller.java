@@ -53,6 +53,10 @@ public class ScheduleActionSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("staticImageActivateSettings").build();
     private static final MarshallingInfo<StructuredPojo> STATICIMAGEDEACTIVATESETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("staticImageDeactivateSettings").build();
+    private static final MarshallingInfo<StructuredPojo> STATICIMAGEOUTPUTACTIVATESETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("staticImageOutputActivateSettings").build();
+    private static final MarshallingInfo<StructuredPojo> STATICIMAGEOUTPUTDEACTIVATESETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("staticImageOutputDeactivateSettings").build();
 
     private static final ScheduleActionSettingsMarshaller instance = new ScheduleActionSettingsMarshaller();
 
@@ -83,6 +87,8 @@ public class ScheduleActionSettingsMarshaller {
             protocolMarshaller.marshall(scheduleActionSettings.getScte35TimeSignalSettings(), SCTE35TIMESIGNALSETTINGS_BINDING);
             protocolMarshaller.marshall(scheduleActionSettings.getStaticImageActivateSettings(), STATICIMAGEACTIVATESETTINGS_BINDING);
             protocolMarshaller.marshall(scheduleActionSettings.getStaticImageDeactivateSettings(), STATICIMAGEDEACTIVATESETTINGS_BINDING);
+            protocolMarshaller.marshall(scheduleActionSettings.getStaticImageOutputActivateSettings(), STATICIMAGEOUTPUTACTIVATESETTINGS_BINDING);
+            protocolMarshaller.marshall(scheduleActionSettings.getStaticImageOutputDeactivateSettings(), STATICIMAGEOUTPUTDEACTIVATESETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

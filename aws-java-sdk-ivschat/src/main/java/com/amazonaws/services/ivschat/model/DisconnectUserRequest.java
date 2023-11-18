@@ -184,7 +184,7 @@ public class DisconnectUserRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getRoomIdentifier() != null)
             sb.append("RoomIdentifier: ").append(getRoomIdentifier()).append(",");
         if (getUserId() != null)
-            sb.append("UserId: ").append(getUserId());
+            sb.append("UserId: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

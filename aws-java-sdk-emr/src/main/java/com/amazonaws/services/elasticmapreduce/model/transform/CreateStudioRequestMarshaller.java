@@ -54,6 +54,14 @@ public class CreateStudioRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdpRelayStateParameterName").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<Boolean> TRUSTEDIDENTITYPROPAGATIONENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TrustedIdentityPropagationEnabled").build();
+    private static final MarshallingInfo<String> IDCUSERASSIGNMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdcUserAssignment").build();
+    private static final MarshallingInfo<String> IDCINSTANCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdcInstanceArn").build();
+    private static final MarshallingInfo<String> ENCRYPTIONKEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionKeyArn").build();
 
     private static final CreateStudioRequestMarshaller instance = new CreateStudioRequestMarshaller();
 
@@ -84,6 +92,10 @@ public class CreateStudioRequestMarshaller {
             protocolMarshaller.marshall(createStudioRequest.getIdpAuthUrl(), IDPAUTHURL_BINDING);
             protocolMarshaller.marshall(createStudioRequest.getIdpRelayStateParameterName(), IDPRELAYSTATEPARAMETERNAME_BINDING);
             protocolMarshaller.marshall(createStudioRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createStudioRequest.getTrustedIdentityPropagationEnabled(), TRUSTEDIDENTITYPROPAGATIONENABLED_BINDING);
+            protocolMarshaller.marshall(createStudioRequest.getIdcUserAssignment(), IDCUSERASSIGNMENT_BINDING);
+            protocolMarshaller.marshall(createStudioRequest.getIdcInstanceArn(), IDCINSTANCEARN_BINDING);
+            protocolMarshaller.marshall(createStudioRequest.getEncryptionKeyArn(), ENCRYPTIONKEYARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

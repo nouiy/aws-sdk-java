@@ -101,6 +101,22 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
      */
     private java.util.List<VpcEndpoint> vpcEndpoints;
 
+    private BufferOptions bufferOptions;
+
+    private EncryptionAtRestOptions encryptionAtRestOptions;
+    /**
+     * <p>
+     * A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * </p>
+     */
+    private java.util.List<ServiceVpcEndpoint> serviceVpcEndpoints;
+    /**
+     * <p>
+     * A list of tags associated with the given pipeline.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
+
     /**
      * <p>
      * The name of the pipeline.
@@ -661,6 +677,198 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param bufferOptions
+     */
+
+    public void setBufferOptions(BufferOptions bufferOptions) {
+        this.bufferOptions = bufferOptions;
+    }
+
+    /**
+     * @return
+     */
+
+    public BufferOptions getBufferOptions() {
+        return this.bufferOptions;
+    }
+
+    /**
+     * @param bufferOptions
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Pipeline withBufferOptions(BufferOptions bufferOptions) {
+        setBufferOptions(bufferOptions);
+        return this;
+    }
+
+    /**
+     * @param encryptionAtRestOptions
+     */
+
+    public void setEncryptionAtRestOptions(EncryptionAtRestOptions encryptionAtRestOptions) {
+        this.encryptionAtRestOptions = encryptionAtRestOptions;
+    }
+
+    /**
+     * @return
+     */
+
+    public EncryptionAtRestOptions getEncryptionAtRestOptions() {
+        return this.encryptionAtRestOptions;
+    }
+
+    /**
+     * @param encryptionAtRestOptions
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Pipeline withEncryptionAtRestOptions(EncryptionAtRestOptions encryptionAtRestOptions) {
+        setEncryptionAtRestOptions(encryptionAtRestOptions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * </p>
+     * 
+     * @return A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     */
+
+    public java.util.List<ServiceVpcEndpoint> getServiceVpcEndpoints() {
+        return serviceVpcEndpoints;
+    }
+
+    /**
+     * <p>
+     * A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * </p>
+     * 
+     * @param serviceVpcEndpoints
+     *        A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     */
+
+    public void setServiceVpcEndpoints(java.util.Collection<ServiceVpcEndpoint> serviceVpcEndpoints) {
+        if (serviceVpcEndpoints == null) {
+            this.serviceVpcEndpoints = null;
+            return;
+        }
+
+        this.serviceVpcEndpoints = new java.util.ArrayList<ServiceVpcEndpoint>(serviceVpcEndpoints);
+    }
+
+    /**
+     * <p>
+     * A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setServiceVpcEndpoints(java.util.Collection)} or {@link #withServiceVpcEndpoints(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param serviceVpcEndpoints
+     *        A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Pipeline withServiceVpcEndpoints(ServiceVpcEndpoint... serviceVpcEndpoints) {
+        if (this.serviceVpcEndpoints == null) {
+            setServiceVpcEndpoints(new java.util.ArrayList<ServiceVpcEndpoint>(serviceVpcEndpoints.length));
+        }
+        for (ServiceVpcEndpoint ele : serviceVpcEndpoints) {
+            this.serviceVpcEndpoints.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * </p>
+     * 
+     * @param serviceVpcEndpoints
+     *        A list of VPC endpoints that OpenSearch Ingestion has created to other AWS services.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Pipeline withServiceVpcEndpoints(java.util.Collection<ServiceVpcEndpoint> serviceVpcEndpoints) {
+        setServiceVpcEndpoints(serviceVpcEndpoints);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of tags associated with the given pipeline.
+     * </p>
+     * 
+     * @return A list of tags associated with the given pipeline.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A list of tags associated with the given pipeline.
+     * </p>
+     * 
+     * @param tags
+     *        A list of tags associated with the given pipeline.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * A list of tags associated with the given pipeline.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        A list of tags associated with the given pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Pipeline withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of tags associated with the given pipeline.
+     * </p>
+     * 
+     * @param tags
+     *        A list of tags associated with the given pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Pipeline withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -695,7 +903,15 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
         if (getLogPublishingOptions() != null)
             sb.append("LogPublishingOptions: ").append(getLogPublishingOptions()).append(",");
         if (getVpcEndpoints() != null)
-            sb.append("VpcEndpoints: ").append(getVpcEndpoints());
+            sb.append("VpcEndpoints: ").append(getVpcEndpoints()).append(",");
+        if (getBufferOptions() != null)
+            sb.append("BufferOptions: ").append(getBufferOptions()).append(",");
+        if (getEncryptionAtRestOptions() != null)
+            sb.append("EncryptionAtRestOptions: ").append(getEncryptionAtRestOptions()).append(",");
+        if (getServiceVpcEndpoints() != null)
+            sb.append("ServiceVpcEndpoints: ").append(getServiceVpcEndpoints()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -758,6 +974,22 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getVpcEndpoints() != null && other.getVpcEndpoints().equals(this.getVpcEndpoints()) == false)
             return false;
+        if (other.getBufferOptions() == null ^ this.getBufferOptions() == null)
+            return false;
+        if (other.getBufferOptions() != null && other.getBufferOptions().equals(this.getBufferOptions()) == false)
+            return false;
+        if (other.getEncryptionAtRestOptions() == null ^ this.getEncryptionAtRestOptions() == null)
+            return false;
+        if (other.getEncryptionAtRestOptions() != null && other.getEncryptionAtRestOptions().equals(this.getEncryptionAtRestOptions()) == false)
+            return false;
+        if (other.getServiceVpcEndpoints() == null ^ this.getServiceVpcEndpoints() == null)
+            return false;
+        if (other.getServiceVpcEndpoints() != null && other.getServiceVpcEndpoints().equals(this.getServiceVpcEndpoints()) == false)
+            return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -778,6 +1010,10 @@ public class Pipeline implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getIngestEndpointUrls() == null) ? 0 : getIngestEndpointUrls().hashCode());
         hashCode = prime * hashCode + ((getLogPublishingOptions() == null) ? 0 : getLogPublishingOptions().hashCode());
         hashCode = prime * hashCode + ((getVpcEndpoints() == null) ? 0 : getVpcEndpoints().hashCode());
+        hashCode = prime * hashCode + ((getBufferOptions() == null) ? 0 : getBufferOptions().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionAtRestOptions() == null) ? 0 : getEncryptionAtRestOptions().hashCode());
+        hashCode = prime * hashCode + ((getServiceVpcEndpoints() == null) ? 0 : getServiceVpcEndpoints().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

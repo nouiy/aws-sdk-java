@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details for an Amazon EMR Studio, including ID, Name, VPC, and Description. The details do not include subnets, IAM
- * roles, security groups, or tags associated with the Studio.
+ * Details for an Amazon EMR Studio, including ID, Name, VPC, and Description. To fetch additional details such as
+ * subnets, IAM roles, security groups, and tags for the Studio, use the <a>DescribeStudio</a> API.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/StudioSummary" target="_top">AWS API

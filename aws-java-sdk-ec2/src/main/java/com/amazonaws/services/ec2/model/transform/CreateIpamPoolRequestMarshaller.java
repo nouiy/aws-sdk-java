@@ -146,6 +146,26 @@ public class CreateIpamPoolRequestMarshaller implements Marshaller<Request<Creat
             request.addParameter("PublicIpSource", StringUtils.fromString(createIpamPoolRequest.getPublicIpSource()));
         }
 
+        IpamPoolSourceResourceRequest sourceResource = createIpamPoolRequest.getSourceResource();
+        if (sourceResource != null) {
+
+            if (sourceResource.getResourceId() != null) {
+                request.addParameter("SourceResource.ResourceId", StringUtils.fromString(sourceResource.getResourceId()));
+            }
+
+            if (sourceResource.getResourceType() != null) {
+                request.addParameter("SourceResource.ResourceType", StringUtils.fromString(sourceResource.getResourceType()));
+            }
+
+            if (sourceResource.getResourceRegion() != null) {
+                request.addParameter("SourceResource.ResourceRegion", StringUtils.fromString(sourceResource.getResourceRegion()));
+            }
+
+            if (sourceResource.getResourceOwner() != null) {
+                request.addParameter("SourceResource.ResourceOwner", StringUtils.fromString(sourceResource.getResourceOwner()));
+            }
+        }
+
         return request;
     }
 

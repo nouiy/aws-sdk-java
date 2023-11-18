@@ -280,6 +280,10 @@ public class CreateChangeSetRequestMarshaller implements Marshaller<Request<Crea
             request.addParameter("OnStackFailure", StringUtils.fromString(createChangeSetRequest.getOnStackFailure()));
         }
 
+        if (createChangeSetRequest.getImportExistingResources() != null) {
+            request.addParameter("ImportExistingResources", StringUtils.fromBoolean(createChangeSetRequest.getImportExistingResources()));
+        }
+
         return request;
     }
 

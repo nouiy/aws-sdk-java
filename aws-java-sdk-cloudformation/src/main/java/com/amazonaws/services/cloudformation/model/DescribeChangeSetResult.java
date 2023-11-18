@@ -187,6 +187,21 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * </ul>
      */
     private String onStackFailure;
+    /**
+     * <p>
+     * Indicates if the stack set imports resources that already exist.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter can only import resources that have <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">custom names</a>
+     * in templates. To import resources that do not accept custom names, such as EC2 instances, use the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">resource import</a>
+     * feature instead.
+     * </p>
+     * </note>
+     */
+    private Boolean importExistingResources;
 
     /**
      * <p>
@@ -1676,6 +1691,124 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * Indicates if the stack set imports resources that already exist.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter can only import resources that have <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">custom names</a>
+     * in templates. To import resources that do not accept custom names, such as EC2 instances, use the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">resource import</a>
+     * feature instead.
+     * </p>
+     * </note>
+     * 
+     * @param importExistingResources
+     *        Indicates if the stack set imports resources that already exist.</p> <note>
+     *        <p>
+     *        This parameter can only import resources that have <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">custom
+     *        names</a> in templates. To import resources that do not accept custom names, such as EC2 instances, use
+     *        the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">resource
+     *        import</a> feature instead.
+     *        </p>
+     */
+
+    public void setImportExistingResources(Boolean importExistingResources) {
+        this.importExistingResources = importExistingResources;
+    }
+
+    /**
+     * <p>
+     * Indicates if the stack set imports resources that already exist.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter can only import resources that have <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">custom names</a>
+     * in templates. To import resources that do not accept custom names, such as EC2 instances, use the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">resource import</a>
+     * feature instead.
+     * </p>
+     * </note>
+     * 
+     * @return Indicates if the stack set imports resources that already exist.</p> <note>
+     *         <p>
+     *         This parameter can only import resources that have <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">custom
+     *         names</a> in templates. To import resources that do not accept custom names, such as EC2 instances, use
+     *         the <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">resource
+     *         import</a> feature instead.
+     *         </p>
+     */
+
+    public Boolean getImportExistingResources() {
+        return this.importExistingResources;
+    }
+
+    /**
+     * <p>
+     * Indicates if the stack set imports resources that already exist.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter can only import resources that have <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">custom names</a>
+     * in templates. To import resources that do not accept custom names, such as EC2 instances, use the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">resource import</a>
+     * feature instead.
+     * </p>
+     * </note>
+     * 
+     * @param importExistingResources
+     *        Indicates if the stack set imports resources that already exist.</p> <note>
+     *        <p>
+     *        This parameter can only import resources that have <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">custom
+     *        names</a> in templates. To import resources that do not accept custom names, such as EC2 instances, use
+     *        the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">resource
+     *        import</a> feature instead.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeChangeSetResult withImportExistingResources(Boolean importExistingResources) {
+        setImportExistingResources(importExistingResources);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates if the stack set imports resources that already exist.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter can only import resources that have <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">custom names</a>
+     * in templates. To import resources that do not accept custom names, such as EC2 instances, use the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">resource import</a>
+     * feature instead.
+     * </p>
+     * </note>
+     * 
+     * @return Indicates if the stack set imports resources that already exist.</p> <note>
+     *         <p>
+     *         This parameter can only import resources that have <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">custom
+     *         names</a> in templates. To import resources that do not accept custom names, such as EC2 instances, use
+     *         the <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">resource
+     *         import</a> feature instead.
+     *         </p>
+     */
+
+    public Boolean isImportExistingResources() {
+        return this.importExistingResources;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1726,7 +1859,9 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
         if (getRootChangeSetId() != null)
             sb.append("RootChangeSetId: ").append(getRootChangeSetId()).append(",");
         if (getOnStackFailure() != null)
-            sb.append("OnStackFailure: ").append(getOnStackFailure());
+            sb.append("OnStackFailure: ").append(getOnStackFailure()).append(",");
+        if (getImportExistingResources() != null)
+            sb.append("ImportExistingResources: ").append(getImportExistingResources());
         sb.append("}");
         return sb.toString();
     }
@@ -1821,6 +1956,10 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
             return false;
         if (other.getOnStackFailure() != null && other.getOnStackFailure().equals(this.getOnStackFailure()) == false)
             return false;
+        if (other.getImportExistingResources() == null ^ this.getImportExistingResources() == null)
+            return false;
+        if (other.getImportExistingResources() != null && other.getImportExistingResources().equals(this.getImportExistingResources()) == false)
+            return false;
         return true;
     }
 
@@ -1849,6 +1988,7 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getParentChangeSetId() == null) ? 0 : getParentChangeSetId().hashCode());
         hashCode = prime * hashCode + ((getRootChangeSetId() == null) ? 0 : getRootChangeSetId().hashCode());
         hashCode = prime * hashCode + ((getOnStackFailure() == null) ? 0 : getOnStackFailure().hashCode());
+        hashCode = prime * hashCode + ((getImportExistingResources() == null) ? 0 : getImportExistingResources().hashCode());
         return hashCode;
     }
 

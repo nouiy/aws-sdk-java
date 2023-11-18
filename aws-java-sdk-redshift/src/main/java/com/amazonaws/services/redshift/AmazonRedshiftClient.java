@@ -344,6 +344,10 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
             exceptionUnmarshallersMap.put("ReservedNodeExchangeNotFond", new ReservedNodeExchangeNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new ReservedNodeExchangeNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("RedshiftIdcApplicationQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("RedshiftIdcApplicationQuotaExceeded", new RedshiftIdcApplicationQuotaExceededExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new RedshiftIdcApplicationQuotaExceededExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("ClusterSubnetGroupQuotaExceeded") == null) {
             exceptionUnmarshallersMap.put("ClusterSubnetGroupQuotaExceeded", new ClusterSubnetGroupQuotaExceededExceptionUnmarshaller());
         }
@@ -360,6 +364,10 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
             exceptionUnmarshallersMap.put("DependentServiceRequestThrottlingFault", new DependentServiceRequestThrottlingExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new DependentServiceRequestThrottlingExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("RedshiftIdcApplicationNotExists") == null) {
+            exceptionUnmarshallersMap.put("RedshiftIdcApplicationNotExists", new RedshiftIdcApplicationNotExistsExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new RedshiftIdcApplicationNotExistsExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("BucketNotFoundFault") == null) {
             exceptionUnmarshallersMap.put("BucketNotFoundFault", new BucketNotFoundExceptionUnmarshaller());
         }
@@ -432,6 +440,10 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
             exceptionUnmarshallersMap.put("ClusterSnapshotQuotaExceeded", new ClusterSnapshotQuotaExceededExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new ClusterSnapshotQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DependentServiceAccessDenied") == null) {
+            exceptionUnmarshallersMap.put("DependentServiceAccessDenied", new DependentServiceAccessDeniedExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new DependentServiceAccessDeniedExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("EndpointAuthorizationAlreadyExists") == null) {
             exceptionUnmarshallersMap.put("EndpointAuthorizationAlreadyExists", new EndpointAuthorizationAlreadyExistsExceptionUnmarshaller());
         }
@@ -801,6 +813,10 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
             exceptionUnmarshallersMap.put("IncompatibleOrderableOptions", new IncompatibleOrderableOptionsExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new IncompatibleOrderableOptionsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("RedshiftIdcApplicationAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("RedshiftIdcApplicationAlreadyExists", new RedshiftIdcApplicationAlreadyExistsExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new RedshiftIdcApplicationAlreadyExistsExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("EndpointsPerClusterLimitExceeded") == null) {
             exceptionUnmarshallersMap.put("EndpointsPerClusterLimitExceeded", new EndpointsPerClusterLimitExceededExceptionUnmarshaller());
         }
@@ -1734,6 +1750,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         IPv6 CIDR block with each subnet in your VPC.
      * @throws UnsupportedOperationException
      *         The requested operation isn't supported.
+     * @throws RedshiftIdcApplicationNotExistsException
+     *         The application you attempted to find doesn't exist.
      * @sample AmazonRedshift.CreateCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateCluster" target="_top">AWS API
      *      Documentation</a>
@@ -2467,6 +2485,73 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
             }
 
             StaxResponseHandler<HsmConfiguration> responseHandler = new StaxResponseHandler<HsmConfiguration>(new HsmConfigurationStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an Amazon Redshift application for use with IAM Identity Center.
+     * </p>
+     * 
+     * @param createRedshiftIdcApplicationRequest
+     * @return Result of the CreateRedshiftIdcApplication operation returned by the service.
+     * @throws RedshiftIdcApplicationAlreadyExistsException
+     *         The application you attempted to add already exists.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws DependentServiceAccessDeniedException
+     *         A dependent service denied access for the integration.
+     * @throws RedshiftIdcApplicationQuotaExceededException
+     *         The maximum number of Redshift IAM Identity Center applications was exceeded.
+     * @sample AmazonRedshift.CreateRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public RedshiftIdcApplication createRedshiftIdcApplication(CreateRedshiftIdcApplicationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateRedshiftIdcApplication(request);
+    }
+
+    @SdkInternalApi
+    final RedshiftIdcApplication executeCreateRedshiftIdcApplication(CreateRedshiftIdcApplicationRequest createRedshiftIdcApplicationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createRedshiftIdcApplicationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateRedshiftIdcApplicationRequest> request = null;
+        Response<RedshiftIdcApplication> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateRedshiftIdcApplicationRequestMarshaller().marshall(super.beforeMarshalling(createRedshiftIdcApplicationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateRedshiftIdcApplication");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<RedshiftIdcApplication> responseHandler = new StaxResponseHandler<RedshiftIdcApplication>(
+                    new RedshiftIdcApplicationStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -3673,6 +3758,71 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
             }
 
             StaxResponseHandler<DeletePartnerResult> responseHandler = new StaxResponseHandler<DeletePartnerResult>(new DeletePartnerResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an Amazon Redshift IAM Identity Center application.
+     * </p>
+     * 
+     * @param deleteRedshiftIdcApplicationRequest
+     * @return Result of the DeleteRedshiftIdcApplication operation returned by the service.
+     * @throws RedshiftIdcApplicationNotExistsException
+     *         The application you attempted to find doesn't exist.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws DependentServiceAccessDeniedException
+     *         A dependent service denied access for the integration.
+     * @sample AmazonRedshift.DeleteRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteRedshiftIdcApplicationResult deleteRedshiftIdcApplication(DeleteRedshiftIdcApplicationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteRedshiftIdcApplication(request);
+    }
+
+    @SdkInternalApi
+    final DeleteRedshiftIdcApplicationResult executeDeleteRedshiftIdcApplication(DeleteRedshiftIdcApplicationRequest deleteRedshiftIdcApplicationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteRedshiftIdcApplicationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteRedshiftIdcApplicationRequest> request = null;
+        Response<DeleteRedshiftIdcApplicationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteRedshiftIdcApplicationRequestMarshaller().marshall(super.beforeMarshalling(deleteRedshiftIdcApplicationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteRedshiftIdcApplication");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteRedshiftIdcApplicationResult> responseHandler = new StaxResponseHandler<DeleteRedshiftIdcApplicationResult>(
+                    new DeleteRedshiftIdcApplicationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -5904,6 +6054,72 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
             StaxResponseHandler<DescribePartnersResult> responseHandler = new StaxResponseHandler<DescribePartnersResult>(
                     new DescribePartnersResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the Amazon Redshift IAM Identity Center applications.
+     * </p>
+     * 
+     * @param describeRedshiftIdcApplicationsRequest
+     * @return Result of the DescribeRedshiftIdcApplications operation returned by the service.
+     * @throws RedshiftIdcApplicationNotExistsException
+     *         The application you attempted to find doesn't exist.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws DependentServiceAccessDeniedException
+     *         A dependent service denied access for the integration.
+     * @sample AmazonRedshift.DescribeRedshiftIdcApplications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeRedshiftIdcApplications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeRedshiftIdcApplicationsResult describeRedshiftIdcApplications(DescribeRedshiftIdcApplicationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeRedshiftIdcApplications(request);
+    }
+
+    @SdkInternalApi
+    final DescribeRedshiftIdcApplicationsResult executeDescribeRedshiftIdcApplications(
+            DescribeRedshiftIdcApplicationsRequest describeRedshiftIdcApplicationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeRedshiftIdcApplicationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeRedshiftIdcApplicationsRequest> request = null;
+        Response<DescribeRedshiftIdcApplicationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeRedshiftIdcApplicationsRequestMarshaller().marshall(super.beforeMarshalling(describeRedshiftIdcApplicationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeRedshiftIdcApplications");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeRedshiftIdcApplicationsResult> responseHandler = new StaxResponseHandler<DescribeRedshiftIdcApplicationsResult>(
+                    new DescribeRedshiftIdcApplicationsResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -8359,6 +8575,71 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
             }
 
             StaxResponseHandler<EventSubscription> responseHandler = new StaxResponseHandler<EventSubscription>(new EventSubscriptionStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Changes an existing Amazon Redshift IAM Identity Center application.
+     * </p>
+     * 
+     * @param modifyRedshiftIdcApplicationRequest
+     * @return Result of the ModifyRedshiftIdcApplication operation returned by the service.
+     * @throws RedshiftIdcApplicationNotExistsException
+     *         The application you attempted to find doesn't exist.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws DependentServiceAccessDeniedException
+     *         A dependent service denied access for the integration.
+     * @sample AmazonRedshift.ModifyRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public RedshiftIdcApplication modifyRedshiftIdcApplication(ModifyRedshiftIdcApplicationRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyRedshiftIdcApplication(request);
+    }
+
+    @SdkInternalApi
+    final RedshiftIdcApplication executeModifyRedshiftIdcApplication(ModifyRedshiftIdcApplicationRequest modifyRedshiftIdcApplicationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyRedshiftIdcApplicationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyRedshiftIdcApplicationRequest> request = null;
+        Response<RedshiftIdcApplication> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyRedshiftIdcApplicationRequestMarshaller().marshall(super.beforeMarshalling(modifyRedshiftIdcApplicationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyRedshiftIdcApplication");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<RedshiftIdcApplication> responseHandler = new StaxResponseHandler<RedshiftIdcApplication>(
+                    new RedshiftIdcApplicationStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

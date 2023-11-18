@@ -64,6 +64,14 @@ public class CreatePullThroughCacheRuleResultJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     createPullThroughCacheRuleResult.setRegistryId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("upstreamRegistry", targetDepth)) {
+                    context.nextToken();
+                    createPullThroughCacheRuleResult.setUpstreamRegistry(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("credentialArn", targetDepth)) {
+                    context.nextToken();
+                    createPullThroughCacheRuleResult.setCredentialArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

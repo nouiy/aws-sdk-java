@@ -32,6 +32,12 @@ public class AdvertiseByoipCidrRequest extends AmazonWebServiceRequest implement
      * </p>
      */
     private String cidr;
+    /**
+     * <p>
+     * The public 2-byte or 4-byte ASN that you want to advertise.
+     * </p>
+     */
+    private String asn;
 
     /**
      * <p>
@@ -80,6 +86,46 @@ public class AdvertiseByoipCidrRequest extends AmazonWebServiceRequest implement
     }
 
     /**
+     * <p>
+     * The public 2-byte or 4-byte ASN that you want to advertise.
+     * </p>
+     * 
+     * @param asn
+     *        The public 2-byte or 4-byte ASN that you want to advertise.
+     */
+
+    public void setAsn(String asn) {
+        this.asn = asn;
+    }
+
+    /**
+     * <p>
+     * The public 2-byte or 4-byte ASN that you want to advertise.
+     * </p>
+     * 
+     * @return The public 2-byte or 4-byte ASN that you want to advertise.
+     */
+
+    public String getAsn() {
+        return this.asn;
+    }
+
+    /**
+     * <p>
+     * The public 2-byte or 4-byte ASN that you want to advertise.
+     * </p>
+     * 
+     * @param asn
+     *        The public 2-byte or 4-byte ASN that you want to advertise.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AdvertiseByoipCidrRequest withAsn(String asn) {
+        setAsn(asn);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -103,7 +149,9 @@ public class AdvertiseByoipCidrRequest extends AmazonWebServiceRequest implement
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getCidr() != null)
-            sb.append("Cidr: ").append(getCidr());
+            sb.append("Cidr: ").append(getCidr()).append(",");
+        if (getAsn() != null)
+            sb.append("Asn: ").append(getAsn());
         sb.append("}");
         return sb.toString();
     }
@@ -122,6 +170,10 @@ public class AdvertiseByoipCidrRequest extends AmazonWebServiceRequest implement
             return false;
         if (other.getCidr() != null && other.getCidr().equals(this.getCidr()) == false)
             return false;
+        if (other.getAsn() == null ^ this.getAsn() == null)
+            return false;
+        if (other.getAsn() != null && other.getAsn().equals(this.getAsn()) == false)
+            return false;
         return true;
     }
 
@@ -131,6 +183,7 @@ public class AdvertiseByoipCidrRequest extends AmazonWebServiceRequest implement
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCidr() == null) ? 0 : getCidr().hashCode());
+        hashCode = prime * hashCode + ((getAsn() == null) ? 0 : getAsn().hashCode());
         return hashCode;
     }
 

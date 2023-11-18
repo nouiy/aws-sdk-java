@@ -31,6 +31,10 @@ public class GrantMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuthorizationCode").build();
     private static final MarshallingInfo<StructuredPojo> JWTBEARER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JwtBearer").build();
+    private static final MarshallingInfo<StructuredPojo> REFRESHTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RefreshToken").build();
+    private static final MarshallingInfo<StructuredPojo> TOKENEXCHANGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TokenExchange").build();
 
     private static final GrantMarshaller instance = new GrantMarshaller();
 
@@ -50,6 +54,8 @@ public class GrantMarshaller {
         try {
             protocolMarshaller.marshall(grant.getAuthorizationCode(), AUTHORIZATIONCODE_BINDING);
             protocolMarshaller.marshall(grant.getJwtBearer(), JWTBEARER_BINDING);
+            protocolMarshaller.marshall(grant.getRefreshToken(), REFRESHTOKEN_BINDING);
+            protocolMarshaller.marshall(grant.getTokenExchange(), TOKENEXCHANGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

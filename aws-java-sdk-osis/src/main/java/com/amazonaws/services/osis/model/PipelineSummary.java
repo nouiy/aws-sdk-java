@@ -72,6 +72,12 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private java.util.Date lastUpdatedAt;
+    /**
+     * <p>
+     * A list of tags associated with the given pipeline.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -399,6 +405,76 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * A list of tags associated with the given pipeline.
+     * </p>
+     * 
+     * @return A list of tags associated with the given pipeline.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A list of tags associated with the given pipeline.
+     * </p>
+     * 
+     * @param tags
+     *        A list of tags associated with the given pipeline.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * A list of tags associated with the given pipeline.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        A list of tags associated with the given pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineSummary withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of tags associated with the given pipeline.
+     * </p>
+     * 
+     * @param tags
+     *        A list of tags associated with the given pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineSummary withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -425,7 +501,9 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getLastUpdatedAt() != null)
-            sb.append("LastUpdatedAt: ").append(getLastUpdatedAt());
+            sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -472,6 +550,10 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getLastUpdatedAt() != null && other.getLastUpdatedAt().equals(this.getLastUpdatedAt()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -488,6 +570,7 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getMaxUnits() == null) ? 0 : getMaxUnits().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

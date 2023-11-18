@@ -26,14 +26,14 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class StopInputDeviceRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** The unique ID of the input device to reboot. For example, hd-123456789abcdef. */
+    /** The unique ID of the input device to stop. For example, hd-123456789abcdef. */
     private String inputDeviceId;
 
     /**
-     * The unique ID of the input device to reboot. For example, hd-123456789abcdef.
+     * The unique ID of the input device to stop. For example, hd-123456789abcdef.
      * 
      * @param inputDeviceId
-     *        The unique ID of the input device to reboot. For example, hd-123456789abcdef.
+     *        The unique ID of the input device to stop. For example, hd-123456789abcdef.
      */
 
     public void setInputDeviceId(String inputDeviceId) {
@@ -41,9 +41,9 @@ public class StopInputDeviceRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
-     * The unique ID of the input device to reboot. For example, hd-123456789abcdef.
+     * The unique ID of the input device to stop. For example, hd-123456789abcdef.
      * 
-     * @return The unique ID of the input device to reboot. For example, hd-123456789abcdef.
+     * @return The unique ID of the input device to stop. For example, hd-123456789abcdef.
      */
 
     public String getInputDeviceId() {
@@ -51,10 +51,10 @@ public class StopInputDeviceRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
-     * The unique ID of the input device to reboot. For example, hd-123456789abcdef.
+     * The unique ID of the input device to stop. For example, hd-123456789abcdef.
      * 
      * @param inputDeviceId
-     *        The unique ID of the input device to reboot. For example, hd-123456789abcdef.
+     *        The unique ID of the input device to stop. For example, hd-123456789abcdef.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

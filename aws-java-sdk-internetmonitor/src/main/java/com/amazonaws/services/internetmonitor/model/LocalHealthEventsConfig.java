@@ -30,6 +30,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * event when a threshold is crossed for a local health score.
  * </p>
  * <p>
+ * If you don't set a local health event threshold, the default value is 60%.
+ * </p>
+ * <p>
  * For more information, see <a href=
  * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-overview.html#IMUpdateThresholdFromOverview"
  * > Change health event thresholds</a> in the Internet Monitor section of the <i>CloudWatch User Guide</i>.
@@ -58,6 +61,9 @@ public class LocalHealthEventsConfig implements Serializable, Cloneable, Structu
      * <p>
      * The minimum percentage of overall traffic for an application that must be impacted by an issue before Internet
      * Monitor creates an event when a threshold is crossed for a local health score.
+     * </p>
+     * <p>
+     * If you don't set a minimum traffic impact threshold, the default value is 0.01%.
      * </p>
      */
     private Double minTrafficImpact;
@@ -174,10 +180,15 @@ public class LocalHealthEventsConfig implements Serializable, Cloneable, Structu
      * The minimum percentage of overall traffic for an application that must be impacted by an issue before Internet
      * Monitor creates an event when a threshold is crossed for a local health score.
      * </p>
+     * <p>
+     * If you don't set a minimum traffic impact threshold, the default value is 0.01%.
+     * </p>
      * 
      * @param minTrafficImpact
      *        The minimum percentage of overall traffic for an application that must be impacted by an issue before
-     *        Internet Monitor creates an event when a threshold is crossed for a local health score.
+     *        Internet Monitor creates an event when a threshold is crossed for a local health score.</p>
+     *        <p>
+     *        If you don't set a minimum traffic impact threshold, the default value is 0.01%.
      */
 
     public void setMinTrafficImpact(Double minTrafficImpact) {
@@ -189,9 +200,14 @@ public class LocalHealthEventsConfig implements Serializable, Cloneable, Structu
      * The minimum percentage of overall traffic for an application that must be impacted by an issue before Internet
      * Monitor creates an event when a threshold is crossed for a local health score.
      * </p>
+     * <p>
+     * If you don't set a minimum traffic impact threshold, the default value is 0.01%.
+     * </p>
      * 
      * @return The minimum percentage of overall traffic for an application that must be impacted by an issue before
-     *         Internet Monitor creates an event when a threshold is crossed for a local health score.
+     *         Internet Monitor creates an event when a threshold is crossed for a local health score.</p>
+     *         <p>
+     *         If you don't set a minimum traffic impact threshold, the default value is 0.01%.
      */
 
     public Double getMinTrafficImpact() {
@@ -203,10 +219,15 @@ public class LocalHealthEventsConfig implements Serializable, Cloneable, Structu
      * The minimum percentage of overall traffic for an application that must be impacted by an issue before Internet
      * Monitor creates an event when a threshold is crossed for a local health score.
      * </p>
+     * <p>
+     * If you don't set a minimum traffic impact threshold, the default value is 0.01%.
+     * </p>
      * 
      * @param minTrafficImpact
      *        The minimum percentage of overall traffic for an application that must be impacted by an issue before
-     *        Internet Monitor creates an event when a threshold is crossed for a local health score.
+     *        Internet Monitor creates an event when a threshold is crossed for a local health score.</p>
+     *        <p>
+     *        If you don't set a minimum traffic impact threshold, the default value is 0.01%.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

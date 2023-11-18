@@ -73,6 +73,14 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      * pipeline is right for me?</a>.
      * </p>
+     * <note>
+     * <p>
+     * V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently supported for
+     * CloudFormation and CDK resources in CodePipeline. For more information about V2 type pipelines, see <a
+     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in the
+     * <i>CodePipeline User Guide</i>.
+     * </p>
+     * </note>
      */
     private String pipelineType;
     /**
@@ -201,6 +209,14 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      * pipeline is right for me?</a>.
      * </p>
+     * <note>
+     * <p>
+     * V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently supported for
+     * CloudFormation and CDK resources in CodePipeline. For more information about V2 type pipelines, see <a
+     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in the
+     * <i>CodePipeline User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param pipelineType
      *        CodePipeline provides the following pipeline types, which differ in characteristics and price, so that you
@@ -233,6 +249,15 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
      *        For information about which type of pipeline to choose, see <a
      *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      *        pipeline is right for me?</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently
+     *        supported for CloudFormation and CDK resources in CodePipeline. For more information about V2 type
+     *        pipelines, see <a
+     *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in
+     *        the <i>CodePipeline User Guide</i>.
+     *        </p>
      * @see PipelineType
      */
 
@@ -273,6 +298,14 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      * pipeline is right for me?</a>.
      * </p>
+     * <note>
+     * <p>
+     * V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently supported for
+     * CloudFormation and CDK resources in CodePipeline. For more information about V2 type pipelines, see <a
+     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in the
+     * <i>CodePipeline User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @return CodePipeline provides the following pipeline types, which differ in characteristics and price, so that
      *         you can tailor your pipeline features and cost to the needs of your applications.</p>
@@ -304,6 +337,15 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
      *         For information about which type of pipeline to choose, see <a
      *         href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type
      *         of pipeline is right for me?</a>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently
+     *         supported for CloudFormation and CDK resources in CodePipeline. For more information about V2 type
+     *         pipelines, see <a
+     *         href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a>
+     *         in the <i>CodePipeline User Guide</i>.
+     *         </p>
      * @see PipelineType
      */
 
@@ -344,6 +386,14 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      * pipeline is right for me?</a>.
      * </p>
+     * <note>
+     * <p>
+     * V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently supported for
+     * CloudFormation and CDK resources in CodePipeline. For more information about V2 type pipelines, see <a
+     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in the
+     * <i>CodePipeline User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param pipelineType
      *        CodePipeline provides the following pipeline types, which differ in characteristics and price, so that you
@@ -376,6 +426,15 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
      *        For information about which type of pipeline to choose, see <a
      *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      *        pipeline is right for me?</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently
+     *        supported for CloudFormation and CDK resources in CodePipeline. For more information about V2 type
+     *        pipelines, see <a
+     *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in
+     *        the <i>CodePipeline User Guide</i>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PipelineType
      */
@@ -418,6 +477,14 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      * pipeline is right for me?</a>.
      * </p>
+     * <note>
+     * <p>
+     * V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently supported for
+     * CloudFormation and CDK resources in CodePipeline. For more information about V2 type pipelines, see <a
+     * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in the
+     * <i>CodePipeline User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param pipelineType
      *        CodePipeline provides the following pipeline types, which differ in characteristics and price, so that you
@@ -450,6 +517,15 @@ public class PipelineSummary implements Serializable, Cloneable, StructuredPojo 
      *        For information about which type of pipeline to choose, see <a
      *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html">What type of
      *        pipeline is right for me?</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        V2 type pipelines, along with triggers on Git tags and pipeline-level variables, are not currently
+     *        supported for CloudFormation and CDK resources in CodePipeline. For more information about V2 type
+     *        pipelines, see <a
+     *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types.html">Pipeline types</a> in
+     *        the <i>CodePipeline User Guide</i>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PipelineType
      */

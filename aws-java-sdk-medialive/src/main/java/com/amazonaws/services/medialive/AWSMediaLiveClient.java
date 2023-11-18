@@ -173,7 +173,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input device not found.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on transfer device calls to the input device service.
      * @throws ConflictException
@@ -449,7 +449,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws UnprocessableEntityException
      *         The update schedule request failed validation.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to update the channel schedule.
      * @throws BadGatewayException
@@ -457,7 +457,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The specified channel id does not exist.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on update schedule calls.
      * @sample AWSMediaLive.BatchUpdateSchedule
@@ -527,7 +527,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input device not found.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on transfer device calls to the input device service.
      * @throws ConflictException
@@ -603,7 +603,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Device not found or you called an unsupported region.
      * @throws GatewayTimeoutException
-     *         Bad gateway error. Try again.
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded. Your have sent this request too many times. There might be a bug in your API
      *         client.
@@ -666,13 +666,13 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws UnprocessableEntityException
      *         The Channel failed validation and could not be created.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to create the channel.
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on create channel calls to channel service.
      * @throws ConflictException
@@ -740,7 +740,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Limit exceeded
      * @sample AWSMediaLive.CreateInput
@@ -806,7 +806,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Limit Exceeded Error
      * @sample AWSMediaLive.CreateInputSecurityGroup
@@ -871,13 +871,13 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws UnprocessableEntityException
      *         The Multiplex failed validation and could not be created.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You don't have permission to create the multiplex.
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on create multiplex calls to multiplex service.
      * @throws ConflictException
@@ -942,13 +942,13 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws UnprocessableEntityException
      *         The Multiplex program failed validation and could not be created.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to create a program.
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on create multiplex program calls to multiplex service.
      * @throws ConflictException
@@ -1017,7 +1017,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Limit exceeded
      * @sample AWSMediaLive.CreatePartnerInput
@@ -1139,7 +1139,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to delete the channel.
      * @throws BadGatewayException
@@ -1147,7 +1147,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The channel you're requesting to delete does not exist.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on delete channel calls to channel service.
      * @throws ConflictException
@@ -1217,7 +1217,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input not found
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Limit exceeded
      * @throws ConflictException
@@ -1287,7 +1287,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input Security Group not found
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Limit Exceeded Error
      * @sample AWSMediaLive.DeleteInputSecurityGroup
@@ -1349,7 +1349,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You don't have permission to delete the multiplex.
      * @throws BadGatewayException
@@ -1357,7 +1357,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The multiplex that you are trying to delete doesn’t exist. Check the ID and try again.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on delete multiplex calls to multiplex service.
      * @throws ConflictException
@@ -1419,7 +1419,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You don't have permission to delete the multiplex program.
      * @throws BadGatewayException
@@ -1427,7 +1427,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The program that you are trying to delete doesn’t exist. Check the ID and try again.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on delete multiplex program calls to multiplex service.
      * @throws ConflictException
@@ -1498,7 +1498,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Reservation you're attempting to delete does not exist
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on delete reservation request
      * @throws ConflictException
@@ -1560,7 +1560,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request to delete the schedule on this channel was invalid.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to delete the channel schedule.
      * @throws BadGatewayException
@@ -1568,7 +1568,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The specified channel does not exist to have its schedule deleted.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on delete schedule calls.
      * @sample AWSMediaLive.DeleteSchedule
@@ -1682,7 +1682,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
     }
 
     /**
-     * Get account configuration
+     * Describe account configuration
      * 
      * @param describeAccountConfigurationRequest
      *        Placeholder documentation for DescribeAccountConfigurationRequest
@@ -1690,13 +1690,13 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to describe the account configuration.
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on describe account configuration calls.
      * @sample AWSMediaLive.DescribeAccountConfiguration
@@ -1758,7 +1758,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to describe the channel.
      * @throws BadGatewayException
@@ -1766,7 +1766,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The channel you're requesting to describe does not exist.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on describe channel calls to channel service.
      * @sample AWSMediaLive.DescribeChannel
@@ -1902,7 +1902,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The input device you're requesting to describe does not exist. Check the ID.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on describe calls to the input device service.
      * @sample AWSMediaLive.DescribeInputDevice
@@ -1970,7 +1970,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input device not found.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on get thumbnail calls to the input device service.
      * @sample AWSMediaLive.DescribeInputDeviceThumbnail
@@ -2042,7 +2042,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input Security Group not found
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Limit Exceeded Error
      * @sample AWSMediaLive.DescribeInputSecurityGroup
@@ -2104,7 +2104,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You don't have permission to describe the multiplex.
      * @throws BadGatewayException
@@ -2112,7 +2112,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The multiplex that you are trying to describe doesn’t exist. Check the ID and try again.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on describe multiplex calls to multiplex service.
      * @sample AWSMediaLive.DescribeMultiplex
@@ -2172,7 +2172,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You don't have permission to describe the multiplex program.
      * @throws BadGatewayException
@@ -2181,7 +2181,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      *         MediaLive can't describe the program. The multiplex or the program that you specified doesn’t exist.
      *         Check the IDs and try again.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on describe multiplex program calls to multiplex service.
      * @sample AWSMediaLive.DescribeMultiplexProgram
@@ -2251,7 +2251,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Offering you're attempting to describe does not exist
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on describe offering request
      * @sample AWSMediaLive.DescribeOffering
@@ -2319,7 +2319,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Reservation you're attempting to describe does not exist
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on describe reservation request
      * @sample AWSMediaLive.DescribeReservation
@@ -2379,7 +2379,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to describe the channel schedule.
      * @throws BadGatewayException
@@ -2387,7 +2387,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The channel you're requesting a schedule describe for does not exist.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on describe schedule calls.
      * @sample AWSMediaLive.DescribeSchedule
@@ -2447,15 +2447,15 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error..
+     *         Internal service error.
      * @throws ForbiddenException
-     *         You do not have permission to get thumbnails.
+     *         You do not have permission to describe thumbnails.
      * @throws BadGatewayException
      *         Bad Gateway error.
      * @throws NotFoundException
      *         There are no thumbnails for this channel.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on describe thumbnails calls to channel service.
      * @throws ConflictException
@@ -2517,13 +2517,13 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to list channels.
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on list channel calls to channel service.
      * @sample AWSMediaLive.ListChannels
@@ -2592,7 +2592,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadGatewayException
      *         Bad gateway error.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on list devices calls to the input device service.
      * @sample AWSMediaLive.ListInputDeviceTransfers
@@ -2660,7 +2660,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadGatewayException
      *         Bad gateway error.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on list devices calls to the input device service.
      * @sample AWSMediaLive.ListInputDevices
@@ -2726,7 +2726,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Limit Exceeded Error
      * @sample AWSMediaLive.ListInputSecurityGroups
@@ -2855,7 +2855,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      *         MediaLive can't process your request because of a problem in the request. Please check your request form
      *         and syntax.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to list multiplex programs.
      * @throws BadGatewayException
@@ -2864,7 +2864,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      *         MediaLive can't provide the list of programs. The multiplex that you specified doesn’t exist. Check the
      *         ID and try again.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on list multiplex calls to multiplex service.
      * @sample AWSMediaLive.ListMultiplexPrograms
@@ -2926,13 +2926,13 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      *         MediaLive can't process your request because of a problem in the request. Please check your request form
      *         and syntax.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You don't have permission to list multiplexes.
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on list multiplex calls to multiplex service.
      * @sample AWSMediaLive.ListMultiplexes
@@ -2998,7 +2998,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadGatewayException
      *         Bad gateway error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on list offerings request
      * @sample AWSMediaLive.ListOfferings
@@ -3064,7 +3064,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadGatewayException
      *         Bad gateway error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on list reservations request
      * @sample AWSMediaLive.ListReservations
@@ -3194,7 +3194,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Offering you're attempting to purchase does not exist
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on purchase offering request
      * @throws ConflictException
@@ -3267,7 +3267,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input device not found.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on reboot device calls to the input device service.
      * @sample AWSMediaLive.RebootInputDevice
@@ -3337,7 +3337,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input device not found.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on transfer device calls to the input device service.
      * @throws ConflictException
@@ -3401,7 +3401,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to start the channel.
      * @throws BadGatewayException
@@ -3409,7 +3409,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The channel you're requesting to start does not exist.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on start channel calls to channel service.
      * @throws ConflictException
@@ -3482,7 +3482,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input device not found.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on start device calls to the input device service.
      * @sample AWSMediaLive.StartInputDevice
@@ -3557,7 +3557,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input device not found.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on start maintenance window calls to the input device service.
      * @sample AWSMediaLive.StartInputDeviceMaintenanceWindow
@@ -3622,7 +3622,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      *         MediaLive can't process your request because of a problem in the request. Please check your request form
      *         and syntax.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You don't have permission to start the multiplex.
      * @throws BadGatewayException
@@ -3630,7 +3630,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The multiplex that you are trying to start doesn’t exist. Check the ID and try again.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on start multiplex calls to multiplex service.
      * @throws ConflictException
@@ -3692,7 +3692,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws BadRequestException
      *         This request was invalid.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to stop the channel.
      * @throws BadGatewayException
@@ -3700,7 +3700,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The channel you're requesting to stop does not exist.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on stop channel calls to channel service.
      * @throws ConflictException
@@ -3773,7 +3773,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input device not found.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on stop device calls to the input device service.
      * @sample AWSMediaLive.StopInputDevice
@@ -3834,7 +3834,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      *         MediaLive can't process your request because of a problem in the request. Please check your request form
      *         and syntax.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You don't have permission to stop the multiplex.
      * @throws BadGatewayException
@@ -3842,7 +3842,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The multiplex that you are trying to stop doesn’t exist. Check the ID and try again.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on stop multiplex calls to multiplex service.
      * @throws ConflictException
@@ -3915,7 +3915,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Input device not found.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on transfer device calls to the input device service.
      * @throws ConflictException
@@ -3979,13 +3979,13 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws UnprocessableEntityException
      *         The update account configuration request failed validation.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to update the account's configuration.
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on update account configuration calls.
      * @sample AWSMediaLive.UpdateAccountConfiguration
@@ -4049,13 +4049,13 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws UnprocessableEntityException
      *         The channel configuration failed validation and could not be updated.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to update the channel.
      * @throws BadGatewayException
      *         Bad Gateway Error
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws ConflictException
      *         The channel is unable to update due to an issue with channel resources.
      * @sample AWSMediaLive.UpdateChannel
@@ -4117,7 +4117,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws UnprocessableEntityException
      *         The channel configuration failed validation when attempting to update the channel class.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You do not have permission to update the class of this channel.
      * @throws BadGatewayException
@@ -4125,7 +4125,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The channel you're trying to update the class on does not exist.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on update channel class calls.
      * @throws ConflictException
@@ -4195,7 +4195,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The input was not found.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws ConflictException
      *         The input was unable to be updated at this time due to an issue with input resources.
      * @sample AWSMediaLive.UpdateInput
@@ -4265,7 +4265,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The input device you're requesting to does not exist. Check the ID.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded on update calls to the input device service.
      * @sample AWSMediaLive.UpdateInputDevice
@@ -4334,7 +4334,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The Input Security Group was not found.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws ConflictException
      *         The Input Security Group was unable to be updated due to an issue with input security group resources.
      * @sample AWSMediaLive.UpdateInputSecurityGroup
@@ -4399,7 +4399,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws UnprocessableEntityException
      *         The multiplex configuration failed validation and could not be updated.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You don't have permission to update the multiplex.
      * @throws BadGatewayException
@@ -4407,7 +4407,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         The multiplex that you are trying to update doesn’t exist. Check the ID and try again.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws ConflictException
      *         The multiplex is unable to update due to an issue with multiplex resources.
      * @sample AWSMediaLive.UpdateMultiplex
@@ -4470,7 +4470,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws UnprocessableEntityException
      *         The multiplex program failed validation and could not be updated.
      * @throws InternalServerErrorException
-     *         Unexpected internal service error.
+     *         Internal Service Error
      * @throws ForbiddenException
      *         You don't have permission to update the multiplex program.
      * @throws BadGatewayException
@@ -4479,7 +4479,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      *         MediaLive can't update the program. The multiplex or the program that you specified doesn’t exist. Check
      *         the IDs and try again.
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws ConflictException
      *         The multiplex program is unable to update due to an issue with multiplex resources.
      * @sample AWSMediaLive.UpdateMultiplexProgram
@@ -4548,7 +4548,7 @@ public class AWSMediaLiveClient extends AmazonWebServiceClient implements AWSMed
      * @throws NotFoundException
      *         Reservation not found
      * @throws GatewayTimeoutException
-     *         Gateway Timeout Error
+     *         Gateway Timeout
      * @throws TooManyRequestsException
      *         Request limit exceeded
      * @throws ConflictException

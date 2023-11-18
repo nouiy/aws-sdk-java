@@ -41,6 +41,12 @@ public class ByoipCidr implements Serializable, Cloneable {
     private String description;
     /**
      * <p>
+     * The BYOIP CIDR associations with ASNs.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<AsnAssociation> asnAssociations;
+    /**
+     * <p>
      * Upon success, contains the ID of the address pool. Otherwise, contains an error message.
      * </p>
      */
@@ -129,6 +135,79 @@ public class ByoipCidr implements Serializable, Cloneable {
 
     public ByoipCidr withDescription(String description) {
         setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The BYOIP CIDR associations with ASNs.
+     * </p>
+     * 
+     * @return The BYOIP CIDR associations with ASNs.
+     */
+
+    public java.util.List<AsnAssociation> getAsnAssociations() {
+        if (asnAssociations == null) {
+            asnAssociations = new com.amazonaws.internal.SdkInternalList<AsnAssociation>();
+        }
+        return asnAssociations;
+    }
+
+    /**
+     * <p>
+     * The BYOIP CIDR associations with ASNs.
+     * </p>
+     * 
+     * @param asnAssociations
+     *        The BYOIP CIDR associations with ASNs.
+     */
+
+    public void setAsnAssociations(java.util.Collection<AsnAssociation> asnAssociations) {
+        if (asnAssociations == null) {
+            this.asnAssociations = null;
+            return;
+        }
+
+        this.asnAssociations = new com.amazonaws.internal.SdkInternalList<AsnAssociation>(asnAssociations);
+    }
+
+    /**
+     * <p>
+     * The BYOIP CIDR associations with ASNs.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAsnAssociations(java.util.Collection)} or {@link #withAsnAssociations(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param asnAssociations
+     *        The BYOIP CIDR associations with ASNs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ByoipCidr withAsnAssociations(AsnAssociation... asnAssociations) {
+        if (this.asnAssociations == null) {
+            setAsnAssociations(new com.amazonaws.internal.SdkInternalList<AsnAssociation>(asnAssociations.length));
+        }
+        for (AsnAssociation ele : asnAssociations) {
+            this.asnAssociations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The BYOIP CIDR associations with ASNs.
+     * </p>
+     * 
+     * @param asnAssociations
+     *        The BYOIP CIDR associations with ASNs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ByoipCidr withAsnAssociations(java.util.Collection<AsnAssociation> asnAssociations) {
+        setAsnAssociations(asnAssociations);
         return this;
     }
 
@@ -247,6 +326,8 @@ public class ByoipCidr implements Serializable, Cloneable {
             sb.append("Cidr: ").append(getCidr()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getAsnAssociations() != null)
+            sb.append("AsnAssociations: ").append(getAsnAssociations()).append(",");
         if (getStatusMessage() != null)
             sb.append("StatusMessage: ").append(getStatusMessage()).append(",");
         if (getState() != null)
@@ -273,6 +354,10 @@ public class ByoipCidr implements Serializable, Cloneable {
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getAsnAssociations() == null ^ this.getAsnAssociations() == null)
+            return false;
+        if (other.getAsnAssociations() != null && other.getAsnAssociations().equals(this.getAsnAssociations()) == false)
+            return false;
         if (other.getStatusMessage() == null ^ this.getStatusMessage() == null)
             return false;
         if (other.getStatusMessage() != null && other.getStatusMessage().equals(this.getStatusMessage()) == false)
@@ -291,6 +376,7 @@ public class ByoipCidr implements Serializable, Cloneable {
 
         hashCode = prime * hashCode + ((getCidr() == null) ? 0 : getCidr().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getAsnAssociations() == null) ? 0 : getAsnAssociations().hashCode());
         hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         return hashCode;

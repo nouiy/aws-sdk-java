@@ -267,7 +267,15 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String sourceIdentity;
     /**
      * <p>
-     * Reserved for future use.
+     * A list of previously acquired trusted context assertions in the format of a JSON array. The trusted context
+     * assertion is signed and encrypted by Amazon Web Services STS.
+     * </p>
+     * <p>
+     * The following is an example of a <code>ProvidedContext</code> value that includes a single trusted context
+     * assertion and the ARN of the context provider from which the trusted context assertion was generated.
+     * </p>
+     * <p>
+     * <code>[{"ProviderArn":"arn:aws:iam::aws:contextProvider/identitycenter","ContextAssertion":"trusted-context-assertion"}]</code>
      * </p>
      */
     private java.util.List<ProvidedContext> providedContexts;
@@ -1988,10 +1996,26 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Reserved for future use.
+     * A list of previously acquired trusted context assertions in the format of a JSON array. The trusted context
+     * assertion is signed and encrypted by Amazon Web Services STS.
+     * </p>
+     * <p>
+     * The following is an example of a <code>ProvidedContext</code> value that includes a single trusted context
+     * assertion and the ARN of the context provider from which the trusted context assertion was generated.
+     * </p>
+     * <p>
+     * <code>[{"ProviderArn":"arn:aws:iam::aws:contextProvider/identitycenter","ContextAssertion":"trusted-context-assertion"}]</code>
      * </p>
      * 
-     * @return Reserved for future use.
+     * @return A list of previously acquired trusted context assertions in the format of a JSON array. The trusted
+     *         context assertion is signed and encrypted by Amazon Web Services STS.</p>
+     *         <p>
+     *         The following is an example of a <code>ProvidedContext</code> value that includes a single trusted
+     *         context assertion and the ARN of the context provider from which the trusted context assertion was
+     *         generated.
+     *         </p>
+     *         <p>
+     *         <code>[{"ProviderArn":"arn:aws:iam::aws:contextProvider/identitycenter","ContextAssertion":"trusted-context-assertion"}]</code>
      */
 
     public java.util.List<ProvidedContext> getProvidedContexts() {
@@ -2000,11 +2024,26 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Reserved for future use.
+     * A list of previously acquired trusted context assertions in the format of a JSON array. The trusted context
+     * assertion is signed and encrypted by Amazon Web Services STS.
+     * </p>
+     * <p>
+     * The following is an example of a <code>ProvidedContext</code> value that includes a single trusted context
+     * assertion and the ARN of the context provider from which the trusted context assertion was generated.
+     * </p>
+     * <p>
+     * <code>[{"ProviderArn":"arn:aws:iam::aws:contextProvider/identitycenter","ContextAssertion":"trusted-context-assertion"}]</code>
      * </p>
      * 
      * @param providedContexts
-     *        Reserved for future use.
+     *        A list of previously acquired trusted context assertions in the format of a JSON array. The trusted
+     *        context assertion is signed and encrypted by Amazon Web Services STS.</p>
+     *        <p>
+     *        The following is an example of a <code>ProvidedContext</code> value that includes a single trusted context
+     *        assertion and the ARN of the context provider from which the trusted context assertion was generated.
+     *        </p>
+     *        <p>
+     *        <code>[{"ProviderArn":"arn:aws:iam::aws:contextProvider/identitycenter","ContextAssertion":"trusted-context-assertion"}]</code>
      */
 
     public void setProvidedContexts(java.util.Collection<ProvidedContext> providedContexts) {
@@ -2018,7 +2057,15 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Reserved for future use.
+     * A list of previously acquired trusted context assertions in the format of a JSON array. The trusted context
+     * assertion is signed and encrypted by Amazon Web Services STS.
+     * </p>
+     * <p>
+     * The following is an example of a <code>ProvidedContext</code> value that includes a single trusted context
+     * assertion and the ARN of the context provider from which the trusted context assertion was generated.
+     * </p>
+     * <p>
+     * <code>[{"ProviderArn":"arn:aws:iam::aws:contextProvider/identitycenter","ContextAssertion":"trusted-context-assertion"}]</code>
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2027,7 +2074,14 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param providedContexts
-     *        Reserved for future use.
+     *        A list of previously acquired trusted context assertions in the format of a JSON array. The trusted
+     *        context assertion is signed and encrypted by Amazon Web Services STS.</p>
+     *        <p>
+     *        The following is an example of a <code>ProvidedContext</code> value that includes a single trusted context
+     *        assertion and the ARN of the context provider from which the trusted context assertion was generated.
+     *        </p>
+     *        <p>
+     *        <code>[{"ProviderArn":"arn:aws:iam::aws:contextProvider/identitycenter","ContextAssertion":"trusted-context-assertion"}]</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2043,11 +2097,26 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Reserved for future use.
+     * A list of previously acquired trusted context assertions in the format of a JSON array. The trusted context
+     * assertion is signed and encrypted by Amazon Web Services STS.
+     * </p>
+     * <p>
+     * The following is an example of a <code>ProvidedContext</code> value that includes a single trusted context
+     * assertion and the ARN of the context provider from which the trusted context assertion was generated.
+     * </p>
+     * <p>
+     * <code>[{"ProviderArn":"arn:aws:iam::aws:contextProvider/identitycenter","ContextAssertion":"trusted-context-assertion"}]</code>
      * </p>
      * 
      * @param providedContexts
-     *        Reserved for future use.
+     *        A list of previously acquired trusted context assertions in the format of a JSON array. The trusted
+     *        context assertion is signed and encrypted by Amazon Web Services STS.</p>
+     *        <p>
+     *        The following is an example of a <code>ProvidedContext</code> value that includes a single trusted context
+     *        assertion and the ARN of the context provider from which the trusted context assertion was generated.
+     *        </p>
+     *        <p>
+     *        <code>[{"ProviderArn":"arn:aws:iam::aws:contextProvider/identitycenter","ContextAssertion":"trusted-context-assertion"}]</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

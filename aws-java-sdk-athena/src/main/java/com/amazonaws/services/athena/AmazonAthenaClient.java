@@ -64,11 +64,6 @@ import com.amazonaws.services.athena.model.transform.*;
  * Earlier version drivers do not support the API. For more information and to download the driver, see <a
  * href="https://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html">Accessing Amazon Athena with JDBC</a>.
  * </p>
- * <p>
- * For code samples using the Amazon Web Services SDK for Java, see <a
- * href="https://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
- * Athena User Guide</i>.
- * </p>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -546,11 +541,6 @@ public class AmazonAthenaClient extends AmazonWebServiceClient implements Amazon
      * <p>
      * Creates a named query in the specified workgroup. Requires that you have access to the workgroup.
      * </p>
-     * <p>
-     * For code samples using the Amazon Web Services SDK for Java, see <a
-     * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the
-     * <i>Amazon Athena User Guide</i>.
-     * </p>
      * 
      * @param createNamedQueryRequest
      * @return Result of the CreateNamedQuery operation returned by the service.
@@ -989,11 +979,6 @@ public class AmazonAthenaClient extends AmazonWebServiceClient implements Amazon
     /**
      * <p>
      * Deletes the named query if you have access to the workgroup in which the query was saved.
-     * </p>
-     * <p>
-     * For code samples using the Amazon Web Services SDK for Java, see <a
-     * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the
-     * <i>Amazon Athena User Guide</i>.
      * </p>
      * 
      * @param deleteNamedQueryRequest
@@ -2894,11 +2879,6 @@ public class AmazonAthenaClient extends AmazonWebServiceClient implements Amazon
      * access to the specified workgroup. If a workgroup is not specified, lists the saved queries for the primary
      * workgroup.
      * </p>
-     * <p>
-     * For code samples using the Amazon Web Services SDK for Java, see <a
-     * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the
-     * <i>Amazon Athena User Guide</i>.
-     * </p>
      * 
      * @param listNamedQueriesRequest
      * @return Result of the ListNamedQueries operation returned by the service.
@@ -3144,14 +3124,9 @@ public class AmazonAthenaClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Provides a list of available query execution IDs for the queries in the specified workgroup. If a workgroup is
-     * not specified, returns a list of query execution IDs for the primary workgroup. Requires you to have access to
-     * the workgroup in which the queries ran.
-     * </p>
-     * <p>
-     * For code samples using the Amazon Web Services SDK for Java, see <a
-     * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the
-     * <i>Amazon Athena User Guide</i>.
+     * Provides a list of available query execution IDs for the queries in the specified workgroup. Athena keeps a query
+     * history for 45 days. If a workgroup is not specified, returns a list of query execution IDs for the primary
+     * workgroup. Requires you to have access to the workgroup in which the queries ran.
      * </p>
      * 
      * @param listQueryExecutionsRequest
@@ -3529,6 +3504,14 @@ public class AmazonAthenaClient extends AmazonWebServiceClient implements Amazon
      * Submits calculations for execution within a session. You can supply the code to run as an inline code block
      * within the request.
      * </p>
+     * <note>
+     * <p>
+     * The request syntax requires the <a>StartCalculationExecutionRequest$CodeBlock</a> parameter or the
+     * <a>CalculationConfiguration$CodeBlock</a> parameter, but not both. Because
+     * <a>CalculationConfiguration$CodeBlock</a> is deprecated, use the
+     * <a>StartCalculationExecutionRequest$CodeBlock</a> parameter instead.
+     * </p>
+     * </note>
      * 
      * @param startCalculationExecutionRequest
      * @return Result of the StartCalculationExecution operation returned by the service.
@@ -3798,11 +3781,6 @@ public class AmazonAthenaClient extends AmazonWebServiceClient implements Amazon
     /**
      * <p>
      * Stops a query execution. Requires you to have access to the workgroup in which the query ran.
-     * </p>
-     * <p>
-     * For code samples using the Amazon Web Services SDK for Java, see <a
-     * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the
-     * <i>Amazon Athena User Guide</i>.
      * </p>
      * 
      * @param stopQueryExecutionRequest

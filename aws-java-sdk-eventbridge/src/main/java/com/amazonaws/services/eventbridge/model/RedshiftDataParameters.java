@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * These are custom parameters to be used when the target is a Amazon Redshift cluster or Redshift Serverless workgroup
- * to invoke the Amazon Redshift Data API ExecuteStatement based on EventBridge events.
+ * These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift
+ * Data API ExecuteStatement based on EventBridge events.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/RedshiftDataParameters" target="_top">AWS
@@ -46,9 +46,6 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
      * <p>
      * The database user name. Required when authenticating using temporary credentials.
      * </p>
-     * <p>
-     * Do not provide this parameter when connecting to a Redshift Serverless workgroup.
-     * </p>
      */
     private String dbUser;
     /**
@@ -69,7 +66,13 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
      * </p>
      */
     private Boolean withEvent;
-
+    /**
+     * <p>
+     * One or more SQL statements to run. The SQL statements are run as a single transaction. They run serially in the
+     * order of the array. Subsequent SQL statements don't start until the previous statement in the array completes. If
+     * any SQL statement fails, then because they are run as one transaction, all work is rolled back.
+     * </p>
+     */
     private java.util.List<String> sqls;
 
     /**
@@ -162,14 +165,9 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
      * <p>
      * The database user name. Required when authenticating using temporary credentials.
      * </p>
-     * <p>
-     * Do not provide this parameter when connecting to a Redshift Serverless workgroup.
-     * </p>
      * 
      * @param dbUser
-     *        The database user name. Required when authenticating using temporary credentials.</p>
-     *        <p>
-     *        Do not provide this parameter when connecting to a Redshift Serverless workgroup.
+     *        The database user name. Required when authenticating using temporary credentials.
      */
 
     public void setDbUser(String dbUser) {
@@ -180,13 +178,8 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
      * <p>
      * The database user name. Required when authenticating using temporary credentials.
      * </p>
-     * <p>
-     * Do not provide this parameter when connecting to a Redshift Serverless workgroup.
-     * </p>
      * 
-     * @return The database user name. Required when authenticating using temporary credentials.</p>
-     *         <p>
-     *         Do not provide this parameter when connecting to a Redshift Serverless workgroup.
+     * @return The database user name. Required when authenticating using temporary credentials.
      */
 
     public String getDbUser() {
@@ -197,14 +190,9 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
      * <p>
      * The database user name. Required when authenticating using temporary credentials.
      * </p>
-     * <p>
-     * Do not provide this parameter when connecting to a Redshift Serverless workgroup.
-     * </p>
      * 
      * @param dbUser
-     *        The database user name. Required when authenticating using temporary credentials.</p>
-     *        <p>
-     *        Do not provide this parameter when connecting to a Redshift Serverless workgroup.
+     *        The database user name. Required when authenticating using temporary credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -346,7 +334,16 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * One or more SQL statements to run. The SQL statements are run as a single transaction. They run serially in the
+     * order of the array. Subsequent SQL statements don't start until the previous statement in the array completes. If
+     * any SQL statement fails, then because they are run as one transaction, all work is rolled back.
+     * </p>
+     * 
+     * @return One or more SQL statements to run. The SQL statements are run as a single transaction. They run serially
+     *         in the order of the array. Subsequent SQL statements don't start until the previous statement in the
+     *         array completes. If any SQL statement fails, then because they are run as one transaction, all work is
+     *         rolled back.
      */
 
     public java.util.List<String> getSqls() {
@@ -354,7 +351,17 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * One or more SQL statements to run. The SQL statements are run as a single transaction. They run serially in the
+     * order of the array. Subsequent SQL statements don't start until the previous statement in the array completes. If
+     * any SQL statement fails, then because they are run as one transaction, all work is rolled back.
+     * </p>
+     * 
      * @param sqls
+     *        One or more SQL statements to run. The SQL statements are run as a single transaction. They run serially
+     *        in the order of the array. Subsequent SQL statements don't start until the previous statement in the array
+     *        completes. If any SQL statement fails, then because they are run as one transaction, all work is rolled
+     *        back.
      */
 
     public void setSqls(java.util.Collection<String> sqls) {
@@ -368,12 +375,21 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
 
     /**
      * <p>
+     * One or more SQL statements to run. The SQL statements are run as a single transaction. They run serially in the
+     * order of the array. Subsequent SQL statements don't start until the previous statement in the array completes. If
+     * any SQL statement fails, then because they are run as one transaction, all work is rolled back.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSqls(java.util.Collection)} or {@link #withSqls(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param sqls
+     *        One or more SQL statements to run. The SQL statements are run as a single transaction. They run serially
+     *        in the order of the array. Subsequent SQL statements don't start until the previous statement in the array
+     *        completes. If any SQL statement fails, then because they are run as one transaction, all work is rolled
+     *        back.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -388,7 +404,17 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * One or more SQL statements to run. The SQL statements are run as a single transaction. They run serially in the
+     * order of the array. Subsequent SQL statements don't start until the previous statement in the array completes. If
+     * any SQL statement fails, then because they are run as one transaction, all work is rolled back.
+     * </p>
+     * 
      * @param sqls
+     *        One or more SQL statements to run. The SQL statements are run as a single transaction. They run serially
+     *        in the order of the array. Subsequent SQL statements don't start until the previous statement in the array
+     *        completes. If any SQL statement fails, then because they are run as one transaction, all work is rolled
+     *        back.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1475,6 +1475,12 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * <p>
      * Copies the specified DB cluster parameter group.
      * </p>
+     * <note>
+     * <p>
+     * You can't copy a default DB cluster parameter group. Instead, create a new custom DB cluster parameter group,
+     * which copies the default parameters and values for the specified DB cluster parameter group family.
+     * </p>
+     * </note>
      * 
      * @param copyDBClusterParameterGroupRequest
      * @return Result of the CopyDBClusterParameterGroup operation returned by the service.
@@ -1655,6 +1661,12 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * <p>
      * Copies the specified DB parameter group.
      * </p>
+     * <note>
+     * <p>
+     * You can't copy a default DB parameter group. Instead, create a new custom DB parameter group, which copies the
+     * default parameters and values for the specified DB parameter group family.
+     * </p>
+     * </note>
      * 
      * @param copyDBParameterGroupRequest
      * @return Result of the CopyDBParameterGroup operation returned by the service.
@@ -2063,6 +2075,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         The DB subnet group doesn't cover all Availability Zones after it's created because of users' change.
      * @throws InvalidDBClusterStateException
      *         The requested operation can't be performed while the cluster is in this state.
+     * @throws InvalidDBSubnetGroupException
+     *         The DBSubnetGroup doesn't belong to the same VPC as that of an existing cross-region read replica of the
+     *         same source instance.
      * @throws InvalidDBSubnetGroupStateException
      *         The DB subnet group cannot be deleted because it's in use.
      * @throws InvalidSubnetException
@@ -2086,6 +2101,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         The global cluster is in an invalid state and can't perform the requested operation.
      * @throws DomainNotFoundException
      *         <code>Domain</code> doesn't refer to an existing Active Directory domain.
+     * @throws OptionGroupNotFoundException
+     *         The specified option group could not be found.
      * @sample AmazonRDS.CreateDBCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBCluster" target="_top">AWS API
      *      Documentation</a>
@@ -8423,6 +8440,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws StorageTypeNotAvailableException
      *         The <code>aurora-iopt1</code> storage type isn't available, because you modified the DB cluster to use
      *         this storage type less than one month ago.
+     * @throws OptionGroupNotFoundException
+     *         The specified option group could not be found.
      * @sample AmazonRDS.ModifyDBCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBCluster" target="_top">AWS API
      *      Documentation</a>

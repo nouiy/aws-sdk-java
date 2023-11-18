@@ -479,6 +479,29 @@ public class RequestSpotFleetRequestMarshaller implements Marshaller<Request<Req
                                     }
                                 }
                             }
+
+                            ConnectionTrackingSpecificationRequest connectionTrackingSpecification = spotFleetLaunchSpecificationNetworkInterfacesListValue
+                                    .getConnectionTrackingSpecification();
+                            if (connectionTrackingSpecification != null) {
+
+                                if (connectionTrackingSpecification.getTcpEstablishedTimeout() != null) {
+                                    request.addParameter("SpotFleetRequestConfig.LaunchSpecifications." + launchSpecificationsListIndex
+                                            + ".NetworkInterfaceSet." + networkInterfacesListIndex + ".ConnectionTrackingSpecification.TcpEstablishedTimeout",
+                                            StringUtils.fromInteger(connectionTrackingSpecification.getTcpEstablishedTimeout()));
+                                }
+
+                                if (connectionTrackingSpecification.getUdpStreamTimeout() != null) {
+                                    request.addParameter("SpotFleetRequestConfig.LaunchSpecifications." + launchSpecificationsListIndex
+                                            + ".NetworkInterfaceSet." + networkInterfacesListIndex + ".ConnectionTrackingSpecification.UdpStreamTimeout",
+                                            StringUtils.fromInteger(connectionTrackingSpecification.getUdpStreamTimeout()));
+                                }
+
+                                if (connectionTrackingSpecification.getUdpTimeout() != null) {
+                                    request.addParameter("SpotFleetRequestConfig.LaunchSpecifications." + launchSpecificationsListIndex
+                                            + ".NetworkInterfaceSet." + networkInterfacesListIndex + ".ConnectionTrackingSpecification.UdpTimeout",
+                                            StringUtils.fromInteger(connectionTrackingSpecification.getUdpTimeout()));
+                                }
+                            }
                             networkInterfacesListIndex++;
                         }
                     }

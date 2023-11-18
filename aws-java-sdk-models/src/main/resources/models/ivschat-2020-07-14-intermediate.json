@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "EnumSetterOverload", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -1676,7 +1676,7 @@
         "marshallingTargetClass" : "Map",
         "marshallingType" : "MAP",
         "name" : "Attributes",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can contain UTF-8 encoded text. The maximum length of this field is 1 KB total.</p>\n@param attributes Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can contain UTF-8 encoded text. The maximum length of this field is 1 KB total.*/",
         "setterMethodName" : "setAttributes",
         "setterModel" : {
@@ -2036,7 +2036,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "UserId",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>Application-provided ID that uniquely identifies the user associated with this token. This can be any UTF-8 encoded text.</p>\n@param userId Application-provided ID that uniquely identifies the user associated with this token. This can be any UTF-8 encoded text.*/",
         "setterMethodName" : "setUserId",
         "setterModel" : {
@@ -2191,7 +2191,7 @@
           "marshallingTargetClass" : "Map",
           "marshallingType" : "MAP",
           "name" : "Attributes",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can contain UTF-8 encoded text. The maximum length of this field is 1 KB total.</p>\n@param attributes Application-provided attributes to encode into the token and attach to a chat session. Map keys and values can contain UTF-8 encoded text. The maximum length of this field is 1 KB total.*/",
           "setterMethodName" : "setAttributes",
           "setterModel" : {
@@ -2555,7 +2555,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "UserId",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>Application-provided ID that uniquely identifies the user associated with this token. This can be any UTF-8 encoded text.</p>\n@param userId Application-provided ID that uniquely identifies the user associated with this token. This can be any UTF-8 encoded text.*/",
           "setterMethodName" : "setUserId",
           "setterModel" : {
@@ -2734,7 +2734,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "Token",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The issued client token, encrypted.</p>\n@param token The issued client token, encrypted.*/",
         "setterMethodName" : "setToken",
         "setterModel" : {
@@ -2944,7 +2944,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "Token",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The issued client token, encrypted.</p>\n@param token The issued client token, encrypted.*/",
           "setterMethodName" : "setToken",
           "setterModel" : {
@@ -9844,7 +9844,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "UserId",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>ID of the user (connection) to disconnect from the room.</p>\n@param userId ID of the user (connection) to disconnect from the room.*/",
         "setterMethodName" : "setUserId",
         "setterModel" : {
@@ -10055,7 +10055,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "UserId",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>ID of the user (connection) to disconnect from the room.</p>\n@param userId ID of the user (connection) to disconnect from the room.*/",
           "setterMethodName" : "setUserId",
           "setterModel" : {

@@ -46,7 +46,8 @@ public class StartCalculationExecutionRequest extends com.amazonaws.AmazonWebSer
     private CalculationConfiguration calculationConfiguration;
     /**
      * <p>
-     * A string that contains the code of the calculation.
+     * A string that contains the code of the calculation. Use this parameter instead of
+     * <a>CalculationConfiguration$CodeBlock</a>, which is deprecated.
      * </p>
      */
     private String codeBlock;
@@ -188,11 +189,13 @@ public class StartCalculationExecutionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A string that contains the code of the calculation.
+     * A string that contains the code of the calculation. Use this parameter instead of
+     * <a>CalculationConfiguration$CodeBlock</a>, which is deprecated.
      * </p>
      * 
      * @param codeBlock
-     *        A string that contains the code of the calculation.
+     *        A string that contains the code of the calculation. Use this parameter instead of
+     *        <a>CalculationConfiguration$CodeBlock</a>, which is deprecated.
      */
 
     public void setCodeBlock(String codeBlock) {
@@ -201,10 +204,12 @@ public class StartCalculationExecutionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A string that contains the code of the calculation.
+     * A string that contains the code of the calculation. Use this parameter instead of
+     * <a>CalculationConfiguration$CodeBlock</a>, which is deprecated.
      * </p>
      * 
-     * @return A string that contains the code of the calculation.
+     * @return A string that contains the code of the calculation. Use this parameter instead of
+     *         <a>CalculationConfiguration$CodeBlock</a>, which is deprecated.
      */
 
     public String getCodeBlock() {
@@ -213,11 +218,13 @@ public class StartCalculationExecutionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A string that contains the code of the calculation.
+     * A string that contains the code of the calculation. Use this parameter instead of
+     * <a>CalculationConfiguration$CodeBlock</a>, which is deprecated.
      * </p>
      * 
      * @param codeBlock
-     *        A string that contains the code of the calculation.
+     *        A string that contains the code of the calculation. Use this parameter instead of
+     *        <a>CalculationConfiguration$CodeBlock</a>, which is deprecated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

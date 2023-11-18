@@ -156,6 +156,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public AssociateIpamByoasnResult associateIpamByoasn(AssociateIpamByoasnRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public AssociateIpamResourceDiscoveryResult associateIpamResourceDiscovery(AssociateIpamResourceDiscoveryRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1128,6 +1133,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DeprovisionIpamByoasnResult deprovisionIpamByoasn(DeprovisionIpamByoasnRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeprovisionIpamPoolCidrResult deprovisionIpamPoolCidr(DeprovisionIpamPoolCidrRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1530,6 +1540,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     @Override
     public DescribeInternetGatewaysResult describeInternetGateways() {
         return describeInternetGateways(new DescribeInternetGatewaysRequest());
+    }
+
+    @Override
+    public DescribeIpamByoasnResult describeIpamByoasn(DescribeIpamByoasnRequest request) {
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -2273,6 +2288,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DisassociateIpamByoasnResult disassociateIpamByoasn(DisassociateIpamByoasnRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisassociateIpamResourceDiscoveryResult disassociateIpamResourceDiscovery(DisassociateIpamResourceDiscoveryRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2512,6 +2532,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public GetIpamDiscoveredAccountsResult getIpamDiscoveredAccounts(GetIpamDiscoveredAccountsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetIpamDiscoveredPublicAddressesResult getIpamDiscoveredPublicAddresses(GetIpamDiscoveredPublicAddressesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -3053,6 +3078,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public ProvisionByoipCidrResult provisionByoipCidr(ProvisionByoipCidrRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ProvisionIpamByoasnResult provisionIpamByoasn(ProvisionIpamByoasnRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

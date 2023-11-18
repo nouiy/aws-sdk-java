@@ -220,6 +220,12 @@ public class DBCluster implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> readReplicaIdentifiers;
     /**
      * <p>
+     * Reserved for future use.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<DBClusterStatusInfo> statusInfos;
+    /**
+     * <p>
      * The list of DB instances that make up the DB cluster.
      * </p>
      */
@@ -1898,6 +1904,79 @@ public class DBCluster implements Serializable, Cloneable {
 
     public DBCluster withReadReplicaIdentifiers(java.util.Collection<String> readReplicaIdentifiers) {
         setReadReplicaIdentifiers(readReplicaIdentifiers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @return Reserved for future use.
+     */
+
+    public java.util.List<DBClusterStatusInfo> getStatusInfos() {
+        if (statusInfos == null) {
+            statusInfos = new com.amazonaws.internal.SdkInternalList<DBClusterStatusInfo>();
+        }
+        return statusInfos;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param statusInfos
+     *        Reserved for future use.
+     */
+
+    public void setStatusInfos(java.util.Collection<DBClusterStatusInfo> statusInfos) {
+        if (statusInfos == null) {
+            this.statusInfos = null;
+            return;
+        }
+
+        this.statusInfos = new com.amazonaws.internal.SdkInternalList<DBClusterStatusInfo>(statusInfos);
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setStatusInfos(java.util.Collection)} or {@link #withStatusInfos(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param statusInfos
+     *        Reserved for future use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withStatusInfos(DBClusterStatusInfo... statusInfos) {
+        if (this.statusInfos == null) {
+            setStatusInfos(new com.amazonaws.internal.SdkInternalList<DBClusterStatusInfo>(statusInfos.length));
+        }
+        for (DBClusterStatusInfo ele : statusInfos) {
+            this.statusInfos.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param statusInfos
+     *        Reserved for future use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withStatusInfos(java.util.Collection<DBClusterStatusInfo> statusInfos) {
+        setStatusInfos(statusInfos);
         return this;
     }
 
@@ -5147,6 +5226,8 @@ public class DBCluster implements Serializable, Cloneable {
             sb.append("ReplicationSourceIdentifier: ").append(getReplicationSourceIdentifier()).append(",");
         if (getReadReplicaIdentifiers() != null)
             sb.append("ReadReplicaIdentifiers: ").append(getReadReplicaIdentifiers()).append(",");
+        if (getStatusInfos() != null)
+            sb.append("StatusInfos: ").append(getStatusInfos()).append(",");
         if (getDBClusterMembers() != null)
             sb.append("DBClusterMembers: ").append(getDBClusterMembers()).append(",");
         if (getVpcSecurityGroups() != null)
@@ -5363,6 +5444,10 @@ public class DBCluster implements Serializable, Cloneable {
         if (other.getReadReplicaIdentifiers() == null ^ this.getReadReplicaIdentifiers() == null)
             return false;
         if (other.getReadReplicaIdentifiers() != null && other.getReadReplicaIdentifiers().equals(this.getReadReplicaIdentifiers()) == false)
+            return false;
+        if (other.getStatusInfos() == null ^ this.getStatusInfos() == null)
+            return false;
+        if (other.getStatusInfos() != null && other.getStatusInfos().equals(this.getStatusInfos()) == false)
             return false;
         if (other.getDBClusterMembers() == null ^ this.getDBClusterMembers() == null)
             return false;
@@ -5602,6 +5687,7 @@ public class DBCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getPreferredMaintenanceWindow() == null) ? 0 : getPreferredMaintenanceWindow().hashCode());
         hashCode = prime * hashCode + ((getReplicationSourceIdentifier() == null) ? 0 : getReplicationSourceIdentifier().hashCode());
         hashCode = prime * hashCode + ((getReadReplicaIdentifiers() == null) ? 0 : getReadReplicaIdentifiers().hashCode());
+        hashCode = prime * hashCode + ((getStatusInfos() == null) ? 0 : getStatusInfos().hashCode());
         hashCode = prime * hashCode + ((getDBClusterMembers() == null) ? 0 : getDBClusterMembers().hashCode());
         hashCode = prime * hashCode + ((getVpcSecurityGroups() == null) ? 0 : getVpcSecurityGroups().hashCode());
         hashCode = prime * hashCode + ((getHostedZoneId() == null) ? 0 : getHostedZoneId().hashCode());

@@ -23,9 +23,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * This data type is used as an element in a response parameter for the <a
- * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorized.html">IsAuthorized</a> and
- * <a href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorizedWithToken.html">
- * IsAuthorizedWithToken</a> operations.
+ * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorized.html">IsAuthorized</a>, <a
+ * href
+ * ="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_BatchIsAuthorized.html">BatchIsAuthorized
+ * </a>, and <a
+ * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorizedWithToken.html"
+ * >IsAuthorizedWithToken</a> operations.
  * </p>
  * <p>
  * Example: <code>"determiningPolicies":[{"policyId":"SPEXAMPLEabcdefg111111"}]</code>

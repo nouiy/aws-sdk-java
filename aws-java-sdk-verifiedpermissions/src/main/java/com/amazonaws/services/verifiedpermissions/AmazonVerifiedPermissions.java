@@ -116,6 +116,141 @@ public interface AmazonVerifiedPermissions {
 
     /**
      * <p>
+     * Makes a series of decisions about multiple authorization requests for one principal or resource. Each request
+     * contains the equivalent content of an <code>IsAuthorized</code> request: principal, action, resource, and
+     * context. Either the <code>principal</code> or the <code>resource</code> parameter must be identical across all
+     * requests. For example, Verified Permissions won't evaluate a pair of requests where <code>bob</code> views
+     * <code>photo1</code> and <code>alice</code> views <code>photo2</code>. Authorization of <code>bob</code> to view
+     * <code>photo1</code> and <code>photo2</code>, or <code>bob</code> and <code>alice</code> to view
+     * <code>photo1</code>, are valid batches.
+     * </p>
+     * <p>
+     * The request is evaluated against all policies in the specified policy store that match the entities that you
+     * declare. The result of the decisions is a series of <code>Allow</code> or <code>Deny</code> responses, along with
+     * the IDs of the policies that produced each decision.
+     * </p>
+     * <p>
+     * The <code>entities</code> of a <code>BatchIsAuthorized</code> API request can contain up to 100 principals and up
+     * to 100 resources. The <code>requests</code> of a <code>BatchIsAuthorized</code> API request can contain up to 30
+     * requests.
+     * </p>
+     * 
+     * @param batchIsAuthorizedRequest
+     * @return Result of the BatchIsAuthorized operation returned by the service.
+     * @throws ValidationException
+     *         The request failed because one or more input parameters don't satisfy their constraint requirements. The
+     *         output is provided as a list of fields and a reason for each field that isn't valid.</p>
+     *         <p>
+     *         The possible reasons include the following:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <b>UnrecognizedEntityType</b>
+     *         </p>
+     *         <p>
+     *         The policy includes an entity type that isn't found in the schema.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>UnrecognizedActionId</b>
+     *         </p>
+     *         <p>
+     *         The policy includes an action id that isn't found in the schema.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>InvalidActionApplication</b>
+     *         </p>
+     *         <p>
+     *         The policy includes an action that, according to the schema, doesn't support the specified principal and
+     *         resource.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>UnexpectedType</b>
+     *         </p>
+     *         <p>
+     *         The policy included an operand that isn't a valid type for the specified operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>IncompatibleTypes</b>
+     *         </p>
+     *         <p>
+     *         The types of elements included in a <code>set</code>, or the types of expressions used in an
+     *         <code>if...then...else</code> clause aren't compatible in this context.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>MissingAttribute</b>
+     *         </p>
+     *         <p>
+     *         The policy attempts to access a record or entity attribute that isn't specified in the schema. Test for
+     *         the existence of the attribute first before attempting to access its value. For more information, see the
+     *         <a href="https://docs.cedarpolicy.com/policies/syntax-operators.html#has-presence-of-attribute-test">has
+     *         (presence of attribute test) operator</a> in the <i>Cedar Policy Language Guide</i>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>UnsafeOptionalAttributeAccess</b>
+     *         </p>
+     *         <p>
+     *         The policy attempts to access a record or entity attribute that is optional and isn't guaranteed to be
+     *         present. Test for the existence of the attribute first before attempting to access its value. For more
+     *         information, see the <a
+     *         href="https://docs.cedarpolicy.com/policies/syntax-operators.html#has-presence-of-attribute-test">has
+     *         (presence of attribute test) operator</a> in the <i>Cedar Policy Language Guide</i>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>ImpossiblePolicy</b>
+     *         </p>
+     *         <p>
+     *         Cedar has determined that a policy condition always evaluates to false. If the policy is always false, it
+     *         can never apply to any query, and so it can never affect an authorization decision.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>WrongNumberArguments</b>
+     *         </p>
+     *         <p>
+     *         The policy references an extension type with the wrong number of arguments.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>FunctionArgumentValidationError</b>
+     *         </p>
+     *         <p>
+     *         Cedar couldn't parse the argument passed to an extension type. For example, a string that is to be parsed
+     *         as an IPv4 address can contain only digits and the period character.
+     *         </p>
+     *         </li>
+     * @throws AccessDeniedException
+     *         You don't have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The request failed because it references a resource that doesn't exist.
+     * @throws ThrottlingException
+     *         The request failed because it exceeded a throttling quota.
+     * @throws InternalServerException
+     *         The request failed because of an internal error. Try your request again later
+     * @sample AmazonVerifiedPermissions.BatchIsAuthorized
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/BatchIsAuthorized"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchIsAuthorizedResult batchIsAuthorized(BatchIsAuthorizedRequest batchIsAuthorizedRequest);
+
+    /**
+     * <p>
      * Creates a reference to an Amazon Cognito user pool as an external identity provider (IdP).
      * </p>
      * <p>

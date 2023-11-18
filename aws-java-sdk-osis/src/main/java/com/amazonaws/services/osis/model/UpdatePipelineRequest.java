@@ -56,6 +56,18 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private LogPublishingOptions logPublishingOptions;
+    /**
+     * <p>
+     * Key-value pairs to configure persistent buffering for the pipeline.
+     * </p>
+     */
+    private BufferOptions bufferOptions;
+    /**
+     * <p>
+     * Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     * </p>
+     */
+    private EncryptionAtRestOptions encryptionAtRestOptions;
 
     /**
      * <p>
@@ -267,6 +279,86 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Key-value pairs to configure persistent buffering for the pipeline.
+     * </p>
+     * 
+     * @param bufferOptions
+     *        Key-value pairs to configure persistent buffering for the pipeline.
+     */
+
+    public void setBufferOptions(BufferOptions bufferOptions) {
+        this.bufferOptions = bufferOptions;
+    }
+
+    /**
+     * <p>
+     * Key-value pairs to configure persistent buffering for the pipeline.
+     * </p>
+     * 
+     * @return Key-value pairs to configure persistent buffering for the pipeline.
+     */
+
+    public BufferOptions getBufferOptions() {
+        return this.bufferOptions;
+    }
+
+    /**
+     * <p>
+     * Key-value pairs to configure persistent buffering for the pipeline.
+     * </p>
+     * 
+     * @param bufferOptions
+     *        Key-value pairs to configure persistent buffering for the pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipelineRequest withBufferOptions(BufferOptions bufferOptions) {
+        setBufferOptions(bufferOptions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     * </p>
+     * 
+     * @param encryptionAtRestOptions
+     *        Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     */
+
+    public void setEncryptionAtRestOptions(EncryptionAtRestOptions encryptionAtRestOptions) {
+        this.encryptionAtRestOptions = encryptionAtRestOptions;
+    }
+
+    /**
+     * <p>
+     * Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     * </p>
+     * 
+     * @return Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     */
+
+    public EncryptionAtRestOptions getEncryptionAtRestOptions() {
+        return this.encryptionAtRestOptions;
+    }
+
+    /**
+     * <p>
+     * Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     * </p>
+     * 
+     * @param encryptionAtRestOptions
+     *        Key-value pairs to configure encryption for data that is written to a persistent buffer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipelineRequest withEncryptionAtRestOptions(EncryptionAtRestOptions encryptionAtRestOptions) {
+        setEncryptionAtRestOptions(encryptionAtRestOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -287,7 +379,11 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getPipelineConfigurationBody() != null)
             sb.append("PipelineConfigurationBody: ").append(getPipelineConfigurationBody()).append(",");
         if (getLogPublishingOptions() != null)
-            sb.append("LogPublishingOptions: ").append(getLogPublishingOptions());
+            sb.append("LogPublishingOptions: ").append(getLogPublishingOptions()).append(",");
+        if (getBufferOptions() != null)
+            sb.append("BufferOptions: ").append(getBufferOptions()).append(",");
+        if (getEncryptionAtRestOptions() != null)
+            sb.append("EncryptionAtRestOptions: ").append(getEncryptionAtRestOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -322,6 +418,14 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getLogPublishingOptions() != null && other.getLogPublishingOptions().equals(this.getLogPublishingOptions()) == false)
             return false;
+        if (other.getBufferOptions() == null ^ this.getBufferOptions() == null)
+            return false;
+        if (other.getBufferOptions() != null && other.getBufferOptions().equals(this.getBufferOptions()) == false)
+            return false;
+        if (other.getEncryptionAtRestOptions() == null ^ this.getEncryptionAtRestOptions() == null)
+            return false;
+        if (other.getEncryptionAtRestOptions() != null && other.getEncryptionAtRestOptions().equals(this.getEncryptionAtRestOptions()) == false)
+            return false;
         return true;
     }
 
@@ -335,6 +439,8 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getMaxUnits() == null) ? 0 : getMaxUnits().hashCode());
         hashCode = prime * hashCode + ((getPipelineConfigurationBody() == null) ? 0 : getPipelineConfigurationBody().hashCode());
         hashCode = prime * hashCode + ((getLogPublishingOptions() == null) ? 0 : getLogPublishingOptions().hashCode());
+        hashCode = prime * hashCode + ((getBufferOptions() == null) ? 0 : getBufferOptions().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionAtRestOptions() == null) ? 0 : getEncryptionAtRestOptions().hashCode());
         return hashCode;
     }
 

@@ -16,12 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <note>
- * <p>
- * Currently available in <b>limited preview only</b>. If you are interested in using this feature, contact your account
- * manager.
- * </p>
- * </note>
  * <p>
  * Information about an association between a branch network interface with a trunk network interface.
  * </p>

@@ -195,6 +195,16 @@ public class DBClusterStaxUnmarshaller implements Unmarshaller<DBCluster, StaxUn
                     continue;
                 }
 
+                if (context.testExpression("StatusInfos", targetDepth)) {
+                    dBCluster.withStatusInfos(new ArrayList<DBClusterStatusInfo>());
+                    continue;
+                }
+
+                if (context.testExpression("StatusInfos/DBClusterStatusInfo", targetDepth)) {
+                    dBCluster.withStatusInfos(DBClusterStatusInfoStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("DBClusterMembers", targetDepth)) {
                     dBCluster.withDBClusterMembers(new ArrayList<DBClusterMember>());
                     continue;

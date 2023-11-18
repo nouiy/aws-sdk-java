@@ -211,6 +211,39 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
     }
 
     @Override
+    public java.util.concurrent.Future<CreateQuickResponseResult> createQuickResponseAsync(CreateQuickResponseRequest request) {
+
+        return createQuickResponseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateQuickResponseResult> createQuickResponseAsync(final CreateQuickResponseRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateQuickResponseRequest, CreateQuickResponseResult> asyncHandler) {
+        final CreateQuickResponseRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateQuickResponseResult>() {
+            @Override
+            public CreateQuickResponseResult call() throws Exception {
+                CreateQuickResponseResult result = null;
+
+                try {
+                    result = executeCreateQuickResponse(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateSessionResult> createSessionAsync(CreateSessionRequest request) {
 
         return createSessionAsync(request, null);
@@ -343,6 +376,39 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteImportJobResult> deleteImportJobAsync(DeleteImportJobRequest request) {
+
+        return deleteImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteImportJobResult> deleteImportJobAsync(final DeleteImportJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteImportJobRequest, DeleteImportJobResult> asyncHandler) {
+        final DeleteImportJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteImportJobResult>() {
+            @Override
+            public DeleteImportJobResult call() throws Exception {
+                DeleteImportJobResult result = null;
+
+                try {
+                    result = executeDeleteImportJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteKnowledgeBaseResult> deleteKnowledgeBaseAsync(DeleteKnowledgeBaseRequest request) {
 
         return deleteKnowledgeBaseAsync(request, null);
@@ -360,6 +426,39 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
 
                 try {
                     result = executeDeleteKnowledgeBase(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteQuickResponseResult> deleteQuickResponseAsync(DeleteQuickResponseRequest request) {
+
+        return deleteQuickResponseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteQuickResponseResult> deleteQuickResponseAsync(final DeleteQuickResponseRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteQuickResponseRequest, DeleteQuickResponseResult> asyncHandler) {
+        final DeleteQuickResponseRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteQuickResponseResult>() {
+            @Override
+            public DeleteQuickResponseResult call() throws Exception {
+                DeleteQuickResponseResult result = null;
+
+                try {
+                    result = executeDeleteQuickResponse(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -508,6 +607,39 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
     }
 
     @Override
+    public java.util.concurrent.Future<GetImportJobResult> getImportJobAsync(GetImportJobRequest request) {
+
+        return getImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetImportJobResult> getImportJobAsync(final GetImportJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetImportJobRequest, GetImportJobResult> asyncHandler) {
+        final GetImportJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetImportJobResult>() {
+            @Override
+            public GetImportJobResult call() throws Exception {
+                GetImportJobResult result = null;
+
+                try {
+                    result = executeGetImportJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetKnowledgeBaseResult> getKnowledgeBaseAsync(GetKnowledgeBaseRequest request) {
 
         return getKnowledgeBaseAsync(request, null);
@@ -525,6 +657,39 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
 
                 try {
                     result = executeGetKnowledgeBase(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQuickResponseResult> getQuickResponseAsync(GetQuickResponseRequest request) {
+
+        return getQuickResponseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQuickResponseResult> getQuickResponseAsync(final GetQuickResponseRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetQuickResponseRequest, GetQuickResponseResult> asyncHandler) {
+        final GetQuickResponseRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetQuickResponseResult>() {
+            @Override
+            public GetQuickResponseResult call() throws Exception {
+                GetQuickResponseResult result = null;
+
+                try {
+                    result = executeGetQuickResponse(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -706,6 +871,39 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
     }
 
     @Override
+    public java.util.concurrent.Future<ListImportJobsResult> listImportJobsAsync(ListImportJobsRequest request) {
+
+        return listImportJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListImportJobsResult> listImportJobsAsync(final ListImportJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListImportJobsRequest, ListImportJobsResult> asyncHandler) {
+        final ListImportJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListImportJobsResult>() {
+            @Override
+            public ListImportJobsResult call() throws Exception {
+                ListImportJobsResult result = null;
+
+                try {
+                    result = executeListImportJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListKnowledgeBasesResult> listKnowledgeBasesAsync(ListKnowledgeBasesRequest request) {
 
         return listKnowledgeBasesAsync(request, null);
@@ -723,6 +921,39 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
 
                 try {
                     result = executeListKnowledgeBases(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListQuickResponsesResult> listQuickResponsesAsync(ListQuickResponsesRequest request) {
+
+        return listQuickResponsesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListQuickResponsesResult> listQuickResponsesAsync(final ListQuickResponsesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListQuickResponsesRequest, ListQuickResponsesResult> asyncHandler) {
+        final ListQuickResponsesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListQuickResponsesResult>() {
+            @Override
+            public ListQuickResponsesResult call() throws Exception {
+                ListQuickResponsesResult result = null;
+
+                try {
+                    result = executeListQuickResponses(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -906,6 +1137,39 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
     }
 
     @Override
+    public java.util.concurrent.Future<SearchQuickResponsesResult> searchQuickResponsesAsync(SearchQuickResponsesRequest request) {
+
+        return searchQuickResponsesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchQuickResponsesResult> searchQuickResponsesAsync(final SearchQuickResponsesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchQuickResponsesRequest, SearchQuickResponsesResult> asyncHandler) {
+        final SearchQuickResponsesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchQuickResponsesResult>() {
+            @Override
+            public SearchQuickResponsesResult call() throws Exception {
+                SearchQuickResponsesResult result = null;
+
+                try {
+                    result = executeSearchQuickResponses(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchSessionsResult> searchSessionsAsync(SearchSessionsRequest request) {
 
         return searchSessionsAsync(request, null);
@@ -956,6 +1220,39 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
 
                 try {
                     result = executeStartContentUpload(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartImportJobResult> startImportJobAsync(StartImportJobRequest request) {
+
+        return startImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartImportJobResult> startImportJobAsync(final StartImportJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartImportJobRequest, StartImportJobResult> asyncHandler) {
+        final StartImportJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartImportJobResult>() {
+            @Override
+            public StartImportJobResult call() throws Exception {
+                StartImportJobResult result = null;
+
+                try {
+                    result = executeStartImportJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1089,6 +1386,39 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
 
                 try {
                     result = executeUpdateKnowledgeBaseTemplateUri(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateQuickResponseResult> updateQuickResponseAsync(UpdateQuickResponseRequest request) {
+
+        return updateQuickResponseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateQuickResponseResult> updateQuickResponseAsync(final UpdateQuickResponseRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateQuickResponseRequest, UpdateQuickResponseResult> asyncHandler) {
+        final UpdateQuickResponseRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateQuickResponseResult>() {
+            @Override
+            public UpdateQuickResponseResult call() throws Exception {
+                UpdateQuickResponseResult result = null;
+
+                try {
+                    result = executeUpdateQuickResponse(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

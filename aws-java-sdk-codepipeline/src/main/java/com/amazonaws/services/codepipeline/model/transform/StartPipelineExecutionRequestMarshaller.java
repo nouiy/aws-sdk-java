@@ -37,6 +37,8 @@ public class StartPipelineExecutionRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTREQUESTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientRequestToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<List> SOURCEREVISIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceRevisions").build();
 
     private static final StartPipelineExecutionRequestMarshaller instance = new StartPipelineExecutionRequestMarshaller();
 
@@ -57,6 +59,7 @@ public class StartPipelineExecutionRequestMarshaller {
             protocolMarshaller.marshall(startPipelineExecutionRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(startPipelineExecutionRequest.getVariables(), VARIABLES_BINDING);
             protocolMarshaller.marshall(startPipelineExecutionRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
+            protocolMarshaller.marshall(startPipelineExecutionRequest.getSourceRevisions(), SOURCEREVISIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

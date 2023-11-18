@@ -36,7 +36,7 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
     private String eventArn;
     /**
      * <p>
-     * The internally generated identifier of a specific network traffic impairment health event.
+     * The internally-generated identifier of a specific network traffic impairment health event.
      * </p>
      */
     private String eventId;
@@ -140,11 +140,11 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The internally generated identifier of a specific network traffic impairment health event.
+     * The internally-generated identifier of a specific network traffic impairment health event.
      * </p>
      * 
      * @param eventId
-     *        The internally generated identifier of a specific network traffic impairment health event.
+     *        The internally-generated identifier of a specific network traffic impairment health event.
      */
 
     public void setEventId(String eventId) {
@@ -153,10 +153,10 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The internally generated identifier of a specific network traffic impairment health event.
+     * The internally-generated identifier of a specific network traffic impairment health event.
      * </p>
      * 
-     * @return The internally generated identifier of a specific network traffic impairment health event.
+     * @return The internally-generated identifier of a specific network traffic impairment health event.
      */
 
     public String getEventId() {
@@ -165,11 +165,11 @@ public class HealthEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The internally generated identifier of a specific network traffic impairment health event.
+     * The internally-generated identifier of a specific network traffic impairment health event.
      * </p>
      * 
      * @param eventId
-     *        The internally generated identifier of a specific network traffic impairment health event.
+     *        The internally-generated identifier of a specific network traffic impairment health event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

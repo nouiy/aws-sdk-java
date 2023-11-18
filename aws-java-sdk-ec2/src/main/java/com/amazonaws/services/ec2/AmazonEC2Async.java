@@ -1157,6 +1157,55 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Associates your Autonomous System Number (ASN) with a BYOIP CIDR that you own in the same Amazon Web Services
+     * Region. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * <p>
+     * After the association succeeds, the ASN is eligible for advertisement. You can view the association with <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeByoipCidrs.html">DescribeByoipCidrs</a>.
+     * You can advertise the CIDR with <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AdvertiseByoipCidr.html">AdvertiseByoipCidr</a>.
+     * </p>
+     * 
+     * @param associateIpamByoasnRequest
+     * @return A Java Future containing the result of the AssociateIpamByoasn operation returned by the service.
+     * @sample AmazonEC2Async.AssociateIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateIpamByoasnResult> associateIpamByoasnAsync(AssociateIpamByoasnRequest associateIpamByoasnRequest);
+
+    /**
+     * <p>
+     * Associates your Autonomous System Number (ASN) with a BYOIP CIDR that you own in the same Amazon Web Services
+     * Region. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * <p>
+     * After the association succeeds, the ASN is eligible for advertisement. You can view the association with <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeByoipCidrs.html">DescribeByoipCidrs</a>.
+     * You can advertise the CIDR with <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AdvertiseByoipCidr.html">AdvertiseByoipCidr</a>.
+     * </p>
+     * 
+     * @param associateIpamByoasnRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateIpamByoasn operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.AssociateIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateIpamByoasnResult> associateIpamByoasnAsync(AssociateIpamByoasnRequest associateIpamByoasnRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateIpamByoasnRequest, AssociateIpamByoasnResult> asyncHandler);
+
+    /**
+     * <p>
      * Associates an IPAM resource discovery with an Amazon VPC IPAM. A resource discovery is an IPAM component that
      * enables IPAM to manage and monitor resources that belong to the owning account.
      * </p>
@@ -1312,8 +1361,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Associates a CIDR block with your subnet. You can only associate a single IPv6 CIDR block with your subnet. An
-     * IPv6 CIDR block must have a prefix length of /64.
+     * Associates a CIDR block with your subnet. You can only associate a single IPv6 CIDR block with your subnet.
      * </p>
      * 
      * @param associateSubnetCidrBlockRequest
@@ -1326,8 +1374,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Associates a CIDR block with your subnet. You can only associate a single IPv6 CIDR block with your subnet. An
-     * IPv6 CIDR block must have a prefix length of /64.
+     * Associates a CIDR block with your subnet. You can only associate a single IPv6 CIDR block with your subnet.
      * </p>
      * 
      * @param associateSubnetCidrBlockRequest
@@ -1463,12 +1510,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
             com.amazonaws.handlers.AsyncHandler<AssociateTransitGatewayRouteTableRequest, AssociateTransitGatewayRouteTableResult> asyncHandler);
 
     /**
-     * <note>
-     * <p>
-     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
-     * your account manager.
-     * </p>
-     * </note>
      * <p>
      * Associates a branch network interface with a trunk network interface.
      * </p>
@@ -1489,12 +1530,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<AssociateTrunkInterfaceResult> associateTrunkInterfaceAsync(AssociateTrunkInterfaceRequest associateTrunkInterfaceRequest);
 
     /**
-     * <note>
-     * <p>
-     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
-     * your account manager.
-     * </p>
-     * </note>
      * <p>
      * Associates a branch network interface with a trunk network interface.
      * </p>
@@ -1523,8 +1558,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * Associates a CIDR block with your VPC. You can associate a secondary IPv4 CIDR block, an Amazon-provided IPv6
      * CIDR block, or an IPv6 CIDR block from an IPv6 address pool that you provisioned through bring your own IP
-     * addresses (<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">BYOIP</a>). The IPv6 CIDR
-     * block size is fixed at /56.
+     * addresses (<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">BYOIP</a>).
      * </p>
      * <p>
      * You must specify one of the following in the request: an IPv4 CIDR block, an IPv6 pool, or an Amazon-provided
@@ -1548,8 +1582,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * Associates a CIDR block with your VPC. You can associate a secondary IPv4 CIDR block, an Amazon-provided IPv6
      * CIDR block, or an IPv6 CIDR block from an IPv6 address pool that you provisioned through bring your own IP
-     * addresses (<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">BYOIP</a>). The IPv6 CIDR
-     * block size is fixed at /56.
+     * addresses (<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">BYOIP</a>).
      * </p>
      * <p>
      * You must specify one of the following in the request: an IPv4 CIDR block, an IPv6 pool, or an Amazon-provided
@@ -5570,7 +5603,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * If you've associated an IPv6 CIDR block with your VPC, you can associate an IPv6 CIDR block with a subnet when
-     * you create it. The allowed block size for an IPv6 subnet is a /64 netmask.
+     * you create it.
      * </p>
      * <p>
      * If you add more than one subnet to a VPC, they're set up in a star topology with a logical router in the middle.
@@ -5610,7 +5643,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * If you've associated an IPv6 CIDR block with your VPC, you can associate an IPv6 CIDR block with a subnet when
-     * you create it. The allowed block size for an IPv6 subnet is a /64 netmask.
+     * you create it.
      * </p>
      * <p>
      * If you add more than one subnet to a VPC, they're set up in a star topology with a logical router in the middle.
@@ -6666,8 +6699,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * You can optionally request an IPv6 CIDR block for the VPC. You can request an Amazon-provided IPv6 CIDR block
-     * from Amazon's pool of IPv6 addresses, or an IPv6 CIDR block from an IPv6 address pool that you provisioned
-     * through bring your own IP addresses (<a
+     * from Amazon's pool of IPv6 addresses or an IPv6 CIDR block from an IPv6 address pool that you provisioned through
+     * bring your own IP addresses (<a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">BYOIP</a>).
      * </p>
      * <p>
@@ -6699,8 +6732,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * You can optionally request an IPv6 CIDR block for the VPC. You can request an Amazon-provided IPv6 CIDR block
-     * from Amazon's pool of IPv6 addresses, or an IPv6 CIDR block from an IPv6 address pool that you provisioned
-     * through bring your own IP addresses (<a
+     * from Amazon's pool of IPv6 addresses or an IPv6 CIDR block from an IPv6 address pool that you provisioned through
+     * bring your own IP addresses (<a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">BYOIP</a>).
      * </p>
      * <p>
@@ -9998,6 +10031,47 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Deprovisions your Autonomous System Number (ASN) from your Amazon Web Services account. This action can only be
+     * called after any BYOIP CIDR associations are removed from your Amazon Web Services account with <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DisassociateIpamByoasn.html"
+     * >DisassociateIpamByoasn</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param deprovisionIpamByoasnRequest
+     * @return A Java Future containing the result of the DeprovisionIpamByoasn operation returned by the service.
+     * @sample AmazonEC2Async.DeprovisionIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeprovisionIpamByoasnResult> deprovisionIpamByoasnAsync(DeprovisionIpamByoasnRequest deprovisionIpamByoasnRequest);
+
+    /**
+     * <p>
+     * Deprovisions your Autonomous System Number (ASN) from your Amazon Web Services account. This action can only be
+     * called after any BYOIP CIDR associations are removed from your Amazon Web Services account with <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DisassociateIpamByoasn.html"
+     * >DisassociateIpamByoasn</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param deprovisionIpamByoasnRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeprovisionIpamByoasn operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DeprovisionIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeprovisionIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeprovisionIpamByoasnResult> deprovisionIpamByoasnAsync(DeprovisionIpamByoasnRequest deprovisionIpamByoasnRequest,
+            com.amazonaws.handlers.AsyncHandler<DeprovisionIpamByoasnRequest, DeprovisionIpamByoasnResult> asyncHandler);
+
+    /**
+     * <p>
      * Deprovision a CIDR provisioned from an IPAM pool. If you deprovision a CIDR from a pool that has a source pool,
      * the CIDR is recycled back into the source pool. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/depro-pool-cidr-ipam.html">Deprovision pool CIDRs</a> in the
@@ -13023,6 +13097,43 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<DescribeInternetGatewaysResult> describeInternetGatewaysAsync(
             com.amazonaws.handlers.AsyncHandler<DescribeInternetGatewaysRequest, DescribeInternetGatewaysResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes your Autonomous System Numbers (ASNs), their provisioning statuses, and the BYOIP CIDRs with which they
+     * are associated. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param describeIpamByoasnRequest
+     * @return A Java Future containing the result of the DescribeIpamByoasn operation returned by the service.
+     * @sample AmazonEC2Async.DescribeIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamByoasnResult> describeIpamByoasnAsync(DescribeIpamByoasnRequest describeIpamByoasnRequest);
+
+    /**
+     * <p>
+     * Describes your Autonomous System Numbers (ASNs), their provisioning statuses, and the BYOIP CIDRs with which they
+     * are associated. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param describeIpamByoasnRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeIpamByoasn operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamByoasnResult> describeIpamByoasnAsync(DescribeIpamByoasnRequest describeIpamByoasnRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpamByoasnRequest, DescribeIpamByoasnResult> asyncHandler);
 
     /**
      * <p>
@@ -16211,12 +16322,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
             com.amazonaws.handlers.AsyncHandler<DescribeTransitGatewaysRequest, DescribeTransitGatewaysResult> asyncHandler);
 
     /**
-     * <note>
-     * <p>
-     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
-     * your account manager.
-     * </p>
-     * </note>
      * <p>
      * Describes one or more network interface trunk associations.
      * </p>
@@ -16232,12 +16337,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
             DescribeTrunkInterfaceAssociationsRequest describeTrunkInterfaceAssociationsRequest);
 
     /**
-     * <note>
-     * <p>
-     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
-     * your account manager.
-     * </p>
-     * </note>
      * <p>
      * Describes one or more network interface trunk associations.
      * </p>
@@ -18496,6 +18595,43 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Remove the association between your Autonomous System Number (ASN) and your BYOIP CIDR. You may want to use this
+     * action to disassociate an ASN from a CIDR or if you want to swap ASNs. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param disassociateIpamByoasnRequest
+     * @return A Java Future containing the result of the DisassociateIpamByoasn operation returned by the service.
+     * @sample AmazonEC2Async.DisassociateIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateIpamByoasnResult> disassociateIpamByoasnAsync(DisassociateIpamByoasnRequest disassociateIpamByoasnRequest);
+
+    /**
+     * <p>
+     * Remove the association between your Autonomous System Number (ASN) and your BYOIP CIDR. You may want to use this
+     * action to disassociate an ASN from a CIDR or if you want to swap ASNs. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param disassociateIpamByoasnRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateIpamByoasn operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DisassociateIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateIpamByoasnResult> disassociateIpamByoasnAsync(DisassociateIpamByoasnRequest disassociateIpamByoasnRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateIpamByoasnRequest, DisassociateIpamByoasnResult> asyncHandler);
+
+    /**
+     * <p>
      * Disassociates a resource discovery from an Amazon VPC IPAM. A resource discovery is an IPAM component that
      * enables IPAM to manage and monitor resources that belong to the owning account.
      * </p>
@@ -18778,12 +18914,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
             com.amazonaws.handlers.AsyncHandler<DisassociateTransitGatewayRouteTableRequest, DisassociateTransitGatewayRouteTableResult> asyncHandler);
 
     /**
-     * <note>
-     * <p>
-     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
-     * your account manager.
-     * </p>
-     * </note>
      * <p>
      * Removes an association between a branch network interface with a trunk network interface.
      * </p>
@@ -18798,12 +18928,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
             DisassociateTrunkInterfaceRequest disassociateTrunkInterfaceRequest);
 
     /**
-     * <note>
-     * <p>
-     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
-     * your account manager.
-     * </p>
-     * </note>
      * <p>
      * Removes an association between a branch network interface with a trunk network interface.
      * </p>
@@ -20647,6 +20771,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<GetIpamDiscoveredAccountsResult> getIpamDiscoveredAccountsAsync(
             GetIpamDiscoveredAccountsRequest getIpamDiscoveredAccountsRequest,
             com.amazonaws.handlers.AsyncHandler<GetIpamDiscoveredAccountsRequest, GetIpamDiscoveredAccountsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the public IP addresses that have been discovered by IPAM.
+     * </p>
+     * 
+     * @param getIpamDiscoveredPublicAddressesRequest
+     * @return A Java Future containing the result of the GetIpamDiscoveredPublicAddresses operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.GetIpamDiscoveredPublicAddresses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamDiscoveredPublicAddresses"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamDiscoveredPublicAddressesResult> getIpamDiscoveredPublicAddressesAsync(
+            GetIpamDiscoveredPublicAddressesRequest getIpamDiscoveredPublicAddressesRequest);
+
+    /**
+     * <p>
+     * Gets the public IP addresses that have been discovered by IPAM.
+     * </p>
+     * 
+     * @param getIpamDiscoveredPublicAddressesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIpamDiscoveredPublicAddresses operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.GetIpamDiscoveredPublicAddresses
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamDiscoveredPublicAddresses"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamDiscoveredPublicAddressesResult> getIpamDiscoveredPublicAddressesAsync(
+            GetIpamDiscoveredPublicAddressesRequest getIpamDiscoveredPublicAddressesRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIpamDiscoveredPublicAddressesRequest, GetIpamDiscoveredPublicAddressesResult> asyncHandler);
 
     /**
      * <p>
@@ -25517,6 +25676,43 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<ProvisionByoipCidrResult> provisionByoipCidrAsync(ProvisionByoipCidrRequest provisionByoipCidrRequest,
             com.amazonaws.handlers.AsyncHandler<ProvisionByoipCidrRequest, ProvisionByoipCidrResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provisions your Autonomous System Number (ASN) for use in your Amazon Web Services account. This action requires
+     * authorization context for Amazon to bring the ASN to an Amazon Web Services account. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param provisionIpamByoasnRequest
+     * @return A Java Future containing the result of the ProvisionIpamByoasn operation returned by the service.
+     * @sample AmazonEC2Async.ProvisionIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ProvisionIpamByoasnResult> provisionIpamByoasnAsync(ProvisionIpamByoasnRequest provisionIpamByoasnRequest);
+
+    /**
+     * <p>
+     * Provisions your Autonomous System Number (ASN) for use in your Amazon Web Services account. This action requires
+     * authorization context for Amazon to bring the ASN to an Amazon Web Services account. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoasn.html">Tutorial: Bring your ASN to IPAM</a> in
+     * the <i>Amazon VPC IPAM guide</i>.
+     * </p>
+     * 
+     * @param provisionIpamByoasnRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ProvisionIpamByoasn operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ProvisionIpamByoasn
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ProvisionIpamByoasn" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ProvisionIpamByoasnResult> provisionIpamByoasnAsync(ProvisionIpamByoasnRequest provisionIpamByoasnRequest,
+            com.amazonaws.handlers.AsyncHandler<ProvisionIpamByoasnRequest, ProvisionIpamByoasnResult> asyncHandler);
 
     /**
      * <p>

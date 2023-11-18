@@ -1010,6 +1010,39 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<RedshiftIdcApplication> createRedshiftIdcApplicationAsync(CreateRedshiftIdcApplicationRequest request) {
+
+        return createRedshiftIdcApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RedshiftIdcApplication> createRedshiftIdcApplicationAsync(final CreateRedshiftIdcApplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateRedshiftIdcApplicationRequest, RedshiftIdcApplication> asyncHandler) {
+        final CreateRedshiftIdcApplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RedshiftIdcApplication>() {
+            @Override
+            public RedshiftIdcApplication call() throws Exception {
+                RedshiftIdcApplication result = null;
+
+                try {
+                    result = executeCreateRedshiftIdcApplication(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateScheduledActionResult> createScheduledActionAsync(CreateScheduledActionRequest request) {
 
         return createScheduledActionAsync(request, null);
@@ -1589,6 +1622,39 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
 
                 try {
                     result = executeDeletePartner(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRedshiftIdcApplicationResult> deleteRedshiftIdcApplicationAsync(DeleteRedshiftIdcApplicationRequest request) {
+
+        return deleteRedshiftIdcApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRedshiftIdcApplicationResult> deleteRedshiftIdcApplicationAsync(final DeleteRedshiftIdcApplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteRedshiftIdcApplicationRequest, DeleteRedshiftIdcApplicationResult> asyncHandler) {
+        final DeleteRedshiftIdcApplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteRedshiftIdcApplicationResult>() {
+            @Override
+            public DeleteRedshiftIdcApplicationResult call() throws Exception {
+                DeleteRedshiftIdcApplicationResult result = null;
+
+                try {
+                    result = executeDeleteRedshiftIdcApplication(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3020,6 +3086,41 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeRedshiftIdcApplicationsResult> describeRedshiftIdcApplicationsAsync(
+            DescribeRedshiftIdcApplicationsRequest request) {
+
+        return describeRedshiftIdcApplicationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRedshiftIdcApplicationsResult> describeRedshiftIdcApplicationsAsync(
+            final DescribeRedshiftIdcApplicationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeRedshiftIdcApplicationsRequest, DescribeRedshiftIdcApplicationsResult> asyncHandler) {
+        final DescribeRedshiftIdcApplicationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeRedshiftIdcApplicationsResult>() {
+            @Override
+            public DescribeRedshiftIdcApplicationsResult call() throws Exception {
+                DescribeRedshiftIdcApplicationsResult result = null;
+
+                try {
+                    result = executeDescribeRedshiftIdcApplications(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeReservedNodeExchangeStatusResult> describeReservedNodeExchangeStatusAsync(
             DescribeReservedNodeExchangeStatusRequest request) {
 
@@ -4285,6 +4386,39 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
 
                 try {
                     result = executeModifyEventSubscription(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RedshiftIdcApplication> modifyRedshiftIdcApplicationAsync(ModifyRedshiftIdcApplicationRequest request) {
+
+        return modifyRedshiftIdcApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RedshiftIdcApplication> modifyRedshiftIdcApplicationAsync(final ModifyRedshiftIdcApplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ModifyRedshiftIdcApplicationRequest, RedshiftIdcApplication> asyncHandler) {
+        final ModifyRedshiftIdcApplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RedshiftIdcApplication>() {
+            @Override
+            public RedshiftIdcApplication call() throws Exception {
+                RedshiftIdcApplication result = null;
+
+                try {
+                    result = executeModifyRedshiftIdcApplication(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -62,6 +62,14 @@ public class CreateIpamRequest extends AmazonWebServiceRequest implements Serial
      * </p>
      */
     private String clientToken;
+    /**
+     * <p>
+     * IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in each
+     * tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing
+     * &gt; IPAM tab</a>.
+     * </p>
+     */
+    private String tier;
 
     /**
      * <p>
@@ -384,6 +392,81 @@ public class CreateIpamRequest extends AmazonWebServiceRequest implements Serial
     }
 
     /**
+     * <p>
+     * IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in each
+     * tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing
+     * &gt; IPAM tab</a>.
+     * </p>
+     * 
+     * @param tier
+     *        IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in
+     *        each tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon
+     *        VPC pricing &gt; IPAM tab</a>.
+     * @see IpamTier
+     */
+
+    public void setTier(String tier) {
+        this.tier = tier;
+    }
+
+    /**
+     * <p>
+     * IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in each
+     * tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing
+     * &gt; IPAM tab</a>.
+     * </p>
+     * 
+     * @return IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in
+     *         each tier and the costs associated with the tiers, see <a
+     *         href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing &gt; IPAM tab</a>.
+     * @see IpamTier
+     */
+
+    public String getTier() {
+        return this.tier;
+    }
+
+    /**
+     * <p>
+     * IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in each
+     * tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing
+     * &gt; IPAM tab</a>.
+     * </p>
+     * 
+     * @param tier
+     *        IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in
+     *        each tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon
+     *        VPC pricing &gt; IPAM tab</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpamTier
+     */
+
+    public CreateIpamRequest withTier(String tier) {
+        setTier(tier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in each
+     * tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing
+     * &gt; IPAM tab</a>.
+     * </p>
+     * 
+     * @param tier
+     *        IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in
+     *        each tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon
+     *        VPC pricing &gt; IPAM tab</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpamTier
+     */
+
+    public CreateIpamRequest withTier(IpamTier tier) {
+        this.tier = tier.toString();
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -413,7 +496,9 @@ public class CreateIpamRequest extends AmazonWebServiceRequest implements Serial
         if (getTagSpecifications() != null)
             sb.append("TagSpecifications: ").append(getTagSpecifications()).append(",");
         if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getTier() != null)
+            sb.append("Tier: ").append(getTier());
         sb.append("}");
         return sb.toString();
     }
@@ -444,6 +529,10 @@ public class CreateIpamRequest extends AmazonWebServiceRequest implements Serial
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getTier() == null ^ this.getTier() == null)
+            return false;
+        if (other.getTier() != null && other.getTier().equals(this.getTier()) == false)
+            return false;
         return true;
     }
 
@@ -456,6 +545,7 @@ public class CreateIpamRequest extends AmazonWebServiceRequest implements Serial
         hashCode = prime * hashCode + ((getOperatingRegions() == null) ? 0 : getOperatingRegions().hashCode());
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getTier() == null) ? 0 : getTier().hashCode());
         return hashCode;
     }
 

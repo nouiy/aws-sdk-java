@@ -976,6 +976,41 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
 
     /**
      * <p>
+     * Creates an Amazon Redshift application for use with IAM Identity Center.
+     * </p>
+     * 
+     * @param createRedshiftIdcApplicationRequest
+     * @return A Java Future containing the result of the CreateRedshiftIdcApplication operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsync.CreateRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RedshiftIdcApplication> createRedshiftIdcApplicationAsync(
+            CreateRedshiftIdcApplicationRequest createRedshiftIdcApplicationRequest);
+
+    /**
+     * <p>
+     * Creates an Amazon Redshift application for use with IAM Identity Center.
+     * </p>
+     * 
+     * @param createRedshiftIdcApplicationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateRedshiftIdcApplication operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsyncHandler.CreateRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RedshiftIdcApplication> createRedshiftIdcApplicationAsync(
+            CreateRedshiftIdcApplicationRequest createRedshiftIdcApplicationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateRedshiftIdcApplicationRequest, RedshiftIdcApplication> asyncHandler);
+
+    /**
+     * <p>
      * Creates a scheduled action. A scheduled action contains a schedule and an Amazon Redshift API action. For
      * example, you can create a schedule of when to run the <code>ResizeCluster</code> API operation.
      * </p>
@@ -1663,6 +1698,41 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
      */
     java.util.concurrent.Future<DeletePartnerResult> deletePartnerAsync(DeletePartnerRequest deletePartnerRequest,
             com.amazonaws.handlers.AsyncHandler<DeletePartnerRequest, DeletePartnerResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an Amazon Redshift IAM Identity Center application.
+     * </p>
+     * 
+     * @param deleteRedshiftIdcApplicationRequest
+     * @return A Java Future containing the result of the DeleteRedshiftIdcApplication operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsync.DeleteRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRedshiftIdcApplicationResult> deleteRedshiftIdcApplicationAsync(
+            DeleteRedshiftIdcApplicationRequest deleteRedshiftIdcApplicationRequest);
+
+    /**
+     * <p>
+     * Deletes an Amazon Redshift IAM Identity Center application.
+     * </p>
+     * 
+     * @param deleteRedshiftIdcApplicationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteRedshiftIdcApplication operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsyncHandler.DeleteRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRedshiftIdcApplicationResult> deleteRedshiftIdcApplicationAsync(
+            DeleteRedshiftIdcApplicationRequest deleteRedshiftIdcApplicationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteRedshiftIdcApplicationRequest, DeleteRedshiftIdcApplicationResult> asyncHandler);
 
     /**
      * <p>
@@ -3246,6 +3316,41 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
 
     /**
      * <p>
+     * Lists the Amazon Redshift IAM Identity Center applications.
+     * </p>
+     * 
+     * @param describeRedshiftIdcApplicationsRequest
+     * @return A Java Future containing the result of the DescribeRedshiftIdcApplications operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsync.DescribeRedshiftIdcApplications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeRedshiftIdcApplications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRedshiftIdcApplicationsResult> describeRedshiftIdcApplicationsAsync(
+            DescribeRedshiftIdcApplicationsRequest describeRedshiftIdcApplicationsRequest);
+
+    /**
+     * <p>
+     * Lists the Amazon Redshift IAM Identity Center applications.
+     * </p>
+     * 
+     * @param describeRedshiftIdcApplicationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeRedshiftIdcApplications operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsyncHandler.DescribeRedshiftIdcApplications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeRedshiftIdcApplications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRedshiftIdcApplicationsResult> describeRedshiftIdcApplicationsAsync(
+            DescribeRedshiftIdcApplicationsRequest describeRedshiftIdcApplicationsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeRedshiftIdcApplicationsRequest, DescribeRedshiftIdcApplicationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns exchange status details and associated metadata for a reserved-node exchange. Statuses include such
      * values as in progress and requested.
      * </p>
@@ -4759,6 +4864,41 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
      */
     java.util.concurrent.Future<EventSubscription> modifyEventSubscriptionAsync(ModifyEventSubscriptionRequest modifyEventSubscriptionRequest,
             com.amazonaws.handlers.AsyncHandler<ModifyEventSubscriptionRequest, EventSubscription> asyncHandler);
+
+    /**
+     * <p>
+     * Changes an existing Amazon Redshift IAM Identity Center application.
+     * </p>
+     * 
+     * @param modifyRedshiftIdcApplicationRequest
+     * @return A Java Future containing the result of the ModifyRedshiftIdcApplication operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsync.ModifyRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RedshiftIdcApplication> modifyRedshiftIdcApplicationAsync(
+            ModifyRedshiftIdcApplicationRequest modifyRedshiftIdcApplicationRequest);
+
+    /**
+     * <p>
+     * Changes an existing Amazon Redshift IAM Identity Center application.
+     * </p>
+     * 
+     * @param modifyRedshiftIdcApplicationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyRedshiftIdcApplication operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsyncHandler.ModifyRedshiftIdcApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyRedshiftIdcApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RedshiftIdcApplication> modifyRedshiftIdcApplicationAsync(
+            ModifyRedshiftIdcApplicationRequest modifyRedshiftIdcApplicationRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyRedshiftIdcApplicationRequest, RedshiftIdcApplication> asyncHandler);
 
     /**
      * <p>

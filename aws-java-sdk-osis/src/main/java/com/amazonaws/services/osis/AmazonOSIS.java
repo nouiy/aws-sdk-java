@@ -65,6 +65,8 @@ public interface AmazonOSIS {
      *         You don't have permissions to access the resource.
      * @throws ResourceAlreadyExistsException
      *         You attempted to create a resource that already exists.
+     * @throws ResourceNotFoundException
+     *         You attempted to access or delete a resource that does not exist.
      * @sample AmazonOSIS.CreatePipeline
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/osis-2022-01-01/CreatePipeline" target="_top">AWS API
      *      Documentation</a>

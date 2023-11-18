@@ -125,6 +125,20 @@ public class Ipam implements Serializable, Cloneable {
      * </p>
      */
     private Integer resourceDiscoveryAssociationCount;
+    /**
+     * <p>
+     * The state message.
+     * </p>
+     */
+    private String stateMessage;
+    /**
+     * <p>
+     * IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in each
+     * tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing
+     * &gt; IPAM tab</a>.
+     * </p>
+     */
+    private String tier;
 
     /**
      * <p>
@@ -860,6 +874,121 @@ public class Ipam implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The state message.
+     * </p>
+     * 
+     * @param stateMessage
+     *        The state message.
+     */
+
+    public void setStateMessage(String stateMessage) {
+        this.stateMessage = stateMessage;
+    }
+
+    /**
+     * <p>
+     * The state message.
+     * </p>
+     * 
+     * @return The state message.
+     */
+
+    public String getStateMessage() {
+        return this.stateMessage;
+    }
+
+    /**
+     * <p>
+     * The state message.
+     * </p>
+     * 
+     * @param stateMessage
+     *        The state message.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Ipam withStateMessage(String stateMessage) {
+        setStateMessage(stateMessage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in each
+     * tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing
+     * &gt; IPAM tab</a>.
+     * </p>
+     * 
+     * @param tier
+     *        IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in
+     *        each tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon
+     *        VPC pricing &gt; IPAM tab</a>.
+     * @see IpamTier
+     */
+
+    public void setTier(String tier) {
+        this.tier = tier;
+    }
+
+    /**
+     * <p>
+     * IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in each
+     * tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing
+     * &gt; IPAM tab</a>.
+     * </p>
+     * 
+     * @return IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in
+     *         each tier and the costs associated with the tiers, see <a
+     *         href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing &gt; IPAM tab</a>.
+     * @see IpamTier
+     */
+
+    public String getTier() {
+        return this.tier;
+    }
+
+    /**
+     * <p>
+     * IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in each
+     * tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing
+     * &gt; IPAM tab</a>.
+     * </p>
+     * 
+     * @param tier
+     *        IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in
+     *        each tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon
+     *        VPC pricing &gt; IPAM tab</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpamTier
+     */
+
+    public Ipam withTier(String tier) {
+        setTier(tier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in each
+     * tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing
+     * &gt; IPAM tab</a>.
+     * </p>
+     * 
+     * @param tier
+     *        IPAM is offered in a Free Tier and an Advanced Tier. For more information about the features available in
+     *        each tier and the costs associated with the tiers, see <a href="http://aws.amazon.com/vpc/pricing/">Amazon
+     *        VPC pricing &gt; IPAM tab</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpamTier
+     */
+
+    public Ipam withTier(IpamTier tier) {
+        this.tier = tier.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -898,7 +1027,11 @@ public class Ipam implements Serializable, Cloneable {
         if (getDefaultResourceDiscoveryAssociationId() != null)
             sb.append("DefaultResourceDiscoveryAssociationId: ").append(getDefaultResourceDiscoveryAssociationId()).append(",");
         if (getResourceDiscoveryAssociationCount() != null)
-            sb.append("ResourceDiscoveryAssociationCount: ").append(getResourceDiscoveryAssociationCount());
+            sb.append("ResourceDiscoveryAssociationCount: ").append(getResourceDiscoveryAssociationCount()).append(",");
+        if (getStateMessage() != null)
+            sb.append("StateMessage: ").append(getStateMessage()).append(",");
+        if (getTier() != null)
+            sb.append("Tier: ").append(getTier());
         sb.append("}");
         return sb.toString();
     }
@@ -971,6 +1104,14 @@ public class Ipam implements Serializable, Cloneable {
         if (other.getResourceDiscoveryAssociationCount() != null
                 && other.getResourceDiscoveryAssociationCount().equals(this.getResourceDiscoveryAssociationCount()) == false)
             return false;
+        if (other.getStateMessage() == null ^ this.getStateMessage() == null)
+            return false;
+        if (other.getStateMessage() != null && other.getStateMessage().equals(this.getStateMessage()) == false)
+            return false;
+        if (other.getTier() == null ^ this.getTier() == null)
+            return false;
+        if (other.getTier() != null && other.getTier().equals(this.getTier()) == false)
+            return false;
         return true;
     }
 
@@ -993,6 +1134,8 @@ public class Ipam implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getDefaultResourceDiscoveryId() == null) ? 0 : getDefaultResourceDiscoveryId().hashCode());
         hashCode = prime * hashCode + ((getDefaultResourceDiscoveryAssociationId() == null) ? 0 : getDefaultResourceDiscoveryAssociationId().hashCode());
         hashCode = prime * hashCode + ((getResourceDiscoveryAssociationCount() == null) ? 0 : getResourceDiscoveryAssociationCount().hashCode());
+        hashCode = prime * hashCode + ((getStateMessage() == null) ? 0 : getStateMessage().hashCode());
+        hashCode = prime * hashCode + ((getTier() == null) ? 0 : getTier().hashCode());
         return hashCode;
     }
 

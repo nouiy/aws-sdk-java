@@ -24,8 +24,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <note>
  * <p>
- * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and higher, excluding 5.0.x versions.
- * Spot Instance allocation strategy is available in Amazon EMR releases 5.12.1 and higher.
+ * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later, excluding 5.0.x versions.
+ * Spot Instance allocation strategy is available in Amazon EMR releases 5.12.1 and later.
  * </p>
  * </note> <note>
  * <p>

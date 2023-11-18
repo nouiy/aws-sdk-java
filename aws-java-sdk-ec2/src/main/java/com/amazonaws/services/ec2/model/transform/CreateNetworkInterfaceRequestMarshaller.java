@@ -197,6 +197,24 @@ public class CreateNetworkInterfaceRequestMarshaller implements Marshaller<Reque
             request.addParameter("EnablePrimaryIpv6", StringUtils.fromBoolean(createNetworkInterfaceRequest.getEnablePrimaryIpv6()));
         }
 
+        ConnectionTrackingSpecificationRequest connectionTrackingSpecification = createNetworkInterfaceRequest.getConnectionTrackingSpecification();
+        if (connectionTrackingSpecification != null) {
+
+            if (connectionTrackingSpecification.getTcpEstablishedTimeout() != null) {
+                request.addParameter("ConnectionTrackingSpecification.TcpEstablishedTimeout",
+                        StringUtils.fromInteger(connectionTrackingSpecification.getTcpEstablishedTimeout()));
+            }
+
+            if (connectionTrackingSpecification.getUdpStreamTimeout() != null) {
+                request.addParameter("ConnectionTrackingSpecification.UdpStreamTimeout",
+                        StringUtils.fromInteger(connectionTrackingSpecification.getUdpStreamTimeout()));
+            }
+
+            if (connectionTrackingSpecification.getUdpTimeout() != null) {
+                request.addParameter("ConnectionTrackingSpecification.UdpTimeout", StringUtils.fromInteger(connectionTrackingSpecification.getUdpTimeout()));
+            }
+        }
+
         return request;
     }
 

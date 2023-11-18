@@ -47,6 +47,14 @@ public class StartPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String clientRequestToken;
+    /**
+     * <p>
+     * A list that allows you to specify, or override, the source revision for a pipeline execution that's being
+     * started. A source revision is the version with all the changes to your application code, or source artifact, for
+     * the pipeline execution.
+     * </p>
+     */
+    private java.util.List<SourceRevisionOverride> sourceRevisions;
 
     /**
      * <p>
@@ -207,6 +215,92 @@ public class StartPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * A list that allows you to specify, or override, the source revision for a pipeline execution that's being
+     * started. A source revision is the version with all the changes to your application code, or source artifact, for
+     * the pipeline execution.
+     * </p>
+     * 
+     * @return A list that allows you to specify, or override, the source revision for a pipeline execution that's being
+     *         started. A source revision is the version with all the changes to your application code, or source
+     *         artifact, for the pipeline execution.
+     */
+
+    public java.util.List<SourceRevisionOverride> getSourceRevisions() {
+        return sourceRevisions;
+    }
+
+    /**
+     * <p>
+     * A list that allows you to specify, or override, the source revision for a pipeline execution that's being
+     * started. A source revision is the version with all the changes to your application code, or source artifact, for
+     * the pipeline execution.
+     * </p>
+     * 
+     * @param sourceRevisions
+     *        A list that allows you to specify, or override, the source revision for a pipeline execution that's being
+     *        started. A source revision is the version with all the changes to your application code, or source
+     *        artifact, for the pipeline execution.
+     */
+
+    public void setSourceRevisions(java.util.Collection<SourceRevisionOverride> sourceRevisions) {
+        if (sourceRevisions == null) {
+            this.sourceRevisions = null;
+            return;
+        }
+
+        this.sourceRevisions = new java.util.ArrayList<SourceRevisionOverride>(sourceRevisions);
+    }
+
+    /**
+     * <p>
+     * A list that allows you to specify, or override, the source revision for a pipeline execution that's being
+     * started. A source revision is the version with all the changes to your application code, or source artifact, for
+     * the pipeline execution.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSourceRevisions(java.util.Collection)} or {@link #withSourceRevisions(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param sourceRevisions
+     *        A list that allows you to specify, or override, the source revision for a pipeline execution that's being
+     *        started. A source revision is the version with all the changes to your application code, or source
+     *        artifact, for the pipeline execution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartPipelineExecutionRequest withSourceRevisions(SourceRevisionOverride... sourceRevisions) {
+        if (this.sourceRevisions == null) {
+            setSourceRevisions(new java.util.ArrayList<SourceRevisionOverride>(sourceRevisions.length));
+        }
+        for (SourceRevisionOverride ele : sourceRevisions) {
+            this.sourceRevisions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list that allows you to specify, or override, the source revision for a pipeline execution that's being
+     * started. A source revision is the version with all the changes to your application code, or source artifact, for
+     * the pipeline execution.
+     * </p>
+     * 
+     * @param sourceRevisions
+     *        A list that allows you to specify, or override, the source revision for a pipeline execution that's being
+     *        started. A source revision is the version with all the changes to your application code, or source
+     *        artifact, for the pipeline execution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartPipelineExecutionRequest withSourceRevisions(java.util.Collection<SourceRevisionOverride> sourceRevisions) {
+        setSourceRevisions(sourceRevisions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -223,7 +317,9 @@ public class StartPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
         if (getVariables() != null)
             sb.append("Variables: ").append(getVariables()).append(",");
         if (getClientRequestToken() != null)
-            sb.append("ClientRequestToken: ").append(getClientRequestToken());
+            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
+        if (getSourceRevisions() != null)
+            sb.append("SourceRevisions: ").append(getSourceRevisions());
         sb.append("}");
         return sb.toString();
     }
@@ -250,6 +346,10 @@ public class StartPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
             return false;
+        if (other.getSourceRevisions() == null ^ this.getSourceRevisions() == null)
+            return false;
+        if (other.getSourceRevisions() != null && other.getSourceRevisions().equals(this.getSourceRevisions()) == false)
+            return false;
         return true;
     }
 
@@ -261,6 +361,7 @@ public class StartPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getVariables() == null) ? 0 : getVariables().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
+        hashCode = prime * hashCode + ((getSourceRevisions() == null) ? 0 : getSourceRevisions().hashCode());
         return hashCode;
     }
 

@@ -52,6 +52,10 @@ public class FeatureActivationsJsonUnmarshaller implements Unmarshaller<FeatureA
                     context.nextToken();
                     featureActivations.setInputPrepareScheduleActions(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("outputStaticImageOverlayScheduleActions", targetDepth)) {
+                    context.nextToken();
+                    featureActivations.setOutputStaticImageOverlayScheduleActions(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

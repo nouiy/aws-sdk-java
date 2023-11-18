@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum RuleState {
 
     ENABLED("ENABLED"),
-    DISABLED("DISABLED");
+    DISABLED("DISABLED"),
+    ENABLED_WITH_ALL_CLOUDTRAIL_MANAGEMENT_EVENTS("ENABLED_WITH_ALL_CLOUDTRAIL_MANAGEMENT_EVENTS");
 
     private String value;
 

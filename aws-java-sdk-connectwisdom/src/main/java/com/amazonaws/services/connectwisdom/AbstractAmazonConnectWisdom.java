@@ -48,6 +48,11 @@ public class AbstractAmazonConnectWisdom implements AmazonConnectWisdom {
     }
 
     @Override
+    public CreateQuickResponseResult createQuickResponse(CreateQuickResponseRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateSessionResult createSession(CreateSessionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -68,7 +73,17 @@ public class AbstractAmazonConnectWisdom implements AmazonConnectWisdom {
     }
 
     @Override
+    public DeleteImportJobResult deleteImportJob(DeleteImportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteKnowledgeBaseResult deleteKnowledgeBase(DeleteKnowledgeBaseRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteQuickResponseResult deleteQuickResponse(DeleteQuickResponseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -93,7 +108,17 @@ public class AbstractAmazonConnectWisdom implements AmazonConnectWisdom {
     }
 
     @Override
+    public GetImportJobResult getImportJob(GetImportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetKnowledgeBaseResult getKnowledgeBase(GetKnowledgeBaseRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetQuickResponseResult getQuickResponse(GetQuickResponseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -123,7 +148,17 @@ public class AbstractAmazonConnectWisdom implements AmazonConnectWisdom {
     }
 
     @Override
+    public ListImportJobsResult listImportJobs(ListImportJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListKnowledgeBasesResult listKnowledgeBases(ListKnowledgeBasesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListQuickResponsesResult listQuickResponses(ListQuickResponsesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -153,12 +188,22 @@ public class AbstractAmazonConnectWisdom implements AmazonConnectWisdom {
     }
 
     @Override
+    public SearchQuickResponsesResult searchQuickResponses(SearchQuickResponsesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SearchSessionsResult searchSessions(SearchSessionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public StartContentUploadResult startContentUpload(StartContentUploadRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartImportJobResult startImportJob(StartImportJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -179,6 +224,11 @@ public class AbstractAmazonConnectWisdom implements AmazonConnectWisdom {
 
     @Override
     public UpdateKnowledgeBaseTemplateUriResult updateKnowledgeBaseTemplateUri(UpdateKnowledgeBaseTemplateUriRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateQuickResponseResult updateQuickResponse(UpdateQuickResponseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

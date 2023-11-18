@@ -160,6 +160,11 @@ public class InstanceNetworkInterfaceStaxUnmarshaller implements Unmarshaller<In
                     continue;
                 }
 
+                if (context.testExpression("connectionTrackingConfiguration", targetDepth)) {
+                    instanceNetworkInterface.setConnectionTrackingConfiguration(ConnectionTrackingSpecificationResponseStaxUnmarshaller.getInstance()
+                            .unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return instanceNetworkInterface;

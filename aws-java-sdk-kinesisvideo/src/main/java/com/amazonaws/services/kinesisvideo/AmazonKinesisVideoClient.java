@@ -861,13 +861,6 @@ public class AmazonKinesisVideoClient extends AmazonWebServiceClient implements 
     }
 
     /**
-     * <important>
-     * <p>
-     * This API is related to <a
-     * href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/webrtc-ingestion.html">WebRTC
-     * Ingestion</a> and is only available in the <code>us-west-2</code> region.
-     * </p>
-     * </important>
      * <p>
      * Returns the most current information about the channel. Specify the <code>ChannelName</code> or
      * <code>ChannelARN</code> in the input.
@@ -2039,11 +2032,6 @@ public class AmazonKinesisVideoClient extends AmazonWebServiceClient implements 
      * want to increase or decrease the data retention period, specify the <code>Operation</code> parameter in the
      * request body. In the request, you must specify either the <code>StreamName</code> or the <code>StreamARN</code>.
      * </p>
-     * <note>
-     * <p>
-     * The retention period that you specify replaces the current value.
-     * </p>
-     * </note>
      * <p>
      * This operation requires permission for the <code>KinesisVideo:UpdateDataRetention</code> action.
      * </p>
@@ -2249,27 +2237,21 @@ public class AmazonKinesisVideoClient extends AmazonWebServiceClient implements 
     }
 
     /**
-     * <important>
      * <p>
-     * This API is related to <a
-     * href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/webrtc-ingestion.html">WebRTC
-     * Ingestion</a> and is only available in the <code>us-west-2</code> region.
-     * </p>
-     * </important>
-     * <p>
-     * Associates a <code>SignalingChannel</code> to a stream to store the media. There are two signaling modes that can
-     * specified :
+     * Associates a <code>SignalingChannel</code> to a stream to store the media. There are two signaling modes that you
+     * can specify :
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If the <code>StorageStatus</code> is disabled, no data will be stored, and the <code>StreamARN</code> parameter
-     * will not be needed.
+     * If <code>StorageStatus</code> is enabled, the data will be stored in the <code>StreamARN</code> provided. In
+     * order for WebRTC Ingestion to work, the stream must have data retention enabled.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If the <code>StorageStatus</code> is enabled, the data will be stored in the <code>StreamARN</code> provided.
+     * If <code>StorageStatus</code> is disabled, no data will be stored, and the <code>StreamARN</code> parameter will
+     * not be needed.
      * </p>
      * </li>
      * </ul>

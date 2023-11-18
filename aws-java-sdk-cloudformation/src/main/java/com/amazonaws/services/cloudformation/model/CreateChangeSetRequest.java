@@ -213,7 +213,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
      * parameter for condition keys in IAM policies for CloudFormation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling access
-     * with Identity and Access Management</a> in the CloudFormation User Guide.
+     * with Identity and Access Management</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -352,6 +352,22 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String onStackFailure;
+    /**
+     * <p>
+     * Indicates if the stack set imports resources that already exist.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter can only import resources that have custom names in templates. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name type</a> in
+     * the <i>CloudFormation User Guide</i>. To import resources that do not accept custom names, such as EC2 instances,
+     * use the resource import feature instead. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">Bringing existing
+     * resources into CloudFormation management</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * </note>
+     */
+    private Boolean importExistingResources;
 
     /**
      * <p>
@@ -2058,7 +2074,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
      * parameter for condition keys in IAM policies for CloudFormation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling access
-     * with Identity and Access Management</a> in the CloudFormation User Guide.
+     * with Identity and Access Management</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -2075,7 +2091,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         Management (IAM) uses this parameter for condition keys in IAM policies for CloudFormation. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling
-     *         access with Identity and Access Management</a> in the CloudFormation User Guide.
+     *         access with Identity and Access Management</a> in the <i>CloudFormation User Guide</i>.
      *         </p>
      *         <note>
      *         <p>
@@ -2100,7 +2116,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
      * parameter for condition keys in IAM policies for CloudFormation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling access
-     * with Identity and Access Management</a> in the CloudFormation User Guide.
+     * with Identity and Access Management</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -2116,7 +2132,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        fails. By default, CloudFormation grants permissions to all resource types. Identity and Access Management
      *        (IAM) uses this parameter for condition keys in IAM policies for CloudFormation. For more information, see
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
-     *        Controlling access with Identity and Access Management</a> in the CloudFormation User Guide.
+     *        Controlling access with Identity and Access Management</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        <note>
      *        <p>
@@ -2143,7 +2159,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
      * parameter for condition keys in IAM policies for CloudFormation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling access
-     * with Identity and Access Management</a> in the CloudFormation User Guide.
+     * with Identity and Access Management</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -2164,7 +2180,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        fails. By default, CloudFormation grants permissions to all resource types. Identity and Access Management
      *        (IAM) uses this parameter for condition keys in IAM policies for CloudFormation. For more information, see
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
-     *        Controlling access with Identity and Access Management</a> in the CloudFormation User Guide.
+     *        Controlling access with Identity and Access Management</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        <note>
      *        <p>
@@ -2193,7 +2209,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
      * parameter for condition keys in IAM policies for CloudFormation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling access
-     * with Identity and Access Management</a> in the CloudFormation User Guide.
+     * with Identity and Access Management</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -2209,7 +2225,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        fails. By default, CloudFormation grants permissions to all resource types. Identity and Access Management
      *        (IAM) uses this parameter for condition keys in IAM policies for CloudFormation. For more information, see
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
-     *        Controlling access with Identity and Access Management</a> in the CloudFormation User Guide.
+     *        Controlling access with Identity and Access Management</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        <note>
      *        <p>
@@ -3410,6 +3426,130 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * Indicates if the stack set imports resources that already exist.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter can only import resources that have custom names in templates. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name type</a> in
+     * the <i>CloudFormation User Guide</i>. To import resources that do not accept custom names, such as EC2 instances,
+     * use the resource import feature instead. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">Bringing existing
+     * resources into CloudFormation management</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * </note>
+     * 
+     * @param importExistingResources
+     *        Indicates if the stack set imports resources that already exist.</p> <note>
+     *        <p>
+     *        This parameter can only import resources that have custom names in templates. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name
+     *        type</a> in the <i>CloudFormation User Guide</i>. To import resources that do not accept custom names,
+     *        such as EC2 instances, use the resource import feature instead. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">Bringing
+     *        existing resources into CloudFormation management</a> in the <i>CloudFormation User Guide</i>.
+     *        </p>
+     */
+
+    public void setImportExistingResources(Boolean importExistingResources) {
+        this.importExistingResources = importExistingResources;
+    }
+
+    /**
+     * <p>
+     * Indicates if the stack set imports resources that already exist.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter can only import resources that have custom names in templates. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name type</a> in
+     * the <i>CloudFormation User Guide</i>. To import resources that do not accept custom names, such as EC2 instances,
+     * use the resource import feature instead. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">Bringing existing
+     * resources into CloudFormation management</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * </note>
+     * 
+     * @return Indicates if the stack set imports resources that already exist.</p> <note>
+     *         <p>
+     *         This parameter can only import resources that have custom names in templates. For more information, see
+     *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name
+     *         type</a> in the <i>CloudFormation User Guide</i>. To import resources that do not accept custom names,
+     *         such as EC2 instances, use the resource import feature instead. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">Bringing
+     *         existing resources into CloudFormation management</a> in the <i>CloudFormation User Guide</i>.
+     *         </p>
+     */
+
+    public Boolean getImportExistingResources() {
+        return this.importExistingResources;
+    }
+
+    /**
+     * <p>
+     * Indicates if the stack set imports resources that already exist.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter can only import resources that have custom names in templates. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name type</a> in
+     * the <i>CloudFormation User Guide</i>. To import resources that do not accept custom names, such as EC2 instances,
+     * use the resource import feature instead. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">Bringing existing
+     * resources into CloudFormation management</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * </note>
+     * 
+     * @param importExistingResources
+     *        Indicates if the stack set imports resources that already exist.</p> <note>
+     *        <p>
+     *        This parameter can only import resources that have custom names in templates. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name
+     *        type</a> in the <i>CloudFormation User Guide</i>. To import resources that do not accept custom names,
+     *        such as EC2 instances, use the resource import feature instead. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">Bringing
+     *        existing resources into CloudFormation management</a> in the <i>CloudFormation User Guide</i>.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateChangeSetRequest withImportExistingResources(Boolean importExistingResources) {
+        setImportExistingResources(importExistingResources);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates if the stack set imports resources that already exist.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter can only import resources that have custom names in templates. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name type</a> in
+     * the <i>CloudFormation User Guide</i>. To import resources that do not accept custom names, such as EC2 instances,
+     * use the resource import feature instead. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">Bringing existing
+     * resources into CloudFormation management</a> in the <i>CloudFormation User Guide</i>.
+     * </p>
+     * </note>
+     * 
+     * @return Indicates if the stack set imports resources that already exist.</p> <note>
+     *         <p>
+     *         This parameter can only import resources that have custom names in templates. For more information, see
+     *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name
+     *         type</a> in the <i>CloudFormation User Guide</i>. To import resources that do not accept custom names,
+     *         such as EC2 instances, use the resource import feature instead. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html">Bringing
+     *         existing resources into CloudFormation management</a> in the <i>CloudFormation User Guide</i>.
+     *         </p>
+     */
+
+    public Boolean isImportExistingResources() {
+        return this.importExistingResources;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3456,7 +3596,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
         if (getIncludeNestedStacks() != null)
             sb.append("IncludeNestedStacks: ").append(getIncludeNestedStacks()).append(",");
         if (getOnStackFailure() != null)
-            sb.append("OnStackFailure: ").append(getOnStackFailure());
+            sb.append("OnStackFailure: ").append(getOnStackFailure()).append(",");
+        if (getImportExistingResources() != null)
+            sb.append("ImportExistingResources: ").append(getImportExistingResources());
         sb.append("}");
         return sb.toString();
     }
@@ -3543,6 +3685,10 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getOnStackFailure() != null && other.getOnStackFailure().equals(this.getOnStackFailure()) == false)
             return false;
+        if (other.getImportExistingResources() == null ^ this.getImportExistingResources() == null)
+            return false;
+        if (other.getImportExistingResources() != null && other.getImportExistingResources().equals(this.getImportExistingResources()) == false)
+            return false;
         return true;
     }
 
@@ -3569,6 +3715,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getResourcesToImport() == null) ? 0 : getResourcesToImport().hashCode());
         hashCode = prime * hashCode + ((getIncludeNestedStacks() == null) ? 0 : getIncludeNestedStacks().hashCode());
         hashCode = prime * hashCode + ((getOnStackFailure() == null) ? 0 : getOnStackFailure().hashCode());
+        hashCode = prime * hashCode + ((getImportExistingResources() == null) ? 0 : getImportExistingResources().hashCode());
         return hashCode;
     }
 

@@ -314,6 +314,19 @@ public class AbstractAmazonRedshiftAsync extends AbstractAmazonRedshift implemen
     }
 
     @Override
+    public java.util.concurrent.Future<RedshiftIdcApplication> createRedshiftIdcApplicationAsync(CreateRedshiftIdcApplicationRequest request) {
+
+        return createRedshiftIdcApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RedshiftIdcApplication> createRedshiftIdcApplicationAsync(CreateRedshiftIdcApplicationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateRedshiftIdcApplicationRequest, RedshiftIdcApplication> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateScheduledActionResult> createScheduledActionAsync(CreateScheduledActionRequest request) {
 
         return createScheduledActionAsync(request, null);
@@ -543,6 +556,19 @@ public class AbstractAmazonRedshiftAsync extends AbstractAmazonRedshift implemen
     @Override
     public java.util.concurrent.Future<DeletePartnerResult> deletePartnerAsync(DeletePartnerRequest request,
             com.amazonaws.handlers.AsyncHandler<DeletePartnerRequest, DeletePartnerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRedshiftIdcApplicationResult> deleteRedshiftIdcApplicationAsync(DeleteRedshiftIdcApplicationRequest request) {
+
+        return deleteRedshiftIdcApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRedshiftIdcApplicationResult> deleteRedshiftIdcApplicationAsync(DeleteRedshiftIdcApplicationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteRedshiftIdcApplicationRequest, DeleteRedshiftIdcApplicationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1276,6 +1302,21 @@ public class AbstractAmazonRedshiftAsync extends AbstractAmazonRedshift implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeRedshiftIdcApplicationsResult> describeRedshiftIdcApplicationsAsync(
+            DescribeRedshiftIdcApplicationsRequest request) {
+
+        return describeRedshiftIdcApplicationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRedshiftIdcApplicationsResult> describeRedshiftIdcApplicationsAsync(
+            DescribeRedshiftIdcApplicationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeRedshiftIdcApplicationsRequest, DescribeRedshiftIdcApplicationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeReservedNodeExchangeStatusResult> describeReservedNodeExchangeStatusAsync(
             DescribeReservedNodeExchangeStatusRequest request) {
 
@@ -1848,6 +1889,19 @@ public class AbstractAmazonRedshiftAsync extends AbstractAmazonRedshift implemen
     @Override
     public java.util.concurrent.Future<EventSubscription> modifyEventSubscriptionAsync(ModifyEventSubscriptionRequest request,
             com.amazonaws.handlers.AsyncHandler<ModifyEventSubscriptionRequest, EventSubscription> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<RedshiftIdcApplication> modifyRedshiftIdcApplicationAsync(ModifyRedshiftIdcApplicationRequest request) {
+
+        return modifyRedshiftIdcApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RedshiftIdcApplication> modifyRedshiftIdcApplicationAsync(ModifyRedshiftIdcApplicationRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyRedshiftIdcApplicationRequest, RedshiftIdcApplication> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -48,14 +48,14 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
     private String logUri;
     /**
      * <p>
-     * The KMS key used for encrypting log files. This attribute is only available with Amazon EMR 5.30.0 and higher,
+     * The KMS key used for encrypting log files. This attribute is only available with Amazon EMR 5.30.0 and later,
      * excluding 6.0.0.
      * </p>
      */
     private String logEncryptionKmsKeyId;
     /**
      * <p>
-     * Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and higher,
+     * Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and later,
      * <code>ReleaseLabel</code> is used. To specify a custom AMI, use <code>CustomAmiID</code>.
      * </p>
      */
@@ -133,12 +133,12 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      * The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an instance
      * group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates nodes at the
      * instance-hour boundary, regardless of when the request to terminate the instance was submitted. This option is
-     * only available with Amazon EMR 5.1.0 and higher and is the default for clusters created using that version.
+     * only available with Amazon EMR 5.1.0 and later and is the default for clusters created using that version.
      * <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes to a deny list and drains tasks
      * from nodes before terminating the Amazon EC2 instances, regardless of the instance-hour boundary. With either
      * behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to
-     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and
-     * higher, and is the default for releases of Amazon EMR earlier than 5.1.0.
+     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and later,
+     * and is the default for releases of Amazon EMR earlier than 5.1.0.
      * </p>
      */
     private String scaleDownBehavior;
@@ -292,13 +292,13 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The KMS key used for encrypting log files. This attribute is only available with Amazon EMR 5.30.0 and higher,
+     * The KMS key used for encrypting log files. This attribute is only available with Amazon EMR 5.30.0 and later,
      * excluding 6.0.0.
      * </p>
      * 
      * @param logEncryptionKmsKeyId
      *        The KMS key used for encrypting log files. This attribute is only available with Amazon EMR 5.30.0 and
-     *        higher, excluding 6.0.0.
+     *        later, excluding 6.0.0.
      */
 
     public void setLogEncryptionKmsKeyId(String logEncryptionKmsKeyId) {
@@ -307,12 +307,12 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The KMS key used for encrypting log files. This attribute is only available with Amazon EMR 5.30.0 and higher,
+     * The KMS key used for encrypting log files. This attribute is only available with Amazon EMR 5.30.0 and later,
      * excluding 6.0.0.
      * </p>
      * 
      * @return The KMS key used for encrypting log files. This attribute is only available with Amazon EMR 5.30.0 and
-     *         higher, excluding 6.0.0.
+     *         later, excluding 6.0.0.
      */
 
     public String getLogEncryptionKmsKeyId() {
@@ -321,13 +321,13 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The KMS key used for encrypting log files. This attribute is only available with Amazon EMR 5.30.0 and higher,
+     * The KMS key used for encrypting log files. This attribute is only available with Amazon EMR 5.30.0 and later,
      * excluding 6.0.0.
      * </p>
      * 
      * @param logEncryptionKmsKeyId
      *        The KMS key used for encrypting log files. This attribute is only available with Amazon EMR 5.30.0 and
-     *        higher, excluding 6.0.0.
+     *        later, excluding 6.0.0.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -338,12 +338,12 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and higher,
+     * Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and later,
      * <code>ReleaseLabel</code> is used. To specify a custom AMI, use <code>CustomAmiID</code>.
      * </p>
      * 
      * @param amiVersion
-     *        Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and higher,
+     *        Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and later,
      *        <code>ReleaseLabel</code> is used. To specify a custom AMI, use <code>CustomAmiID</code>.
      */
 
@@ -353,11 +353,11 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and higher,
+     * Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and later,
      * <code>ReleaseLabel</code> is used. To specify a custom AMI, use <code>CustomAmiID</code>.
      * </p>
      * 
-     * @return Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and higher,
+     * @return Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and later,
      *         <code>ReleaseLabel</code> is used. To specify a custom AMI, use <code>CustomAmiID</code>.
      */
 
@@ -367,12 +367,12 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and higher,
+     * Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and later,
      * <code>ReleaseLabel</code> is used. To specify a custom AMI, use <code>CustomAmiID</code>.
      * </p>
      * 
      * @param amiVersion
-     *        Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and higher,
+     *        Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and later,
      *        <code>ReleaseLabel</code> is used. To specify a custom AMI, use <code>CustomAmiID</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -963,24 +963,24 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      * The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an instance
      * group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates nodes at the
      * instance-hour boundary, regardless of when the request to terminate the instance was submitted. This option is
-     * only available with Amazon EMR 5.1.0 and higher and is the default for clusters created using that version.
+     * only available with Amazon EMR 5.1.0 and later and is the default for clusters created using that version.
      * <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes to a deny list and drains tasks
      * from nodes before terminating the Amazon EC2 instances, regardless of the instance-hour boundary. With either
      * behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to
-     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and
-     * higher, and is the default for releases of Amazon EMR earlier than 5.1.0.
+     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and later,
+     * and is the default for releases of Amazon EMR earlier than 5.1.0.
      * </p>
      * 
      * @param scaleDownBehavior
      *        The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an
      *        instance group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates
      *        nodes at the instance-hour boundary, regardless of when the request to terminate the instance was
-     *        submitted. This option is only available with Amazon EMR 5.1.0 and higher and is the default for clusters
+     *        submitted. This option is only available with Amazon EMR 5.1.0 and later and is the default for clusters
      *        created using that version. <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes
      *        to a deny list and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the
      *        instance-hour boundary. With either behavior, Amazon EMR removes the least active nodes first and blocks
      *        instance termination if it could lead to HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code>
-     *        available only in Amazon EMR releases 4.1.0 and higher, and is the default for releases of Amazon EMR
+     *        available only in Amazon EMR releases 4.1.0 and later, and is the default for releases of Amazon EMR
      *        earlier than 5.1.0.
      * @see ScaleDownBehavior
      */
@@ -994,23 +994,23 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      * The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an instance
      * group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates nodes at the
      * instance-hour boundary, regardless of when the request to terminate the instance was submitted. This option is
-     * only available with Amazon EMR 5.1.0 and higher and is the default for clusters created using that version.
+     * only available with Amazon EMR 5.1.0 and later and is the default for clusters created using that version.
      * <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes to a deny list and drains tasks
      * from nodes before terminating the Amazon EC2 instances, regardless of the instance-hour boundary. With either
      * behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to
-     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and
-     * higher, and is the default for releases of Amazon EMR earlier than 5.1.0.
+     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and later,
+     * and is the default for releases of Amazon EMR earlier than 5.1.0.
      * </p>
      * 
      * @return The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an
      *         instance group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates
      *         nodes at the instance-hour boundary, regardless of when the request to terminate the instance was
-     *         submitted. This option is only available with Amazon EMR 5.1.0 and higher and is the default for clusters
+     *         submitted. This option is only available with Amazon EMR 5.1.0 and later and is the default for clusters
      *         created using that version. <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds
      *         nodes to a deny list and drains tasks from nodes before terminating the Amazon EC2 instances, regardless
      *         of the instance-hour boundary. With either behavior, Amazon EMR removes the least active nodes first and
      *         blocks instance termination if it could lead to HDFS corruption.
-     *         <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and higher, and is
+     *         <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and later, and is
      *         the default for releases of Amazon EMR earlier than 5.1.0.
      * @see ScaleDownBehavior
      */
@@ -1024,24 +1024,24 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      * The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an instance
      * group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates nodes at the
      * instance-hour boundary, regardless of when the request to terminate the instance was submitted. This option is
-     * only available with Amazon EMR 5.1.0 and higher and is the default for clusters created using that version.
+     * only available with Amazon EMR 5.1.0 and later and is the default for clusters created using that version.
      * <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes to a deny list and drains tasks
      * from nodes before terminating the Amazon EC2 instances, regardless of the instance-hour boundary. With either
      * behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to
-     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and
-     * higher, and is the default for releases of Amazon EMR earlier than 5.1.0.
+     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and later,
+     * and is the default for releases of Amazon EMR earlier than 5.1.0.
      * </p>
      * 
      * @param scaleDownBehavior
      *        The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an
      *        instance group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates
      *        nodes at the instance-hour boundary, regardless of when the request to terminate the instance was
-     *        submitted. This option is only available with Amazon EMR 5.1.0 and higher and is the default for clusters
+     *        submitted. This option is only available with Amazon EMR 5.1.0 and later and is the default for clusters
      *        created using that version. <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes
      *        to a deny list and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the
      *        instance-hour boundary. With either behavior, Amazon EMR removes the least active nodes first and blocks
      *        instance termination if it could lead to HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code>
-     *        available only in Amazon EMR releases 4.1.0 and higher, and is the default for releases of Amazon EMR
+     *        available only in Amazon EMR releases 4.1.0 and later, and is the default for releases of Amazon EMR
      *        earlier than 5.1.0.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScaleDownBehavior
@@ -1057,24 +1057,24 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      * The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an instance
      * group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates nodes at the
      * instance-hour boundary, regardless of when the request to terminate the instance was submitted. This option is
-     * only available with Amazon EMR 5.1.0 and higher and is the default for clusters created using that version.
+     * only available with Amazon EMR 5.1.0 and later and is the default for clusters created using that version.
      * <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes to a deny list and drains tasks
      * from nodes before terminating the Amazon EC2 instances, regardless of the instance-hour boundary. With either
      * behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to
-     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and
-     * higher, and is the default for releases of Amazon EMR earlier than 5.1.0.
+     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and later,
+     * and is the default for releases of Amazon EMR earlier than 5.1.0.
      * </p>
      * 
      * @param scaleDownBehavior
      *        The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an
      *        instance group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates
      *        nodes at the instance-hour boundary, regardless of when the request to terminate the instance was
-     *        submitted. This option is only available with Amazon EMR 5.1.0 and higher and is the default for clusters
+     *        submitted. This option is only available with Amazon EMR 5.1.0 and later and is the default for clusters
      *        created using that version. <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes
      *        to a deny list and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the
      *        instance-hour boundary. With either behavior, Amazon EMR removes the least active nodes first and blocks
      *        instance termination if it could lead to HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code>
-     *        available only in Amazon EMR releases 4.1.0 and higher, and is the default for releases of Amazon EMR
+     *        available only in Amazon EMR releases 4.1.0 and later, and is the default for releases of Amazon EMR
      *        earlier than 5.1.0.
      * @see ScaleDownBehavior
      */
@@ -1088,24 +1088,24 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      * The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an instance
      * group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates nodes at the
      * instance-hour boundary, regardless of when the request to terminate the instance was submitted. This option is
-     * only available with Amazon EMR 5.1.0 and higher and is the default for clusters created using that version.
+     * only available with Amazon EMR 5.1.0 and later and is the default for clusters created using that version.
      * <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes to a deny list and drains tasks
      * from nodes before terminating the Amazon EC2 instances, regardless of the instance-hour boundary. With either
      * behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to
-     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and
-     * higher, and is the default for releases of Amazon EMR earlier than 5.1.0.
+     * HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR releases 4.1.0 and later,
+     * and is the default for releases of Amazon EMR earlier than 5.1.0.
      * </p>
      * 
      * @param scaleDownBehavior
      *        The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an
      *        instance group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates
      *        nodes at the instance-hour boundary, regardless of when the request to terminate the instance was
-     *        submitted. This option is only available with Amazon EMR 5.1.0 and higher and is the default for clusters
+     *        submitted. This option is only available with Amazon EMR 5.1.0 and later and is the default for clusters
      *        created using that version. <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes
      *        to a deny list and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the
      *        instance-hour boundary. With either behavior, Amazon EMR removes the least active nodes first and blocks
      *        instance termination if it could lead to HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code>
-     *        available only in Amazon EMR releases 4.1.0 and higher, and is the default for releases of Amazon EMR
+     *        available only in Amazon EMR releases 4.1.0 and later, and is the default for releases of Amazon EMR
      *        earlier than 5.1.0.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScaleDownBehavior

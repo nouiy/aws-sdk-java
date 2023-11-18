@@ -175,6 +175,12 @@ public class InstanceNetworkInterfaceSpecificationStaxUnmarshaller implements Un
                     instanceNetworkInterfaceSpecification.setEnaSrdSpecification(EnaSrdSpecificationRequestStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ConnectionTrackingSpecification", targetDepth)) {
+                    instanceNetworkInterfaceSpecification.setConnectionTrackingSpecification(ConnectionTrackingSpecificationRequestStaxUnmarshaller
+                            .getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return instanceNetworkInterfaceSpecification;

@@ -153,6 +153,12 @@ public class CreateIpamPoolRequest extends AmazonWebServiceRequest implements Se
      * </p>
      */
     private String publicIpSource;
+    /**
+     * <p>
+     * The resource used to provision CIDRs to a resource planning pool.
+     * </p>
+     */
+    private IpamPoolSourceResourceRequest sourceResource;
 
     /**
      * <p>
@@ -1174,6 +1180,46 @@ public class CreateIpamPoolRequest extends AmazonWebServiceRequest implements Se
     }
 
     /**
+     * <p>
+     * The resource used to provision CIDRs to a resource planning pool.
+     * </p>
+     * 
+     * @param sourceResource
+     *        The resource used to provision CIDRs to a resource planning pool.
+     */
+
+    public void setSourceResource(IpamPoolSourceResourceRequest sourceResource) {
+        this.sourceResource = sourceResource;
+    }
+
+    /**
+     * <p>
+     * The resource used to provision CIDRs to a resource planning pool.
+     * </p>
+     * 
+     * @return The resource used to provision CIDRs to a resource planning pool.
+     */
+
+    public IpamPoolSourceResourceRequest getSourceResource() {
+        return this.sourceResource;
+    }
+
+    /**
+     * <p>
+     * The resource used to provision CIDRs to a resource planning pool.
+     * </p>
+     * 
+     * @param sourceResource
+     *        The resource used to provision CIDRs to a resource planning pool.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateIpamPoolRequest withSourceResource(IpamPoolSourceResourceRequest sourceResource) {
+        setSourceResource(sourceResource);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -1225,7 +1271,9 @@ public class CreateIpamPoolRequest extends AmazonWebServiceRequest implements Se
         if (getAwsService() != null)
             sb.append("AwsService: ").append(getAwsService()).append(",");
         if (getPublicIpSource() != null)
-            sb.append("PublicIpSource: ").append(getPublicIpSource());
+            sb.append("PublicIpSource: ").append(getPublicIpSource()).append(",");
+        if (getSourceResource() != null)
+            sb.append("SourceResource: ").append(getSourceResource());
         sb.append("}");
         return sb.toString();
     }
@@ -1301,6 +1349,10 @@ public class CreateIpamPoolRequest extends AmazonWebServiceRequest implements Se
             return false;
         if (other.getPublicIpSource() != null && other.getPublicIpSource().equals(this.getPublicIpSource()) == false)
             return false;
+        if (other.getSourceResource() == null ^ this.getSourceResource() == null)
+            return false;
+        if (other.getSourceResource() != null && other.getSourceResource().equals(this.getSourceResource()) == false)
+            return false;
         return true;
     }
 
@@ -1324,6 +1376,7 @@ public class CreateIpamPoolRequest extends AmazonWebServiceRequest implements Se
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getAwsService() == null) ? 0 : getAwsService().hashCode());
         hashCode = prime * hashCode + ((getPublicIpSource() == null) ? 0 : getPublicIpSource().hashCode());
+        hashCode = prime * hashCode + ((getSourceResource() == null) ? 0 : getSourceResource().hashCode());
         return hashCode;
     }
 

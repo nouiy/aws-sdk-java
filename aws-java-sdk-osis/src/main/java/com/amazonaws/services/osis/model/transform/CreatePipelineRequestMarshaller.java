@@ -40,6 +40,10 @@ public class CreatePipelineRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogPublishingOptions").build();
     private static final MarshallingInfo<StructuredPojo> VPCOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcOptions").build();
+    private static final MarshallingInfo<StructuredPojo> BUFFEROPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BufferOptions").build();
+    private static final MarshallingInfo<StructuredPojo> ENCRYPTIONATRESTOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionAtRestOptions").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -65,6 +69,8 @@ public class CreatePipelineRequestMarshaller {
             protocolMarshaller.marshall(createPipelineRequest.getPipelineConfigurationBody(), PIPELINECONFIGURATIONBODY_BINDING);
             protocolMarshaller.marshall(createPipelineRequest.getLogPublishingOptions(), LOGPUBLISHINGOPTIONS_BINDING);
             protocolMarshaller.marshall(createPipelineRequest.getVpcOptions(), VPCOPTIONS_BINDING);
+            protocolMarshaller.marshall(createPipelineRequest.getBufferOptions(), BUFFEROPTIONS_BINDING);
+            protocolMarshaller.marshall(createPipelineRequest.getEncryptionAtRestOptions(), ENCRYPTIONATRESTOPTIONS_BINDING);
             protocolMarshaller.marshall(createPipelineRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

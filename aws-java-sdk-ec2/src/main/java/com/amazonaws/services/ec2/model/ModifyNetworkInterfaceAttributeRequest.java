@@ -85,6 +85,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends AmazonWebServiceRequ
      * </p>
      */
     private Boolean enablePrimaryIpv6;
+    /**
+     * <p>
+     * A connection tracking specification.
+     * </p>
+     */
+    private ConnectionTrackingSpecificationRequest connectionTrackingSpecification;
 
     /**
      * <p>
@@ -546,6 +552,46 @@ public class ModifyNetworkInterfaceAttributeRequest extends AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * A connection tracking specification.
+     * </p>
+     * 
+     * @param connectionTrackingSpecification
+     *        A connection tracking specification.
+     */
+
+    public void setConnectionTrackingSpecification(ConnectionTrackingSpecificationRequest connectionTrackingSpecification) {
+        this.connectionTrackingSpecification = connectionTrackingSpecification;
+    }
+
+    /**
+     * <p>
+     * A connection tracking specification.
+     * </p>
+     * 
+     * @return A connection tracking specification.
+     */
+
+    public ConnectionTrackingSpecificationRequest getConnectionTrackingSpecification() {
+        return this.connectionTrackingSpecification;
+    }
+
+    /**
+     * <p>
+     * A connection tracking specification.
+     * </p>
+     * 
+     * @param connectionTrackingSpecification
+     *        A connection tracking specification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyNetworkInterfaceAttributeRequest withConnectionTrackingSpecification(ConnectionTrackingSpecificationRequest connectionTrackingSpecification) {
+        setConnectionTrackingSpecification(connectionTrackingSpecification);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -581,7 +627,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends AmazonWebServiceRequ
         if (getEnaSrdSpecification() != null)
             sb.append("EnaSrdSpecification: ").append(getEnaSrdSpecification()).append(",");
         if (getEnablePrimaryIpv6() != null)
-            sb.append("EnablePrimaryIpv6: ").append(getEnablePrimaryIpv6());
+            sb.append("EnablePrimaryIpv6: ").append(getEnablePrimaryIpv6()).append(",");
+        if (getConnectionTrackingSpecification() != null)
+            sb.append("ConnectionTrackingSpecification: ").append(getConnectionTrackingSpecification());
         sb.append("}");
         return sb.toString();
     }
@@ -624,6 +672,11 @@ public class ModifyNetworkInterfaceAttributeRequest extends AmazonWebServiceRequ
             return false;
         if (other.getEnablePrimaryIpv6() != null && other.getEnablePrimaryIpv6().equals(this.getEnablePrimaryIpv6()) == false)
             return false;
+        if (other.getConnectionTrackingSpecification() == null ^ this.getConnectionTrackingSpecification() == null)
+            return false;
+        if (other.getConnectionTrackingSpecification() != null
+                && other.getConnectionTrackingSpecification().equals(this.getConnectionTrackingSpecification()) == false)
+            return false;
         return true;
     }
 
@@ -639,6 +692,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getSourceDestCheck() == null) ? 0 : getSourceDestCheck().hashCode());
         hashCode = prime * hashCode + ((getEnaSrdSpecification() == null) ? 0 : getEnaSrdSpecification().hashCode());
         hashCode = prime * hashCode + ((getEnablePrimaryIpv6() == null) ? 0 : getEnablePrimaryIpv6().hashCode());
+        hashCode = prime * hashCode + ((getConnectionTrackingSpecification() == null) ? 0 : getConnectionTrackingSpecification().hashCode());
         return hashCode;
     }
 

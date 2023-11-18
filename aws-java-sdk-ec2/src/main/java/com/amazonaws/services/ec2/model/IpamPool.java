@@ -105,7 +105,7 @@ public class IpamPool implements Serializable, Cloneable {
     private String state;
     /**
      * <p>
-     * A message related to the failed creation of an IPAM pool.
+     * The state message.
      * </p>
      */
     private String stateMessage;
@@ -202,6 +202,8 @@ public class IpamPool implements Serializable, Cloneable {
      * </p>
      */
     private String publicIpSource;
+
+    private IpamPoolSourceResource sourceResource;
 
     /**
      * <p>
@@ -752,11 +754,11 @@ public class IpamPool implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A message related to the failed creation of an IPAM pool.
+     * The state message.
      * </p>
      * 
      * @param stateMessage
-     *        A message related to the failed creation of an IPAM pool.
+     *        The state message.
      */
 
     public void setStateMessage(String stateMessage) {
@@ -765,10 +767,10 @@ public class IpamPool implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A message related to the failed creation of an IPAM pool.
+     * The state message.
      * </p>
      * 
-     * @return A message related to the failed creation of an IPAM pool.
+     * @return The state message.
      */
 
     public String getStateMessage() {
@@ -777,11 +779,11 @@ public class IpamPool implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A message related to the failed creation of an IPAM pool.
+     * The state message.
      * </p>
      * 
      * @param stateMessage
-     *        A message related to the failed creation of an IPAM pool.
+     *        The state message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1584,6 +1586,32 @@ public class IpamPool implements Serializable, Cloneable {
     }
 
     /**
+     * @param sourceResource
+     */
+
+    public void setSourceResource(IpamPoolSourceResource sourceResource) {
+        this.sourceResource = sourceResource;
+    }
+
+    /**
+     * @return
+     */
+
+    public IpamPoolSourceResource getSourceResource() {
+        return this.sourceResource;
+    }
+
+    /**
+     * @param sourceResource
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IpamPool withSourceResource(IpamPoolSourceResource sourceResource) {
+        setSourceResource(sourceResource);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1640,7 +1668,9 @@ public class IpamPool implements Serializable, Cloneable {
         if (getAwsService() != null)
             sb.append("AwsService: ").append(getAwsService()).append(",");
         if (getPublicIpSource() != null)
-            sb.append("PublicIpSource: ").append(getPublicIpSource());
+            sb.append("PublicIpSource: ").append(getPublicIpSource()).append(",");
+        if (getSourceResource() != null)
+            sb.append("SourceResource: ").append(getSourceResource());
         sb.append("}");
         return sb.toString();
     }
@@ -1748,6 +1778,10 @@ public class IpamPool implements Serializable, Cloneable {
             return false;
         if (other.getPublicIpSource() != null && other.getPublicIpSource().equals(this.getPublicIpSource()) == false)
             return false;
+        if (other.getSourceResource() == null ^ this.getSourceResource() == null)
+            return false;
+        if (other.getSourceResource() != null && other.getSourceResource().equals(this.getSourceResource()) == false)
+            return false;
         return true;
     }
 
@@ -1779,6 +1813,7 @@ public class IpamPool implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getAwsService() == null) ? 0 : getAwsService().hashCode());
         hashCode = prime * hashCode + ((getPublicIpSource() == null) ? 0 : getPublicIpSource().hashCode());
+        hashCode = prime * hashCode + ((getSourceResource() == null) ? 0 : getSourceResource().hashCode());
         return hashCode;
     }
 

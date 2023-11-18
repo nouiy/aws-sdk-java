@@ -44,6 +44,10 @@ public class AdvertiseByoipCidrRequestMarshaller implements Marshaller<Request<A
             request.addParameter("Cidr", StringUtils.fromString(advertiseByoipCidrRequest.getCidr()));
         }
 
+        if (advertiseByoipCidrRequest.getAsn() != null) {
+            request.addParameter("Asn", StringUtils.fromString(advertiseByoipCidrRequest.getAsn()));
+        }
+
         return request;
     }
 

@@ -52,6 +52,14 @@ public class PipelineMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogPublishingOptions").build();
     private static final MarshallingInfo<List> VPCENDPOINTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("VpcEndpoints").build();
+    private static final MarshallingInfo<StructuredPojo> BUFFEROPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BufferOptions").build();
+    private static final MarshallingInfo<StructuredPojo> ENCRYPTIONATRESTOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionAtRestOptions").build();
+    private static final MarshallingInfo<List> SERVICEVPCENDPOINTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ServiceVpcEndpoints").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final PipelineMarshaller instance = new PipelineMarshaller();
 
@@ -81,6 +89,10 @@ public class PipelineMarshaller {
             protocolMarshaller.marshall(pipeline.getIngestEndpointUrls(), INGESTENDPOINTURLS_BINDING);
             protocolMarshaller.marshall(pipeline.getLogPublishingOptions(), LOGPUBLISHINGOPTIONS_BINDING);
             protocolMarshaller.marshall(pipeline.getVpcEndpoints(), VPCENDPOINTS_BINDING);
+            protocolMarshaller.marshall(pipeline.getBufferOptions(), BUFFEROPTIONS_BINDING);
+            protocolMarshaller.marshall(pipeline.getEncryptionAtRestOptions(), ENCRYPTIONATRESTOPTIONS_BINDING);
+            protocolMarshaller.marshall(pipeline.getServiceVpcEndpoints(), SERVICEVPCENDPOINTS_BINDING);
+            protocolMarshaller.marshall(pipeline.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -178,6 +178,12 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
      * </p>
      */
     private Boolean enablePrimaryIpv6;
+    /**
+     * <p>
+     * A connection tracking specification for the network interface.
+     * </p>
+     */
+    private ConnectionTrackingSpecificationRequest connectionTrackingSpecification;
 
     /**
      * <p>
@@ -1414,6 +1420,46 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
     }
 
     /**
+     * <p>
+     * A connection tracking specification for the network interface.
+     * </p>
+     * 
+     * @param connectionTrackingSpecification
+     *        A connection tracking specification for the network interface.
+     */
+
+    public void setConnectionTrackingSpecification(ConnectionTrackingSpecificationRequest connectionTrackingSpecification) {
+        this.connectionTrackingSpecification = connectionTrackingSpecification;
+    }
+
+    /**
+     * <p>
+     * A connection tracking specification for the network interface.
+     * </p>
+     * 
+     * @return A connection tracking specification for the network interface.
+     */
+
+    public ConnectionTrackingSpecificationRequest getConnectionTrackingSpecification() {
+        return this.connectionTrackingSpecification;
+    }
+
+    /**
+     * <p>
+     * A connection tracking specification for the network interface.
+     * </p>
+     * 
+     * @param connectionTrackingSpecification
+     *        A connection tracking specification for the network interface.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateNetworkInterfaceRequest withConnectionTrackingSpecification(ConnectionTrackingSpecificationRequest connectionTrackingSpecification) {
+        setConnectionTrackingSpecification(connectionTrackingSpecification);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -1467,7 +1513,9 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getEnablePrimaryIpv6() != null)
-            sb.append("EnablePrimaryIpv6: ").append(getEnablePrimaryIpv6());
+            sb.append("EnablePrimaryIpv6: ").append(getEnablePrimaryIpv6()).append(",");
+        if (getConnectionTrackingSpecification() != null)
+            sb.append("ConnectionTrackingSpecification: ").append(getConnectionTrackingSpecification());
         sb.append("}");
         return sb.toString();
     }
@@ -1547,6 +1595,11 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
             return false;
         if (other.getEnablePrimaryIpv6() != null && other.getEnablePrimaryIpv6().equals(this.getEnablePrimaryIpv6()) == false)
             return false;
+        if (other.getConnectionTrackingSpecification() == null ^ this.getConnectionTrackingSpecification() == null)
+            return false;
+        if (other.getConnectionTrackingSpecification() != null
+                && other.getConnectionTrackingSpecification().equals(this.getConnectionTrackingSpecification()) == false)
+            return false;
         return true;
     }
 
@@ -1571,6 +1624,7 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getEnablePrimaryIpv6() == null) ? 0 : getEnablePrimaryIpv6().hashCode());
+        hashCode = prime * hashCode + ((getConnectionTrackingSpecification() == null) ? 0 : getConnectionTrackingSpecification().hashCode());
         return hashCode;
     }
 

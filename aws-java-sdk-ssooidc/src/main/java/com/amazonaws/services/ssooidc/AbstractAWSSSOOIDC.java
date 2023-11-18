@@ -33,6 +33,11 @@ public class AbstractAWSSSOOIDC implements AWSSSOOIDC {
     }
 
     @Override
+    public CreateTokenWithIAMResult createTokenWithIAM(CreateTokenWithIAMRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public RegisterClientResult registerClient(RegisterClientRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

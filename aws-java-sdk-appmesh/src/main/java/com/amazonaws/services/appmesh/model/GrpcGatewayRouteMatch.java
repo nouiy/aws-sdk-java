@@ -42,7 +42,7 @@ public class GrpcGatewayRouteMatch implements Serializable, Cloneable, Structure
     private java.util.List<GrpcGatewayRouteMetadata> metadata;
     /**
      * <p>
-     * The port number to match from the request.
+     * The gateway route port to be matched on.
      * </p>
      */
     private Integer port;
@@ -165,11 +165,11 @@ public class GrpcGatewayRouteMatch implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The port number to match from the request.
+     * The gateway route port to be matched on.
      * </p>
      * 
      * @param port
-     *        The port number to match from the request.
+     *        The gateway route port to be matched on.
      */
 
     public void setPort(Integer port) {
@@ -178,10 +178,10 @@ public class GrpcGatewayRouteMatch implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The port number to match from the request.
+     * The gateway route port to be matched on.
      * </p>
      * 
-     * @return The port number to match from the request.
+     * @return The gateway route port to be matched on.
      */
 
     public Integer getPort() {
@@ -190,11 +190,11 @@ public class GrpcGatewayRouteMatch implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The port number to match from the request.
+     * The gateway route port to be matched on.
      * </p>
      * 
      * @param port
-     *        The port number to match from the request.
+     *        The gateway route port to be matched on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

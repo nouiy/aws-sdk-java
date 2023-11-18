@@ -81,7 +81,7 @@ public class Instance implements Serializable, Cloneable {
     private Placement placement;
     /**
      * <p>
-     * The value is <code>Windows</code> for Windows instances; otherwise blank.
+     * The platform. This value is <code>windows</code> for Windows instances; otherwise, it is empty.
      * </p>
      */
     private String platform;
@@ -794,11 +794,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The value is <code>Windows</code> for Windows instances; otherwise blank.
+     * The platform. This value is <code>windows</code> for Windows instances; otherwise, it is empty.
      * </p>
      * 
      * @param platform
-     *        The value is <code>Windows</code> for Windows instances; otherwise blank.
+     *        The platform. This value is <code>windows</code> for Windows instances; otherwise, it is empty.
      * @see PlatformValues
      */
 
@@ -808,10 +808,10 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The value is <code>Windows</code> for Windows instances; otherwise blank.
+     * The platform. This value is <code>windows</code> for Windows instances; otherwise, it is empty.
      * </p>
      * 
-     * @return The value is <code>Windows</code> for Windows instances; otherwise blank.
+     * @return The platform. This value is <code>windows</code> for Windows instances; otherwise, it is empty.
      * @see PlatformValues
      */
 
@@ -821,11 +821,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The value is <code>Windows</code> for Windows instances; otherwise blank.
+     * The platform. This value is <code>windows</code> for Windows instances; otherwise, it is empty.
      * </p>
      * 
      * @param platform
-     *        The value is <code>Windows</code> for Windows instances; otherwise blank.
+     *        The platform. This value is <code>windows</code> for Windows instances; otherwise, it is empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PlatformValues
      */
@@ -837,11 +837,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The value is <code>Windows</code> for Windows instances; otherwise blank.
+     * The platform. This value is <code>windows</code> for Windows instances; otherwise, it is empty.
      * </p>
      * 
      * @param platform
-     *        The value is <code>Windows</code> for Windows instances; otherwise blank.
+     *        The platform. This value is <code>windows</code> for Windows instances; otherwise, it is empty.
      * @see PlatformValues
      */
 
@@ -851,11 +851,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The value is <code>Windows</code> for Windows instances; otherwise blank.
+     * The platform. This value is <code>windows</code> for Windows instances; otherwise, it is empty.
      * </p>
      * 
      * @param platform
-     *        The value is <code>Windows</code> for Windows instances; otherwise blank.
+     *        The platform. This value is <code>windows</code> for Windows instances; otherwise, it is empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PlatformValues
      */

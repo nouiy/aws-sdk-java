@@ -191,7 +191,7 @@ public class CreateChatTokenResult extends com.amazonaws.AmazonWebServiceResult<
         if (getSessionExpirationTime() != null)
             sb.append("SessionExpirationTime: ").append(getSessionExpirationTime()).append(",");
         if (getToken() != null)
-            sb.append("Token: ").append(getToken()).append(",");
+            sb.append("Token: ").append("***Sensitive Data Redacted***").append(",");
         if (getTokenExpirationTime() != null)
             sb.append("TokenExpirationTime: ").append(getTokenExpirationTime());
         sb.append("}");

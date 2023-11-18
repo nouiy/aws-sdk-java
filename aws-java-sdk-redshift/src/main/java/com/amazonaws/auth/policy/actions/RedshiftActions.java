@@ -69,6 +69,8 @@ public enum RedshiftActions implements Action {
     CreateHsmClientCertificate("redshift:CreateHsmClientCertificate"),
     /** Action for the CreateHsmConfiguration operation. */
     CreateHsmConfiguration("redshift:CreateHsmConfiguration"),
+    /** Action for the CreateRedshiftIdcApplication operation. */
+    CreateRedshiftIdcApplication("redshift:CreateRedshiftIdcApplication"),
     /** Action for the CreateScheduledAction operation. */
     CreateScheduledAction("redshift:CreateScheduledAction"),
     /** Action for the CreateSnapshotCopyGrant operation. */
@@ -105,6 +107,8 @@ public enum RedshiftActions implements Action {
     DeleteHsmConfiguration("redshift:DeleteHsmConfiguration"),
     /** Action for the DeletePartner operation. */
     DeletePartner("redshift:DeletePartner"),
+    /** Action for the DeleteRedshiftIdcApplication operation. */
+    DeleteRedshiftIdcApplication("redshift:DeleteRedshiftIdcApplication"),
     /** Action for the DeleteResourcePolicy operation. */
     DeleteResourcePolicy("redshift:DeleteResourcePolicy"),
     /** Action for the DeleteScheduledAction operation. */
@@ -173,6 +177,8 @@ public enum RedshiftActions implements Action {
     DescribeOrderableClusterOptions("redshift:DescribeOrderableClusterOptions"),
     /** Action for the DescribePartners operation. */
     DescribePartners("redshift:DescribePartners"),
+    /** Action for the DescribeRedshiftIdcApplications operation. */
+    DescribeRedshiftIdcApplications("redshift:DescribeRedshiftIdcApplications"),
     /** Action for the DescribeReservedNodeExchangeStatus operation. */
     DescribeReservedNodeExchangeStatus("redshift:DescribeReservedNodeExchangeStatus"),
     /** Action for the DescribeReservedNodeOfferings operation. */
@@ -243,6 +249,8 @@ public enum RedshiftActions implements Action {
     ModifyEndpointAccess("redshift:ModifyEndpointAccess"),
     /** Action for the ModifyEventSubscription operation. */
     ModifyEventSubscription("redshift:ModifyEventSubscription"),
+    /** Action for the ModifyRedshiftIdcApplication operation. */
+    ModifyRedshiftIdcApplication("redshift:ModifyRedshiftIdcApplication"),
     /** Action for the ModifyScheduledAction operation. */
     ModifyScheduledAction("redshift:ModifyScheduledAction"),
     /** Action for the ModifySnapshotCopyRetentionPeriod operation. */

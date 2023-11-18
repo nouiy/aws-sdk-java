@@ -38,6 +38,8 @@ public class UpdateStudioRequestMarshaller {
             .marshallLocationName("SubnetIds").build();
     private static final MarshallingInfo<String> DEFAULTS3LOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultS3Location").build();
+    private static final MarshallingInfo<String> ENCRYPTIONKEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionKeyArn").build();
 
     private static final UpdateStudioRequestMarshaller instance = new UpdateStudioRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class UpdateStudioRequestMarshaller {
             protocolMarshaller.marshall(updateStudioRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateStudioRequest.getSubnetIds(), SUBNETIDS_BINDING);
             protocolMarshaller.marshall(updateStudioRequest.getDefaultS3Location(), DEFAULTS3LOCATION_BINDING);
+            protocolMarshaller.marshall(updateStudioRequest.getEncryptionKeyArn(), ENCRYPTIONKEYARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

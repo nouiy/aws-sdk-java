@@ -149,6 +149,39 @@ public class AmazonVerifiedPermissionsAsyncClient extends AmazonVerifiedPermissi
     }
 
     @Override
+    public java.util.concurrent.Future<BatchIsAuthorizedResult> batchIsAuthorizedAsync(BatchIsAuthorizedRequest request) {
+
+        return batchIsAuthorizedAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchIsAuthorizedResult> batchIsAuthorizedAsync(final BatchIsAuthorizedRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchIsAuthorizedRequest, BatchIsAuthorizedResult> asyncHandler) {
+        final BatchIsAuthorizedRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchIsAuthorizedResult>() {
+            @Override
+            public BatchIsAuthorizedResult call() throws Exception {
+                BatchIsAuthorizedResult result = null;
+
+                try {
+                    result = executeBatchIsAuthorized(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateIdentitySourceResult> createIdentitySourceAsync(CreateIdentitySourceRequest request) {
 
         return createIdentitySourceAsync(request, null);

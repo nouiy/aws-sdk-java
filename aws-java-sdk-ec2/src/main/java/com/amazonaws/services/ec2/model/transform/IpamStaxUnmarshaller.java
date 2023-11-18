@@ -124,6 +124,16 @@ public class IpamStaxUnmarshaller implements Unmarshaller<Ipam, StaxUnmarshaller
                     ipam.setResourceDiscoveryAssociationCount(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("stateMessage", targetDepth)) {
+                    ipam.setStateMessage(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("tier", targetDepth)) {
+                    ipam.setTier(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return ipam;

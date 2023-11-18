@@ -64,6 +64,18 @@ public class PullThroughCacheRuleJsonUnmarshaller implements Unmarshaller<PullTh
                     context.nextToken();
                     pullThroughCacheRule.setRegistryId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("credentialArn", targetDepth)) {
+                    context.nextToken();
+                    pullThroughCacheRule.setCredentialArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("upstreamRegistry", targetDepth)) {
+                    context.nextToken();
+                    pullThroughCacheRule.setUpstreamRegistry(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("updatedAt", targetDepth)) {
+                    context.nextToken();
+                    pullThroughCacheRule.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

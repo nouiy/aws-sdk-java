@@ -37,6 +37,8 @@ public class QueryExecutionStatisticsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TotalExecutionTimeInMillis").build();
     private static final MarshallingInfo<Long> QUERYQUEUETIMEINMILLIS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QueryQueueTimeInMillis").build();
+    private static final MarshallingInfo<Long> SERVICEPREPROCESSINGTIMEINMILLIS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ServicePreProcessingTimeInMillis").build();
     private static final MarshallingInfo<Long> QUERYPLANNINGTIMEINMILLIS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QueryPlanningTimeInMillis").build();
     private static final MarshallingInfo<Long> SERVICEPROCESSINGTIMEINMILLIS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
@@ -65,6 +67,7 @@ public class QueryExecutionStatisticsMarshaller {
             protocolMarshaller.marshall(queryExecutionStatistics.getDataManifestLocation(), DATAMANIFESTLOCATION_BINDING);
             protocolMarshaller.marshall(queryExecutionStatistics.getTotalExecutionTimeInMillis(), TOTALEXECUTIONTIMEINMILLIS_BINDING);
             protocolMarshaller.marshall(queryExecutionStatistics.getQueryQueueTimeInMillis(), QUERYQUEUETIMEINMILLIS_BINDING);
+            protocolMarshaller.marshall(queryExecutionStatistics.getServicePreProcessingTimeInMillis(), SERVICEPREPROCESSINGTIMEINMILLIS_BINDING);
             protocolMarshaller.marshall(queryExecutionStatistics.getQueryPlanningTimeInMillis(), QUERYPLANNINGTIMEINMILLIS_BINDING);
             protocolMarshaller.marshall(queryExecutionStatistics.getServiceProcessingTimeInMillis(), SERVICEPROCESSINGTIMEINMILLIS_BINDING);
             protocolMarshaller.marshall(queryExecutionStatistics.getResultReuseInformation(), RESULTREUSEINFORMATION_BINDING);

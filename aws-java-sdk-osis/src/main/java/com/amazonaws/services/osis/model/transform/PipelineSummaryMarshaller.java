@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.osis.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -43,6 +44,8 @@ public class PipelineSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final PipelineSummaryMarshaller instance = new PipelineSummaryMarshaller();
 
@@ -68,6 +71,7 @@ public class PipelineSummaryMarshaller {
             protocolMarshaller.marshall(pipelineSummary.getMaxUnits(), MAXUNITS_BINDING);
             protocolMarshaller.marshall(pipelineSummary.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(pipelineSummary.getLastUpdatedAt(), LASTUPDATEDAT_BINDING);
+            protocolMarshaller.marshall(pipelineSummary.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

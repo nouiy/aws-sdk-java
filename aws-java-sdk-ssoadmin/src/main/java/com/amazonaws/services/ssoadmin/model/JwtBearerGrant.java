@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+ * A structure that defines configuration settings for an application that supports the JWT Bearer Token Authorization
+ * Grant.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/JwtBearerGrant" target="_top">AWS API
@@ -30,17 +31,17 @@ public class JwtBearerGrant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * A list of allowed token issuers trusted by the Identity Center instances for this application.
      * </p>
      */
     private java.util.List<AuthorizedTokenIssuer> authorizedTokenIssuers;
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * A list of allowed token issuers trusted by the Identity Center instances for this application.
      * </p>
      * 
-     * @return ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * @return A list of allowed token issuers trusted by the Identity Center instances for this application.
      */
 
     public java.util.List<AuthorizedTokenIssuer> getAuthorizedTokenIssuers() {
@@ -49,11 +50,11 @@ public class JwtBearerGrant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * A list of allowed token issuers trusted by the Identity Center instances for this application.
      * </p>
      * 
      * @param authorizedTokenIssuers
-     *        ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     *        A list of allowed token issuers trusted by the Identity Center instances for this application.
      */
 
     public void setAuthorizedTokenIssuers(java.util.Collection<AuthorizedTokenIssuer> authorizedTokenIssuers) {
@@ -67,7 +68,7 @@ public class JwtBearerGrant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * A list of allowed token issuers trusted by the Identity Center instances for this application.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -76,7 +77,7 @@ public class JwtBearerGrant implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param authorizedTokenIssuers
-     *        ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     *        A list of allowed token issuers trusted by the Identity Center instances for this application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +93,11 @@ public class JwtBearerGrant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     * A list of allowed token issuers trusted by the Identity Center instances for this application.
      * </p>
      * 
      * @param authorizedTokenIssuers
-     *        ~~~[ TODO: ADD DESCRIPTION HERE ]~~~
+     *        A list of allowed token issuers trusted by the Identity Center instances for this application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

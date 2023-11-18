@@ -24,12 +24,15 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * This data type is used as a request parameter for the <a
- * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorized.html">IsAuthorized</a> and
- * <a href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorizedWithToken.html">
- * IsAuthorizedWithToken</a> operations.
+ * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorized.html">IsAuthorized</a>, <a
+ * href
+ * ="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_BatchIsAuthorized.html">BatchIsAuthorized
+ * </a>, and <a
+ * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorizedWithToken.html"
+ * >IsAuthorizedWithToken</a> operations.
  * </p>
  * <p>
- * Example: <code>"context":{"Context":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}}</code>
+ * Example: <code>"context":{"contextMap":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}}</code>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/ContextDefinition"
@@ -44,7 +47,7 @@ public class ContextDefinition implements Serializable, Cloneable, StructuredPoj
      * array must include a map of a data type and its value.
      * </p>
      * <p>
-     * Example: <code>"Context":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
+     * Example: <code>"contextMap":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
      * </p>
      */
     private java.util.Map<String, AttributeValue> contextMap;
@@ -55,13 +58,13 @@ public class ContextDefinition implements Serializable, Cloneable, StructuredPoj
      * array must include a map of a data type and its value.
      * </p>
      * <p>
-     * Example: <code>"Context":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
+     * Example: <code>"contextMap":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
      * </p>
      * 
      * @return An list of attributes that are needed to successfully evaluate an authorization request. Each attribute
      *         in this array must include a map of a data type and its value.</p>
      *         <p>
-     *         Example: <code>"Context":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
+     *         Example: <code>"contextMap":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
      */
 
     public java.util.Map<String, AttributeValue> getContextMap() {
@@ -74,14 +77,14 @@ public class ContextDefinition implements Serializable, Cloneable, StructuredPoj
      * array must include a map of a data type and its value.
      * </p>
      * <p>
-     * Example: <code>"Context":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
+     * Example: <code>"contextMap":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
      * </p>
      * 
      * @param contextMap
      *        An list of attributes that are needed to successfully evaluate an authorization request. Each attribute in
      *        this array must include a map of a data type and its value.</p>
      *        <p>
-     *        Example: <code>"Context":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
+     *        Example: <code>"contextMap":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
      */
 
     public void setContextMap(java.util.Map<String, AttributeValue> contextMap) {
@@ -94,14 +97,14 @@ public class ContextDefinition implements Serializable, Cloneable, StructuredPoj
      * array must include a map of a data type and its value.
      * </p>
      * <p>
-     * Example: <code>"Context":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
+     * Example: <code>"contextMap":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
      * </p>
      * 
      * @param contextMap
      *        An list of attributes that are needed to successfully evaluate an authorization request. Each attribute in
      *        this array must include a map of a data type and its value.</p>
      *        <p>
-     *        Example: <code>"Context":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
+     *        Example: <code>"contextMap":{"&lt;KeyName1&gt;":{"boolean":true},"&lt;KeyName2&gt;":{"long":1234}}</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the KMS key that is used to encrypt the user's data stores in Athena. This setting does not apply to Athena
- * SQL workgroups.
+ * Specifies the customer managed KMS key that is used to encrypt the user's data stores in Athena. When an Amazon Web
+ * Services managed key is used, this value is null. This setting does not apply to Athena SQL workgroups.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/CustomerContentEncryptionConfiguration"
@@ -31,18 +31,18 @@ public class CustomerContentEncryptionConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * The KMS key that is used to encrypt the user's data stores in Athena.
+     * The customer managed KMS key that is used to encrypt the user's data stores in Athena.
      * </p>
      */
     private String kmsKey;
 
     /**
      * <p>
-     * The KMS key that is used to encrypt the user's data stores in Athena.
+     * The customer managed KMS key that is used to encrypt the user's data stores in Athena.
      * </p>
      * 
      * @param kmsKey
-     *        The KMS key that is used to encrypt the user's data stores in Athena.
+     *        The customer managed KMS key that is used to encrypt the user's data stores in Athena.
      */
 
     public void setKmsKey(String kmsKey) {
@@ -51,10 +51,10 @@ public class CustomerContentEncryptionConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * The KMS key that is used to encrypt the user's data stores in Athena.
+     * The customer managed KMS key that is used to encrypt the user's data stores in Athena.
      * </p>
      * 
-     * @return The KMS key that is used to encrypt the user's data stores in Athena.
+     * @return The customer managed KMS key that is used to encrypt the user's data stores in Athena.
      */
 
     public String getKmsKey() {
@@ -63,11 +63,11 @@ public class CustomerContentEncryptionConfiguration implements Serializable, Clo
 
     /**
      * <p>
-     * The KMS key that is used to encrypt the user's data stores in Athena.
+     * The customer managed KMS key that is used to encrypt the user's data stores in Athena.
      * </p>
      * 
      * @param kmsKey
-     *        The KMS key that is used to encrypt the user's data stores in Athena.
+     *        The customer managed KMS key that is used to encrypt the user's data stores in Athena.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

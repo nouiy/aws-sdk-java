@@ -41,6 +41,19 @@ public class AbstractAWSSSOOIDCAsync extends AbstractAWSSSOOIDC implements AWSSS
     }
 
     @Override
+    public java.util.concurrent.Future<CreateTokenWithIAMResult> createTokenWithIAMAsync(CreateTokenWithIAMRequest request) {
+
+        return createTokenWithIAMAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTokenWithIAMResult> createTokenWithIAMAsync(CreateTokenWithIAMRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateTokenWithIAMRequest, CreateTokenWithIAMResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<RegisterClientResult> registerClientAsync(RegisterClientRequest request) {
 
         return registerClientAsync(request, null);

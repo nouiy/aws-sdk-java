@@ -31,7 +31,7 @@ public class GetHealthEventResult extends com.amazonaws.AmazonWebServiceResult<c
     private String eventArn;
     /**
      * <p>
-     * The internally generated identifier of a health event.
+     * The internally-generated identifier of a health event.
      * </p>
      */
     private String eventId;
@@ -135,11 +135,11 @@ public class GetHealthEventResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The internally generated identifier of a health event.
+     * The internally-generated identifier of a health event.
      * </p>
      * 
      * @param eventId
-     *        The internally generated identifier of a health event.
+     *        The internally-generated identifier of a health event.
      */
 
     public void setEventId(String eventId) {
@@ -148,10 +148,10 @@ public class GetHealthEventResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The internally generated identifier of a health event.
+     * The internally-generated identifier of a health event.
      * </p>
      * 
-     * @return The internally generated identifier of a health event.
+     * @return The internally-generated identifier of a health event.
      */
 
     public String getEventId() {
@@ -160,11 +160,11 @@ public class GetHealthEventResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The internally generated identifier of a health event.
+     * The internally-generated identifier of a health event.
      * </p>
      * 
      * @param eventId
-     *        The internally generated identifier of a health event.
+     *        The internally-generated identifier of a health event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

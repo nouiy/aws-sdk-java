@@ -24,7 +24,8 @@ public enum IpamResourceType {
     Subnet("subnet"),
     Eip("eip"),
     PublicIpv4Pool("public-ipv4-pool"),
-    Ipv6Pool("ipv6-pool");
+    Ipv6Pool("ipv6-pool"),
+    Eni("eni");
 
     private String value;
 

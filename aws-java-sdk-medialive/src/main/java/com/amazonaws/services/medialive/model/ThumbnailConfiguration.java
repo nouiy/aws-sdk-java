@@ -26,14 +26,19 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ThumbnailConfiguration implements Serializable, Cloneable, StructuredPojo {
 
-    /** Whether Thumbnail is enabled. */
+    /**
+     * Enables the thumbnail feature. The feature generates thumbnails of the incoming video in each pipeline in the
+     * channel. AUTO turns the feature on, DISABLE turns the feature off.
+     */
     private String state;
 
     /**
-     * Whether Thumbnail is enabled.
+     * Enables the thumbnail feature. The feature generates thumbnails of the incoming video in each pipeline in the
+     * channel. AUTO turns the feature on, DISABLE turns the feature off.
      * 
      * @param state
-     *        Whether Thumbnail is enabled.
+     *        Enables the thumbnail feature. The feature generates thumbnails of the incoming video in each pipeline in
+     *        the channel. AUTO turns the feature on, DISABLE turns the feature off.
      * @see ThumbnailState
      */
 
@@ -42,9 +47,11 @@ public class ThumbnailConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
-     * Whether Thumbnail is enabled.
+     * Enables the thumbnail feature. The feature generates thumbnails of the incoming video in each pipeline in the
+     * channel. AUTO turns the feature on, DISABLE turns the feature off.
      * 
-     * @return Whether Thumbnail is enabled.
+     * @return Enables the thumbnail feature. The feature generates thumbnails of the incoming video in each pipeline in
+     *         the channel. AUTO turns the feature on, DISABLE turns the feature off.
      * @see ThumbnailState
      */
 
@@ -53,10 +60,12 @@ public class ThumbnailConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
-     * Whether Thumbnail is enabled.
+     * Enables the thumbnail feature. The feature generates thumbnails of the incoming video in each pipeline in the
+     * channel. AUTO turns the feature on, DISABLE turns the feature off.
      * 
      * @param state
-     *        Whether Thumbnail is enabled.
+     *        Enables the thumbnail feature. The feature generates thumbnails of the incoming video in each pipeline in
+     *        the channel. AUTO turns the feature on, DISABLE turns the feature off.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ThumbnailState
      */
@@ -67,10 +76,12 @@ public class ThumbnailConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
-     * Whether Thumbnail is enabled.
+     * Enables the thumbnail feature. The feature generates thumbnails of the incoming video in each pipeline in the
+     * channel. AUTO turns the feature on, DISABLE turns the feature off.
      * 
      * @param state
-     *        Whether Thumbnail is enabled.
+     *        Enables the thumbnail feature. The feature generates thumbnails of the incoming video in each pipeline in
+     *        the channel. AUTO turns the feature on, DISABLE turns the feature off.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ThumbnailState
      */

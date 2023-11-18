@@ -69,7 +69,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * the instance, you must specify a valid AMI alias or a valid Amazon EC2 Systems Manager (SSM) path.
      * </p>
      * <p>
-     * From November 20, 2023, you will be required to include the <code>imageId</code> parameter for the
+     * From December 04, 2023, you will be required to include the <code>imageId</code> parameter for the
      * <code>CreateEnvironmentEC2</code> action. This change will be reflected across all direct methods of
      * communicating with the API, such as Amazon Web Services SDK, Amazon Web Services CLI and Amazon Web Services
      * CloudFormation. This change will only affect direct API consumers, and not Cloud9 console users.
@@ -89,7 +89,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Linux (default): <code>amazonlinux-1-x86_64</code> </b>
+     * Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -114,7 +114,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code> </b>
+     * Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -425,7 +425,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * the instance, you must specify a valid AMI alias or a valid Amazon EC2 Systems Manager (SSM) path.
      * </p>
      * <p>
-     * From November 20, 2023, you will be required to include the <code>imageId</code> parameter for the
+     * From December 04, 2023, you will be required to include the <code>imageId</code> parameter for the
      * <code>CreateEnvironmentEC2</code> action. This change will be reflected across all direct methods of
      * communicating with the API, such as Amazon Web Services SDK, Amazon Web Services CLI and Amazon Web Services
      * CloudFormation. This change will only affect direct API consumers, and not Cloud9 console users.
@@ -445,7 +445,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Linux (default): <code>amazonlinux-1-x86_64</code> </b>
+     * Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -470,7 +470,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code> </b>
+     * Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -494,7 +494,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        The identifier for the Amazon Machine Image (AMI) that's used to create the EC2 instance. To choose an AMI
      *        for the instance, you must specify a valid AMI alias or a valid Amazon EC2 Systems Manager (SSM) path.</p>
      *        <p>
-     *        From November 20, 2023, you will be required to include the <code>imageId</code> parameter for the
+     *        From December 04, 2023, you will be required to include the <code>imageId</code> parameter for the
      *        <code>CreateEnvironmentEC2</code> action. This change will be reflected across all direct methods of
      *        communicating with the API, such as Amazon Web Services SDK, Amazon Web Services CLI and Amazon Web
      *        Services CloudFormation. This change will only affect direct API consumers, and not Cloud9 console users.
@@ -515,7 +515,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Amazon Linux (default): <code>amazonlinux-1-x86_64</code> </b>
+     *        Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
      *        </p>
      *        </li>
      *        <li>
@@ -540,7 +540,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code> </b>
+     *        Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      *        </p>
      *        </li>
      *        <li>
@@ -570,7 +570,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * the instance, you must specify a valid AMI alias or a valid Amazon EC2 Systems Manager (SSM) path.
      * </p>
      * <p>
-     * From November 20, 2023, you will be required to include the <code>imageId</code> parameter for the
+     * From December 04, 2023, you will be required to include the <code>imageId</code> parameter for the
      * <code>CreateEnvironmentEC2</code> action. This change will be reflected across all direct methods of
      * communicating with the API, such as Amazon Web Services SDK, Amazon Web Services CLI and Amazon Web Services
      * CloudFormation. This change will only affect direct API consumers, and not Cloud9 console users.
@@ -590,7 +590,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Linux (default): <code>amazonlinux-1-x86_64</code> </b>
+     * Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -615,7 +615,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code> </b>
+     * Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -639,7 +639,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *         AMI for the instance, you must specify a valid AMI alias or a valid Amazon EC2 Systems Manager (SSM)
      *         path.</p>
      *         <p>
-     *         From November 20, 2023, you will be required to include the <code>imageId</code> parameter for the
+     *         From December 04, 2023, you will be required to include the <code>imageId</code> parameter for the
      *         <code>CreateEnvironmentEC2</code> action. This change will be reflected across all direct methods of
      *         communicating with the API, such as Amazon Web Services SDK, Amazon Web Services CLI and Amazon Web
      *         Services CloudFormation. This change will only affect direct API consumers, and not Cloud9 console users.
@@ -660,7 +660,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>Amazon Linux (default): <code>amazonlinux-1-x86_64</code> </b>
+     *         Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
      *         </p>
      *         </li>
      *         <li>
@@ -685,7 +685,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code> </b>
+     *         Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      *         </p>
      *         </li>
      *         <li>
@@ -715,7 +715,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * the instance, you must specify a valid AMI alias or a valid Amazon EC2 Systems Manager (SSM) path.
      * </p>
      * <p>
-     * From November 20, 2023, you will be required to include the <code>imageId</code> parameter for the
+     * From December 04, 2023, you will be required to include the <code>imageId</code> parameter for the
      * <code>CreateEnvironmentEC2</code> action. This change will be reflected across all direct methods of
      * communicating with the API, such as Amazon Web Services SDK, Amazon Web Services CLI and Amazon Web Services
      * CloudFormation. This change will only affect direct API consumers, and not Cloud9 console users.
@@ -735,7 +735,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Linux (default): <code>amazonlinux-1-x86_64</code> </b>
+     * Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -760,7 +760,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code> </b>
+     * Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -784,7 +784,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        The identifier for the Amazon Machine Image (AMI) that's used to create the EC2 instance. To choose an AMI
      *        for the instance, you must specify a valid AMI alias or a valid Amazon EC2 Systems Manager (SSM) path.</p>
      *        <p>
-     *        From November 20, 2023, you will be required to include the <code>imageId</code> parameter for the
+     *        From December 04, 2023, you will be required to include the <code>imageId</code> parameter for the
      *        <code>CreateEnvironmentEC2</code> action. This change will be reflected across all direct methods of
      *        communicating with the API, such as Amazon Web Services SDK, Amazon Web Services CLI and Amazon Web
      *        Services CloudFormation. This change will only affect direct API consumers, and not Cloud9 console users.
@@ -805,7 +805,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Amazon Linux (default): <code>amazonlinux-1-x86_64</code> </b>
+     *        Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
      *        </p>
      *        </li>
      *        <li>
@@ -830,7 +830,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code> </b>
+     *        Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      *        </p>
      *        </li>
      *        <li>

@@ -56,6 +56,14 @@ public class GrantJsonUnmarshaller implements Unmarshaller<Grant, JsonUnmarshall
                     context.nextToken();
                     grant.setJwtBearer(JwtBearerGrantJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RefreshToken", targetDepth)) {
+                    context.nextToken();
+                    grant.setRefreshToken(RefreshTokenGrantJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("TokenExchange", targetDepth)) {
+                    context.nextToken();
+                    grant.setTokenExchange(TokenExchangeGrantJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -78,6 +78,10 @@ public class ModifyIpamRequestMarshaller implements Marshaller<Request<ModifyIpa
             }
         }
 
+        if (modifyIpamRequest.getTier() != null) {
+            request.addParameter("Tier", StringUtils.fromString(modifyIpamRequest.getTier()));
+        }
+
         return request;
     }
 

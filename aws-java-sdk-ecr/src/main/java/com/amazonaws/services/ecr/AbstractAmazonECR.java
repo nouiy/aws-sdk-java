@@ -239,7 +239,17 @@ public class AbstractAmazonECR implements AmazonECR {
     }
 
     @Override
+    public UpdatePullThroughCacheRuleResult updatePullThroughCacheRule(UpdatePullThroughCacheRuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UploadLayerPartResult uploadLayerPart(UploadLayerPartRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ValidatePullThroughCacheRuleResult validatePullThroughCacheRule(ValidatePullThroughCacheRuleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

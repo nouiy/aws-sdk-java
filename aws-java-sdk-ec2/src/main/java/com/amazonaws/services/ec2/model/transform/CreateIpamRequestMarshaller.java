@@ -97,6 +97,10 @@ public class CreateIpamRequestMarshaller implements Marshaller<Request<CreateIpa
 
         request.addParameter("ClientToken", IdempotentUtils.resolveString(createIpamRequest.getClientToken()));
 
+        if (createIpamRequest.getTier() != null) {
+            request.addParameter("Tier", StringUtils.fromString(createIpamRequest.getTier()));
+        }
+
         return request;
     }
 

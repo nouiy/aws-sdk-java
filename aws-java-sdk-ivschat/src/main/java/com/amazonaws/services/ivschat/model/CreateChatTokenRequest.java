@@ -380,7 +380,7 @@ public class CreateChatTokenRequest extends com.amazonaws.AmazonWebServiceReques
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getAttributes() != null)
-            sb.append("Attributes: ").append(getAttributes()).append(",");
+            sb.append("Attributes: ").append("***Sensitive Data Redacted***").append(",");
         if (getCapabilities() != null)
             sb.append("Capabilities: ").append(getCapabilities()).append(",");
         if (getRoomIdentifier() != null)
@@ -388,7 +388,7 @@ public class CreateChatTokenRequest extends com.amazonaws.AmazonWebServiceReques
         if (getSessionDurationInMinutes() != null)
             sb.append("SessionDurationInMinutes: ").append(getSessionDurationInMinutes()).append(",");
         if (getUserId() != null)
-            sb.append("UserId: ").append(getUserId());
+            sb.append("UserId: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
