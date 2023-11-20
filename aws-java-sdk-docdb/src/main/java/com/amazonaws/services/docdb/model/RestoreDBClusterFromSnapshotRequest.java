@@ -194,6 +194,22 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * </p>
      */
     private String dBClusterParameterGroupName;
+    /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     * <i>Amazon DocumentDB Developer Guide</i>.
+     * </p>
+     * <p>
+     * Valid values for storage type - <code>standard | iopt1</code>
+     * </p>
+     * <p>
+     * Default value is <code>standard </code>
+     * </p>
+     */
+    private String storageType;
 
     /**
      * <p>
@@ -1369,6 +1385,103 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     * <i>Amazon DocumentDB Developer Guide</i>.
+     * </p>
+     * <p>
+     * Valid values for storage type - <code>standard | iopt1</code>
+     * </p>
+     * <p>
+     * Default value is <code>standard </code>
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type to associate with the DB cluster.</p>
+     *        <p>
+     *        For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     *        <i>Amazon DocumentDB Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Valid values for storage type - <code>standard | iopt1</code>
+     *        </p>
+     *        <p>
+     *        Default value is <code>standard </code>
+     */
+
+    public void setStorageType(String storageType) {
+        this.storageType = storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     * <i>Amazon DocumentDB Developer Guide</i>.
+     * </p>
+     * <p>
+     * Valid values for storage type - <code>standard | iopt1</code>
+     * </p>
+     * <p>
+     * Default value is <code>standard </code>
+     * </p>
+     * 
+     * @return The storage type to associate with the DB cluster.</p>
+     *         <p>
+     *         For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in
+     *         the <i>Amazon DocumentDB Developer Guide</i>.
+     *         </p>
+     *         <p>
+     *         Valid values for storage type - <code>standard | iopt1</code>
+     *         </p>
+     *         <p>
+     *         Default value is <code>standard </code>
+     */
+
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     * <i>Amazon DocumentDB Developer Guide</i>.
+     * </p>
+     * <p>
+     * Valid values for storage type - <code>standard | iopt1</code>
+     * </p>
+     * <p>
+     * Default value is <code>standard </code>
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type to associate with the DB cluster.</p>
+     *        <p>
+     *        For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     *        <i>Amazon DocumentDB Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Valid values for storage type - <code>standard | iopt1</code>
+     *        </p>
+     *        <p>
+     *        Default value is <code>standard </code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreDBClusterFromSnapshotRequest withStorageType(String storageType) {
+        setStorageType(storageType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1405,7 +1518,9 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
         if (getDeletionProtection() != null)
             sb.append("DeletionProtection: ").append(getDeletionProtection()).append(",");
         if (getDBClusterParameterGroupName() != null)
-            sb.append("DBClusterParameterGroupName: ").append(getDBClusterParameterGroupName());
+            sb.append("DBClusterParameterGroupName: ").append(getDBClusterParameterGroupName()).append(",");
+        if (getStorageType() != null)
+            sb.append("StorageType: ").append(getStorageType());
         sb.append("}");
         return sb.toString();
     }
@@ -1472,6 +1587,10 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
             return false;
         if (other.getDBClusterParameterGroupName() != null && other.getDBClusterParameterGroupName().equals(this.getDBClusterParameterGroupName()) == false)
             return false;
+        if (other.getStorageType() == null ^ this.getStorageType() == null)
+            return false;
+        if (other.getStorageType() != null && other.getStorageType().equals(this.getStorageType()) == false)
+            return false;
         return true;
     }
 
@@ -1493,6 +1612,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
         hashCode = prime * hashCode + ((getEnableCloudwatchLogsExports() == null) ? 0 : getEnableCloudwatchLogsExports().hashCode());
         hashCode = prime * hashCode + ((getDeletionProtection() == null) ? 0 : getDeletionProtection().hashCode());
         hashCode = prime * hashCode + ((getDBClusterParameterGroupName() == null) ? 0 : getDBClusterParameterGroupName().hashCode());
+        hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         return hashCode;
     }
 

@@ -82,6 +82,10 @@ public class ModifyTransitGatewayVpcAttachmentRequestMarshaller implements
                 request.addParameter("Options.DnsSupport", StringUtils.fromString(options.getDnsSupport()));
             }
 
+            if (options.getSecurityGroupReferencingSupport() != null) {
+                request.addParameter("Options.SecurityGroupReferencingSupport", StringUtils.fromString(options.getSecurityGroupReferencingSupport()));
+            }
+
             if (options.getIpv6Support() != null) {
                 request.addParameter("Options.Ipv6Support", StringUtils.fromString(options.getIpv6Support()));
             }

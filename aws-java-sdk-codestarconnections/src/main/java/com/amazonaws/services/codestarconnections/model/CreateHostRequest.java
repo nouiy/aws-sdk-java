@@ -51,11 +51,7 @@ public class CreateHostRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private VpcConfiguration vpcConfiguration;
-    /**
-     * <p>
-     * Tags for the host to be created.
-     * </p>
-     */
+
     private java.util.List<Tag> tags;
 
     /**
@@ -253,11 +249,7 @@ public class CreateHostRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * <p>
-     * Tags for the host to be created.
-     * </p>
-     * 
-     * @return Tags for the host to be created.
+     * @return
      */
 
     public java.util.List<Tag> getTags() {
@@ -265,12 +257,7 @@ public class CreateHostRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * <p>
-     * Tags for the host to be created.
-     * </p>
-     * 
      * @param tags
-     *        Tags for the host to be created.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -284,16 +271,12 @@ public class CreateHostRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Tags for the host to be created.
-     * </p>
-     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param tags
-     *        Tags for the host to be created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -308,12 +291,7 @@ public class CreateHostRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * <p>
-     * Tags for the host to be created.
-     * </p>
-     * 
      * @param tags
-     *        Tags for the host to be created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

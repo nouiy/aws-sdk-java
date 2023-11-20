@@ -75,6 +75,11 @@ public class ModifyTransitGatewayOptionsStaxUnmarshaller implements Unmarshaller
                     continue;
                 }
 
+                if (context.testExpression("SecurityGroupReferencingSupport", targetDepth)) {
+                    modifyTransitGatewayOptions.setSecurityGroupReferencingSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("AutoAcceptSharedAttachments", targetDepth)) {
                     modifyTransitGatewayOptions.setAutoAcceptSharedAttachments(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

@@ -154,6 +154,10 @@ public class RestoreDBClusterFromSnapshotRequestMarshaller implements
             request.addParameter("DBClusterParameterGroupName", StringUtils.fromString(restoreDBClusterFromSnapshotRequest.getDBClusterParameterGroupName()));
         }
 
+        if (restoreDBClusterFromSnapshotRequest.getStorageType() != null) {
+            request.addParameter("StorageType", StringUtils.fromString(restoreDBClusterFromSnapshotRequest.getStorageType()));
+        }
+
         return request;
     }
 

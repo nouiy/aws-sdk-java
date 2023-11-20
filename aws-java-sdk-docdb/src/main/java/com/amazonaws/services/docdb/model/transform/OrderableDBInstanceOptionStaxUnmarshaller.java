@@ -79,6 +79,11 @@ public class OrderableDBInstanceOptionStaxUnmarshaller implements Unmarshaller<O
                     orderableDBInstanceOption.setVpc(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("StorageType", targetDepth)) {
+                    orderableDBInstanceOption.setStorageType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return orderableDBInstanceOption;

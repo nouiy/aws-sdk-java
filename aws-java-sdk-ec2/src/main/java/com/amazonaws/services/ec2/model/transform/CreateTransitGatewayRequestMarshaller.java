@@ -71,6 +71,10 @@ public class CreateTransitGatewayRequestMarshaller implements Marshaller<Request
                 request.addParameter("Options.DnsSupport", StringUtils.fromString(options.getDnsSupport()));
             }
 
+            if (options.getSecurityGroupReferencingSupport() != null) {
+                request.addParameter("Options.SecurityGroupReferencingSupport", StringUtils.fromString(options.getSecurityGroupReferencingSupport()));
+            }
+
             if (options.getMulticastSupport() != null) {
                 request.addParameter("Options.MulticastSupport", StringUtils.fromString(options.getMulticastSupport()));
             }

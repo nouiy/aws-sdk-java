@@ -52,7 +52,7 @@ public class ReferencedSecurityGroup implements Serializable, Cloneable {
     private String vpcId;
     /**
      * <p>
-     * The ID of the VPC peering connection.
+     * The ID of the VPC peering connection (if applicable).
      * </p>
      */
     private String vpcPeeringConnectionId;
@@ -219,11 +219,11 @@ public class ReferencedSecurityGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the VPC peering connection.
+     * The ID of the VPC peering connection (if applicable).
      * </p>
      * 
      * @param vpcPeeringConnectionId
-     *        The ID of the VPC peering connection.
+     *        The ID of the VPC peering connection (if applicable).
      */
 
     public void setVpcPeeringConnectionId(String vpcPeeringConnectionId) {
@@ -232,10 +232,10 @@ public class ReferencedSecurityGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the VPC peering connection.
+     * The ID of the VPC peering connection (if applicable).
      * </p>
      * 
-     * @return The ID of the VPC peering connection.
+     * @return The ID of the VPC peering connection (if applicable).
      */
 
     public String getVpcPeeringConnectionId() {
@@ -244,11 +244,11 @@ public class ReferencedSecurityGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the VPC peering connection.
+     * The ID of the VPC peering connection (if applicable).
      * </p>
      * 
      * @param vpcPeeringConnectionId
-     *        The ID of the VPC peering connection.
+     *        The ID of the VPC peering connection (if applicable).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

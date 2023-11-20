@@ -53,6 +53,21 @@ public class ModifyTransitGatewayOptions implements Serializable, Cloneable {
     private String dnsSupport;
     /**
      * <p>
+     * Enables you to reference a security group across VPCs attached to a transit gateway (TGW). Use this option to
+     * simplify security group management and control of instance-to-instance traffic across VPCs that are connected by
+     * transit gateway. You can also use this option to migrate from VPC peering (which was the only option that
+     * supported security group referencing) to transit gateways (which now also support security group referencing).
+     * This option is disabled by default and there are no additional costs to use this feature.
+     * </p>
+     * <p>
+     * For important information about this feature, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">Create a transit
+     * gateway</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * </p>
+     */
+    private String securityGroupReferencingSupport;
+    /**
+     * <p>
      * Enable or disable automatic acceptance of attachment requests.
      * </p>
      */
@@ -362,6 +377,137 @@ public class ModifyTransitGatewayOptions implements Serializable, Cloneable {
 
     public ModifyTransitGatewayOptions withDnsSupport(DnsSupportValue dnsSupport) {
         this.dnsSupport = dnsSupport.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables you to reference a security group across VPCs attached to a transit gateway (TGW). Use this option to
+     * simplify security group management and control of instance-to-instance traffic across VPCs that are connected by
+     * transit gateway. You can also use this option to migrate from VPC peering (which was the only option that
+     * supported security group referencing) to transit gateways (which now also support security group referencing).
+     * This option is disabled by default and there are no additional costs to use this feature.
+     * </p>
+     * <p>
+     * For important information about this feature, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">Create a transit
+     * gateway</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * </p>
+     * 
+     * @param securityGroupReferencingSupport
+     *        Enables you to reference a security group across VPCs attached to a transit gateway (TGW). Use this option
+     *        to simplify security group management and control of instance-to-instance traffic across VPCs that are
+     *        connected by transit gateway. You can also use this option to migrate from VPC peering (which was the only
+     *        option that supported security group referencing) to transit gateways (which now also support security
+     *        group referencing). This option is disabled by default and there are no additional costs to use this
+     *        feature.</p>
+     *        <p>
+     *        For important information about this feature, see <a
+     *        href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">Create a transit
+     *        gateway</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * @see SecurityGroupReferencingSupportValue
+     */
+
+    public void setSecurityGroupReferencingSupport(String securityGroupReferencingSupport) {
+        this.securityGroupReferencingSupport = securityGroupReferencingSupport;
+    }
+
+    /**
+     * <p>
+     * Enables you to reference a security group across VPCs attached to a transit gateway (TGW). Use this option to
+     * simplify security group management and control of instance-to-instance traffic across VPCs that are connected by
+     * transit gateway. You can also use this option to migrate from VPC peering (which was the only option that
+     * supported security group referencing) to transit gateways (which now also support security group referencing).
+     * This option is disabled by default and there are no additional costs to use this feature.
+     * </p>
+     * <p>
+     * For important information about this feature, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">Create a transit
+     * gateway</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * </p>
+     * 
+     * @return Enables you to reference a security group across VPCs attached to a transit gateway (TGW). Use this
+     *         option to simplify security group management and control of instance-to-instance traffic across VPCs that
+     *         are connected by transit gateway. You can also use this option to migrate from VPC peering (which was the
+     *         only option that supported security group referencing) to transit gateways (which now also support
+     *         security group referencing). This option is disabled by default and there are no additional costs to use
+     *         this feature.</p>
+     *         <p>
+     *         For important information about this feature, see <a
+     *         href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">Create a transit
+     *         gateway</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * @see SecurityGroupReferencingSupportValue
+     */
+
+    public String getSecurityGroupReferencingSupport() {
+        return this.securityGroupReferencingSupport;
+    }
+
+    /**
+     * <p>
+     * Enables you to reference a security group across VPCs attached to a transit gateway (TGW). Use this option to
+     * simplify security group management and control of instance-to-instance traffic across VPCs that are connected by
+     * transit gateway. You can also use this option to migrate from VPC peering (which was the only option that
+     * supported security group referencing) to transit gateways (which now also support security group referencing).
+     * This option is disabled by default and there are no additional costs to use this feature.
+     * </p>
+     * <p>
+     * For important information about this feature, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">Create a transit
+     * gateway</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * </p>
+     * 
+     * @param securityGroupReferencingSupport
+     *        Enables you to reference a security group across VPCs attached to a transit gateway (TGW). Use this option
+     *        to simplify security group management and control of instance-to-instance traffic across VPCs that are
+     *        connected by transit gateway. You can also use this option to migrate from VPC peering (which was the only
+     *        option that supported security group referencing) to transit gateways (which now also support security
+     *        group referencing). This option is disabled by default and there are no additional costs to use this
+     *        feature.</p>
+     *        <p>
+     *        For important information about this feature, see <a
+     *        href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">Create a transit
+     *        gateway</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SecurityGroupReferencingSupportValue
+     */
+
+    public ModifyTransitGatewayOptions withSecurityGroupReferencingSupport(String securityGroupReferencingSupport) {
+        setSecurityGroupReferencingSupport(securityGroupReferencingSupport);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables you to reference a security group across VPCs attached to a transit gateway (TGW). Use this option to
+     * simplify security group management and control of instance-to-instance traffic across VPCs that are connected by
+     * transit gateway. You can also use this option to migrate from VPC peering (which was the only option that
+     * supported security group referencing) to transit gateways (which now also support security group referencing).
+     * This option is disabled by default and there are no additional costs to use this feature.
+     * </p>
+     * <p>
+     * For important information about this feature, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">Create a transit
+     * gateway</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * </p>
+     * 
+     * @param securityGroupReferencingSupport
+     *        Enables you to reference a security group across VPCs attached to a transit gateway (TGW). Use this option
+     *        to simplify security group management and control of instance-to-instance traffic across VPCs that are
+     *        connected by transit gateway. You can also use this option to migrate from VPC peering (which was the only
+     *        option that supported security group referencing) to transit gateways (which now also support security
+     *        group referencing). This option is disabled by default and there are no additional costs to use this
+     *        feature.</p>
+     *        <p>
+     *        For important information about this feature, see <a
+     *        href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw">Create a transit
+     *        gateway</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SecurityGroupReferencingSupportValue
+     */
+
+    public ModifyTransitGatewayOptions withSecurityGroupReferencingSupport(SecurityGroupReferencingSupportValue securityGroupReferencingSupport) {
+        this.securityGroupReferencingSupport = securityGroupReferencingSupport.toString();
         return this;
     }
 
@@ -712,6 +858,8 @@ public class ModifyTransitGatewayOptions implements Serializable, Cloneable {
             sb.append("VpnEcmpSupport: ").append(getVpnEcmpSupport()).append(",");
         if (getDnsSupport() != null)
             sb.append("DnsSupport: ").append(getDnsSupport()).append(",");
+        if (getSecurityGroupReferencingSupport() != null)
+            sb.append("SecurityGroupReferencingSupport: ").append(getSecurityGroupReferencingSupport()).append(",");
         if (getAutoAcceptSharedAttachments() != null)
             sb.append("AutoAcceptSharedAttachments: ").append(getAutoAcceptSharedAttachments()).append(",");
         if (getDefaultRouteTableAssociation() != null)
@@ -755,6 +903,11 @@ public class ModifyTransitGatewayOptions implements Serializable, Cloneable {
             return false;
         if (other.getDnsSupport() != null && other.getDnsSupport().equals(this.getDnsSupport()) == false)
             return false;
+        if (other.getSecurityGroupReferencingSupport() == null ^ this.getSecurityGroupReferencingSupport() == null)
+            return false;
+        if (other.getSecurityGroupReferencingSupport() != null
+                && other.getSecurityGroupReferencingSupport().equals(this.getSecurityGroupReferencingSupport()) == false)
+            return false;
         if (other.getAutoAcceptSharedAttachments() == null ^ this.getAutoAcceptSharedAttachments() == null)
             return false;
         if (other.getAutoAcceptSharedAttachments() != null && other.getAutoAcceptSharedAttachments().equals(this.getAutoAcceptSharedAttachments()) == false)
@@ -793,6 +946,7 @@ public class ModifyTransitGatewayOptions implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getRemoveTransitGatewayCidrBlocks() == null) ? 0 : getRemoveTransitGatewayCidrBlocks().hashCode());
         hashCode = prime * hashCode + ((getVpnEcmpSupport() == null) ? 0 : getVpnEcmpSupport().hashCode());
         hashCode = prime * hashCode + ((getDnsSupport() == null) ? 0 : getDnsSupport().hashCode());
+        hashCode = prime * hashCode + ((getSecurityGroupReferencingSupport() == null) ? 0 : getSecurityGroupReferencingSupport().hashCode());
         hashCode = prime * hashCode + ((getAutoAcceptSharedAttachments() == null) ? 0 : getAutoAcceptSharedAttachments().hashCode());
         hashCode = prime * hashCode + ((getDefaultRouteTableAssociation() == null) ? 0 : getDefaultRouteTableAssociation().hashCode());
         hashCode = prime * hashCode + ((getAssociationDefaultRouteTableId() == null) ? 0 : getAssociationDefaultRouteTableId().hashCode());

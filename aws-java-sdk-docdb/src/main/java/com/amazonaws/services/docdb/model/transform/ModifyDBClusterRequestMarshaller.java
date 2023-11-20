@@ -147,6 +147,10 @@ public class ModifyDBClusterRequestMarshaller implements Marshaller<Request<Modi
             request.addParameter("DeletionProtection", StringUtils.fromBoolean(modifyDBClusterRequest.getDeletionProtection()));
         }
 
+        if (modifyDBClusterRequest.getStorageType() != null) {
+            request.addParameter("StorageType", StringUtils.fromString(modifyDBClusterRequest.getStorageType()));
+        }
+
         return request;
     }
 

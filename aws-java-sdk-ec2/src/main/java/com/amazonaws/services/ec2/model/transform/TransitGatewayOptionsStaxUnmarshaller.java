@@ -95,6 +95,11 @@ public class TransitGatewayOptionsStaxUnmarshaller implements Unmarshaller<Trans
                     continue;
                 }
 
+                if (context.testExpression("securityGroupReferencingSupport", targetDepth)) {
+                    transitGatewayOptions.setSecurityGroupReferencingSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("multicastSupport", targetDepth)) {
                     transitGatewayOptions.setMulticastSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

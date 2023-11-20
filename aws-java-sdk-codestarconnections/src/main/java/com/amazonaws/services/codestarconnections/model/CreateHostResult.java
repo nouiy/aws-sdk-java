@@ -29,11 +29,7 @@ public class CreateHostResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      */
     private String hostArn;
-    /**
-     * <p>
-     * Tags for the created host.
-     * </p>
-     */
+
     private java.util.List<Tag> tags;
 
     /**
@@ -77,11 +73,7 @@ public class CreateHostResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
-     * <p>
-     * Tags for the created host.
-     * </p>
-     * 
-     * @return Tags for the created host.
+     * @return
      */
 
     public java.util.List<Tag> getTags() {
@@ -89,12 +81,7 @@ public class CreateHostResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
-     * <p>
-     * Tags for the created host.
-     * </p>
-     * 
      * @param tags
-     *        Tags for the created host.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -108,16 +95,12 @@ public class CreateHostResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * Tags for the created host.
-     * </p>
-     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param tags
-     *        Tags for the created host.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,12 +115,7 @@ public class CreateHostResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
-     * <p>
-     * Tags for the created host.
-     * </p>
-     * 
      * @param tags
-     *        Tags for the created host.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -238,6 +238,22 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private Boolean deletionProtection;
+    /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     * <i>Amazon DocumentDB Developer Guide</i>.
+     * </p>
+     * <p>
+     * Valid values for storage type - <code>standard | iopt1</code>
+     * </p>
+     * <p>
+     * Default value is <code>standard </code>
+     * </p>
+     */
+    private String storageType;
 
     /**
      * <p>
@@ -1640,6 +1656,103 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     * <i>Amazon DocumentDB Developer Guide</i>.
+     * </p>
+     * <p>
+     * Valid values for storage type - <code>standard | iopt1</code>
+     * </p>
+     * <p>
+     * Default value is <code>standard </code>
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type to associate with the DB cluster.</p>
+     *        <p>
+     *        For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     *        <i>Amazon DocumentDB Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Valid values for storage type - <code>standard | iopt1</code>
+     *        </p>
+     *        <p>
+     *        Default value is <code>standard </code>
+     */
+
+    public void setStorageType(String storageType) {
+        this.storageType = storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     * <i>Amazon DocumentDB Developer Guide</i>.
+     * </p>
+     * <p>
+     * Valid values for storage type - <code>standard | iopt1</code>
+     * </p>
+     * <p>
+     * Default value is <code>standard </code>
+     * </p>
+     * 
+     * @return The storage type to associate with the DB cluster.</p>
+     *         <p>
+     *         For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in
+     *         the <i>Amazon DocumentDB Developer Guide</i>.
+     *         </p>
+     *         <p>
+     *         Valid values for storage type - <code>standard | iopt1</code>
+     *         </p>
+     *         <p>
+     *         Default value is <code>standard </code>
+     */
+
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     * <i>Amazon DocumentDB Developer Guide</i>.
+     * </p>
+     * <p>
+     * Valid values for storage type - <code>standard | iopt1</code>
+     * </p>
+     * <p>
+     * Default value is <code>standard </code>
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type to associate with the DB cluster.</p>
+     *        <p>
+     *        For information on storage types for Amazon DocumentDB clusters, see Cluster storage configurations in the
+     *        <i>Amazon DocumentDB Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Valid values for storage type - <code>standard | iopt1</code>
+     *        </p>
+     *        <p>
+     *        Default value is <code>standard </code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyDBClusterRequest withStorageType(String storageType) {
+        setStorageType(storageType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1678,7 +1791,9 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         if (getAllowMajorVersionUpgrade() != null)
             sb.append("AllowMajorVersionUpgrade: ").append(getAllowMajorVersionUpgrade()).append(",");
         if (getDeletionProtection() != null)
-            sb.append("DeletionProtection: ").append(getDeletionProtection());
+            sb.append("DeletionProtection: ").append(getDeletionProtection()).append(",");
+        if (getStorageType() != null)
+            sb.append("StorageType: ").append(getStorageType());
         sb.append("}");
         return sb.toString();
     }
@@ -1750,6 +1865,10 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getDeletionProtection() != null && other.getDeletionProtection().equals(this.getDeletionProtection()) == false)
             return false;
+        if (other.getStorageType() == null ^ this.getStorageType() == null)
+            return false;
+        if (other.getStorageType() != null && other.getStorageType().equals(this.getStorageType()) == false)
+            return false;
         return true;
     }
 
@@ -1772,6 +1891,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getEngineVersion() == null) ? 0 : getEngineVersion().hashCode());
         hashCode = prime * hashCode + ((getAllowMajorVersionUpgrade() == null) ? 0 : getAllowMajorVersionUpgrade().hashCode());
         hashCode = prime * hashCode + ((getDeletionProtection() == null) ? 0 : getDeletionProtection().hashCode());
+        hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         return hashCode;
     }
 

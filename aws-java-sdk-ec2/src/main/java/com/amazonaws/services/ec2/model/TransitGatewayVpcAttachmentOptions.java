@@ -34,6 +34,14 @@ public class TransitGatewayVpcAttachmentOptions implements Serializable, Cloneab
     private String dnsSupport;
     /**
      * <p>
+     * For important information about this feature, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a transit
+     * gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * </p>
+     */
+    private String securityGroupReferencingSupport;
+    /**
+     * <p>
      * Indicates whether IPv6 support is disabled.
      * </p>
      */
@@ -101,6 +109,81 @@ public class TransitGatewayVpcAttachmentOptions implements Serializable, Cloneab
 
     public TransitGatewayVpcAttachmentOptions withDnsSupport(DnsSupportValue dnsSupport) {
         this.dnsSupport = dnsSupport.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * For important information about this feature, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a transit
+     * gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * </p>
+     * 
+     * @param securityGroupReferencingSupport
+     *        For important information about this feature, see <a
+     *        href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a
+     *        transit gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * @see SecurityGroupReferencingSupportValue
+     */
+
+    public void setSecurityGroupReferencingSupport(String securityGroupReferencingSupport) {
+        this.securityGroupReferencingSupport = securityGroupReferencingSupport;
+    }
+
+    /**
+     * <p>
+     * For important information about this feature, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a transit
+     * gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * </p>
+     * 
+     * @return For important information about this feature, see <a
+     *         href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a
+     *         transit gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * @see SecurityGroupReferencingSupportValue
+     */
+
+    public String getSecurityGroupReferencingSupport() {
+        return this.securityGroupReferencingSupport;
+    }
+
+    /**
+     * <p>
+     * For important information about this feature, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a transit
+     * gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * </p>
+     * 
+     * @param securityGroupReferencingSupport
+     *        For important information about this feature, see <a
+     *        href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a
+     *        transit gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SecurityGroupReferencingSupportValue
+     */
+
+    public TransitGatewayVpcAttachmentOptions withSecurityGroupReferencingSupport(String securityGroupReferencingSupport) {
+        setSecurityGroupReferencingSupport(securityGroupReferencingSupport);
+        return this;
+    }
+
+    /**
+     * <p>
+     * For important information about this feature, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a transit
+     * gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * </p>
+     * 
+     * @param securityGroupReferencingSupport
+     *        For important information about this feature, see <a
+     *        href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-vpc-attachments.html#create-vpc-attachment">Create a
+     *        transit gateway attachment to a VPC</a> in the <i>Amazon Web Services Transit Gateway Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SecurityGroupReferencingSupportValue
+     */
+
+    public TransitGatewayVpcAttachmentOptions withSecurityGroupReferencingSupport(SecurityGroupReferencingSupportValue securityGroupReferencingSupport) {
+        this.securityGroupReferencingSupport = securityGroupReferencingSupport.toString();
         return this;
     }
 
@@ -236,6 +319,8 @@ public class TransitGatewayVpcAttachmentOptions implements Serializable, Cloneab
         sb.append("{");
         if (getDnsSupport() != null)
             sb.append("DnsSupport: ").append(getDnsSupport()).append(",");
+        if (getSecurityGroupReferencingSupport() != null)
+            sb.append("SecurityGroupReferencingSupport: ").append(getSecurityGroupReferencingSupport()).append(",");
         if (getIpv6Support() != null)
             sb.append("Ipv6Support: ").append(getIpv6Support()).append(",");
         if (getApplianceModeSupport() != null)
@@ -258,6 +343,11 @@ public class TransitGatewayVpcAttachmentOptions implements Serializable, Cloneab
             return false;
         if (other.getDnsSupport() != null && other.getDnsSupport().equals(this.getDnsSupport()) == false)
             return false;
+        if (other.getSecurityGroupReferencingSupport() == null ^ this.getSecurityGroupReferencingSupport() == null)
+            return false;
+        if (other.getSecurityGroupReferencingSupport() != null
+                && other.getSecurityGroupReferencingSupport().equals(this.getSecurityGroupReferencingSupport()) == false)
+            return false;
         if (other.getIpv6Support() == null ^ this.getIpv6Support() == null)
             return false;
         if (other.getIpv6Support() != null && other.getIpv6Support().equals(this.getIpv6Support()) == false)
@@ -275,6 +365,7 @@ public class TransitGatewayVpcAttachmentOptions implements Serializable, Cloneab
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDnsSupport() == null) ? 0 : getDnsSupport().hashCode());
+        hashCode = prime * hashCode + ((getSecurityGroupReferencingSupport() == null) ? 0 : getSecurityGroupReferencingSupport().hashCode());
         hashCode = prime * hashCode + ((getIpv6Support() == null) ? 0 : getIpv6Support().hashCode());
         hashCode = prime * hashCode + ((getApplianceModeSupport() == null) ? 0 : getApplianceModeSupport().hashCode());
         return hashCode;

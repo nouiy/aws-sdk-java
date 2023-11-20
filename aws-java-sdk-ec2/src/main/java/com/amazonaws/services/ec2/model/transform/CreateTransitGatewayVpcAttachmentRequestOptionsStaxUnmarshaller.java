@@ -49,6 +49,12 @@ public class CreateTransitGatewayVpcAttachmentRequestOptionsStaxUnmarshaller imp
                     continue;
                 }
 
+                if (context.testExpression("SecurityGroupReferencingSupport", targetDepth)) {
+                    createTransitGatewayVpcAttachmentRequestOptions
+                            .setSecurityGroupReferencingSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("Ipv6Support", targetDepth)) {
                     createTransitGatewayVpcAttachmentRequestOptions.setIpv6Support(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

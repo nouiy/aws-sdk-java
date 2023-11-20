@@ -1,3 +1,16 @@
+# __1.12.593__ __2023-11-20__
+## __AWS CodeStar connections__
+  - ### Features
+    - This release updates a few CodeStar Connections related APIs.
+
+## __Amazon DocumentDB with MongoDB compatibility__
+  - ### Features
+    - Amazon DocumentDB updates for new cluster storage configuration: Amazon DocumentDB I/O-Optimized.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release adds support for Security group referencing over Transit gateways, enabling you to simplify Security group management and control of instance-to-instance traffic across VPCs that are connected by Transit gateway.
+
 # __1.12.592__ __2023-11-17__
 ## __AWS App Mesh__
   - ### Features

@@ -48,6 +48,11 @@ public class TransitGatewayVpcAttachmentOptionsStaxUnmarshaller implements Unmar
                     continue;
                 }
 
+                if (context.testExpression("securityGroupReferencingSupport", targetDepth)) {
+                    transitGatewayVpcAttachmentOptions.setSecurityGroupReferencingSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("ipv6Support", targetDepth)) {
                     transitGatewayVpcAttachmentOptions.setIpv6Support(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
