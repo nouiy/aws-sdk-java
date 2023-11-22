@@ -663,6 +663,39 @@ public class AmazonCloudFrontAsyncClient extends AmazonCloudFrontClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateKeyValueStoreResult> createKeyValueStoreAsync(CreateKeyValueStoreRequest request) {
+
+        return createKeyValueStoreAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateKeyValueStoreResult> createKeyValueStoreAsync(final CreateKeyValueStoreRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateKeyValueStoreRequest, CreateKeyValueStoreResult> asyncHandler) {
+        final CreateKeyValueStoreRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateKeyValueStoreResult>() {
+            @Override
+            public CreateKeyValueStoreResult call() throws Exception {
+                CreateKeyValueStoreResult result = null;
+
+                try {
+                    result = executeCreateKeyValueStore(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateMonitoringSubscriptionResult> createMonitoringSubscriptionAsync(CreateMonitoringSubscriptionRequest request) {
 
         return createMonitoringSubscriptionAsync(request, null);
@@ -1201,6 +1234,39 @@ public class AmazonCloudFrontAsyncClient extends AmazonCloudFrontClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteKeyValueStoreResult> deleteKeyValueStoreAsync(DeleteKeyValueStoreRequest request) {
+
+        return deleteKeyValueStoreAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteKeyValueStoreResult> deleteKeyValueStoreAsync(final DeleteKeyValueStoreRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteKeyValueStoreRequest, DeleteKeyValueStoreResult> asyncHandler) {
+        final DeleteKeyValueStoreRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteKeyValueStoreResult>() {
+            @Override
+            public DeleteKeyValueStoreResult call() throws Exception {
+                DeleteKeyValueStoreResult result = null;
+
+                try {
+                    result = executeDeleteKeyValueStore(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteMonitoringSubscriptionResult> deleteMonitoringSubscriptionAsync(DeleteMonitoringSubscriptionRequest request) {
 
         return deleteMonitoringSubscriptionAsync(request, null);
@@ -1449,6 +1515,39 @@ public class AmazonCloudFrontAsyncClient extends AmazonCloudFrontClient implemen
 
                 try {
                     result = executeDescribeFunction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeKeyValueStoreResult> describeKeyValueStoreAsync(DescribeKeyValueStoreRequest request) {
+
+        return describeKeyValueStoreAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeKeyValueStoreResult> describeKeyValueStoreAsync(final DescribeKeyValueStoreRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeKeyValueStoreRequest, DescribeKeyValueStoreResult> asyncHandler) {
+        final DescribeKeyValueStoreRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeKeyValueStoreResult>() {
+            @Override
+            public DescribeKeyValueStoreResult call() throws Exception {
+                DescribeKeyValueStoreResult result = null;
+
+                try {
+                    result = executeDescribeKeyValueStore(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2946,6 +3045,39 @@ public class AmazonCloudFrontAsyncClient extends AmazonCloudFrontClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListKeyValueStoresResult> listKeyValueStoresAsync(ListKeyValueStoresRequest request) {
+
+        return listKeyValueStoresAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListKeyValueStoresResult> listKeyValueStoresAsync(final ListKeyValueStoresRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListKeyValueStoresRequest, ListKeyValueStoresResult> asyncHandler) {
+        final ListKeyValueStoresRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListKeyValueStoresResult>() {
+            @Override
+            public ListKeyValueStoresResult call() throws Exception {
+                ListKeyValueStoresResult result = null;
+
+                try {
+                    result = executeListKeyValueStores(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListOriginAccessControlsResult> listOriginAccessControlsAsync(ListOriginAccessControlsRequest request) {
 
         return listOriginAccessControlsAsync(request, null);
@@ -3600,6 +3732,39 @@ public class AmazonCloudFrontAsyncClient extends AmazonCloudFrontClient implemen
 
                 try {
                     result = executeUpdateKeyGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKeyValueStoreResult> updateKeyValueStoreAsync(UpdateKeyValueStoreRequest request) {
+
+        return updateKeyValueStoreAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKeyValueStoreResult> updateKeyValueStoreAsync(final UpdateKeyValueStoreRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateKeyValueStoreRequest, UpdateKeyValueStoreResult> asyncHandler) {
+        final UpdateKeyValueStoreRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateKeyValueStoreResult>() {
+            @Override
+            public UpdateKeyValueStoreResult call() throws Exception {
+                UpdateKeyValueStoreResult result = null;
+
+                try {
+                    result = executeUpdateKeyValueStore(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

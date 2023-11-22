@@ -73,6 +73,35 @@ public class CreateFunctionRequestMarshaller implements Marshaller<Request<Creat
                         if (functionConfig.getRuntime() != null) {
                             xmlWriter.startElement("Runtime").value(functionConfig.getRuntime()).endElement();
                         }
+
+                        {
+                            KeyValueStoreAssociations keyValueStoreAssociations = functionConfig.getKeyValueStoreAssociations();
+                            if (keyValueStoreAssociations != null) {
+                                xmlWriter.startElement("KeyValueStoreAssociations");
+
+                                if (keyValueStoreAssociations.getQuantity() != null) {
+                                    xmlWriter.startElement("Quantity").value(keyValueStoreAssociations.getQuantity()).endElement();
+                                }
+
+                                com.amazonaws.internal.SdkInternalList<KeyValueStoreAssociation> keyValueStoreAssociationsItemsList = (com.amazonaws.internal.SdkInternalList<KeyValueStoreAssociation>) keyValueStoreAssociations
+                                        .getItems();
+                                if (!keyValueStoreAssociationsItemsList.isEmpty() || !keyValueStoreAssociationsItemsList.isAutoConstruct()) {
+                                    xmlWriter.startElement("Items");
+
+                                    for (KeyValueStoreAssociation keyValueStoreAssociationsItemsListValue : keyValueStoreAssociationsItemsList) {
+                                        xmlWriter.startElement("KeyValueStoreAssociation");
+
+                                        if (keyValueStoreAssociationsItemsListValue.getKeyValueStoreARN() != null) {
+                                            xmlWriter.startElement("KeyValueStoreARN").value(keyValueStoreAssociationsItemsListValue.getKeyValueStoreARN())
+                                                    .endElement();
+                                        }
+                                        xmlWriter.endElement();
+                                    }
+                                    xmlWriter.endElement();
+                                }
+                                xmlWriter.endElement();
+                            }
+                        }
                         xmlWriter.endElement();
                     }
                 }

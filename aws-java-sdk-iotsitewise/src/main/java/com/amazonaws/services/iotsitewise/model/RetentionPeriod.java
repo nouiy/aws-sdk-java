@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * How many days your data is kept in the hot tier. By default, your data is kept indefinitely in the hot tier.
+ * The number of days your data is kept in the hot tier. By default, your data is kept indefinitely in the hot tier.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/RetentionPeriod" target="_top">AWS API

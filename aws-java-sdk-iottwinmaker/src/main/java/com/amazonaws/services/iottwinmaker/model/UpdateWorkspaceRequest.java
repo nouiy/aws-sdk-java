@@ -43,6 +43,12 @@ public class UpdateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String role;
+    /**
+     * <p>
+     * The ARN of the S3 bucket where resources associated with the workspace are stored.
+     * </p>
+     */
+    private String s3Location;
 
     /**
      * <p>
@@ -165,6 +171,46 @@ public class UpdateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The ARN of the S3 bucket where resources associated with the workspace are stored.
+     * </p>
+     * 
+     * @param s3Location
+     *        The ARN of the S3 bucket where resources associated with the workspace are stored.
+     */
+
+    public void setS3Location(String s3Location) {
+        this.s3Location = s3Location;
+    }
+
+    /**
+     * <p>
+     * The ARN of the S3 bucket where resources associated with the workspace are stored.
+     * </p>
+     * 
+     * @return The ARN of the S3 bucket where resources associated with the workspace are stored.
+     */
+
+    public String getS3Location() {
+        return this.s3Location;
+    }
+
+    /**
+     * <p>
+     * The ARN of the S3 bucket where resources associated with the workspace are stored.
+     * </p>
+     * 
+     * @param s3Location
+     *        The ARN of the S3 bucket where resources associated with the workspace are stored.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateWorkspaceRequest withS3Location(String s3Location) {
+        setS3Location(s3Location);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,7 +227,9 @@ public class UpdateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getRole() != null)
-            sb.append("Role: ").append(getRole());
+            sb.append("Role: ").append(getRole()).append(",");
+        if (getS3Location() != null)
+            sb.append("S3Location: ").append(getS3Location());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +256,10 @@ public class UpdateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getRole() != null && other.getRole().equals(this.getRole()) == false)
             return false;
+        if (other.getS3Location() == null ^ this.getS3Location() == null)
+            return false;
+        if (other.getS3Location() != null && other.getS3Location().equals(this.getS3Location()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +271,7 @@ public class UpdateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getRole() == null) ? 0 : getRole().hashCode());
+        hashCode = prime * hashCode + ((getS3Location() == null) ? 0 : getS3Location().hashCode());
         return hashCode;
     }
 

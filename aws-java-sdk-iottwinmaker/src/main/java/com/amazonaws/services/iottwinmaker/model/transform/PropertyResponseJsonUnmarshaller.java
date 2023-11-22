@@ -56,6 +56,10 @@ public class PropertyResponseJsonUnmarshaller implements Unmarshaller<PropertyRe
                     context.nextToken();
                     propertyResponse.setValue(DataValueJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("areAllPropertyValuesReturned", targetDepth)) {
+                    context.nextToken();
+                    propertyResponse.setAreAllPropertyValuesReturned(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

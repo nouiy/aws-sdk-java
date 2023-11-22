@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.iotsitewise.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class VariableValueMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("propertyId").build();
     private static final MarshallingInfo<String> HIERARCHYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hierarchyId").build();
+    private static final MarshallingInfo<List> PROPERTYPATH_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("propertyPath").build();
 
     private static final VariableValueMarshaller instance = new VariableValueMarshaller();
 
@@ -50,6 +53,7 @@ public class VariableValueMarshaller {
         try {
             protocolMarshaller.marshall(variableValue.getPropertyId(), PROPERTYID_BINDING);
             protocolMarshaller.marshall(variableValue.getHierarchyId(), HIERARCHYID_BINDING);
+            protocolMarshaller.marshall(variableValue.getPropertyPath(), PROPERTYPATH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

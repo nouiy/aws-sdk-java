@@ -27,13 +27,13 @@ public class GetInterpolatedAssetPropertyValuesRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      */
     private String assetId;
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property, in UUID format.
      * </p>
      */
     private String propertyId;
@@ -167,11 +167,11 @@ public class GetInterpolatedAssetPropertyValuesRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      * 
      * @param assetId
-     *        The ID of the asset.
+     *        The ID of the asset, in UUID format.
      */
 
     public void setAssetId(String assetId) {
@@ -180,10 +180,10 @@ public class GetInterpolatedAssetPropertyValuesRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      * 
-     * @return The ID of the asset.
+     * @return The ID of the asset, in UUID format.
      */
 
     public String getAssetId() {
@@ -192,11 +192,11 @@ public class GetInterpolatedAssetPropertyValuesRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      * 
      * @param assetId
-     *        The ID of the asset.
+     *        The ID of the asset, in UUID format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -207,11 +207,11 @@ public class GetInterpolatedAssetPropertyValuesRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property, in UUID format.
      * </p>
      * 
      * @param propertyId
-     *        The ID of the asset property.
+     *        The ID of the asset property, in UUID format.
      */
 
     public void setPropertyId(String propertyId) {
@@ -220,10 +220,10 @@ public class GetInterpolatedAssetPropertyValuesRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property, in UUID format.
      * </p>
      * 
-     * @return The ID of the asset property.
+     * @return The ID of the asset property, in UUID format.
      */
 
     public String getPropertyId() {
@@ -232,11 +232,11 @@ public class GetInterpolatedAssetPropertyValuesRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property, in UUID format.
      * </p>
      * 
      * @param propertyId
-     *        The ID of the asset property.
+     *        The ID of the asset property, in UUID format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

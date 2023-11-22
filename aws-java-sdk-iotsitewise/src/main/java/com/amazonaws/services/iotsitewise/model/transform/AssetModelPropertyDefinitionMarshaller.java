@@ -37,6 +37,10 @@ public class AssetModelPropertyDefinitionMarshaller {
             .marshallLocationName("unit").build();
     private static final MarshallingInfo<StructuredPojo> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("type").build();
+    private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("id").build();
+    private static final MarshallingInfo<String> EXTERNALID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("externalId").build();
 
     private static final AssetModelPropertyDefinitionMarshaller instance = new AssetModelPropertyDefinitionMarshaller();
 
@@ -59,6 +63,8 @@ public class AssetModelPropertyDefinitionMarshaller {
             protocolMarshaller.marshall(assetModelPropertyDefinition.getDataTypeSpec(), DATATYPESPEC_BINDING);
             protocolMarshaller.marshall(assetModelPropertyDefinition.getUnit(), UNIT_BINDING);
             protocolMarshaller.marshall(assetModelPropertyDefinition.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(assetModelPropertyDefinition.getId(), ID_BINDING);
+            protocolMarshaller.marshall(assetModelPropertyDefinition.getExternalId(), EXTERNALID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

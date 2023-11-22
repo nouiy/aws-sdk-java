@@ -58,6 +58,13 @@ public class CreateEntityRequest extends com.amazonaws.AmazonWebServiceRequest i
     private java.util.Map<String, ComponentRequest> components;
     /**
      * <p>
+     * This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of the
+     * map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     * </p>
+     */
+    private java.util.Map<String, CompositeComponentRequest> compositeComponents;
+    /**
+     * <p>
      * The ID of the entity's parent entity.
      * </p>
      */
@@ -305,6 +312,80 @@ public class CreateEntityRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
+     * This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of the
+     * map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     * </p>
+     * 
+     * @return This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key
+     *         of the map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     */
+
+    public java.util.Map<String, CompositeComponentRequest> getCompositeComponents() {
+        return compositeComponents;
+    }
+
+    /**
+     * <p>
+     * This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of the
+     * map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     * </p>
+     * 
+     * @param compositeComponents
+     *        This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of
+     *        the map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     */
+
+    public void setCompositeComponents(java.util.Map<String, CompositeComponentRequest> compositeComponents) {
+        this.compositeComponents = compositeComponents;
+    }
+
+    /**
+     * <p>
+     * This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of the
+     * map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     * </p>
+     * 
+     * @param compositeComponents
+     *        This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of
+     *        the map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEntityRequest withCompositeComponents(java.util.Map<String, CompositeComponentRequest> compositeComponents) {
+        setCompositeComponents(compositeComponents);
+        return this;
+    }
+
+    /**
+     * Add a single CompositeComponents entry
+     *
+     * @see CreateEntityRequest#withCompositeComponents
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEntityRequest addCompositeComponentsEntry(String key, CompositeComponentRequest value) {
+        if (null == this.compositeComponents) {
+            this.compositeComponents = new java.util.HashMap<String, CompositeComponentRequest>();
+        }
+        if (this.compositeComponents.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.compositeComponents.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into CompositeComponents.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEntityRequest clearCompositeComponentsEntries() {
+        this.compositeComponents = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * The ID of the entity's parent entity.
      * </p>
      * 
@@ -433,6 +514,8 @@ public class CreateEntityRequest extends com.amazonaws.AmazonWebServiceRequest i
             sb.append("Description: ").append(getDescription()).append(",");
         if (getComponents() != null)
             sb.append("Components: ").append(getComponents()).append(",");
+        if (getCompositeComponents() != null)
+            sb.append("CompositeComponents: ").append(getCompositeComponents()).append(",");
         if (getParentEntityId() != null)
             sb.append("ParentEntityId: ").append(getParentEntityId()).append(",");
         if (getTags() != null)
@@ -471,6 +554,10 @@ public class CreateEntityRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getComponents() != null && other.getComponents().equals(this.getComponents()) == false)
             return false;
+        if (other.getCompositeComponents() == null ^ this.getCompositeComponents() == null)
+            return false;
+        if (other.getCompositeComponents() != null && other.getCompositeComponents().equals(this.getCompositeComponents()) == false)
+            return false;
         if (other.getParentEntityId() == null ^ this.getParentEntityId() == null)
             return false;
         if (other.getParentEntityId() != null && other.getParentEntityId().equals(this.getParentEntityId()) == false)
@@ -492,6 +579,7 @@ public class CreateEntityRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getEntityName() == null) ? 0 : getEntityName().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getComponents() == null) ? 0 : getComponents().hashCode());
+        hashCode = prime * hashCode + ((getCompositeComponents() == null) ? 0 : getCompositeComponents().hashCode());
         hashCode = prime * hashCode + ((getParentEntityId() == null) ? 0 : getParentEntityId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

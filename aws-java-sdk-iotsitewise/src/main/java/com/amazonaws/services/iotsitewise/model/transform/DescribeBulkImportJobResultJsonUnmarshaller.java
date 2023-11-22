@@ -86,6 +86,14 @@ public class DescribeBulkImportJobResultJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     describeBulkImportJobResult.setJobLastUpdateDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("adaptiveIngestion", targetDepth)) {
+                    context.nextToken();
+                    describeBulkImportJobResult.setAdaptiveIngestion(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("deleteFilesAfterImport", targetDepth)) {
+                    context.nextToken();
+                    describeBulkImportJobResult.setDeleteFilesAfterImport(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

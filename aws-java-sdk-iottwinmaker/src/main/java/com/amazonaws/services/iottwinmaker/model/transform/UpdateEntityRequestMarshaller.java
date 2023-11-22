@@ -39,6 +39,8 @@ public class UpdateEntityRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<Map> COMPONENTUPDATES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentUpdates").build();
+    private static final MarshallingInfo<Map> COMPOSITECOMPONENTUPDATES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("compositeComponentUpdates").build();
     private static final MarshallingInfo<StructuredPojo> PARENTENTITYUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentEntityUpdate").build();
 
@@ -63,6 +65,7 @@ public class UpdateEntityRequestMarshaller {
             protocolMarshaller.marshall(updateEntityRequest.getEntityName(), ENTITYNAME_BINDING);
             protocolMarshaller.marshall(updateEntityRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateEntityRequest.getComponentUpdates(), COMPONENTUPDATES_BINDING);
+            protocolMarshaller.marshall(updateEntityRequest.getCompositeComponentUpdates(), COMPOSITECOMPONENTUPDATES_BINDING);
             protocolMarshaller.marshall(updateEntityRequest.getParentEntityUpdate(), PARENTENTITYUPDATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

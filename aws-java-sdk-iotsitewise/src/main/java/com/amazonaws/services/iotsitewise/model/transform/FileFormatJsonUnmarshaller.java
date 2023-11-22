@@ -52,6 +52,10 @@ public class FileFormatJsonUnmarshaller implements Unmarshaller<FileFormat, Json
                     context.nextToken();
                     fileFormat.setCsv(CsvJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("parquet", targetDepth)) {
+                    context.nextToken();
+                    fileFormat.setParquet(ParquetJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

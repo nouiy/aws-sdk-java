@@ -83,6 +83,13 @@ public class CreateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String componentTypeName;
+    /**
+     * <p>
+     * This is an object that maps strings to <code>compositeComponentTypes</code> of the <code>componentType</code>.
+     * <code>CompositeComponentType</code> is referenced by <code>componentTypeId</code>.
+     * </p>
+     */
+    private java.util.Map<String, CompositeComponentTypeRequest> compositeComponentTypes;
 
     /**
      * <p>
@@ -643,6 +650,83 @@ public class CreateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * This is an object that maps strings to <code>compositeComponentTypes</code> of the <code>componentType</code>.
+     * <code>CompositeComponentType</code> is referenced by <code>componentTypeId</code>.
+     * </p>
+     * 
+     * @return This is an object that maps strings to <code>compositeComponentTypes</code> of the
+     *         <code>componentType</code>. <code>CompositeComponentType</code> is referenced by
+     *         <code>componentTypeId</code>.
+     */
+
+    public java.util.Map<String, CompositeComponentTypeRequest> getCompositeComponentTypes() {
+        return compositeComponentTypes;
+    }
+
+    /**
+     * <p>
+     * This is an object that maps strings to <code>compositeComponentTypes</code> of the <code>componentType</code>.
+     * <code>CompositeComponentType</code> is referenced by <code>componentTypeId</code>.
+     * </p>
+     * 
+     * @param compositeComponentTypes
+     *        This is an object that maps strings to <code>compositeComponentTypes</code> of the
+     *        <code>componentType</code>. <code>CompositeComponentType</code> is referenced by
+     *        <code>componentTypeId</code>.
+     */
+
+    public void setCompositeComponentTypes(java.util.Map<String, CompositeComponentTypeRequest> compositeComponentTypes) {
+        this.compositeComponentTypes = compositeComponentTypes;
+    }
+
+    /**
+     * <p>
+     * This is an object that maps strings to <code>compositeComponentTypes</code> of the <code>componentType</code>.
+     * <code>CompositeComponentType</code> is referenced by <code>componentTypeId</code>.
+     * </p>
+     * 
+     * @param compositeComponentTypes
+     *        This is an object that maps strings to <code>compositeComponentTypes</code> of the
+     *        <code>componentType</code>. <code>CompositeComponentType</code> is referenced by
+     *        <code>componentTypeId</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateComponentTypeRequest withCompositeComponentTypes(java.util.Map<String, CompositeComponentTypeRequest> compositeComponentTypes) {
+        setCompositeComponentTypes(compositeComponentTypes);
+        return this;
+    }
+
+    /**
+     * Add a single CompositeComponentTypes entry
+     *
+     * @see CreateComponentTypeRequest#withCompositeComponentTypes
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateComponentTypeRequest addCompositeComponentTypesEntry(String key, CompositeComponentTypeRequest value) {
+        if (null == this.compositeComponentTypes) {
+            this.compositeComponentTypes = new java.util.HashMap<String, CompositeComponentTypeRequest>();
+        }
+        if (this.compositeComponentTypes.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.compositeComponentTypes.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into CompositeComponentTypes.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateComponentTypeRequest clearCompositeComponentTypesEntries() {
+        this.compositeComponentTypes = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -673,7 +757,9 @@ public class CreateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
         if (getPropertyGroups() != null)
             sb.append("PropertyGroups: ").append(getPropertyGroups()).append(",");
         if (getComponentTypeName() != null)
-            sb.append("ComponentTypeName: ").append(getComponentTypeName());
+            sb.append("ComponentTypeName: ").append(getComponentTypeName()).append(",");
+        if (getCompositeComponentTypes() != null)
+            sb.append("CompositeComponentTypes: ").append(getCompositeComponentTypes());
         sb.append("}");
         return sb.toString();
     }
@@ -728,6 +814,10 @@ public class CreateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getComponentTypeName() != null && other.getComponentTypeName().equals(this.getComponentTypeName()) == false)
             return false;
+        if (other.getCompositeComponentTypes() == null ^ this.getCompositeComponentTypes() == null)
+            return false;
+        if (other.getCompositeComponentTypes() != null && other.getCompositeComponentTypes().equals(this.getCompositeComponentTypes()) == false)
+            return false;
         return true;
     }
 
@@ -746,6 +836,7 @@ public class CreateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getPropertyGroups() == null) ? 0 : getPropertyGroups().hashCode());
         hashCode = prime * hashCode + ((getComponentTypeName() == null) ? 0 : getComponentTypeName().hashCode());
+        hashCode = prime * hashCode + ((getCompositeComponentTypes() == null) ? 0 : getCompositeComponentTypes().hashCode());
         return hashCode;
     }
 

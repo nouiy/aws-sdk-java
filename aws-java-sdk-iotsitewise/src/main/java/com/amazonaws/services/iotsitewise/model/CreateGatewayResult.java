@@ -25,7 +25,7 @@ public class CreateGatewayResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the gateway device. You can use this ID when you call other IoT SiteWise APIs.
+     * The ID of the gateway device. You can use this ID when you call other IoT SiteWise API operations.
      * </p>
      */
     private String gatewayId;
@@ -42,11 +42,11 @@ public class CreateGatewayResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the gateway device. You can use this ID when you call other IoT SiteWise APIs.
+     * The ID of the gateway device. You can use this ID when you call other IoT SiteWise API operations.
      * </p>
      * 
      * @param gatewayId
-     *        The ID of the gateway device. You can use this ID when you call other IoT SiteWise APIs.
+     *        The ID of the gateway device. You can use this ID when you call other IoT SiteWise API operations.
      */
 
     public void setGatewayId(String gatewayId) {
@@ -55,10 +55,10 @@ public class CreateGatewayResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the gateway device. You can use this ID when you call other IoT SiteWise APIs.
+     * The ID of the gateway device. You can use this ID when you call other IoT SiteWise API operations.
      * </p>
      * 
-     * @return The ID of the gateway device. You can use this ID when you call other IoT SiteWise APIs.
+     * @return The ID of the gateway device. You can use this ID when you call other IoT SiteWise API operations.
      */
 
     public String getGatewayId() {
@@ -67,11 +67,11 @@ public class CreateGatewayResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the gateway device. You can use this ID when you call other IoT SiteWise APIs.
+     * The ID of the gateway device. You can use this ID when you call other IoT SiteWise API operations.
      * </p>
      * 
      * @param gatewayId
-     *        The ID of the gateway device. You can use this ID when you call other IoT SiteWise APIs.
+     *        The ID of the gateway device. You can use this ID when you call other IoT SiteWise API operations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

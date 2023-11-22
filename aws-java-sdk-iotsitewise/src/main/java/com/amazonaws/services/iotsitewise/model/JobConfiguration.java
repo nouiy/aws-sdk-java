@@ -30,18 +30,18 @@ public class JobConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The file format of the data in Amazon S3.
+     * The file format of the data in S3.
      * </p>
      */
     private FileFormat fileFormat;
 
     /**
      * <p>
-     * The file format of the data in Amazon S3.
+     * The file format of the data in S3.
      * </p>
      * 
      * @param fileFormat
-     *        The file format of the data in Amazon S3.
+     *        The file format of the data in S3.
      */
 
     public void setFileFormat(FileFormat fileFormat) {
@@ -50,10 +50,10 @@ public class JobConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The file format of the data in Amazon S3.
+     * The file format of the data in S3.
      * </p>
      * 
-     * @return The file format of the data in Amazon S3.
+     * @return The file format of the data in S3.
      */
 
     public FileFormat getFileFormat() {
@@ -62,11 +62,11 @@ public class JobConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The file format of the data in Amazon S3.
+     * The file format of the data in S3.
      * </p>
      * 
      * @param fileFormat
-     *        The file format of the data in Amazon S3.
+     *        The file format of the data in S3.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

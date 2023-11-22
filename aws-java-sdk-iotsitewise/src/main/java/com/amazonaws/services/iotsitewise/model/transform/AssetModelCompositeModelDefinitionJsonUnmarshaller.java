@@ -67,6 +67,14 @@ public class AssetModelCompositeModelDefinitionJsonUnmarshaller implements Unmar
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("id", targetDepth)) {
+                    context.nextToken();
+                    assetModelCompositeModelDefinition.setId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("externalId", targetDepth)) {
+                    context.nextToken();
+                    assetModelCompositeModelDefinition.setExternalId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

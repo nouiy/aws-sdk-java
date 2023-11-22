@@ -29,6 +29,8 @@ public class FileFormatMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> CSV_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("csv").build();
+    private static final MarshallingInfo<StructuredPojo> PARQUET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parquet").build();
 
     private static final FileFormatMarshaller instance = new FileFormatMarshaller();
 
@@ -47,6 +49,7 @@ public class FileFormatMarshaller {
 
         try {
             protocolMarshaller.marshall(fileFormat.getCsv(), CSV_BINDING);
+            protocolMarshaller.marshall(fileFormat.getParquet(), PARQUET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

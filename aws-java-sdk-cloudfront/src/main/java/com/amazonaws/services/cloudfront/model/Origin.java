@@ -46,12 +46,12 @@ import javax.annotation.Generated;
  * </li>
  * <li>
  * <p>
- * An AWS Elemental MediaPackage endpoint
+ * An Elemental MediaPackage endpoint
  * </p>
  * </li>
  * <li>
  * <p>
- * An AWS Elemental MediaStore container
+ * An Elemental MediaStore container
  * </p>
  * </li>
  * <li>

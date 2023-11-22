@@ -98,6 +98,17 @@ public class DescribeAssetResultJsonUnmarshaller implements Unmarshaller<Describ
                     context.nextToken();
                     describeAssetResult.setAssetDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("assetCompositeModelSummaries", targetDepth)) {
+                    context.nextToken();
+                    describeAssetResult.setAssetCompositeModelSummaries(new ListUnmarshaller<AssetCompositeModelSummary>(
+                            AssetCompositeModelSummaryJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("assetExternalId", targetDepth)) {
+                    context.nextToken();
+                    describeAssetResult.setAssetExternalId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

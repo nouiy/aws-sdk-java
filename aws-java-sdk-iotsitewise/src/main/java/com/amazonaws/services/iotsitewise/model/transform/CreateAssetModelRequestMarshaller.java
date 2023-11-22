@@ -46,6 +46,12 @@ public class CreateAssetModelRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> ASSETMODELID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("assetModelId").build();
+    private static final MarshallingInfo<String> ASSETMODELEXTERNALID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("assetModelExternalId").build();
+    private static final MarshallingInfo<String> ASSETMODELTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("assetModelType").build();
 
     private static final CreateAssetModelRequestMarshaller instance = new CreateAssetModelRequestMarshaller();
 
@@ -70,6 +76,9 @@ public class CreateAssetModelRequestMarshaller {
             protocolMarshaller.marshall(createAssetModelRequest.getAssetModelCompositeModels(), ASSETMODELCOMPOSITEMODELS_BINDING);
             protocolMarshaller.marshall(createAssetModelRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createAssetModelRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createAssetModelRequest.getAssetModelId(), ASSETMODELID_BINDING);
+            protocolMarshaller.marshall(createAssetModelRequest.getAssetModelExternalId(), ASSETMODELEXTERNALID_BINDING);
+            protocolMarshaller.marshall(createAssetModelRequest.getAssetModelType(), ASSETMODELTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

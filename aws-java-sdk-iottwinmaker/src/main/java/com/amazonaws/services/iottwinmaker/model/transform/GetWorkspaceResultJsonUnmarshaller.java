@@ -60,6 +60,12 @@ public class GetWorkspaceResultJsonUnmarshaller implements Unmarshaller<GetWorks
                     context.nextToken();
                     getWorkspaceResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("linkedServices", targetDepth)) {
+                    context.nextToken();
+                    getWorkspaceResult.setLinkedServices(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("s3Location", targetDepth)) {
                     context.nextToken();
                     getWorkspaceResult.setS3Location(context.getUnmarshaller(String.class).unmarshall(context));

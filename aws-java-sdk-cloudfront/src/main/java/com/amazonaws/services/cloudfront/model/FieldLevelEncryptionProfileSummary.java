@@ -34,7 +34,7 @@ public class FieldLevelEncryptionProfileSummary implements Serializable, Cloneab
     private String id;
     /**
      * <p>
-     * The time when the the field-level encryption profile summary was last updated.
+     * The time when the field-level encryption profile summary was last updated.
      * </p>
      */
     private java.util.Date lastModifiedTime;
@@ -101,11 +101,11 @@ public class FieldLevelEncryptionProfileSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The time when the the field-level encryption profile summary was last updated.
+     * The time when the field-level encryption profile summary was last updated.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The time when the the field-level encryption profile summary was last updated.
+     *        The time when the field-level encryption profile summary was last updated.
      */
 
     public void setLastModifiedTime(java.util.Date lastModifiedTime) {
@@ -114,10 +114,10 @@ public class FieldLevelEncryptionProfileSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The time when the the field-level encryption profile summary was last updated.
+     * The time when the field-level encryption profile summary was last updated.
      * </p>
      * 
-     * @return The time when the the field-level encryption profile summary was last updated.
+     * @return The time when the field-level encryption profile summary was last updated.
      */
 
     public java.util.Date getLastModifiedTime() {
@@ -126,11 +126,11 @@ public class FieldLevelEncryptionProfileSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The time when the the field-level encryption profile summary was last updated.
+     * The time when the field-level encryption profile summary was last updated.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The time when the the field-level encryption profile summary was last updated.
+     *        The time when the field-level encryption profile summary was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

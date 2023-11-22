@@ -45,6 +45,8 @@ public class UpdateAssetModelRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<String> ASSETMODELEXTERNALID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("assetModelExternalId").build();
 
     private static final UpdateAssetModelRequestMarshaller instance = new UpdateAssetModelRequestMarshaller();
 
@@ -69,6 +71,7 @@ public class UpdateAssetModelRequestMarshaller {
             protocolMarshaller.marshall(updateAssetModelRequest.getAssetModelHierarchies(), ASSETMODELHIERARCHIES_BINDING);
             protocolMarshaller.marshall(updateAssetModelRequest.getAssetModelCompositeModels(), ASSETMODELCOMPOSITEMODELS_BINDING);
             protocolMarshaller.marshall(updateAssetModelRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(updateAssetModelRequest.getAssetModelExternalId(), ASSETMODELEXTERNALID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

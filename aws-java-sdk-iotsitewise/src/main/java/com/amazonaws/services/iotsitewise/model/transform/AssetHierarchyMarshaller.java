@@ -31,6 +31,8 @@ public class AssetHierarchyMarshaller {
             .marshallLocationName("id").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> EXTERNALID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("externalId").build();
 
     private static final AssetHierarchyMarshaller instance = new AssetHierarchyMarshaller();
 
@@ -50,6 +52,7 @@ public class AssetHierarchyMarshaller {
         try {
             protocolMarshaller.marshall(assetHierarchy.getId(), ID_BINDING);
             protocolMarshaller.marshall(assetHierarchy.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(assetHierarchy.getExternalId(), EXTERNALID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

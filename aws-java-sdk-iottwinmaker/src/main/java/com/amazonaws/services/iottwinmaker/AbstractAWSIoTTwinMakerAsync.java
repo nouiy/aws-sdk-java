@@ -41,6 +41,19 @@ public class AbstractAWSIoTTwinMakerAsync extends AbstractAWSIoTTwinMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<CancelMetadataTransferJobResult> cancelMetadataTransferJobAsync(CancelMetadataTransferJobRequest request) {
+
+        return cancelMetadataTransferJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelMetadataTransferJobResult> cancelMetadataTransferJobAsync(CancelMetadataTransferJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<CancelMetadataTransferJobRequest, CancelMetadataTransferJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateComponentTypeResult> createComponentTypeAsync(CreateComponentTypeRequest request) {
 
         return createComponentTypeAsync(request, null);
@@ -62,6 +75,19 @@ public class AbstractAWSIoTTwinMakerAsync extends AbstractAWSIoTTwinMaker implem
     @Override
     public java.util.concurrent.Future<CreateEntityResult> createEntityAsync(CreateEntityRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateEntityRequest, CreateEntityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMetadataTransferJobResult> createMetadataTransferJobAsync(CreateMetadataTransferJobRequest request) {
+
+        return createMetadataTransferJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMetadataTransferJobResult> createMetadataTransferJobAsync(CreateMetadataTransferJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateMetadataTransferJobRequest, CreateMetadataTransferJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -210,6 +236,19 @@ public class AbstractAWSIoTTwinMakerAsync extends AbstractAWSIoTTwinMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetMetadataTransferJobResult> getMetadataTransferJobAsync(GetMetadataTransferJobRequest request) {
+
+        return getMetadataTransferJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMetadataTransferJobResult> getMetadataTransferJobAsync(GetMetadataTransferJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetMetadataTransferJobRequest, GetMetadataTransferJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPricingPlanResult> getPricingPlanAsync(GetPricingPlanRequest request) {
 
         return getPricingPlanAsync(request, null);
@@ -301,6 +340,19 @@ public class AbstractAWSIoTTwinMakerAsync extends AbstractAWSIoTTwinMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListComponentsResult> listComponentsAsync(ListComponentsRequest request) {
+
+        return listComponentsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListComponentsResult> listComponentsAsync(ListComponentsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListComponentsRequest, ListComponentsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListEntitiesResult> listEntitiesAsync(ListEntitiesRequest request) {
 
         return listEntitiesAsync(request, null);
@@ -309,6 +361,32 @@ public class AbstractAWSIoTTwinMakerAsync extends AbstractAWSIoTTwinMaker implem
     @Override
     public java.util.concurrent.Future<ListEntitiesResult> listEntitiesAsync(ListEntitiesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListEntitiesRequest, ListEntitiesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMetadataTransferJobsResult> listMetadataTransferJobsAsync(ListMetadataTransferJobsRequest request) {
+
+        return listMetadataTransferJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMetadataTransferJobsResult> listMetadataTransferJobsAsync(ListMetadataTransferJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListMetadataTransferJobsRequest, ListMetadataTransferJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPropertiesResult> listPropertiesAsync(ListPropertiesRequest request) {
+
+        return listPropertiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPropertiesResult> listPropertiesAsync(ListPropertiesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListPropertiesRequest, ListPropertiesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

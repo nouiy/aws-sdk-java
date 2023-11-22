@@ -39,6 +39,8 @@ public class CreateEntityRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<Map> COMPONENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("components").build();
+    private static final MarshallingInfo<Map> COMPOSITECOMPONENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("compositeComponents").build();
     private static final MarshallingInfo<String> PARENTENTITYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentEntityId").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -65,6 +67,7 @@ public class CreateEntityRequestMarshaller {
             protocolMarshaller.marshall(createEntityRequest.getEntityName(), ENTITYNAME_BINDING);
             protocolMarshaller.marshall(createEntityRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createEntityRequest.getComponents(), COMPONENTS_BINDING);
+            protocolMarshaller.marshall(createEntityRequest.getCompositeComponents(), COMPOSITECOMPONENTS_BINDING);
             protocolMarshaller.marshall(createEntityRequest.getParentEntityId(), PARENTENTITYID_BINDING);
             protocolMarshaller.marshall(createEntityRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {

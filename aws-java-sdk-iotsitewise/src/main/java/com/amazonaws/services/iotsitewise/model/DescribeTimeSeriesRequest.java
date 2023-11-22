@@ -33,13 +33,19 @@ public class DescribeTimeSeriesRequest extends com.amazonaws.AmazonWebServiceReq
     private String alias;
     /**
      * <p>
-     * The ID of the asset in which the asset property was created.
+     * The ID of the asset in which the asset property was created. This can be either the actual ID in UUID format, or
+     * else <code>externalId:</code> followed by the external ID, if it has one. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     * >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      */
     private String assetId;
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property. This can be either the actual ID in UUID format, or else <code>externalId:</code>
+     * followed by the external ID, if it has one. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     * >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      */
     private String propertyId;
@@ -86,11 +92,18 @@ public class DescribeTimeSeriesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ID of the asset in which the asset property was created.
+     * The ID of the asset in which the asset property was created. This can be either the actual ID in UUID format, or
+     * else <code>externalId:</code> followed by the external ID, if it has one. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     * >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * 
      * @param assetId
-     *        The ID of the asset in which the asset property was created.
+     *        The ID of the asset in which the asset property was created. This can be either the actual ID in UUID
+     *        format, or else <code>externalId:</code> followed by the external ID, if it has one. For more information,
+     *        see <a
+     *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     *        >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      */
 
     public void setAssetId(String assetId) {
@@ -99,10 +112,17 @@ public class DescribeTimeSeriesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ID of the asset in which the asset property was created.
+     * The ID of the asset in which the asset property was created. This can be either the actual ID in UUID format, or
+     * else <code>externalId:</code> followed by the external ID, if it has one. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     * >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * 
-     * @return The ID of the asset in which the asset property was created.
+     * @return The ID of the asset in which the asset property was created. This can be either the actual ID in UUID
+     *         format, or else <code>externalId:</code> followed by the external ID, if it has one. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     *         >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      */
 
     public String getAssetId() {
@@ -111,11 +131,18 @@ public class DescribeTimeSeriesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ID of the asset in which the asset property was created.
+     * The ID of the asset in which the asset property was created. This can be either the actual ID in UUID format, or
+     * else <code>externalId:</code> followed by the external ID, if it has one. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     * >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * 
      * @param assetId
-     *        The ID of the asset in which the asset property was created.
+     *        The ID of the asset in which the asset property was created. This can be either the actual ID in UUID
+     *        format, or else <code>externalId:</code> followed by the external ID, if it has one. For more information,
+     *        see <a
+     *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     *        >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +153,17 @@ public class DescribeTimeSeriesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property. This can be either the actual ID in UUID format, or else <code>externalId:</code>
+     * followed by the external ID, if it has one. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     * >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * 
      * @param propertyId
-     *        The ID of the asset property.
+     *        The ID of the asset property. This can be either the actual ID in UUID format, or else
+     *        <code>externalId:</code> followed by the external ID, if it has one. For more information, see <a
+     *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     *        >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      */
 
     public void setPropertyId(String propertyId) {
@@ -139,10 +172,16 @@ public class DescribeTimeSeriesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property. This can be either the actual ID in UUID format, or else <code>externalId:</code>
+     * followed by the external ID, if it has one. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     * >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * 
-     * @return The ID of the asset property.
+     * @return The ID of the asset property. This can be either the actual ID in UUID format, or else
+     *         <code>externalId:</code> followed by the external ID, if it has one. For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     *         >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      */
 
     public String getPropertyId() {
@@ -151,11 +190,17 @@ public class DescribeTimeSeriesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property. This can be either the actual ID in UUID format, or else <code>externalId:</code>
+     * followed by the external ID, if it has one. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     * >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * 
      * @param propertyId
-     *        The ID of the asset property.
+     *        The ID of the asset property. This can be either the actual ID in UUID format, or else
+     *        <code>externalId:</code> followed by the external ID, if it has one. For more information, see <a
+     *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-id-references"
+     *        >Referencing objects with external IDs</a> in the <i>IoT SiteWise User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

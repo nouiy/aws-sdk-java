@@ -45,6 +45,12 @@ public class ComponentResponseMarshaller {
             .marshallLocationName("propertyGroups").build();
     private static final MarshallingInfo<String> SYNCSOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("syncSource").build();
+    private static final MarshallingInfo<Boolean> AREALLPROPERTIESRETURNED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("areAllPropertiesReturned").build();
+    private static final MarshallingInfo<Map> COMPOSITECOMPONENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("compositeComponents").build();
+    private static final MarshallingInfo<Boolean> AREALLCOMPOSITECOMPONENTSRETURNED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("areAllCompositeComponentsReturned").build();
 
     private static final ComponentResponseMarshaller instance = new ComponentResponseMarshaller();
 
@@ -70,6 +76,9 @@ public class ComponentResponseMarshaller {
             protocolMarshaller.marshall(componentResponse.getProperties(), PROPERTIES_BINDING);
             protocolMarshaller.marshall(componentResponse.getPropertyGroups(), PROPERTYGROUPS_BINDING);
             protocolMarshaller.marshall(componentResponse.getSyncSource(), SYNCSOURCE_BINDING);
+            protocolMarshaller.marshall(componentResponse.getAreAllPropertiesReturned(), AREALLPROPERTIESRETURNED_BINDING);
+            protocolMarshaller.marshall(componentResponse.getCompositeComponents(), COMPOSITECOMPONENTS_BINDING);
+            protocolMarshaller.marshall(componentResponse.getAreAllCompositeComponentsReturned(), AREALLCOMPOSITECOMPONENTSRETURNED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -27,13 +27,13 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      */
     private String assetId;
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property, in UUID format.
      * </p>
      */
     private String propertyId;
@@ -105,7 +105,7 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
      * <li>
      * <p>
      * The number of data points in the result set is equal to the value of <code>maxResults</code>. The maximum value
-     * of <code>maxResults</code> is 250.
+     * of <code>maxResults</code> is 2500.
      * </p>
      * </li>
      * </ul>
@@ -114,11 +114,11 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      * 
      * @param assetId
-     *        The ID of the asset.
+     *        The ID of the asset, in UUID format.
      */
 
     public void setAssetId(String assetId) {
@@ -127,10 +127,10 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      * 
-     * @return The ID of the asset.
+     * @return The ID of the asset, in UUID format.
      */
 
     public String getAssetId() {
@@ -139,11 +139,11 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      * 
      * @param assetId
-     *        The ID of the asset.
+     *        The ID of the asset, in UUID format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -154,11 +154,11 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property, in UUID format.
      * </p>
      * 
      * @param propertyId
-     *        The ID of the asset property.
+     *        The ID of the asset property, in UUID format.
      */
 
     public void setPropertyId(String propertyId) {
@@ -167,10 +167,10 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property, in UUID format.
      * </p>
      * 
-     * @return The ID of the asset property.
+     * @return The ID of the asset property, in UUID format.
      */
 
     public String getPropertyId() {
@@ -179,11 +179,11 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ID of the asset property.
+     * The ID of the asset property, in UUID format.
      * </p>
      * 
      * @param propertyId
-     *        The ID of the asset property.
+     *        The ID of the asset property, in UUID format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -705,7 +705,7 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
      * <li>
      * <p>
      * The number of data points in the result set is equal to the value of <code>maxResults</code>. The maximum value
-     * of <code>maxResults</code> is 250.
+     * of <code>maxResults</code> is 2500.
      * </p>
      * </li>
      * </ul>
@@ -722,7 +722,7 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
      *        <li>
      *        <p>
      *        The number of data points in the result set is equal to the value of <code>maxResults</code>. The maximum
-     *        value of <code>maxResults</code> is 250.
+     *        value of <code>maxResults</code> is 2500.
      *        </p>
      *        </li>
      */
@@ -745,7 +745,7 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
      * <li>
      * <p>
      * The number of data points in the result set is equal to the value of <code>maxResults</code>. The maximum value
-     * of <code>maxResults</code> is 250.
+     * of <code>maxResults</code> is 2500.
      * </p>
      * </li>
      * </ul>
@@ -761,7 +761,7 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
      *         <li>
      *         <p>
      *         The number of data points in the result set is equal to the value of <code>maxResults</code>. The maximum
-     *         value of <code>maxResults</code> is 250.
+     *         value of <code>maxResults</code> is 2500.
      *         </p>
      *         </li>
      */
@@ -784,7 +784,7 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
      * <li>
      * <p>
      * The number of data points in the result set is equal to the value of <code>maxResults</code>. The maximum value
-     * of <code>maxResults</code> is 250.
+     * of <code>maxResults</code> is 2500.
      * </p>
      * </li>
      * </ul>
@@ -801,7 +801,7 @@ public class GetAssetPropertyAggregatesRequest extends com.amazonaws.AmazonWebSe
      *        <li>
      *        <p>
      *        The number of data points in the result set is equal to the value of <code>maxResults</code>. The maximum
-     *        value of <code>maxResults</code> is 250.
+     *        value of <code>maxResults</code> is 2500.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

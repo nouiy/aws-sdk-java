@@ -112,6 +112,39 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CancelMetadataTransferJobResult> cancelMetadataTransferJobAsync(CancelMetadataTransferJobRequest request) {
+
+        return cancelMetadataTransferJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelMetadataTransferJobResult> cancelMetadataTransferJobAsync(final CancelMetadataTransferJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CancelMetadataTransferJobRequest, CancelMetadataTransferJobResult> asyncHandler) {
+        final CancelMetadataTransferJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CancelMetadataTransferJobResult>() {
+            @Override
+            public CancelMetadataTransferJobResult call() throws Exception {
+                CancelMetadataTransferJobResult result = null;
+
+                try {
+                    result = executeCancelMetadataTransferJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateComponentTypeResult> createComponentTypeAsync(CreateComponentTypeRequest request) {
 
         return createComponentTypeAsync(request, null);
@@ -162,6 +195,39 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
 
                 try {
                     result = executeCreateEntity(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMetadataTransferJobResult> createMetadataTransferJobAsync(CreateMetadataTransferJobRequest request) {
+
+        return createMetadataTransferJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMetadataTransferJobResult> createMetadataTransferJobAsync(final CreateMetadataTransferJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateMetadataTransferJobRequest, CreateMetadataTransferJobResult> asyncHandler) {
+        final CreateMetadataTransferJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateMetadataTransferJobResult>() {
+            @Override
+            public CreateMetadataTransferJobResult call() throws Exception {
+                CreateMetadataTransferJobResult result = null;
+
+                try {
+                    result = executeCreateMetadataTransferJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -541,6 +607,39 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetMetadataTransferJobResult> getMetadataTransferJobAsync(GetMetadataTransferJobRequest request) {
+
+        return getMetadataTransferJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMetadataTransferJobResult> getMetadataTransferJobAsync(final GetMetadataTransferJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetMetadataTransferJobRequest, GetMetadataTransferJobResult> asyncHandler) {
+        final GetMetadataTransferJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetMetadataTransferJobResult>() {
+            @Override
+            public GetMetadataTransferJobResult call() throws Exception {
+                GetMetadataTransferJobResult result = null;
+
+                try {
+                    result = executeGetMetadataTransferJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPricingPlanResult> getPricingPlanAsync(GetPricingPlanRequest request) {
 
         return getPricingPlanAsync(request, null);
@@ -772,6 +871,39 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListComponentsResult> listComponentsAsync(ListComponentsRequest request) {
+
+        return listComponentsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListComponentsResult> listComponentsAsync(final ListComponentsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListComponentsRequest, ListComponentsResult> asyncHandler) {
+        final ListComponentsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListComponentsResult>() {
+            @Override
+            public ListComponentsResult call() throws Exception {
+                ListComponentsResult result = null;
+
+                try {
+                    result = executeListComponents(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListEntitiesResult> listEntitiesAsync(ListEntitiesRequest request) {
 
         return listEntitiesAsync(request, null);
@@ -789,6 +921,72 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
 
                 try {
                     result = executeListEntities(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMetadataTransferJobsResult> listMetadataTransferJobsAsync(ListMetadataTransferJobsRequest request) {
+
+        return listMetadataTransferJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMetadataTransferJobsResult> listMetadataTransferJobsAsync(final ListMetadataTransferJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListMetadataTransferJobsRequest, ListMetadataTransferJobsResult> asyncHandler) {
+        final ListMetadataTransferJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListMetadataTransferJobsResult>() {
+            @Override
+            public ListMetadataTransferJobsResult call() throws Exception {
+                ListMetadataTransferJobsResult result = null;
+
+                try {
+                    result = executeListMetadataTransferJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPropertiesResult> listPropertiesAsync(ListPropertiesRequest request) {
+
+        return listPropertiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPropertiesResult> listPropertiesAsync(final ListPropertiesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListPropertiesRequest, ListPropertiesResult> asyncHandler) {
+        final ListPropertiesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListPropertiesResult>() {
+            @Override
+            public ListPropertiesResult call() throws Exception {
+                ListPropertiesResult result = null;
+
+                try {
+                    result = executeListProperties(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

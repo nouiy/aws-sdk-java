@@ -33,12 +33,22 @@ public class AbstractAWSIoTTwinMaker implements AWSIoTTwinMaker {
     }
 
     @Override
+    public CancelMetadataTransferJobResult cancelMetadataTransferJob(CancelMetadataTransferJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateComponentTypeResult createComponentType(CreateComponentTypeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public CreateEntityResult createEntity(CreateEntityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateMetadataTransferJobResult createMetadataTransferJob(CreateMetadataTransferJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -98,6 +108,11 @@ public class AbstractAWSIoTTwinMaker implements AWSIoTTwinMaker {
     }
 
     @Override
+    public GetMetadataTransferJobResult getMetadataTransferJob(GetMetadataTransferJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetPricingPlanResult getPricingPlan(GetPricingPlanRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -133,7 +148,22 @@ public class AbstractAWSIoTTwinMaker implements AWSIoTTwinMaker {
     }
 
     @Override
+    public ListComponentsResult listComponents(ListComponentsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListEntitiesResult listEntities(ListEntitiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListMetadataTransferJobsResult listMetadataTransferJobs(ListMetadataTransferJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListPropertiesResult listProperties(ListPropertiesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

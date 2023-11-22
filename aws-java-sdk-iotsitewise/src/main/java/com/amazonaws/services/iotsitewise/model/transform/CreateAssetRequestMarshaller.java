@@ -42,6 +42,10 @@ public class CreateAssetRequestMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> ASSETDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("assetDescription").build();
+    private static final MarshallingInfo<String> ASSETID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("assetId").build();
+    private static final MarshallingInfo<String> ASSETEXTERNALID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("assetExternalId").build();
 
     private static final CreateAssetRequestMarshaller instance = new CreateAssetRequestMarshaller();
 
@@ -64,6 +68,8 @@ public class CreateAssetRequestMarshaller {
             protocolMarshaller.marshall(createAssetRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createAssetRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createAssetRequest.getAssetDescription(), ASSETDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(createAssetRequest.getAssetId(), ASSETID_BINDING);
+            protocolMarshaller.marshall(createAssetRequest.getAssetExternalId(), ASSETEXTERNALID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

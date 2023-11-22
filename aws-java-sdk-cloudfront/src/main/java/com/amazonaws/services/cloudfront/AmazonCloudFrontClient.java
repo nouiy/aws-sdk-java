@@ -504,6 +504,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
             exceptionUnmarshallersMap.put("TooManyCloudFrontOriginAccessIdentities", new TooManyCloudFrontOriginAccessIdentitiesExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new TooManyCloudFrontOriginAccessIdentitiesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EntityNotFound") == null) {
+            exceptionUnmarshallersMap.put("EntityNotFound", new EntityNotFoundExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new EntityNotFoundExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("TooManyFieldLevelEncryptionContentTypeProfiles") == null) {
             exceptionUnmarshallersMap.put("TooManyFieldLevelEncryptionContentTypeProfiles",
                     new TooManyFieldLevelEncryptionContentTypeProfilesExceptionUnmarshaller());
@@ -517,6 +521,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
             exceptionUnmarshallersMap.put("TooManyDistributionsWithLambdaAssociations", new TooManyDistributionsWithLambdaAssociationsExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new TooManyDistributionsWithLambdaAssociationsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EntitySizeLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("EntitySizeLimitExceeded", new EntitySizeLimitExceededExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new EntitySizeLimitExceededExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("InvalidHeadersForS3Origin") == null) {
             exceptionUnmarshallersMap.put("InvalidHeadersForS3Origin", new InvalidHeadersForS3OriginExceptionUnmarshaller());
         }
@@ -634,6 +642,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
             exceptionUnmarshallersMap.put("NoSuchOriginRequestPolicy", new NoSuchOriginRequestPolicyExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new NoSuchOriginRequestPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EntityLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("EntityLimitExceeded", new EntityLimitExceededExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new EntityLimitExceededExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("NoSuchOrigin") == null) {
             exceptionUnmarshallersMap.put("NoSuchOrigin", new NoSuchOriginExceptionUnmarshaller());
         }
@@ -743,6 +755,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
             exceptionUnmarshallersMap.put("TooManyHeadersInCachePolicy", new TooManyHeadersInCachePolicyExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new TooManyHeadersInCachePolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EntityAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("EntityAlreadyExists", new EntityAlreadyExistsExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new EntityAlreadyExistsExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("RealtimeLogConfigOwnerMismatch") == null) {
             exceptionUnmarshallersMap.put("RealtimeLogConfigOwnerMismatch", new RealtimeLogConfigOwnerMismatchExceptionUnmarshaller());
         }
@@ -791,6 +807,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
             exceptionUnmarshallersMap.put("TooManyOriginGroupsPerDistribution", new TooManyOriginGroupsPerDistributionExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new TooManyOriginGroupsPerDistributionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CannotDeleteEntityWhileInUse") == null) {
+            exceptionUnmarshallersMap.put("CannotDeleteEntityWhileInUse", new CannotDeleteEntityWhileInUseExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new CannotDeleteEntityWhileInUseExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("AccessDenied") == null) {
             exceptionUnmarshallersMap.put("AccessDenied", new AccessDeniedExceptionUnmarshaller());
         }
@@ -2344,6 +2364,74 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Specifies the Key Value Store resource to add to your account. In your account, the Key Value Store names must be
+     * unique. You can also import Key Value Store data in JSON format from an S3 bucket by providing a valid
+     * <code>ImportSource</code> that you own.
+     * </p>
+     * 
+     * @param createKeyValueStoreRequest
+     * @return Result of the CreateKeyValueStore operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access denied.
+     * @throws EntityLimitExceededException
+     *         The Key Value Store entity limit has been exceeded.
+     * @throws EntityAlreadyExistsException
+     *         The Key Value Store entity already exists. You must provide a unique Key Value Store entity.
+     * @throws EntitySizeLimitExceededException
+     *         The Key Value Store entity size limit was exceeded.
+     * @throws InvalidArgumentException
+     *         An argument is invalid.
+     * @sample AmazonCloudFront.CreateKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateKeyValueStoreResult createKeyValueStore(CreateKeyValueStoreRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateKeyValueStore(request);
+    }
+
+    @SdkInternalApi
+    final CreateKeyValueStoreResult executeCreateKeyValueStore(CreateKeyValueStoreRequest createKeyValueStoreRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createKeyValueStoreRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateKeyValueStoreRequest> request = null;
+        Response<CreateKeyValueStoreResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateKeyValueStoreRequestMarshaller().marshall(super.beforeMarshalling(createKeyValueStoreRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudFront");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateKeyValueStore");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateKeyValueStoreResult> responseHandler = new StaxResponseHandler<CreateKeyValueStoreResult>(
+                    new CreateKeyValueStoreResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Enables additional CloudWatch metrics for the specified CloudFront distribution. The additional metrics incur an
      * additional cost.
      * </p>
@@ -3667,6 +3755,72 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Specifies the Key Value Store to delete.
+     * </p>
+     * 
+     * @param deleteKeyValueStoreRequest
+     * @return Result of the DeleteKeyValueStore operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access denied.
+     * @throws InvalidIfMatchVersionException
+     *         The <code>If-Match</code> version is missing or not valid.
+     * @throws EntityNotFoundException
+     *         The Key Value Store entity was not found.
+     * @throws CannotDeleteEntityWhileInUseException
+     *         The Key Value Store entity cannot be deleted while it is in use.
+     * @throws PreconditionFailedException
+     *         The precondition in one or more of the request fields evaluated to <code>false</code>.
+     * @sample AmazonCloudFront.DeleteKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteKeyValueStoreResult deleteKeyValueStore(DeleteKeyValueStoreRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteKeyValueStore(request);
+    }
+
+    @SdkInternalApi
+    final DeleteKeyValueStoreResult executeDeleteKeyValueStore(DeleteKeyValueStoreRequest deleteKeyValueStoreRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteKeyValueStoreRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteKeyValueStoreRequest> request = null;
+        Response<DeleteKeyValueStoreResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteKeyValueStoreRequestMarshaller().marshall(super.beforeMarshalling(deleteKeyValueStoreRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudFront");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteKeyValueStore");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteKeyValueStoreResult> responseHandler = new StaxResponseHandler<DeleteKeyValueStoreResult>(
+                    new DeleteKeyValueStoreResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Disables additional CloudWatch metrics for the specified CloudFront distribution.
      * </p>
      * 
@@ -4276,6 +4430,68 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
 
             StaxResponseHandler<DescribeFunctionResult> responseHandler = new StaxResponseHandler<DescribeFunctionResult>(
                     new DescribeFunctionResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Specifies the Key Value Store and its configuration.
+     * </p>
+     * 
+     * @param describeKeyValueStoreRequest
+     * @return Result of the DescribeKeyValueStore operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access denied.
+     * @throws InvalidArgumentException
+     *         An argument is invalid.
+     * @throws EntityNotFoundException
+     *         The Key Value Store entity was not found.
+     * @sample AmazonCloudFront.DescribeKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DescribeKeyValueStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeKeyValueStoreResult describeKeyValueStore(DescribeKeyValueStoreRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeKeyValueStore(request);
+    }
+
+    @SdkInternalApi
+    final DescribeKeyValueStoreResult executeDescribeKeyValueStore(DescribeKeyValueStoreRequest describeKeyValueStoreRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeKeyValueStoreRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeKeyValueStoreRequest> request = null;
+        Response<DescribeKeyValueStoreResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeKeyValueStoreRequestMarshaller().marshall(super.beforeMarshalling(describeKeyValueStoreRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudFront");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeKeyValueStore");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeKeyValueStoreResult> responseHandler = new StaxResponseHandler<DescribeKeyValueStoreResult>(
+                    new DescribeKeyValueStoreResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -7150,6 +7366,66 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Specifies the Key Value Stores to list.
+     * </p>
+     * 
+     * @param listKeyValueStoresRequest
+     * @return Result of the ListKeyValueStores operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access denied.
+     * @throws InvalidArgumentException
+     *         An argument is invalid.
+     * @sample AmazonCloudFront.ListKeyValueStores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListKeyValueStores" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListKeyValueStoresResult listKeyValueStores(ListKeyValueStoresRequest request) {
+        request = beforeClientExecution(request);
+        return executeListKeyValueStores(request);
+    }
+
+    @SdkInternalApi
+    final ListKeyValueStoresResult executeListKeyValueStores(ListKeyValueStoresRequest listKeyValueStoresRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listKeyValueStoresRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListKeyValueStoresRequest> request = null;
+        Response<ListKeyValueStoresResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListKeyValueStoresRequestMarshaller().marshall(super.beforeMarshalling(listKeyValueStoresRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudFront");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListKeyValueStores");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ListKeyValueStoresResult> responseHandler = new StaxResponseHandler<ListKeyValueStoresResult>(
+                    new ListKeyValueStoresResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets the list of CloudFront origin access controls in this Amazon Web Services account.
      * </p>
      * <p>
@@ -9002,6 +9278,72 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
 
             StaxResponseHandler<UpdateKeyGroupResult> responseHandler = new StaxResponseHandler<UpdateKeyGroupResult>(
                     new UpdateKeyGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Specifies the Key Value Store to update.
+     * </p>
+     * 
+     * @param updateKeyValueStoreRequest
+     * @return Result of the UpdateKeyValueStore operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access denied.
+     * @throws InvalidArgumentException
+     *         An argument is invalid.
+     * @throws EntityNotFoundException
+     *         The Key Value Store entity was not found.
+     * @throws InvalidIfMatchVersionException
+     *         The <code>If-Match</code> version is missing or not valid.
+     * @throws PreconditionFailedException
+     *         The precondition in one or more of the request fields evaluated to <code>false</code>.
+     * @sample AmazonCloudFront.UpdateKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UpdateKeyValueStoreResult updateKeyValueStore(UpdateKeyValueStoreRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateKeyValueStore(request);
+    }
+
+    @SdkInternalApi
+    final UpdateKeyValueStoreResult executeUpdateKeyValueStore(UpdateKeyValueStoreRequest updateKeyValueStoreRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateKeyValueStoreRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateKeyValueStoreRequest> request = null;
+        Response<UpdateKeyValueStoreResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateKeyValueStoreRequestMarshaller().marshall(super.beforeMarshalling(updateKeyValueStoreRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudFront");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateKeyValueStore");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<UpdateKeyValueStoreResult> responseHandler = new StaxResponseHandler<UpdateKeyValueStoreResult>(
+                    new UpdateKeyValueStoreResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

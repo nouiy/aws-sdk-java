@@ -31,6 +31,8 @@ public class PropertyResponseMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("definition").build();
     private static final MarshallingInfo<StructuredPojo> VALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("value").build();
+    private static final MarshallingInfo<Boolean> AREALLPROPERTYVALUESRETURNED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("areAllPropertyValuesReturned").build();
 
     private static final PropertyResponseMarshaller instance = new PropertyResponseMarshaller();
 
@@ -50,6 +52,7 @@ public class PropertyResponseMarshaller {
         try {
             protocolMarshaller.marshall(propertyResponse.getDefinition(), DEFINITION_BINDING);
             protocolMarshaller.marshall(propertyResponse.getValue(), VALUE_BINDING);
+            protocolMarshaller.marshall(propertyResponse.getAreAllPropertyValuesReturned(), AREALLPROPERTYVALUESRETURNED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

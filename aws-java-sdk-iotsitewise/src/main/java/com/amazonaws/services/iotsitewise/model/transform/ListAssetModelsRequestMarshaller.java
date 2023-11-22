@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.iotsitewise.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class ListAssetModelsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
+    private static final MarshallingInfo<List> ASSETMODELTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("assetModelTypes").build();
 
     private static final ListAssetModelsRequestMarshaller instance = new ListAssetModelsRequestMarshaller();
 
@@ -50,6 +53,7 @@ public class ListAssetModelsRequestMarshaller {
         try {
             protocolMarshaller.marshall(listAssetModelsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listAssetModelsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listAssetModelsRequest.getAssetModelTypes(), ASSETMODELTYPES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

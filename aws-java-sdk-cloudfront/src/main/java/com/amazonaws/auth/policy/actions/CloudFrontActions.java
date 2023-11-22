@@ -49,6 +49,8 @@ public enum CloudFrontActions implements Action {
     CreateInvalidation("cloudfront:CreateInvalidation"),
     /** Action for the CreateKeyGroup operation. */
     CreateKeyGroup("cloudfront:CreateKeyGroup"),
+    /** Action for the CreateKeyValueStore operation. */
+    CreateKeyValueStore("cloudfront:CreateKeyValueStore"),
     /** Action for the CreateMonitoringSubscription operation. */
     CreateMonitoringSubscription("cloudfront:CreateMonitoringSubscription"),
     /** Action for the CreateOriginAccessControl operation. */
@@ -81,6 +83,8 @@ public enum CloudFrontActions implements Action {
     DeleteFunction("cloudfront:DeleteFunction"),
     /** Action for the DeleteKeyGroup operation. */
     DeleteKeyGroup("cloudfront:DeleteKeyGroup"),
+    /** Action for the DeleteKeyValueStore operation. */
+    DeleteKeyValueStore("cloudfront:DeleteKeyValueStore"),
     /** Action for the DeleteMonitoringSubscription operation. */
     DeleteMonitoringSubscription("cloudfront:DeleteMonitoringSubscription"),
     /** Action for the DeleteOriginAccessControl operation. */
@@ -97,6 +101,8 @@ public enum CloudFrontActions implements Action {
     DeleteStreamingDistribution("cloudfront:DeleteStreamingDistribution"),
     /** Action for the DescribeFunction operation. */
     DescribeFunction("cloudfront:DescribeFunction"),
+    /** Action for the DescribeKeyValueStore operation. */
+    DescribeKeyValueStore("cloudfront:DescribeKeyValueStore"),
     /** Action for the GetCachePolicy operation. */
     GetCachePolicy("cloudfront:GetCachePolicy"),
     /** Action for the GetCachePolicyConfig operation. */
@@ -185,6 +191,8 @@ public enum CloudFrontActions implements Action {
     ListInvalidations("cloudfront:ListInvalidations"),
     /** Action for the ListKeyGroups operation. */
     ListKeyGroups("cloudfront:ListKeyGroups"),
+    /** Action for the ListKeyValueStores operation. */
+    ListKeyValueStores("cloudfront:ListKeyValueStores"),
     /** Action for the ListOriginAccessControls operation. */
     ListOriginAccessControls("cloudfront:ListOriginAccessControls"),
     /** Action for the ListOriginRequestPolicies operation. */
@@ -225,6 +233,8 @@ public enum CloudFrontActions implements Action {
     UpdateFunction("cloudfront:UpdateFunction"),
     /** Action for the UpdateKeyGroup operation. */
     UpdateKeyGroup("cloudfront:UpdateKeyGroup"),
+    /** Action for the UpdateKeyValueStore operation. */
+    UpdateKeyValueStore("cloudfront:UpdateKeyValueStore"),
     /** Action for the UpdateOriginAccessControl operation. */
     UpdateOriginAccessControl("cloudfront:UpdateOriginAccessControl"),
     /** Action for the UpdateOriginRequestPolicy operation. */

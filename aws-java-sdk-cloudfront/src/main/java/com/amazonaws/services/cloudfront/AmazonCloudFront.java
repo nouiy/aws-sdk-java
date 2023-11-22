@@ -1038,6 +1038,31 @@ public interface AmazonCloudFront {
 
     /**
      * <p>
+     * Specifies the Key Value Store resource to add to your account. In your account, the Key Value Store names must be
+     * unique. You can also import Key Value Store data in JSON format from an S3 bucket by providing a valid
+     * <code>ImportSource</code> that you own.
+     * </p>
+     * 
+     * @param createKeyValueStoreRequest
+     * @return Result of the CreateKeyValueStore operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access denied.
+     * @throws EntityLimitExceededException
+     *         The Key Value Store entity limit has been exceeded.
+     * @throws EntityAlreadyExistsException
+     *         The Key Value Store entity already exists. You must provide a unique Key Value Store entity.
+     * @throws EntitySizeLimitExceededException
+     *         The Key Value Store entity size limit was exceeded.
+     * @throws InvalidArgumentException
+     *         An argument is invalid.
+     * @sample AmazonCloudFront.CreateKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateKeyValueStoreResult createKeyValueStore(CreateKeyValueStoreRequest createKeyValueStoreRequest);
+
+    /**
+     * <p>
      * Enables additional CloudWatch metrics for the specified CloudFront distribution. The additional metrics incur an
      * additional cost.
      * </p>
@@ -1668,6 +1693,29 @@ public interface AmazonCloudFront {
 
     /**
      * <p>
+     * Specifies the Key Value Store to delete.
+     * </p>
+     * 
+     * @param deleteKeyValueStoreRequest
+     * @return Result of the DeleteKeyValueStore operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access denied.
+     * @throws InvalidIfMatchVersionException
+     *         The <code>If-Match</code> version is missing or not valid.
+     * @throws EntityNotFoundException
+     *         The Key Value Store entity was not found.
+     * @throws CannotDeleteEntityWhileInUseException
+     *         The Key Value Store entity cannot be deleted while it is in use.
+     * @throws PreconditionFailedException
+     *         The precondition in one or more of the request fields evaluated to <code>false</code>.
+     * @sample AmazonCloudFront.DeleteKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteKeyValueStoreResult deleteKeyValueStore(DeleteKeyValueStoreRequest deleteKeyValueStoreRequest);
+
+    /**
+     * <p>
      * Disables additional CloudWatch metrics for the specified CloudFront distribution.
      * </p>
      * 
@@ -1943,6 +1991,25 @@ public interface AmazonCloudFront {
      *      API Documentation</a>
      */
     DescribeFunctionResult describeFunction(DescribeFunctionRequest describeFunctionRequest);
+
+    /**
+     * <p>
+     * Specifies the Key Value Store and its configuration.
+     * </p>
+     * 
+     * @param describeKeyValueStoreRequest
+     * @return Result of the DescribeKeyValueStore operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access denied.
+     * @throws InvalidArgumentException
+     *         An argument is invalid.
+     * @throws EntityNotFoundException
+     *         The Key Value Store entity was not found.
+     * @sample AmazonCloudFront.DescribeKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DescribeKeyValueStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeKeyValueStoreResult describeKeyValueStore(DescribeKeyValueStoreRequest describeKeyValueStoreRequest);
 
     /**
      * <p>
@@ -2904,6 +2971,23 @@ public interface AmazonCloudFront {
      *      Documentation</a>
      */
     ListKeyGroupsResult listKeyGroups(ListKeyGroupsRequest listKeyGroupsRequest);
+
+    /**
+     * <p>
+     * Specifies the Key Value Stores to list.
+     * </p>
+     * 
+     * @param listKeyValueStoresRequest
+     * @return Result of the ListKeyValueStores operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access denied.
+     * @throws InvalidArgumentException
+     *         An argument is invalid.
+     * @sample AmazonCloudFront.ListKeyValueStores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListKeyValueStores" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListKeyValueStoresResult listKeyValueStores(ListKeyValueStoresRequest listKeyValueStoresRequest);
 
     /**
      * <p>
@@ -3907,6 +3991,29 @@ public interface AmazonCloudFront {
      *      Documentation</a>
      */
     UpdateKeyGroupResult updateKeyGroup(UpdateKeyGroupRequest updateKeyGroupRequest);
+
+    /**
+     * <p>
+     * Specifies the Key Value Store to update.
+     * </p>
+     * 
+     * @param updateKeyValueStoreRequest
+     * @return Result of the UpdateKeyValueStore operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access denied.
+     * @throws InvalidArgumentException
+     *         An argument is invalid.
+     * @throws EntityNotFoundException
+     *         The Key Value Store entity was not found.
+     * @throws InvalidIfMatchVersionException
+     *         The <code>If-Match</code> version is missing or not valid.
+     * @throws PreconditionFailedException
+     *         The precondition in one or more of the request fields evaluated to <code>false</code>.
+     * @sample AmazonCloudFront.UpdateKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateKeyValueStoreResult updateKeyValueStore(UpdateKeyValueStoreRequest updateKeyValueStoreRequest);
 
     /**
      * <p>

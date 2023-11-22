@@ -68,6 +68,14 @@ public class PutStorageConfigurationResultJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     putStorageConfigurationResult.setConfigurationStatus(ConfigurationStatusJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("warmTier", targetDepth)) {
+                    context.nextToken();
+                    putStorageConfigurationResult.setWarmTier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("warmTierRetentionPeriod", targetDepth)) {
+                    context.nextToken();
+                    putStorageConfigurationResult.setWarmTierRetentionPeriod(WarmTierRetentionPeriodJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

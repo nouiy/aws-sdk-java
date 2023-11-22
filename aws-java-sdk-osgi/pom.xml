@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.594-SNAPSHOT</version>
+    <version>1.12.594</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,18 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-inspectorscan</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-cloudfrontkeyvaluestore</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-trustedadvisor</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -2270,6 +2282,14 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>Inspector Scan</title>
+                                  <packages>com.amazonaws.services.inspectorscan*</packages>
+                              </group>
+                              <group>
+                                  <title>Amazon CloudFront KeyValueStore</title>
+                                  <packages>com.amazonaws.services.cloudfrontkeyvaluestore*</packages>
+                              </group>
                               <group>
                                   <title>TrustedAdvisor Public API</title>
                                   <packages>com.amazonaws.services.trustedadvisor*</packages>

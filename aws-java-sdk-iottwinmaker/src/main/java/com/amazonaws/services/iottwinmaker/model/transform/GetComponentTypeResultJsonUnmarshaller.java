@@ -117,6 +117,11 @@ public class GetComponentTypeResultJsonUnmarshaller implements Unmarshaller<GetC
                     context.nextToken();
                     getComponentTypeResult.setComponentTypeName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("compositeComponentTypes", targetDepth)) {
+                    context.nextToken();
+                    getComponentTypeResult.setCompositeComponentTypes(new MapUnmarshaller<String, CompositeComponentTypeResponse>(context
+                            .getUnmarshaller(String.class), CompositeComponentTypeResponseJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

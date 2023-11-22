@@ -56,6 +56,13 @@ public class VariableValueJsonUnmarshaller implements Unmarshaller<VariableValue
                     context.nextToken();
                     variableValue.setHierarchyId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("propertyPath", targetDepth)) {
+                    context.nextToken();
+                    variableValue.setPropertyPath(new ListUnmarshaller<AssetModelPropertyPathSegment>(AssetModelPropertyPathSegmentJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

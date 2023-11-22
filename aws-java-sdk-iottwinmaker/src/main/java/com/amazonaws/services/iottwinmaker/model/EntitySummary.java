@@ -66,7 +66,7 @@ public class EntitySummary implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * A Boolean value that specifies whether the entity has child entities or not.
+     * An <b>eventual</b> Boolean value that specifies whether the entity has child entities or not.
      * </p>
      */
     private Boolean hasChildEntities;
@@ -325,11 +325,11 @@ public class EntitySummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A Boolean value that specifies whether the entity has child entities or not.
+     * An <b>eventual</b> Boolean value that specifies whether the entity has child entities or not.
      * </p>
      * 
      * @param hasChildEntities
-     *        A Boolean value that specifies whether the entity has child entities or not.
+     *        An <b>eventual</b> Boolean value that specifies whether the entity has child entities or not.
      */
 
     public void setHasChildEntities(Boolean hasChildEntities) {
@@ -338,10 +338,10 @@ public class EntitySummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A Boolean value that specifies whether the entity has child entities or not.
+     * An <b>eventual</b> Boolean value that specifies whether the entity has child entities or not.
      * </p>
      * 
-     * @return A Boolean value that specifies whether the entity has child entities or not.
+     * @return An <b>eventual</b> Boolean value that specifies whether the entity has child entities or not.
      */
 
     public Boolean getHasChildEntities() {
@@ -350,11 +350,11 @@ public class EntitySummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A Boolean value that specifies whether the entity has child entities or not.
+     * An <b>eventual</b> Boolean value that specifies whether the entity has child entities or not.
      * </p>
      * 
      * @param hasChildEntities
-     *        A Boolean value that specifies whether the entity has child entities or not.
+     *        An <b>eventual</b> Boolean value that specifies whether the entity has child entities or not.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -365,10 +365,10 @@ public class EntitySummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A Boolean value that specifies whether the entity has child entities or not.
+     * An <b>eventual</b> Boolean value that specifies whether the entity has child entities or not.
      * </p>
      * 
-     * @return A Boolean value that specifies whether the entity has child entities or not.
+     * @return An <b>eventual</b> Boolean value that specifies whether the entity has child entities or not.
      */
 
     public Boolean isHasChildEntities() {

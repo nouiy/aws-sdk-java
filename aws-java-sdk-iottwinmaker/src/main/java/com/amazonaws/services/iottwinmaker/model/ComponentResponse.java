@@ -77,6 +77,25 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String syncSource;
+    /**
+     * <p>
+     * This flag notes whether all properties of the component are returned in the API response. The maximum number of
+     * properties returned is 800.
+     * </p>
+     */
+    private Boolean areAllPropertiesReturned;
+    /**
+     * <p>
+     * This lists objects that contain information about the <code>compositeComponents</code>.
+     * </p>
+     */
+    private java.util.Map<String, ComponentSummary> compositeComponents;
+    /**
+     * <p>
+     * This flag notes whether all <code>compositeComponents</code> are returned in the API response.
+     * </p>
+     */
+    private Boolean areAllCompositeComponentsReturned;
 
     /**
      * <p>
@@ -461,6 +480,186 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * This flag notes whether all properties of the component are returned in the API response. The maximum number of
+     * properties returned is 800.
+     * </p>
+     * 
+     * @param areAllPropertiesReturned
+     *        This flag notes whether all properties of the component are returned in the API response. The maximum
+     *        number of properties returned is 800.
+     */
+
+    public void setAreAllPropertiesReturned(Boolean areAllPropertiesReturned) {
+        this.areAllPropertiesReturned = areAllPropertiesReturned;
+    }
+
+    /**
+     * <p>
+     * This flag notes whether all properties of the component are returned in the API response. The maximum number of
+     * properties returned is 800.
+     * </p>
+     * 
+     * @return This flag notes whether all properties of the component are returned in the API response. The maximum
+     *         number of properties returned is 800.
+     */
+
+    public Boolean getAreAllPropertiesReturned() {
+        return this.areAllPropertiesReturned;
+    }
+
+    /**
+     * <p>
+     * This flag notes whether all properties of the component are returned in the API response. The maximum number of
+     * properties returned is 800.
+     * </p>
+     * 
+     * @param areAllPropertiesReturned
+     *        This flag notes whether all properties of the component are returned in the API response. The maximum
+     *        number of properties returned is 800.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentResponse withAreAllPropertiesReturned(Boolean areAllPropertiesReturned) {
+        setAreAllPropertiesReturned(areAllPropertiesReturned);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This flag notes whether all properties of the component are returned in the API response. The maximum number of
+     * properties returned is 800.
+     * </p>
+     * 
+     * @return This flag notes whether all properties of the component are returned in the API response. The maximum
+     *         number of properties returned is 800.
+     */
+
+    public Boolean isAreAllPropertiesReturned() {
+        return this.areAllPropertiesReturned;
+    }
+
+    /**
+     * <p>
+     * This lists objects that contain information about the <code>compositeComponents</code>.
+     * </p>
+     * 
+     * @return This lists objects that contain information about the <code>compositeComponents</code>.
+     */
+
+    public java.util.Map<String, ComponentSummary> getCompositeComponents() {
+        return compositeComponents;
+    }
+
+    /**
+     * <p>
+     * This lists objects that contain information about the <code>compositeComponents</code>.
+     * </p>
+     * 
+     * @param compositeComponents
+     *        This lists objects that contain information about the <code>compositeComponents</code>.
+     */
+
+    public void setCompositeComponents(java.util.Map<String, ComponentSummary> compositeComponents) {
+        this.compositeComponents = compositeComponents;
+    }
+
+    /**
+     * <p>
+     * This lists objects that contain information about the <code>compositeComponents</code>.
+     * </p>
+     * 
+     * @param compositeComponents
+     *        This lists objects that contain information about the <code>compositeComponents</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentResponse withCompositeComponents(java.util.Map<String, ComponentSummary> compositeComponents) {
+        setCompositeComponents(compositeComponents);
+        return this;
+    }
+
+    /**
+     * Add a single CompositeComponents entry
+     *
+     * @see ComponentResponse#withCompositeComponents
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentResponse addCompositeComponentsEntry(String key, ComponentSummary value) {
+        if (null == this.compositeComponents) {
+            this.compositeComponents = new java.util.HashMap<String, ComponentSummary>();
+        }
+        if (this.compositeComponents.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.compositeComponents.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into CompositeComponents.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentResponse clearCompositeComponentsEntries() {
+        this.compositeComponents = null;
+        return this;
+    }
+
+    /**
+     * <p>
+     * This flag notes whether all <code>compositeComponents</code> are returned in the API response.
+     * </p>
+     * 
+     * @param areAllCompositeComponentsReturned
+     *        This flag notes whether all <code>compositeComponents</code> are returned in the API response.
+     */
+
+    public void setAreAllCompositeComponentsReturned(Boolean areAllCompositeComponentsReturned) {
+        this.areAllCompositeComponentsReturned = areAllCompositeComponentsReturned;
+    }
+
+    /**
+     * <p>
+     * This flag notes whether all <code>compositeComponents</code> are returned in the API response.
+     * </p>
+     * 
+     * @return This flag notes whether all <code>compositeComponents</code> are returned in the API response.
+     */
+
+    public Boolean getAreAllCompositeComponentsReturned() {
+        return this.areAllCompositeComponentsReturned;
+    }
+
+    /**
+     * <p>
+     * This flag notes whether all <code>compositeComponents</code> are returned in the API response.
+     * </p>
+     * 
+     * @param areAllCompositeComponentsReturned
+     *        This flag notes whether all <code>compositeComponents</code> are returned in the API response.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentResponse withAreAllCompositeComponentsReturned(Boolean areAllCompositeComponentsReturned) {
+        setAreAllCompositeComponentsReturned(areAllCompositeComponentsReturned);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This flag notes whether all <code>compositeComponents</code> are returned in the API response.
+     * </p>
+     * 
+     * @return This flag notes whether all <code>compositeComponents</code> are returned in the API response.
+     */
+
+    public Boolean isAreAllCompositeComponentsReturned() {
+        return this.areAllCompositeComponentsReturned;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -487,7 +686,13 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
         if (getPropertyGroups() != null)
             sb.append("PropertyGroups: ").append(getPropertyGroups()).append(",");
         if (getSyncSource() != null)
-            sb.append("SyncSource: ").append(getSyncSource());
+            sb.append("SyncSource: ").append(getSyncSource()).append(",");
+        if (getAreAllPropertiesReturned() != null)
+            sb.append("AreAllPropertiesReturned: ").append(getAreAllPropertiesReturned()).append(",");
+        if (getCompositeComponents() != null)
+            sb.append("CompositeComponents: ").append(getCompositeComponents()).append(",");
+        if (getAreAllCompositeComponentsReturned() != null)
+            sb.append("AreAllCompositeComponentsReturned: ").append(getAreAllCompositeComponentsReturned());
         sb.append("}");
         return sb.toString();
     }
@@ -534,6 +739,19 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getSyncSource() != null && other.getSyncSource().equals(this.getSyncSource()) == false)
             return false;
+        if (other.getAreAllPropertiesReturned() == null ^ this.getAreAllPropertiesReturned() == null)
+            return false;
+        if (other.getAreAllPropertiesReturned() != null && other.getAreAllPropertiesReturned().equals(this.getAreAllPropertiesReturned()) == false)
+            return false;
+        if (other.getCompositeComponents() == null ^ this.getCompositeComponents() == null)
+            return false;
+        if (other.getCompositeComponents() != null && other.getCompositeComponents().equals(this.getCompositeComponents()) == false)
+            return false;
+        if (other.getAreAllCompositeComponentsReturned() == null ^ this.getAreAllCompositeComponentsReturned() == null)
+            return false;
+        if (other.getAreAllCompositeComponentsReturned() != null
+                && other.getAreAllCompositeComponentsReturned().equals(this.getAreAllCompositeComponentsReturned()) == false)
+            return false;
         return true;
     }
 
@@ -550,6 +768,9 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getProperties() == null) ? 0 : getProperties().hashCode());
         hashCode = prime * hashCode + ((getPropertyGroups() == null) ? 0 : getPropertyGroups().hashCode());
         hashCode = prime * hashCode + ((getSyncSource() == null) ? 0 : getSyncSource().hashCode());
+        hashCode = prime * hashCode + ((getAreAllPropertiesReturned() == null) ? 0 : getAreAllPropertiesReturned().hashCode());
+        hashCode = prime * hashCode + ((getCompositeComponents() == null) ? 0 : getCompositeComponents().hashCode());
+        hashCode = prime * hashCode + ((getAreAllCompositeComponentsReturned() == null) ? 0 : getAreAllCompositeComponentsReturned().hashCode());
         return hashCode;
     }
 

@@ -87,9 +87,10 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> for General
-     * Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD, <code>st1</code> for Throughput
-     * Optimized HDD, <code>sc1</code>for Cold HDD, or <code>standard</code> for Magnetic.
+     * <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> or
+     * <code>gp3</code> for General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD,
+     * <code>st1</code> for Throughput Optimized HDD, <code>sc1</code> for Cold HDD, or <code>standard</code> for
+     * Magnetic.
      * </p>
      * </li>
      * <li>
@@ -328,9 +329,10 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> for General
-     * Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD, <code>st1</code> for Throughput
-     * Optimized HDD, <code>sc1</code>for Cold HDD, or <code>standard</code> for Magnetic.
+     * <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> or
+     * <code>gp3</code> for General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD,
+     * <code>st1</code> for Throughput Optimized HDD, <code>sc1</code> for Cold HDD, or <code>standard</code> for
+     * Magnetic.
      * </p>
      * </li>
      * <li>
@@ -543,9 +545,10 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      *         </li>
      *         <li>
      *         <p>
-     *         <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> for
-     *         General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD, <code>st1</code> for
-     *         Throughput Optimized HDD, <code>sc1</code>for Cold HDD, or <code>standard</code> for Magnetic.
+     *         <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> or
+     *         <code>gp3</code> for General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD,
+     *         <code>st1</code> for Throughput Optimized HDD, <code>sc1</code> for Cold HDD, or <code>standard</code>
+     *         for Magnetic.
      *         </p>
      *         </li>
      *         <li>
@@ -771,9 +774,10 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> for General
-     * Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD, <code>st1</code> for Throughput
-     * Optimized HDD, <code>sc1</code>for Cold HDD, or <code>standard</code> for Magnetic.
+     * <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> or
+     * <code>gp3</code> for General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD,
+     * <code>st1</code> for Throughput Optimized HDD, <code>sc1</code> for Cold HDD, or <code>standard</code> for
+     * Magnetic.
      * </p>
      * </li>
      * <li>
@@ -987,9 +991,10 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
-     *        <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> for
-     *        General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD, <code>st1</code> for
-     *        Throughput Optimized HDD, <code>sc1</code>for Cold HDD, or <code>standard</code> for Magnetic.
+     *        <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> or
+     *        <code>gp3</code> for General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD,
+     *        <code>st1</code> for Throughput Optimized HDD, <code>sc1</code> for Cold HDD, or <code>standard</code> for
+     *        Magnetic.
      *        </p>
      *        </li>
      *        <li>
@@ -1217,9 +1222,10 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> for General
-     * Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD, <code>st1</code> for Throughput
-     * Optimized HDD, <code>sc1</code>for Cold HDD, or <code>standard</code> for Magnetic.
+     * <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> or
+     * <code>gp3</code> for General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD,
+     * <code>st1</code> for Throughput Optimized HDD, <code>sc1</code> for Cold HDD, or <code>standard</code> for
+     * Magnetic.
      * </p>
      * </li>
      * <li>
@@ -1438,9 +1444,10 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
-     *        <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> for
-     *        General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD, <code>st1</code> for
-     *        Throughput Optimized HDD, <code>sc1</code>for Cold HDD, or <code>standard</code> for Magnetic.
+     *        <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> or
+     *        <code>gp3</code> for General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD,
+     *        <code>st1</code> for Throughput Optimized HDD, <code>sc1</code> for Cold HDD, or <code>standard</code> for
+     *        Magnetic.
      *        </p>
      *        </li>
      *        <li>
@@ -1670,9 +1677,10 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> for General
-     * Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD, <code>st1</code> for Throughput
-     * Optimized HDD, <code>sc1</code>for Cold HDD, or <code>standard</code> for Magnetic.
+     * <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> or
+     * <code>gp3</code> for General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD,
+     * <code>st1</code> for Throughput Optimized HDD, <code>sc1</code> for Cold HDD, or <code>standard</code> for
+     * Magnetic.
      * </p>
      * </li>
      * <li>
@@ -1886,9 +1894,10 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
-     *        <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> for
-     *        General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD, <code>st1</code> for
-     *        Throughput Optimized HDD, <code>sc1</code>for Cold HDD, or <code>standard</code> for Magnetic.
+     *        <code>launch.block-device-mapping.volume-type</code> - The type of EBS volume: <code>gp2</code> or
+     *        <code>gp3</code> for General Purpose SSD, <code>io1</code> or <code>io2</code> for Provisioned IOPS SSD,
+     *        <code>st1</code> for Throughput Optimized HDD, <code>sc1</code> for Cold HDD, or <code>standard</code> for
+     *        Magnetic.
      *        </p>
      *        </li>
      *        <li>

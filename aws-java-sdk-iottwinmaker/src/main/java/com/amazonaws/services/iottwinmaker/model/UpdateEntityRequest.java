@@ -58,6 +58,13 @@ public class UpdateEntityRequest extends com.amazonaws.AmazonWebServiceRequest i
     private java.util.Map<String, ComponentUpdateRequest> componentUpdates;
     /**
      * <p>
+     * This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of the
+     * map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     * </p>
+     */
+    private java.util.Map<String, CompositeComponentUpdateRequest> compositeComponentUpdates;
+    /**
+     * <p>
      * An object that describes the update request for a parent entity.
      * </p>
      */
@@ -299,6 +306,80 @@ public class UpdateEntityRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
+     * This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of the
+     * map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     * </p>
+     * 
+     * @return This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key
+     *         of the map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     */
+
+    public java.util.Map<String, CompositeComponentUpdateRequest> getCompositeComponentUpdates() {
+        return compositeComponentUpdates;
+    }
+
+    /**
+     * <p>
+     * This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of the
+     * map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     * </p>
+     * 
+     * @param compositeComponentUpdates
+     *        This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of
+     *        the map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     */
+
+    public void setCompositeComponentUpdates(java.util.Map<String, CompositeComponentUpdateRequest> compositeComponentUpdates) {
+        this.compositeComponentUpdates = compositeComponentUpdates;
+    }
+
+    /**
+     * <p>
+     * This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of the
+     * map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     * </p>
+     * 
+     * @param compositeComponentUpdates
+     *        This is an object that maps strings to <code>compositeComponent</code> updates in the request. Each key of
+     *        the map represents the <code>componentPath</code> of the <code>compositeComponent</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEntityRequest withCompositeComponentUpdates(java.util.Map<String, CompositeComponentUpdateRequest> compositeComponentUpdates) {
+        setCompositeComponentUpdates(compositeComponentUpdates);
+        return this;
+    }
+
+    /**
+     * Add a single CompositeComponentUpdates entry
+     *
+     * @see UpdateEntityRequest#withCompositeComponentUpdates
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEntityRequest addCompositeComponentUpdatesEntry(String key, CompositeComponentUpdateRequest value) {
+        if (null == this.compositeComponentUpdates) {
+            this.compositeComponentUpdates = new java.util.HashMap<String, CompositeComponentUpdateRequest>();
+        }
+        if (this.compositeComponentUpdates.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.compositeComponentUpdates.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into CompositeComponentUpdates.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEntityRequest clearCompositeComponentUpdatesEntries() {
+        this.compositeComponentUpdates = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * An object that describes the update request for a parent entity.
      * </p>
      * 
@@ -359,6 +440,8 @@ public class UpdateEntityRequest extends com.amazonaws.AmazonWebServiceRequest i
             sb.append("Description: ").append(getDescription()).append(",");
         if (getComponentUpdates() != null)
             sb.append("ComponentUpdates: ").append(getComponentUpdates()).append(",");
+        if (getCompositeComponentUpdates() != null)
+            sb.append("CompositeComponentUpdates: ").append(getCompositeComponentUpdates()).append(",");
         if (getParentEntityUpdate() != null)
             sb.append("ParentEntityUpdate: ").append(getParentEntityUpdate());
         sb.append("}");
@@ -395,6 +478,10 @@ public class UpdateEntityRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getComponentUpdates() != null && other.getComponentUpdates().equals(this.getComponentUpdates()) == false)
             return false;
+        if (other.getCompositeComponentUpdates() == null ^ this.getCompositeComponentUpdates() == null)
+            return false;
+        if (other.getCompositeComponentUpdates() != null && other.getCompositeComponentUpdates().equals(this.getCompositeComponentUpdates()) == false)
+            return false;
         if (other.getParentEntityUpdate() == null ^ this.getParentEntityUpdate() == null)
             return false;
         if (other.getParentEntityUpdate() != null && other.getParentEntityUpdate().equals(this.getParentEntityUpdate()) == false)
@@ -412,6 +499,7 @@ public class UpdateEntityRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getEntityName() == null) ? 0 : getEntityName().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getComponentUpdates() == null) ? 0 : getComponentUpdates().hashCode());
+        hashCode = prime * hashCode + ((getCompositeComponentUpdates() == null) ? 0 : getCompositeComponentUpdates().hashCode());
         hashCode = prime * hashCode + ((getParentEntityUpdate() == null) ? 0 : getParentEntityUpdate().hashCode());
         return hashCode;
     }

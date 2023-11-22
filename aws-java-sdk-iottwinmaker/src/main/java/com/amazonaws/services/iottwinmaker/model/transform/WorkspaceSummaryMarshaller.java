@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.iottwinmaker.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,8 @@ public class WorkspaceSummaryMarshaller {
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<List> LINKEDSERVICES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("linkedServices").build();
     private static final MarshallingInfo<java.util.Date> CREATIONDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationDateTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -57,6 +60,7 @@ public class WorkspaceSummaryMarshaller {
             protocolMarshaller.marshall(workspaceSummary.getWorkspaceId(), WORKSPACEID_BINDING);
             protocolMarshaller.marshall(workspaceSummary.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(workspaceSummary.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(workspaceSummary.getLinkedServices(), LINKEDSERVICES_BINDING);
             protocolMarshaller.marshall(workspaceSummary.getCreationDateTime(), CREATIONDATETIME_BINDING);
             protocolMarshaller.marshall(workspaceSummary.getUpdateDateTime(), UPDATEDATETIME_BINDING);
         } catch (Exception e) {

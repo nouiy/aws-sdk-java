@@ -33,6 +33,8 @@ public class UpdateWorkspaceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> ROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("role").build();
+    private static final MarshallingInfo<String> S3LOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3Location").build();
 
     private static final UpdateWorkspaceRequestMarshaller instance = new UpdateWorkspaceRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class UpdateWorkspaceRequestMarshaller {
             protocolMarshaller.marshall(updateWorkspaceRequest.getWorkspaceId(), WORKSPACEID_BINDING);
             protocolMarshaller.marshall(updateWorkspaceRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateWorkspaceRequest.getRole(), ROLE_BINDING);
+            protocolMarshaller.marshall(updateWorkspaceRequest.getS3Location(), S3LOCATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

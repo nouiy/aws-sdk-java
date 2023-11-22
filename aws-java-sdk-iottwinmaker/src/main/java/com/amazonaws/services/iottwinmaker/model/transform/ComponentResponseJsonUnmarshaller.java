@@ -82,6 +82,19 @@ public class ComponentResponseJsonUnmarshaller implements Unmarshaller<Component
                     context.nextToken();
                     componentResponse.setSyncSource(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("areAllPropertiesReturned", targetDepth)) {
+                    context.nextToken();
+                    componentResponse.setAreAllPropertiesReturned(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("compositeComponents", targetDepth)) {
+                    context.nextToken();
+                    componentResponse.setCompositeComponents(new MapUnmarshaller<String, ComponentSummary>(context.getUnmarshaller(String.class),
+                            ComponentSummaryJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
+                if (context.testExpression("areAllCompositeComponentsReturned", targetDepth)) {
+                    context.nextToken();
+                    componentResponse.setAreAllCompositeComponentsReturned(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -689,6 +689,41 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
+     * Specifies the Key Value Store resource to add to your account. In your account, the Key Value Store names must be
+     * unique. You can also import Key Value Store data in JSON format from an S3 bucket by providing a valid
+     * <code>ImportSource</code> that you own.
+     * </p>
+     * 
+     * @param createKeyValueStoreRequest
+     * @return A Java Future containing the result of the CreateKeyValueStore operation returned by the service.
+     * @sample AmazonCloudFrontAsync.CreateKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateKeyValueStoreResult> createKeyValueStoreAsync(CreateKeyValueStoreRequest createKeyValueStoreRequest);
+
+    /**
+     * <p>
+     * Specifies the Key Value Store resource to add to your account. In your account, the Key Value Store names must be
+     * unique. You can also import Key Value Store data in JSON format from an S3 bucket by providing a valid
+     * <code>ImportSource</code> that you own.
+     * </p>
+     * 
+     * @param createKeyValueStoreRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateKeyValueStore operation returned by the service.
+     * @sample AmazonCloudFrontAsyncHandler.CreateKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateKeyValueStoreResult> createKeyValueStoreAsync(CreateKeyValueStoreRequest createKeyValueStoreRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateKeyValueStoreRequest, CreateKeyValueStoreResult> asyncHandler);
+
+    /**
+     * <p>
      * Enables additional CloudWatch metrics for the specified CloudFront distribution. The additional metrics incur an
      * additional cost.
      * </p>
@@ -1565,6 +1600,37 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
+     * Specifies the Key Value Store to delete.
+     * </p>
+     * 
+     * @param deleteKeyValueStoreRequest
+     * @return A Java Future containing the result of the DeleteKeyValueStore operation returned by the service.
+     * @sample AmazonCloudFrontAsync.DeleteKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteKeyValueStoreResult> deleteKeyValueStoreAsync(DeleteKeyValueStoreRequest deleteKeyValueStoreRequest);
+
+    /**
+     * <p>
+     * Specifies the Key Value Store to delete.
+     * </p>
+     * 
+     * @param deleteKeyValueStoreRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteKeyValueStore operation returned by the service.
+     * @sample AmazonCloudFrontAsyncHandler.DeleteKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteKeyValueStoreResult> deleteKeyValueStoreAsync(DeleteKeyValueStoreRequest deleteKeyValueStoreRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteKeyValueStoreRequest, DeleteKeyValueStoreResult> asyncHandler);
+
+    /**
+     * <p>
      * Disables additional CloudWatch metrics for the specified CloudFront distribution.
      * </p>
      * 
@@ -2018,6 +2084,37 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
      */
     java.util.concurrent.Future<DescribeFunctionResult> describeFunctionAsync(DescribeFunctionRequest describeFunctionRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeFunctionRequest, DescribeFunctionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Specifies the Key Value Store and its configuration.
+     * </p>
+     * 
+     * @param describeKeyValueStoreRequest
+     * @return A Java Future containing the result of the DescribeKeyValueStore operation returned by the service.
+     * @sample AmazonCloudFrontAsync.DescribeKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DescribeKeyValueStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeKeyValueStoreResult> describeKeyValueStoreAsync(DescribeKeyValueStoreRequest describeKeyValueStoreRequest);
+
+    /**
+     * <p>
+     * Specifies the Key Value Store and its configuration.
+     * </p>
+     * 
+     * @param describeKeyValueStoreRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeKeyValueStore operation returned by the service.
+     * @sample AmazonCloudFrontAsyncHandler.DescribeKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DescribeKeyValueStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeKeyValueStoreResult> describeKeyValueStoreAsync(DescribeKeyValueStoreRequest describeKeyValueStoreRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeKeyValueStoreRequest, DescribeKeyValueStoreResult> asyncHandler);
 
     /**
      * <p>
@@ -3863,6 +3960,37 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
+     * Specifies the Key Value Stores to list.
+     * </p>
+     * 
+     * @param listKeyValueStoresRequest
+     * @return A Java Future containing the result of the ListKeyValueStores operation returned by the service.
+     * @sample AmazonCloudFrontAsync.ListKeyValueStores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListKeyValueStores" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListKeyValueStoresResult> listKeyValueStoresAsync(ListKeyValueStoresRequest listKeyValueStoresRequest);
+
+    /**
+     * <p>
+     * Specifies the Key Value Stores to list.
+     * </p>
+     * 
+     * @param listKeyValueStoresRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListKeyValueStores operation returned by the service.
+     * @sample AmazonCloudFrontAsyncHandler.ListKeyValueStores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListKeyValueStores" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListKeyValueStoresResult> listKeyValueStoresAsync(ListKeyValueStoresRequest listKeyValueStoresRequest,
+            com.amazonaws.handlers.AsyncHandler<ListKeyValueStoresRequest, ListKeyValueStoresResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets the list of CloudFront origin access controls in this Amazon Web Services account.
      * </p>
      * <p>
@@ -4920,6 +5048,37 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
      */
     java.util.concurrent.Future<UpdateKeyGroupResult> updateKeyGroupAsync(UpdateKeyGroupRequest updateKeyGroupRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateKeyGroupRequest, UpdateKeyGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Specifies the Key Value Store to update.
+     * </p>
+     * 
+     * @param updateKeyValueStoreRequest
+     * @return A Java Future containing the result of the UpdateKeyValueStore operation returned by the service.
+     * @sample AmazonCloudFrontAsync.UpdateKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKeyValueStoreResult> updateKeyValueStoreAsync(UpdateKeyValueStoreRequest updateKeyValueStoreRequest);
+
+    /**
+     * <p>
+     * Specifies the Key Value Store to update.
+     * </p>
+     * 
+     * @param updateKeyValueStoreRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateKeyValueStore operation returned by the service.
+     * @sample AmazonCloudFrontAsyncHandler.UpdateKeyValueStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateKeyValueStore" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKeyValueStoreResult> updateKeyValueStoreAsync(UpdateKeyValueStoreRequest updateKeyValueStoreRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateKeyValueStoreRequest, UpdateKeyValueStoreResult> asyncHandler);
 
     /**
      * <p>

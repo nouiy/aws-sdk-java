@@ -33,6 +33,12 @@ public class GetPropertyValueRequest extends com.amazonaws.AmazonWebServiceReque
     private String componentName;
     /**
      * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     */
+    private String componentPath;
+    /**
+     * <p>
      * The ID of the component type whose property values the operation returns.
      * </p>
      */
@@ -120,6 +126,46 @@ public class GetPropertyValueRequest extends com.amazonaws.AmazonWebServiceReque
 
     public GetPropertyValueRequest withComponentName(String componentName) {
         setComponentName(componentName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     * 
+     * @param componentPath
+     *        This string specifies the path to the composite component, starting from the top-level component.
+     */
+
+    public void setComponentPath(String componentPath) {
+        this.componentPath = componentPath;
+    }
+
+    /**
+     * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     * 
+     * @return This string specifies the path to the composite component, starting from the top-level component.
+     */
+
+    public String getComponentPath() {
+        return this.componentPath;
+    }
+
+    /**
+     * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     * 
+     * @param componentPath
+     *        This string specifies the path to the composite component, starting from the top-level component.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetPropertyValueRequest withComponentPath(String componentPath) {
+        setComponentPath(componentPath);
         return this;
     }
 
@@ -502,6 +548,8 @@ public class GetPropertyValueRequest extends com.amazonaws.AmazonWebServiceReque
         sb.append("{");
         if (getComponentName() != null)
             sb.append("ComponentName: ").append(getComponentName()).append(",");
+        if (getComponentPath() != null)
+            sb.append("ComponentPath: ").append(getComponentPath()).append(",");
         if (getComponentTypeId() != null)
             sb.append("ComponentTypeId: ").append(getComponentTypeId()).append(",");
         if (getEntityId() != null)
@@ -535,6 +583,10 @@ public class GetPropertyValueRequest extends com.amazonaws.AmazonWebServiceReque
         if (other.getComponentName() == null ^ this.getComponentName() == null)
             return false;
         if (other.getComponentName() != null && other.getComponentName().equals(this.getComponentName()) == false)
+            return false;
+        if (other.getComponentPath() == null ^ this.getComponentPath() == null)
+            return false;
+        if (other.getComponentPath() != null && other.getComponentPath().equals(this.getComponentPath()) == false)
             return false;
         if (other.getComponentTypeId() == null ^ this.getComponentTypeId() == null)
             return false;
@@ -577,6 +629,7 @@ public class GetPropertyValueRequest extends com.amazonaws.AmazonWebServiceReque
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getComponentName() == null) ? 0 : getComponentName().hashCode());
+        hashCode = prime * hashCode + ((getComponentPath() == null) ? 0 : getComponentPath().hashCode());
         hashCode = prime * hashCode + ((getComponentTypeId() == null) ? 0 : getComponentTypeId().hashCode());
         hashCode = prime * hashCode + ((getEntityId() == null) ? 0 : getEntityId().hashCode());
         hashCode = prime * hashCode + ((getSelectedProperties() == null) ? 0 : getSelectedProperties().hashCode());

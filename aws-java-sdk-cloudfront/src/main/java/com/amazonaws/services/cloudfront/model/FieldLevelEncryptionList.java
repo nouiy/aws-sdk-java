@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * List of field-level encrpytion configurations.
+ * List of field-level encryption configurations.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/FieldLevelEncryptionList"

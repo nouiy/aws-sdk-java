@@ -34,6 +34,8 @@ public class GetPropertyValueHistoryRequestMarshaller {
             .marshallLocationName("entityId").build();
     private static final MarshallingInfo<String> COMPONENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentName").build();
+    private static final MarshallingInfo<String> COMPONENTPATH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentPath").build();
     private static final MarshallingInfo<String> COMPONENTTYPEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentTypeId").build();
     private static final MarshallingInfo<List> SELECTEDPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -76,6 +78,7 @@ public class GetPropertyValueHistoryRequestMarshaller {
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getWorkspaceId(), WORKSPACEID_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getEntityId(), ENTITYID_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getComponentName(), COMPONENTNAME_BINDING);
+            protocolMarshaller.marshall(getPropertyValueHistoryRequest.getComponentPath(), COMPONENTPATH_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getComponentTypeId(), COMPONENTTYPEID_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getSelectedProperties(), SELECTEDPROPERTIES_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getPropertyFilters(), PROPERTYFILTERS_BINDING);

@@ -42,22 +42,27 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <ul>
      * <li>
      * <p>
-     * <code>gp2</code> and <code>gp3</code>: 1-16,384
+     * <code>gp2</code> and <code>gp3</code>: 1 - 16,384 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io1</code> and <code>io2</code>: 4-16,384
+     * <code>io1</code>: 4 - 16,384 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>st1</code> and <code>sc1</code>: 125-16,384
+     * <code>io2</code>: 4 - 65,536 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>standard</code>: 1-1,024
+     * <code>st1</code> and <code>sc1</code>: 125 - 16,384 GiB
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>standard</code>: 1 - 1024 GiB
      * </p>
      * </li>
      * </ul>
@@ -88,20 +93,25 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <ul>
      * <li>
      * <p>
-     * <code>gp3</code>: 3,000-16,000 IOPS
+     * <code>gp3</code>: 3,000 - 16,000 IOPS
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io1</code>: 100-64,000 IOPS
+     * <code>io1</code>: 100 - 64,000 IOPS
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io2</code>: 100-64,000 IOPS
+     * <code>io2</code>: 100 - 256,000 IOPS
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
+     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * </p>
      * <p>
      * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
      * <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
@@ -185,22 +195,27 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <ul>
      * <li>
      * <p>
-     * <code>gp2</code> and <code>gp3</code>: 1-16,384
+     * <code>gp2</code> and <code>gp3</code>: 1 - 16,384 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io1</code> and <code>io2</code>: 4-16,384
+     * <code>io1</code>: 4 - 16,384 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>st1</code> and <code>sc1</code>: 125-16,384
+     * <code>io2</code>: 4 - 65,536 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>standard</code>: 1-1,024
+     * <code>st1</code> and <code>sc1</code>: 125 - 16,384 GiB
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>standard</code>: 1 - 1024 GiB
      * </p>
      * </li>
      * </ul>
@@ -217,22 +232,27 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>gp2</code> and <code>gp3</code>: 1-16,384
+     *        <code>gp2</code> and <code>gp3</code>: 1 - 16,384 GiB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>io1</code> and <code>io2</code>: 4-16,384
+     *        <code>io1</code>: 4 - 16,384 GiB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>st1</code> and <code>sc1</code>: 125-16,384
+     *        <code>io2</code>: 4 - 65,536 GiB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>standard</code>: 1-1,024
+     *        <code>st1</code> and <code>sc1</code>: 125 - 16,384 GiB
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>standard</code>: 1 - 1024 GiB
      *        </p>
      *        </li>
      *        </ul>
@@ -255,22 +275,27 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <ul>
      * <li>
      * <p>
-     * <code>gp2</code> and <code>gp3</code>: 1-16,384
+     * <code>gp2</code> and <code>gp3</code>: 1 - 16,384 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io1</code> and <code>io2</code>: 4-16,384
+     * <code>io1</code>: 4 - 16,384 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>st1</code> and <code>sc1</code>: 125-16,384
+     * <code>io2</code>: 4 - 65,536 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>standard</code>: 1-1,024
+     * <code>st1</code> and <code>sc1</code>: 125 - 16,384 GiB
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>standard</code>: 1 - 1024 GiB
      * </p>
      * </li>
      * </ul>
@@ -286,22 +311,27 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>gp2</code> and <code>gp3</code>: 1-16,384
+     *         <code>gp2</code> and <code>gp3</code>: 1 - 16,384 GiB
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>io1</code> and <code>io2</code>: 4-16,384
+     *         <code>io1</code>: 4 - 16,384 GiB
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>st1</code> and <code>sc1</code>: 125-16,384
+     *         <code>io2</code>: 4 - 65,536 GiB
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>standard</code>: 1-1,024
+     *         <code>st1</code> and <code>sc1</code>: 125 - 16,384 GiB
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>standard</code>: 1 - 1024 GiB
      *         </p>
      *         </li>
      *         </ul>
@@ -324,22 +354,27 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <ul>
      * <li>
      * <p>
-     * <code>gp2</code> and <code>gp3</code>: 1-16,384
+     * <code>gp2</code> and <code>gp3</code>: 1 - 16,384 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io1</code> and <code>io2</code>: 4-16,384
+     * <code>io1</code>: 4 - 16,384 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>st1</code> and <code>sc1</code>: 125-16,384
+     * <code>io2</code>: 4 - 65,536 GiB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>standard</code>: 1-1,024
+     * <code>st1</code> and <code>sc1</code>: 125 - 16,384 GiB
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>standard</code>: 1 - 1024 GiB
      * </p>
      * </li>
      * </ul>
@@ -356,22 +391,27 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>gp2</code> and <code>gp3</code>: 1-16,384
+     *        <code>gp2</code> and <code>gp3</code>: 1 - 16,384 GiB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>io1</code> and <code>io2</code>: 4-16,384
+     *        <code>io1</code>: 4 - 16,384 GiB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>st1</code> and <code>sc1</code>: 125-16,384
+     *        <code>io2</code>: 4 - 65,536 GiB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>standard</code>: 1-1,024
+     *        <code>st1</code> and <code>sc1</code>: 125 - 16,384 GiB
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>standard</code>: 1 - 1024 GiB
      *        </p>
      *        </li>
      *        </ul>
@@ -514,20 +554,25 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <ul>
      * <li>
      * <p>
-     * <code>gp3</code>: 3,000-16,000 IOPS
+     * <code>gp3</code>: 3,000 - 16,000 IOPS
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io1</code>: 100-64,000 IOPS
+     * <code>io1</code>: 100 - 64,000 IOPS
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io2</code>: 100-64,000 IOPS
+     * <code>io2</code>: 100 - 256,000 IOPS
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
+     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * </p>
      * <p>
      * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
      * <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
@@ -542,20 +587,26 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>gp3</code>: 3,000-16,000 IOPS
+     *        <code>gp3</code>: 3,000 - 16,000 IOPS
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>io1</code>: 100-64,000 IOPS
+     *        <code>io1</code>: 100 - 64,000 IOPS
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>io2</code>: 100-64,000 IOPS
+     *        <code>io2</code>: 100 - 256,000 IOPS
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
+     *        >instances built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000
+     *        IOPS.
+     *        </p>
      *        <p>
      *        Default: The existing value is retained if you keep the same volume type. If you change the volume type to
      *        <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
@@ -576,20 +627,25 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <ul>
      * <li>
      * <p>
-     * <code>gp3</code>: 3,000-16,000 IOPS
+     * <code>gp3</code>: 3,000 - 16,000 IOPS
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io1</code>: 100-64,000 IOPS
+     * <code>io1</code>: 100 - 64,000 IOPS
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io2</code>: 100-64,000 IOPS
+     * <code>io2</code>: 100 - 256,000 IOPS
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
+     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * </p>
      * <p>
      * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
      * <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
@@ -603,20 +659,26 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>gp3</code>: 3,000-16,000 IOPS
+     *         <code>gp3</code>: 3,000 - 16,000 IOPS
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>io1</code>: 100-64,000 IOPS
+     *         <code>io1</code>: 100 - 64,000 IOPS
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>io2</code>: 100-64,000 IOPS
+     *         <code>io2</code>: 100 - 256,000 IOPS
      *         </p>
      *         </li>
      *         </ul>
+     *         <p>
+     *         For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
+     *         >instances built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000
+     *         IOPS.
+     *         </p>
      *         <p>
      *         Default: The existing value is retained if you keep the same volume type. If you change the volume type
      *         to <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
@@ -637,20 +699,25 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <ul>
      * <li>
      * <p>
-     * <code>gp3</code>: 3,000-16,000 IOPS
+     * <code>gp3</code>: 3,000 - 16,000 IOPS
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io1</code>: 100-64,000 IOPS
+     * <code>io1</code>: 100 - 64,000 IOPS
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>io2</code>: 100-64,000 IOPS
+     * <code>io2</code>: 100 - 256,000 IOPS
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
+     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * </p>
      * <p>
      * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
      * <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
@@ -665,20 +732,26 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>gp3</code>: 3,000-16,000 IOPS
+     *        <code>gp3</code>: 3,000 - 16,000 IOPS
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>io1</code>: 100-64,000 IOPS
+     *        <code>io1</code>: 100 - 64,000 IOPS
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>io2</code>: 100-64,000 IOPS
+     *        <code>io2</code>: 100 - 256,000 IOPS
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
+     *        >instances built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000
+     *        IOPS.
+     *        </p>
      *        <p>
      *        Default: The existing value is retained if you keep the same volume type. If you change the volume type to
      *        <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.

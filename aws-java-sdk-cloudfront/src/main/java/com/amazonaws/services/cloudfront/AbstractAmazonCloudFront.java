@@ -99,6 +99,11 @@ public class AbstractAmazonCloudFront implements AmazonCloudFront {
     }
 
     @Override
+    public CreateKeyValueStoreResult createKeyValueStore(CreateKeyValueStoreRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateMonitoringSubscriptionResult createMonitoringSubscription(CreateMonitoringSubscriptionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -179,6 +184,11 @@ public class AbstractAmazonCloudFront implements AmazonCloudFront {
     }
 
     @Override
+    public DeleteKeyValueStoreResult deleteKeyValueStore(DeleteKeyValueStoreRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteMonitoringSubscriptionResult deleteMonitoringSubscription(DeleteMonitoringSubscriptionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -215,6 +225,11 @@ public class AbstractAmazonCloudFront implements AmazonCloudFront {
 
     @Override
     public DescribeFunctionResult describeFunction(DescribeFunctionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeKeyValueStoreResult describeKeyValueStore(DescribeKeyValueStoreRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -439,6 +454,11 @@ public class AbstractAmazonCloudFront implements AmazonCloudFront {
     }
 
     @Override
+    public ListKeyValueStoresResult listKeyValueStores(ListKeyValueStoresRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListOriginAccessControlsResult listOriginAccessControls(ListOriginAccessControlsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -535,6 +555,11 @@ public class AbstractAmazonCloudFront implements AmazonCloudFront {
 
     @Override
     public UpdateKeyGroupResult updateKeyGroup(UpdateKeyGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateKeyValueStoreResult updateKeyValueStore(UpdateKeyValueStoreRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -45,6 +45,12 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
     private String componentName;
     /**
      * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     */
+    private String componentPath;
+    /**
+     * <p>
      * The ID of the component type.
      * </p>
      */
@@ -240,6 +246,46 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
 
     public GetPropertyValueHistoryRequest withComponentName(String componentName) {
         setComponentName(componentName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     * 
+     * @param componentPath
+     *        This string specifies the path to the composite component, starting from the top-level component.
+     */
+
+    public void setComponentPath(String componentPath) {
+        this.componentPath = componentPath;
+    }
+
+    /**
+     * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     * 
+     * @return This string specifies the path to the composite component, starting from the top-level component.
+     */
+
+    public String getComponentPath() {
+        return this.componentPath;
+    }
+
+    /**
+     * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     * 
+     * @param componentPath
+     *        This string specifies the path to the composite component, starting from the top-level component.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetPropertyValueHistoryRequest withComponentPath(String componentPath) {
+        setComponentPath(componentPath);
         return this;
     }
 
@@ -843,6 +889,8 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
             sb.append("EntityId: ").append(getEntityId()).append(",");
         if (getComponentName() != null)
             sb.append("ComponentName: ").append(getComponentName()).append(",");
+        if (getComponentPath() != null)
+            sb.append("ComponentPath: ").append(getComponentPath()).append(",");
         if (getComponentTypeId() != null)
             sb.append("ComponentTypeId: ").append(getComponentTypeId()).append(",");
         if (getSelectedProperties() != null)
@@ -890,6 +938,10 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
         if (other.getComponentName() == null ^ this.getComponentName() == null)
             return false;
         if (other.getComponentName() != null && other.getComponentName().equals(this.getComponentName()) == false)
+            return false;
+        if (other.getComponentPath() == null ^ this.getComponentPath() == null)
+            return false;
+        if (other.getComponentPath() != null && other.getComponentPath().equals(this.getComponentPath()) == false)
             return false;
         if (other.getComponentTypeId() == null ^ this.getComponentTypeId() == null)
             return false;
@@ -946,6 +998,7 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         hashCode = prime * hashCode + ((getEntityId() == null) ? 0 : getEntityId().hashCode());
         hashCode = prime * hashCode + ((getComponentName() == null) ? 0 : getComponentName().hashCode());
+        hashCode = prime * hashCode + ((getComponentPath() == null) ? 0 : getComponentPath().hashCode());
         hashCode = prime * hashCode + ((getComponentTypeId() == null) ? 0 : getComponentTypeId().hashCode());
         hashCode = prime * hashCode + ((getSelectedProperties() == null) ? 0 : getSelectedProperties().hashCode());
         hashCode = prime * hashCode + ((getPropertyFilters() == null) ? 0 : getPropertyFilters().hashCode());

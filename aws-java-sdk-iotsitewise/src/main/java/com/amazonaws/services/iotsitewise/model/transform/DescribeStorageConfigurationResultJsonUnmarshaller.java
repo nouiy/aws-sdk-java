@@ -72,6 +72,14 @@ public class DescribeStorageConfigurationResultJsonUnmarshaller implements Unmar
                     context.nextToken();
                     describeStorageConfigurationResult.setLastUpdateDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("warmTier", targetDepth)) {
+                    context.nextToken();
+                    describeStorageConfigurationResult.setWarmTier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("warmTierRetentionPeriod", targetDepth)) {
+                    context.nextToken();
+                    describeStorageConfigurationResult.setWarmTierRetentionPeriod(WarmTierRetentionPeriodJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

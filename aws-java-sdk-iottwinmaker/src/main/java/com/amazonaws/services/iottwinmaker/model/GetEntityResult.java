@@ -96,6 +96,13 @@ public class GetEntityResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </p>
      */
     private String syncSource;
+    /**
+     * <p>
+     * This flag notes whether all components are returned in the API response. The maximum number of components
+     * returned is 30.
+     * </p>
+     */
+    private Boolean areAllComponentsReturned;
 
     /**
      * <p>
@@ -624,6 +631,66 @@ public class GetEntityResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
+     * <p>
+     * This flag notes whether all components are returned in the API response. The maximum number of components
+     * returned is 30.
+     * </p>
+     * 
+     * @param areAllComponentsReturned
+     *        This flag notes whether all components are returned in the API response. The maximum number of components
+     *        returned is 30.
+     */
+
+    public void setAreAllComponentsReturned(Boolean areAllComponentsReturned) {
+        this.areAllComponentsReturned = areAllComponentsReturned;
+    }
+
+    /**
+     * <p>
+     * This flag notes whether all components are returned in the API response. The maximum number of components
+     * returned is 30.
+     * </p>
+     * 
+     * @return This flag notes whether all components are returned in the API response. The maximum number of components
+     *         returned is 30.
+     */
+
+    public Boolean getAreAllComponentsReturned() {
+        return this.areAllComponentsReturned;
+    }
+
+    /**
+     * <p>
+     * This flag notes whether all components are returned in the API response. The maximum number of components
+     * returned is 30.
+     * </p>
+     * 
+     * @param areAllComponentsReturned
+     *        This flag notes whether all components are returned in the API response. The maximum number of components
+     *        returned is 30.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetEntityResult withAreAllComponentsReturned(Boolean areAllComponentsReturned) {
+        setAreAllComponentsReturned(areAllComponentsReturned);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This flag notes whether all components are returned in the API response. The maximum number of components
+     * returned is 30.
+     * </p>
+     * 
+     * @return This flag notes whether all components are returned in the API response. The maximum number of components
+     *         returned is 30.
+     */
+
+    public Boolean isAreAllComponentsReturned() {
+        return this.areAllComponentsReturned;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -658,7 +725,9 @@ public class GetEntityResult extends com.amazonaws.AmazonWebServiceResult<com.am
         if (getUpdateDateTime() != null)
             sb.append("UpdateDateTime: ").append(getUpdateDateTime()).append(",");
         if (getSyncSource() != null)
-            sb.append("SyncSource: ").append(getSyncSource());
+            sb.append("SyncSource: ").append(getSyncSource()).append(",");
+        if (getAreAllComponentsReturned() != null)
+            sb.append("AreAllComponentsReturned: ").append(getAreAllComponentsReturned());
         sb.append("}");
         return sb.toString();
     }
@@ -721,6 +790,10 @@ public class GetEntityResult extends com.amazonaws.AmazonWebServiceResult<com.am
             return false;
         if (other.getSyncSource() != null && other.getSyncSource().equals(this.getSyncSource()) == false)
             return false;
+        if (other.getAreAllComponentsReturned() == null ^ this.getAreAllComponentsReturned() == null)
+            return false;
+        if (other.getAreAllComponentsReturned() != null && other.getAreAllComponentsReturned().equals(this.getAreAllComponentsReturned()) == false)
+            return false;
         return true;
     }
 
@@ -741,6 +814,7 @@ public class GetEntityResult extends com.amazonaws.AmazonWebServiceResult<com.am
         hashCode = prime * hashCode + ((getCreationDateTime() == null) ? 0 : getCreationDateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateDateTime() == null) ? 0 : getUpdateDateTime().hashCode());
         hashCode = prime * hashCode + ((getSyncSource() == null) ? 0 : getSyncSource().hashCode());
+        hashCode = prime * hashCode + ((getAreAllComponentsReturned() == null) ? 0 : getAreAllComponentsReturned().hashCode());
         return hashCode;
     }
 

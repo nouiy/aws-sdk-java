@@ -30,7 +30,7 @@ public class AssetErrorDetails implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      */
     private String assetId;
@@ -49,11 +49,11 @@ public class AssetErrorDetails implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      * 
      * @param assetId
-     *        The ID of the asset.
+     *        The ID of the asset, in UUID format.
      */
 
     public void setAssetId(String assetId) {
@@ -62,10 +62,10 @@ public class AssetErrorDetails implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      * 
-     * @return The ID of the asset.
+     * @return The ID of the asset, in UUID format.
      */
 
     public String getAssetId() {
@@ -74,11 +74,11 @@ public class AssetErrorDetails implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the asset.
+     * The ID of the asset, in UUID format.
      * </p>
      * 
      * @param assetId
-     *        The ID of the asset.
+     *        The ID of the asset, in UUID format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

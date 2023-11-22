@@ -43,6 +43,12 @@ public class GetWorkspaceResult extends com.amazonaws.AmazonWebServiceResult<com
     private String description;
     /**
      * <p>
+     * A list of services that are linked to the workspace.
+     * </p>
+     */
+    private java.util.List<String> linkedServices;
+    /**
+     * <p>
      * The ARN of the S3 bucket where resources associated with the workspace are stored.
      * </p>
      */
@@ -183,6 +189,76 @@ public class GetWorkspaceResult extends com.amazonaws.AmazonWebServiceResult<com
 
     public GetWorkspaceResult withDescription(String description) {
         setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of services that are linked to the workspace.
+     * </p>
+     * 
+     * @return A list of services that are linked to the workspace.
+     */
+
+    public java.util.List<String> getLinkedServices() {
+        return linkedServices;
+    }
+
+    /**
+     * <p>
+     * A list of services that are linked to the workspace.
+     * </p>
+     * 
+     * @param linkedServices
+     *        A list of services that are linked to the workspace.
+     */
+
+    public void setLinkedServices(java.util.Collection<String> linkedServices) {
+        if (linkedServices == null) {
+            this.linkedServices = null;
+            return;
+        }
+
+        this.linkedServices = new java.util.ArrayList<String>(linkedServices);
+    }
+
+    /**
+     * <p>
+     * A list of services that are linked to the workspace.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLinkedServices(java.util.Collection)} or {@link #withLinkedServices(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param linkedServices
+     *        A list of services that are linked to the workspace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetWorkspaceResult withLinkedServices(String... linkedServices) {
+        if (this.linkedServices == null) {
+            setLinkedServices(new java.util.ArrayList<String>(linkedServices.length));
+        }
+        for (String ele : linkedServices) {
+            this.linkedServices.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of services that are linked to the workspace.
+     * </p>
+     * 
+     * @param linkedServices
+     *        A list of services that are linked to the workspace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetWorkspaceResult withLinkedServices(java.util.Collection<String> linkedServices) {
+        setLinkedServices(linkedServices);
         return this;
     }
 
@@ -364,6 +440,8 @@ public class GetWorkspaceResult extends com.amazonaws.AmazonWebServiceResult<com
             sb.append("Arn: ").append(getArn()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getLinkedServices() != null)
+            sb.append("LinkedServices: ").append(getLinkedServices()).append(",");
         if (getS3Location() != null)
             sb.append("S3Location: ").append(getS3Location()).append(",");
         if (getRole() != null)
@@ -398,6 +476,10 @@ public class GetWorkspaceResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getLinkedServices() == null ^ this.getLinkedServices() == null)
+            return false;
+        if (other.getLinkedServices() != null && other.getLinkedServices().equals(this.getLinkedServices()) == false)
+            return false;
         if (other.getS3Location() == null ^ this.getS3Location() == null)
             return false;
         if (other.getS3Location() != null && other.getS3Location().equals(this.getS3Location()) == false)
@@ -425,6 +507,7 @@ public class GetWorkspaceResult extends com.amazonaws.AmazonWebServiceResult<com
         hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getLinkedServices() == null) ? 0 : getLinkedServices().hashCode());
         hashCode = prime * hashCode + ((getS3Location() == null) ? 0 : getS3Location().hashCode());
         hashCode = prime * hashCode + ((getRole() == null) ? 0 : getRole().hashCode());
         hashCode = prime * hashCode + ((getCreationDateTime() == null) ? 0 : getCreationDateTime().hashCode());

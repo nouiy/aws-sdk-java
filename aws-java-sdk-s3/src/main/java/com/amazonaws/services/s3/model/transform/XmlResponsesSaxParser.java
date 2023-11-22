@@ -17,6 +17,7 @@
  */
 package com.amazonaws.services.s3.model.transform;
 
+import com.amazonaws.services.s3.TargetObjectKeyFormat;
 import com.amazonaws.services.s3.model.*;
 
 import static com.amazonaws.util.StringUtils.UTF8;
@@ -1209,10 +1210,18 @@ public class XmlResponsesSaxParser {
                 if (name.equals("TargetBucket")) {
                     bucketLoggingConfiguration
                         .setDestinationBucketName(getText());
-
                 } else if (name.equals("TargetPrefix")) {
                     bucketLoggingConfiguration
                         .setLogFilePrefix(getText());
+                }
+            } else if (in("BucketLoggingStatus", "LoggingEnabled", "TargetObjectKeyFormat")) {
+                if (name.equals("SimplePrefix")) {
+                    bucketLoggingConfiguration.setTargetObjectKeyFormat(
+                            new TargetObjectKeyFormat(new SimplePrefix()));
+                } else if (name.equals("PartitionedPrefix")) {
+                    bucketLoggingConfiguration.setTargetObjectKeyFormat(
+                            new TargetObjectKeyFormat(
+                                    new PartitionedPrefix().withPartitionDateSource(checkForEmptyString(getText()))));
                 }
             }
         }

@@ -39,10 +39,7 @@ public class ExecuteQueryRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String queryStatement;
     /**
      * <p>
-     * The maximum number of results to return at one time. The default is 25.
-     * </p>
-     * <p>
-     * Valid Range: Minimum value of 1. Maximum value of 250.
+     * The maximum number of results to return at one time. The default is 50.
      * </p>
      */
     private Integer maxResults;
@@ -135,16 +132,11 @@ public class ExecuteQueryRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The maximum number of results to return at one time. The default is 25.
-     * </p>
-     * <p>
-     * Valid Range: Minimum value of 1. Maximum value of 250.
+     * The maximum number of results to return at one time. The default is 50.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to return at one time. The default is 25.</p>
-     *        <p>
-     *        Valid Range: Minimum value of 1. Maximum value of 250.
+     *        The maximum number of results to return at one time. The default is 50.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -153,15 +145,10 @@ public class ExecuteQueryRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The maximum number of results to return at one time. The default is 25.
-     * </p>
-     * <p>
-     * Valid Range: Minimum value of 1. Maximum value of 250.
+     * The maximum number of results to return at one time. The default is 50.
      * </p>
      * 
-     * @return The maximum number of results to return at one time. The default is 25.</p>
-     *         <p>
-     *         Valid Range: Minimum value of 1. Maximum value of 250.
+     * @return The maximum number of results to return at one time. The default is 50.
      */
 
     public Integer getMaxResults() {
@@ -170,16 +157,11 @@ public class ExecuteQueryRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The maximum number of results to return at one time. The default is 25.
-     * </p>
-     * <p>
-     * Valid Range: Minimum value of 1. Maximum value of 250.
+     * The maximum number of results to return at one time. The default is 50.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to return at one time. The default is 25.</p>
-     *        <p>
-     *        Valid Range: Minimum value of 1. Maximum value of 250.
+     *        The maximum number of results to return at one time. The default is 50.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

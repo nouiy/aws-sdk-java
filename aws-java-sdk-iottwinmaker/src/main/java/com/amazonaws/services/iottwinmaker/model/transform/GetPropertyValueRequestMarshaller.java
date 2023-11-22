@@ -30,6 +30,8 @@ public class GetPropertyValueRequestMarshaller {
 
     private static final MarshallingInfo<String> COMPONENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentName").build();
+    private static final MarshallingInfo<String> COMPONENTPATH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentPath").build();
     private static final MarshallingInfo<String> COMPONENTTYPEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentTypeId").build();
     private static final MarshallingInfo<String> ENTITYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -64,6 +66,7 @@ public class GetPropertyValueRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(getPropertyValueRequest.getComponentName(), COMPONENTNAME_BINDING);
+            protocolMarshaller.marshall(getPropertyValueRequest.getComponentPath(), COMPONENTPATH_BINDING);
             protocolMarshaller.marshall(getPropertyValueRequest.getComponentTypeId(), COMPONENTTYPEID_BINDING);
             protocolMarshaller.marshall(getPropertyValueRequest.getEntityId(), ENTITYID_BINDING);
             protocolMarshaller.marshall(getPropertyValueRequest.getSelectedProperties(), SELECTEDPROPERTIES_BINDING);

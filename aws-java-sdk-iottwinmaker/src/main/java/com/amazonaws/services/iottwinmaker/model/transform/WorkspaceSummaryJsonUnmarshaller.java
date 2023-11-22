@@ -60,6 +60,12 @@ public class WorkspaceSummaryJsonUnmarshaller implements Unmarshaller<WorkspaceS
                     context.nextToken();
                     workspaceSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("linkedServices", targetDepth)) {
+                    context.nextToken();
+                    workspaceSummary.setLinkedServices(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("creationDateTime", targetDepth)) {
                     context.nextToken();
                     workspaceSummary.setCreationDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

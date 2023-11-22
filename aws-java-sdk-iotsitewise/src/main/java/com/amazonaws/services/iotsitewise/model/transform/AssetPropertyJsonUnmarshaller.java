@@ -76,6 +76,16 @@ public class AssetPropertyJsonUnmarshaller implements Unmarshaller<AssetProperty
                     context.nextToken();
                     assetProperty.setUnit(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("path", targetDepth)) {
+                    context.nextToken();
+                    assetProperty.setPath(new ListUnmarshaller<AssetPropertyPathSegment>(AssetPropertyPathSegmentJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("externalId", targetDepth)) {
+                    context.nextToken();
+                    assetProperty.setExternalId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

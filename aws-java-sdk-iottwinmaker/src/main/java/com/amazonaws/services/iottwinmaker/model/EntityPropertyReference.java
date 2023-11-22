@@ -36,6 +36,12 @@ public class EntityPropertyReference implements Serializable, Cloneable, Structu
     private String componentName;
     /**
      * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     */
+    private String componentPath;
+    /**
+     * <p>
      * A mapping of external IDs to property names. External IDs uniquely identify properties from external data stores.
      * </p>
      */
@@ -90,6 +96,46 @@ public class EntityPropertyReference implements Serializable, Cloneable, Structu
 
     public EntityPropertyReference withComponentName(String componentName) {
         setComponentName(componentName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     * 
+     * @param componentPath
+     *        This string specifies the path to the composite component, starting from the top-level component.
+     */
+
+    public void setComponentPath(String componentPath) {
+        this.componentPath = componentPath;
+    }
+
+    /**
+     * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     * 
+     * @return This string specifies the path to the composite component, starting from the top-level component.
+     */
+
+    public String getComponentPath() {
+        return this.componentPath;
+    }
+
+    /**
+     * <p>
+     * This string specifies the path to the composite component, starting from the top-level component.
+     * </p>
+     * 
+     * @param componentPath
+     *        This string specifies the path to the composite component, starting from the top-level component.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EntityPropertyReference withComponentPath(String componentPath) {
+        setComponentPath(componentPath);
         return this;
     }
 
@@ -258,6 +304,8 @@ public class EntityPropertyReference implements Serializable, Cloneable, Structu
         sb.append("{");
         if (getComponentName() != null)
             sb.append("ComponentName: ").append(getComponentName()).append(",");
+        if (getComponentPath() != null)
+            sb.append("ComponentPath: ").append(getComponentPath()).append(",");
         if (getExternalIdProperty() != null)
             sb.append("ExternalIdProperty: ").append(getExternalIdProperty()).append(",");
         if (getEntityId() != null)
@@ -282,6 +330,10 @@ public class EntityPropertyReference implements Serializable, Cloneable, Structu
             return false;
         if (other.getComponentName() != null && other.getComponentName().equals(this.getComponentName()) == false)
             return false;
+        if (other.getComponentPath() == null ^ this.getComponentPath() == null)
+            return false;
+        if (other.getComponentPath() != null && other.getComponentPath().equals(this.getComponentPath()) == false)
+            return false;
         if (other.getExternalIdProperty() == null ^ this.getExternalIdProperty() == null)
             return false;
         if (other.getExternalIdProperty() != null && other.getExternalIdProperty().equals(this.getExternalIdProperty()) == false)
@@ -303,6 +355,7 @@ public class EntityPropertyReference implements Serializable, Cloneable, Structu
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getComponentName() == null) ? 0 : getComponentName().hashCode());
+        hashCode = prime * hashCode + ((getComponentPath() == null) ? 0 : getComponentPath().hashCode());
         hashCode = prime * hashCode + ((getExternalIdProperty() == null) ? 0 : getExternalIdProperty().hashCode());
         hashCode = prime * hashCode + ((getEntityId() == null) ? 0 : getEntityId().hashCode());
         hashCode = prime * hashCode + ((getPropertyName() == null) ? 0 : getPropertyName().hashCode());

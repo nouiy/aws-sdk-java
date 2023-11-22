@@ -48,6 +48,12 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
     private String description;
     /**
      * <p>
+     * A list of services that are linked to the workspace.
+     * </p>
+     */
+    private java.util.List<String> linkedServices;
+    /**
+     * <p>
      * The date and time when the workspace was created.
      * </p>
      */
@@ -181,6 +187,76 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
+     * A list of services that are linked to the workspace.
+     * </p>
+     * 
+     * @return A list of services that are linked to the workspace.
+     */
+
+    public java.util.List<String> getLinkedServices() {
+        return linkedServices;
+    }
+
+    /**
+     * <p>
+     * A list of services that are linked to the workspace.
+     * </p>
+     * 
+     * @param linkedServices
+     *        A list of services that are linked to the workspace.
+     */
+
+    public void setLinkedServices(java.util.Collection<String> linkedServices) {
+        if (linkedServices == null) {
+            this.linkedServices = null;
+            return;
+        }
+
+        this.linkedServices = new java.util.ArrayList<String>(linkedServices);
+    }
+
+    /**
+     * <p>
+     * A list of services that are linked to the workspace.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLinkedServices(java.util.Collection)} or {@link #withLinkedServices(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param linkedServices
+     *        A list of services that are linked to the workspace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceSummary withLinkedServices(String... linkedServices) {
+        if (this.linkedServices == null) {
+            setLinkedServices(new java.util.ArrayList<String>(linkedServices.length));
+        }
+        for (String ele : linkedServices) {
+            this.linkedServices.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of services that are linked to the workspace.
+     * </p>
+     * 
+     * @param linkedServices
+     *        A list of services that are linked to the workspace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceSummary withLinkedServices(java.util.Collection<String> linkedServices) {
+        setLinkedServices(linkedServices);
+        return this;
+    }
+
+    /**
+     * <p>
      * The date and time when the workspace was created.
      * </p>
      * 
@@ -277,6 +353,8 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
             sb.append("Arn: ").append(getArn()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getLinkedServices() != null)
+            sb.append("LinkedServices: ").append(getLinkedServices()).append(",");
         if (getCreationDateTime() != null)
             sb.append("CreationDateTime: ").append(getCreationDateTime()).append(",");
         if (getUpdateDateTime() != null)
@@ -307,6 +385,10 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getLinkedServices() == null ^ this.getLinkedServices() == null)
+            return false;
+        if (other.getLinkedServices() != null && other.getLinkedServices().equals(this.getLinkedServices()) == false)
+            return false;
         if (other.getCreationDateTime() == null ^ this.getCreationDateTime() == null)
             return false;
         if (other.getCreationDateTime() != null && other.getCreationDateTime().equals(this.getCreationDateTime()) == false)
@@ -326,6 +408,7 @@ public class WorkspaceSummary implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getLinkedServices() == null) ? 0 : getLinkedServices().hashCode());
         hashCode = prime * hashCode + ((getCreationDateTime() == null) ? 0 : getCreationDateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateDateTime() == null) ? 0 : getUpdateDateTime().hashCode());
         return hashCode;
