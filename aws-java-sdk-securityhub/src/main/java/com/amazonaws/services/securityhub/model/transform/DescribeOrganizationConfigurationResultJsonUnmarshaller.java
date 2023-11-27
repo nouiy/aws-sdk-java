@@ -60,6 +60,11 @@ public class DescribeOrganizationConfigurationResultJsonUnmarshaller implements 
                     context.nextToken();
                     describeOrganizationConfigurationResult.setAutoEnableStandards(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("OrganizationConfiguration", targetDepth)) {
+                    context.nextToken();
+                    describeOrganizationConfigurationResult.setOrganizationConfiguration(OrganizationConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

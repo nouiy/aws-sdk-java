@@ -28,12 +28,22 @@ public class DescribeOptionGroupOptionsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A required parameter. Options available for the given engine name are described.
+     * The name of the engine to describe options for.
      * </p>
      * <p>
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -128,12 +138,22 @@ public class DescribeOptionGroupOptionsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A required parameter. Options available for the given engine name are described.
+     * The name of the engine to describe options for.
      * </p>
      * <p>
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -192,11 +212,21 @@ public class DescribeOptionGroupOptionsRequest extends com.amazonaws.AmazonWebSe
      * </ul>
      * 
      * @param engineName
-     *        A required parameter. Options available for the given engine name are described.</p>
+     *        The name of the engine to describe options for.</p>
      *        <p>
      *        Valid Values:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>mariadb</code>
@@ -260,12 +290,22 @@ public class DescribeOptionGroupOptionsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A required parameter. Options available for the given engine name are described.
+     * The name of the engine to describe options for.
      * </p>
      * <p>
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -323,11 +363,21 @@ public class DescribeOptionGroupOptionsRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * </ul>
      * 
-     * @return A required parameter. Options available for the given engine name are described.</p>
+     * @return The name of the engine to describe options for.</p>
      *         <p>
      *         Valid Values:
      *         </p>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>db2-ae</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db2-se</code>
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         <code>mariadb</code>
@@ -391,12 +441,22 @@ public class DescribeOptionGroupOptionsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A required parameter. Options available for the given engine name are described.
+     * The name of the engine to describe options for.
      * </p>
      * <p>
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -455,11 +515,21 @@ public class DescribeOptionGroupOptionsRequest extends com.amazonaws.AmazonWebSe
      * </ul>
      * 
      * @param engineName
-     *        A required parameter. Options available for the given engine name are described.</p>
+     *        The name of the engine to describe options for.</p>
      *        <p>
      *        Valid Values:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>mariadb</code>

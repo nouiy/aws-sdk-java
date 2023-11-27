@@ -998,6 +998,39 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataSourceIntrospectionResult> getDataSourceIntrospectionAsync(GetDataSourceIntrospectionRequest request) {
+
+        return getDataSourceIntrospectionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataSourceIntrospectionResult> getDataSourceIntrospectionAsync(final GetDataSourceIntrospectionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDataSourceIntrospectionRequest, GetDataSourceIntrospectionResult> asyncHandler) {
+        final GetDataSourceIntrospectionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDataSourceIntrospectionResult>() {
+            @Override
+            public GetDataSourceIntrospectionResult call() throws Exception {
+                GetDataSourceIntrospectionResult result = null;
+
+                try {
+                    result = executeGetDataSourceIntrospection(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDomainNameResult> getDomainNameAsync(GetDomainNameRequest request) {
 
         return getDomainNameAsync(request, null);
@@ -1609,6 +1642,39 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
 
                 try {
                     result = executeListTypesByAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartDataSourceIntrospectionResult> startDataSourceIntrospectionAsync(StartDataSourceIntrospectionRequest request) {
+
+        return startDataSourceIntrospectionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartDataSourceIntrospectionResult> startDataSourceIntrospectionAsync(final StartDataSourceIntrospectionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartDataSourceIntrospectionRequest, StartDataSourceIntrospectionResult> asyncHandler) {
+        final StartDataSourceIntrospectionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartDataSourceIntrospectionResult>() {
+            @Override
+            public StartDataSourceIntrospectionResult call() throws Exception {
+                StartDataSourceIntrospectionResult result = null;
+
+                try {
+                    result = executeStartDataSourceIntrospection(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

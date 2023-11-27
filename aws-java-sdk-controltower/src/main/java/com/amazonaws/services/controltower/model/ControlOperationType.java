@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ControlOperationType {
 
     ENABLE_CONTROL("ENABLE_CONTROL"),
-    DISABLE_CONTROL("DISABLE_CONTROL");
+    DISABLE_CONTROL("DISABLE_CONTROL"),
+    UPDATE_ENABLED_CONTROL("UPDATE_ENABLED_CONTROL");
 
     private String value;
 

@@ -69,7 +69,7 @@ public class StandardsControlAssociationSummary implements Serializable, Cloneab
     private java.util.Date updatedAt;
     /**
      * <p>
-     * The reason for updating the control's enablement status in a specified standard.
+     * The reason for updating a control's enablement status in a specified standard.
      * </p>
      */
     private String updatedReason;
@@ -393,11 +393,11 @@ public class StandardsControlAssociationSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The reason for updating the control's enablement status in a specified standard.
+     * The reason for updating a control's enablement status in a specified standard.
      * </p>
      * 
      * @param updatedReason
-     *        The reason for updating the control's enablement status in a specified standard.
+     *        The reason for updating a control's enablement status in a specified standard.
      */
 
     public void setUpdatedReason(String updatedReason) {
@@ -406,10 +406,10 @@ public class StandardsControlAssociationSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The reason for updating the control's enablement status in a specified standard.
+     * The reason for updating a control's enablement status in a specified standard.
      * </p>
      * 
-     * @return The reason for updating the control's enablement status in a specified standard.
+     * @return The reason for updating a control's enablement status in a specified standard.
      */
 
     public String getUpdatedReason() {
@@ -418,11 +418,11 @@ public class StandardsControlAssociationSummary implements Serializable, Cloneab
 
     /**
      * <p>
-     * The reason for updating the control's enablement status in a specified standard.
+     * The reason for updating a control's enablement status in a specified standard.
      * </p>
      * 
      * @param updatedReason
-     *        The reason for updating the control's enablement status in a specified standard.
+     *        The reason for updating a control's enablement status in a specified standard.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

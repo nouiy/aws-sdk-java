@@ -41,6 +41,9 @@ public class CreateLogicallyAirGappedBackupVaultRequest extends com.amazonaws.Am
      * <p>
      * This is the ID of the creation request.
      * </p>
+     * <p>
+     * This parameter is optional. If used, this parameter must contain 1 to 50 alphanumeric or '-_.' characters.
+     * </p>
      */
     private String creatorRequestId;
     /**
@@ -183,9 +186,14 @@ public class CreateLogicallyAirGappedBackupVaultRequest extends com.amazonaws.Am
      * <p>
      * This is the ID of the creation request.
      * </p>
+     * <p>
+     * This parameter is optional. If used, this parameter must contain 1 to 50 alphanumeric or '-_.' characters.
+     * </p>
      * 
      * @param creatorRequestId
-     *        This is the ID of the creation request.
+     *        This is the ID of the creation request.</p>
+     *        <p>
+     *        This parameter is optional. If used, this parameter must contain 1 to 50 alphanumeric or '-_.' characters.
      */
 
     public void setCreatorRequestId(String creatorRequestId) {
@@ -196,8 +204,14 @@ public class CreateLogicallyAirGappedBackupVaultRequest extends com.amazonaws.Am
      * <p>
      * This is the ID of the creation request.
      * </p>
+     * <p>
+     * This parameter is optional. If used, this parameter must contain 1 to 50 alphanumeric or '-_.' characters.
+     * </p>
      * 
-     * @return This is the ID of the creation request.
+     * @return This is the ID of the creation request.</p>
+     *         <p>
+     *         This parameter is optional. If used, this parameter must contain 1 to 50 alphanumeric or '-_.'
+     *         characters.
      */
 
     public String getCreatorRequestId() {
@@ -208,9 +222,14 @@ public class CreateLogicallyAirGappedBackupVaultRequest extends com.amazonaws.Am
      * <p>
      * This is the ID of the creation request.
      * </p>
+     * <p>
+     * This parameter is optional. If used, this parameter must contain 1 to 50 alphanumeric or '-_.' characters.
+     * </p>
      * 
      * @param creatorRequestId
-     *        This is the ID of the creation request.
+     *        This is the ID of the creation request.</p>
+     *        <p>
+     *        This parameter is optional. If used, this parameter must contain 1 to 50 alphanumeric or '-_.' characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

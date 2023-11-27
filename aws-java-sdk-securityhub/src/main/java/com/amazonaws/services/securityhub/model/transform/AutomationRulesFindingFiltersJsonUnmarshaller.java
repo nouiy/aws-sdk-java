@@ -259,6 +259,24 @@ public class AutomationRulesFindingFiltersJsonUnmarshaller implements Unmarshall
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ResourceApplicationArn", targetDepth)) {
+                    context.nextToken();
+                    automationRulesFindingFilters.setResourceApplicationArn(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("ResourceApplicationName", targetDepth)) {
+                    context.nextToken();
+                    automationRulesFindingFilters.setResourceApplicationName(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("AwsAccountName", targetDepth)) {
+                    context.nextToken();
+                    automationRulesFindingFilters.setAwsAccountName(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

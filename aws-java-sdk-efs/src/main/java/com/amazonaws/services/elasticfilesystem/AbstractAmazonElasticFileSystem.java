@@ -196,6 +196,11 @@ public class AbstractAmazonElasticFileSystem implements AmazonElasticFileSystem 
     }
 
     @Override
+    public UpdateFileSystemProtectionResult updateFileSystemProtection(UpdateFileSystemProtectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }

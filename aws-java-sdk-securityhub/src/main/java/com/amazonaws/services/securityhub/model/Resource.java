@@ -82,6 +82,18 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private ResourceDetails details;
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     */
+    private String applicationName;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application that is related to a finding.
+     * </p>
+     */
+    private String applicationArn;
 
     /**
      * <p>
@@ -485,6 +497,86 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * 
+     * @param applicationName
+     *        The name of the application that is related to a finding.
+     */
+
+    public void setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+    }
+
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * 
+     * @return The name of the application that is related to a finding.
+     */
+
+    public String getApplicationName() {
+        return this.applicationName;
+    }
+
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * 
+     * @param applicationName
+     *        The name of the application that is related to a finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Resource withApplicationName(String applicationName) {
+        setApplicationName(applicationName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application that is related to a finding.
+     * </p>
+     * 
+     * @param applicationArn
+     *        The Amazon Resource Name (ARN) of the application that is related to a finding.
+     */
+
+    public void setApplicationArn(String applicationArn) {
+        this.applicationArn = applicationArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application that is related to a finding.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the application that is related to a finding.
+     */
+
+    public String getApplicationArn() {
+        return this.applicationArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application that is related to a finding.
+     * </p>
+     * 
+     * @param applicationArn
+     *        The Amazon Resource Name (ARN) of the application that is related to a finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Resource withApplicationArn(String applicationArn) {
+        setApplicationArn(applicationArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -511,7 +603,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
         if (getDataClassification() != null)
             sb.append("DataClassification: ").append(getDataClassification()).append(",");
         if (getDetails() != null)
-            sb.append("Details: ").append(getDetails());
+            sb.append("Details: ").append(getDetails()).append(",");
+        if (getApplicationName() != null)
+            sb.append("ApplicationName: ").append(getApplicationName()).append(",");
+        if (getApplicationArn() != null)
+            sb.append("ApplicationArn: ").append(getApplicationArn());
         sb.append("}");
         return sb.toString();
     }
@@ -558,6 +654,14 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDetails() != null && other.getDetails().equals(this.getDetails()) == false)
             return false;
+        if (other.getApplicationName() == null ^ this.getApplicationName() == null)
+            return false;
+        if (other.getApplicationName() != null && other.getApplicationName().equals(this.getApplicationName()) == false)
+            return false;
+        if (other.getApplicationArn() == null ^ this.getApplicationArn() == null)
+            return false;
+        if (other.getApplicationArn() != null && other.getApplicationArn().equals(this.getApplicationArn()) == false)
+            return false;
         return true;
     }
 
@@ -574,6 +678,8 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getDataClassification() == null) ? 0 : getDataClassification().hashCode());
         hashCode = prime * hashCode + ((getDetails() == null) ? 0 : getDetails().hashCode());
+        hashCode = prime * hashCode + ((getApplicationName() == null) ? 0 : getApplicationName().hashCode());
+        hashCode = prime * hashCode + ((getApplicationArn() == null) ? 0 : getApplicationArn().hashCode());
         return hashCode;
     }
 

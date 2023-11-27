@@ -28,7 +28,7 @@ public class ListRestoreJobsRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The next item following a partial list of returned items. For example, if a request is made to return
-     * <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      */
@@ -75,17 +75,23 @@ public class ListRestoreJobsRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private java.util.Date byCompleteAfter;
+    /**
+     * <p>
+     * This returns only restore testing jobs that match the specified resource Amazon Resource Name (ARN).
+     * </p>
+     */
+    private String byRestoreTestingPlanArn;
 
     /**
      * <p>
      * The next item following a partial list of returned items. For example, if a request is made to return
-     * <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @param nextToken
      *        The next item following a partial list of returned items. For example, if a request is made to return
-     *        <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
+     *        <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
      *        list starting at the location pointed to by the next token.
      */
 
@@ -96,12 +102,12 @@ public class ListRestoreJobsRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The next item following a partial list of returned items. For example, if a request is made to return
-     * <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @return The next item following a partial list of returned items. For example, if a request is made to return
-     *         <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
+     *         <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
      *         list starting at the location pointed to by the next token.
      */
 
@@ -112,13 +118,13 @@ public class ListRestoreJobsRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The next item following a partial list of returned items. For example, if a request is made to return
-     * <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @param nextToken
      *        The next item following a partial list of returned items. For example, if a request is made to return
-     *        <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
+     *        <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
      *        list starting at the location pointed to by the next token.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -434,6 +440,46 @@ public class ListRestoreJobsRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * This returns only restore testing jobs that match the specified resource Amazon Resource Name (ARN).
+     * </p>
+     * 
+     * @param byRestoreTestingPlanArn
+     *        This returns only restore testing jobs that match the specified resource Amazon Resource Name (ARN).
+     */
+
+    public void setByRestoreTestingPlanArn(String byRestoreTestingPlanArn) {
+        this.byRestoreTestingPlanArn = byRestoreTestingPlanArn;
+    }
+
+    /**
+     * <p>
+     * This returns only restore testing jobs that match the specified resource Amazon Resource Name (ARN).
+     * </p>
+     * 
+     * @return This returns only restore testing jobs that match the specified resource Amazon Resource Name (ARN).
+     */
+
+    public String getByRestoreTestingPlanArn() {
+        return this.byRestoreTestingPlanArn;
+    }
+
+    /**
+     * <p>
+     * This returns only restore testing jobs that match the specified resource Amazon Resource Name (ARN).
+     * </p>
+     * 
+     * @param byRestoreTestingPlanArn
+     *        This returns only restore testing jobs that match the specified resource Amazon Resource Name (ARN).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListRestoreJobsRequest withByRestoreTestingPlanArn(String byRestoreTestingPlanArn) {
+        setByRestoreTestingPlanArn(byRestoreTestingPlanArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -460,7 +506,9 @@ public class ListRestoreJobsRequest extends com.amazonaws.AmazonWebServiceReques
         if (getByCompleteBefore() != null)
             sb.append("ByCompleteBefore: ").append(getByCompleteBefore()).append(",");
         if (getByCompleteAfter() != null)
-            sb.append("ByCompleteAfter: ").append(getByCompleteAfter());
+            sb.append("ByCompleteAfter: ").append(getByCompleteAfter()).append(",");
+        if (getByRestoreTestingPlanArn() != null)
+            sb.append("ByRestoreTestingPlanArn: ").append(getByRestoreTestingPlanArn());
         sb.append("}");
         return sb.toString();
     }
@@ -507,6 +555,10 @@ public class ListRestoreJobsRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getByCompleteAfter() != null && other.getByCompleteAfter().equals(this.getByCompleteAfter()) == false)
             return false;
+        if (other.getByRestoreTestingPlanArn() == null ^ this.getByRestoreTestingPlanArn() == null)
+            return false;
+        if (other.getByRestoreTestingPlanArn() != null && other.getByRestoreTestingPlanArn().equals(this.getByRestoreTestingPlanArn()) == false)
+            return false;
         return true;
     }
 
@@ -523,6 +575,7 @@ public class ListRestoreJobsRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getByStatus() == null) ? 0 : getByStatus().hashCode());
         hashCode = prime * hashCode + ((getByCompleteBefore() == null) ? 0 : getByCompleteBefore().hashCode());
         hashCode = prime * hashCode + ((getByCompleteAfter() == null) ? 0 : getByCompleteAfter().hashCode());
+        hashCode = prime * hashCode + ((getByRestoreTestingPlanArn() == null) ? 0 : getByRestoreTestingPlanArn().hashCode());
         return hashCode;
     }
 

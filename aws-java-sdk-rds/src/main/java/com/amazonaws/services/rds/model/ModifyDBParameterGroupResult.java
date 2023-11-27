@@ -18,7 +18,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * Contains the result of a successful invocation of the <code>ModifyDBParameterGroup</code> or
- * <code>ResetDBParameterGroup</code> action.
+ * <code>ResetDBParameterGroup</code> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBParameterGroup" target="_top">AWS API

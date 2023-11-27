@@ -52,7 +52,7 @@ import com.amazonaws.services.controltower.model.*;
  * </li>
  * </ul>
  * <p>
- * <b>To get the <code>controlIdentifier</code> for your AWS Control Tower control:</b>
+ * <b>To get the <code>controlIdentifier</code> for your Amazon Web Services Control Tower control:</b>
  * </p>
  * <p>
  * The <code>controlIdentifier</code> is an ARN that is specified for each control. You can view the
@@ -181,24 +181,24 @@ public interface AWSControlTower {
 
     /**
      * <p>
-     * This decommissions a landing zone. This starts an asynchronous operation that deletes Amazon Web Services Control
-     * Tower resources deployed in Amazon Web Services Control Tower managed accounts.
+     * Decommissions a landing zone. This API call starts an asynchronous operation that deletes Amazon Web Services
+     * Control Tower resources deployed in accounts managed by Amazon Web Services Control Tower.
      * </p>
      * 
      * @param deleteLandingZoneRequest
      * @return Result of the DeleteLandingZone operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
-     *         Updating or deleting a resource can cause an inconsistent state.
+     *         Updating or deleting the resource can cause an inconsistent state.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         The request references a resource that does not exist.
      * @sample AWSControlTower.DeleteLandingZone
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/DeleteLandingZone" target="_top">AWS
      *      API Documentation</a>
@@ -217,19 +217,19 @@ public interface AWSControlTower {
      * @param disableControlRequest
      * @return Result of the DisableControl operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
-     *         Updating or deleting a resource can cause an inconsistent state.
+     *         Updating or deleting the resource can cause an inconsistent state.
      * @throws ServiceQuotaExceededException
-     *         Request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+     *         The request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         The request references a resource that does not exist.
      * @sample AWSControlTower.DisableControl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/DisableControl" target="_top">AWS
      *      API Documentation</a>
@@ -248,19 +248,19 @@ public interface AWSControlTower {
      * @param enableControlRequest
      * @return Result of the EnableControl operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
-     *         Updating or deleting a resource can cause an inconsistent state.
+     *         Updating or deleting the resource can cause an inconsistent state.
      * @throws ServiceQuotaExceededException
-     *         Request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+     *         The request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         The request references a resource that does not exist.
      * @sample AWSControlTower.EnableControl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/EnableControl" target="_top">AWS API
      *      Documentation</a>
@@ -278,15 +278,15 @@ public interface AWSControlTower {
      * @param getControlOperationRequest
      * @return Result of the GetControlOperation operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         The request references a resource that does not exist.
      * @sample AWSControlTower.GetControlOperation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetControlOperation"
      *      target="_top">AWS API Documentation</a>
@@ -303,15 +303,15 @@ public interface AWSControlTower {
      * @param getEnabledControlRequest
      * @return Result of the GetEnabledControl operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         The request references a resource that does not exist.
      * @sample AWSControlTower.GetEnabledControl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetEnabledControl" target="_top">AWS
      *      API Documentation</a>
@@ -320,21 +320,21 @@ public interface AWSControlTower {
 
     /**
      * <p>
-     * Returns the status of the specified landing zone operation. Details for an operation are available for X days.
+     * Returns the status of the specified landing zone operation. Details for an operation are available for 60 days.
      * </p>
      * 
      * @param getLandingZoneOperationRequest
      * @return Result of the GetLandingZoneOperation operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         The request references a resource that does not exist.
      * @sample AWSControlTower.GetLandingZoneOperation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetLandingZoneOperation"
      *      target="_top">AWS API Documentation</a>
@@ -352,15 +352,15 @@ public interface AWSControlTower {
      * @param listEnabledControlsRequest
      * @return Result of the ListEnabledControls operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         The request references a resource that does not exist.
      * @sample AWSControlTower.ListEnabledControls
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListEnabledControls"
      *      target="_top">AWS API Documentation</a>
@@ -373,19 +373,19 @@ public interface AWSControlTower {
      * for existing accounts that do not yet have a landing zone ARN.
      * </p>
      * <p>
-     * The return limit is one landing zone ARN.
+     * Returns one landing zone ARN.
      * </p>
      * 
      * @param listLandingZonesRequest
      * @return Result of the ListLandingZones operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         The request was denied due to request throttling.
      * @sample AWSControlTower.ListLandingZones
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListLandingZones" target="_top">AWS
      *      API Documentation</a>
@@ -402,11 +402,11 @@ public interface AWSControlTower {
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         The request references a resource that does not exist.
      * @sample AWSControlTower.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -422,17 +422,17 @@ public interface AWSControlTower {
      * @param resetLandingZoneRequest
      * @return Result of the ResetLandingZone operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
-     *         Updating or deleting a resource can cause an inconsistent state.
+     *         Updating or deleting the resource can cause an inconsistent state.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ThrottlingException
-     *         Request was denied due to request throttling.
+     *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         The request references a resource that does not exist.
      * @sample AWSControlTower.ResetLandingZone
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ResetLandingZone" target="_top">AWS
      *      API Documentation</a>
@@ -449,11 +449,11 @@ public interface AWSControlTower {
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         The request references a resource that does not exist.
      * @sample AWSControlTower.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -470,11 +470,11 @@ public interface AWSControlTower {
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
-     *         Unexpected error during processing of request.
+     *         An unexpected error occurred during processing of a request.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         The request references a resource that does not exist.
      * @sample AWSControlTower.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/UntagResource" target="_top">AWS API
      *      Documentation</a>

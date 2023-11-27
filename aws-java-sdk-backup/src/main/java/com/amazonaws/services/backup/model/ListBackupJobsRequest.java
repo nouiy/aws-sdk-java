@@ -28,7 +28,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The next item following a partial list of returned items. For example, if a request is made to return
-     * <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      */
@@ -169,12 +169,21 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
     private String byParentJobId;
     /**
      * <p>
-     * This returns a list of backup jobs for the specified message category.
+     * This is an optional parameter that can be used to filter out jobs with a MessageCategory which matches the value
+     * you input.
      * </p>
      * <p>
-     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
-     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     * MessageCategory strings.
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>InvalidParameters</code>.
+     * </p>
+     * <p>
+     * View <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a>
+     * </p>
+     * <p>
+     * The wildcard () returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
      * </p>
      */
     private String byMessageCategory;
@@ -182,13 +191,13 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The next item following a partial list of returned items. For example, if a request is made to return
-     * <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @param nextToken
      *        The next item following a partial list of returned items. For example, if a request is made to return
-     *        <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
+     *        <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
      *        list starting at the location pointed to by the next token.
      */
 
@@ -199,12 +208,12 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The next item following a partial list of returned items. For example, if a request is made to return
-     * <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @return The next item following a partial list of returned items. For example, if a request is made to return
-     *         <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
+     *         <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
      *         list starting at the location pointed to by the next token.
      */
 
@@ -215,13 +224,13 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The next item following a partial list of returned items. For example, if a request is made to return
-     * <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @param nextToken
      *        The next item following a partial list of returned items. For example, if a request is made to return
-     *        <code>maxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
+     *        <code>MaxResults</code> number of items, <code>NextToken</code> allows you to return more items in your
      *        list starting at the location pointed to by the next token.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1103,21 +1112,38 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * This returns a list of backup jobs for the specified message category.
+     * This is an optional parameter that can be used to filter out jobs with a MessageCategory which matches the value
+     * you input.
      * </p>
      * <p>
-     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
-     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     * MessageCategory strings.
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>InvalidParameters</code>.
+     * </p>
+     * <p>
+     * View <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a>
+     * </p>
+     * <p>
+     * The wildcard () returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
      * </p>
      * 
      * @param byMessageCategory
-     *        This returns a list of backup jobs for the specified message category.</p>
+     *        This is an optional parameter that can be used to filter out jobs with a MessageCategory which matches the
+     *        value you input.</p>
      *        <p>
-     *        Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
-     *        <code>InvalidParameters</code>. See <a
-     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     *        MessageCategory strings.
+     *        Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>,
+     *        and <code>InvalidParameters</code>.
+     *        </p>
+     *        <p>
+     *        View <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a>
+     *        </p>
+     *        <p>
+     *        The wildcard () returns count of all message categories.
+     *        </p>
+     *        <p>
+     *        <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
      */
 
     public void setByMessageCategory(String byMessageCategory) {
@@ -1126,20 +1152,37 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * This returns a list of backup jobs for the specified message category.
+     * This is an optional parameter that can be used to filter out jobs with a MessageCategory which matches the value
+     * you input.
      * </p>
      * <p>
-     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
-     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     * MessageCategory strings.
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>InvalidParameters</code>.
+     * </p>
+     * <p>
+     * View <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a>
+     * </p>
+     * <p>
+     * The wildcard () returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
      * </p>
      * 
-     * @return This returns a list of backup jobs for the specified message category.</p>
+     * @return This is an optional parameter that can be used to filter out jobs with a MessageCategory which matches
+     *         the value you input.</p>
      *         <p>
-     *         Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
-     *         <code>InvalidParameters</code>. See <a
-     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list
-     *         of MessageCategory strings.
+     *         Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>,
+     *         and <code>InvalidParameters</code>.
+     *         </p>
+     *         <p>
+     *         View <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a>
+     *         </p>
+     *         <p>
+     *         The wildcard () returns count of all message categories.
+     *         </p>
+     *         <p>
+     *         <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
      */
 
     public String getByMessageCategory() {
@@ -1148,21 +1191,38 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * This returns a list of backup jobs for the specified message category.
+     * This is an optional parameter that can be used to filter out jobs with a MessageCategory which matches the value
+     * you input.
      * </p>
      * <p>
-     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
-     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     * MessageCategory strings.
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>InvalidParameters</code>.
+     * </p>
+     * <p>
+     * View <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a>
+     * </p>
+     * <p>
+     * The wildcard () returns count of all message categories.
+     * </p>
+     * <p>
+     * <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
      * </p>
      * 
      * @param byMessageCategory
-     *        This returns a list of backup jobs for the specified message category.</p>
+     *        This is an optional parameter that can be used to filter out jobs with a MessageCategory which matches the
+     *        value you input.</p>
      *        <p>
-     *        Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
-     *        <code>InvalidParameters</code>. See <a
-     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     *        MessageCategory strings.
+     *        Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>,
+     *        and <code>InvalidParameters</code>.
+     *        </p>
+     *        <p>
+     *        View <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a>
+     *        </p>
+     *        <p>
+     *        The wildcard () returns count of all message categories.
+     *        </p>
+     *        <p>
+     *        <code>AGGREGATE_ALL</code> aggregates job counts for all message categories and returns the sum.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

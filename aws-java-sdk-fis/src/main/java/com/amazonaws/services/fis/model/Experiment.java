@@ -101,6 +101,18 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private ExperimentLogConfiguration logConfiguration;
+    /**
+     * <p>
+     * The experiment options for the experiment.
+     * </p>
+     */
+    private ExperimentOptions experimentOptions;
+    /**
+     * <p>
+     * The count of target account configurations for the experiment.
+     * </p>
+     */
+    private Long targetAccountConfigurationsCount;
 
     /**
      * <p>
@@ -703,6 +715,86 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The experiment options for the experiment.
+     * </p>
+     * 
+     * @param experimentOptions
+     *        The experiment options for the experiment.
+     */
+
+    public void setExperimentOptions(ExperimentOptions experimentOptions) {
+        this.experimentOptions = experimentOptions;
+    }
+
+    /**
+     * <p>
+     * The experiment options for the experiment.
+     * </p>
+     * 
+     * @return The experiment options for the experiment.
+     */
+
+    public ExperimentOptions getExperimentOptions() {
+        return this.experimentOptions;
+    }
+
+    /**
+     * <p>
+     * The experiment options for the experiment.
+     * </p>
+     * 
+     * @param experimentOptions
+     *        The experiment options for the experiment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Experiment withExperimentOptions(ExperimentOptions experimentOptions) {
+        setExperimentOptions(experimentOptions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The count of target account configurations for the experiment.
+     * </p>
+     * 
+     * @param targetAccountConfigurationsCount
+     *        The count of target account configurations for the experiment.
+     */
+
+    public void setTargetAccountConfigurationsCount(Long targetAccountConfigurationsCount) {
+        this.targetAccountConfigurationsCount = targetAccountConfigurationsCount;
+    }
+
+    /**
+     * <p>
+     * The count of target account configurations for the experiment.
+     * </p>
+     * 
+     * @return The count of target account configurations for the experiment.
+     */
+
+    public Long getTargetAccountConfigurationsCount() {
+        return this.targetAccountConfigurationsCount;
+    }
+
+    /**
+     * <p>
+     * The count of target account configurations for the experiment.
+     * </p>
+     * 
+     * @param targetAccountConfigurationsCount
+     *        The count of target account configurations for the experiment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Experiment withTargetAccountConfigurationsCount(Long targetAccountConfigurationsCount) {
+        setTargetAccountConfigurationsCount(targetAccountConfigurationsCount);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -737,7 +829,11 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getLogConfiguration() != null)
-            sb.append("LogConfiguration: ").append(getLogConfiguration());
+            sb.append("LogConfiguration: ").append(getLogConfiguration()).append(",");
+        if (getExperimentOptions() != null)
+            sb.append("ExperimentOptions: ").append(getExperimentOptions()).append(",");
+        if (getTargetAccountConfigurationsCount() != null)
+            sb.append("TargetAccountConfigurationsCount: ").append(getTargetAccountConfigurationsCount());
         sb.append("}");
         return sb.toString();
     }
@@ -800,6 +896,15 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
             return false;
+        if (other.getExperimentOptions() == null ^ this.getExperimentOptions() == null)
+            return false;
+        if (other.getExperimentOptions() != null && other.getExperimentOptions().equals(this.getExperimentOptions()) == false)
+            return false;
+        if (other.getTargetAccountConfigurationsCount() == null ^ this.getTargetAccountConfigurationsCount() == null)
+            return false;
+        if (other.getTargetAccountConfigurationsCount() != null
+                && other.getTargetAccountConfigurationsCount().equals(this.getTargetAccountConfigurationsCount()) == false)
+            return false;
         return true;
     }
 
@@ -820,6 +925,8 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getExperimentOptions() == null) ? 0 : getExperimentOptions().hashCode());
+        hashCode = prime * hashCode + ((getTargetAccountConfigurationsCount() == null) ? 0 : getTargetAccountConfigurationsCount().hashCode());
         return hashCode;
     }
 

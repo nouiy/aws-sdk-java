@@ -452,4 +452,17 @@ public class AbstractAmazonElasticFileSystemAsync extends AbstractAmazonElasticF
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<UpdateFileSystemProtectionResult> updateFileSystemProtectionAsync(UpdateFileSystemProtectionRequest request) {
+
+        return updateFileSystemProtectionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFileSystemProtectionResult> updateFileSystemProtectionAsync(UpdateFileSystemProtectionRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateFileSystemProtectionRequest, UpdateFileSystemProtectionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

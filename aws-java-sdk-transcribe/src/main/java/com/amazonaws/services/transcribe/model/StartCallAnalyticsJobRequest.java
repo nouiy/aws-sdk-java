@@ -70,11 +70,11 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * You can specify a KMS key to encrypt your output using the <code>OutputEncryptionKMSKeyId</code> parameter. If
-     * you don't specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for server-side encryption.
+     * you do not specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for server-side encryption.
      * </p>
      * <p>
-     * If you don't specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon S3 bucket
-     * and you are provided with a URI to access your transcript.
+     * If you do not specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon S3
+     * bucket and you are provided with a URI to access your transcript.
      * </p>
      */
     private String outputLocation;
@@ -127,7 +127,7 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -305,11 +305,11 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * You can specify a KMS key to encrypt your output using the <code>OutputEncryptionKMSKeyId</code> parameter. If
-     * you don't specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for server-side encryption.
+     * you do not specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for server-side encryption.
      * </p>
      * <p>
-     * If you don't specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon S3 bucket
-     * and you are provided with a URI to access your transcript.
+     * If you do not specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon S3
+     * bucket and you are provided with a URI to access your transcript.
      * </p>
      * 
      * @param outputLocation
@@ -338,12 +338,12 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      *        </p>
      *        <p>
      *        You can specify a KMS key to encrypt your output using the <code>OutputEncryptionKMSKeyId</code>
-     *        parameter. If you don't specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for
+     *        parameter. If you do not specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for
      *        server-side encryption.
      *        </p>
      *        <p>
-     *        If you don't specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon S3
-     *        bucket and you are provided with a URI to access your transcript.
+     *        If you do not specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon
+     *        S3 bucket and you are provided with a URI to access your transcript.
      */
 
     public void setOutputLocation(String outputLocation) {
@@ -378,11 +378,11 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * You can specify a KMS key to encrypt your output using the <code>OutputEncryptionKMSKeyId</code> parameter. If
-     * you don't specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for server-side encryption.
+     * you do not specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for server-side encryption.
      * </p>
      * <p>
-     * If you don't specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon S3 bucket
-     * and you are provided with a URI to access your transcript.
+     * If you do not specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon S3
+     * bucket and you are provided with a URI to access your transcript.
      * </p>
      * 
      * @return The Amazon S3 location where you want your Call Analytics transcription output stored. You can use any of
@@ -410,11 +410,11 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      *         </p>
      *         <p>
      *         You can specify a KMS key to encrypt your output using the <code>OutputEncryptionKMSKeyId</code>
-     *         parameter. If you don't specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for
+     *         parameter. If you do not specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for
      *         server-side encryption.
      *         </p>
      *         <p>
-     *         If you don't specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon
+     *         If you do not specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon
      *         S3 bucket and you are provided with a URI to access your transcript.
      */
 
@@ -450,11 +450,11 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * You can specify a KMS key to encrypt your output using the <code>OutputEncryptionKMSKeyId</code> parameter. If
-     * you don't specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for server-side encryption.
+     * you do not specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for server-side encryption.
      * </p>
      * <p>
-     * If you don't specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon S3 bucket
-     * and you are provided with a URI to access your transcript.
+     * If you do not specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon S3
+     * bucket and you are provided with a URI to access your transcript.
      * </p>
      * 
      * @param outputLocation
@@ -483,12 +483,12 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      *        </p>
      *        <p>
      *        You can specify a KMS key to encrypt your output using the <code>OutputEncryptionKMSKeyId</code>
-     *        parameter. If you don't specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for
+     *        parameter. If you do not specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for
      *        server-side encryption.
      *        </p>
      *        <p>
-     *        If you don't specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon S3
-     *        bucket and you are provided with a URI to access your transcript.
+     *        If you do not specify <code>OutputLocation</code>, your transcript is placed in a service-managed Amazon
+     *        S3 bucket and you are provided with a URI to access your transcript.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -546,7 +546,7 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -605,7 +605,7 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        </ol>
      *        <p>
-     *        If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     *        If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      *        </p>
      *        <p>
      *        If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -668,7 +668,7 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -726,7 +726,8 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      *         </li>
      *         </ol>
      *         <p>
-     *         If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     *         If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key
+     *         (SSE-S3).
      *         </p>
      *         <p>
      *         If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -789,7 +790,7 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -848,7 +849,7 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        </ol>
      *        <p>
-     *        If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     *        If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      *        </p>
      *        <p>
      *        If you specify a KMS key to encrypt your output, you must also specify an output location using the

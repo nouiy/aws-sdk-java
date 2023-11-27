@@ -57,12 +57,22 @@ public class CreateOptionGroupRequest extends com.amazonaws.AmazonWebServiceRequ
     private String optionGroupName;
     /**
      * <p>
-     * Specifies the name of the engine that this option group should be associated with.
+     * The name of the engine to associate this option group with.
      * </p>
      * <p>
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -317,12 +327,22 @@ public class CreateOptionGroupRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies the name of the engine that this option group should be associated with.
+     * The name of the engine to associate this option group with.
      * </p>
      * <p>
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -381,11 +401,21 @@ public class CreateOptionGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * </ul>
      * 
      * @param engineName
-     *        Specifies the name of the engine that this option group should be associated with.</p>
+     *        The name of the engine to associate this option group with.</p>
      *        <p>
      *        Valid Values:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>mariadb</code>
@@ -449,12 +479,22 @@ public class CreateOptionGroupRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies the name of the engine that this option group should be associated with.
+     * The name of the engine to associate this option group with.
      * </p>
      * <p>
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -512,11 +552,21 @@ public class CreateOptionGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * </ul>
      * 
-     * @return Specifies the name of the engine that this option group should be associated with.</p>
+     * @return The name of the engine to associate this option group with.</p>
      *         <p>
      *         Valid Values:
      *         </p>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>db2-ae</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db2-se</code>
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         <code>mariadb</code>
@@ -580,12 +630,22 @@ public class CreateOptionGroupRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies the name of the engine that this option group should be associated with.
+     * The name of the engine to associate this option group with.
      * </p>
      * <p>
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -644,11 +704,21 @@ public class CreateOptionGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * </ul>
      * 
      * @param engineName
-     *        Specifies the name of the engine that this option group should be associated with.</p>
+     *        The name of the engine to associate this option group with.</p>
      *        <p>
      *        Valid Values:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>mariadb</code>

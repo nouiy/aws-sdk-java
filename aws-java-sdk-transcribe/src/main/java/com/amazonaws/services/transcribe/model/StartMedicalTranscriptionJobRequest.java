@@ -51,7 +51,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * The sample rate, in hertz, of the audio track in your input media file.
      * </p>
      * <p>
-     * If you don't specify the media sample rate, Amazon Transcribe Medical determines it for you. If you specify the
+     * If you do not specify the media sample rate, Amazon Transcribe Medical determines it for you. If you specify the
      * sample rate, it must match the rate detected by Amazon Transcribe Medical; if there's a mismatch between the
      * value that you specify and the value detected, your job fails. Therefore, in most cases, it's advised to omit
      * <code>MediaSampleRateHertz</code> and let Amazon Transcribe Medical determine the sample rate.
@@ -184,7 +184,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -411,7 +411,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * The sample rate, in hertz, of the audio track in your input media file.
      * </p>
      * <p>
-     * If you don't specify the media sample rate, Amazon Transcribe Medical determines it for you. If you specify the
+     * If you do not specify the media sample rate, Amazon Transcribe Medical determines it for you. If you specify the
      * sample rate, it must match the rate detected by Amazon Transcribe Medical; if there's a mismatch between the
      * value that you specify and the value detected, your job fails. Therefore, in most cases, it's advised to omit
      * <code>MediaSampleRateHertz</code> and let Amazon Transcribe Medical determine the sample rate.
@@ -420,7 +420,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * @param mediaSampleRateHertz
      *        The sample rate, in hertz, of the audio track in your input media file.</p>
      *        <p>
-     *        If you don't specify the media sample rate, Amazon Transcribe Medical determines it for you. If you
+     *        If you do not specify the media sample rate, Amazon Transcribe Medical determines it for you. If you
      *        specify the sample rate, it must match the rate detected by Amazon Transcribe Medical; if there's a
      *        mismatch between the value that you specify and the value detected, your job fails. Therefore, in most
      *        cases, it's advised to omit <code>MediaSampleRateHertz</code> and let Amazon Transcribe Medical determine
@@ -436,7 +436,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * The sample rate, in hertz, of the audio track in your input media file.
      * </p>
      * <p>
-     * If you don't specify the media sample rate, Amazon Transcribe Medical determines it for you. If you specify the
+     * If you do not specify the media sample rate, Amazon Transcribe Medical determines it for you. If you specify the
      * sample rate, it must match the rate detected by Amazon Transcribe Medical; if there's a mismatch between the
      * value that you specify and the value detected, your job fails. Therefore, in most cases, it's advised to omit
      * <code>MediaSampleRateHertz</code> and let Amazon Transcribe Medical determine the sample rate.
@@ -444,7 +444,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * 
      * @return The sample rate, in hertz, of the audio track in your input media file.</p>
      *         <p>
-     *         If you don't specify the media sample rate, Amazon Transcribe Medical determines it for you. If you
+     *         If you do not specify the media sample rate, Amazon Transcribe Medical determines it for you. If you
      *         specify the sample rate, it must match the rate detected by Amazon Transcribe Medical; if there's a
      *         mismatch between the value that you specify and the value detected, your job fails. Therefore, in most
      *         cases, it's advised to omit <code>MediaSampleRateHertz</code> and let Amazon Transcribe Medical determine
@@ -460,7 +460,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * The sample rate, in hertz, of the audio track in your input media file.
      * </p>
      * <p>
-     * If you don't specify the media sample rate, Amazon Transcribe Medical determines it for you. If you specify the
+     * If you do not specify the media sample rate, Amazon Transcribe Medical determines it for you. If you specify the
      * sample rate, it must match the rate detected by Amazon Transcribe Medical; if there's a mismatch between the
      * value that you specify and the value detected, your job fails. Therefore, in most cases, it's advised to omit
      * <code>MediaSampleRateHertz</code> and let Amazon Transcribe Medical determine the sample rate.
@@ -469,7 +469,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * @param mediaSampleRateHertz
      *        The sample rate, in hertz, of the audio track in your input media file.</p>
      *        <p>
-     *        If you don't specify the media sample rate, Amazon Transcribe Medical determines it for you. If you
+     *        If you do not specify the media sample rate, Amazon Transcribe Medical determines it for you. If you
      *        specify the sample rate, it must match the rate detected by Amazon Transcribe Medical; if there's a
      *        mismatch between the value that you specify and the value detected, your job fails. Therefore, in most
      *        cases, it's advised to omit <code>MediaSampleRateHertz</code> and let Amazon Transcribe Medical determine
@@ -1038,7 +1038,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -1097,7 +1097,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      *        </li>
      *        </ol>
      *        <p>
-     *        If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     *        If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      *        </p>
      *        <p>
      *        If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -1160,7 +1160,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -1218,7 +1218,8 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      *         </li>
      *         </ol>
      *         <p>
-     *         If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     *         If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key
+     *         (SSE-S3).
      *         </p>
      *         <p>
      *         If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -1281,7 +1282,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -1340,7 +1341,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      *        </li>
      *        </ol>
      *        <p>
-     *        If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     *        If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      *        </p>
      *        <p>
      *        If you specify a KMS key to encrypt your output, you must also specify an output location using the

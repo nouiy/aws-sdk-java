@@ -28,7 +28,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The name of the engine to retrieve DB instance options for.
+     * The name of the engine to describe DB instance options for.
      * </p>
      * <p>
      * Valid Values:
@@ -47,6 +47,16 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * <li>
      * <p>
      * <code>custom-oracle-ee</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
      * </p>
      * </li>
      * <li>
@@ -109,22 +119,19 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
     private String engine;
     /**
      * <p>
-     * The engine version filter value. Specify this parameter to show only the available offerings matching the
-     * specified engine version.
+     * A filter to include only the available options for the specified engine version.
      * </p>
      */
     private String engineVersion;
     /**
      * <p>
-     * The DB instance class filter value. Specify this parameter to show only the available offerings matching the
-     * specified DB instance class.
+     * A filter to include only the available options for the specified DB instance class.
      * </p>
      */
     private String dBInstanceClass;
     /**
      * <p>
-     * The license model filter value. Specify this parameter to show only the available offerings matching the
-     * specified license model.
+     * A filter to include only the available options for the specified license model.
      * </p>
      * <p>
      * RDS Custom supports only the BYOL licensing model.
@@ -133,14 +140,14 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
     private String licenseModel;
     /**
      * <p>
-     * The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available offerings
+     * The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available options
      * for the Local Zones in the group.
      * </p>
      * <p>
-     * Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
+     * Omit this parameter to show the available options in the specified Amazon Web Services Region.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      */
     private String availabilityZoneGroup;
@@ -185,7 +192,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The name of the engine to retrieve DB instance options for.
+     * The name of the engine to describe DB instance options for.
      * </p>
      * <p>
      * Valid Values:
@@ -204,6 +211,16 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * <li>
      * <p>
      * <code>custom-oracle-ee</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
      * </p>
      * </li>
      * <li>
@@ -264,7 +281,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * </ul>
      * 
      * @param engine
-     *        The name of the engine to retrieve DB instance options for.</p>
+     *        The name of the engine to describe DB instance options for.</p>
      *        <p>
      *        Valid Values:
      *        </p>
@@ -282,6 +299,16 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      *        <li>
      *        <p>
      *        <code>custom-oracle-ee</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
      *        </p>
      *        </li>
      *        <li>
@@ -347,7 +374,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The name of the engine to retrieve DB instance options for.
+     * The name of the engine to describe DB instance options for.
      * </p>
      * <p>
      * Valid Values:
@@ -366,6 +393,16 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * <li>
      * <p>
      * <code>custom-oracle-ee</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
      * </p>
      * </li>
      * <li>
@@ -425,7 +462,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * </li>
      * </ul>
      * 
-     * @return The name of the engine to retrieve DB instance options for.</p>
+     * @return The name of the engine to describe DB instance options for.</p>
      *         <p>
      *         Valid Values:
      *         </p>
@@ -443,6 +480,16 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      *         <li>
      *         <p>
      *         <code>custom-oracle-ee</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db2-ae</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db2-se</code>
      *         </p>
      *         </li>
      *         <li>
@@ -508,7 +555,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The name of the engine to retrieve DB instance options for.
+     * The name of the engine to describe DB instance options for.
      * </p>
      * <p>
      * Valid Values:
@@ -527,6 +574,16 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * <li>
      * <p>
      * <code>custom-oracle-ee</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
      * </p>
      * </li>
      * <li>
@@ -587,7 +644,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * </ul>
      * 
      * @param engine
-     *        The name of the engine to retrieve DB instance options for.</p>
+     *        The name of the engine to describe DB instance options for.</p>
      *        <p>
      *        Valid Values:
      *        </p>
@@ -605,6 +662,16 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      *        <li>
      *        <p>
      *        <code>custom-oracle-ee</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
      *        </p>
      *        </li>
      *        <li>
@@ -672,13 +739,11 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The engine version filter value. Specify this parameter to show only the available offerings matching the
-     * specified engine version.
+     * A filter to include only the available options for the specified engine version.
      * </p>
      * 
      * @param engineVersion
-     *        The engine version filter value. Specify this parameter to show only the available offerings matching the
-     *        specified engine version.
+     *        A filter to include only the available options for the specified engine version.
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -687,12 +752,10 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The engine version filter value. Specify this parameter to show only the available offerings matching the
-     * specified engine version.
+     * A filter to include only the available options for the specified engine version.
      * </p>
      * 
-     * @return The engine version filter value. Specify this parameter to show only the available offerings matching the
-     *         specified engine version.
+     * @return A filter to include only the available options for the specified engine version.
      */
 
     public String getEngineVersion() {
@@ -701,13 +764,11 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The engine version filter value. Specify this parameter to show only the available offerings matching the
-     * specified engine version.
+     * A filter to include only the available options for the specified engine version.
      * </p>
      * 
      * @param engineVersion
-     *        The engine version filter value. Specify this parameter to show only the available offerings matching the
-     *        specified engine version.
+     *        A filter to include only the available options for the specified engine version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -718,13 +779,11 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The DB instance class filter value. Specify this parameter to show only the available offerings matching the
-     * specified DB instance class.
+     * A filter to include only the available options for the specified DB instance class.
      * </p>
      * 
      * @param dBInstanceClass
-     *        The DB instance class filter value. Specify this parameter to show only the available offerings matching
-     *        the specified DB instance class.
+     *        A filter to include only the available options for the specified DB instance class.
      */
 
     public void setDBInstanceClass(String dBInstanceClass) {
@@ -733,12 +792,10 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The DB instance class filter value. Specify this parameter to show only the available offerings matching the
-     * specified DB instance class.
+     * A filter to include only the available options for the specified DB instance class.
      * </p>
      * 
-     * @return The DB instance class filter value. Specify this parameter to show only the available offerings matching
-     *         the specified DB instance class.
+     * @return A filter to include only the available options for the specified DB instance class.
      */
 
     public String getDBInstanceClass() {
@@ -747,13 +804,11 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The DB instance class filter value. Specify this parameter to show only the available offerings matching the
-     * specified DB instance class.
+     * A filter to include only the available options for the specified DB instance class.
      * </p>
      * 
      * @param dBInstanceClass
-     *        The DB instance class filter value. Specify this parameter to show only the available offerings matching
-     *        the specified DB instance class.
+     *        A filter to include only the available options for the specified DB instance class.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -764,16 +819,14 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The license model filter value. Specify this parameter to show only the available offerings matching the
-     * specified license model.
+     * A filter to include only the available options for the specified license model.
      * </p>
      * <p>
      * RDS Custom supports only the BYOL licensing model.
      * </p>
      * 
      * @param licenseModel
-     *        The license model filter value. Specify this parameter to show only the available offerings matching the
-     *        specified license model.</p>
+     *        A filter to include only the available options for the specified license model.</p>
      *        <p>
      *        RDS Custom supports only the BYOL licensing model.
      */
@@ -784,15 +837,13 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The license model filter value. Specify this parameter to show only the available offerings matching the
-     * specified license model.
+     * A filter to include only the available options for the specified license model.
      * </p>
      * <p>
      * RDS Custom supports only the BYOL licensing model.
      * </p>
      * 
-     * @return The license model filter value. Specify this parameter to show only the available offerings matching the
-     *         specified license model.</p>
+     * @return A filter to include only the available options for the specified license model.</p>
      *         <p>
      *         RDS Custom supports only the BYOL licensing model.
      */
@@ -803,16 +854,14 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The license model filter value. Specify this parameter to show only the available offerings matching the
-     * specified license model.
+     * A filter to include only the available options for the specified license model.
      * </p>
      * <p>
      * RDS Custom supports only the BYOL licensing model.
      * </p>
      * 
      * @param licenseModel
-     *        The license model filter value. Specify this parameter to show only the available offerings matching the
-     *        specified license model.</p>
+     *        A filter to include only the available options for the specified license model.</p>
      *        <p>
      *        RDS Custom supports only the BYOL licensing model.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -825,24 +874,24 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available offerings
+     * The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available options
      * for the Local Zones in the group.
      * </p>
      * <p>
-     * Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
+     * Omit this parameter to show the available options in the specified Amazon Web Services Region.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * 
      * @param availabilityZoneGroup
      *        The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available
-     *        offerings for the Local Zones in the group.</p>
+     *        options for the Local Zones in the group.</p>
      *        <p>
-     *        Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
+     *        Omit this parameter to show the available options in the specified Amazon Web Services Region.
      *        </p>
      *        <p>
-     *        This setting doesn't apply to RDS Custom.
+     *        This setting doesn't apply to RDS Custom DB instances.
      */
 
     public void setAvailabilityZoneGroup(String availabilityZoneGroup) {
@@ -851,23 +900,23 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available offerings
+     * The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available options
      * for the Local Zones in the group.
      * </p>
      * <p>
-     * Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
+     * Omit this parameter to show the available options in the specified Amazon Web Services Region.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * 
      * @return The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available
-     *         offerings for the Local Zones in the group.</p>
+     *         options for the Local Zones in the group.</p>
      *         <p>
-     *         Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
+     *         Omit this parameter to show the available options in the specified Amazon Web Services Region.
      *         </p>
      *         <p>
-     *         This setting doesn't apply to RDS Custom.
+     *         This setting doesn't apply to RDS Custom DB instances.
      */
 
     public String getAvailabilityZoneGroup() {
@@ -876,24 +925,24 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available offerings
+     * The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available options
      * for the Local Zones in the group.
      * </p>
      * <p>
-     * Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
+     * Omit this parameter to show the available options in the specified Amazon Web Services Region.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * 
      * @param availabilityZoneGroup
      *        The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available
-     *        offerings for the Local Zones in the group.</p>
+     *        options for the Local Zones in the group.</p>
      *        <p>
-     *        Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
+     *        Omit this parameter to show the available options in the specified Amazon Web Services Region.
      *        </p>
      *        <p>
-     *        This setting doesn't apply to RDS Custom.
+     *        This setting doesn't apply to RDS Custom DB instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

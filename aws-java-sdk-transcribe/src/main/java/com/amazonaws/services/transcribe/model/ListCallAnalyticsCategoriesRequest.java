@@ -37,8 +37,8 @@ public class ListCallAnalyticsCategoriesRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The maximum number of Call Analytics categories to return in each page of results. If there are fewer results
-     * than the value that you specify, only the actual results are returned. If you don't specify a value, a default of
-     * 5 is used.
+     * than the value that you specify, only the actual results are returned. If you do not specify a value, a default
+     * of 5 is used.
      * </p>
      */
     private Integer maxResults;
@@ -104,13 +104,13 @@ public class ListCallAnalyticsCategoriesRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The maximum number of Call Analytics categories to return in each page of results. If there are fewer results
-     * than the value that you specify, only the actual results are returned. If you don't specify a value, a default of
-     * 5 is used.
+     * than the value that you specify, only the actual results are returned. If you do not specify a value, a default
+     * of 5 is used.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of Call Analytics categories to return in each page of results. If there are fewer
-     *        results than the value that you specify, only the actual results are returned. If you don't specify a
+     *        results than the value that you specify, only the actual results are returned. If you do not specify a
      *        value, a default of 5 is used.
      */
 
@@ -121,12 +121,12 @@ public class ListCallAnalyticsCategoriesRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The maximum number of Call Analytics categories to return in each page of results. If there are fewer results
-     * than the value that you specify, only the actual results are returned. If you don't specify a value, a default of
-     * 5 is used.
+     * than the value that you specify, only the actual results are returned. If you do not specify a value, a default
+     * of 5 is used.
      * </p>
      * 
      * @return The maximum number of Call Analytics categories to return in each page of results. If there are fewer
-     *         results than the value that you specify, only the actual results are returned. If you don't specify a
+     *         results than the value that you specify, only the actual results are returned. If you do not specify a
      *         value, a default of 5 is used.
      */
 
@@ -137,13 +137,13 @@ public class ListCallAnalyticsCategoriesRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The maximum number of Call Analytics categories to return in each page of results. If there are fewer results
-     * than the value that you specify, only the actual results are returned. If you don't specify a value, a default of
-     * 5 is used.
+     * than the value that you specify, only the actual results are returned. If you do not specify a value, a default
+     * of 5 is used.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of Call Analytics categories to return in each page of results. If there are fewer
-     *        results than the value that you specify, only the actual results are returned. If you don't specify a
+     *        results than the value that you specify, only the actual results are returned. If you do not specify a
      *        value, a default of 5 is used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

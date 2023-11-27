@@ -97,7 +97,12 @@ public class CreateDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * <code>mariadb</code>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
      * </p>
      * </li>
      * <li>
@@ -241,7 +246,12 @@ public class CreateDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
      *        </li>
      *        <li>
      *        <p>
-     *        <code>mariadb</code>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
      *        </p>
      *        </li>
      *        <li>
@@ -530,7 +540,12 @@ public class CreateDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * <code>mariadb</code>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
      * </p>
      * </li>
      * <li>
@@ -623,7 +638,12 @@ public class CreateDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
      *        </li>
      *        <li>
      *        <p>
-     *        <code>mariadb</code>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
      *        </p>
      *        </li>
      *        <li>
@@ -722,7 +742,12 @@ public class CreateDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * <code>mariadb</code>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
      * </p>
      * </li>
      * <li>
@@ -814,7 +839,12 @@ public class CreateDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
      *         </li>
      *         <li>
      *         <p>
-     *         <code>mariadb</code>
+     *         <code>db2-ae</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db2-se</code>
      *         </p>
      *         </li>
      *         <li>
@@ -913,7 +943,12 @@ public class CreateDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * <code>mariadb</code>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
      * </p>
      * </li>
      * <li>
@@ -1006,7 +1041,12 @@ public class CreateDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
      *        </li>
      *        <li>
      *        <p>
-     *        <code>mariadb</code>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
      *        </p>
      *        </li>
      *        <li>

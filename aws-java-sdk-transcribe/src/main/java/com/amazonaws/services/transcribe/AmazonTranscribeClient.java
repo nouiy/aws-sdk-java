@@ -800,6 +800,72 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Deletes a Medical Scribe job. To use this operation, specify the name of the job you want to delete using
+     * <code>MedicalScribeJobName</code>. Job names are case sensitive.
+     * </p>
+     * 
+     * @param deleteMedicalScribeJobRequest
+     * @return Result of the DeleteMedicalScribeJob operation returned by the service.
+     * @throws LimitExceededException
+     *         You've either sent too many requests or your input file is too long. Wait before retrying your request,
+     *         or use a smaller file and try your request again.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. This can occur when the entity you're trying to
+     *         delete doesn't exist or if it's in a non-terminal state (such as <code>IN PROGRESS</code>). See the
+     *         exception message field for more information.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message, correct the issue, and try your request again.
+     * @sample AmazonTranscribe.DeleteMedicalScribeJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteMedicalScribeJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteMedicalScribeJobResult deleteMedicalScribeJob(DeleteMedicalScribeJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteMedicalScribeJob(request);
+    }
+
+    @SdkInternalApi
+    final DeleteMedicalScribeJobResult executeDeleteMedicalScribeJob(DeleteMedicalScribeJobRequest deleteMedicalScribeJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteMedicalScribeJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteMedicalScribeJobRequest> request = null;
+        Response<DeleteMedicalScribeJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteMedicalScribeJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteMedicalScribeJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteMedicalScribeJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteMedicalScribeJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteMedicalScribeJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a medical transcription job. To use this operation, specify the name of the job you want to delete using
      * <code>MedicalTranscriptionJobName</code>. Job names are case sensitive.
      * </p>
@@ -1361,6 +1427,82 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
 
             HttpResponseHandler<AmazonWebServiceResponse<GetCallAnalyticsJobResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetCallAnalyticsJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides information about the specified Medical Scribe job.
+     * </p>
+     * <p>
+     * To view the status of the specified medical transcription job, check the <code>MedicalScribeJobStatus</code>
+     * field. If the status is <code>COMPLETED</code>, the job is finished. You can find the results at the location
+     * specified in <code>MedicalScribeOutput</code>. If the status is <code>FAILED</code>, <code>FailureReason</code>
+     * provides details on why your Medical Scribe job failed.
+     * </p>
+     * <p>
+     * To get a list of your Medical Scribe jobs, use the operation.
+     * </p>
+     * 
+     * @param getMedicalScribeJobRequest
+     * @return Result of the GetMedicalScribeJob operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. This can occur when the entity you're trying to
+     *         delete doesn't exist or if it's in a non-terminal state (such as <code>IN PROGRESS</code>). See the
+     *         exception message field for more information.
+     * @throws LimitExceededException
+     *         You've either sent too many requests or your input file is too long. Wait before retrying your request,
+     *         or use a smaller file and try your request again.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message, correct the issue, and try your request again.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check that the specified name is correct and try your request
+     *         again.
+     * @sample AmazonTranscribe.GetMedicalScribeJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetMedicalScribeJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetMedicalScribeJobResult getMedicalScribeJob(GetMedicalScribeJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetMedicalScribeJob(request);
+    }
+
+    @SdkInternalApi
+    final GetMedicalScribeJobResult executeGetMedicalScribeJob(GetMedicalScribeJobRequest getMedicalScribeJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getMedicalScribeJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetMedicalScribeJobRequest> request = null;
+        Response<GetMedicalScribeJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetMedicalScribeJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getMedicalScribeJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetMedicalScribeJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetMedicalScribeJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetMedicalScribeJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1957,6 +2099,75 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Provides a list of Medical Scribe jobs that match the specified criteria. If no criteria are specified, all
+     * Medical Scribe jobs are returned.
+     * </p>
+     * <p>
+     * To get detailed information about a specific Medical Scribe job, use the operation.
+     * </p>
+     * 
+     * @param listMedicalScribeJobsRequest
+     * @return Result of the ListMedicalScribeJobs operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. This can occur when the entity you're trying to
+     *         delete doesn't exist or if it's in a non-terminal state (such as <code>IN PROGRESS</code>). See the
+     *         exception message field for more information.
+     * @throws LimitExceededException
+     *         You've either sent too many requests or your input file is too long. Wait before retrying your request,
+     *         or use a smaller file and try your request again.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message, correct the issue, and try your request again.
+     * @sample AmazonTranscribe.ListMedicalScribeJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListMedicalScribeJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListMedicalScribeJobsResult listMedicalScribeJobs(ListMedicalScribeJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListMedicalScribeJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListMedicalScribeJobsResult executeListMedicalScribeJobs(ListMedicalScribeJobsRequest listMedicalScribeJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listMedicalScribeJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListMedicalScribeJobsRequest> request = null;
+        Response<ListMedicalScribeJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListMedicalScribeJobsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listMedicalScribeJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListMedicalScribeJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListMedicalScribeJobsResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new ListMedicalScribeJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Provides a list of medical transcription jobs that match the specified criteria. If no criteria are specified,
      * all medical transcription jobs are returned.
      * </p>
@@ -2504,6 +2715,127 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Transcribes patient-clinician conversations and generates clinical notes.
+     * </p>
+     * <p>
+     * Amazon Web Services HealthScribe automatically provides rich conversation transcripts, identifies speaker roles,
+     * classifies dialogues, extracts medical terms, and generates preliminary clinical notes. To learn more about these
+     * features, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/health-scribe.html">Amazon Web
+     * Services HealthScribe</a>.
+     * </p>
+     * <p>
+     * To make a <code>StartMedicalScribeJob</code> request, you must first upload your media file into an Amazon S3
+     * bucket; you can then specify the Amazon S3 location of the file using the <code>Media</code> parameter.
+     * </p>
+     * <p>
+     * You must include the following parameters in your <code>StartMedicalTranscriptionJob</code> request:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>DataAccessRoleArn</code>: The ARN of an IAM role with the these minimum permissions: read permission on
+     * input file Amazon S3 bucket specified in <code>Media</code>, write permission on the Amazon S3 bucket specified
+     * in <code>OutputBucketName</code>, and full permissions on the KMS key specified in
+     * <code>OutputEncryptionKMSKeyId</code> (if set). The role should also allow <code>transcribe.amazonaws.com</code>
+     * to assume it.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Media</code> (<code>MediaFileUri</code>): The Amazon S3 location of your media file.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MedicalScribeJobName</code>: A custom name you create for your MedicalScribe job that is unique within your
+     * Amazon Web Services account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>OutputBucketName</code>: The Amazon S3 bucket where you want your output files stored.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Settings</code>: A <code>MedicalScribeSettings</code> obect that must set exactly one of
+     * <code>ShowSpeakerLabels</code> or <code>ChannelIdentification</code> to true. If <code>ShowSpeakerLabels</code>
+     * is true, <code>MaxSpeakerLabels</code> must also be set.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ChannelDefinitions</code>: A <code>MedicalScribeChannelDefinitions</code> array should be set if and only
+     * if the <code>ChannelIdentification</code> value of <code>Settings</code> is set to true.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param startMedicalScribeJobRequest
+     * @return Result of the StartMedicalScribeJob operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. This can occur when the entity you're trying to
+     *         delete doesn't exist or if it's in a non-terminal state (such as <code>IN PROGRESS</code>). See the
+     *         exception message field for more information.
+     * @throws LimitExceededException
+     *         You've either sent too many requests or your input file is too long. Wait before retrying your request,
+     *         or use a smaller file and try your request again.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message, correct the issue, and try your request again.
+     * @throws ConflictException
+     *         A resource already exists with this name. Resource names must be unique within an Amazon Web Services
+     *         account.
+     * @sample AmazonTranscribe.StartMedicalScribeJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/StartMedicalScribeJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartMedicalScribeJobResult startMedicalScribeJob(StartMedicalScribeJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartMedicalScribeJob(request);
+    }
+
+    @SdkInternalApi
+    final StartMedicalScribeJobResult executeStartMedicalScribeJob(StartMedicalScribeJobRequest startMedicalScribeJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startMedicalScribeJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartMedicalScribeJobRequest> request = null;
+        Response<StartMedicalScribeJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartMedicalScribeJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startMedicalScribeJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartMedicalScribeJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartMedicalScribeJobResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new StartMedicalScribeJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Transcribes the audio from a medical dictation or conversation and applies any additional Request Parameters you
      * choose to include in your request.
      * </p>
@@ -2516,7 +2848,7 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
      * </p>
      * <p>
      * To make a <code>StartMedicalTranscriptionJob</code> request, you must first upload your media file into an Amazon
-     * S3 bucket; you can then specify the S3 location of the file using the <code>Media</code> parameter.
+     * S3 bucket; you can then specify the Amazon S3 location of the file using the <code>Media</code> parameter.
      * </p>
      * <p>
      * You must include the following parameters in your <code>StartMedicalTranscriptionJob</code> request:
@@ -2664,7 +2996,7 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
      * you know the language of your media file, specify it using the <code>LanguageCode</code> parameter; you can find
      * all valid language codes in the <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table.
-     * If you don't know the languages spoken in your media, use either <code>IdentifyLanguage</code> or
+     * If you do not know the languages spoken in your media, use either <code>IdentifyLanguage</code> or
      * <code>IdentifyMultipleLanguages</code> and let Amazon Transcribe identify the languages for you.
      * </p>
      * </li>

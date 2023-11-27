@@ -38,7 +38,7 @@
  * </li>
  * </ul>
  * <p>
- * <b>To get the <code>controlIdentifier</code> for your AWS Control Tower control:</b>
+ * <b>To get the <code>controlIdentifier</code> for your Amazon Web Services Control Tower control:</b>
  * </p>
  * <p>
  * The <code>controlIdentifier</code> is an ARN that is specified for each control. You can view the

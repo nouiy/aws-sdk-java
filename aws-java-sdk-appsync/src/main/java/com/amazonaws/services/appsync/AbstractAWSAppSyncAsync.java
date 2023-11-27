@@ -392,6 +392,19 @@ public class AbstractAWSAppSyncAsync extends AbstractAWSAppSync implements AWSAp
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataSourceIntrospectionResult> getDataSourceIntrospectionAsync(GetDataSourceIntrospectionRequest request) {
+
+        return getDataSourceIntrospectionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataSourceIntrospectionResult> getDataSourceIntrospectionAsync(GetDataSourceIntrospectionRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetDataSourceIntrospectionRequest, GetDataSourceIntrospectionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDomainNameResult> getDomainNameAsync(GetDomainNameRequest request) {
 
         return getDomainNameAsync(request, null);
@@ -634,6 +647,19 @@ public class AbstractAWSAppSyncAsync extends AbstractAWSAppSync implements AWSAp
     @Override
     public java.util.concurrent.Future<ListTypesByAssociationResult> listTypesByAssociationAsync(ListTypesByAssociationRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTypesByAssociationRequest, ListTypesByAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartDataSourceIntrospectionResult> startDataSourceIntrospectionAsync(StartDataSourceIntrospectionRequest request) {
+
+        return startDataSourceIntrospectionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartDataSourceIntrospectionResult> startDataSourceIntrospectionAsync(StartDataSourceIntrospectionRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartDataSourceIntrospectionRequest, StartDataSourceIntrospectionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

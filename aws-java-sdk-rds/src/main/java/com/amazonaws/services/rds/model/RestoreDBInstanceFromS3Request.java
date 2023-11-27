@@ -124,41 +124,59 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private String masterUsername;
     /**
      * <p>
-     * The password for the master user. The password can include any printable ASCII character except "/", """, or "@".
+     * The password for the master user.
      * </p>
      * <p>
-     * Constraints: Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * <b>MariaDB</b>
+     * Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 41 characters.
+     * Can include any printable ASCII character except "/",
+     * """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes) character.
      * </p>
+     * </li>
+     * </ul>
      * <p>
-     * <b>Microsoft SQL Server</b>
+     * Length Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 128 characters.
+     * RDS for Db2 - Must contain from 8 to 128 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>MySQL</b>
+     * RDS for MariaDB - Must contain from 8 to 41 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 41 characters.
+     * RDS for Microsoft SQL Server - Must contain from 8 to 128 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>Oracle</b>
+     * RDS for MySQL - Must contain from 8 to 41 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 30 characters.
+     * RDS for Oracle - Must contain from 8 to 30 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>PostgreSQL</b>
+     * RDS for PostgreSQL - Must contain from 8 to 128 characters.
      * </p>
-     * <p>
-     * Constraints: Must contain from 8 to 128 characters.
-     * </p>
+     * </li>
+     * </ul>
      */
     private String masterUserPassword;
     /**
@@ -1312,77 +1330,113 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The password for the master user. The password can include any printable ASCII character except "/", """, or "@".
+     * The password for the master user.
      * </p>
      * <p>
-     * Constraints: Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * <b>MariaDB</b>
+     * Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 41 characters.
+     * Can include any printable ASCII character except "/",
+     * """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes) character.
      * </p>
+     * </li>
+     * </ul>
      * <p>
-     * <b>Microsoft SQL Server</b>
+     * Length Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 128 characters.
+     * RDS for Db2 - Must contain from 8 to 128 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>MySQL</b>
+     * RDS for MariaDB - Must contain from 8 to 41 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 41 characters.
+     * RDS for Microsoft SQL Server - Must contain from 8 to 128 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>Oracle</b>
+     * RDS for MySQL - Must contain from 8 to 41 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 30 characters.
+     * RDS for Oracle - Must contain from 8 to 30 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>PostgreSQL</b>
+     * RDS for PostgreSQL - Must contain from 8 to 128 characters.
      * </p>
-     * <p>
-     * Constraints: Must contain from 8 to 128 characters.
-     * </p>
+     * </li>
+     * </ul>
      * 
      * @param masterUserPassword
-     *        The password for the master user. The password can include any printable ASCII character except "/",
-     *        """, or "@".</p>
+     *        The password for the master user.</p>
      *        <p>
-     *        Constraints: Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
+     *        Constraints:
      *        </p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        <b>MariaDB</b>
+     *        Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        Constraints: Must contain from 8 to 41 characters.
+     *        Can include any printable ASCII character except "/",
+     *        """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes)
+     *        character.
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
-     *        <b>Microsoft SQL Server</b>
+     *        Length Constraints:
      *        </p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        Constraints: Must contain from 8 to 128 characters.
+     *        RDS for Db2 - Must contain from 8 to 128 characters.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        <b>MySQL</b>
+     *        RDS for MariaDB - Must contain from 8 to 41 characters.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        Constraints: Must contain from 8 to 41 characters.
+     *        RDS for Microsoft SQL Server - Must contain from 8 to 128 characters.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        <b>Oracle</b>
+     *        RDS for MySQL - Must contain from 8 to 41 characters.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        Constraints: Must contain from 8 to 30 characters.
+     *        RDS for Oracle - Must contain from 8 to 30 characters.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        <b>PostgreSQL</b>
+     *        RDS for PostgreSQL - Must contain from 8 to 128 characters.
      *        </p>
-     *        <p>
-     *        Constraints: Must contain from 8 to 128 characters.
+     *        </li>
      */
 
     public void setMasterUserPassword(String masterUserPassword) {
@@ -1391,76 +1445,112 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The password for the master user. The password can include any printable ASCII character except "/", """, or "@".
+     * The password for the master user.
      * </p>
      * <p>
-     * Constraints: Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * <b>MariaDB</b>
+     * Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 41 characters.
+     * Can include any printable ASCII character except "/",
+     * """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes) character.
      * </p>
+     * </li>
+     * </ul>
      * <p>
-     * <b>Microsoft SQL Server</b>
+     * Length Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 128 characters.
+     * RDS for Db2 - Must contain from 8 to 128 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>MySQL</b>
+     * RDS for MariaDB - Must contain from 8 to 41 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 41 characters.
+     * RDS for Microsoft SQL Server - Must contain from 8 to 128 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>Oracle</b>
+     * RDS for MySQL - Must contain from 8 to 41 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 30 characters.
+     * RDS for Oracle - Must contain from 8 to 30 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>PostgreSQL</b>
+     * RDS for PostgreSQL - Must contain from 8 to 128 characters.
      * </p>
-     * <p>
-     * Constraints: Must contain from 8 to 128 characters.
-     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The password for the master user. The password can include any printable ASCII character except "/",
-     *         """, or "@".</p>
+     * @return The password for the master user.</p>
      *         <p>
-     *         Constraints: Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
+     *         Constraints:
      *         </p>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         <b>MariaDB</b>
+     *         Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         Constraints: Must contain from 8 to 41 characters.
+     *         Can include any printable ASCII character except "/",
+     *         """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes)
+     *         character.
      *         </p>
+     *         </li>
+     *         </ul>
      *         <p>
-     *         <b>Microsoft SQL Server</b>
+     *         Length Constraints:
      *         </p>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         Constraints: Must contain from 8 to 128 characters.
+     *         RDS for Db2 - Must contain from 8 to 128 characters.
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         <b>MySQL</b>
+     *         RDS for MariaDB - Must contain from 8 to 41 characters.
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         Constraints: Must contain from 8 to 41 characters.
+     *         RDS for Microsoft SQL Server - Must contain from 8 to 128 characters.
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         <b>Oracle</b>
+     *         RDS for MySQL - Must contain from 8 to 41 characters.
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         Constraints: Must contain from 8 to 30 characters.
+     *         RDS for Oracle - Must contain from 8 to 30 characters.
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         <b>PostgreSQL</b>
+     *         RDS for PostgreSQL - Must contain from 8 to 128 characters.
      *         </p>
-     *         <p>
-     *         Constraints: Must contain from 8 to 128 characters.
+     *         </li>
      */
 
     public String getMasterUserPassword() {
@@ -1469,77 +1559,113 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The password for the master user. The password can include any printable ASCII character except "/", """, or "@".
+     * The password for the master user.
      * </p>
      * <p>
-     * Constraints: Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * <b>MariaDB</b>
+     * Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 41 characters.
+     * Can include any printable ASCII character except "/",
+     * """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes) character.
      * </p>
+     * </li>
+     * </ul>
      * <p>
-     * <b>Microsoft SQL Server</b>
+     * Length Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 128 characters.
+     * RDS for Db2 - Must contain from 8 to 128 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>MySQL</b>
+     * RDS for MariaDB - Must contain from 8 to 41 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 41 characters.
+     * RDS for Microsoft SQL Server - Must contain from 8 to 128 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>Oracle</b>
+     * RDS for MySQL - Must contain from 8 to 41 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * Constraints: Must contain from 8 to 30 characters.
+     * RDS for Oracle - Must contain from 8 to 30 characters.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * <b>PostgreSQL</b>
+     * RDS for PostgreSQL - Must contain from 8 to 128 characters.
      * </p>
-     * <p>
-     * Constraints: Must contain from 8 to 128 characters.
-     * </p>
+     * </li>
+     * </ul>
      * 
      * @param masterUserPassword
-     *        The password for the master user. The password can include any printable ASCII character except "/",
-     *        """, or "@".</p>
+     *        The password for the master user.</p>
      *        <p>
-     *        Constraints: Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
+     *        Constraints:
      *        </p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        <b>MariaDB</b>
+     *        Can't be specified if <code>ManageMasterUserPassword</code> is turned on.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        Constraints: Must contain from 8 to 41 characters.
+     *        Can include any printable ASCII character except "/",
+     *        """, or "@". For RDS for Oracle, can't include the "&amp;" (ampersand) or the "'" (single quotes)
+     *        character.
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
-     *        <b>Microsoft SQL Server</b>
+     *        Length Constraints:
      *        </p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        Constraints: Must contain from 8 to 128 characters.
+     *        RDS for Db2 - Must contain from 8 to 128 characters.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        <b>MySQL</b>
+     *        RDS for MariaDB - Must contain from 8 to 41 characters.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        Constraints: Must contain from 8 to 41 characters.
+     *        RDS for Microsoft SQL Server - Must contain from 8 to 128 characters.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        <b>Oracle</b>
+     *        RDS for MySQL - Must contain from 8 to 41 characters.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        Constraints: Must contain from 8 to 30 characters.
+     *        RDS for Oracle - Must contain from 8 to 30 characters.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        <b>PostgreSQL</b>
+     *        RDS for PostgreSQL - Must contain from 8 to 128 characters.
      *        </p>
-     *        <p>
-     *        Constraints: Must contain from 8 to 128 characters.
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

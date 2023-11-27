@@ -57,6 +57,18 @@ public class ProtectedResource implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String resourceName;
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery point.
+     * </p>
+     */
+    private String lastBackupVaultArn;
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     * </p>
+     */
+    private String lastRecoveryPointArn;
 
     /**
      * <p>
@@ -249,6 +261,89 @@ public class ProtectedResource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery point.
+     * </p>
+     * 
+     * @param lastBackupVaultArn
+     *        This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery
+     *        point.
+     */
+
+    public void setLastBackupVaultArn(String lastBackupVaultArn) {
+        this.lastBackupVaultArn = lastBackupVaultArn;
+    }
+
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery point.
+     * </p>
+     * 
+     * @return This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery
+     *         point.
+     */
+
+    public String getLastBackupVaultArn() {
+        return this.lastBackupVaultArn;
+    }
+
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery point.
+     * </p>
+     * 
+     * @param lastBackupVaultArn
+     *        This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery
+     *        point.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProtectedResource withLastBackupVaultArn(String lastBackupVaultArn) {
+        setLastBackupVaultArn(lastBackupVaultArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     * </p>
+     * 
+     * @param lastRecoveryPointArn
+     *        This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     */
+
+    public void setLastRecoveryPointArn(String lastRecoveryPointArn) {
+        this.lastRecoveryPointArn = lastRecoveryPointArn;
+    }
+
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     * </p>
+     * 
+     * @return This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     */
+
+    public String getLastRecoveryPointArn() {
+        return this.lastRecoveryPointArn;
+    }
+
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     * </p>
+     * 
+     * @param lastRecoveryPointArn
+     *        This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProtectedResource withLastRecoveryPointArn(String lastRecoveryPointArn) {
+        setLastRecoveryPointArn(lastRecoveryPointArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -267,7 +362,11 @@ public class ProtectedResource implements Serializable, Cloneable, StructuredPoj
         if (getLastBackupTime() != null)
             sb.append("LastBackupTime: ").append(getLastBackupTime()).append(",");
         if (getResourceName() != null)
-            sb.append("ResourceName: ").append(getResourceName());
+            sb.append("ResourceName: ").append(getResourceName()).append(",");
+        if (getLastBackupVaultArn() != null)
+            sb.append("LastBackupVaultArn: ").append(getLastBackupVaultArn()).append(",");
+        if (getLastRecoveryPointArn() != null)
+            sb.append("LastRecoveryPointArn: ").append(getLastRecoveryPointArn());
         sb.append("}");
         return sb.toString();
     }
@@ -298,6 +397,14 @@ public class ProtectedResource implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getResourceName() != null && other.getResourceName().equals(this.getResourceName()) == false)
             return false;
+        if (other.getLastBackupVaultArn() == null ^ this.getLastBackupVaultArn() == null)
+            return false;
+        if (other.getLastBackupVaultArn() != null && other.getLastBackupVaultArn().equals(this.getLastBackupVaultArn()) == false)
+            return false;
+        if (other.getLastRecoveryPointArn() == null ^ this.getLastRecoveryPointArn() == null)
+            return false;
+        if (other.getLastRecoveryPointArn() != null && other.getLastRecoveryPointArn().equals(this.getLastRecoveryPointArn()) == false)
+            return false;
         return true;
     }
 
@@ -310,6 +417,8 @@ public class ProtectedResource implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
         hashCode = prime * hashCode + ((getLastBackupTime() == null) ? 0 : getLastBackupTime().hashCode());
         hashCode = prime * hashCode + ((getResourceName() == null) ? 0 : getResourceName().hashCode());
+        hashCode = prime * hashCode + ((getLastBackupVaultArn() == null) ? 0 : getLastBackupVaultArn().hashCode());
+        hashCode = prime * hashCode + ((getLastRecoveryPointArn() == null) ? 0 : getLastRecoveryPointArn().hashCode());
         return hashCode;
     }
 

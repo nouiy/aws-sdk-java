@@ -368,6 +368,23 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private GeneratorDetails generatorDetails;
+    /**
+     * <p>
+     * An ISO8601-formatted timestamp that indicates when Security Hub received a finding and begins to process it.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
+     */
+    private String processedAt;
+    /**
+     * <p>
+     * The name of the Amazon Web Services account from which a finding was generated.
+     * </p>
+     */
+    private String awsAccountName;
 
     /**
      * <p>
@@ -2895,6 +2912,119 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * An ISO8601-formatted timestamp that indicates when Security Hub received a finding and begins to process it.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
+     * 
+     * @param processedAt
+     *        An ISO8601-formatted timestamp that indicates when Security Hub received a finding and begins to process
+     *        it.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
+     */
+
+    public void setProcessedAt(String processedAt) {
+        this.processedAt = processedAt;
+    }
+
+    /**
+     * <p>
+     * An ISO8601-formatted timestamp that indicates when Security Hub received a finding and begins to process it.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
+     * 
+     * @return An ISO8601-formatted timestamp that indicates when Security Hub received a finding and begins to process
+     *         it.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
+     */
+
+    public String getProcessedAt() {
+        return this.processedAt;
+    }
+
+    /**
+     * <p>
+     * An ISO8601-formatted timestamp that indicates when Security Hub received a finding and begins to process it.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
+     * 
+     * @param processedAt
+     *        An ISO8601-formatted timestamp that indicates when Security Hub received a finding and begins to process
+     *        it.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFinding withProcessedAt(String processedAt) {
+        setProcessedAt(processedAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Web Services account from which a finding was generated.
+     * </p>
+     * 
+     * @param awsAccountName
+     *        The name of the Amazon Web Services account from which a finding was generated.
+     */
+
+    public void setAwsAccountName(String awsAccountName) {
+        this.awsAccountName = awsAccountName;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Web Services account from which a finding was generated.
+     * </p>
+     * 
+     * @return The name of the Amazon Web Services account from which a finding was generated.
+     */
+
+    public String getAwsAccountName() {
+        return this.awsAccountName;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Web Services account from which a finding was generated.
+     * </p>
+     * 
+     * @param awsAccountName
+     *        The name of the Amazon Web Services account from which a finding was generated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFinding withAwsAccountName(String awsAccountName) {
+        setAwsAccountName(awsAccountName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2989,7 +3119,11 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
         if (getSample() != null)
             sb.append("Sample: ").append(getSample()).append(",");
         if (getGeneratorDetails() != null)
-            sb.append("GeneratorDetails: ").append(getGeneratorDetails());
+            sb.append("GeneratorDetails: ").append(getGeneratorDetails()).append(",");
+        if (getProcessedAt() != null)
+            sb.append("ProcessedAt: ").append(getProcessedAt()).append(",");
+        if (getAwsAccountName() != null)
+            sb.append("AwsAccountName: ").append(getAwsAccountName());
         sb.append("}");
         return sb.toString();
     }
@@ -3172,6 +3306,14 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getGeneratorDetails() != null && other.getGeneratorDetails().equals(this.getGeneratorDetails()) == false)
             return false;
+        if (other.getProcessedAt() == null ^ this.getProcessedAt() == null)
+            return false;
+        if (other.getProcessedAt() != null && other.getProcessedAt().equals(this.getProcessedAt()) == false)
+            return false;
+        if (other.getAwsAccountName() == null ^ this.getAwsAccountName() == null)
+            return false;
+        if (other.getAwsAccountName() != null && other.getAwsAccountName().equals(this.getAwsAccountName()) == false)
+            return false;
         return true;
     }
 
@@ -3222,6 +3364,8 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getFindingProviderFields() == null) ? 0 : getFindingProviderFields().hashCode());
         hashCode = prime * hashCode + ((getSample() == null) ? 0 : getSample().hashCode());
         hashCode = prime * hashCode + ((getGeneratorDetails() == null) ? 0 : getGeneratorDetails().hashCode());
+        hashCode = prime * hashCode + ((getProcessedAt() == null) ? 0 : getProcessedAt().hashCode());
+        hashCode = prime * hashCode + ((getAwsAccountName() == null) ? 0 : getAwsAccountName().hashCode());
         return hashCode;
     }
 

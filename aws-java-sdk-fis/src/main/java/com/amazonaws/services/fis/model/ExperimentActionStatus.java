@@ -27,7 +27,8 @@ public enum ExperimentActionStatus {
     Cancelled("cancelled"),
     Stopping("stopping"),
     Stopped("stopped"),
-    Failed("failed");
+    Failed("failed"),
+    Skipped("skipped");
 
     private String value;
 

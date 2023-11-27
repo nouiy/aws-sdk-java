@@ -334,6 +334,41 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetConfigurationPolicyAssociationsResult> batchGetConfigurationPolicyAssociationsAsync(
+            BatchGetConfigurationPolicyAssociationsRequest request) {
+
+        return batchGetConfigurationPolicyAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetConfigurationPolicyAssociationsResult> batchGetConfigurationPolicyAssociationsAsync(
+            final BatchGetConfigurationPolicyAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetConfigurationPolicyAssociationsRequest, BatchGetConfigurationPolicyAssociationsResult> asyncHandler) {
+        final BatchGetConfigurationPolicyAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetConfigurationPolicyAssociationsResult>() {
+            @Override
+            public BatchGetConfigurationPolicyAssociationsResult call() throws Exception {
+                BatchGetConfigurationPolicyAssociationsResult result = null;
+
+                try {
+                    result = executeBatchGetConfigurationPolicyAssociations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetSecurityControlsResult> batchGetSecurityControlsAsync(BatchGetSecurityControlsRequest request) {
 
         return batchGetSecurityControlsAsync(request, null);
@@ -602,6 +637,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CreateConfigurationPolicyResult> createConfigurationPolicyAsync(CreateConfigurationPolicyRequest request) {
+
+        return createConfigurationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateConfigurationPolicyResult> createConfigurationPolicyAsync(final CreateConfigurationPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateConfigurationPolicyRequest, CreateConfigurationPolicyResult> asyncHandler) {
+        final CreateConfigurationPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateConfigurationPolicyResult>() {
+            @Override
+            public CreateConfigurationPolicyResult call() throws Exception {
+                CreateConfigurationPolicyResult result = null;
+
+                try {
+                    result = executeCreateConfigurationPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateFindingAggregatorResult> createFindingAggregatorAsync(CreateFindingAggregatorRequest request) {
 
         return createFindingAggregatorAsync(request, null);
@@ -751,6 +819,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
 
                 try {
                     result = executeDeleteActionTarget(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteConfigurationPolicyResult> deleteConfigurationPolicyAsync(DeleteConfigurationPolicyRequest request) {
+
+        return deleteConfigurationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteConfigurationPolicyResult> deleteConfigurationPolicyAsync(final DeleteConfigurationPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteConfigurationPolicyRequest, DeleteConfigurationPolicyResult> asyncHandler) {
+        final DeleteConfigurationPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteConfigurationPolicyResult>() {
+            @Override
+            public DeleteConfigurationPolicyResult call() throws Exception {
+                DeleteConfigurationPolicyResult result = null;
+
+                try {
+                    result = executeDeleteConfigurationPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1440,6 +1541,74 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetConfigurationPolicyResult> getConfigurationPolicyAsync(GetConfigurationPolicyRequest request) {
+
+        return getConfigurationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConfigurationPolicyResult> getConfigurationPolicyAsync(final GetConfigurationPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetConfigurationPolicyRequest, GetConfigurationPolicyResult> asyncHandler) {
+        final GetConfigurationPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetConfigurationPolicyResult>() {
+            @Override
+            public GetConfigurationPolicyResult call() throws Exception {
+                GetConfigurationPolicyResult result = null;
+
+                try {
+                    result = executeGetConfigurationPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConfigurationPolicyAssociationResult> getConfigurationPolicyAssociationAsync(
+            GetConfigurationPolicyAssociationRequest request) {
+
+        return getConfigurationPolicyAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConfigurationPolicyAssociationResult> getConfigurationPolicyAssociationAsync(
+            final GetConfigurationPolicyAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetConfigurationPolicyAssociationRequest, GetConfigurationPolicyAssociationResult> asyncHandler) {
+        final GetConfigurationPolicyAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetConfigurationPolicyAssociationResult>() {
+            @Override
+            public GetConfigurationPolicyAssociationResult call() throws Exception {
+                GetConfigurationPolicyAssociationResult result = null;
+
+                try {
+                    result = executeGetConfigurationPolicyAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetEnabledStandardsResult> getEnabledStandardsAsync(GetEnabledStandardsRequest request) {
 
         return getEnabledStandardsAsync(request, null);
@@ -1838,6 +2007,74 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<ListConfigurationPoliciesResult> listConfigurationPoliciesAsync(ListConfigurationPoliciesRequest request) {
+
+        return listConfigurationPoliciesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListConfigurationPoliciesResult> listConfigurationPoliciesAsync(final ListConfigurationPoliciesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListConfigurationPoliciesRequest, ListConfigurationPoliciesResult> asyncHandler) {
+        final ListConfigurationPoliciesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListConfigurationPoliciesResult>() {
+            @Override
+            public ListConfigurationPoliciesResult call() throws Exception {
+                ListConfigurationPoliciesResult result = null;
+
+                try {
+                    result = executeListConfigurationPolicies(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListConfigurationPolicyAssociationsResult> listConfigurationPolicyAssociationsAsync(
+            ListConfigurationPolicyAssociationsRequest request) {
+
+        return listConfigurationPolicyAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListConfigurationPolicyAssociationsResult> listConfigurationPolicyAssociationsAsync(
+            final ListConfigurationPolicyAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListConfigurationPolicyAssociationsRequest, ListConfigurationPolicyAssociationsResult> asyncHandler) {
+        final ListConfigurationPolicyAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListConfigurationPolicyAssociationsResult>() {
+            @Override
+            public ListConfigurationPolicyAssociationsResult call() throws Exception {
+                ListConfigurationPolicyAssociationsResult result = null;
+
+                try {
+                    result = executeListConfigurationPolicyAssociations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListEnabledProductsForImportResult> listEnabledProductsForImportAsync(ListEnabledProductsForImportRequest request) {
 
         return listEnabledProductsForImportAsync(request, null);
@@ -2106,6 +2343,76 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<StartConfigurationPolicyAssociationResult> startConfigurationPolicyAssociationAsync(
+            StartConfigurationPolicyAssociationRequest request) {
+
+        return startConfigurationPolicyAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartConfigurationPolicyAssociationResult> startConfigurationPolicyAssociationAsync(
+            final StartConfigurationPolicyAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartConfigurationPolicyAssociationRequest, StartConfigurationPolicyAssociationResult> asyncHandler) {
+        final StartConfigurationPolicyAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartConfigurationPolicyAssociationResult>() {
+            @Override
+            public StartConfigurationPolicyAssociationResult call() throws Exception {
+                StartConfigurationPolicyAssociationResult result = null;
+
+                try {
+                    result = executeStartConfigurationPolicyAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartConfigurationPolicyDisassociationResult> startConfigurationPolicyDisassociationAsync(
+            StartConfigurationPolicyDisassociationRequest request) {
+
+        return startConfigurationPolicyDisassociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartConfigurationPolicyDisassociationResult> startConfigurationPolicyDisassociationAsync(
+            final StartConfigurationPolicyDisassociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartConfigurationPolicyDisassociationRequest, StartConfigurationPolicyDisassociationResult> asyncHandler) {
+        final StartConfigurationPolicyDisassociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartConfigurationPolicyDisassociationResult>() {
+            @Override
+            public StartConfigurationPolicyDisassociationResult call() throws Exception {
+                StartConfigurationPolicyDisassociationResult result = null;
+
+                try {
+                    result = executeStartConfigurationPolicyDisassociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
 
         return tagResourceAsync(request, null);
@@ -2189,6 +2496,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
 
                 try {
                     result = executeUpdateActionTarget(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConfigurationPolicyResult> updateConfigurationPolicyAsync(UpdateConfigurationPolicyRequest request) {
+
+        return updateConfigurationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConfigurationPolicyResult> updateConfigurationPolicyAsync(final UpdateConfigurationPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateConfigurationPolicyRequest, UpdateConfigurationPolicyResult> asyncHandler) {
+        final UpdateConfigurationPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateConfigurationPolicyResult>() {
+            @Override
+            public UpdateConfigurationPolicyResult call() throws Exception {
+                UpdateConfigurationPolicyResult result = null;
+
+                try {
+                    result = executeUpdateConfigurationPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

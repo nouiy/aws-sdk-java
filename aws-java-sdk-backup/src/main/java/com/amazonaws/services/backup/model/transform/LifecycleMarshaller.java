@@ -31,6 +31,8 @@ public class LifecycleMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MoveToColdStorageAfterDays").build();
     private static final MarshallingInfo<Long> DELETEAFTERDAYS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeleteAfterDays").build();
+    private static final MarshallingInfo<Boolean> OPTINTOARCHIVEFORSUPPORTEDRESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OptInToArchiveForSupportedResources").build();
 
     private static final LifecycleMarshaller instance = new LifecycleMarshaller();
 
@@ -50,6 +52,7 @@ public class LifecycleMarshaller {
         try {
             protocolMarshaller.marshall(lifecycle.getMoveToColdStorageAfterDays(), MOVETOCOLDSTORAGEAFTERDAYS_BINDING);
             protocolMarshaller.marshall(lifecycle.getDeleteAfterDays(), DELETEAFTERDAYS_BINDING);
+            protocolMarshaller.marshall(lifecycle.getOptInToArchiveForSupportedResources(), OPTINTOARCHIVEFORSUPPORTEDRESOURCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

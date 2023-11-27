@@ -51,7 +51,7 @@ import com.amazonaws.services.controltower.model.*;
  * </li>
  * </ul>
  * <p>
- * <b>To get the <code>controlIdentifier</code> for your AWS Control Tower control:</b>
+ * <b>To get the <code>controlIdentifier</code> for your Amazon Web Services Control Tower control:</b>
  * </p>
  * <p>
  * The <code>controlIdentifier</code> is an ARN that is specified for each control. You can view the
@@ -172,8 +172,8 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * This decommissions a landing zone. This starts an asynchronous operation that deletes Amazon Web Services Control
-     * Tower resources deployed in Amazon Web Services Control Tower managed accounts.
+     * Decommissions a landing zone. This API call starts an asynchronous operation that deletes Amazon Web Services
+     * Control Tower resources deployed in accounts managed by Amazon Web Services Control Tower.
      * </p>
      * 
      * @param deleteLandingZoneRequest
@@ -186,8 +186,8 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * This decommissions a landing zone. This starts an asynchronous operation that deletes Amazon Web Services Control
-     * Tower resources deployed in Amazon Web Services Control Tower managed accounts.
+     * Decommissions a landing zone. This API call starts an asynchronous operation that deletes Amazon Web Services
+     * Control Tower resources deployed in accounts managed by Amazon Web Services Control Tower.
      * </p>
      * 
      * @param deleteLandingZoneRequest
@@ -355,7 +355,7 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Returns the status of the specified landing zone operation. Details for an operation are available for X days.
+     * Returns the status of the specified landing zone operation. Details for an operation are available for 60 days.
      * </p>
      * 
      * @param getLandingZoneOperationRequest
@@ -368,7 +368,7 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Returns the status of the specified landing zone operation. Details for an operation are available for X days.
+     * Returns the status of the specified landing zone operation. Details for an operation are available for 60 days.
      * </p>
      * 
      * @param getLandingZoneOperationRequest
@@ -427,7 +427,7 @@ public interface AWSControlTowerAsync extends AWSControlTower {
      * for existing accounts that do not yet have a landing zone ARN.
      * </p>
      * <p>
-     * The return limit is one landing zone ARN.
+     * Returns one landing zone ARN.
      * </p>
      * 
      * @param listLandingZonesRequest
@@ -444,7 +444,7 @@ public interface AWSControlTowerAsync extends AWSControlTower {
      * for existing accounts that do not yet have a landing zone ARN.
      * </p>
      * <p>
-     * The return limit is one landing zone ARN.
+     * Returns one landing zone ARN.
      * </p>
      * 
      * @param listLandingZonesRequest

@@ -68,7 +68,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * The sample rate, in hertz, of the audio track in your input media file.
      * </p>
      * <p>
-     * If you don't specify the media sample rate, Amazon Transcribe determines it for you. If you specify the sample
+     * If you do not specify the media sample rate, Amazon Transcribe determines it for you. If you specify the sample
      * rate, it must match the rate detected by Amazon Transcribe. If there's a mismatch between the value that you
      * specify and the value detected, your job fails. In most cases, you can omit <code>MediaSampleRateHertz</code> and
      * let Amazon Transcribe determine the sample rate.
@@ -110,7 +110,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * >Permissions Required for IAM User Roles</a>.
      * </p>
      * <p>
-     * If you don't specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon S3
+     * If you do not specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon S3
      * bucket and you are provided with a URI to access your transcript.
      * </p>
      */
@@ -208,7 +208,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -273,8 +273,9 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Makes it possible to redact or flag specified personally identifiable information (PII) in your transcript. If
-     * you use <code>ContentRedaction</code>, you must also include the sub-parameters: <code>PiiEntityTypes</code>,
-     * <code>RedactionOutput</code>, and <code>RedactionType</code>.
+     * you use <code>ContentRedaction</code>, you must also include the sub-parameters: <code>RedactionOutput</code> and
+     * <code>RedactionType</code>. You can optionally include <code>PiiEntityTypes</code> to choose which types of PII
+     * you want to redact. If you do not include <code>PiiEntityTypes</code> in your request, all PII is redacted.
      * </p>
      */
     private ContentRedaction contentRedaction;
@@ -704,7 +705,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * The sample rate, in hertz, of the audio track in your input media file.
      * </p>
      * <p>
-     * If you don't specify the media sample rate, Amazon Transcribe determines it for you. If you specify the sample
+     * If you do not specify the media sample rate, Amazon Transcribe determines it for you. If you specify the sample
      * rate, it must match the rate detected by Amazon Transcribe. If there's a mismatch between the value that you
      * specify and the value detected, your job fails. In most cases, you can omit <code>MediaSampleRateHertz</code> and
      * let Amazon Transcribe determine the sample rate.
@@ -713,7 +714,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * @param mediaSampleRateHertz
      *        The sample rate, in hertz, of the audio track in your input media file.</p>
      *        <p>
-     *        If you don't specify the media sample rate, Amazon Transcribe determines it for you. If you specify the
+     *        If you do not specify the media sample rate, Amazon Transcribe determines it for you. If you specify the
      *        sample rate, it must match the rate detected by Amazon Transcribe. If there's a mismatch between the value
      *        that you specify and the value detected, your job fails. In most cases, you can omit
      *        <code>MediaSampleRateHertz</code> and let Amazon Transcribe determine the sample rate.
@@ -728,7 +729,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * The sample rate, in hertz, of the audio track in your input media file.
      * </p>
      * <p>
-     * If you don't specify the media sample rate, Amazon Transcribe determines it for you. If you specify the sample
+     * If you do not specify the media sample rate, Amazon Transcribe determines it for you. If you specify the sample
      * rate, it must match the rate detected by Amazon Transcribe. If there's a mismatch between the value that you
      * specify and the value detected, your job fails. In most cases, you can omit <code>MediaSampleRateHertz</code> and
      * let Amazon Transcribe determine the sample rate.
@@ -736,7 +737,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * 
      * @return The sample rate, in hertz, of the audio track in your input media file.</p>
      *         <p>
-     *         If you don't specify the media sample rate, Amazon Transcribe determines it for you. If you specify the
+     *         If you do not specify the media sample rate, Amazon Transcribe determines it for you. If you specify the
      *         sample rate, it must match the rate detected by Amazon Transcribe. If there's a mismatch between the
      *         value that you specify and the value detected, your job fails. In most cases, you can omit
      *         <code>MediaSampleRateHertz</code> and let Amazon Transcribe determine the sample rate.
@@ -751,7 +752,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * The sample rate, in hertz, of the audio track in your input media file.
      * </p>
      * <p>
-     * If you don't specify the media sample rate, Amazon Transcribe determines it for you. If you specify the sample
+     * If you do not specify the media sample rate, Amazon Transcribe determines it for you. If you specify the sample
      * rate, it must match the rate detected by Amazon Transcribe. If there's a mismatch between the value that you
      * specify and the value detected, your job fails. In most cases, you can omit <code>MediaSampleRateHertz</code> and
      * let Amazon Transcribe determine the sample rate.
@@ -760,7 +761,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * @param mediaSampleRateHertz
      *        The sample rate, in hertz, of the audio track in your input media file.</p>
      *        <p>
-     *        If you don't specify the media sample rate, Amazon Transcribe determines it for you. If you specify the
+     *        If you do not specify the media sample rate, Amazon Transcribe determines it for you. If you specify the
      *        sample rate, it must match the rate detected by Amazon Transcribe. If there's a mismatch between the value
      *        that you specify and the value detected, your job fails. In most cases, you can omit
      *        <code>MediaSampleRateHertz</code> and let Amazon Transcribe determine the sample rate.
@@ -894,7 +895,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * >Permissions Required for IAM User Roles</a>.
      * </p>
      * <p>
-     * If you don't specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon S3
+     * If you do not specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon S3
      * bucket and you are provided with a URI to access your transcript.
      * </p>
      * 
@@ -919,7 +920,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        >Permissions Required for IAM User Roles</a>.
      *        </p>
      *        <p>
-     *        If you don't specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon
+     *        If you do not specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon
      *        S3 bucket and you are provided with a URI to access your transcript.
      */
 
@@ -950,7 +951,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * >Permissions Required for IAM User Roles</a>.
      * </p>
      * <p>
-     * If you don't specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon S3
+     * If you do not specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon S3
      * bucket and you are provided with a URI to access your transcript.
      * </p>
      * 
@@ -974,8 +975,8 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *         >Permissions Required for IAM User Roles</a>.
      *         </p>
      *         <p>
-     *         If you don't specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon
-     *         S3 bucket and you are provided with a URI to access your transcript.
+     *         If you do not specify <code>OutputBucketName</code>, your transcript is placed in a service-managed
+     *         Amazon S3 bucket and you are provided with a URI to access your transcript.
      */
 
     public String getOutputBucketName() {
@@ -1005,7 +1006,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * >Permissions Required for IAM User Roles</a>.
      * </p>
      * <p>
-     * If you don't specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon S3
+     * If you do not specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon S3
      * bucket and you are provided with a URI to access your transcript.
      * </p>
      * 
@@ -1030,7 +1031,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        >Permissions Required for IAM User Roles</a>.
      *        </p>
      *        <p>
-     *        If you don't specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon
+     *        If you do not specify <code>OutputBucketName</code>, your transcript is placed in a service-managed Amazon
      *        S3 bucket and you are provided with a URI to access your transcript.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1357,7 +1358,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -1416,7 +1417,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        </ol>
      *        <p>
-     *        If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     *        If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      *        </p>
      *        <p>
      *        If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -1479,7 +1480,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -1537,7 +1538,8 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *         </li>
      *         </ol>
      *         <p>
-     *         If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     *         If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key
+     *         (SSE-S3).
      *         </p>
      *         <p>
      *         If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -1600,7 +1602,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ol>
      * <p>
-     * If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     * If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      * </p>
      * <p>
      * If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -1659,7 +1661,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        </ol>
      *        <p>
-     *        If you don't specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
+     *        If you do not specify an encryption key, your output is encrypted with the default Amazon S3 key (SSE-S3).
      *        </p>
      *        <p>
      *        If you specify a KMS key to encrypt your output, you must also specify an output location using the
@@ -2031,14 +2033,17 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Makes it possible to redact or flag specified personally identifiable information (PII) in your transcript. If
-     * you use <code>ContentRedaction</code>, you must also include the sub-parameters: <code>PiiEntityTypes</code>,
-     * <code>RedactionOutput</code>, and <code>RedactionType</code>.
+     * you use <code>ContentRedaction</code>, you must also include the sub-parameters: <code>RedactionOutput</code> and
+     * <code>RedactionType</code>. You can optionally include <code>PiiEntityTypes</code> to choose which types of PII
+     * you want to redact. If you do not include <code>PiiEntityTypes</code> in your request, all PII is redacted.
      * </p>
      * 
      * @param contentRedaction
      *        Makes it possible to redact or flag specified personally identifiable information (PII) in your
      *        transcript. If you use <code>ContentRedaction</code>, you must also include the sub-parameters:
-     *        <code>PiiEntityTypes</code>, <code>RedactionOutput</code>, and <code>RedactionType</code>.
+     *        <code>RedactionOutput</code> and <code>RedactionType</code>. You can optionally include
+     *        <code>PiiEntityTypes</code> to choose which types of PII you want to redact. If you do not include
+     *        <code>PiiEntityTypes</code> in your request, all PII is redacted.
      */
 
     public void setContentRedaction(ContentRedaction contentRedaction) {
@@ -2048,13 +2053,16 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Makes it possible to redact or flag specified personally identifiable information (PII) in your transcript. If
-     * you use <code>ContentRedaction</code>, you must also include the sub-parameters: <code>PiiEntityTypes</code>,
-     * <code>RedactionOutput</code>, and <code>RedactionType</code>.
+     * you use <code>ContentRedaction</code>, you must also include the sub-parameters: <code>RedactionOutput</code> and
+     * <code>RedactionType</code>. You can optionally include <code>PiiEntityTypes</code> to choose which types of PII
+     * you want to redact. If you do not include <code>PiiEntityTypes</code> in your request, all PII is redacted.
      * </p>
      * 
      * @return Makes it possible to redact or flag specified personally identifiable information (PII) in your
      *         transcript. If you use <code>ContentRedaction</code>, you must also include the sub-parameters:
-     *         <code>PiiEntityTypes</code>, <code>RedactionOutput</code>, and <code>RedactionType</code>.
+     *         <code>RedactionOutput</code> and <code>RedactionType</code>. You can optionally include
+     *         <code>PiiEntityTypes</code> to choose which types of PII you want to redact. If you do not include
+     *         <code>PiiEntityTypes</code> in your request, all PII is redacted.
      */
 
     public ContentRedaction getContentRedaction() {
@@ -2064,14 +2072,17 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Makes it possible to redact or flag specified personally identifiable information (PII) in your transcript. If
-     * you use <code>ContentRedaction</code>, you must also include the sub-parameters: <code>PiiEntityTypes</code>,
-     * <code>RedactionOutput</code>, and <code>RedactionType</code>.
+     * you use <code>ContentRedaction</code>, you must also include the sub-parameters: <code>RedactionOutput</code> and
+     * <code>RedactionType</code>. You can optionally include <code>PiiEntityTypes</code> to choose which types of PII
+     * you want to redact. If you do not include <code>PiiEntityTypes</code> in your request, all PII is redacted.
      * </p>
      * 
      * @param contentRedaction
      *        Makes it possible to redact or flag specified personally identifiable information (PII) in your
      *        transcript. If you use <code>ContentRedaction</code>, you must also include the sub-parameters:
-     *        <code>PiiEntityTypes</code>, <code>RedactionOutput</code>, and <code>RedactionType</code>.
+     *        <code>RedactionOutput</code> and <code>RedactionType</code>. You can optionally include
+     *        <code>PiiEntityTypes</code> to choose which types of PII you want to redact. If you do not include
+     *        <code>PiiEntityTypes</code> in your request, all PII is redacted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -142,6 +142,10 @@ public class BackupJobJsonUnmarshaller implements Unmarshaller<BackupJob, JsonUn
                     context.nextToken();
                     backupJob.setResourceName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("InitiationDate", targetDepth)) {
+                    context.nextToken();
+                    backupJob.setInitiationDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
                 if (context.testExpression("MessageCategory", targetDepth)) {
                     context.nextToken();
                     backupJob.setMessageCategory(context.getUnmarshaller(String.class).unmarshall(context));

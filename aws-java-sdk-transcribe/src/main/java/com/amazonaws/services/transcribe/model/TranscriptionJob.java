@@ -136,8 +136,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <code>Unsupported media format</code>.
      * </p>
      * <p>
-     * The media format specified in <code>MediaFormat</code> isn't valid. Refer to <b>MediaFormat</b> for a list of
-     * supported formats.
+     * The media format specified in <code>MediaFormat</code> isn't valid. Refer to refer to the
+     * <code>MediaFormat</code> parameter for a list of supported formats.
      * </p>
      * </li>
      * <li>
@@ -173,7 +173,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * The size of your media file is larger than what Amazon Transcribe can process. For more information, refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service quotas</a>.
      * </p>
      * </li>
      * <li>
@@ -182,7 +182,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * Your audio contains more channels than Amazon Transcribe is able to process. For more information, refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service quotas</a>.
      * </p>
      * </li>
      * </ul>
@@ -897,8 +897,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <code>Unsupported media format</code>.
      * </p>
      * <p>
-     * The media format specified in <code>MediaFormat</code> isn't valid. Refer to <b>MediaFormat</b> for a list of
-     * supported formats.
+     * The media format specified in <code>MediaFormat</code> isn't valid. Refer to refer to the
+     * <code>MediaFormat</code> parameter for a list of supported formats.
      * </p>
      * </li>
      * <li>
@@ -934,7 +934,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * The size of your media file is larger than what Amazon Transcribe can process. For more information, refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service quotas</a>.
      * </p>
      * </li>
      * <li>
@@ -943,7 +943,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * Your audio contains more channels than Amazon Transcribe is able to process. For more information, refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service quotas</a>.
      * </p>
      * </li>
      * </ul>
@@ -960,8 +960,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *        <code>Unsupported media format</code>.
      *        </p>
      *        <p>
-     *        The media format specified in <code>MediaFormat</code> isn't valid. Refer to <b>MediaFormat</b> for a list
-     *        of supported formats.
+     *        The media format specified in <code>MediaFormat</code> isn't valid. Refer to refer to the
+     *        <code>MediaFormat</code> parameter for a list of supported formats.
      *        </p>
      *        </li>
      *        <li>
@@ -997,7 +997,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *        </p>
      *        <p>
      *        The size of your media file is larger than what Amazon Transcribe can process. For more information, refer
-     *        to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and
+     *        to <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service
      *        quotas</a>.
      *        </p>
      *        </li>
@@ -1007,7 +1008,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *        </p>
      *        <p>
      *        Your audio contains more channels than Amazon Transcribe is able to process. For more information, refer
-     *        to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and
+     *        to <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service
      *        quotas</a>.
      *        </p>
      *        </li>
@@ -1031,8 +1033,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <code>Unsupported media format</code>.
      * </p>
      * <p>
-     * The media format specified in <code>MediaFormat</code> isn't valid. Refer to <b>MediaFormat</b> for a list of
-     * supported formats.
+     * The media format specified in <code>MediaFormat</code> isn't valid. Refer to refer to the
+     * <code>MediaFormat</code> parameter for a list of supported formats.
      * </p>
      * </li>
      * <li>
@@ -1068,7 +1070,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * The size of your media file is larger than what Amazon Transcribe can process. For more information, refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service quotas</a>.
      * </p>
      * </li>
      * <li>
@@ -1077,7 +1079,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * Your audio contains more channels than Amazon Transcribe is able to process. For more information, refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service quotas</a>.
      * </p>
      * </li>
      * </ul>
@@ -1093,8 +1095,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *         <code>Unsupported media format</code>.
      *         </p>
      *         <p>
-     *         The media format specified in <code>MediaFormat</code> isn't valid. Refer to <b>MediaFormat</b> for a
-     *         list of supported formats.
+     *         The media format specified in <code>MediaFormat</code> isn't valid. Refer to refer to the
+     *         <code>MediaFormat</code> parameter for a list of supported formats.
      *         </p>
      *         </li>
      *         <li>
@@ -1131,7 +1133,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *         <p>
      *         The size of your media file is larger than what Amazon Transcribe can process. For more information,
      *         refer to <a
-     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and
+     *         href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service
      *         quotas</a>.
      *         </p>
      *         </li>
@@ -1141,8 +1143,9 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *         </p>
      *         <p>
      *         Your audio contains more channels than Amazon Transcribe is able to process. For more information, refer
-     *         to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines
-     *         and quotas</a>.
+     *         to <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service
+     *         quotas</a>.
      *         </p>
      *         </li>
      */
@@ -1165,8 +1168,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <code>Unsupported media format</code>.
      * </p>
      * <p>
-     * The media format specified in <code>MediaFormat</code> isn't valid. Refer to <b>MediaFormat</b> for a list of
-     * supported formats.
+     * The media format specified in <code>MediaFormat</code> isn't valid. Refer to refer to the
+     * <code>MediaFormat</code> parameter for a list of supported formats.
      * </p>
      * </li>
      * <li>
@@ -1202,7 +1205,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * The size of your media file is larger than what Amazon Transcribe can process. For more information, refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service quotas</a>.
      * </p>
      * </li>
      * <li>
@@ -1211,7 +1214,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * Your audio contains more channels than Amazon Transcribe is able to process. For more information, refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service quotas</a>.
      * </p>
      * </li>
      * </ul>
@@ -1228,8 +1231,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *        <code>Unsupported media format</code>.
      *        </p>
      *        <p>
-     *        The media format specified in <code>MediaFormat</code> isn't valid. Refer to <b>MediaFormat</b> for a list
-     *        of supported formats.
+     *        The media format specified in <code>MediaFormat</code> isn't valid. Refer to refer to the
+     *        <code>MediaFormat</code> parameter for a list of supported formats.
      *        </p>
      *        </li>
      *        <li>
@@ -1265,7 +1268,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *        </p>
      *        <p>
      *        The size of your media file is larger than what Amazon Transcribe can process. For more information, refer
-     *        to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and
+     *        to <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service
      *        quotas</a>.
      *        </p>
      *        </li>
@@ -1275,7 +1279,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *        </p>
      *        <p>
      *        Your audio contains more channels than Amazon Transcribe is able to process. For more information, refer
-     *        to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and
+     *        to <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/transcribe.html#limits-amazon-transcribe">Service
      *        quotas</a>.
      *        </p>
      *        </li>

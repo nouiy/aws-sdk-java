@@ -28,8 +28,9 @@ public class EnableControlRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The ARN of the control. Only <b>Strongly recommended</b> and <b>Elective</b> controls are permitted, with the
-     * exception of the <b>Region deny</b> control. For information on how to find the <code>controlIdentifier</code>,
-     * see <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/Welcome.html">the overview page</a>.
+     * exception of the <b>landing zone Region deny</b> control. For information on how to find the
+     * <code>controlIdentifier</code>, see <a
+     * href="https://docs.aws.amazon.com/controltower/latest/APIReference/Welcome.html">the overview page</a>.
      * </p>
      */
     private String controlIdentifier;
@@ -50,13 +51,14 @@ public class EnableControlRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The ARN of the control. Only <b>Strongly recommended</b> and <b>Elective</b> controls are permitted, with the
-     * exception of the <b>Region deny</b> control. For information on how to find the <code>controlIdentifier</code>,
-     * see <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/Welcome.html">the overview page</a>.
+     * exception of the <b>landing zone Region deny</b> control. For information on how to find the
+     * <code>controlIdentifier</code>, see <a
+     * href="https://docs.aws.amazon.com/controltower/latest/APIReference/Welcome.html">the overview page</a>.
      * </p>
      * 
      * @param controlIdentifier
      *        The ARN of the control. Only <b>Strongly recommended</b> and <b>Elective</b> controls are permitted, with
-     *        the exception of the <b>Region deny</b> control. For information on how to find the
+     *        the exception of the <b>landing zone Region deny</b> control. For information on how to find the
      *        <code>controlIdentifier</code>, see <a
      *        href="https://docs.aws.amazon.com/controltower/latest/APIReference/Welcome.html">the overview page</a>.
      */
@@ -68,12 +70,13 @@ public class EnableControlRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The ARN of the control. Only <b>Strongly recommended</b> and <b>Elective</b> controls are permitted, with the
-     * exception of the <b>Region deny</b> control. For information on how to find the <code>controlIdentifier</code>,
-     * see <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/Welcome.html">the overview page</a>.
+     * exception of the <b>landing zone Region deny</b> control. For information on how to find the
+     * <code>controlIdentifier</code>, see <a
+     * href="https://docs.aws.amazon.com/controltower/latest/APIReference/Welcome.html">the overview page</a>.
      * </p>
      * 
      * @return The ARN of the control. Only <b>Strongly recommended</b> and <b>Elective</b> controls are permitted, with
-     *         the exception of the <b>Region deny</b> control. For information on how to find the
+     *         the exception of the <b>landing zone Region deny</b> control. For information on how to find the
      *         <code>controlIdentifier</code>, see <a
      *         href="https://docs.aws.amazon.com/controltower/latest/APIReference/Welcome.html">the overview page</a>.
      */
@@ -85,13 +88,14 @@ public class EnableControlRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The ARN of the control. Only <b>Strongly recommended</b> and <b>Elective</b> controls are permitted, with the
-     * exception of the <b>Region deny</b> control. For information on how to find the <code>controlIdentifier</code>,
-     * see <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/Welcome.html">the overview page</a>.
+     * exception of the <b>landing zone Region deny</b> control. For information on how to find the
+     * <code>controlIdentifier</code>, see <a
+     * href="https://docs.aws.amazon.com/controltower/latest/APIReference/Welcome.html">the overview page</a>.
      * </p>
      * 
      * @param controlIdentifier
      *        The ARN of the control. Only <b>Strongly recommended</b> and <b>Elective</b> controls are permitted, with
-     *        the exception of the <b>Region deny</b> control. For information on how to find the
+     *        the exception of the <b>landing zone Region deny</b> control. For information on how to find the
      *        <code>controlIdentifier</code>, see <a
      *        href="https://docs.aws.amazon.com/controltower/latest/APIReference/Welcome.html">the overview page</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

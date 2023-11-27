@@ -28,7 +28,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.
+     * The name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.
      * </p>
      * <p>
      * Constraints:
@@ -36,17 +36,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Must contain from 1 to 63 numbers, letters, or hyphens
+     * Must contain from 1 to 63 numbers, letters, or hyphens.
      * </p>
      * </li>
      * <li>
      * <p>
-     * First character must be a letter
+     * First character must be a letter.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Can't end with a hyphen or contain two consecutive hyphens
+     * Can't end with a hyphen or contain two consecutive hyphens.
      * </p>
      * </li>
      * </ul>
@@ -65,7 +65,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Must match the identifier of an existing DBSnapshot.
+     * Must match the identifier of an existing DB snapshot.
      * </p>
      * </li>
      * <li>
@@ -130,11 +130,18 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     private String availabilityZone;
     /**
      * <p>
-     * The DB subnet group name to use for the new instance.
+     * The name of the DB subnet group to use for the new instance.
      * </p>
      * <p>
-     * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If supplied, must match the name of an existing DB subnet group.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * Example: <code>mydbsubnetgroup</code>
      * </p>
@@ -199,11 +206,11 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     private String licenseModel;
     /**
      * <p>
-     * The database name for the restored DB instance.
+     * The name of the database for the restored DB instance.
      * </p>
      * <p>
-     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS Custom DB
-     * instances.
+     * This parameter only applies to RDS for Oracle and RDS for SQL Server DB instances. It doesn't apply to the other
+     * engines or to RDS Custom DB instances.
      * </p>
      */
     private String dBName;
@@ -225,6 +232,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -360,8 +377,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     private com.amazonaws.internal.SdkInternalList<String> vpcSecurityGroupIds;
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to
-     * this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
+     * The Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to this
+     * operation. Currently, you can create only Db2, MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
      * in an Active Directory Domain.
      * </p>
      * <p>
@@ -499,8 +516,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     private Boolean enableIAMDatabaseAuthentication;
     /**
      * <p>
-     * The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list depend on
-     * the DB engine being used. For more information, see <a href=
+     * The list of logs for the restored DB instance to export to CloudWatch Logs. The values in the list depend on the
+     * DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -544,7 +561,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * If supplied, must match the name of an existing DBParameterGroup.
+     * If supplied, must match the name of an existing DB parameter group.
      * </p>
      * </li>
      * <li>
@@ -764,24 +781,24 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * (with...) methods to initialize any additional object members.
      * 
      * @param dBInstanceIdentifier
-     *        Name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.</p>
+     *        The name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Must contain from 1 to 63 numbers, letters, or hyphens
+     *        Must contain from 1 to 63 numbers, letters, or hyphens.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        First character must be a letter
+     *        First character must be a letter.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Can't end with a hyphen or contain two consecutive hyphens
+     *        Can't end with a hyphen or contain two consecutive hyphens.
      *        </p>
      *        </li>
      *        </ul>
@@ -796,7 +813,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <ul>
      *        <li>
      *        <p>
-     *        Must match the identifier of an existing DBSnapshot.
+     *        Must match the identifier of an existing DB snapshot.
      *        </p>
      *        </li>
      *        <li>
@@ -823,7 +840,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.
+     * The name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.
      * </p>
      * <p>
      * Constraints:
@@ -831,17 +848,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Must contain from 1 to 63 numbers, letters, or hyphens
+     * Must contain from 1 to 63 numbers, letters, or hyphens.
      * </p>
      * </li>
      * <li>
      * <p>
-     * First character must be a letter
+     * First character must be a letter.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Can't end with a hyphen or contain two consecutive hyphens
+     * Can't end with a hyphen or contain two consecutive hyphens.
      * </p>
      * </li>
      * </ul>
@@ -850,24 +867,24 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param dBInstanceIdentifier
-     *        Name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.</p>
+     *        The name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Must contain from 1 to 63 numbers, letters, or hyphens
+     *        Must contain from 1 to 63 numbers, letters, or hyphens.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        First character must be a letter
+     *        First character must be a letter.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Can't end with a hyphen or contain two consecutive hyphens
+     *        Can't end with a hyphen or contain two consecutive hyphens.
      *        </p>
      *        </li>
      *        </ul>
@@ -881,7 +898,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.
+     * The name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.
      * </p>
      * <p>
      * Constraints:
@@ -889,17 +906,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Must contain from 1 to 63 numbers, letters, or hyphens
+     * Must contain from 1 to 63 numbers, letters, or hyphens.
      * </p>
      * </li>
      * <li>
      * <p>
-     * First character must be a letter
+     * First character must be a letter.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Can't end with a hyphen or contain two consecutive hyphens
+     * Can't end with a hyphen or contain two consecutive hyphens.
      * </p>
      * </li>
      * </ul>
@@ -907,24 +924,24 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Example: <code>my-snapshot-id</code>
      * </p>
      * 
-     * @return Name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.</p>
+     * @return The name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.</p>
      *         <p>
      *         Constraints:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Must contain from 1 to 63 numbers, letters, or hyphens
+     *         Must contain from 1 to 63 numbers, letters, or hyphens.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         First character must be a letter
+     *         First character must be a letter.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Can't end with a hyphen or contain two consecutive hyphens
+     *         Can't end with a hyphen or contain two consecutive hyphens.
      *         </p>
      *         </li>
      *         </ul>
@@ -938,7 +955,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.
+     * The name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.
      * </p>
      * <p>
      * Constraints:
@@ -946,17 +963,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Must contain from 1 to 63 numbers, letters, or hyphens
+     * Must contain from 1 to 63 numbers, letters, or hyphens.
      * </p>
      * </li>
      * <li>
      * <p>
-     * First character must be a letter
+     * First character must be a letter.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Can't end with a hyphen or contain two consecutive hyphens
+     * Can't end with a hyphen or contain two consecutive hyphens.
      * </p>
      * </li>
      * </ul>
@@ -965,24 +982,24 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param dBInstanceIdentifier
-     *        Name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.</p>
+     *        The name of the DB instance to create from the DB snapshot. This parameter isn't case-sensitive.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Must contain from 1 to 63 numbers, letters, or hyphens
+     *        Must contain from 1 to 63 numbers, letters, or hyphens.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        First character must be a letter
+     *        First character must be a letter.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Can't end with a hyphen or contain two consecutive hyphens
+     *        Can't end with a hyphen or contain two consecutive hyphens.
      *        </p>
      *        </li>
      *        </ul>
@@ -1006,7 +1023,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Must match the identifier of an existing DBSnapshot.
+     * Must match the identifier of an existing DB snapshot.
      * </p>
      * </li>
      * <li>
@@ -1035,7 +1052,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <ul>
      *        <li>
      *        <p>
-     *        Must match the identifier of an existing DBSnapshot.
+     *        Must match the identifier of an existing DB snapshot.
      *        </p>
      *        </li>
      *        <li>
@@ -1070,7 +1087,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Must match the identifier of an existing DBSnapshot.
+     * Must match the identifier of an existing DB snapshot.
      * </p>
      * </li>
      * <li>
@@ -1098,7 +1115,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         <ul>
      *         <li>
      *         <p>
-     *         Must match the identifier of an existing DBSnapshot.
+     *         Must match the identifier of an existing DB snapshot.
      *         </p>
      *         </li>
      *         <li>
@@ -1133,7 +1150,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Must match the identifier of an existing DBSnapshot.
+     * Must match the identifier of an existing DB snapshot.
      * </p>
      * </li>
      * <li>
@@ -1162,7 +1179,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <ul>
      *        <li>
      *        <p>
-     *        Must match the identifier of an existing DBSnapshot.
+     *        Must match the identifier of an existing DB snapshot.
      *        </p>
      *        </li>
      *        <li>
@@ -1440,20 +1457,34 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The DB subnet group name to use for the new instance.
+     * The name of the DB subnet group to use for the new instance.
      * </p>
      * <p>
-     * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If supplied, must match the name of an existing DB subnet group.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
-     *        The DB subnet group name to use for the new instance.</p>
+     *        The name of the DB subnet group to use for the new instance.</p>
      *        <p>
-     *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     *        Constraints:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If supplied, must match the name of an existing DB subnet group.
+     *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        Example: <code>mydbsubnetgroup</code>
      */
@@ -1464,19 +1495,33 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The DB subnet group name to use for the new instance.
+     * The name of the DB subnet group to use for the new instance.
      * </p>
      * <p>
-     * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If supplied, must match the name of an existing DB subnet group.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
-     * @return The DB subnet group name to use for the new instance.</p>
+     * @return The name of the DB subnet group to use for the new instance.</p>
      *         <p>
-     *         Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     *         Constraints:
      *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If supplied, must match the name of an existing DB subnet group.
+     *         </p>
+     *         </li>
+     *         </ul>
      *         <p>
      *         Example: <code>mydbsubnetgroup</code>
      */
@@ -1487,20 +1532,34 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The DB subnet group name to use for the new instance.
+     * The name of the DB subnet group to use for the new instance.
      * </p>
      * <p>
-     * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If supplied, must match the name of an existing DB subnet group.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
-     *        The DB subnet group name to use for the new instance.</p>
+     *        The name of the DB subnet group to use for the new instance.</p>
      *        <p>
-     *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     *        Constraints:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If supplied, must match the name of an existing DB subnet group.
+     *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        Example: <code>mydbsubnetgroup</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1946,18 +2005,18 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The database name for the restored DB instance.
+     * The name of the database for the restored DB instance.
      * </p>
      * <p>
-     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS Custom DB
-     * instances.
+     * This parameter only applies to RDS for Oracle and RDS for SQL Server DB instances. It doesn't apply to the other
+     * engines or to RDS Custom DB instances.
      * </p>
      * 
      * @param dBName
-     *        The database name for the restored DB instance.</p>
+     *        The name of the database for the restored DB instance.</p>
      *        <p>
-     *        This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS
-     *        Custom DB instances.
+     *        This parameter only applies to RDS for Oracle and RDS for SQL Server DB instances. It doesn't apply to the
+     *        other engines or to RDS Custom DB instances.
      */
 
     public void setDBName(String dBName) {
@@ -1966,17 +2025,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The database name for the restored DB instance.
+     * The name of the database for the restored DB instance.
      * </p>
      * <p>
-     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS Custom DB
-     * instances.
+     * This parameter only applies to RDS for Oracle and RDS for SQL Server DB instances. It doesn't apply to the other
+     * engines or to RDS Custom DB instances.
      * </p>
      * 
-     * @return The database name for the restored DB instance.</p>
+     * @return The name of the database for the restored DB instance.</p>
      *         <p>
-     *         This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS
-     *         Custom DB instances.
+     *         This parameter only applies to RDS for Oracle and RDS for SQL Server DB instances. It doesn't apply to
+     *         the other engines or to RDS Custom DB instances.
      */
 
     public String getDBName() {
@@ -1985,18 +2044,18 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The database name for the restored DB instance.
+     * The name of the database for the restored DB instance.
      * </p>
      * <p>
-     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS Custom DB
-     * instances.
+     * This parameter only applies to RDS for Oracle and RDS for SQL Server DB instances. It doesn't apply to the other
+     * engines or to RDS Custom DB instances.
      * </p>
      * 
      * @param dBName
-     *        The database name for the restored DB instance.</p>
+     *        The name of the database for the restored DB instance.</p>
      *        <p>
-     *        This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS
-     *        Custom DB instances.
+     *        This parameter only applies to RDS for Oracle and RDS for SQL Server DB instances. It doesn't apply to the
+     *        other engines or to RDS Custom DB instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2023,6 +2082,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -2096,6 +2165,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        Valid Values:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>mariadb</code>
@@ -2177,6 +2256,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>mariadb</code>
      * </p>
      * </li>
@@ -2247,6 +2336,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         Valid Values:
      *         </p>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>db2-ae</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db2-se</code>
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         <code>mariadb</code>
@@ -2328,6 +2427,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>mariadb</code>
      * </p>
      * </li>
@@ -2399,6 +2508,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        Valid Values:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>mariadb</code>
@@ -3004,8 +3123,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to
-     * this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
+     * The Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to this
+     * operation. Currently, you can create only Db2, MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
      * in an Active Directory Domain.
      * </p>
      * <p>
@@ -3018,8 +3137,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param domain
-     *        Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior
-     *        to this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB
+     *        The Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to this
+     *        operation. Currently, you can create only Db2, MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB
      *        instances in an Active Directory Domain.</p>
      *        <p>
      *        For more information, see <a
@@ -3036,8 +3155,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to
-     * this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
+     * The Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to this
+     * operation. Currently, you can create only Db2, MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
      * in an Active Directory Domain.
      * </p>
      * <p>
@@ -3049,9 +3168,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
-     * @return Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created
-     *         prior to this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and
-     *         PostgreSQL DB instances in an Active Directory Domain.</p>
+     * @return The Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to
+     *         this operation. Currently, you can create only Db2, MySQL, Microsoft SQL Server, Oracle, and PostgreSQL
+     *         DB instances in an Active Directory Domain.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
@@ -3067,8 +3186,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to
-     * this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
+     * The Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to this
+     * operation. Currently, you can create only Db2, MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
      * in an Active Directory Domain.
      * </p>
      * <p>
@@ -3081,8 +3200,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param domain
-     *        Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior
-     *        to this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB
+     *        The Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to this
+     *        operation. Currently, you can create only Db2, MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB
      *        instances in an Active Directory Domain.</p>
      *        <p>
      *        For more information, see <a
@@ -3969,8 +4088,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list depend on
-     * the DB engine being used. For more information, see <a href=
+     * The list of logs for the restored DB instance to export to CloudWatch Logs. The values in the list depend on the
+     * DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -3978,8 +4097,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
-     * @return The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list
-     *         depend on the DB engine being used. For more information, see <a href=
+     * @return The list of logs for the restored DB instance to export to CloudWatch Logs. The values in the list depend
+     *         on the DB engine. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      *         >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
@@ -3995,8 +4114,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list depend on
-     * the DB engine being used. For more information, see <a href=
+     * The list of logs for the restored DB instance to export to CloudWatch Logs. The values in the list depend on the
+     * DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -4005,8 +4124,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param enableCloudwatchLogsExports
-     *        The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list
-     *        depend on the DB engine being used. For more information, see <a href=
+     *        The list of logs for the restored DB instance to export to CloudWatch Logs. The values in the list depend
+     *        on the DB engine. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
@@ -4024,8 +4143,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list depend on
-     * the DB engine being used. For more information, see <a href=
+     * The list of logs for the restored DB instance to export to CloudWatch Logs. The values in the list depend on the
+     * DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -4039,8 +4158,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param enableCloudwatchLogsExports
-     *        The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list
-     *        depend on the DB engine being used. For more information, see <a href=
+     *        The list of logs for the restored DB instance to export to CloudWatch Logs. The values in the list depend
+     *        on the DB engine. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
@@ -4060,8 +4179,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list depend on
-     * the DB engine being used. For more information, see <a href=
+     * The list of logs for the restored DB instance to export to CloudWatch Logs. The values in the list depend on the
+     * DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -4070,8 +4189,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param enableCloudwatchLogsExports
-     *        The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list
-     *        depend on the DB engine being used. For more information, see <a href=
+     *        The list of logs for the restored DB instance to export to CloudWatch Logs. The values in the list depend
+     *        on the DB engine. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
@@ -4270,7 +4389,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * If supplied, must match the name of an existing DBParameterGroup.
+     * If supplied, must match the name of an existing DB parameter group.
      * </p>
      * </li>
      * <li>
@@ -4305,7 +4424,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <ul>
      *        <li>
      *        <p>
-     *        If supplied, must match the name of an existing DBParameterGroup.
+     *        If supplied, must match the name of an existing DB parameter group.
      *        </p>
      *        </li>
      *        <li>
@@ -4346,7 +4465,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * If supplied, must match the name of an existing DBParameterGroup.
+     * If supplied, must match the name of an existing DB parameter group.
      * </p>
      * </li>
      * <li>
@@ -4380,7 +4499,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         <ul>
      *         <li>
      *         <p>
-     *         If supplied, must match the name of an existing DBParameterGroup.
+     *         If supplied, must match the name of an existing DB parameter group.
      *         </p>
      *         </li>
      *         <li>
@@ -4421,7 +4540,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * If supplied, must match the name of an existing DBParameterGroup.
+     * If supplied, must match the name of an existing DB parameter group.
      * </p>
      * </li>
      * <li>
@@ -4456,7 +4575,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <ul>
      *        <li>
      *        <p>
-     *        If supplied, must match the name of an existing DBParameterGroup.
+     *        If supplied, must match the name of an existing DB parameter group.
      *        </p>
      *        </li>
      *        <li>

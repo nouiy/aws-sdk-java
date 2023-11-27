@@ -2035,6 +2035,72 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
 
     /**
      * <p>
+     * Retrieves the record of an existing introspection. If the retrieval is successful, the result of the
+     * instrospection will also be returned. If the retrieval fails the operation, an error message will be returned
+     * instead.
+     * </p>
+     * 
+     * @param getDataSourceIntrospectionRequest
+     * @return Result of the GetDataSourceIntrospection operation returned by the service.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @throws NotFoundException
+     *         The resource specified in the request was not found. Check the resource, and then try again.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @sample AWSAppSync.GetDataSourceIntrospection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetDataSourceIntrospection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetDataSourceIntrospectionResult getDataSourceIntrospection(GetDataSourceIntrospectionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDataSourceIntrospection(request);
+    }
+
+    @SdkInternalApi
+    final GetDataSourceIntrospectionResult executeGetDataSourceIntrospection(GetDataSourceIntrospectionRequest getDataSourceIntrospectionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDataSourceIntrospectionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDataSourceIntrospectionRequest> request = null;
+        Response<GetDataSourceIntrospectionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDataSourceIntrospectionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getDataSourceIntrospectionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDataSourceIntrospection");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDataSourceIntrospectionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetDataSourceIntrospectionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves a custom <code>DomainName</code> object.
      * </p>
      * 
@@ -3257,6 +3323,73 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
             HttpResponseHandler<AmazonWebServiceResponse<ListTypesByAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListTypesByAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a new introspection. Returns the <code>introspectionId</code> of the new introspection after its
+     * creation.
+     * </p>
+     * 
+     * @param startDataSourceIntrospectionRequest
+     * @return Result of the StartDataSourceIntrospection operation returned by the service.
+     * @throws NotFoundException
+     *         The resource specified in the request was not found. Check the resource, and then try again.
+     * @throws UnauthorizedException
+     *         You aren't authorized to perform this operation.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @sample AWSAppSync.StartDataSourceIntrospection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/StartDataSourceIntrospection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartDataSourceIntrospectionResult startDataSourceIntrospection(StartDataSourceIntrospectionRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartDataSourceIntrospection(request);
+    }
+
+    @SdkInternalApi
+    final StartDataSourceIntrospectionResult executeStartDataSourceIntrospection(StartDataSourceIntrospectionRequest startDataSourceIntrospectionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startDataSourceIntrospectionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartDataSourceIntrospectionRequest> request = null;
+        Response<StartDataSourceIntrospectionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartDataSourceIntrospectionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startDataSourceIntrospectionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartDataSourceIntrospection");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartDataSourceIntrospectionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartDataSourceIntrospectionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

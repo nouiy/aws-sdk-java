@@ -26,7 +26,7 @@ public class ResetLandingZoneResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * A unique identifier assigned to a <code>ResetLandingZone</code> operation. You can use this identifier as an
-     * input of <code>GetLandingZoneOperation</code> to check the operation's status.
+     * input parameter of <code>GetLandingZoneOperation</code> to check the operation's status.
      * </p>
      */
     private String operationIdentifier;
@@ -34,12 +34,12 @@ public class ResetLandingZoneResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * A unique identifier assigned to a <code>ResetLandingZone</code> operation. You can use this identifier as an
-     * input of <code>GetLandingZoneOperation</code> to check the operation's status.
+     * input parameter of <code>GetLandingZoneOperation</code> to check the operation's status.
      * </p>
      * 
      * @param operationIdentifier
      *        A unique identifier assigned to a <code>ResetLandingZone</code> operation. You can use this identifier as
-     *        an input of <code>GetLandingZoneOperation</code> to check the operation's status.
+     *        an input parameter of <code>GetLandingZoneOperation</code> to check the operation's status.
      */
 
     public void setOperationIdentifier(String operationIdentifier) {
@@ -49,11 +49,11 @@ public class ResetLandingZoneResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * A unique identifier assigned to a <code>ResetLandingZone</code> operation. You can use this identifier as an
-     * input of <code>GetLandingZoneOperation</code> to check the operation's status.
+     * input parameter of <code>GetLandingZoneOperation</code> to check the operation's status.
      * </p>
      * 
      * @return A unique identifier assigned to a <code>ResetLandingZone</code> operation. You can use this identifier as
-     *         an input of <code>GetLandingZoneOperation</code> to check the operation's status.
+     *         an input parameter of <code>GetLandingZoneOperation</code> to check the operation's status.
      */
 
     public String getOperationIdentifier() {
@@ -63,12 +63,12 @@ public class ResetLandingZoneResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * A unique identifier assigned to a <code>ResetLandingZone</code> operation. You can use this identifier as an
-     * input of <code>GetLandingZoneOperation</code> to check the operation's status.
+     * input parameter of <code>GetLandingZoneOperation</code> to check the operation's status.
      * </p>
      * 
      * @param operationIdentifier
      *        A unique identifier assigned to a <code>ResetLandingZone</code> operation. You can use this identifier as
-     *        an input of <code>GetLandingZoneOperation</code> to check the operation's status.
+     *        an input parameter of <code>GetLandingZoneOperation</code> to check the operation's status.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

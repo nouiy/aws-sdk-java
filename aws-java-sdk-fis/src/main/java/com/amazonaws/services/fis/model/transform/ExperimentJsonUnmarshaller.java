@@ -101,6 +101,14 @@ public class ExperimentJsonUnmarshaller implements Unmarshaller<Experiment, Json
                     context.nextToken();
                     experiment.setLogConfiguration(ExperimentLogConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("experimentOptions", targetDepth)) {
+                    context.nextToken();
+                    experiment.setExperimentOptions(ExperimentOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("targetAccountConfigurationsCount", targetDepth)) {
+                    context.nextToken();
+                    experiment.setTargetAccountConfigurationsCount(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

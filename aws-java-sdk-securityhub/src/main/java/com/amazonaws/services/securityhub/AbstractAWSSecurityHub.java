@@ -59,6 +59,11 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
     }
 
     @Override
+    public BatchGetConfigurationPolicyAssociationsResult batchGetConfigurationPolicyAssociations(BatchGetConfigurationPolicyAssociationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchGetSecurityControlsResult batchGetSecurityControls(BatchGetSecurityControlsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,6 +104,11 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
     }
 
     @Override
+    public CreateConfigurationPolicyResult createConfigurationPolicy(CreateConfigurationPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateFindingAggregatorResult createFindingAggregator(CreateFindingAggregatorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -120,6 +130,11 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
 
     @Override
     public DeleteActionTargetResult deleteActionTarget(DeleteActionTargetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteConfigurationPolicyResult deleteConfigurationPolicy(DeleteConfigurationPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -225,6 +240,16 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
     }
 
     @Override
+    public GetConfigurationPolicyResult getConfigurationPolicy(GetConfigurationPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetConfigurationPolicyAssociationResult getConfigurationPolicyAssociation(GetConfigurationPolicyAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetEnabledStandardsResult getEnabledStandards(GetEnabledStandardsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -286,6 +311,16 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
     }
 
     @Override
+    public ListConfigurationPoliciesResult listConfigurationPolicies(ListConfigurationPoliciesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListConfigurationPolicyAssociationsResult listConfigurationPolicyAssociations(ListConfigurationPolicyAssociationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListEnabledProductsForImportResult listEnabledProductsForImport(ListEnabledProductsForImportRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -326,6 +361,16 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
     }
 
     @Override
+    public StartConfigurationPolicyAssociationResult startConfigurationPolicyAssociation(StartConfigurationPolicyAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartConfigurationPolicyDisassociationResult startConfigurationPolicyDisassociation(StartConfigurationPolicyDisassociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public TagResourceResult tagResource(TagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -337,6 +382,11 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
 
     @Override
     public UpdateActionTargetResult updateActionTarget(UpdateActionTargetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateConfigurationPolicyResult updateConfigurationPolicy(UpdateConfigurationPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

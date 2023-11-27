@@ -108,7 +108,7 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For a list of supported languages and their associated language codes, refer to the <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table.
-     * Note that U.S. English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.
+     * Note that US English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.
      * </p>
      */
     private String languageCode;
@@ -346,7 +346,7 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For a list of supported languages and their associated language codes, refer to the <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table.
-     * Note that U.S. English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.
+     * Note that US English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.
      * </p>
      * 
      * @param languageCode
@@ -356,7 +356,7 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For a list of supported languages and their associated language codes, refer to the <a
      *        href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>
-     *        table. Note that U.S. English (<code>en-US</code>) is the only language supported with Amazon Transcribe
+     *        table. Note that US English (<code>en-US</code>) is the only language supported with Amazon Transcribe
      *        Medical.
      * @see CLMLanguageCode
      */
@@ -374,7 +374,7 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For a list of supported languages and their associated language codes, refer to the <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table.
-     * Note that U.S. English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.
+     * Note that US English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.
      * </p>
      * 
      * @return The language code used to create your custom language model. Each custom language model must contain
@@ -383,7 +383,7 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         For a list of supported languages and their associated language codes, refer to the <a
      *         href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>
-     *         table. Note that U.S. English (<code>en-US</code>) is the only language supported with Amazon Transcribe
+     *         table. Note that US English (<code>en-US</code>) is the only language supported with Amazon Transcribe
      *         Medical.
      * @see CLMLanguageCode
      */
@@ -401,7 +401,7 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For a list of supported languages and their associated language codes, refer to the <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table.
-     * Note that U.S. English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.
+     * Note that US English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.
      * </p>
      * 
      * @param languageCode
@@ -411,7 +411,7 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For a list of supported languages and their associated language codes, refer to the <a
      *        href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>
-     *        table. Note that U.S. English (<code>en-US</code>) is the only language supported with Amazon Transcribe
+     *        table. Note that US English (<code>en-US</code>) is the only language supported with Amazon Transcribe
      *        Medical.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CLMLanguageCode
@@ -431,7 +431,7 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For a list of supported languages and their associated language codes, refer to the <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table.
-     * Note that U.S. English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.
+     * Note that US English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.
      * </p>
      * 
      * @param languageCode
@@ -441,7 +441,7 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For a list of supported languages and their associated language codes, refer to the <a
      *        href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>
-     *        table. Note that U.S. English (<code>en-US</code>) is the only language supported with Amazon Transcribe
+     *        table. Note that US English (<code>en-US</code>) is the only language supported with Amazon Transcribe
      *        Medical.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CLMLanguageCode

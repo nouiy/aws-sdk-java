@@ -150,6 +150,10 @@ public class DescribeBackupJobResultJsonUnmarshaller implements Unmarshaller<Des
                     context.nextToken();
                     describeBackupJobResult.setResourceName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("InitiationDate", targetDepth)) {
+                    context.nextToken();
+                    describeBackupJobResult.setInitiationDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
                 if (context.testExpression("MessageCategory", targetDepth)) {
                     context.nextToken();
                     describeBackupJobResult.setMessageCategory(context.getUnmarshaller(String.class).unmarshall(context));

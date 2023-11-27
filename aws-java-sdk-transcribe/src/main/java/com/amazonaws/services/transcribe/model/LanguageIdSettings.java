@@ -59,7 +59,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom vocabulary must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom vocabulary isn't applied. There are no errors or
+     * transcription request. If the languages do not match, the custom vocabulary isn't applied. There are no errors or
      * warnings associated with a language mismatch.
      * </p>
      */
@@ -71,7 +71,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom vocabulary filter must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom vocabulary filter isn't applied. There are no
+     * transcription request. If the languages do not match, the custom vocabulary filter isn't applied. There are no
      * errors or warnings associated with a language mismatch.
      * </p>
      * <p>
@@ -87,8 +87,8 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom language model must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom language model isn't applied. There are no errors
-     * or warnings associated with a language mismatch.
+     * transcription request. If the languages do not match, the custom language model isn't applied. There are no
+     * errors or warnings associated with a language mismatch.
      * </p>
      */
     private String languageModelName;
@@ -100,7 +100,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom vocabulary must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom vocabulary isn't applied. There are no errors or
+     * transcription request. If the languages do not match, the custom vocabulary isn't applied. There are no errors or
      * warnings associated with a language mismatch.
      * </p>
      * 
@@ -109,7 +109,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      *        vocabulary names are case sensitive.</p>
      *        <p>
      *        The language of the specified custom vocabulary must match the language code that you specify in your
-     *        transcription request. If the languages don't match, the custom vocabulary isn't applied. There are no
+     *        transcription request. If the languages do not match, the custom vocabulary isn't applied. There are no
      *        errors or warnings associated with a language mismatch.
      */
 
@@ -124,7 +124,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom vocabulary must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom vocabulary isn't applied. There are no errors or
+     * transcription request. If the languages do not match, the custom vocabulary isn't applied. There are no errors or
      * warnings associated with a language mismatch.
      * </p>
      * 
@@ -132,7 +132,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      *         vocabulary names are case sensitive.</p>
      *         <p>
      *         The language of the specified custom vocabulary must match the language code that you specify in your
-     *         transcription request. If the languages don't match, the custom vocabulary isn't applied. There are no
+     *         transcription request. If the languages do not match, the custom vocabulary isn't applied. There are no
      *         errors or warnings associated with a language mismatch.
      */
 
@@ -147,7 +147,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom vocabulary must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom vocabulary isn't applied. There are no errors or
+     * transcription request. If the languages do not match, the custom vocabulary isn't applied. There are no errors or
      * warnings associated with a language mismatch.
      * </p>
      * 
@@ -156,7 +156,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      *        vocabulary names are case sensitive.</p>
      *        <p>
      *        The language of the specified custom vocabulary must match the language code that you specify in your
-     *        transcription request. If the languages don't match, the custom vocabulary isn't applied. There are no
+     *        transcription request. If the languages do not match, the custom vocabulary isn't applied. There are no
      *        errors or warnings associated with a language mismatch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -173,7 +173,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom vocabulary filter must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom vocabulary filter isn't applied. There are no
+     * transcription request. If the languages do not match, the custom vocabulary filter isn't applied. There are no
      * errors or warnings associated with a language mismatch.
      * </p>
      * <p>
@@ -186,7 +186,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      *        vocabulary filter names are case sensitive.</p>
      *        <p>
      *        The language of the specified custom vocabulary filter must match the language code that you specify in
-     *        your transcription request. If the languages don't match, the custom vocabulary filter isn't applied.
+     *        your transcription request. If the languages do not match, the custom vocabulary filter isn't applied.
      *        There are no errors or warnings associated with a language mismatch.
      *        </p>
      *        <p>
@@ -205,7 +205,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom vocabulary filter must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom vocabulary filter isn't applied. There are no
+     * transcription request. If the languages do not match, the custom vocabulary filter isn't applied. There are no
      * errors or warnings associated with a language mismatch.
      * </p>
      * <p>
@@ -217,7 +217,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      *         vocabulary filter names are case sensitive.</p>
      *         <p>
      *         The language of the specified custom vocabulary filter must match the language code that you specify in
-     *         your transcription request. If the languages don't match, the custom vocabulary filter isn't applied.
+     *         your transcription request. If the languages do not match, the custom vocabulary filter isn't applied.
      *         There are no errors or warnings associated with a language mismatch.
      *         </p>
      *         <p>
@@ -236,7 +236,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom vocabulary filter must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom vocabulary filter isn't applied. There are no
+     * transcription request. If the languages do not match, the custom vocabulary filter isn't applied. There are no
      * errors or warnings associated with a language mismatch.
      * </p>
      * <p>
@@ -249,7 +249,7 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      *        vocabulary filter names are case sensitive.</p>
      *        <p>
      *        The language of the specified custom vocabulary filter must match the language code that you specify in
-     *        your transcription request. If the languages don't match, the custom vocabulary filter isn't applied.
+     *        your transcription request. If the languages do not match, the custom vocabulary filter isn't applied.
      *        There are no errors or warnings associated with a language mismatch.
      *        </p>
      *        <p>
@@ -270,8 +270,8 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom language model must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom language model isn't applied. There are no errors
-     * or warnings associated with a language mismatch.
+     * transcription request. If the languages do not match, the custom language model isn't applied. There are no
+     * errors or warnings associated with a language mismatch.
      * </p>
      * 
      * @param languageModelName
@@ -279,8 +279,8 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      *        custom language model names are case sensitive.</p>
      *        <p>
      *        The language of the specified custom language model must match the language code that you specify in your
-     *        transcription request. If the languages don't match, the custom language model isn't applied. There are no
-     *        errors or warnings associated with a language mismatch.
+     *        transcription request. If the languages do not match, the custom language model isn't applied. There are
+     *        no errors or warnings associated with a language mismatch.
      */
 
     public void setLanguageModelName(String languageModelName) {
@@ -294,15 +294,15 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom language model must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom language model isn't applied. There are no errors
-     * or warnings associated with a language mismatch.
+     * transcription request. If the languages do not match, the custom language model isn't applied. There are no
+     * errors or warnings associated with a language mismatch.
      * </p>
      * 
      * @return The name of the custom language model you want to use when processing your transcription job. Note that
      *         custom language model names are case sensitive.</p>
      *         <p>
      *         The language of the specified custom language model must match the language code that you specify in your
-     *         transcription request. If the languages don't match, the custom language model isn't applied. There are
+     *         transcription request. If the languages do not match, the custom language model isn't applied. There are
      *         no errors or warnings associated with a language mismatch.
      */
 
@@ -317,8 +317,8 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * The language of the specified custom language model must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom language model isn't applied. There are no errors
-     * or warnings associated with a language mismatch.
+     * transcription request. If the languages do not match, the custom language model isn't applied. There are no
+     * errors or warnings associated with a language mismatch.
      * </p>
      * 
      * @param languageModelName
@@ -326,8 +326,8 @@ public class LanguageIdSettings implements Serializable, Cloneable, StructuredPo
      *        custom language model names are case sensitive.</p>
      *        <p>
      *        The language of the specified custom language model must match the language code that you specify in your
-     *        transcription request. If the languages don't match, the custom language model isn't applied. There are no
-     *        errors or warnings associated with a language mismatch.
+     *        transcription request. If the languages do not match, the custom language model isn't applied. There are
+     *        no errors or warnings associated with a language mismatch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

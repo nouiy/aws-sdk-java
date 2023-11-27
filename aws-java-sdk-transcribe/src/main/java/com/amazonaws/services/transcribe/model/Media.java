@@ -22,9 +22,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Describes the Amazon S3 location of the media file you want to use in your request.
  * </p>
  * <p>
- * For information on supported media formats, refer to the <a href=
- * "https://docs.aws.amazon.com/APIReference/API_StartTranscriptionJob.html#transcribe-StartTranscriptionJob-request-MediaFormat"
- * >MediaFormat</a> parameter or the <a
+ * For information on supported media formats, refer to the <code>MediaFormat</code> parameter or the <a
  * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-input.html#how-input-audio">Media formats</a> section in
  * the Amazon S3 Developer Guide.
  * </p>

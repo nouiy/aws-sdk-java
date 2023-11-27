@@ -31,7 +31,7 @@ public class ListLandingZonesResult extends com.amazonaws.AmazonWebServiceResult
     private java.util.List<LandingZoneSummary> landingZones;
     /**
      * <p>
-     * Retrieves the next page of results. If the string is empty, the current response is the end of the results.
+     * Retrieves the next page of results. If the string is empty, the response is the end of the results.
      * </p>
      */
     private String nextToken;
@@ -108,12 +108,11 @@ public class ListLandingZonesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Retrieves the next page of results. If the string is empty, the current response is the end of the results.
+     * Retrieves the next page of results. If the string is empty, the response is the end of the results.
      * </p>
      * 
      * @param nextToken
-     *        Retrieves the next page of results. If the string is empty, the current response is the end of the
-     *        results.
+     *        Retrieves the next page of results. If the string is empty, the response is the end of the results.
      */
 
     public void setNextToken(String nextToken) {
@@ -122,11 +121,10 @@ public class ListLandingZonesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Retrieves the next page of results. If the string is empty, the current response is the end of the results.
+     * Retrieves the next page of results. If the string is empty, the response is the end of the results.
      * </p>
      * 
-     * @return Retrieves the next page of results. If the string is empty, the current response is the end of the
-     *         results.
+     * @return Retrieves the next page of results. If the string is empty, the response is the end of the results.
      */
 
     public String getNextToken() {
@@ -135,12 +133,11 @@ public class ListLandingZonesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Retrieves the next page of results. If the string is empty, the current response is the end of the results.
+     * Retrieves the next page of results. If the string is empty, the response is the end of the results.
      * </p>
      * 
      * @param nextToken
-     *        Retrieves the next page of results. If the string is empty, the current response is the end of the
-     *        results.
+     *        Retrieves the next page of results. If the string is empty, the response is the end of the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

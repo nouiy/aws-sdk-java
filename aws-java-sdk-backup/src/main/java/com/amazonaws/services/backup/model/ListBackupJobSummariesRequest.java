@@ -128,7 +128,7 @@ public class ListBackupJobSummariesRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The next item following a partial list of returned resources. For example, if a request is made to return
-     * <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      */
@@ -831,13 +831,13 @@ public class ListBackupJobSummariesRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The next item following a partial list of returned resources. For example, if a request is made to return
-     * <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @param nextToken
      *        The next item following a partial list of returned resources. For example, if a request is made to return
-     *        <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items in
+     *        <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items in
      *        your list starting at the location pointed to by the next token.
      */
 
@@ -848,12 +848,12 @@ public class ListBackupJobSummariesRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The next item following a partial list of returned resources. For example, if a request is made to return
-     * <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @return The next item following a partial list of returned resources. For example, if a request is made to return
-     *         <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items in
+     *         <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items in
      *         your list starting at the location pointed to by the next token.
      */
 
@@ -864,13 +864,13 @@ public class ListBackupJobSummariesRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The next item following a partial list of returned resources. For example, if a request is made to return
-     * <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @param nextToken
      *        The next item following a partial list of returned resources. For example, if a request is made to return
-     *        <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items in
+     *        <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items in
      *        your list starting at the location pointed to by the next token.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

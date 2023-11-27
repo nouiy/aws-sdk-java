@@ -50,6 +50,36 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
      * </p>
      */
     private String resourceName;
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery point.
+     * </p>
+     */
+    private String lastBackupVaultArn;
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     * </p>
+     */
+    private String lastRecoveryPointArn;
+    /**
+     * <p>
+     * This is the time in minutes the most recent restore job took to complete.
+     * </p>
+     */
+    private Long latestRestoreExecutionTimeMinutes;
+    /**
+     * <p>
+     * This is the creation date of the most recent restore job.
+     * </p>
+     */
+    private java.util.Date latestRestoreJobCreationDate;
+    /**
+     * <p>
+     * This is the date the most recent recovery point was created.
+     * </p>
+     */
+    private java.util.Date latestRestoreRecoveryPointCreationDate;
 
     /**
      * <p>
@@ -230,6 +260,209 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery point.
+     * </p>
+     * 
+     * @param lastBackupVaultArn
+     *        This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery
+     *        point.
+     */
+
+    public void setLastBackupVaultArn(String lastBackupVaultArn) {
+        this.lastBackupVaultArn = lastBackupVaultArn;
+    }
+
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery point.
+     * </p>
+     * 
+     * @return This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery
+     *         point.
+     */
+
+    public String getLastBackupVaultArn() {
+        return this.lastBackupVaultArn;
+    }
+
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery point.
+     * </p>
+     * 
+     * @param lastBackupVaultArn
+     *        This is the ARN (Amazon Resource Name) of the backup vault that contains the most recent backup recovery
+     *        point.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeProtectedResourceResult withLastBackupVaultArn(String lastBackupVaultArn) {
+        setLastBackupVaultArn(lastBackupVaultArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     * </p>
+     * 
+     * @param lastRecoveryPointArn
+     *        This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     */
+
+    public void setLastRecoveryPointArn(String lastRecoveryPointArn) {
+        this.lastRecoveryPointArn = lastRecoveryPointArn;
+    }
+
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     * </p>
+     * 
+     * @return This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     */
+
+    public String getLastRecoveryPointArn() {
+        return this.lastRecoveryPointArn;
+    }
+
+    /**
+     * <p>
+     * This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     * </p>
+     * 
+     * @param lastRecoveryPointArn
+     *        This is the ARN (Amazon Resource Name) of the most recent recovery point.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeProtectedResourceResult withLastRecoveryPointArn(String lastRecoveryPointArn) {
+        setLastRecoveryPointArn(lastRecoveryPointArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This is the time in minutes the most recent restore job took to complete.
+     * </p>
+     * 
+     * @param latestRestoreExecutionTimeMinutes
+     *        This is the time in minutes the most recent restore job took to complete.
+     */
+
+    public void setLatestRestoreExecutionTimeMinutes(Long latestRestoreExecutionTimeMinutes) {
+        this.latestRestoreExecutionTimeMinutes = latestRestoreExecutionTimeMinutes;
+    }
+
+    /**
+     * <p>
+     * This is the time in minutes the most recent restore job took to complete.
+     * </p>
+     * 
+     * @return This is the time in minutes the most recent restore job took to complete.
+     */
+
+    public Long getLatestRestoreExecutionTimeMinutes() {
+        return this.latestRestoreExecutionTimeMinutes;
+    }
+
+    /**
+     * <p>
+     * This is the time in minutes the most recent restore job took to complete.
+     * </p>
+     * 
+     * @param latestRestoreExecutionTimeMinutes
+     *        This is the time in minutes the most recent restore job took to complete.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeProtectedResourceResult withLatestRestoreExecutionTimeMinutes(Long latestRestoreExecutionTimeMinutes) {
+        setLatestRestoreExecutionTimeMinutes(latestRestoreExecutionTimeMinutes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This is the creation date of the most recent restore job.
+     * </p>
+     * 
+     * @param latestRestoreJobCreationDate
+     *        This is the creation date of the most recent restore job.
+     */
+
+    public void setLatestRestoreJobCreationDate(java.util.Date latestRestoreJobCreationDate) {
+        this.latestRestoreJobCreationDate = latestRestoreJobCreationDate;
+    }
+
+    /**
+     * <p>
+     * This is the creation date of the most recent restore job.
+     * </p>
+     * 
+     * @return This is the creation date of the most recent restore job.
+     */
+
+    public java.util.Date getLatestRestoreJobCreationDate() {
+        return this.latestRestoreJobCreationDate;
+    }
+
+    /**
+     * <p>
+     * This is the creation date of the most recent restore job.
+     * </p>
+     * 
+     * @param latestRestoreJobCreationDate
+     *        This is the creation date of the most recent restore job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeProtectedResourceResult withLatestRestoreJobCreationDate(java.util.Date latestRestoreJobCreationDate) {
+        setLatestRestoreJobCreationDate(latestRestoreJobCreationDate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This is the date the most recent recovery point was created.
+     * </p>
+     * 
+     * @param latestRestoreRecoveryPointCreationDate
+     *        This is the date the most recent recovery point was created.
+     */
+
+    public void setLatestRestoreRecoveryPointCreationDate(java.util.Date latestRestoreRecoveryPointCreationDate) {
+        this.latestRestoreRecoveryPointCreationDate = latestRestoreRecoveryPointCreationDate;
+    }
+
+    /**
+     * <p>
+     * This is the date the most recent recovery point was created.
+     * </p>
+     * 
+     * @return This is the date the most recent recovery point was created.
+     */
+
+    public java.util.Date getLatestRestoreRecoveryPointCreationDate() {
+        return this.latestRestoreRecoveryPointCreationDate;
+    }
+
+    /**
+     * <p>
+     * This is the date the most recent recovery point was created.
+     * </p>
+     * 
+     * @param latestRestoreRecoveryPointCreationDate
+     *        This is the date the most recent recovery point was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeProtectedResourceResult withLatestRestoreRecoveryPointCreationDate(java.util.Date latestRestoreRecoveryPointCreationDate) {
+        setLatestRestoreRecoveryPointCreationDate(latestRestoreRecoveryPointCreationDate);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -248,7 +481,17 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
         if (getLastBackupTime() != null)
             sb.append("LastBackupTime: ").append(getLastBackupTime()).append(",");
         if (getResourceName() != null)
-            sb.append("ResourceName: ").append(getResourceName());
+            sb.append("ResourceName: ").append(getResourceName()).append(",");
+        if (getLastBackupVaultArn() != null)
+            sb.append("LastBackupVaultArn: ").append(getLastBackupVaultArn()).append(",");
+        if (getLastRecoveryPointArn() != null)
+            sb.append("LastRecoveryPointArn: ").append(getLastRecoveryPointArn()).append(",");
+        if (getLatestRestoreExecutionTimeMinutes() != null)
+            sb.append("LatestRestoreExecutionTimeMinutes: ").append(getLatestRestoreExecutionTimeMinutes()).append(",");
+        if (getLatestRestoreJobCreationDate() != null)
+            sb.append("LatestRestoreJobCreationDate: ").append(getLatestRestoreJobCreationDate()).append(",");
+        if (getLatestRestoreRecoveryPointCreationDate() != null)
+            sb.append("LatestRestoreRecoveryPointCreationDate: ").append(getLatestRestoreRecoveryPointCreationDate());
         sb.append("}");
         return sb.toString();
     }
@@ -279,6 +522,28 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getResourceName() != null && other.getResourceName().equals(this.getResourceName()) == false)
             return false;
+        if (other.getLastBackupVaultArn() == null ^ this.getLastBackupVaultArn() == null)
+            return false;
+        if (other.getLastBackupVaultArn() != null && other.getLastBackupVaultArn().equals(this.getLastBackupVaultArn()) == false)
+            return false;
+        if (other.getLastRecoveryPointArn() == null ^ this.getLastRecoveryPointArn() == null)
+            return false;
+        if (other.getLastRecoveryPointArn() != null && other.getLastRecoveryPointArn().equals(this.getLastRecoveryPointArn()) == false)
+            return false;
+        if (other.getLatestRestoreExecutionTimeMinutes() == null ^ this.getLatestRestoreExecutionTimeMinutes() == null)
+            return false;
+        if (other.getLatestRestoreExecutionTimeMinutes() != null
+                && other.getLatestRestoreExecutionTimeMinutes().equals(this.getLatestRestoreExecutionTimeMinutes()) == false)
+            return false;
+        if (other.getLatestRestoreJobCreationDate() == null ^ this.getLatestRestoreJobCreationDate() == null)
+            return false;
+        if (other.getLatestRestoreJobCreationDate() != null && other.getLatestRestoreJobCreationDate().equals(this.getLatestRestoreJobCreationDate()) == false)
+            return false;
+        if (other.getLatestRestoreRecoveryPointCreationDate() == null ^ this.getLatestRestoreRecoveryPointCreationDate() == null)
+            return false;
+        if (other.getLatestRestoreRecoveryPointCreationDate() != null
+                && other.getLatestRestoreRecoveryPointCreationDate().equals(this.getLatestRestoreRecoveryPointCreationDate()) == false)
+            return false;
         return true;
     }
 
@@ -291,6 +556,11 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
         hashCode = prime * hashCode + ((getLastBackupTime() == null) ? 0 : getLastBackupTime().hashCode());
         hashCode = prime * hashCode + ((getResourceName() == null) ? 0 : getResourceName().hashCode());
+        hashCode = prime * hashCode + ((getLastBackupVaultArn() == null) ? 0 : getLastBackupVaultArn().hashCode());
+        hashCode = prime * hashCode + ((getLastRecoveryPointArn() == null) ? 0 : getLastRecoveryPointArn().hashCode());
+        hashCode = prime * hashCode + ((getLatestRestoreExecutionTimeMinutes() == null) ? 0 : getLatestRestoreExecutionTimeMinutes().hashCode());
+        hashCode = prime * hashCode + ((getLatestRestoreJobCreationDate() == null) ? 0 : getLatestRestoreJobCreationDate().hashCode());
+        hashCode = prime * hashCode + ((getLatestRestoreRecoveryPointCreationDate() == null) ? 0 : getLatestRestoreRecoveryPointCreationDate().hashCode());
         return hashCode;
     }
 

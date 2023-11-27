@@ -40,7 +40,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     private java.util.List<StringFilter> productArn;
     /**
      * <p>
-     * The Amazon Web Services account ID that a finding is generated in.
+     * The Amazon Web Services account ID in which a finding is generated.
      * </p>
      */
     private java.util.List<StringFilter> awsAccountId;
@@ -803,6 +803,24 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      */
     private java.util.List<StringFilter> complianceSecurityControlParametersValue;
+    /**
+     * <p>
+     * The name of the Amazon Web Services account in which a finding is generated.
+     * </p>
+     */
+    private java.util.List<StringFilter> awsAccountName;
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     */
+    private java.util.List<StringFilter> resourceApplicationName;
+    /**
+     * <p>
+     * The ARN of the application that is related to a finding.
+     * </p>
+     */
+    private java.util.List<StringFilter> resourceApplicationArn;
 
     /**
      * <p>
@@ -888,10 +906,10 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Web Services account ID that a finding is generated in.
+     * The Amazon Web Services account ID in which a finding is generated.
      * </p>
      * 
-     * @return The Amazon Web Services account ID that a finding is generated in.
+     * @return The Amazon Web Services account ID in which a finding is generated.
      */
 
     public java.util.List<StringFilter> getAwsAccountId() {
@@ -900,11 +918,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Web Services account ID that a finding is generated in.
+     * The Amazon Web Services account ID in which a finding is generated.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account ID that a finding is generated in.
+     *        The Amazon Web Services account ID in which a finding is generated.
      */
 
     public void setAwsAccountId(java.util.Collection<StringFilter> awsAccountId) {
@@ -918,7 +936,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Web Services account ID that a finding is generated in.
+     * The Amazon Web Services account ID in which a finding is generated.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -927,7 +945,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account ID that a finding is generated in.
+     *        The Amazon Web Services account ID in which a finding is generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -943,11 +961,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Web Services account ID that a finding is generated in.
+     * The Amazon Web Services account ID in which a finding is generated.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account ID that a finding is generated in.
+     *        The Amazon Web Services account ID in which a finding is generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -9176,6 +9194,216 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The name of the Amazon Web Services account in which a finding is generated.
+     * </p>
+     * 
+     * @return The name of the Amazon Web Services account in which a finding is generated.
+     */
+
+    public java.util.List<StringFilter> getAwsAccountName() {
+        return awsAccountName;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Web Services account in which a finding is generated.
+     * </p>
+     * 
+     * @param awsAccountName
+     *        The name of the Amazon Web Services account in which a finding is generated.
+     */
+
+    public void setAwsAccountName(java.util.Collection<StringFilter> awsAccountName) {
+        if (awsAccountName == null) {
+            this.awsAccountName = null;
+            return;
+        }
+
+        this.awsAccountName = new java.util.ArrayList<StringFilter>(awsAccountName);
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Web Services account in which a finding is generated.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAwsAccountName(java.util.Collection)} or {@link #withAwsAccountName(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param awsAccountName
+     *        The name of the Amazon Web Services account in which a finding is generated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withAwsAccountName(StringFilter... awsAccountName) {
+        if (this.awsAccountName == null) {
+            setAwsAccountName(new java.util.ArrayList<StringFilter>(awsAccountName.length));
+        }
+        for (StringFilter ele : awsAccountName) {
+            this.awsAccountName.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Web Services account in which a finding is generated.
+     * </p>
+     * 
+     * @param awsAccountName
+     *        The name of the Amazon Web Services account in which a finding is generated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withAwsAccountName(java.util.Collection<StringFilter> awsAccountName) {
+        setAwsAccountName(awsAccountName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * 
+     * @return The name of the application that is related to a finding.
+     */
+
+    public java.util.List<StringFilter> getResourceApplicationName() {
+        return resourceApplicationName;
+    }
+
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * 
+     * @param resourceApplicationName
+     *        The name of the application that is related to a finding.
+     */
+
+    public void setResourceApplicationName(java.util.Collection<StringFilter> resourceApplicationName) {
+        if (resourceApplicationName == null) {
+            this.resourceApplicationName = null;
+            return;
+        }
+
+        this.resourceApplicationName = new java.util.ArrayList<StringFilter>(resourceApplicationName);
+    }
+
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setResourceApplicationName(java.util.Collection)} or
+     * {@link #withResourceApplicationName(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param resourceApplicationName
+     *        The name of the application that is related to a finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withResourceApplicationName(StringFilter... resourceApplicationName) {
+        if (this.resourceApplicationName == null) {
+            setResourceApplicationName(new java.util.ArrayList<StringFilter>(resourceApplicationName.length));
+        }
+        for (StringFilter ele : resourceApplicationName) {
+            this.resourceApplicationName.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * 
+     * @param resourceApplicationName
+     *        The name of the application that is related to a finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withResourceApplicationName(java.util.Collection<StringFilter> resourceApplicationName) {
+        setResourceApplicationName(resourceApplicationName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN of the application that is related to a finding.
+     * </p>
+     * 
+     * @return The ARN of the application that is related to a finding.
+     */
+
+    public java.util.List<StringFilter> getResourceApplicationArn() {
+        return resourceApplicationArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the application that is related to a finding.
+     * </p>
+     * 
+     * @param resourceApplicationArn
+     *        The ARN of the application that is related to a finding.
+     */
+
+    public void setResourceApplicationArn(java.util.Collection<StringFilter> resourceApplicationArn) {
+        if (resourceApplicationArn == null) {
+            this.resourceApplicationArn = null;
+            return;
+        }
+
+        this.resourceApplicationArn = new java.util.ArrayList<StringFilter>(resourceApplicationArn);
+    }
+
+    /**
+     * <p>
+     * The ARN of the application that is related to a finding.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setResourceApplicationArn(java.util.Collection)} or
+     * {@link #withResourceApplicationArn(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param resourceApplicationArn
+     *        The ARN of the application that is related to a finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withResourceApplicationArn(StringFilter... resourceApplicationArn) {
+        if (this.resourceApplicationArn == null) {
+            setResourceApplicationArn(new java.util.ArrayList<StringFilter>(resourceApplicationArn.length));
+        }
+        for (StringFilter ele : resourceApplicationArn) {
+            this.resourceApplicationArn.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN of the application that is related to a finding.
+     * </p>
+     * 
+     * @param resourceApplicationArn
+     *        The ARN of the application that is related to a finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withResourceApplicationArn(java.util.Collection<StringFilter> resourceApplicationArn) {
+        setResourceApplicationArn(resourceApplicationArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -9388,7 +9616,13 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         if (getComplianceSecurityControlParametersName() != null)
             sb.append("ComplianceSecurityControlParametersName: ").append(getComplianceSecurityControlParametersName()).append(",");
         if (getComplianceSecurityControlParametersValue() != null)
-            sb.append("ComplianceSecurityControlParametersValue: ").append(getComplianceSecurityControlParametersValue());
+            sb.append("ComplianceSecurityControlParametersValue: ").append(getComplianceSecurityControlParametersValue()).append(",");
+        if (getAwsAccountName() != null)
+            sb.append("AwsAccountName: ").append(getAwsAccountName()).append(",");
+        if (getResourceApplicationName() != null)
+            sb.append("ResourceApplicationName: ").append(getResourceApplicationName()).append(",");
+        if (getResourceApplicationArn() != null)
+            sb.append("ResourceApplicationArn: ").append(getResourceApplicationArn());
         sb.append("}");
         return sb.toString();
     }
@@ -9830,6 +10064,18 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         if (other.getComplianceSecurityControlParametersValue() != null
                 && other.getComplianceSecurityControlParametersValue().equals(this.getComplianceSecurityControlParametersValue()) == false)
             return false;
+        if (other.getAwsAccountName() == null ^ this.getAwsAccountName() == null)
+            return false;
+        if (other.getAwsAccountName() != null && other.getAwsAccountName().equals(this.getAwsAccountName()) == false)
+            return false;
+        if (other.getResourceApplicationName() == null ^ this.getResourceApplicationName() == null)
+            return false;
+        if (other.getResourceApplicationName() != null && other.getResourceApplicationName().equals(this.getResourceApplicationName()) == false)
+            return false;
+        if (other.getResourceApplicationArn() == null ^ this.getResourceApplicationArn() == null)
+            return false;
+        if (other.getResourceApplicationArn() != null && other.getResourceApplicationArn().equals(this.getResourceApplicationArn()) == false)
+            return false;
         return true;
     }
 
@@ -9941,6 +10187,9 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getVulnerabilitiesFixAvailable() == null) ? 0 : getVulnerabilitiesFixAvailable().hashCode());
         hashCode = prime * hashCode + ((getComplianceSecurityControlParametersName() == null) ? 0 : getComplianceSecurityControlParametersName().hashCode());
         hashCode = prime * hashCode + ((getComplianceSecurityControlParametersValue() == null) ? 0 : getComplianceSecurityControlParametersValue().hashCode());
+        hashCode = prime * hashCode + ((getAwsAccountName() == null) ? 0 : getAwsAccountName().hashCode());
+        hashCode = prime * hashCode + ((getResourceApplicationName() == null) ? 0 : getResourceApplicationName().hashCode());
+        hashCode = prime * hashCode + ((getResourceApplicationArn() == null) ? 0 : getResourceApplicationArn().hashCode());
         return hashCode;
     }
 

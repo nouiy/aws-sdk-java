@@ -34,7 +34,7 @@ public class ListRecoveryPointsByLegalHoldRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * This is the next item following a partial list of returned resources. For example, if a request is made to return
-     * <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      */
@@ -89,13 +89,13 @@ public class ListRecoveryPointsByLegalHoldRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * This is the next item following a partial list of returned resources. For example, if a request is made to return
-     * <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @param nextToken
      *        This is the next item following a partial list of returned resources. For example, if a request is made to
-     *        return <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items
+     *        return <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items
      *        in your list starting at the location pointed to by the next token.
      */
 
@@ -106,12 +106,12 @@ public class ListRecoveryPointsByLegalHoldRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * This is the next item following a partial list of returned resources. For example, if a request is made to return
-     * <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @return This is the next item following a partial list of returned resources. For example, if a request is made
-     *         to return <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more
+     *         to return <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more
      *         items in your list starting at the location pointed to by the next token.
      */
 
@@ -122,13 +122,13 @@ public class ListRecoveryPointsByLegalHoldRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * This is the next item following a partial list of returned resources. For example, if a request is made to return
-     * <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
+     * <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items in your list
      * starting at the location pointed to by the next token.
      * </p>
      * 
      * @param nextToken
      *        This is the next item following a partial list of returned resources. For example, if a request is made to
-     *        return <code>maxResults</code> number of resources, <code>NextToken</code> allows you to return more items
+     *        return <code>MaxResults</code> number of resources, <code>NextToken</code> allows you to return more items
      *        in your list starting at the location pointed to by the next token.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

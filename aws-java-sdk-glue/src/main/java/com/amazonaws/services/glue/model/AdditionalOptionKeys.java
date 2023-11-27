@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum AdditionalOptionKeys {
 
-    PerformanceTuningCaching("performanceTuning.caching");
+    PerformanceTuningCaching("performanceTuning.caching"),
+    ObservationsScope("observations.scope");
 
     private String value;
 

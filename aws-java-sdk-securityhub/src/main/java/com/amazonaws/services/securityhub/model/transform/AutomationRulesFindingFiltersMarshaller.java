@@ -98,6 +98,12 @@ public class AutomationRulesFindingFiltersMarshaller {
             .marshallLocationName("NoteUpdatedBy").build();
     private static final MarshallingInfo<List> USERDEFINEDFIELDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UserDefinedFields").build();
+    private static final MarshallingInfo<List> RESOURCEAPPLICATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceApplicationArn").build();
+    private static final MarshallingInfo<List> RESOURCEAPPLICATIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceApplicationName").build();
+    private static final MarshallingInfo<List> AWSACCOUNTNAME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsAccountName").build();
 
     private static final AutomationRulesFindingFiltersMarshaller instance = new AutomationRulesFindingFiltersMarshaller();
 
@@ -150,6 +156,9 @@ public class AutomationRulesFindingFiltersMarshaller {
             protocolMarshaller.marshall(automationRulesFindingFilters.getNoteUpdatedAt(), NOTEUPDATEDAT_BINDING);
             protocolMarshaller.marshall(automationRulesFindingFilters.getNoteUpdatedBy(), NOTEUPDATEDBY_BINDING);
             protocolMarshaller.marshall(automationRulesFindingFilters.getUserDefinedFields(), USERDEFINEDFIELDS_BINDING);
+            protocolMarshaller.marshall(automationRulesFindingFilters.getResourceApplicationArn(), RESOURCEAPPLICATIONARN_BINDING);
+            protocolMarshaller.marshall(automationRulesFindingFilters.getResourceApplicationName(), RESOURCEAPPLICATIONNAME_BINDING);
+            protocolMarshaller.marshall(automationRulesFindingFilters.getAwsAccountName(), AWSACCOUNTNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

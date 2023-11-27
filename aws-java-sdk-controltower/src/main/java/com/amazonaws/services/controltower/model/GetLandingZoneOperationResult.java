@@ -25,18 +25,18 @@ public class GetLandingZoneOperationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The landing zone operation details.
+     * Details about a landing zone operation.
      * </p>
      */
     private LandingZoneOperationDetail operationDetails;
 
     /**
      * <p>
-     * The landing zone operation details.
+     * Details about a landing zone operation.
      * </p>
      * 
      * @param operationDetails
-     *        The landing zone operation details.
+     *        Details about a landing zone operation.
      */
 
     public void setOperationDetails(LandingZoneOperationDetail operationDetails) {
@@ -45,10 +45,10 @@ public class GetLandingZoneOperationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The landing zone operation details.
+     * Details about a landing zone operation.
      * </p>
      * 
-     * @return The landing zone operation details.
+     * @return Details about a landing zone operation.
      */
 
     public LandingZoneOperationDetail getOperationDetails() {
@@ -57,11 +57,11 @@ public class GetLandingZoneOperationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The landing zone operation details.
+     * Details about a landing zone operation.
      * </p>
      * 
      * @param operationDetails
-     *        The landing zone operation details.
+     *        Details about a landing zone operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

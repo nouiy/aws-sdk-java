@@ -40,8 +40,8 @@ public class ModelSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The language of the specified custom language model must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom language model isn't applied. There are no errors
-     * or warnings associated with a language mismatch.
+     * transcription request. If the languages do not match, the custom language model isn't applied. There are no
+     * errors or warnings associated with a language mismatch.
      * </p>
      */
     private String languageModelName;
@@ -53,8 +53,8 @@ public class ModelSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The language of the specified custom language model must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom language model isn't applied. There are no errors
-     * or warnings associated with a language mismatch.
+     * transcription request. If the languages do not match, the custom language model isn't applied. There are no
+     * errors or warnings associated with a language mismatch.
      * </p>
      * 
      * @param languageModelName
@@ -62,8 +62,8 @@ public class ModelSettings implements Serializable, Cloneable, StructuredPojo {
      *        custom language model names are case sensitive.</p>
      *        <p>
      *        The language of the specified custom language model must match the language code that you specify in your
-     *        transcription request. If the languages don't match, the custom language model isn't applied. There are no
-     *        errors or warnings associated with a language mismatch.
+     *        transcription request. If the languages do not match, the custom language model isn't applied. There are
+     *        no errors or warnings associated with a language mismatch.
      */
 
     public void setLanguageModelName(String languageModelName) {
@@ -77,15 +77,15 @@ public class ModelSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The language of the specified custom language model must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom language model isn't applied. There are no errors
-     * or warnings associated with a language mismatch.
+     * transcription request. If the languages do not match, the custom language model isn't applied. There are no
+     * errors or warnings associated with a language mismatch.
      * </p>
      * 
      * @return The name of the custom language model you want to use when processing your transcription job. Note that
      *         custom language model names are case sensitive.</p>
      *         <p>
      *         The language of the specified custom language model must match the language code that you specify in your
-     *         transcription request. If the languages don't match, the custom language model isn't applied. There are
+     *         transcription request. If the languages do not match, the custom language model isn't applied. There are
      *         no errors or warnings associated with a language mismatch.
      */
 
@@ -100,8 +100,8 @@ public class ModelSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The language of the specified custom language model must match the language code that you specify in your
-     * transcription request. If the languages don't match, the custom language model isn't applied. There are no errors
-     * or warnings associated with a language mismatch.
+     * transcription request. If the languages do not match, the custom language model isn't applied. There are no
+     * errors or warnings associated with a language mismatch.
      * </p>
      * 
      * @param languageModelName
@@ -109,8 +109,8 @@ public class ModelSettings implements Serializable, Cloneable, StructuredPojo {
      *        custom language model names are case sensitive.</p>
      *        <p>
      *        The language of the specified custom language model must match the language code that you specify in your
-     *        transcription request. If the languages don't match, the custom language model isn't applied. There are no
-     *        errors or warnings associated with a language mismatch.
+     *        transcription request. If the languages do not match, the custom language model isn't applied. There are
+     *        no errors or warnings associated with a language mismatch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

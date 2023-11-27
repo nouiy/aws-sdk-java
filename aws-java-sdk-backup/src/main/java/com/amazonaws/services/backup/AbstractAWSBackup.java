@@ -68,6 +68,16 @@ public class AbstractAWSBackup implements AWSBackup {
     }
 
     @Override
+    public CreateRestoreTestingPlanResult createRestoreTestingPlan(CreateRestoreTestingPlanRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateRestoreTestingSelectionResult createRestoreTestingSelection(CreateRestoreTestingSelectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteBackupPlanResult deleteBackupPlan(DeleteBackupPlanRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -109,6 +119,16 @@ public class AbstractAWSBackup implements AWSBackup {
 
     @Override
     public DeleteReportPlanResult deleteReportPlan(DeleteReportPlanRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteRestoreTestingPlanResult deleteRestoreTestingPlan(DeleteRestoreTestingPlanRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteRestoreTestingSelectionResult deleteRestoreTestingSelection(DeleteRestoreTestingSelectionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -223,6 +243,26 @@ public class AbstractAWSBackup implements AWSBackup {
     }
 
     @Override
+    public GetRestoreJobMetadataResult getRestoreJobMetadata(GetRestoreJobMetadataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetRestoreTestingInferredMetadataResult getRestoreTestingInferredMetadata(GetRestoreTestingInferredMetadataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetRestoreTestingPlanResult getRestoreTestingPlan(GetRestoreTestingPlanRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetRestoreTestingSelectionResult getRestoreTestingSelection(GetRestoreTestingSelectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetSupportedResourceTypesResult getSupportedResourceTypes(GetSupportedResourceTypesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -328,6 +368,21 @@ public class AbstractAWSBackup implements AWSBackup {
     }
 
     @Override
+    public ListRestoreJobsByProtectedResourceResult listRestoreJobsByProtectedResource(ListRestoreJobsByProtectedResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListRestoreTestingPlansResult listRestoreTestingPlans(ListRestoreTestingPlansRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListRestoreTestingSelectionsResult listRestoreTestingSelections(ListRestoreTestingSelectionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListTagsResult listTags(ListTagsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -344,6 +399,11 @@ public class AbstractAWSBackup implements AWSBackup {
 
     @Override
     public PutBackupVaultNotificationsResult putBackupVaultNotifications(PutBackupVaultNotificationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutRestoreValidationResultResult putRestoreValidationResult(PutRestoreValidationResultRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -409,6 +469,16 @@ public class AbstractAWSBackup implements AWSBackup {
 
     @Override
     public UpdateReportPlanResult updateReportPlan(UpdateReportPlanRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateRestoreTestingPlanResult updateRestoreTestingPlan(UpdateRestoreTestingPlanRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateRestoreTestingSelectionResult updateRestoreTestingSelection(UpdateRestoreTestingSelectionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

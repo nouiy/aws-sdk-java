@@ -195,12 +195,19 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
     private String resourceName;
     /**
      * <p>
+     * This is the date a backup job was initiated.
+     * </p>
+     */
+    private java.util.Date initiationDate;
+    /**
+     * <p>
      * This is the job count for the specified message category.
      * </p>
      * <p>
-     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
-     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     * MessageCategory strings.
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>INVALIDPARAMETERS</code>. View <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * accepted MessageCategory strings.
      * </p>
      */
     private String messageCategory;
@@ -1414,21 +1421,62 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
+     * This is the date a backup job was initiated.
+     * </p>
+     * 
+     * @param initiationDate
+     *        This is the date a backup job was initiated.
+     */
+
+    public void setInitiationDate(java.util.Date initiationDate) {
+        this.initiationDate = initiationDate;
+    }
+
+    /**
+     * <p>
+     * This is the date a backup job was initiated.
+     * </p>
+     * 
+     * @return This is the date a backup job was initiated.
+     */
+
+    public java.util.Date getInitiationDate() {
+        return this.initiationDate;
+    }
+
+    /**
+     * <p>
+     * This is the date a backup job was initiated.
+     * </p>
+     * 
+     * @param initiationDate
+     *        This is the date a backup job was initiated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeBackupJobResult withInitiationDate(java.util.Date initiationDate) {
+        setInitiationDate(initiationDate);
+        return this;
+    }
+
+    /**
+     * <p>
      * This is the job count for the specified message category.
      * </p>
      * <p>
-     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
-     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     * MessageCategory strings.
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>INVALIDPARAMETERS</code>. View <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * accepted MessageCategory strings.
      * </p>
      * 
      * @param messageCategory
      *        This is the job count for the specified message category.</p>
      *        <p>
-     *        Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
-     *        <code>InvalidParameters</code>. See <a
+     *        Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>,
+     *        and <code>INVALIDPARAMETERS</code>. View <a
      *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     *        MessageCategory strings.
+     *        accepted MessageCategory strings.
      */
 
     public void setMessageCategory(String messageCategory) {
@@ -1440,17 +1488,18 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
      * This is the job count for the specified message category.
      * </p>
      * <p>
-     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
-     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     * MessageCategory strings.
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>INVALIDPARAMETERS</code>. View <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * accepted MessageCategory strings.
      * </p>
      * 
      * @return This is the job count for the specified message category.</p>
      *         <p>
-     *         Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
-     *         <code>InvalidParameters</code>. See <a
+     *         Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>,
+     *         and <code>INVALIDPARAMETERS</code>. View <a
      *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list
-     *         of MessageCategory strings.
+     *         of accepted MessageCategory strings.
      */
 
     public String getMessageCategory() {
@@ -1462,18 +1511,19 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
      * This is the job count for the specified message category.
      * </p>
      * <p>
-     * Example strings may include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>.
-     * See <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     * MessageCategory strings.
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>INVALIDPARAMETERS</code>. View <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * accepted MessageCategory strings.
      * </p>
      * 
      * @param messageCategory
      *        This is the job count for the specified message category.</p>
      *        <p>
-     *        Example strings may include <code>AccessDenied</code>, <code>Success</code>, and
-     *        <code>InvalidParameters</code>. See <a
+     *        Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>,
+     *        and <code>INVALIDPARAMETERS</code>. View <a
      *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
-     *        MessageCategory strings.
+     *        accepted MessageCategory strings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1544,6 +1594,8 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
             sb.append("ChildJobsInState: ").append(getChildJobsInState()).append(",");
         if (getResourceName() != null)
             sb.append("ResourceName: ").append(getResourceName()).append(",");
+        if (getInitiationDate() != null)
+            sb.append("InitiationDate: ").append(getInitiationDate()).append(",");
         if (getMessageCategory() != null)
             sb.append("MessageCategory: ").append(getMessageCategory());
         sb.append("}");
@@ -1660,6 +1712,10 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
             return false;
         if (other.getResourceName() != null && other.getResourceName().equals(this.getResourceName()) == false)
             return false;
+        if (other.getInitiationDate() == null ^ this.getInitiationDate() == null)
+            return false;
+        if (other.getInitiationDate() != null && other.getInitiationDate().equals(this.getInitiationDate()) == false)
+            return false;
         if (other.getMessageCategory() == null ^ this.getMessageCategory() == null)
             return false;
         if (other.getMessageCategory() != null && other.getMessageCategory().equals(this.getMessageCategory()) == false)
@@ -1697,6 +1753,7 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getNumberOfChildJobs() == null) ? 0 : getNumberOfChildJobs().hashCode());
         hashCode = prime * hashCode + ((getChildJobsInState() == null) ? 0 : getChildJobsInState().hashCode());
         hashCode = prime * hashCode + ((getResourceName() == null) ? 0 : getResourceName().hashCode());
+        hashCode = prime * hashCode + ((getInitiationDate() == null) ? 0 : getInitiationDate().hashCode());
         hashCode = prime * hashCode + ((getMessageCategory() == null) ? 0 : getMessageCategory().hashCode());
         return hashCode;
     }

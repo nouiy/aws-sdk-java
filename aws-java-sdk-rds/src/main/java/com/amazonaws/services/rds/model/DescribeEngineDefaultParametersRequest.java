@@ -76,6 +76,16 @@ public class DescribeEngineDefaultParametersRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>mariadb10.2</code>
      * </p>
      * </li>
@@ -355,6 +365,16 @@ public class DescribeEngineDefaultParametersRequest extends com.amazonaws.Amazon
      *        </li>
      *        <li>
      *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>mariadb10.2</code>
      *        </p>
      *        </li>
@@ -598,6 +618,16 @@ public class DescribeEngineDefaultParametersRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>mariadb10.2</code>
      * </p>
      * </li>
@@ -832,6 +862,16 @@ public class DescribeEngineDefaultParametersRequest extends com.amazonaws.Amazon
      *        <li>
      *        <p>
      *        <code>custom-oracle-ee-19</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1080,6 +1120,16 @@ public class DescribeEngineDefaultParametersRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>mariadb10.2</code>
      * </p>
      * </li>
@@ -1313,6 +1363,16 @@ public class DescribeEngineDefaultParametersRequest extends com.amazonaws.Amazon
      *         <li>
      *         <p>
      *         <code>custom-oracle-ee-19</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db2-ae</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db2-se</code>
      *         </p>
      *         </li>
      *         <li>
@@ -1561,6 +1621,16 @@ public class DescribeEngineDefaultParametersRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>mariadb10.2</code>
      * </p>
      * </li>
@@ -1795,6 +1865,16 @@ public class DescribeEngineDefaultParametersRequest extends com.amazonaws.Amazon
      *        <li>
      *        <p>
      *        <code>custom-oracle-ee-19</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
      *        </p>
      *        </li>
      *        <li>

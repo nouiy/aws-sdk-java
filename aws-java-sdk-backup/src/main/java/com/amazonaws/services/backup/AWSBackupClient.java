@@ -719,6 +719,177 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
 
     /**
      * <p>
+     * This is the first of two steps to create a restore testing plan; once this request is successful, finish the
+     * procedure with request CreateRestoreTestingSelection.
+     * </p>
+     * <p>
+     * You must include the parameter RestoreTestingPlan. You may optionally include CreatorRequestId and Tags.
+     * </p>
+     * 
+     * @param createRestoreTestingPlanRequest
+     * @return Result of the CreateRestoreTestingPlan operation returned by the service.
+     * @throws AlreadyExistsException
+     *         The required resource already exists.
+     * @throws ConflictException
+     *         Backup can't perform the action that you requested until it finishes performing a previous action. Try
+     *         again later.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws LimitExceededException
+     *         A limit in the request has been exceeded; for example, a maximum number of items allowed in a request.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.CreateRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/CreateRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateRestoreTestingPlanResult createRestoreTestingPlan(CreateRestoreTestingPlanRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateRestoreTestingPlan(request);
+    }
+
+    @SdkInternalApi
+    final CreateRestoreTestingPlanResult executeCreateRestoreTestingPlan(CreateRestoreTestingPlanRequest createRestoreTestingPlanRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createRestoreTestingPlanRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateRestoreTestingPlanRequest> request = null;
+        Response<CreateRestoreTestingPlanResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateRestoreTestingPlanRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createRestoreTestingPlanRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateRestoreTestingPlan");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateRestoreTestingPlanResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateRestoreTestingPlanResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This request can be sent after CreateRestoreTestingPlan request returns successfully. This is the second part of
+     * creating a resource testing plan, and it must be completed sequentially.
+     * </p>
+     * <p>
+     * This consists of <code>RestoreTestingSelectionName</code>, <code>ProtectedResourceType</code>, and one of the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ProtectedResourceArns</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ProtectedResourceConditions</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Each protected resource type can have one single value.
+     * </p>
+     * <p>
+     * A restore testing selection can include a wildcard value ("*") for <code>ProtectedResourceArns</code> along with
+     * <code>ProtectedResourceConditions</code>. Alternatively, you can include up to 30 specific protected resource
+     * ARNs in <code>ProtectedResourceArns</code>.
+     * </p>
+     * <p>
+     * Cannot select by both protected resource types AND specific ARNs. Request will fail if both are included.
+     * </p>
+     * 
+     * @param createRestoreTestingSelectionRequest
+     * @return Result of the CreateRestoreTestingSelection operation returned by the service.
+     * @throws AlreadyExistsException
+     *         The required resource already exists.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws LimitExceededException
+     *         A limit in the request has been exceeded; for example, a maximum number of items allowed in a request.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.CreateRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/CreateRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateRestoreTestingSelectionResult createRestoreTestingSelection(CreateRestoreTestingSelectionRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateRestoreTestingSelection(request);
+    }
+
+    @SdkInternalApi
+    final CreateRestoreTestingSelectionResult executeCreateRestoreTestingSelection(CreateRestoreTestingSelectionRequest createRestoreTestingSelectionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createRestoreTestingSelectionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateRestoreTestingSelectionRequest> request = null;
+        Response<CreateRestoreTestingSelectionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateRestoreTestingSelectionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createRestoreTestingSelectionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateRestoreTestingSelection");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateRestoreTestingSelectionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateRestoreTestingSelectionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a backup plan. A backup plan can only be deleted after all associated selections of resources have been
      * deleted. Deleting a backup plan deletes the current version of a backup plan. Previous versions, if any, will
      * still exist.
@@ -1329,6 +1500,136 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteReportPlanResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteReportPlanResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This request deletes the specified restore testing plan.
+     * </p>
+     * <p>
+     * Deletion can only successfully occur if all associated restore testing selections are deleted first.
+     * </p>
+     * 
+     * @param deleteRestoreTestingPlanRequest
+     * @return Result of the DeleteRestoreTestingPlan operation returned by the service.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a parameter is of the wrong
+     *         type.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.DeleteRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteRestoreTestingPlanResult deleteRestoreTestingPlan(DeleteRestoreTestingPlanRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteRestoreTestingPlan(request);
+    }
+
+    @SdkInternalApi
+    final DeleteRestoreTestingPlanResult executeDeleteRestoreTestingPlan(DeleteRestoreTestingPlanRequest deleteRestoreTestingPlanRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteRestoreTestingPlanRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteRestoreTestingPlanRequest> request = null;
+        Response<DeleteRestoreTestingPlanResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteRestoreTestingPlanRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteRestoreTestingPlanRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteRestoreTestingPlan");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteRestoreTestingPlanResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteRestoreTestingPlanResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Input the Restore Testing Plan name and Restore Testing Selection name.
+     * </p>
+     * <p>
+     * All testing selections associated with a restore testing plan must be deleted before the restore testing plan can
+     * be deleted.
+     * </p>
+     * 
+     * @param deleteRestoreTestingSelectionRequest
+     * @return Result of the DeleteRestoreTestingSelection operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.DeleteRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteRestoreTestingSelectionResult deleteRestoreTestingSelection(DeleteRestoreTestingSelectionRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteRestoreTestingSelection(request);
+    }
+
+    @SdkInternalApi
+    final DeleteRestoreTestingSelectionResult executeDeleteRestoreTestingSelection(DeleteRestoreTestingSelectionRequest deleteRestoreTestingSelectionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteRestoreTestingSelectionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteRestoreTestingSelectionRequest> request = null;
+        Response<DeleteRestoreTestingSelectionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteRestoreTestingSelectionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteRestoreTestingSelectionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteRestoreTestingSelection");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteRestoreTestingSelectionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteRestoreTestingSelectionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2770,6 +3071,260 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
 
     /**
      * <p>
+     * This request returns the metadata for the specified restore job.
+     * </p>
+     * 
+     * @param getRestoreJobMetadataRequest
+     * @return Result of the GetRestoreJobMetadata operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.GetRestoreJobMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreJobMetadata" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetRestoreJobMetadataResult getRestoreJobMetadata(GetRestoreJobMetadataRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetRestoreJobMetadata(request);
+    }
+
+    @SdkInternalApi
+    final GetRestoreJobMetadataResult executeGetRestoreJobMetadata(GetRestoreJobMetadataRequest getRestoreJobMetadataRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getRestoreJobMetadataRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetRestoreJobMetadataRequest> request = null;
+        Response<GetRestoreJobMetadataResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetRestoreJobMetadataRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getRestoreJobMetadataRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetRestoreJobMetadata");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetRestoreJobMetadataResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetRestoreJobMetadataResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This request returns the minimal required set of metadata needed to start a restore job with secure default
+     * settings. <code>BackupVaultName</code> and <code>RecoveryPointArn</code> are required parameters.
+     * <code>BackupVaultAccountId</code> is an optional parameter.
+     * </p>
+     * 
+     * @param getRestoreTestingInferredMetadataRequest
+     * @return Result of the GetRestoreTestingInferredMetadata operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.GetRestoreTestingInferredMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingInferredMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetRestoreTestingInferredMetadataResult getRestoreTestingInferredMetadata(GetRestoreTestingInferredMetadataRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetRestoreTestingInferredMetadata(request);
+    }
+
+    @SdkInternalApi
+    final GetRestoreTestingInferredMetadataResult executeGetRestoreTestingInferredMetadata(
+            GetRestoreTestingInferredMetadataRequest getRestoreTestingInferredMetadataRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getRestoreTestingInferredMetadataRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetRestoreTestingInferredMetadataRequest> request = null;
+        Response<GetRestoreTestingInferredMetadataResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetRestoreTestingInferredMetadataRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getRestoreTestingInferredMetadataRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetRestoreTestingInferredMetadata");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetRestoreTestingInferredMetadataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetRestoreTestingInferredMetadataResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns <code>RestoreTestingPlan</code> details for the specified <code>RestoreTestingPlanName</code>. The
+     * details are the body of a restore testing plan in JSON format, in addition to plan metadata.
+     * </p>
+     * 
+     * @param getRestoreTestingPlanRequest
+     * @return Result of the GetRestoreTestingPlan operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.GetRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetRestoreTestingPlanResult getRestoreTestingPlan(GetRestoreTestingPlanRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetRestoreTestingPlan(request);
+    }
+
+    @SdkInternalApi
+    final GetRestoreTestingPlanResult executeGetRestoreTestingPlan(GetRestoreTestingPlanRequest getRestoreTestingPlanRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getRestoreTestingPlanRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetRestoreTestingPlanRequest> request = null;
+        Response<GetRestoreTestingPlanResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetRestoreTestingPlanRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getRestoreTestingPlanRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetRestoreTestingPlan");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetRestoreTestingPlanResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetRestoreTestingPlanResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns RestoreTestingSelection, which displays resources and elements of the restore testing plan.
+     * </p>
+     * 
+     * @param getRestoreTestingSelectionRequest
+     * @return Result of the GetRestoreTestingSelection operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.GetRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetRestoreTestingSelectionResult getRestoreTestingSelection(GetRestoreTestingSelectionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetRestoreTestingSelection(request);
+    }
+
+    @SdkInternalApi
+    final GetRestoreTestingSelectionResult executeGetRestoreTestingSelection(GetRestoreTestingSelectionRequest getRestoreTestingSelectionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getRestoreTestingSelectionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetRestoreTestingSelectionRequest> request = null;
+        Response<GetRestoreTestingSelectionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetRestoreTestingSelectionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getRestoreTestingSelectionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetRestoreTestingSelection");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetRestoreTestingSelectionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetRestoreTestingSelectionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the Amazon Web Services resource types supported by Backup.
      * </p>
      * 
@@ -4096,6 +4651,202 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
 
     /**
      * <p>
+     * This returns restore jobs that contain the specified protected resource.
+     * </p>
+     * <p>
+     * You must include <code>ResourceArn</code>. You can optionally include <code>NextToken</code>,
+     * <code>ByStatus</code>, <code>MaxResults</code>, <code>ByRecoveryPointCreationDateAfter</code> , and
+     * <code>ByRecoveryPointCreationDateBefore</code>.
+     * </p>
+     * 
+     * @param listRestoreJobsByProtectedResourceRequest
+     * @return Result of the ListRestoreJobsByProtectedResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.ListRestoreJobsByProtectedResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreJobsByProtectedResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListRestoreJobsByProtectedResourceResult listRestoreJobsByProtectedResource(ListRestoreJobsByProtectedResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeListRestoreJobsByProtectedResource(request);
+    }
+
+    @SdkInternalApi
+    final ListRestoreJobsByProtectedResourceResult executeListRestoreJobsByProtectedResource(
+            ListRestoreJobsByProtectedResourceRequest listRestoreJobsByProtectedResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listRestoreJobsByProtectedResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListRestoreJobsByProtectedResourceRequest> request = null;
+        Response<ListRestoreJobsByProtectedResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListRestoreJobsByProtectedResourceRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listRestoreJobsByProtectedResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListRestoreJobsByProtectedResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListRestoreJobsByProtectedResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListRestoreJobsByProtectedResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of restore testing plans.
+     * </p>
+     * 
+     * @param listRestoreTestingPlansRequest
+     * @return Result of the ListRestoreTestingPlans operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.ListRestoreTestingPlans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreTestingPlans" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListRestoreTestingPlansResult listRestoreTestingPlans(ListRestoreTestingPlansRequest request) {
+        request = beforeClientExecution(request);
+        return executeListRestoreTestingPlans(request);
+    }
+
+    @SdkInternalApi
+    final ListRestoreTestingPlansResult executeListRestoreTestingPlans(ListRestoreTestingPlansRequest listRestoreTestingPlansRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listRestoreTestingPlansRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListRestoreTestingPlansRequest> request = null;
+        Response<ListRestoreTestingPlansResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListRestoreTestingPlansRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listRestoreTestingPlansRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListRestoreTestingPlans");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListRestoreTestingPlansResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListRestoreTestingPlansResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of restore testing selections. Can be filtered by <code>MaxResults</code> and
+     * <code>RestoreTestingPlanName</code>.
+     * </p>
+     * 
+     * @param listRestoreTestingSelectionsRequest
+     * @return Result of the ListRestoreTestingSelections operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.ListRestoreTestingSelections
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreTestingSelections"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListRestoreTestingSelectionsResult listRestoreTestingSelections(ListRestoreTestingSelectionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListRestoreTestingSelections(request);
+    }
+
+    @SdkInternalApi
+    final ListRestoreTestingSelectionsResult executeListRestoreTestingSelections(ListRestoreTestingSelectionsRequest listRestoreTestingSelectionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listRestoreTestingSelectionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListRestoreTestingSelectionsRequest> request = null;
+        Response<ListRestoreTestingSelectionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListRestoreTestingSelectionsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listRestoreTestingSelectionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListRestoreTestingSelections");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListRestoreTestingSelectionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListRestoreTestingSelectionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of key-value pairs assigned to a target recovery point, backup plan, or backup vault.
      * </p>
      * <p>
@@ -4363,6 +5114,76 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
             HttpResponseHandler<AmazonWebServiceResponse<PutBackupVaultNotificationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new PutBackupVaultNotificationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This request allows you to send your independent self-run restore test validation results.
+     * <code>RestoreJobId</code> and <code>ValidationStatus</code> are required. Optionally, you can input a
+     * <code>ValidationStatusMessage</code>.
+     * </p>
+     * 
+     * @param putRestoreValidationResultRequest
+     * @return Result of the PutRestoreValidationResult operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a parameter is of the wrong
+     *         type.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.PutRestoreValidationResult
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/PutRestoreValidationResult"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutRestoreValidationResultResult putRestoreValidationResult(PutRestoreValidationResultRequest request) {
+        request = beforeClientExecution(request);
+        return executePutRestoreValidationResult(request);
+    }
+
+    @SdkInternalApi
+    final PutRestoreValidationResultResult executePutRestoreValidationResult(PutRestoreValidationResultRequest putRestoreValidationResultRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putRestoreValidationResultRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutRestoreValidationResultRequest> request = null;
+        Response<PutRestoreValidationResultResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutRestoreValidationResultRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putRestoreValidationResultRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutRestoreValidationResult");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutRestoreValidationResultResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutRestoreValidationResultResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -5250,6 +6071,178 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateReportPlanResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateReportPlanResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This request will send changes to your specified restore testing plan. <code>RestoreTestingPlanName</code> cannot
+     * be updated after it is created.
+     * </p>
+     * <p>
+     * <code>RecoveryPointSelection</code> can contain:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Algorithm</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExcludeVaults</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IncludeVaults</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RecoveryPointTypes</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SelectionWindowDays</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param updateRestoreTestingPlanRequest
+     * @return Result of the UpdateRestoreTestingPlan operation returned by the service.
+     * @throws ConflictException
+     *         Backup can't perform the action that you requested until it finishes performing a previous action. Try
+     *         again later.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.UpdateRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateRestoreTestingPlanResult updateRestoreTestingPlan(UpdateRestoreTestingPlanRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateRestoreTestingPlan(request);
+    }
+
+    @SdkInternalApi
+    final UpdateRestoreTestingPlanResult executeUpdateRestoreTestingPlan(UpdateRestoreTestingPlanRequest updateRestoreTestingPlanRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateRestoreTestingPlanRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateRestoreTestingPlanRequest> request = null;
+        Response<UpdateRestoreTestingPlanResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateRestoreTestingPlanRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateRestoreTestingPlanRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateRestoreTestingPlan");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateRestoreTestingPlanResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateRestoreTestingPlanResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Most elements except the <code>RestoreTestingSelectionName</code> can be updated with this request.
+     * </p>
+     * <p>
+     * <code>RestoreTestingSelection</code> can use either protected resource ARNs or conditions, but not both. That is,
+     * if your selection has <code>ProtectedResourceArns</code>, requesting an update with the parameter
+     * <code>ProtectedResourceConditions</code> will be unsuccessful.
+     * </p>
+     * 
+     * @param updateRestoreTestingSelectionRequest
+     * @return Result of the UpdateRestoreTestingSelection operation returned by the service.
+     * @throws ConflictException
+     *         Backup can't perform the action that you requested until it finishes performing a previous action. Try
+     *         again later.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.UpdateRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateRestoreTestingSelectionResult updateRestoreTestingSelection(UpdateRestoreTestingSelectionRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateRestoreTestingSelection(request);
+    }
+
+    @SdkInternalApi
+    final UpdateRestoreTestingSelectionResult executeUpdateRestoreTestingSelection(UpdateRestoreTestingSelectionRequest updateRestoreTestingSelectionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateRestoreTestingSelectionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateRestoreTestingSelectionRequest> request = null;
+        Response<UpdateRestoreTestingSelectionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateRestoreTestingSelectionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateRestoreTestingSelectionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateRestoreTestingSelection");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateRestoreTestingSelectionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateRestoreTestingSelectionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

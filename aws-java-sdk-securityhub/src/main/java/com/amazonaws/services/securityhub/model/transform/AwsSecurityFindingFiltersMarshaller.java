@@ -230,6 +230,12 @@ public class AwsSecurityFindingFiltersMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComplianceSecurityControlParametersName").build();
     private static final MarshallingInfo<List> COMPLIANCESECURITYCONTROLPARAMETERSVALUE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComplianceSecurityControlParametersValue").build();
+    private static final MarshallingInfo<List> AWSACCOUNTNAME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsAccountName").build();
+    private static final MarshallingInfo<List> RESOURCEAPPLICATIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceApplicationName").build();
+    private static final MarshallingInfo<List> RESOURCEAPPLICATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceApplicationArn").build();
 
     private static final AwsSecurityFindingFiltersMarshaller instance = new AwsSecurityFindingFiltersMarshaller();
 
@@ -352,6 +358,9 @@ public class AwsSecurityFindingFiltersMarshaller {
                     .marshall(awsSecurityFindingFilters.getComplianceSecurityControlParametersName(), COMPLIANCESECURITYCONTROLPARAMETERSNAME_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getComplianceSecurityControlParametersValue(),
                     COMPLIANCESECURITYCONTROLPARAMETERSVALUE_BINDING);
+            protocolMarshaller.marshall(awsSecurityFindingFilters.getAwsAccountName(), AWSACCOUNTNAME_BINDING);
+            protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceApplicationName(), RESOURCEAPPLICATIONNAME_BINDING);
+            protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceApplicationArn(), RESOURCEAPPLICATIONARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

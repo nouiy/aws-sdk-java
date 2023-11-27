@@ -196,11 +196,18 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
     private String resourceName;
     /**
      * <p>
+     * This is the date on which the backup job was initiated.
+     * </p>
+     */
+    private java.util.Date initiationDate;
+    /**
+     * <p>
      * This parameter is the job count for the specified message category.
      * </p>
      * <p>
-     * Example strings include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>. See
-     * <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>INVALIDPARAMETERS</code>. See <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
      * MessageCategory strings.
      * </p>
      * <p>
@@ -1361,11 +1368,52 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * This is the date on which the backup job was initiated.
+     * </p>
+     * 
+     * @param initiationDate
+     *        This is the date on which the backup job was initiated.
+     */
+
+    public void setInitiationDate(java.util.Date initiationDate) {
+        this.initiationDate = initiationDate;
+    }
+
+    /**
+     * <p>
+     * This is the date on which the backup job was initiated.
+     * </p>
+     * 
+     * @return This is the date on which the backup job was initiated.
+     */
+
+    public java.util.Date getInitiationDate() {
+        return this.initiationDate;
+    }
+
+    /**
+     * <p>
+     * This is the date on which the backup job was initiated.
+     * </p>
+     * 
+     * @param initiationDate
+     *        This is the date on which the backup job was initiated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BackupJob withInitiationDate(java.util.Date initiationDate) {
+        setInitiationDate(initiationDate);
+        return this;
+    }
+
+    /**
+     * <p>
      * This parameter is the job count for the specified message category.
      * </p>
      * <p>
-     * Example strings include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>. See
-     * <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>INVALIDPARAMETERS</code>. See <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
      * MessageCategory strings.
      * </p>
      * <p>
@@ -1378,8 +1426,8 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
      * @param messageCategory
      *        This parameter is the job count for the specified message category.</p>
      *        <p>
-     *        Example strings include <code>AccessDenied</code>, <code>Success</code>, and
-     *        <code>InvalidParameters</code>. See <a
+     *        Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>,
+     *        and <code>INVALIDPARAMETERS</code>. See <a
      *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
      *        MessageCategory strings.
      *        </p>
@@ -1399,8 +1447,9 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
      * This parameter is the job count for the specified message category.
      * </p>
      * <p>
-     * Example strings include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>. See
-     * <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>INVALIDPARAMETERS</code>. See <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
      * MessageCategory strings.
      * </p>
      * <p>
@@ -1412,8 +1461,8 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
      * 
      * @return This parameter is the job count for the specified message category.</p>
      *         <p>
-     *         Example strings include <code>AccessDenied</code>, <code>Success</code>, and
-     *         <code>InvalidParameters</code>. See <a
+     *         Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>,
+     *         and <code>INVALIDPARAMETERS</code>. See <a
      *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list
      *         of MessageCategory strings.
      *         </p>
@@ -1433,8 +1482,9 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
      * This parameter is the job count for the specified message category.
      * </p>
      * <p>
-     * Example strings include <code>AccessDenied</code>, <code>Success</code>, and <code>InvalidParameters</code>. See
-     * <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
+     * Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>, and
+     * <code>INVALIDPARAMETERS</code>. See <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
      * MessageCategory strings.
      * </p>
      * <p>
@@ -1447,8 +1497,8 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
      * @param messageCategory
      *        This parameter is the job count for the specified message category.</p>
      *        <p>
-     *        Example strings include <code>AccessDenied</code>, <code>Success</code>, and
-     *        <code>InvalidParameters</code>. See <a
+     *        Example strings may include <code>AccessDenied</code>, <code>SUCCESS</code>, <code>AGGREGATE_ALL</code>,
+     *        and <code>INVALIDPARAMETERS</code>. See <a
      *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">Monitoring</a> for a list of
      *        MessageCategory strings.
      *        </p>
@@ -1523,6 +1573,8 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
             sb.append("IsParent: ").append(getIsParent()).append(",");
         if (getResourceName() != null)
             sb.append("ResourceName: ").append(getResourceName()).append(",");
+        if (getInitiationDate() != null)
+            sb.append("InitiationDate: ").append(getInitiationDate()).append(",");
         if (getMessageCategory() != null)
             sb.append("MessageCategory: ").append(getMessageCategory());
         sb.append("}");
@@ -1631,6 +1683,10 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getResourceName() != null && other.getResourceName().equals(this.getResourceName()) == false)
             return false;
+        if (other.getInitiationDate() == null ^ this.getInitiationDate() == null)
+            return false;
+        if (other.getInitiationDate() != null && other.getInitiationDate().equals(this.getInitiationDate()) == false)
+            return false;
         if (other.getMessageCategory() == null ^ this.getMessageCategory() == null)
             return false;
         if (other.getMessageCategory() != null && other.getMessageCategory().equals(this.getMessageCategory()) == false)
@@ -1666,6 +1722,7 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getParentJobId() == null) ? 0 : getParentJobId().hashCode());
         hashCode = prime * hashCode + ((getIsParent() == null) ? 0 : getIsParent().hashCode());
         hashCode = prime * hashCode + ((getResourceName() == null) ? 0 : getResourceName().hashCode());
+        hashCode = prime * hashCode + ((getInitiationDate() == null) ? 0 : getInitiationDate().hashCode());
         hashCode = prime * hashCode + ((getMessageCategory() == null) ? 0 : getMessageCategory().hashCode());
         return hashCode;
     }

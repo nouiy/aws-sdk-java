@@ -88,6 +88,18 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private ExperimentTemplateLogConfiguration logConfiguration;
+    /**
+     * <p>
+     * The experiment options for an experiment template.
+     * </p>
+     */
+    private ExperimentTemplateExperimentOptions experimentOptions;
+    /**
+     * <p>
+     * The count of target account configurations for the experiment template.
+     * </p>
+     */
+    private Long targetAccountConfigurationsCount;
 
     /**
      * <p>
@@ -604,6 +616,86 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The experiment options for an experiment template.
+     * </p>
+     * 
+     * @param experimentOptions
+     *        The experiment options for an experiment template.
+     */
+
+    public void setExperimentOptions(ExperimentTemplateExperimentOptions experimentOptions) {
+        this.experimentOptions = experimentOptions;
+    }
+
+    /**
+     * <p>
+     * The experiment options for an experiment template.
+     * </p>
+     * 
+     * @return The experiment options for an experiment template.
+     */
+
+    public ExperimentTemplateExperimentOptions getExperimentOptions() {
+        return this.experimentOptions;
+    }
+
+    /**
+     * <p>
+     * The experiment options for an experiment template.
+     * </p>
+     * 
+     * @param experimentOptions
+     *        The experiment options for an experiment template.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExperimentTemplate withExperimentOptions(ExperimentTemplateExperimentOptions experimentOptions) {
+        setExperimentOptions(experimentOptions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The count of target account configurations for the experiment template.
+     * </p>
+     * 
+     * @param targetAccountConfigurationsCount
+     *        The count of target account configurations for the experiment template.
+     */
+
+    public void setTargetAccountConfigurationsCount(Long targetAccountConfigurationsCount) {
+        this.targetAccountConfigurationsCount = targetAccountConfigurationsCount;
+    }
+
+    /**
+     * <p>
+     * The count of target account configurations for the experiment template.
+     * </p>
+     * 
+     * @return The count of target account configurations for the experiment template.
+     */
+
+    public Long getTargetAccountConfigurationsCount() {
+        return this.targetAccountConfigurationsCount;
+    }
+
+    /**
+     * <p>
+     * The count of target account configurations for the experiment template.
+     * </p>
+     * 
+     * @param targetAccountConfigurationsCount
+     *        The count of target account configurations for the experiment template.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExperimentTemplate withTargetAccountConfigurationsCount(Long targetAccountConfigurationsCount) {
+        setTargetAccountConfigurationsCount(targetAccountConfigurationsCount);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -634,7 +726,11 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getLogConfiguration() != null)
-            sb.append("LogConfiguration: ").append(getLogConfiguration());
+            sb.append("LogConfiguration: ").append(getLogConfiguration()).append(",");
+        if (getExperimentOptions() != null)
+            sb.append("ExperimentOptions: ").append(getExperimentOptions()).append(",");
+        if (getTargetAccountConfigurationsCount() != null)
+            sb.append("TargetAccountConfigurationsCount: ").append(getTargetAccountConfigurationsCount());
         sb.append("}");
         return sb.toString();
     }
@@ -689,6 +785,15 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
             return false;
+        if (other.getExperimentOptions() == null ^ this.getExperimentOptions() == null)
+            return false;
+        if (other.getExperimentOptions() != null && other.getExperimentOptions().equals(this.getExperimentOptions()) == false)
+            return false;
+        if (other.getTargetAccountConfigurationsCount() == null ^ this.getTargetAccountConfigurationsCount() == null)
+            return false;
+        if (other.getTargetAccountConfigurationsCount() != null
+                && other.getTargetAccountConfigurationsCount().equals(this.getTargetAccountConfigurationsCount()) == false)
+            return false;
         return true;
     }
 
@@ -707,6 +812,8 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getExperimentOptions() == null) ? 0 : getExperimentOptions().hashCode());
+        hashCode = prime * hashCode + ((getTargetAccountConfigurationsCount() == null) ? 0 : getTargetAccountConfigurationsCount().hashCode());
         return hashCode;
     }
 

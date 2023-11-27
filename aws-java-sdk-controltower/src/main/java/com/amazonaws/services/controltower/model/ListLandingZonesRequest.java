@@ -27,7 +27,7 @@ public class ListLandingZonesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The maximum number of returned landing zone ARNs.
+     * The maximum number of returned landing zone ARNs, which is one.
      * </p>
      */
     private Integer maxResults;
@@ -40,11 +40,11 @@ public class ListLandingZonesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The maximum number of returned landing zone ARNs.
+     * The maximum number of returned landing zone ARNs, which is one.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of returned landing zone ARNs.
+     *        The maximum number of returned landing zone ARNs, which is one.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -53,10 +53,10 @@ public class ListLandingZonesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The maximum number of returned landing zone ARNs.
+     * The maximum number of returned landing zone ARNs, which is one.
      * </p>
      * 
-     * @return The maximum number of returned landing zone ARNs.
+     * @return The maximum number of returned landing zone ARNs, which is one.
      */
 
     public Integer getMaxResults() {
@@ -65,11 +65,11 @@ public class ListLandingZonesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The maximum number of returned landing zone ARNs.
+     * The maximum number of returned landing zone ARNs, which is one.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of returned landing zone ARNs.
+     *        The maximum number of returned landing zone ARNs, which is one.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

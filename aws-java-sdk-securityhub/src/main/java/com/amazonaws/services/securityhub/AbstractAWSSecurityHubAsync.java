@@ -108,6 +108,21 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetConfigurationPolicyAssociationsResult> batchGetConfigurationPolicyAssociationsAsync(
+            BatchGetConfigurationPolicyAssociationsRequest request) {
+
+        return batchGetConfigurationPolicyAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetConfigurationPolicyAssociationsResult> batchGetConfigurationPolicyAssociationsAsync(
+            BatchGetConfigurationPolicyAssociationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetConfigurationPolicyAssociationsRequest, BatchGetConfigurationPolicyAssociationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetSecurityControlsResult> batchGetSecurityControlsAsync(BatchGetSecurityControlsRequest request) {
 
         return batchGetSecurityControlsAsync(request, null);
@@ -216,6 +231,19 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateConfigurationPolicyResult> createConfigurationPolicyAsync(CreateConfigurationPolicyRequest request) {
+
+        return createConfigurationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateConfigurationPolicyResult> createConfigurationPolicyAsync(CreateConfigurationPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateConfigurationPolicyRequest, CreateConfigurationPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateFindingAggregatorResult> createFindingAggregatorAsync(CreateFindingAggregatorRequest request) {
 
         return createFindingAggregatorAsync(request, null);
@@ -276,6 +304,19 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     @Override
     public java.util.concurrent.Future<DeleteActionTargetResult> deleteActionTargetAsync(DeleteActionTargetRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteActionTargetRequest, DeleteActionTargetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteConfigurationPolicyResult> deleteConfigurationPolicyAsync(DeleteConfigurationPolicyRequest request) {
+
+        return deleteConfigurationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteConfigurationPolicyResult> deleteConfigurationPolicyAsync(DeleteConfigurationPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteConfigurationPolicyRequest, DeleteConfigurationPolicyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -551,6 +592,34 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetConfigurationPolicyResult> getConfigurationPolicyAsync(GetConfigurationPolicyRequest request) {
+
+        return getConfigurationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConfigurationPolicyResult> getConfigurationPolicyAsync(GetConfigurationPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetConfigurationPolicyRequest, GetConfigurationPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConfigurationPolicyAssociationResult> getConfigurationPolicyAssociationAsync(
+            GetConfigurationPolicyAssociationRequest request) {
+
+        return getConfigurationPolicyAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConfigurationPolicyAssociationResult> getConfigurationPolicyAssociationAsync(
+            GetConfigurationPolicyAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetConfigurationPolicyAssociationRequest, GetConfigurationPolicyAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetEnabledStandardsResult> getEnabledStandardsAsync(GetEnabledStandardsRequest request) {
 
         return getEnabledStandardsAsync(request, null);
@@ -709,6 +778,34 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListConfigurationPoliciesResult> listConfigurationPoliciesAsync(ListConfigurationPoliciesRequest request) {
+
+        return listConfigurationPoliciesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListConfigurationPoliciesResult> listConfigurationPoliciesAsync(ListConfigurationPoliciesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListConfigurationPoliciesRequest, ListConfigurationPoliciesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListConfigurationPolicyAssociationsResult> listConfigurationPolicyAssociationsAsync(
+            ListConfigurationPolicyAssociationsRequest request) {
+
+        return listConfigurationPolicyAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListConfigurationPolicyAssociationsResult> listConfigurationPolicyAssociationsAsync(
+            ListConfigurationPolicyAssociationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListConfigurationPolicyAssociationsRequest, ListConfigurationPolicyAssociationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListEnabledProductsForImportResult> listEnabledProductsForImportAsync(ListEnabledProductsForImportRequest request) {
 
         return listEnabledProductsForImportAsync(request, null);
@@ -815,6 +912,36 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     }
 
     @Override
+    public java.util.concurrent.Future<StartConfigurationPolicyAssociationResult> startConfigurationPolicyAssociationAsync(
+            StartConfigurationPolicyAssociationRequest request) {
+
+        return startConfigurationPolicyAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartConfigurationPolicyAssociationResult> startConfigurationPolicyAssociationAsync(
+            StartConfigurationPolicyAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartConfigurationPolicyAssociationRequest, StartConfigurationPolicyAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartConfigurationPolicyDisassociationResult> startConfigurationPolicyDisassociationAsync(
+            StartConfigurationPolicyDisassociationRequest request) {
+
+        return startConfigurationPolicyDisassociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartConfigurationPolicyDisassociationResult> startConfigurationPolicyDisassociationAsync(
+            StartConfigurationPolicyDisassociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartConfigurationPolicyDisassociationRequest, StartConfigurationPolicyDisassociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
 
         return tagResourceAsync(request, null);
@@ -849,6 +976,19 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     @Override
     public java.util.concurrent.Future<UpdateActionTargetResult> updateActionTargetAsync(UpdateActionTargetRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateActionTargetRequest, UpdateActionTargetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConfigurationPolicyResult> updateConfigurationPolicyAsync(UpdateConfigurationPolicyRequest request) {
+
+        return updateConfigurationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConfigurationPolicyResult> updateConfigurationPolicyAsync(UpdateConfigurationPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateConfigurationPolicyRequest, UpdateConfigurationPolicyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

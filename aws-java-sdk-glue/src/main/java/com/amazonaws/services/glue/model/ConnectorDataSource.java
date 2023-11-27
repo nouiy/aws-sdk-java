@@ -42,7 +42,37 @@ public class ConnectorDataSource implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
+     * <code>opensearch</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>azuresql</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>azurecosmos</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>bigquery</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>saphana</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>teradata</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vertica</code>
      * </p>
      * </li>
      * </ul>
@@ -112,7 +142,37 @@ public class ConnectorDataSource implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
+     * <code>opensearch</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>azuresql</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>azurecosmos</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>bigquery</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>saphana</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>teradata</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vertica</code>
      * </p>
      * </li>
      * </ul>
@@ -123,7 +183,37 @@ public class ConnectorDataSource implements Serializable, Cloneable, StructuredP
      *        <ul>
      *        <li>
      *        <p>
+     *        <code>opensearch</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>azuresql</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>azurecosmos</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>bigquery</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>saphana</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>teradata</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>vertica</code>
      *        </p>
      *        </li>
      */
@@ -140,7 +230,37 @@ public class ConnectorDataSource implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
+     * <code>opensearch</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>azuresql</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>azurecosmos</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>bigquery</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>saphana</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>teradata</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vertica</code>
      * </p>
      * </li>
      * </ul>
@@ -150,7 +270,37 @@ public class ConnectorDataSource implements Serializable, Cloneable, StructuredP
      *         <ul>
      *         <li>
      *         <p>
+     *         <code>opensearch</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>azuresql</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>azurecosmos</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>bigquery</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>saphana</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>teradata</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>vertica</code>
      *         </p>
      *         </li>
      */
@@ -167,7 +317,37 @@ public class ConnectorDataSource implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
+     * <code>opensearch</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>azuresql</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>azurecosmos</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>bigquery</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>saphana</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>teradata</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vertica</code>
      * </p>
      * </li>
      * </ul>
@@ -178,7 +358,37 @@ public class ConnectorDataSource implements Serializable, Cloneable, StructuredP
      *        <ul>
      *        <li>
      *        <p>
+     *        <code>opensearch</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>azuresql</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>azurecosmos</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>bigquery</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>saphana</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>teradata</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>vertica</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -168,6 +168,11 @@ public class AbstractAWSAppSync implements AWSAppSync {
     }
 
     @Override
+    public GetDataSourceIntrospectionResult getDataSourceIntrospection(GetDataSourceIntrospectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetDomainNameResult getDomainName(GetDomainNameRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -259,6 +264,11 @@ public class AbstractAWSAppSync implements AWSAppSync {
 
     @Override
     public ListTypesByAssociationResult listTypesByAssociation(ListTypesByAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartDataSourceIntrospectionResult startDataSourceIntrospection(StartDataSourceIntrospectionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

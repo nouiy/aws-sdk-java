@@ -149,6 +149,12 @@ public class FileSystemDescription implements Serializable, Cloneable, Structure
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * Describes the protection on the file system.
+     * </p>
+     */
+    private FileSystemProtectionDescription fileSystemProtection;
 
     /**
      * <p>
@@ -1104,6 +1110,46 @@ public class FileSystemDescription implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Describes the protection on the file system.
+     * </p>
+     * 
+     * @param fileSystemProtection
+     *        Describes the protection on the file system.
+     */
+
+    public void setFileSystemProtection(FileSystemProtectionDescription fileSystemProtection) {
+        this.fileSystemProtection = fileSystemProtection;
+    }
+
+    /**
+     * <p>
+     * Describes the protection on the file system.
+     * </p>
+     * 
+     * @return Describes the protection on the file system.
+     */
+
+    public FileSystemProtectionDescription getFileSystemProtection() {
+        return this.fileSystemProtection;
+    }
+
+    /**
+     * <p>
+     * Describes the protection on the file system.
+     * </p>
+     * 
+     * @param fileSystemProtection
+     *        Describes the protection on the file system.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FileSystemDescription withFileSystemProtection(FileSystemProtectionDescription fileSystemProtection) {
+        setFileSystemProtection(fileSystemProtection);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1148,7 +1194,9 @@ public class FileSystemDescription implements Serializable, Cloneable, Structure
         if (getAvailabilityZoneId() != null)
             sb.append("AvailabilityZoneId: ").append(getAvailabilityZoneId()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getFileSystemProtection() != null)
+            sb.append("FileSystemProtection: ").append(getFileSystemProtection());
         sb.append("}");
         return sb.toString();
     }
@@ -1231,6 +1279,10 @@ public class FileSystemDescription implements Serializable, Cloneable, Structure
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getFileSystemProtection() == null ^ this.getFileSystemProtection() == null)
+            return false;
+        if (other.getFileSystemProtection() != null && other.getFileSystemProtection().equals(this.getFileSystemProtection()) == false)
+            return false;
         return true;
     }
 
@@ -1256,6 +1308,7 @@ public class FileSystemDescription implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getAvailabilityZoneName() == null) ? 0 : getAvailabilityZoneName().hashCode());
         hashCode = prime * hashCode + ((getAvailabilityZoneId() == null) ? 0 : getAvailabilityZoneId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getFileSystemProtection() == null) ? 0 : getFileSystemProtection().hashCode());
         return hashCode;
     }
 

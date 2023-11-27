@@ -56,6 +56,10 @@ public class LifecycleJsonUnmarshaller implements Unmarshaller<Lifecycle, JsonUn
                     context.nextToken();
                     lifecycle.setDeleteAfterDays(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("OptInToArchiveForSupportedResources", targetDepth)) {
+                    context.nextToken();
+                    lifecycle.setOptInToArchiveForSupportedResources(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

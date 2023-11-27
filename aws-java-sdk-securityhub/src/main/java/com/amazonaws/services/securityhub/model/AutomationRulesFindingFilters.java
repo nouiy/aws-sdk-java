@@ -390,6 +390,33 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * </p>
      */
     private java.util.List<MapFilter> userDefinedFields;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application that is related to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     */
+    private java.util.List<StringFilter> resourceApplicationArn;
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     */
+    private java.util.List<StringFilter> resourceApplicationName;
+    /**
+     * <p>
+     * The name of the Amazon Web Services account in which a finding was generated.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     */
+    private java.util.List<StringFilter> awsAccountName;
 
     /**
      * <p>
@@ -489,7 +516,7 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * </p>
      * 
-     * @return The Amazon Web Services account ID in which a finding was generated. </p>
+     * @return The Amazon Web Services account ID in which a finding was generated.</p>
      *         <p>
      *         Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
@@ -507,7 +534,7 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account ID in which a finding was generated. </p>
+     *        The Amazon Web Services account ID in which a finding was generated.</p>
      *        <p>
      *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
@@ -535,7 +562,7 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account ID in which a finding was generated. </p>
+     *        The Amazon Web Services account ID in which a finding was generated.</p>
      *        <p>
      *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -560,7 +587,7 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account ID in which a finding was generated. </p>
+     *        The Amazon Web Services account ID in which a finding was generated.</p>
      *        <p>
      *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3922,6 +3949,276 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application that is related to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the application that is related to a finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     */
+
+    public java.util.List<StringFilter> getResourceApplicationArn() {
+        return resourceApplicationArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application that is related to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * 
+     * @param resourceApplicationArn
+     *        The Amazon Resource Name (ARN) of the application that is related to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     */
+
+    public void setResourceApplicationArn(java.util.Collection<StringFilter> resourceApplicationArn) {
+        if (resourceApplicationArn == null) {
+            this.resourceApplicationArn = null;
+            return;
+        }
+
+        this.resourceApplicationArn = new java.util.ArrayList<StringFilter>(resourceApplicationArn);
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application that is related to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setResourceApplicationArn(java.util.Collection)} or
+     * {@link #withResourceApplicationArn(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param resourceApplicationArn
+     *        The Amazon Resource Name (ARN) of the application that is related to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutomationRulesFindingFilters withResourceApplicationArn(StringFilter... resourceApplicationArn) {
+        if (this.resourceApplicationArn == null) {
+            setResourceApplicationArn(new java.util.ArrayList<StringFilter>(resourceApplicationArn.length));
+        }
+        for (StringFilter ele : resourceApplicationArn) {
+            this.resourceApplicationArn.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application that is related to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * 
+     * @param resourceApplicationArn
+     *        The Amazon Resource Name (ARN) of the application that is related to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutomationRulesFindingFilters withResourceApplicationArn(java.util.Collection<StringFilter> resourceApplicationArn) {
+        setResourceApplicationArn(resourceApplicationArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * 
+     * @return The name of the application that is related to a finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     */
+
+    public java.util.List<StringFilter> getResourceApplicationName() {
+        return resourceApplicationName;
+    }
+
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * 
+     * @param resourceApplicationName
+     *        The name of the application that is related to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     */
+
+    public void setResourceApplicationName(java.util.Collection<StringFilter> resourceApplicationName) {
+        if (resourceApplicationName == null) {
+            this.resourceApplicationName = null;
+            return;
+        }
+
+        this.resourceApplicationName = new java.util.ArrayList<StringFilter>(resourceApplicationName);
+    }
+
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setResourceApplicationName(java.util.Collection)} or
+     * {@link #withResourceApplicationName(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param resourceApplicationName
+     *        The name of the application that is related to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutomationRulesFindingFilters withResourceApplicationName(StringFilter... resourceApplicationName) {
+        if (this.resourceApplicationName == null) {
+            setResourceApplicationName(new java.util.ArrayList<StringFilter>(resourceApplicationName.length));
+        }
+        for (StringFilter ele : resourceApplicationName) {
+            this.resourceApplicationName.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the application that is related to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * 
+     * @param resourceApplicationName
+     *        The name of the application that is related to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutomationRulesFindingFilters withResourceApplicationName(java.util.Collection<StringFilter> resourceApplicationName) {
+        setResourceApplicationName(resourceApplicationName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Web Services account in which a finding was generated.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * 
+     * @return The name of the Amazon Web Services account in which a finding was generated. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     */
+
+    public java.util.List<StringFilter> getAwsAccountName() {
+        return awsAccountName;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Web Services account in which a finding was generated.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * 
+     * @param awsAccountName
+     *        The name of the Amazon Web Services account in which a finding was generated. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     */
+
+    public void setAwsAccountName(java.util.Collection<StringFilter> awsAccountName) {
+        if (awsAccountName == null) {
+            this.awsAccountName = null;
+            return;
+        }
+
+        this.awsAccountName = new java.util.ArrayList<StringFilter>(awsAccountName);
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Web Services account in which a finding was generated.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAwsAccountName(java.util.Collection)} or {@link #withAwsAccountName(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param awsAccountName
+     *        The name of the Amazon Web Services account in which a finding was generated. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutomationRulesFindingFilters withAwsAccountName(StringFilter... awsAccountName) {
+        if (this.awsAccountName == null) {
+            setAwsAccountName(new java.util.ArrayList<StringFilter>(awsAccountName.length));
+        }
+        for (StringFilter ele : awsAccountName) {
+            this.awsAccountName.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Web Services account in which a finding was generated.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * 
+     * @param awsAccountName
+     *        The name of the Amazon Web Services account in which a finding was generated. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutomationRulesFindingFilters withAwsAccountName(java.util.Collection<StringFilter> awsAccountName) {
+        setAwsAccountName(awsAccountName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4002,7 +4299,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
         if (getNoteUpdatedBy() != null)
             sb.append("NoteUpdatedBy: ").append(getNoteUpdatedBy()).append(",");
         if (getUserDefinedFields() != null)
-            sb.append("UserDefinedFields: ").append(getUserDefinedFields());
+            sb.append("UserDefinedFields: ").append(getUserDefinedFields()).append(",");
+        if (getResourceApplicationArn() != null)
+            sb.append("ResourceApplicationArn: ").append(getResourceApplicationArn()).append(",");
+        if (getResourceApplicationName() != null)
+            sb.append("ResourceApplicationName: ").append(getResourceApplicationName()).append(",");
+        if (getAwsAccountName() != null)
+            sb.append("AwsAccountName: ").append(getAwsAccountName());
         sb.append("}");
         return sb.toString();
     }
@@ -4158,6 +4461,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
             return false;
         if (other.getUserDefinedFields() != null && other.getUserDefinedFields().equals(this.getUserDefinedFields()) == false)
             return false;
+        if (other.getResourceApplicationArn() == null ^ this.getResourceApplicationArn() == null)
+            return false;
+        if (other.getResourceApplicationArn() != null && other.getResourceApplicationArn().equals(this.getResourceApplicationArn()) == false)
+            return false;
+        if (other.getResourceApplicationName() == null ^ this.getResourceApplicationName() == null)
+            return false;
+        if (other.getResourceApplicationName() != null && other.getResourceApplicationName().equals(this.getResourceApplicationName()) == false)
+            return false;
+        if (other.getAwsAccountName() == null ^ this.getAwsAccountName() == null)
+            return false;
+        if (other.getAwsAccountName() != null && other.getAwsAccountName().equals(this.getAwsAccountName()) == false)
+            return false;
         return true;
     }
 
@@ -4201,6 +4516,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getNoteUpdatedAt() == null) ? 0 : getNoteUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getNoteUpdatedBy() == null) ? 0 : getNoteUpdatedBy().hashCode());
         hashCode = prime * hashCode + ((getUserDefinedFields() == null) ? 0 : getUserDefinedFields().hashCode());
+        hashCode = prime * hashCode + ((getResourceApplicationArn() == null) ? 0 : getResourceApplicationArn().hashCode());
+        hashCode = prime * hashCode + ((getResourceApplicationName() == null) ? 0 : getResourceApplicationName().hashCode());
+        hashCode = prime * hashCode + ((getAwsAccountName() == null) ? 0 : getAwsAccountName().hashCode());
         return hashCode;
     }
 

@@ -64,6 +64,14 @@ public class ProtectedResourceJsonUnmarshaller implements Unmarshaller<Protected
                     context.nextToken();
                     protectedResource.setResourceName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LastBackupVaultArn", targetDepth)) {
+                    context.nextToken();
+                    protectedResource.setLastBackupVaultArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LastRecoveryPointArn", targetDepth)) {
+                    context.nextToken();
+                    protectedResource.setLastRecoveryPointArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

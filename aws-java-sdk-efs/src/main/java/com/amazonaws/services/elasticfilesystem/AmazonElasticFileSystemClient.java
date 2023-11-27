@@ -122,8 +122,14 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
                             new JsonErrorShapeMetadata().withErrorCode("PolicyNotFound").withExceptionUnmarshaller(
                                     com.amazonaws.services.elasticfilesystem.model.transform.PolicyNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ReplicationAlreadyExists").withExceptionUnmarshaller(
+                                    com.amazonaws.services.elasticfilesystem.model.transform.ReplicationAlreadyExistsExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("FileSystemLimitExceeded").withExceptionUnmarshaller(
                                     com.amazonaws.services.elasticfilesystem.model.transform.FileSystemLimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.elasticfilesystem.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("UnsupportedAvailabilityZone").withExceptionUnmarshaller(
                                     com.amazonaws.services.elasticfilesystem.model.transform.UnsupportedAvailabilityZoneExceptionUnmarshaller.getInstance()))
@@ -912,38 +918,49 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
      * <ul>
      * <li>
      * <p>
-     * <b>Source file system</b> - An existing EFS file system that you want replicated. The source file system cannot
-     * be a destination file system in an existing replication configuration.
+     * <b>Source file system</b> – The EFS file system that you want replicated. The source file system cannot be a
+     * destination file system in an existing replication configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Destination file system configuration</b> - The configuration of the destination file system to which the
+     * <b>Amazon Web Services Region</b> – The Amazon Web Services Region in which the destination file system is
+     * created. Amazon EFS replication is available in all Amazon Web Services Regions in which EFS is available. The
+     * Region must be enabled. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html#rande-manage-enable">Managing Amazon Web
+     * Services Regions</a> in the <i>Amazon Web Services General Reference Reference Guide</i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Destination file system configuration</b> – The configuration of the destination file system to which the
      * source file system will be replicated. There can only be one destination file system in a replication
-     * configuration. The destination file system configuration consists of the following properties:
+     * configuration.
+     * </p>
+     * <p>
+     * Parameters for the replication configuration include:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Web Services Region</b> - The Amazon Web Services Region in which the destination file system is
-     * created. Amazon EFS replication is available in all Amazon Web Services Regions in which EFS is available. To use
-     * EFS replication in a Region that is disabled by default, you must first opt in to the Region. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html#rande-manage-enable">Managing Amazon Web
-     * Services Regions</a> in the <i>Amazon Web Services General Reference Reference Guide</i>
+     * <b>File system ID</b> – The ID of the destination file system for the replication. If no ID is provided, then EFS
+     * creates a new file system with the default settings. For existing file systems, the file system's replication
+     * overwrite protection must be disabled. For more information, see <a
+     * href="https://docs.aws.amazon.com/efs/latest/ug/efs-replication#replicate-existing-destination"> Replicating to
+     * an existing file system</a>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Availability Zone</b> - If you want the destination file system to use EFS One Zone availability, you must
-     * specify the Availability Zone to create the file system in. For more information about EFS storage classes, see
-     * <a href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html"> Amazon EFS storage classes</a> in the
-     * <i>Amazon EFS User Guide</i>.
+     * <b>Availability Zone</b> – If you want the destination file system to use One Zone storage, you must specify the
+     * Availability Zone to create the file system in. For more information, see <a
+     * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html"> EFS file system types</a> in the <i>Amazon
+     * EFS User Guide</i>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Encryption</b> - All destination file systems are created with encryption at rest enabled. You can specify the
+     * <b>Encryption</b> – All destination file systems are created with encryption at rest enabled. You can specify the
      * Key Management Service (KMS) key that is used to encrypt the destination file system. If you don't specify a KMS
      * key, your service-managed KMS key for Amazon EFS is used.
      * </p>
@@ -955,8 +972,13 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
      * </ul>
      * </li>
      * </ul>
+     * <note>
      * <p>
-     * The following properties are set by default:
+     * After the file system is created, you cannot change the KMS key.
+     * </p>
+     * </note>
+     * <p>
+     * For new destination file systems, the following properties are set by default:
      * </p>
      * <ul>
      * <li>
@@ -973,14 +995,11 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * The following properties are turned off by default:
-     * </p>
      * <ul>
      * <li>
      * <p>
      * <b>Lifecycle management</b> – Lifecycle management is not enabled on the destination file system. After the
-     * destination file system is created, you can enable it.
+     * destination file system is created, you can enable lifecycle management.
      * </p>
      * </li>
      * <li>
@@ -1023,6 +1042,9 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
      * @throws ThroughputLimitExceededException
      *         Returned if the throughput mode or amount of provisioned throughput can't be changed because the
      *         throughput limit of 1024 MiB/s has been reached.
+     * @throws ConflictException
+     *         Returned if the source file system in a replication is encrypted but the destination file system is
+     *         unencrypted.
      * @throws InternalServerErrorException
      *         Returned if an error occurred on the server side.
      * @sample AmazonElasticFileSystem.CreateReplicationConfiguration
@@ -1486,9 +1508,13 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
 
     /**
      * <p>
-     * Deletes an existing replication configuration. Deleting a replication configuration ends the replication process.
-     * After a replication configuration is deleted, the destination file system is no longer read-only. You can write
-     * to the destination file system after its status becomes <code>Writeable</code>.
+     * Deletes a replication configuration. Deleting a replication configuration ends the replication process. After a
+     * replication configuration is deleted, the destination file system becomes <code>Writeable</code> and its
+     * replication overwrite protection is re-enabled. For more information, see <a
+     * href="https://docs.aws.amazon.com/efs/latest/ug/delete-replications.html">Delete a replication configuration</a>.
+     * </p>
+     * <p>
+     * This operation requires permissions for the <code>elasticfilesystem:DeleteReplicationConfiguration</code> action.
      * </p>
      * 
      * @param deleteReplicationConfigurationRequest
@@ -1991,7 +2017,7 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
     /**
      * <p>
      * Returns the current <code>LifecycleConfiguration</code> object for the specified Amazon EFS file system.
-     * Llifecycle management uses the <code>LifecycleConfiguration</code> object to identify when to move files between
+     * Lifecycle management uses the <code>LifecycleConfiguration</code> object to identify when to move files between
      * storage classes. For a file system without a <code>LifecycleConfiguration</code> object, the call returns an
      * empty array in the response.
      * </p>
@@ -2761,7 +2787,7 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
 
     /**
      * <p>
-     * Use this action to manage storage of your file system. A <code>LifecycleConfiguration</code> consists of one or
+     * Use this action to manage storage for your file system. A <code>LifecycleConfiguration</code> consists of one or
      * more <code>LifecyclePolicy</code> objects that define the following:
      * </p>
      * <ul>
@@ -2786,6 +2812,8 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
      * Purpose Performance mode.
      * </p>
      * </note></li>
+     * </ul>
+     * <ul>
      * <li>
      * <p>
      * <b> <code>TransitionToPrimaryStorageClass</code> </b> – Whether to move files in the file system back to primary
@@ -2802,10 +2830,7 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
      * If a <code>LifecycleConfiguration</code> object already exists for the specified file system, a
      * <code>PutLifecycleConfiguration</code> call modifies the existing configuration. A
      * <code>PutLifecycleConfiguration</code> call with an empty <code>LifecyclePolicies</code> array in the request
-     * body deletes any existing <code>LifecycleConfiguration</code> for the file system.
-     * </p>
-     * <p>
-     * In the request, specify the following:
+     * body deletes any existing <code>LifecycleConfiguration</code>. In the request, specify the following:
      * </p>
      * <ul>
      * <li>
@@ -3102,6 +3127,89 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateFileSystemResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateFileSystemResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates protection on the file system.
+     * </p>
+     * <p>
+     * This operation requires permissions for the <code>elasticfilesystem:UpdateFileSystemProtection</code> action.
+     * </p>
+     * 
+     * @param updateFileSystemProtectionRequest
+     * @return Result of the UpdateFileSystemProtection operation returned by the service.
+     * @throws BadRequestException
+     *         Returned if the request is malformed or contains an error such as an invalid parameter value or a missing
+     *         required parameter.
+     * @throws FileSystemNotFoundException
+     *         Returned if the specified <code>FileSystemId</code> value doesn't exist in the requester's Amazon Web
+     *         Services account.
+     * @throws IncorrectFileSystemLifeCycleStateException
+     *         Returned if the file system's lifecycle state is not "available".
+     * @throws InsufficientThroughputCapacityException
+     *         Returned if there's not enough capacity to provision additional throughput. This value might be returned
+     *         when you try to create a file system in provisioned throughput mode, when you attempt to increase the
+     *         provisioned throughput of an existing file system, or when you attempt to change an existing file system
+     *         from Bursting Throughput to Provisioned Throughput mode. Try again later.
+     * @throws InternalServerErrorException
+     *         Returned if an error occurred on the server side.
+     * @throws ThroughputLimitExceededException
+     *         Returned if the throughput mode or amount of provisioned throughput can't be changed because the
+     *         throughput limit of 1024 MiB/s has been reached.
+     * @throws ReplicationAlreadyExistsException
+     *         Returned if the file system is already included in a replication configuration.&gt;
+     * @throws TooManyRequestsException
+     *         Returned if you don’t wait at least 24 hours before either changing the throughput mode, or decreasing
+     *         the Provisioned Throughput value.
+     * @sample AmazonElasticFileSystem.UpdateFileSystemProtection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticfilesystem-2015-02-01/UpdateFileSystemProtection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateFileSystemProtectionResult updateFileSystemProtection(UpdateFileSystemProtectionRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateFileSystemProtection(request);
+    }
+
+    @SdkInternalApi
+    final UpdateFileSystemProtectionResult executeUpdateFileSystemProtection(UpdateFileSystemProtectionRequest updateFileSystemProtectionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateFileSystemProtectionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateFileSystemProtectionRequest> request = null;
+        Response<UpdateFileSystemProtectionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateFileSystemProtectionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateFileSystemProtectionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EFS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateFileSystemProtection");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateFileSystemProtectionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateFileSystemProtectionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

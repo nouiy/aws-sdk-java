@@ -100,6 +100,30 @@ public class DescribeRestoreJobResultJsonUnmarshaller implements Unmarshaller<De
                     context.nextToken();
                     describeRestoreJobResult.setResourceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("RecoveryPointCreationDate", targetDepth)) {
+                    context.nextToken();
+                    describeRestoreJobResult.setRecoveryPointCreationDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("CreatedBy", targetDepth)) {
+                    context.nextToken();
+                    describeRestoreJobResult.setCreatedBy(RestoreJobCreatorJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ValidationStatus", targetDepth)) {
+                    context.nextToken();
+                    describeRestoreJobResult.setValidationStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ValidationStatusMessage", targetDepth)) {
+                    context.nextToken();
+                    describeRestoreJobResult.setValidationStatusMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DeletionStatus", targetDepth)) {
+                    context.nextToken();
+                    describeRestoreJobResult.setDeletionStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DeletionStatusMessage", targetDepth)) {
+                    context.nextToken();
+                    describeRestoreJobResult.setDeletionStatusMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

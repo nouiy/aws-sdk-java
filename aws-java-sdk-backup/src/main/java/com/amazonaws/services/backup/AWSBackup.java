@@ -265,6 +265,89 @@ public interface AWSBackup {
 
     /**
      * <p>
+     * This is the first of two steps to create a restore testing plan; once this request is successful, finish the
+     * procedure with request CreateRestoreTestingSelection.
+     * </p>
+     * <p>
+     * You must include the parameter RestoreTestingPlan. You may optionally include CreatorRequestId and Tags.
+     * </p>
+     * 
+     * @param createRestoreTestingPlanRequest
+     * @return Result of the CreateRestoreTestingPlan operation returned by the service.
+     * @throws AlreadyExistsException
+     *         The required resource already exists.
+     * @throws ConflictException
+     *         Backup can't perform the action that you requested until it finishes performing a previous action. Try
+     *         again later.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws LimitExceededException
+     *         A limit in the request has been exceeded; for example, a maximum number of items allowed in a request.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.CreateRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/CreateRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateRestoreTestingPlanResult createRestoreTestingPlan(CreateRestoreTestingPlanRequest createRestoreTestingPlanRequest);
+
+    /**
+     * <p>
+     * This request can be sent after CreateRestoreTestingPlan request returns successfully. This is the second part of
+     * creating a resource testing plan, and it must be completed sequentially.
+     * </p>
+     * <p>
+     * This consists of <code>RestoreTestingSelectionName</code>, <code>ProtectedResourceType</code>, and one of the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ProtectedResourceArns</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ProtectedResourceConditions</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Each protected resource type can have one single value.
+     * </p>
+     * <p>
+     * A restore testing selection can include a wildcard value ("*") for <code>ProtectedResourceArns</code> along with
+     * <code>ProtectedResourceConditions</code>. Alternatively, you can include up to 30 specific protected resource
+     * ARNs in <code>ProtectedResourceArns</code>.
+     * </p>
+     * <p>
+     * Cannot select by both protected resource types AND specific ARNs. Request will fail if both are included.
+     * </p>
+     * 
+     * @param createRestoreTestingSelectionRequest
+     * @return Result of the CreateRestoreTestingSelection operation returned by the service.
+     * @throws AlreadyExistsException
+     *         The required resource already exists.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws LimitExceededException
+     *         A limit in the request has been exceeded; for example, a maximum number of items allowed in a request.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.CreateRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/CreateRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateRestoreTestingSelectionResult createRestoreTestingSelection(CreateRestoreTestingSelectionRequest createRestoreTestingSelectionRequest);
+
+    /**
+     * <p>
      * Deletes a backup plan. A backup plan can only be deleted after all associated selections of resources have been
      * deleted. Deleting a backup plan deletes the current version of a backup plan. Previous versions, if any, will
      * still exist.
@@ -499,6 +582,48 @@ public interface AWSBackup {
      *      Documentation</a>
      */
     DeleteReportPlanResult deleteReportPlan(DeleteReportPlanRequest deleteReportPlanRequest);
+
+    /**
+     * <p>
+     * This request deletes the specified restore testing plan.
+     * </p>
+     * <p>
+     * Deletion can only successfully occur if all associated restore testing selections are deleted first.
+     * </p>
+     * 
+     * @param deleteRestoreTestingPlanRequest
+     * @return Result of the DeleteRestoreTestingPlan operation returned by the service.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a parameter is of the wrong
+     *         type.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.DeleteRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteRestoreTestingPlanResult deleteRestoreTestingPlan(DeleteRestoreTestingPlanRequest deleteRestoreTestingPlanRequest);
+
+    /**
+     * <p>
+     * Input the Restore Testing Plan name and Restore Testing Selection name.
+     * </p>
+     * <p>
+     * All testing selections associated with a restore testing plan must be deleted before the restore testing plan can
+     * be deleted.
+     * </p>
+     * 
+     * @param deleteRestoreTestingSelectionRequest
+     * @return Result of the DeleteRestoreTestingSelection operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.DeleteRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteRestoreTestingSelectionResult deleteRestoreTestingSelection(DeleteRestoreTestingSelectionRequest deleteRestoreTestingSelectionRequest);
 
     /**
      * <p>
@@ -986,6 +1111,85 @@ public interface AWSBackup {
 
     /**
      * <p>
+     * This request returns the metadata for the specified restore job.
+     * </p>
+     * 
+     * @param getRestoreJobMetadataRequest
+     * @return Result of the GetRestoreJobMetadata operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.GetRestoreJobMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreJobMetadata" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetRestoreJobMetadataResult getRestoreJobMetadata(GetRestoreJobMetadataRequest getRestoreJobMetadataRequest);
+
+    /**
+     * <p>
+     * This request returns the minimal required set of metadata needed to start a restore job with secure default
+     * settings. <code>BackupVaultName</code> and <code>RecoveryPointArn</code> are required parameters.
+     * <code>BackupVaultAccountId</code> is an optional parameter.
+     * </p>
+     * 
+     * @param getRestoreTestingInferredMetadataRequest
+     * @return Result of the GetRestoreTestingInferredMetadata operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.GetRestoreTestingInferredMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingInferredMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetRestoreTestingInferredMetadataResult getRestoreTestingInferredMetadata(GetRestoreTestingInferredMetadataRequest getRestoreTestingInferredMetadataRequest);
+
+    /**
+     * <p>
+     * Returns <code>RestoreTestingPlan</code> details for the specified <code>RestoreTestingPlanName</code>. The
+     * details are the body of a restore testing plan in JSON format, in addition to plan metadata.
+     * </p>
+     * 
+     * @param getRestoreTestingPlanRequest
+     * @return Result of the GetRestoreTestingPlan operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.GetRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetRestoreTestingPlanResult getRestoreTestingPlan(GetRestoreTestingPlanRequest getRestoreTestingPlanRequest);
+
+    /**
+     * <p>
+     * Returns RestoreTestingSelection, which displays resources and elements of the restore testing plan.
+     * </p>
+     * 
+     * @param getRestoreTestingSelectionRequest
+     * @return Result of the GetRestoreTestingSelection operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.GetRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetRestoreTestingSelectionResult getRestoreTestingSelection(GetRestoreTestingSelectionRequest getRestoreTestingSelectionRequest);
+
+    /**
+     * <p>
      * Returns the Amazon Web Services resource types supported by Backup.
      * </p>
      * 
@@ -1412,6 +1616,70 @@ public interface AWSBackup {
 
     /**
      * <p>
+     * This returns restore jobs that contain the specified protected resource.
+     * </p>
+     * <p>
+     * You must include <code>ResourceArn</code>. You can optionally include <code>NextToken</code>,
+     * <code>ByStatus</code>, <code>MaxResults</code>, <code>ByRecoveryPointCreationDateAfter</code> , and
+     * <code>ByRecoveryPointCreationDateBefore</code>.
+     * </p>
+     * 
+     * @param listRestoreJobsByProtectedResourceRequest
+     * @return Result of the ListRestoreJobsByProtectedResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.ListRestoreJobsByProtectedResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreJobsByProtectedResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListRestoreJobsByProtectedResourceResult listRestoreJobsByProtectedResource(
+            ListRestoreJobsByProtectedResourceRequest listRestoreJobsByProtectedResourceRequest);
+
+    /**
+     * <p>
+     * Returns a list of restore testing plans.
+     * </p>
+     * 
+     * @param listRestoreTestingPlansRequest
+     * @return Result of the ListRestoreTestingPlans operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.ListRestoreTestingPlans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreTestingPlans" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListRestoreTestingPlansResult listRestoreTestingPlans(ListRestoreTestingPlansRequest listRestoreTestingPlansRequest);
+
+    /**
+     * <p>
+     * Returns a list of restore testing selections. Can be filtered by <code>MaxResults</code> and
+     * <code>RestoreTestingPlanName</code>.
+     * </p>
+     * 
+     * @param listRestoreTestingSelectionsRequest
+     * @return Result of the ListRestoreTestingSelections operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.ListRestoreTestingSelections
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreTestingSelections"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListRestoreTestingSelectionsResult listRestoreTestingSelections(ListRestoreTestingSelectionsRequest listRestoreTestingSelectionsRequest);
+
+    /**
+     * <p>
      * Returns a list of key-value pairs assigned to a target recovery point, backup plan, or backup vault.
      * </p>
      * <p>
@@ -1513,6 +1781,32 @@ public interface AWSBackup {
      *      target="_top">AWS API Documentation</a>
      */
     PutBackupVaultNotificationsResult putBackupVaultNotifications(PutBackupVaultNotificationsRequest putBackupVaultNotificationsRequest);
+
+    /**
+     * <p>
+     * This request allows you to send your independent self-run restore test validation results.
+     * <code>RestoreJobId</code> and <code>ValidationStatus</code> are required. Optionally, you can input a
+     * <code>ValidationStatusMessage</code>.
+     * </p>
+     * 
+     * @param putRestoreValidationResultRequest
+     * @return Result of the PutRestoreValidationResult operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a parameter is of the wrong
+     *         type.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.PutRestoreValidationResult
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/PutRestoreValidationResult"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutRestoreValidationResultResult putRestoreValidationResult(PutRestoreValidationResultRequest putRestoreValidationResultRequest);
 
     /**
      * <p>
@@ -1852,6 +2146,90 @@ public interface AWSBackup {
      *      Documentation</a>
      */
     UpdateReportPlanResult updateReportPlan(UpdateReportPlanRequest updateReportPlanRequest);
+
+    /**
+     * <p>
+     * This request will send changes to your specified restore testing plan. <code>RestoreTestingPlanName</code> cannot
+     * be updated after it is created.
+     * </p>
+     * <p>
+     * <code>RecoveryPointSelection</code> can contain:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Algorithm</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExcludeVaults</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IncludeVaults</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RecoveryPointTypes</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SelectionWindowDays</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param updateRestoreTestingPlanRequest
+     * @return Result of the UpdateRestoreTestingPlan operation returned by the service.
+     * @throws ConflictException
+     *         Backup can't perform the action that you requested until it finishes performing a previous action. Try
+     *         again later.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.UpdateRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateRestoreTestingPlanResult updateRestoreTestingPlan(UpdateRestoreTestingPlanRequest updateRestoreTestingPlanRequest);
+
+    /**
+     * <p>
+     * Most elements except the <code>RestoreTestingSelectionName</code> can be updated with this request.
+     * </p>
+     * <p>
+     * <code>RestoreTestingSelection</code> can use either protected resource ARNs or conditions, but not both. That is,
+     * if your selection has <code>ProtectedResourceArns</code>, requesting an update with the parameter
+     * <code>ProtectedResourceConditions</code> will be unsuccessful.
+     * </p>
+     * 
+     * @param updateRestoreTestingSelectionRequest
+     * @return Result of the UpdateRestoreTestingSelection operation returned by the service.
+     * @throws ConflictException
+     *         Backup can't perform the action that you requested until it finishes performing a previous action. Try
+     *         again later.
+     * @throws InvalidParameterValueException
+     *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws MissingParameterValueException
+     *         Indicates that a required parameter is missing.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action doesn't exist.
+     * @throws ServiceUnavailableException
+     *         The request failed due to a temporary failure of the server.
+     * @sample AWSBackup.UpdateRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateRestoreTestingSelectionResult updateRestoreTestingSelection(UpdateRestoreTestingSelectionRequest updateRestoreTestingSelectionRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

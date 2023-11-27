@@ -964,6 +964,43 @@ public interface AWSAppSyncAsync extends AWSAppSync {
 
     /**
      * <p>
+     * Retrieves the record of an existing introspection. If the retrieval is successful, the result of the
+     * instrospection will also be returned. If the retrieval fails the operation, an error message will be returned
+     * instead.
+     * </p>
+     * 
+     * @param getDataSourceIntrospectionRequest
+     * @return A Java Future containing the result of the GetDataSourceIntrospection operation returned by the service.
+     * @sample AWSAppSyncAsync.GetDataSourceIntrospection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetDataSourceIntrospection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDataSourceIntrospectionResult> getDataSourceIntrospectionAsync(
+            GetDataSourceIntrospectionRequest getDataSourceIntrospectionRequest);
+
+    /**
+     * <p>
+     * Retrieves the record of an existing introspection. If the retrieval is successful, the result of the
+     * instrospection will also be returned. If the retrieval fails the operation, an error message will be returned
+     * instead.
+     * </p>
+     * 
+     * @param getDataSourceIntrospectionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDataSourceIntrospection operation returned by the service.
+     * @sample AWSAppSyncAsyncHandler.GetDataSourceIntrospection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetDataSourceIntrospection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDataSourceIntrospectionResult> getDataSourceIntrospectionAsync(
+            GetDataSourceIntrospectionRequest getDataSourceIntrospectionRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDataSourceIntrospectionRequest, GetDataSourceIntrospectionResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves a custom <code>DomainName</code> object.
      * </p>
      * 
@@ -1566,6 +1603,43 @@ public interface AWSAppSyncAsync extends AWSAppSync {
      */
     java.util.concurrent.Future<ListTypesByAssociationResult> listTypesByAssociationAsync(ListTypesByAssociationRequest listTypesByAssociationRequest,
             com.amazonaws.handlers.AsyncHandler<ListTypesByAssociationRequest, ListTypesByAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new introspection. Returns the <code>introspectionId</code> of the new introspection after its
+     * creation.
+     * </p>
+     * 
+     * @param startDataSourceIntrospectionRequest
+     * @return A Java Future containing the result of the StartDataSourceIntrospection operation returned by the
+     *         service.
+     * @sample AWSAppSyncAsync.StartDataSourceIntrospection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/StartDataSourceIntrospection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartDataSourceIntrospectionResult> startDataSourceIntrospectionAsync(
+            StartDataSourceIntrospectionRequest startDataSourceIntrospectionRequest);
+
+    /**
+     * <p>
+     * Creates a new introspection. Returns the <code>introspectionId</code> of the new introspection after its
+     * creation.
+     * </p>
+     * 
+     * @param startDataSourceIntrospectionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartDataSourceIntrospection operation returned by the
+     *         service.
+     * @sample AWSAppSyncAsyncHandler.StartDataSourceIntrospection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/StartDataSourceIntrospection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartDataSourceIntrospectionResult> startDataSourceIntrospectionAsync(
+            StartDataSourceIntrospectionRequest startDataSourceIntrospectionRequest,
+            com.amazonaws.handlers.AsyncHandler<StartDataSourceIntrospectionRequest, StartDataSourceIntrospectionResult> asyncHandler);
 
     /**
      * <p>

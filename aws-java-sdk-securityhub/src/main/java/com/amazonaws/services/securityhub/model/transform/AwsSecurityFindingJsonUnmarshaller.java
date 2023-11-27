@@ -234,6 +234,14 @@ public class AwsSecurityFindingJsonUnmarshaller implements Unmarshaller<AwsSecur
                     context.nextToken();
                     awsSecurityFinding.setGeneratorDetails(GeneratorDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ProcessedAt", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFinding.setProcessedAt(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AwsAccountName", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFinding.setAwsAccountName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

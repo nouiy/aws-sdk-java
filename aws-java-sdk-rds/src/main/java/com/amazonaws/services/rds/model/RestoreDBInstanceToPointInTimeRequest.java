@@ -255,11 +255,31 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <p>
      * The database name for the restored DB instance.
      * </p>
-     * <note>
      * <p>
-     * This parameter isn't supported for the MySQL or MariaDB engines. It also doesn't apply to RDS Custom.
+     * This parameter doesn't apply to the following DB instances:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * RDS Custom
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Db2
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MariaDB
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MySQL
+     * </p>
+     * </li>
+     * </ul>
      */
     private String dBName;
     /**
@@ -273,6 +293,16 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -722,11 +752,25 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
     private String customIamInstanceProfile;
     /**
      * <p>
-     * Specifies where automated backups and manual snapshots are stored for the restored DB instance.
+     * The location for storing automated backups and manual snapshots for the restored DB instance.
      * </p>
      * <p>
-     * Possible values are <code>outposts</code> (Amazon Web Services Outposts) and <code>region</code> (Amazon Web
-     * Services Region). The default is <code>region</code>.
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>outposts</code> (Amazon Web Services Outposts)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>region</code> (Amazon Web Services Region)
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: <code>region</code>
      * </p>
      * <p>
      * For more information, see <a
@@ -2343,17 +2387,58 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <p>
      * The database name for the restored DB instance.
      * </p>
-     * <note>
      * <p>
-     * This parameter isn't supported for the MySQL or MariaDB engines. It also doesn't apply to RDS Custom.
+     * This parameter doesn't apply to the following DB instances:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * RDS Custom
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Db2
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MariaDB
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MySQL
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param dBName
-     *        The database name for the restored DB instance.</p> <note>
+     *        The database name for the restored DB instance.</p>
      *        <p>
-     *        This parameter isn't supported for the MySQL or MariaDB engines. It also doesn't apply to RDS Custom.
+     *        This parameter doesn't apply to the following DB instances:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        RDS Custom
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for Db2
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for MariaDB
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for MySQL
+     *        </p>
+     *        </li>
      */
 
     public void setDBName(String dBName) {
@@ -2364,16 +2449,57 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <p>
      * The database name for the restored DB instance.
      * </p>
-     * <note>
      * <p>
-     * This parameter isn't supported for the MySQL or MariaDB engines. It also doesn't apply to RDS Custom.
+     * This parameter doesn't apply to the following DB instances:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * RDS Custom
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Db2
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MariaDB
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MySQL
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The database name for the restored DB instance.</p> <note>
+     * @return The database name for the restored DB instance.</p>
      *         <p>
-     *         This parameter isn't supported for the MySQL or MariaDB engines. It also doesn't apply to RDS Custom.
+     *         This parameter doesn't apply to the following DB instances:
      *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         RDS Custom
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         RDS for Db2
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         RDS for MariaDB
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         RDS for MySQL
+     *         </p>
+     *         </li>
      */
 
     public String getDBName() {
@@ -2384,17 +2510,58 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <p>
      * The database name for the restored DB instance.
      * </p>
-     * <note>
      * <p>
-     * This parameter isn't supported for the MySQL or MariaDB engines. It also doesn't apply to RDS Custom.
+     * This parameter doesn't apply to the following DB instances:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * RDS Custom
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Db2
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MariaDB
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MySQL
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param dBName
-     *        The database name for the restored DB instance.</p> <note>
+     *        The database name for the restored DB instance.</p>
      *        <p>
-     *        This parameter isn't supported for the MySQL or MariaDB engines. It also doesn't apply to RDS Custom.
+     *        This parameter doesn't apply to the following DB instances:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        RDS Custom
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for Db2
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for MariaDB
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for MySQL
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2414,6 +2581,16 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * Valid Values:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>mariadb</code>
@@ -2493,6 +2670,16 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        Valid Values:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>mariadb</code>
@@ -2580,6 +2767,16 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>mariadb</code>
      * </p>
      * </li>
@@ -2656,6 +2853,16 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *         Valid Values:
      *         </p>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>db2-ae</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db2-se</code>
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         <code>mariadb</code>
@@ -2743,6 +2950,16 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
+     * <code>db2-ae</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db2-se</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>mariadb</code>
      * </p>
      * </li>
@@ -2820,6 +3037,16 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        Valid Values:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db2-ae</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db2-se</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>mariadb</code>
@@ -5555,11 +5782,25 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specifies where automated backups and manual snapshots are stored for the restored DB instance.
+     * The location for storing automated backups and manual snapshots for the restored DB instance.
      * </p>
      * <p>
-     * Possible values are <code>outposts</code> (Amazon Web Services Outposts) and <code>region</code> (Amazon Web
-     * Services Region). The default is <code>region</code>.
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>outposts</code> (Amazon Web Services Outposts)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>region</code> (Amazon Web Services Region)
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: <code>region</code>
      * </p>
      * <p>
      * For more information, see <a
@@ -5568,10 +5809,24 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param backupTarget
-     *        Specifies where automated backups and manual snapshots are stored for the restored DB instance.</p>
+     *        The location for storing automated backups and manual snapshots for the restored DB instance.</p>
      *        <p>
-     *        Possible values are <code>outposts</code> (Amazon Web Services Outposts) and <code>region</code> (Amazon
-     *        Web Services Region). The default is <code>region</code>.
+     *        Valid Values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>outposts</code> (Amazon Web Services Outposts)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>region</code> (Amazon Web Services Region)
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Default: <code>region</code>
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -5585,11 +5840,25 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specifies where automated backups and manual snapshots are stored for the restored DB instance.
+     * The location for storing automated backups and manual snapshots for the restored DB instance.
      * </p>
      * <p>
-     * Possible values are <code>outposts</code> (Amazon Web Services Outposts) and <code>region</code> (Amazon Web
-     * Services Region). The default is <code>region</code>.
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>outposts</code> (Amazon Web Services Outposts)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>region</code> (Amazon Web Services Region)
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: <code>region</code>
      * </p>
      * <p>
      * For more information, see <a
@@ -5597,10 +5866,24 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
-     * @return Specifies where automated backups and manual snapshots are stored for the restored DB instance.</p>
+     * @return The location for storing automated backups and manual snapshots for the restored DB instance.</p>
      *         <p>
-     *         Possible values are <code>outposts</code> (Amazon Web Services Outposts) and <code>region</code> (Amazon
-     *         Web Services Region). The default is <code>region</code>.
+     *         Valid Values:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>outposts</code> (Amazon Web Services Outposts)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>region</code> (Amazon Web Services Region)
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Default: <code>region</code>
      *         </p>
      *         <p>
      *         For more information, see <a
@@ -5614,11 +5897,25 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specifies where automated backups and manual snapshots are stored for the restored DB instance.
+     * The location for storing automated backups and manual snapshots for the restored DB instance.
      * </p>
      * <p>
-     * Possible values are <code>outposts</code> (Amazon Web Services Outposts) and <code>region</code> (Amazon Web
-     * Services Region). The default is <code>region</code>.
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>outposts</code> (Amazon Web Services Outposts)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>region</code> (Amazon Web Services Region)
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: <code>region</code>
      * </p>
      * <p>
      * For more information, see <a
@@ -5627,10 +5924,24 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param backupTarget
-     *        Specifies where automated backups and manual snapshots are stored for the restored DB instance.</p>
+     *        The location for storing automated backups and manual snapshots for the restored DB instance.</p>
      *        <p>
-     *        Possible values are <code>outposts</code> (Amazon Web Services Outposts) and <code>region</code> (Amazon
-     *        Web Services Region). The default is <code>region</code>.
+     *        Valid Values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>outposts</code> (Amazon Web Services Outposts)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>region</code> (Amazon Web Services Region)
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Default: <code>region</code>
      *        </p>
      *        <p>
      *        For more information, see <a

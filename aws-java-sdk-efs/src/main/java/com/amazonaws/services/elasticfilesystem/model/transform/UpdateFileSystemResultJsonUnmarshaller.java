@@ -118,6 +118,10 @@ public class UpdateFileSystemResultJsonUnmarshaller implements Unmarshaller<Upda
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("FileSystemProtection", targetDepth)) {
+                    context.nextToken();
+                    updateFileSystemResult.setFileSystemProtection(FileSystemProtectionDescriptionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

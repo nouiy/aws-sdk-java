@@ -459,6 +459,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws LimitExceededException
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.BatchDisableStandards
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchDisableStandards"
      *      target="_top">AWS API Documentation</a>
@@ -530,6 +532,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws LimitExceededException
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.BatchEnableStandards
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchEnableStandards"
      *      target="_top">AWS API Documentation</a>
@@ -638,6 +642,80 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
             HttpResponseHandler<AmazonWebServiceResponse<BatchGetAutomationRulesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new BatchGetAutomationRulesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns associations between an Security Hub configuration and a batch of target accounts, organizational units,
+     * or the root. Only the Security Hub delegated administrator can invoke this operation from the home Region. A
+     * configuration can refer to a configuration policy or to a self-managed configuration.
+     * </p>
+     * 
+     * @param batchGetConfigurationPolicyAssociationsRequest
+     * @return Result of the BatchGetConfigurationPolicyAssociations operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.BatchGetConfigurationPolicyAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetConfigurationPolicyAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchGetConfigurationPolicyAssociationsResult batchGetConfigurationPolicyAssociations(BatchGetConfigurationPolicyAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchGetConfigurationPolicyAssociations(request);
+    }
+
+    @SdkInternalApi
+    final BatchGetConfigurationPolicyAssociationsResult executeBatchGetConfigurationPolicyAssociations(
+            BatchGetConfigurationPolicyAssociationsRequest batchGetConfigurationPolicyAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchGetConfigurationPolicyAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchGetConfigurationPolicyAssociationsRequest> request = null;
+        Response<BatchGetConfigurationPolicyAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchGetConfigurationPolicyAssociationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchGetConfigurationPolicyAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchGetConfigurationPolicyAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchGetConfigurationPolicyAssociationsResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new BatchGetConfigurationPolicyAssociationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1142,6 +1220,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         The account doesn't have permission to perform this action.
      * @throws InvalidInputException
      *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.BatchUpdateStandardsControlAssociations
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchUpdateStandardsControlAssociations"
@@ -1320,6 +1400,77 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateAutomationRuleResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateAutomationRuleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a configuration policy with the defined configuration. Only the Security Hub delegated administrator can
+     * invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param createConfigurationPolicyRequest
+     * @return Result of the CreateConfigurationPolicy operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws ResourceConflictException
+     *         The resource specified in the request conflicts with an existing resource.
+     * @sample AWSSecurityHub.CreateConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateConfigurationPolicyResult createConfigurationPolicy(CreateConfigurationPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateConfigurationPolicy(request);
+    }
+
+    @SdkInternalApi
+    final CreateConfigurationPolicyResult executeCreateConfigurationPolicy(CreateConfigurationPolicyRequest createConfigurationPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createConfigurationPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateConfigurationPolicyRequest> request = null;
+        Response<CreateConfigurationPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateConfigurationPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createConfigurationPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateConfigurationPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateConfigurationPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateConfigurationPolicyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1549,6 +1700,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         The account doesn't have permission to perform this action.
      * @throws ResourceConflictException
      *         The resource specified in the request conflicts with an existing resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.CreateMembers
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateMembers" target="_top">AWS API
      *      Documentation</a>
@@ -1724,6 +1877,81 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteActionTargetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteActionTargetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a configuration policy. Only the Security Hub delegated administrator can invoke this operation from the
+     * home Region. For the deletion to succeed, you must first disassociate a configuration policy from target
+     * accounts, organizational units, or the root by invoking the <code>StartConfigurationPolicyDisassociation</code>
+     * operation.
+     * </p>
+     * 
+     * @param deleteConfigurationPolicyRequest
+     * @return Result of the DeleteConfigurationPolicy operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws ResourceConflictException
+     *         The resource specified in the request conflicts with an existing resource.
+     * @sample AWSSecurityHub.DeleteConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteConfigurationPolicyResult deleteConfigurationPolicy(DeleteConfigurationPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteConfigurationPolicy(request);
+    }
+
+    @SdkInternalApi
+    final DeleteConfigurationPolicyResult executeDeleteConfigurationPolicy(DeleteConfigurationPolicyRequest deleteConfigurationPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteConfigurationPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteConfigurationPolicyRequest> request = null;
+        Response<DeleteConfigurationPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteConfigurationPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteConfigurationPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteConfigurationPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteConfigurationPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteConfigurationPolicyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2151,8 +2379,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
-     * Returns information about the Organizations configuration for Security Hub. Can only be called from a Security
-     * Hub administrator account.
+     * Returns information about the way your organization is configured in Security Hub. Only the Security Hub
+     * administrator account can invoke this operation.
      * </p>
      * 
      * @param describeOrganizationConfigurationRequest
@@ -2507,6 +2735,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws LimitExceededException
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.DisableOrganizationAdminAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisableOrganizationAdminAccount"
      *      target="_top">AWS API Documentation</a>
@@ -2586,6 +2816,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         The account doesn't have permission to perform this action.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.DisableSecurityHub
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisableSecurityHub" target="_top">AWS
      *      API Documentation</a>
@@ -2812,6 +3044,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.DisassociateMembers
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisassociateMembers"
      *      target="_top">AWS API Documentation</a>
@@ -2950,6 +3184,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws LimitExceededException
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.EnableOrganizationAdminAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/EnableOrganizationAdminAccount"
      *      target="_top">AWS API Documentation</a>
@@ -3162,6 +3398,149 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
             HttpResponseHandler<AmazonWebServiceResponse<GetAdministratorAccountResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new GetAdministratorAccountResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides information about a configuration policy. Only the Security Hub delegated administrator can invoke this
+     * operation from the home Region.
+     * </p>
+     * 
+     * @param getConfigurationPolicyRequest
+     * @return Result of the GetConfigurationPolicy operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.GetConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetConfigurationPolicyResult getConfigurationPolicy(GetConfigurationPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetConfigurationPolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetConfigurationPolicyResult executeGetConfigurationPolicy(GetConfigurationPolicyRequest getConfigurationPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getConfigurationPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetConfigurationPolicyRequest> request = null;
+        Response<GetConfigurationPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetConfigurationPolicyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getConfigurationPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetConfigurationPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetConfigurationPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetConfigurationPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the association between a configuration and a target account, organizational unit, or the root. The
+     * configuration can be a configuration policy or self-managed behavior. Only the Security Hub delegated
+     * administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param getConfigurationPolicyAssociationRequest
+     * @return Result of the GetConfigurationPolicyAssociation operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.GetConfigurationPolicyAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetConfigurationPolicyAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetConfigurationPolicyAssociationResult getConfigurationPolicyAssociation(GetConfigurationPolicyAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetConfigurationPolicyAssociation(request);
+    }
+
+    @SdkInternalApi
+    final GetConfigurationPolicyAssociationResult executeGetConfigurationPolicyAssociation(
+            GetConfigurationPolicyAssociationRequest getConfigurationPolicyAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getConfigurationPolicyAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetConfigurationPolicyAssociationRequest> request = null;
+        Response<GetConfigurationPolicyAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetConfigurationPolicyAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getConfigurationPolicyAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetConfigurationPolicyAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetConfigurationPolicyAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetConfigurationPolicyAssociationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4004,6 +4383,147 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
+     * Lists the configuration policies that the Security Hub delegated administrator has created for your organization.
+     * Only the delegated administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param listConfigurationPoliciesRequest
+     * @return Result of the ListConfigurationPolicies operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.ListConfigurationPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListConfigurationPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListConfigurationPoliciesResult listConfigurationPolicies(ListConfigurationPoliciesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListConfigurationPolicies(request);
+    }
+
+    @SdkInternalApi
+    final ListConfigurationPoliciesResult executeListConfigurationPolicies(ListConfigurationPoliciesRequest listConfigurationPoliciesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listConfigurationPoliciesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListConfigurationPoliciesRequest> request = null;
+        Response<ListConfigurationPoliciesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListConfigurationPoliciesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listConfigurationPoliciesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListConfigurationPolicies");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListConfigurationPoliciesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListConfigurationPoliciesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides information about the associations for your configuration policies and self-managed behavior. Only the
+     * Security Hub delegated administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param listConfigurationPolicyAssociationsRequest
+     * @return Result of the ListConfigurationPolicyAssociations operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.ListConfigurationPolicyAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListConfigurationPolicyAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListConfigurationPolicyAssociationsResult listConfigurationPolicyAssociations(ListConfigurationPolicyAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListConfigurationPolicyAssociations(request);
+    }
+
+    @SdkInternalApi
+    final ListConfigurationPolicyAssociationsResult executeListConfigurationPolicyAssociations(
+            ListConfigurationPolicyAssociationsRequest listConfigurationPolicyAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listConfigurationPolicyAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListConfigurationPolicyAssociationsRequest> request = null;
+        Response<ListConfigurationPolicyAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListConfigurationPolicyAssociationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listConfigurationPolicyAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListConfigurationPolicyAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListConfigurationPolicyAssociationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListConfigurationPolicyAssociationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists all findings-generating solutions (products) that you are subscribed to receive findings from in Security
      * Hub.
      * </p>
@@ -4533,6 +5053,155 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
+     * Associates a target account, organizational unit, or the root with a specified configuration. The target can be
+     * associated with a configuration policy or self-managed behavior. Only the Security Hub delegated administrator
+     * can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param startConfigurationPolicyAssociationRequest
+     * @return Result of the StartConfigurationPolicyAssociation operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.StartConfigurationPolicyAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/StartConfigurationPolicyAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartConfigurationPolicyAssociationResult startConfigurationPolicyAssociation(StartConfigurationPolicyAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartConfigurationPolicyAssociation(request);
+    }
+
+    @SdkInternalApi
+    final StartConfigurationPolicyAssociationResult executeStartConfigurationPolicyAssociation(
+            StartConfigurationPolicyAssociationRequest startConfigurationPolicyAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startConfigurationPolicyAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartConfigurationPolicyAssociationRequest> request = null;
+        Response<StartConfigurationPolicyAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartConfigurationPolicyAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startConfigurationPolicyAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartConfigurationPolicyAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartConfigurationPolicyAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartConfigurationPolicyAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Disassociates a target account, organizational unit, or the root from a specified configuration. When you
+     * disassociate a configuration from its target, the target inherits the configuration of the closest parent. If
+     * there’s no configuration to inherit, the target retains its settings but becomes a self-managed account. A target
+     * can be disassociated from a configuration policy or self-managed behavior. Only the Security Hub delegated
+     * administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param startConfigurationPolicyDisassociationRequest
+     * @return Result of the StartConfigurationPolicyDisassociation operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.StartConfigurationPolicyDisassociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/StartConfigurationPolicyDisassociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartConfigurationPolicyDisassociationResult startConfigurationPolicyDisassociation(StartConfigurationPolicyDisassociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartConfigurationPolicyDisassociation(request);
+    }
+
+    @SdkInternalApi
+    final StartConfigurationPolicyDisassociationResult executeStartConfigurationPolicyDisassociation(
+            StartConfigurationPolicyDisassociationRequest startConfigurationPolicyDisassociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startConfigurationPolicyDisassociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartConfigurationPolicyDisassociationRequest> request = null;
+        Response<StartConfigurationPolicyDisassociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartConfigurationPolicyDisassociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startConfigurationPolicyDisassociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartConfigurationPolicyDisassociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartConfigurationPolicyDisassociationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new StartConfigurationPolicyDisassociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Adds one or more tags to a resource.
      * </p>
      * 
@@ -4708,6 +5377,79 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateActionTargetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateActionTargetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates a configuration policy. Only the Security Hub delegated administrator can invoke this operation from the
+     * home Region.
+     * </p>
+     * 
+     * @param updateConfigurationPolicyRequest
+     * @return Result of the UpdateConfigurationPolicy operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws ResourceConflictException
+     *         The resource specified in the request conflicts with an existing resource.
+     * @sample AWSSecurityHub.UpdateConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateConfigurationPolicyResult updateConfigurationPolicy(UpdateConfigurationPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateConfigurationPolicy(request);
+    }
+
+    @SdkInternalApi
+    final UpdateConfigurationPolicyResult executeUpdateConfigurationPolicy(UpdateConfigurationPolicyRequest updateConfigurationPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateConfigurationPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateConfigurationPolicyRequest> request = null;
+        Response<UpdateConfigurationPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateConfigurationPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateConfigurationPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateConfigurationPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateConfigurationPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateConfigurationPolicyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4931,8 +5673,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
-     * Used to update the configuration related to Organizations. Can only be called from a Security Hub administrator
-     * account.
+     * Updates the configuration of your organization in Security Hub. Only the Security Hub administrator account can
+     * invoke this operation.
      * </p>
      * 
      * @param updateOrganizationConfigurationRequest
@@ -4946,6 +5688,12 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws LimitExceededException
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws ResourceConflictException
+     *         The resource specified in the request conflicts with an existing resource.
      * @sample AWSSecurityHub.UpdateOrganizationConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateOrganizationConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -5018,6 +5766,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws ResourceInUseException
      *         The request was rejected because it conflicts with the resource's availability. For example, you tried to
      *         update a security control that's currently in the <code>UPDATING</code> state.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.UpdateSecurityControl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateSecurityControl"
      *      target="_top">AWS API Documentation</a>
@@ -5085,6 +5835,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.UpdateSecurityHubConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateSecurityHubConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -5150,6 +5902,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         The account doesn't have permission to perform this action.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.UpdateStandardsControl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateStandardsControl"
      *      target="_top">AWS API Documentation</a>

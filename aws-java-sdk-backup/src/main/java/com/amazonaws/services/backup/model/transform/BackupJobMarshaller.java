@@ -75,6 +75,8 @@ public class BackupJobMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IsParent").build();
     private static final MarshallingInfo<String> RESOURCENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceName").build();
+    private static final MarshallingInfo<java.util.Date> INITIATIONDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InitiationDate").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> MESSAGECATEGORY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageCategory").build();
 
@@ -117,6 +119,7 @@ public class BackupJobMarshaller {
             protocolMarshaller.marshall(backupJob.getParentJobId(), PARENTJOBID_BINDING);
             protocolMarshaller.marshall(backupJob.getIsParent(), ISPARENT_BINDING);
             protocolMarshaller.marshall(backupJob.getResourceName(), RESOURCENAME_BINDING);
+            protocolMarshaller.marshall(backupJob.getInitiationDate(), INITIATIONDATE_BINDING);
             protocolMarshaller.marshall(backupJob.getMessageCategory(), MESSAGECATEGORY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

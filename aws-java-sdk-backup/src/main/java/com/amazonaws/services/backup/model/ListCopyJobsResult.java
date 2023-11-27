@@ -31,7 +31,7 @@ public class ListCopyJobsResult extends com.amazonaws.AmazonWebServiceResult<com
     private java.util.List<CopyJob> copyJobs;
     /**
      * <p>
-     * The next item following a partial list of returned items. For example, if a request is made to return maxResults
+     * The next item following a partial list of returned items. For example, if a request is made to return MaxResults
      * number of items, NextToken allows you to return more items in your list starting at the location pointed to by
      * the next token.
      * </p>
@@ -110,14 +110,14 @@ public class ListCopyJobsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The next item following a partial list of returned items. For example, if a request is made to return maxResults
+     * The next item following a partial list of returned items. For example, if a request is made to return MaxResults
      * number of items, NextToken allows you to return more items in your list starting at the location pointed to by
      * the next token.
      * </p>
      * 
      * @param nextToken
      *        The next item following a partial list of returned items. For example, if a request is made to return
-     *        maxResults number of items, NextToken allows you to return more items in your list starting at the
+     *        MaxResults number of items, NextToken allows you to return more items in your list starting at the
      *        location pointed to by the next token.
      */
 
@@ -127,13 +127,13 @@ public class ListCopyJobsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The next item following a partial list of returned items. For example, if a request is made to return maxResults
+     * The next item following a partial list of returned items. For example, if a request is made to return MaxResults
      * number of items, NextToken allows you to return more items in your list starting at the location pointed to by
      * the next token.
      * </p>
      * 
      * @return The next item following a partial list of returned items. For example, if a request is made to return
-     *         maxResults number of items, NextToken allows you to return more items in your list starting at the
+     *         MaxResults number of items, NextToken allows you to return more items in your list starting at the
      *         location pointed to by the next token.
      */
 
@@ -143,14 +143,14 @@ public class ListCopyJobsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The next item following a partial list of returned items. For example, if a request is made to return maxResults
+     * The next item following a partial list of returned items. For example, if a request is made to return MaxResults
      * number of items, NextToken allows you to return more items in your list starting at the location pointed to by
      * the next token.
      * </p>
      * 
      * @param nextToken
      *        The next item following a partial list of returned items. For example, if a request is made to return
-     *        maxResults number of items, NextToken allows you to return more items in your list starting at the
+     *        MaxResults number of items, NextToken allows you to return more items in your list starting at the
      *        location pointed to by the next token.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

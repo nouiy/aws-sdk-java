@@ -62,7 +62,8 @@ public class GetVocabularyResult extends com.amazonaws.AmazonWebServiceResult<co
     private String failureReason;
     /**
      * <p>
-     * The S3 location where the custom vocabulary is stored; use this URI to view or download the custom vocabulary.
+     * The Amazon S3 location where the custom vocabulary is stored; use this URI to view or download the custom
+     * vocabulary.
      * </p>
      */
     private String downloadUri;
@@ -348,11 +349,12 @@ public class GetVocabularyResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The S3 location where the custom vocabulary is stored; use this URI to view or download the custom vocabulary.
+     * The Amazon S3 location where the custom vocabulary is stored; use this URI to view or download the custom
+     * vocabulary.
      * </p>
      * 
      * @param downloadUri
-     *        The S3 location where the custom vocabulary is stored; use this URI to view or download the custom
+     *        The Amazon S3 location where the custom vocabulary is stored; use this URI to view or download the custom
      *        vocabulary.
      */
 
@@ -362,10 +364,11 @@ public class GetVocabularyResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The S3 location where the custom vocabulary is stored; use this URI to view or download the custom vocabulary.
+     * The Amazon S3 location where the custom vocabulary is stored; use this URI to view or download the custom
+     * vocabulary.
      * </p>
      * 
-     * @return The S3 location where the custom vocabulary is stored; use this URI to view or download the custom
+     * @return The Amazon S3 location where the custom vocabulary is stored; use this URI to view or download the custom
      *         vocabulary.
      */
 
@@ -375,11 +378,12 @@ public class GetVocabularyResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The S3 location where the custom vocabulary is stored; use this URI to view or download the custom vocabulary.
+     * The Amazon S3 location where the custom vocabulary is stored; use this URI to view or download the custom
+     * vocabulary.
      * </p>
      * 
      * @param downloadUri
-     *        The S3 location where the custom vocabulary is stored; use this URI to view or download the custom
+     *        The Amazon S3 location where the custom vocabulary is stored; use this URI to view or download the custom
      *        vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

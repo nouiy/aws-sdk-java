@@ -49,6 +49,10 @@ public class ExperimentTemplateMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<StructuredPojo> LOGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> EXPERIMENTOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("experimentOptions").build();
+    private static final MarshallingInfo<Long> TARGETACCOUNTCONFIGURATIONSCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("targetAccountConfigurationsCount").build();
 
     private static final ExperimentTemplateMarshaller instance = new ExperimentTemplateMarshaller();
 
@@ -76,6 +80,8 @@ public class ExperimentTemplateMarshaller {
             protocolMarshaller.marshall(experimentTemplate.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(experimentTemplate.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(experimentTemplate.getLogConfiguration(), LOGCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(experimentTemplate.getExperimentOptions(), EXPERIMENTOPTIONS_BINDING);
+            protocolMarshaller.marshall(experimentTemplate.getTargetAccountConfigurationsCount(), TARGETACCOUNTCONFIGURATIONSCOUNT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

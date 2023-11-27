@@ -27,7 +27,7 @@ public class CreateAutomationRuleRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * User-defined tags that help you label the purpose of a rule.
+     * User-defined tags associated with an automation rule.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -87,10 +87,10 @@ public class CreateAutomationRuleRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * User-defined tags that help you label the purpose of a rule.
+     * User-defined tags associated with an automation rule.
      * </p>
      * 
-     * @return User-defined tags that help you label the purpose of a rule.
+     * @return User-defined tags associated with an automation rule.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -99,11 +99,11 @@ public class CreateAutomationRuleRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * User-defined tags that help you label the purpose of a rule.
+     * User-defined tags associated with an automation rule.
      * </p>
      * 
      * @param tags
-     *        User-defined tags that help you label the purpose of a rule.
+     *        User-defined tags associated with an automation rule.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -112,11 +112,11 @@ public class CreateAutomationRuleRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * User-defined tags that help you label the purpose of a rule.
+     * User-defined tags associated with an automation rule.
      * </p>
      * 
      * @param tags
-     *        User-defined tags that help you label the purpose of a rule.
+     *        User-defined tags associated with an automation rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

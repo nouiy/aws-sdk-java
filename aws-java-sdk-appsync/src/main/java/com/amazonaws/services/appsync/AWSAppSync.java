@@ -731,6 +731,28 @@ public interface AWSAppSync {
 
     /**
      * <p>
+     * Retrieves the record of an existing introspection. If the retrieval is successful, the result of the
+     * instrospection will also be returned. If the retrieval fails the operation, an error message will be returned
+     * instead.
+     * </p>
+     * 
+     * @param getDataSourceIntrospectionRequest
+     * @return Result of the GetDataSourceIntrospection operation returned by the service.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @throws NotFoundException
+     *         The resource specified in the request was not found. Check the resource, and then try again.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @sample AWSAppSync.GetDataSourceIntrospection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetDataSourceIntrospection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetDataSourceIntrospectionResult getDataSourceIntrospection(GetDataSourceIntrospectionRequest getDataSourceIntrospectionRequest);
+
+    /**
+     * <p>
      * Retrieves a custom <code>DomainName</code> object.
      * </p>
      * 
@@ -1154,6 +1176,29 @@ public interface AWSAppSync {
      *      API Documentation</a>
      */
     ListTypesByAssociationResult listTypesByAssociation(ListTypesByAssociationRequest listTypesByAssociationRequest);
+
+    /**
+     * <p>
+     * Creates a new introspection. Returns the <code>introspectionId</code> of the new introspection after its
+     * creation.
+     * </p>
+     * 
+     * @param startDataSourceIntrospectionRequest
+     * @return Result of the StartDataSourceIntrospection operation returned by the service.
+     * @throws NotFoundException
+     *         The resource specified in the request was not found. Check the resource, and then try again.
+     * @throws UnauthorizedException
+     *         You aren't authorized to perform this operation.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @sample AWSAppSync.StartDataSourceIntrospection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/StartDataSourceIntrospection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartDataSourceIntrospectionResult startDataSourceIntrospection(StartDataSourceIntrospectionRequest startDataSourceIntrospectionRequest);
 
     /**
      * <p>

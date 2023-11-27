@@ -95,6 +95,14 @@ public class ExperimentTemplateJsonUnmarshaller implements Unmarshaller<Experime
                     context.nextToken();
                     experimentTemplate.setLogConfiguration(ExperimentTemplateLogConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("experimentOptions", targetDepth)) {
+                    context.nextToken();
+                    experimentTemplate.setExperimentOptions(ExperimentTemplateExperimentOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("targetAccountConfigurationsCount", targetDepth)) {
+                    context.nextToken();
+                    experimentTemplate.setTargetAccountConfigurationsCount(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

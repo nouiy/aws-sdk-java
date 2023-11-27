@@ -1,3 +1,44 @@
+# __1.12.597__ __2023-11-27__
+## __AWS AppSync__
+  - ### Features
+    - This update enables introspection of Aurora cluster databases using the RDS Data API
+
+## __AWS B2B Data Interchange__
+  - ### Features
+    - This is the initial SDK release for AWS B2B Data Interchange.
+
+## __AWS Backup__
+  - ### Features
+    - AWS Backup now supports restore testing, a new feature that allows customers to automate restore testing and validating their backups. Additionally, this release adds support for EBS Snapshots Archive tier.
+
+## __AWS Control Tower__
+  - ### Features
+    - This release adds the following support: 1. The EnableControl API can configure controls that are configurable.  2. The GetEnabledControl API shows the configured parameters on an enabled control. 3. The new UpdateEnabledControl API can change parameters on an enabled control.
+
+## __AWS Fault Injection Simulator__
+  - ### Features
+    - AWS FIS adds support for multi-account experiments & empty target resolution. This release also introduces the CreateTargetAccountConfiguration API that allows experiments across multiple AWS accounts, and the ListExperimentResolvedTargets API to list target details.
+
+## __AWS Glue__
+  - ### Features
+    - add observations support to DQ CodeGen config model + update document for connectiontypes supported by ConnectorData entities
+
+## __AWS SecurityHub__
+  - ### Features
+    - Adds and updates APIs to support central configuration. This feature allows the Security Hub delegated administrator to configure Security Hub for their entire AWS Org across multiple regions from a home Region. With this release, findings also include account name and application metadata.
+
+## __Amazon Elastic File System__
+  - ### Features
+    - Adding support for EFS Replication to existing file system.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Updates Amazon RDS documentation for support for RDS for Db2.
+
+## __Amazon Transcribe Service__
+  - ### Features
+    - This release adds support for AWS HealthScribe APIs within Amazon Transcribe
+
 # __1.12.596__ __2023-11-27__
 ## __AWS Billing and Cost Management Data Exports__
   - ### Features

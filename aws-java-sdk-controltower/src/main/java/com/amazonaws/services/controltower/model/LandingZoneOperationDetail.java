@@ -73,9 +73,6 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
     private java.util.Date startTime;
     /**
      * <p>
-     * The landing zone operation status.
-     * </p>
-     * <p>
      * Valid values:
      * </p>
      * <ul>
@@ -441,9 +438,6 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The landing zone operation status.
-     * </p>
-     * <p>
      * Valid values:
      * </p>
      * <ul>
@@ -465,10 +459,7 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
      * </ul>
      * 
      * @param status
-     *        The landing zone operation status. </p>
-     *        <p>
-     *        Valid values:
-     *        </p>
+     *        Valid values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -494,9 +485,6 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The landing zone operation status.
-     * </p>
-     * <p>
      * Valid values:
      * </p>
      * <ul>
@@ -517,10 +505,7 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
      * </li>
      * </ul>
      * 
-     * @return The landing zone operation status. </p>
-     *         <p>
-     *         Valid values:
-     *         </p>
+     * @return Valid values:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -546,9 +531,6 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The landing zone operation status.
-     * </p>
-     * <p>
      * Valid values:
      * </p>
      * <ul>
@@ -570,10 +552,7 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
      * </ul>
      * 
      * @param status
-     *        The landing zone operation status. </p>
-     *        <p>
-     *        Valid values:
-     *        </p>
+     *        Valid values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -601,9 +580,6 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The landing zone operation status.
-     * </p>
-     * <p>
      * Valid values:
      * </p>
      * <ul>
@@ -625,10 +601,7 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
      * </ul>
      * 
      * @param status
-     *        The landing zone operation status. </p>
-     *        <p>
-     *        Valid values:
-     *        </p>
+     *        Valid values:</p>
      *        <ul>
      *        <li>
      *        <p>

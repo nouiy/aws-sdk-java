@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Unexpected error during processing of request.
+ * An unexpected error occurred during processing of a request.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

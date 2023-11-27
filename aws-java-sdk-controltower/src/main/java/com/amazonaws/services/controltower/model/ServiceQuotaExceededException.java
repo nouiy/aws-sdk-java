@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+ * The request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

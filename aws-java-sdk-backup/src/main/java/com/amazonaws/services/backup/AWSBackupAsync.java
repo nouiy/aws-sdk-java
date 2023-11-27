@@ -353,6 +353,136 @@ public interface AWSBackupAsync extends AWSBackup {
 
     /**
      * <p>
+     * This is the first of two steps to create a restore testing plan; once this request is successful, finish the
+     * procedure with request CreateRestoreTestingSelection.
+     * </p>
+     * <p>
+     * You must include the parameter RestoreTestingPlan. You may optionally include CreatorRequestId and Tags.
+     * </p>
+     * 
+     * @param createRestoreTestingPlanRequest
+     * @return A Java Future containing the result of the CreateRestoreTestingPlan operation returned by the service.
+     * @sample AWSBackupAsync.CreateRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/CreateRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRestoreTestingPlanResult> createRestoreTestingPlanAsync(CreateRestoreTestingPlanRequest createRestoreTestingPlanRequest);
+
+    /**
+     * <p>
+     * This is the first of two steps to create a restore testing plan; once this request is successful, finish the
+     * procedure with request CreateRestoreTestingSelection.
+     * </p>
+     * <p>
+     * You must include the parameter RestoreTestingPlan. You may optionally include CreatorRequestId and Tags.
+     * </p>
+     * 
+     * @param createRestoreTestingPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateRestoreTestingPlan operation returned by the service.
+     * @sample AWSBackupAsyncHandler.CreateRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/CreateRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRestoreTestingPlanResult> createRestoreTestingPlanAsync(CreateRestoreTestingPlanRequest createRestoreTestingPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateRestoreTestingPlanRequest, CreateRestoreTestingPlanResult> asyncHandler);
+
+    /**
+     * <p>
+     * This request can be sent after CreateRestoreTestingPlan request returns successfully. This is the second part of
+     * creating a resource testing plan, and it must be completed sequentially.
+     * </p>
+     * <p>
+     * This consists of <code>RestoreTestingSelectionName</code>, <code>ProtectedResourceType</code>, and one of the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ProtectedResourceArns</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ProtectedResourceConditions</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Each protected resource type can have one single value.
+     * </p>
+     * <p>
+     * A restore testing selection can include a wildcard value ("*") for <code>ProtectedResourceArns</code> along with
+     * <code>ProtectedResourceConditions</code>. Alternatively, you can include up to 30 specific protected resource
+     * ARNs in <code>ProtectedResourceArns</code>.
+     * </p>
+     * <p>
+     * Cannot select by both protected resource types AND specific ARNs. Request will fail if both are included.
+     * </p>
+     * 
+     * @param createRestoreTestingSelectionRequest
+     * @return A Java Future containing the result of the CreateRestoreTestingSelection operation returned by the
+     *         service.
+     * @sample AWSBackupAsync.CreateRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/CreateRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRestoreTestingSelectionResult> createRestoreTestingSelectionAsync(
+            CreateRestoreTestingSelectionRequest createRestoreTestingSelectionRequest);
+
+    /**
+     * <p>
+     * This request can be sent after CreateRestoreTestingPlan request returns successfully. This is the second part of
+     * creating a resource testing plan, and it must be completed sequentially.
+     * </p>
+     * <p>
+     * This consists of <code>RestoreTestingSelectionName</code>, <code>ProtectedResourceType</code>, and one of the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ProtectedResourceArns</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ProtectedResourceConditions</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Each protected resource type can have one single value.
+     * </p>
+     * <p>
+     * A restore testing selection can include a wildcard value ("*") for <code>ProtectedResourceArns</code> along with
+     * <code>ProtectedResourceConditions</code>. Alternatively, you can include up to 30 specific protected resource
+     * ARNs in <code>ProtectedResourceArns</code>.
+     * </p>
+     * <p>
+     * Cannot select by both protected resource types AND specific ARNs. Request will fail if both are included.
+     * </p>
+     * 
+     * @param createRestoreTestingSelectionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateRestoreTestingSelection operation returned by the
+     *         service.
+     * @sample AWSBackupAsyncHandler.CreateRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/CreateRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRestoreTestingSelectionResult> createRestoreTestingSelectionAsync(
+            CreateRestoreTestingSelectionRequest createRestoreTestingSelectionRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateRestoreTestingSelectionRequest, CreateRestoreTestingSelectionResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a backup plan. A backup plan can only be deleted after all associated selections of resources have been
      * deleted. Deleting a backup plan deletes the current version of a backup plan. Previous versions, if any, will
      * still exist.
@@ -693,6 +823,86 @@ public interface AWSBackupAsync extends AWSBackup {
      */
     java.util.concurrent.Future<DeleteReportPlanResult> deleteReportPlanAsync(DeleteReportPlanRequest deleteReportPlanRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteReportPlanRequest, DeleteReportPlanResult> asyncHandler);
+
+    /**
+     * <p>
+     * This request deletes the specified restore testing plan.
+     * </p>
+     * <p>
+     * Deletion can only successfully occur if all associated restore testing selections are deleted first.
+     * </p>
+     * 
+     * @param deleteRestoreTestingPlanRequest
+     * @return A Java Future containing the result of the DeleteRestoreTestingPlan operation returned by the service.
+     * @sample AWSBackupAsync.DeleteRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRestoreTestingPlanResult> deleteRestoreTestingPlanAsync(DeleteRestoreTestingPlanRequest deleteRestoreTestingPlanRequest);
+
+    /**
+     * <p>
+     * This request deletes the specified restore testing plan.
+     * </p>
+     * <p>
+     * Deletion can only successfully occur if all associated restore testing selections are deleted first.
+     * </p>
+     * 
+     * @param deleteRestoreTestingPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteRestoreTestingPlan operation returned by the service.
+     * @sample AWSBackupAsyncHandler.DeleteRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRestoreTestingPlanResult> deleteRestoreTestingPlanAsync(DeleteRestoreTestingPlanRequest deleteRestoreTestingPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteRestoreTestingPlanRequest, DeleteRestoreTestingPlanResult> asyncHandler);
+
+    /**
+     * <p>
+     * Input the Restore Testing Plan name and Restore Testing Selection name.
+     * </p>
+     * <p>
+     * All testing selections associated with a restore testing plan must be deleted before the restore testing plan can
+     * be deleted.
+     * </p>
+     * 
+     * @param deleteRestoreTestingSelectionRequest
+     * @return A Java Future containing the result of the DeleteRestoreTestingSelection operation returned by the
+     *         service.
+     * @sample AWSBackupAsync.DeleteRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRestoreTestingSelectionResult> deleteRestoreTestingSelectionAsync(
+            DeleteRestoreTestingSelectionRequest deleteRestoreTestingSelectionRequest);
+
+    /**
+     * <p>
+     * Input the Restore Testing Plan name and Restore Testing Selection name.
+     * </p>
+     * <p>
+     * All testing selections associated with a restore testing plan must be deleted before the restore testing plan can
+     * be deleted.
+     * </p>
+     * 
+     * @param deleteRestoreTestingSelectionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteRestoreTestingSelection operation returned by the
+     *         service.
+     * @sample AWSBackupAsyncHandler.DeleteRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/DeleteRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRestoreTestingSelectionResult> deleteRestoreTestingSelectionAsync(
+            DeleteRestoreTestingSelectionRequest deleteRestoreTestingSelectionRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteRestoreTestingSelectionRequest, DeleteRestoreTestingSelectionResult> asyncHandler);
 
     /**
      * <p>
@@ -1421,6 +1631,142 @@ public interface AWSBackupAsync extends AWSBackup {
     java.util.concurrent.Future<GetRecoveryPointRestoreMetadataResult> getRecoveryPointRestoreMetadataAsync(
             GetRecoveryPointRestoreMetadataRequest getRecoveryPointRestoreMetadataRequest,
             com.amazonaws.handlers.AsyncHandler<GetRecoveryPointRestoreMetadataRequest, GetRecoveryPointRestoreMetadataResult> asyncHandler);
+
+    /**
+     * <p>
+     * This request returns the metadata for the specified restore job.
+     * </p>
+     * 
+     * @param getRestoreJobMetadataRequest
+     * @return A Java Future containing the result of the GetRestoreJobMetadata operation returned by the service.
+     * @sample AWSBackupAsync.GetRestoreJobMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreJobMetadata" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRestoreJobMetadataResult> getRestoreJobMetadataAsync(GetRestoreJobMetadataRequest getRestoreJobMetadataRequest);
+
+    /**
+     * <p>
+     * This request returns the metadata for the specified restore job.
+     * </p>
+     * 
+     * @param getRestoreJobMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRestoreJobMetadata operation returned by the service.
+     * @sample AWSBackupAsyncHandler.GetRestoreJobMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreJobMetadata" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRestoreJobMetadataResult> getRestoreJobMetadataAsync(GetRestoreJobMetadataRequest getRestoreJobMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRestoreJobMetadataRequest, GetRestoreJobMetadataResult> asyncHandler);
+
+    /**
+     * <p>
+     * This request returns the minimal required set of metadata needed to start a restore job with secure default
+     * settings. <code>BackupVaultName</code> and <code>RecoveryPointArn</code> are required parameters.
+     * <code>BackupVaultAccountId</code> is an optional parameter.
+     * </p>
+     * 
+     * @param getRestoreTestingInferredMetadataRequest
+     * @return A Java Future containing the result of the GetRestoreTestingInferredMetadata operation returned by the
+     *         service.
+     * @sample AWSBackupAsync.GetRestoreTestingInferredMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingInferredMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRestoreTestingInferredMetadataResult> getRestoreTestingInferredMetadataAsync(
+            GetRestoreTestingInferredMetadataRequest getRestoreTestingInferredMetadataRequest);
+
+    /**
+     * <p>
+     * This request returns the minimal required set of metadata needed to start a restore job with secure default
+     * settings. <code>BackupVaultName</code> and <code>RecoveryPointArn</code> are required parameters.
+     * <code>BackupVaultAccountId</code> is an optional parameter.
+     * </p>
+     * 
+     * @param getRestoreTestingInferredMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRestoreTestingInferredMetadata operation returned by the
+     *         service.
+     * @sample AWSBackupAsyncHandler.GetRestoreTestingInferredMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingInferredMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRestoreTestingInferredMetadataResult> getRestoreTestingInferredMetadataAsync(
+            GetRestoreTestingInferredMetadataRequest getRestoreTestingInferredMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRestoreTestingInferredMetadataRequest, GetRestoreTestingInferredMetadataResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns <code>RestoreTestingPlan</code> details for the specified <code>RestoreTestingPlanName</code>. The
+     * details are the body of a restore testing plan in JSON format, in addition to plan metadata.
+     * </p>
+     * 
+     * @param getRestoreTestingPlanRequest
+     * @return A Java Future containing the result of the GetRestoreTestingPlan operation returned by the service.
+     * @sample AWSBackupAsync.GetRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRestoreTestingPlanResult> getRestoreTestingPlanAsync(GetRestoreTestingPlanRequest getRestoreTestingPlanRequest);
+
+    /**
+     * <p>
+     * Returns <code>RestoreTestingPlan</code> details for the specified <code>RestoreTestingPlanName</code>. The
+     * details are the body of a restore testing plan in JSON format, in addition to plan metadata.
+     * </p>
+     * 
+     * @param getRestoreTestingPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRestoreTestingPlan operation returned by the service.
+     * @sample AWSBackupAsyncHandler.GetRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRestoreTestingPlanResult> getRestoreTestingPlanAsync(GetRestoreTestingPlanRequest getRestoreTestingPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRestoreTestingPlanRequest, GetRestoreTestingPlanResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns RestoreTestingSelection, which displays resources and elements of the restore testing plan.
+     * </p>
+     * 
+     * @param getRestoreTestingSelectionRequest
+     * @return A Java Future containing the result of the GetRestoreTestingSelection operation returned by the service.
+     * @sample AWSBackupAsync.GetRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRestoreTestingSelectionResult> getRestoreTestingSelectionAsync(
+            GetRestoreTestingSelectionRequest getRestoreTestingSelectionRequest);
+
+    /**
+     * <p>
+     * Returns RestoreTestingSelection, which displays resources and elements of the restore testing plan.
+     * </p>
+     * 
+     * @param getRestoreTestingSelectionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRestoreTestingSelection operation returned by the service.
+     * @sample AWSBackupAsyncHandler.GetRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/GetRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRestoreTestingSelectionResult> getRestoreTestingSelectionAsync(
+            GetRestoreTestingSelectionRequest getRestoreTestingSelectionRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRestoreTestingSelectionRequest, GetRestoreTestingSelectionResult> asyncHandler);
 
     /**
      * <p>
@@ -2157,6 +2503,119 @@ public interface AWSBackupAsync extends AWSBackup {
 
     /**
      * <p>
+     * This returns restore jobs that contain the specified protected resource.
+     * </p>
+     * <p>
+     * You must include <code>ResourceArn</code>. You can optionally include <code>NextToken</code>,
+     * <code>ByStatus</code>, <code>MaxResults</code>, <code>ByRecoveryPointCreationDateAfter</code> , and
+     * <code>ByRecoveryPointCreationDateBefore</code>.
+     * </p>
+     * 
+     * @param listRestoreJobsByProtectedResourceRequest
+     * @return A Java Future containing the result of the ListRestoreJobsByProtectedResource operation returned by the
+     *         service.
+     * @sample AWSBackupAsync.ListRestoreJobsByProtectedResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreJobsByProtectedResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRestoreJobsByProtectedResourceResult> listRestoreJobsByProtectedResourceAsync(
+            ListRestoreJobsByProtectedResourceRequest listRestoreJobsByProtectedResourceRequest);
+
+    /**
+     * <p>
+     * This returns restore jobs that contain the specified protected resource.
+     * </p>
+     * <p>
+     * You must include <code>ResourceArn</code>. You can optionally include <code>NextToken</code>,
+     * <code>ByStatus</code>, <code>MaxResults</code>, <code>ByRecoveryPointCreationDateAfter</code> , and
+     * <code>ByRecoveryPointCreationDateBefore</code>.
+     * </p>
+     * 
+     * @param listRestoreJobsByProtectedResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListRestoreJobsByProtectedResource operation returned by the
+     *         service.
+     * @sample AWSBackupAsyncHandler.ListRestoreJobsByProtectedResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreJobsByProtectedResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRestoreJobsByProtectedResourceResult> listRestoreJobsByProtectedResourceAsync(
+            ListRestoreJobsByProtectedResourceRequest listRestoreJobsByProtectedResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<ListRestoreJobsByProtectedResourceRequest, ListRestoreJobsByProtectedResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of restore testing plans.
+     * </p>
+     * 
+     * @param listRestoreTestingPlansRequest
+     * @return A Java Future containing the result of the ListRestoreTestingPlans operation returned by the service.
+     * @sample AWSBackupAsync.ListRestoreTestingPlans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreTestingPlans" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRestoreTestingPlansResult> listRestoreTestingPlansAsync(ListRestoreTestingPlansRequest listRestoreTestingPlansRequest);
+
+    /**
+     * <p>
+     * Returns a list of restore testing plans.
+     * </p>
+     * 
+     * @param listRestoreTestingPlansRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListRestoreTestingPlans operation returned by the service.
+     * @sample AWSBackupAsyncHandler.ListRestoreTestingPlans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreTestingPlans" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRestoreTestingPlansResult> listRestoreTestingPlansAsync(ListRestoreTestingPlansRequest listRestoreTestingPlansRequest,
+            com.amazonaws.handlers.AsyncHandler<ListRestoreTestingPlansRequest, ListRestoreTestingPlansResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of restore testing selections. Can be filtered by <code>MaxResults</code> and
+     * <code>RestoreTestingPlanName</code>.
+     * </p>
+     * 
+     * @param listRestoreTestingSelectionsRequest
+     * @return A Java Future containing the result of the ListRestoreTestingSelections operation returned by the
+     *         service.
+     * @sample AWSBackupAsync.ListRestoreTestingSelections
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreTestingSelections"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRestoreTestingSelectionsResult> listRestoreTestingSelectionsAsync(
+            ListRestoreTestingSelectionsRequest listRestoreTestingSelectionsRequest);
+
+    /**
+     * <p>
+     * Returns a list of restore testing selections. Can be filtered by <code>MaxResults</code> and
+     * <code>RestoreTestingPlanName</code>.
+     * </p>
+     * 
+     * @param listRestoreTestingSelectionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListRestoreTestingSelections operation returned by the
+     *         service.
+     * @sample AWSBackupAsyncHandler.ListRestoreTestingSelections
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ListRestoreTestingSelections"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRestoreTestingSelectionsResult> listRestoreTestingSelectionsAsync(
+            ListRestoreTestingSelectionsRequest listRestoreTestingSelectionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListRestoreTestingSelectionsRequest, ListRestoreTestingSelectionsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of key-value pairs assigned to a target recovery point, backup plan, or backup vault.
      * </p>
      * <p>
@@ -2320,6 +2779,43 @@ public interface AWSBackupAsync extends AWSBackup {
     java.util.concurrent.Future<PutBackupVaultNotificationsResult> putBackupVaultNotificationsAsync(
             PutBackupVaultNotificationsRequest putBackupVaultNotificationsRequest,
             com.amazonaws.handlers.AsyncHandler<PutBackupVaultNotificationsRequest, PutBackupVaultNotificationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * This request allows you to send your independent self-run restore test validation results.
+     * <code>RestoreJobId</code> and <code>ValidationStatus</code> are required. Optionally, you can input a
+     * <code>ValidationStatusMessage</code>.
+     * </p>
+     * 
+     * @param putRestoreValidationResultRequest
+     * @return A Java Future containing the result of the PutRestoreValidationResult operation returned by the service.
+     * @sample AWSBackupAsync.PutRestoreValidationResult
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/PutRestoreValidationResult"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutRestoreValidationResultResult> putRestoreValidationResultAsync(
+            PutRestoreValidationResultRequest putRestoreValidationResultRequest);
+
+    /**
+     * <p>
+     * This request allows you to send your independent self-run restore test validation results.
+     * <code>RestoreJobId</code> and <code>ValidationStatus</code> are required. Optionally, you can input a
+     * <code>ValidationStatusMessage</code>.
+     * </p>
+     * 
+     * @param putRestoreValidationResultRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutRestoreValidationResult operation returned by the service.
+     * @sample AWSBackupAsyncHandler.PutRestoreValidationResult
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/PutRestoreValidationResult"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutRestoreValidationResultResult> putRestoreValidationResultAsync(
+            PutRestoreValidationResultRequest putRestoreValidationResultRequest,
+            com.amazonaws.handlers.AsyncHandler<PutRestoreValidationResultRequest, PutRestoreValidationResultResult> asyncHandler);
 
     /**
      * <p>
@@ -2799,5 +3295,143 @@ public interface AWSBackupAsync extends AWSBackup {
      */
     java.util.concurrent.Future<UpdateReportPlanResult> updateReportPlanAsync(UpdateReportPlanRequest updateReportPlanRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateReportPlanRequest, UpdateReportPlanResult> asyncHandler);
+
+    /**
+     * <p>
+     * This request will send changes to your specified restore testing plan. <code>RestoreTestingPlanName</code> cannot
+     * be updated after it is created.
+     * </p>
+     * <p>
+     * <code>RecoveryPointSelection</code> can contain:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Algorithm</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExcludeVaults</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IncludeVaults</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RecoveryPointTypes</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SelectionWindowDays</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param updateRestoreTestingPlanRequest
+     * @return A Java Future containing the result of the UpdateRestoreTestingPlan operation returned by the service.
+     * @sample AWSBackupAsync.UpdateRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRestoreTestingPlanResult> updateRestoreTestingPlanAsync(UpdateRestoreTestingPlanRequest updateRestoreTestingPlanRequest);
+
+    /**
+     * <p>
+     * This request will send changes to your specified restore testing plan. <code>RestoreTestingPlanName</code> cannot
+     * be updated after it is created.
+     * </p>
+     * <p>
+     * <code>RecoveryPointSelection</code> can contain:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Algorithm</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ExcludeVaults</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IncludeVaults</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RecoveryPointTypes</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SelectionWindowDays</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param updateRestoreTestingPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateRestoreTestingPlan operation returned by the service.
+     * @sample AWSBackupAsyncHandler.UpdateRestoreTestingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateRestoreTestingPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRestoreTestingPlanResult> updateRestoreTestingPlanAsync(UpdateRestoreTestingPlanRequest updateRestoreTestingPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateRestoreTestingPlanRequest, UpdateRestoreTestingPlanResult> asyncHandler);
+
+    /**
+     * <p>
+     * Most elements except the <code>RestoreTestingSelectionName</code> can be updated with this request.
+     * </p>
+     * <p>
+     * <code>RestoreTestingSelection</code> can use either protected resource ARNs or conditions, but not both. That is,
+     * if your selection has <code>ProtectedResourceArns</code>, requesting an update with the parameter
+     * <code>ProtectedResourceConditions</code> will be unsuccessful.
+     * </p>
+     * 
+     * @param updateRestoreTestingSelectionRequest
+     * @return A Java Future containing the result of the UpdateRestoreTestingSelection operation returned by the
+     *         service.
+     * @sample AWSBackupAsync.UpdateRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRestoreTestingSelectionResult> updateRestoreTestingSelectionAsync(
+            UpdateRestoreTestingSelectionRequest updateRestoreTestingSelectionRequest);
+
+    /**
+     * <p>
+     * Most elements except the <code>RestoreTestingSelectionName</code> can be updated with this request.
+     * </p>
+     * <p>
+     * <code>RestoreTestingSelection</code> can use either protected resource ARNs or conditions, but not both. That is,
+     * if your selection has <code>ProtectedResourceArns</code>, requesting an update with the parameter
+     * <code>ProtectedResourceConditions</code> will be unsuccessful.
+     * </p>
+     * 
+     * @param updateRestoreTestingSelectionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateRestoreTestingSelection operation returned by the
+     *         service.
+     * @sample AWSBackupAsyncHandler.UpdateRestoreTestingSelection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/UpdateRestoreTestingSelection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRestoreTestingSelectionResult> updateRestoreTestingSelectionAsync(
+            UpdateRestoreTestingSelectionRequest updateRestoreTestingSelectionRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateRestoreTestingSelectionRequest, UpdateRestoreTestingSelectionResult> asyncHandler);
 
 }

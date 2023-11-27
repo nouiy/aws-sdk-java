@@ -361,6 +361,47 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * Returns associations between an Security Hub configuration and a batch of target accounts, organizational units,
+     * or the root. Only the Security Hub delegated administrator can invoke this operation from the home Region. A
+     * configuration can refer to a configuration policy or to a self-managed configuration.
+     * </p>
+     * 
+     * @param batchGetConfigurationPolicyAssociationsRequest
+     * @return A Java Future containing the result of the BatchGetConfigurationPolicyAssociations operation returned by
+     *         the service.
+     * @sample AWSSecurityHubAsync.BatchGetConfigurationPolicyAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetConfigurationPolicyAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetConfigurationPolicyAssociationsResult> batchGetConfigurationPolicyAssociationsAsync(
+            BatchGetConfigurationPolicyAssociationsRequest batchGetConfigurationPolicyAssociationsRequest);
+
+    /**
+     * <p>
+     * Returns associations between an Security Hub configuration and a batch of target accounts, organizational units,
+     * or the root. Only the Security Hub delegated administrator can invoke this operation from the home Region. A
+     * configuration can refer to a configuration policy or to a self-managed configuration.
+     * </p>
+     * 
+     * @param batchGetConfigurationPolicyAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetConfigurationPolicyAssociations operation returned by
+     *         the service.
+     * @sample AWSSecurityHubAsyncHandler.BatchGetConfigurationPolicyAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetConfigurationPolicyAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetConfigurationPolicyAssociationsResult> batchGetConfigurationPolicyAssociationsAsync(
+            BatchGetConfigurationPolicyAssociationsRequest batchGetConfigurationPolicyAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetConfigurationPolicyAssociationsRequest, BatchGetConfigurationPolicyAssociationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides details about a batch of security controls for the current Amazon Web Services account and Amazon Web
      * Services Region.
      * </p>
@@ -927,6 +968,41 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * Creates a configuration policy with the defined configuration. Only the Security Hub delegated administrator can
+     * invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param createConfigurationPolicyRequest
+     * @return A Java Future containing the result of the CreateConfigurationPolicy operation returned by the service.
+     * @sample AWSSecurityHubAsync.CreateConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConfigurationPolicyResult> createConfigurationPolicyAsync(
+            CreateConfigurationPolicyRequest createConfigurationPolicyRequest);
+
+    /**
+     * <p>
+     * Creates a configuration policy with the defined configuration. Only the Security Hub delegated administrator can
+     * invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param createConfigurationPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateConfigurationPolicy operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.CreateConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConfigurationPolicyResult> createConfigurationPolicyAsync(
+            CreateConfigurationPolicyRequest createConfigurationPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateConfigurationPolicyRequest, CreateConfigurationPolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Used to enable finding aggregation. Must be called from the aggregation Region.
      * </p>
      * <p>
@@ -1238,6 +1314,45 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * Deletes a configuration policy. Only the Security Hub delegated administrator can invoke this operation from the
+     * home Region. For the deletion to succeed, you must first disassociate a configuration policy from target
+     * accounts, organizational units, or the root by invoking the <code>StartConfigurationPolicyDisassociation</code>
+     * operation.
+     * </p>
+     * 
+     * @param deleteConfigurationPolicyRequest
+     * @return A Java Future containing the result of the DeleteConfigurationPolicy operation returned by the service.
+     * @sample AWSSecurityHubAsync.DeleteConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConfigurationPolicyResult> deleteConfigurationPolicyAsync(
+            DeleteConfigurationPolicyRequest deleteConfigurationPolicyRequest);
+
+    /**
+     * <p>
+     * Deletes a configuration policy. Only the Security Hub delegated administrator can invoke this operation from the
+     * home Region. For the deletion to succeed, you must first disassociate a configuration policy from target
+     * accounts, organizational units, or the root by invoking the <code>StartConfigurationPolicyDisassociation</code>
+     * operation.
+     * </p>
+     * 
+     * @param deleteConfigurationPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteConfigurationPolicy operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.DeleteConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConfigurationPolicyResult> deleteConfigurationPolicyAsync(
+            DeleteConfigurationPolicyRequest deleteConfigurationPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteConfigurationPolicyRequest, DeleteConfigurationPolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a finding aggregator. When you delete the finding aggregator, you stop finding aggregation.
      * </p>
      * <p>
@@ -1458,8 +1573,8 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
-     * Returns information about the Organizations configuration for Security Hub. Can only be called from a Security
-     * Hub administrator account.
+     * Returns information about the way your organization is configured in Security Hub. Only the Security Hub
+     * administrator account can invoke this operation.
      * </p>
      * 
      * @param describeOrganizationConfigurationRequest
@@ -1474,8 +1589,8 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
-     * Returns information about the Organizations configuration for Security Hub. Can only be called from a Security
-     * Hub administrator account.
+     * Returns information about the way your organization is configured in Security Hub. Only the Security Hub
+     * administrator account can invoke this operation.
      * </p>
      * 
      * @param describeOrganizationConfigurationRequest
@@ -2112,6 +2227,78 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * Provides information about a configuration policy. Only the Security Hub delegated administrator can invoke this
+     * operation from the home Region.
+     * </p>
+     * 
+     * @param getConfigurationPolicyRequest
+     * @return A Java Future containing the result of the GetConfigurationPolicy operation returned by the service.
+     * @sample AWSSecurityHubAsync.GetConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfigurationPolicyResult> getConfigurationPolicyAsync(GetConfigurationPolicyRequest getConfigurationPolicyRequest);
+
+    /**
+     * <p>
+     * Provides information about a configuration policy. Only the Security Hub delegated administrator can invoke this
+     * operation from the home Region.
+     * </p>
+     * 
+     * @param getConfigurationPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetConfigurationPolicy operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.GetConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfigurationPolicyResult> getConfigurationPolicyAsync(GetConfigurationPolicyRequest getConfigurationPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetConfigurationPolicyRequest, GetConfigurationPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the association between a configuration and a target account, organizational unit, or the root. The
+     * configuration can be a configuration policy or self-managed behavior. Only the Security Hub delegated
+     * administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param getConfigurationPolicyAssociationRequest
+     * @return A Java Future containing the result of the GetConfigurationPolicyAssociation operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsync.GetConfigurationPolicyAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetConfigurationPolicyAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfigurationPolicyAssociationResult> getConfigurationPolicyAssociationAsync(
+            GetConfigurationPolicyAssociationRequest getConfigurationPolicyAssociationRequest);
+
+    /**
+     * <p>
+     * Returns the association between a configuration and a target account, organizational unit, or the root. The
+     * configuration can be a configuration policy or self-managed behavior. Only the Security Hub delegated
+     * administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param getConfigurationPolicyAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetConfigurationPolicyAssociation operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsyncHandler.GetConfigurationPolicyAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetConfigurationPolicyAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfigurationPolicyAssociationResult> getConfigurationPolicyAssociationAsync(
+            GetConfigurationPolicyAssociationRequest getConfigurationPolicyAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetConfigurationPolicyAssociationRequest, GetConfigurationPolicyAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of the standards that are currently enabled.
      * </p>
      * 
@@ -2572,6 +2759,78 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * Lists the configuration policies that the Security Hub delegated administrator has created for your organization.
+     * Only the delegated administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param listConfigurationPoliciesRequest
+     * @return A Java Future containing the result of the ListConfigurationPolicies operation returned by the service.
+     * @sample AWSSecurityHubAsync.ListConfigurationPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListConfigurationPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListConfigurationPoliciesResult> listConfigurationPoliciesAsync(
+            ListConfigurationPoliciesRequest listConfigurationPoliciesRequest);
+
+    /**
+     * <p>
+     * Lists the configuration policies that the Security Hub delegated administrator has created for your organization.
+     * Only the delegated administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param listConfigurationPoliciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListConfigurationPolicies operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.ListConfigurationPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListConfigurationPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListConfigurationPoliciesResult> listConfigurationPoliciesAsync(
+            ListConfigurationPoliciesRequest listConfigurationPoliciesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListConfigurationPoliciesRequest, ListConfigurationPoliciesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides information about the associations for your configuration policies and self-managed behavior. Only the
+     * Security Hub delegated administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param listConfigurationPolicyAssociationsRequest
+     * @return A Java Future containing the result of the ListConfigurationPolicyAssociations operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsync.ListConfigurationPolicyAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListConfigurationPolicyAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListConfigurationPolicyAssociationsResult> listConfigurationPolicyAssociationsAsync(
+            ListConfigurationPolicyAssociationsRequest listConfigurationPolicyAssociationsRequest);
+
+    /**
+     * <p>
+     * Provides information about the associations for your configuration policies and self-managed behavior. Only the
+     * Security Hub delegated administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param listConfigurationPolicyAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListConfigurationPolicyAssociations operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsyncHandler.ListConfigurationPolicyAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListConfigurationPolicyAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListConfigurationPolicyAssociationsResult> listConfigurationPolicyAssociationsAsync(
+            ListConfigurationPolicyAssociationsRequest listConfigurationPolicyAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListConfigurationPolicyAssociationsRequest, ListConfigurationPolicyAssociationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists all findings-generating solutions (products) that you are subscribed to receive findings from in Security
      * Hub.
      * </p>
@@ -2856,6 +3115,90 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * Associates a target account, organizational unit, or the root with a specified configuration. The target can be
+     * associated with a configuration policy or self-managed behavior. Only the Security Hub delegated administrator
+     * can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param startConfigurationPolicyAssociationRequest
+     * @return A Java Future containing the result of the StartConfigurationPolicyAssociation operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsync.StartConfigurationPolicyAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/StartConfigurationPolicyAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartConfigurationPolicyAssociationResult> startConfigurationPolicyAssociationAsync(
+            StartConfigurationPolicyAssociationRequest startConfigurationPolicyAssociationRequest);
+
+    /**
+     * <p>
+     * Associates a target account, organizational unit, or the root with a specified configuration. The target can be
+     * associated with a configuration policy or self-managed behavior. Only the Security Hub delegated administrator
+     * can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param startConfigurationPolicyAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartConfigurationPolicyAssociation operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsyncHandler.StartConfigurationPolicyAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/StartConfigurationPolicyAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartConfigurationPolicyAssociationResult> startConfigurationPolicyAssociationAsync(
+            StartConfigurationPolicyAssociationRequest startConfigurationPolicyAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<StartConfigurationPolicyAssociationRequest, StartConfigurationPolicyAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Disassociates a target account, organizational unit, or the root from a specified configuration. When you
+     * disassociate a configuration from its target, the target inherits the configuration of the closest parent. If
+     * there’s no configuration to inherit, the target retains its settings but becomes a self-managed account. A target
+     * can be disassociated from a configuration policy or self-managed behavior. Only the Security Hub delegated
+     * administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param startConfigurationPolicyDisassociationRequest
+     * @return A Java Future containing the result of the StartConfigurationPolicyDisassociation operation returned by
+     *         the service.
+     * @sample AWSSecurityHubAsync.StartConfigurationPolicyDisassociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/StartConfigurationPolicyDisassociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartConfigurationPolicyDisassociationResult> startConfigurationPolicyDisassociationAsync(
+            StartConfigurationPolicyDisassociationRequest startConfigurationPolicyDisassociationRequest);
+
+    /**
+     * <p>
+     * Disassociates a target account, organizational unit, or the root from a specified configuration. When you
+     * disassociate a configuration from its target, the target inherits the configuration of the closest parent. If
+     * there’s no configuration to inherit, the target retains its settings but becomes a self-managed account. A target
+     * can be disassociated from a configuration policy or self-managed behavior. Only the Security Hub delegated
+     * administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param startConfigurationPolicyDisassociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartConfigurationPolicyDisassociation operation returned by
+     *         the service.
+     * @sample AWSSecurityHubAsyncHandler.StartConfigurationPolicyDisassociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/StartConfigurationPolicyDisassociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartConfigurationPolicyDisassociationResult> startConfigurationPolicyDisassociationAsync(
+            StartConfigurationPolicyDisassociationRequest startConfigurationPolicyDisassociationRequest,
+            com.amazonaws.handlers.AsyncHandler<StartConfigurationPolicyDisassociationRequest, StartConfigurationPolicyDisassociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Adds one or more tags to a resource.
      * </p>
      * 
@@ -2946,6 +3289,41 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
      */
     java.util.concurrent.Future<UpdateActionTargetResult> updateActionTargetAsync(UpdateActionTargetRequest updateActionTargetRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateActionTargetRequest, UpdateActionTargetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a configuration policy. Only the Security Hub delegated administrator can invoke this operation from the
+     * home Region.
+     * </p>
+     * 
+     * @param updateConfigurationPolicyRequest
+     * @return A Java Future containing the result of the UpdateConfigurationPolicy operation returned by the service.
+     * @sample AWSSecurityHubAsync.UpdateConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConfigurationPolicyResult> updateConfigurationPolicyAsync(
+            UpdateConfigurationPolicyRequest updateConfigurationPolicyRequest);
+
+    /**
+     * <p>
+     * Updates a configuration policy. Only the Security Hub delegated administrator can invoke this operation from the
+     * home Region.
+     * </p>
+     * 
+     * @param updateConfigurationPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateConfigurationPolicy operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.UpdateConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConfigurationPolicyResult> updateConfigurationPolicyAsync(
+            UpdateConfigurationPolicyRequest updateConfigurationPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateConfigurationPolicyRequest, UpdateConfigurationPolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -3060,8 +3438,8 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
-     * Used to update the configuration related to Organizations. Can only be called from a Security Hub administrator
-     * account.
+     * Updates the configuration of your organization in Security Hub. Only the Security Hub administrator account can
+     * invoke this operation.
      * </p>
      * 
      * @param updateOrganizationConfigurationRequest
@@ -3076,8 +3454,8 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
-     * Used to update the configuration related to Organizations. Can only be called from a Security Hub administrator
-     * account.
+     * Updates the configuration of your organization in Security Hub. Only the Security Hub administrator account can
+     * invoke this operation.
      * </p>
      * 
      * @param updateOrganizationConfigurationRequest

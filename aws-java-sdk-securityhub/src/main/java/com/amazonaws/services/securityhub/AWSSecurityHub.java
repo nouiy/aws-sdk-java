@@ -220,6 +220,8 @@ public interface AWSSecurityHub {
      * @throws LimitExceededException
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.BatchDisableStandards
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchDisableStandards"
      *      target="_top">AWS API Documentation</a>
@@ -248,6 +250,8 @@ public interface AWSSecurityHub {
      * @throws LimitExceededException
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.BatchEnableStandards
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchEnableStandards"
      *      target="_top">AWS API Documentation</a>
@@ -279,6 +283,36 @@ public interface AWSSecurityHub {
      *      target="_top">AWS API Documentation</a>
      */
     BatchGetAutomationRulesResult batchGetAutomationRules(BatchGetAutomationRulesRequest batchGetAutomationRulesRequest);
+
+    /**
+     * <p>
+     * Returns associations between an Security Hub configuration and a batch of target accounts, organizational units,
+     * or the root. Only the Security Hub delegated administrator can invoke this operation from the home Region. A
+     * configuration can refer to a configuration policy or to a self-managed configuration.
+     * </p>
+     * 
+     * @param batchGetConfigurationPolicyAssociationsRequest
+     * @return Result of the BatchGetConfigurationPolicyAssociations operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.BatchGetConfigurationPolicyAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetConfigurationPolicyAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchGetConfigurationPolicyAssociationsResult batchGetConfigurationPolicyAssociations(
+            BatchGetConfigurationPolicyAssociationsRequest batchGetConfigurationPolicyAssociationsRequest);
 
     /**
      * <p>
@@ -558,6 +592,8 @@ public interface AWSSecurityHub {
      *         The account doesn't have permission to perform this action.
      * @throws InvalidInputException
      *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.BatchUpdateStandardsControlAssociations
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchUpdateStandardsControlAssociations"
@@ -617,6 +653,33 @@ public interface AWSSecurityHub {
      *      target="_top">AWS API Documentation</a>
      */
     CreateAutomationRuleResult createAutomationRule(CreateAutomationRuleRequest createAutomationRuleRequest);
+
+    /**
+     * <p>
+     * Creates a configuration policy with the defined configuration. Only the Security Hub delegated administrator can
+     * invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param createConfigurationPolicyRequest
+     * @return Result of the CreateConfigurationPolicy operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws ResourceConflictException
+     *         The resource specified in the request conflicts with an existing resource.
+     * @sample AWSSecurityHub.CreateConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateConfigurationPolicyResult createConfigurationPolicy(CreateConfigurationPolicyRequest createConfigurationPolicyRequest);
 
     /**
      * <p>
@@ -751,6 +814,8 @@ public interface AWSSecurityHub {
      *         The account doesn't have permission to perform this action.
      * @throws ResourceConflictException
      *         The resource specified in the request conflicts with an existing resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.CreateMembers
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateMembers" target="_top">AWS API
      *      Documentation</a>
@@ -809,6 +874,37 @@ public interface AWSSecurityHub {
      *      API Documentation</a>
      */
     DeleteActionTargetResult deleteActionTarget(DeleteActionTargetRequest deleteActionTargetRequest);
+
+    /**
+     * <p>
+     * Deletes a configuration policy. Only the Security Hub delegated administrator can invoke this operation from the
+     * home Region. For the deletion to succeed, you must first disassociate a configuration policy from target
+     * accounts, organizational units, or the root by invoking the <code>StartConfigurationPolicyDisassociation</code>
+     * operation.
+     * </p>
+     * 
+     * @param deleteConfigurationPolicyRequest
+     * @return Result of the DeleteConfigurationPolicy operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws ResourceConflictException
+     *         The resource specified in the request conflicts with an existing resource.
+     * @sample AWSSecurityHub.DeleteConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DeleteConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteConfigurationPolicyResult deleteConfigurationPolicy(DeleteConfigurationPolicyRequest deleteConfigurationPolicyRequest);
 
     /**
      * <p>
@@ -972,8 +1068,8 @@ public interface AWSSecurityHub {
 
     /**
      * <p>
-     * Returns information about the Organizations configuration for Security Hub. Can only be called from a Security
-     * Hub administrator account.
+     * Returns information about the way your organization is configured in Security Hub. Only the Security Hub
+     * administrator account can invoke this operation.
      * </p>
      * 
      * @param describeOrganizationConfigurationRequest
@@ -1110,6 +1206,8 @@ public interface AWSSecurityHub {
      * @throws LimitExceededException
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.DisableOrganizationAdminAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisableOrganizationAdminAccount"
      *      target="_top">AWS API Documentation</a>
@@ -1144,6 +1242,8 @@ public interface AWSSecurityHub {
      *         The account doesn't have permission to perform this action.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.DisableSecurityHub
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisableSecurityHub" target="_top">AWS
      *      API Documentation</a>
@@ -1240,6 +1340,8 @@ public interface AWSSecurityHub {
      *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.DisassociateMembers
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisassociateMembers"
      *      target="_top">AWS API Documentation</a>
@@ -1292,6 +1394,8 @@ public interface AWSSecurityHub {
      * @throws LimitExceededException
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.EnableOrganizationAdminAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/EnableOrganizationAdminAccount"
      *      target="_top">AWS API Documentation</a>
@@ -1383,6 +1487,61 @@ public interface AWSSecurityHub {
      *      target="_top">AWS API Documentation</a>
      */
     GetAdministratorAccountResult getAdministratorAccount(GetAdministratorAccountRequest getAdministratorAccountRequest);
+
+    /**
+     * <p>
+     * Provides information about a configuration policy. Only the Security Hub delegated administrator can invoke this
+     * operation from the home Region.
+     * </p>
+     * 
+     * @param getConfigurationPolicyRequest
+     * @return Result of the GetConfigurationPolicy operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.GetConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetConfigurationPolicyResult getConfigurationPolicy(GetConfigurationPolicyRequest getConfigurationPolicyRequest);
+
+    /**
+     * <p>
+     * Returns the association between a configuration and a target account, organizational unit, or the root. The
+     * configuration can be a configuration policy or self-managed behavior. Only the Security Hub delegated
+     * administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param getConfigurationPolicyAssociationRequest
+     * @return Result of the GetConfigurationPolicyAssociation operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.GetConfigurationPolicyAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetConfigurationPolicyAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetConfigurationPolicyAssociationResult getConfigurationPolicyAssociation(GetConfigurationPolicyAssociationRequest getConfigurationPolicyAssociationRequest);
 
     /**
      * <p>
@@ -1710,6 +1869,59 @@ public interface AWSSecurityHub {
 
     /**
      * <p>
+     * Lists the configuration policies that the Security Hub delegated administrator has created for your organization.
+     * Only the delegated administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param listConfigurationPoliciesRequest
+     * @return Result of the ListConfigurationPolicies operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.ListConfigurationPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListConfigurationPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListConfigurationPoliciesResult listConfigurationPolicies(ListConfigurationPoliciesRequest listConfigurationPoliciesRequest);
+
+    /**
+     * <p>
+     * Provides information about the associations for your configuration policies and self-managed behavior. Only the
+     * Security Hub delegated administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param listConfigurationPolicyAssociationsRequest
+     * @return Result of the ListConfigurationPolicyAssociations operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.ListConfigurationPolicyAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListConfigurationPolicyAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListConfigurationPolicyAssociationsResult listConfigurationPolicyAssociations(
+            ListConfigurationPolicyAssociationsRequest listConfigurationPolicyAssociationsRequest);
+
+    /**
+     * <p>
      * Lists all findings-generating solutions (products) that you are subscribed to receive findings from in Security
      * Hub.
      * </p>
@@ -1893,6 +2105,67 @@ public interface AWSSecurityHub {
 
     /**
      * <p>
+     * Associates a target account, organizational unit, or the root with a specified configuration. The target can be
+     * associated with a configuration policy or self-managed behavior. Only the Security Hub delegated administrator
+     * can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param startConfigurationPolicyAssociationRequest
+     * @return Result of the StartConfigurationPolicyAssociation operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.StartConfigurationPolicyAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/StartConfigurationPolicyAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartConfigurationPolicyAssociationResult startConfigurationPolicyAssociation(
+            StartConfigurationPolicyAssociationRequest startConfigurationPolicyAssociationRequest);
+
+    /**
+     * <p>
+     * Disassociates a target account, organizational unit, or the root from a specified configuration. When you
+     * disassociate a configuration from its target, the target inherits the configuration of the closest parent. If
+     * there’s no configuration to inherit, the target retains its settings but becomes a self-managed account. A target
+     * can be disassociated from a configuration policy or self-managed behavior. Only the Security Hub delegated
+     * administrator can invoke this operation from the home Region.
+     * </p>
+     * 
+     * @param startConfigurationPolicyDisassociationRequest
+     * @return Result of the StartConfigurationPolicyDisassociation operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @sample AWSSecurityHub.StartConfigurationPolicyDisassociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/StartConfigurationPolicyDisassociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartConfigurationPolicyDisassociationResult startConfigurationPolicyDisassociation(
+            StartConfigurationPolicyDisassociationRequest startConfigurationPolicyDisassociationRequest);
+
+    /**
+     * <p>
      * Adds one or more tags to a resource.
      * </p>
      * 
@@ -1951,6 +2224,35 @@ public interface AWSSecurityHub {
      *      API Documentation</a>
      */
     UpdateActionTargetResult updateActionTarget(UpdateActionTargetRequest updateActionTargetRequest);
+
+    /**
+     * <p>
+     * Updates a configuration policy. Only the Security Hub delegated administrator can invoke this operation from the
+     * home Region.
+     * </p>
+     * 
+     * @param updateConfigurationPolicyRequest
+     * @return Result of the UpdateConfigurationPolicy operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws ResourceConflictException
+     *         The resource specified in the request conflicts with an existing resource.
+     * @sample AWSSecurityHub.UpdateConfigurationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateConfigurationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateConfigurationPolicyResult updateConfigurationPolicy(UpdateConfigurationPolicyRequest updateConfigurationPolicyRequest);
 
     /**
      * <p>
@@ -2037,8 +2339,8 @@ public interface AWSSecurityHub {
 
     /**
      * <p>
-     * Used to update the configuration related to Organizations. Can only be called from a Security Hub administrator
-     * account.
+     * Updates the configuration of your organization in Security Hub. Only the Security Hub administrator account can
+     * invoke this operation.
      * </p>
      * 
      * @param updateOrganizationConfigurationRequest
@@ -2052,6 +2354,12 @@ public interface AWSSecurityHub {
      * @throws LimitExceededException
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws ResourceConflictException
+     *         The resource specified in the request conflicts with an existing resource.
      * @sample AWSSecurityHub.UpdateOrganizationConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateOrganizationConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -2079,6 +2387,8 @@ public interface AWSSecurityHub {
      * @throws ResourceInUseException
      *         The request was rejected because it conflicts with the resource's availability. For example, you tried to
      *         update a security control that's currently in the <code>UPDATING</code> state.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.UpdateSecurityControl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateSecurityControl"
      *      target="_top">AWS API Documentation</a>
@@ -2103,6 +2413,8 @@ public interface AWSSecurityHub {
      *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.UpdateSecurityHubConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateSecurityHubConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -2124,6 +2436,8 @@ public interface AWSSecurityHub {
      *         The account doesn't have permission to perform this action.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
      * @sample AWSSecurityHub.UpdateStandardsControl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateStandardsControl"
      *      target="_top">AWS API Documentation</a>
