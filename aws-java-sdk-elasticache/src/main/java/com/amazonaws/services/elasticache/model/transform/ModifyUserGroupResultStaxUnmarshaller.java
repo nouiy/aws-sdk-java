@@ -90,6 +90,16 @@ public class ModifyUserGroupResultStaxUnmarshaller implements Unmarshaller<Modif
                     continue;
                 }
 
+                if (context.testExpression("ServerlessCaches", targetDepth)) {
+                    modifyUserGroupResult.withServerlessCaches(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("ServerlessCaches/member", targetDepth)) {
+                    modifyUserGroupResult.withServerlessCaches(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("ARN", targetDepth)) {
                     modifyUserGroupResult.setARN(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

@@ -387,6 +387,10 @@ public class CreateReplicationGroupRequestMarshaller implements Marshaller<Reque
             request.addParameter("ClusterMode", StringUtils.fromString(createReplicationGroupRequest.getClusterMode()));
         }
 
+        if (createReplicationGroupRequest.getServerlessCacheSnapshotName() != null) {
+            request.addParameter("ServerlessCacheSnapshotName", StringUtils.fromString(createReplicationGroupRequest.getServerlessCacheSnapshotName()));
+        }
+
         return request;
     }
 

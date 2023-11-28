@@ -1,3 +1,8 @@
+# __1.12.598__ __2023-11-28__
+## __Amazon ElastiCache__
+  - ### Features
+    - Launching Amazon ElastiCache Serverless that enables you to create a cache in under a minute without any capacity management. ElastiCache Serverless monitors the cache's memory, CPU, and network usage and scales both vertically and horizontally to support your application's requirements.
+
 # __1.12.597__ __2023-11-27__
 ## __AWS AppSync__
   - ### Features

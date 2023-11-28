@@ -90,6 +90,16 @@ public class DeleteUserGroupResultStaxUnmarshaller implements Unmarshaller<Delet
                     continue;
                 }
 
+                if (context.testExpression("ServerlessCaches", targetDepth)) {
+                    deleteUserGroupResult.withServerlessCaches(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("ServerlessCaches/member", targetDepth)) {
+                    deleteUserGroupResult.withServerlessCaches(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("ARN", targetDepth)) {
                     deleteUserGroupResult.setARN(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

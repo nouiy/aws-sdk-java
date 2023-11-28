@@ -64,6 +64,11 @@ public class AbstractAmazonElastiCache implements AmazonElastiCache {
     }
 
     @Override
+    public CopyServerlessCacheSnapshotResult copyServerlessCacheSnapshot(CopyServerlessCacheSnapshotRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public Snapshot copySnapshot(CopySnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -95,6 +100,16 @@ public class AbstractAmazonElastiCache implements AmazonElastiCache {
 
     @Override
     public ReplicationGroup createReplicationGroup(CreateReplicationGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateServerlessCacheResult createServerlessCache(CreateServerlessCacheRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateServerlessCacheSnapshotResult createServerlessCacheSnapshot(CreateServerlessCacheSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -150,6 +165,16 @@ public class AbstractAmazonElastiCache implements AmazonElastiCache {
 
     @Override
     public ReplicationGroup deleteReplicationGroup(DeleteReplicationGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteServerlessCacheResult deleteServerlessCache(DeleteServerlessCacheRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteServerlessCacheSnapshotResult deleteServerlessCacheSnapshot(DeleteServerlessCacheSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -274,6 +299,16 @@ public class AbstractAmazonElastiCache implements AmazonElastiCache {
     }
 
     @Override
+    public DescribeServerlessCacheSnapshotsResult describeServerlessCacheSnapshots(DescribeServerlessCacheSnapshotsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeServerlessCachesResult describeServerlessCaches(DescribeServerlessCachesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeServiceUpdatesResult describeServiceUpdates(DescribeServiceUpdatesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -305,6 +340,11 @@ public class AbstractAmazonElastiCache implements AmazonElastiCache {
 
     @Override
     public GlobalReplicationGroup disassociateGlobalReplicationGroup(DisassociateGlobalReplicationGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ExportServerlessCacheSnapshotResult exportServerlessCacheSnapshot(ExportServerlessCacheSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -365,6 +405,11 @@ public class AbstractAmazonElastiCache implements AmazonElastiCache {
 
     @Override
     public ReplicationGroup modifyReplicationGroupShardConfiguration(ModifyReplicationGroupShardConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ModifyServerlessCacheResult modifyServerlessCache(ModifyServerlessCacheRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

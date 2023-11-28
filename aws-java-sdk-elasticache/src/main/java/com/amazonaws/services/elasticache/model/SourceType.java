@@ -25,6 +25,8 @@ public enum SourceType {
     CacheSecurityGroup("cache-security-group"),
     CacheSubnetGroup("cache-subnet-group"),
     ReplicationGroup("replication-group"),
+    ServerlessCache("serverless-cache"),
+    ServerlessCacheSnapshot("serverless-cache-snapshot"),
     User("user"),
     UserGroup("user-group");
 

@@ -191,10 +191,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * Current generation:
      * </p>
      * <p>
-     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
-     * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
-     * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
-     * <code>cache.m6g.16xlarge</code>
+     * <b>M7g node types</b>: <code>cache.m7g.large</code>, <code>cache.m7g.xlarge</code>,
+     * <code>cache.m7g.2xlarge</code>, <code>cache.m7g.4xlarge</code>, <code>cache.m7g.8xlarge</code>,
+     * <code>cache.m7g.12xlarge</code>, <code>cache.m7g.16xlarge</code>
      * </p>
      * <note>
      * <p>
@@ -203,6 +202,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * >Supported Node Types</a>
      * </p>
      * </note>
+     * <p>
+     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
+     * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
+     * <code>cache.m6g.16xlarge</code>
+     * </p>
      * <p>
      * <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>,
      * <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code>
@@ -267,13 +272,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * Current generation:
      * </p>
      * <p>
-     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
-     * 1.5.16 onward).
-     * </p>
-     * <p>
-     * <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
-     * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
-     * <code>cache.r6g.16xlarge</code>
+     * <b>R7g node types</b>: <code>cache.r7g.large</code>, <code>cache.r7g.xlarge</code>,
+     * <code>cache.r7g.2xlarge</code>, <code>cache.r7g.4xlarge</code>, <code>cache.r7g.8xlarge</code>,
+     * <code>cache.r7g.12xlarge</code>, <code>cache.r7g.16xlarge</code>
      * </p>
      * <note>
      * <p>
@@ -282,6 +283,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * >Supported Node Types</a>
      * </p>
      * </note>
+     * <p>
+     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
+     * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
+     * <code>cache.r6g.16xlarge</code>
+     * </p>
      * <p>
      * <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>,
      * <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code>
@@ -700,6 +707,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String clusterMode;
+    /**
+     * <p>
+     * The name of the snapshot used to create a replication group. Available for Redis only.
+     * </p>
+     */
+    private String serverlessCacheSnapshotName;
 
     /**
      * <p>
@@ -1768,10 +1781,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * Current generation:
      * </p>
      * <p>
-     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
-     * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
-     * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
-     * <code>cache.m6g.16xlarge</code>
+     * <b>M7g node types</b>: <code>cache.m7g.large</code>, <code>cache.m7g.xlarge</code>,
+     * <code>cache.m7g.2xlarge</code>, <code>cache.m7g.4xlarge</code>, <code>cache.m7g.8xlarge</code>,
+     * <code>cache.m7g.12xlarge</code>, <code>cache.m7g.16xlarge</code>
      * </p>
      * <note>
      * <p>
@@ -1780,6 +1792,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * >Supported Node Types</a>
      * </p>
      * </note>
+     * <p>
+     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
+     * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
+     * <code>cache.m6g.16xlarge</code>
+     * </p>
      * <p>
      * <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>,
      * <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code>
@@ -1844,13 +1862,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * Current generation:
      * </p>
      * <p>
-     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
-     * 1.5.16 onward).
-     * </p>
-     * <p>
-     * <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
-     * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
-     * <code>cache.r6g.16xlarge</code>
+     * <b>R7g node types</b>: <code>cache.r7g.large</code>, <code>cache.r7g.xlarge</code>,
+     * <code>cache.r7g.2xlarge</code>, <code>cache.r7g.4xlarge</code>, <code>cache.r7g.8xlarge</code>,
+     * <code>cache.r7g.12xlarge</code>, <code>cache.r7g.16xlarge</code>
      * </p>
      * <note>
      * <p>
@@ -1859,6 +1873,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * >Supported Node Types</a>
      * </p>
      * </note>
+     * <p>
+     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
+     * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
+     * <code>cache.r6g.16xlarge</code>
+     * </p>
      * <p>
      * <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>,
      * <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code>
@@ -1929,10 +1949,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        Current generation:
      *        </p>
      *        <p>
-     *        <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
-     *        version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>,
-     *        <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>,
-     *        <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code>
+     *        <b>M7g node types</b>: <code>cache.m7g.large</code>, <code>cache.m7g.xlarge</code>,
+     *        <code>cache.m7g.2xlarge</code>, <code>cache.m7g.4xlarge</code>, <code>cache.m7g.8xlarge</code>,
+     *        <code>cache.m7g.12xlarge</code>, <code>cache.m7g.16xlarge</code>
      *        </p>
      *        <note>
      *        <p>
@@ -1941,6 +1960,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        >Supported Node Types</a>
      *        </p>
      *        </note>
+     *        <p>
+     *        <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *        version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>,
+     *        <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>,
+     *        <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code>
+     *        </p>
      *        <p>
      *        <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>,
      *        <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>,
@@ -2008,13 +2033,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        Current generation:
      *        </p>
      *        <p>
-     *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
-     *        version 1.5.16 onward).
-     *        </p>
-     *        <p>
-     *        <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
-     *        <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
-     *        <code>cache.r6g.16xlarge</code>
+     *        <b>R7g node types</b>: <code>cache.r7g.large</code>, <code>cache.r7g.xlarge</code>,
+     *        <code>cache.r7g.2xlarge</code>, <code>cache.r7g.4xlarge</code>, <code>cache.r7g.8xlarge</code>,
+     *        <code>cache.r7g.12xlarge</code>, <code>cache.r7g.16xlarge</code>
      *        </p>
      *        <note>
      *        <p>
@@ -2023,6 +2044,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        >Supported Node Types</a>
      *        </p>
      *        </note>
+     *        <p>
+     *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *        version 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>,
+     *        <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>,
+     *        <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code>
+     *        </p>
      *        <p>
      *        <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>,
      *        <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>,
@@ -2102,10 +2129,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * Current generation:
      * </p>
      * <p>
-     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
-     * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
-     * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
-     * <code>cache.m6g.16xlarge</code>
+     * <b>M7g node types</b>: <code>cache.m7g.large</code>, <code>cache.m7g.xlarge</code>,
+     * <code>cache.m7g.2xlarge</code>, <code>cache.m7g.4xlarge</code>, <code>cache.m7g.8xlarge</code>,
+     * <code>cache.m7g.12xlarge</code>, <code>cache.m7g.16xlarge</code>
      * </p>
      * <note>
      * <p>
@@ -2114,6 +2140,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * >Supported Node Types</a>
      * </p>
      * </note>
+     * <p>
+     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
+     * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
+     * <code>cache.m6g.16xlarge</code>
+     * </p>
      * <p>
      * <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>,
      * <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code>
@@ -2178,13 +2210,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * Current generation:
      * </p>
      * <p>
-     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
-     * 1.5.16 onward).
-     * </p>
-     * <p>
-     * <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
-     * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
-     * <code>cache.r6g.16xlarge</code>
+     * <b>R7g node types</b>: <code>cache.r7g.large</code>, <code>cache.r7g.xlarge</code>,
+     * <code>cache.r7g.2xlarge</code>, <code>cache.r7g.4xlarge</code>, <code>cache.r7g.8xlarge</code>,
+     * <code>cache.r7g.12xlarge</code>, <code>cache.r7g.16xlarge</code>
      * </p>
      * <note>
      * <p>
@@ -2193,6 +2221,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * >Supported Node Types</a>
      * </p>
      * </note>
+     * <p>
+     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
+     * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
+     * <code>cache.r6g.16xlarge</code>
+     * </p>
      * <p>
      * <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>,
      * <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code>
@@ -2262,10 +2296,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         Current generation:
      *         </p>
      *         <p>
-     *         <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
-     *         version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>,
-     *         <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>,
-     *         <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code>
+     *         <b>M7g node types</b>: <code>cache.m7g.large</code>, <code>cache.m7g.xlarge</code>,
+     *         <code>cache.m7g.2xlarge</code>, <code>cache.m7g.4xlarge</code>, <code>cache.m7g.8xlarge</code>,
+     *         <code>cache.m7g.12xlarge</code>, <code>cache.m7g.16xlarge</code>
      *         </p>
      *         <note>
      *         <p>
@@ -2274,6 +2307,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         >Supported Node Types</a>
      *         </p>
      *         </note>
+     *         <p>
+     *         <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *         version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>,
+     *         <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>,
+     *         <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code>
+     *         </p>
      *         <p>
      *         <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>,
      *         <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>,
@@ -2341,13 +2380,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         Current generation:
      *         </p>
      *         <p>
-     *         <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
-     *         version 1.5.16 onward).
-     *         </p>
-     *         <p>
-     *         <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
-     *         <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
-     *         <code>cache.r6g.16xlarge</code>
+     *         <b>R7g node types</b>: <code>cache.r7g.large</code>, <code>cache.r7g.xlarge</code>,
+     *         <code>cache.r7g.2xlarge</code>, <code>cache.r7g.4xlarge</code>, <code>cache.r7g.8xlarge</code>,
+     *         <code>cache.r7g.12xlarge</code>, <code>cache.r7g.16xlarge</code>
      *         </p>
      *         <note>
      *         <p>
@@ -2356,6 +2391,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *         >Supported Node Types</a>
      *         </p>
      *         </note>
+     *         <p>
+     *         <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *         version 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>,
+     *         <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>,
+     *         <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code>
+     *         </p>
      *         <p>
      *         <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>,
      *         <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>,
@@ -2435,10 +2476,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * Current generation:
      * </p>
      * <p>
-     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
-     * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
-     * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
-     * <code>cache.m6g.16xlarge</code>
+     * <b>M7g node types</b>: <code>cache.m7g.large</code>, <code>cache.m7g.xlarge</code>,
+     * <code>cache.m7g.2xlarge</code>, <code>cache.m7g.4xlarge</code>, <code>cache.m7g.8xlarge</code>,
+     * <code>cache.m7g.12xlarge</code>, <code>cache.m7g.16xlarge</code>
      * </p>
      * <note>
      * <p>
@@ -2447,6 +2487,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * >Supported Node Types</a>
      * </p>
      * </note>
+     * <p>
+     * <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>,
+     * <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>,
+     * <code>cache.m6g.16xlarge</code>
+     * </p>
      * <p>
      * <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>,
      * <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code>
@@ -2511,13 +2557,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * Current generation:
      * </p>
      * <p>
-     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
-     * 1.5.16 onward).
-     * </p>
-     * <p>
-     * <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
-     * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
-     * <code>cache.r6g.16xlarge</code>
+     * <b>R7g node types</b>: <code>cache.r7g.large</code>, <code>cache.r7g.xlarge</code>,
+     * <code>cache.r7g.2xlarge</code>, <code>cache.r7g.4xlarge</code>, <code>cache.r7g.8xlarge</code>,
+     * <code>cache.r7g.12xlarge</code>, <code>cache.r7g.16xlarge</code>
      * </p>
      * <note>
      * <p>
@@ -2526,6 +2568,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * >Supported Node Types</a>
      * </p>
      * </note>
+     * <p>
+     * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
+     * 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
+     * <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
+     * <code>cache.r6g.16xlarge</code>
+     * </p>
      * <p>
      * <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>,
      * <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code>
@@ -2596,10 +2644,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        Current generation:
      *        </p>
      *        <p>
-     *        <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
-     *        version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>,
-     *        <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>,
-     *        <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code>
+     *        <b>M7g node types</b>: <code>cache.m7g.large</code>, <code>cache.m7g.xlarge</code>,
+     *        <code>cache.m7g.2xlarge</code>, <code>cache.m7g.4xlarge</code>, <code>cache.m7g.8xlarge</code>,
+     *        <code>cache.m7g.12xlarge</code>, <code>cache.m7g.16xlarge</code>
      *        </p>
      *        <note>
      *        <p>
@@ -2608,6 +2655,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        >Supported Node Types</a>
      *        </p>
      *        </note>
+     *        <p>
+     *        <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *        version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>,
+     *        <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>,
+     *        <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code>
+     *        </p>
      *        <p>
      *        <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>,
      *        <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>,
@@ -2675,13 +2728,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        Current generation:
      *        </p>
      *        <p>
-     *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
-     *        version 1.5.16 onward).
-     *        </p>
-     *        <p>
-     *        <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>,
-     *        <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>,
-     *        <code>cache.r6g.16xlarge</code>
+     *        <b>R7g node types</b>: <code>cache.r7g.large</code>, <code>cache.r7g.xlarge</code>,
+     *        <code>cache.r7g.2xlarge</code>, <code>cache.r7g.4xlarge</code>, <code>cache.r7g.8xlarge</code>,
+     *        <code>cache.r7g.12xlarge</code>, <code>cache.r7g.16xlarge</code>
      *        </p>
      *        <note>
      *        <p>
@@ -2690,6 +2739,12 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      *        >Supported Node Types</a>
      *        </p>
      *        </note>
+     *        <p>
+     *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
+     *        version 1.5.16 onward): <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>,
+     *        <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>,
+     *        <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code>
+     *        </p>
      *        <p>
      *        <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>,
      *        <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>,
@@ -5470,6 +5525,46 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The name of the snapshot used to create a replication group. Available for Redis only.
+     * </p>
+     * 
+     * @param serverlessCacheSnapshotName
+     *        The name of the snapshot used to create a replication group. Available for Redis only.
+     */
+
+    public void setServerlessCacheSnapshotName(String serverlessCacheSnapshotName) {
+        this.serverlessCacheSnapshotName = serverlessCacheSnapshotName;
+    }
+
+    /**
+     * <p>
+     * The name of the snapshot used to create a replication group. Available for Redis only.
+     * </p>
+     * 
+     * @return The name of the snapshot used to create a replication group. Available for Redis only.
+     */
+
+    public String getServerlessCacheSnapshotName() {
+        return this.serverlessCacheSnapshotName;
+    }
+
+    /**
+     * <p>
+     * The name of the snapshot used to create a replication group. Available for Redis only.
+     * </p>
+     * 
+     * @param serverlessCacheSnapshotName
+     *        The name of the snapshot used to create a replication group. Available for Redis only.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateReplicationGroupRequest withServerlessCacheSnapshotName(String serverlessCacheSnapshotName) {
+        setServerlessCacheSnapshotName(serverlessCacheSnapshotName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -5556,7 +5651,9 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
         if (getTransitEncryptionMode() != null)
             sb.append("TransitEncryptionMode: ").append(getTransitEncryptionMode()).append(",");
         if (getClusterMode() != null)
-            sb.append("ClusterMode: ").append(getClusterMode());
+            sb.append("ClusterMode: ").append(getClusterMode()).append(",");
+        if (getServerlessCacheSnapshotName() != null)
+            sb.append("ServerlessCacheSnapshotName: ").append(getServerlessCacheSnapshotName());
         sb.append("}");
         return sb.toString();
     }
@@ -5723,6 +5820,10 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getClusterMode() != null && other.getClusterMode().equals(this.getClusterMode()) == false)
             return false;
+        if (other.getServerlessCacheSnapshotName() == null ^ this.getServerlessCacheSnapshotName() == null)
+            return false;
+        if (other.getServerlessCacheSnapshotName() != null && other.getServerlessCacheSnapshotName().equals(this.getServerlessCacheSnapshotName()) == false)
+            return false;
         return true;
     }
 
@@ -5769,6 +5870,7 @@ public class CreateReplicationGroupRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getIpDiscovery() == null) ? 0 : getIpDiscovery().hashCode());
         hashCode = prime * hashCode + ((getTransitEncryptionMode() == null) ? 0 : getTransitEncryptionMode().hashCode());
         hashCode = prime * hashCode + ((getClusterMode() == null) ? 0 : getClusterMode().hashCode());
+        hashCode = prime * hashCode + ((getServerlessCacheSnapshotName() == null) ? 0 : getServerlessCacheSnapshotName().hashCode());
         return hashCode;
     }
 

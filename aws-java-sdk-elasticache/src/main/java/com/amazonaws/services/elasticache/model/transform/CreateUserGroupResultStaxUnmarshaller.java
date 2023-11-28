@@ -90,6 +90,16 @@ public class CreateUserGroupResultStaxUnmarshaller implements Unmarshaller<Creat
                     continue;
                 }
 
+                if (context.testExpression("ServerlessCaches", targetDepth)) {
+                    createUserGroupResult.withServerlessCaches(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("ServerlessCaches/member", targetDepth)) {
+                    createUserGroupResult.withServerlessCaches(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("ARN", targetDepth)) {
                     createUserGroupResult.setARN(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
