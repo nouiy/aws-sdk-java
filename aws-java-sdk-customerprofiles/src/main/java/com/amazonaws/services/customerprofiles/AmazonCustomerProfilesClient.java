@@ -1176,6 +1176,73 @@ public class AmazonCustomerProfilesClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
+     * The process of detecting profile object type mapping by using given objects.
+     * </p>
+     * 
+     * @param detectProfileObjectTypeRequest
+     * @return Result of the DetectProfileObjectType operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.DetectProfileObjectType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DetectProfileObjectType"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DetectProfileObjectTypeResult detectProfileObjectType(DetectProfileObjectTypeRequest request) {
+        request = beforeClientExecution(request);
+        return executeDetectProfileObjectType(request);
+    }
+
+    @SdkInternalApi
+    final DetectProfileObjectTypeResult executeDetectProfileObjectType(DetectProfileObjectTypeRequest detectProfileObjectTypeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(detectProfileObjectTypeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DetectProfileObjectTypeRequest> request = null;
+        Response<DetectProfileObjectTypeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DetectProfileObjectTypeRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(detectProfileObjectTypeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Customer Profiles");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DetectProfileObjectType");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DetectProfileObjectTypeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DetectProfileObjectTypeResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Tests the auto-merging settings of your Identity Resolution Job without merging your data. It randomly selects a
      * sample of matching groups from the existing matching results, and applies the automerging settings that you
      * provided. You can then view the number of profiles in the sample, the number of matches, and the number of

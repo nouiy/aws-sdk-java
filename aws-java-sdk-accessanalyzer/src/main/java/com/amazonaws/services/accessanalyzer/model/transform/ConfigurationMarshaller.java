@@ -49,6 +49,8 @@ public class ConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("snsTopic").build();
     private static final MarshallingInfo<StructuredPojo> SQSQUEUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sqsQueue").build();
+    private static final MarshallingInfo<StructuredPojo> S3EXPRESSDIRECTORYBUCKET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3ExpressDirectoryBucket").build();
 
     private static final ConfigurationMarshaller instance = new ConfigurationMarshaller();
 
@@ -77,6 +79,7 @@ public class ConfigurationMarshaller {
             protocolMarshaller.marshall(configuration.getS3Bucket(), S3BUCKET_BINDING);
             protocolMarshaller.marshall(configuration.getSnsTopic(), SNSTOPIC_BINDING);
             protocolMarshaller.marshall(configuration.getSqsQueue(), SQSQUEUE_BINDING);
+            protocolMarshaller.marshall(configuration.getS3ExpressDirectoryBucket(), S3EXPRESSDIRECTORYBUCKET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

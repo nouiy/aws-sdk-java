@@ -32,7 +32,8 @@ public enum ResourceType {
     AWSECRRepository("AWS::ECR::Repository"),
     AWSRDSDBSnapshot("AWS::RDS::DBSnapshot"),
     AWSRDSDBClusterSnapshot("AWS::RDS::DBClusterSnapshot"),
-    AWSSNSTopic("AWS::SNS::Topic");
+    AWSSNSTopic("AWS::SNS::Topic"),
+    AWSS3ExpressDirectoryBucket("AWS::S3Express::DirectoryBucket");
 
     private String value;
 

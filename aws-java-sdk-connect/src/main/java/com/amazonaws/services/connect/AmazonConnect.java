@@ -86,6 +86,33 @@ public interface AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
+     * Associates the specified dataset for a Amazon Connect instance with the target account. You can associate only
+     * one dataset in a single call.
+     * </p>
+     * 
+     * @param associateAnalyticsDataSetRequest
+     * @return Result of the AssociateAnalyticsDataSet operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.AssociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateAnalyticsDataSetResult associateAnalyticsDataSet(AssociateAnalyticsDataSetRequest associateAnalyticsDataSetRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
      * Associates an approved origin to an Amazon Connect instance.
      * </p>
      * 
@@ -164,6 +191,31 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     AssociateDefaultVocabularyResult associateDefaultVocabulary(AssociateDefaultVocabularyRequest associateDefaultVocabularyRequest);
+
+    /**
+     * <p>
+     * Associates a connect resource to a flow.
+     * </p>
+     * 
+     * @param associateFlowRequest
+     * @return Result of the AssociateFlow operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.AssociateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    AssociateFlowResult associateFlow(AssociateFlowRequest associateFlowRequest);
 
     /**
      * <p>
@@ -399,6 +451,60 @@ public interface AmazonConnect {
      */
     AssociateTrafficDistributionGroupUserResult associateTrafficDistributionGroupUser(
             AssociateTrafficDistributionGroupUserRequest associateTrafficDistributionGroupUserRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Associates a list of analytics datasets for a given Amazon Connect instance to a target account. You can
+     * associate multiple datasets in a single call.
+     * </p>
+     * 
+     * @param batchAssociateAnalyticsDataSetRequest
+     * @return Result of the BatchAssociateAnalyticsDataSet operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.BatchAssociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchAssociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchAssociateAnalyticsDataSetResult batchAssociateAnalyticsDataSet(BatchAssociateAnalyticsDataSetRequest batchAssociateAnalyticsDataSetRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Removes a list of analytics datasets associated with a given Amazon Connect instance. You can disassociate
+     * multiple datasets in a single call.
+     * </p>
+     * 
+     * @param batchDisassociateAnalyticsDataSetRequest
+     * @return Result of the BatchDisassociateAnalyticsDataSet operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.BatchDisassociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchDisassociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchDisassociateAnalyticsDataSetResult batchDisassociateAnalyticsDataSet(BatchDisassociateAnalyticsDataSetRequest batchDisassociateAnalyticsDataSetRequest);
 
     /**
      * <p>
@@ -1092,7 +1198,7 @@ public interface AmazonConnect {
      * </p>
      * </important>
      * <p>
-     * For information about how to create user accounts using the Amazon Connect console, see <a
+     * For information about how to create users using the Amazon Connect admin website, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/user-management.html">Add Users</a> in the <i>Amazon
      * Connect Administrator Guide</i>.
      * </p>
@@ -2274,7 +2380,7 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * Describes the specified user account. You can <a
+     * Describes the specified user. You can <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID in the
      * Amazon Connect console</a> (it’s the final part of the ARN). The console does not display the user IDs. Instead,
      * list the users and note the IDs provided in the output.
@@ -2409,6 +2515,32 @@ public interface AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
+     * Removes the dataset ID associated with a given Amazon Connect instance.
+     * </p>
+     * 
+     * @param disassociateAnalyticsDataSetRequest
+     * @return Result of the DisassociateAnalyticsDataSet operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DisassociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateAnalyticsDataSetResult disassociateAnalyticsDataSet(DisassociateAnalyticsDataSetRequest disassociateAnalyticsDataSetRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
      * Revokes access to integrated applications from Amazon Connect.
      * </p>
      * 
@@ -2453,6 +2585,31 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     DisassociateBotResult disassociateBot(DisassociateBotRequest disassociateBotRequest);
+
+    /**
+     * <p>
+     * Disassociates a connect resource from a flow.
+     * </p>
+     * 
+     * @param disassociateFlowRequest
+     * @return Result of the DisassociateFlow operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.DisassociateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DisassociateFlowResult disassociateFlow(DisassociateFlowRequest disassociateFlowRequest);
 
     /**
      * <p>
@@ -2807,6 +2964,31 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Retrieves the flow associated for a given resource.
+     * </p>
+     * 
+     * @param getFlowAssociationRequest
+     * @return Result of the GetFlowAssociation operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.GetFlowAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetFlowAssociation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetFlowAssociationResult getFlowAssociation(GetFlowAssociationRequest getFlowAssociationRequest);
+
+    /**
+     * <p>
      * Gets historical metric data from the specified Amazon Connect instance.
      * </p>
      * <p>
@@ -2951,6 +3133,33 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Imports a claimed phone number from an external service, such as Amazon Pinpoint, into an Amazon Connect
+     * instance. You can call this API only in the same Amazon Web Services Region where the Amazon Connect instance was
+     * created.
+     * </p>
+     * 
+     * @param importPhoneNumberRequest
+     * @return Result of the ImportPhoneNumber operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws IdempotencyException
+     *         An entity with the same name already exists.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.ImportPhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ImportPhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ImportPhoneNumberResult importPhoneNumber(ImportPhoneNumberRequest importPhoneNumberRequest);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -2974,6 +3183,32 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     ListAgentStatusesResult listAgentStatuses(ListAgentStatusesRequest listAgentStatusesRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Lists the association status of requested dataset ID for a given Amazon Connect instance.
+     * </p>
+     * 
+     * @param listAnalyticsDataAssociationsRequest
+     * @return Result of the ListAnalyticsDataAssociations operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListAnalyticsDataAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListAnalyticsDataAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListAnalyticsDataAssociationsResult listAnalyticsDataAssociations(ListAnalyticsDataAssociationsRequest listAnalyticsDataAssociationsRequest);
 
     /**
      * <p>
@@ -3193,6 +3428,31 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     ListEvaluationFormsResult listEvaluationForms(ListEvaluationFormsRequest listEvaluationFormsRequest);
+
+    /**
+     * <p>
+     * List the flow association based on the filters.
+     * </p>
+     * 
+     * @param listFlowAssociationsRequest
+     * @return Result of the ListFlowAssociations operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.ListFlowAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListFlowAssociations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListFlowAssociationsResult listFlowAssociations(ListFlowAssociationsRequest listFlowAssociationsRequest);
 
     /**
      * <p>
@@ -3574,6 +3834,34 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     ListQuickConnectsResult listQuickConnects(ListQuickConnectsRequest listQuickConnectsRequest);
+
+    /**
+     * <p>
+     * Provides a list of analysis segments for a real-time analysis session.
+     * </p>
+     * 
+     * @param listRealtimeContactAnalysisSegmentsV2Request
+     * @return Result of the ListRealtimeContactAnalysisSegmentsV2 operation returned by the service.
+     * @throws OutputTypeNotFoundException
+     *         Thrown for analyzed content when requested OutputType was not enabled for a given contact. For example,
+     *         if an OutputType.Raw was requested for a contact that had `RedactedOnly` Redaction policy set in Contact
+     *         flow.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.ListRealtimeContactAnalysisSegmentsV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListRealtimeContactAnalysisSegmentsV2"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListRealtimeContactAnalysisSegmentsV2Result listRealtimeContactAnalysisSegmentsV2(
+            ListRealtimeContactAnalysisSegmentsV2Request listRealtimeContactAnalysisSegmentsV2Request);
 
     /**
      * <p>
@@ -4042,7 +4330,7 @@ public interface AmazonConnect {
      * <important>
      * <p>
      * To release phone numbers from a traffic distribution group, use the <code>ReleasePhoneNumber</code> API, not the
-     * Amazon Connect console.
+     * Amazon Connect admin website.
      * </p>
      * <p>
      * After releasing a phone number, the phone number enters into a cooldown period of 30 days. It cannot be searched
@@ -4387,6 +4675,49 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Processes chat integration events from Amazon Web Services or external integrations to Amazon Connect. A chat
+     * integration event includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * SourceId, DestinationId, and Subtype: a set of identifiers, uniquely representing a chat
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ChatEvent: details of the chat action to perform such as sending a message, event, or disconnecting from a chat
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When a chat integration event is sent with chat identifiers that do not map to an active chat contact, a new chat
+     * contact is also created before handling chat action.
+     * </p>
+     * <p>
+     * Access to this API is currently restricted to Amazon Pinpoint for supporting SMS integration.
+     * </p>
+     * 
+     * @param sendChatIntegrationEventRequest
+     * @return Result of the SendChatIntegrationEvent operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.SendChatIntegrationEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SendChatIntegrationEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    SendChatIntegrationEventResult sendChatIntegrationEvent(SendChatIntegrationEventRequest sendChatIntegrationEventRequest);
+
+    /**
+     * <p>
      * Initiates a flow to start a new chat for the customer. Response of this API provides a token required to obtain
      * credentials from the <a
      * href="https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_CreateParticipantConnection.html"
@@ -4687,6 +5018,31 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     StartTaskContactResult startTaskContact(StartTaskContactRequest startTaskContactRequest);
+
+    /**
+     * <p>
+     * Places an inbound in-app, web, or video call to a contact, and then initiates the flow. It performs the actions
+     * in the flow that are specified (in ContactFlowId) and present in the Amazon Connect instance (specified as
+     * InstanceId).
+     * </p>
+     * 
+     * @param startWebRTCContactRequest
+     * @return Result of the StartWebRTCContact operation returned by the service.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws LimitExceededException
+     *         The allowed limit for the resource has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @sample AmazonConnect.StartWebRTCContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartWebRTCContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StartWebRTCContactResult startWebRTCContact(StartWebRTCContactRequest startWebRTCContactRequest);
 
     /**
      * <p>

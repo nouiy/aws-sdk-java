@@ -600,6 +600,37 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
 
     /**
      * <p>
+     * The process of detecting profile object type mapping by using given objects.
+     * </p>
+     * 
+     * @param detectProfileObjectTypeRequest
+     * @return A Java Future containing the result of the DetectProfileObjectType operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.DetectProfileObjectType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DetectProfileObjectType"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DetectProfileObjectTypeResult> detectProfileObjectTypeAsync(DetectProfileObjectTypeRequest detectProfileObjectTypeRequest);
+
+    /**
+     * <p>
+     * The process of detecting profile object type mapping by using given objects.
+     * </p>
+     * 
+     * @param detectProfileObjectTypeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DetectProfileObjectType operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.DetectProfileObjectType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DetectProfileObjectType"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DetectProfileObjectTypeResult> detectProfileObjectTypeAsync(DetectProfileObjectTypeRequest detectProfileObjectTypeRequest,
+            com.amazonaws.handlers.AsyncHandler<DetectProfileObjectTypeRequest, DetectProfileObjectTypeResult> asyncHandler);
+
+    /**
+     * <p>
      * Tests the auto-merging settings of your Identity Resolution Job without merging your data. It randomly selects a
      * sample of matching groups from the existing matching results, and applies the automerging settings that you
      * provided. You can then view the number of profiles in the sample, the number of matches, and the number of

@@ -113,6 +113,10 @@ public class GetModelCustomizationJobResultJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     getModelCustomizationJobResult.setOutputDataConfig(OutputDataConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("customizationType", targetDepth)) {
+                    context.nextToken();
+                    getModelCustomizationJobResult.setCustomizationType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("outputModelKmsKeyArn", targetDepth)) {
                     context.nextToken();
                     getModelCustomizationJobResult.setOutputModelKmsKeyArn(context.getUnmarshaller(String.class).unmarshall(context));

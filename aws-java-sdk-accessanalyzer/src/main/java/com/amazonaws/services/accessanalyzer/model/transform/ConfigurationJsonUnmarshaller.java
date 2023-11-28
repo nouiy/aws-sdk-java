@@ -92,6 +92,10 @@ public class ConfigurationJsonUnmarshaller implements Unmarshaller<Configuration
                     context.nextToken();
                     configuration.setSqsQueue(SqsQueueConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("s3ExpressDirectoryBucket", targetDepth)) {
+                    context.nextToken();
+                    configuration.setS3ExpressDirectoryBucket(S3ExpressDirectoryBucketConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

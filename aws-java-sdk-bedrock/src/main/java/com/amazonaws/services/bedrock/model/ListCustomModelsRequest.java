@@ -63,7 +63,7 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
     private Integer maxResults;
     /**
      * <p>
-     * Continuation token from the previous response, for Bedrock to list the next set of results.
+     * Continuation token from the previous response, for Amazon Bedrock to list the next set of results.
      * </p>
      */
     private String nextToken;
@@ -322,11 +322,11 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Continuation token from the previous response, for Bedrock to list the next set of results.
+     * Continuation token from the previous response, for Amazon Bedrock to list the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        Continuation token from the previous response, for Bedrock to list the next set of results.
+     *        Continuation token from the previous response, for Amazon Bedrock to list the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -335,10 +335,10 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Continuation token from the previous response, for Bedrock to list the next set of results.
+     * Continuation token from the previous response, for Amazon Bedrock to list the next set of results.
      * </p>
      * 
-     * @return Continuation token from the previous response, for Bedrock to list the next set of results.
+     * @return Continuation token from the previous response, for Amazon Bedrock to list the next set of results.
      */
 
     public String getNextToken() {
@@ -347,11 +347,11 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Continuation token from the previous response, for Bedrock to list the next set of results.
+     * Continuation token from the previous response, for Amazon Bedrock to list the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        Continuation token from the previous response, for Bedrock to list the next set of results.
+     *        Continuation token from the previous response, for Amazon Bedrock to list the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

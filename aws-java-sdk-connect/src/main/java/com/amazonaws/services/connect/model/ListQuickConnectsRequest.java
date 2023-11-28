@@ -48,8 +48,8 @@ public class ListQuickConnectsRequest extends com.amazonaws.AmazonWebServiceRequ
     private Integer maxResults;
     /**
      * <p>
-     * The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are prompted to
-     * assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
+     * The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are prompted
+     * to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * </p>
      */
     private java.util.List<String> quickConnectTypes;
@@ -194,11 +194,11 @@ public class ListQuickConnectsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are prompted to
-     * assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
+     * The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are prompted
+     * to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * </p>
      * 
-     * @return The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are
+     * @return The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are
      *         prompted to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * @see QuickConnectType
      */
@@ -209,12 +209,12 @@ public class ListQuickConnectsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are prompted to
-     * assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
+     * The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are prompted
+     * to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * </p>
      * 
      * @param quickConnectTypes
-     *        The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are
+     *        The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are
      *        prompted to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * @see QuickConnectType
      */
@@ -230,8 +230,8 @@ public class ListQuickConnectsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are prompted to
-     * assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
+     * The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are prompted
+     * to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -240,7 +240,7 @@ public class ListQuickConnectsRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param quickConnectTypes
-     *        The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are
+     *        The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are
      *        prompted to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QuickConnectType
@@ -258,12 +258,12 @@ public class ListQuickConnectsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are prompted to
-     * assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
+     * The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are prompted
+     * to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * </p>
      * 
      * @param quickConnectTypes
-     *        The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are
+     *        The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are
      *        prompted to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QuickConnectType
@@ -276,12 +276,12 @@ public class ListQuickConnectsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are prompted to
-     * assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
+     * The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are prompted
+     * to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * </p>
      * 
      * @param quickConnectTypes
-     *        The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are
+     *        The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are
      *        prompted to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QuickConnectType

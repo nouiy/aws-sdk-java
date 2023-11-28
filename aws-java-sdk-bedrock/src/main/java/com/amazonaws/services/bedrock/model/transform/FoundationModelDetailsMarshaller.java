@@ -46,6 +46,8 @@ public class FoundationModelDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customizationsSupported").build();
     private static final MarshallingInfo<List> INFERENCETYPESSUPPORTED_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferenceTypesSupported").build();
+    private static final MarshallingInfo<StructuredPojo> MODELLIFECYCLE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("modelLifecycle").build();
 
     private static final FoundationModelDetailsMarshaller instance = new FoundationModelDetailsMarshaller();
 
@@ -72,6 +74,7 @@ public class FoundationModelDetailsMarshaller {
             protocolMarshaller.marshall(foundationModelDetails.getResponseStreamingSupported(), RESPONSESTREAMINGSUPPORTED_BINDING);
             protocolMarshaller.marshall(foundationModelDetails.getCustomizationsSupported(), CUSTOMIZATIONSSUPPORTED_BINDING);
             protocolMarshaller.marshall(foundationModelDetails.getInferenceTypesSupported(), INFERENCETYPESSUPPORTED_BINDING);
+            protocolMarshaller.marshall(foundationModelDetails.getModelLifecycle(), MODELLIFECYCLE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

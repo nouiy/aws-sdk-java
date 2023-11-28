@@ -26,7 +26,7 @@ import com.amazonaws.services.bedrock.model.*;
  * </p>
  * <p>
  * <p>
- * Describes the API operations for creating and managing Bedrock models.
+ * Describes the API operations for creating and managing Amazon Bedrock models.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -40,7 +40,7 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
      * You specify the base foundation model and the location of the training data. After the model-customization job
      * completes successfully, your custom model resource will be ready to use. Training data contains input and output
      * text for each record in a JSONL format. Optionally, you can specify validation data in the same format as the
-     * training data. Bedrock returns validation loss metrics and output generations after the job completes.
+     * training data. Amazon Bedrock returns validation loss metrics and output generations after the job completes.
      * </p>
      * <p>
      * Model-customization jobs are asynchronous and the completion time depends on the base model and the
@@ -70,7 +70,7 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
      * You specify the base foundation model and the location of the training data. After the model-customization job
      * completes successfully, your custom model resource will be ready to use. Training data contains input and output
      * text for each record in a JSONL format. Optionally, you can specify validation data in the same format as the
-     * training data. Bedrock returns validation loss metrics and output generations after the job completes.
+     * training data. Amazon Bedrock returns validation loss metrics and output generations after the job completes.
      * </p>
      * <p>
      * Model-customization jobs are asynchronous and the completion time depends on the base model and the
@@ -255,9 +255,9 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
 
     /**
      * <p>
-     * Get the properties associated with a Bedrock custom model that you have created.For more information, see <a
-     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom models</a> in the Bedrock
-     * User Guide.
+     * Get the properties associated with a Amazon Bedrock custom model that you have created.For more information, see
+     * <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom models</a> in the
+     * Bedrock User Guide.
      * </p>
      * 
      * @param getCustomModelRequest
@@ -270,9 +270,9 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
 
     /**
      * <p>
-     * Get the properties associated with a Bedrock custom model that you have created.For more information, see <a
-     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom models</a> in the Bedrock
-     * User Guide.
+     * Get the properties associated with a Amazon Bedrock custom model that you have created.For more information, see
+     * <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom models</a> in the
+     * Bedrock User Guide.
      * </p>
      * 
      * @param getCustomModelRequest
@@ -290,7 +290,7 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
 
     /**
      * <p>
-     * Get details about a Bedrock foundation model.
+     * Get details about a Amazon Bedrock foundation model.
      * </p>
      * 
      * @param getFoundationModelRequest
@@ -303,7 +303,7 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
 
     /**
      * <p>
-     * Get details about a Bedrock foundation model.
+     * Get details about a Amazon Bedrock foundation model.
      * </p>
      * 
      * @param getFoundationModelRequest
@@ -473,7 +473,7 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
 
     /**
      * <p>
-     * List of Bedrock foundation models that you can use. For more information, see <a
+     * List of Amazon Bedrock foundation models that you can use. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/foundation-models.html">Foundation models</a> in the
      * Bedrock User Guide.
      * </p>
@@ -488,7 +488,7 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
 
     /**
      * <p>
-     * List of Bedrock foundation models that you can use. For more information, see <a
+     * List of Amazon Bedrock foundation models that you can use. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/foundation-models.html">Foundation models</a> in the
      * Bedrock User Guide.
      * </p>

@@ -48,8 +48,9 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     * <code>OnMetricDataUpdate</code>
      * </p>
      */
     private EventBridgeActionDefinition eventBridgeAction;
@@ -59,9 +60,9 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnZendeskTicketCreate</code> | <code>OnZendeskTicketStatusUpdate</code> |
-     * <code>OnSalesforceCaseCreate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnZendeskTicketCreate</code> |
+     * <code>OnZendeskTicketStatusUpdate</code> | <code>OnSalesforceCaseCreate</code>
      * </p>
      */
     private AssignContactCategoryActionDefinition assignContactCategoryAction;
@@ -71,8 +72,9 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     * <code>OnMetricDataUpdate</code>
      * </p>
      */
     private SendNotificationActionDefinition sendNotificationAction;
@@ -194,16 +196,18 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     * <code>OnMetricDataUpdate</code>
      * </p>
      * 
      * @param eventBridgeAction
      *        Information about the EventBridge action.</p>
      *        <p>
      *        Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     *        <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     *        <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     *        <code>OnMetricDataUpdate</code>
      */
 
     public void setEventBridgeAction(EventBridgeActionDefinition eventBridgeAction) {
@@ -216,15 +220,17 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     * <code>OnMetricDataUpdate</code>
      * </p>
      * 
      * @return Information about the EventBridge action.</p>
      *         <p>
      *         Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     *         <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     *         <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     *         <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     *         <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     *         <code>OnMetricDataUpdate</code>
      */
 
     public EventBridgeActionDefinition getEventBridgeAction() {
@@ -237,16 +243,18 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     * <code>OnMetricDataUpdate</code>
      * </p>
      * 
      * @param eventBridgeAction
      *        Information about the EventBridge action.</p>
      *        <p>
      *        Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     *        <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     *        <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     *        <code>OnMetricDataUpdate</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -261,18 +269,18 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnZendeskTicketCreate</code> | <code>OnZendeskTicketStatusUpdate</code> |
-     * <code>OnSalesforceCaseCreate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnZendeskTicketCreate</code> |
+     * <code>OnZendeskTicketStatusUpdate</code> | <code>OnSalesforceCaseCreate</code>
      * </p>
      * 
      * @param assignContactCategoryAction
      *        Information about the contact category action.</p>
      *        <p>
      *        Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     *        <code>OnZendeskTicketCreate</code> | <code>OnZendeskTicketStatusUpdate</code> |
-     *        <code>OnSalesforceCaseCreate</code>
+     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     *        <code>OnPostChatAnalysisAvailable</code> | <code>OnZendeskTicketCreate</code> |
+     *        <code>OnZendeskTicketStatusUpdate</code> | <code>OnSalesforceCaseCreate</code>
      */
 
     public void setAssignContactCategoryAction(AssignContactCategoryActionDefinition assignContactCategoryAction) {
@@ -285,17 +293,17 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnZendeskTicketCreate</code> | <code>OnZendeskTicketStatusUpdate</code> |
-     * <code>OnSalesforceCaseCreate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnZendeskTicketCreate</code> |
+     * <code>OnZendeskTicketStatusUpdate</code> | <code>OnSalesforceCaseCreate</code>
      * </p>
      * 
      * @return Information about the contact category action.</p>
      *         <p>
      *         Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     *         <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     *         <code>OnZendeskTicketCreate</code> | <code>OnZendeskTicketStatusUpdate</code> |
-     *         <code>OnSalesforceCaseCreate</code>
+     *         <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     *         <code>OnPostChatAnalysisAvailable</code> | <code>OnZendeskTicketCreate</code> |
+     *         <code>OnZendeskTicketStatusUpdate</code> | <code>OnSalesforceCaseCreate</code>
      */
 
     public AssignContactCategoryActionDefinition getAssignContactCategoryAction() {
@@ -308,18 +316,18 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnZendeskTicketCreate</code> | <code>OnZendeskTicketStatusUpdate</code> |
-     * <code>OnSalesforceCaseCreate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnZendeskTicketCreate</code> |
+     * <code>OnZendeskTicketStatusUpdate</code> | <code>OnSalesforceCaseCreate</code>
      * </p>
      * 
      * @param assignContactCategoryAction
      *        Information about the contact category action.</p>
      *        <p>
      *        Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     *        <code>OnZendeskTicketCreate</code> | <code>OnZendeskTicketStatusUpdate</code> |
-     *        <code>OnSalesforceCaseCreate</code>
+     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     *        <code>OnPostChatAnalysisAvailable</code> | <code>OnZendeskTicketCreate</code> |
+     *        <code>OnZendeskTicketStatusUpdate</code> | <code>OnSalesforceCaseCreate</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -334,16 +342,18 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     * <code>OnMetricDataUpdate</code>
      * </p>
      * 
      * @param sendNotificationAction
      *        Information about the send notification action.</p>
      *        <p>
      *        Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     *        <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     *        <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     *        <code>OnMetricDataUpdate</code>
      */
 
     public void setSendNotificationAction(SendNotificationActionDefinition sendNotificationAction) {
@@ -356,15 +366,17 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     * <code>OnMetricDataUpdate</code>
      * </p>
      * 
      * @return Information about the send notification action.</p>
      *         <p>
      *         Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     *         <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     *         <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     *         <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     *         <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     *         <code>OnMetricDataUpdate</code>
      */
 
     public SendNotificationActionDefinition getSendNotificationAction() {
@@ -377,16 +389,18 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     * <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     * <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     * <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     * <code>OnMetricDataUpdate</code>
      * </p>
      * 
      * @param sendNotificationAction
      *        Information about the send notification action.</p>
      *        <p>
      *        Supported only for <code>TriggerEventSource</code> values: <code>OnPostCallAnalysisAvailable</code> |
-     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code> |
-     *        <code>OnContactEvaluationSubmit</code> | <code>OnMetricDataUpdate</code>
+     *        <code>OnRealTimeCallAnalysisAvailable</code> | <code>OnRealTimeChatAnalysisAvailable</code> |
+     *        <code>OnPostChatAnalysisAvailable</code> | <code>OnContactEvaluationSubmit</code> |
+     *        <code>OnMetricDataUpdate</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

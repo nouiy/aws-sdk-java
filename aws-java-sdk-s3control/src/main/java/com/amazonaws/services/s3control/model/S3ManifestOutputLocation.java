@@ -36,6 +36,11 @@ public class S3ManifestOutputLocation implements Serializable, Cloneable {
      * <p>
      * The bucket ARN the generated manifest should be written to.
      * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets</b> - Directory buckets aren't supported as the buckets to store the generated manifest.
+     * </p>
+     * </note>
      */
     private String bucket;
     /**
@@ -101,9 +106,18 @@ public class S3ManifestOutputLocation implements Serializable, Cloneable {
      * <p>
      * The bucket ARN the generated manifest should be written to.
      * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets</b> - Directory buckets aren't supported as the buckets to store the generated manifest.
+     * </p>
+     * </note>
      * 
      * @param bucket
-     *        The bucket ARN the generated manifest should be written to.
+     *        The bucket ARN the generated manifest should be written to.</p> <note>
+     *        <p>
+     *        <b>Directory buckets</b> - Directory buckets aren't supported as the buckets to store the generated
+     *        manifest.
+     *        </p>
      */
 
     public void setBucket(String bucket) {
@@ -114,8 +128,17 @@ public class S3ManifestOutputLocation implements Serializable, Cloneable {
      * <p>
      * The bucket ARN the generated manifest should be written to.
      * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets</b> - Directory buckets aren't supported as the buckets to store the generated manifest.
+     * </p>
+     * </note>
      * 
-     * @return The bucket ARN the generated manifest should be written to.
+     * @return The bucket ARN the generated manifest should be written to.</p> <note>
+     *         <p>
+     *         <b>Directory buckets</b> - Directory buckets aren't supported as the buckets to store the generated
+     *         manifest.
+     *         </p>
      */
 
     public String getBucket() {
@@ -126,9 +149,18 @@ public class S3ManifestOutputLocation implements Serializable, Cloneable {
      * <p>
      * The bucket ARN the generated manifest should be written to.
      * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets</b> - Directory buckets aren't supported as the buckets to store the generated manifest.
+     * </p>
+     * </note>
      * 
      * @param bucket
-     *        The bucket ARN the generated manifest should be written to.
+     *        The bucket ARN the generated manifest should be written to.</p> <note>
+     *        <p>
+     *        <b>Directory buckets</b> - Directory buckets aren't supported as the buckets to store the generated
+     *        manifest.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

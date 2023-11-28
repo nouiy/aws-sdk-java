@@ -13,7 +13,7 @@
 
 /**
  * <p>
- * Describes the API operations for creating and managing Bedrock models.
+ * Describes the API operations for creating and managing Amazon Bedrock models.
  * </p>
  */
 package com.amazonaws.services.bedrock;

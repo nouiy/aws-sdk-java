@@ -227,6 +227,19 @@ public class AbstractAmazonCustomerProfilesAsync extends AbstractAmazonCustomerP
     }
 
     @Override
+    public java.util.concurrent.Future<DetectProfileObjectTypeResult> detectProfileObjectTypeAsync(DetectProfileObjectTypeRequest request) {
+
+        return detectProfileObjectTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DetectProfileObjectTypeResult> detectProfileObjectTypeAsync(DetectProfileObjectTypeRequest request,
+            com.amazonaws.handlers.AsyncHandler<DetectProfileObjectTypeRequest, DetectProfileObjectTypeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAutoMergingPreviewResult> getAutoMergingPreviewAsync(GetAutoMergingPreviewRequest request) {
 
         return getAutoMergingPreviewAsync(request, null);

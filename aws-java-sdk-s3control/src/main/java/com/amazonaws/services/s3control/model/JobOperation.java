@@ -45,24 +45,44 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to run a <code>PutObjectAcl</code> call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      */
     private S3SetObjectAclOperation s3PutObjectAcl;
     /**
      * <p>
      * Directs the specified job to run a PUT Object tagging call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      */
     private S3SetObjectTaggingOperation s3PutObjectTagging;
     /**
      * <p>
      * Directs the specified job to execute a DELETE Object tagging call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      */
     private S3DeleteObjectTaggingOperation s3DeleteObjectTagging;
     /**
      * <p>
      * Directs the specified job to initiate restore requests for every archived object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      */
     private S3InitiateRestoreObjectOperation s3InitiateRestoreObject;
 
@@ -73,6 +93,11 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      */
     private S3ReplicateObjectOperation s3ReplicateObject;
 
@@ -160,9 +185,18 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to run a <code>PutObjectAcl</code> call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param s3PutObjectAcl
-     *        Directs the specified job to run a <code>PutObjectAcl</code> call on every object in the manifest.
+     *        Directs the specified job to run a <code>PutObjectAcl</code> call on every object in the manifest.</p>
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      */
 
     public void setS3PutObjectAcl(S3SetObjectAclOperation s3PutObjectAcl) {
@@ -173,8 +207,17 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to run a <code>PutObjectAcl</code> call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return Directs the specified job to run a <code>PutObjectAcl</code> call on every object in the manifest.
+     * @return Directs the specified job to run a <code>PutObjectAcl</code> call on every object in the manifest.</p>
+     *         <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public S3SetObjectAclOperation getS3PutObjectAcl() {
@@ -185,9 +228,18 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to run a <code>PutObjectAcl</code> call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param s3PutObjectAcl
-     *        Directs the specified job to run a <code>PutObjectAcl</code> call on every object in the manifest.
+     *        Directs the specified job to run a <code>PutObjectAcl</code> call on every object in the manifest.</p>
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,9 +252,17 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to run a PUT Object tagging call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param s3PutObjectTagging
-     *        Directs the specified job to run a PUT Object tagging call on every object in the manifest.
+     *        Directs the specified job to run a PUT Object tagging call on every object in the manifest.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      */
 
     public void setS3PutObjectTagging(S3SetObjectTaggingOperation s3PutObjectTagging) {
@@ -213,8 +273,16 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to run a PUT Object tagging call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return Directs the specified job to run a PUT Object tagging call on every object in the manifest.
+     * @return Directs the specified job to run a PUT Object tagging call on every object in the manifest.</p> <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public S3SetObjectTaggingOperation getS3PutObjectTagging() {
@@ -225,9 +293,17 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to run a PUT Object tagging call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param s3PutObjectTagging
-     *        Directs the specified job to run a PUT Object tagging call on every object in the manifest.
+     *        Directs the specified job to run a PUT Object tagging call on every object in the manifest.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -240,9 +316,18 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to execute a DELETE Object tagging call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param s3DeleteObjectTagging
-     *        Directs the specified job to execute a DELETE Object tagging call on every object in the manifest.
+     *        Directs the specified job to execute a DELETE Object tagging call on every object in the manifest.</p>
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      */
 
     public void setS3DeleteObjectTagging(S3DeleteObjectTaggingOperation s3DeleteObjectTagging) {
@@ -253,8 +338,17 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to execute a DELETE Object tagging call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return Directs the specified job to execute a DELETE Object tagging call on every object in the manifest.
+     * @return Directs the specified job to execute a DELETE Object tagging call on every object in the manifest.</p>
+     *         <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public S3DeleteObjectTaggingOperation getS3DeleteObjectTagging() {
@@ -265,9 +359,18 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to execute a DELETE Object tagging call on every object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param s3DeleteObjectTagging
-     *        Directs the specified job to execute a DELETE Object tagging call on every object in the manifest.
+     *        Directs the specified job to execute a DELETE Object tagging call on every object in the manifest.</p>
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -280,9 +383,18 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to initiate restore requests for every archived object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param s3InitiateRestoreObject
-     *        Directs the specified job to initiate restore requests for every archived object in the manifest.
+     *        Directs the specified job to initiate restore requests for every archived object in the manifest.</p>
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      */
 
     public void setS3InitiateRestoreObject(S3InitiateRestoreObjectOperation s3InitiateRestoreObject) {
@@ -293,8 +405,17 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to initiate restore requests for every archived object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return Directs the specified job to initiate restore requests for every archived object in the manifest.
+     * @return Directs the specified job to initiate restore requests for every archived object in the manifest.</p>
+     *         <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public S3InitiateRestoreObjectOperation getS3InitiateRestoreObject() {
@@ -305,9 +426,18 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to initiate restore requests for every archived object in the manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param s3InitiateRestoreObject
-     *        Directs the specified job to initiate restore requests for every archived object in the manifest.
+     *        Directs the specified job to initiate restore requests for every archived object in the manifest.</p>
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -372,9 +502,18 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param s3ReplicateObject
-     *        Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
+     *        Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's
+     *        manifest.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      */
 
     public void setS3ReplicateObject(S3ReplicateObjectOperation s3ReplicateObject) {
@@ -385,8 +524,17 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
+     * @return Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's
+     *         manifest.</p> <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public S3ReplicateObjectOperation getS3ReplicateObject() {
@@ -397,9 +545,18 @@ public class JobOperation implements Serializable, Cloneable {
      * <p>
      * Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param s3ReplicateObject
-     *        Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
+     *        Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's
+     *        manifest.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

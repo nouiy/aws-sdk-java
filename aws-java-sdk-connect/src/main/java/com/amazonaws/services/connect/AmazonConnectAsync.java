@@ -86,6 +86,47 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
+     * Associates the specified dataset for a Amazon Connect instance with the target account. You can associate only
+     * one dataset in a single call.
+     * </p>
+     * 
+     * @param associateAnalyticsDataSetRequest
+     * @return A Java Future containing the result of the AssociateAnalyticsDataSet operation returned by the service.
+     * @sample AmazonConnectAsync.AssociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateAnalyticsDataSetResult> associateAnalyticsDataSetAsync(
+            AssociateAnalyticsDataSetRequest associateAnalyticsDataSetRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Associates the specified dataset for a Amazon Connect instance with the target account. You can associate only
+     * one dataset in a single call.
+     * </p>
+     * 
+     * @param associateAnalyticsDataSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateAnalyticsDataSet operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.AssociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateAnalyticsDataSetResult> associateAnalyticsDataSetAsync(
+            AssociateAnalyticsDataSetRequest associateAnalyticsDataSetRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateAnalyticsDataSetRequest, AssociateAnalyticsDataSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
      * Associates an approved origin to an Amazon Connect instance.
      * </p>
      * 
@@ -189,6 +230,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<AssociateDefaultVocabularyResult> associateDefaultVocabularyAsync(
             AssociateDefaultVocabularyRequest associateDefaultVocabularyRequest,
             com.amazonaws.handlers.AsyncHandler<AssociateDefaultVocabularyRequest, AssociateDefaultVocabularyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Associates a connect resource to a flow.
+     * </p>
+     * 
+     * @param associateFlowRequest
+     * @return A Java Future containing the result of the AssociateFlow operation returned by the service.
+     * @sample AmazonConnectAsync.AssociateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateFlowResult> associateFlowAsync(AssociateFlowRequest associateFlowRequest);
+
+    /**
+     * <p>
+     * Associates a connect resource to a flow.
+     * </p>
+     * 
+     * @param associateFlowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateFlow operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.AssociateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateFlowResult> associateFlowAsync(AssociateFlowRequest associateFlowRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateFlowRequest, AssociateFlowResult> asyncHandler);
 
     /**
      * <p>
@@ -519,6 +591,92 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<AssociateTrafficDistributionGroupUserResult> associateTrafficDistributionGroupUserAsync(
             AssociateTrafficDistributionGroupUserRequest associateTrafficDistributionGroupUserRequest,
             com.amazonaws.handlers.AsyncHandler<AssociateTrafficDistributionGroupUserRequest, AssociateTrafficDistributionGroupUserResult> asyncHandler);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Associates a list of analytics datasets for a given Amazon Connect instance to a target account. You can
+     * associate multiple datasets in a single call.
+     * </p>
+     * 
+     * @param batchAssociateAnalyticsDataSetRequest
+     * @return A Java Future containing the result of the BatchAssociateAnalyticsDataSet operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.BatchAssociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchAssociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchAssociateAnalyticsDataSetResult> batchAssociateAnalyticsDataSetAsync(
+            BatchAssociateAnalyticsDataSetRequest batchAssociateAnalyticsDataSetRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Associates a list of analytics datasets for a given Amazon Connect instance to a target account. You can
+     * associate multiple datasets in a single call.
+     * </p>
+     * 
+     * @param batchAssociateAnalyticsDataSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchAssociateAnalyticsDataSet operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.BatchAssociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchAssociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchAssociateAnalyticsDataSetResult> batchAssociateAnalyticsDataSetAsync(
+            BatchAssociateAnalyticsDataSetRequest batchAssociateAnalyticsDataSetRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchAssociateAnalyticsDataSetRequest, BatchAssociateAnalyticsDataSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Removes a list of analytics datasets associated with a given Amazon Connect instance. You can disassociate
+     * multiple datasets in a single call.
+     * </p>
+     * 
+     * @param batchDisassociateAnalyticsDataSetRequest
+     * @return A Java Future containing the result of the BatchDisassociateAnalyticsDataSet operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.BatchDisassociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchDisassociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDisassociateAnalyticsDataSetResult> batchDisassociateAnalyticsDataSetAsync(
+            BatchDisassociateAnalyticsDataSetRequest batchDisassociateAnalyticsDataSetRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Removes a list of analytics datasets associated with a given Amazon Connect instance. You can disassociate
+     * multiple datasets in a single call.
+     * </p>
+     * 
+     * @param batchDisassociateAnalyticsDataSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchDisassociateAnalyticsDataSet operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.BatchDisassociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchDisassociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDisassociateAnalyticsDataSetResult> batchDisassociateAnalyticsDataSetAsync(
+            BatchDisassociateAnalyticsDataSetRequest batchDisassociateAnalyticsDataSetRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchDisassociateAnalyticsDataSetRequest, BatchDisassociateAnalyticsDataSetResult> asyncHandler);
 
     /**
      * <p>
@@ -1457,7 +1615,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * </important>
      * <p>
-     * For information about how to create user accounts using the Amazon Connect console, see <a
+     * For information about how to create users using the Amazon Connect admin website, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/user-management.html">Add Users</a> in the <i>Amazon
      * Connect Administrator Guide</i>.
      * </p>
@@ -1484,7 +1642,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * </important>
      * <p>
-     * For information about how to create user accounts using the Amazon Connect console, see <a
+     * For information about how to create users using the Amazon Connect admin website, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/user-management.html">Add Users</a> in the <i>Amazon
      * Connect Administrator Guide</i>.
      * </p>
@@ -3104,7 +3262,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Describes the specified user account. You can <a
+     * Describes the specified user. You can <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID in the
      * Amazon Connect console</a> (it’s the final part of the ARN). The console does not display the user IDs. Instead,
      * list the users and note the IDs provided in the output.
@@ -3120,7 +3278,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Describes the specified user account. You can <a
+     * Describes the specified user. You can <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID in the
      * Amazon Connect console</a> (it’s the final part of the ARN). The console does not display the user IDs. Instead,
      * list the users and note the IDs provided in the output.
@@ -3298,6 +3456,47 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
+     * Removes the dataset ID associated with a given Amazon Connect instance.
+     * </p>
+     * 
+     * @param disassociateAnalyticsDataSetRequest
+     * @return A Java Future containing the result of the DisassociateAnalyticsDataSet operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.DisassociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateAnalyticsDataSetResult> disassociateAnalyticsDataSetAsync(
+            DisassociateAnalyticsDataSetRequest disassociateAnalyticsDataSetRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Removes the dataset ID associated with a given Amazon Connect instance.
+     * </p>
+     * 
+     * @param disassociateAnalyticsDataSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateAnalyticsDataSet operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.DisassociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateAnalyticsDataSetResult> disassociateAnalyticsDataSetAsync(
+            DisassociateAnalyticsDataSetRequest disassociateAnalyticsDataSetRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateAnalyticsDataSetRequest, DisassociateAnalyticsDataSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
      * Revokes access to integrated applications from Amazon Connect.
      * </p>
      * 
@@ -3368,6 +3567,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<DisassociateBotResult> disassociateBotAsync(DisassociateBotRequest disassociateBotRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateBotRequest, DisassociateBotResult> asyncHandler);
+
+    /**
+     * <p>
+     * Disassociates a connect resource from a flow.
+     * </p>
+     * 
+     * @param disassociateFlowRequest
+     * @return A Java Future containing the result of the DisassociateFlow operation returned by the service.
+     * @sample AmazonConnectAsync.DisassociateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateFlowResult> disassociateFlowAsync(DisassociateFlowRequest disassociateFlowRequest);
+
+    /**
+     * <p>
+     * Disassociates a connect resource from a flow.
+     * </p>
+     * 
+     * @param disassociateFlowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateFlow operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DisassociateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateFlowResult> disassociateFlowAsync(DisassociateFlowRequest disassociateFlowRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateFlowRequest, DisassociateFlowResult> asyncHandler);
 
     /**
      * <p>
@@ -3892,6 +4122,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Retrieves the flow associated for a given resource.
+     * </p>
+     * 
+     * @param getFlowAssociationRequest
+     * @return A Java Future containing the result of the GetFlowAssociation operation returned by the service.
+     * @sample AmazonConnectAsync.GetFlowAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetFlowAssociation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetFlowAssociationResult> getFlowAssociationAsync(GetFlowAssociationRequest getFlowAssociationRequest);
+
+    /**
+     * <p>
+     * Retrieves the flow associated for a given resource.
+     * </p>
+     * 
+     * @param getFlowAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetFlowAssociation operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.GetFlowAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetFlowAssociation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetFlowAssociationResult> getFlowAssociationAsync(GetFlowAssociationRequest getFlowAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetFlowAssociationRequest, GetFlowAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets historical metric data from the specified Amazon Connect instance.
      * </p>
      * <p>
@@ -4105,6 +4366,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Imports a claimed phone number from an external service, such as Amazon Pinpoint, into an Amazon Connect
+     * instance. You can call this API only in the same Amazon Web Services Region where the Amazon Connect instance was
+     * created.
+     * </p>
+     * 
+     * @param importPhoneNumberRequest
+     * @return A Java Future containing the result of the ImportPhoneNumber operation returned by the service.
+     * @sample AmazonConnectAsync.ImportPhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ImportPhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ImportPhoneNumberResult> importPhoneNumberAsync(ImportPhoneNumberRequest importPhoneNumberRequest);
+
+    /**
+     * <p>
+     * Imports a claimed phone number from an external service, such as Amazon Pinpoint, into an Amazon Connect
+     * instance. You can call this API only in the same Amazon Web Services Region where the Amazon Connect instance was
+     * created.
+     * </p>
+     * 
+     * @param importPhoneNumberRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ImportPhoneNumber operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ImportPhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ImportPhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ImportPhoneNumberResult> importPhoneNumberAsync(ImportPhoneNumberRequest importPhoneNumberRequest,
+            com.amazonaws.handlers.AsyncHandler<ImportPhoneNumberRequest, ImportPhoneNumberResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -4139,6 +4435,47 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<ListAgentStatusesResult> listAgentStatusesAsync(ListAgentStatusesRequest listAgentStatusesRequest,
             com.amazonaws.handlers.AsyncHandler<ListAgentStatusesRequest, ListAgentStatusesResult> asyncHandler);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Lists the association status of requested dataset ID for a given Amazon Connect instance.
+     * </p>
+     * 
+     * @param listAnalyticsDataAssociationsRequest
+     * @return A Java Future containing the result of the ListAnalyticsDataAssociations operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.ListAnalyticsDataAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListAnalyticsDataAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAnalyticsDataAssociationsResult> listAnalyticsDataAssociationsAsync(
+            ListAnalyticsDataAssociationsRequest listAnalyticsDataAssociationsRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Lists the association status of requested dataset ID for a given Amazon Connect instance.
+     * </p>
+     * 
+     * @param listAnalyticsDataAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAnalyticsDataAssociations operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.ListAnalyticsDataAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListAnalyticsDataAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAnalyticsDataAssociationsResult> listAnalyticsDataAssociationsAsync(
+            ListAnalyticsDataAssociationsRequest listAnalyticsDataAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAnalyticsDataAssociationsRequest, ListAnalyticsDataAssociationsResult> asyncHandler);
 
     /**
      * <p>
@@ -4460,6 +4797,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<ListEvaluationFormsResult> listEvaluationFormsAsync(ListEvaluationFormsRequest listEvaluationFormsRequest,
             com.amazonaws.handlers.AsyncHandler<ListEvaluationFormsRequest, ListEvaluationFormsResult> asyncHandler);
+
+    /**
+     * <p>
+     * List the flow association based on the filters.
+     * </p>
+     * 
+     * @param listFlowAssociationsRequest
+     * @return A Java Future containing the result of the ListFlowAssociations operation returned by the service.
+     * @sample AmazonConnectAsync.ListFlowAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListFlowAssociations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFlowAssociationsResult> listFlowAssociationsAsync(ListFlowAssociationsRequest listFlowAssociationsRequest);
+
+    /**
+     * <p>
+     * List the flow association based on the filters.
+     * </p>
+     * 
+     * @param listFlowAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListFlowAssociations operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ListFlowAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListFlowAssociations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFlowAssociationsResult> listFlowAssociationsAsync(ListFlowAssociationsRequest listFlowAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListFlowAssociationsRequest, ListFlowAssociationsResult> asyncHandler);
 
     /**
      * <p>
@@ -5047,6 +5415,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<ListQuickConnectsResult> listQuickConnectsAsync(ListQuickConnectsRequest listQuickConnectsRequest,
             com.amazonaws.handlers.AsyncHandler<ListQuickConnectsRequest, ListQuickConnectsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides a list of analysis segments for a real-time analysis session.
+     * </p>
+     * 
+     * @param listRealtimeContactAnalysisSegmentsV2Request
+     * @return A Java Future containing the result of the ListRealtimeContactAnalysisSegmentsV2 operation returned by
+     *         the service.
+     * @sample AmazonConnectAsync.ListRealtimeContactAnalysisSegmentsV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListRealtimeContactAnalysisSegmentsV2"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRealtimeContactAnalysisSegmentsV2Result> listRealtimeContactAnalysisSegmentsV2Async(
+            ListRealtimeContactAnalysisSegmentsV2Request listRealtimeContactAnalysisSegmentsV2Request);
+
+    /**
+     * <p>
+     * Provides a list of analysis segments for a real-time analysis session.
+     * </p>
+     * 
+     * @param listRealtimeContactAnalysisSegmentsV2Request
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListRealtimeContactAnalysisSegmentsV2 operation returned by
+     *         the service.
+     * @sample AmazonConnectAsyncHandler.ListRealtimeContactAnalysisSegmentsV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListRealtimeContactAnalysisSegmentsV2"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRealtimeContactAnalysisSegmentsV2Result> listRealtimeContactAnalysisSegmentsV2Async(
+            ListRealtimeContactAnalysisSegmentsV2Request listRealtimeContactAnalysisSegmentsV2Request,
+            com.amazonaws.handlers.AsyncHandler<ListRealtimeContactAnalysisSegmentsV2Request, ListRealtimeContactAnalysisSegmentsV2Result> asyncHandler);
 
     /**
      * <p>
@@ -5708,7 +6111,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * <important>
      * <p>
      * To release phone numbers from a traffic distribution group, use the <code>ReleasePhoneNumber</code> API, not the
-     * Amazon Connect console.
+     * Amazon Connect admin website.
      * </p>
      * <p>
      * After releasing a phone number, the phone number enters into a cooldown period of 30 days. It cannot be searched
@@ -5749,7 +6152,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * <important>
      * <p>
      * To release phone numbers from a traffic distribution group, use the <code>ReleasePhoneNumber</code> API, not the
-     * Amazon Connect console.
+     * Amazon Connect admin website.
      * </p>
      * <p>
      * After releasing a phone number, the phone number enters into a cooldown period of 30 days. It cannot be searched
@@ -6198,6 +6601,77 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<SearchVocabulariesResult> searchVocabulariesAsync(SearchVocabulariesRequest searchVocabulariesRequest,
             com.amazonaws.handlers.AsyncHandler<SearchVocabulariesRequest, SearchVocabulariesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Processes chat integration events from Amazon Web Services or external integrations to Amazon Connect. A chat
+     * integration event includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * SourceId, DestinationId, and Subtype: a set of identifiers, uniquely representing a chat
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ChatEvent: details of the chat action to perform such as sending a message, event, or disconnecting from a chat
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When a chat integration event is sent with chat identifiers that do not map to an active chat contact, a new chat
+     * contact is also created before handling chat action.
+     * </p>
+     * <p>
+     * Access to this API is currently restricted to Amazon Pinpoint for supporting SMS integration.
+     * </p>
+     * 
+     * @param sendChatIntegrationEventRequest
+     * @return A Java Future containing the result of the SendChatIntegrationEvent operation returned by the service.
+     * @sample AmazonConnectAsync.SendChatIntegrationEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SendChatIntegrationEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SendChatIntegrationEventResult> sendChatIntegrationEventAsync(SendChatIntegrationEventRequest sendChatIntegrationEventRequest);
+
+    /**
+     * <p>
+     * Processes chat integration events from Amazon Web Services or external integrations to Amazon Connect. A chat
+     * integration event includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * SourceId, DestinationId, and Subtype: a set of identifiers, uniquely representing a chat
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ChatEvent: details of the chat action to perform such as sending a message, event, or disconnecting from a chat
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When a chat integration event is sent with chat identifiers that do not map to an active chat contact, a new chat
+     * contact is also created before handling chat action.
+     * </p>
+     * <p>
+     * Access to this API is currently restricted to Amazon Pinpoint for supporting SMS integration.
+     * </p>
+     * 
+     * @param sendChatIntegrationEventRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SendChatIntegrationEvent operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SendChatIntegrationEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SendChatIntegrationEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SendChatIntegrationEventResult> sendChatIntegrationEventAsync(SendChatIntegrationEventRequest sendChatIntegrationEventRequest,
+            com.amazonaws.handlers.AsyncHandler<SendChatIntegrationEventRequest, SendChatIntegrationEventResult> asyncHandler);
 
     /**
      * <p>
@@ -6704,6 +7178,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<StartTaskContactResult> startTaskContactAsync(StartTaskContactRequest startTaskContactRequest,
             com.amazonaws.handlers.AsyncHandler<StartTaskContactRequest, StartTaskContactResult> asyncHandler);
+
+    /**
+     * <p>
+     * Places an inbound in-app, web, or video call to a contact, and then initiates the flow. It performs the actions
+     * in the flow that are specified (in ContactFlowId) and present in the Amazon Connect instance (specified as
+     * InstanceId).
+     * </p>
+     * 
+     * @param startWebRTCContactRequest
+     * @return A Java Future containing the result of the StartWebRTCContact operation returned by the service.
+     * @sample AmazonConnectAsync.StartWebRTCContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartWebRTCContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartWebRTCContactResult> startWebRTCContactAsync(StartWebRTCContactRequest startWebRTCContactRequest);
+
+    /**
+     * <p>
+     * Places an inbound in-app, web, or video call to a contact, and then initiates the flow. It performs the actions
+     * in the flow that are specified (in ContactFlowId) and present in the Amazon Connect instance (specified as
+     * InstanceId).
+     * </p>
+     * 
+     * @param startWebRTCContactRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartWebRTCContact operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.StartWebRTCContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartWebRTCContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartWebRTCContactResult> startWebRTCContactAsync(StartWebRTCContactRequest startWebRTCContactRequest,
+            com.amazonaws.handlers.AsyncHandler<StartWebRTCContactRequest, StartWebRTCContactResult> asyncHandler);
 
     /**
      * <p>

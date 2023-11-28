@@ -98,7 +98,9 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
     private String baseModelArn;
     /**
      * <p>
-     * The hyperparameter values for the job.
+     * The hyperparameter values for the job. For information about hyperparameters for specific models, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-guidelines.html">Guidelines for
+     * model customization</a>.
      * </p>
      */
     private java.util.Map<String, String> hyperParameters;
@@ -112,6 +114,12 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private OutputDataConfig outputDataConfig;
+    /**
+     * <p>
+     * The type of model customization.
+     * </p>
+     */
+    private String customizationType;
     /**
      * <p>
      * The custom model is encrypted at rest using this key.
@@ -642,10 +650,15 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The hyperparameter values for the job.
+     * The hyperparameter values for the job. For information about hyperparameters for specific models, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-guidelines.html">Guidelines for
+     * model customization</a>.
      * </p>
      * 
-     * @return The hyperparameter values for the job.
+     * @return The hyperparameter values for the job. For information about hyperparameters for specific models, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-guidelines.html">Guidelines
+     *         for model customization</a>.
      */
 
     public java.util.Map<String, String> getHyperParameters() {
@@ -654,11 +667,15 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The hyperparameter values for the job.
+     * The hyperparameter values for the job. For information about hyperparameters for specific models, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-guidelines.html">Guidelines for
+     * model customization</a>.
      * </p>
      * 
      * @param hyperParameters
-     *        The hyperparameter values for the job.
+     *        The hyperparameter values for the job. For information about hyperparameters for specific models, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-guidelines.html">Guidelines
+     *        for model customization</a>.
      */
 
     public void setHyperParameters(java.util.Map<String, String> hyperParameters) {
@@ -667,11 +684,15 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The hyperparameter values for the job.
+     * The hyperparameter values for the job. For information about hyperparameters for specific models, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-guidelines.html">Guidelines for
+     * model customization</a>.
      * </p>
      * 
      * @param hyperParameters
-     *        The hyperparameter values for the job.
+     *        The hyperparameter values for the job. For information about hyperparameters for specific models, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-guidelines.html">Guidelines
+     *        for model customization</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -797,6 +818,65 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
 
     public GetModelCustomizationJobResult withOutputDataConfig(OutputDataConfig outputDataConfig) {
         setOutputDataConfig(outputDataConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of model customization.
+     * </p>
+     * 
+     * @param customizationType
+     *        The type of model customization.
+     * @see CustomizationType
+     */
+
+    public void setCustomizationType(String customizationType) {
+        this.customizationType = customizationType;
+    }
+
+    /**
+     * <p>
+     * The type of model customization.
+     * </p>
+     * 
+     * @return The type of model customization.
+     * @see CustomizationType
+     */
+
+    public String getCustomizationType() {
+        return this.customizationType;
+    }
+
+    /**
+     * <p>
+     * The type of model customization.
+     * </p>
+     * 
+     * @param customizationType
+     *        The type of model customization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomizationType
+     */
+
+    public GetModelCustomizationJobResult withCustomizationType(String customizationType) {
+        setCustomizationType(customizationType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of model customization.
+     * </p>
+     * 
+     * @param customizationType
+     *        The type of model customization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomizationType
+     */
+
+    public GetModelCustomizationJobResult withCustomizationType(CustomizationType customizationType) {
+        this.customizationType = customizationType.toString();
         return this;
     }
 
@@ -1020,6 +1100,8 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
             sb.append("ValidationDataConfig: ").append(getValidationDataConfig()).append(",");
         if (getOutputDataConfig() != null)
             sb.append("OutputDataConfig: ").append(getOutputDataConfig()).append(",");
+        if (getCustomizationType() != null)
+            sb.append("CustomizationType: ").append(getCustomizationType()).append(",");
         if (getOutputModelKmsKeyArn() != null)
             sb.append("OutputModelKmsKeyArn: ").append(getOutputModelKmsKeyArn()).append(",");
         if (getTrainingMetrics() != null)
@@ -1106,6 +1188,10 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getOutputDataConfig() != null && other.getOutputDataConfig().equals(this.getOutputDataConfig()) == false)
             return false;
+        if (other.getCustomizationType() == null ^ this.getCustomizationType() == null)
+            return false;
+        if (other.getCustomizationType() != null && other.getCustomizationType().equals(this.getCustomizationType()) == false)
+            return false;
         if (other.getOutputModelKmsKeyArn() == null ^ this.getOutputModelKmsKeyArn() == null)
             return false;
         if (other.getOutputModelKmsKeyArn() != null && other.getOutputModelKmsKeyArn().equals(this.getOutputModelKmsKeyArn()) == false)
@@ -1146,6 +1232,7 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getTrainingDataConfig() == null) ? 0 : getTrainingDataConfig().hashCode());
         hashCode = prime * hashCode + ((getValidationDataConfig() == null) ? 0 : getValidationDataConfig().hashCode());
         hashCode = prime * hashCode + ((getOutputDataConfig() == null) ? 0 : getOutputDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getCustomizationType() == null) ? 0 : getCustomizationType().hashCode());
         hashCode = prime * hashCode + ((getOutputModelKmsKeyArn() == null) ? 0 : getOutputModelKmsKeyArn().hashCode());
         hashCode = prime * hashCode + ((getTrainingMetrics() == null) ? 0 : getTrainingMetrics().hashCode());
         hashCode = prime * hashCode + ((getValidationMetrics() == null) ? 0 : getValidationMetrics().hashCode());

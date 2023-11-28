@@ -79,7 +79,7 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
     private SecretsManagerSecretConfiguration secretsManagerSecret;
     /**
      * <p>
-     * The access control configuration is for an Amazon S3 Bucket.
+     * The access control configuration is for an Amazon S3 bucket.
      * </p>
      */
     private S3BucketConfiguration s3Bucket;
@@ -95,6 +95,12 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private SqsQueueConfiguration sqsQueue;
+    /**
+     * <p>
+     * The access control configuration is for an Amazon S3 directory bucket.
+     * </p>
+     */
+    private S3ExpressDirectoryBucketConfiguration s3ExpressDirectoryBucket;
 
     /**
      * <p>
@@ -418,11 +424,11 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The access control configuration is for an Amazon S3 Bucket.
+     * The access control configuration is for an Amazon S3 bucket.
      * </p>
      * 
      * @param s3Bucket
-     *        The access control configuration is for an Amazon S3 Bucket.
+     *        The access control configuration is for an Amazon S3 bucket.
      */
 
     public void setS3Bucket(S3BucketConfiguration s3Bucket) {
@@ -431,10 +437,10 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The access control configuration is for an Amazon S3 Bucket.
+     * The access control configuration is for an Amazon S3 bucket.
      * </p>
      * 
-     * @return The access control configuration is for an Amazon S3 Bucket.
+     * @return The access control configuration is for an Amazon S3 bucket.
      */
 
     public S3BucketConfiguration getS3Bucket() {
@@ -443,11 +449,11 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The access control configuration is for an Amazon S3 Bucket.
+     * The access control configuration is for an Amazon S3 bucket.
      * </p>
      * 
      * @param s3Bucket
-     *        The access control configuration is for an Amazon S3 Bucket.
+     *        The access control configuration is for an Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -537,6 +543,46 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The access control configuration is for an Amazon S3 directory bucket.
+     * </p>
+     * 
+     * @param s3ExpressDirectoryBucket
+     *        The access control configuration is for an Amazon S3 directory bucket.
+     */
+
+    public void setS3ExpressDirectoryBucket(S3ExpressDirectoryBucketConfiguration s3ExpressDirectoryBucket) {
+        this.s3ExpressDirectoryBucket = s3ExpressDirectoryBucket;
+    }
+
+    /**
+     * <p>
+     * The access control configuration is for an Amazon S3 directory bucket.
+     * </p>
+     * 
+     * @return The access control configuration is for an Amazon S3 directory bucket.
+     */
+
+    public S3ExpressDirectoryBucketConfiguration getS3ExpressDirectoryBucket() {
+        return this.s3ExpressDirectoryBucket;
+    }
+
+    /**
+     * <p>
+     * The access control configuration is for an Amazon S3 directory bucket.
+     * </p>
+     * 
+     * @param s3ExpressDirectoryBucket
+     *        The access control configuration is for an Amazon S3 directory bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Configuration withS3ExpressDirectoryBucket(S3ExpressDirectoryBucketConfiguration s3ExpressDirectoryBucket) {
+        setS3ExpressDirectoryBucket(s3ExpressDirectoryBucket);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -569,7 +615,9 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
         if (getSnsTopic() != null)
             sb.append("SnsTopic: ").append(getSnsTopic()).append(",");
         if (getSqsQueue() != null)
-            sb.append("SqsQueue: ").append(getSqsQueue());
+            sb.append("SqsQueue: ").append(getSqsQueue()).append(",");
+        if (getS3ExpressDirectoryBucket() != null)
+            sb.append("S3ExpressDirectoryBucket: ").append(getS3ExpressDirectoryBucket());
         sb.append("}");
         return sb.toString();
     }
@@ -628,6 +676,10 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSqsQueue() != null && other.getSqsQueue().equals(this.getSqsQueue()) == false)
             return false;
+        if (other.getS3ExpressDirectoryBucket() == null ^ this.getS3ExpressDirectoryBucket() == null)
+            return false;
+        if (other.getS3ExpressDirectoryBucket() != null && other.getS3ExpressDirectoryBucket().equals(this.getS3ExpressDirectoryBucket()) == false)
+            return false;
         return true;
     }
 
@@ -647,6 +699,7 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getS3Bucket() == null) ? 0 : getS3Bucket().hashCode());
         hashCode = prime * hashCode + ((getSnsTopic() == null) ? 0 : getSnsTopic().hashCode());
         hashCode = prime * hashCode + ((getSqsQueue() == null) ? 0 : getSqsQueue().hashCode());
+        hashCode = prime * hashCode + ((getS3ExpressDirectoryBucket() == null) ? 0 : getS3ExpressDirectoryBucket().hashCode());
         return hashCode;
     }
 

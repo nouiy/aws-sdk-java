@@ -55,6 +55,12 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
     private String baseModelArn;
     /**
      * <p>
+     * The type of model customization.
+     * </p>
+     */
+    private String customizationType;
+    /**
+     * <p>
      * The custom model is encrypted at rest using this key.
      * </p>
      */
@@ -295,6 +301,65 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
 
     public GetCustomModelResult withBaseModelArn(String baseModelArn) {
         setBaseModelArn(baseModelArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of model customization.
+     * </p>
+     * 
+     * @param customizationType
+     *        The type of model customization.
+     * @see CustomizationType
+     */
+
+    public void setCustomizationType(String customizationType) {
+        this.customizationType = customizationType;
+    }
+
+    /**
+     * <p>
+     * The type of model customization.
+     * </p>
+     * 
+     * @return The type of model customization.
+     * @see CustomizationType
+     */
+
+    public String getCustomizationType() {
+        return this.customizationType;
+    }
+
+    /**
+     * <p>
+     * The type of model customization.
+     * </p>
+     * 
+     * @param customizationType
+     *        The type of model customization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomizationType
+     */
+
+    public GetCustomModelResult withCustomizationType(String customizationType) {
+        setCustomizationType(customizationType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of model customization.
+     * </p>
+     * 
+     * @param customizationType
+     *        The type of model customization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomizationType
+     */
+
+    public GetCustomModelResult withCustomizationType(CustomizationType customizationType) {
+        this.customizationType = customizationType.toString();
         return this;
     }
 
@@ -684,6 +749,8 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
             sb.append("JobArn: ").append(getJobArn()).append(",");
         if (getBaseModelArn() != null)
             sb.append("BaseModelArn: ").append(getBaseModelArn()).append(",");
+        if (getCustomizationType() != null)
+            sb.append("CustomizationType: ").append(getCustomizationType()).append(",");
         if (getModelKmsKeyArn() != null)
             sb.append("ModelKmsKeyArn: ").append(getModelKmsKeyArn()).append(",");
         if (getHyperParameters() != null)
@@ -734,6 +801,10 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
             return false;
         if (other.getBaseModelArn() != null && other.getBaseModelArn().equals(this.getBaseModelArn()) == false)
             return false;
+        if (other.getCustomizationType() == null ^ this.getCustomizationType() == null)
+            return false;
+        if (other.getCustomizationType() != null && other.getCustomizationType().equals(this.getCustomizationType()) == false)
+            return false;
         if (other.getModelKmsKeyArn() == null ^ this.getModelKmsKeyArn() == null)
             return false;
         if (other.getModelKmsKeyArn() != null && other.getModelKmsKeyArn().equals(this.getModelKmsKeyArn()) == false)
@@ -779,6 +850,7 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
         hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
         hashCode = prime * hashCode + ((getJobArn() == null) ? 0 : getJobArn().hashCode());
         hashCode = prime * hashCode + ((getBaseModelArn() == null) ? 0 : getBaseModelArn().hashCode());
+        hashCode = prime * hashCode + ((getCustomizationType() == null) ? 0 : getCustomizationType().hashCode());
         hashCode = prime * hashCode + ((getModelKmsKeyArn() == null) ? 0 : getModelKmsKeyArn().hashCode());
         hashCode = prime * hashCode + ((getHyperParameters() == null) ? 0 : getHyperParameters().hashCode());
         hashCode = prime * hashCode + ((getTrainingDataConfig() == null) ? 0 : getTrainingDataConfig().hashCode());

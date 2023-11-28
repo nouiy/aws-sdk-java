@@ -27,8 +27,8 @@ public class CreateProvisionedModelThroughputRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Unique token value that you can provide. If this token matches a previous request, Bedrock ignores the request,
-     * but does not return an error.
+     * Unique token value that you can provide. If this token matches a previous request, Amazon Bedrock ignores the
+     * request, but does not return an error.
      * </p>
      */
     private String clientRequestToken;
@@ -65,13 +65,13 @@ public class CreateProvisionedModelThroughputRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Unique token value that you can provide. If this token matches a previous request, Bedrock ignores the request,
-     * but does not return an error.
+     * Unique token value that you can provide. If this token matches a previous request, Amazon Bedrock ignores the
+     * request, but does not return an error.
      * </p>
      * 
      * @param clientRequestToken
-     *        Unique token value that you can provide. If this token matches a previous request, Bedrock ignores the
-     *        request, but does not return an error.
+     *        Unique token value that you can provide. If this token matches a previous request, Amazon Bedrock ignores
+     *        the request, but does not return an error.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -80,12 +80,12 @@ public class CreateProvisionedModelThroughputRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Unique token value that you can provide. If this token matches a previous request, Bedrock ignores the request,
-     * but does not return an error.
+     * Unique token value that you can provide. If this token matches a previous request, Amazon Bedrock ignores the
+     * request, but does not return an error.
      * </p>
      * 
-     * @return Unique token value that you can provide. If this token matches a previous request, Bedrock ignores the
-     *         request, but does not return an error.
+     * @return Unique token value that you can provide. If this token matches a previous request, Amazon Bedrock ignores
+     *         the request, but does not return an error.
      */
 
     public String getClientRequestToken() {
@@ -94,13 +94,13 @@ public class CreateProvisionedModelThroughputRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Unique token value that you can provide. If this token matches a previous request, Bedrock ignores the request,
-     * but does not return an error.
+     * Unique token value that you can provide. If this token matches a previous request, Amazon Bedrock ignores the
+     * request, but does not return an error.
      * </p>
      * 
      * @param clientRequestToken
-     *        Unique token value that you can provide. If this token matches a previous request, Bedrock ignores the
-     *        request, but does not return an error.
+     *        Unique token value that you can provide. If this token matches a previous request, Amazon Bedrock ignores
+     *        the request, but does not return an error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

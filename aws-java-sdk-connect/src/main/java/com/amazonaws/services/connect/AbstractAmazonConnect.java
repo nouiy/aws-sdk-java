@@ -33,6 +33,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public AssociateAnalyticsDataSetResult associateAnalyticsDataSet(AssociateAnalyticsDataSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public AssociateApprovedOriginResult associateApprovedOrigin(AssociateApprovedOriginRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -44,6 +49,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public AssociateDefaultVocabularyResult associateDefaultVocabulary(AssociateDefaultVocabularyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public AssociateFlowResult associateFlow(AssociateFlowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -84,6 +94,16 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public AssociateTrafficDistributionGroupUserResult associateTrafficDistributionGroupUser(AssociateTrafficDistributionGroupUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public BatchAssociateAnalyticsDataSetResult batchAssociateAnalyticsDataSet(BatchAssociateAnalyticsDataSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public BatchDisassociateAnalyticsDataSetResult batchDisassociateAnalyticsDataSet(BatchDisassociateAnalyticsDataSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -443,12 +463,22 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public DisassociateAnalyticsDataSetResult disassociateAnalyticsDataSet(DisassociateAnalyticsDataSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisassociateApprovedOriginResult disassociateApprovedOrigin(DisassociateApprovedOriginRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DisassociateBotResult disassociateBot(DisassociateBotRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DisassociateFlowResult disassociateFlow(DisassociateFlowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -518,6 +548,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public GetFlowAssociationResult getFlowAssociation(GetFlowAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetMetricDataResult getMetricData(GetMetricDataRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -543,7 +578,17 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public ImportPhoneNumberResult importPhoneNumber(ImportPhoneNumberRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAgentStatusesResult listAgentStatuses(ListAgentStatusesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAnalyticsDataAssociationsResult listAnalyticsDataAssociations(ListAnalyticsDataAssociationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -589,6 +634,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public ListEvaluationFormsResult listEvaluationForms(ListEvaluationFormsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListFlowAssociationsResult listFlowAssociations(ListFlowAssociationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -654,6 +704,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public ListQuickConnectsResult listQuickConnects(ListQuickConnectsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListRealtimeContactAnalysisSegmentsV2Result listRealtimeContactAnalysisSegmentsV2(ListRealtimeContactAnalysisSegmentsV2Request request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -813,6 +868,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public SendChatIntegrationEventResult sendChatIntegrationEvent(SendChatIntegrationEventRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartChatContactResult startChatContact(StartChatContactRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -839,6 +899,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public StartTaskContactResult startTaskContact(StartTaskContactRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartWebRTCContactResult startWebRTCContact(StartWebRTCContactRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

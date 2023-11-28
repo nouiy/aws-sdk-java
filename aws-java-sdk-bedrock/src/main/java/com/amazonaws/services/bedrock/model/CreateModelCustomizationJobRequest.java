@@ -39,9 +39,9 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
     private String customModelName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
-     * example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write model
-     * artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
+     * The Amazon Resource Name (ARN) of an IAM role that Amazon Bedrock can assume to perform tasks on your behalf. For
+     * example, during model training, Amazon Bedrock needs your permission to read input data from an S3 bucket, write
+     * model artifacts to an S3 bucket. To pass this role to Amazon Bedrock, the caller of this API must have the
      * <code>iam:PassRole</code> permission.
      * </p>
      */
@@ -58,6 +58,12 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
      * </p>
      */
     private String baseModelIdentifier;
+    /**
+     * <p>
+     * The customization type.
+     * </p>
+     */
+    private String customizationType;
     /**
      * <p>
      * The custom model is encrypted at rest using this key.
@@ -190,17 +196,17 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
-     * example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write model
-     * artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
+     * The Amazon Resource Name (ARN) of an IAM role that Amazon Bedrock can assume to perform tasks on your behalf. For
+     * example, during model training, Amazon Bedrock needs your permission to read input data from an S3 bucket, write
+     * model artifacts to an S3 bucket. To pass this role to Amazon Bedrock, the caller of this API must have the
      * <code>iam:PassRole</code> permission.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
-     *        example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write
-     *        model artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
-     *        <code>iam:PassRole</code> permission.
+     *        The Amazon Resource Name (ARN) of an IAM role that Amazon Bedrock can assume to perform tasks on your
+     *        behalf. For example, during model training, Amazon Bedrock needs your permission to read input data from
+     *        an S3 bucket, write model artifacts to an S3 bucket. To pass this role to Amazon Bedrock, the caller of
+     *        this API must have the <code>iam:PassRole</code> permission.
      */
 
     public void setRoleArn(String roleArn) {
@@ -209,16 +215,16 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
-     * example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write model
-     * artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
+     * The Amazon Resource Name (ARN) of an IAM role that Amazon Bedrock can assume to perform tasks on your behalf. For
+     * example, during model training, Amazon Bedrock needs your permission to read input data from an S3 bucket, write
+     * model artifacts to an S3 bucket. To pass this role to Amazon Bedrock, the caller of this API must have the
      * <code>iam:PassRole</code> permission.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf.
-     *         For example, during model training, Bedrock needs your permission to read input data from an S3 bucket,
-     *         write model artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
-     *         <code>iam:PassRole</code> permission.
+     * @return The Amazon Resource Name (ARN) of an IAM role that Amazon Bedrock can assume to perform tasks on your
+     *         behalf. For example, during model training, Amazon Bedrock needs your permission to read input data from
+     *         an S3 bucket, write model artifacts to an S3 bucket. To pass this role to Amazon Bedrock, the caller of
+     *         this API must have the <code>iam:PassRole</code> permission.
      */
 
     public String getRoleArn() {
@@ -227,17 +233,17 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
-     * example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write model
-     * artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
+     * The Amazon Resource Name (ARN) of an IAM role that Amazon Bedrock can assume to perform tasks on your behalf. For
+     * example, during model training, Amazon Bedrock needs your permission to read input data from an S3 bucket, write
+     * model artifacts to an S3 bucket. To pass this role to Amazon Bedrock, the caller of this API must have the
      * <code>iam:PassRole</code> permission.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
-     *        example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write
-     *        model artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
-     *        <code>iam:PassRole</code> permission.
+     *        The Amazon Resource Name (ARN) of an IAM role that Amazon Bedrock can assume to perform tasks on your
+     *        behalf. For example, during model training, Amazon Bedrock needs your permission to read input data from
+     *        an S3 bucket, write model artifacts to an S3 bucket. To pass this role to Amazon Bedrock, the caller of
+     *        this API must have the <code>iam:PassRole</code> permission.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -326,6 +332,65 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
 
     public CreateModelCustomizationJobRequest withBaseModelIdentifier(String baseModelIdentifier) {
         setBaseModelIdentifier(baseModelIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The customization type.
+     * </p>
+     * 
+     * @param customizationType
+     *        The customization type.
+     * @see CustomizationType
+     */
+
+    public void setCustomizationType(String customizationType) {
+        this.customizationType = customizationType;
+    }
+
+    /**
+     * <p>
+     * The customization type.
+     * </p>
+     * 
+     * @return The customization type.
+     * @see CustomizationType
+     */
+
+    public String getCustomizationType() {
+        return this.customizationType;
+    }
+
+    /**
+     * <p>
+     * The customization type.
+     * </p>
+     * 
+     * @param customizationType
+     *        The customization type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomizationType
+     */
+
+    public CreateModelCustomizationJobRequest withCustomizationType(String customizationType) {
+        setCustomizationType(customizationType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The customization type.
+     * </p>
+     * 
+     * @param customizationType
+     *        The customization type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomizationType
+     */
+
+    public CreateModelCustomizationJobRequest withCustomizationType(CustomizationType customizationType) {
+        this.customizationType = customizationType.toString();
         return this;
     }
 
@@ -765,6 +830,8 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
             sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
         if (getBaseModelIdentifier() != null)
             sb.append("BaseModelIdentifier: ").append(getBaseModelIdentifier()).append(",");
+        if (getCustomizationType() != null)
+            sb.append("CustomizationType: ").append(getCustomizationType()).append(",");
         if (getCustomModelKmsKeyId() != null)
             sb.append("CustomModelKmsKeyId: ").append(getCustomModelKmsKeyId()).append(",");
         if (getJobTags() != null)
@@ -815,6 +882,10 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getBaseModelIdentifier() != null && other.getBaseModelIdentifier().equals(this.getBaseModelIdentifier()) == false)
             return false;
+        if (other.getCustomizationType() == null ^ this.getCustomizationType() == null)
+            return false;
+        if (other.getCustomizationType() != null && other.getCustomizationType().equals(this.getCustomizationType()) == false)
+            return false;
         if (other.getCustomModelKmsKeyId() == null ^ this.getCustomModelKmsKeyId() == null)
             return false;
         if (other.getCustomModelKmsKeyId() != null && other.getCustomModelKmsKeyId().equals(this.getCustomModelKmsKeyId()) == false)
@@ -860,6 +931,7 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getBaseModelIdentifier() == null) ? 0 : getBaseModelIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getCustomizationType() == null) ? 0 : getCustomizationType().hashCode());
         hashCode = prime * hashCode + ((getCustomModelKmsKeyId() == null) ? 0 : getCustomModelKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getJobTags() == null) ? 0 : getJobTags().hashCode());
         hashCode = prime * hashCode + ((getCustomModelTags() == null) ? 0 : getCustomModelTags().hashCode());

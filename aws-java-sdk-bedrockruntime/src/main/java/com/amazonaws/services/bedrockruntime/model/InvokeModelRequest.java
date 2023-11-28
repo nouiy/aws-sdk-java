@@ -27,12 +27,6 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The desired MIME type of the inference body in the response. The default value is <code>application/json</code>.
-     * </p>
-     */
-    private String accept;
-    /**
-     * <p>
      * Input data in the format specified in the content-type request header. To see the format and content of this
      * field for different models, refer to <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters</a>.
@@ -47,53 +41,16 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String contentType;
     /**
      * <p>
+     * The desired MIME type of the inference body in the response. The default value is <code>application/json</code>.
+     * </p>
+     */
+    private String accept;
+    /**
+     * <p>
      * Identifier of the model.
      * </p>
      */
     private String modelId;
-
-    /**
-     * <p>
-     * The desired MIME type of the inference body in the response. The default value is <code>application/json</code>.
-     * </p>
-     * 
-     * @param accept
-     *        The desired MIME type of the inference body in the response. The default value is
-     *        <code>application/json</code>.
-     */
-
-    public void setAccept(String accept) {
-        this.accept = accept;
-    }
-
-    /**
-     * <p>
-     * The desired MIME type of the inference body in the response. The default value is <code>application/json</code>.
-     * </p>
-     * 
-     * @return The desired MIME type of the inference body in the response. The default value is
-     *         <code>application/json</code>.
-     */
-
-    public String getAccept() {
-        return this.accept;
-    }
-
-    /**
-     * <p>
-     * The desired MIME type of the inference body in the response. The default value is <code>application/json</code>.
-     * </p>
-     * 
-     * @param accept
-     *        The desired MIME type of the inference body in the response. The default value is
-     *        <code>application/json</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public InvokeModelRequest withAccept(String accept) {
-        setAccept(accept);
-        return this;
-    }
 
     /**
      * <p>
@@ -219,6 +176,49 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
+     * The desired MIME type of the inference body in the response. The default value is <code>application/json</code>.
+     * </p>
+     * 
+     * @param accept
+     *        The desired MIME type of the inference body in the response. The default value is
+     *        <code>application/json</code>.
+     */
+
+    public void setAccept(String accept) {
+        this.accept = accept;
+    }
+
+    /**
+     * <p>
+     * The desired MIME type of the inference body in the response. The default value is <code>application/json</code>.
+     * </p>
+     * 
+     * @return The desired MIME type of the inference body in the response. The default value is
+     *         <code>application/json</code>.
+     */
+
+    public String getAccept() {
+        return this.accept;
+    }
+
+    /**
+     * <p>
+     * The desired MIME type of the inference body in the response. The default value is <code>application/json</code>.
+     * </p>
+     * 
+     * @param accept
+     *        The desired MIME type of the inference body in the response. The default value is
+     *        <code>application/json</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InvokeModelRequest withAccept(String accept) {
+        setAccept(accept);
+        return this;
+    }
+
+    /**
+     * <p>
      * Identifier of the model.
      * </p>
      * 
@@ -269,12 +269,12 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAccept() != null)
-            sb.append("Accept: ").append(getAccept()).append(",");
         if (getBody() != null)
             sb.append("Body: ").append("***Sensitive Data Redacted***").append(",");
         if (getContentType() != null)
             sb.append("ContentType: ").append(getContentType()).append(",");
+        if (getAccept() != null)
+            sb.append("Accept: ").append(getAccept()).append(",");
         if (getModelId() != null)
             sb.append("ModelId: ").append(getModelId());
         sb.append("}");
@@ -291,10 +291,6 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (obj instanceof InvokeModelRequest == false)
             return false;
         InvokeModelRequest other = (InvokeModelRequest) obj;
-        if (other.getAccept() == null ^ this.getAccept() == null)
-            return false;
-        if (other.getAccept() != null && other.getAccept().equals(this.getAccept()) == false)
-            return false;
         if (other.getBody() == null ^ this.getBody() == null)
             return false;
         if (other.getBody() != null && other.getBody().equals(this.getBody()) == false)
@@ -302,6 +298,10 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (other.getContentType() == null ^ this.getContentType() == null)
             return false;
         if (other.getContentType() != null && other.getContentType().equals(this.getContentType()) == false)
+            return false;
+        if (other.getAccept() == null ^ this.getAccept() == null)
+            return false;
+        if (other.getAccept() != null && other.getAccept().equals(this.getAccept()) == false)
             return false;
         if (other.getModelId() == null ^ this.getModelId() == null)
             return false;
@@ -315,9 +315,9 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAccept() == null) ? 0 : getAccept().hashCode());
         hashCode = prime * hashCode + ((getBody() == null) ? 0 : getBody().hashCode());
         hashCode = prime * hashCode + ((getContentType() == null) ? 0 : getContentType().hashCode());
+        hashCode = prime * hashCode + ((getAccept() == null) ? 0 : getAccept().hashCode());
         hashCode = prime * hashCode + ((getModelId() == null) ? 0 : getModelId().hashCode());
         return hashCode;
     }

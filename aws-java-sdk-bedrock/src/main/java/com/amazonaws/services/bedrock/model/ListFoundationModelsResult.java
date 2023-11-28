@@ -25,17 +25,17 @@ public class ListFoundationModelsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of bedrock foundation models.
+     * A list of Amazon Bedrock foundation models.
      * </p>
      */
     private java.util.List<FoundationModelSummary> modelSummaries;
 
     /**
      * <p>
-     * A list of bedrock foundation models.
+     * A list of Amazon Bedrock foundation models.
      * </p>
      * 
-     * @return A list of bedrock foundation models.
+     * @return A list of Amazon Bedrock foundation models.
      */
 
     public java.util.List<FoundationModelSummary> getModelSummaries() {
@@ -44,11 +44,11 @@ public class ListFoundationModelsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of bedrock foundation models.
+     * A list of Amazon Bedrock foundation models.
      * </p>
      * 
      * @param modelSummaries
-     *        A list of bedrock foundation models.
+     *        A list of Amazon Bedrock foundation models.
      */
 
     public void setModelSummaries(java.util.Collection<FoundationModelSummary> modelSummaries) {
@@ -62,7 +62,7 @@ public class ListFoundationModelsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of bedrock foundation models.
+     * A list of Amazon Bedrock foundation models.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -71,7 +71,7 @@ public class ListFoundationModelsResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param modelSummaries
-     *        A list of bedrock foundation models.
+     *        A list of Amazon Bedrock foundation models.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,11 +87,11 @@ public class ListFoundationModelsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of bedrock foundation models.
+     * A list of Amazon Bedrock foundation models.
      * </p>
      * 
      * @param modelSummaries
-     *        A list of bedrock foundation models.
+     *        A list of Amazon Bedrock foundation models.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

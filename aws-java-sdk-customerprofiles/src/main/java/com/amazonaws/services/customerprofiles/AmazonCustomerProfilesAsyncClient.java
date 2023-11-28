@@ -580,6 +580,39 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
     }
 
     @Override
+    public java.util.concurrent.Future<DetectProfileObjectTypeResult> detectProfileObjectTypeAsync(DetectProfileObjectTypeRequest request) {
+
+        return detectProfileObjectTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DetectProfileObjectTypeResult> detectProfileObjectTypeAsync(final DetectProfileObjectTypeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DetectProfileObjectTypeRequest, DetectProfileObjectTypeResult> asyncHandler) {
+        final DetectProfileObjectTypeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DetectProfileObjectTypeResult>() {
+            @Override
+            public DetectProfileObjectTypeResult call() throws Exception {
+                DetectProfileObjectTypeResult result = null;
+
+                try {
+                    result = executeDetectProfileObjectType(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAutoMergingPreviewResult> getAutoMergingPreviewAsync(GetAutoMergingPreviewRequest request) {
 
         return getAutoMergingPreviewAsync(request, null);

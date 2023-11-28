@@ -133,6 +133,13 @@ public class ClaimedPhoneNumberSummary implements Serializable, Cloneable, Struc
      * </note>
      */
     private PhoneNumberStatus phoneNumberStatus;
+    /**
+     * <p>
+     * The claimed phone number ARN that was previously imported from the external service, such as Amazon Pinpoint. If
+     * it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from Amazon Pinpoint.
+     * </p>
+     */
+    private String sourcePhoneNumberArn;
 
     /**
      * <p>
@@ -874,6 +881,55 @@ public class ClaimedPhoneNumberSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The claimed phone number ARN that was previously imported from the external service, such as Amazon Pinpoint. If
+     * it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from Amazon Pinpoint.
+     * </p>
+     * 
+     * @param sourcePhoneNumberArn
+     *        The claimed phone number ARN that was previously imported from the external service, such as Amazon
+     *        Pinpoint. If it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from
+     *        Amazon Pinpoint.
+     */
+
+    public void setSourcePhoneNumberArn(String sourcePhoneNumberArn) {
+        this.sourcePhoneNumberArn = sourcePhoneNumberArn;
+    }
+
+    /**
+     * <p>
+     * The claimed phone number ARN that was previously imported from the external service, such as Amazon Pinpoint. If
+     * it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from Amazon Pinpoint.
+     * </p>
+     * 
+     * @return The claimed phone number ARN that was previously imported from the external service, such as Amazon
+     *         Pinpoint. If it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from
+     *         Amazon Pinpoint.
+     */
+
+    public String getSourcePhoneNumberArn() {
+        return this.sourcePhoneNumberArn;
+    }
+
+    /**
+     * <p>
+     * The claimed phone number ARN that was previously imported from the external service, such as Amazon Pinpoint. If
+     * it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from Amazon Pinpoint.
+     * </p>
+     * 
+     * @param sourcePhoneNumberArn
+     *        The claimed phone number ARN that was previously imported from the external service, such as Amazon
+     *        Pinpoint. If it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from
+     *        Amazon Pinpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClaimedPhoneNumberSummary withSourcePhoneNumberArn(String sourcePhoneNumberArn) {
+        setSourcePhoneNumberArn(sourcePhoneNumberArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -904,7 +960,9 @@ public class ClaimedPhoneNumberSummary implements Serializable, Cloneable, Struc
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getPhoneNumberStatus() != null)
-            sb.append("PhoneNumberStatus: ").append(getPhoneNumberStatus());
+            sb.append("PhoneNumberStatus: ").append(getPhoneNumberStatus()).append(",");
+        if (getSourcePhoneNumberArn() != null)
+            sb.append("SourcePhoneNumberArn: ").append(getSourcePhoneNumberArn());
         sb.append("}");
         return sb.toString();
     }
@@ -959,6 +1017,10 @@ public class ClaimedPhoneNumberSummary implements Serializable, Cloneable, Struc
             return false;
         if (other.getPhoneNumberStatus() != null && other.getPhoneNumberStatus().equals(this.getPhoneNumberStatus()) == false)
             return false;
+        if (other.getSourcePhoneNumberArn() == null ^ this.getSourcePhoneNumberArn() == null)
+            return false;
+        if (other.getSourcePhoneNumberArn() != null && other.getSourcePhoneNumberArn().equals(this.getSourcePhoneNumberArn()) == false)
+            return false;
         return true;
     }
 
@@ -977,6 +1039,7 @@ public class ClaimedPhoneNumberSummary implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getInstanceId() == null) ? 0 : getInstanceId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getPhoneNumberStatus() == null) ? 0 : getPhoneNumberStatus().hashCode());
+        hashCode = prime * hashCode + ((getSourcePhoneNumberArn() == null) ? 0 : getSourcePhoneNumberArn().hashCode());
         return hashCode;
     }
 

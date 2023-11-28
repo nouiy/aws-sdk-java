@@ -48,8 +48,8 @@ public class QuickConnectSummary implements Serializable, Cloneable, StructuredP
     private String name;
     /**
      * <p>
-     * The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are prompted to
-     * assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
+     * The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are prompted
+     * to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * </p>
      */
     private String quickConnectType;
@@ -188,12 +188,12 @@ public class QuickConnectSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are prompted to
-     * assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
+     * The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are prompted
+     * to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * </p>
      * 
      * @param quickConnectType
-     *        The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are
+     *        The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are
      *        prompted to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * @see QuickConnectType
      */
@@ -204,11 +204,11 @@ public class QuickConnectSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are prompted to
-     * assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
+     * The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are prompted
+     * to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * </p>
      * 
-     * @return The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are
+     * @return The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are
      *         prompted to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * @see QuickConnectType
      */
@@ -219,12 +219,12 @@ public class QuickConnectSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are prompted to
-     * assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
+     * The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are prompted
+     * to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * </p>
      * 
      * @param quickConnectType
-     *        The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are
+     *        The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are
      *        prompted to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QuickConnectType
@@ -237,12 +237,12 @@ public class QuickConnectSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are prompted to
-     * assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
+     * The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are prompted
+     * to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * </p>
      * 
      * @param quickConnectType
-     *        The type of quick connect. In the Amazon Connect console, when you create a quick connect, you are
+     *        The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are
      *        prompted to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QuickConnectType

@@ -42,6 +42,8 @@ public class CreateModelCustomizationJobRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<String> BASEMODELIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("baseModelIdentifier").build();
+    private static final MarshallingInfo<String> CUSTOMIZATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customizationType").build();
     private static final MarshallingInfo<String> CUSTOMMODELKMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customModelKmsKeyId").build();
     private static final MarshallingInfo<List> JOBTAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -80,6 +82,7 @@ public class CreateModelCustomizationJobRequestMarshaller {
             protocolMarshaller.marshall(createModelCustomizationJobRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(createModelCustomizationJobRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
             protocolMarshaller.marshall(createModelCustomizationJobRequest.getBaseModelIdentifier(), BASEMODELIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(createModelCustomizationJobRequest.getCustomizationType(), CUSTOMIZATIONTYPE_BINDING);
             protocolMarshaller.marshall(createModelCustomizationJobRequest.getCustomModelKmsKeyId(), CUSTOMMODELKMSKEYID_BINDING);
             protocolMarshaller.marshall(createModelCustomizationJobRequest.getJobTags(), JOBTAGS_BINDING);
             protocolMarshaller.marshall(createModelCustomizationJobRequest.getCustomModelTags(), CUSTOMMODELTAGS_BINDING);

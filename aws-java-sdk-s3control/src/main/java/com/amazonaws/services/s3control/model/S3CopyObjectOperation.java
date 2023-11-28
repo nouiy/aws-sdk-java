@@ -30,15 +30,45 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to copy
-     * objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code> property to
+     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>General purpose buckets</b> - For example, to copy objects to a general purpose bucket named
+     * <code>destinationBucket</code>, set the <code>TargetResource</code> property to
      * <code>arn:aws:s3:::destinationBucket</code>.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
+     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>, set the
+     * <code>TargetResource</code> property to
+     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     * .
+     * </p>
+     * </li>
+     * </ul>
      */
     private String targetResource;
-    /** <p/> */
+    /**
+     * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
+     */
     private String cannedAccessControlList;
-    /** <p/> */
+    /**
+     * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
+     */
     private java.util.List<S3Grant> accessControlGrants;
     /** <p/> */
     private String metadataDirective;
@@ -52,22 +82,64 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * </p>
      */
     private S3ObjectMetadata newObjectMetadata;
-    /** <p/> */
+    /**
+     * <p>
+     * Specifies a list of tags to add to the destination objects after they are copied. If
+     * <code>NewObjectTagging</code> is not specified, the tags of the source objects are copied to destination objects
+     * by default.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets</b> - Tags aren't supported by directory buckets. If your source objects have tags and your
+     * destination bucket is a directory bucket, specify an empty tag set in the <code>NewObjectTagging</code> field to
+     * prevent copying the source object tags to the directory bucket.
+     * </p>
+     * </note>
+     */
     private java.util.List<S3Tag> newObjectTagging;
     /**
      * <p>
-     * Specifies an optional metadata property for website redirects, <code>x-amz-website-redirect-location</code>.
-     * Allows webpage redirects if the object is accessed through a website endpoint.
+     * If the destination bucket is configured as a website, specifies an optional metadata property for website
+     * redirects, <code>x-amz-website-redirect-location</code>. Allows webpage redirects if the object copy is accessed
+     * through a website endpoint.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      */
     private String redirectLocation;
-    /** <p/> */
+    /**
+     * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
+     */
     private Boolean requesterPays;
-    /** <p/> */
+    /**
+     * <p>
+     * Specify the storage class for the destination objects in a <code>Copy</code> operation.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets </b> - This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
+     */
     private String storageClass;
     /** <p/> */
     private java.util.Date unModifiedSinceConstraint;
-    /** <p/> */
+    /**
+     * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
+     */
     private String sSEAwsKmsKeyId;
     /**
      * <p>
@@ -81,18 +153,33 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The legal hold status to be applied to all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      */
     private String objectLockLegalHoldStatus;
     /**
      * <p>
      * The retention mode to be applied to all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      */
     private String objectLockMode;
     /**
      * <p>
      * The date when the applied object retention configuration expires on all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      */
     private java.util.Date objectLockRetainUntilDate;
     /**
@@ -105,6 +192,11 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * Specifying this header with an <i>object</i> action doesn’t affect <i>bucket-level</i> settings for S3 Bucket
      * Key.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      */
     private Boolean bucketKeyEnabled;
     /**
@@ -118,15 +210,46 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to copy
-     * objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code> property to
+     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>General purpose buckets</b> - For example, to copy objects to a general purpose bucket named
+     * <code>destinationBucket</code>, set the <code>TargetResource</code> property to
      * <code>arn:aws:s3:::destinationBucket</code>.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
+     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>, set the
+     * <code>TargetResource</code> property to
+     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     * .
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param targetResource
-     *        Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to
-     *        copy objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code>
-     *        property to <code>arn:aws:s3:::destinationBucket</code>.
+     *        Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>General purpose buckets</b> - For example, to copy objects to a general purpose bucket named
+     *        <code>destinationBucket</code>, set the <code>TargetResource</code> property to
+     *        <code>arn:aws:s3:::destinationBucket</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
+     *        <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>,
+     *        set the <code>TargetResource</code> property to
+     *        <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     *        .
+     *        </p>
+     *        </li>
      */
 
     public void setTargetResource(String targetResource) {
@@ -135,14 +258,45 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to copy
-     * objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code> property to
+     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>General purpose buckets</b> - For example, to copy objects to a general purpose bucket named
+     * <code>destinationBucket</code>, set the <code>TargetResource</code> property to
      * <code>arn:aws:s3:::destinationBucket</code>.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
+     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>, set the
+     * <code>TargetResource</code> property to
+     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     * .
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to
-     *         copy objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code>
-     *         property to <code>arn:aws:s3:::destinationBucket</code>.
+     * @return Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <b>General purpose buckets</b> - For example, to copy objects to a general purpose bucket named
+     *         <code>destinationBucket</code>, set the <code>TargetResource</code> property to
+     *         <code>arn:aws:s3:::destinationBucket</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
+     *         <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>,
+     *         set the <code>TargetResource</code> property to
+     *         <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     *         .
+     *         </p>
+     *         </li>
      */
 
     public String getTargetResource() {
@@ -151,15 +305,46 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to copy
-     * objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code> property to
+     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>General purpose buckets</b> - For example, to copy objects to a general purpose bucket named
+     * <code>destinationBucket</code>, set the <code>TargetResource</code> property to
      * <code>arn:aws:s3:::destinationBucket</code>.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
+     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>, set the
+     * <code>TargetResource</code> property to
+     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     * .
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param targetResource
-     *        Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to
-     *        copy objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code>
-     *        property to <code>arn:aws:s3:::destinationBucket</code>.
+     *        Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>General purpose buckets</b> - For example, to copy objects to a general purpose bucket named
+     *        <code>destinationBucket</code>, set the <code>TargetResource</code> property to
+     *        <code>arn:aws:s3:::destinationBucket</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
+     *        <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>,
+     *        set the <code>TargetResource</code> property to
+     *        <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     *        .
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,8 +355,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param cannedAccessControlList
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @see S3CannedAccessControlList
      */
 
@@ -181,8 +375,16 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return
+     * @return <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      * @see S3CannedAccessControlList
      */
 
@@ -192,8 +394,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param cannedAccessControlList
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3CannedAccessControlList
      */
@@ -205,8 +416,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param cannedAccessControlList
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3CannedAccessControlList
      */
@@ -218,8 +438,16 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return
+     * @return <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public java.util.List<S3Grant> getAccessControlGrants() {
@@ -228,8 +456,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param accessControlGrants
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      */
 
     public void setAccessControlGrants(java.util.Collection<S3Grant> accessControlGrants) {
@@ -243,6 +480,11 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAccessControlGrants(java.util.Collection)} or {@link #withAccessControlGrants(java.util.Collection)}
@@ -250,6 +492,10 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * </p>
      * 
      * @param accessControlGrants
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -265,8 +511,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param accessControlGrants
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -408,9 +663,27 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Specifies a list of tags to add to the destination objects after they are copied. If
+     * <code>NewObjectTagging</code> is not specified, the tags of the source objects are copied to destination objects
+     * by default.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets</b> - Tags aren't supported by directory buckets. If your source objects have tags and your
+     * destination bucket is a directory bucket, specify an empty tag set in the <code>NewObjectTagging</code> field to
+     * prevent copying the source object tags to the directory bucket.
+     * </p>
+     * </note>
      * 
-     * @return
+     * @return Specifies a list of tags to add to the destination objects after they are copied. If
+     *         <code>NewObjectTagging</code> is not specified, the tags of the source objects are copied to destination
+     *         objects by default.</p> <note>
+     *         <p>
+     *         <b>Directory buckets</b> - Tags aren't supported by directory buckets. If your source objects have tags
+     *         and your destination bucket is a directory bucket, specify an empty tag set in the
+     *         <code>NewObjectTagging</code> field to prevent copying the source object tags to the directory bucket.
+     *         </p>
      */
 
     public java.util.List<S3Tag> getNewObjectTagging() {
@@ -418,9 +691,28 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Specifies a list of tags to add to the destination objects after they are copied. If
+     * <code>NewObjectTagging</code> is not specified, the tags of the source objects are copied to destination objects
+     * by default.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets</b> - Tags aren't supported by directory buckets. If your source objects have tags and your
+     * destination bucket is a directory bucket, specify an empty tag set in the <code>NewObjectTagging</code> field to
+     * prevent copying the source object tags to the directory bucket.
+     * </p>
+     * </note>
      * 
      * @param newObjectTagging
+     *        Specifies a list of tags to add to the destination objects after they are copied. If
+     *        <code>NewObjectTagging</code> is not specified, the tags of the source objects are copied to destination
+     *        objects by default.</p> <note>
+     *        <p>
+     *        <b>Directory buckets</b> - Tags aren't supported by directory buckets. If your source objects have tags
+     *        and your destination bucket is a directory bucket, specify an empty tag set in the
+     *        <code>NewObjectTagging</code> field to prevent copying the source object tags to the directory bucket.
+     *        </p>
      */
 
     public void setNewObjectTagging(java.util.Collection<S3Tag> newObjectTagging) {
@@ -433,7 +725,18 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Specifies a list of tags to add to the destination objects after they are copied. If
+     * <code>NewObjectTagging</code> is not specified, the tags of the source objects are copied to destination objects
+     * by default.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets</b> - Tags aren't supported by directory buckets. If your source objects have tags and your
+     * destination bucket is a directory bucket, specify an empty tag set in the <code>NewObjectTagging</code> field to
+     * prevent copying the source object tags to the directory bucket.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setNewObjectTagging(java.util.Collection)} or {@link #withNewObjectTagging(java.util.Collection)} if you
@@ -441,6 +744,14 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * </p>
      * 
      * @param newObjectTagging
+     *        Specifies a list of tags to add to the destination objects after they are copied. If
+     *        <code>NewObjectTagging</code> is not specified, the tags of the source objects are copied to destination
+     *        objects by default.</p> <note>
+     *        <p>
+     *        <b>Directory buckets</b> - Tags aren't supported by directory buckets. If your source objects have tags
+     *        and your destination bucket is a directory bucket, specify an empty tag set in the
+     *        <code>NewObjectTagging</code> field to prevent copying the source object tags to the directory bucket.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -455,9 +766,28 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Specifies a list of tags to add to the destination objects after they are copied. If
+     * <code>NewObjectTagging</code> is not specified, the tags of the source objects are copied to destination objects
+     * by default.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets</b> - Tags aren't supported by directory buckets. If your source objects have tags and your
+     * destination bucket is a directory bucket, specify an empty tag set in the <code>NewObjectTagging</code> field to
+     * prevent copying the source object tags to the directory bucket.
+     * </p>
+     * </note>
      * 
      * @param newObjectTagging
+     *        Specifies a list of tags to add to the destination objects after they are copied. If
+     *        <code>NewObjectTagging</code> is not specified, the tags of the source objects are copied to destination
+     *        objects by default.</p> <note>
+     *        <p>
+     *        <b>Directory buckets</b> - Tags aren't supported by directory buckets. If your source objects have tags
+     *        and your destination bucket is a directory bucket, specify an empty tag set in the
+     *        <code>NewObjectTagging</code> field to prevent copying the source object tags to the directory bucket.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -468,14 +798,23 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies an optional metadata property for website redirects, <code>x-amz-website-redirect-location</code>.
-     * Allows webpage redirects if the object is accessed through a website endpoint.
+     * If the destination bucket is configured as a website, specifies an optional metadata property for website
+     * redirects, <code>x-amz-website-redirect-location</code>. Allows webpage redirects if the object copy is accessed
+     * through a website endpoint.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param redirectLocation
-     *        Specifies an optional metadata property for website redirects,
-     *        <code>x-amz-website-redirect-location</code>. Allows webpage redirects if the object is accessed through a
-     *        website endpoint.
+     *        If the destination bucket is configured as a website, specifies an optional metadata property for website
+     *        redirects, <code>x-amz-website-redirect-location</code>. Allows webpage redirects if the object copy is
+     *        accessed through a website endpoint.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      */
 
     public void setRedirectLocation(String redirectLocation) {
@@ -484,13 +823,22 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies an optional metadata property for website redirects, <code>x-amz-website-redirect-location</code>.
-     * Allows webpage redirects if the object is accessed through a website endpoint.
+     * If the destination bucket is configured as a website, specifies an optional metadata property for website
+     * redirects, <code>x-amz-website-redirect-location</code>. Allows webpage redirects if the object copy is accessed
+     * through a website endpoint.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return Specifies an optional metadata property for website redirects,
-     *         <code>x-amz-website-redirect-location</code>. Allows webpage redirects if the object is accessed through
-     *         a website endpoint.
+     * @return If the destination bucket is configured as a website, specifies an optional metadata property for website
+     *         redirects, <code>x-amz-website-redirect-location</code>. Allows webpage redirects if the object copy is
+     *         accessed through a website endpoint.</p> <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public String getRedirectLocation() {
@@ -499,14 +847,23 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies an optional metadata property for website redirects, <code>x-amz-website-redirect-location</code>.
-     * Allows webpage redirects if the object is accessed through a website endpoint.
+     * If the destination bucket is configured as a website, specifies an optional metadata property for website
+     * redirects, <code>x-amz-website-redirect-location</code>. Allows webpage redirects if the object copy is accessed
+     * through a website endpoint.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param redirectLocation
-     *        Specifies an optional metadata property for website redirects,
-     *        <code>x-amz-website-redirect-location</code>. Allows webpage redirects if the object is accessed through a
-     *        website endpoint.
+     *        If the destination bucket is configured as a website, specifies an optional metadata property for website
+     *        redirects, <code>x-amz-website-redirect-location</code>. Allows webpage redirects if the object copy is
+     *        accessed through a website endpoint.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -517,8 +874,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param requesterPays
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      */
 
     public void setRequesterPays(Boolean requesterPays) {
@@ -527,8 +893,16 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return
+     * @return <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public Boolean getRequesterPays() {
@@ -537,8 +911,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param requesterPays
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -549,8 +932,16 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return
+     * @return <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public Boolean isRequesterPays() {
@@ -558,9 +949,20 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Specify the storage class for the destination objects in a <code>Copy</code> operation.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets </b> - This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param storageClass
+     *        Specify the storage class for the destination objects in a <code>Copy</code> operation.</p> <note>
+     *        <p>
+     *        <b>Directory buckets </b> - This functionality is not supported by directory buckets.
+     *        </p>
      * @see S3StorageClass
      */
 
@@ -569,9 +971,19 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Specify the storage class for the destination objects in a <code>Copy</code> operation.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets </b> - This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return
+     * @return Specify the storage class for the destination objects in a <code>Copy</code> operation.</p> <note>
+     *         <p>
+     *         <b>Directory buckets </b> - This functionality is not supported by directory buckets.
+     *         </p>
      * @see S3StorageClass
      */
 
@@ -580,9 +992,20 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Specify the storage class for the destination objects in a <code>Copy</code> operation.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets </b> - This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param storageClass
+     *        Specify the storage class for the destination objects in a <code>Copy</code> operation.</p> <note>
+     *        <p>
+     *        <b>Directory buckets </b> - This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3StorageClass
      */
@@ -593,9 +1016,20 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Specify the storage class for the destination objects in a <code>Copy</code> operation.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Directory buckets </b> - This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param storageClass
+     *        Specify the storage class for the destination objects in a <code>Copy</code> operation.</p> <note>
+     *        <p>
+     *        <b>Directory buckets </b> - This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3StorageClass
      */
@@ -639,8 +1073,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param sSEAwsKmsKeyId
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      */
 
     public void setSSEAwsKmsKeyId(String sSEAwsKmsKeyId) {
@@ -649,8 +1092,16 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return
+     * @return <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public String getSSEAwsKmsKeyId() {
@@ -659,8 +1110,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p/>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param sSEAwsKmsKeyId
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -725,9 +1185,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The legal hold status to be applied to all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param objectLockLegalHoldStatus
-     *        The legal hold status to be applied to all objects in the Batch Operations job.
+     *        The legal hold status to be applied to all objects in the Batch Operations job.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @see S3ObjectLockLegalHoldStatus
      */
 
@@ -739,8 +1207,16 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The legal hold status to be applied to all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return The legal hold status to be applied to all objects in the Batch Operations job.
+     * @return The legal hold status to be applied to all objects in the Batch Operations job.</p> <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      * @see S3ObjectLockLegalHoldStatus
      */
 
@@ -752,9 +1228,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The legal hold status to be applied to all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param objectLockLegalHoldStatus
-     *        The legal hold status to be applied to all objects in the Batch Operations job.
+     *        The legal hold status to be applied to all objects in the Batch Operations job.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ObjectLockLegalHoldStatus
      */
@@ -768,9 +1252,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The legal hold status to be applied to all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param objectLockLegalHoldStatus
-     *        The legal hold status to be applied to all objects in the Batch Operations job.
+     *        The legal hold status to be applied to all objects in the Batch Operations job.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ObjectLockLegalHoldStatus
      */
@@ -784,9 +1276,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The retention mode to be applied to all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param objectLockMode
-     *        The retention mode to be applied to all objects in the Batch Operations job.
+     *        The retention mode to be applied to all objects in the Batch Operations job.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @see S3ObjectLockMode
      */
 
@@ -798,8 +1298,16 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The retention mode to be applied to all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
-     * @return The retention mode to be applied to all objects in the Batch Operations job.
+     * @return The retention mode to be applied to all objects in the Batch Operations job.</p> <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      * @see S3ObjectLockMode
      */
 
@@ -811,9 +1319,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The retention mode to be applied to all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param objectLockMode
-     *        The retention mode to be applied to all objects in the Batch Operations job.
+     *        The retention mode to be applied to all objects in the Batch Operations job.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ObjectLockMode
      */
@@ -827,9 +1343,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The retention mode to be applied to all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param objectLockMode
-     *        The retention mode to be applied to all objects in the Batch Operations job.
+     *        The retention mode to be applied to all objects in the Batch Operations job.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ObjectLockMode
      */
@@ -843,10 +1367,18 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The date when the applied object retention configuration expires on all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param objectLockRetainUntilDate
      *        The date when the applied object retention configuration expires on all objects in the Batch Operations
-     *        job.
+     *        job.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      */
 
     public void setObjectLockRetainUntilDate(java.util.Date objectLockRetainUntilDate) {
@@ -857,9 +1389,17 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The date when the applied object retention configuration expires on all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @return The date when the applied object retention configuration expires on all objects in the Batch Operations
-     *         job.
+     *         job.</p> <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public java.util.Date getObjectLockRetainUntilDate() {
@@ -870,10 +1410,18 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <p>
      * The date when the applied object retention configuration expires on all objects in the Batch Operations job.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param objectLockRetainUntilDate
      *        The date when the applied object retention configuration expires on all objects in the Batch Operations
-     *        job.
+     *        job.</p> <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -892,6 +1440,11 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * Specifying this header with an <i>object</i> action doesn’t affect <i>bucket-level</i> settings for S3 Bucket
      * Key.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param bucketKeyEnabled
      *        Specifies whether Amazon S3 should use an S3 Bucket Key for object encryption with server-side encryption
@@ -900,6 +1453,11 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      *        <p>
      *        Specifying this header with an <i>object</i> action doesn’t affect <i>bucket-level</i> settings for S3
      *        Bucket Key.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      */
 
     public void setBucketKeyEnabled(Boolean bucketKeyEnabled) {
@@ -916,6 +1474,11 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * Specifying this header with an <i>object</i> action doesn’t affect <i>bucket-level</i> settings for S3 Bucket
      * Key.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @return Specifies whether Amazon S3 should use an S3 Bucket Key for object encryption with server-side encryption
      *         using Amazon Web Services KMS (SSE-KMS). Setting this header to <code>true</code> causes Amazon S3 to use
@@ -923,6 +1486,11 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      *         <p>
      *         Specifying this header with an <i>object</i> action doesn’t affect <i>bucket-level</i> settings for S3
      *         Bucket Key.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public Boolean getBucketKeyEnabled() {
@@ -939,6 +1507,11 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * Specifying this header with an <i>object</i> action doesn’t affect <i>bucket-level</i> settings for S3 Bucket
      * Key.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @param bucketKeyEnabled
      *        Specifies whether Amazon S3 should use an S3 Bucket Key for object encryption with server-side encryption
@@ -947,6 +1520,11 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      *        <p>
      *        Specifying this header with an <i>object</i> action doesn’t affect <i>bucket-level</i> settings for S3
      *        Bucket Key.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This functionality is not supported by directory buckets.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -965,6 +1543,11 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * Specifying this header with an <i>object</i> action doesn’t affect <i>bucket-level</i> settings for S3 Bucket
      * Key.
      * </p>
+     * <note>
+     * <p>
+     * This functionality is not supported by directory buckets.
+     * </p>
+     * </note>
      * 
      * @return Specifies whether Amazon S3 should use an S3 Bucket Key for object encryption with server-side encryption
      *         using Amazon Web Services KMS (SSE-KMS). Setting this header to <code>true</code> causes Amazon S3 to use
@@ -972,6 +1555,11 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      *         <p>
      *         Specifying this header with an <i>object</i> action doesn’t affect <i>bucket-level</i> settings for S3
      *         Bucket Key.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         This functionality is not supported by directory buckets.
+     *         </p>
      */
 
     public Boolean isBucketKeyEnabled() {

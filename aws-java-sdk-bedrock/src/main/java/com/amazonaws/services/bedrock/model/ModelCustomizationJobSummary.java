@@ -82,6 +82,14 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
      * </p>
      */
     private String customModelName;
+    /**
+     * <p>
+     * Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     * models</a>.
+     * </p>
+     */
+    private String customizationType;
 
     /**
      * <p>
@@ -463,6 +471,81 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     * models</a>.
+     * </p>
+     * 
+     * @param customizationType
+     *        Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     *        information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     *        models</a>.
+     * @see CustomizationType
+     */
+
+    public void setCustomizationType(String customizationType) {
+        this.customizationType = customizationType;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     * models</a>.
+     * </p>
+     * 
+     * @return Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     *         information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     *         models</a>.
+     * @see CustomizationType
+     */
+
+    public String getCustomizationType() {
+        return this.customizationType;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     * models</a>.
+     * </p>
+     * 
+     * @param customizationType
+     *        Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     *        information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     *        models</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomizationType
+     */
+
+    public ModelCustomizationJobSummary withCustomizationType(String customizationType) {
+        setCustomizationType(customizationType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     * models</a>.
+     * </p>
+     * 
+     * @param customizationType
+     *        Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     *        information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     *        models</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomizationType
+     */
+
+    public ModelCustomizationJobSummary withCustomizationType(CustomizationType customizationType) {
+        this.customizationType = customizationType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -491,7 +574,9 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
         if (getCustomModelArn() != null)
             sb.append("CustomModelArn: ").append(getCustomModelArn()).append(",");
         if (getCustomModelName() != null)
-            sb.append("CustomModelName: ").append(getCustomModelName());
+            sb.append("CustomModelName: ").append(getCustomModelName()).append(",");
+        if (getCustomizationType() != null)
+            sb.append("CustomizationType: ").append(getCustomizationType());
         sb.append("}");
         return sb.toString();
     }
@@ -542,6 +627,10 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
             return false;
         if (other.getCustomModelName() != null && other.getCustomModelName().equals(this.getCustomModelName()) == false)
             return false;
+        if (other.getCustomizationType() == null ^ this.getCustomizationType() == null)
+            return false;
+        if (other.getCustomizationType() != null && other.getCustomizationType().equals(this.getCustomizationType()) == false)
+            return false;
         return true;
     }
 
@@ -559,6 +648,7 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getCustomModelArn() == null) ? 0 : getCustomModelArn().hashCode());
         hashCode = prime * hashCode + ((getCustomModelName() == null) ? 0 : getCustomModelName().hashCode());
+        hashCode = prime * hashCode + ((getCustomizationType() == null) ? 0 : getCustomizationType().hashCode());
         return hashCode;
     }
 

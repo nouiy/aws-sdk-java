@@ -26,7 +26,7 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * Describes the API operations for creating and managing Bedrock models.
+ * Describes the API operations for creating and managing Amazon Bedrock models.
  * </p>
  */
 @ThreadSafe

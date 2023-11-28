@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class InvokeModelRequestMarshaller {
 
-    private static final MarshallingInfo<String> ACCEPT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.HEADER)
-            .marshallLocationName("Accept").build();
     private static final MarshallingInfo<java.nio.ByteBuffer> BODY_BINDING = MarshallingInfo.builder(MarshallingType.BYTE_BUFFER)
             .marshallLocation(MarshallLocation.PAYLOAD).isExplicitPayloadMember(true).isBinary(true).build();
     private static final MarshallingInfo<String> CONTENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.HEADER).marshallLocationName("Content-Type").build();
+    private static final MarshallingInfo<String> ACCEPT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.HEADER)
+            .marshallLocationName("Accept").build();
     private static final MarshallingInfo<String> MODELID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("modelId").build();
 
@@ -52,9 +52,9 @@ public class InvokeModelRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(invokeModelRequest.getAccept(), ACCEPT_BINDING);
             protocolMarshaller.marshall(invokeModelRequest.getBody(), BODY_BINDING);
             protocolMarshaller.marshall(invokeModelRequest.getContentType(), CONTENTTYPE_BINDING);
+            protocolMarshaller.marshall(invokeModelRequest.getAccept(), ACCEPT_BINDING);
             protocolMarshaller.marshall(invokeModelRequest.getModelId(), MODELID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

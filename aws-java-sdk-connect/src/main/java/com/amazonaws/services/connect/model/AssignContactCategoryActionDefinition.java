@@ -21,7 +21,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * This action must be set if <code>TriggerEventSource</code> is one of the following values:
  * <code>OnPostCallAnalysisAvailable</code> | <code>OnRealTimeCallAnalysisAvailable</code> |
- * <code>OnPostChatAnalysisAvailable</code>. Contact is categorized using the rule name.
+ * <code>OnRealTimeChatAnalysisAvailable</code> | <code>OnPostChatAnalysisAvailable</code>. Contact is categorized using
+ * the rule name.
  * </p>
  * <p>
  * <code>RuleName</code> is used as <code>ContactCategory</code>.

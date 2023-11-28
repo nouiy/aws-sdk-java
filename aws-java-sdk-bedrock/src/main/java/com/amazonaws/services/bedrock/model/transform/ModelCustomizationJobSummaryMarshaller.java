@@ -45,6 +45,8 @@ public class ModelCustomizationJobSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customModelArn").build();
     private static final MarshallingInfo<String> CUSTOMMODELNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customModelName").build();
+    private static final MarshallingInfo<String> CUSTOMIZATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customizationType").build();
 
     private static final ModelCustomizationJobSummaryMarshaller instance = new ModelCustomizationJobSummaryMarshaller();
 
@@ -71,6 +73,7 @@ public class ModelCustomizationJobSummaryMarshaller {
             protocolMarshaller.marshall(modelCustomizationJobSummary.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(modelCustomizationJobSummary.getCustomModelArn(), CUSTOMMODELARN_BINDING);
             protocolMarshaller.marshall(modelCustomizationJobSummary.getCustomModelName(), CUSTOMMODELNAME_BINDING);
+            protocolMarshaller.marshall(modelCustomizationJobSummary.getCustomizationType(), CUSTOMIZATIONTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

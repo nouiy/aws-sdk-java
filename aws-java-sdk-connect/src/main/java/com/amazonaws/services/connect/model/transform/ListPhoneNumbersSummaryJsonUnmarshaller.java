@@ -76,6 +76,14 @@ public class ListPhoneNumbersSummaryJsonUnmarshaller implements Unmarshaller<Lis
                     context.nextToken();
                     listPhoneNumbersSummary.setInstanceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("PhoneNumberDescription", targetDepth)) {
+                    context.nextToken();
+                    listPhoneNumbersSummary.setPhoneNumberDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SourcePhoneNumberArn", targetDepth)) {
+                    context.nextToken();
+                    listPhoneNumbersSummary.setSourcePhoneNumberArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

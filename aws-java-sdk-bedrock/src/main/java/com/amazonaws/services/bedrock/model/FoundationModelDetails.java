@@ -82,6 +82,12 @@ public class FoundationModelDetails implements Serializable, Cloneable, Structur
      * </p>
      */
     private java.util.List<String> inferenceTypesSupported;
+    /**
+     * <p>
+     * Contains details about whether a model version is available or deprecated
+     * </p>
+     */
+    private FoundationModelLifecycle modelLifecycle;
 
     /**
      * <p>
@@ -688,6 +694,46 @@ public class FoundationModelDetails implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Contains details about whether a model version is available or deprecated
+     * </p>
+     * 
+     * @param modelLifecycle
+     *        Contains details about whether a model version is available or deprecated
+     */
+
+    public void setModelLifecycle(FoundationModelLifecycle modelLifecycle) {
+        this.modelLifecycle = modelLifecycle;
+    }
+
+    /**
+     * <p>
+     * Contains details about whether a model version is available or deprecated
+     * </p>
+     * 
+     * @return Contains details about whether a model version is available or deprecated
+     */
+
+    public FoundationModelLifecycle getModelLifecycle() {
+        return this.modelLifecycle;
+    }
+
+    /**
+     * <p>
+     * Contains details about whether a model version is available or deprecated
+     * </p>
+     * 
+     * @param modelLifecycle
+     *        Contains details about whether a model version is available or deprecated
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FoundationModelDetails withModelLifecycle(FoundationModelLifecycle modelLifecycle) {
+        setModelLifecycle(modelLifecycle);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -716,7 +762,9 @@ public class FoundationModelDetails implements Serializable, Cloneable, Structur
         if (getCustomizationsSupported() != null)
             sb.append("CustomizationsSupported: ").append(getCustomizationsSupported()).append(",");
         if (getInferenceTypesSupported() != null)
-            sb.append("InferenceTypesSupported: ").append(getInferenceTypesSupported());
+            sb.append("InferenceTypesSupported: ").append(getInferenceTypesSupported()).append(",");
+        if (getModelLifecycle() != null)
+            sb.append("ModelLifecycle: ").append(getModelLifecycle());
         sb.append("}");
         return sb.toString();
     }
@@ -767,6 +815,10 @@ public class FoundationModelDetails implements Serializable, Cloneable, Structur
             return false;
         if (other.getInferenceTypesSupported() != null && other.getInferenceTypesSupported().equals(this.getInferenceTypesSupported()) == false)
             return false;
+        if (other.getModelLifecycle() == null ^ this.getModelLifecycle() == null)
+            return false;
+        if (other.getModelLifecycle() != null && other.getModelLifecycle().equals(this.getModelLifecycle()) == false)
+            return false;
         return true;
     }
 
@@ -784,6 +836,7 @@ public class FoundationModelDetails implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getResponseStreamingSupported() == null) ? 0 : getResponseStreamingSupported().hashCode());
         hashCode = prime * hashCode + ((getCustomizationsSupported() == null) ? 0 : getCustomizationsSupported().hashCode());
         hashCode = prime * hashCode + ((getInferenceTypesSupported() == null) ? 0 : getInferenceTypesSupported().hashCode());
+        hashCode = prime * hashCode + ((getModelLifecycle() == null) ? 0 : getModelLifecycle().hashCode());
         return hashCode;
     }
 

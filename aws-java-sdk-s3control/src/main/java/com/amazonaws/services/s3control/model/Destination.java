@@ -93,7 +93,7 @@ public class Destination implements Serializable, Cloneable {
      * </p>
      * <note>
      * <p>
-     * Values other than <code>OUTPOSTS</code> are not supported by Amazon S3 on Outposts.
+     * Values other than <code>OUTPOSTS</code> aren't supported by Amazon S3 on Outposts.
      * </p>
      * </note>
      */
@@ -461,7 +461,7 @@ public class Destination implements Serializable, Cloneable {
      * </p>
      * <note>
      * <p>
-     * Values other than <code>OUTPOSTS</code> are not supported by Amazon S3 on Outposts.
+     * Values other than <code>OUTPOSTS</code> aren't supported by Amazon S3 on Outposts.
      * </p>
      * </note>
      * 
@@ -470,7 +470,7 @@ public class Destination implements Serializable, Cloneable {
      *        <code>OUTPOSTS</code> storage class. S3 on Outposts uses the <code>OUTPOSTS</code> storage class to create
      *        the object replicas. </p> <note>
      *        <p>
-     *        Values other than <code>OUTPOSTS</code> are not supported by Amazon S3 on Outposts.
+     *        Values other than <code>OUTPOSTS</code> aren't supported by Amazon S3 on Outposts.
      *        </p>
      * @see ReplicationStorageClass
      */
@@ -487,7 +487,7 @@ public class Destination implements Serializable, Cloneable {
      * </p>
      * <note>
      * <p>
-     * Values other than <code>OUTPOSTS</code> are not supported by Amazon S3 on Outposts.
+     * Values other than <code>OUTPOSTS</code> aren't supported by Amazon S3 on Outposts.
      * </p>
      * </note>
      * 
@@ -495,7 +495,7 @@ public class Destination implements Serializable, Cloneable {
      *         <code>OUTPOSTS</code> storage class. S3 on Outposts uses the <code>OUTPOSTS</code> storage class to
      *         create the object replicas. </p> <note>
      *         <p>
-     *         Values other than <code>OUTPOSTS</code> are not supported by Amazon S3 on Outposts.
+     *         Values other than <code>OUTPOSTS</code> aren't supported by Amazon S3 on Outposts.
      *         </p>
      * @see ReplicationStorageClass
      */
@@ -512,7 +512,7 @@ public class Destination implements Serializable, Cloneable {
      * </p>
      * <note>
      * <p>
-     * Values other than <code>OUTPOSTS</code> are not supported by Amazon S3 on Outposts.
+     * Values other than <code>OUTPOSTS</code> aren't supported by Amazon S3 on Outposts.
      * </p>
      * </note>
      * 
@@ -521,7 +521,7 @@ public class Destination implements Serializable, Cloneable {
      *        <code>OUTPOSTS</code> storage class. S3 on Outposts uses the <code>OUTPOSTS</code> storage class to create
      *        the object replicas. </p> <note>
      *        <p>
-     *        Values other than <code>OUTPOSTS</code> are not supported by Amazon S3 on Outposts.
+     *        Values other than <code>OUTPOSTS</code> aren't supported by Amazon S3 on Outposts.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReplicationStorageClass
@@ -540,7 +540,7 @@ public class Destination implements Serializable, Cloneable {
      * </p>
      * <note>
      * <p>
-     * Values other than <code>OUTPOSTS</code> are not supported by Amazon S3 on Outposts.
+     * Values other than <code>OUTPOSTS</code> aren't supported by Amazon S3 on Outposts.
      * </p>
      * </note>
      * 
@@ -549,7 +549,7 @@ public class Destination implements Serializable, Cloneable {
      *        <code>OUTPOSTS</code> storage class. S3 on Outposts uses the <code>OUTPOSTS</code> storage class to create
      *        the object replicas. </p> <note>
      *        <p>
-     *        Values other than <code>OUTPOSTS</code> are not supported by Amazon S3 on Outposts.
+     *        Values other than <code>OUTPOSTS</code> aren't supported by Amazon S3 on Outposts.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReplicationStorageClass

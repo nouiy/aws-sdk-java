@@ -74,6 +74,19 @@ public class ListPhoneNumbersSummary implements Serializable, Cloneable, Structu
      * </p>
      */
     private String instanceId;
+    /**
+     * <p>
+     * The description of the phone number.
+     * </p>
+     */
+    private String phoneNumberDescription;
+    /**
+     * <p>
+     * The claimed phone number ARN that was previously imported from the external service, such as Amazon Pinpoint. If
+     * it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from Amazon Pinpoint.
+     * </p>
+     */
+    private String sourcePhoneNumberArn;
 
     /**
      * <p>
@@ -418,6 +431,95 @@ public class ListPhoneNumbersSummary implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The description of the phone number.
+     * </p>
+     * 
+     * @param phoneNumberDescription
+     *        The description of the phone number.
+     */
+
+    public void setPhoneNumberDescription(String phoneNumberDescription) {
+        this.phoneNumberDescription = phoneNumberDescription;
+    }
+
+    /**
+     * <p>
+     * The description of the phone number.
+     * </p>
+     * 
+     * @return The description of the phone number.
+     */
+
+    public String getPhoneNumberDescription() {
+        return this.phoneNumberDescription;
+    }
+
+    /**
+     * <p>
+     * The description of the phone number.
+     * </p>
+     * 
+     * @param phoneNumberDescription
+     *        The description of the phone number.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListPhoneNumbersSummary withPhoneNumberDescription(String phoneNumberDescription) {
+        setPhoneNumberDescription(phoneNumberDescription);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The claimed phone number ARN that was previously imported from the external service, such as Amazon Pinpoint. If
+     * it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from Amazon Pinpoint.
+     * </p>
+     * 
+     * @param sourcePhoneNumberArn
+     *        The claimed phone number ARN that was previously imported from the external service, such as Amazon
+     *        Pinpoint. If it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from
+     *        Amazon Pinpoint.
+     */
+
+    public void setSourcePhoneNumberArn(String sourcePhoneNumberArn) {
+        this.sourcePhoneNumberArn = sourcePhoneNumberArn;
+    }
+
+    /**
+     * <p>
+     * The claimed phone number ARN that was previously imported from the external service, such as Amazon Pinpoint. If
+     * it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from Amazon Pinpoint.
+     * </p>
+     * 
+     * @return The claimed phone number ARN that was previously imported from the external service, such as Amazon
+     *         Pinpoint. If it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from
+     *         Amazon Pinpoint.
+     */
+
+    public String getSourcePhoneNumberArn() {
+        return this.sourcePhoneNumberArn;
+    }
+
+    /**
+     * <p>
+     * The claimed phone number ARN that was previously imported from the external service, such as Amazon Pinpoint. If
+     * it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from Amazon Pinpoint.
+     * </p>
+     * 
+     * @param sourcePhoneNumberArn
+     *        The claimed phone number ARN that was previously imported from the external service, such as Amazon
+     *        Pinpoint. If it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from
+     *        Amazon Pinpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListPhoneNumbersSummary withSourcePhoneNumberArn(String sourcePhoneNumberArn) {
+        setSourcePhoneNumberArn(sourcePhoneNumberArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -442,7 +544,11 @@ public class ListPhoneNumbersSummary implements Serializable, Cloneable, Structu
         if (getTargetArn() != null)
             sb.append("TargetArn: ").append(getTargetArn()).append(",");
         if (getInstanceId() != null)
-            sb.append("InstanceId: ").append(getInstanceId());
+            sb.append("InstanceId: ").append(getInstanceId()).append(",");
+        if (getPhoneNumberDescription() != null)
+            sb.append("PhoneNumberDescription: ").append(getPhoneNumberDescription()).append(",");
+        if (getSourcePhoneNumberArn() != null)
+            sb.append("SourcePhoneNumberArn: ").append(getSourcePhoneNumberArn());
         sb.append("}");
         return sb.toString();
     }
@@ -485,6 +591,14 @@ public class ListPhoneNumbersSummary implements Serializable, Cloneable, Structu
             return false;
         if (other.getInstanceId() != null && other.getInstanceId().equals(this.getInstanceId()) == false)
             return false;
+        if (other.getPhoneNumberDescription() == null ^ this.getPhoneNumberDescription() == null)
+            return false;
+        if (other.getPhoneNumberDescription() != null && other.getPhoneNumberDescription().equals(this.getPhoneNumberDescription()) == false)
+            return false;
+        if (other.getSourcePhoneNumberArn() == null ^ this.getSourcePhoneNumberArn() == null)
+            return false;
+        if (other.getSourcePhoneNumberArn() != null && other.getSourcePhoneNumberArn().equals(this.getSourcePhoneNumberArn()) == false)
+            return false;
         return true;
     }
 
@@ -500,6 +614,8 @@ public class ListPhoneNumbersSummary implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getPhoneNumberType() == null) ? 0 : getPhoneNumberType().hashCode());
         hashCode = prime * hashCode + ((getTargetArn() == null) ? 0 : getTargetArn().hashCode());
         hashCode = prime * hashCode + ((getInstanceId() == null) ? 0 : getInstanceId().hashCode());
+        hashCode = prime * hashCode + ((getPhoneNumberDescription() == null) ? 0 : getPhoneNumberDescription().hashCode());
+        hashCode = prime * hashCode + ((getSourcePhoneNumberArn() == null) ? 0 : getSourcePhoneNumberArn().hashCode());
         return hashCode;
     }
 

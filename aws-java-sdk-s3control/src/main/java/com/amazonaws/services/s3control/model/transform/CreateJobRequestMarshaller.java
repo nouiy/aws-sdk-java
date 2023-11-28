@@ -82,6 +82,32 @@ public class CreateJobRequestMarshaller implements Marshaller<Request<CreateJobR
                                 if (lambdaInvoke.getFunctionArn() != null) {
                                     xmlWriter.startElement("FunctionArn").value(lambdaInvoke.getFunctionArn()).endElement();
                                 }
+
+                                if (lambdaInvoke.getInvocationSchemaVersion() != null) {
+                                    xmlWriter.startElement("InvocationSchemaVersion").value(lambdaInvoke.getInvocationSchemaVersion()).endElement();
+                                }
+
+                                java.util.HashMap<String, String> lambdaInvokeOperationUserArgumentsMap = (java.util.HashMap<String, String>) lambdaInvoke
+                                        .getUserArguments();
+                                if (lambdaInvokeOperationUserArgumentsMap != null) {
+                                    xmlWriter.startElement("UserArguments");
+
+                                    for (Map.Entry<String, String> lambdaInvokeOperationUserArgumentsMapValue : lambdaInvokeOperationUserArgumentsMap
+                                            .entrySet()) {
+                                        if (lambdaInvokeOperationUserArgumentsMapValue == null) {
+                                            continue;
+                                        }
+                                        xmlWriter.startElement("entry");
+                                        xmlWriter.startElement("key");
+                                        xmlWriter.value(lambdaInvokeOperationUserArgumentsMapValue.getKey());
+                                        xmlWriter.endElement();
+                                        xmlWriter.startElement("value");
+                                        xmlWriter.value(lambdaInvokeOperationUserArgumentsMapValue.getValue());
+                                        xmlWriter.endElement();
+                                        xmlWriter.endElement();
+                                    }
+                                    xmlWriter.endElement();
+                                }
                                 xmlWriter.endElement();
                             }
                         }

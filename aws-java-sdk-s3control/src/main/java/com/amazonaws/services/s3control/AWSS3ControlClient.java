@@ -560,6 +560,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Creates an access point and associates it with the specified bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html">Managing Data Access with Amazon
@@ -696,6 +701,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Creates an Object Lambda Access Point. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/transforming-objects.html">Transforming objects with
@@ -925,14 +935,24 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
+     * This operation creates an S3 Batch Operations job.
+     * </p>
+     * <p>
      * You can use S3 Batch Operations to perform large-scale batch actions on Amazon S3 objects. Batch Operations can
      * run a single action on lists of Amazon S3 objects that you specify. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the
      * <i>Amazon S3 User Guide</i>.
      * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
      * <p>
-     * This action creates a S3 Batch Operations job.
+     * For information about permissions required to use the Batch Operations, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Granting permissions for S3 Batch
+     * Operations</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
+     * </dd>
+     * </dl>
      * <p/>
      * <p>
      * Related actions include:
@@ -1033,6 +1053,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Creates a Multi-Region Access Point and associates it with the specified buckets. For more information about
      * creating Multi-Region Access Points, see <a
@@ -1551,6 +1576,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Deletes the specified access point.
      * </p>
@@ -1673,6 +1703,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Deletes the specified Object Lambda Access Point.
      * </p>
@@ -1765,6 +1800,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Deletes the access point policy for the specified access point.
      * </p>
@@ -1884,6 +1924,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Removes the resource policy for an Object Lambda Access Point.
      * </p>
@@ -2644,12 +2689,19 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * Removes the entire tag set from the specified S3 Batch Operations job. To use the <code>DeleteJobTagging</code>
-     * operation, you must have permission to perform the <code>s3:DeleteJobTagging</code> action. For more information,
-     * see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">
-     * Controlling access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.
+     * Removes the entire tag set from the specified S3 Batch Operations job.
      * </p>
-     * <p/>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * To use the <code>DeleteJobTagging</code> operation, you must have permission to perform the
+     * <code>s3:DeleteJobTagging</code> action. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags"
+     * >Controlling access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * </dd>
+     * </dl>
      * <p>
      * Related actions include:
      * </p>
@@ -2737,6 +2789,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Deletes a Multi-Region Access Point. This action does not delete the buckets associated with the Multi-Region
      * Access Point, only the Multi-Region Access Point itself.
@@ -2847,6 +2904,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Removes the <code>PublicAccessBlock</code> configuration for an Amazon Web Services account. For more
      * information, see <a
@@ -2934,6 +2996,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Deletes the Amazon S3 Storage Lens configuration. For more information about S3 Storage Lens, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing your storage activity and
@@ -3012,6 +3079,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Deletes the Amazon S3 Storage Lens configuration tags. For more information about S3 Storage Lens, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing your storage activity and
@@ -3175,7 +3247,15 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the
      * <i>Amazon S3 User Guide</i>.
      * </p>
-     * <p/>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * To use the <code>DescribeJob</code> operation, you must have permission to perform the
+     * <code>s3:DescribeJob</code> action.
+     * </p>
+     * </dd>
+     * </dl>
      * <p>
      * Related actions include:
      * </p>
@@ -3270,6 +3350,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Retrieves the status of an asynchronous request to manage a Multi-Region Access Point. For more information about
      * managing Multi-Region Access Points and how asynchronous requests work, see <a
@@ -3845,6 +3930,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns configuration information about the specified access point.
      * </p>
@@ -3969,6 +4059,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns configuration for an Object Lambda Access Point.
      * </p>
@@ -4052,6 +4147,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns configuration information about the specified Object Lambda Access Point
      * </p>
@@ -4143,6 +4243,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns the access point policy associated with the specified access point.
      * </p>
@@ -4252,6 +4357,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns the resource policy for an Object Lambda Access Point.
      * </p>
@@ -4340,6 +4450,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Indicates whether the specified access point currently has a policy that allows public access. For more
      * information about public access through access points, see <a
@@ -4410,6 +4525,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns the status of the resource policy associated with an Object Lambda Access Point.
      * </p>
@@ -4481,11 +4601,13 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
      * <p>
      * Gets an Amazon S3 on Outposts bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html"> Using Amazon S3 on Outposts</a>
      * in the <i>Amazon S3 User Guide</i>.
      * </p>
+     * </note>
      * <p>
      * If you are using an identity other than the root user of the Amazon Web Services account that owns the Outposts
      * bucket, the calling identity must have the <code>s3-outposts:GetBucket</code> permissions on the specified
@@ -5443,12 +5565,19 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * Returns the tags on an S3 Batch Operations job. To use the <code>GetJobTagging</code> operation, you must have
-     * permission to perform the <code>s3:GetJobTagging</code> action. For more information, see <a
+     * Returns the tags on an S3 Batch Operations job.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * To use the <code>GetJobTagging</code> operation, you must have permission to perform the
+     * <code>s3:GetJobTagging</code> action. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags"
      * >Controlling access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
-     * <p/>
+     * </dd>
+     * </dl>
      * <p>
      * Related actions include:
      * </p>
@@ -5536,6 +5665,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns configuration information about the specified Multi-Region Access Point.
      * </p>
@@ -5639,6 +5773,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns the access control policy of the specified Multi-Region Access Point.
      * </p>
@@ -5731,6 +5870,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Indicates whether the specified Multi-Region Access Point has an access control policy that allows public access.
      * </p>
@@ -5824,6 +5968,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns the routing configuration for a Multi-Region Access Point, indicating which Regions are active or
      * passive.
@@ -5930,6 +6079,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Retrieves the <code>PublicAccessBlock</code> configuration for an Amazon Web Services account. For more
      * information, see <a
@@ -6020,6 +6174,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Gets the Amazon S3 Storage Lens configuration. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing your storage activity and
@@ -6101,6 +6260,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Gets the tags of Amazon S3 Storage Lens configuration. For more information about S3 Storage Lens, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing your storage activity and
@@ -6485,6 +6649,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns a list of the access points that are owned by the current account that's associated with the specified
      * bucket. You can retrieve up to 1000 access points per call. If the specified bucket has more than 1,000 access
@@ -6612,6 +6781,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns some or all (up to 1,000) access points associated with the Object Lambda Access Point per call. If there
      * are more access points than what can be returned in one call, the response will include a continuation token that
@@ -6707,11 +6881,20 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * Lists current S3 Batch Operations jobs and jobs that have ended within the last 30 days for the Amazon Web
-     * Services account making the request. For more information, see <a
+     * Lists current S3 Batch Operations jobs as well as the jobs that have ended within the last 30 days for the Amazon
+     * Web Services account making the request. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the
      * <i>Amazon S3 User Guide</i>.
      * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * To use the <code>ListJobs</code> operation, you must have permission to perform the <code>s3:ListJobs</code>
+     * action.
+     * </p>
+     * </dd>
+     * </dl>
      * <p>
      * Related actions include:
      * </p>
@@ -6806,6 +6989,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns a list of the Multi-Region Access Points currently associated with the specified Amazon Web Services
      * account. Each call can return up to 100 Multi-Region Access Points, the maximum number of Multi-Region Access
@@ -6912,6 +7100,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Returns a list of all Outposts buckets in an Outpost that are owned by the authenticated sender of the request.
      * For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
@@ -6987,6 +7180,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Gets a list of Amazon S3 Storage Lens configurations. For more information about S3 Storage Lens, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing your storage activity and
@@ -7317,6 +7515,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Replaces configuration for an Object Lambda Access Point.
      * </p>
@@ -7400,6 +7603,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Associates an access policy with the specified access point. Each access point can have only one policy, so a
      * request made to this API replaces any existing policy associated with the specified access point.
@@ -7520,6 +7728,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Creates or replaces resource policy for an Object Lambda Access Point. For an example policy, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/olap-create.html#olap-create-cli">Creating Object
@@ -8464,12 +8677,10 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * replace the existing tag set entirely, or make changes within the existing tag set by retrieving the existing tag
      * set using <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetJobTagging.html">GetJobTagging</a>, modify
-     * that tag set, and use this action to replace the tag set with the one you modified. For more information, see <a
-     * href
-     * ="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
-     * access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.
+     * that tag set, and use this operation to replace the tag set with the one you modified. For more information, see
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">
+     * Controlling access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
-     * <p/>
      * <note>
      * <ul>
      * <li>
@@ -8523,11 +8734,15 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </li>
      * </ul>
      * </note>
-     * <p/>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
      * <p>
      * To use the <code>PutJobTagging</code> operation, you must have permission to perform the
      * <code>s3:PutJobTagging</code> action.
      * </p>
+     * </dd>
+     * </dl>
      * <p>
      * Related actions include:
      * </p>
@@ -8617,6 +8832,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Associates an access control policy with the specified Multi-Region Access Point. Each Multi-Region Access Point
      * can have only one policy, so a request made to this action replaces any existing policy that is associated with
@@ -8711,6 +8931,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Creates or modifies the <code>PublicAccessBlock</code> configuration for an Amazon Web Services account. For this
      * operation, users must have the <code>s3:PutAccountPublicAccessBlock</code> permission. For more information, see
@@ -8798,6 +9023,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Puts an Amazon S3 Storage Lens configuration. For more information about S3 Storage Lens, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working with Amazon S3 Storage Lens</a>
@@ -8878,6 +9108,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Put or replace tags on an existing Amazon S3 Storage Lens configuration. For more information about S3 Storage
      * Lens, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing your storage
@@ -8958,6 +9193,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
+     * <note>
+     * <p>
+     * This operation is not supported by directory buckets.
+     * </p>
+     * </note>
      * <p>
      * Submits an updated route configuration for a Multi-Region Access Point. This API operation updates the routing
      * status for the specified Regions from active to passive, or from passive to active. A value of <code>0</code>
@@ -9357,7 +9597,15 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the
      * <i>Amazon S3 User Guide</i>.
      * </p>
-     * <p/>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * To use the <code>UpdateJobPriority</code> operation, you must have permission to perform the
+     * <code>s3:UpdateJobPriority</code> action.
+     * </p>
+     * </dd>
+     * </dl>
      * <p>
      * Related actions include:
      * </p>
@@ -9452,12 +9700,20 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * Updates the status for the specified job. Use this action to confirm that you want to run a job or to cancel an
-     * existing job. For more information, see <a
+     * Updates the status for the specified job. Use this operation to confirm that you want to run a job or to cancel
+     * an existing job. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the
      * <i>Amazon S3 User Guide</i>.
      * </p>
-     * <p/>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * To use the <code>UpdateJobStatus</code> operation, you must have permission to perform the
+     * <code>s3:UpdateJobStatus</code> action.
+     * </p>
+     * </dd>
+     * </dl>
      * <p>
      * Related actions include:
      * </p>

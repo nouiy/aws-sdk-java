@@ -103,6 +103,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
     }
 
     @Override
+    public DetectProfileObjectTypeResult detectProfileObjectType(DetectProfileObjectTypeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetAutoMergingPreviewResult getAutoMergingPreview(GetAutoMergingPreviewRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

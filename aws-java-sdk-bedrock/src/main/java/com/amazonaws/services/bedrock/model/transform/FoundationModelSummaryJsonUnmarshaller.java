@@ -92,6 +92,10 @@ public class FoundationModelSummaryJsonUnmarshaller implements Unmarshaller<Foun
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("modelLifecycle", targetDepth)) {
+                    context.nextToken();
+                    foundationModelSummary.setModelLifecycle(FoundationModelLifecycleJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -68,6 +68,10 @@ public class GetCustomModelResultJsonUnmarshaller implements Unmarshaller<GetCus
                     context.nextToken();
                     getCustomModelResult.setBaseModelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("customizationType", targetDepth)) {
+                    context.nextToken();
+                    getCustomModelResult.setCustomizationType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("modelKmsKeyArn", targetDepth)) {
                     context.nextToken();
                     getCustomModelResult.setModelKmsKeyArn(context.getUnmarshaller(String.class).unmarshall(context));

@@ -95,20 +95,44 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("OutboundContactNotPermittedException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.connect.model.transform.OutboundContactNotPermittedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotReadyException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connect.model.transform.ResourceNotReadyExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("DuplicateResourceException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.connect.model.transform.DuplicateResourceExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServiceException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.connect.model.transform.InternalServiceExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceInUseException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.connect.model.transform.ResourceInUseExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidRequestException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.connect.model.transform.InvalidRequestExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("OutputTypeNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.connect.model.transform.OutputTypeNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.connect.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("MaximumResultReturnedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.connect.model.transform.MaximumResultReturnedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.connect.model.transform.InvalidParameterExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ContactNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.connect.model.transform.ContactNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("OutboundContactNotPermittedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.connect.model.transform.OutboundContactNotPermittedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ContactFlowNotPublishedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connect.model.transform.ContactFlowNotPublishedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connect.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("DuplicateResourceException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.connect.model.transform.DuplicateResourceExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connect.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
@@ -122,26 +146,11 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
                             new JsonErrorShapeMetadata().withErrorCode("PropertyValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connect.model.transform.PropertyValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServiceException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.connect.model.transform.InternalServiceExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceInUseException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.connect.model.transform.ResourceInUseExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connect.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("TooManyRequestsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connect.model.transform.TooManyRequestsExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidRequestException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.connect.model.transform.InvalidRequestExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.connect.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("MaximumResultReturnedException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.connect.model.transform.MaximumResultReturnedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidContactFlowModuleException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connect.model.transform.InvalidContactFlowModuleExceptionUnmarshaller.getInstance()))
@@ -151,12 +160,6 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidContactFlowException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connect.model.transform.InvalidContactFlowExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.connect.model.transform.InvalidParameterExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ContactNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.connect.model.transform.ContactNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connect.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
@@ -268,6 +271,77 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<ActivateEvaluationFormResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ActivateEvaluationFormResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Associates the specified dataset for a Amazon Connect instance with the target account. You can associate only
+     * one dataset in a single call.
+     * </p>
+     * 
+     * @param associateAnalyticsDataSetRequest
+     * @return Result of the AssociateAnalyticsDataSet operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.AssociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AssociateAnalyticsDataSetResult associateAnalyticsDataSet(AssociateAnalyticsDataSetRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateAnalyticsDataSet(request);
+    }
+
+    @SdkInternalApi
+    final AssociateAnalyticsDataSetResult executeAssociateAnalyticsDataSet(AssociateAnalyticsDataSetRequest associateAnalyticsDataSetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateAnalyticsDataSetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateAnalyticsDataSetRequest> request = null;
+        Response<AssociateAnalyticsDataSetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateAnalyticsDataSetRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(associateAnalyticsDataSetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateAnalyticsDataSet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AssociateAnalyticsDataSetResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new AssociateAnalyticsDataSetResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -482,6 +556,73 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<AssociateDefaultVocabularyResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new AssociateDefaultVocabularyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Associates a connect resource to a flow.
+     * </p>
+     * 
+     * @param associateFlowRequest
+     * @return Result of the AssociateFlow operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.AssociateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public AssociateFlowResult associateFlow(AssociateFlowRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateFlow(request);
+    }
+
+    @SdkInternalApi
+    final AssociateFlowResult executeAssociateFlow(AssociateFlowRequest associateFlowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateFlowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateFlowRequest> request = null;
+        Response<AssociateFlowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateFlowRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(associateFlowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateFlow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AssociateFlowResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new AssociateFlowResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1066,6 +1207,149 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<AssociateTrafficDistributionGroupUserResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new AssociateTrafficDistributionGroupUserResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Associates a list of analytics datasets for a given Amazon Connect instance to a target account. You can
+     * associate multiple datasets in a single call.
+     * </p>
+     * 
+     * @param batchAssociateAnalyticsDataSetRequest
+     * @return Result of the BatchAssociateAnalyticsDataSet operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.BatchAssociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchAssociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchAssociateAnalyticsDataSetResult batchAssociateAnalyticsDataSet(BatchAssociateAnalyticsDataSetRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchAssociateAnalyticsDataSet(request);
+    }
+
+    @SdkInternalApi
+    final BatchAssociateAnalyticsDataSetResult executeBatchAssociateAnalyticsDataSet(BatchAssociateAnalyticsDataSetRequest batchAssociateAnalyticsDataSetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchAssociateAnalyticsDataSetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchAssociateAnalyticsDataSetRequest> request = null;
+        Response<BatchAssociateAnalyticsDataSetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchAssociateAnalyticsDataSetRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchAssociateAnalyticsDataSetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchAssociateAnalyticsDataSet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchAssociateAnalyticsDataSetResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchAssociateAnalyticsDataSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Removes a list of analytics datasets associated with a given Amazon Connect instance. You can disassociate
+     * multiple datasets in a single call.
+     * </p>
+     * 
+     * @param batchDisassociateAnalyticsDataSetRequest
+     * @return Result of the BatchDisassociateAnalyticsDataSet operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.BatchDisassociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchDisassociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchDisassociateAnalyticsDataSetResult batchDisassociateAnalyticsDataSet(BatchDisassociateAnalyticsDataSetRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchDisassociateAnalyticsDataSet(request);
+    }
+
+    @SdkInternalApi
+    final BatchDisassociateAnalyticsDataSetResult executeBatchDisassociateAnalyticsDataSet(
+            BatchDisassociateAnalyticsDataSetRequest batchDisassociateAnalyticsDataSetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchDisassociateAnalyticsDataSetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchDisassociateAnalyticsDataSetRequest> request = null;
+        Response<BatchDisassociateAnalyticsDataSetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchDisassociateAnalyticsDataSetRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchDisassociateAnalyticsDataSetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchDisassociateAnalyticsDataSet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchDisassociateAnalyticsDataSetResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchDisassociateAnalyticsDataSetResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2662,7 +2946,7 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * </p>
      * </important>
      * <p>
-     * For information about how to create user accounts using the Amazon Connect console, see <a
+     * For information about how to create users using the Amazon Connect admin website, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/user-management.html">Add Users</a> in the <i>Amazon
      * Connect Administrator Guide</i>.
      * </p>
@@ -5767,7 +6051,7 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
-     * Describes the specified user account. You can <a
+     * Describes the specified user. You can <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID in the
      * Amazon Connect console</a> (it’s the final part of the ARN). The console does not display the user IDs. Instead,
      * list the users and note the IDs provided in the output.
@@ -6116,6 +6400,76 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
+     * Removes the dataset ID associated with a given Amazon Connect instance.
+     * </p>
+     * 
+     * @param disassociateAnalyticsDataSetRequest
+     * @return Result of the DisassociateAnalyticsDataSet operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DisassociateAnalyticsDataSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateAnalyticsDataSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisassociateAnalyticsDataSetResult disassociateAnalyticsDataSet(DisassociateAnalyticsDataSetRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateAnalyticsDataSet(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateAnalyticsDataSetResult executeDisassociateAnalyticsDataSet(DisassociateAnalyticsDataSetRequest disassociateAnalyticsDataSetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateAnalyticsDataSetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateAnalyticsDataSetRequest> request = null;
+        Response<DisassociateAnalyticsDataSetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateAnalyticsDataSetRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(disassociateAnalyticsDataSetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateAnalyticsDataSet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisassociateAnalyticsDataSetResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DisassociateAnalyticsDataSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
      * Revokes access to integrated applications from Amazon Connect.
      * </p>
      * 
@@ -6237,6 +6591,73 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<DisassociateBotResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DisassociateBotResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Disassociates a connect resource from a flow.
+     * </p>
+     * 
+     * @param disassociateFlowRequest
+     * @return Result of the DisassociateFlow operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.DisassociateFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateFlow" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DisassociateFlowResult disassociateFlow(DisassociateFlowRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateFlow(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateFlowResult executeDisassociateFlow(DisassociateFlowRequest disassociateFlowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateFlowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateFlowRequest> request = null;
+        Response<DisassociateFlowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateFlowRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(disassociateFlowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateFlow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisassociateFlowResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DisassociateFlowResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -7162,6 +7583,73 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Retrieves the flow associated for a given resource.
+     * </p>
+     * 
+     * @param getFlowAssociationRequest
+     * @return Result of the GetFlowAssociation operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.GetFlowAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetFlowAssociation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetFlowAssociationResult getFlowAssociation(GetFlowAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetFlowAssociation(request);
+    }
+
+    @SdkInternalApi
+    final GetFlowAssociationResult executeGetFlowAssociation(GetFlowAssociationRequest getFlowAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getFlowAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetFlowAssociationRequest> request = null;
+        Response<GetFlowAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetFlowAssociationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getFlowAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetFlowAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetFlowAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetFlowAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets historical metric data from the specified Amazon Connect instance.
      * </p>
      * <p>
@@ -7517,6 +8005,75 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Imports a claimed phone number from an external service, such as Amazon Pinpoint, into an Amazon Connect
+     * instance. You can call this API only in the same Amazon Web Services Region where the Amazon Connect instance was
+     * created.
+     * </p>
+     * 
+     * @param importPhoneNumberRequest
+     * @return Result of the ImportPhoneNumber operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws IdempotencyException
+     *         An entity with the same name already exists.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.ImportPhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ImportPhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ImportPhoneNumberResult importPhoneNumber(ImportPhoneNumberRequest request) {
+        request = beforeClientExecution(request);
+        return executeImportPhoneNumber(request);
+    }
+
+    @SdkInternalApi
+    final ImportPhoneNumberResult executeImportPhoneNumber(ImportPhoneNumberRequest importPhoneNumberRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(importPhoneNumberRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ImportPhoneNumberRequest> request = null;
+        Response<ImportPhoneNumberResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ImportPhoneNumberRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(importPhoneNumberRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ImportPhoneNumber");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ImportPhoneNumberResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ImportPhoneNumberResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -7573,6 +8130,76 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<ListAgentStatusesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListAgentStatusesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Lists the association status of requested dataset ID for a given Amazon Connect instance.
+     * </p>
+     * 
+     * @param listAnalyticsDataAssociationsRequest
+     * @return Result of the ListAnalyticsDataAssociations operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListAnalyticsDataAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListAnalyticsDataAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAnalyticsDataAssociationsResult listAnalyticsDataAssociations(ListAnalyticsDataAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAnalyticsDataAssociations(request);
+    }
+
+    @SdkInternalApi
+    final ListAnalyticsDataAssociationsResult executeListAnalyticsDataAssociations(ListAnalyticsDataAssociationsRequest listAnalyticsDataAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAnalyticsDataAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAnalyticsDataAssociationsRequest> request = null;
+        Response<ListAnalyticsDataAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAnalyticsDataAssociationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAnalyticsDataAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAnalyticsDataAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAnalyticsDataAssociationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAnalyticsDataAssociationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -8177,6 +8804,73 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<ListEvaluationFormsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListEvaluationFormsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List the flow association based on the filters.
+     * </p>
+     * 
+     * @param listFlowAssociationsRequest
+     * @return Result of the ListFlowAssociations operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.ListFlowAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListFlowAssociations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListFlowAssociationsResult listFlowAssociations(ListFlowAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListFlowAssociations(request);
+    }
+
+    @SdkInternalApi
+    final ListFlowAssociationsResult executeListFlowAssociations(ListFlowAssociationsRequest listFlowAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listFlowAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListFlowAssociationsRequest> request = null;
+        Response<ListFlowAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListFlowAssociationsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listFlowAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListFlowAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListFlowAssociationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListFlowAssociationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -9111,6 +9805,78 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<ListQuickConnectsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListQuickConnectsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides a list of analysis segments for a real-time analysis session.
+     * </p>
+     * 
+     * @param listRealtimeContactAnalysisSegmentsV2Request
+     * @return Result of the ListRealtimeContactAnalysisSegmentsV2 operation returned by the service.
+     * @throws OutputTypeNotFoundException
+     *         Thrown for analyzed content when requested OutputType was not enabled for a given contact. For example,
+     *         if an OutputType.Raw was requested for a contact that had `RedactedOnly` Redaction policy set in Contact
+     *         flow.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.ListRealtimeContactAnalysisSegmentsV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListRealtimeContactAnalysisSegmentsV2"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListRealtimeContactAnalysisSegmentsV2Result listRealtimeContactAnalysisSegmentsV2(ListRealtimeContactAnalysisSegmentsV2Request request) {
+        request = beforeClientExecution(request);
+        return executeListRealtimeContactAnalysisSegmentsV2(request);
+    }
+
+    @SdkInternalApi
+    final ListRealtimeContactAnalysisSegmentsV2Result executeListRealtimeContactAnalysisSegmentsV2(
+            ListRealtimeContactAnalysisSegmentsV2Request listRealtimeContactAnalysisSegmentsV2Request) {
+
+        ExecutionContext executionContext = createExecutionContext(listRealtimeContactAnalysisSegmentsV2Request);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListRealtimeContactAnalysisSegmentsV2Request> request = null;
+        Response<ListRealtimeContactAnalysisSegmentsV2Result> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListRealtimeContactAnalysisSegmentsV2RequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listRealtimeContactAnalysisSegmentsV2Request));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListRealtimeContactAnalysisSegmentsV2");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListRealtimeContactAnalysisSegmentsV2Result>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListRealtimeContactAnalysisSegmentsV2ResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -10358,7 +11124,7 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * <important>
      * <p>
      * To release phone numbers from a traffic distribution group, use the <code>ReleasePhoneNumber</code> API, not the
-     * Amazon Connect console.
+     * Amazon Connect admin website.
      * </p>
      * <p>
      * After releasing a phone number, the phone number enters into a cooldown period of 30 days. It cannot be searched
@@ -11256,6 +12022,93 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Processes chat integration events from Amazon Web Services or external integrations to Amazon Connect. A chat
+     * integration event includes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * SourceId, DestinationId, and Subtype: a set of identifiers, uniquely representing a chat
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ChatEvent: details of the chat action to perform such as sending a message, event, or disconnecting from a chat
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When a chat integration event is sent with chat identifiers that do not map to an active chat contact, a new chat
+     * contact is also created before handling chat action.
+     * </p>
+     * <p>
+     * Access to this API is currently restricted to Amazon Pinpoint for supporting SMS integration.
+     * </p>
+     * 
+     * @param sendChatIntegrationEventRequest
+     * @return Result of the SendChatIntegrationEvent operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.SendChatIntegrationEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SendChatIntegrationEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public SendChatIntegrationEventResult sendChatIntegrationEvent(SendChatIntegrationEventRequest request) {
+        request = beforeClientExecution(request);
+        return executeSendChatIntegrationEvent(request);
+    }
+
+    @SdkInternalApi
+    final SendChatIntegrationEventResult executeSendChatIntegrationEvent(SendChatIntegrationEventRequest sendChatIntegrationEventRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(sendChatIntegrationEventRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SendChatIntegrationEventRequest> request = null;
+        Response<SendChatIntegrationEventResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SendChatIntegrationEventRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(sendChatIntegrationEventRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SendChatIntegrationEvent");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SendChatIntegrationEventResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new SendChatIntegrationEventResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Initiates a flow to start a new chat for the customer. Response of this API provides a token required to obtain
      * credentials from the <a
      * href="https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_CreateParticipantConnection.html"
@@ -11804,6 +12657,73 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<StartTaskContactResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartTaskContactResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Places an inbound in-app, web, or video call to a contact, and then initiates the flow. It performs the actions
+     * in the flow that are specified (in ContactFlowId) and present in the Amazon Connect instance (specified as
+     * InstanceId).
+     * </p>
+     * 
+     * @param startWebRTCContactRequest
+     * @return Result of the StartWebRTCContact operation returned by the service.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws LimitExceededException
+     *         The allowed limit for the resource has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @sample AmazonConnect.StartWebRTCContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartWebRTCContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StartWebRTCContactResult startWebRTCContact(StartWebRTCContactRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartWebRTCContact(request);
+    }
+
+    @SdkInternalApi
+    final StartWebRTCContactResult executeStartWebRTCContact(StartWebRTCContactRequest startWebRTCContactRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startWebRTCContactRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartWebRTCContactRequest> request = null;
+        Response<StartWebRTCContactResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartWebRTCContactRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startWebRTCContactRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartWebRTCContact");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartWebRTCContactResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartWebRTCContactResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

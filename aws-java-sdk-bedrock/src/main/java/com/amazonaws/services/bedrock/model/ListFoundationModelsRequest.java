@@ -27,7 +27,7 @@ public class ListFoundationModelsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A Bedrock model provider.
+     * A Amazon Bedrock model provider.
      * </p>
      */
     private String byProvider;
@@ -52,11 +52,11 @@ public class ListFoundationModelsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A Bedrock model provider.
+     * A Amazon Bedrock model provider.
      * </p>
      * 
      * @param byProvider
-     *        A Bedrock model provider.
+     *        A Amazon Bedrock model provider.
      */
 
     public void setByProvider(String byProvider) {
@@ -65,10 +65,10 @@ public class ListFoundationModelsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A Bedrock model provider.
+     * A Amazon Bedrock model provider.
      * </p>
      * 
-     * @return A Bedrock model provider.
+     * @return A Amazon Bedrock model provider.
      */
 
     public String getByProvider() {
@@ -77,11 +77,11 @@ public class ListFoundationModelsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A Bedrock model provider.
+     * A Amazon Bedrock model provider.
      * </p>
      * 
      * @param byProvider
-     *        A Bedrock model provider.
+     *        A Amazon Bedrock model provider.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

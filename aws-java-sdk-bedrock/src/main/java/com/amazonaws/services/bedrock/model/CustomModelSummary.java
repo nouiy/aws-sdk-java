@@ -58,6 +58,14 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String baseModelName;
+    /**
+     * <p>
+     * Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     * models</a>.
+     * </p>
+     */
+    private String customizationType;
 
     /**
      * <p>
@@ -260,6 +268,81 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     * models</a>.
+     * </p>
+     * 
+     * @param customizationType
+     *        Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     *        information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     *        models</a>.
+     * @see CustomizationType
+     */
+
+    public void setCustomizationType(String customizationType) {
+        this.customizationType = customizationType;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     * models</a>.
+     * </p>
+     * 
+     * @return Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     *         information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     *         models</a>.
+     * @see CustomizationType
+     */
+
+    public String getCustomizationType() {
+        return this.customizationType;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     * models</a>.
+     * </p>
+     * 
+     * @param customizationType
+     *        Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     *        information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     *        models</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomizationType
+     */
+
+    public CustomModelSummary withCustomizationType(String customizationType) {
+        setCustomizationType(customizationType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     * models</a>.
+     * </p>
+     * 
+     * @param customizationType
+     *        Specifies whether to carry out continued pre-training of a model or whether to fine-tune it. For more
+     *        information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom
+     *        models</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomizationType
+     */
+
+    public CustomModelSummary withCustomizationType(CustomizationType customizationType) {
+        this.customizationType = customizationType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -280,7 +363,9 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
         if (getBaseModelArn() != null)
             sb.append("BaseModelArn: ").append(getBaseModelArn()).append(",");
         if (getBaseModelName() != null)
-            sb.append("BaseModelName: ").append(getBaseModelName());
+            sb.append("BaseModelName: ").append(getBaseModelName()).append(",");
+        if (getCustomizationType() != null)
+            sb.append("CustomizationType: ").append(getCustomizationType());
         sb.append("}");
         return sb.toString();
     }
@@ -315,6 +400,10 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getBaseModelName() != null && other.getBaseModelName().equals(this.getBaseModelName()) == false)
             return false;
+        if (other.getCustomizationType() == null ^ this.getCustomizationType() == null)
+            return false;
+        if (other.getCustomizationType() != null && other.getCustomizationType().equals(this.getCustomizationType()) == false)
+            return false;
         return true;
     }
 
@@ -328,6 +417,7 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getBaseModelArn() == null) ? 0 : getBaseModelArn().hashCode());
         hashCode = prime * hashCode + ((getBaseModelName() == null) ? 0 : getBaseModelName().hashCode());
+        hashCode = prime * hashCode + ((getCustomizationType() == null) ? 0 : getCustomizationType().hashCode());
         return hashCode;
     }
 

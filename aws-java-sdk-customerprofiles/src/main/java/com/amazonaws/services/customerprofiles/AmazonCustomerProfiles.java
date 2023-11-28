@@ -438,6 +438,29 @@ public interface AmazonCustomerProfiles {
 
     /**
      * <p>
+     * The process of detecting profile object type mapping by using given objects.
+     * </p>
+     * 
+     * @param detectProfileObjectTypeRequest
+     * @return Result of the DetectProfileObjectType operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.DetectProfileObjectType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DetectProfileObjectType"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DetectProfileObjectTypeResult detectProfileObjectType(DetectProfileObjectTypeRequest detectProfileObjectTypeRequest);
+
+    /**
+     * <p>
      * Tests the auto-merging settings of your Identity Resolution Job without merging your data. It randomly selects a
      * sample of matching groups from the existing matching results, and applies the automerging settings that you
      * provided. You can then view the number of profiles in the sample, the number of matches, and the number of

@@ -22,6 +22,7 @@ public enum EventSourceName {
 
     OnPostCallAnalysisAvailable("OnPostCallAnalysisAvailable"),
     OnRealTimeCallAnalysisAvailable("OnRealTimeCallAnalysisAvailable"),
+    OnRealTimeChatAnalysisAvailable("OnRealTimeChatAnalysisAvailable"),
     OnPostChatAnalysisAvailable("OnPostChatAnalysisAvailable"),
     OnZendeskTicketCreate("OnZendeskTicketCreate"),
     OnZendeskTicketStatusUpdate("OnZendeskTicketStatusUpdate"),

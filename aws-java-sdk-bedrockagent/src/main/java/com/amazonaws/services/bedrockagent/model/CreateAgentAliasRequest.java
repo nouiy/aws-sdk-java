@@ -1,0 +1,356 @@
+/*
+ * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
+ * the License. A copy of the License is located at
+ * 
+ * http://aws.amazon.com/apache2.0
+ * 
+ * or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
+ * and limitations under the License.
+ */
+package com.amazonaws.services.bedrockagent.model;
+
+import java.io.Serializable;
+import javax.annotation.Generated;
+
+import com.amazonaws.AmazonWebServiceRequest;
+
+/**
+ * <p>
+ * Create Agent Alias Request
+ * </p>
+ * 
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/CreateAgentAlias" target="_top">AWS API
+ *      Documentation</a>
+ */
+@Generated("com.amazonaws:aws-java-sdk-code-generator")
+public class CreateAgentAliasRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
+
+    /**
+     * <p>
+     * Id generated at the server side when an Agent is created
+     * </p>
+     */
+    private String agentId;
+
+    private String agentAliasName;
+
+    private String clientToken;
+
+    private String description;
+
+    private java.util.List<AgentAliasRoutingConfigurationListItem> routingConfiguration;
+
+    private java.util.Map<String, String> tags;
+
+    /**
+     * <p>
+     * Id generated at the server side when an Agent is created
+     * </p>
+     * 
+     * @param agentId
+     *        Id generated at the server side when an Agent is created
+     */
+
+    public void setAgentId(String agentId) {
+        this.agentId = agentId;
+    }
+
+    /**
+     * <p>
+     * Id generated at the server side when an Agent is created
+     * </p>
+     * 
+     * @return Id generated at the server side when an Agent is created
+     */
+
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
+     * <p>
+     * Id generated at the server side when an Agent is created
+     * </p>
+     * 
+     * @param agentId
+     *        Id generated at the server side when an Agent is created
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentAliasRequest withAgentId(String agentId) {
+        setAgentId(agentId);
+        return this;
+    }
+
+    /**
+     * @param agentAliasName
+     */
+
+    public void setAgentAliasName(String agentAliasName) {
+        this.agentAliasName = agentAliasName;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getAgentAliasName() {
+        return this.agentAliasName;
+    }
+
+    /**
+     * @param agentAliasName
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentAliasRequest withAgentAliasName(String agentAliasName) {
+        setAgentAliasName(agentAliasName);
+        return this;
+    }
+
+    /**
+     * @param clientToken
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @param clientToken
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentAliasRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
+        return this;
+    }
+
+    /**
+     * @param description
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @param description
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentAliasRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public java.util.List<AgentAliasRoutingConfigurationListItem> getRoutingConfiguration() {
+        return routingConfiguration;
+    }
+
+    /**
+     * @param routingConfiguration
+     */
+
+    public void setRoutingConfiguration(java.util.Collection<AgentAliasRoutingConfigurationListItem> routingConfiguration) {
+        if (routingConfiguration == null) {
+            this.routingConfiguration = null;
+            return;
+        }
+
+        this.routingConfiguration = new java.util.ArrayList<AgentAliasRoutingConfigurationListItem>(routingConfiguration);
+    }
+
+    /**
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setRoutingConfiguration(java.util.Collection)} or {@link #withRoutingConfiguration(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param routingConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentAliasRequest withRoutingConfiguration(AgentAliasRoutingConfigurationListItem... routingConfiguration) {
+        if (this.routingConfiguration == null) {
+            setRoutingConfiguration(new java.util.ArrayList<AgentAliasRoutingConfigurationListItem>(routingConfiguration.length));
+        }
+        for (AgentAliasRoutingConfigurationListItem ele : routingConfiguration) {
+            this.routingConfiguration.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * @param routingConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentAliasRequest withRoutingConfiguration(java.util.Collection<AgentAliasRoutingConfigurationListItem> routingConfiguration) {
+        setRoutingConfiguration(routingConfiguration);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * @param tags
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * @param tags
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentAliasRequest withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see CreateAgentAliasRequest#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentAliasRequest addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentAliasRequest clearTagsEntries() {
+        this.tags = null;
+        return this;
+    }
+
+    /**
+     * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
+     * redacted from this string using a placeholder value.
+     *
+     * @return A string representation of this object.
+     *
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{");
+        if (getAgentId() != null)
+            sb.append("AgentId: ").append(getAgentId()).append(",");
+        if (getAgentAliasName() != null)
+            sb.append("AgentAliasName: ").append(getAgentAliasName()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getRoutingConfiguration() != null)
+            sb.append("RoutingConfiguration: ").append(getRoutingConfiguration()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
+        sb.append("}");
+        return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+
+        if (obj instanceof CreateAgentAliasRequest == false)
+            return false;
+        CreateAgentAliasRequest other = (CreateAgentAliasRequest) obj;
+        if (other.getAgentId() == null ^ this.getAgentId() == null)
+            return false;
+        if (other.getAgentId() != null && other.getAgentId().equals(this.getAgentId()) == false)
+            return false;
+        if (other.getAgentAliasName() == null ^ this.getAgentAliasName() == null)
+            return false;
+        if (other.getAgentAliasName() != null && other.getAgentAliasName().equals(this.getAgentAliasName()) == false)
+            return false;
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
+            return false;
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getRoutingConfiguration() == null ^ this.getRoutingConfiguration() == null)
+            return false;
+        if (other.getRoutingConfiguration() != null && other.getRoutingConfiguration().equals(this.getRoutingConfiguration()) == false)
+            return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int hashCode = 1;
+
+        hashCode = prime * hashCode + ((getAgentId() == null) ? 0 : getAgentId().hashCode());
+        hashCode = prime * hashCode + ((getAgentAliasName() == null) ? 0 : getAgentAliasName().hashCode());
+        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getRoutingConfiguration() == null) ? 0 : getRoutingConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        return hashCode;
+    }
+
+    @Override
+    public CreateAgentAliasRequest clone() {
+        return (CreateAgentAliasRequest) super.clone();
+    }
+
+}
