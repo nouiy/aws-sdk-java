@@ -186,6 +186,39 @@ public interface AWSRedshiftServerlessAsync extends AWSRedshiftServerless {
 
     /**
      * <p>
+     * Creates a scheduled action. A scheduled action contains a schedule and an Amazon Redshift API action. For
+     * example, you can create a schedule of when to run the <code>CreateSnapshot</code> API operation.
+     * </p>
+     * 
+     * @param createScheduledActionRequest
+     * @return A Java Future containing the result of the CreateScheduledAction operation returned by the service.
+     * @sample AWSRedshiftServerlessAsync.CreateScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/CreateScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateScheduledActionResult> createScheduledActionAsync(CreateScheduledActionRequest createScheduledActionRequest);
+
+    /**
+     * <p>
+     * Creates a scheduled action. A scheduled action contains a schedule and an Amazon Redshift API action. For
+     * example, you can create a schedule of when to run the <code>CreateSnapshot</code> API operation.
+     * </p>
+     * 
+     * @param createScheduledActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateScheduledAction operation returned by the service.
+     * @sample AWSRedshiftServerlessAsyncHandler.CreateScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/CreateScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateScheduledActionResult> createScheduledActionAsync(CreateScheduledActionRequest createScheduledActionRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateScheduledActionRequest, CreateScheduledActionResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a snapshot of all databases in a namespace. For more information about snapshots, see <a
      * href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-snapshots-recovery.html"> Working with
      * snapshots and recovery points</a>.
@@ -218,6 +251,43 @@ public interface AWSRedshiftServerlessAsync extends AWSRedshiftServerless {
      */
     java.util.concurrent.Future<CreateSnapshotResult> createSnapshotAsync(CreateSnapshotRequest createSnapshotRequest,
             com.amazonaws.handlers.AsyncHandler<CreateSnapshotRequest, CreateSnapshotResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a snapshot copy configuration that lets you copy snapshots to another Amazon Web Services Region.
+     * </p>
+     * 
+     * @param createSnapshotCopyConfigurationRequest
+     * @return A Java Future containing the result of the CreateSnapshotCopyConfiguration operation returned by the
+     *         service.
+     * @sample AWSRedshiftServerlessAsync.CreateSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/CreateSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSnapshotCopyConfigurationResult> createSnapshotCopyConfigurationAsync(
+            CreateSnapshotCopyConfigurationRequest createSnapshotCopyConfigurationRequest);
+
+    /**
+     * <p>
+     * Creates a snapshot copy configuration that lets you copy snapshots to another Amazon Web Services Region.
+     * </p>
+     * 
+     * @param createSnapshotCopyConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateSnapshotCopyConfiguration operation returned by the
+     *         service.
+     * @sample AWSRedshiftServerlessAsyncHandler.CreateSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/CreateSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSnapshotCopyConfigurationResult> createSnapshotCopyConfigurationAsync(
+            CreateSnapshotCopyConfigurationRequest createSnapshotCopyConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateSnapshotCopyConfigurationRequest, CreateSnapshotCopyConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -417,6 +487,37 @@ public interface AWSRedshiftServerlessAsync extends AWSRedshiftServerless {
 
     /**
      * <p>
+     * Deletes a scheduled action.
+     * </p>
+     * 
+     * @param deleteScheduledActionRequest
+     * @return A Java Future containing the result of the DeleteScheduledAction operation returned by the service.
+     * @sample AWSRedshiftServerlessAsync.DeleteScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/DeleteScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteScheduledActionResult> deleteScheduledActionAsync(DeleteScheduledActionRequest deleteScheduledActionRequest);
+
+    /**
+     * <p>
+     * Deletes a scheduled action.
+     * </p>
+     * 
+     * @param deleteScheduledActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteScheduledAction operation returned by the service.
+     * @sample AWSRedshiftServerlessAsyncHandler.DeleteScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/DeleteScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteScheduledActionResult> deleteScheduledActionAsync(DeleteScheduledActionRequest deleteScheduledActionRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteScheduledActionRequest, DeleteScheduledActionResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a snapshot from Amazon Redshift Serverless.
      * </p>
      * 
@@ -445,6 +546,43 @@ public interface AWSRedshiftServerlessAsync extends AWSRedshiftServerless {
      */
     java.util.concurrent.Future<DeleteSnapshotResult> deleteSnapshotAsync(DeleteSnapshotRequest deleteSnapshotRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteSnapshotRequest, DeleteSnapshotResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a snapshot copy configuration
+     * </p>
+     * 
+     * @param deleteSnapshotCopyConfigurationRequest
+     * @return A Java Future containing the result of the DeleteSnapshotCopyConfiguration operation returned by the
+     *         service.
+     * @sample AWSRedshiftServerlessAsync.DeleteSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/DeleteSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteSnapshotCopyConfigurationResult> deleteSnapshotCopyConfigurationAsync(
+            DeleteSnapshotCopyConfigurationRequest deleteSnapshotCopyConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes a snapshot copy configuration
+     * </p>
+     * 
+     * @param deleteSnapshotCopyConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteSnapshotCopyConfiguration operation returned by the
+     *         service.
+     * @sample AWSRedshiftServerlessAsyncHandler.DeleteSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/DeleteSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteSnapshotCopyConfigurationResult> deleteSnapshotCopyConfigurationAsync(
+            DeleteSnapshotCopyConfigurationRequest deleteSnapshotCopyConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteSnapshotCopyConfigurationRequest, DeleteSnapshotCopyConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -716,6 +854,37 @@ public interface AWSRedshiftServerlessAsync extends AWSRedshiftServerless {
 
     /**
      * <p>
+     * Returns information about a scheduled action.
+     * </p>
+     * 
+     * @param getScheduledActionRequest
+     * @return A Java Future containing the result of the GetScheduledAction operation returned by the service.
+     * @sample AWSRedshiftServerlessAsync.GetScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/GetScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetScheduledActionResult> getScheduledActionAsync(GetScheduledActionRequest getScheduledActionRequest);
+
+    /**
+     * <p>
+     * Returns information about a scheduled action.
+     * </p>
+     * 
+     * @param getScheduledActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetScheduledAction operation returned by the service.
+     * @sample AWSRedshiftServerlessAsyncHandler.GetScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/GetScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetScheduledActionResult> getScheduledActionAsync(GetScheduledActionRequest getScheduledActionRequest,
+            com.amazonaws.handlers.AsyncHandler<GetScheduledActionRequest, GetScheduledActionResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns information about a specific snapshot.
      * </p>
      * 
@@ -965,6 +1134,74 @@ public interface AWSRedshiftServerlessAsync extends AWSRedshiftServerless {
      */
     java.util.concurrent.Future<ListRecoveryPointsResult> listRecoveryPointsAsync(ListRecoveryPointsRequest listRecoveryPointsRequest,
             com.amazonaws.handlers.AsyncHandler<ListRecoveryPointsRequest, ListRecoveryPointsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of scheduled actions. You can use the flags to filter the list of returned scheduled actions.
+     * </p>
+     * 
+     * @param listScheduledActionsRequest
+     * @return A Java Future containing the result of the ListScheduledActions operation returned by the service.
+     * @sample AWSRedshiftServerlessAsync.ListScheduledActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/ListScheduledActions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListScheduledActionsResult> listScheduledActionsAsync(ListScheduledActionsRequest listScheduledActionsRequest);
+
+    /**
+     * <p>
+     * Returns a list of scheduled actions. You can use the flags to filter the list of returned scheduled actions.
+     * </p>
+     * 
+     * @param listScheduledActionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListScheduledActions operation returned by the service.
+     * @sample AWSRedshiftServerlessAsyncHandler.ListScheduledActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/ListScheduledActions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListScheduledActionsResult> listScheduledActionsAsync(ListScheduledActionsRequest listScheduledActionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListScheduledActionsRequest, ListScheduledActionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of snapshot copy configurations.
+     * </p>
+     * 
+     * @param listSnapshotCopyConfigurationsRequest
+     * @return A Java Future containing the result of the ListSnapshotCopyConfigurations operation returned by the
+     *         service.
+     * @sample AWSRedshiftServerlessAsync.ListSnapshotCopyConfigurations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/ListSnapshotCopyConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSnapshotCopyConfigurationsResult> listSnapshotCopyConfigurationsAsync(
+            ListSnapshotCopyConfigurationsRequest listSnapshotCopyConfigurationsRequest);
+
+    /**
+     * <p>
+     * Returns a list of snapshot copy configurations.
+     * </p>
+     * 
+     * @param listSnapshotCopyConfigurationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListSnapshotCopyConfigurations operation returned by the
+     *         service.
+     * @sample AWSRedshiftServerlessAsyncHandler.ListSnapshotCopyConfigurations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/ListSnapshotCopyConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSnapshotCopyConfigurationsResult> listSnapshotCopyConfigurationsAsync(
+            ListSnapshotCopyConfigurationsRequest listSnapshotCopyConfigurationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListSnapshotCopyConfigurationsRequest, ListSnapshotCopyConfigurationsResult> asyncHandler);
 
     /**
      * <p>
@@ -1218,6 +1455,45 @@ public interface AWSRedshiftServerlessAsync extends AWSRedshiftServerless {
 
     /**
      * <p>
+     * Restores a table from a recovery point to your Amazon Redshift Serverless instance. You can't use this operation
+     * to restore tables with interleaved sort keys.
+     * </p>
+     * 
+     * @param restoreTableFromRecoveryPointRequest
+     * @return A Java Future containing the result of the RestoreTableFromRecoveryPoint operation returned by the
+     *         service.
+     * @sample AWSRedshiftServerlessAsync.RestoreTableFromRecoveryPoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/RestoreTableFromRecoveryPoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreTableFromRecoveryPointResult> restoreTableFromRecoveryPointAsync(
+            RestoreTableFromRecoveryPointRequest restoreTableFromRecoveryPointRequest);
+
+    /**
+     * <p>
+     * Restores a table from a recovery point to your Amazon Redshift Serverless instance. You can't use this operation
+     * to restore tables with interleaved sort keys.
+     * </p>
+     * 
+     * @param restoreTableFromRecoveryPointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RestoreTableFromRecoveryPoint operation returned by the
+     *         service.
+     * @sample AWSRedshiftServerlessAsyncHandler.RestoreTableFromRecoveryPoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/RestoreTableFromRecoveryPoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreTableFromRecoveryPointResult> restoreTableFromRecoveryPointAsync(
+            RestoreTableFromRecoveryPointRequest restoreTableFromRecoveryPointRequest,
+            com.amazonaws.handlers.AsyncHandler<RestoreTableFromRecoveryPointRequest, RestoreTableFromRecoveryPointResult> asyncHandler);
+
+    /**
+     * <p>
      * Restores a table from a snapshot to your Amazon Redshift Serverless instance. You can't use this operation to
      * restore tables with <a
      * href="https://docs.aws.amazon.com/redshift/latest/dg/t_Sorting_data.html#t_Sorting_data-interleaved">interleaved
@@ -1422,6 +1698,37 @@ public interface AWSRedshiftServerlessAsync extends AWSRedshiftServerless {
 
     /**
      * <p>
+     * Updates a scheduled action.
+     * </p>
+     * 
+     * @param updateScheduledActionRequest
+     * @return A Java Future containing the result of the UpdateScheduledAction operation returned by the service.
+     * @sample AWSRedshiftServerlessAsync.UpdateScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/UpdateScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateScheduledActionResult> updateScheduledActionAsync(UpdateScheduledActionRequest updateScheduledActionRequest);
+
+    /**
+     * <p>
+     * Updates a scheduled action.
+     * </p>
+     * 
+     * @param updateScheduledActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateScheduledAction operation returned by the service.
+     * @sample AWSRedshiftServerlessAsyncHandler.UpdateScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/UpdateScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateScheduledActionResult> updateScheduledActionAsync(UpdateScheduledActionRequest updateScheduledActionRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateScheduledActionRequest, UpdateScheduledActionResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates a snapshot.
      * </p>
      * 
@@ -1450,6 +1757,43 @@ public interface AWSRedshiftServerlessAsync extends AWSRedshiftServerless {
      */
     java.util.concurrent.Future<UpdateSnapshotResult> updateSnapshotAsync(UpdateSnapshotRequest updateSnapshotRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateSnapshotRequest, UpdateSnapshotResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a snapshot copy configuration.
+     * </p>
+     * 
+     * @param updateSnapshotCopyConfigurationRequest
+     * @return A Java Future containing the result of the UpdateSnapshotCopyConfiguration operation returned by the
+     *         service.
+     * @sample AWSRedshiftServerlessAsync.UpdateSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/UpdateSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSnapshotCopyConfigurationResult> updateSnapshotCopyConfigurationAsync(
+            UpdateSnapshotCopyConfigurationRequest updateSnapshotCopyConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates a snapshot copy configuration.
+     * </p>
+     * 
+     * @param updateSnapshotCopyConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSnapshotCopyConfiguration operation returned by the
+     *         service.
+     * @sample AWSRedshiftServerlessAsyncHandler.UpdateSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/UpdateSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSnapshotCopyConfigurationResult> updateSnapshotCopyConfigurationAsync(
+            UpdateSnapshotCopyConfigurationRequest updateSnapshotCopyConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSnapshotCopyConfigurationRequest, UpdateSnapshotCopyConfigurationResult> asyncHandler);
 
     /**
      * <p>

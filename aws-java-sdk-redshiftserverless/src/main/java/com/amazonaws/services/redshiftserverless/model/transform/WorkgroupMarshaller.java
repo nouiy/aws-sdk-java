@@ -34,6 +34,8 @@ public class WorkgroupMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configParameters").build();
     private static final MarshallingInfo<java.util.Date> CREATIONDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationDate").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<List> CROSSACCOUNTVPCS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("crossAccountVpcs").build();
     private static final MarshallingInfo<String> CUSTOMDOMAINCERTIFICATEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customDomainCertificateArn").build();
     private static final MarshallingInfo<java.util.Date> CUSTOMDOMAINCERTIFICATEEXPIRYTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -88,6 +90,7 @@ public class WorkgroupMarshaller {
             protocolMarshaller.marshall(workgroup.getBaseCapacity(), BASECAPACITY_BINDING);
             protocolMarshaller.marshall(workgroup.getConfigParameters(), CONFIGPARAMETERS_BINDING);
             protocolMarshaller.marshall(workgroup.getCreationDate(), CREATIONDATE_BINDING);
+            protocolMarshaller.marshall(workgroup.getCrossAccountVpcs(), CROSSACCOUNTVPCS_BINDING);
             protocolMarshaller.marshall(workgroup.getCustomDomainCertificateArn(), CUSTOMDOMAINCERTIFICATEARN_BINDING);
             protocolMarshaller.marshall(workgroup.getCustomDomainCertificateExpiryTime(), CUSTOMDOMAINCERTIFICATEEXPIRYTIME_BINDING);
             protocolMarshaller.marshall(workgroup.getCustomDomainName(), CUSTOMDOMAINNAME_BINDING);

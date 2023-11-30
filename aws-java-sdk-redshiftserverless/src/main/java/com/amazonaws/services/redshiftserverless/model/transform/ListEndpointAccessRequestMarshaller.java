@@ -31,6 +31,8 @@ public class ListEndpointAccessRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<String> OWNERACCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ownerAccount").build();
     private static final MarshallingInfo<String> VPCID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("vpcId").build();
     private static final MarshallingInfo<String> WORKGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -54,6 +56,7 @@ public class ListEndpointAccessRequestMarshaller {
         try {
             protocolMarshaller.marshall(listEndpointAccessRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listEndpointAccessRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listEndpointAccessRequest.getOwnerAccount(), OWNERACCOUNT_BINDING);
             protocolMarshaller.marshall(listEndpointAccessRequest.getVpcId(), VPCID_BINDING);
             protocolMarshaller.marshall(listEndpointAccessRequest.getWorkgroupName(), WORKGROUPNAME_BINDING);
         } catch (Exception e) {

@@ -64,6 +64,10 @@ public class TableRestoreStatusJsonUnmarshaller implements Unmarshaller<TableRes
                     context.nextToken();
                     tableRestoreStatus.setProgressInMegaBytes(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("recoveryPointId", targetDepth)) {
+                    context.nextToken();
+                    tableRestoreStatus.setRecoveryPointId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("requestTime", targetDepth)) {
                     context.nextToken();
                     tableRestoreStatus.setRequestTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

@@ -441,6 +441,71 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Creates a scheduled action. A scheduled action contains a schedule and an Amazon Redshift API action. For
+     * example, you can create a schedule of when to run the <code>CreateSnapshot</code> API operation.
+     * </p>
+     * 
+     * @param createScheduledActionRequest
+     * @return Result of the CreateScheduledAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.CreateScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/CreateScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateScheduledActionResult createScheduledAction(CreateScheduledActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateScheduledAction(request);
+    }
+
+    @SdkInternalApi
+    final CreateScheduledActionResult executeCreateScheduledAction(CreateScheduledActionRequest createScheduledActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createScheduledActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateScheduledActionRequest> request = null;
+        Response<CreateScheduledActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateScheduledActionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createScheduledActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateScheduledAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateScheduledActionResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new CreateScheduledActionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a snapshot of all databases in a namespace. For more information about snapshots, see <a
      * href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-snapshots-recovery.html"> Working with
      * snapshots and recovery points</a>.
@@ -498,6 +563,77 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateSnapshotResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateSnapshotResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a snapshot copy configuration that lets you copy snapshots to another Amazon Web Services Region.
+     * </p>
+     * 
+     * @param createSnapshotCopyConfigurationRequest
+     * @return Result of the CreateSnapshotCopyConfiguration operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ServiceQuotaExceededException
+     *         The service limit was exceeded.
+     * @sample AWSRedshiftServerless.CreateSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/CreateSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateSnapshotCopyConfigurationResult createSnapshotCopyConfiguration(CreateSnapshotCopyConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateSnapshotCopyConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final CreateSnapshotCopyConfigurationResult executeCreateSnapshotCopyConfiguration(
+            CreateSnapshotCopyConfigurationRequest createSnapshotCopyConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createSnapshotCopyConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateSnapshotCopyConfigurationRequest> request = null;
+        Response<CreateSnapshotCopyConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateSnapshotCopyConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createSnapshotCopyConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateSnapshotCopyConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateSnapshotCopyConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateSnapshotCopyConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -901,6 +1037,68 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Deletes a scheduled action.
+     * </p>
+     * 
+     * @param deleteScheduledActionRequest
+     * @return Result of the DeleteScheduledAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.DeleteScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/DeleteScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteScheduledActionResult deleteScheduledAction(DeleteScheduledActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteScheduledAction(request);
+    }
+
+    @SdkInternalApi
+    final DeleteScheduledActionResult executeDeleteScheduledAction(DeleteScheduledActionRequest deleteScheduledActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteScheduledActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteScheduledActionRequest> request = null;
+        Response<DeleteScheduledActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteScheduledActionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteScheduledActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteScheduledAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteScheduledActionResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DeleteScheduledActionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a snapshot from Amazon Redshift Serverless.
      * </p>
      * 
@@ -952,6 +1150,75 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteSnapshotResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteSnapshotResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a snapshot copy configuration
+     * </p>
+     * 
+     * @param deleteSnapshotCopyConfigurationRequest
+     * @return Result of the DeleteSnapshotCopyConfiguration operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSRedshiftServerless.DeleteSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/DeleteSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteSnapshotCopyConfigurationResult deleteSnapshotCopyConfiguration(DeleteSnapshotCopyConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteSnapshotCopyConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DeleteSnapshotCopyConfigurationResult executeDeleteSnapshotCopyConfiguration(
+            DeleteSnapshotCopyConfigurationRequest deleteSnapshotCopyConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteSnapshotCopyConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteSnapshotCopyConfigurationRequest> request = null;
+        Response<DeleteSnapshotCopyConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteSnapshotCopyConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteSnapshotCopyConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteSnapshotCopyConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteSnapshotCopyConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteSnapshotCopyConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1477,6 +1744,67 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Returns information about a scheduled action.
+     * </p>
+     * 
+     * @param getScheduledActionRequest
+     * @return Result of the GetScheduledAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.GetScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/GetScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetScheduledActionResult getScheduledAction(GetScheduledActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetScheduledAction(request);
+    }
+
+    @SdkInternalApi
+    final GetScheduledActionResult executeGetScheduledAction(GetScheduledActionRequest getScheduledActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getScheduledActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetScheduledActionRequest> request = null;
+        Response<GetScheduledActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetScheduledActionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getScheduledActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetScheduledAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetScheduledActionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetScheduledActionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns information about a specific snapshot.
      * </p>
      * 
@@ -1958,6 +2286,137 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<ListRecoveryPointsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListRecoveryPointsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of scheduled actions. You can use the flags to filter the list of returned scheduled actions.
+     * </p>
+     * 
+     * @param listScheduledActionsRequest
+     * @return Result of the ListScheduledActions operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws InvalidPaginationException
+     *         The provided pagination token is invalid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.ListScheduledActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/ListScheduledActions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListScheduledActionsResult listScheduledActions(ListScheduledActionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListScheduledActions(request);
+    }
+
+    @SdkInternalApi
+    final ListScheduledActionsResult executeListScheduledActions(ListScheduledActionsRequest listScheduledActionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listScheduledActionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListScheduledActionsRequest> request = null;
+        Response<ListScheduledActionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListScheduledActionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listScheduledActionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListScheduledActions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListScheduledActionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListScheduledActionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of snapshot copy configurations.
+     * </p>
+     * 
+     * @param listSnapshotCopyConfigurationsRequest
+     * @return Result of the ListSnapshotCopyConfigurations operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws InvalidPaginationException
+     *         The provided pagination token is invalid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.ListSnapshotCopyConfigurations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/ListSnapshotCopyConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListSnapshotCopyConfigurationsResult listSnapshotCopyConfigurations(ListSnapshotCopyConfigurationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListSnapshotCopyConfigurations(request);
+    }
+
+    @SdkInternalApi
+    final ListSnapshotCopyConfigurationsResult executeListSnapshotCopyConfigurations(ListSnapshotCopyConfigurationsRequest listSnapshotCopyConfigurationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listSnapshotCopyConfigurationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListSnapshotCopyConfigurationsRequest> request = null;
+        Response<ListSnapshotCopyConfigurationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListSnapshotCopyConfigurationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listSnapshotCopyConfigurationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListSnapshotCopyConfigurations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListSnapshotCopyConfigurationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListSnapshotCopyConfigurationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2476,6 +2935,73 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Restores a table from a recovery point to your Amazon Redshift Serverless instance. You can't use this operation
+     * to restore tables with interleaved sort keys.
+     * </p>
+     * 
+     * @param restoreTableFromRecoveryPointRequest
+     * @return Result of the RestoreTableFromRecoveryPoint operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.RestoreTableFromRecoveryPoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/RestoreTableFromRecoveryPoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public RestoreTableFromRecoveryPointResult restoreTableFromRecoveryPoint(RestoreTableFromRecoveryPointRequest request) {
+        request = beforeClientExecution(request);
+        return executeRestoreTableFromRecoveryPoint(request);
+    }
+
+    @SdkInternalApi
+    final RestoreTableFromRecoveryPointResult executeRestoreTableFromRecoveryPoint(RestoreTableFromRecoveryPointRequest restoreTableFromRecoveryPointRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(restoreTableFromRecoveryPointRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RestoreTableFromRecoveryPointRequest> request = null;
+        Response<RestoreTableFromRecoveryPointResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RestoreTableFromRecoveryPointRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(restoreTableFromRecoveryPointRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RestoreTableFromRecoveryPoint");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<RestoreTableFromRecoveryPointResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new RestoreTableFromRecoveryPointResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Restores a table from a snapshot to your Amazon Redshift Serverless instance. You can't use this operation to
      * restore tables with <a
      * href="https://docs.aws.amazon.com/redshift/latest/dg/t_Sorting_data.html#t_Sorting_data-interleaved">interleaved
@@ -2873,6 +3399,70 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Updates a scheduled action.
+     * </p>
+     * 
+     * @param updateScheduledActionRequest
+     * @return Result of the UpdateScheduledAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.UpdateScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/UpdateScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateScheduledActionResult updateScheduledAction(UpdateScheduledActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateScheduledAction(request);
+    }
+
+    @SdkInternalApi
+    final UpdateScheduledActionResult executeUpdateScheduledAction(UpdateScheduledActionRequest updateScheduledActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateScheduledActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateScheduledActionRequest> request = null;
+        Response<UpdateScheduledActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateScheduledActionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateScheduledActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateScheduledAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateScheduledActionResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateScheduledActionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates a snapshot.
      * </p>
      * 
@@ -2924,6 +3514,75 @@ public class AWSRedshiftServerlessClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateSnapshotResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateSnapshotResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates a snapshot copy configuration.
+     * </p>
+     * 
+     * @param updateSnapshotCopyConfigurationRequest
+     * @return Result of the UpdateSnapshotCopyConfiguration operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSRedshiftServerless.UpdateSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/UpdateSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateSnapshotCopyConfigurationResult updateSnapshotCopyConfiguration(UpdateSnapshotCopyConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateSnapshotCopyConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateSnapshotCopyConfigurationResult executeUpdateSnapshotCopyConfiguration(
+            UpdateSnapshotCopyConfigurationRequest updateSnapshotCopyConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateSnapshotCopyConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateSnapshotCopyConfigurationRequest> request = null;
+        Response<UpdateSnapshotCopyConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateSnapshotCopyConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateSnapshotCopyConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateSnapshotCopyConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateSnapshotCopyConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateSnapshotCopyConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

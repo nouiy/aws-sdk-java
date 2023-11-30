@@ -72,6 +72,30 @@ public class EntitySummaryJsonUnmarshaller implements Unmarshaller<EntitySummary
                     context.nextToken();
                     entitySummary.setVisibility(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("AmiProductSummary", targetDepth)) {
+                    context.nextToken();
+                    entitySummary.setAmiProductSummary(AmiProductSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ContainerProductSummary", targetDepth)) {
+                    context.nextToken();
+                    entitySummary.setContainerProductSummary(ContainerProductSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("DataProductSummary", targetDepth)) {
+                    context.nextToken();
+                    entitySummary.setDataProductSummary(DataProductSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("SaaSProductSummary", targetDepth)) {
+                    context.nextToken();
+                    entitySummary.setSaaSProductSummary(SaaSProductSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("OfferSummary", targetDepth)) {
+                    context.nextToken();
+                    entitySummary.setOfferSummary(OfferSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ResaleAuthorizationSummary", targetDepth)) {
+                    context.nextToken();
+                    entitySummary.setResaleAuthorizationSummary(ResaleAuthorizationSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

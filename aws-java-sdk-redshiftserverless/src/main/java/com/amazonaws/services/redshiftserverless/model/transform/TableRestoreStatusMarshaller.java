@@ -35,6 +35,8 @@ public class TableRestoreStatusMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("newTableName").build();
     private static final MarshallingInfo<Long> PROGRESSINMEGABYTES_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("progressInMegaBytes").build();
+    private static final MarshallingInfo<String> RECOVERYPOINTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recoveryPointId").build();
     private static final MarshallingInfo<java.util.Date> REQUESTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("requestTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> SNAPSHOTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -78,6 +80,7 @@ public class TableRestoreStatusMarshaller {
             protocolMarshaller.marshall(tableRestoreStatus.getNamespaceName(), NAMESPACENAME_BINDING);
             protocolMarshaller.marshall(tableRestoreStatus.getNewTableName(), NEWTABLENAME_BINDING);
             protocolMarshaller.marshall(tableRestoreStatus.getProgressInMegaBytes(), PROGRESSINMEGABYTES_BINDING);
+            protocolMarshaller.marshall(tableRestoreStatus.getRecoveryPointId(), RECOVERYPOINTID_BINDING);
             protocolMarshaller.marshall(tableRestoreStatus.getRequestTime(), REQUESTTIME_BINDING);
             protocolMarshaller.marshall(tableRestoreStatus.getSnapshotName(), SNAPSHOTNAME_BINDING);
             protocolMarshaller.marshall(tableRestoreStatus.getSourceDatabaseName(), SOURCEDATABASENAME_BINDING);

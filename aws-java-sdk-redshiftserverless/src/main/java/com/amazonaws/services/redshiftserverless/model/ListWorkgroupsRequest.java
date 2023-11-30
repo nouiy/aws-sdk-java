@@ -39,6 +39,12 @@ public class ListWorkgroupsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     * </p>
+     */
+    private String ownerAccount;
 
     /**
      * <p>
@@ -133,6 +139,46 @@ public class ListWorkgroupsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     * </p>
+     * 
+     * @param ownerAccount
+     *        The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     */
+
+    public void setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+    }
+
+    /**
+     * <p>
+     * The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     * </p>
+     * 
+     * @return The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     */
+
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * <p>
+     * The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     * </p>
+     * 
+     * @param ownerAccount
+     *        The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListWorkgroupsRequest withOwnerAccount(String ownerAccount) {
+        setOwnerAccount(ownerAccount);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -147,7 +193,9 @@ public class ListWorkgroupsRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getOwnerAccount() != null)
+            sb.append("OwnerAccount: ").append(getOwnerAccount());
         sb.append("}");
         return sb.toString();
     }
@@ -170,6 +218,10 @@ public class ListWorkgroupsRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getOwnerAccount() == null ^ this.getOwnerAccount() == null)
+            return false;
+        if (other.getOwnerAccount() != null && other.getOwnerAccount().equals(this.getOwnerAccount()) == false)
+            return false;
         return true;
     }
 
@@ -180,6 +232,7 @@ public class ListWorkgroupsRequest extends com.amazonaws.AmazonWebServiceRequest
 
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getOwnerAccount() == null) ? 0 : getOwnerAccount().hashCode());
         return hashCode;
     }
 

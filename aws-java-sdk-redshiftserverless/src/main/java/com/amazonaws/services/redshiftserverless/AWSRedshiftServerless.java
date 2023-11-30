@@ -155,6 +155,28 @@ public interface AWSRedshiftServerless {
 
     /**
      * <p>
+     * Creates a scheduled action. A scheduled action contains a schedule and an Amazon Redshift API action. For
+     * example, you can create a schedule of when to run the <code>CreateSnapshot</code> API operation.
+     * </p>
+     * 
+     * @param createScheduledActionRequest
+     * @return Result of the CreateScheduledAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.CreateScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/CreateScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateScheduledActionResult createScheduledAction(CreateScheduledActionRequest createScheduledActionRequest);
+
+    /**
+     * <p>
      * Creates a snapshot of all databases in a namespace. For more information about snapshots, see <a
      * href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-snapshots-recovery.html"> Working with
      * snapshots and recovery points</a>.
@@ -179,6 +201,32 @@ public interface AWSRedshiftServerless {
      *      target="_top">AWS API Documentation</a>
      */
     CreateSnapshotResult createSnapshot(CreateSnapshotRequest createSnapshotRequest);
+
+    /**
+     * <p>
+     * Creates a snapshot copy configuration that lets you copy snapshots to another Amazon Web Services Region.
+     * </p>
+     * 
+     * @param createSnapshotCopyConfigurationRequest
+     * @return Result of the CreateSnapshotCopyConfiguration operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ServiceQuotaExceededException
+     *         The service limit was exceeded.
+     * @sample AWSRedshiftServerless.CreateSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/CreateSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateSnapshotCopyConfigurationResult createSnapshotCopyConfiguration(CreateSnapshotCopyConfigurationRequest createSnapshotCopyConfigurationRequest);
 
     /**
      * <p>
@@ -319,6 +367,25 @@ public interface AWSRedshiftServerless {
 
     /**
      * <p>
+     * Deletes a scheduled action.
+     * </p>
+     * 
+     * @param deleteScheduledActionRequest
+     * @return Result of the DeleteScheduledAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.DeleteScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/DeleteScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteScheduledActionResult deleteScheduledAction(DeleteScheduledActionRequest deleteScheduledActionRequest);
+
+    /**
+     * <p>
      * Deletes a snapshot from Amazon Redshift Serverless.
      * </p>
      * 
@@ -337,6 +404,30 @@ public interface AWSRedshiftServerless {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteSnapshotResult deleteSnapshot(DeleteSnapshotRequest deleteSnapshotRequest);
+
+    /**
+     * <p>
+     * Deletes a snapshot copy configuration
+     * </p>
+     * 
+     * @param deleteSnapshotCopyConfigurationRequest
+     * @return Result of the DeleteSnapshotCopyConfiguration operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSRedshiftServerless.DeleteSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/DeleteSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteSnapshotCopyConfigurationResult deleteSnapshotCopyConfiguration(DeleteSnapshotCopyConfigurationRequest deleteSnapshotCopyConfigurationRequest);
 
     /**
      * <p>
@@ -515,6 +606,25 @@ public interface AWSRedshiftServerless {
 
     /**
      * <p>
+     * Returns information about a scheduled action.
+     * </p>
+     * 
+     * @param getScheduledActionRequest
+     * @return Result of the GetScheduledAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.GetScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/GetScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetScheduledActionResult getScheduledAction(GetScheduledActionRequest getScheduledActionRequest);
+
+    /**
+     * <p>
      * Returns information about a specific snapshot.
      * </p>
      * 
@@ -666,6 +776,51 @@ public interface AWSRedshiftServerless {
      *      target="_top">AWS API Documentation</a>
      */
     ListRecoveryPointsResult listRecoveryPoints(ListRecoveryPointsRequest listRecoveryPointsRequest);
+
+    /**
+     * <p>
+     * Returns a list of scheduled actions. You can use the flags to filter the list of returned scheduled actions.
+     * </p>
+     * 
+     * @param listScheduledActionsRequest
+     * @return Result of the ListScheduledActions operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws InvalidPaginationException
+     *         The provided pagination token is invalid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.ListScheduledActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/ListScheduledActions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListScheduledActionsResult listScheduledActions(ListScheduledActionsRequest listScheduledActionsRequest);
+
+    /**
+     * <p>
+     * Returns a list of snapshot copy configurations.
+     * </p>
+     * 
+     * @param listSnapshotCopyConfigurationsRequest
+     * @return Result of the ListSnapshotCopyConfigurations operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws InvalidPaginationException
+     *         The provided pagination token is invalid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.ListSnapshotCopyConfigurations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/ListSnapshotCopyConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListSnapshotCopyConfigurationsResult listSnapshotCopyConfigurations(ListSnapshotCopyConfigurationsRequest listSnapshotCopyConfigurationsRequest);
 
     /**
      * <p>
@@ -836,6 +991,29 @@ public interface AWSRedshiftServerless {
 
     /**
      * <p>
+     * Restores a table from a recovery point to your Amazon Redshift Serverless instance. You can't use this operation
+     * to restore tables with interleaved sort keys.
+     * </p>
+     * 
+     * @param restoreTableFromRecoveryPointRequest
+     * @return Result of the RestoreTableFromRecoveryPoint operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.RestoreTableFromRecoveryPoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/RestoreTableFromRecoveryPoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    RestoreTableFromRecoveryPointResult restoreTableFromRecoveryPoint(RestoreTableFromRecoveryPointRequest restoreTableFromRecoveryPointRequest);
+
+    /**
+     * <p>
      * Restores a table from a snapshot to your Amazon Redshift Serverless instance. You can't use this operation to
      * restore tables with <a
      * href="https://docs.aws.amazon.com/redshift/latest/dg/t_Sorting_data.html#t_Sorting_data-interleaved">interleaved
@@ -977,6 +1155,27 @@ public interface AWSRedshiftServerless {
 
     /**
      * <p>
+     * Updates a scheduled action.
+     * </p>
+     * 
+     * @param updateScheduledActionRequest
+     * @return Result of the UpdateScheduledAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @sample AWSRedshiftServerless.UpdateScheduledAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/UpdateScheduledAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateScheduledActionResult updateScheduledAction(UpdateScheduledActionRequest updateScheduledActionRequest);
+
+    /**
+     * <p>
      * Updates a snapshot.
      * </p>
      * 
@@ -995,6 +1194,30 @@ public interface AWSRedshiftServerless {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateSnapshotResult updateSnapshot(UpdateSnapshotRequest updateSnapshotRequest);
+
+    /**
+     * <p>
+     * Updates a snapshot copy configuration.
+     * </p>
+     * 
+     * @param updateSnapshotCopyConfigurationRequest
+     * @return Result of the UpdateSnapshotCopyConfiguration operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ConflictException
+     *         The submitted action has conflicts.
+     * @throws ValidationException
+     *         The input failed to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSRedshiftServerless.UpdateSnapshotCopyConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-serverless-2021-04-21/UpdateSnapshotCopyConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateSnapshotCopyConfigurationResult updateSnapshotCopyConfiguration(UpdateSnapshotCopyConfigurationRequest updateSnapshotCopyConfigurationRequest);
 
     /**
      * <p>

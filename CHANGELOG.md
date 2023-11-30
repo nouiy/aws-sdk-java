@@ -1,3 +1,20 @@
+# __1.12.602__ __2023-11-30__
+## __AWS Marketplace Agreement Service__
+  - ### Features
+    - The AWS Marketplace Agreement Service provides an API interface that helps AWS Marketplace sellers manage their agreements, including listing, filtering, and viewing details about their agreements.
+
+## __AWS Marketplace Catalog Service__
+  - ### Features
+    - This release enhances the ListEntities API to support new entity type-specific strongly typed filters in the request and entity type-specific strongly typed summaries in the response.
+
+## __AWS Marketplace Deployment Service__
+  - ### Features
+    - AWS Marketplace Deployment is a new service that provides essential features that facilitate the deployment of software, data, and services procured through AWS Marketplace.
+
+## __Redshift Serverless__
+  - ### Features
+    - This release adds the following support for Amazon Redshift Serverless: 1) cross-account cross-VPCs, 2) copying snapshots across Regions, 3) scheduling snapshot creation, and 4) restoring tables from a recovery point.
+
 # __1.12.600__ __2023-11-29__
 ## __AWS Clean Rooms Service__
   - ### Features

@@ -30,8 +30,8 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A description of the status of the table restore request. Status values include <code>SUCCEEDED</code>,
-     * <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, <code>IN_PROGRESS</code>.
+     * A message that explains the returned status. For example, if the status of the operation is <code>FAILED</code>,
+     * the message explains why the operation failed.
      * </p>
      */
     private String message;
@@ -53,6 +53,12 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private Long progressInMegaBytes;
+    /**
+     * <p>
+     * The ID of the recovery point being restored from.
+     * </p>
+     */
+    private String recoveryPointId;
     /**
      * <p>
      * The time that the table restore request was made, in Universal Coordinated Time (UTC).
@@ -85,9 +91,7 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
     private String sourceTableName;
     /**
      * <p>
-     * A value that describes the current state of the table restore request. Possible values include
-     * <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>,
-     * <code>IN_PROGRESS</code>.
+     * A value that describes the current state of the table restore request. Possible values are <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, and <code>IN_PROGRESS</code>.
      * </p>
      */
     private String status;
@@ -124,13 +128,13 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A description of the status of the table restore request. Status values include <code>SUCCEEDED</code>,
-     * <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, <code>IN_PROGRESS</code>.
+     * A message that explains the returned status. For example, if the status of the operation is <code>FAILED</code>,
+     * the message explains why the operation failed.
      * </p>
      * 
      * @param message
-     *        A description of the status of the table restore request. Status values include <code>SUCCEEDED</code>,
-     *        <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, <code>IN_PROGRESS</code>.
+     *        A message that explains the returned status. For example, if the status of the operation is
+     *        <code>FAILED</code>, the message explains why the operation failed.
      */
 
     public void setMessage(String message) {
@@ -139,12 +143,12 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A description of the status of the table restore request. Status values include <code>SUCCEEDED</code>,
-     * <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, <code>IN_PROGRESS</code>.
+     * A message that explains the returned status. For example, if the status of the operation is <code>FAILED</code>,
+     * the message explains why the operation failed.
      * </p>
      * 
-     * @return A description of the status of the table restore request. Status values include <code>SUCCEEDED</code>,
-     *         <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, <code>IN_PROGRESS</code>.
+     * @return A message that explains the returned status. For example, if the status of the operation is
+     *         <code>FAILED</code>, the message explains why the operation failed.
      */
 
     public String getMessage() {
@@ -153,13 +157,13 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A description of the status of the table restore request. Status values include <code>SUCCEEDED</code>,
-     * <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, <code>IN_PROGRESS</code>.
+     * A message that explains the returned status. For example, if the status of the operation is <code>FAILED</code>,
+     * the message explains why the operation failed.
      * </p>
      * 
      * @param message
-     *        A description of the status of the table restore request. Status values include <code>SUCCEEDED</code>,
-     *        <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, <code>IN_PROGRESS</code>.
+     *        A message that explains the returned status. For example, if the status of the operation is
+     *        <code>FAILED</code>, the message explains why the operation failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -285,6 +289,46 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
 
     public TableRestoreStatus withProgressInMegaBytes(Long progressInMegaBytes) {
         setProgressInMegaBytes(progressInMegaBytes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the recovery point being restored from.
+     * </p>
+     * 
+     * @param recoveryPointId
+     *        The ID of the recovery point being restored from.
+     */
+
+    public void setRecoveryPointId(String recoveryPointId) {
+        this.recoveryPointId = recoveryPointId;
+    }
+
+    /**
+     * <p>
+     * The ID of the recovery point being restored from.
+     * </p>
+     * 
+     * @return The ID of the recovery point being restored from.
+     */
+
+    public String getRecoveryPointId() {
+        return this.recoveryPointId;
+    }
+
+    /**
+     * <p>
+     * The ID of the recovery point being restored from.
+     * </p>
+     * 
+     * @param recoveryPointId
+     *        The ID of the recovery point being restored from.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TableRestoreStatus withRecoveryPointId(String recoveryPointId) {
+        setRecoveryPointId(recoveryPointId);
         return this;
     }
 
@@ -490,14 +534,12 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A value that describes the current state of the table restore request. Possible values include
-     * <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>,
-     * <code>IN_PROGRESS</code>.
+     * A value that describes the current state of the table restore request. Possible values are <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, and <code>IN_PROGRESS</code>.
      * </p>
      * 
      * @param status
-     *        A value that describes the current state of the table restore request. Possible values include
-     *        <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>,
+     *        A value that describes the current state of the table restore request. Possible values are
+     *        <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, and
      *        <code>IN_PROGRESS</code>.
      */
 
@@ -507,13 +549,11 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A value that describes the current state of the table restore request. Possible values include
-     * <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>,
-     * <code>IN_PROGRESS</code>.
+     * A value that describes the current state of the table restore request. Possible values are <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, and <code>IN_PROGRESS</code>.
      * </p>
      * 
-     * @return A value that describes the current state of the table restore request. Possible values include
-     *         <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>,
+     * @return A value that describes the current state of the table restore request. Possible values are
+     *         <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, and
      *         <code>IN_PROGRESS</code>.
      */
 
@@ -523,14 +563,12 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A value that describes the current state of the table restore request. Possible values include
-     * <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>,
-     * <code>IN_PROGRESS</code>.
+     * A value that describes the current state of the table restore request. Possible values are <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, and <code>IN_PROGRESS</code>.
      * </p>
      * 
      * @param status
-     *        A value that describes the current state of the table restore request. Possible values include
-     *        <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>,
+     *        A value that describes the current state of the table restore request. Possible values are
+     *        <code>SUCCEEDED</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PENDING</code>, and
      *        <code>IN_PROGRESS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -760,6 +798,8 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
             sb.append("NewTableName: ").append(getNewTableName()).append(",");
         if (getProgressInMegaBytes() != null)
             sb.append("ProgressInMegaBytes: ").append(getProgressInMegaBytes()).append(",");
+        if (getRecoveryPointId() != null)
+            sb.append("RecoveryPointId: ").append(getRecoveryPointId()).append(",");
         if (getRequestTime() != null)
             sb.append("RequestTime: ").append(getRequestTime()).append(",");
         if (getSnapshotName() != null)
@@ -811,6 +851,10 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
         if (other.getProgressInMegaBytes() == null ^ this.getProgressInMegaBytes() == null)
             return false;
         if (other.getProgressInMegaBytes() != null && other.getProgressInMegaBytes().equals(this.getProgressInMegaBytes()) == false)
+            return false;
+        if (other.getRecoveryPointId() == null ^ this.getRecoveryPointId() == null)
+            return false;
+        if (other.getRecoveryPointId() != null && other.getRecoveryPointId().equals(this.getRecoveryPointId()) == false)
             return false;
         if (other.getRequestTime() == null ^ this.getRequestTime() == null)
             return false;
@@ -868,6 +912,7 @@ public class TableRestoreStatus implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getNamespaceName() == null) ? 0 : getNamespaceName().hashCode());
         hashCode = prime * hashCode + ((getNewTableName() == null) ? 0 : getNewTableName().hashCode());
         hashCode = prime * hashCode + ((getProgressInMegaBytes() == null) ? 0 : getProgressInMegaBytes().hashCode());
+        hashCode = prime * hashCode + ((getRecoveryPointId() == null) ? 0 : getRecoveryPointId().hashCode());
         hashCode = prime * hashCode + ((getRequestTime() == null) ? 0 : getRequestTime().hashCode());
         hashCode = prime * hashCode + ((getSnapshotName() == null) ? 0 : getSnapshotName().hashCode());
         hashCode = prime * hashCode + ((getSourceDatabaseName() == null) ? 0 : getSourceDatabaseName().hashCode());

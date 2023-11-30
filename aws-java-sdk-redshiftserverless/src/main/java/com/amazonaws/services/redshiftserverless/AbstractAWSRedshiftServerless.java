@@ -48,7 +48,17 @@ public class AbstractAWSRedshiftServerless implements AWSRedshiftServerless {
     }
 
     @Override
+    public CreateScheduledActionResult createScheduledAction(CreateScheduledActionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateSnapshotResult createSnapshot(CreateSnapshotRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateSnapshotCopyConfigurationResult createSnapshotCopyConfiguration(CreateSnapshotCopyConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -83,7 +93,17 @@ public class AbstractAWSRedshiftServerless implements AWSRedshiftServerless {
     }
 
     @Override
+    public DeleteScheduledActionResult deleteScheduledAction(DeleteScheduledActionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteSnapshotResult deleteSnapshot(DeleteSnapshotRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteSnapshotCopyConfigurationResult deleteSnapshotCopyConfiguration(DeleteSnapshotCopyConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -128,6 +148,11 @@ public class AbstractAWSRedshiftServerless implements AWSRedshiftServerless {
     }
 
     @Override
+    public GetScheduledActionResult getScheduledAction(GetScheduledActionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetSnapshotResult getSnapshot(GetSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -164,6 +189,16 @@ public class AbstractAWSRedshiftServerless implements AWSRedshiftServerless {
 
     @Override
     public ListRecoveryPointsResult listRecoveryPoints(ListRecoveryPointsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListScheduledActionsResult listScheduledActions(ListScheduledActionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListSnapshotCopyConfigurationsResult listSnapshotCopyConfigurations(ListSnapshotCopyConfigurationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -208,6 +243,11 @@ public class AbstractAWSRedshiftServerless implements AWSRedshiftServerless {
     }
 
     @Override
+    public RestoreTableFromRecoveryPointResult restoreTableFromRecoveryPoint(RestoreTableFromRecoveryPointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public RestoreTableFromSnapshotResult restoreTableFromSnapshot(RestoreTableFromSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -238,7 +278,17 @@ public class AbstractAWSRedshiftServerless implements AWSRedshiftServerless {
     }
 
     @Override
+    public UpdateScheduledActionResult updateScheduledAction(UpdateScheduledActionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateSnapshotResult updateSnapshot(UpdateSnapshotRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSnapshotCopyConfigurationResult updateSnapshotCopyConfiguration(UpdateSnapshotCopyConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

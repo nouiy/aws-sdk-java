@@ -30,6 +30,8 @@ public class CreateEndpointAccessRequestMarshaller {
 
     private static final MarshallingInfo<String> ENDPOINTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endpointName").build();
+    private static final MarshallingInfo<String> OWNERACCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ownerAccount").build();
     private static final MarshallingInfo<List> SUBNETIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("subnetIds").build();
     private static final MarshallingInfo<List> VPCSECURITYGROUPIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -54,6 +56,7 @@ public class CreateEndpointAccessRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createEndpointAccessRequest.getEndpointName(), ENDPOINTNAME_BINDING);
+            protocolMarshaller.marshall(createEndpointAccessRequest.getOwnerAccount(), OWNERACCOUNT_BINDING);
             protocolMarshaller.marshall(createEndpointAccessRequest.getSubnetIds(), SUBNETIDS_BINDING);
             protocolMarshaller.marshall(createEndpointAccessRequest.getVpcSecurityGroupIds(), VPCSECURITYGROUPIDS_BINDING);
             protocolMarshaller.marshall(createEndpointAccessRequest.getWorkgroupName(), WORKGROUPNAME_BINDING);

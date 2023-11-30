@@ -42,6 +42,12 @@ public class ListEndpointAccessRequest extends com.amazonaws.AmazonWebServiceReq
     private String nextToken;
     /**
      * <p>
+     * The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     * </p>
+     */
+    private String ownerAccount;
+    /**
+     * <p>
      * The unique identifier of the virtual private cloud with access to Amazon Redshift Serverless.
      * </p>
      */
@@ -153,6 +159,46 @@ public class ListEndpointAccessRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
+     * The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     * </p>
+     * 
+     * @param ownerAccount
+     *        The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     */
+
+    public void setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+    }
+
+    /**
+     * <p>
+     * The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     * </p>
+     * 
+     * @return The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     */
+
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * <p>
+     * The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     * </p>
+     * 
+     * @param ownerAccount
+     *        The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListEndpointAccessRequest withOwnerAccount(String ownerAccount) {
+        setOwnerAccount(ownerAccount);
+        return this;
+    }
+
+    /**
+     * <p>
      * The unique identifier of the virtual private cloud with access to Amazon Redshift Serverless.
      * </p>
      * 
@@ -247,6 +293,8 @@ public class ListEndpointAccessRequest extends com.amazonaws.AmazonWebServiceReq
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getOwnerAccount() != null)
+            sb.append("OwnerAccount: ").append(getOwnerAccount()).append(",");
         if (getVpcId() != null)
             sb.append("VpcId: ").append(getVpcId()).append(",");
         if (getWorkgroupName() != null)
@@ -273,6 +321,10 @@ public class ListEndpointAccessRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getOwnerAccount() == null ^ this.getOwnerAccount() == null)
+            return false;
+        if (other.getOwnerAccount() != null && other.getOwnerAccount().equals(this.getOwnerAccount()) == false)
+            return false;
         if (other.getVpcId() == null ^ this.getVpcId() == null)
             return false;
         if (other.getVpcId() != null && other.getVpcId().equals(this.getVpcId()) == false)
@@ -291,6 +343,7 @@ public class ListEndpointAccessRequest extends com.amazonaws.AmazonWebServiceReq
 
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getOwnerAccount() == null) ? 0 : getOwnerAccount().hashCode());
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
         hashCode = prime * hashCode + ((getWorkgroupName() == null) ? 0 : getWorkgroupName().hashCode());
         return hashCode;

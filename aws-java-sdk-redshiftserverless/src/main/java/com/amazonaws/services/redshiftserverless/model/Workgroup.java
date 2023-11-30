@@ -37,10 +37,9 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, , <code>search_path</code>, and query
-     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
-     * and available metrics, see <a href=
+     * <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>, <code>enable_user_activity_logging</code>,
+     * <code>query_group</code>, <code>search_path</code>, and query monitoring metrics that let you define performance
+     * boundaries. For more information about query monitoring rules and available metrics, see <a href=
      * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
      * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
@@ -52,6 +51,13 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date creationDate;
+    /**
+     * <p>
+     * A list of VPCs. Each entry is the unique identifier of a virtual private cloud with access to Amazon Redshift
+     * Serverless. If all of the VPCs for the grantee are allowed, it shows an asterisk.
+     * </p>
+     */
+    private java.util.List<String> crossAccountVpcs;
     /**
      * <p>
      * The custom domain name’s certificate Amazon resource name (ARN).
@@ -205,18 +211,17 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, , <code>search_path</code>, and query
-     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
-     * and available metrics, see <a href=
+     * <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>, <code>enable_user_activity_logging</code>,
+     * <code>query_group</code>, <code>search_path</code>, and query monitoring metrics that let you define performance
+     * boundaries. For more information about query monitoring rules and available metrics, see <a href=
      * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
      * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
      * 
      * @return An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     *         <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     *         <code>enable_user_activity_logging</code>, <code>query_group</code>, , <code>search_path</code>, and
-     *         query monitoring metrics that let you define performance boundaries. For more information about query
+     *         <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>,
+     *         <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
+     *         monitoring metrics that let you define performance boundaries. For more information about query
      *         monitoring rules and available metrics, see <a href=
      *         "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
      *         > Query monitoring metrics for Amazon Redshift Serverless</a>.
@@ -229,18 +234,17 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, , <code>search_path</code>, and query
-     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
-     * and available metrics, see <a href=
+     * <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>, <code>enable_user_activity_logging</code>,
+     * <code>query_group</code>, <code>search_path</code>, and query monitoring metrics that let you define performance
+     * boundaries. For more information about query monitoring rules and available metrics, see <a href=
      * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
      * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
      * 
      * @param configParameters
      *        An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     *        <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     *        <code>enable_user_activity_logging</code>, <code>query_group</code>, , <code>search_path</code>, and query
+     *        <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>,
+     *        <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
      *        monitoring metrics that let you define performance boundaries. For more information about query monitoring
      *        rules and available metrics, see <a href=
      *        "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
@@ -259,10 +263,9 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, , <code>search_path</code>, and query
-     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
-     * and available metrics, see <a href=
+     * <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>, <code>enable_user_activity_logging</code>,
+     * <code>query_group</code>, <code>search_path</code>, and query monitoring metrics that let you define performance
+     * boundaries. For more information about query monitoring rules and available metrics, see <a href=
      * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
      * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
@@ -274,8 +277,8 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param configParameters
      *        An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     *        <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     *        <code>enable_user_activity_logging</code>, <code>query_group</code>, , <code>search_path</code>, and query
+     *        <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>,
+     *        <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
      *        monitoring metrics that let you define performance boundaries. For more information about query monitoring
      *        rules and available metrics, see <a href=
      *        "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
@@ -296,18 +299,17 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, , <code>search_path</code>, and query
-     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
-     * and available metrics, see <a href=
+     * <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>, <code>enable_user_activity_logging</code>,
+     * <code>query_group</code>, <code>search_path</code>, and query monitoring metrics that let you define performance
+     * boundaries. For more information about query monitoring rules and available metrics, see <a href=
      * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
      * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
      * 
      * @param configParameters
      *        An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     *        <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     *        <code>enable_user_activity_logging</code>, <code>query_group</code>, , <code>search_path</code>, and query
+     *        <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>,
+     *        <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
      *        monitoring metrics that let you define performance boundaries. For more information about query monitoring
      *        rules and available metrics, see <a href=
      *        "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
@@ -357,6 +359,84 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
 
     public Workgroup withCreationDate(java.util.Date creationDate) {
         setCreationDate(creationDate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of VPCs. Each entry is the unique identifier of a virtual private cloud with access to Amazon Redshift
+     * Serverless. If all of the VPCs for the grantee are allowed, it shows an asterisk.
+     * </p>
+     * 
+     * @return A list of VPCs. Each entry is the unique identifier of a virtual private cloud with access to Amazon
+     *         Redshift Serverless. If all of the VPCs for the grantee are allowed, it shows an asterisk.
+     */
+
+    public java.util.List<String> getCrossAccountVpcs() {
+        return crossAccountVpcs;
+    }
+
+    /**
+     * <p>
+     * A list of VPCs. Each entry is the unique identifier of a virtual private cloud with access to Amazon Redshift
+     * Serverless. If all of the VPCs for the grantee are allowed, it shows an asterisk.
+     * </p>
+     * 
+     * @param crossAccountVpcs
+     *        A list of VPCs. Each entry is the unique identifier of a virtual private cloud with access to Amazon
+     *        Redshift Serverless. If all of the VPCs for the grantee are allowed, it shows an asterisk.
+     */
+
+    public void setCrossAccountVpcs(java.util.Collection<String> crossAccountVpcs) {
+        if (crossAccountVpcs == null) {
+            this.crossAccountVpcs = null;
+            return;
+        }
+
+        this.crossAccountVpcs = new java.util.ArrayList<String>(crossAccountVpcs);
+    }
+
+    /**
+     * <p>
+     * A list of VPCs. Each entry is the unique identifier of a virtual private cloud with access to Amazon Redshift
+     * Serverless. If all of the VPCs for the grantee are allowed, it shows an asterisk.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCrossAccountVpcs(java.util.Collection)} or {@link #withCrossAccountVpcs(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param crossAccountVpcs
+     *        A list of VPCs. Each entry is the unique identifier of a virtual private cloud with access to Amazon
+     *        Redshift Serverless. If all of the VPCs for the grantee are allowed, it shows an asterisk.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workgroup withCrossAccountVpcs(String... crossAccountVpcs) {
+        if (this.crossAccountVpcs == null) {
+            setCrossAccountVpcs(new java.util.ArrayList<String>(crossAccountVpcs.length));
+        }
+        for (String ele : crossAccountVpcs) {
+            this.crossAccountVpcs.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of VPCs. Each entry is the unique identifier of a virtual private cloud with access to Amazon Redshift
+     * Serverless. If all of the VPCs for the grantee are allowed, it shows an asterisk.
+     * </p>
+     * 
+     * @param crossAccountVpcs
+     *        A list of VPCs. Each entry is the unique identifier of a virtual private cloud with access to Amazon
+     *        Redshift Serverless. If all of the VPCs for the grantee are allowed, it shows an asterisk.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workgroup withCrossAccountVpcs(java.util.Collection<String> crossAccountVpcs) {
+        setCrossAccountVpcs(crossAccountVpcs);
         return this;
     }
 
@@ -1208,6 +1288,8 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
             sb.append("ConfigParameters: ").append(getConfigParameters()).append(",");
         if (getCreationDate() != null)
             sb.append("CreationDate: ").append(getCreationDate()).append(",");
+        if (getCrossAccountVpcs() != null)
+            sb.append("CrossAccountVpcs: ").append(getCrossAccountVpcs()).append(",");
         if (getCustomDomainCertificateArn() != null)
             sb.append("CustomDomainCertificateArn: ").append(getCustomDomainCertificateArn()).append(",");
         if (getCustomDomainCertificateExpiryTime() != null)
@@ -1267,6 +1349,10 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
         if (other.getCreationDate() == null ^ this.getCreationDate() == null)
             return false;
         if (other.getCreationDate() != null && other.getCreationDate().equals(this.getCreationDate()) == false)
+            return false;
+        if (other.getCrossAccountVpcs() == null ^ this.getCrossAccountVpcs() == null)
+            return false;
+        if (other.getCrossAccountVpcs() != null && other.getCrossAccountVpcs().equals(this.getCrossAccountVpcs()) == false)
             return false;
         if (other.getCustomDomainCertificateArn() == null ^ this.getCustomDomainCertificateArn() == null)
             return false;
@@ -1348,6 +1434,7 @@ public class Workgroup implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getBaseCapacity() == null) ? 0 : getBaseCapacity().hashCode());
         hashCode = prime * hashCode + ((getConfigParameters() == null) ? 0 : getConfigParameters().hashCode());
         hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
+        hashCode = prime * hashCode + ((getCrossAccountVpcs() == null) ? 0 : getCrossAccountVpcs().hashCode());
         hashCode = prime * hashCode + ((getCustomDomainCertificateArn() == null) ? 0 : getCustomDomainCertificateArn().hashCode());
         hashCode = prime * hashCode + ((getCustomDomainCertificateExpiryTime() == null) ? 0 : getCustomDomainCertificateExpiryTime().hashCode());
         hashCode = prime * hashCode + ((getCustomDomainName() == null) ? 0 : getCustomDomainName().hashCode());

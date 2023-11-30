@@ -42,6 +42,10 @@ public class ListEntitiesRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> OWNERSHIPTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OwnershipType").build();
+    private static final MarshallingInfo<StructuredPojo> ENTITYTYPEFILTERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EntityTypeFilters").build();
+    private static final MarshallingInfo<StructuredPojo> ENTITYTYPESORT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EntityTypeSort").build();
 
     private static final ListEntitiesRequestMarshaller instance = new ListEntitiesRequestMarshaller();
 
@@ -66,6 +70,8 @@ public class ListEntitiesRequestMarshaller {
             protocolMarshaller.marshall(listEntitiesRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listEntitiesRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listEntitiesRequest.getOwnershipType(), OWNERSHIPTYPE_BINDING);
+            protocolMarshaller.marshall(listEntitiesRequest.getEntityTypeFilters(), ENTITYTYPEFILTERS_BINDING);
+            protocolMarshaller.marshall(listEntitiesRequest.getEntityTypeSort(), ENTITYTYPESORT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

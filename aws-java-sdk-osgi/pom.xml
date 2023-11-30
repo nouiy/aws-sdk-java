@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.601-SNAPSHOT</version>
+    <version>1.12.602</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,18 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-marketplaceagreement</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-marketplacedeployment</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-cleanroomsml</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -2354,6 +2366,14 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>AWS Marketplace Agreement</title>
+                                  <packages>com.amazonaws.services.marketplaceagreement*</packages>
+                              </group>
+                              <group>
+                                  <title>AWS Marketplace Deployment</title>
+                                  <packages>com.amazonaws.services.marketplacedeployment*</packages>
+                              </group>
                               <group>
                                   <title>cleanrooms-ml</title>
                                   <packages>com.amazonaws.services.cleanroomsml*</packages>

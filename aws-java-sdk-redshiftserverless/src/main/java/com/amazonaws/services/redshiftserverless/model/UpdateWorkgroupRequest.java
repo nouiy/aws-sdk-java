@@ -34,10 +34,9 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
-     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
-     * and available metrics, see <a href=
+     * <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>, <code>enable_user_activity_logging</code>,
+     * <code>query_group</code>, <code>search_path</code>, and query monitoring metrics that let you define performance
+     * boundaries. For more information about query monitoring rules and available metrics, see <a href=
      * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
      * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
@@ -132,16 +131,15 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
-     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
-     * and available metrics, see <a href=
+     * <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>, <code>enable_user_activity_logging</code>,
+     * <code>query_group</code>, <code>search_path</code>, and query monitoring metrics that let you define performance
+     * boundaries. For more information about query monitoring rules and available metrics, see <a href=
      * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
      * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
      * 
      * @return An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     *         <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     *         <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>,
      *         <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
      *         monitoring metrics that let you define performance boundaries. For more information about query
      *         monitoring rules and available metrics, see <a href=
@@ -156,17 +154,16 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
-     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
-     * and available metrics, see <a href=
+     * <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>, <code>enable_user_activity_logging</code>,
+     * <code>query_group</code>, <code>search_path</code>, and query monitoring metrics that let you define performance
+     * boundaries. For more information about query monitoring rules and available metrics, see <a href=
      * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
      * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
      * 
      * @param configParameters
      *        An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     *        <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     *        <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>,
      *        <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
      *        monitoring metrics that let you define performance boundaries. For more information about query monitoring
      *        rules and available metrics, see <a href=
@@ -186,10 +183,9 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
-     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
-     * and available metrics, see <a href=
+     * <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>, <code>enable_user_activity_logging</code>,
+     * <code>query_group</code>, <code>search_path</code>, and query monitoring metrics that let you define performance
+     * boundaries. For more information about query monitoring rules and available metrics, see <a href=
      * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
      * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
@@ -201,7 +197,7 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param configParameters
      *        An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     *        <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     *        <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>,
      *        <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
      *        monitoring metrics that let you define performance boundaries. For more information about query monitoring
      *        rules and available metrics, see <a href=
@@ -223,17 +219,16 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
-     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
-     * and available metrics, see <a href=
+     * <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>, <code>enable_user_activity_logging</code>,
+     * <code>query_group</code>, <code>search_path</code>, and query monitoring metrics that let you define performance
+     * boundaries. For more information about query monitoring rules and available metrics, see <a href=
      * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
      * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
      * 
      * @param configParameters
      *        An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
-     *        <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     *        <code>datestyle</code>, <code>enable_case_sensitive_identifier</code>,
      *        <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
      *        monitoring metrics that let you define performance boundaries. For more information about query monitoring
      *        rules and available metrics, see <a href=

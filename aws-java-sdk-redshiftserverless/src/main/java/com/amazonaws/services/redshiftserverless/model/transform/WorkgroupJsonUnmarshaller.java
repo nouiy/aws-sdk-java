@@ -62,6 +62,12 @@ public class WorkgroupJsonUnmarshaller implements Unmarshaller<Workgroup, JsonUn
                     context.nextToken();
                     workgroup.setCreationDate(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("crossAccountVpcs", targetDepth)) {
+                    context.nextToken();
+                    workgroup.setCrossAccountVpcs(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("customDomainCertificateArn", targetDepth)) {
                     context.nextToken();
                     workgroup.setCustomDomainCertificateArn(context.getUnmarshaller(String.class).unmarshall(context));
