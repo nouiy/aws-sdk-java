@@ -25,6 +25,14 @@ import java.util.concurrent.ExecutorService;
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
+ * <note>
+ * <p>
+ * <b>Powered by Amazon Bedrock</b>: Amazon Web Services implements <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html">automated abuse detection</a>.
+ * Because Amazon Q in Connect is built on Amazon Bedrock, users can take full advantage of the controls implemented in
+ * Amazon Bedrock to enforce safety, security, and the responsible use of artificial intelligence (AI).
+ * </p>
+ * </note>
  * <p>
  * Amazon Q in Connect is a generative AI customer service assistant. It is an LLM-enhanced evolution of Amazon Connect
  * Wisdom that delivers real-time recommendations to help contact center agents resolve customer issues quickly and
@@ -1035,6 +1043,39 @@ public class AmazonQConnectAsyncClient extends AmazonQConnectClient implements A
 
                 try {
                     result = executeNotifyRecommendationsReceived(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutFeedbackResult> putFeedbackAsync(PutFeedbackRequest request) {
+
+        return putFeedbackAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutFeedbackResult> putFeedbackAsync(final PutFeedbackRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutFeedbackRequest, PutFeedbackResult> asyncHandler) {
+        final PutFeedbackRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutFeedbackResult>() {
+            @Override
+            public PutFeedbackResult call() throws Exception {
+                PutFeedbackResult result = null;
+
+                try {
+                    result = executePutFeedback(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -100,6 +100,12 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </ul>
      */
     private String lockState;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the retention rule.
+     * </p>
+     */
+    private String ruleArn;
 
     /**
      * <p>
@@ -778,6 +784,46 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the retention rule.
+     * </p>
+     * 
+     * @param ruleArn
+     *        The Amazon Resource Name (ARN) of the retention rule.
+     */
+
+    public void setRuleArn(String ruleArn) {
+        this.ruleArn = ruleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the retention rule.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the retention rule.
+     */
+
+    public String getRuleArn() {
+        return this.ruleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the retention rule.
+     * </p>
+     * 
+     * @param ruleArn
+     *        The Amazon Resource Name (ARN) of the retention rule.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRuleResult withRuleArn(String ruleArn) {
+        setRuleArn(ruleArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -806,7 +852,9 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
         if (getLockConfiguration() != null)
             sb.append("LockConfiguration: ").append(getLockConfiguration()).append(",");
         if (getLockState() != null)
-            sb.append("LockState: ").append(getLockState());
+            sb.append("LockState: ").append(getLockState()).append(",");
+        if (getRuleArn() != null)
+            sb.append("RuleArn: ").append(getRuleArn());
         sb.append("}");
         return sb.toString();
     }
@@ -857,6 +905,10 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
             return false;
         if (other.getLockState() != null && other.getLockState().equals(this.getLockState()) == false)
             return false;
+        if (other.getRuleArn() == null ^ this.getRuleArn() == null)
+            return false;
+        if (other.getRuleArn() != null && other.getRuleArn().equals(this.getRuleArn()) == false)
+            return false;
         return true;
     }
 
@@ -874,6 +926,7 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getLockConfiguration() == null) ? 0 : getLockConfiguration().hashCode());
         hashCode = prime * hashCode + ((getLockState() == null) ? 0 : getLockState().hashCode());
+        hashCode = prime * hashCode + ((getRuleArn() == null) ? 0 : getRuleArn().hashCode());
         return hashCode;
     }
 

@@ -1,3 +1,16 @@
+# __1.12.604__ __2023-12-01__
+## __Amazon Q Connect__
+  - ### Features
+    - This release adds the PutFeedback API and allows providing feedback against the specified assistant for the specified target.
+
+## __Amazon Recycle Bin__
+  - ### Features
+    - Added resource identifier in the output and updated error handling.
+
+## __Amazon Verified Permissions__
+  - ### Features
+    - Adds description field to PolicyStore API's and namespaces field to GetSchema.
+
 # __1.12.603__ __2023-11-30__
 ## __AWS ARC - Zonal Shift__
   - ### Features

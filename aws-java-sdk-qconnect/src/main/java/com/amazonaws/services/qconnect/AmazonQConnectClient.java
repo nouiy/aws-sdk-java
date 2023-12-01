@@ -51,6 +51,14 @@ import com.amazonaws.services.qconnect.model.transform.*;
  * Client for accessing Amazon Q Connect. All service calls made using this client are blocking, and will not return
  * until the service call completes.
  * <p>
+ * <note>
+ * <p>
+ * <b>Powered by Amazon Bedrock</b>: Amazon Web Services implements <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html">automated abuse detection</a>.
+ * Because Amazon Q in Connect is built on Amazon Bedrock, users can take full advantage of the controls implemented in
+ * Amazon Bedrock to enforce safety, security, and the responsible use of artificial intelligence (AI).
+ * </p>
+ * </note>
  * <p>
  * Amazon Q in Connect is a generative AI customer service assistant. It is an LLM-enhanced evolution of Amazon Connect
  * Wisdom that delivers real-time recommendations to help contact center agents resolve customer issues quickly and
@@ -479,7 +487,7 @@ public class AmazonQConnectClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Creates a Amazon Q quick response.
+     * Creates an Amazon Q quick response.
      * </p>
      * 
      * @param createQuickResponseRequest
@@ -2043,6 +2051,68 @@ public class AmazonQConnectClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Provides feedback against the specified assistant for the specified target. This API only supports generative
+     * targets.
+     * </p>
+     * 
+     * @param putFeedbackRequest
+     * @return Result of the PutFeedback operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonQConnect.PutFeedback
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/PutFeedback" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public PutFeedbackResult putFeedback(PutFeedbackRequest request) {
+        request = beforeClientExecution(request);
+        return executePutFeedback(request);
+    }
+
+    @SdkInternalApi
+    final PutFeedbackResult executePutFeedback(PutFeedbackRequest putFeedbackRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putFeedbackRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutFeedbackRequest> request = null;
+        Response<PutFeedbackResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutFeedbackRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putFeedbackRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QConnect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutFeedback");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutFeedbackResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new PutFeedbackResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Performs a manual search against the specified assistant. To retrieve recommendations for an assistant, use <a
      * href="https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetRecommendations.html">
      * GetRecommendations</a>.
@@ -2234,7 +2304,7 @@ public class AmazonQConnectClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Searches existing Amazon Q quick responses in a Amazon Q knowledge base.
+     * Searches existing Amazon Q quick responses in an Amazon Q knowledge base.
      * </p>
      * 
      * @param searchQuickResponsesRequest

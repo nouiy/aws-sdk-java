@@ -53,6 +53,12 @@ public class GetPolicyStoreResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      */
     private java.util.Date lastUpdatedDate;
+    /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     */
+    private String description;
 
     /**
      * <p>
@@ -255,6 +261,46 @@ public class GetPolicyStoreResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     * 
+     * @param description
+     *        Descriptive text that you can provide to help with identification of the current policy store.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     * 
+     * @return Descriptive text that you can provide to help with identification of the current policy store.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     * 
+     * @param description
+     *        Descriptive text that you can provide to help with identification of the current policy store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetPolicyStoreResult withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -275,7 +321,9 @@ public class GetPolicyStoreResult extends com.amazonaws.AmazonWebServiceResult<c
         if (getCreatedDate() != null)
             sb.append("CreatedDate: ").append(getCreatedDate()).append(",");
         if (getLastUpdatedDate() != null)
-            sb.append("LastUpdatedDate: ").append(getLastUpdatedDate());
+            sb.append("LastUpdatedDate: ").append(getLastUpdatedDate()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -310,6 +358,10 @@ public class GetPolicyStoreResult extends com.amazonaws.AmazonWebServiceResult<c
             return false;
         if (other.getLastUpdatedDate() != null && other.getLastUpdatedDate().equals(this.getLastUpdatedDate()) == false)
             return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
         return true;
     }
 
@@ -323,6 +375,7 @@ public class GetPolicyStoreResult extends com.amazonaws.AmazonWebServiceResult<c
         hashCode = prime * hashCode + ((getValidationSettings() == null) ? 0 : getValidationSettings().hashCode());
         hashCode = prime * hashCode + ((getCreatedDate() == null) ? 0 : getCreatedDate().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedDate() == null) ? 0 : getLastUpdatedDate().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 

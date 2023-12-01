@@ -33,6 +33,10 @@ public class PolicyStoreItemMarshaller {
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<java.util.Date> CREATEDDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdDate").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<java.util.Date> LASTUPDATEDDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdatedDate").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
 
     private static final PolicyStoreItemMarshaller instance = new PolicyStoreItemMarshaller();
 
@@ -53,6 +57,8 @@ public class PolicyStoreItemMarshaller {
             protocolMarshaller.marshall(policyStoreItem.getPolicyStoreId(), POLICYSTOREID_BINDING);
             protocolMarshaller.marshall(policyStoreItem.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(policyStoreItem.getCreatedDate(), CREATEDDATE_BINDING);
+            protocolMarshaller.marshall(policyStoreItem.getLastUpdatedDate(), LASTUPDATEDDATE_BINDING);
+            protocolMarshaller.marshall(policyStoreItem.getDescription(), DESCRIPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

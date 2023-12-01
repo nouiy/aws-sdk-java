@@ -86,6 +86,10 @@ public class UnlockRuleResultJsonUnmarshaller implements Unmarshaller<UnlockRule
                     context.nextToken();
                     unlockRuleResult.setLockEndTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("RuleArn", targetDepth)) {
+                    context.nextToken();
+                    unlockRuleResult.setRuleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

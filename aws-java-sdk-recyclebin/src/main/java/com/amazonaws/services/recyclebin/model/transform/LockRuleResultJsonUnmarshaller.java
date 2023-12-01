@@ -82,6 +82,10 @@ public class LockRuleResultJsonUnmarshaller implements Unmarshaller<LockRuleResu
                     context.nextToken();
                     lockRuleResult.setLockState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("RuleArn", targetDepth)) {
+                    context.nextToken();
+                    lockRuleResult.setRuleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -31,6 +31,8 @@ public class UpdatePolicyStoreRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("policyStoreId").build();
     private static final MarshallingInfo<StructuredPojo> VALIDATIONSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("validationSettings").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
 
     private static final UpdatePolicyStoreRequestMarshaller instance = new UpdatePolicyStoreRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class UpdatePolicyStoreRequestMarshaller {
         try {
             protocolMarshaller.marshall(updatePolicyStoreRequest.getPolicyStoreId(), POLICYSTOREID_BINDING);
             protocolMarshaller.marshall(updatePolicyStoreRequest.getValidationSettings(), VALIDATIONSETTINGS_BINDING);
+            protocolMarshaller.marshall(updatePolicyStoreRequest.getDescription(), DESCRIPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

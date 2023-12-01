@@ -34,6 +34,8 @@ public class CreatePolicyStoreRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<StructuredPojo> VALIDATIONSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("validationSettings").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
 
     private static final CreatePolicyStoreRequestMarshaller instance = new CreatePolicyStoreRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class CreatePolicyStoreRequestMarshaller {
         try {
             protocolMarshaller.marshall(createPolicyStoreRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createPolicyStoreRequest.getValidationSettings(), VALIDATIONSETTINGS_BINDING);
+            protocolMarshaller.marshall(createPolicyStoreRequest.getDescription(), DESCRIPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

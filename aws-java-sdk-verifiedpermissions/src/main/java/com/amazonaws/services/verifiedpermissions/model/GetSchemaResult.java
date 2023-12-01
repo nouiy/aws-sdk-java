@@ -47,6 +47,12 @@ public class GetSchemaResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </p>
      */
     private java.util.Date lastUpdatedDate;
+    /**
+     * <p>
+     * The namespaces of the entities referenced by this schema.
+     * </p>
+     */
+    private java.util.List<String> namespaces;
 
     /**
      * <p>
@@ -209,6 +215,76 @@ public class GetSchemaResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
+     * <p>
+     * The namespaces of the entities referenced by this schema.
+     * </p>
+     * 
+     * @return The namespaces of the entities referenced by this schema.
+     */
+
+    public java.util.List<String> getNamespaces() {
+        return namespaces;
+    }
+
+    /**
+     * <p>
+     * The namespaces of the entities referenced by this schema.
+     * </p>
+     * 
+     * @param namespaces
+     *        The namespaces of the entities referenced by this schema.
+     */
+
+    public void setNamespaces(java.util.Collection<String> namespaces) {
+        if (namespaces == null) {
+            this.namespaces = null;
+            return;
+        }
+
+        this.namespaces = new java.util.ArrayList<String>(namespaces);
+    }
+
+    /**
+     * <p>
+     * The namespaces of the entities referenced by this schema.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setNamespaces(java.util.Collection)} or {@link #withNamespaces(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param namespaces
+     *        The namespaces of the entities referenced by this schema.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSchemaResult withNamespaces(String... namespaces) {
+        if (this.namespaces == null) {
+            setNamespaces(new java.util.ArrayList<String>(namespaces.length));
+        }
+        for (String ele : namespaces) {
+            this.namespaces.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The namespaces of the entities referenced by this schema.
+     * </p>
+     * 
+     * @param namespaces
+     *        The namespaces of the entities referenced by this schema.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSchemaResult withNamespaces(java.util.Collection<String> namespaces) {
+        setNamespaces(namespaces);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -227,7 +303,9 @@ public class GetSchemaResult extends com.amazonaws.AmazonWebServiceResult<com.am
         if (getCreatedDate() != null)
             sb.append("CreatedDate: ").append(getCreatedDate()).append(",");
         if (getLastUpdatedDate() != null)
-            sb.append("LastUpdatedDate: ").append(getLastUpdatedDate());
+            sb.append("LastUpdatedDate: ").append(getLastUpdatedDate()).append(",");
+        if (getNamespaces() != null)
+            sb.append("Namespaces: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -258,6 +336,10 @@ public class GetSchemaResult extends com.amazonaws.AmazonWebServiceResult<com.am
             return false;
         if (other.getLastUpdatedDate() != null && other.getLastUpdatedDate().equals(this.getLastUpdatedDate()) == false)
             return false;
+        if (other.getNamespaces() == null ^ this.getNamespaces() == null)
+            return false;
+        if (other.getNamespaces() != null && other.getNamespaces().equals(this.getNamespaces()) == false)
+            return false;
         return true;
     }
 
@@ -270,6 +352,7 @@ public class GetSchemaResult extends com.amazonaws.AmazonWebServiceResult<com.am
         hashCode = prime * hashCode + ((getSchema() == null) ? 0 : getSchema().hashCode());
         hashCode = prime * hashCode + ((getCreatedDate() == null) ? 0 : getCreatedDate().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedDate() == null) ? 0 : getLastUpdatedDate().hashCode());
+        hashCode = prime * hashCode + ((getNamespaces() == null) ? 0 : getNamespaces().hashCode());
         return hashCode;
     }
 

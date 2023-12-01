@@ -173,6 +173,11 @@ public class AbstractAmazonQConnect implements AmazonQConnect {
     }
 
     @Override
+    public PutFeedbackResult putFeedback(PutFeedbackRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public QueryAssistantResult queryAssistant(QueryAssistantRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

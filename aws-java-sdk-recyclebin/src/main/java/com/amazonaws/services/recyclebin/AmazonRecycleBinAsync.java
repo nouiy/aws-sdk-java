@@ -39,9 +39,8 @@ import com.amazonaws.services.recyclebin.model.*;
  * resource from the Recycle Bin, the resource is removed from the Recycle Bin, and you can then use it in the same way
  * you use any other resource of that type in your account. If the retention period expires and the resource is not
  * restored, the resource is permanently deleted from the Recycle Bin and is no longer available for recovery. For more
- * information about Recycle Bin, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-recycle-bin.html"> Recycle Bin</a> in the
- * <i>Amazon Elastic Compute Cloud User Guide</i>.
+ * information about Recycle Bin, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">
+ * Recycle Bin</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

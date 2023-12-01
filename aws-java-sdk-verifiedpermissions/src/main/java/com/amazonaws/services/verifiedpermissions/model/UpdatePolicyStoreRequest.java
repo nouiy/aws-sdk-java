@@ -37,6 +37,12 @@ public class UpdatePolicyStoreRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private ValidationSettings validationSettings;
+    /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     */
+    private String description;
 
     /**
      * <p>
@@ -119,6 +125,46 @@ public class UpdatePolicyStoreRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     * 
+     * @param description
+     *        Descriptive text that you can provide to help with identification of the current policy store.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     * 
+     * @return Descriptive text that you can provide to help with identification of the current policy store.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     * 
+     * @param description
+     *        Descriptive text that you can provide to help with identification of the current policy store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePolicyStoreRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +179,9 @@ public class UpdatePolicyStoreRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getPolicyStoreId() != null)
             sb.append("PolicyStoreId: ").append(getPolicyStoreId()).append(",");
         if (getValidationSettings() != null)
-            sb.append("ValidationSettings: ").append(getValidationSettings());
+            sb.append("ValidationSettings: ").append(getValidationSettings()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +204,10 @@ public class UpdatePolicyStoreRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getValidationSettings() != null && other.getValidationSettings().equals(this.getValidationSettings()) == false)
             return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +218,7 @@ public class UpdatePolicyStoreRequest extends com.amazonaws.AmazonWebServiceRequ
 
         hashCode = prime * hashCode + ((getPolicyStoreId() == null) ? 0 : getPolicyStoreId().hashCode());
         hashCode = prime * hashCode + ((getValidationSettings() == null) ? 0 : getValidationSettings().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 

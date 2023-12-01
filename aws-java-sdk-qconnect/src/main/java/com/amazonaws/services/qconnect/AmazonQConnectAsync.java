@@ -25,6 +25,14 @@ import com.amazonaws.services.qconnect.model.*;
  * {@link com.amazonaws.services.qconnect.AbstractAmazonQConnectAsync} instead.
  * </p>
  * <p>
+ * <note>
+ * <p>
+ * <b>Powered by Amazon Bedrock</b>: Amazon Web Services implements <a
+ * href="https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html">automated abuse detection</a>.
+ * Because Amazon Q in Connect is built on Amazon Bedrock, users can take full advantage of the controls implemented in
+ * Amazon Bedrock to enforce safety, security, and the responsible use of artificial intelligence (AI).
+ * </p>
+ * </note>
  * <p>
  * Amazon Q in Connect is a generative AI customer service assistant. It is an LLM-enhanced evolution of Amazon Connect
  * Wisdom that delivers real-time recommendations to help contact center agents resolve customer issues quickly and
@@ -257,7 +265,7 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
 
     /**
      * <p>
-     * Creates a Amazon Q quick response.
+     * Creates an Amazon Q quick response.
      * </p>
      * 
      * @param createQuickResponseRequest
@@ -270,7 +278,7 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
 
     /**
      * <p>
-     * Creates a Amazon Q quick response.
+     * Creates an Amazon Q quick response.
      * </p>
      * 
      * @param createQuickResponseRequest
@@ -1088,6 +1096,39 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
 
     /**
      * <p>
+     * Provides feedback against the specified assistant for the specified target. This API only supports generative
+     * targets.
+     * </p>
+     * 
+     * @param putFeedbackRequest
+     * @return A Java Future containing the result of the PutFeedback operation returned by the service.
+     * @sample AmazonQConnectAsync.PutFeedback
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/PutFeedback" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutFeedbackResult> putFeedbackAsync(PutFeedbackRequest putFeedbackRequest);
+
+    /**
+     * <p>
+     * Provides feedback against the specified assistant for the specified target. This API only supports generative
+     * targets.
+     * </p>
+     * 
+     * @param putFeedbackRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutFeedback operation returned by the service.
+     * @sample AmazonQConnectAsyncHandler.PutFeedback
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/PutFeedback" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutFeedbackResult> putFeedbackAsync(PutFeedbackRequest putFeedbackRequest,
+            com.amazonaws.handlers.AsyncHandler<PutFeedbackRequest, PutFeedbackResult> asyncHandler);
+
+    /**
+     * <p>
      * Performs a manual search against the specified assistant. To retrieve recommendations for an assistant, use <a
      * href="https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetRecommendations.html">
      * GetRecommendations</a>.
@@ -1189,7 +1230,7 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
 
     /**
      * <p>
-     * Searches existing Amazon Q quick responses in a Amazon Q knowledge base.
+     * Searches existing Amazon Q quick responses in an Amazon Q knowledge base.
      * </p>
      * 
      * @param searchQuickResponsesRequest
@@ -1202,7 +1243,7 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
 
     /**
      * <p>
-     * Searches existing Amazon Q quick responses in a Amazon Q knowledge base.
+     * Searches existing Amazon Q quick responses in an Amazon Q knowledge base.
      * </p>
      * 
      * @param searchQuickResponsesRequest

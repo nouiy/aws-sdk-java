@@ -64,6 +64,10 @@ public class RuleSummaryJsonUnmarshaller implements Unmarshaller<RuleSummary, Js
                     context.nextToken();
                     ruleSummary.setLockState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("RuleArn", targetDepth)) {
+                    context.nextToken();
+                    ruleSummary.setRuleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

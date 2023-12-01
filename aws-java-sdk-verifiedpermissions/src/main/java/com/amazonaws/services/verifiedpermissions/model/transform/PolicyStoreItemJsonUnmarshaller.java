@@ -60,6 +60,14 @@ public class PolicyStoreItemJsonUnmarshaller implements Unmarshaller<PolicyStore
                     context.nextToken();
                     policyStoreItem.setCreatedDate(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("lastUpdatedDate", targetDepth)) {
+                    context.nextToken();
+                    policyStoreItem.setLastUpdatedDate(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("description", targetDepth)) {
+                    context.nextToken();
+                    policyStoreItem.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

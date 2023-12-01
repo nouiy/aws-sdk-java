@@ -64,6 +64,12 @@ public class GetSchemaResultJsonUnmarshaller implements Unmarshaller<GetSchemaRe
                     context.nextToken();
                     getSchemaResult.setLastUpdatedDate(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("namespaces", targetDepth)) {
+                    context.nextToken();
+                    getSchemaResult.setNamespaces(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

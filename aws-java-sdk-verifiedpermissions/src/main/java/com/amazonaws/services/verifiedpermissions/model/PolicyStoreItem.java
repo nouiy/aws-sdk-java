@@ -51,6 +51,18 @@ public class PolicyStoreItem implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private java.util.Date createdDate;
+    /**
+     * <p>
+     * The date and time the policy store was most recently updated.
+     * </p>
+     */
+    private java.util.Date lastUpdatedDate;
+    /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     */
+    private String description;
 
     /**
      * <p>
@@ -173,6 +185,86 @@ public class PolicyStoreItem implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The date and time the policy store was most recently updated.
+     * </p>
+     * 
+     * @param lastUpdatedDate
+     *        The date and time the policy store was most recently updated.
+     */
+
+    public void setLastUpdatedDate(java.util.Date lastUpdatedDate) {
+        this.lastUpdatedDate = lastUpdatedDate;
+    }
+
+    /**
+     * <p>
+     * The date and time the policy store was most recently updated.
+     * </p>
+     * 
+     * @return The date and time the policy store was most recently updated.
+     */
+
+    public java.util.Date getLastUpdatedDate() {
+        return this.lastUpdatedDate;
+    }
+
+    /**
+     * <p>
+     * The date and time the policy store was most recently updated.
+     * </p>
+     * 
+     * @param lastUpdatedDate
+     *        The date and time the policy store was most recently updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PolicyStoreItem withLastUpdatedDate(java.util.Date lastUpdatedDate) {
+        setLastUpdatedDate(lastUpdatedDate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     * 
+     * @param description
+     *        Descriptive text that you can provide to help with identification of the current policy store.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     * 
+     * @return Descriptive text that you can provide to help with identification of the current policy store.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * Descriptive text that you can provide to help with identification of the current policy store.
+     * </p>
+     * 
+     * @param description
+     *        Descriptive text that you can provide to help with identification of the current policy store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PolicyStoreItem withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -189,7 +281,11 @@ public class PolicyStoreItem implements Serializable, Cloneable, StructuredPojo 
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
         if (getCreatedDate() != null)
-            sb.append("CreatedDate: ").append(getCreatedDate());
+            sb.append("CreatedDate: ").append(getCreatedDate()).append(",");
+        if (getLastUpdatedDate() != null)
+            sb.append("LastUpdatedDate: ").append(getLastUpdatedDate()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -216,6 +312,14 @@ public class PolicyStoreItem implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getCreatedDate() != null && other.getCreatedDate().equals(this.getCreatedDate()) == false)
             return false;
+        if (other.getLastUpdatedDate() == null ^ this.getLastUpdatedDate() == null)
+            return false;
+        if (other.getLastUpdatedDate() != null && other.getLastUpdatedDate().equals(this.getLastUpdatedDate()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
         return true;
     }
 
@@ -227,6 +331,8 @@ public class PolicyStoreItem implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getPolicyStoreId() == null) ? 0 : getPolicyStoreId().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getCreatedDate() == null) ? 0 : getCreatedDate().hashCode());
+        hashCode = prime * hashCode + ((getLastUpdatedDate() == null) ? 0 : getLastUpdatedDate().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 
