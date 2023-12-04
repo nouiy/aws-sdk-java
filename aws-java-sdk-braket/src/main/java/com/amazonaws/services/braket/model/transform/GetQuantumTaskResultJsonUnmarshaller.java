@@ -48,6 +48,12 @@ public class GetQuantumTaskResultJsonUnmarshaller implements Unmarshaller<GetQua
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("associations", targetDepth)) {
+                    context.nextToken();
+                    getQuantumTaskResult.setAssociations(new ListUnmarshaller<Association>(AssociationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("createdAt", targetDepth)) {
                     context.nextToken();
                     getQuantumTaskResult.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));

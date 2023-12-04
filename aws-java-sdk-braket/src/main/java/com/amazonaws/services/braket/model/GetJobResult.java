@@ -32,6 +32,12 @@ public class GetJobResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
     private AlgorithmSpecification algorithmSpecification;
     /**
      * <p>
+     * The list of Amazon Braket resources associated with the hybrid job.
+     * </p>
+     */
+    private java.util.List<Association> associations;
+    /**
+     * <p>
      * The billable time the Amazon Braket job used to complete.
      * </p>
      */
@@ -194,6 +200,76 @@ public class GetJobResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
 
     public GetJobResult withAlgorithmSpecification(AlgorithmSpecification algorithmSpecification) {
         setAlgorithmSpecification(algorithmSpecification);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of Amazon Braket resources associated with the hybrid job.
+     * </p>
+     * 
+     * @return The list of Amazon Braket resources associated with the hybrid job.
+     */
+
+    public java.util.List<Association> getAssociations() {
+        return associations;
+    }
+
+    /**
+     * <p>
+     * The list of Amazon Braket resources associated with the hybrid job.
+     * </p>
+     * 
+     * @param associations
+     *        The list of Amazon Braket resources associated with the hybrid job.
+     */
+
+    public void setAssociations(java.util.Collection<Association> associations) {
+        if (associations == null) {
+            this.associations = null;
+            return;
+        }
+
+        this.associations = new java.util.ArrayList<Association>(associations);
+    }
+
+    /**
+     * <p>
+     * The list of Amazon Braket resources associated with the hybrid job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAssociations(java.util.Collection)} or {@link #withAssociations(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param associations
+     *        The list of Amazon Braket resources associated with the hybrid job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetJobResult withAssociations(Association... associations) {
+        if (this.associations == null) {
+            setAssociations(new java.util.ArrayList<Association>(associations.length));
+        }
+        for (Association ele : associations) {
+            this.associations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of Amazon Braket resources associated with the hybrid job.
+     * </p>
+     * 
+     * @param associations
+     *        The list of Amazon Braket resources associated with the hybrid job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetJobResult withAssociations(java.util.Collection<Association> associations) {
+        setAssociations(associations);
         return this;
     }
 
@@ -1142,6 +1218,8 @@ public class GetJobResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
         sb.append("{");
         if (getAlgorithmSpecification() != null)
             sb.append("AlgorithmSpecification: ").append(getAlgorithmSpecification()).append(",");
+        if (getAssociations() != null)
+            sb.append("Associations: ").append(getAssociations()).append(",");
         if (getBillableDuration() != null)
             sb.append("BillableDuration: ").append(getBillableDuration()).append(",");
         if (getCheckpointConfig() != null)
@@ -1197,6 +1275,10 @@ public class GetJobResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
         if (other.getAlgorithmSpecification() == null ^ this.getAlgorithmSpecification() == null)
             return false;
         if (other.getAlgorithmSpecification() != null && other.getAlgorithmSpecification().equals(this.getAlgorithmSpecification()) == false)
+            return false;
+        if (other.getAssociations() == null ^ this.getAssociations() == null)
+            return false;
+        if (other.getAssociations() != null && other.getAssociations().equals(this.getAssociations()) == false)
             return false;
         if (other.getBillableDuration() == null ^ this.getBillableDuration() == null)
             return false;
@@ -1283,6 +1365,7 @@ public class GetJobResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAlgorithmSpecification() == null) ? 0 : getAlgorithmSpecification().hashCode());
+        hashCode = prime * hashCode + ((getAssociations() == null) ? 0 : getAssociations().hashCode());
         hashCode = prime * hashCode + ((getBillableDuration() == null) ? 0 : getBillableDuration().hashCode());
         hashCode = prime * hashCode + ((getCheckpointConfig() == null) ? 0 : getCheckpointConfig().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());

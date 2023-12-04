@@ -70,6 +70,318 @@ class StackCreateComplete {
         }
     }
 
+    static class IsUPDATE_COMPLETEMatcher extends WaiterAcceptor<DescribeStacksResult> {
+        private static final JsonNode expectedResult;
+
+        static {
+            try {
+                expectedResult = ObjectMapperSingleton.getObjectMapper().readTree("\"UPDATE_COMPLETE\"");
+            } catch (IOException ioe) {
+                throw new RuntimeException(ioe);
+            }
+        }
+
+        private static final JmesPathExpression ast = new JmesPathProjection(new JmesPathFlatten(new JmesPathField("Stacks")), new JmesPathField("StackStatus"));
+
+        /**
+         * Takes the result and determines whether the state of the resource matches the expected state. To determine
+         * the current state of the resource, JmesPath expression is evaluated and compared against the expected result.
+         * 
+         * @param result
+         *        Corresponding result of the operation
+         * @return True if current state of the resource matches the expected state, False otherwise
+         */
+        @Override
+        public boolean matches(DescribeStacksResult result) {
+            JsonNode queryNode = ObjectMapperSingleton.getObjectMapper().valueToTree(result);
+            JsonNode finalResult = ast.accept(new JmesPathEvaluationVisitor(), queryNode);
+            return AcceptorPathMatcher.pathAll(expectedResult, finalResult);
+        }
+
+        /**
+         * Represents the current waiter state in the case where resource state matches the expected state
+         * 
+         * @return Corresponding state of the waiter
+         */
+        @Override
+        public WaiterState getState() {
+            return WaiterState.SUCCESS;
+        }
+    }
+
+    static class IsUPDATE_IN_PROGRESSMatcher extends WaiterAcceptor<DescribeStacksResult> {
+        private static final JsonNode expectedResult;
+
+        static {
+            try {
+                expectedResult = ObjectMapperSingleton.getObjectMapper().readTree("\"UPDATE_IN_PROGRESS\"");
+            } catch (IOException ioe) {
+                throw new RuntimeException(ioe);
+            }
+        }
+
+        private static final JmesPathExpression ast = new JmesPathProjection(new JmesPathFlatten(new JmesPathField("Stacks")), new JmesPathField("StackStatus"));
+
+        /**
+         * Takes the result and determines whether the state of the resource matches the expected state. To determine
+         * the current state of the resource, JmesPath expression is evaluated and compared against the expected result.
+         * 
+         * @param result
+         *        Corresponding result of the operation
+         * @return True if current state of the resource matches the expected state, False otherwise
+         */
+        @Override
+        public boolean matches(DescribeStacksResult result) {
+            JsonNode queryNode = ObjectMapperSingleton.getObjectMapper().valueToTree(result);
+            JsonNode finalResult = ast.accept(new JmesPathEvaluationVisitor(), queryNode);
+            return AcceptorPathMatcher.pathAll(expectedResult, finalResult);
+        }
+
+        /**
+         * Represents the current waiter state in the case where resource state matches the expected state
+         * 
+         * @return Corresponding state of the waiter
+         */
+        @Override
+        public WaiterState getState() {
+            return WaiterState.SUCCESS;
+        }
+    }
+
+    static class IsUPDATE_COMPLETE_CLEANUP_IN_PROGRESSMatcher extends WaiterAcceptor<DescribeStacksResult> {
+        private static final JsonNode expectedResult;
+
+        static {
+            try {
+                expectedResult = ObjectMapperSingleton.getObjectMapper().readTree("\"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS\"");
+            } catch (IOException ioe) {
+                throw new RuntimeException(ioe);
+            }
+        }
+
+        private static final JmesPathExpression ast = new JmesPathProjection(new JmesPathFlatten(new JmesPathField("Stacks")), new JmesPathField("StackStatus"));
+
+        /**
+         * Takes the result and determines whether the state of the resource matches the expected state. To determine
+         * the current state of the resource, JmesPath expression is evaluated and compared against the expected result.
+         * 
+         * @param result
+         *        Corresponding result of the operation
+         * @return True if current state of the resource matches the expected state, False otherwise
+         */
+        @Override
+        public boolean matches(DescribeStacksResult result) {
+            JsonNode queryNode = ObjectMapperSingleton.getObjectMapper().valueToTree(result);
+            JsonNode finalResult = ast.accept(new JmesPathEvaluationVisitor(), queryNode);
+            return AcceptorPathMatcher.pathAll(expectedResult, finalResult);
+        }
+
+        /**
+         * Represents the current waiter state in the case where resource state matches the expected state
+         * 
+         * @return Corresponding state of the waiter
+         */
+        @Override
+        public WaiterState getState() {
+            return WaiterState.SUCCESS;
+        }
+    }
+
+    static class IsUPDATE_FAILEDMatcher extends WaiterAcceptor<DescribeStacksResult> {
+        private static final JsonNode expectedResult;
+
+        static {
+            try {
+                expectedResult = ObjectMapperSingleton.getObjectMapper().readTree("\"UPDATE_FAILED\"");
+            } catch (IOException ioe) {
+                throw new RuntimeException(ioe);
+            }
+        }
+
+        private static final JmesPathExpression ast = new JmesPathProjection(new JmesPathFlatten(new JmesPathField("Stacks")), new JmesPathField("StackStatus"));
+
+        /**
+         * Takes the result and determines whether the state of the resource matches the expected state. To determine
+         * the current state of the resource, JmesPath expression is evaluated and compared against the expected result.
+         * 
+         * @param result
+         *        Corresponding result of the operation
+         * @return True if current state of the resource matches the expected state, False otherwise
+         */
+        @Override
+        public boolean matches(DescribeStacksResult result) {
+            JsonNode queryNode = ObjectMapperSingleton.getObjectMapper().valueToTree(result);
+            JsonNode finalResult = ast.accept(new JmesPathEvaluationVisitor(), queryNode);
+            return AcceptorPathMatcher.pathAll(expectedResult, finalResult);
+        }
+
+        /**
+         * Represents the current waiter state in the case where resource state matches the expected state
+         * 
+         * @return Corresponding state of the waiter
+         */
+        @Override
+        public WaiterState getState() {
+            return WaiterState.SUCCESS;
+        }
+    }
+
+    static class IsUPDATE_ROLLBACK_IN_PROGRESSMatcher extends WaiterAcceptor<DescribeStacksResult> {
+        private static final JsonNode expectedResult;
+
+        static {
+            try {
+                expectedResult = ObjectMapperSingleton.getObjectMapper().readTree("\"UPDATE_ROLLBACK_IN_PROGRESS\"");
+            } catch (IOException ioe) {
+                throw new RuntimeException(ioe);
+            }
+        }
+
+        private static final JmesPathExpression ast = new JmesPathProjection(new JmesPathFlatten(new JmesPathField("Stacks")), new JmesPathField("StackStatus"));
+
+        /**
+         * Takes the result and determines whether the state of the resource matches the expected state. To determine
+         * the current state of the resource, JmesPath expression is evaluated and compared against the expected result.
+         * 
+         * @param result
+         *        Corresponding result of the operation
+         * @return True if current state of the resource matches the expected state, False otherwise
+         */
+        @Override
+        public boolean matches(DescribeStacksResult result) {
+            JsonNode queryNode = ObjectMapperSingleton.getObjectMapper().valueToTree(result);
+            JsonNode finalResult = ast.accept(new JmesPathEvaluationVisitor(), queryNode);
+            return AcceptorPathMatcher.pathAll(expectedResult, finalResult);
+        }
+
+        /**
+         * Represents the current waiter state in the case where resource state matches the expected state
+         * 
+         * @return Corresponding state of the waiter
+         */
+        @Override
+        public WaiterState getState() {
+            return WaiterState.SUCCESS;
+        }
+    }
+
+    static class IsUPDATE_ROLLBACK_FAILEDMatcher extends WaiterAcceptor<DescribeStacksResult> {
+        private static final JsonNode expectedResult;
+
+        static {
+            try {
+                expectedResult = ObjectMapperSingleton.getObjectMapper().readTree("\"UPDATE_ROLLBACK_FAILED\"");
+            } catch (IOException ioe) {
+                throw new RuntimeException(ioe);
+            }
+        }
+
+        private static final JmesPathExpression ast = new JmesPathProjection(new JmesPathFlatten(new JmesPathField("Stacks")), new JmesPathField("StackStatus"));
+
+        /**
+         * Takes the result and determines whether the state of the resource matches the expected state. To determine
+         * the current state of the resource, JmesPath expression is evaluated and compared against the expected result.
+         * 
+         * @param result
+         *        Corresponding result of the operation
+         * @return True if current state of the resource matches the expected state, False otherwise
+         */
+        @Override
+        public boolean matches(DescribeStacksResult result) {
+            JsonNode queryNode = ObjectMapperSingleton.getObjectMapper().valueToTree(result);
+            JsonNode finalResult = ast.accept(new JmesPathEvaluationVisitor(), queryNode);
+            return AcceptorPathMatcher.pathAll(expectedResult, finalResult);
+        }
+
+        /**
+         * Represents the current waiter state in the case where resource state matches the expected state
+         * 
+         * @return Corresponding state of the waiter
+         */
+        @Override
+        public WaiterState getState() {
+            return WaiterState.SUCCESS;
+        }
+    }
+
+    static class IsUPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESSMatcher extends WaiterAcceptor<DescribeStacksResult> {
+        private static final JsonNode expectedResult;
+
+        static {
+            try {
+                expectedResult = ObjectMapperSingleton.getObjectMapper().readTree("\"UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS\"");
+            } catch (IOException ioe) {
+                throw new RuntimeException(ioe);
+            }
+        }
+
+        private static final JmesPathExpression ast = new JmesPathProjection(new JmesPathFlatten(new JmesPathField("Stacks")), new JmesPathField("StackStatus"));
+
+        /**
+         * Takes the result and determines whether the state of the resource matches the expected state. To determine
+         * the current state of the resource, JmesPath expression is evaluated and compared against the expected result.
+         * 
+         * @param result
+         *        Corresponding result of the operation
+         * @return True if current state of the resource matches the expected state, False otherwise
+         */
+        @Override
+        public boolean matches(DescribeStacksResult result) {
+            JsonNode queryNode = ObjectMapperSingleton.getObjectMapper().valueToTree(result);
+            JsonNode finalResult = ast.accept(new JmesPathEvaluationVisitor(), queryNode);
+            return AcceptorPathMatcher.pathAll(expectedResult, finalResult);
+        }
+
+        /**
+         * Represents the current waiter state in the case where resource state matches the expected state
+         * 
+         * @return Corresponding state of the waiter
+         */
+        @Override
+        public WaiterState getState() {
+            return WaiterState.SUCCESS;
+        }
+    }
+
+    static class IsUPDATE_ROLLBACK_COMPLETEMatcher extends WaiterAcceptor<DescribeStacksResult> {
+        private static final JsonNode expectedResult;
+
+        static {
+            try {
+                expectedResult = ObjectMapperSingleton.getObjectMapper().readTree("\"UPDATE_ROLLBACK_COMPLETE\"");
+            } catch (IOException ioe) {
+                throw new RuntimeException(ioe);
+            }
+        }
+
+        private static final JmesPathExpression ast = new JmesPathProjection(new JmesPathFlatten(new JmesPathField("Stacks")), new JmesPathField("StackStatus"));
+
+        /**
+         * Takes the result and determines whether the state of the resource matches the expected state. To determine
+         * the current state of the resource, JmesPath expression is evaluated and compared against the expected result.
+         * 
+         * @param result
+         *        Corresponding result of the operation
+         * @return True if current state of the resource matches the expected state, False otherwise
+         */
+        @Override
+        public boolean matches(DescribeStacksResult result) {
+            JsonNode queryNode = ObjectMapperSingleton.getObjectMapper().valueToTree(result);
+            JsonNode finalResult = ast.accept(new JmesPathEvaluationVisitor(), queryNode);
+            return AcceptorPathMatcher.pathAll(expectedResult, finalResult);
+        }
+
+        /**
+         * Represents the current waiter state in the case where resource state matches the expected state
+         * 
+         * @return Corresponding state of the waiter
+         */
+        @Override
+        public WaiterState getState() {
+            return WaiterState.SUCCESS;
+        }
+    }
+
     static class IsCREATE_FAILEDMatcher extends WaiterAcceptor<DescribeStacksResult> {
         private static final JsonNode expectedResult;
 

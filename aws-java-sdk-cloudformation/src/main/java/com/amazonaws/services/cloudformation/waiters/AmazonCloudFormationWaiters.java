@@ -64,7 +64,12 @@ public class AmazonCloudFormationWaiters {
 
         return new WaiterBuilder<DescribeStacksRequest, DescribeStacksResult>()
                 .withSdkFunction(new DescribeStacksFunction(client))
-                .withAcceptors(new StackCreateComplete.IsCREATE_COMPLETEMatcher(), new StackCreateComplete.IsCREATE_FAILEDMatcher(),
+                .withAcceptors(new StackCreateComplete.IsCREATE_COMPLETEMatcher(), new StackCreateComplete.IsUPDATE_COMPLETEMatcher(),
+                        new StackCreateComplete.IsUPDATE_IN_PROGRESSMatcher(), new StackCreateComplete.IsUPDATE_COMPLETE_CLEANUP_IN_PROGRESSMatcher(),
+                        new StackCreateComplete.IsUPDATE_FAILEDMatcher(), new StackCreateComplete.IsUPDATE_ROLLBACK_IN_PROGRESSMatcher(),
+                        new StackCreateComplete.IsUPDATE_ROLLBACK_FAILEDMatcher(),
+                        new StackCreateComplete.IsUPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESSMatcher(),
+                        new StackCreateComplete.IsUPDATE_ROLLBACK_COMPLETEMatcher(), new StackCreateComplete.IsCREATE_FAILEDMatcher(),
                         new StackCreateComplete.IsDELETE_COMPLETEMatcher(), new StackCreateComplete.IsDELETE_FAILEDMatcher(),
                         new StackCreateComplete.IsROLLBACK_FAILEDMatcher(), new StackCreateComplete.IsROLLBACK_COMPLETEMatcher(),
                         new StackCreateComplete.IsValidationErrorMatcher())

@@ -25,6 +25,12 @@ public class GetQuantumTaskResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
+     * The list of Amazon Braket resources associated with the quantum task.
+     * </p>
+     */
+    private java.util.List<Association> associations;
+    /**
+     * <p>
      * The time at which the task was created.
      * </p>
      */
@@ -102,6 +108,76 @@ public class GetQuantumTaskResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      */
     private java.util.Map<String, String> tags;
+
+    /**
+     * <p>
+     * The list of Amazon Braket resources associated with the quantum task.
+     * </p>
+     * 
+     * @return The list of Amazon Braket resources associated with the quantum task.
+     */
+
+    public java.util.List<Association> getAssociations() {
+        return associations;
+    }
+
+    /**
+     * <p>
+     * The list of Amazon Braket resources associated with the quantum task.
+     * </p>
+     * 
+     * @param associations
+     *        The list of Amazon Braket resources associated with the quantum task.
+     */
+
+    public void setAssociations(java.util.Collection<Association> associations) {
+        if (associations == null) {
+            this.associations = null;
+            return;
+        }
+
+        this.associations = new java.util.ArrayList<Association>(associations);
+    }
+
+    /**
+     * <p>
+     * The list of Amazon Braket resources associated with the quantum task.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAssociations(java.util.Collection)} or {@link #withAssociations(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param associations
+     *        The list of Amazon Braket resources associated with the quantum task.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetQuantumTaskResult withAssociations(Association... associations) {
+        if (this.associations == null) {
+            setAssociations(new java.util.ArrayList<Association>(associations.length));
+        }
+        for (Association ele : associations) {
+            this.associations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of Amazon Braket resources associated with the quantum task.
+     * </p>
+     * 
+     * @param associations
+     *        The list of Amazon Braket resources associated with the quantum task.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetQuantumTaskResult withAssociations(java.util.Collection<Association> associations) {
+        setAssociations(associations);
+        return this;
+    }
 
     /**
      * <p>
@@ -708,6 +784,8 @@ public class GetQuantumTaskResult extends com.amazonaws.AmazonWebServiceResult<c
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAssociations() != null)
+            sb.append("Associations: ").append(getAssociations()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getDeviceArn() != null)
@@ -748,6 +826,10 @@ public class GetQuantumTaskResult extends com.amazonaws.AmazonWebServiceResult<c
         if (obj instanceof GetQuantumTaskResult == false)
             return false;
         GetQuantumTaskResult other = (GetQuantumTaskResult) obj;
+        if (other.getAssociations() == null ^ this.getAssociations() == null)
+            return false;
+        if (other.getAssociations() != null && other.getAssociations().equals(this.getAssociations()) == false)
+            return false;
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
@@ -808,6 +890,7 @@ public class GetQuantumTaskResult extends com.amazonaws.AmazonWebServiceResult<c
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAssociations() == null) ? 0 : getAssociations().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDeviceArn() == null) ? 0 : getDeviceArn().hashCode());
         hashCode = prime * hashCode + ((getDeviceParameters() == null) ? 0 : getDeviceParameters().hashCode());

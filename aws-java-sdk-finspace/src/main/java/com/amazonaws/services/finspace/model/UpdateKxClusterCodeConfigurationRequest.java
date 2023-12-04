@@ -51,11 +51,17 @@ public class UpdateKxClusterCodeConfigurationRequest extends com.amazonaws.Amazo
      * contains the custom code, which will be loaded on the cluster. It must include the file name itself. For example,
      * <code>somedir/init.q</code>.
      * </p>
+     * <p>
+     * You cannot update this parameter for a <code>NO_RESTART</code> deployment.
+     * </p>
      */
     private String initializationScript;
     /**
      * <p>
      * Specifies the key-value pairs to make them available inside the cluster.
+     * </p>
+     * <p>
+     * You cannot update this parameter for a <code>NO_RESTART</code> deployment.
      * </p>
      */
     private java.util.List<KxCommandLineArgument> commandLineArguments;
@@ -218,11 +224,16 @@ public class UpdateKxClusterCodeConfigurationRequest extends com.amazonaws.Amazo
      * contains the custom code, which will be loaded on the cluster. It must include the file name itself. For example,
      * <code>somedir/init.q</code>.
      * </p>
+     * <p>
+     * You cannot update this parameter for a <code>NO_RESTART</code> deployment.
+     * </p>
      * 
      * @param initializationScript
      *        Specifies a Q program that will be run at launch of a cluster. It is a relative path within <i>.zip</i>
      *        file that contains the custom code, which will be loaded on the cluster. It must include the file name
-     *        itself. For example, <code>somedir/init.q</code>.
+     *        itself. For example, <code>somedir/init.q</code>.</p>
+     *        <p>
+     *        You cannot update this parameter for a <code>NO_RESTART</code> deployment.
      */
 
     public void setInitializationScript(String initializationScript) {
@@ -235,10 +246,15 @@ public class UpdateKxClusterCodeConfigurationRequest extends com.amazonaws.Amazo
      * contains the custom code, which will be loaded on the cluster. It must include the file name itself. For example,
      * <code>somedir/init.q</code>.
      * </p>
+     * <p>
+     * You cannot update this parameter for a <code>NO_RESTART</code> deployment.
+     * </p>
      * 
      * @return Specifies a Q program that will be run at launch of a cluster. It is a relative path within <i>.zip</i>
      *         file that contains the custom code, which will be loaded on the cluster. It must include the file name
-     *         itself. For example, <code>somedir/init.q</code>.
+     *         itself. For example, <code>somedir/init.q</code>.</p>
+     *         <p>
+     *         You cannot update this parameter for a <code>NO_RESTART</code> deployment.
      */
 
     public String getInitializationScript() {
@@ -251,11 +267,16 @@ public class UpdateKxClusterCodeConfigurationRequest extends com.amazonaws.Amazo
      * contains the custom code, which will be loaded on the cluster. It must include the file name itself. For example,
      * <code>somedir/init.q</code>.
      * </p>
+     * <p>
+     * You cannot update this parameter for a <code>NO_RESTART</code> deployment.
+     * </p>
      * 
      * @param initializationScript
      *        Specifies a Q program that will be run at launch of a cluster. It is a relative path within <i>.zip</i>
      *        file that contains the custom code, which will be loaded on the cluster. It must include the file name
-     *        itself. For example, <code>somedir/init.q</code>.
+     *        itself. For example, <code>somedir/init.q</code>.</p>
+     *        <p>
+     *        You cannot update this parameter for a <code>NO_RESTART</code> deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -268,8 +289,13 @@ public class UpdateKxClusterCodeConfigurationRequest extends com.amazonaws.Amazo
      * <p>
      * Specifies the key-value pairs to make them available inside the cluster.
      * </p>
+     * <p>
+     * You cannot update this parameter for a <code>NO_RESTART</code> deployment.
+     * </p>
      * 
-     * @return Specifies the key-value pairs to make them available inside the cluster.
+     * @return Specifies the key-value pairs to make them available inside the cluster.</p>
+     *         <p>
+     *         You cannot update this parameter for a <code>NO_RESTART</code> deployment.
      */
 
     public java.util.List<KxCommandLineArgument> getCommandLineArguments() {
@@ -280,9 +306,14 @@ public class UpdateKxClusterCodeConfigurationRequest extends com.amazonaws.Amazo
      * <p>
      * Specifies the key-value pairs to make them available inside the cluster.
      * </p>
+     * <p>
+     * You cannot update this parameter for a <code>NO_RESTART</code> deployment.
+     * </p>
      * 
      * @param commandLineArguments
-     *        Specifies the key-value pairs to make them available inside the cluster.
+     *        Specifies the key-value pairs to make them available inside the cluster.</p>
+     *        <p>
+     *        You cannot update this parameter for a <code>NO_RESTART</code> deployment.
      */
 
     public void setCommandLineArguments(java.util.Collection<KxCommandLineArgument> commandLineArguments) {
@@ -299,13 +330,18 @@ public class UpdateKxClusterCodeConfigurationRequest extends com.amazonaws.Amazo
      * Specifies the key-value pairs to make them available inside the cluster.
      * </p>
      * <p>
+     * You cannot update this parameter for a <code>NO_RESTART</code> deployment.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCommandLineArguments(java.util.Collection)} or {@link #withCommandLineArguments(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param commandLineArguments
-     *        Specifies the key-value pairs to make them available inside the cluster.
+     *        Specifies the key-value pairs to make them available inside the cluster.</p>
+     *        <p>
+     *        You cannot update this parameter for a <code>NO_RESTART</code> deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -323,9 +359,14 @@ public class UpdateKxClusterCodeConfigurationRequest extends com.amazonaws.Amazo
      * <p>
      * Specifies the key-value pairs to make them available inside the cluster.
      * </p>
+     * <p>
+     * You cannot update this parameter for a <code>NO_RESTART</code> deployment.
+     * </p>
      * 
      * @param commandLineArguments
-     *        Specifies the key-value pairs to make them available inside the cluster.
+     *        Specifies the key-value pairs to make them available inside the cluster.</p>
+     *        <p>
+     *        You cannot update this parameter for a <code>NO_RESTART</code> deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

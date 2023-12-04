@@ -33,7 +33,7 @@ public class GetQuantumTaskRequest extends com.amazonaws.AmazonWebServiceRequest
     private java.util.List<String> additionalAttributeNames;
     /**
      * <p>
-     * the ARN of the task to retrieve.
+     * The ARN of the task to retrieve.
      * </p>
      */
     private String quantumTaskArn;
@@ -138,11 +138,11 @@ public class GetQuantumTaskRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * the ARN of the task to retrieve.
+     * The ARN of the task to retrieve.
      * </p>
      * 
      * @param quantumTaskArn
-     *        the ARN of the task to retrieve.
+     *        The ARN of the task to retrieve.
      */
 
     public void setQuantumTaskArn(String quantumTaskArn) {
@@ -151,10 +151,10 @@ public class GetQuantumTaskRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * the ARN of the task to retrieve.
+     * The ARN of the task to retrieve.
      * </p>
      * 
-     * @return the ARN of the task to retrieve.
+     * @return The ARN of the task to retrieve.
      */
 
     public String getQuantumTaskArn() {
@@ -163,11 +163,11 @@ public class GetQuantumTaskRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * the ARN of the task to retrieve.
+     * The ARN of the task to retrieve.
      * </p>
      * 
      * @param quantumTaskArn
-     *        the ARN of the task to retrieve.
+     *        The ARN of the task to retrieve.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

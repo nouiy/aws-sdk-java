@@ -88,6 +88,10 @@ public class CustomLineItemListElementJsonUnmarshaller implements Unmarshaller<C
                     context.nextToken();
                     customLineItemListElement.setAssociationSize(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("AccountId", targetDepth)) {
+                    context.nextToken();
+                    customLineItemListElement.setAccountId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

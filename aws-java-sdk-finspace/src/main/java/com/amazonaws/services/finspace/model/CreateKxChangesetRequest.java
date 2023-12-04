@@ -39,8 +39,9 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
     private String databaseName;
     /**
      * <p>
-     * A list of change request objects that are run in order. A change request object consists of changeType , s3Path,
-     * and a dbPath. A changeType can has the following values:
+     * A list of change request objects that are run in order. A change request object consists of
+     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     * values:
      * </p>
      * <ul>
      * <li>
@@ -55,21 +56,58 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * </ul>
      * <p>
-     * All the change requests require a mandatory <i>dbPath</i> attribute that defines the path within the database
-     * directory. The <i>s3Path</i> attribute defines the s3 source file path and is required for a PUT change type.
+     * All the change requests require a mandatory <code>dbPath</code> attribute that defines the path within the
+     * database directory. All database paths must start with a leading / and end with a trailing /. The
+     * <code>s3Path</code> attribute defines the s3 source file path and is required for a PUT change type. The
+     * <code>s3path</code> must end with a trailing / if it is a directory and must end without a trailing / if it is a
+     * file.
      * </p>
      * <p>
-     * Here is an example of how you can use the change request object:
+     * Here are few examples of how you can use the change request object:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * This request adds a single sym file at database root location.
      * </p>
      * <p>
-     * <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}, { "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}, { "changeType": "DELETE", "dbPath": "/2020.01.01/"} ]</code>
+     * <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request adds files in the given <code>s3Path</code> under the 2020.01.02 partition of the database.
      * </p>
      * <p>
-     * In this example, the first request with <i>PUT</i> change type allows you to add files in the given s3Path under
-     * the <i>2020.01.02</i> partition of the database. The second request with <i>PUT</i> change type allows you to add
-     * a single sym file at database root location. The last request with <i>DELETE</i> change type allows you to delete
-     * the files under the <i>2020.01.01</i> partition of the database.
+     * <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}</code>
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request adds files in the given <code>s3Path</code> under the <i>taq</i> table partition of the database.
+     * </p>
+     * <p>
+     * <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request deletes the 2020.01.02 partition of the database.
+     * </p>
+     * <p>
+     * <code>[{ "changeType": "DELETE", "dbPath": "/2020.01.02/"} ]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <i>DELETE</i> request allows you to delete the existing files under the 2020.01.02 partition of the database,
+     * and the <i>PUT</i> request adds a new taq table under it.
+     * </p>
+     * <p>
+     * <code>[ {"changeType": "DELETE", "dbPath":"/2020.01.02/"}, {"changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     * </p>
+     * </li>
+     * </ol>
      */
     private java.util.List<ChangeRequest> changeRequests;
     /**
@@ -161,8 +199,9 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A list of change request objects that are run in order. A change request object consists of changeType , s3Path,
-     * and a dbPath. A changeType can has the following values:
+     * A list of change request objects that are run in order. A change request object consists of
+     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     * values:
      * </p>
      * <ul>
      * <li>
@@ -177,24 +216,62 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * </ul>
      * <p>
-     * All the change requests require a mandatory <i>dbPath</i> attribute that defines the path within the database
-     * directory. The <i>s3Path</i> attribute defines the s3 source file path and is required for a PUT change type.
+     * All the change requests require a mandatory <code>dbPath</code> attribute that defines the path within the
+     * database directory. All database paths must start with a leading / and end with a trailing /. The
+     * <code>s3Path</code> attribute defines the s3 source file path and is required for a PUT change type. The
+     * <code>s3path</code> must end with a trailing / if it is a directory and must end without a trailing / if it is a
+     * file.
      * </p>
      * <p>
-     * Here is an example of how you can use the change request object:
+     * Here are few examples of how you can use the change request object:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * This request adds a single sym file at database root location.
      * </p>
      * <p>
-     * <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}, { "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}, { "changeType": "DELETE", "dbPath": "/2020.01.01/"} ]</code>
+     * <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request adds files in the given <code>s3Path</code> under the 2020.01.02 partition of the database.
      * </p>
      * <p>
-     * In this example, the first request with <i>PUT</i> change type allows you to add files in the given s3Path under
-     * the <i>2020.01.02</i> partition of the database. The second request with <i>PUT</i> change type allows you to add
-     * a single sym file at database root location. The last request with <i>DELETE</i> change type allows you to delete
-     * the files under the <i>2020.01.01</i> partition of the database.
+     * <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}</code>
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request adds files in the given <code>s3Path</code> under the <i>taq</i> table partition of the database.
+     * </p>
+     * <p>
+     * <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request deletes the 2020.01.02 partition of the database.
+     * </p>
+     * <p>
+     * <code>[{ "changeType": "DELETE", "dbPath": "/2020.01.02/"} ]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <i>DELETE</i> request allows you to delete the existing files under the 2020.01.02 partition of the database,
+     * and the <i>PUT</i> request adds a new taq table under it.
+     * </p>
+     * <p>
+     * <code>[ {"changeType": "DELETE", "dbPath":"/2020.01.02/"}, {"changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     * </p>
+     * </li>
+     * </ol>
      * 
-     * @return A list of change request objects that are run in order. A change request object consists of changeType ,
-     *         s3Path, and a dbPath. A changeType can has the following values: </p>
+     * @return A list of change request objects that are run in order. A change request object consists of
+     *         <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the
+     *         following values: </p>
      *         <ul>
      *         <li>
      *         <p>
@@ -208,21 +285,58 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      *         </li>
      *         </ul>
      *         <p>
-     *         All the change requests require a mandatory <i>dbPath</i> attribute that defines the path within the
-     *         database directory. The <i>s3Path</i> attribute defines the s3 source file path and is required for a PUT
-     *         change type.
+     *         All the change requests require a mandatory <code>dbPath</code> attribute that defines the path within
+     *         the database directory. All database paths must start with a leading / and end with a trailing /. The
+     *         <code>s3Path</code> attribute defines the s3 source file path and is required for a PUT change type. The
+     *         <code>s3path</code> must end with a trailing / if it is a directory and must end without a trailing / if
+     *         it is a file.
      *         </p>
      *         <p>
-     *         Here is an example of how you can use the change request object:
+     *         Here are few examples of how you can use the change request object:
+     *         </p>
+     *         <ol>
+     *         <li>
+     *         <p>
+     *         This request adds a single sym file at database root location.
      *         </p>
      *         <p>
-     *         <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}, { "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}, { "changeType": "DELETE", "dbPath": "/2020.01.01/"} ]</code>
+     *         <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         This request adds files in the given <code>s3Path</code> under the 2020.01.02 partition of the database.
      *         </p>
      *         <p>
-     *         In this example, the first request with <i>PUT</i> change type allows you to add files in the given
-     *         s3Path under the <i>2020.01.02</i> partition of the database. The second request with <i>PUT</i> change
-     *         type allows you to add a single sym file at database root location. The last request with <i>DELETE</i>
-     *         change type allows you to delete the files under the <i>2020.01.01</i> partition of the database.
+     *         <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         This request adds files in the given <code>s3Path</code> under the <i>taq</i> table partition of the
+     *         database.
+     *         </p>
+     *         <p>
+     *         <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         This request deletes the 2020.01.02 partition of the database.
+     *         </p>
+     *         <p>
+     *         <code>[{ "changeType": "DELETE", "dbPath": "/2020.01.02/"} ]</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The <i>DELETE</i> request allows you to delete the existing files under the 2020.01.02 partition of the
+     *         database, and the <i>PUT</i> request adds a new taq table under it.
+     *         </p>
+     *         <p>
+     *         <code>[ {"changeType": "DELETE", "dbPath":"/2020.01.02/"}, {"changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<ChangeRequest> getChangeRequests() {
@@ -231,8 +345,9 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A list of change request objects that are run in order. A change request object consists of changeType , s3Path,
-     * and a dbPath. A changeType can has the following values:
+     * A list of change request objects that are run in order. A change request object consists of
+     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     * values:
      * </p>
      * <ul>
      * <li>
@@ -247,25 +362,63 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * </ul>
      * <p>
-     * All the change requests require a mandatory <i>dbPath</i> attribute that defines the path within the database
-     * directory. The <i>s3Path</i> attribute defines the s3 source file path and is required for a PUT change type.
+     * All the change requests require a mandatory <code>dbPath</code> attribute that defines the path within the
+     * database directory. All database paths must start with a leading / and end with a trailing /. The
+     * <code>s3Path</code> attribute defines the s3 source file path and is required for a PUT change type. The
+     * <code>s3path</code> must end with a trailing / if it is a directory and must end without a trailing / if it is a
+     * file.
      * </p>
      * <p>
-     * Here is an example of how you can use the change request object:
+     * Here are few examples of how you can use the change request object:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * This request adds a single sym file at database root location.
      * </p>
      * <p>
-     * <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}, { "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}, { "changeType": "DELETE", "dbPath": "/2020.01.01/"} ]</code>
+     * <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request adds files in the given <code>s3Path</code> under the 2020.01.02 partition of the database.
      * </p>
      * <p>
-     * In this example, the first request with <i>PUT</i> change type allows you to add files in the given s3Path under
-     * the <i>2020.01.02</i> partition of the database. The second request with <i>PUT</i> change type allows you to add
-     * a single sym file at database root location. The last request with <i>DELETE</i> change type allows you to delete
-     * the files under the <i>2020.01.01</i> partition of the database.
+     * <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}</code>
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request adds files in the given <code>s3Path</code> under the <i>taq</i> table partition of the database.
+     * </p>
+     * <p>
+     * <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request deletes the 2020.01.02 partition of the database.
+     * </p>
+     * <p>
+     * <code>[{ "changeType": "DELETE", "dbPath": "/2020.01.02/"} ]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <i>DELETE</i> request allows you to delete the existing files under the 2020.01.02 partition of the database,
+     * and the <i>PUT</i> request adds a new taq table under it.
+     * </p>
+     * <p>
+     * <code>[ {"changeType": "DELETE", "dbPath":"/2020.01.02/"}, {"changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     * </p>
+     * </li>
+     * </ol>
      * 
      * @param changeRequests
-     *        A list of change request objects that are run in order. A change request object consists of changeType ,
-     *        s3Path, and a dbPath. A changeType can has the following values: </p>
+     *        A list of change request objects that are run in order. A change request object consists of
+     *        <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     *        values: </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -279,21 +432,58 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </li>
      *        </ul>
      *        <p>
-     *        All the change requests require a mandatory <i>dbPath</i> attribute that defines the path within the
-     *        database directory. The <i>s3Path</i> attribute defines the s3 source file path and is required for a PUT
-     *        change type.
+     *        All the change requests require a mandatory <code>dbPath</code> attribute that defines the path within the
+     *        database directory. All database paths must start with a leading / and end with a trailing /. The
+     *        <code>s3Path</code> attribute defines the s3 source file path and is required for a PUT change type. The
+     *        <code>s3path</code> must end with a trailing / if it is a directory and must end without a trailing / if
+     *        it is a file.
      *        </p>
      *        <p>
-     *        Here is an example of how you can use the change request object:
+     *        Here are few examples of how you can use the change request object:
+     *        </p>
+     *        <ol>
+     *        <li>
+     *        <p>
+     *        This request adds a single sym file at database root location.
      *        </p>
      *        <p>
-     *        <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}, { "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}, { "changeType": "DELETE", "dbPath": "/2020.01.01/"} ]</code>
+     *        <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        This request adds files in the given <code>s3Path</code> under the 2020.01.02 partition of the database.
      *        </p>
      *        <p>
-     *        In this example, the first request with <i>PUT</i> change type allows you to add files in the given s3Path
-     *        under the <i>2020.01.02</i> partition of the database. The second request with <i>PUT</i> change type
-     *        allows you to add a single sym file at database root location. The last request with <i>DELETE</i> change
-     *        type allows you to delete the files under the <i>2020.01.01</i> partition of the database.
+     *        <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        This request adds files in the given <code>s3Path</code> under the <i>taq</i> table partition of the
+     *        database.
+     *        </p>
+     *        <p>
+     *        <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        This request deletes the 2020.01.02 partition of the database.
+     *        </p>
+     *        <p>
+     *        <code>[{ "changeType": "DELETE", "dbPath": "/2020.01.02/"} ]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <i>DELETE</i> request allows you to delete the existing files under the 2020.01.02 partition of the
+     *        database, and the <i>PUT</i> request adds a new taq table under it.
+     *        </p>
+     *        <p>
+     *        <code>[ {"changeType": "DELETE", "dbPath":"/2020.01.02/"}, {"changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     *        </p>
+     *        </li>
      */
 
     public void setChangeRequests(java.util.Collection<ChangeRequest> changeRequests) {
@@ -307,8 +497,9 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A list of change request objects that are run in order. A change request object consists of changeType , s3Path,
-     * and a dbPath. A changeType can has the following values:
+     * A list of change request objects that are run in order. A change request object consists of
+     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     * values:
      * </p>
      * <ul>
      * <li>
@@ -323,21 +514,58 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * </ul>
      * <p>
-     * All the change requests require a mandatory <i>dbPath</i> attribute that defines the path within the database
-     * directory. The <i>s3Path</i> attribute defines the s3 source file path and is required for a PUT change type.
+     * All the change requests require a mandatory <code>dbPath</code> attribute that defines the path within the
+     * database directory. All database paths must start with a leading / and end with a trailing /. The
+     * <code>s3Path</code> attribute defines the s3 source file path and is required for a PUT change type. The
+     * <code>s3path</code> must end with a trailing / if it is a directory and must end without a trailing / if it is a
+     * file.
      * </p>
      * <p>
-     * Here is an example of how you can use the change request object:
+     * Here are few examples of how you can use the change request object:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * This request adds a single sym file at database root location.
      * </p>
      * <p>
-     * <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}, { "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}, { "changeType": "DELETE", "dbPath": "/2020.01.01/"} ]</code>
+     * <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request adds files in the given <code>s3Path</code> under the 2020.01.02 partition of the database.
      * </p>
      * <p>
-     * In this example, the first request with <i>PUT</i> change type allows you to add files in the given s3Path under
-     * the <i>2020.01.02</i> partition of the database. The second request with <i>PUT</i> change type allows you to add
-     * a single sym file at database root location. The last request with <i>DELETE</i> change type allows you to delete
-     * the files under the <i>2020.01.01</i> partition of the database.
+     * <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}</code>
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request adds files in the given <code>s3Path</code> under the <i>taq</i> table partition of the database.
+     * </p>
+     * <p>
+     * <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request deletes the 2020.01.02 partition of the database.
+     * </p>
+     * <p>
+     * <code>[{ "changeType": "DELETE", "dbPath": "/2020.01.02/"} ]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <i>DELETE</i> request allows you to delete the existing files under the 2020.01.02 partition of the database,
+     * and the <i>PUT</i> request adds a new taq table under it.
+     * </p>
+     * <p>
+     * <code>[ {"changeType": "DELETE", "dbPath":"/2020.01.02/"}, {"changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     * </p>
+     * </li>
+     * </ol>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setChangeRequests(java.util.Collection)} or {@link #withChangeRequests(java.util.Collection)} if you want
@@ -345,8 +573,9 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param changeRequests
-     *        A list of change request objects that are run in order. A change request object consists of changeType ,
-     *        s3Path, and a dbPath. A changeType can has the following values: </p>
+     *        A list of change request objects that are run in order. A change request object consists of
+     *        <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     *        values: </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -360,21 +589,58 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </li>
      *        </ul>
      *        <p>
-     *        All the change requests require a mandatory <i>dbPath</i> attribute that defines the path within the
-     *        database directory. The <i>s3Path</i> attribute defines the s3 source file path and is required for a PUT
-     *        change type.
+     *        All the change requests require a mandatory <code>dbPath</code> attribute that defines the path within the
+     *        database directory. All database paths must start with a leading / and end with a trailing /. The
+     *        <code>s3Path</code> attribute defines the s3 source file path and is required for a PUT change type. The
+     *        <code>s3path</code> must end with a trailing / if it is a directory and must end without a trailing / if
+     *        it is a file.
      *        </p>
      *        <p>
-     *        Here is an example of how you can use the change request object:
+     *        Here are few examples of how you can use the change request object:
+     *        </p>
+     *        <ol>
+     *        <li>
+     *        <p>
+     *        This request adds a single sym file at database root location.
      *        </p>
      *        <p>
-     *        <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}, { "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}, { "changeType": "DELETE", "dbPath": "/2020.01.01/"} ]</code>
+     *        <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        This request adds files in the given <code>s3Path</code> under the 2020.01.02 partition of the database.
      *        </p>
      *        <p>
-     *        In this example, the first request with <i>PUT</i> change type allows you to add files in the given s3Path
-     *        under the <i>2020.01.02</i> partition of the database. The second request with <i>PUT</i> change type
-     *        allows you to add a single sym file at database root location. The last request with <i>DELETE</i> change
-     *        type allows you to delete the files under the <i>2020.01.01</i> partition of the database.
+     *        <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        This request adds files in the given <code>s3Path</code> under the <i>taq</i> table partition of the
+     *        database.
+     *        </p>
+     *        <p>
+     *        <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        This request deletes the 2020.01.02 partition of the database.
+     *        </p>
+     *        <p>
+     *        <code>[{ "changeType": "DELETE", "dbPath": "/2020.01.02/"} ]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <i>DELETE</i> request allows you to delete the existing files under the 2020.01.02 partition of the
+     *        database, and the <i>PUT</i> request adds a new taq table under it.
+     *        </p>
+     *        <p>
+     *        <code>[ {"changeType": "DELETE", "dbPath":"/2020.01.02/"}, {"changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -390,8 +656,9 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A list of change request objects that are run in order. A change request object consists of changeType , s3Path,
-     * and a dbPath. A changeType can has the following values:
+     * A list of change request objects that are run in order. A change request object consists of
+     * <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     * values:
      * </p>
      * <ul>
      * <li>
@@ -406,25 +673,63 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * </ul>
      * <p>
-     * All the change requests require a mandatory <i>dbPath</i> attribute that defines the path within the database
-     * directory. The <i>s3Path</i> attribute defines the s3 source file path and is required for a PUT change type.
+     * All the change requests require a mandatory <code>dbPath</code> attribute that defines the path within the
+     * database directory. All database paths must start with a leading / and end with a trailing /. The
+     * <code>s3Path</code> attribute defines the s3 source file path and is required for a PUT change type. The
+     * <code>s3path</code> must end with a trailing / if it is a directory and must end without a trailing / if it is a
+     * file.
      * </p>
      * <p>
-     * Here is an example of how you can use the change request object:
+     * Here are few examples of how you can use the change request object:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * This request adds a single sym file at database root location.
      * </p>
      * <p>
-     * <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}, { "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}, { "changeType": "DELETE", "dbPath": "/2020.01.01/"} ]</code>
+     * <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request adds files in the given <code>s3Path</code> under the 2020.01.02 partition of the database.
      * </p>
      * <p>
-     * In this example, the first request with <i>PUT</i> change type allows you to add files in the given s3Path under
-     * the <i>2020.01.02</i> partition of the database. The second request with <i>PUT</i> change type allows you to add
-     * a single sym file at database root location. The last request with <i>DELETE</i> change type allows you to delete
-     * the files under the <i>2020.01.01</i> partition of the database.
+     * <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}</code>
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request adds files in the given <code>s3Path</code> under the <i>taq</i> table partition of the database.
+     * </p>
+     * <p>
+     * <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This request deletes the 2020.01.02 partition of the database.
+     * </p>
+     * <p>
+     * <code>[{ "changeType": "DELETE", "dbPath": "/2020.01.02/"} ]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <i>DELETE</i> request allows you to delete the existing files under the 2020.01.02 partition of the database,
+     * and the <i>PUT</i> request adds a new taq table under it.
+     * </p>
+     * <p>
+     * <code>[ {"changeType": "DELETE", "dbPath":"/2020.01.02/"}, {"changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     * </p>
+     * </li>
+     * </ol>
      * 
      * @param changeRequests
-     *        A list of change request objects that are run in order. A change request object consists of changeType ,
-     *        s3Path, and a dbPath. A changeType can has the following values: </p>
+     *        A list of change request objects that are run in order. A change request object consists of
+     *        <code>changeType</code> , <code>s3Path</code>, and <code>dbPath</code>. A changeType can has the following
+     *        values: </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -438,21 +743,58 @@ public class CreateKxChangesetRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </li>
      *        </ul>
      *        <p>
-     *        All the change requests require a mandatory <i>dbPath</i> attribute that defines the path within the
-     *        database directory. The <i>s3Path</i> attribute defines the s3 source file path and is required for a PUT
-     *        change type.
+     *        All the change requests require a mandatory <code>dbPath</code> attribute that defines the path within the
+     *        database directory. All database paths must start with a leading / and end with a trailing /. The
+     *        <code>s3Path</code> attribute defines the s3 source file path and is required for a PUT change type. The
+     *        <code>s3path</code> must end with a trailing / if it is a directory and must end without a trailing / if
+     *        it is a file.
      *        </p>
      *        <p>
-     *        Here is an example of how you can use the change request object:
+     *        Here are few examples of how you can use the change request object:
+     *        </p>
+     *        <ol>
+     *        <li>
+     *        <p>
+     *        This request adds a single sym file at database root location.
      *        </p>
      *        <p>
-     *        <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}, { "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}, { "changeType": "DELETE", "dbPath": "/2020.01.01/"} ]</code>
+     *        <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/sym", "dbPath":"/"}</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        This request adds files in the given <code>s3Path</code> under the 2020.01.02 partition of the database.
      *        </p>
      *        <p>
-     *        In this example, the first request with <i>PUT</i> change type allows you to add files in the given s3Path
-     *        under the <i>2020.01.02</i> partition of the database. The second request with <i>PUT</i> change type
-     *        allows you to add a single sym file at database root location. The last request with <i>DELETE</i> change
-     *        type allows you to delete the files under the <i>2020.01.01</i> partition of the database.
+     *        <code>{ "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/", "dbPath":"/2020.01.02/"}</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        This request adds files in the given <code>s3Path</code> under the <i>taq</i> table partition of the
+     *        database.
+     *        </p>
+     *        <p>
+     *        <code>[ { "changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        This request deletes the 2020.01.02 partition of the database.
+     *        </p>
+     *        <p>
+     *        <code>[{ "changeType": "DELETE", "dbPath": "/2020.01.02/"} ]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <i>DELETE</i> request allows you to delete the existing files under the 2020.01.02 partition of the
+     *        database, and the <i>PUT</i> request adds a new taq table under it.
+     *        </p>
+     *        <p>
+     *        <code>[ {"changeType": "DELETE", "dbPath":"/2020.01.02/"}, {"changeType": "PUT", "s3Path":"s3://bucket/db/2020.01.02/taq/", "dbPath":"/2020.01.02/taq/"}]</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

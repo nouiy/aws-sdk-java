@@ -13,7 +13,7 @@
 package com.amazonaws.services.braket.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +33,8 @@ public class CreateQuantumTaskRequestMarshaller {
 
     private static final MarshallingInfo<String> ACTION_BINDING = MarshallingInfo.builder(MarshallingType.JSON_VALUE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("action").build();
+    private static final MarshallingInfo<List> ASSOCIATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("associations").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
@@ -68,6 +70,7 @@ public class CreateQuantumTaskRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createQuantumTaskRequest.getAction(), ACTION_BINDING);
+            protocolMarshaller.marshall(createQuantumTaskRequest.getAssociations(), ASSOCIATIONS_BINDING);
             protocolMarshaller.marshall(createQuantumTaskRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createQuantumTaskRequest.getDeviceArn(), DEVICEARN_BINDING);
             protocolMarshaller.marshall(createQuantumTaskRequest.getDeviceParameters(), DEVICEPARAMETERS_BINDING);

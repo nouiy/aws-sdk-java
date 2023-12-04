@@ -22,7 +22,8 @@ public enum KxClusterType {
 
     HDB("HDB"),
     RDB("RDB"),
-    GATEWAY("GATEWAY");
+    GATEWAY("GATEWAY"),
+    GP("GP");
 
     private String value;
 

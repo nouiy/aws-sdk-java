@@ -57,6 +57,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      * writable local storage.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * GP – A general purpose cluster allows you to quickly iterate on code during development by granting greater
+     * access to system commands and enabling a fast reload of custom code. This cluster type can optionally mount
+     * databases including cache and savedown storage. For this cluster type, the node count is fixed at 1. It does not
+     * support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     * </p>
+     * </li>
      * </ul>
      */
     private String clusterType;
@@ -139,6 +147,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      * writable local storage.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * GP – A general purpose cluster allows you to quickly iterate on code during development by granting greater
+     * access to system commands and enabling a fast reload of custom code. This cluster type can optionally mount
+     * databases including cache and savedown storage. For this cluster type, the node count is fixed at 1. It does not
+     * support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -164,6 +180,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      *        GATEWAY – A gateway cluster allows you to access data across processes in kdb systems. It allows you to
      *        create your own routing logic using the initialization scripts and custom code. This type of cluster does
      *        not require a writable local storage.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        GP – A general purpose cluster allows you to quickly iterate on code during development by granting
+     *        greater access to system commands and enabling a fast reload of custom code. This cluster type can
+     *        optionally mount databases including cache and savedown storage. For this cluster type, the node count is
+     *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
      *        </p>
      *        </li>
      * @see KxClusterType
@@ -199,6 +223,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      * writable local storage.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * GP – A general purpose cluster allows you to quickly iterate on code during development by granting greater
+     * access to system commands and enabling a fast reload of custom code. This cluster type can optionally mount
+     * databases including cache and savedown storage. For this cluster type, the node count is fixed at 1. It does not
+     * support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return Specifies the type of KDB database that is being created. The following types are available: </p>
@@ -223,6 +255,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      *         GATEWAY – A gateway cluster allows you to access data across processes in kdb systems. It allows you to
      *         create your own routing logic using the initialization scripts and custom code. This type of cluster does
      *         not require a writable local storage.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         GP – A general purpose cluster allows you to quickly iterate on code during development by granting
+     *         greater access to system commands and enabling a fast reload of custom code. This cluster type can
+     *         optionally mount databases including cache and savedown storage. For this cluster type, the node count is
+     *         fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
      *         </p>
      *         </li>
      * @see KxClusterType
@@ -258,6 +298,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      * writable local storage.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * GP – A general purpose cluster allows you to quickly iterate on code during development by granting greater
+     * access to system commands and enabling a fast reload of custom code. This cluster type can optionally mount
+     * databases including cache and savedown storage. For this cluster type, the node count is fixed at 1. It does not
+     * support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -283,6 +331,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      *        GATEWAY – A gateway cluster allows you to access data across processes in kdb systems. It allows you to
      *        create your own routing logic using the initialization scripts and custom code. This type of cluster does
      *        not require a writable local storage.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        GP – A general purpose cluster allows you to quickly iterate on code during development by granting
+     *        greater access to system commands and enabling a fast reload of custom code. This cluster type can
+     *        optionally mount databases including cache and savedown storage. For this cluster type, the node count is
+     *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -320,6 +376,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      * writable local storage.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * GP – A general purpose cluster allows you to quickly iterate on code during development by granting greater
+     * access to system commands and enabling a fast reload of custom code. This cluster type can optionally mount
+     * databases including cache and savedown storage. For this cluster type, the node count is fixed at 1. It does not
+     * support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -345,6 +409,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      *        GATEWAY – A gateway cluster allows you to access data across processes in kdb systems. It allows you to
      *        create your own routing logic using the initialization scripts and custom code. This type of cluster does
      *        not require a writable local storage.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        GP – A general purpose cluster allows you to quickly iterate on code during development by granting
+     *        greater access to system commands and enabling a fast reload of custom code. This cluster type can
+     *        optionally mount databases including cache and savedown storage. For this cluster type, the node count is
+     *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

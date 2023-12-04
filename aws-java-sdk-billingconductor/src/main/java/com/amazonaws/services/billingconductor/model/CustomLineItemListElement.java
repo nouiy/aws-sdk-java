@@ -88,6 +88,12 @@ public class CustomLineItemListElement implements Serializable, Cloneable, Struc
      * </p>
      */
     private Long associationSize;
+    /**
+     * <p>
+     * The Amazon Web Services account in which this custom line item will be applied to.
+     * </p>
+     */
+    private String accountId;
 
     /**
      * <p>
@@ -509,6 +515,46 @@ public class CustomLineItemListElement implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The Amazon Web Services account in which this custom line item will be applied to.
+     * </p>
+     * 
+     * @param accountId
+     *        The Amazon Web Services account in which this custom line item will be applied to.
+     */
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account in which this custom line item will be applied to.
+     * </p>
+     * 
+     * @return The Amazon Web Services account in which this custom line item will be applied to.
+     */
+
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account in which this custom line item will be applied to.
+     * </p>
+     * 
+     * @param accountId
+     *        The Amazon Web Services account in which this custom line item will be applied to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CustomLineItemListElement withAccountId(String accountId) {
+        setAccountId(accountId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -539,7 +585,9 @@ public class CustomLineItemListElement implements Serializable, Cloneable, Struc
         if (getLastModifiedTime() != null)
             sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
         if (getAssociationSize() != null)
-            sb.append("AssociationSize: ").append(getAssociationSize());
+            sb.append("AssociationSize: ").append(getAssociationSize()).append(",");
+        if (getAccountId() != null)
+            sb.append("AccountId: ").append(getAccountId());
         sb.append("}");
         return sb.toString();
     }
@@ -594,6 +642,10 @@ public class CustomLineItemListElement implements Serializable, Cloneable, Struc
             return false;
         if (other.getAssociationSize() != null && other.getAssociationSize().equals(this.getAssociationSize()) == false)
             return false;
+        if (other.getAccountId() == null ^ this.getAccountId() == null)
+            return false;
+        if (other.getAccountId() != null && other.getAccountId().equals(this.getAccountId()) == false)
+            return false;
         return true;
     }
 
@@ -612,6 +664,7 @@ public class CustomLineItemListElement implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getAssociationSize() == null) ? 0 : getAssociationSize().hashCode());
+        hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
         return hashCode;
     }
 

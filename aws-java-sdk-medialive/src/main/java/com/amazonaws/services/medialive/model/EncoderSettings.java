@@ -35,6 +35,8 @@ public class EncoderSettings implements Serializable, Cloneable, StructuredPojo 
     private BlackoutSlate blackoutSlate;
     /** Settings for caption decriptions */
     private java.util.List<CaptionDescription> captionDescriptions;
+    /** Color correction settings */
+    private ColorCorrectionSettings colorCorrectionSettings;
     /** Feature Activations */
     private FeatureActivations featureActivations;
     /** Configuration settings that apply to the event as a whole. */
@@ -265,6 +267,40 @@ public class EncoderSettings implements Serializable, Cloneable, StructuredPojo 
 
     public EncoderSettings withCaptionDescriptions(java.util.Collection<CaptionDescription> captionDescriptions) {
         setCaptionDescriptions(captionDescriptions);
+        return this;
+    }
+
+    /**
+     * Color correction settings
+     * 
+     * @param colorCorrectionSettings
+     *        Color correction settings
+     */
+
+    public void setColorCorrectionSettings(ColorCorrectionSettings colorCorrectionSettings) {
+        this.colorCorrectionSettings = colorCorrectionSettings;
+    }
+
+    /**
+     * Color correction settings
+     * 
+     * @return Color correction settings
+     */
+
+    public ColorCorrectionSettings getColorCorrectionSettings() {
+        return this.colorCorrectionSettings;
+    }
+
+    /**
+     * Color correction settings
+     * 
+     * @param colorCorrectionSettings
+     *        Color correction settings
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EncoderSettings withColorCorrectionSettings(ColorCorrectionSettings colorCorrectionSettings) {
+        setColorCorrectionSettings(colorCorrectionSettings);
         return this;
     }
 
@@ -598,6 +634,8 @@ public class EncoderSettings implements Serializable, Cloneable, StructuredPojo 
             sb.append("BlackoutSlate: ").append(getBlackoutSlate()).append(",");
         if (getCaptionDescriptions() != null)
             sb.append("CaptionDescriptions: ").append(getCaptionDescriptions()).append(",");
+        if (getColorCorrectionSettings() != null)
+            sb.append("ColorCorrectionSettings: ").append(getColorCorrectionSettings()).append(",");
         if (getFeatureActivations() != null)
             sb.append("FeatureActivations: ").append(getFeatureActivations()).append(",");
         if (getGlobalConfiguration() != null)
@@ -648,6 +686,10 @@ public class EncoderSettings implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getCaptionDescriptions() != null && other.getCaptionDescriptions().equals(this.getCaptionDescriptions()) == false)
             return false;
+        if (other.getColorCorrectionSettings() == null ^ this.getColorCorrectionSettings() == null)
+            return false;
+        if (other.getColorCorrectionSettings() != null && other.getColorCorrectionSettings().equals(this.getColorCorrectionSettings()) == false)
+            return false;
         if (other.getFeatureActivations() == null ^ this.getFeatureActivations() == null)
             return false;
         if (other.getFeatureActivations() != null && other.getFeatureActivations().equals(this.getFeatureActivations()) == false)
@@ -693,6 +735,7 @@ public class EncoderSettings implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getAvailConfiguration() == null) ? 0 : getAvailConfiguration().hashCode());
         hashCode = prime * hashCode + ((getBlackoutSlate() == null) ? 0 : getBlackoutSlate().hashCode());
         hashCode = prime * hashCode + ((getCaptionDescriptions() == null) ? 0 : getCaptionDescriptions().hashCode());
+        hashCode = prime * hashCode + ((getColorCorrectionSettings() == null) ? 0 : getColorCorrectionSettings().hashCode());
         hashCode = prime * hashCode + ((getFeatureActivations() == null) ? 0 : getFeatureActivations().hashCode());
         hashCode = prime * hashCode + ((getGlobalConfiguration() == null) ? 0 : getGlobalConfiguration().hashCode());
         hashCode = prime * hashCode + ((getMotionGraphicsConfiguration() == null) ? 0 : getMotionGraphicsConfiguration().hashCode());

@@ -89,7 +89,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
+     * Amazon Linux: <code>amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -114,7 +114,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
+     * Amazon Linux: <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -445,7 +445,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
+     * Amazon Linux: <code>amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -470,7 +470,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
+     * Amazon Linux: <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -515,7 +515,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        <ul>
      *        <li>
      *        <p>
-     *        Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
+     *        Amazon Linux: <code>amazonlinux-1-x86_64</code>
      *        </p>
      *        </li>
      *        <li>
@@ -540,7 +540,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        <ul>
      *        <li>
      *        <p>
-     *        Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
+     *        Amazon Linux: <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      *        </p>
      *        </li>
      *        <li>
@@ -590,7 +590,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
+     * Amazon Linux: <code>amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -615,7 +615,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
+     * Amazon Linux: <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -660,7 +660,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *         <ul>
      *         <li>
      *         <p>
-     *         Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
+     *         Amazon Linux: <code>amazonlinux-1-x86_64</code>
      *         </p>
      *         </li>
      *         <li>
@@ -685,7 +685,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *         <ul>
      *         <li>
      *         <p>
-     *         Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
+     *         Amazon Linux: <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      *         </p>
      *         </li>
      *         <li>
@@ -735,7 +735,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
+     * Amazon Linux: <code>amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -760,7 +760,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      * <ul>
      * <li>
      * <p>
-     * Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
+     * Amazon Linux: <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      * </p>
      * </li>
      * <li>
@@ -805,7 +805,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        <ul>
      *        <li>
      *        <p>
-     *        Amazon Linux (default): <code>amazonlinux-1-x86_64</code>
+     *        Amazon Linux: <code>amazonlinux-1-x86_64</code>
      *        </p>
      *        </li>
      *        <li>
@@ -830,7 +830,7 @@ public class CreateEnvironmentEC2Request extends com.amazonaws.AmazonWebServiceR
      *        <ul>
      *        <li>
      *        <p>
-     *        Amazon Linux (default): <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
+     *        Amazon Linux: <code>resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64</code>
      *        </p>
      *        </li>
      *        <li>

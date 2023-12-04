@@ -52,6 +52,7 @@ public class RuntimeHttpUtils {
     private static final String RETRY_MODE_PREFIX = "cfg/retry-mode/";
 
     private static final String TRACE_ID_ENVIRONMENT_VARIABLE = "_X_AMZN_TRACE_ID";
+    private static final String TRACE_ID_SYSTEM_PROPERTY = "com.amazonaws.xray.traceHeader";
     private static final String LAMBDA_FUNCTION_NAME_ENVIRONMENT_VARIABLE = "AWS_LAMBDA_FUNCTION_NAME";
 
 
@@ -159,6 +160,14 @@ public class RuntimeHttpUtils {
         } catch (Exception e) {
             // Return an empty string if unable to get environment variable
             return "";
+        }
+    }
+
+    private static String getSystemProperty(String systemProperty) {
+        try {
+            return System.getProperty(systemProperty);
+        } catch (Exception e) {
+            return null;
         }
     }
 
@@ -279,11 +288,18 @@ public class RuntimeHttpUtils {
      */
     public static String getLambdaEnvironmentTraceId() {
         String lambdafunctionName = getEnvironmentVariable(LAMBDA_FUNCTION_NAME_ENVIRONMENT_VARIABLE);
-        String traceId = getEnvironmentVariable(TRACE_ID_ENVIRONMENT_VARIABLE);
-
+        String traceId = traceId();
         if (!StringUtils.isNullOrEmpty(lambdafunctionName) && !StringUtils.isNullOrEmpty(traceId)) {
             return traceId;
         };
         return null;
+    }
+
+    static String traceId() {
+        String traceId = getSystemProperty(TRACE_ID_SYSTEM_PROPERTY);
+        if (traceId == null) {
+            traceId = getEnvironmentVariable(TRACE_ID_ENVIRONMENT_VARIABLE);
+        }
+        return traceId;
     }
 }

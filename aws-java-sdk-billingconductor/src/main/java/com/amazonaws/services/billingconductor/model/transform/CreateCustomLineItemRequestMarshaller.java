@@ -46,6 +46,8 @@ public class CreateCustomLineItemRequestMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<StructuredPojo> CHARGEDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ChargeDetails").build();
+    private static final MarshallingInfo<String> ACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AccountId").build();
 
     private static final CreateCustomLineItemRequestMarshaller instance = new CreateCustomLineItemRequestMarshaller();
 
@@ -70,6 +72,7 @@ public class CreateCustomLineItemRequestMarshaller {
             protocolMarshaller.marshall(createCustomLineItemRequest.getBillingPeriodRange(), BILLINGPERIODRANGE_BINDING);
             protocolMarshaller.marshall(createCustomLineItemRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createCustomLineItemRequest.getChargeDetails(), CHARGEDETAILS_BINDING);
+            protocolMarshaller.marshall(createCustomLineItemRequest.getAccountId(), ACCOUNTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

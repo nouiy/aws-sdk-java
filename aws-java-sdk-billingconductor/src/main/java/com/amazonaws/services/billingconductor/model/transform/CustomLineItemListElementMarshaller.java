@@ -47,6 +47,8 @@ public class CustomLineItemListElementMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedTime").build();
     private static final MarshallingInfo<Long> ASSOCIATIONSIZE_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AssociationSize").build();
+    private static final MarshallingInfo<String> ACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AccountId").build();
 
     private static final CustomLineItemListElementMarshaller instance = new CustomLineItemListElementMarshaller();
 
@@ -74,6 +76,7 @@ public class CustomLineItemListElementMarshaller {
             protocolMarshaller.marshall(customLineItemListElement.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(customLineItemListElement.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
             protocolMarshaller.marshall(customLineItemListElement.getAssociationSize(), ASSOCIATIONSIZE_BINDING);
+            protocolMarshaller.marshall(customLineItemListElement.getAccountId(), ACCOUNTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

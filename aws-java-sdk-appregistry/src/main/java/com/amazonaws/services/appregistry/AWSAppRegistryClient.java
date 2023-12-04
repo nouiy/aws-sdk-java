@@ -249,7 +249,7 @@ public class AWSAppRegistryClient extends AmazonWebServiceClient implements AWSA
      * <ul>
      * <li>
      * <p>
-     * <code>resource-groups:DisassociateResource</code>
+     * <code>resource-groups:AssociateResource</code>
      * </p>
      * </li>
      * <li>

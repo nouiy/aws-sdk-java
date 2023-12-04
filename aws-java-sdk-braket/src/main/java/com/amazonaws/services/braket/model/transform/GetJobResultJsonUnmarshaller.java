@@ -52,6 +52,12 @@ public class GetJobResultJsonUnmarshaller implements Unmarshaller<GetJobResult, 
                     context.nextToken();
                     getJobResult.setAlgorithmSpecification(AlgorithmSpecificationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("associations", targetDepth)) {
+                    context.nextToken();
+                    getJobResult.setAssociations(new ListUnmarshaller<Association>(AssociationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("billableDuration", targetDepth)) {
                     context.nextToken();
                     getJobResult.setBillableDuration(context.getUnmarshaller(Integer.class).unmarshall(context));

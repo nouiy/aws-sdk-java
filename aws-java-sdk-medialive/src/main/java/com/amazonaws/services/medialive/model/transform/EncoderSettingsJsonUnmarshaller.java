@@ -72,6 +72,10 @@ public class EncoderSettingsJsonUnmarshaller implements Unmarshaller<EncoderSett
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("colorCorrectionSettings", targetDepth)) {
+                    context.nextToken();
+                    encoderSettings.setColorCorrectionSettings(ColorCorrectionSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("featureActivations", targetDepth)) {
                     context.nextToken();
                     encoderSettings.setFeatureActivations(FeatureActivationsJsonUnmarshaller.getInstance().unmarshall(context));

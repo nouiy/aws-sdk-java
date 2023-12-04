@@ -33,6 +33,8 @@ public class CreateJobRequestMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> ALGORITHMSPECIFICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("algorithmSpecification").build();
+    private static final MarshallingInfo<List> ASSOCIATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("associations").build();
     private static final MarshallingInfo<StructuredPojo> CHECKPOINTCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("checkpointConfig").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -74,6 +76,7 @@ public class CreateJobRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createJobRequest.getAlgorithmSpecification(), ALGORITHMSPECIFICATION_BINDING);
+            protocolMarshaller.marshall(createJobRequest.getAssociations(), ASSOCIATIONS_BINDING);
             protocolMarshaller.marshall(createJobRequest.getCheckpointConfig(), CHECKPOINTCONFIG_BINDING);
             protocolMarshaller.marshall(createJobRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createJobRequest.getDeviceConfig(), DEVICECONFIG_BINDING);

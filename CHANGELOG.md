@@ -1,3 +1,32 @@
+# __1.12.605__ __2023-12-04__
+## __AWS Cloud9__
+  - ### Features
+    - This release adds the requirement to include the imageId parameter in the CreateEnvironmentEC2 API call.
+
+## __AWS CloudFormation__
+  - ### Features
+    - Including UPDATE_* states as a success status for CreateStack waiter.
+
+## __AWS Elemental MediaLive__
+  - ### Features
+    - Adds support for custom color correction on channels using 3D LUT files.
+
+## __AWS Service Catalog App Registry__
+  - ### Features
+    - Documentation-only updates for Dawn
+
+## __AWSBillingConductor__
+  - ### Features
+    - This release adds the ability to specify a linked account of the billing group for the custom line item resource.
+
+## __Braket__
+  - ### Features
+    - This release enhances service support to create quantum tasks and hybrid jobs associated with Braket Direct Reservations.
+
+## __FinSpace User Environment Management service__
+  - ### Features
+    - Release General Purpose type clusters
+
 # __1.12.604__ __2023-12-01__
 ## __Amazon Q Connect__
   - ### Features

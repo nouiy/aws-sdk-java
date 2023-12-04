@@ -42,6 +42,17 @@ public class KxClusterCodeDeploymentConfiguration implements Serializable, Clone
      * </li>
      * <li>
      * <p>
+     * NO_RESTART – This option updates the cluster without stopping the running q process. It is only available for
+     * <code>GP</code> type cluster. This option is quicker as it reduces the turn around time to update configuration
+     * on a cluster.
+     * </p>
+     * <p>
+     * With this deployment mode, you cannot update the <code>initializationScript</code> and
+     * <code>commandLineArguments</code> parameters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * FORCE – This option updates the cluster by immediately stopping all the running processes before starting up new
      * ones with the updated configuration.
      * </p>
@@ -63,6 +74,17 @@ public class KxClusterCodeDeploymentConfiguration implements Serializable, Clone
      * </li>
      * <li>
      * <p>
+     * NO_RESTART – This option updates the cluster without stopping the running q process. It is only available for
+     * <code>GP</code> type cluster. This option is quicker as it reduces the turn around time to update configuration
+     * on a cluster.
+     * </p>
+     * <p>
+     * With this deployment mode, you cannot update the <code>initializationScript</code> and
+     * <code>commandLineArguments</code> parameters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * FORCE – This option updates the cluster by immediately stopping all the running processes before starting up new
      * ones with the updated configuration.
      * </p>
@@ -76,6 +98,17 @@ public class KxClusterCodeDeploymentConfiguration implements Serializable, Clone
      *        <p>
      *        ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process
      *        with updated configuration.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        NO_RESTART – This option updates the cluster without stopping the running q process. It is only available
+     *        for <code>GP</code> type cluster. This option is quicker as it reduces the turn around time to update
+     *        configuration on a cluster.
+     *        </p>
+     *        <p>
+     *        With this deployment mode, you cannot update the <code>initializationScript</code> and
+     *        <code>commandLineArguments</code> parameters.
      *        </p>
      *        </li>
      *        <li>
@@ -104,6 +137,17 @@ public class KxClusterCodeDeploymentConfiguration implements Serializable, Clone
      * </li>
      * <li>
      * <p>
+     * NO_RESTART – This option updates the cluster without stopping the running q process. It is only available for
+     * <code>GP</code> type cluster. This option is quicker as it reduces the turn around time to update configuration
+     * on a cluster.
+     * </p>
+     * <p>
+     * With this deployment mode, you cannot update the <code>initializationScript</code> and
+     * <code>commandLineArguments</code> parameters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * FORCE – This option updates the cluster by immediately stopping all the running processes before starting up new
      * ones with the updated configuration.
      * </p>
@@ -116,6 +160,17 @@ public class KxClusterCodeDeploymentConfiguration implements Serializable, Clone
      *         <p>
      *         ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process
      *         with updated configuration.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         NO_RESTART – This option updates the cluster without stopping the running q process. It is only available
+     *         for <code>GP</code> type cluster. This option is quicker as it reduces the turn around time to update
+     *         configuration on a cluster.
+     *         </p>
+     *         <p>
+     *         With this deployment mode, you cannot update the <code>initializationScript</code> and
+     *         <code>commandLineArguments</code> parameters.
      *         </p>
      *         </li>
      *         <li>
@@ -144,6 +199,17 @@ public class KxClusterCodeDeploymentConfiguration implements Serializable, Clone
      * </li>
      * <li>
      * <p>
+     * NO_RESTART – This option updates the cluster without stopping the running q process. It is only available for
+     * <code>GP</code> type cluster. This option is quicker as it reduces the turn around time to update configuration
+     * on a cluster.
+     * </p>
+     * <p>
+     * With this deployment mode, you cannot update the <code>initializationScript</code> and
+     * <code>commandLineArguments</code> parameters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * FORCE – This option updates the cluster by immediately stopping all the running processes before starting up new
      * ones with the updated configuration.
      * </p>
@@ -157,6 +223,17 @@ public class KxClusterCodeDeploymentConfiguration implements Serializable, Clone
      *        <p>
      *        ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process
      *        with updated configuration.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        NO_RESTART – This option updates the cluster without stopping the running q process. It is only available
+     *        for <code>GP</code> type cluster. This option is quicker as it reduces the turn around time to update
+     *        configuration on a cluster.
+     *        </p>
+     *        <p>
+     *        With this deployment mode, you cannot update the <code>initializationScript</code> and
+     *        <code>commandLineArguments</code> parameters.
      *        </p>
      *        </li>
      *        <li>
@@ -187,6 +264,17 @@ public class KxClusterCodeDeploymentConfiguration implements Serializable, Clone
      * </li>
      * <li>
      * <p>
+     * NO_RESTART – This option updates the cluster without stopping the running q process. It is only available for
+     * <code>GP</code> type cluster. This option is quicker as it reduces the turn around time to update configuration
+     * on a cluster.
+     * </p>
+     * <p>
+     * With this deployment mode, you cannot update the <code>initializationScript</code> and
+     * <code>commandLineArguments</code> parameters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * FORCE – This option updates the cluster by immediately stopping all the running processes before starting up new
      * ones with the updated configuration.
      * </p>
@@ -200,6 +288,17 @@ public class KxClusterCodeDeploymentConfiguration implements Serializable, Clone
      *        <p>
      *        ROLLING – This options updates the cluster by stopping the exiting q process and starting a new q process
      *        with updated configuration.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        NO_RESTART – This option updates the cluster without stopping the running q process. It is only available
+     *        for <code>GP</code> type cluster. This option is quicker as it reduces the turn around time to update
+     *        configuration on a cluster.
+     *        </p>
+     *        <p>
+     *        With this deployment mode, you cannot update the <code>initializationScript</code> and
+     *        <code>commandLineArguments</code> parameters.
      *        </p>
      *        </li>
      *        <li>
