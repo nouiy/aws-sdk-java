@@ -31,6 +31,8 @@ public class GetDatabaseRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CatalogName").build();
     private static final MarshallingInfo<String> DATABASENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DatabaseName").build();
+    private static final MarshallingInfo<String> WORKGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("WorkGroup").build();
 
     private static final GetDatabaseRequestMarshaller instance = new GetDatabaseRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class GetDatabaseRequestMarshaller {
         try {
             protocolMarshaller.marshall(getDatabaseRequest.getCatalogName(), CATALOGNAME_BINDING);
             protocolMarshaller.marshall(getDatabaseRequest.getDatabaseName(), DATABASENAME_BINDING);
+            protocolMarshaller.marshall(getDatabaseRequest.getWorkGroup(), WORKGROUP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

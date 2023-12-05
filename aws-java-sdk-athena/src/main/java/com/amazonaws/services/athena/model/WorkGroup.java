@@ -69,6 +69,12 @@ public class WorkGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date creationTime;
+    /**
+     * <p>
+     * The ARN of the IAM Identity Center enabled application associated with the workgroup.
+     * </p>
+     */
+    private String identityCenterApplicationArn;
 
     /**
      * <p>
@@ -321,6 +327,46 @@ public class WorkGroup implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ARN of the IAM Identity Center enabled application associated with the workgroup.
+     * </p>
+     * 
+     * @param identityCenterApplicationArn
+     *        The ARN of the IAM Identity Center enabled application associated with the workgroup.
+     */
+
+    public void setIdentityCenterApplicationArn(String identityCenterApplicationArn) {
+        this.identityCenterApplicationArn = identityCenterApplicationArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the IAM Identity Center enabled application associated with the workgroup.
+     * </p>
+     * 
+     * @return The ARN of the IAM Identity Center enabled application associated with the workgroup.
+     */
+
+    public String getIdentityCenterApplicationArn() {
+        return this.identityCenterApplicationArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the IAM Identity Center enabled application associated with the workgroup.
+     * </p>
+     * 
+     * @param identityCenterApplicationArn
+     *        The ARN of the IAM Identity Center enabled application associated with the workgroup.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkGroup withIdentityCenterApplicationArn(String identityCenterApplicationArn) {
+        setIdentityCenterApplicationArn(identityCenterApplicationArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -341,7 +387,9 @@ public class WorkGroup implements Serializable, Cloneable, StructuredPojo {
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getCreationTime() != null)
-            sb.append("CreationTime: ").append(getCreationTime());
+            sb.append("CreationTime: ").append(getCreationTime()).append(",");
+        if (getIdentityCenterApplicationArn() != null)
+            sb.append("IdentityCenterApplicationArn: ").append(getIdentityCenterApplicationArn());
         sb.append("}");
         return sb.toString();
     }
@@ -376,6 +424,10 @@ public class WorkGroup implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
             return false;
+        if (other.getIdentityCenterApplicationArn() == null ^ this.getIdentityCenterApplicationArn() == null)
+            return false;
+        if (other.getIdentityCenterApplicationArn() != null && other.getIdentityCenterApplicationArn().equals(this.getIdentityCenterApplicationArn()) == false)
+            return false;
         return true;
     }
 
@@ -389,6 +441,7 @@ public class WorkGroup implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
+        hashCode = prime * hashCode + ((getIdentityCenterApplicationArn() == null) ? 0 : getIdentityCenterApplicationArn().hashCode());
         return hashCode;
     }
 

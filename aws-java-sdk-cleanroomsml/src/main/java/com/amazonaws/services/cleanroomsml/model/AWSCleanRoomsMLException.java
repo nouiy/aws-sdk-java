@@ -15,7 +15,7 @@ package com.amazonaws.services.cleanroomsml.model;
 import javax.annotation.Generated;
 
 /**
- * Base exception for all service exceptions thrown by cleanrooms-ml
+ * Base exception for all service exceptions thrown by AWS Clean Rooms ML
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AWSCleanRoomsMLException extends com.amazonaws.AmazonServiceException {

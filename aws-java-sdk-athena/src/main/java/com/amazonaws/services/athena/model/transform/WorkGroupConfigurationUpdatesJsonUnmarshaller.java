@@ -97,6 +97,11 @@ public class WorkGroupConfigurationUpdatesJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     workGroupConfigurationUpdates.setEnableMinimumEncryptionConfiguration(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("QueryResultsS3AccessGrantsConfiguration", targetDepth)) {
+                    context.nextToken();
+                    workGroupConfigurationUpdates.setQueryResultsS3AccessGrantsConfiguration(QueryResultsS3AccessGrantsConfigurationJsonUnmarshaller
+                            .getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -23,7 +23,8 @@ public enum AcceleratorManufacturer {
     AmazonWebServices("amazon-web-services"),
     Amd("amd"),
     Nvidia("nvidia"),
-    Xilinx("xilinx");
+    Xilinx("xilinx"),
+    Habana("habana");
 
     private String value;
 

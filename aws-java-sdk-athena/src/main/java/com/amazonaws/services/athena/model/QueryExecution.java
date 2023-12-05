@@ -109,6 +109,12 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String substatementType;
+    /**
+     * <p>
+     * Specifies whether Amazon S3 access grants are enabled for query results.
+     * </p>
+     */
+    private QueryResultsS3AccessGrantsConfiguration queryResultsS3AccessGrantsConfiguration;
 
     /**
      * <p>
@@ -706,6 +712,46 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies whether Amazon S3 access grants are enabled for query results.
+     * </p>
+     * 
+     * @param queryResultsS3AccessGrantsConfiguration
+     *        Specifies whether Amazon S3 access grants are enabled for query results.
+     */
+
+    public void setQueryResultsS3AccessGrantsConfiguration(QueryResultsS3AccessGrantsConfiguration queryResultsS3AccessGrantsConfiguration) {
+        this.queryResultsS3AccessGrantsConfiguration = queryResultsS3AccessGrantsConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies whether Amazon S3 access grants are enabled for query results.
+     * </p>
+     * 
+     * @return Specifies whether Amazon S3 access grants are enabled for query results.
+     */
+
+    public QueryResultsS3AccessGrantsConfiguration getQueryResultsS3AccessGrantsConfiguration() {
+        return this.queryResultsS3AccessGrantsConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies whether Amazon S3 access grants are enabled for query results.
+     * </p>
+     * 
+     * @param queryResultsS3AccessGrantsConfiguration
+     *        Specifies whether Amazon S3 access grants are enabled for query results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryExecution withQueryResultsS3AccessGrantsConfiguration(QueryResultsS3AccessGrantsConfiguration queryResultsS3AccessGrantsConfiguration) {
+        setQueryResultsS3AccessGrantsConfiguration(queryResultsS3AccessGrantsConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -740,7 +786,9 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
         if (getExecutionParameters() != null)
             sb.append("ExecutionParameters: ").append(getExecutionParameters()).append(",");
         if (getSubstatementType() != null)
-            sb.append("SubstatementType: ").append(getSubstatementType());
+            sb.append("SubstatementType: ").append(getSubstatementType()).append(",");
+        if (getQueryResultsS3AccessGrantsConfiguration() != null)
+            sb.append("QueryResultsS3AccessGrantsConfiguration: ").append(getQueryResultsS3AccessGrantsConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -803,6 +851,11 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSubstatementType() != null && other.getSubstatementType().equals(this.getSubstatementType()) == false)
             return false;
+        if (other.getQueryResultsS3AccessGrantsConfiguration() == null ^ this.getQueryResultsS3AccessGrantsConfiguration() == null)
+            return false;
+        if (other.getQueryResultsS3AccessGrantsConfiguration() != null
+                && other.getQueryResultsS3AccessGrantsConfiguration().equals(this.getQueryResultsS3AccessGrantsConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -823,6 +876,7 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEngineVersion() == null) ? 0 : getEngineVersion().hashCode());
         hashCode = prime * hashCode + ((getExecutionParameters() == null) ? 0 : getExecutionParameters().hashCode());
         hashCode = prime * hashCode + ((getSubstatementType() == null) ? 0 : getSubstatementType().hashCode());
+        hashCode = prime * hashCode + ((getQueryResultsS3AccessGrantsConfiguration() == null) ? 0 : getQueryResultsS3AccessGrantsConfiguration().hashCode());
         return hashCode;
     }
 

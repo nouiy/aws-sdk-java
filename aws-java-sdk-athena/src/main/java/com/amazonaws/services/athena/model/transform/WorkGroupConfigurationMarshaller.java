@@ -47,6 +47,10 @@ public class WorkGroupConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomerContentEncryptionConfiguration").build();
     private static final MarshallingInfo<Boolean> ENABLEMINIMUMENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnableMinimumEncryptionConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> IDENTITYCENTERCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdentityCenterConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> QUERYRESULTSS3ACCESSGRANTSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QueryResultsS3AccessGrantsConfiguration").build();
 
     private static final WorkGroupConfigurationMarshaller instance = new WorkGroupConfigurationMarshaller();
 
@@ -74,6 +78,8 @@ public class WorkGroupConfigurationMarshaller {
             protocolMarshaller.marshall(workGroupConfiguration.getExecutionRole(), EXECUTIONROLE_BINDING);
             protocolMarshaller.marshall(workGroupConfiguration.getCustomerContentEncryptionConfiguration(), CUSTOMERCONTENTENCRYPTIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(workGroupConfiguration.getEnableMinimumEncryptionConfiguration(), ENABLEMINIMUMENCRYPTIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(workGroupConfiguration.getIdentityCenterConfiguration(), IDENTITYCENTERCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(workGroupConfiguration.getQueryResultsS3AccessGrantsConfiguration(), QUERYRESULTSS3ACCESSGRANTSCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

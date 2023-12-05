@@ -1,3 +1,20 @@
+# __1.12.606__ __2023-12-05__
+## __AWS Clean Rooms ML__
+  - ### Features
+    - Updated service title from cleanroomsml to CleanRoomsML.
+
+## __AWS CloudFormation__
+  - ### Features
+    - Documentation update, December 2023
+
+## __Amazon Athena__
+  - ### Features
+    - Adding IdentityCenter enabled request for interactive query
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Adds A10G, T4G, and H100 as accelerator name options and Habana as an accelerator manufacturer option for attribute based selection
+
 # __1.12.605__ __2023-12-04__
 ## __AWS Cloud9__
   - ### Features

@@ -92,8 +92,8 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
     private String additionalConfiguration;
     /**
      * <p>
-     * Role used in a Spark session for accessing the user's resources. This property applies only to Spark-enabled
-     * workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      * </p>
      */
     private String executionRole;
@@ -118,6 +118,18 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
      * </p>
      */
     private Boolean enableMinimumEncryptionConfiguration;
+    /**
+     * <p>
+     * Specifies whether the workgroup is IAM Identity Center supported.
+     * </p>
+     */
+    private IdentityCenterConfiguration identityCenterConfiguration;
+    /**
+     * <p>
+     * Specifies whether Amazon S3 access grants are enabled for query results.
+     * </p>
+     */
+    private QueryResultsS3AccessGrantsConfiguration queryResultsS3AccessGrantsConfiguration;
 
     /**
      * <p>
@@ -549,13 +561,13 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Role used in a Spark session for accessing the user's resources. This property applies only to Spark-enabled
-     * workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      * </p>
      * 
      * @param executionRole
-     *        Role used in a Spark session for accessing the user's resources. This property applies only to
-     *        Spark-enabled workgroups.
+     *        The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     *        workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      */
 
     public void setExecutionRole(String executionRole) {
@@ -564,12 +576,13 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Role used in a Spark session for accessing the user's resources. This property applies only to Spark-enabled
-     * workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      * </p>
      * 
-     * @return Role used in a Spark session for accessing the user's resources. This property applies only to
-     *         Spark-enabled workgroups.
+     * @return The ARN of the execution role used to access user resources for Spark sessions and Identity Center
+     *         enabled workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled
+     *         workgroups.
      */
 
     public String getExecutionRole() {
@@ -578,13 +591,13 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Role used in a Spark session for accessing the user's resources. This property applies only to Spark-enabled
-     * workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      * </p>
      * 
      * @param executionRole
-     *        Role used in a Spark session for accessing the user's resources. This property applies only to
-     *        Spark-enabled workgroups.
+     *        The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     *        workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -752,6 +765,86 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Specifies whether the workgroup is IAM Identity Center supported.
+     * </p>
+     * 
+     * @param identityCenterConfiguration
+     *        Specifies whether the workgroup is IAM Identity Center supported.
+     */
+
+    public void setIdentityCenterConfiguration(IdentityCenterConfiguration identityCenterConfiguration) {
+        this.identityCenterConfiguration = identityCenterConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the workgroup is IAM Identity Center supported.
+     * </p>
+     * 
+     * @return Specifies whether the workgroup is IAM Identity Center supported.
+     */
+
+    public IdentityCenterConfiguration getIdentityCenterConfiguration() {
+        return this.identityCenterConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the workgroup is IAM Identity Center supported.
+     * </p>
+     * 
+     * @param identityCenterConfiguration
+     *        Specifies whether the workgroup is IAM Identity Center supported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkGroupConfiguration withIdentityCenterConfiguration(IdentityCenterConfiguration identityCenterConfiguration) {
+        setIdentityCenterConfiguration(identityCenterConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether Amazon S3 access grants are enabled for query results.
+     * </p>
+     * 
+     * @param queryResultsS3AccessGrantsConfiguration
+     *        Specifies whether Amazon S3 access grants are enabled for query results.
+     */
+
+    public void setQueryResultsS3AccessGrantsConfiguration(QueryResultsS3AccessGrantsConfiguration queryResultsS3AccessGrantsConfiguration) {
+        this.queryResultsS3AccessGrantsConfiguration = queryResultsS3AccessGrantsConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies whether Amazon S3 access grants are enabled for query results.
+     * </p>
+     * 
+     * @return Specifies whether Amazon S3 access grants are enabled for query results.
+     */
+
+    public QueryResultsS3AccessGrantsConfiguration getQueryResultsS3AccessGrantsConfiguration() {
+        return this.queryResultsS3AccessGrantsConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies whether Amazon S3 access grants are enabled for query results.
+     * </p>
+     * 
+     * @param queryResultsS3AccessGrantsConfiguration
+     *        Specifies whether Amazon S3 access grants are enabled for query results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkGroupConfiguration withQueryResultsS3AccessGrantsConfiguration(QueryResultsS3AccessGrantsConfiguration queryResultsS3AccessGrantsConfiguration) {
+        setQueryResultsS3AccessGrantsConfiguration(queryResultsS3AccessGrantsConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -782,7 +875,11 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
         if (getCustomerContentEncryptionConfiguration() != null)
             sb.append("CustomerContentEncryptionConfiguration: ").append(getCustomerContentEncryptionConfiguration()).append(",");
         if (getEnableMinimumEncryptionConfiguration() != null)
-            sb.append("EnableMinimumEncryptionConfiguration: ").append(getEnableMinimumEncryptionConfiguration());
+            sb.append("EnableMinimumEncryptionConfiguration: ").append(getEnableMinimumEncryptionConfiguration()).append(",");
+        if (getIdentityCenterConfiguration() != null)
+            sb.append("IdentityCenterConfiguration: ").append(getIdentityCenterConfiguration()).append(",");
+        if (getQueryResultsS3AccessGrantsConfiguration() != null)
+            sb.append("QueryResultsS3AccessGrantsConfiguration: ").append(getQueryResultsS3AccessGrantsConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -841,6 +938,15 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
         if (other.getEnableMinimumEncryptionConfiguration() != null
                 && other.getEnableMinimumEncryptionConfiguration().equals(this.getEnableMinimumEncryptionConfiguration()) == false)
             return false;
+        if (other.getIdentityCenterConfiguration() == null ^ this.getIdentityCenterConfiguration() == null)
+            return false;
+        if (other.getIdentityCenterConfiguration() != null && other.getIdentityCenterConfiguration().equals(this.getIdentityCenterConfiguration()) == false)
+            return false;
+        if (other.getQueryResultsS3AccessGrantsConfiguration() == null ^ this.getQueryResultsS3AccessGrantsConfiguration() == null)
+            return false;
+        if (other.getQueryResultsS3AccessGrantsConfiguration() != null
+                && other.getQueryResultsS3AccessGrantsConfiguration().equals(this.getQueryResultsS3AccessGrantsConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -859,6 +965,8 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getExecutionRole() == null) ? 0 : getExecutionRole().hashCode());
         hashCode = prime * hashCode + ((getCustomerContentEncryptionConfiguration() == null) ? 0 : getCustomerContentEncryptionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getEnableMinimumEncryptionConfiguration() == null) ? 0 : getEnableMinimumEncryptionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getIdentityCenterConfiguration() == null) ? 0 : getIdentityCenterConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getQueryResultsS3AccessGrantsConfiguration() == null) ? 0 : getQueryResultsS3AccessGrantsConfiguration().hashCode());
         return hashCode;
     }
 

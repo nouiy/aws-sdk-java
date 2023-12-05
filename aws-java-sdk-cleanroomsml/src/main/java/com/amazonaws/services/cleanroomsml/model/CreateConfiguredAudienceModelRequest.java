@@ -49,6 +49,10 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
      * override the default.
      * </p>
+     * <p>
+     * When the client is in a different account than the configured audience model, the tags from the client are never
+     * applied to a resource in the caller's account.
+     * </p>
      */
     private String childResourceTagOnCreatePolicy;
     /**
@@ -250,13 +254,20 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
      * override the default.
      * </p>
+     * <p>
+     * When the client is in a different account than the configured audience model, the tags from the client are never
+     * applied to a resource in the caller's account.
+     * </p>
      * 
      * @param childResourceTagOnCreatePolicy
      *        Configure how the service tags audience generation jobs created using this configured audience model. If
      *        you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
      *        tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
      *        generation job inherits the tags from the configured audience model, by default. Tags in the
-     *        <a>StartAudienceGenerationJob</a> will override the default.
+     *        <a>StartAudienceGenerationJob</a> will override the default.</p>
+     *        <p>
+     *        When the client is in a different account than the configured audience model, the tags from the client are
+     *        never applied to a resource in the caller's account.
      * @see TagOnCreatePolicy
      */
 
@@ -272,12 +283,19 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
      * override the default.
      * </p>
+     * <p>
+     * When the client is in a different account than the configured audience model, the tags from the client are never
+     * applied to a resource in the caller's account.
+     * </p>
      * 
      * @return Configure how the service tags audience generation jobs created using this configured audience model. If
      *         you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
      *         tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
      *         generation job inherits the tags from the configured audience model, by default. Tags in the
-     *         <a>StartAudienceGenerationJob</a> will override the default.
+     *         <a>StartAudienceGenerationJob</a> will override the default.</p>
+     *         <p>
+     *         When the client is in a different account than the configured audience model, the tags from the client
+     *         are never applied to a resource in the caller's account.
      * @see TagOnCreatePolicy
      */
 
@@ -293,13 +311,20 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
      * override the default.
      * </p>
+     * <p>
+     * When the client is in a different account than the configured audience model, the tags from the client are never
+     * applied to a resource in the caller's account.
+     * </p>
      * 
      * @param childResourceTagOnCreatePolicy
      *        Configure how the service tags audience generation jobs created using this configured audience model. If
      *        you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
      *        tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
      *        generation job inherits the tags from the configured audience model, by default. Tags in the
-     *        <a>StartAudienceGenerationJob</a> will override the default.
+     *        <a>StartAudienceGenerationJob</a> will override the default.</p>
+     *        <p>
+     *        When the client is in a different account than the configured audience model, the tags from the client are
+     *        never applied to a resource in the caller's account.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TagOnCreatePolicy
      */
@@ -317,13 +342,20 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
      * override the default.
      * </p>
+     * <p>
+     * When the client is in a different account than the configured audience model, the tags from the client are never
+     * applied to a resource in the caller's account.
+     * </p>
      * 
      * @param childResourceTagOnCreatePolicy
      *        Configure how the service tags audience generation jobs created using this configured audience model. If
      *        you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
      *        tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
      *        generation job inherits the tags from the configured audience model, by default. Tags in the
-     *        <a>StartAudienceGenerationJob</a> will override the default.
+     *        <a>StartAudienceGenerationJob</a> will override the default.</p>
+     *        <p>
+     *        When the client is in a different account than the configured audience model, the tags from the client are
+     *        never applied to a resource in the caller's account.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TagOnCreatePolicy
      */

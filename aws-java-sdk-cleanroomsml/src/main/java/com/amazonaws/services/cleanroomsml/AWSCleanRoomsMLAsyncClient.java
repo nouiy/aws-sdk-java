@@ -21,12 +21,27 @@ import com.amazonaws.annotation.ThreadSafe;
 import java.util.concurrent.ExecutorService;
 
 /**
- * Client for accessing cleanrooms-ml asynchronously. Each asynchronous method will return a Java Future object
+ * Client for accessing AWS Clean Rooms ML asynchronously. Each asynchronous method will return a Java Future object
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * API Reference for Amazon Web Services Clean Rooms ML.
+ * Welcome to the <i>Amazon Web Services Clean Rooms ML API Reference</i>.
+ * </p>
+ * <p>
+ * Amazon Web Services Clean Rooms ML provides a privacy-enhancing method for two parties to identify similar users in
+ * their data without the need to share their data with each other. The first party brings the training data to Clean
+ * Rooms so that they can create and configure an audience model (lookalike model) and associate it with a
+ * collaboration. The second party then brings their seed data to Clean Rooms and generates an audience (lookalike
+ * segment) that resembles the training data.
+ * </p>
+ * <p>
+ * To learn more about Amazon Web Services Clean Rooms ML concepts, procedures, and best practices, see the <a
+ * href="https://docs.aws.amazon.com/clean-rooms/latest/userguide/machine-learning.html">Clean Rooms User Guide</a>.
+ * </p>
+ * <p>
+ * To learn more about SQL commands, functions, and conditions supported in Clean Rooms, see the <a
+ * href="https://docs.aws.amazon.com/clean-rooms/latest/sql-reference/sql-reference.html">Clean Rooms SQL Reference</a>.
  * </p>
  */
 @ThreadSafe
@@ -42,7 +57,8 @@ public class AWSCleanRoomsMLAsyncClient extends AWSCleanRoomsMLClient implements
     }
 
     /**
-     * Constructs a new asynchronous client to invoke service methods on cleanrooms-ml using the specified parameters.
+     * Constructs a new asynchronous client to invoke service methods on AWS Clean Rooms ML using the specified
+     * parameters.
      *
      * @param asyncClientParams
      *        Object providing client parameters.
@@ -52,7 +68,8 @@ public class AWSCleanRoomsMLAsyncClient extends AWSCleanRoomsMLClient implements
     }
 
     /**
-     * Constructs a new asynchronous client to invoke service methods on cleanrooms-ml using the specified parameters.
+     * Constructs a new asynchronous client to invoke service methods on AWS Clean Rooms ML using the specified
+     * parameters.
      *
      * @param asyncClientParams
      *        Object providing client parameters.

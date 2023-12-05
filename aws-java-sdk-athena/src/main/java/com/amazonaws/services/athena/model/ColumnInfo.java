@@ -80,7 +80,7 @@ public class ColumnInfo implements Serializable, Cloneable, StructuredPojo {
     private Integer scale;
     /**
      * <p>
-     * Indicates the column's nullable status.
+     * Unsupported constraint. This value always shows as <code>UNKNOWN</code>.
      * </p>
      */
     private String nullable;
@@ -425,11 +425,11 @@ public class ColumnInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates the column's nullable status.
+     * Unsupported constraint. This value always shows as <code>UNKNOWN</code>.
      * </p>
      * 
      * @param nullable
-     *        Indicates the column's nullable status.
+     *        Unsupported constraint. This value always shows as <code>UNKNOWN</code>.
      * @see ColumnNullable
      */
 
@@ -439,10 +439,10 @@ public class ColumnInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates the column's nullable status.
+     * Unsupported constraint. This value always shows as <code>UNKNOWN</code>.
      * </p>
      * 
-     * @return Indicates the column's nullable status.
+     * @return Unsupported constraint. This value always shows as <code>UNKNOWN</code>.
      * @see ColumnNullable
      */
 
@@ -452,11 +452,11 @@ public class ColumnInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates the column's nullable status.
+     * Unsupported constraint. This value always shows as <code>UNKNOWN</code>.
      * </p>
      * 
      * @param nullable
-     *        Indicates the column's nullable status.
+     *        Unsupported constraint. This value always shows as <code>UNKNOWN</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ColumnNullable
      */
@@ -468,11 +468,11 @@ public class ColumnInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates the column's nullable status.
+     * Unsupported constraint. This value always shows as <code>UNKNOWN</code>.
      * </p>
      * 
      * @param nullable
-     *        Indicates the column's nullable status.
+     *        Unsupported constraint. This value always shows as <code>UNKNOWN</code>.
      * @see ColumnNullable
      */
 
@@ -482,11 +482,11 @@ public class ColumnInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates the column's nullable status.
+     * Unsupported constraint. This value always shows as <code>UNKNOWN</code>.
      * </p>
      * 
      * @param nullable
-     *        Indicates the column's nullable status.
+     *        Unsupported constraint. This value always shows as <code>UNKNOWN</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ColumnNullable
      */

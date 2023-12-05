@@ -30,8 +30,8 @@ public class SessionConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the execution role used in a Spark session to access user resources. This property applies only to
-     * Spark-enabled workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      * </p>
      */
     private String executionRole;
@@ -52,13 +52,13 @@ public class SessionConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the execution role used in a Spark session to access user resources. This property applies only to
-     * Spark-enabled workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      * </p>
      * 
      * @param executionRole
-     *        The ARN of the execution role used in a Spark session to access user resources. This property applies only
-     *        to Spark-enabled workgroups.
+     *        The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     *        workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      */
 
     public void setExecutionRole(String executionRole) {
@@ -67,12 +67,13 @@ public class SessionConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the execution role used in a Spark session to access user resources. This property applies only to
-     * Spark-enabled workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      * </p>
      * 
-     * @return The ARN of the execution role used in a Spark session to access user resources. This property applies
-     *         only to Spark-enabled workgroups.
+     * @return The ARN of the execution role used to access user resources for Spark sessions and Identity Center
+     *         enabled workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled
+     *         workgroups.
      */
 
     public String getExecutionRole() {
@@ -81,13 +82,13 @@ public class SessionConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The ARN of the execution role used in a Spark session to access user resources. This property applies only to
-     * Spark-enabled workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      * </p>
      * 
      * @param executionRole
-     *        The ARN of the execution role used in a Spark session to access user resources. This property applies only
-     *        to Spark-enabled workgroups.
+     *        The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
+     *        workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

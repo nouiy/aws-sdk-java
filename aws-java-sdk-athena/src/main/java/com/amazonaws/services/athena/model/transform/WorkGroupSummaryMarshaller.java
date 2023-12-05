@@ -37,6 +37,8 @@ public class WorkGroupSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<StructuredPojo> ENGINEVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EngineVersion").build();
+    private static final MarshallingInfo<String> IDENTITYCENTERAPPLICATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdentityCenterApplicationArn").build();
 
     private static final WorkGroupSummaryMarshaller instance = new WorkGroupSummaryMarshaller();
 
@@ -59,6 +61,7 @@ public class WorkGroupSummaryMarshaller {
             protocolMarshaller.marshall(workGroupSummary.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(workGroupSummary.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(workGroupSummary.getEngineVersion(), ENGINEVERSION_BINDING);
+            protocolMarshaller.marshall(workGroupSummary.getIdentityCenterApplicationArn(), IDENTITYCENTERAPPLICATIONARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

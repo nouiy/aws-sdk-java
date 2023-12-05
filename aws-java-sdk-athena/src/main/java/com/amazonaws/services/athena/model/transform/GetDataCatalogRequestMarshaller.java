@@ -29,6 +29,8 @@ public class GetDataCatalogRequestMarshaller {
 
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Name").build();
+    private static final MarshallingInfo<String> WORKGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("WorkGroup").build();
 
     private static final GetDataCatalogRequestMarshaller instance = new GetDataCatalogRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class GetDataCatalogRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(getDataCatalogRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(getDataCatalogRequest.getWorkGroup(), WORKGROUP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

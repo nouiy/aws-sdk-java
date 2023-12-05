@@ -89,6 +89,15 @@ public class WorkGroupConfigurationJsonUnmarshaller implements Unmarshaller<Work
                     context.nextToken();
                     workGroupConfiguration.setEnableMinimumEncryptionConfiguration(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("IdentityCenterConfiguration", targetDepth)) {
+                    context.nextToken();
+                    workGroupConfiguration.setIdentityCenterConfiguration(IdentityCenterConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("QueryResultsS3AccessGrantsConfiguration", targetDepth)) {
+                    context.nextToken();
+                    workGroupConfiguration.setQueryResultsS3AccessGrantsConfiguration(QueryResultsS3AccessGrantsConfigurationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

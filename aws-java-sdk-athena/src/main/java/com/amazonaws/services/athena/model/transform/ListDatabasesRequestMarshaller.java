@@ -33,6 +33,8 @@ public class ListDatabasesRequestMarshaller {
             .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<String> WORKGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("WorkGroup").build();
 
     private static final ListDatabasesRequestMarshaller instance = new ListDatabasesRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class ListDatabasesRequestMarshaller {
             protocolMarshaller.marshall(listDatabasesRequest.getCatalogName(), CATALOGNAME_BINDING);
             protocolMarshaller.marshall(listDatabasesRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listDatabasesRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listDatabasesRequest.getWorkGroup(), WORKGROUP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

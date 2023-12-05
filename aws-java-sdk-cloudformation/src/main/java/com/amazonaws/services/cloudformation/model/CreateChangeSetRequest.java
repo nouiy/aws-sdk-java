@@ -354,7 +354,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     private String onStackFailure;
     /**
      * <p>
-     * Indicates if the stack set imports resources that already exist.
+     * Indicates if the change set imports resources that already exist.
      * </p>
      * <note>
      * <p>
@@ -3427,7 +3427,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Indicates if the stack set imports resources that already exist.
+     * Indicates if the change set imports resources that already exist.
      * </p>
      * <note>
      * <p>
@@ -3441,7 +3441,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * 
      * @param importExistingResources
-     *        Indicates if the stack set imports resources that already exist.</p> <note>
+     *        Indicates if the change set imports resources that already exist.</p> <note>
      *        <p>
      *        This parameter can only import resources that have custom names in templates. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name
@@ -3458,7 +3458,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Indicates if the stack set imports resources that already exist.
+     * Indicates if the change set imports resources that already exist.
      * </p>
      * <note>
      * <p>
@@ -3471,7 +3471,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </note>
      * 
-     * @return Indicates if the stack set imports resources that already exist.</p> <note>
+     * @return Indicates if the change set imports resources that already exist.</p> <note>
      *         <p>
      *         This parameter can only import resources that have custom names in templates. For more information, see
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name
@@ -3488,7 +3488,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Indicates if the stack set imports resources that already exist.
+     * Indicates if the change set imports resources that already exist.
      * </p>
      * <note>
      * <p>
@@ -3502,7 +3502,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * 
      * @param importExistingResources
-     *        Indicates if the stack set imports resources that already exist.</p> <note>
+     *        Indicates if the change set imports resources that already exist.</p> <note>
      *        <p>
      *        This parameter can only import resources that have custom names in templates. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name
@@ -3521,7 +3521,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Indicates if the stack set imports resources that already exist.
+     * Indicates if the change set imports resources that already exist.
      * </p>
      * <note>
      * <p>
@@ -3534,7 +3534,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </note>
      * 
-     * @return Indicates if the stack set imports resources that already exist.</p> <note>
+     * @return Indicates if the change set imports resources that already exist.</p> <note>
      *         <p>
      *         This parameter can only import resources that have custom names in templates. For more information, see
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html">name

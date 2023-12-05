@@ -33,6 +33,8 @@ public class GetTableMetadataRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DatabaseName").build();
     private static final MarshallingInfo<String> TABLENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("TableName").build();
+    private static final MarshallingInfo<String> WORKGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("WorkGroup").build();
 
     private static final GetTableMetadataRequestMarshaller instance = new GetTableMetadataRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class GetTableMetadataRequestMarshaller {
             protocolMarshaller.marshall(getTableMetadataRequest.getCatalogName(), CATALOGNAME_BINDING);
             protocolMarshaller.marshall(getTableMetadataRequest.getDatabaseName(), DATABASENAME_BINDING);
             protocolMarshaller.marshall(getTableMetadataRequest.getTableName(), TABLENAME_BINDING);
+            protocolMarshaller.marshall(getTableMetadataRequest.getWorkGroup(), WORKGROUP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

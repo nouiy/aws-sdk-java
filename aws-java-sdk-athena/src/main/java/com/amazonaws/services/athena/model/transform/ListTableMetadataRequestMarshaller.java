@@ -37,6 +37,8 @@ public class ListTableMetadataRequestMarshaller {
             .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<String> WORKGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("WorkGroup").build();
 
     private static final ListTableMetadataRequestMarshaller instance = new ListTableMetadataRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class ListTableMetadataRequestMarshaller {
             protocolMarshaller.marshall(listTableMetadataRequest.getExpression(), EXPRESSION_BINDING);
             protocolMarshaller.marshall(listTableMetadataRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listTableMetadataRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listTableMetadataRequest.getWorkGroup(), WORKGROUP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -428,7 +428,7 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
+     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
      * </p>
      * </li>
      * <li>
@@ -438,7 +438,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
+     * For instance types with Habana devices, specify <code>habana</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
      * </p>
      * </li>
      * <li>
@@ -459,22 +464,32 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
+     * For instance types with NVIDIA A10G GPUs, specify <code>a10g</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * For instance types with NVIDIA A100 GPUs, specify <code>a100</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
+     * For instance types with NVIDIA H100 GPUs, specify <code>h100</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
      * </p>
      * </li>
      * <li>
      * <p>
      * For instance types with NVIDIA K80 GPUs, specify <code>k80</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
@@ -489,17 +504,22 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Xilinx VU9P FPGAs, specify <code> vu9p</code>.
+     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * For instance types with NVIDIA T4G GPUs, specify <code>t4g</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
+     * For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
      * </p>
      * </li>
      * </ul>
@@ -3469,7 +3489,7 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
+     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
      * </p>
      * </li>
      * <li>
@@ -3479,7 +3499,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
+     * For instance types with Habana devices, specify <code>habana</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
      * </p>
      * </li>
      * <li>
@@ -3496,7 +3521,7 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
-     *         For instance types with NVIDIA devices, specify <code>nvidia</code>.
+     *         For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -3506,7 +3531,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
+     *         For instance types with Habana devices, specify <code>habana</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For instance types with NVIDIA devices, specify <code>nvidia</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -3534,7 +3564,7 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
+     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
      * </p>
      * </li>
      * <li>
@@ -3544,7 +3574,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
+     * For instance types with Habana devices, specify <code>habana</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
      * </p>
      * </li>
      * <li>
@@ -3562,7 +3597,7 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA devices, specify <code>nvidia</code>.
+     *        For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -3572,7 +3607,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
+     *        For instance types with Habana devices, specify <code>habana</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA devices, specify <code>nvidia</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -3602,7 +3642,7 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
+     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
      * </p>
      * </li>
      * <li>
@@ -3612,7 +3652,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
+     * For instance types with Habana devices, specify <code>habana</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
      * </p>
      * </li>
      * <li>
@@ -3635,7 +3680,7 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA devices, specify <code>nvidia</code>.
+     *        For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -3645,7 +3690,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
+     *        For instance types with Habana devices, specify <code>habana</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA devices, specify <code>nvidia</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -3677,7 +3727,7 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
+     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
      * </p>
      * </li>
      * <li>
@@ -3687,7 +3737,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
+     * For instance types with Habana devices, specify <code>habana</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
      * </p>
      * </li>
      * <li>
@@ -3705,7 +3760,7 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA devices, specify <code>nvidia</code>.
+     *        For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -3715,7 +3770,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
+     *        For instance types with Habana devices, specify <code>habana</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA devices, specify <code>nvidia</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -3742,7 +3802,7 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
+     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
      * </p>
      * </li>
      * <li>
@@ -3752,7 +3812,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
+     * For instance types with Habana devices, specify <code>habana</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA devices, specify <code>nvidia</code>.
      * </p>
      * </li>
      * <li>
@@ -3770,7 +3835,7 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA devices, specify <code>nvidia</code>.
+     *        For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -3780,7 +3845,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services devices, specify <code>amazon-web-services</code>.
+     *        For instance types with Habana devices, specify <code>habana</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA devices, specify <code>nvidia</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -3816,22 +3886,32 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
+     * For instance types with NVIDIA A10G GPUs, specify <code>a10g</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * For instance types with NVIDIA A100 GPUs, specify <code>a100</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
+     * For instance types with NVIDIA H100 GPUs, specify <code>h100</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
      * </p>
      * </li>
      * <li>
      * <p>
      * For instance types with NVIDIA K80 GPUs, specify <code>k80</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
@@ -3846,17 +3926,22 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Xilinx VU9P FPGAs, specify <code> vu9p</code>.
+     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * For instance types with NVIDIA T4G GPUs, specify <code>t4g</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
+     * For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
      * </p>
      * </li>
      * </ul>
@@ -3868,22 +3953,32 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
+     *         For instance types with NVIDIA A10G GPUs, specify <code>a10g</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         For instance types with NVIDIA A100 GPUs, specify <code>a100</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
+     *         For instance types with NVIDIA H100 GPUs, specify <code>h100</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         For instance types with NVIDIA K80 GPUs, specify <code>k80</code>.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -3898,17 +3993,22 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         For instance types with Xilinx VU9P FPGAs, specify <code> vu9p</code>.
+     *         For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     *         For instance types with NVIDIA T4G GPUs, specify <code>t4g</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
+     *         For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
      *         </p>
      *         </li>
      *         </ul>
@@ -3931,22 +4031,32 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
+     * For instance types with NVIDIA A10G GPUs, specify <code>a10g</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * For instance types with NVIDIA A100 GPUs, specify <code>a100</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
+     * For instance types with NVIDIA H100 GPUs, specify <code>h100</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
      * </p>
      * </li>
      * <li>
      * <p>
      * For instance types with NVIDIA K80 GPUs, specify <code>k80</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
@@ -3961,17 +4071,22 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Xilinx VU9P FPGAs, specify <code> vu9p</code>.
+     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * For instance types with NVIDIA T4G GPUs, specify <code>t4g</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
+     * For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
      * </p>
      * </li>
      * </ul>
@@ -3984,22 +4099,32 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
+     *        For instance types with NVIDIA A10G GPUs, specify <code>a10g</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        For instance types with NVIDIA A100 GPUs, specify <code>a100</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
+     *        For instance types with NVIDIA H100 GPUs, specify <code>h100</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        For instance types with NVIDIA K80 GPUs, specify <code>k80</code>.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -4014,17 +4139,22 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Xilinx VU9P FPGAs, specify <code> vu9p</code>.
+     *        For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     *        For instance types with NVIDIA T4G GPUs, specify <code>t4g</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
+     *        For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
      *        </p>
      *        </li>
      *        </ul>
@@ -4049,22 +4179,32 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
+     * For instance types with NVIDIA A10G GPUs, specify <code>a10g</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * For instance types with NVIDIA A100 GPUs, specify <code>a100</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
+     * For instance types with NVIDIA H100 GPUs, specify <code>h100</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
      * </p>
      * </li>
      * <li>
      * <p>
      * For instance types with NVIDIA K80 GPUs, specify <code>k80</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
@@ -4079,17 +4219,22 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Xilinx VU9P FPGAs, specify <code> vu9p</code>.
+     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * For instance types with NVIDIA T4G GPUs, specify <code>t4g</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
+     * For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
      * </p>
      * </li>
      * </ul>
@@ -4107,22 +4252,32 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
+     *        For instance types with NVIDIA A10G GPUs, specify <code>a10g</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        For instance types with NVIDIA A100 GPUs, specify <code>a100</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
+     *        For instance types with NVIDIA H100 GPUs, specify <code>h100</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        For instance types with NVIDIA K80 GPUs, specify <code>k80</code>.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -4137,17 +4292,22 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Xilinx VU9P FPGAs, specify <code> vu9p</code>.
+     *        For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     *        For instance types with NVIDIA T4G GPUs, specify <code>t4g</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
+     *        For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
      *        </p>
      *        </li>
      *        </ul>
@@ -4174,22 +4334,32 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
+     * For instance types with NVIDIA A10G GPUs, specify <code>a10g</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * For instance types with NVIDIA A100 GPUs, specify <code>a100</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
+     * For instance types with NVIDIA H100 GPUs, specify <code>h100</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
      * </p>
      * </li>
      * <li>
      * <p>
      * For instance types with NVIDIA K80 GPUs, specify <code>k80</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
@@ -4204,17 +4374,22 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Xilinx VU9P FPGAs, specify <code> vu9p</code>.
+     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * For instance types with NVIDIA T4G GPUs, specify <code>t4g</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
+     * For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
      * </p>
      * </li>
      * </ul>
@@ -4227,22 +4402,32 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
+     *        For instance types with NVIDIA A10G GPUs, specify <code>a10g</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        For instance types with NVIDIA A100 GPUs, specify <code>a100</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
+     *        For instance types with NVIDIA H100 GPUs, specify <code>h100</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        For instance types with NVIDIA K80 GPUs, specify <code>k80</code>.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -4257,17 +4442,22 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Xilinx VU9P FPGAs, specify <code> vu9p</code>.
+     *        For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     *        For instance types with NVIDIA T4G GPUs, specify <code>t4g</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
+     *        For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
      *        </p>
      *        </li>
      *        </ul>
@@ -4289,22 +4479,32 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
+     * For instance types with NVIDIA A10G GPUs, specify <code>a10g</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * For instance types with NVIDIA A100 GPUs, specify <code>a100</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
+     * For instance types with NVIDIA H100 GPUs, specify <code>h100</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
      * </p>
      * </li>
      * <li>
      * <p>
      * For instance types with NVIDIA K80 GPUs, specify <code>k80</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
@@ -4319,17 +4519,22 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Xilinx VU9P FPGAs, specify <code> vu9p</code>.
+     * For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     * For instance types with NVIDIA T4G GPUs, specify <code>t4g</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
+     * For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
      * </p>
      * </li>
      * </ul>
@@ -4342,22 +4547,32 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
+     *        For instance types with NVIDIA A10G GPUs, specify <code>a10g</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        For instance types with NVIDIA A100 GPUs, specify <code>a100</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
+     *        For instance types with NVIDIA H100 GPUs, specify <code>h100</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        For instance types with NVIDIA K80 GPUs, specify <code>k80</code>.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -4372,17 +4587,22 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Xilinx VU9P FPGAs, specify <code> vu9p</code>.
+     *        For instance types with NVIDIA T4 GPUs, specify <code>t4</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
+     *        For instance types with NVIDIA T4G GPUs, specify <code>t4g</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with NVIDIA GRID K520 GPUs, specify <code>k520</code>.
+     *        For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For instance types with NVIDIA V100 GPUs, specify <code>v100</code>.
      *        </p>
      *        </li>
      *        </ul>

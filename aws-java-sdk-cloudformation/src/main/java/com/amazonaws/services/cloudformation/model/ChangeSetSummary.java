@@ -106,7 +106,7 @@ public class ChangeSetSummary implements Serializable, Cloneable {
     private String rootChangeSetId;
     /**
      * <p>
-     * Indicates if the stack set imports resources that already exist.
+     * Indicates if the change set imports resources that already exist.
      * </p>
      */
     private Boolean importExistingResources;
@@ -717,11 +717,11 @@ public class ChangeSetSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates if the stack set imports resources that already exist.
+     * Indicates if the change set imports resources that already exist.
      * </p>
      * 
      * @param importExistingResources
-     *        Indicates if the stack set imports resources that already exist.
+     *        Indicates if the change set imports resources that already exist.
      */
 
     public void setImportExistingResources(Boolean importExistingResources) {
@@ -730,10 +730,10 @@ public class ChangeSetSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates if the stack set imports resources that already exist.
+     * Indicates if the change set imports resources that already exist.
      * </p>
      * 
-     * @return Indicates if the stack set imports resources that already exist.
+     * @return Indicates if the change set imports resources that already exist.
      */
 
     public Boolean getImportExistingResources() {
@@ -742,11 +742,11 @@ public class ChangeSetSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates if the stack set imports resources that already exist.
+     * Indicates if the change set imports resources that already exist.
      * </p>
      * 
      * @param importExistingResources
-     *        Indicates if the stack set imports resources that already exist.
+     *        Indicates if the change set imports resources that already exist.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -757,10 +757,10 @@ public class ChangeSetSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates if the stack set imports resources that already exist.
+     * Indicates if the change set imports resources that already exist.
      * </p>
      * 
-     * @return Indicates if the stack set imports resources that already exist.
+     * @return Indicates if the change set imports resources that already exist.
      */
 
     public Boolean isImportExistingResources() {
