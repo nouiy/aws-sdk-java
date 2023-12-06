@@ -83,6 +83,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>CloudFormation</code> for CloudFormation
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
      * </p>
      * </li>
@@ -118,7 +123,17 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>Redshift</code> for Amazon Redshift
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>RDS</code> for Amazon Relational Database Service
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SAP HANA on Amazon EC2</code> for SAP HANA databases
      * </p>
      * </li>
      * <li>
@@ -129,6 +144,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <li>
      * <p>
      * <code>S3</code> for Amazon S3
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Timestream</code> for Amazon Timestream
      * </p>
      * </li>
      * <li>
@@ -523,6 +543,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>CloudFormation</code> for CloudFormation
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
      * </p>
      * </li>
@@ -558,7 +583,17 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>Redshift</code> for Amazon Redshift
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>RDS</code> for Amazon Relational Database Service
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SAP HANA on Amazon EC2</code> for SAP HANA databases
      * </p>
      * </li>
      * <li>
@@ -569,6 +604,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <li>
      * <p>
      * <code>S3</code> for Amazon S3
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Timestream</code> for Amazon Timestream
      * </p>
      * </li>
      * <li>
@@ -584,6 +624,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <code>Aurora</code> for Amazon Aurora
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CloudFormation</code> for CloudFormation
      *        </p>
      *        </li>
      *        <li>
@@ -623,7 +668,17 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
+     *        <code>Redshift</code> for Amazon Redshift
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>RDS</code> for Amazon Relational Database Service
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SAP HANA on Amazon EC2</code> for SAP HANA databases
      *        </p>
      *        </li>
      *        <li>
@@ -634,6 +689,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <code>S3</code> for Amazon S3
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Timestream</code> for Amazon Timestream
      *        </p>
      *        </li>
      *        <li>
@@ -655,6 +715,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <li>
      * <p>
      * <code>Aurora</code> for Amazon Aurora
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CloudFormation</code> for CloudFormation
      * </p>
      * </li>
      * <li>
@@ -694,7 +759,17 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>Redshift</code> for Amazon Redshift
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>RDS</code> for Amazon Relational Database Service
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SAP HANA on Amazon EC2</code> for SAP HANA databases
      * </p>
      * </li>
      * <li>
@@ -709,6 +784,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>Timestream</code> for Amazon Timestream
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>VirtualMachine</code> for virtual machines
      * </p>
      * </li>
@@ -719,6 +799,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <li>
      *         <p>
      *         <code>Aurora</code> for Amazon Aurora
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CloudFormation</code> for CloudFormation
      *         </p>
      *         </li>
      *         <li>
@@ -758,7 +843,17 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *         </li>
      *         <li>
      *         <p>
+     *         <code>Redshift</code> for Amazon Redshift
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>RDS</code> for Amazon Relational Database Service
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SAP HANA on Amazon EC2</code> for SAP HANA databases
      *         </p>
      *         </li>
      *         <li>
@@ -769,6 +864,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <li>
      *         <p>
      *         <code>S3</code> for Amazon S3
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Timestream</code> for Amazon Timestream
      *         </p>
      *         </li>
      *         <li>
@@ -790,6 +890,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <li>
      * <p>
      * <code>Aurora</code> for Amazon Aurora
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CloudFormation</code> for CloudFormation
      * </p>
      * </li>
      * <li>
@@ -829,7 +934,17 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>Redshift</code> for Amazon Redshift
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>RDS</code> for Amazon Relational Database Service
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SAP HANA on Amazon EC2</code> for SAP HANA databases
      * </p>
      * </li>
      * <li>
@@ -840,6 +955,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <li>
      * <p>
      * <code>S3</code> for Amazon S3
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Timestream</code> for Amazon Timestream
      * </p>
      * </li>
      * <li>
@@ -855,6 +975,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <code>Aurora</code> for Amazon Aurora
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CloudFormation</code> for CloudFormation
      *        </p>
      *        </li>
      *        <li>
@@ -894,7 +1019,17 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
+     *        <code>Redshift</code> for Amazon Redshift
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>RDS</code> for Amazon Relational Database Service
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SAP HANA on Amazon EC2</code> for SAP HANA databases
      *        </p>
      *        </li>
      *        <li>
@@ -905,6 +1040,11 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <code>S3</code> for Amazon S3
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Timestream</code> for Amazon Timestream
      *        </p>
      *        </li>
      *        <li>

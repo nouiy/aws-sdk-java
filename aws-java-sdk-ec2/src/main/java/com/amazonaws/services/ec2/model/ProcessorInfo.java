@@ -46,6 +46,12 @@ public class ProcessorInfo implements Serializable, Cloneable {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> supportedFeatures;
+    /**
+     * <p>
+     * The manufacturer of the processor.
+     * </p>
+     */
+    private String manufacturer;
 
     /**
      * <p>
@@ -311,6 +317,46 @@ public class ProcessorInfo implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The manufacturer of the processor.
+     * </p>
+     * 
+     * @param manufacturer
+     *        The manufacturer of the processor.
+     */
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    /**
+     * <p>
+     * The manufacturer of the processor.
+     * </p>
+     * 
+     * @return The manufacturer of the processor.
+     */
+
+    public String getManufacturer() {
+        return this.manufacturer;
+    }
+
+    /**
+     * <p>
+     * The manufacturer of the processor.
+     * </p>
+     * 
+     * @param manufacturer
+     *        The manufacturer of the processor.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProcessorInfo withManufacturer(String manufacturer) {
+        setManufacturer(manufacturer);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -327,7 +373,9 @@ public class ProcessorInfo implements Serializable, Cloneable {
         if (getSustainedClockSpeedInGhz() != null)
             sb.append("SustainedClockSpeedInGhz: ").append(getSustainedClockSpeedInGhz()).append(",");
         if (getSupportedFeatures() != null)
-            sb.append("SupportedFeatures: ").append(getSupportedFeatures());
+            sb.append("SupportedFeatures: ").append(getSupportedFeatures()).append(",");
+        if (getManufacturer() != null)
+            sb.append("Manufacturer: ").append(getManufacturer());
         sb.append("}");
         return sb.toString();
     }
@@ -354,6 +402,10 @@ public class ProcessorInfo implements Serializable, Cloneable {
             return false;
         if (other.getSupportedFeatures() != null && other.getSupportedFeatures().equals(this.getSupportedFeatures()) == false)
             return false;
+        if (other.getManufacturer() == null ^ this.getManufacturer() == null)
+            return false;
+        if (other.getManufacturer() != null && other.getManufacturer().equals(this.getManufacturer()) == false)
+            return false;
         return true;
     }
 
@@ -365,6 +417,7 @@ public class ProcessorInfo implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getSupportedArchitectures() == null) ? 0 : getSupportedArchitectures().hashCode());
         hashCode = prime * hashCode + ((getSustainedClockSpeedInGhz() == null) ? 0 : getSustainedClockSpeedInGhz().hashCode());
         hashCode = prime * hashCode + ((getSupportedFeatures() == null) ? 0 : getSupportedFeatures().hashCode());
+        hashCode = prime * hashCode + ((getManufacturer() == null) ? 0 : getManufacturer().hashCode());
         return hashCode;
     }
 

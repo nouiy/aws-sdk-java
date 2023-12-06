@@ -25,18 +25,18 @@ public class ExportKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The key material under export as a TR-34 or TR-31 wrapped key block.
+     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
      * </p>
      */
     private WrappedKey wrappedKey;
 
     /**
      * <p>
-     * The key material under export as a TR-34 or TR-31 wrapped key block.
+     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
      * </p>
      * 
      * @param wrappedKey
-     *        The key material under export as a TR-34 or TR-31 wrapped key block.
+     *        The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
      */
 
     public void setWrappedKey(WrappedKey wrappedKey) {
@@ -45,10 +45,10 @@ public class ExportKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The key material under export as a TR-34 or TR-31 wrapped key block.
+     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
      * </p>
      * 
-     * @return The key material under export as a TR-34 or TR-31 wrapped key block.
+     * @return The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
      */
 
     public WrappedKey getWrappedKey() {
@@ -57,11 +57,11 @@ public class ExportKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The key material under export as a TR-34 or TR-31 wrapped key block.
+     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
      * </p>
      * 
      * @param wrappedKey
-     *        The key material under export as a TR-34 or TR-31 wrapped key block.
+     *        The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,28 +25,28 @@ public class GetPublicKeyCertificateResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The public key component of the asymmetric key pair in a certificate (PEM) format. It is signed by the root
-     * certificate authority (CA) within your service account. The certificate expires in 90 days.
+     * The public key component of the asymmetric key pair in a certificate PEM format (base64 encoded). It is signed by
+     * the root certificate authority (CA). The certificate expires in 90 days.
      * </p>
      */
     private String keyCertificate;
     /**
      * <p>
-     * The certificate chain that signed the public key certificate of the asymmetric key pair. This is the root
-     * certificate authority (CA) within your service account.
+     * The root certificate authority (CA) that signed the public key certificate in PEM format (base64 encoded) of the
+     * asymmetric key pair.
      * </p>
      */
     private String keyCertificateChain;
 
     /**
      * <p>
-     * The public key component of the asymmetric key pair in a certificate (PEM) format. It is signed by the root
-     * certificate authority (CA) within your service account. The certificate expires in 90 days.
+     * The public key component of the asymmetric key pair in a certificate PEM format (base64 encoded). It is signed by
+     * the root certificate authority (CA). The certificate expires in 90 days.
      * </p>
      * 
      * @param keyCertificate
-     *        The public key component of the asymmetric key pair in a certificate (PEM) format. It is signed by the
-     *        root certificate authority (CA) within your service account. The certificate expires in 90 days.
+     *        The public key component of the asymmetric key pair in a certificate PEM format (base64 encoded). It is
+     *        signed by the root certificate authority (CA). The certificate expires in 90 days.
      */
 
     public void setKeyCertificate(String keyCertificate) {
@@ -55,12 +55,12 @@ public class GetPublicKeyCertificateResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The public key component of the asymmetric key pair in a certificate (PEM) format. It is signed by the root
-     * certificate authority (CA) within your service account. The certificate expires in 90 days.
+     * The public key component of the asymmetric key pair in a certificate PEM format (base64 encoded). It is signed by
+     * the root certificate authority (CA). The certificate expires in 90 days.
      * </p>
      * 
-     * @return The public key component of the asymmetric key pair in a certificate (PEM) format. It is signed by the
-     *         root certificate authority (CA) within your service account. The certificate expires in 90 days.
+     * @return The public key component of the asymmetric key pair in a certificate PEM format (base64 encoded). It is
+     *         signed by the root certificate authority (CA). The certificate expires in 90 days.
      */
 
     public String getKeyCertificate() {
@@ -69,13 +69,13 @@ public class GetPublicKeyCertificateResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The public key component of the asymmetric key pair in a certificate (PEM) format. It is signed by the root
-     * certificate authority (CA) within your service account. The certificate expires in 90 days.
+     * The public key component of the asymmetric key pair in a certificate PEM format (base64 encoded). It is signed by
+     * the root certificate authority (CA). The certificate expires in 90 days.
      * </p>
      * 
      * @param keyCertificate
-     *        The public key component of the asymmetric key pair in a certificate (PEM) format. It is signed by the
-     *        root certificate authority (CA) within your service account. The certificate expires in 90 days.
+     *        The public key component of the asymmetric key pair in a certificate PEM format (base64 encoded). It is
+     *        signed by the root certificate authority (CA). The certificate expires in 90 days.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,13 +86,13 @@ public class GetPublicKeyCertificateResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The certificate chain that signed the public key certificate of the asymmetric key pair. This is the root
-     * certificate authority (CA) within your service account.
+     * The root certificate authority (CA) that signed the public key certificate in PEM format (base64 encoded) of the
+     * asymmetric key pair.
      * </p>
      * 
      * @param keyCertificateChain
-     *        The certificate chain that signed the public key certificate of the asymmetric key pair. This is the root
-     *        certificate authority (CA) within your service account.
+     *        The root certificate authority (CA) that signed the public key certificate in PEM format (base64 encoded)
+     *        of the asymmetric key pair.
      */
 
     public void setKeyCertificateChain(String keyCertificateChain) {
@@ -101,12 +101,12 @@ public class GetPublicKeyCertificateResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The certificate chain that signed the public key certificate of the asymmetric key pair. This is the root
-     * certificate authority (CA) within your service account.
+     * The root certificate authority (CA) that signed the public key certificate in PEM format (base64 encoded) of the
+     * asymmetric key pair.
      * </p>
      * 
-     * @return The certificate chain that signed the public key certificate of the asymmetric key pair. This is the root
-     *         certificate authority (CA) within your service account.
+     * @return The root certificate authority (CA) that signed the public key certificate in PEM format (base64 encoded)
+     *         of the asymmetric key pair.
      */
 
     public String getKeyCertificateChain() {
@@ -115,13 +115,13 @@ public class GetPublicKeyCertificateResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The certificate chain that signed the public key certificate of the asymmetric key pair. This is the root
-     * certificate authority (CA) within your service account.
+     * The root certificate authority (CA) that signed the public key certificate in PEM format (base64 encoded) of the
+     * asymmetric key pair.
      * </p>
      * 
      * @param keyCertificateChain
-     *        The certificate chain that signed the public key certificate of the asymmetric key pair. This is the root
-     *        certificate authority (CA) within your service account.
+     *        The root certificate authority (CA) that signed the public key certificate in PEM format (base64 encoded)
+     *        of the asymmetric key pair.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

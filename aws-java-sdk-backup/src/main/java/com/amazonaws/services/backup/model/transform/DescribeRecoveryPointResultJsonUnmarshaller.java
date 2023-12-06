@@ -140,6 +140,10 @@ public class DescribeRecoveryPointResultJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     describeRecoveryPointResult.setResourceName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("VaultType", targetDepth)) {
+                    context.nextToken();
+                    describeRecoveryPointResult.setVaultType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

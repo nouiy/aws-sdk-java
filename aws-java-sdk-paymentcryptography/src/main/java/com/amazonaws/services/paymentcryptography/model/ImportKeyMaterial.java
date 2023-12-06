@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Parameter information for key material import.
+ * Parameter information for key material import into Amazon Web Services Payment Cryptography using TR-31 or TR-34 key
+ * exchange method.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/payment-cryptography-2021-09-14/ImportKeyMaterial"
@@ -36,13 +37,13 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
     private RootCertificatePublicKey rootCertificatePublicKey;
     /**
      * <p>
-     * Parameter information for key material import using TR-31 standard.
+     * Parameter information for key material import using symmetric TR-31 key exchange method.
      * </p>
      */
     private ImportTr31KeyBlock tr31KeyBlock;
     /**
      * <p>
-     * Parameter information for key material import using TR-34 standard.
+     * Parameter information for key material import using the asymmetric TR-34 key exchange method.
      * </p>
      */
     private ImportTr34KeyBlock tr34KeyBlock;
@@ -95,11 +96,11 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material import using TR-31 standard.
+     * Parameter information for key material import using symmetric TR-31 key exchange method.
      * </p>
      * 
      * @param tr31KeyBlock
-     *        Parameter information for key material import using TR-31 standard.
+     *        Parameter information for key material import using symmetric TR-31 key exchange method.
      */
 
     public void setTr31KeyBlock(ImportTr31KeyBlock tr31KeyBlock) {
@@ -108,10 +109,10 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material import using TR-31 standard.
+     * Parameter information for key material import using symmetric TR-31 key exchange method.
      * </p>
      * 
-     * @return Parameter information for key material import using TR-31 standard.
+     * @return Parameter information for key material import using symmetric TR-31 key exchange method.
      */
 
     public ImportTr31KeyBlock getTr31KeyBlock() {
@@ -120,11 +121,11 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material import using TR-31 standard.
+     * Parameter information for key material import using symmetric TR-31 key exchange method.
      * </p>
      * 
      * @param tr31KeyBlock
-     *        Parameter information for key material import using TR-31 standard.
+     *        Parameter information for key material import using symmetric TR-31 key exchange method.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +136,11 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material import using TR-34 standard.
+     * Parameter information for key material import using the asymmetric TR-34 key exchange method.
      * </p>
      * 
      * @param tr34KeyBlock
-     *        Parameter information for key material import using TR-34 standard.
+     *        Parameter information for key material import using the asymmetric TR-34 key exchange method.
      */
 
     public void setTr34KeyBlock(ImportTr34KeyBlock tr34KeyBlock) {
@@ -148,10 +149,10 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material import using TR-34 standard.
+     * Parameter information for key material import using the asymmetric TR-34 key exchange method.
      * </p>
      * 
-     * @return Parameter information for key material import using TR-34 standard.
+     * @return Parameter information for key material import using the asymmetric TR-34 key exchange method.
      */
 
     public ImportTr34KeyBlock getTr34KeyBlock() {
@@ -160,11 +161,11 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material import using TR-34 standard.
+     * Parameter information for key material import using the asymmetric TR-34 key exchange method.
      * </p>
      * 
      * @param tr34KeyBlock
-     *        Parameter information for key material import using TR-34 standard.
+     *        Parameter information for key material import using the asymmetric TR-34 key exchange method.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

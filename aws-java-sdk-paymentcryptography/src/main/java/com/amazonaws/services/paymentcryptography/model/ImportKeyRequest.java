@@ -33,13 +33,13 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private Boolean enabled;
     /**
      * <p>
-     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV) for DES
-     * and AES keys.
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
      * </p>
      * <p>
-     * For DES key, the KCV is computed by encrypting 8 bytes, each with value '00', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result. For AES key, the KCV is computed by encrypting 8
-     * bytes, each with value '01', with the key to be checked and retaining the 3 highest order bytes of the encrypted
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
      * result.
      * </p>
      */
@@ -53,22 +53,20 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private ImportKeyMaterial keyMaterial;
     /**
      * <p>
-     * The tags to attach to the key. Each tag consists of a tag key and a tag value. Both the tag key and the tag value
-     * are required, but the tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web
-     * Services Payment Cryptography key with the same tag key.
+     * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
+     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * operation.
      * </p>
      * <p>
-     * You can't have more than one tag on an Amazon Web Services Payment Cryptography key with the same tag key. If you
-     * specify an existing tag key with a different tag value, Amazon Web Services Payment Cryptography replaces the
-     * current tag value with the specified one.
-     * </p>
-     * <p>
-     * To use this parameter, you must have <code>TagResource</code> permission.
+     * Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the tag
+     * value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services Payment
+     * Cryptography key with the same tag key. If you specify an existing tag key with a different tag value, Amazon Web
+     * Services Payment Cryptography replaces the current tag value with the specified one.
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important> <note>
      * <p>
@@ -132,24 +130,24 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV) for DES
-     * and AES keys.
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
      * </p>
      * <p>
-     * For DES key, the KCV is computed by encrypting 8 bytes, each with value '00', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result. For AES key, the KCV is computed by encrypting 8
-     * bytes, each with value '01', with the key to be checked and retaining the 3 highest order bytes of the encrypted
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
      * result.
      * </p>
      * 
      * @param keyCheckValueAlgorithm
-     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV)
-     *        for DES and AES keys.</p>
+     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *        It is used to validate the key integrity.</p>
      *        <p>
-     *        For DES key, the KCV is computed by encrypting 8 bytes, each with value '00', with the key to be checked
-     *        and retaining the 3 highest order bytes of the encrypted result. For AES key, the KCV is computed by
-     *        encrypting 8 bytes, each with value '01', with the key to be checked and retaining the 3 highest order
-     *        bytes of the encrypted result.
+     *        For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *        checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed
+     *        using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of
+     *        the encrypted result.
      * @see KeyCheckValueAlgorithm
      */
 
@@ -159,23 +157,23 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV) for DES
-     * and AES keys.
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
      * </p>
      * <p>
-     * For DES key, the KCV is computed by encrypting 8 bytes, each with value '00', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result. For AES key, the KCV is computed by encrypting 8
-     * bytes, each with value '01', with the key to be checked and retaining the 3 highest order bytes of the encrypted
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
      * result.
      * </p>
      * 
-     * @return The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV)
-     *         for DES and AES keys.</p>
+     * @return The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *         It is used to validate the key integrity.</p>
      *         <p>
-     *         For DES key, the KCV is computed by encrypting 8 bytes, each with value '00', with the key to be checked
-     *         and retaining the 3 highest order bytes of the encrypted result. For AES key, the KCV is computed by
-     *         encrypting 8 bytes, each with value '01', with the key to be checked and retaining the 3 highest order
-     *         bytes of the encrypted result.
+     *         For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *         checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is
+     *         computed using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest
+     *         order bytes of the encrypted result.
      * @see KeyCheckValueAlgorithm
      */
 
@@ -185,24 +183,24 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV) for DES
-     * and AES keys.
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
      * </p>
      * <p>
-     * For DES key, the KCV is computed by encrypting 8 bytes, each with value '00', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result. For AES key, the KCV is computed by encrypting 8
-     * bytes, each with value '01', with the key to be checked and retaining the 3 highest order bytes of the encrypted
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
      * result.
      * </p>
      * 
      * @param keyCheckValueAlgorithm
-     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV)
-     *        for DES and AES keys.</p>
+     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *        It is used to validate the key integrity.</p>
      *        <p>
-     *        For DES key, the KCV is computed by encrypting 8 bytes, each with value '00', with the key to be checked
-     *        and retaining the 3 highest order bytes of the encrypted result. For AES key, the KCV is computed by
-     *        encrypting 8 bytes, each with value '01', with the key to be checked and retaining the 3 highest order
-     *        bytes of the encrypted result.
+     *        For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *        checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed
+     *        using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of
+     *        the encrypted result.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyCheckValueAlgorithm
      */
@@ -214,24 +212,24 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV) for DES
-     * and AES keys.
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
      * </p>
      * <p>
-     * For DES key, the KCV is computed by encrypting 8 bytes, each with value '00', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result. For AES key, the KCV is computed by encrypting 8
-     * bytes, each with value '01', with the key to be checked and retaining the 3 highest order bytes of the encrypted
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
      * result.
      * </p>
      * 
      * @param keyCheckValueAlgorithm
-     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV)
-     *        for DES and AES keys.</p>
+     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *        It is used to validate the key integrity.</p>
      *        <p>
-     *        For DES key, the KCV is computed by encrypting 8 bytes, each with value '00', with the key to be checked
-     *        and retaining the 3 highest order bytes of the encrypted result. For AES key, the KCV is computed by
-     *        encrypting 8 bytes, each with value '01', with the key to be checked and retaining the 3 highest order
-     *        bytes of the encrypted result.
+     *        For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *        checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed
+     *        using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of
+     *        the encrypted result.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyCheckValueAlgorithm
      */
@@ -289,22 +287,20 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The tags to attach to the key. Each tag consists of a tag key and a tag value. Both the tag key and the tag value
-     * are required, but the tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web
-     * Services Payment Cryptography key with the same tag key.
+     * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
+     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * operation.
      * </p>
      * <p>
-     * You can't have more than one tag on an Amazon Web Services Payment Cryptography key with the same tag key. If you
-     * specify an existing tag key with a different tag value, Amazon Web Services Payment Cryptography replaces the
-     * current tag value with the specified one.
-     * </p>
-     * <p>
-     * To use this parameter, you must have <code>TagResource</code> permission.
+     * Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the tag
+     * value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services Payment
+     * Cryptography key with the same tag key. If you specify an existing tag key with a different tag value, Amazon Web
+     * Services Payment Cryptography replaces the current tag value with the specified one.
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important> <note>
      * <p>
@@ -312,21 +308,19 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * </note>
      * 
-     * @return The tags to attach to the key. Each tag consists of a tag key and a tag value. Both the tag key and the
-     *         tag value are required, but the tag value can be an empty (null) string. You can't have more than one tag
-     *         on an Amazon Web Services Payment Cryptography key with the same tag key. </p>
+     * @return Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
+     *         key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the
+     *         <a>TagResource</a> operation.</p>
      *         <p>
-     *         You can't have more than one tag on an Amazon Web Services Payment Cryptography key with the same tag
-     *         key. If you specify an existing tag key with a different tag value, Amazon Web Services Payment
-     *         Cryptography replaces the current tag value with the specified one.
-     *         </p>
-     *         <p>
-     *         To use this parameter, you must have <code>TagResource</code> permission.
+     *         Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
+     *         tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
+     *         Payment Cryptography key with the same tag key. If you specify an existing tag key with a different tag
+     *         value, Amazon Web Services Payment Cryptography replaces the current tag value with the specified one.
      *         </p>
      *         <important>
      *         <p>
-     *         Don't include confidential or sensitive information in this field. This field may be displayed in
-     *         plaintext in CloudTrail logs and other output.
+     *         Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *         in plaintext in CloudTrail logs and other output.
      *         </p>
      *         </important> <note>
      *         <p>
@@ -341,22 +335,20 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The tags to attach to the key. Each tag consists of a tag key and a tag value. Both the tag key and the tag value
-     * are required, but the tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web
-     * Services Payment Cryptography key with the same tag key.
+     * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
+     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * operation.
      * </p>
      * <p>
-     * You can't have more than one tag on an Amazon Web Services Payment Cryptography key with the same tag key. If you
-     * specify an existing tag key with a different tag value, Amazon Web Services Payment Cryptography replaces the
-     * current tag value with the specified one.
-     * </p>
-     * <p>
-     * To use this parameter, you must have <code>TagResource</code> permission.
+     * Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the tag
+     * value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services Payment
+     * Cryptography key with the same tag key. If you specify an existing tag key with a different tag value, Amazon Web
+     * Services Payment Cryptography replaces the current tag value with the specified one.
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important> <note>
      * <p>
@@ -365,21 +357,19 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </note>
      * 
      * @param tags
-     *        The tags to attach to the key. Each tag consists of a tag key and a tag value. Both the tag key and the
-     *        tag value are required, but the tag value can be an empty (null) string. You can't have more than one tag
-     *        on an Amazon Web Services Payment Cryptography key with the same tag key. </p>
+     *        Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
+     *        key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the
+     *        <a>TagResource</a> operation.</p>
      *        <p>
-     *        You can't have more than one tag on an Amazon Web Services Payment Cryptography key with the same tag key.
-     *        If you specify an existing tag key with a different tag value, Amazon Web Services Payment Cryptography
-     *        replaces the current tag value with the specified one.
-     *        </p>
-     *        <p>
-     *        To use this parameter, you must have <code>TagResource</code> permission.
+     *        Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
+     *        tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
+     *        Payment Cryptography key with the same tag key. If you specify an existing tag key with a different tag
+     *        value, Amazon Web Services Payment Cryptography replaces the current tag value with the specified one.
      *        </p>
      *        <important>
      *        <p>
-     *        Don't include confidential or sensitive information in this field. This field may be displayed in
-     *        plaintext in CloudTrail logs and other output.
+     *        Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *        in plaintext in CloudTrail logs and other output.
      *        </p>
      *        </important> <note>
      *        <p>
@@ -399,22 +389,20 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The tags to attach to the key. Each tag consists of a tag key and a tag value. Both the tag key and the tag value
-     * are required, but the tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web
-     * Services Payment Cryptography key with the same tag key.
+     * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
+     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * operation.
      * </p>
      * <p>
-     * You can't have more than one tag on an Amazon Web Services Payment Cryptography key with the same tag key. If you
-     * specify an existing tag key with a different tag value, Amazon Web Services Payment Cryptography replaces the
-     * current tag value with the specified one.
-     * </p>
-     * <p>
-     * To use this parameter, you must have <code>TagResource</code> permission.
+     * Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the tag
+     * value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services Payment
+     * Cryptography key with the same tag key. If you specify an existing tag key with a different tag value, Amazon Web
+     * Services Payment Cryptography replaces the current tag value with the specified one.
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important> <note>
      * <p>
@@ -428,21 +416,19 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param tags
-     *        The tags to attach to the key. Each tag consists of a tag key and a tag value. Both the tag key and the
-     *        tag value are required, but the tag value can be an empty (null) string. You can't have more than one tag
-     *        on an Amazon Web Services Payment Cryptography key with the same tag key. </p>
+     *        Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
+     *        key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the
+     *        <a>TagResource</a> operation.</p>
      *        <p>
-     *        You can't have more than one tag on an Amazon Web Services Payment Cryptography key with the same tag key.
-     *        If you specify an existing tag key with a different tag value, Amazon Web Services Payment Cryptography
-     *        replaces the current tag value with the specified one.
-     *        </p>
-     *        <p>
-     *        To use this parameter, you must have <code>TagResource</code> permission.
+     *        Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
+     *        tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
+     *        Payment Cryptography key with the same tag key. If you specify an existing tag key with a different tag
+     *        value, Amazon Web Services Payment Cryptography replaces the current tag value with the specified one.
      *        </p>
      *        <important>
      *        <p>
-     *        Don't include confidential or sensitive information in this field. This field may be displayed in
-     *        plaintext in CloudTrail logs and other output.
+     *        Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *        in plaintext in CloudTrail logs and other output.
      *        </p>
      *        </important> <note>
      *        <p>
@@ -464,22 +450,20 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The tags to attach to the key. Each tag consists of a tag key and a tag value. Both the tag key and the tag value
-     * are required, but the tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web
-     * Services Payment Cryptography key with the same tag key.
+     * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
+     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * operation.
      * </p>
      * <p>
-     * You can't have more than one tag on an Amazon Web Services Payment Cryptography key with the same tag key. If you
-     * specify an existing tag key with a different tag value, Amazon Web Services Payment Cryptography replaces the
-     * current tag value with the specified one.
-     * </p>
-     * <p>
-     * To use this parameter, you must have <code>TagResource</code> permission.
+     * Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the tag
+     * value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services Payment
+     * Cryptography key with the same tag key. If you specify an existing tag key with a different tag value, Amazon Web
+     * Services Payment Cryptography replaces the current tag value with the specified one.
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important> <note>
      * <p>
@@ -488,21 +472,19 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </note>
      * 
      * @param tags
-     *        The tags to attach to the key. Each tag consists of a tag key and a tag value. Both the tag key and the
-     *        tag value are required, but the tag value can be an empty (null) string. You can't have more than one tag
-     *        on an Amazon Web Services Payment Cryptography key with the same tag key. </p>
+     *        Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
+     *        key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the
+     *        <a>TagResource</a> operation.</p>
      *        <p>
-     *        You can't have more than one tag on an Amazon Web Services Payment Cryptography key with the same tag key.
-     *        If you specify an existing tag key with a different tag value, Amazon Web Services Payment Cryptography
-     *        replaces the current tag value with the specified one.
-     *        </p>
-     *        <p>
-     *        To use this parameter, you must have <code>TagResource</code> permission.
+     *        Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
+     *        tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
+     *        Payment Cryptography key with the same tag key. If you specify an existing tag key with a different tag
+     *        value, Amazon Web Services Payment Cryptography replaces the current tag value with the specified one.
      *        </p>
      *        <important>
      *        <p>
-     *        Don't include confidential or sensitive information in this field. This field may be displayed in
-     *        plaintext in CloudTrail logs and other output.
+     *        Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *        in plaintext in CloudTrail logs and other output.
      *        </p>
      *        </important> <note>
      *        <p>

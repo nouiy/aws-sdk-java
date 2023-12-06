@@ -30,6 +30,10 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * Use this parameter to specify the maximum number of items to return. When this value is present, Amazon Web
      * Services Payment Cryptography does not return more than the specified number of items, but it might return fewer.
      * </p>
+     * <p>
+     * This value is optional. If you include a value, it must be between 1 and 100, inclusive. If you do not include a
+     * value, it defaults to 50.
+     * </p>
      */
     private Integer maxResults;
     /**
@@ -51,11 +55,18 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * Use this parameter to specify the maximum number of items to return. When this value is present, Amazon Web
      * Services Payment Cryptography does not return more than the specified number of items, but it might return fewer.
      * </p>
+     * <p>
+     * This value is optional. If you include a value, it must be between 1 and 100, inclusive. If you do not include a
+     * value, it defaults to 50.
+     * </p>
      * 
      * @param maxResults
      *        Use this parameter to specify the maximum number of items to return. When this value is present, Amazon
      *        Web Services Payment Cryptography does not return more than the specified number of items, but it might
-     *        return fewer.
+     *        return fewer.</p>
+     *        <p>
+     *        This value is optional. If you include a value, it must be between 1 and 100, inclusive. If you do not
+     *        include a value, it defaults to 50.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -67,10 +78,17 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * Use this parameter to specify the maximum number of items to return. When this value is present, Amazon Web
      * Services Payment Cryptography does not return more than the specified number of items, but it might return fewer.
      * </p>
+     * <p>
+     * This value is optional. If you include a value, it must be between 1 and 100, inclusive. If you do not include a
+     * value, it defaults to 50.
+     * </p>
      * 
      * @return Use this parameter to specify the maximum number of items to return. When this value is present, Amazon
      *         Web Services Payment Cryptography does not return more than the specified number of items, but it might
-     *         return fewer.
+     *         return fewer.</p>
+     *         <p>
+     *         This value is optional. If you include a value, it must be between 1 and 100, inclusive. If you do not
+     *         include a value, it defaults to 50.
      */
 
     public Integer getMaxResults() {
@@ -82,11 +100,18 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * Use this parameter to specify the maximum number of items to return. When this value is present, Amazon Web
      * Services Payment Cryptography does not return more than the specified number of items, but it might return fewer.
      * </p>
+     * <p>
+     * This value is optional. If you include a value, it must be between 1 and 100, inclusive. If you do not include a
+     * value, it defaults to 50.
+     * </p>
      * 
      * @param maxResults
      *        Use this parameter to specify the maximum number of items to return. When this value is present, Amazon
      *        Web Services Payment Cryptography does not return more than the specified number of items, but it might
-     *        return fewer.
+     *        return fewer.</p>
+     *        <p>
+     *        This value is optional. If you include a value, it must be between 1 and 100, inclusive. If you do not
+     *        include a value, it defaults to 50.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -96,6 +96,12 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String instanceAccessUrl;
+    /**
+     * <p>
+     * The tags of an instance.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
 
     /**
      * <p>
@@ -612,6 +618,74 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The tags of an instance.
+     * </p>
+     * 
+     * @return The tags of an instance.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * The tags of an instance.
+     * </p>
+     * 
+     * @param tags
+     *        The tags of an instance.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * The tags of an instance.
+     * </p>
+     * 
+     * @param tags
+     *        The tags of an instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see Instance#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance clearTagsEntries() {
+        this.tags = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -644,7 +718,9 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
         if (getOutboundCallsEnabled() != null)
             sb.append("OutboundCallsEnabled: ").append(getOutboundCallsEnabled()).append(",");
         if (getInstanceAccessUrl() != null)
-            sb.append("InstanceAccessUrl: ").append(getInstanceAccessUrl());
+            sb.append("InstanceAccessUrl: ").append(getInstanceAccessUrl()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -703,6 +779,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getInstanceAccessUrl() != null && other.getInstanceAccessUrl().equals(this.getInstanceAccessUrl()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -722,6 +802,7 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getInboundCallsEnabled() == null) ? 0 : getInboundCallsEnabled().hashCode());
         hashCode = prime * hashCode + ((getOutboundCallsEnabled() == null) ? 0 : getOutboundCallsEnabled().hashCode());
         hashCode = prime * hashCode + ((getInstanceAccessUrl() == null) ? 0 : getInstanceAccessUrl().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

@@ -38,22 +38,21 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
     private java.util.Date parametersValidUntilTimestamp;
     /**
      * <p>
-     * The algorithm of the wrapping key for use within TR-34 key block. <code>RSA_2048</code> is the only wrapping key
-     * algorithm allowed.
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
      * </p>
      */
     private String wrappingKeyAlgorithm;
     /**
      * <p>
-     * The wrapping key certificate of the wrapping key for use within the TR-34 key block. The certificate expires in 7
-     * days.
+     * The wrapping key certificate in PEM format (base64 encoded) of the wrapping key for use within the TR-34 key
+     * block. The certificate expires in 7 days.
      * </p>
      */
     private String wrappingKeyCertificate;
     /**
      * <p>
-     * The Amazon Web Services Payment Cryptography certificate chain that signed the wrapping key certificate. This is
-     * the root certificate authority (CA) within your service account.
+     * The Amazon Web Services Payment Cryptography root certificate authority (CA) that signed the wrapping key
+     * certificate in PEM format (base64 encoded).
      * </p>
      */
     private String wrappingKeyCertificateChain;
@@ -149,13 +148,11 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The algorithm of the wrapping key for use within TR-34 key block. <code>RSA_2048</code> is the only wrapping key
-     * algorithm allowed.
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
      * </p>
      * 
      * @param wrappingKeyAlgorithm
-     *        The algorithm of the wrapping key for use within TR-34 key block. <code>RSA_2048</code> is the only
-     *        wrapping key algorithm allowed.
+     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
      * @see KeyAlgorithm
      */
 
@@ -165,12 +162,10 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The algorithm of the wrapping key for use within TR-34 key block. <code>RSA_2048</code> is the only wrapping key
-     * algorithm allowed.
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
      * </p>
      * 
-     * @return The algorithm of the wrapping key for use within TR-34 key block. <code>RSA_2048</code> is the only
-     *         wrapping key algorithm allowed.
+     * @return The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
      * @see KeyAlgorithm
      */
 
@@ -180,13 +175,11 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The algorithm of the wrapping key for use within TR-34 key block. <code>RSA_2048</code> is the only wrapping key
-     * algorithm allowed.
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
      * </p>
      * 
      * @param wrappingKeyAlgorithm
-     *        The algorithm of the wrapping key for use within TR-34 key block. <code>RSA_2048</code> is the only
-     *        wrapping key algorithm allowed.
+     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyAlgorithm
      */
@@ -198,13 +191,11 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The algorithm of the wrapping key for use within TR-34 key block. <code>RSA_2048</code> is the only wrapping key
-     * algorithm allowed.
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
      * </p>
      * 
      * @param wrappingKeyAlgorithm
-     *        The algorithm of the wrapping key for use within TR-34 key block. <code>RSA_2048</code> is the only
-     *        wrapping key algorithm allowed.
+     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyAlgorithm
      */
@@ -216,13 +207,13 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The wrapping key certificate of the wrapping key for use within the TR-34 key block. The certificate expires in 7
-     * days.
+     * The wrapping key certificate in PEM format (base64 encoded) of the wrapping key for use within the TR-34 key
+     * block. The certificate expires in 7 days.
      * </p>
      * 
      * @param wrappingKeyCertificate
-     *        The wrapping key certificate of the wrapping key for use within the TR-34 key block. The certificate
-     *        expires in 7 days.
+     *        The wrapping key certificate in PEM format (base64 encoded) of the wrapping key for use within the TR-34
+     *        key block. The certificate expires in 7 days.
      */
 
     public void setWrappingKeyCertificate(String wrappingKeyCertificate) {
@@ -231,12 +222,12 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The wrapping key certificate of the wrapping key for use within the TR-34 key block. The certificate expires in 7
-     * days.
+     * The wrapping key certificate in PEM format (base64 encoded) of the wrapping key for use within the TR-34 key
+     * block. The certificate expires in 7 days.
      * </p>
      * 
-     * @return The wrapping key certificate of the wrapping key for use within the TR-34 key block. The certificate
-     *         expires in 7 days.
+     * @return The wrapping key certificate in PEM format (base64 encoded) of the wrapping key for use within the TR-34
+     *         key block. The certificate expires in 7 days.
      */
 
     public String getWrappingKeyCertificate() {
@@ -245,13 +236,13 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The wrapping key certificate of the wrapping key for use within the TR-34 key block. The certificate expires in 7
-     * days.
+     * The wrapping key certificate in PEM format (base64 encoded) of the wrapping key for use within the TR-34 key
+     * block. The certificate expires in 7 days.
      * </p>
      * 
      * @param wrappingKeyCertificate
-     *        The wrapping key certificate of the wrapping key for use within the TR-34 key block. The certificate
-     *        expires in 7 days.
+     *        The wrapping key certificate in PEM format (base64 encoded) of the wrapping key for use within the TR-34
+     *        key block. The certificate expires in 7 days.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -262,13 +253,13 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Web Services Payment Cryptography certificate chain that signed the wrapping key certificate. This is
-     * the root certificate authority (CA) within your service account.
+     * The Amazon Web Services Payment Cryptography root certificate authority (CA) that signed the wrapping key
+     * certificate in PEM format (base64 encoded).
      * </p>
      * 
      * @param wrappingKeyCertificateChain
-     *        The Amazon Web Services Payment Cryptography certificate chain that signed the wrapping key certificate.
-     *        This is the root certificate authority (CA) within your service account.
+     *        The Amazon Web Services Payment Cryptography root certificate authority (CA) that signed the wrapping key
+     *        certificate in PEM format (base64 encoded).
      */
 
     public void setWrappingKeyCertificateChain(String wrappingKeyCertificateChain) {
@@ -277,12 +268,12 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Web Services Payment Cryptography certificate chain that signed the wrapping key certificate. This is
-     * the root certificate authority (CA) within your service account.
+     * The Amazon Web Services Payment Cryptography root certificate authority (CA) that signed the wrapping key
+     * certificate in PEM format (base64 encoded).
      * </p>
      * 
-     * @return The Amazon Web Services Payment Cryptography certificate chain that signed the wrapping key certificate.
-     *         This is the root certificate authority (CA) within your service account.
+     * @return The Amazon Web Services Payment Cryptography root certificate authority (CA) that signed the wrapping key
+     *         certificate in PEM format (base64 encoded).
      */
 
     public String getWrappingKeyCertificateChain() {
@@ -291,13 +282,13 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Web Services Payment Cryptography certificate chain that signed the wrapping key certificate. This is
-     * the root certificate authority (CA) within your service account.
+     * The Amazon Web Services Payment Cryptography root certificate authority (CA) that signed the wrapping key
+     * certificate in PEM format (base64 encoded).
      * </p>
      * 
      * @param wrappingKeyCertificateChain
-     *        The Amazon Web Services Payment Cryptography certificate chain that signed the wrapping key certificate.
-     *        This is the root certificate authority (CA) within your service account.
+     *        The Amazon Web Services Payment Cryptography root certificate authority (CA) that signed the wrapping key
+     *        certificate in PEM format (base64 encoded).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

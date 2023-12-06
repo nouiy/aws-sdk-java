@@ -82,10 +82,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws BatchSizeLimitExceededException
      *         The number of documents in the request exceeds the limit of 25. Try your request again with fewer
      *         documents.
@@ -109,10 +108,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws BatchSizeLimitExceededException
      *         The number of documents in the request exceeds the limit of 25. Try your request again with fewer
      *         documents.
@@ -137,10 +135,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws BatchSizeLimitExceededException
      *         The number of documents in the request exceeds the limit of 25. Try your request again with fewer
      *         documents.
@@ -167,10 +164,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws BatchSizeLimitExceededException
      *         The number of documents in the request exceeds the limit of 25. Try your request again with fewer
      *         documents.
@@ -199,10 +195,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws BatchSizeLimitExceededException
      *         The number of documents in the request exceeds the limit of 25. Try your request again with fewer
      *         documents.
@@ -223,24 +218,24 @@ public interface AmazonComprehend {
      * <li>
      * <p>
      * Custom classifier - a custom model that you have created and trained. For input, you can provide plain text, a
-     * single-page document (PDF, Word, or image), or Textract API output. For more information, see <a
+     * single-page document (PDF, Word, or image), or Amazon Textract API output. For more information, see <a
      * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-document-classification.html">Custom
      * classification</a> in the <i>Amazon Comprehend Developer Guide</i>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Prompt classifier - Amazon Comprehend provides a model for classifying prompts. For input, you provide English
-     * plain text input. For prompt classification, the response includes only the <code>Classes</code> field. For more
-     * information about prompt classifiers, see <a
-     * href="https://docs.aws.amazon.com/comprehend/latest/dg/prompt-classification.html">Prompt classifiers</a> in the
-     * <i>Amazon Comprehend Developer Guide</i>.
+     * Prompt safety classifier - Amazon Comprehend provides a pre-trained model for classifying input prompts for
+     * generative AI applications. For input, you provide English plain text input. For prompt safety classification,
+     * the response includes only the <code>Classes</code> field. For more information about prompt safety classifiers,
+     * see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/trust-safety.html#prompt-classification">Prompt
+     * safety classification</a> in the <i>Amazon Comprehend Developer Guide</i>.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * If the system detects errors while processing a page in the input document, the API response includes an entry in
-     * <code>Errors</code> that describes the errors.
+     * If the system detects errors while processing a page in the input document, the API response includes an
+     * <code>Errors</code> field that describes the errors.
      * </p>
      * <p>
      * If the system detects a document-level error in your input document, the API returns an
@@ -278,10 +273,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonComprehend.ContainsPiiEntities
@@ -344,10 +338,9 @@ public interface AmazonComprehend {
      *         The maximum number of resources per account has been exceeded. Review the resources, and then try your
      *         request again.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws KmsKeyValidationException
      *         The KMS customer managed key (CMK) entered cannot be validated. Verify the key and re-enter it.
      * @throws InternalServerException
@@ -412,10 +405,9 @@ public interface AmazonComprehend {
      *         The maximum number of resources per account has been exceeded. Review the resources, and then try your
      *         request again.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws KmsKeyValidationException
      *         The KMS customer managed key (CMK) entered cannot be validated. Verify the key and re-enter it.
      * @throws InternalServerException
@@ -465,10 +457,9 @@ public interface AmazonComprehend {
      *         The maximum number of resources per account has been exceeded. Review the resources, and then try your
      *         request again.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws KmsKeyValidationException
      *         The KMS customer managed key (CMK) entered cannot be validated. Verify the key and re-enter it.
      * @throws ResourceNotFoundException
@@ -1034,10 +1025,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonComprehend.DetectEntities
@@ -1058,10 +1048,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonComprehend.DetectKeyPhrases
@@ -1083,10 +1072,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonComprehend.DetectPiiEntities
@@ -1108,10 +1096,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonComprehend.DetectSentiment
@@ -1134,10 +1121,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonComprehend.DetectSyntax
@@ -1163,10 +1149,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonComprehend.DetectTargetedSentiment
@@ -1177,11 +1162,10 @@ public interface AmazonComprehend {
 
     /**
      * <p>
-     * Performs toxicity analysis on the list of text strings that you provide as input. The analysis uses the order of
-     * strings in the list to determine context when predicting toxicity. The API response contains a results list that
-     * matches the size of the input list. For more information about toxicity detection, see <a
+     * Performs toxicity analysis on the list of text strings that you provide as input. The API response contains a
+     * results list that matches the size of the input list. For more information about toxicity detection, see <a
      * href="https://docs.aws.amazon.com/comprehend/latest/dg/toxicity-detection.html">Toxicity detection</a> in the
-     * <i>Amazon Comprehend Developer Guide</i>
+     * <i>Amazon Comprehend Developer Guide</i>.
      * </p>
      * 
      * @param detectToxicContentRequest
@@ -1191,10 +1175,9 @@ public interface AmazonComprehend {
      * @throws TextSizeLimitExceededException
      *         The size of the input text exceeds the limit. Use a smaller document.
      * @throws UnsupportedLanguageException
-     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
-     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
-     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
-     *         languages</a> in the Comprehend Developer Guide.
+     *         Amazon Comprehend can't process the language of the input text. For a list of supported languages, <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported languages</a>
+     *         in the Comprehend Developer Guide.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonComprehend.DetectToxicContent
@@ -1653,8 +1636,8 @@ public interface AmazonComprehend {
 
     /**
      * <p>
-     * Starts an asynchronous document classification job. Use the <code>DescribeDocumentClassificationJob</code>
-     * operation to track the progress of the job.
+     * Starts an asynchronous document classification job using a custom classification model. Use the
+     * <code>DescribeDocumentClassificationJob</code> operation to track the progress of the job.
      * </p>
      * 
      * @param startDocumentClassificationJobRequest

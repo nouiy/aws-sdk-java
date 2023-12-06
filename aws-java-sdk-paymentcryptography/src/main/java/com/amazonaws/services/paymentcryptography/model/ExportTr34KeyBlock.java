@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Parameter information for key material export using TR-34 standard.
+ * Parameter information for key material export using the asymmetric TR-34 key exchange method.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/payment-cryptography-2021-09-14/ExportTr34KeyBlock"

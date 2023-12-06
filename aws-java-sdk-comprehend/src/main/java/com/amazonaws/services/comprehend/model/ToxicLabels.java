@@ -21,7 +21,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Toxicity analysis result for one string. For more information about toxicity detection, see <a
  * href="https://docs.aws.amazon.com/comprehend/latest/dg/toxicity-detection.html">Toxicity detection</a> in the
- * <i>Amazon Comprehend Developer Guide</i>
+ * <i>Amazon Comprehend Developer Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ToxicLabels" target="_top">AWS API
@@ -38,7 +38,7 @@ public class ToxicLabels implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<ToxicContent> labels;
     /**
      * <p>
-     * Overall toxicity score for the string.
+     * Overall toxicity score for the string. Value range is zero to one, where one is the highest confidence.
      * </p>
      */
     private Float toxicity;
@@ -115,11 +115,11 @@ public class ToxicLabels implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Overall toxicity score for the string.
+     * Overall toxicity score for the string. Value range is zero to one, where one is the highest confidence.
      * </p>
      * 
      * @param toxicity
-     *        Overall toxicity score for the string.
+     *        Overall toxicity score for the string. Value range is zero to one, where one is the highest confidence.
      */
 
     public void setToxicity(Float toxicity) {
@@ -128,10 +128,10 @@ public class ToxicLabels implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Overall toxicity score for the string.
+     * Overall toxicity score for the string. Value range is zero to one, where one is the highest confidence.
      * </p>
      * 
-     * @return Overall toxicity score for the string.
+     * @return Overall toxicity score for the string. Value range is zero to one, where one is the highest confidence.
      */
 
     public Float getToxicity() {
@@ -140,11 +140,11 @@ public class ToxicLabels implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Overall toxicity score for the string.
+     * Overall toxicity score for the string. Value range is zero to one, where one is the highest confidence.
      * </p>
      * 
      * @param toxicity
-     *        Overall toxicity score for the string.
+     *        Overall toxicity score for the string. Value range is zero to one, where one is the highest confidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

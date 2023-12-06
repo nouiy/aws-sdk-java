@@ -37,7 +37,10 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Resource Number (ARN) of the endpoint.
      * </p>
      * <p>
-     * For prompt classification, Amazon Comprehend provides the endpoint ARN: <code>zzz</code>.
+     * For prompt safety classification, Amazon Comprehend provides the endpoint ARN. For more information about prompt
+     * safety classifiers, see <a
+     * href="https://docs.aws.amazon.com/comprehend/latest/dg/trust-safety.html#prompt-classification">Prompt safety
+     * classification</a> in the <i>Amazon Comprehend Developer Guide</i>
      * </p>
      * <p>
      * For custom classification, you create an endpoint for your custom model. For more information, see <a
@@ -55,7 +58,7 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * Amazon Textract <code>DetectDocumentText</code> or <code>AnalyzeDocument</code> output file.
      * </p>
      * <p>
-     * To classify a document using the prompt classifier, use the <code>Text</code> parameter for input.
+     * To classify a document using the prompt safety classifier, use the <code>Text</code> parameter for input.
      * </p>
      * <p>
      * Provide the input document as a sequence of base64-encoded bytes. If your code uses an Amazon Web Services SDK to
@@ -130,7 +133,10 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Resource Number (ARN) of the endpoint.
      * </p>
      * <p>
-     * For prompt classification, Amazon Comprehend provides the endpoint ARN: <code>zzz</code>.
+     * For prompt safety classification, Amazon Comprehend provides the endpoint ARN. For more information about prompt
+     * safety classifiers, see <a
+     * href="https://docs.aws.amazon.com/comprehend/latest/dg/trust-safety.html#prompt-classification">Prompt safety
+     * classification</a> in the <i>Amazon Comprehend Developer Guide</i>
      * </p>
      * <p>
      * For custom classification, you create an endpoint for your custom model. For more information, see <a
@@ -141,7 +147,10 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * @param endpointArn
      *        The Amazon Resource Number (ARN) of the endpoint. </p>
      *        <p>
-     *        For prompt classification, Amazon Comprehend provides the endpoint ARN: <code>zzz</code>.
+     *        For prompt safety classification, Amazon Comprehend provides the endpoint ARN. For more information about
+     *        prompt safety classifiers, see <a
+     *        href="https://docs.aws.amazon.com/comprehend/latest/dg/trust-safety.html#prompt-classification">Prompt
+     *        safety classification</a> in the <i>Amazon Comprehend Developer Guide</i>
      *        </p>
      *        <p>
      *        For custom classification, you create an endpoint for your custom model. For more information, see <a
@@ -158,7 +167,10 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Resource Number (ARN) of the endpoint.
      * </p>
      * <p>
-     * For prompt classification, Amazon Comprehend provides the endpoint ARN: <code>zzz</code>.
+     * For prompt safety classification, Amazon Comprehend provides the endpoint ARN. For more information about prompt
+     * safety classifiers, see <a
+     * href="https://docs.aws.amazon.com/comprehend/latest/dg/trust-safety.html#prompt-classification">Prompt safety
+     * classification</a> in the <i>Amazon Comprehend Developer Guide</i>
      * </p>
      * <p>
      * For custom classification, you create an endpoint for your custom model. For more information, see <a
@@ -168,7 +180,10 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return The Amazon Resource Number (ARN) of the endpoint. </p>
      *         <p>
-     *         For prompt classification, Amazon Comprehend provides the endpoint ARN: <code>zzz</code>.
+     *         For prompt safety classification, Amazon Comprehend provides the endpoint ARN. For more information about
+     *         prompt safety classifiers, see <a
+     *         href="https://docs.aws.amazon.com/comprehend/latest/dg/trust-safety.html#prompt-classification">Prompt
+     *         safety classification</a> in the <i>Amazon Comprehend Developer Guide</i>
      *         </p>
      *         <p>
      *         For custom classification, you create an endpoint for your custom model. For more information, see <a
@@ -185,7 +200,10 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Resource Number (ARN) of the endpoint.
      * </p>
      * <p>
-     * For prompt classification, Amazon Comprehend provides the endpoint ARN: <code>zzz</code>.
+     * For prompt safety classification, Amazon Comprehend provides the endpoint ARN. For more information about prompt
+     * safety classifiers, see <a
+     * href="https://docs.aws.amazon.com/comprehend/latest/dg/trust-safety.html#prompt-classification">Prompt safety
+     * classification</a> in the <i>Amazon Comprehend Developer Guide</i>
      * </p>
      * <p>
      * For custom classification, you create an endpoint for your custom model. For more information, see <a
@@ -196,7 +214,10 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * @param endpointArn
      *        The Amazon Resource Number (ARN) of the endpoint. </p>
      *        <p>
-     *        For prompt classification, Amazon Comprehend provides the endpoint ARN: <code>zzz</code>.
+     *        For prompt safety classification, Amazon Comprehend provides the endpoint ARN. For more information about
+     *        prompt safety classifiers, see <a
+     *        href="https://docs.aws.amazon.com/comprehend/latest/dg/trust-safety.html#prompt-classification">Prompt
+     *        safety classification</a> in the <i>Amazon Comprehend Developer Guide</i>
      *        </p>
      *        <p>
      *        For custom classification, you create an endpoint for your custom model. For more information, see <a
@@ -219,7 +240,7 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * Amazon Textract <code>DetectDocumentText</code> or <code>AnalyzeDocument</code> output file.
      * </p>
      * <p>
-     * To classify a document using the prompt classifier, use the <code>Text</code> parameter for input.
+     * To classify a document using the prompt safety classifier, use the <code>Text</code> parameter for input.
      * </p>
      * <p>
      * Provide the input document as a sequence of base64-encoded bytes. If your code uses an Amazon Web Services SDK to
@@ -251,7 +272,7 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      *        input an Amazon Textract <code>DetectDocumentText</code> or <code>AnalyzeDocument</code> output file.
      *        </p>
      *        <p>
-     *        To classify a document using the prompt classifier, use the <code>Text</code> parameter for input.
+     *        To classify a document using the prompt safety classifier, use the <code>Text</code> parameter for input.
      *        </p>
      *        <p>
      *        Provide the input document as a sequence of base64-encoded bytes. If your code uses an Amazon Web Services
@@ -279,7 +300,7 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * Amazon Textract <code>DetectDocumentText</code> or <code>AnalyzeDocument</code> output file.
      * </p>
      * <p>
-     * To classify a document using the prompt classifier, use the <code>Text</code> parameter for input.
+     * To classify a document using the prompt safety classifier, use the <code>Text</code> parameter for input.
      * </p>
      * <p>
      * Provide the input document as a sequence of base64-encoded bytes. If your code uses an Amazon Web Services SDK to
@@ -307,7 +328,7 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      *         input an Amazon Textract <code>DetectDocumentText</code> or <code>AnalyzeDocument</code> output file.
      *         </p>
      *         <p>
-     *         To classify a document using the prompt classifier, use the <code>Text</code> parameter for input.
+     *         To classify a document using the prompt safety classifier, use the <code>Text</code> parameter for input.
      *         </p>
      *         <p>
      *         Provide the input document as a sequence of base64-encoded bytes. If your code uses an Amazon Web
@@ -335,7 +356,7 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * Amazon Textract <code>DetectDocumentText</code> or <code>AnalyzeDocument</code> output file.
      * </p>
      * <p>
-     * To classify a document using the prompt classifier, use the <code>Text</code> parameter for input.
+     * To classify a document using the prompt safety classifier, use the <code>Text</code> parameter for input.
      * </p>
      * <p>
      * Provide the input document as a sequence of base64-encoded bytes. If your code uses an Amazon Web Services SDK to
@@ -367,7 +388,7 @@ public class ClassifyDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      *        input an Amazon Textract <code>DetectDocumentText</code> or <code>AnalyzeDocument</code> output file.
      *        </p>
      *        <p>
-     *        To classify a document using the prompt classifier, use the <code>Text</code> parameter for input.
+     *        To classify a document using the prompt safety classifier, use the <code>Text</code> parameter for input.
      *        </p>
      *        <p>
      *        Provide the input document as a sequence of base64-encoded bytes. If your code uses an Amazon Web Services

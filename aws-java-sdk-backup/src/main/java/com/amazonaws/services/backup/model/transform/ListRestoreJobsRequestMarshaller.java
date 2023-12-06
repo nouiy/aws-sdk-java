@@ -33,6 +33,8 @@ public class ListRestoreJobsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> BYACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("accountId").build();
+    private static final MarshallingInfo<String> BYRESOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("resourceType").build();
     private static final MarshallingInfo<java.util.Date> BYCREATEDBEFORE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("createdBefore").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> BYCREATEDAFTER_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -65,6 +67,7 @@ public class ListRestoreJobsRequestMarshaller {
             protocolMarshaller.marshall(listRestoreJobsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listRestoreJobsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listRestoreJobsRequest.getByAccountId(), BYACCOUNTID_BINDING);
+            protocolMarshaller.marshall(listRestoreJobsRequest.getByResourceType(), BYRESOURCETYPE_BINDING);
             protocolMarshaller.marshall(listRestoreJobsRequest.getByCreatedBefore(), BYCREATEDBEFORE_BINDING);
             protocolMarshaller.marshall(listRestoreJobsRequest.getByCreatedAfter(), BYCREATEDAFTER_BINDING);
             protocolMarshaller.marshall(listRestoreJobsRequest.getByStatus(), BYSTATUS_BINDING);

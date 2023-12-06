@@ -25,19 +25,20 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The classes used by the document being analyzed. These are used for multi-class trained models. Individual
-     * classes are mutually exclusive and each document is expected to have only a single class assigned to it. For
-     * example, an animal can be a dog or a cat, but not both at the same time.
+     * The classes used by the document being analyzed. These are used for models trained in multi-class mode.
+     * Individual classes are mutually exclusive and each document is expected to have only a single class assigned to
+     * it. For example, an animal can be a dog or a cat, but not both at the same time.
      * </p>
      * <p>
-     * For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along with a
-     * confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     * For prompt safety classification, the response includes only two classes (SAFE_PROMPT and UNSAFE_PROMPT), along
+     * with a confidence score for each class. The value range of the score is zero to one, where one is the highest
+     * confidence.
      * </p>
      */
     private java.util.List<DocumentClass> classes;
     /**
      * <p>
-     * The labels used the document being analyzed. These are used for multi-label trained models. Individual labels
+     * The labels used in the document being analyzed. These are used for multi-label trained models. Individual labels
      * represent different categories that are related in some manner and are not mutually exclusive. For example, a
      * movie can be just an action movie, or it can be an action movie, a science fiction movie, and a comedy, all at
      * the same time.
@@ -79,22 +80,23 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The classes used by the document being analyzed. These are used for multi-class trained models. Individual
-     * classes are mutually exclusive and each document is expected to have only a single class assigned to it. For
-     * example, an animal can be a dog or a cat, but not both at the same time.
+     * The classes used by the document being analyzed. These are used for models trained in multi-class mode.
+     * Individual classes are mutually exclusive and each document is expected to have only a single class assigned to
+     * it. For example, an animal can be a dog or a cat, but not both at the same time.
      * </p>
      * <p>
-     * For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along with a
-     * confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     * For prompt safety classification, the response includes only two classes (SAFE_PROMPT and UNSAFE_PROMPT), along
+     * with a confidence score for each class. The value range of the score is zero to one, where one is the highest
+     * confidence.
      * </p>
      * 
-     * @return The classes used by the document being analyzed. These are used for multi-class trained models.
+     * @return The classes used by the document being analyzed. These are used for models trained in multi-class mode.
      *         Individual classes are mutually exclusive and each document is expected to have only a single class
      *         assigned to it. For example, an animal can be a dog or a cat, but not both at the same time. </p>
      *         <p>
-     *         For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along
-     *         with a confidence score. A higher confidence score indicates that the input prompt is undesired in
-     *         nature.
+     *         For prompt safety classification, the response includes only two classes (SAFE_PROMPT and UNSAFE_PROMPT),
+     *         along with a confidence score for each class. The value range of the score is zero to one, where one is
+     *         the highest confidence.
      */
 
     public java.util.List<DocumentClass> getClasses() {
@@ -103,22 +105,24 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The classes used by the document being analyzed. These are used for multi-class trained models. Individual
-     * classes are mutually exclusive and each document is expected to have only a single class assigned to it. For
-     * example, an animal can be a dog or a cat, but not both at the same time.
+     * The classes used by the document being analyzed. These are used for models trained in multi-class mode.
+     * Individual classes are mutually exclusive and each document is expected to have only a single class assigned to
+     * it. For example, an animal can be a dog or a cat, but not both at the same time.
      * </p>
      * <p>
-     * For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along with a
-     * confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     * For prompt safety classification, the response includes only two classes (SAFE_PROMPT and UNSAFE_PROMPT), along
+     * with a confidence score for each class. The value range of the score is zero to one, where one is the highest
+     * confidence.
      * </p>
      * 
      * @param classes
-     *        The classes used by the document being analyzed. These are used for multi-class trained models. Individual
-     *        classes are mutually exclusive and each document is expected to have only a single class assigned to it.
-     *        For example, an animal can be a dog or a cat, but not both at the same time. </p>
+     *        The classes used by the document being analyzed. These are used for models trained in multi-class mode.
+     *        Individual classes are mutually exclusive and each document is expected to have only a single class
+     *        assigned to it. For example, an animal can be a dog or a cat, but not both at the same time. </p>
      *        <p>
-     *        For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along
-     *        with a confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     *        For prompt safety classification, the response includes only two classes (SAFE_PROMPT and UNSAFE_PROMPT),
+     *        along with a confidence score for each class. The value range of the score is zero to one, where one is
+     *        the highest confidence.
      */
 
     public void setClasses(java.util.Collection<DocumentClass> classes) {
@@ -132,13 +136,14 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The classes used by the document being analyzed. These are used for multi-class trained models. Individual
-     * classes are mutually exclusive and each document is expected to have only a single class assigned to it. For
-     * example, an animal can be a dog or a cat, but not both at the same time.
+     * The classes used by the document being analyzed. These are used for models trained in multi-class mode.
+     * Individual classes are mutually exclusive and each document is expected to have only a single class assigned to
+     * it. For example, an animal can be a dog or a cat, but not both at the same time.
      * </p>
      * <p>
-     * For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along with a
-     * confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     * For prompt safety classification, the response includes only two classes (SAFE_PROMPT and UNSAFE_PROMPT), along
+     * with a confidence score for each class. The value range of the score is zero to one, where one is the highest
+     * confidence.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -147,12 +152,13 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param classes
-     *        The classes used by the document being analyzed. These are used for multi-class trained models. Individual
-     *        classes are mutually exclusive and each document is expected to have only a single class assigned to it.
-     *        For example, an animal can be a dog or a cat, but not both at the same time. </p>
+     *        The classes used by the document being analyzed. These are used for models trained in multi-class mode.
+     *        Individual classes are mutually exclusive and each document is expected to have only a single class
+     *        assigned to it. For example, an animal can be a dog or a cat, but not both at the same time. </p>
      *        <p>
-     *        For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along
-     *        with a confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     *        For prompt safety classification, the response includes only two classes (SAFE_PROMPT and UNSAFE_PROMPT),
+     *        along with a confidence score for each class. The value range of the score is zero to one, where one is
+     *        the highest confidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,22 +174,24 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The classes used by the document being analyzed. These are used for multi-class trained models. Individual
-     * classes are mutually exclusive and each document is expected to have only a single class assigned to it. For
-     * example, an animal can be a dog or a cat, but not both at the same time.
+     * The classes used by the document being analyzed. These are used for models trained in multi-class mode.
+     * Individual classes are mutually exclusive and each document is expected to have only a single class assigned to
+     * it. For example, an animal can be a dog or a cat, but not both at the same time.
      * </p>
      * <p>
-     * For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along with a
-     * confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     * For prompt safety classification, the response includes only two classes (SAFE_PROMPT and UNSAFE_PROMPT), along
+     * with a confidence score for each class. The value range of the score is zero to one, where one is the highest
+     * confidence.
      * </p>
      * 
      * @param classes
-     *        The classes used by the document being analyzed. These are used for multi-class trained models. Individual
-     *        classes are mutually exclusive and each document is expected to have only a single class assigned to it.
-     *        For example, an animal can be a dog or a cat, but not both at the same time. </p>
+     *        The classes used by the document being analyzed. These are used for models trained in multi-class mode.
+     *        Individual classes are mutually exclusive and each document is expected to have only a single class
+     *        assigned to it. For example, an animal can be a dog or a cat, but not both at the same time. </p>
      *        <p>
-     *        For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along
-     *        with a confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     *        For prompt safety classification, the response includes only two classes (SAFE_PROMPT and UNSAFE_PROMPT),
+     *        along with a confidence score for each class. The value range of the score is zero to one, where one is
+     *        the highest confidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,13 +202,13 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The labels used the document being analyzed. These are used for multi-label trained models. Individual labels
+     * The labels used in the document being analyzed. These are used for multi-label trained models. Individual labels
      * represent different categories that are related in some manner and are not mutually exclusive. For example, a
      * movie can be just an action movie, or it can be an action movie, a science fiction movie, and a comedy, all at
      * the same time.
      * </p>
      * 
-     * @return The labels used the document being analyzed. These are used for multi-label trained models. Individual
+     * @return The labels used in the document being analyzed. These are used for multi-label trained models. Individual
      *         labels represent different categories that are related in some manner and are not mutually exclusive. For
      *         example, a movie can be just an action movie, or it can be an action movie, a science fiction movie, and
      *         a comedy, all at the same time.
@@ -212,14 +220,14 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The labels used the document being analyzed. These are used for multi-label trained models. Individual labels
+     * The labels used in the document being analyzed. These are used for multi-label trained models. Individual labels
      * represent different categories that are related in some manner and are not mutually exclusive. For example, a
      * movie can be just an action movie, or it can be an action movie, a science fiction movie, and a comedy, all at
      * the same time.
      * </p>
      * 
      * @param labels
-     *        The labels used the document being analyzed. These are used for multi-label trained models. Individual
+     *        The labels used in the document being analyzed. These are used for multi-label trained models. Individual
      *        labels represent different categories that are related in some manner and are not mutually exclusive. For
      *        example, a movie can be just an action movie, or it can be an action movie, a science fiction movie, and a
      *        comedy, all at the same time.
@@ -236,7 +244,7 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The labels used the document being analyzed. These are used for multi-label trained models. Individual labels
+     * The labels used in the document being analyzed. These are used for multi-label trained models. Individual labels
      * represent different categories that are related in some manner and are not mutually exclusive. For example, a
      * movie can be just an action movie, or it can be an action movie, a science fiction movie, and a comedy, all at
      * the same time.
@@ -248,7 +256,7 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param labels
-     *        The labels used the document being analyzed. These are used for multi-label trained models. Individual
+     *        The labels used in the document being analyzed. These are used for multi-label trained models. Individual
      *        labels represent different categories that are related in some manner and are not mutually exclusive. For
      *        example, a movie can be just an action movie, or it can be an action movie, a science fiction movie, and a
      *        comedy, all at the same time.
@@ -267,14 +275,14 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The labels used the document being analyzed. These are used for multi-label trained models. Individual labels
+     * The labels used in the document being analyzed. These are used for multi-label trained models. Individual labels
      * represent different categories that are related in some manner and are not mutually exclusive. For example, a
      * movie can be just an action movie, or it can be an action movie, a science fiction movie, and a comedy, all at
      * the same time.
      * </p>
      * 
      * @param labels
-     *        The labels used the document being analyzed. These are used for multi-label trained models. Individual
+     *        The labels used in the document being analyzed. These are used for multi-label trained models. Individual
      *        labels represent different categories that are related in some manner and are not mutually exclusive. For
      *        example, a movie can be just an action movie, or it can be an action movie, a science fiction movie, and a
      *        comedy, all at the same time.

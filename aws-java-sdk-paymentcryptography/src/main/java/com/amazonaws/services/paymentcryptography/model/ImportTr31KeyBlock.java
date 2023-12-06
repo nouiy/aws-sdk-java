@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Parameter information for key material import using TR-31 standard.
+ * Parameter information for key material import using symmetric TR-31 key exchange method.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/payment-cryptography-2021-09-14/ImportTr31KeyBlock"
@@ -30,7 +30,7 @@ public class ImportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The TR-34 wrapped key block to import.
+     * The TR-31 wrapped key block to import.
      * </p>
      */
     private String wrappedKeyBlock;
@@ -43,11 +43,11 @@ public class ImportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The TR-34 wrapped key block to import.
+     * The TR-31 wrapped key block to import.
      * </p>
      * 
      * @param wrappedKeyBlock
-     *        The TR-34 wrapped key block to import.
+     *        The TR-31 wrapped key block to import.
      */
 
     public void setWrappedKeyBlock(String wrappedKeyBlock) {
@@ -56,10 +56,10 @@ public class ImportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The TR-34 wrapped key block to import.
+     * The TR-31 wrapped key block to import.
      * </p>
      * 
-     * @return The TR-34 wrapped key block to import.
+     * @return The TR-31 wrapped key block to import.
      */
 
     public String getWrappedKeyBlock() {
@@ -68,11 +68,11 @@ public class ImportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The TR-34 wrapped key block to import.
+     * The TR-31 wrapped key block to import.
      * </p>
      * 
      * @param wrappedKeyBlock
-     *        The TR-34 wrapped key block to import.
+     *        The TR-31 wrapped key block to import.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

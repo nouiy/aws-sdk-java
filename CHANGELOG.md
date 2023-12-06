@@ -1,3 +1,24 @@
+# __1.12.607__ __2023-12-06__
+## __AWS Backup__
+  - ### Features
+    - AWS Backup - Features: Add VaultType to the output of DescribeRecoveryPoint, ListRecoveryPointByBackupVault API and add ResourceType to the input of ListRestoreJobs API
+
+## __Amazon Comprehend__
+  - ### Features
+    - Documentation updates for Trust and Safety features.
+
+## __Amazon Connect Service__
+  - ### Features
+    - Releasing Tagging Support for Instance Management APIS
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Releasing the new cpuManufacturer attribute within the DescribeInstanceTypes API response which notifies our customers with information on who the Manufacturer is for the processor attached to the instance, for example: Intel.
+
+## __Payment Cryptography Control Plane__
+  - ### Features
+    - AWS Payment Cryptography IPEK feature release
+
 # __1.12.606__ __2023-12-05__
 ## __AWS Clean Rooms ML__
   - ### Features

@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Parameter information for key material export from Amazon Web Services Payment Cryptography.
+ * Parameter information for key material export from Amazon Web Services Payment Cryptography using TR-31 or TR-34 key
+ * exchange method.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/payment-cryptography-2021-09-14/ExportKeyMaterial"
@@ -30,24 +31,24 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material export using TR-31 standard.
+     * Parameter information for key material export using symmetric TR-31 key exchange method.
      * </p>
      */
     private ExportTr31KeyBlock tr31KeyBlock;
     /**
      * <p>
-     * Parameter information for key material export using TR-34 standard.
+     * Parameter information for key material export using the asymmetric TR-34 key exchange method.
      * </p>
      */
     private ExportTr34KeyBlock tr34KeyBlock;
 
     /**
      * <p>
-     * Parameter information for key material export using TR-31 standard.
+     * Parameter information for key material export using symmetric TR-31 key exchange method.
      * </p>
      * 
      * @param tr31KeyBlock
-     *        Parameter information for key material export using TR-31 standard.
+     *        Parameter information for key material export using symmetric TR-31 key exchange method.
      */
 
     public void setTr31KeyBlock(ExportTr31KeyBlock tr31KeyBlock) {
@@ -56,10 +57,10 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material export using TR-31 standard.
+     * Parameter information for key material export using symmetric TR-31 key exchange method.
      * </p>
      * 
-     * @return Parameter information for key material export using TR-31 standard.
+     * @return Parameter information for key material export using symmetric TR-31 key exchange method.
      */
 
     public ExportTr31KeyBlock getTr31KeyBlock() {
@@ -68,11 +69,11 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material export using TR-31 standard.
+     * Parameter information for key material export using symmetric TR-31 key exchange method.
      * </p>
      * 
      * @param tr31KeyBlock
-     *        Parameter information for key material export using TR-31 standard.
+     *        Parameter information for key material export using symmetric TR-31 key exchange method.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +84,11 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material export using TR-34 standard.
+     * Parameter information for key material export using the asymmetric TR-34 key exchange method.
      * </p>
      * 
      * @param tr34KeyBlock
-     *        Parameter information for key material export using TR-34 standard.
+     *        Parameter information for key material export using the asymmetric TR-34 key exchange method.
      */
 
     public void setTr34KeyBlock(ExportTr34KeyBlock tr34KeyBlock) {
@@ -96,10 +97,10 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material export using TR-34 standard.
+     * Parameter information for key material export using the asymmetric TR-34 key exchange method.
      * </p>
      * 
-     * @return Parameter information for key material export using TR-34 standard.
+     * @return Parameter information for key material export using the asymmetric TR-34 key exchange method.
      */
 
     public ExportTr34KeyBlock getTr34KeyBlock() {
@@ -108,11 +109,11 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material export using TR-34 standard.
+     * Parameter information for key material export using the asymmetric TR-34 key exchange method.
      * </p>
      * 
      * @param tr34KeyBlock
-     *        Parameter information for key material export using TR-34 standard.
+     *        Parameter information for key material export using the asymmetric TR-34 key exchange method.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

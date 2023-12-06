@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.connect.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -49,6 +51,8 @@ public class InstanceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutboundCallsEnabled").build();
     private static final MarshallingInfo<String> INSTANCEACCESSURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceAccessUrl").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final InstanceMarshaller instance = new InstanceMarshaller();
 
@@ -77,6 +81,7 @@ public class InstanceMarshaller {
             protocolMarshaller.marshall(instance.getInboundCallsEnabled(), INBOUNDCALLSENABLED_BINDING);
             protocolMarshaller.marshall(instance.getOutboundCallsEnabled(), OUTBOUNDCALLSENABLED_BINDING);
             protocolMarshaller.marshall(instance.getInstanceAccessUrl(), INSTANCEACCESSURL_BINDING);
+            protocolMarshaller.marshall(instance.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

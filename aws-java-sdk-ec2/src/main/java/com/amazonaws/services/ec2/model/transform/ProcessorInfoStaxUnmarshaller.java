@@ -70,6 +70,10 @@ public class ProcessorInfoStaxUnmarshaller implements Unmarshaller<ProcessorInfo
                     continue;
                 }
 
+                if (context.testExpression("manufacturer", targetDepth)) {
+                    processorInfo.setManufacturer(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return processorInfo;

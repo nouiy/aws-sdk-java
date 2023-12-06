@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ExportKeyRequestMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> EXPORTATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExportAttributes").build();
     private static final MarshallingInfo<String> EXPORTKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExportKeyIdentifier").build();
     private static final MarshallingInfo<StructuredPojo> KEYMATERIAL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -48,6 +50,7 @@ public class ExportKeyRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(exportKeyRequest.getExportAttributes(), EXPORTATTRIBUTES_BINDING);
             protocolMarshaller.marshall(exportKeyRequest.getExportKeyIdentifier(), EXPORTKEYIDENTIFIER_BINDING);
             protocolMarshaller.marshall(exportKeyRequest.getKeyMaterial(), KEYMATERIAL_BINDING);
         } catch (Exception e) {

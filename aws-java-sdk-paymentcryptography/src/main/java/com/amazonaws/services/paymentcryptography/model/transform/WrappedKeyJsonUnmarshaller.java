@@ -48,6 +48,14 @@ public class WrappedKeyJsonUnmarshaller implements Unmarshaller<WrappedKey, Json
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("KeyCheckValue", targetDepth)) {
+                    context.nextToken();
+                    wrappedKey.setKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("KeyCheckValueAlgorithm", targetDepth)) {
+                    context.nextToken();
+                    wrappedKey.setKeyCheckValueAlgorithm(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("KeyMaterial", targetDepth)) {
                     context.nextToken();
                     wrappedKey.setKeyMaterial(context.getUnmarshaller(String.class).unmarshall(context));

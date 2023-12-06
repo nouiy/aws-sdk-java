@@ -40,8 +40,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * <p>
@@ -49,8 +49,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      */
@@ -105,8 +105,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * <p>
@@ -114,8 +114,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * 
@@ -124,8 +124,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         tag key. If you specify an existing tag key with a different tag value, Amazon Web Services Payment
      *         Cryptography replaces the current tag value with the new one.</p> <important>
      *         <p>
-     *         Don't include confidential or sensitive information in this field. This field may be displayed in
-     *         plaintext in CloudTrail logs and other output.
+     *         Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *         in plaintext in CloudTrail logs and other output.
      *         </p>
      *         </important>
      *         <p>
@@ -133,8 +133,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         </p>
      *         <important>
      *         <p>
-     *         Don't include confidential or sensitive information in this field. This field may be displayed in
-     *         plaintext in CloudTrail logs and other output.
+     *         Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *         in plaintext in CloudTrail logs and other output.
      *         </p>
      */
 
@@ -151,8 +151,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * <p>
@@ -160,8 +160,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * 
@@ -171,8 +171,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        tag key. If you specify an existing tag key with a different tag value, Amazon Web Services Payment
      *        Cryptography replaces the current tag value with the new one.</p> <important>
      *        <p>
-     *        Don't include confidential or sensitive information in this field. This field may be displayed in
-     *        plaintext in CloudTrail logs and other output.
+     *        Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *        in plaintext in CloudTrail logs and other output.
      *        </p>
      *        </important>
      *        <p>
@@ -180,8 +180,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        <important>
      *        <p>
-     *        Don't include confidential or sensitive information in this field. This field may be displayed in
-     *        plaintext in CloudTrail logs and other output.
+     *        Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *        in plaintext in CloudTrail logs and other output.
      *        </p>
      */
 
@@ -203,8 +203,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * <p>
@@ -212,8 +212,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * <p>
@@ -228,8 +228,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        tag key. If you specify an existing tag key with a different tag value, Amazon Web Services Payment
      *        Cryptography replaces the current tag value with the new one.</p> <important>
      *        <p>
-     *        Don't include confidential or sensitive information in this field. This field may be displayed in
-     *        plaintext in CloudTrail logs and other output.
+     *        Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *        in plaintext in CloudTrail logs and other output.
      *        </p>
      *        </important>
      *        <p>
@@ -237,8 +237,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        <important>
      *        <p>
-     *        Don't include confidential or sensitive information in this field. This field may be displayed in
-     *        plaintext in CloudTrail logs and other output.
+     *        Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *        in plaintext in CloudTrail logs and other output.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -262,8 +262,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * <p>
@@ -271,8 +271,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * 
@@ -282,8 +282,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        tag key. If you specify an existing tag key with a different tag value, Amazon Web Services Payment
      *        Cryptography replaces the current tag value with the new one.</p> <important>
      *        <p>
-     *        Don't include confidential or sensitive information in this field. This field may be displayed in
-     *        plaintext in CloudTrail logs and other output.
+     *        Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *        in plaintext in CloudTrail logs and other output.
      *        </p>
      *        </important>
      *        <p>
@@ -291,8 +291,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        <important>
      *        <p>
-     *        Don't include confidential or sensitive information in this field. This field may be displayed in
-     *        plaintext in CloudTrail logs and other output.
+     *        Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *        in plaintext in CloudTrail logs and other output.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

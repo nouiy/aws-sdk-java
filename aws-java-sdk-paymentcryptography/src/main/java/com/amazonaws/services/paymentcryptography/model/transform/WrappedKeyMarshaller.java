@@ -27,6 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class WrappedKeyMarshaller {
 
+    private static final MarshallingInfo<String> KEYCHECKVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyCheckValue").build();
+    private static final MarshallingInfo<String> KEYCHECKVALUEALGORITHM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyCheckValueAlgorithm").build();
     private static final MarshallingInfo<String> KEYMATERIAL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyMaterial").build();
     private static final MarshallingInfo<String> WRAPPEDKEYMATERIALFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -50,6 +54,8 @@ public class WrappedKeyMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(wrappedKey.getKeyCheckValue(), KEYCHECKVALUE_BINDING);
+            protocolMarshaller.marshall(wrappedKey.getKeyCheckValueAlgorithm(), KEYCHECKVALUEALGORITHM_BINDING);
             protocolMarshaller.marshall(wrappedKey.getKeyMaterial(), KEYMATERIAL_BINDING);
             protocolMarshaller.marshall(wrappedKey.getWrappedKeyMaterialFormat(), WRAPPEDKEYMATERIALFORMAT_BINDING);
             protocolMarshaller.marshall(wrappedKey.getWrappingKeyArn(), WRAPPINGKEYARN_BINDING);

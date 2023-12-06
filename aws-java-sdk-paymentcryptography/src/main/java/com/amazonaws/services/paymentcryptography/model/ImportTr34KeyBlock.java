@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Parameter information for key material import using TR-34 standard.
+ * Parameter information for key material import using the asymmetric TR-34 key exchange method.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/payment-cryptography-2021-09-14/ImportTr34KeyBlock"
@@ -36,8 +36,9 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
     private String certificateAuthorityPublicKeyIdentifier;
     /**
      * <p>
-     * The import token that initiates key import into Amazon Web Services Payment Cryptography. It expires after 7
-     * days. You can use the same import token to import multiple keys to the same service account.
+     * The import token that initiates key import using the asymmetric TR-34 key exchange method into Amazon Web
+     * Services Payment Cryptography. It expires after 7 days. You can use the same import token to import multiple keys
+     * to the same service account.
      * </p>
      */
     private String importToken;
@@ -56,7 +57,7 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
     private String randomNonce;
     /**
      * <p>
-     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 wrapped key block.
+     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
      * </p>
      */
     private String signingKeyCertificate;
@@ -112,13 +113,15 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The import token that initiates key import into Amazon Web Services Payment Cryptography. It expires after 7
-     * days. You can use the same import token to import multiple keys to the same service account.
+     * The import token that initiates key import using the asymmetric TR-34 key exchange method into Amazon Web
+     * Services Payment Cryptography. It expires after 7 days. You can use the same import token to import multiple keys
+     * to the same service account.
      * </p>
      * 
      * @param importToken
-     *        The import token that initiates key import into Amazon Web Services Payment Cryptography. It expires after
-     *        7 days. You can use the same import token to import multiple keys to the same service account.
+     *        The import token that initiates key import using the asymmetric TR-34 key exchange method into Amazon Web
+     *        Services Payment Cryptography. It expires after 7 days. You can use the same import token to import
+     *        multiple keys to the same service account.
      */
 
     public void setImportToken(String importToken) {
@@ -127,12 +130,14 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The import token that initiates key import into Amazon Web Services Payment Cryptography. It expires after 7
-     * days. You can use the same import token to import multiple keys to the same service account.
+     * The import token that initiates key import using the asymmetric TR-34 key exchange method into Amazon Web
+     * Services Payment Cryptography. It expires after 7 days. You can use the same import token to import multiple keys
+     * to the same service account.
      * </p>
      * 
-     * @return The import token that initiates key import into Amazon Web Services Payment Cryptography. It expires
-     *         after 7 days. You can use the same import token to import multiple keys to the same service account.
+     * @return The import token that initiates key import using the asymmetric TR-34 key exchange method into Amazon Web
+     *         Services Payment Cryptography. It expires after 7 days. You can use the same import token to import
+     *         multiple keys to the same service account.
      */
 
     public String getImportToken() {
@@ -141,13 +146,15 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The import token that initiates key import into Amazon Web Services Payment Cryptography. It expires after 7
-     * days. You can use the same import token to import multiple keys to the same service account.
+     * The import token that initiates key import using the asymmetric TR-34 key exchange method into Amazon Web
+     * Services Payment Cryptography. It expires after 7 days. You can use the same import token to import multiple keys
+     * to the same service account.
      * </p>
      * 
      * @param importToken
-     *        The import token that initiates key import into Amazon Web Services Payment Cryptography. It expires after
-     *        7 days. You can use the same import token to import multiple keys to the same service account.
+     *        The import token that initiates key import using the asymmetric TR-34 key exchange method into Amazon Web
+     *        Services Payment Cryptography. It expires after 7 days. You can use the same import token to import
+     *        multiple keys to the same service account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -263,12 +270,12 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 wrapped key block.
+     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
      * </p>
      * 
      * @param signingKeyCertificate
-     *        The public key component in PEM certificate format of the private key that signs the KDH TR-34 wrapped key
-     *        block.
+     *        The public key component in PEM certificate format of the private key that signs the KDH TR-34
+     *        WrappedKeyBlock.
      */
 
     public void setSigningKeyCertificate(String signingKeyCertificate) {
@@ -277,11 +284,11 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 wrapped key block.
+     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
      * </p>
      * 
-     * @return The public key component in PEM certificate format of the private key that signs the KDH TR-34 wrapped
-     *         key block.
+     * @return The public key component in PEM certificate format of the private key that signs the KDH TR-34
+     *         WrappedKeyBlock.
      */
 
     public String getSigningKeyCertificate() {
@@ -290,12 +297,12 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 wrapped key block.
+     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
      * </p>
      * 
      * @param signingKeyCertificate
-     *        The public key component in PEM certificate format of the private key that signs the KDH TR-34 wrapped key
-     *        block.
+     *        The public key component in PEM certificate format of the private key that signs the KDH TR-34
+     *        WrappedKeyBlock.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

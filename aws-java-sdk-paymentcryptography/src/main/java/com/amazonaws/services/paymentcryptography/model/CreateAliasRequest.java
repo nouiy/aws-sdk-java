@@ -27,14 +27,14 @@ public class CreateAliasRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A friendly name that you can use to refer a key. An alias must begin with <code>alias/</code> followed by a name,
-     * for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters, forward slashes (/),
-     * underscores (_), and dashes (-).
+     * A friendly name that you can use to refer to a key. An alias must begin with <code>alias/</code> followed by a
+     * name, for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters, forward slashes
+     * (/), underscores (_), and dashes (-).
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      */
@@ -48,24 +48,24 @@ public class CreateAliasRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A friendly name that you can use to refer a key. An alias must begin with <code>alias/</code> followed by a name,
-     * for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters, forward slashes (/),
-     * underscores (_), and dashes (-).
+     * A friendly name that you can use to refer to a key. An alias must begin with <code>alias/</code> followed by a
+     * name, for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters, forward slashes
+     * (/), underscores (_), and dashes (-).
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * 
      * @param aliasName
-     *        A friendly name that you can use to refer a key. An alias must begin with <code>alias/</code> followed by
-     *        a name, for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters, forward
-     *        slashes (/), underscores (_), and dashes (-).</p> <important>
+     *        A friendly name that you can use to refer to a key. An alias must begin with <code>alias/</code> followed
+     *        by a name, for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters,
+     *        forward slashes (/), underscores (_), and dashes (-).</p> <important>
      *        <p>
-     *        Don't include confidential or sensitive information in this field. This field may be displayed in
-     *        plaintext in CloudTrail logs and other output.
+     *        Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *        in plaintext in CloudTrail logs and other output.
      *        </p>
      */
 
@@ -75,23 +75,23 @@ public class CreateAliasRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A friendly name that you can use to refer a key. An alias must begin with <code>alias/</code> followed by a name,
-     * for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters, forward slashes (/),
-     * underscores (_), and dashes (-).
+     * A friendly name that you can use to refer to a key. An alias must begin with <code>alias/</code> followed by a
+     * name, for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters, forward slashes
+     * (/), underscores (_), and dashes (-).
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * 
-     * @return A friendly name that you can use to refer a key. An alias must begin with <code>alias/</code> followed by
-     *         a name, for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters, forward
-     *         slashes (/), underscores (_), and dashes (-).</p> <important>
+     * @return A friendly name that you can use to refer to a key. An alias must begin with <code>alias/</code> followed
+     *         by a name, for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters,
+     *         forward slashes (/), underscores (_), and dashes (-).</p> <important>
      *         <p>
-     *         Don't include confidential or sensitive information in this field. This field may be displayed in
-     *         plaintext in CloudTrail logs and other output.
+     *         Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *         in plaintext in CloudTrail logs and other output.
      *         </p>
      */
 
@@ -101,24 +101,24 @@ public class CreateAliasRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A friendly name that you can use to refer a key. An alias must begin with <code>alias/</code> followed by a name,
-     * for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters, forward slashes (/),
-     * underscores (_), and dashes (-).
+     * A friendly name that you can use to refer to a key. An alias must begin with <code>alias/</code> followed by a
+     * name, for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters, forward slashes
+     * (/), underscores (_), and dashes (-).
      * </p>
      * <important>
      * <p>
-     * Don't include confidential or sensitive information in this field. This field may be displayed in plaintext in
-     * CloudTrail logs and other output.
+     * Don't include personal, confidential or sensitive information in this field. This field may be displayed in
+     * plaintext in CloudTrail logs and other output.
      * </p>
      * </important>
      * 
      * @param aliasName
-     *        A friendly name that you can use to refer a key. An alias must begin with <code>alias/</code> followed by
-     *        a name, for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters, forward
-     *        slashes (/), underscores (_), and dashes (-).</p> <important>
+     *        A friendly name that you can use to refer to a key. An alias must begin with <code>alias/</code> followed
+     *        by a name, for example <code>alias/ExampleAlias</code>. It can contain only alphanumeric characters,
+     *        forward slashes (/), underscores (_), and dashes (-).</p> <important>
      *        <p>
-     *        Don't include confidential or sensitive information in this field. This field may be displayed in
-     *        plaintext in CloudTrail logs and other output.
+     *        Don't include personal, confidential or sensitive information in this field. This field may be displayed
+     *        in plaintext in CloudTrail logs and other output.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -77,19 +77,20 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The key check value (KCV) is used to check if all parties holding a given key have the same key or to detect that
-     * a key has changed. Amazon Web Services Payment Cryptography calculates the KCV by using standard algorithms,
-     * typically by encrypting 8 or 16 bytes or "00" or "01" and then truncating the result to the first 3 bytes, or 6
-     * hex digits, of the resulting cryptogram.
+     * a key has changed.
      * </p>
      */
     private String keyCheckValue;
     /**
      * <p>
-     * The algorithm used for calculating key check value (KCV) for DES and AES keys. For a DES key, Amazon Web Services
-     * Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '00', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result. For an AES key, Amazon Web Services Payment
-     * Cryptography computes the KCV by encrypting 8 bytes, each with value '01', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result.
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
+     * </p>
+     * <p>
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
+     * result.
      * </p>
      */
     private String keyCheckValueAlgorithm;
@@ -456,16 +457,12 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The key check value (KCV) is used to check if all parties holding a given key have the same key or to detect that
-     * a key has changed. Amazon Web Services Payment Cryptography calculates the KCV by using standard algorithms,
-     * typically by encrypting 8 or 16 bytes or "00" or "01" and then truncating the result to the first 3 bytes, or 6
-     * hex digits, of the resulting cryptogram.
+     * a key has changed.
      * </p>
      * 
      * @param keyCheckValue
      *        The key check value (KCV) is used to check if all parties holding a given key have the same key or to
-     *        detect that a key has changed. Amazon Web Services Payment Cryptography calculates the KCV by using
-     *        standard algorithms, typically by encrypting 8 or 16 bytes or "00" or "01" and then truncating the result
-     *        to the first 3 bytes, or 6 hex digits, of the resulting cryptogram.
+     *        detect that a key has changed.
      */
 
     public void setKeyCheckValue(String keyCheckValue) {
@@ -475,15 +472,11 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The key check value (KCV) is used to check if all parties holding a given key have the same key or to detect that
-     * a key has changed. Amazon Web Services Payment Cryptography calculates the KCV by using standard algorithms,
-     * typically by encrypting 8 or 16 bytes or "00" or "01" and then truncating the result to the first 3 bytes, or 6
-     * hex digits, of the resulting cryptogram.
+     * a key has changed.
      * </p>
      * 
      * @return The key check value (KCV) is used to check if all parties holding a given key have the same key or to
-     *         detect that a key has changed. Amazon Web Services Payment Cryptography calculates the KCV by using
-     *         standard algorithms, typically by encrypting 8 or 16 bytes or "00" or "01" and then truncating the result
-     *         to the first 3 bytes, or 6 hex digits, of the resulting cryptogram.
+     *         detect that a key has changed.
      */
 
     public String getKeyCheckValue() {
@@ -493,16 +486,12 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The key check value (KCV) is used to check if all parties holding a given key have the same key or to detect that
-     * a key has changed. Amazon Web Services Payment Cryptography calculates the KCV by using standard algorithms,
-     * typically by encrypting 8 or 16 bytes or "00" or "01" and then truncating the result to the first 3 bytes, or 6
-     * hex digits, of the resulting cryptogram.
+     * a key has changed.
      * </p>
      * 
      * @param keyCheckValue
      *        The key check value (KCV) is used to check if all parties holding a given key have the same key or to
-     *        detect that a key has changed. Amazon Web Services Payment Cryptography calculates the KCV by using
-     *        standard algorithms, typically by encrypting 8 or 16 bytes or "00" or "01" and then truncating the result
-     *        to the first 3 bytes, or 6 hex digits, of the resulting cryptogram.
+     *        detect that a key has changed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -513,19 +502,24 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The algorithm used for calculating key check value (KCV) for DES and AES keys. For a DES key, Amazon Web Services
-     * Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '00', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result. For an AES key, Amazon Web Services Payment
-     * Cryptography computes the KCV by encrypting 8 bytes, each with value '01', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result.
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
+     * </p>
+     * <p>
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
+     * result.
      * </p>
      * 
      * @param keyCheckValueAlgorithm
-     *        The algorithm used for calculating key check value (KCV) for DES and AES keys. For a DES key, Amazon Web
-     *        Services Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '00', with the key
-     *        to be checked and retaining the 3 highest order bytes of the encrypted result. For an AES key, Amazon Web
-     *        Services Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '01', with the key
-     *        to be checked and retaining the 3 highest order bytes of the encrypted result.
+     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *        It is used to validate the key integrity.</p>
+     *        <p>
+     *        For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *        checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed
+     *        using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of
+     *        the encrypted result.
      * @see KeyCheckValueAlgorithm
      */
 
@@ -535,18 +529,23 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The algorithm used for calculating key check value (KCV) for DES and AES keys. For a DES key, Amazon Web Services
-     * Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '00', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result. For an AES key, Amazon Web Services Payment
-     * Cryptography computes the KCV by encrypting 8 bytes, each with value '01', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result.
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
+     * </p>
+     * <p>
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
+     * result.
      * </p>
      * 
-     * @return The algorithm used for calculating key check value (KCV) for DES and AES keys. For a DES key, Amazon Web
-     *         Services Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '00', with the key
-     *         to be checked and retaining the 3 highest order bytes of the encrypted result. For an AES key, Amazon Web
-     *         Services Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '01', with the key
-     *         to be checked and retaining the 3 highest order bytes of the encrypted result.
+     * @return The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *         It is used to validate the key integrity.</p>
+     *         <p>
+     *         For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *         checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is
+     *         computed using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest
+     *         order bytes of the encrypted result.
      * @see KeyCheckValueAlgorithm
      */
 
@@ -556,19 +555,24 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The algorithm used for calculating key check value (KCV) for DES and AES keys. For a DES key, Amazon Web Services
-     * Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '00', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result. For an AES key, Amazon Web Services Payment
-     * Cryptography computes the KCV by encrypting 8 bytes, each with value '01', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result.
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
+     * </p>
+     * <p>
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
+     * result.
      * </p>
      * 
      * @param keyCheckValueAlgorithm
-     *        The algorithm used for calculating key check value (KCV) for DES and AES keys. For a DES key, Amazon Web
-     *        Services Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '00', with the key
-     *        to be checked and retaining the 3 highest order bytes of the encrypted result. For an AES key, Amazon Web
-     *        Services Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '01', with the key
-     *        to be checked and retaining the 3 highest order bytes of the encrypted result.
+     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *        It is used to validate the key integrity.</p>
+     *        <p>
+     *        For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *        checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed
+     *        using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of
+     *        the encrypted result.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyCheckValueAlgorithm
      */
@@ -580,19 +584,24 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The algorithm used for calculating key check value (KCV) for DES and AES keys. For a DES key, Amazon Web Services
-     * Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '00', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result. For an AES key, Amazon Web Services Payment
-     * Cryptography computes the KCV by encrypting 8 bytes, each with value '01', with the key to be checked and
-     * retaining the 3 highest order bytes of the encrypted result.
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
+     * </p>
+     * <p>
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
+     * result.
      * </p>
      * 
      * @param keyCheckValueAlgorithm
-     *        The algorithm used for calculating key check value (KCV) for DES and AES keys. For a DES key, Amazon Web
-     *        Services Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '00', with the key
-     *        to be checked and retaining the 3 highest order bytes of the encrypted result. For an AES key, Amazon Web
-     *        Services Payment Cryptography computes the KCV by encrypting 8 bytes, each with value '01', with the key
-     *        to be checked and retaining the 3 highest order bytes of the encrypted result.
+     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *        It is used to validate the key integrity.</p>
+     *        <p>
+     *        For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *        checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed
+     *        using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of
+     *        the encrypted result.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyCheckValueAlgorithm
      */

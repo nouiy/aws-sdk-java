@@ -45,15 +45,14 @@ public class GetParametersForExportResult extends com.amazonaws.AmazonWebService
     private String signingKeyAlgorithm;
     /**
      * <p>
-     * The signing key certificate of the public key for signature within the TR-34 key block cryptogram. The
-     * certificate expires after 7 days.
+     * The signing key certificate in PEM format (base64 encoded) of the public key for signature within the TR-34 key
+     * block. The certificate expires after 7 days.
      * </p>
      */
     private String signingKeyCertificate;
     /**
      * <p>
-     * The certificate chain that signed the signing key certificate. This is the root certificate authority (CA) within
-     * your service account.
+     * The root certificate authority (CA) that signed the signing key certificate in PEM format (base64 encoded).
      * </p>
      */
     private String signingKeyCertificateChain;
@@ -216,13 +215,13 @@ public class GetParametersForExportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The signing key certificate of the public key for signature within the TR-34 key block cryptogram. The
-     * certificate expires after 7 days.
+     * The signing key certificate in PEM format (base64 encoded) of the public key for signature within the TR-34 key
+     * block. The certificate expires after 7 days.
      * </p>
      * 
      * @param signingKeyCertificate
-     *        The signing key certificate of the public key for signature within the TR-34 key block cryptogram. The
-     *        certificate expires after 7 days.
+     *        The signing key certificate in PEM format (base64 encoded) of the public key for signature within the
+     *        TR-34 key block. The certificate expires after 7 days.
      */
 
     public void setSigningKeyCertificate(String signingKeyCertificate) {
@@ -231,12 +230,12 @@ public class GetParametersForExportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The signing key certificate of the public key for signature within the TR-34 key block cryptogram. The
-     * certificate expires after 7 days.
+     * The signing key certificate in PEM format (base64 encoded) of the public key for signature within the TR-34 key
+     * block. The certificate expires after 7 days.
      * </p>
      * 
-     * @return The signing key certificate of the public key for signature within the TR-34 key block cryptogram. The
-     *         certificate expires after 7 days.
+     * @return The signing key certificate in PEM format (base64 encoded) of the public key for signature within the
+     *         TR-34 key block. The certificate expires after 7 days.
      */
 
     public String getSigningKeyCertificate() {
@@ -245,13 +244,13 @@ public class GetParametersForExportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The signing key certificate of the public key for signature within the TR-34 key block cryptogram. The
-     * certificate expires after 7 days.
+     * The signing key certificate in PEM format (base64 encoded) of the public key for signature within the TR-34 key
+     * block. The certificate expires after 7 days.
      * </p>
      * 
      * @param signingKeyCertificate
-     *        The signing key certificate of the public key for signature within the TR-34 key block cryptogram. The
-     *        certificate expires after 7 days.
+     *        The signing key certificate in PEM format (base64 encoded) of the public key for signature within the
+     *        TR-34 key block. The certificate expires after 7 days.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -262,13 +261,12 @@ public class GetParametersForExportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The certificate chain that signed the signing key certificate. This is the root certificate authority (CA) within
-     * your service account.
+     * The root certificate authority (CA) that signed the signing key certificate in PEM format (base64 encoded).
      * </p>
      * 
      * @param signingKeyCertificateChain
-     *        The certificate chain that signed the signing key certificate. This is the root certificate authority (CA)
-     *        within your service account.
+     *        The root certificate authority (CA) that signed the signing key certificate in PEM format (base64
+     *        encoded).
      */
 
     public void setSigningKeyCertificateChain(String signingKeyCertificateChain) {
@@ -277,12 +275,11 @@ public class GetParametersForExportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The certificate chain that signed the signing key certificate. This is the root certificate authority (CA) within
-     * your service account.
+     * The root certificate authority (CA) that signed the signing key certificate in PEM format (base64 encoded).
      * </p>
      * 
-     * @return The certificate chain that signed the signing key certificate. This is the root certificate authority
-     *         (CA) within your service account.
+     * @return The root certificate authority (CA) that signed the signing key certificate in PEM format (base64
+     *         encoded).
      */
 
     public String getSigningKeyCertificateChain() {
@@ -291,13 +288,12 @@ public class GetParametersForExportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The certificate chain that signed the signing key certificate. This is the root certificate authority (CA) within
-     * your service account.
+     * The root certificate authority (CA) that signed the signing key certificate in PEM format (base64 encoded).
      * </p>
      * 
      * @param signingKeyCertificateChain
-     *        The certificate chain that signed the signing key certificate. This is the root certificate authority (CA)
-     *        within your service account.
+     *        The root certificate authority (CA) that signed the signing key certificate in PEM format (base64
+     *        encoded).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

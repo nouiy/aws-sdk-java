@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Parameter information for generating a wrapped key using TR-31 or TR-34 standard.
+ * Parameter information for generating a WrappedKeyBlock for key exchange.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/payment-cryptography-2021-09-14/WrappedKey" target="_top">AWS
@@ -30,7 +30,27 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Parameter information for generating a wrapped key using TR-31 or TR-34 standard.
+     * The key check value (KCV) is used to check if all parties holding a given key have the same key or to detect that
+     * a key has changed.
+     * </p>
+     */
+    private String keyCheckValue;
+    /**
+     * <p>
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
+     * </p>
+     * <p>
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
+     * result.
+     * </p>
+     */
+    private String keyCheckValueAlgorithm;
+    /**
+     * <p>
+     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
      * </p>
      */
     private String keyMaterial;
@@ -49,11 +69,168 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Parameter information for generating a wrapped key using TR-31 or TR-34 standard.
+     * The key check value (KCV) is used to check if all parties holding a given key have the same key or to detect that
+     * a key has changed.
+     * </p>
+     * 
+     * @param keyCheckValue
+     *        The key check value (KCV) is used to check if all parties holding a given key have the same key or to
+     *        detect that a key has changed.
+     */
+
+    public void setKeyCheckValue(String keyCheckValue) {
+        this.keyCheckValue = keyCheckValue;
+    }
+
+    /**
+     * <p>
+     * The key check value (KCV) is used to check if all parties holding a given key have the same key or to detect that
+     * a key has changed.
+     * </p>
+     * 
+     * @return The key check value (KCV) is used to check if all parties holding a given key have the same key or to
+     *         detect that a key has changed.
+     */
+
+    public String getKeyCheckValue() {
+        return this.keyCheckValue;
+    }
+
+    /**
+     * <p>
+     * The key check value (KCV) is used to check if all parties holding a given key have the same key or to detect that
+     * a key has changed.
+     * </p>
+     * 
+     * @param keyCheckValue
+     *        The key check value (KCV) is used to check if all parties holding a given key have the same key or to
+     *        detect that a key has changed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WrappedKey withKeyCheckValue(String keyCheckValue) {
+        setKeyCheckValue(keyCheckValue);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
+     * </p>
+     * <p>
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
+     * result.
+     * </p>
+     * 
+     * @param keyCheckValueAlgorithm
+     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *        It is used to validate the key integrity.</p>
+     *        <p>
+     *        For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *        checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed
+     *        using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of
+     *        the encrypted result.
+     * @see KeyCheckValueAlgorithm
+     */
+
+    public void setKeyCheckValueAlgorithm(String keyCheckValueAlgorithm) {
+        this.keyCheckValueAlgorithm = keyCheckValueAlgorithm;
+    }
+
+    /**
+     * <p>
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
+     * </p>
+     * <p>
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
+     * result.
+     * </p>
+     * 
+     * @return The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *         It is used to validate the key integrity.</p>
+     *         <p>
+     *         For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *         checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is
+     *         computed using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest
+     *         order bytes of the encrypted result.
+     * @see KeyCheckValueAlgorithm
+     */
+
+    public String getKeyCheckValueAlgorithm() {
+        return this.keyCheckValueAlgorithm;
+    }
+
+    /**
+     * <p>
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
+     * </p>
+     * <p>
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
+     * result.
+     * </p>
+     * 
+     * @param keyCheckValueAlgorithm
+     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *        It is used to validate the key integrity.</p>
+     *        <p>
+     *        For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *        checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed
+     *        using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of
+     *        the encrypted result.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyCheckValueAlgorithm
+     */
+
+    public WrappedKey withKeyCheckValueAlgorithm(String keyCheckValueAlgorithm) {
+        setKeyCheckValueAlgorithm(keyCheckValueAlgorithm);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
+     * used to validate the key integrity.
+     * </p>
+     * <p>
+     * For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and
+     * retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC
+     * algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted
+     * result.
+     * </p>
+     * 
+     * @param keyCheckValueAlgorithm
+     *        The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV).
+     *        It is used to validate the key integrity.</p>
+     *        <p>
+     *        For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be
+     *        checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed
+     *        using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of
+     *        the encrypted result.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyCheckValueAlgorithm
+     */
+
+    public WrappedKey withKeyCheckValueAlgorithm(KeyCheckValueAlgorithm keyCheckValueAlgorithm) {
+        this.keyCheckValueAlgorithm = keyCheckValueAlgorithm.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
      * </p>
      * 
      * @param keyMaterial
-     *        Parameter information for generating a wrapped key using TR-31 or TR-34 standard.
+     *        Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
      */
 
     public void setKeyMaterial(String keyMaterial) {
@@ -62,10 +239,10 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Parameter information for generating a wrapped key using TR-31 or TR-34 standard.
+     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
      * </p>
      * 
-     * @return Parameter information for generating a wrapped key using TR-31 or TR-34 standard.
+     * @return Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
      */
 
     public String getKeyMaterial() {
@@ -74,11 +251,11 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Parameter information for generating a wrapped key using TR-31 or TR-34 standard.
+     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
      * </p>
      * 
      * @param keyMaterial
-     *        Parameter information for generating a wrapped key using TR-31 or TR-34 standard.
+     *        Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -198,6 +375,10 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getKeyCheckValue() != null)
+            sb.append("KeyCheckValue: ").append(getKeyCheckValue()).append(",");
+        if (getKeyCheckValueAlgorithm() != null)
+            sb.append("KeyCheckValueAlgorithm: ").append(getKeyCheckValueAlgorithm()).append(",");
         if (getKeyMaterial() != null)
             sb.append("KeyMaterial: ").append("***Sensitive Data Redacted***").append(",");
         if (getWrappedKeyMaterialFormat() != null)
@@ -218,6 +399,14 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof WrappedKey == false)
             return false;
         WrappedKey other = (WrappedKey) obj;
+        if (other.getKeyCheckValue() == null ^ this.getKeyCheckValue() == null)
+            return false;
+        if (other.getKeyCheckValue() != null && other.getKeyCheckValue().equals(this.getKeyCheckValue()) == false)
+            return false;
+        if (other.getKeyCheckValueAlgorithm() == null ^ this.getKeyCheckValueAlgorithm() == null)
+            return false;
+        if (other.getKeyCheckValueAlgorithm() != null && other.getKeyCheckValueAlgorithm().equals(this.getKeyCheckValueAlgorithm()) == false)
+            return false;
         if (other.getKeyMaterial() == null ^ this.getKeyMaterial() == null)
             return false;
         if (other.getKeyMaterial() != null && other.getKeyMaterial().equals(this.getKeyMaterial()) == false)
@@ -238,6 +427,8 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getKeyCheckValue() == null) ? 0 : getKeyCheckValue().hashCode());
+        hashCode = prime * hashCode + ((getKeyCheckValueAlgorithm() == null) ? 0 : getKeyCheckValueAlgorithm().hashCode());
         hashCode = prime * hashCode + ((getKeyMaterial() == null) ? 0 : getKeyMaterial().hashCode());
         hashCode = prime * hashCode + ((getWrappedKeyMaterialFormat() == null) ? 0 : getWrappedKeyMaterialFormat().hashCode());
         hashCode = prime * hashCode + ((getWrappingKeyArn() == null) ? 0 : getWrappingKeyArn().hashCode());

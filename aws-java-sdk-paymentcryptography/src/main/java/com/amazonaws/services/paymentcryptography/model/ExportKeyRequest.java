@@ -27,6 +27,12 @@ public class ExportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
+     * The attributes for IPEK generation during export.
+     * </p>
+     */
+    private ExportAttributes exportAttributes;
+    /**
+     * <p>
      * The <code>KeyARN</code> of the key under export from Amazon Web Services Payment Cryptography.
      * </p>
      */
@@ -37,6 +43,46 @@ public class ExportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      */
     private ExportKeyMaterial keyMaterial;
+
+    /**
+     * <p>
+     * The attributes for IPEK generation during export.
+     * </p>
+     * 
+     * @param exportAttributes
+     *        The attributes for IPEK generation during export.
+     */
+
+    public void setExportAttributes(ExportAttributes exportAttributes) {
+        this.exportAttributes = exportAttributes;
+    }
+
+    /**
+     * <p>
+     * The attributes for IPEK generation during export.
+     * </p>
+     * 
+     * @return The attributes for IPEK generation during export.
+     */
+
+    public ExportAttributes getExportAttributes() {
+        return this.exportAttributes;
+    }
+
+    /**
+     * <p>
+     * The attributes for IPEK generation during export.
+     * </p>
+     * 
+     * @param exportAttributes
+     *        The attributes for IPEK generation during export.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExportKeyRequest withExportAttributes(ExportAttributes exportAttributes) {
+        setExportAttributes(exportAttributes);
+        return this;
+    }
 
     /**
      * <p>
@@ -130,6 +176,8 @@ public class ExportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getExportAttributes() != null)
+            sb.append("ExportAttributes: ").append(getExportAttributes()).append(",");
         if (getExportKeyIdentifier() != null)
             sb.append("ExportKeyIdentifier: ").append(getExportKeyIdentifier()).append(",");
         if (getKeyMaterial() != null)
@@ -148,6 +196,10 @@ public class ExportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof ExportKeyRequest == false)
             return false;
         ExportKeyRequest other = (ExportKeyRequest) obj;
+        if (other.getExportAttributes() == null ^ this.getExportAttributes() == null)
+            return false;
+        if (other.getExportAttributes() != null && other.getExportAttributes().equals(this.getExportAttributes()) == false)
+            return false;
         if (other.getExportKeyIdentifier() == null ^ this.getExportKeyIdentifier() == null)
             return false;
         if (other.getExportKeyIdentifier() != null && other.getExportKeyIdentifier().equals(this.getExportKeyIdentifier()) == false)
@@ -164,6 +216,7 @@ public class ExportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getExportAttributes() == null) ? 0 : getExportAttributes().hashCode());
         hashCode = prime * hashCode + ((getExportKeyIdentifier() == null) ? 0 : getExportKeyIdentifier().hashCode());
         hashCode = prime * hashCode + ((getKeyMaterial() == null) ? 0 : getKeyMaterial().hashCode());
         return hashCode;

@@ -27,7 +27,8 @@ public class DetectToxicContentRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of up to 10 text strings. The maximum size for the list is 10 KB.
+     * A list of up to 10 text strings. Each string has a maximum size of 1 KB, and the maximum size of the list is 10
+     * KB.
      * </p>
      */
     private java.util.List<TextSegment> textSegments;
@@ -40,10 +41,12 @@ public class DetectToxicContentRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of up to 10 text strings. The maximum size for the list is 10 KB.
+     * A list of up to 10 text strings. Each string has a maximum size of 1 KB, and the maximum size of the list is 10
+     * KB.
      * </p>
      * 
-     * @return A list of up to 10 text strings. The maximum size for the list is 10 KB.
+     * @return A list of up to 10 text strings. Each string has a maximum size of 1 KB, and the maximum size of the list
+     *         is 10 KB.
      */
 
     public java.util.List<TextSegment> getTextSegments() {
@@ -52,11 +55,13 @@ public class DetectToxicContentRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of up to 10 text strings. The maximum size for the list is 10 KB.
+     * A list of up to 10 text strings. Each string has a maximum size of 1 KB, and the maximum size of the list is 10
+     * KB.
      * </p>
      * 
      * @param textSegments
-     *        A list of up to 10 text strings. The maximum size for the list is 10 KB.
+     *        A list of up to 10 text strings. Each string has a maximum size of 1 KB, and the maximum size of the list
+     *        is 10 KB.
      */
 
     public void setTextSegments(java.util.Collection<TextSegment> textSegments) {
@@ -70,7 +75,8 @@ public class DetectToxicContentRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of up to 10 text strings. The maximum size for the list is 10 KB.
+     * A list of up to 10 text strings. Each string has a maximum size of 1 KB, and the maximum size of the list is 10
+     * KB.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -79,7 +85,8 @@ public class DetectToxicContentRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param textSegments
-     *        A list of up to 10 text strings. The maximum size for the list is 10 KB.
+     *        A list of up to 10 text strings. Each string has a maximum size of 1 KB, and the maximum size of the list
+     *        is 10 KB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +102,13 @@ public class DetectToxicContentRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of up to 10 text strings. The maximum size for the list is 10 KB.
+     * A list of up to 10 text strings. Each string has a maximum size of 1 KB, and the maximum size of the list is 10
+     * KB.
      * </p>
      * 
      * @param textSegments
-     *        A list of up to 10 text strings. The maximum size for the list is 10 KB.
+     *        A list of up to 10 text strings. Each string has a maximum size of 1 KB, and the maximum size of the list
+     *        is 10 KB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

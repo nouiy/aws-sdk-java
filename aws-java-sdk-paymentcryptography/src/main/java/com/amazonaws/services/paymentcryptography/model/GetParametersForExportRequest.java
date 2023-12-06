@@ -35,7 +35,7 @@ public class GetParametersForExportRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The signing key algorithm to generate a signing key certificate. This certificate signs the wrapped key under
-     * export within the TR-34 key block cryptogram. <code>RSA_2048</code> is the only signing key algorithm allowed.
+     * export within the TR-34 key block. <code>RSA_2048</code> is the only signing key algorithm allowed.
      * </p>
      */
     private String signingKeyAlgorithm;
@@ -114,13 +114,12 @@ public class GetParametersForExportRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The signing key algorithm to generate a signing key certificate. This certificate signs the wrapped key under
-     * export within the TR-34 key block cryptogram. <code>RSA_2048</code> is the only signing key algorithm allowed.
+     * export within the TR-34 key block. <code>RSA_2048</code> is the only signing key algorithm allowed.
      * </p>
      * 
      * @param signingKeyAlgorithm
      *        The signing key algorithm to generate a signing key certificate. This certificate signs the wrapped key
-     *        under export within the TR-34 key block cryptogram. <code>RSA_2048</code> is the only signing key
-     *        algorithm allowed.
+     *        under export within the TR-34 key block. <code>RSA_2048</code> is the only signing key algorithm allowed.
      * @see KeyAlgorithm
      */
 
@@ -131,12 +130,11 @@ public class GetParametersForExportRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The signing key algorithm to generate a signing key certificate. This certificate signs the wrapped key under
-     * export within the TR-34 key block cryptogram. <code>RSA_2048</code> is the only signing key algorithm allowed.
+     * export within the TR-34 key block. <code>RSA_2048</code> is the only signing key algorithm allowed.
      * </p>
      * 
      * @return The signing key algorithm to generate a signing key certificate. This certificate signs the wrapped key
-     *         under export within the TR-34 key block cryptogram. <code>RSA_2048</code> is the only signing key
-     *         algorithm allowed.
+     *         under export within the TR-34 key block. <code>RSA_2048</code> is the only signing key algorithm allowed.
      * @see KeyAlgorithm
      */
 
@@ -147,13 +145,12 @@ public class GetParametersForExportRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The signing key algorithm to generate a signing key certificate. This certificate signs the wrapped key under
-     * export within the TR-34 key block cryptogram. <code>RSA_2048</code> is the only signing key algorithm allowed.
+     * export within the TR-34 key block. <code>RSA_2048</code> is the only signing key algorithm allowed.
      * </p>
      * 
      * @param signingKeyAlgorithm
      *        The signing key algorithm to generate a signing key certificate. This certificate signs the wrapped key
-     *        under export within the TR-34 key block cryptogram. <code>RSA_2048</code> is the only signing key
-     *        algorithm allowed.
+     *        under export within the TR-34 key block. <code>RSA_2048</code> is the only signing key algorithm allowed.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyAlgorithm
      */
@@ -166,13 +163,12 @@ public class GetParametersForExportRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The signing key algorithm to generate a signing key certificate. This certificate signs the wrapped key under
-     * export within the TR-34 key block cryptogram. <code>RSA_2048</code> is the only signing key algorithm allowed.
+     * export within the TR-34 key block. <code>RSA_2048</code> is the only signing key algorithm allowed.
      * </p>
      * 
      * @param signingKeyAlgorithm
      *        The signing key algorithm to generate a signing key certificate. This certificate signs the wrapped key
-     *        under export within the TR-34 key block cryptogram. <code>RSA_2048</code> is the only signing key
-     *        algorithm allowed.
+     *        under export within the TR-34 key block. <code>RSA_2048</code> is the only signing key algorithm allowed.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyAlgorithm
      */

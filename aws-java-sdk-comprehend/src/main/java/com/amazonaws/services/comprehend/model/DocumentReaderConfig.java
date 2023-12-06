@@ -107,12 +107,12 @@ public class DocumentReaderConfig implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>TABLES</code> - Returns information about any tables that are detected in the input document.
+     * <code>TABLES</code> - Returns additional information about any tables that are detected in the input document.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document.
+     * <code>FORMS</code> - Returns additional information about any forms that are detected in the input document.
      * </p>
      * </li>
      * </ul>
@@ -461,12 +461,12 @@ public class DocumentReaderConfig implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>TABLES</code> - Returns information about any tables that are detected in the input document.
+     * <code>TABLES</code> - Returns additional information about any tables that are detected in the input document.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document.
+     * <code>FORMS</code> - Returns additional information about any forms that are detected in the input document.
      * </p>
      * </li>
      * </ul>
@@ -477,12 +477,13 @@ public class DocumentReaderConfig implements Serializable, Cloneable, Structured
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>TABLES</code> - Returns information about any tables that are detected in the input document.
+     *         <code>TABLES</code> - Returns additional information about any tables that are detected in the input
+     *         document.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>FORMS</code> - Returns information and the data from any forms that are detected in the input
+     *         <code>FORMS</code> - Returns additional information about any forms that are detected in the input
      *         document.
      *         </p>
      *         </li>
@@ -501,12 +502,12 @@ public class DocumentReaderConfig implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>TABLES</code> - Returns information about any tables that are detected in the input document.
+     * <code>TABLES</code> - Returns additional information about any tables that are detected in the input document.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document.
+     * <code>FORMS</code> - Returns additional information about any forms that are detected in the input document.
      * </p>
      * </li>
      * </ul>
@@ -518,12 +519,13 @@ public class DocumentReaderConfig implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TABLES</code> - Returns information about any tables that are detected in the input document.
+     *        <code>TABLES</code> - Returns additional information about any tables that are detected in the input
+     *        document.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FORMS</code> - Returns information and the data from any forms that are detected in the input
+     *        <code>FORMS</code> - Returns additional information about any forms that are detected in the input
      *        document.
      *        </p>
      *        </li>
@@ -547,12 +549,12 @@ public class DocumentReaderConfig implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>TABLES</code> - Returns information about any tables that are detected in the input document.
+     * <code>TABLES</code> - Returns additional information about any tables that are detected in the input document.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document.
+     * <code>FORMS</code> - Returns additional information about any forms that are detected in the input document.
      * </p>
      * </li>
      * </ul>
@@ -569,12 +571,13 @@ public class DocumentReaderConfig implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TABLES</code> - Returns information about any tables that are detected in the input document.
+     *        <code>TABLES</code> - Returns additional information about any tables that are detected in the input
+     *        document.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FORMS</code> - Returns information and the data from any forms that are detected in the input
+     *        <code>FORMS</code> - Returns additional information about any forms that are detected in the input
      *        document.
      *        </p>
      *        </li>
@@ -600,12 +603,12 @@ public class DocumentReaderConfig implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>TABLES</code> - Returns information about any tables that are detected in the input document.
+     * <code>TABLES</code> - Returns additional information about any tables that are detected in the input document.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document.
+     * <code>FORMS</code> - Returns additional information about any forms that are detected in the input document.
      * </p>
      * </li>
      * </ul>
@@ -617,12 +620,13 @@ public class DocumentReaderConfig implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TABLES</code> - Returns information about any tables that are detected in the input document.
+     *        <code>TABLES</code> - Returns additional information about any tables that are detected in the input
+     *        document.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FORMS</code> - Returns information and the data from any forms that are detected in the input
+     *        <code>FORMS</code> - Returns additional information about any forms that are detected in the input
      *        document.
      *        </p>
      *        </li>
@@ -643,12 +647,12 @@ public class DocumentReaderConfig implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>TABLES</code> - Returns information about any tables that are detected in the input document.
+     * <code>TABLES</code> - Returns additional information about any tables that are detected in the input document.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document.
+     * <code>FORMS</code> - Returns additional information about any forms that are detected in the input document.
      * </p>
      * </li>
      * </ul>
@@ -660,12 +664,13 @@ public class DocumentReaderConfig implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TABLES</code> - Returns information about any tables that are detected in the input document.
+     *        <code>TABLES</code> - Returns additional information about any tables that are detected in the input
+     *        document.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FORMS</code> - Returns information and the data from any forms that are detected in the input
+     *        <code>FORMS</code> - Returns additional information about any forms that are detected in the input
      *        document.
      *        </p>
      *        </li>
