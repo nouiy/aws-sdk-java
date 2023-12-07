@@ -72,6 +72,10 @@ public class DeploymentConfigInfoJsonUnmarshaller implements Unmarshaller<Deploy
                     context.nextToken();
                     deploymentConfigInfo.setTrafficRoutingConfig(TrafficRoutingConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("zonalConfig", targetDepth)) {
+                    context.nextToken();
+                    deploymentConfigInfo.setZonalConfig(ZonalConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

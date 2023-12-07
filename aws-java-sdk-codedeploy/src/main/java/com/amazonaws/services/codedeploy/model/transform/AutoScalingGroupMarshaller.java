@@ -31,6 +31,8 @@ public class AutoScalingGroupMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> HOOK_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("hook").build();
+    private static final MarshallingInfo<String> TERMINATIONHOOK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("terminationHook").build();
 
     private static final AutoScalingGroupMarshaller instance = new AutoScalingGroupMarshaller();
 
@@ -50,6 +52,7 @@ public class AutoScalingGroupMarshaller {
         try {
             protocolMarshaller.marshall(autoScalingGroup.getName(), NAME_BINDING);
             protocolMarshaller.marshall(autoScalingGroup.getHook(), HOOK_BINDING);
+            protocolMarshaller.marshall(autoScalingGroup.getTerminationHook(), TERMINATIONHOOK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

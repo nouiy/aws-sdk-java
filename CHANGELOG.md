@@ -1,3 +1,8 @@
+# __1.12.608__ __2023-12-07__
+## __AWS CodeDeploy__
+  - ### Features
+    - This release adds support for two new CodeDeploy features: 1) zonal deployments for Amazon EC2 in-place deployments, 2) deployments triggered by Auto Scaling group termination lifecycle hook events.
+
 # __1.12.607__ __2023-12-06__
 ## __AWS Backup__
   - ### Features

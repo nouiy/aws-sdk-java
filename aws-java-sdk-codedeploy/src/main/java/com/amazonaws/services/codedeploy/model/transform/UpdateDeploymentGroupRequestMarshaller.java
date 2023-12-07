@@ -64,6 +64,8 @@ public class UpdateDeploymentGroupRequestMarshaller {
             .marshallLocationName("ecsServices").build();
     private static final MarshallingInfo<StructuredPojo> ONPREMISESTAGSET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("onPremisesTagSet").build();
+    private static final MarshallingInfo<Boolean> TERMINATIONHOOKENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("terminationHookEnabled").build();
 
     private static final UpdateDeploymentGroupRequestMarshaller instance = new UpdateDeploymentGroupRequestMarshaller();
 
@@ -99,6 +101,7 @@ public class UpdateDeploymentGroupRequestMarshaller {
             protocolMarshaller.marshall(updateDeploymentGroupRequest.getEc2TagSet(), EC2TAGSET_BINDING);
             protocolMarshaller.marshall(updateDeploymentGroupRequest.getEcsServices(), ECSSERVICES_BINDING);
             protocolMarshaller.marshall(updateDeploymentGroupRequest.getOnPremisesTagSet(), ONPREMISESTAGSET_BINDING);
+            protocolMarshaller.marshall(updateDeploymentGroupRequest.getTerminationHookEnabled(), TERMINATIONHOOKENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

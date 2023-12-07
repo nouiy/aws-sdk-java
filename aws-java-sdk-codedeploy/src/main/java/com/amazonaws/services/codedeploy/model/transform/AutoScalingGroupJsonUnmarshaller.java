@@ -56,6 +56,10 @@ public class AutoScalingGroupJsonUnmarshaller implements Unmarshaller<AutoScalin
                     context.nextToken();
                     autoScalingGroup.setHook(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("terminationHook", targetDepth)) {
+                    context.nextToken();
+                    autoScalingGroup.setTerminationHook(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

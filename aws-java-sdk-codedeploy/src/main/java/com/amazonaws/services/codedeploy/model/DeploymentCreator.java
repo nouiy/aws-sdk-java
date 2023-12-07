@@ -26,7 +26,8 @@ public enum DeploymentCreator {
     CodeDeploy("CodeDeploy"),
     CodeDeployAutoUpdate("CodeDeployAutoUpdate"),
     CloudFormation("CloudFormation"),
-    CloudFormationRollback("CloudFormationRollback");
+    CloudFormationRollback("CloudFormationRollback"),
+    AutoscalingTermination("autoscalingTermination");
 
     private String value;
 

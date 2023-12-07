@@ -651,6 +651,8 @@ public interface AmazonCodeDeploy {
      *         or <code>ECS</code>.
      * @throws InvalidTrafficRoutingConfigurationException
      *         The configuration that specifies how traffic is routed during a deployment is invalid.
+     * @throws InvalidZonalDeploymentConfigurationException
+     *         The <code>ZonalConfig</code> object is not valid.
      * @sample AmazonCodeDeploy.CreateDeploymentConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/CreateDeploymentConfig"
      *      target="_top">AWS API Documentation</a>
@@ -1283,6 +1285,8 @@ public interface AmazonCodeDeploy {
      * @throws InvalidDeploymentInstanceTypeException
      *         An instance type was specified for an in-place deployment. Instance types are supported for blue/green
      *         deployments only.
+     * @throws InvalidTargetFilterNameException
+     *         The target filter name is invalid.
      * @sample AmazonCodeDeploy.ListDeploymentTargets
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codedeploy-2014-10-06/ListDeploymentTargets"
      *      target="_top">AWS API Documentation</a>
