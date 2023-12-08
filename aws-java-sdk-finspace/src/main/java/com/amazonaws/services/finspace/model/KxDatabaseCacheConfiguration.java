@@ -47,6 +47,12 @@ public class KxDatabaseCacheConfiguration implements Serializable, Cloneable, St
      * </p>
      */
     private java.util.List<String> dbPaths;
+    /**
+     * <p>
+     * The name of the dataview to be used for caching historical data on disk.
+     * </p>
+     */
+    private String dataviewName;
 
     /**
      * <p>
@@ -201,6 +207,46 @@ public class KxDatabaseCacheConfiguration implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The name of the dataview to be used for caching historical data on disk.
+     * </p>
+     * 
+     * @param dataviewName
+     *        The name of the dataview to be used for caching historical data on disk.
+     */
+
+    public void setDataviewName(String dataviewName) {
+        this.dataviewName = dataviewName;
+    }
+
+    /**
+     * <p>
+     * The name of the dataview to be used for caching historical data on disk.
+     * </p>
+     * 
+     * @return The name of the dataview to be used for caching historical data on disk.
+     */
+
+    public String getDataviewName() {
+        return this.dataviewName;
+    }
+
+    /**
+     * <p>
+     * The name of the dataview to be used for caching historical data on disk.
+     * </p>
+     * 
+     * @param dataviewName
+     *        The name of the dataview to be used for caching historical data on disk.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KxDatabaseCacheConfiguration withDataviewName(String dataviewName) {
+        setDataviewName(dataviewName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -215,7 +261,9 @@ public class KxDatabaseCacheConfiguration implements Serializable, Cloneable, St
         if (getCacheType() != null)
             sb.append("CacheType: ").append(getCacheType()).append(",");
         if (getDbPaths() != null)
-            sb.append("DbPaths: ").append(getDbPaths());
+            sb.append("DbPaths: ").append(getDbPaths()).append(",");
+        if (getDataviewName() != null)
+            sb.append("DataviewName: ").append(getDataviewName());
         sb.append("}");
         return sb.toString();
     }
@@ -238,6 +286,10 @@ public class KxDatabaseCacheConfiguration implements Serializable, Cloneable, St
             return false;
         if (other.getDbPaths() != null && other.getDbPaths().equals(this.getDbPaths()) == false)
             return false;
+        if (other.getDataviewName() == null ^ this.getDataviewName() == null)
+            return false;
+        if (other.getDataviewName() != null && other.getDataviewName().equals(this.getDataviewName()) == false)
+            return false;
         return true;
     }
 
@@ -248,6 +300,7 @@ public class KxDatabaseCacheConfiguration implements Serializable, Cloneable, St
 
         hashCode = prime * hashCode + ((getCacheType() == null) ? 0 : getCacheType().hashCode());
         hashCode = prime * hashCode + ((getDbPaths() == null) ? 0 : getDbPaths().hashCode());
+        hashCode = prime * hashCode + ((getDataviewName() == null) ? 0 : getDataviewName().hashCode());
         return hashCode;
     }
 

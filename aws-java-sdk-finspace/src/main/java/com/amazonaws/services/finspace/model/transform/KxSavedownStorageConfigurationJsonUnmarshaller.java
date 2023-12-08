@@ -56,6 +56,10 @@ public class KxSavedownStorageConfigurationJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     kxSavedownStorageConfiguration.setSize(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("volumeName", targetDepth)) {
+                    context.nextToken();
+                    kxSavedownStorageConfiguration.setVolumeName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

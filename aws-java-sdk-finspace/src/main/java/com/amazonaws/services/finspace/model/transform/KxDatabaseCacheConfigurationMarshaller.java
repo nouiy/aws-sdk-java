@@ -32,6 +32,8 @@ public class KxDatabaseCacheConfigurationMarshaller {
             .marshallLocationName("cacheType").build();
     private static final MarshallingInfo<List> DBPATHS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("dbPaths").build();
+    private static final MarshallingInfo<String> DATAVIEWNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataviewName").build();
 
     private static final KxDatabaseCacheConfigurationMarshaller instance = new KxDatabaseCacheConfigurationMarshaller();
 
@@ -51,6 +53,7 @@ public class KxDatabaseCacheConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(kxDatabaseCacheConfiguration.getCacheType(), CACHETYPE_BINDING);
             protocolMarshaller.marshall(kxDatabaseCacheConfiguration.getDbPaths(), DBPATHS_BINDING);
+            protocolMarshaller.marshall(kxDatabaseCacheConfiguration.getDataviewName(), DATAVIEWNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

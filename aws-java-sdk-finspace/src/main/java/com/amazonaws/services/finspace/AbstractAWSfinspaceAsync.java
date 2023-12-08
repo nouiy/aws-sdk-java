@@ -82,6 +82,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<CreateKxDataviewResult> createKxDataviewAsync(CreateKxDataviewRequest request) {
+
+        return createKxDataviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateKxDataviewResult> createKxDataviewAsync(CreateKxDataviewRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateKxDataviewRequest, CreateKxDataviewResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateKxEnvironmentResult> createKxEnvironmentAsync(CreateKxEnvironmentRequest request) {
 
         return createKxEnvironmentAsync(request, null);
@@ -95,6 +108,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<CreateKxScalingGroupResult> createKxScalingGroupAsync(CreateKxScalingGroupRequest request) {
+
+        return createKxScalingGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateKxScalingGroupResult> createKxScalingGroupAsync(CreateKxScalingGroupRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateKxScalingGroupRequest, CreateKxScalingGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateKxUserResult> createKxUserAsync(CreateKxUserRequest request) {
 
         return createKxUserAsync(request, null);
@@ -103,6 +129,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     @Override
     public java.util.concurrent.Future<CreateKxUserResult> createKxUserAsync(CreateKxUserRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateKxUserRequest, CreateKxUserResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateKxVolumeResult> createKxVolumeAsync(CreateKxVolumeRequest request) {
+
+        return createKxVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateKxVolumeResult> createKxVolumeAsync(CreateKxVolumeRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateKxVolumeRequest, CreateKxVolumeResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -149,6 +188,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteKxDataviewResult> deleteKxDataviewAsync(DeleteKxDataviewRequest request) {
+
+        return deleteKxDataviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteKxDataviewResult> deleteKxDataviewAsync(DeleteKxDataviewRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteKxDataviewRequest, DeleteKxDataviewResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteKxEnvironmentResult> deleteKxEnvironmentAsync(DeleteKxEnvironmentRequest request) {
 
         return deleteKxEnvironmentAsync(request, null);
@@ -162,6 +214,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteKxScalingGroupResult> deleteKxScalingGroupAsync(DeleteKxScalingGroupRequest request) {
+
+        return deleteKxScalingGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteKxScalingGroupResult> deleteKxScalingGroupAsync(DeleteKxScalingGroupRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteKxScalingGroupRequest, DeleteKxScalingGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteKxUserResult> deleteKxUserAsync(DeleteKxUserRequest request) {
 
         return deleteKxUserAsync(request, null);
@@ -170,6 +235,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     @Override
     public java.util.concurrent.Future<DeleteKxUserResult> deleteKxUserAsync(DeleteKxUserRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteKxUserRequest, DeleteKxUserResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteKxVolumeResult> deleteKxVolumeAsync(DeleteKxVolumeRequest request) {
+
+        return deleteKxVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteKxVolumeResult> deleteKxVolumeAsync(DeleteKxVolumeRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteKxVolumeRequest, DeleteKxVolumeResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -242,6 +320,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<GetKxDataviewResult> getKxDataviewAsync(GetKxDataviewRequest request) {
+
+        return getKxDataviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetKxDataviewResult> getKxDataviewAsync(GetKxDataviewRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetKxDataviewRequest, GetKxDataviewResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetKxEnvironmentResult> getKxEnvironmentAsync(GetKxEnvironmentRequest request) {
 
         return getKxEnvironmentAsync(request, null);
@@ -255,6 +346,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<GetKxScalingGroupResult> getKxScalingGroupAsync(GetKxScalingGroupRequest request) {
+
+        return getKxScalingGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetKxScalingGroupResult> getKxScalingGroupAsync(GetKxScalingGroupRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetKxScalingGroupRequest, GetKxScalingGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetKxUserResult> getKxUserAsync(GetKxUserRequest request) {
 
         return getKxUserAsync(request, null);
@@ -263,6 +367,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     @Override
     public java.util.concurrent.Future<GetKxUserResult> getKxUserAsync(GetKxUserRequest request,
             com.amazonaws.handlers.AsyncHandler<GetKxUserRequest, GetKxUserResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetKxVolumeResult> getKxVolumeAsync(GetKxVolumeRequest request) {
+
+        return getKxVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetKxVolumeResult> getKxVolumeAsync(GetKxVolumeRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetKxVolumeRequest, GetKxVolumeResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -335,6 +452,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<ListKxDataviewsResult> listKxDataviewsAsync(ListKxDataviewsRequest request) {
+
+        return listKxDataviewsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListKxDataviewsResult> listKxDataviewsAsync(ListKxDataviewsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListKxDataviewsRequest, ListKxDataviewsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListKxEnvironmentsResult> listKxEnvironmentsAsync(ListKxEnvironmentsRequest request) {
 
         return listKxEnvironmentsAsync(request, null);
@@ -348,6 +478,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<ListKxScalingGroupsResult> listKxScalingGroupsAsync(ListKxScalingGroupsRequest request) {
+
+        return listKxScalingGroupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListKxScalingGroupsResult> listKxScalingGroupsAsync(ListKxScalingGroupsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListKxScalingGroupsRequest, ListKxScalingGroupsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListKxUsersResult> listKxUsersAsync(ListKxUsersRequest request) {
 
         return listKxUsersAsync(request, null);
@@ -356,6 +499,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     @Override
     public java.util.concurrent.Future<ListKxUsersResult> listKxUsersAsync(ListKxUsersRequest request,
             com.amazonaws.handlers.AsyncHandler<ListKxUsersRequest, ListKxUsersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListKxVolumesResult> listKxVolumesAsync(ListKxVolumesRequest request) {
+
+        return listKxVolumesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListKxVolumesResult> listKxVolumesAsync(ListKxVolumesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListKxVolumesRequest, ListKxVolumesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -456,6 +612,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateKxDataviewResult> updateKxDataviewAsync(UpdateKxDataviewRequest request) {
+
+        return updateKxDataviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKxDataviewResult> updateKxDataviewAsync(UpdateKxDataviewRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateKxDataviewRequest, UpdateKxDataviewResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateKxEnvironmentResult> updateKxEnvironmentAsync(UpdateKxEnvironmentRequest request) {
 
         return updateKxEnvironmentAsync(request, null);
@@ -490,6 +659,19 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     @Override
     public java.util.concurrent.Future<UpdateKxUserResult> updateKxUserAsync(UpdateKxUserRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateKxUserRequest, UpdateKxUserResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKxVolumeResult> updateKxVolumeAsync(UpdateKxVolumeRequest request) {
+
+        return updateKxVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKxVolumeResult> updateKxVolumeAsync(UpdateKxVolumeRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateKxVolumeRequest, UpdateKxVolumeResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

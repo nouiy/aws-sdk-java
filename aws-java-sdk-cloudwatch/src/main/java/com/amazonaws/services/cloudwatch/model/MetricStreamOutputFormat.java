@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum MetricStreamOutputFormat {
 
     Json("json"),
-    Opentelemetry07("opentelemetry0.7");
+    Opentelemetry07("opentelemetry0.7"),
+    Opentelemetry10("opentelemetry1.0");
 
     private String value;
 

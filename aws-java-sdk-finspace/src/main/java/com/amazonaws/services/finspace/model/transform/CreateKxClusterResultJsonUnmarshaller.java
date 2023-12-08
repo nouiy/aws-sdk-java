@@ -68,6 +68,16 @@ public class CreateKxClusterResultJsonUnmarshaller implements Unmarshaller<Creat
                     context.nextToken();
                     createKxClusterResult.setClusterType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("tickerplantLogConfiguration", targetDepth)) {
+                    context.nextToken();
+                    createKxClusterResult.setTickerplantLogConfiguration(TickerplantLogConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("volumes", targetDepth)) {
+                    context.nextToken();
+                    createKxClusterResult.setVolumes(new ListUnmarshaller<Volume>(VolumeJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("databases", targetDepth)) {
                     context.nextToken();
                     createKxClusterResult.setDatabases(new ListUnmarshaller<KxDatabaseConfiguration>(KxDatabaseConfigurationJsonUnmarshaller.getInstance())
@@ -139,6 +149,10 @@ public class CreateKxClusterResultJsonUnmarshaller implements Unmarshaller<Creat
                 if (context.testExpression("createdTimestamp", targetDepth)) {
                     context.nextToken();
                     createKxClusterResult.setCreatedTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("scalingGroupConfiguration", targetDepth)) {
+                    context.nextToken();
+                    createKxClusterResult.setScalingGroupConfiguration(KxScalingGroupConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

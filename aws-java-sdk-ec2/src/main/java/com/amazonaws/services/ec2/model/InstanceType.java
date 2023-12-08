@@ -791,7 +791,16 @@ public enum InstanceType {
     R7i16xlarge("r7i.16xlarge"),
     R7i24xlarge("r7i.24xlarge"),
     R7i48xlarge("r7i.48xlarge"),
-    Dl2q24xlarge("dl2q.24xlarge");
+    Dl2q24xlarge("dl2q.24xlarge"),
+    Mac2M2Metal("mac2-m2.metal"),
+    I4i12xlarge("i4i.12xlarge"),
+    I4i24xlarge("i4i.24xlarge"),
+    C7iMetal24xl("c7i.metal-24xl"),
+    C7iMetal48xl("c7i.metal-48xl"),
+    M7iMetal24xl("m7i.metal-24xl"),
+    M7iMetal48xl("m7i.metal-48xl"),
+    R7iMetal24xl("r7i.metal-24xl"),
+    R7iMetal48xl("r7i.metal-48xl");
 
     private String value;
 

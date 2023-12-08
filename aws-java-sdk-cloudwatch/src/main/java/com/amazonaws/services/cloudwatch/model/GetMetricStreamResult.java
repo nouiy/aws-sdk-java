@@ -82,8 +82,8 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
     private java.util.Date lastUpdateDate;
     /**
      * <p>
-     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
-     * information about metric stream output formats, see <a
+     * The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     * <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
      * >Metric streams output formats</a>.
      * </p>
@@ -558,16 +558,16 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
-     * information about metric stream output formats, see <a
+     * The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     * <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
      * >Metric streams output formats</a>.
      * </p>
      * 
      * @param outputFormat
-     *        The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
-     *        For more information about metric stream output formats, see <a href=
-     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
+     *        The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     *        <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
      *        >Metric streams output formats</a>.
      * @see MetricStreamOutputFormat
      */
@@ -578,15 +578,15 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
-     * information about metric stream output formats, see <a
+     * The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     * <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
      * >Metric streams output formats</a>.
      * </p>
      * 
-     * @return The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
-     *         For more information about metric stream output formats, see <a href=
-     *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
+     * @return The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     *         <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
      *         >Metric streams output formats</a>.
      * @see MetricStreamOutputFormat
      */
@@ -597,16 +597,16 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
-     * information about metric stream output formats, see <a
+     * The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     * <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
      * >Metric streams output formats</a>.
      * </p>
      * 
      * @param outputFormat
-     *        The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
-     *        For more information about metric stream output formats, see <a href=
-     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
+     *        The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     *        <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
      *        >Metric streams output formats</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricStreamOutputFormat
@@ -619,16 +619,16 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
-     * information about metric stream output formats, see <a
+     * The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     * <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
      * >Metric streams output formats</a>.
      * </p>
      * 
      * @param outputFormat
-     *        The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
-     *        For more information about metric stream output formats, see <a href=
-     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
+     *        The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     *        <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
      *        >Metric streams output formats</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricStreamOutputFormat

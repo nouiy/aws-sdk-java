@@ -208,6 +208,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    public java.util.concurrent.Future<CreateKxDataviewResult> createKxDataviewAsync(CreateKxDataviewRequest request) {
+
+        return createKxDataviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateKxDataviewResult> createKxDataviewAsync(final CreateKxDataviewRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateKxDataviewRequest, CreateKxDataviewResult> asyncHandler) {
+        final CreateKxDataviewRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateKxDataviewResult>() {
+            @Override
+            public CreateKxDataviewResult call() throws Exception {
+                CreateKxDataviewResult result = null;
+
+                try {
+                    result = executeCreateKxDataview(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateKxEnvironmentResult> createKxEnvironmentAsync(CreateKxEnvironmentRequest request) {
 
         return createKxEnvironmentAsync(request, null);
@@ -241,6 +274,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    public java.util.concurrent.Future<CreateKxScalingGroupResult> createKxScalingGroupAsync(CreateKxScalingGroupRequest request) {
+
+        return createKxScalingGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateKxScalingGroupResult> createKxScalingGroupAsync(final CreateKxScalingGroupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateKxScalingGroupRequest, CreateKxScalingGroupResult> asyncHandler) {
+        final CreateKxScalingGroupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateKxScalingGroupResult>() {
+            @Override
+            public CreateKxScalingGroupResult call() throws Exception {
+                CreateKxScalingGroupResult result = null;
+
+                try {
+                    result = executeCreateKxScalingGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateKxUserResult> createKxUserAsync(CreateKxUserRequest request) {
 
         return createKxUserAsync(request, null);
@@ -258,6 +324,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
 
                 try {
                     result = executeCreateKxUser(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateKxVolumeResult> createKxVolumeAsync(CreateKxVolumeRequest request) {
+
+        return createKxVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateKxVolumeResult> createKxVolumeAsync(final CreateKxVolumeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateKxVolumeRequest, CreateKxVolumeResult> asyncHandler) {
+        final CreateKxVolumeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateKxVolumeResult>() {
+            @Override
+            public CreateKxVolumeResult call() throws Exception {
+                CreateKxVolumeResult result = null;
+
+                try {
+                    result = executeCreateKxVolume(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -375,6 +474,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteKxDataviewResult> deleteKxDataviewAsync(DeleteKxDataviewRequest request) {
+
+        return deleteKxDataviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteKxDataviewResult> deleteKxDataviewAsync(final DeleteKxDataviewRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteKxDataviewRequest, DeleteKxDataviewResult> asyncHandler) {
+        final DeleteKxDataviewRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteKxDataviewResult>() {
+            @Override
+            public DeleteKxDataviewResult call() throws Exception {
+                DeleteKxDataviewResult result = null;
+
+                try {
+                    result = executeDeleteKxDataview(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteKxEnvironmentResult> deleteKxEnvironmentAsync(DeleteKxEnvironmentRequest request) {
 
         return deleteKxEnvironmentAsync(request, null);
@@ -408,6 +540,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteKxScalingGroupResult> deleteKxScalingGroupAsync(DeleteKxScalingGroupRequest request) {
+
+        return deleteKxScalingGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteKxScalingGroupResult> deleteKxScalingGroupAsync(final DeleteKxScalingGroupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteKxScalingGroupRequest, DeleteKxScalingGroupResult> asyncHandler) {
+        final DeleteKxScalingGroupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteKxScalingGroupResult>() {
+            @Override
+            public DeleteKxScalingGroupResult call() throws Exception {
+                DeleteKxScalingGroupResult result = null;
+
+                try {
+                    result = executeDeleteKxScalingGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteKxUserResult> deleteKxUserAsync(DeleteKxUserRequest request) {
 
         return deleteKxUserAsync(request, null);
@@ -425,6 +590,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
 
                 try {
                     result = executeDeleteKxUser(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteKxVolumeResult> deleteKxVolumeAsync(DeleteKxVolumeRequest request) {
+
+        return deleteKxVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteKxVolumeResult> deleteKxVolumeAsync(final DeleteKxVolumeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteKxVolumeRequest, DeleteKxVolumeResult> asyncHandler) {
+        final DeleteKxVolumeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteKxVolumeResult>() {
+            @Override
+            public DeleteKxVolumeResult call() throws Exception {
+                DeleteKxVolumeResult result = null;
+
+                try {
+                    result = executeDeleteKxVolume(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -608,6 +806,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    public java.util.concurrent.Future<GetKxDataviewResult> getKxDataviewAsync(GetKxDataviewRequest request) {
+
+        return getKxDataviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetKxDataviewResult> getKxDataviewAsync(final GetKxDataviewRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetKxDataviewRequest, GetKxDataviewResult> asyncHandler) {
+        final GetKxDataviewRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetKxDataviewResult>() {
+            @Override
+            public GetKxDataviewResult call() throws Exception {
+                GetKxDataviewResult result = null;
+
+                try {
+                    result = executeGetKxDataview(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetKxEnvironmentResult> getKxEnvironmentAsync(GetKxEnvironmentRequest request) {
 
         return getKxEnvironmentAsync(request, null);
@@ -641,6 +872,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    public java.util.concurrent.Future<GetKxScalingGroupResult> getKxScalingGroupAsync(GetKxScalingGroupRequest request) {
+
+        return getKxScalingGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetKxScalingGroupResult> getKxScalingGroupAsync(final GetKxScalingGroupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetKxScalingGroupRequest, GetKxScalingGroupResult> asyncHandler) {
+        final GetKxScalingGroupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetKxScalingGroupResult>() {
+            @Override
+            public GetKxScalingGroupResult call() throws Exception {
+                GetKxScalingGroupResult result = null;
+
+                try {
+                    result = executeGetKxScalingGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetKxUserResult> getKxUserAsync(GetKxUserRequest request) {
 
         return getKxUserAsync(request, null);
@@ -658,6 +922,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
 
                 try {
                     result = executeGetKxUser(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetKxVolumeResult> getKxVolumeAsync(GetKxVolumeRequest request) {
+
+        return getKxVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetKxVolumeResult> getKxVolumeAsync(final GetKxVolumeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetKxVolumeRequest, GetKxVolumeResult> asyncHandler) {
+        final GetKxVolumeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetKxVolumeResult>() {
+            @Override
+            public GetKxVolumeResult call() throws Exception {
+                GetKxVolumeResult result = null;
+
+                try {
+                    result = executeGetKxVolume(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -841,6 +1138,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    public java.util.concurrent.Future<ListKxDataviewsResult> listKxDataviewsAsync(ListKxDataviewsRequest request) {
+
+        return listKxDataviewsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListKxDataviewsResult> listKxDataviewsAsync(final ListKxDataviewsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListKxDataviewsRequest, ListKxDataviewsResult> asyncHandler) {
+        final ListKxDataviewsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListKxDataviewsResult>() {
+            @Override
+            public ListKxDataviewsResult call() throws Exception {
+                ListKxDataviewsResult result = null;
+
+                try {
+                    result = executeListKxDataviews(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListKxEnvironmentsResult> listKxEnvironmentsAsync(ListKxEnvironmentsRequest request) {
 
         return listKxEnvironmentsAsync(request, null);
@@ -874,6 +1204,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    public java.util.concurrent.Future<ListKxScalingGroupsResult> listKxScalingGroupsAsync(ListKxScalingGroupsRequest request) {
+
+        return listKxScalingGroupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListKxScalingGroupsResult> listKxScalingGroupsAsync(final ListKxScalingGroupsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListKxScalingGroupsRequest, ListKxScalingGroupsResult> asyncHandler) {
+        final ListKxScalingGroupsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListKxScalingGroupsResult>() {
+            @Override
+            public ListKxScalingGroupsResult call() throws Exception {
+                ListKxScalingGroupsResult result = null;
+
+                try {
+                    result = executeListKxScalingGroups(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListKxUsersResult> listKxUsersAsync(ListKxUsersRequest request) {
 
         return listKxUsersAsync(request, null);
@@ -891,6 +1254,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
 
                 try {
                     result = executeListKxUsers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListKxVolumesResult> listKxVolumesAsync(ListKxVolumesRequest request) {
+
+        return listKxVolumesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListKxVolumesResult> listKxVolumesAsync(final ListKxVolumesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListKxVolumesRequest, ListKxVolumesResult> asyncHandler) {
+        final ListKxVolumesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListKxVolumesResult>() {
+            @Override
+            public ListKxVolumesResult call() throws Exception {
+                ListKxVolumesResult result = null;
+
+                try {
+                    result = executeListKxVolumes(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1142,6 +1538,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateKxDataviewResult> updateKxDataviewAsync(UpdateKxDataviewRequest request) {
+
+        return updateKxDataviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKxDataviewResult> updateKxDataviewAsync(final UpdateKxDataviewRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateKxDataviewRequest, UpdateKxDataviewResult> asyncHandler) {
+        final UpdateKxDataviewRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateKxDataviewResult>() {
+            @Override
+            public UpdateKxDataviewResult call() throws Exception {
+                UpdateKxDataviewResult result = null;
+
+                try {
+                    result = executeUpdateKxDataview(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateKxEnvironmentResult> updateKxEnvironmentAsync(UpdateKxEnvironmentRequest request) {
 
         return updateKxEnvironmentAsync(request, null);
@@ -1225,6 +1654,39 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
 
                 try {
                     result = executeUpdateKxUser(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKxVolumeResult> updateKxVolumeAsync(UpdateKxVolumeRequest request) {
+
+        return updateKxVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKxVolumeResult> updateKxVolumeAsync(final UpdateKxVolumeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateKxVolumeRequest, UpdateKxVolumeResult> asyncHandler) {
+        final UpdateKxVolumeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateKxVolumeResult>() {
+            @Override
+            public UpdateKxVolumeResult call() throws Exception {
+                UpdateKxVolumeResult result = null;
+
+                try {
+                    result = executeUpdateKxVolume(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

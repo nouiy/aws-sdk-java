@@ -64,6 +64,16 @@ public class GetKxClusterResultJsonUnmarshaller implements Unmarshaller<GetKxClu
                     context.nextToken();
                     getKxClusterResult.setClusterType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("tickerplantLogConfiguration", targetDepth)) {
+                    context.nextToken();
+                    getKxClusterResult.setTickerplantLogConfiguration(TickerplantLogConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("volumes", targetDepth)) {
+                    context.nextToken();
+                    getKxClusterResult.setVolumes(new ListUnmarshaller<Volume>(VolumeJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("databases", targetDepth)) {
                     context.nextToken();
                     getKxClusterResult.setDatabases(new ListUnmarshaller<KxDatabaseConfiguration>(KxDatabaseConfigurationJsonUnmarshaller.getInstance())
@@ -134,6 +144,10 @@ public class GetKxClusterResultJsonUnmarshaller implements Unmarshaller<GetKxClu
                 if (context.testExpression("createdTimestamp", targetDepth)) {
                     context.nextToken();
                     getKxClusterResult.setCreatedTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("scalingGroupConfiguration", targetDepth)) {
+                    context.nextToken();
+                    getKxClusterResult.setScalingGroupConfiguration(KxScalingGroupConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

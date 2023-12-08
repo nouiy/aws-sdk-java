@@ -48,6 +48,12 @@ public class KxSavedownStorageConfiguration implements Serializable, Cloneable, 
      * </p>
      */
     private Integer size;
+    /**
+     * <p>
+     * The name of the kdb volume that you want to use as writeable save-down storage for clusters.
+     * </p>
+     */
+    private String volumeName;
 
     /**
      * <p>
@@ -201,6 +207,46 @@ public class KxSavedownStorageConfiguration implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * The name of the kdb volume that you want to use as writeable save-down storage for clusters.
+     * </p>
+     * 
+     * @param volumeName
+     *        The name of the kdb volume that you want to use as writeable save-down storage for clusters.
+     */
+
+    public void setVolumeName(String volumeName) {
+        this.volumeName = volumeName;
+    }
+
+    /**
+     * <p>
+     * The name of the kdb volume that you want to use as writeable save-down storage for clusters.
+     * </p>
+     * 
+     * @return The name of the kdb volume that you want to use as writeable save-down storage for clusters.
+     */
+
+    public String getVolumeName() {
+        return this.volumeName;
+    }
+
+    /**
+     * <p>
+     * The name of the kdb volume that you want to use as writeable save-down storage for clusters.
+     * </p>
+     * 
+     * @param volumeName
+     *        The name of the kdb volume that you want to use as writeable save-down storage for clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KxSavedownStorageConfiguration withVolumeName(String volumeName) {
+        setVolumeName(volumeName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -215,7 +261,9 @@ public class KxSavedownStorageConfiguration implements Serializable, Cloneable, 
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getSize() != null)
-            sb.append("Size: ").append(getSize());
+            sb.append("Size: ").append(getSize()).append(",");
+        if (getVolumeName() != null)
+            sb.append("VolumeName: ").append(getVolumeName());
         sb.append("}");
         return sb.toString();
     }
@@ -238,6 +286,10 @@ public class KxSavedownStorageConfiguration implements Serializable, Cloneable, 
             return false;
         if (other.getSize() != null && other.getSize().equals(this.getSize()) == false)
             return false;
+        if (other.getVolumeName() == null ^ this.getVolumeName() == null)
+            return false;
+        if (other.getVolumeName() != null && other.getVolumeName().equals(this.getVolumeName()) == false)
+            return false;
         return true;
     }
 
@@ -248,6 +300,7 @@ public class KxSavedownStorageConfiguration implements Serializable, Cloneable, 
 
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getSize() == null) ? 0 : getSize().hashCode());
+        hashCode = prime * hashCode + ((getVolumeName() == null) ? 0 : getVolumeName().hashCode());
         return hashCode;
     }
 

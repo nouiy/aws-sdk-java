@@ -17,6 +17,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.finspace.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -31,6 +33,9 @@ public class DeleteKxUserRequestMarshaller {
             .marshallLocationName("userName").build();
     private static final MarshallingInfo<String> ENVIRONMENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("environmentId").build();
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
 
     private static final DeleteKxUserRequestMarshaller instance = new DeleteKxUserRequestMarshaller();
 
@@ -50,6 +55,7 @@ public class DeleteKxUserRequestMarshaller {
         try {
             protocolMarshaller.marshall(deleteKxUserRequest.getUserName(), USERNAME_BINDING);
             protocolMarshaller.marshall(deleteKxUserRequest.getEnvironmentId(), ENVIRONMENTID_BINDING);
+            protocolMarshaller.marshall(deleteKxUserRequest.getClientToken(), CLIENTTOKEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

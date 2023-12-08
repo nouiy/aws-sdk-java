@@ -87,8 +87,8 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
     private String roleArn;
     /**
      * <p>
-     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
-     * information about metric stream output formats, see <a
+     * The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     * <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
      * Metric streams output formats</a>.
      * </p>
@@ -125,8 +125,8 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * the <code>OutputFormat</code> is <code>json</code>, you can stream any additional statistic that is supported by
      * CloudWatch, listed in <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
-     * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>, you can
-     * stream percentile statistics such as p95, p99.9, and so on.
+     * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry1.0</code> or
+     * <code>opentelemetry0.7</code>, you can stream percentile statistics such as p95, p99.9, and so on.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration> statisticsConfigurations;
@@ -591,17 +591,17 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
-     * information about metric stream output formats, see <a
+     * The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     * <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
      * Metric streams output formats</a>.
      * </p>
      * 
      * @param outputFormat
-     *        The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
-     *        For more information about metric stream output formats, see <a href=
-     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
-     *        Metric streams output formats</a>.
+     *        The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     *        <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
+     *        > Metric streams output formats</a>.
      * @see MetricStreamOutputFormat
      */
 
@@ -611,16 +611,16 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
-     * information about metric stream output formats, see <a
+     * The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     * <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
      * Metric streams output formats</a>.
      * </p>
      * 
-     * @return The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
-     *         For more information about metric stream output formats, see <a href=
-     *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
-     *         Metric streams output formats</a>.
+     * @return The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     *         <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
+     *         > Metric streams output formats</a>.
      * @see MetricStreamOutputFormat
      */
 
@@ -630,17 +630,17 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
-     * information about metric stream output formats, see <a
+     * The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     * <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
      * Metric streams output formats</a>.
      * </p>
      * 
      * @param outputFormat
-     *        The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
-     *        For more information about metric stream output formats, see <a href=
-     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
-     *        Metric streams output formats</a>.
+     *        The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     *        <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
+     *        > Metric streams output formats</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricStreamOutputFormat
      */
@@ -652,17 +652,17 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
-     * information about metric stream output formats, see <a
+     * The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     * <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
      * Metric streams output formats</a>.
      * </p>
      * 
      * @param outputFormat
-     *        The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
-     *        For more information about metric stream output formats, see <a href=
-     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
-     *        Metric streams output formats</a>.
+     *        The output format for the stream. Valid values are <code>json</code>, <code>opentelemetry1.0</code>, and
+     *        <code>opentelemetry0.7</code>. For more information about metric stream output formats, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html"
+     *        > Metric streams output formats</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricStreamOutputFormat
      */
@@ -861,8 +861,8 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * the <code>OutputFormat</code> is <code>json</code>, you can stream any additional statistic that is supported by
      * CloudWatch, listed in <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
-     * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>, you can
-     * stream percentile statistics such as p95, p99.9, and so on.
+     * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry1.0</code> or
+     * <code>opentelemetry0.7</code>, you can stream percentile statistics such as p95, p99.9, and so on.
      * </p>
      * 
      * @return By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
@@ -875,8 +875,8 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      *         <code>OutputFormat</code>. If the <code>OutputFormat</code> is <code>json</code>, you can stream any
      *         additional statistic that is supported by CloudWatch, listed in <a
      *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
-     *         CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>,
-     *         you can stream percentile statistics such as p95, p99.9, and so on.
+     *         CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry1.0</code>
+     *         or <code>opentelemetry0.7</code>, you can stream percentile statistics such as p95, p99.9, and so on.
      */
 
     public java.util.List<MetricStreamStatisticsConfiguration> getStatisticsConfigurations() {
@@ -898,8 +898,8 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * the <code>OutputFormat</code> is <code>json</code>, you can stream any additional statistic that is supported by
      * CloudWatch, listed in <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
-     * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>, you can
-     * stream percentile statistics such as p95, p99.9, and so on.
+     * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry1.0</code> or
+     * <code>opentelemetry0.7</code>, you can stream percentile statistics such as p95, p99.9, and so on.
      * </p>
      * 
      * @param statisticsConfigurations
@@ -913,8 +913,8 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code>OutputFormat</code>. If the <code>OutputFormat</code> is <code>json</code>, you can stream any
      *        additional statistic that is supported by CloudWatch, listed in <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
-     *        CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>,
-     *        you can stream percentile statistics such as p95, p99.9, and so on.
+     *        CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry1.0</code>
+     *        or <code>opentelemetry0.7</code>, you can stream percentile statistics such as p95, p99.9, and so on.
      */
 
     public void setStatisticsConfigurations(java.util.Collection<MetricStreamStatisticsConfiguration> statisticsConfigurations) {
@@ -938,8 +938,8 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * the <code>OutputFormat</code> is <code>json</code>, you can stream any additional statistic that is supported by
      * CloudWatch, listed in <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
-     * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>, you can
-     * stream percentile statistics such as p95, p99.9, and so on.
+     * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry1.0</code> or
+     * <code>opentelemetry0.7</code>, you can stream percentile statistics such as p95, p99.9, and so on.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -958,8 +958,8 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code>OutputFormat</code>. If the <code>OutputFormat</code> is <code>json</code>, you can stream any
      *        additional statistic that is supported by CloudWatch, listed in <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
-     *        CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>,
-     *        you can stream percentile statistics such as p95, p99.9, and so on.
+     *        CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry1.0</code>
+     *        or <code>opentelemetry0.7</code>, you can stream percentile statistics such as p95, p99.9, and so on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -985,8 +985,8 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * the <code>OutputFormat</code> is <code>json</code>, you can stream any additional statistic that is supported by
      * CloudWatch, listed in <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
-     * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>, you can
-     * stream percentile statistics such as p95, p99.9, and so on.
+     * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry1.0</code> or
+     * <code>opentelemetry0.7</code>, you can stream percentile statistics such as p95, p99.9, and so on.
      * </p>
      * 
      * @param statisticsConfigurations
@@ -1000,8 +1000,8 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code>OutputFormat</code>. If the <code>OutputFormat</code> is <code>json</code>, you can stream any
      *        additional statistic that is supported by CloudWatch, listed in <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
-     *        CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>,
-     *        you can stream percentile statistics such as p95, p99.9, and so on.
+     *        CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry1.0</code>
+     *        or <code>opentelemetry0.7</code>, you can stream percentile statistics such as p95, p99.9, and so on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

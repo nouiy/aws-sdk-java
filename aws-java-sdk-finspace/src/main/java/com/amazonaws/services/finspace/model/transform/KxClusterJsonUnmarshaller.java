@@ -72,6 +72,12 @@ public class KxClusterJsonUnmarshaller implements Unmarshaller<KxCluster, JsonUn
                     context.nextToken();
                     kxCluster.setReleaseLabel(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("volumes", targetDepth)) {
+                    context.nextToken();
+                    kxCluster.setVolumes(new ListUnmarshaller<Volume>(VolumeJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("initializationScript", targetDepth)) {
                     context.nextToken();
                     kxCluster.setInitializationScript(context.getUnmarshaller(String.class).unmarshall(context));

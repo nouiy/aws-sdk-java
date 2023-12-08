@@ -31,6 +31,8 @@ public class KxSavedownStorageConfigurationMarshaller {
             .marshallLocationName("type").build();
     private static final MarshallingInfo<Integer> SIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("size").build();
+    private static final MarshallingInfo<String> VOLUMENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeName").build();
 
     private static final KxSavedownStorageConfigurationMarshaller instance = new KxSavedownStorageConfigurationMarshaller();
 
@@ -50,6 +52,7 @@ public class KxSavedownStorageConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(kxSavedownStorageConfiguration.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(kxSavedownStorageConfiguration.getSize(), SIZE_BINDING);
+            protocolMarshaller.marshall(kxSavedownStorageConfiguration.getVolumeName(), VOLUMENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -315,9 +315,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * If you are creating an alarm based on a math expression, you cannot specify this parameter, or any of the
-     * <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     * <code>ExtendedStatistic</code> parameters. Instead, you specify all this information in the <code>Metrics</code>
-     * array.
+     * <code>Namespace</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>, <code>Statistic</code>,
+     * or <code>ExtendedStatistic</code> parameters. Instead, you specify all this information in the
+     * <code>Metrics</code> array.
      * </p>
      */
     private String metricName;
@@ -445,7 +445,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are Bytes
      * because NetworkIn tracks the number of bytes that an instance receives on all network interfaces. You can also
      * specify a unit when you create a custom metric. Units help provide conceptual meaning to your data. Metric data
-     * points that specify a unit of measure, such as Percent, are aggregated separately.
+     * points that specify a unit of measure, such as Percent, are aggregated separately. If you are creating an alarm
+     * based on a metric math expression, you can specify the unit for each metric (if needed) within the objects in the
+     * <code>Metrics</code> array.
      * </p>
      * <p>
      * If you don't specify <code>Unit</code>, CloudWatch retrieves all unit types that have been published for the
@@ -553,9 +555,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * ="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDataQuery.html">MetricDataQuery</a>.
      * </p>
      * <p>
-     * If you use the <code>Metrics</code> parameter, you cannot include the <code>MetricName</code>,
-     * <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     * <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead, you
+     * If you use the <code>Metrics</code> parameter, you cannot include the <code>Namespace</code>,
+     * <code>MetricName</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>, <code>Statistic</code>,
+     * or <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead, you
      * retrieve the metrics you are using in your math expression as part of the <code>Metrics</code> array.
      * </p>
      */
@@ -2906,9 +2908,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * If you are creating an alarm based on a math expression, you cannot specify this parameter, or any of the
-     * <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     * <code>ExtendedStatistic</code> parameters. Instead, you specify all this information in the <code>Metrics</code>
-     * array.
+     * <code>Namespace</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>, <code>Statistic</code>,
+     * or <code>ExtendedStatistic</code> parameters. Instead, you specify all this information in the
+     * <code>Metrics</code> array.
      * </p>
      * 
      * @param metricName
@@ -2916,9 +2918,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        must specify either <code>MetricName</code> or a <code>Metrics</code> array.</p>
      *        <p>
      *        If you are creating an alarm based on a math expression, you cannot specify this parameter, or any of the
-     *        <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     *        <code>ExtendedStatistic</code> parameters. Instead, you specify all this information in the
-     *        <code>Metrics</code> array.
+     *        <code>Namespace</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>,
+     *        <code>Statistic</code>, or <code>ExtendedStatistic</code> parameters. Instead, you specify all this
+     *        information in the <code>Metrics</code> array.
      */
 
     public void setMetricName(String metricName) {
@@ -2932,18 +2934,18 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * If you are creating an alarm based on a math expression, you cannot specify this parameter, or any of the
-     * <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     * <code>ExtendedStatistic</code> parameters. Instead, you specify all this information in the <code>Metrics</code>
-     * array.
+     * <code>Namespace</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>, <code>Statistic</code>,
+     * or <code>ExtendedStatistic</code> parameters. Instead, you specify all this information in the
+     * <code>Metrics</code> array.
      * </p>
      * 
      * @return The name for the metric associated with the alarm. For each <code>PutMetricAlarm</code> operation, you
      *         must specify either <code>MetricName</code> or a <code>Metrics</code> array.</p>
      *         <p>
      *         If you are creating an alarm based on a math expression, you cannot specify this parameter, or any of the
-     *         <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     *         <code>ExtendedStatistic</code> parameters. Instead, you specify all this information in the
-     *         <code>Metrics</code> array.
+     *         <code>Namespace</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>,
+     *         <code>Statistic</code>, or <code>ExtendedStatistic</code> parameters. Instead, you specify all this
+     *         information in the <code>Metrics</code> array.
      */
 
     public String getMetricName() {
@@ -2957,9 +2959,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * If you are creating an alarm based on a math expression, you cannot specify this parameter, or any of the
-     * <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     * <code>ExtendedStatistic</code> parameters. Instead, you specify all this information in the <code>Metrics</code>
-     * array.
+     * <code>Namespace</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>, <code>Statistic</code>,
+     * or <code>ExtendedStatistic</code> parameters. Instead, you specify all this information in the
+     * <code>Metrics</code> array.
      * </p>
      * 
      * @param metricName
@@ -2967,9 +2969,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        must specify either <code>MetricName</code> or a <code>Metrics</code> array.</p>
      *        <p>
      *        If you are creating an alarm based on a math expression, you cannot specify this parameter, or any of the
-     *        <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     *        <code>ExtendedStatistic</code> parameters. Instead, you specify all this information in the
-     *        <code>Metrics</code> array.
+     *        <code>Namespace</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>,
+     *        <code>Statistic</code>, or <code>ExtendedStatistic</code> parameters. Instead, you specify all this
+     *        information in the <code>Metrics</code> array.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3789,7 +3791,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are Bytes
      * because NetworkIn tracks the number of bytes that an instance receives on all network interfaces. You can also
      * specify a unit when you create a custom metric. Units help provide conceptual meaning to your data. Metric data
-     * points that specify a unit of measure, such as Percent, are aggregated separately.
+     * points that specify a unit of measure, such as Percent, are aggregated separately. If you are creating an alarm
+     * based on a metric math expression, you can specify the unit for each metric (if needed) within the objects in the
+     * <code>Metrics</code> array.
      * </p>
      * <p>
      * If you don't specify <code>Unit</code>, CloudWatch retrieves all unit types that have been published for the
@@ -3809,7 +3813,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are
      *        Bytes because NetworkIn tracks the number of bytes that an instance receives on all network interfaces.
      *        You can also specify a unit when you create a custom metric. Units help provide conceptual meaning to your
-     *        data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately.</p>
+     *        data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately. If
+     *        you are creating an alarm based on a metric math expression, you can specify the unit for each metric (if
+     *        needed) within the objects in the <code>Metrics</code> array.</p>
      *        <p>
      *        If you don't specify <code>Unit</code>, CloudWatch retrieves all unit types that have been published for
      *        the metric and attempts to evaluate the alarm. Usually, metrics are published with only one unit, so the
@@ -3835,7 +3841,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are Bytes
      * because NetworkIn tracks the number of bytes that an instance receives on all network interfaces. You can also
      * specify a unit when you create a custom metric. Units help provide conceptual meaning to your data. Metric data
-     * points that specify a unit of measure, such as Percent, are aggregated separately.
+     * points that specify a unit of measure, such as Percent, are aggregated separately. If you are creating an alarm
+     * based on a metric math expression, you can specify the unit for each metric (if needed) within the objects in the
+     * <code>Metrics</code> array.
      * </p>
      * <p>
      * If you don't specify <code>Unit</code>, CloudWatch retrieves all unit types that have been published for the
@@ -3854,8 +3862,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * @return The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are
      *         Bytes because NetworkIn tracks the number of bytes that an instance receives on all network interfaces.
      *         You can also specify a unit when you create a custom metric. Units help provide conceptual meaning to
-     *         your data. Metric data points that specify a unit of measure, such as Percent, are aggregated
-     *         separately.</p>
+     *         your data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately.
+     *         If you are creating an alarm based on a metric math expression, you can specify the unit for each metric
+     *         (if needed) within the objects in the <code>Metrics</code> array.</p>
      *         <p>
      *         If you don't specify <code>Unit</code>, CloudWatch retrieves all unit types that have been published for
      *         the metric and attempts to evaluate the alarm. Usually, metrics are published with only one unit, so the
@@ -3881,7 +3890,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are Bytes
      * because NetworkIn tracks the number of bytes that an instance receives on all network interfaces. You can also
      * specify a unit when you create a custom metric. Units help provide conceptual meaning to your data. Metric data
-     * points that specify a unit of measure, such as Percent, are aggregated separately.
+     * points that specify a unit of measure, such as Percent, are aggregated separately. If you are creating an alarm
+     * based on a metric math expression, you can specify the unit for each metric (if needed) within the objects in the
+     * <code>Metrics</code> array.
      * </p>
      * <p>
      * If you don't specify <code>Unit</code>, CloudWatch retrieves all unit types that have been published for the
@@ -3901,7 +3912,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are
      *        Bytes because NetworkIn tracks the number of bytes that an instance receives on all network interfaces.
      *        You can also specify a unit when you create a custom metric. Units help provide conceptual meaning to your
-     *        data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately.</p>
+     *        data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately. If
+     *        you are creating an alarm based on a metric math expression, you can specify the unit for each metric (if
+     *        needed) within the objects in the <code>Metrics</code> array.</p>
      *        <p>
      *        If you don't specify <code>Unit</code>, CloudWatch retrieves all unit types that have been published for
      *        the metric and attempts to evaluate the alarm. Usually, metrics are published with only one unit, so the
@@ -3929,7 +3942,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are Bytes
      * because NetworkIn tracks the number of bytes that an instance receives on all network interfaces. You can also
      * specify a unit when you create a custom metric. Units help provide conceptual meaning to your data. Metric data
-     * points that specify a unit of measure, such as Percent, are aggregated separately.
+     * points that specify a unit of measure, such as Percent, are aggregated separately. If you are creating an alarm
+     * based on a metric math expression, you can specify the unit for each metric (if needed) within the objects in the
+     * <code>Metrics</code> array.
      * </p>
      * <p>
      * If you don't specify <code>Unit</code>, CloudWatch retrieves all unit types that have been published for the
@@ -3949,7 +3964,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are
      *        Bytes because NetworkIn tracks the number of bytes that an instance receives on all network interfaces.
      *        You can also specify a unit when you create a custom metric. Units help provide conceptual meaning to your
-     *        data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately.</p>
+     *        data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately. If
+     *        you are creating an alarm based on a metric math expression, you can specify the unit for each metric (if
+     *        needed) within the objects in the <code>Metrics</code> array.</p>
      *        <p>
      *        If you don't specify <code>Unit</code>, CloudWatch retrieves all unit types that have been published for
      *        the metric and attempts to evaluate the alarm. Usually, metrics are published with only one unit, so the
@@ -3975,7 +3992,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are Bytes
      * because NetworkIn tracks the number of bytes that an instance receives on all network interfaces. You can also
      * specify a unit when you create a custom metric. Units help provide conceptual meaning to your data. Metric data
-     * points that specify a unit of measure, such as Percent, are aggregated separately.
+     * points that specify a unit of measure, such as Percent, are aggregated separately. If you are creating an alarm
+     * based on a metric math expression, you can specify the unit for each metric (if needed) within the objects in the
+     * <code>Metrics</code> array.
      * </p>
      * <p>
      * If you don't specify <code>Unit</code>, CloudWatch retrieves all unit types that have been published for the
@@ -3995,7 +4014,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are
      *        Bytes because NetworkIn tracks the number of bytes that an instance receives on all network interfaces.
      *        You can also specify a unit when you create a custom metric. Units help provide conceptual meaning to your
-     *        data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately.</p>
+     *        data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately. If
+     *        you are creating an alarm based on a metric math expression, you can specify the unit for each metric (if
+     *        needed) within the objects in the <code>Metrics</code> array.</p>
      *        <p>
      *        If you don't specify <code>Unit</code>, CloudWatch retrieves all unit types that have been published for
      *        the metric and attempts to evaluate the alarm. Usually, metrics are published with only one unit, so the
@@ -4547,9 +4568,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * ="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDataQuery.html">MetricDataQuery</a>.
      * </p>
      * <p>
-     * If you use the <code>Metrics</code> parameter, you cannot include the <code>MetricName</code>,
-     * <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     * <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead, you
+     * If you use the <code>Metrics</code> parameter, you cannot include the <code>Namespace</code>,
+     * <code>MetricName</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>, <code>Statistic</code>,
+     * or <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead, you
      * retrieve the metrics you are using in your math expression as part of the <code>Metrics</code> array.
      * </p>
      * 
@@ -4566,10 +4587,11 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *         MetricDataQuery</a>.
      *         </p>
      *         <p>
-     *         If you use the <code>Metrics</code> parameter, you cannot include the <code>MetricName</code>,
-     *         <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     *         <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead,
-     *         you retrieve the metrics you are using in your math expression as part of the <code>Metrics</code> array.
+     *         If you use the <code>Metrics</code> parameter, you cannot include the <code>Namespace</code>,
+     *         <code>MetricName</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>,
+     *         <code>Statistic</code>, or <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in
+     *         the same operation. Instead, you retrieve the metrics you are using in your math expression as part of
+     *         the <code>Metrics</code> array.
      */
 
     public java.util.List<MetricDataQuery> getMetrics() {
@@ -4595,9 +4617,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * ="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDataQuery.html">MetricDataQuery</a>.
      * </p>
      * <p>
-     * If you use the <code>Metrics</code> parameter, you cannot include the <code>MetricName</code>,
-     * <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     * <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead, you
+     * If you use the <code>Metrics</code> parameter, you cannot include the <code>Namespace</code>,
+     * <code>MetricName</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>, <code>Statistic</code>,
+     * or <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead, you
      * retrieve the metrics you are using in your math expression as part of the <code>Metrics</code> array.
      * </p>
      * 
@@ -4615,10 +4637,11 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        MetricDataQuery</a>.
      *        </p>
      *        <p>
-     *        If you use the <code>Metrics</code> parameter, you cannot include the <code>MetricName</code>,
-     *        <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     *        <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead,
-     *        you retrieve the metrics you are using in your math expression as part of the <code>Metrics</code> array.
+     *        If you use the <code>Metrics</code> parameter, you cannot include the <code>Namespace</code>,
+     *        <code>MetricName</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>,
+     *        <code>Statistic</code>, or <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the
+     *        same operation. Instead, you retrieve the metrics you are using in your math expression as part of the
+     *        <code>Metrics</code> array.
      */
 
     public void setMetrics(java.util.Collection<MetricDataQuery> metrics) {
@@ -4646,9 +4669,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * ="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDataQuery.html">MetricDataQuery</a>.
      * </p>
      * <p>
-     * If you use the <code>Metrics</code> parameter, you cannot include the <code>MetricName</code>,
-     * <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     * <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead, you
+     * If you use the <code>Metrics</code> parameter, you cannot include the <code>Namespace</code>,
+     * <code>MetricName</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>, <code>Statistic</code>,
+     * or <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead, you
      * retrieve the metrics you are using in your math expression as part of the <code>Metrics</code> array.
      * </p>
      * <p>
@@ -4671,10 +4694,11 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        MetricDataQuery</a>.
      *        </p>
      *        <p>
-     *        If you use the <code>Metrics</code> parameter, you cannot include the <code>MetricName</code>,
-     *        <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     *        <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead,
-     *        you retrieve the metrics you are using in your math expression as part of the <code>Metrics</code> array.
+     *        If you use the <code>Metrics</code> parameter, you cannot include the <code>Namespace</code>,
+     *        <code>MetricName</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>,
+     *        <code>Statistic</code>, or <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the
+     *        same operation. Instead, you retrieve the metrics you are using in your math expression as part of the
+     *        <code>Metrics</code> array.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4704,9 +4728,9 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * ="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDataQuery.html">MetricDataQuery</a>.
      * </p>
      * <p>
-     * If you use the <code>Metrics</code> parameter, you cannot include the <code>MetricName</code>,
-     * <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     * <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead, you
+     * If you use the <code>Metrics</code> parameter, you cannot include the <code>Namespace</code>,
+     * <code>MetricName</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>, <code>Statistic</code>,
+     * or <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead, you
      * retrieve the metrics you are using in your math expression as part of the <code>Metrics</code> array.
      * </p>
      * 
@@ -4724,10 +4748,11 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        MetricDataQuery</a>.
      *        </p>
      *        <p>
-     *        If you use the <code>Metrics</code> parameter, you cannot include the <code>MetricName</code>,
-     *        <code>Dimensions</code>, <code>Period</code>, <code>Namespace</code>, <code>Statistic</code>, or
-     *        <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the same operation. Instead,
-     *        you retrieve the metrics you are using in your math expression as part of the <code>Metrics</code> array.
+     *        If you use the <code>Metrics</code> parameter, you cannot include the <code>Namespace</code>,
+     *        <code>MetricName</code>, <code>Dimensions</code>, <code>Period</code>, <code>Unit</code>,
+     *        <code>Statistic</code>, or <code>ExtendedStatistic</code> parameters of <code>PutMetricAlarm</code> in the
+     *        same operation. Instead, you retrieve the metrics you are using in your math expression as part of the
+     *        <code>Metrics</code> array.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

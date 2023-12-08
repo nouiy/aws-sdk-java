@@ -439,6 +439,79 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
     /**
      * <p>
+     * Creates a snapshot of kdb database with tiered storage capabilities and a pre-warmed cache, ready for mounting on
+     * kdb clusters. Dataviews are only available for clusters running on a scaling group. They are not supported on
+     * dedicated clusters.
+     * </p>
+     * 
+     * @param createKxDataviewRequest
+     * @return Result of the CreateKxDataview operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource group already exists.
+     * @sample AWSfinspace.CreateKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateKxDataviewResult createKxDataview(CreateKxDataviewRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateKxDataview(request);
+    }
+
+    @SdkInternalApi
+    final CreateKxDataviewResult executeCreateKxDataview(CreateKxDataviewRequest createKxDataviewRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createKxDataviewRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateKxDataviewRequest> request = null;
+        Response<CreateKxDataviewResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateKxDataviewRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createKxDataviewRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateKxDataview");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateKxDataviewResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateKxDataviewResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a managed kdb environment for the account.
      * </p>
      * 
@@ -497,6 +570,77 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateKxEnvironmentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateKxEnvironmentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a new scaling group.
+     * </p>
+     * 
+     * @param createKxScalingGroupRequest
+     * @return Result of the CreateKxScalingGroup operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSfinspace.CreateKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxScalingGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateKxScalingGroupResult createKxScalingGroup(CreateKxScalingGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateKxScalingGroup(request);
+    }
+
+    @SdkInternalApi
+    final CreateKxScalingGroupResult executeCreateKxScalingGroup(CreateKxScalingGroupRequest createKxScalingGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createKxScalingGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateKxScalingGroupRequest> request = null;
+        Response<CreateKxScalingGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateKxScalingGroupRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createKxScalingGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateKxScalingGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateKxScalingGroupResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateKxScalingGroupResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -568,6 +712,79 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateKxUserResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateKxUserResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a new volume with a specific amount of throughput and storage capacity.
+     * </p>
+     * 
+     * @param createKxVolumeRequest
+     * @return Result of the CreateKxVolume operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource group already exists.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSfinspace.CreateKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateKxVolumeResult createKxVolume(CreateKxVolumeRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateKxVolume(request);
+    }
+
+    @SdkInternalApi
+    final CreateKxVolumeResult executeCreateKxVolume(CreateKxVolumeRequest createKxVolumeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createKxVolumeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateKxVolumeRequest> request = null;
+        Response<CreateKxVolumeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateKxVolumeRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createKxVolumeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateKxVolume");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateKxVolumeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateKxVolumeResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -783,6 +1000,73 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
     /**
      * <p>
+     * Deletes the specified dataview. Before deleting a dataview, make sure that it is not in use by any cluster.
+     * </p>
+     * 
+     * @param deleteKxDataviewRequest
+     * @return Result of the DeleteKxDataview operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @sample AWSfinspace.DeleteKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteKxDataviewResult deleteKxDataview(DeleteKxDataviewRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteKxDataview(request);
+    }
+
+    @SdkInternalApi
+    final DeleteKxDataviewResult executeDeleteKxDataview(DeleteKxDataviewRequest deleteKxDataviewRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteKxDataviewRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteKxDataviewRequest> request = null;
+        Response<DeleteKxDataviewResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteKxDataviewRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteKxDataviewRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteKxDataview");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteKxDataviewResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteKxDataviewResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the kdb environment. This action is irreversible. Deleting a kdb environment will remove all the
      * associated data and any services running in it.
      * </p>
@@ -799,6 +1083,8 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
      *         The request was denied due to request throttling.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
      * @sample AWSfinspace.DeleteKxEnvironment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxEnvironment" target="_top">AWS
      *      API Documentation</a>
@@ -849,6 +1135,76 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
     /**
      * <p>
+     * Deletes the specified scaling group. This action is irreversible. You cannot delete a scaling group until all the
+     * clusters running on it have been deleted.
+     * </p>
+     * 
+     * @param deleteKxScalingGroupRequest
+     * @return Result of the DeleteKxScalingGroup operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.DeleteKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxScalingGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteKxScalingGroupResult deleteKxScalingGroup(DeleteKxScalingGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteKxScalingGroup(request);
+    }
+
+    @SdkInternalApi
+    final DeleteKxScalingGroupResult executeDeleteKxScalingGroup(DeleteKxScalingGroupRequest deleteKxScalingGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteKxScalingGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteKxScalingGroupRequest> request = null;
+        Response<DeleteKxScalingGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteKxScalingGroupRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteKxScalingGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteKxScalingGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteKxScalingGroupResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteKxScalingGroupResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a user in the specified kdb environment.
      * </p>
      * 
@@ -864,6 +1220,8 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
      *         One or more resources can't be found.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
      * @sample AWSfinspace.DeleteKxUser
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxUser" target="_top">AWS API
      *      Documentation</a>
@@ -902,6 +1260,76 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteKxUserResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteKxUserResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a volume. You can only delete a volume if it's not attached to a cluster or a dataview. When a volume is
+     * deleted, any data on the volume is lost. This action is irreversible.
+     * </p>
+     * 
+     * @param deleteKxVolumeRequest
+     * @return Result of the DeleteKxVolume operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.DeleteKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteKxVolumeResult deleteKxVolume(DeleteKxVolumeRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteKxVolume(request);
+    }
+
+    @SdkInternalApi
+    final DeleteKxVolumeResult executeDeleteKxVolume(DeleteKxVolumeRequest deleteKxVolumeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteKxVolumeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteKxVolumeRequest> request = null;
+        Response<DeleteKxVolumeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteKxVolumeRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteKxVolumeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteKxVolume");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteKxVolumeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteKxVolumeResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1244,6 +1672,71 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
     /**
      * <p>
+     * Retrieves details of the dataview.
+     * </p>
+     * 
+     * @param getKxDataviewRequest
+     * @return Result of the GetKxDataview operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.GetKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetKxDataviewResult getKxDataview(GetKxDataviewRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetKxDataview(request);
+    }
+
+    @SdkInternalApi
+    final GetKxDataviewResult executeGetKxDataview(GetKxDataviewRequest getKxDataviewRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getKxDataviewRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetKxDataviewRequest> request = null;
+        Response<GetKxDataviewResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetKxDataviewRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getKxDataviewRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetKxDataview");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetKxDataviewResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetKxDataviewResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves all the information for the specified kdb environment.
      * </p>
      * 
@@ -1257,6 +1750,8 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
      *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
      * @sample AWSfinspace.GetKxEnvironment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxEnvironment" target="_top">AWS API
      *      Documentation</a>
@@ -1295,6 +1790,75 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
             HttpResponseHandler<AmazonWebServiceResponse<GetKxEnvironmentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetKxEnvironmentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves details of a scaling group.
+     * </p>
+     * 
+     * @param getKxScalingGroupRequest
+     * @return Result of the GetKxScalingGroup operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.GetKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxScalingGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetKxScalingGroupResult getKxScalingGroup(GetKxScalingGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetKxScalingGroup(request);
+    }
+
+    @SdkInternalApi
+    final GetKxScalingGroupResult executeGetKxScalingGroup(GetKxScalingGroupRequest getKxScalingGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getKxScalingGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetKxScalingGroupRequest> request = null;
+        Response<GetKxScalingGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetKxScalingGroupRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getKxScalingGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetKxScalingGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetKxScalingGroupResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetKxScalingGroupResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1372,6 +1936,75 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
     /**
      * <p>
+     * Retrieves the information about the volume.
+     * </p>
+     * 
+     * @param getKxVolumeRequest
+     * @return Result of the GetKxVolume operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.GetKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetKxVolumeResult getKxVolume(GetKxVolumeRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetKxVolume(request);
+    }
+
+    @SdkInternalApi
+    final GetKxVolumeResult executeGetKxVolume(GetKxVolumeRequest getKxVolumeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getKxVolumeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetKxVolumeRequest> request = null;
+        Response<GetKxVolumeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetKxVolumeRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getKxVolumeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetKxVolume");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetKxVolumeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetKxVolumeResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * A list of all of your FinSpace environments.
      * </p>
      * 
@@ -1381,6 +2014,8 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
      *         The request processing has failed because of an unknown error, exception or failure.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @sample AWSfinspace.ListEnvironments
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListEnvironments" target="_top">AWS API
      *      Documentation</a>
@@ -1698,6 +2333,71 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
     /**
      * <p>
+     * Returns a list of all the dataviews in the database.
+     * </p>
+     * 
+     * @param listKxDataviewsRequest
+     * @return Result of the ListKxDataviews operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.ListKxDataviews
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxDataviews" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListKxDataviewsResult listKxDataviews(ListKxDataviewsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListKxDataviews(request);
+    }
+
+    @SdkInternalApi
+    final ListKxDataviewsResult executeListKxDataviews(ListKxDataviewsRequest listKxDataviewsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listKxDataviewsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListKxDataviewsRequest> request = null;
+        Response<ListKxDataviewsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListKxDataviewsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listKxDataviewsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListKxDataviews");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListKxDataviewsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListKxDataviewsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of kdb environments created in an account.
      * </p>
      * 
@@ -1705,6 +2405,8 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
      * @return Result of the ListKxEnvironments operation returned by the service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
      * @sample AWSfinspace.ListKxEnvironments
@@ -1745,6 +2447,75 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
             HttpResponseHandler<AmazonWebServiceResponse<ListKxEnvironmentsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListKxEnvironmentsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of scaling groups in a kdb environment.
+     * </p>
+     * 
+     * @param listKxScalingGroupsRequest
+     * @return Result of the ListKxScalingGroups operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.ListKxScalingGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxScalingGroups" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListKxScalingGroupsResult listKxScalingGroups(ListKxScalingGroupsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListKxScalingGroups(request);
+    }
+
+    @SdkInternalApi
+    final ListKxScalingGroupsResult executeListKxScalingGroups(ListKxScalingGroupsRequest listKxScalingGroupsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listKxScalingGroupsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListKxScalingGroupsRequest> request = null;
+        Response<ListKxScalingGroupsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListKxScalingGroupsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listKxScalingGroupsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListKxScalingGroups");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListKxScalingGroupsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListKxScalingGroupsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1810,6 +2581,75 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
             HttpResponseHandler<AmazonWebServiceResponse<ListKxUsersResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListKxUsersResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all the volumes in a kdb environment.
+     * </p>
+     * 
+     * @param listKxVolumesRequest
+     * @return Result of the ListKxVolumes operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.ListKxVolumes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxVolumes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListKxVolumesResult listKxVolumes(ListKxVolumesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListKxVolumes(request);
+    }
+
+    @SdkInternalApi
+    final ListKxVolumesResult executeListKxVolumes(ListKxVolumesRequest listKxVolumesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listKxVolumesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListKxVolumesRequest> request = null;
+        Response<ListKxVolumesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListKxVolumesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listKxVolumesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListKxVolumes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListKxVolumesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListKxVolumesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2288,6 +3128,76 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
     /**
      * <p>
+     * Updates the specified dataview. The dataviews get automatically updated when any new changesets are ingested.
+     * Each update of the dataview creates a new version, including changeset details and cache configurations
+     * </p>
+     * 
+     * @param updateKxDataviewRequest
+     * @return Result of the UpdateKxDataview operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource group already exists.
+     * @sample AWSfinspace.UpdateKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateKxDataviewResult updateKxDataview(UpdateKxDataviewRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateKxDataview(request);
+    }
+
+    @SdkInternalApi
+    final UpdateKxDataviewResult executeUpdateKxDataview(UpdateKxDataviewRequest updateKxDataviewRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateKxDataviewRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateKxDataviewRequest> request = null;
+        Response<UpdateKxDataviewResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateKxDataviewRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateKxDataviewRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateKxDataview");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateKxDataviewResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateKxDataviewResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates information for the given kdb environment.
      * </p>
      * 
@@ -2487,6 +3397,76 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateKxUserResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateKxUserResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the throughput or capacity of a volume. During the update process, the filesystem might be unavailable
+     * for a few minutes. You can retry any operations after the update is complete.
+     * </p>
+     * 
+     * @param updateKxVolumeRequest
+     * @return Result of the UpdateKxVolume operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.UpdateKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateKxVolumeResult updateKxVolume(UpdateKxVolumeRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateKxVolume(request);
+    }
+
+    @SdkInternalApi
+    final UpdateKxVolumeResult executeUpdateKxVolume(UpdateKxVolumeRequest updateKxVolumeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateKxVolumeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateKxVolumeRequest> request = null;
+        Response<UpdateKxVolumeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateKxVolumeRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateKxVolumeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateKxVolume");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateKxVolumeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateKxVolumeResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

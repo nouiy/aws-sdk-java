@@ -17,6 +17,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.finspace.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -34,7 +36,8 @@ public class UpdateKxUserRequestMarshaller {
     private static final MarshallingInfo<String> IAMROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("iamRole").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken").build();
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
 
     private static final UpdateKxUserRequestMarshaller instance = new UpdateKxUserRequestMarshaller();
 

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.finspace.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -39,6 +40,8 @@ public class KxClusterMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clusterDescription").build();
     private static final MarshallingInfo<String> RELEASELABEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("releaseLabel").build();
+    private static final MarshallingInfo<List> VOLUMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("volumes").build();
     private static final MarshallingInfo<String> INITIALIZATIONSCRIPT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("initializationScript").build();
     private static final MarshallingInfo<String> EXECUTIONROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -74,6 +77,7 @@ public class KxClusterMarshaller {
             protocolMarshaller.marshall(kxCluster.getClusterType(), CLUSTERTYPE_BINDING);
             protocolMarshaller.marshall(kxCluster.getClusterDescription(), CLUSTERDESCRIPTION_BINDING);
             protocolMarshaller.marshall(kxCluster.getReleaseLabel(), RELEASELABEL_BINDING);
+            protocolMarshaller.marshall(kxCluster.getVolumes(), VOLUMES_BINDING);
             protocolMarshaller.marshall(kxCluster.getInitializationScript(), INITIALIZATIONSCRIPT_BINDING);
             protocolMarshaller.marshall(kxCluster.getExecutionRole(), EXECUTIONROLE_BINDING);
             protocolMarshaller.marshall(kxCluster.getAzMode(), AZMODE_BINDING);

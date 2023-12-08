@@ -48,6 +48,18 @@ public class KxDatabaseConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private String changesetId;
+    /**
+     * <p>
+     * The name of the dataview to be used for caching historical data on disk.
+     * </p>
+     */
+    private String dataviewName;
+    /**
+     * <p>
+     * The configuration of the dataview to be used with specified cluster.
+     * </p>
+     */
+    private KxDataviewConfiguration dataviewConfiguration;
 
     /**
      * <p>
@@ -214,6 +226,86 @@ public class KxDatabaseConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The name of the dataview to be used for caching historical data on disk.
+     * </p>
+     * 
+     * @param dataviewName
+     *        The name of the dataview to be used for caching historical data on disk.
+     */
+
+    public void setDataviewName(String dataviewName) {
+        this.dataviewName = dataviewName;
+    }
+
+    /**
+     * <p>
+     * The name of the dataview to be used for caching historical data on disk.
+     * </p>
+     * 
+     * @return The name of the dataview to be used for caching historical data on disk.
+     */
+
+    public String getDataviewName() {
+        return this.dataviewName;
+    }
+
+    /**
+     * <p>
+     * The name of the dataview to be used for caching historical data on disk.
+     * </p>
+     * 
+     * @param dataviewName
+     *        The name of the dataview to be used for caching historical data on disk.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KxDatabaseConfiguration withDataviewName(String dataviewName) {
+        setDataviewName(dataviewName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration of the dataview to be used with specified cluster.
+     * </p>
+     * 
+     * @param dataviewConfiguration
+     *        The configuration of the dataview to be used with specified cluster.
+     */
+
+    public void setDataviewConfiguration(KxDataviewConfiguration dataviewConfiguration) {
+        this.dataviewConfiguration = dataviewConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of the dataview to be used with specified cluster.
+     * </p>
+     * 
+     * @return The configuration of the dataview to be used with specified cluster.
+     */
+
+    public KxDataviewConfiguration getDataviewConfiguration() {
+        return this.dataviewConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of the dataview to be used with specified cluster.
+     * </p>
+     * 
+     * @param dataviewConfiguration
+     *        The configuration of the dataview to be used with specified cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KxDatabaseConfiguration withDataviewConfiguration(KxDataviewConfiguration dataviewConfiguration) {
+        setDataviewConfiguration(dataviewConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -230,7 +322,11 @@ public class KxDatabaseConfiguration implements Serializable, Cloneable, Structu
         if (getCacheConfigurations() != null)
             sb.append("CacheConfigurations: ").append(getCacheConfigurations()).append(",");
         if (getChangesetId() != null)
-            sb.append("ChangesetId: ").append(getChangesetId());
+            sb.append("ChangesetId: ").append(getChangesetId()).append(",");
+        if (getDataviewName() != null)
+            sb.append("DataviewName: ").append(getDataviewName()).append(",");
+        if (getDataviewConfiguration() != null)
+            sb.append("DataviewConfiguration: ").append(getDataviewConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -257,6 +353,14 @@ public class KxDatabaseConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getChangesetId() != null && other.getChangesetId().equals(this.getChangesetId()) == false)
             return false;
+        if (other.getDataviewName() == null ^ this.getDataviewName() == null)
+            return false;
+        if (other.getDataviewName() != null && other.getDataviewName().equals(this.getDataviewName()) == false)
+            return false;
+        if (other.getDataviewConfiguration() == null ^ this.getDataviewConfiguration() == null)
+            return false;
+        if (other.getDataviewConfiguration() != null && other.getDataviewConfiguration().equals(this.getDataviewConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -268,6 +372,8 @@ public class KxDatabaseConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getDatabaseName() == null) ? 0 : getDatabaseName().hashCode());
         hashCode = prime * hashCode + ((getCacheConfigurations() == null) ? 0 : getCacheConfigurations().hashCode());
         hashCode = prime * hashCode + ((getChangesetId() == null) ? 0 : getChangesetId().hashCode());
+        hashCode = prime * hashCode + ((getDataviewName() == null) ? 0 : getDataviewName().hashCode());
+        hashCode = prime * hashCode + ((getDataviewConfiguration() == null) ? 0 : getDataviewConfiguration().hashCode());
         return hashCode;
     }
 

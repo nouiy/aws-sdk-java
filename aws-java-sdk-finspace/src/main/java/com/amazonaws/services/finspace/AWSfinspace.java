@@ -156,6 +156,37 @@ public interface AWSfinspace {
 
     /**
      * <p>
+     * Creates a snapshot of kdb database with tiered storage capabilities and a pre-warmed cache, ready for mounting on
+     * kdb clusters. Dataviews are only available for clusters running on a scaling group. They are not supported on
+     * dedicated clusters.
+     * </p>
+     * 
+     * @param createKxDataviewRequest
+     * @return Result of the CreateKxDataview operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource group already exists.
+     * @sample AWSfinspace.CreateKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateKxDataviewResult createKxDataview(CreateKxDataviewRequest createKxDataviewRequest);
+
+    /**
+     * <p>
      * Creates a managed kdb environment for the account.
      * </p>
      * 
@@ -181,6 +212,35 @@ public interface AWSfinspace {
      *      API Documentation</a>
      */
     CreateKxEnvironmentResult createKxEnvironment(CreateKxEnvironmentRequest createKxEnvironmentRequest);
+
+    /**
+     * <p>
+     * Creates a new scaling group.
+     * </p>
+     * 
+     * @param createKxScalingGroupRequest
+     * @return Result of the CreateKxScalingGroup operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSfinspace.CreateKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxScalingGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateKxScalingGroupResult createKxScalingGroup(CreateKxScalingGroupRequest createKxScalingGroupRequest);
 
     /**
      * <p>
@@ -210,6 +270,37 @@ public interface AWSfinspace {
      *      Documentation</a>
      */
     CreateKxUserResult createKxUser(CreateKxUserRequest createKxUserRequest);
+
+    /**
+     * <p>
+     * Creates a new volume with a specific amount of throughput and storage capacity.
+     * </p>
+     * 
+     * @param createKxVolumeRequest
+     * @return Result of the CreateKxVolume operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource group already exists.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSfinspace.CreateKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateKxVolumeResult createKxVolume(CreateKxVolumeRequest createKxVolumeRequest);
 
     /**
      * <p>
@@ -290,6 +381,31 @@ public interface AWSfinspace {
 
     /**
      * <p>
+     * Deletes the specified dataview. Before deleting a dataview, make sure that it is not in use by any cluster.
+     * </p>
+     * 
+     * @param deleteKxDataviewRequest
+     * @return Result of the DeleteKxDataview operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @sample AWSfinspace.DeleteKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteKxDataviewResult deleteKxDataview(DeleteKxDataviewRequest deleteKxDataviewRequest);
+
+    /**
+     * <p>
      * Deletes the kdb environment. This action is irreversible. Deleting a kdb environment will remove all the
      * associated data and any services running in it.
      * </p>
@@ -306,11 +422,41 @@ public interface AWSfinspace {
      *         The request was denied due to request throttling.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
      * @sample AWSfinspace.DeleteKxEnvironment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxEnvironment" target="_top">AWS
      *      API Documentation</a>
      */
     DeleteKxEnvironmentResult deleteKxEnvironment(DeleteKxEnvironmentRequest deleteKxEnvironmentRequest);
+
+    /**
+     * <p>
+     * Deletes the specified scaling group. This action is irreversible. You cannot delete a scaling group until all the
+     * clusters running on it have been deleted.
+     * </p>
+     * 
+     * @param deleteKxScalingGroupRequest
+     * @return Result of the DeleteKxScalingGroup operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.DeleteKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxScalingGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteKxScalingGroupResult deleteKxScalingGroup(DeleteKxScalingGroupRequest deleteKxScalingGroupRequest);
 
     /**
      * <p>
@@ -329,11 +475,41 @@ public interface AWSfinspace {
      *         One or more resources can't be found.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
      * @sample AWSfinspace.DeleteKxUser
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxUser" target="_top">AWS API
      *      Documentation</a>
      */
     DeleteKxUserResult deleteKxUser(DeleteKxUserRequest deleteKxUserRequest);
+
+    /**
+     * <p>
+     * Deletes a volume. You can only delete a volume if it's not attached to a cluster or a dataview. When a volume is
+     * deleted, any data on the volume is lost. This action is irreversible.
+     * </p>
+     * 
+     * @param deleteKxVolumeRequest
+     * @return Result of the DeleteKxVolume operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.DeleteKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteKxVolumeResult deleteKxVolume(DeleteKxVolumeRequest deleteKxVolumeRequest);
 
     /**
      * <p>
@@ -456,6 +632,29 @@ public interface AWSfinspace {
 
     /**
      * <p>
+     * Retrieves details of the dataview.
+     * </p>
+     * 
+     * @param getKxDataviewRequest
+     * @return Result of the GetKxDataview operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.GetKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetKxDataviewResult getKxDataview(GetKxDataviewRequest getKxDataviewRequest);
+
+    /**
+     * <p>
      * Retrieves all the information for the specified kdb environment.
      * </p>
      * 
@@ -469,11 +668,40 @@ public interface AWSfinspace {
      *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
      * @sample AWSfinspace.GetKxEnvironment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxEnvironment" target="_top">AWS API
      *      Documentation</a>
      */
     GetKxEnvironmentResult getKxEnvironment(GetKxEnvironmentRequest getKxEnvironmentRequest);
+
+    /**
+     * <p>
+     * Retrieves details of a scaling group.
+     * </p>
+     * 
+     * @param getKxScalingGroupRequest
+     * @return Result of the GetKxScalingGroup operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.GetKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxScalingGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetKxScalingGroupResult getKxScalingGroup(GetKxScalingGroupRequest getKxScalingGroupRequest);
 
     /**
      * <p>
@@ -500,6 +728,33 @@ public interface AWSfinspace {
 
     /**
      * <p>
+     * Retrieves the information about the volume.
+     * </p>
+     * 
+     * @param getKxVolumeRequest
+     * @return Result of the GetKxVolume operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.GetKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetKxVolumeResult getKxVolume(GetKxVolumeRequest getKxVolumeRequest);
+
+    /**
+     * <p>
      * A list of all of your FinSpace environments.
      * </p>
      * 
@@ -509,6 +764,8 @@ public interface AWSfinspace {
      *         The request processing has failed because of an unknown error, exception or failure.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @sample AWSfinspace.ListEnvironments
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListEnvironments" target="_top">AWS API
      *      Documentation</a>
@@ -616,6 +873,29 @@ public interface AWSfinspace {
 
     /**
      * <p>
+     * Returns a list of all the dataviews in the database.
+     * </p>
+     * 
+     * @param listKxDataviewsRequest
+     * @return Result of the ListKxDataviews operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.ListKxDataviews
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxDataviews" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListKxDataviewsResult listKxDataviews(ListKxDataviewsRequest listKxDataviewsRequest);
+
+    /**
+     * <p>
      * Returns a list of kdb environments created in an account.
      * </p>
      * 
@@ -623,6 +903,8 @@ public interface AWSfinspace {
      * @return Result of the ListKxEnvironments operation returned by the service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
      * @sample AWSfinspace.ListKxEnvironments
@@ -630,6 +912,33 @@ public interface AWSfinspace {
      *      API Documentation</a>
      */
     ListKxEnvironmentsResult listKxEnvironments(ListKxEnvironmentsRequest listKxEnvironmentsRequest);
+
+    /**
+     * <p>
+     * Returns a list of scaling groups in a kdb environment.
+     * </p>
+     * 
+     * @param listKxScalingGroupsRequest
+     * @return Result of the ListKxScalingGroups operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.ListKxScalingGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxScalingGroups" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListKxScalingGroupsResult listKxScalingGroups(ListKxScalingGroupsRequest listKxScalingGroupsRequest);
 
     /**
      * <p>
@@ -653,6 +962,33 @@ public interface AWSfinspace {
      *      Documentation</a>
      */
     ListKxUsersResult listKxUsers(ListKxUsersRequest listKxUsersRequest);
+
+    /**
+     * <p>
+     * Lists all the volumes in a kdb environment.
+     * </p>
+     * 
+     * @param listKxVolumesRequest
+     * @return Result of the ListKxVolumes operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.ListKxVolumes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxVolumes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListKxVolumesResult listKxVolumes(ListKxVolumesRequest listKxVolumesRequest);
 
     /**
      * <p>
@@ -823,6 +1159,34 @@ public interface AWSfinspace {
 
     /**
      * <p>
+     * Updates the specified dataview. The dataviews get automatically updated when any new changesets are ingested.
+     * Each update of the dataview creates a new version, including changeset details and cache configurations
+     * </p>
+     * 
+     * @param updateKxDataviewRequest
+     * @return Result of the UpdateKxDataview operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource group already exists.
+     * @sample AWSfinspace.UpdateKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateKxDataviewResult updateKxDataview(UpdateKxDataviewRequest updateKxDataviewRequest);
+
+    /**
+     * <p>
      * Updates information for the given kdb environment.
      * </p>
      * 
@@ -903,6 +1267,34 @@ public interface AWSfinspace {
      *      Documentation</a>
      */
     UpdateKxUserResult updateKxUser(UpdateKxUserRequest updateKxUserRequest);
+
+    /**
+     * <p>
+     * Updates the throughput or capacity of a volume. During the update process, the filesystem might be unavailable
+     * for a few minutes. You can retry any operations after the update is complete.
+     * </p>
+     * 
+     * @param updateKxVolumeRequest
+     * @return Result of the UpdateKxVolume operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A service limit or quota is exceeded.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSfinspace.UpdateKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateKxVolumeResult updateKxVolume(UpdateKxVolumeRequest updateKxVolumeRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

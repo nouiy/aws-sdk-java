@@ -65,6 +65,13 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      */
     private String clusterType;
@@ -155,6 +162,13 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -188,6 +202,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      *        greater access to system commands and enabling a fast reload of custom code. This cluster type can
      *        optionally mount databases including cache and savedown storage. For this cluster type, the node count is
      *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *        can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *        messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *        kdb process.
      *        </p>
      *        </li>
      * @see KxClusterType
@@ -231,6 +253,13 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return Specifies the type of KDB database that is being created. The following types are available: </p>
@@ -263,6 +292,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      *         greater access to system commands and enabling a fast reload of custom code. This cluster type can
      *         optionally mount databases including cache and savedown storage. For this cluster type, the node count is
      *         fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *         can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *         messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *         kdb process.
      *         </p>
      *         </li>
      * @see KxClusterType
@@ -306,6 +343,13 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -339,6 +383,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      *        greater access to system commands and enabling a fast reload of custom code. This cluster type can
      *        optionally mount databases including cache and savedown storage. For this cluster type, the node count is
      *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *        can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *        messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *        kdb process.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -384,6 +436,13 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -417,6 +476,14 @@ public class ListKxClustersRequest extends com.amazonaws.AmazonWebServiceRequest
      *        greater access to system commands and enabling a fast reload of custom code. This cluster type can
      *        optionally mount databases including cache and savedown storage. For this cluster type, the node count is
      *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *        can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *        messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *        kdb process.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

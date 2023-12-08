@@ -23,7 +23,8 @@ public enum KxClusterType {
     HDB("HDB"),
     RDB("RDB"),
     GATEWAY("GATEWAY"),
-    GP("GP");
+    GP("GP"),
+    TICKERPLANT("TICKERPLANT");
 
     private String value;
 

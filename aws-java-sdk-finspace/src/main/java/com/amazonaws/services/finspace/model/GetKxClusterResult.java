@@ -117,9 +117,24 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      */
     private String clusterType;
+
+    private TickerplantLogConfiguration tickerplantLogConfiguration;
+    /**
+     * <p>
+     * A list of volumes attached to the cluster.
+     * </p>
+     */
+    private java.util.List<Volume> volumes;
     /**
      * <p>
      * A list of databases mounted on the cluster.
@@ -239,6 +254,8 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      */
     private java.util.Date createdTimestamp;
+
+    private KxScalingGroupConfiguration scalingGroupConfiguration;
 
     /**
      * <p>
@@ -745,6 +762,13 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -778,6 +802,14 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
      *        greater access to system commands and enabling a fast reload of custom code. This cluster type can
      *        optionally mount databases including cache and savedown storage. For this cluster type, the node count is
      *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *        can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *        messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *        kdb process.
      *        </p>
      *        </li>
      * @see KxClusterType
@@ -821,6 +853,13 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return Specifies the type of KDB database that is being created. The following types are available: </p>
@@ -853,6 +892,14 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
      *         greater access to system commands and enabling a fast reload of custom code. This cluster type can
      *         optionally mount databases including cache and savedown storage. For this cluster type, the node count is
      *         fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *         can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *         messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *         kdb process.
      *         </p>
      *         </li>
      * @see KxClusterType
@@ -896,6 +943,13 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -929,6 +983,14 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
      *        greater access to system commands and enabling a fast reload of custom code. This cluster type can
      *        optionally mount databases including cache and savedown storage. For this cluster type, the node count is
      *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *        can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *        messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *        kdb process.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -974,6 +1036,13 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -1009,12 +1078,116 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
      *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *        can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *        messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *        kdb process.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KxClusterType
      */
 
     public GetKxClusterResult withClusterType(KxClusterType clusterType) {
         this.clusterType = clusterType.toString();
+        return this;
+    }
+
+    /**
+     * @param tickerplantLogConfiguration
+     */
+
+    public void setTickerplantLogConfiguration(TickerplantLogConfiguration tickerplantLogConfiguration) {
+        this.tickerplantLogConfiguration = tickerplantLogConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public TickerplantLogConfiguration getTickerplantLogConfiguration() {
+        return this.tickerplantLogConfiguration;
+    }
+
+    /**
+     * @param tickerplantLogConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetKxClusterResult withTickerplantLogConfiguration(TickerplantLogConfiguration tickerplantLogConfiguration) {
+        setTickerplantLogConfiguration(tickerplantLogConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of volumes attached to the cluster.
+     * </p>
+     * 
+     * @return A list of volumes attached to the cluster.
+     */
+
+    public java.util.List<Volume> getVolumes() {
+        return volumes;
+    }
+
+    /**
+     * <p>
+     * A list of volumes attached to the cluster.
+     * </p>
+     * 
+     * @param volumes
+     *        A list of volumes attached to the cluster.
+     */
+
+    public void setVolumes(java.util.Collection<Volume> volumes) {
+        if (volumes == null) {
+            this.volumes = null;
+            return;
+        }
+
+        this.volumes = new java.util.ArrayList<Volume>(volumes);
+    }
+
+    /**
+     * <p>
+     * A list of volumes attached to the cluster.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setVolumes(java.util.Collection)} or {@link #withVolumes(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param volumes
+     *        A list of volumes attached to the cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetKxClusterResult withVolumes(Volume... volumes) {
+        if (this.volumes == null) {
+            setVolumes(new java.util.ArrayList<Volume>(volumes.length));
+        }
+        for (Volume ele : volumes) {
+            this.volumes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of volumes attached to the cluster.
+     * </p>
+     * 
+     * @param volumes
+     *        A list of volumes attached to the cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetKxClusterResult withVolumes(java.util.Collection<Volume> volumes) {
+        setVolumes(volumes);
         return this;
     }
 
@@ -1931,6 +2104,32 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * @param scalingGroupConfiguration
+     */
+
+    public void setScalingGroupConfiguration(KxScalingGroupConfiguration scalingGroupConfiguration) {
+        this.scalingGroupConfiguration = scalingGroupConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public KxScalingGroupConfiguration getScalingGroupConfiguration() {
+        return this.scalingGroupConfiguration;
+    }
+
+    /**
+     * @param scalingGroupConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetKxClusterResult withScalingGroupConfiguration(KxScalingGroupConfiguration scalingGroupConfiguration) {
+        setScalingGroupConfiguration(scalingGroupConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1950,6 +2149,10 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
             sb.append("ClusterName: ").append(getClusterName()).append(",");
         if (getClusterType() != null)
             sb.append("ClusterType: ").append(getClusterType()).append(",");
+        if (getTickerplantLogConfiguration() != null)
+            sb.append("TickerplantLogConfiguration: ").append(getTickerplantLogConfiguration()).append(",");
+        if (getVolumes() != null)
+            sb.append("Volumes: ").append(getVolumes()).append(",");
         if (getDatabases() != null)
             sb.append("Databases: ").append(getDatabases()).append(",");
         if (getCacheStorageConfigurations() != null)
@@ -1981,7 +2184,9 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
         if (getAvailabilityZoneId() != null)
             sb.append("AvailabilityZoneId: ").append(getAvailabilityZoneId()).append(",");
         if (getCreatedTimestamp() != null)
-            sb.append("CreatedTimestamp: ").append(getCreatedTimestamp());
+            sb.append("CreatedTimestamp: ").append(getCreatedTimestamp()).append(",");
+        if (getScalingGroupConfiguration() != null)
+            sb.append("ScalingGroupConfiguration: ").append(getScalingGroupConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -2011,6 +2216,14 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
         if (other.getClusterType() == null ^ this.getClusterType() == null)
             return false;
         if (other.getClusterType() != null && other.getClusterType().equals(this.getClusterType()) == false)
+            return false;
+        if (other.getTickerplantLogConfiguration() == null ^ this.getTickerplantLogConfiguration() == null)
+            return false;
+        if (other.getTickerplantLogConfiguration() != null && other.getTickerplantLogConfiguration().equals(this.getTickerplantLogConfiguration()) == false)
+            return false;
+        if (other.getVolumes() == null ^ this.getVolumes() == null)
+            return false;
+        if (other.getVolumes() != null && other.getVolumes().equals(this.getVolumes()) == false)
             return false;
         if (other.getDatabases() == null ^ this.getDatabases() == null)
             return false;
@@ -2076,6 +2289,10 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getCreatedTimestamp() != null && other.getCreatedTimestamp().equals(this.getCreatedTimestamp()) == false)
             return false;
+        if (other.getScalingGroupConfiguration() == null ^ this.getScalingGroupConfiguration() == null)
+            return false;
+        if (other.getScalingGroupConfiguration() != null && other.getScalingGroupConfiguration().equals(this.getScalingGroupConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -2088,6 +2305,8 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
         hashCode = prime * hashCode + ((getStatusReason() == null) ? 0 : getStatusReason().hashCode());
         hashCode = prime * hashCode + ((getClusterName() == null) ? 0 : getClusterName().hashCode());
         hashCode = prime * hashCode + ((getClusterType() == null) ? 0 : getClusterType().hashCode());
+        hashCode = prime * hashCode + ((getTickerplantLogConfiguration() == null) ? 0 : getTickerplantLogConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getVolumes() == null) ? 0 : getVolumes().hashCode());
         hashCode = prime * hashCode + ((getDatabases() == null) ? 0 : getDatabases().hashCode());
         hashCode = prime * hashCode + ((getCacheStorageConfigurations() == null) ? 0 : getCacheStorageConfigurations().hashCode());
         hashCode = prime * hashCode + ((getAutoScalingConfiguration() == null) ? 0 : getAutoScalingConfiguration().hashCode());
@@ -2104,6 +2323,7 @@ public class GetKxClusterResult extends com.amazonaws.AmazonWebServiceResult<com
         hashCode = prime * hashCode + ((getAzMode() == null) ? 0 : getAzMode().hashCode());
         hashCode = prime * hashCode + ((getAvailabilityZoneId() == null) ? 0 : getAvailabilityZoneId().hashCode());
         hashCode = prime * hashCode + ((getCreatedTimestamp() == null) ? 0 : getCreatedTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getScalingGroupConfiguration() == null) ? 0 : getScalingGroupConfiguration().hashCode());
         return hashCode;
     }
 

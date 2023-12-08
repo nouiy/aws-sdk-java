@@ -49,12 +49,27 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    public CreateKxDataviewResult createKxDataview(CreateKxDataviewRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateKxEnvironmentResult createKxEnvironment(CreateKxEnvironmentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public CreateKxScalingGroupResult createKxScalingGroup(CreateKxScalingGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateKxUserResult createKxUser(CreateKxUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateKxVolumeResult createKxVolume(CreateKxVolumeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -75,12 +90,27 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    public DeleteKxDataviewResult deleteKxDataview(DeleteKxDataviewRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteKxEnvironmentResult deleteKxEnvironment(DeleteKxEnvironmentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public DeleteKxScalingGroupResult deleteKxScalingGroup(DeleteKxScalingGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteKxUserResult deleteKxUser(DeleteKxUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteKxVolumeResult deleteKxVolume(DeleteKxVolumeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -111,12 +141,27 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    public GetKxDataviewResult getKxDataview(GetKxDataviewRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetKxEnvironmentResult getKxEnvironment(GetKxEnvironmentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public GetKxScalingGroupResult getKxScalingGroup(GetKxScalingGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetKxUserResult getKxUser(GetKxUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetKxVolumeResult getKxVolume(GetKxVolumeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -147,12 +192,27 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    public ListKxDataviewsResult listKxDataviews(ListKxDataviewsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListKxEnvironmentsResult listKxEnvironments(ListKxEnvironmentsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public ListKxScalingGroupsResult listKxScalingGroups(ListKxScalingGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListKxUsersResult listKxUsers(ListKxUsersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListKxVolumesResult listKxVolumes(ListKxVolumesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -193,6 +253,11 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    public UpdateKxDataviewResult updateKxDataview(UpdateKxDataviewRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateKxEnvironmentResult updateKxEnvironment(UpdateKxEnvironmentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -204,6 +269,11 @@ public class AbstractAWSfinspace implements AWSfinspace {
 
     @Override
     public UpdateKxUserResult updateKxUser(UpdateKxUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateKxVolumeResult updateKxVolume(UpdateKxVolumeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

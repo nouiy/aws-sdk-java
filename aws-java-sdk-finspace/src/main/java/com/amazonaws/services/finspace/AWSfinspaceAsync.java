@@ -162,6 +162,41 @@ public interface AWSfinspaceAsync extends AWSfinspace {
 
     /**
      * <p>
+     * Creates a snapshot of kdb database with tiered storage capabilities and a pre-warmed cache, ready for mounting on
+     * kdb clusters. Dataviews are only available for clusters running on a scaling group. They are not supported on
+     * dedicated clusters.
+     * </p>
+     * 
+     * @param createKxDataviewRequest
+     * @return A Java Future containing the result of the CreateKxDataview operation returned by the service.
+     * @sample AWSfinspaceAsync.CreateKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateKxDataviewResult> createKxDataviewAsync(CreateKxDataviewRequest createKxDataviewRequest);
+
+    /**
+     * <p>
+     * Creates a snapshot of kdb database with tiered storage capabilities and a pre-warmed cache, ready for mounting on
+     * kdb clusters. Dataviews are only available for clusters running on a scaling group. They are not supported on
+     * dedicated clusters.
+     * </p>
+     * 
+     * @param createKxDataviewRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateKxDataview operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.CreateKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateKxDataviewResult> createKxDataviewAsync(CreateKxDataviewRequest createKxDataviewRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateKxDataviewRequest, CreateKxDataviewResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a managed kdb environment for the account.
      * </p>
      * 
@@ -193,6 +228,37 @@ public interface AWSfinspaceAsync extends AWSfinspace {
 
     /**
      * <p>
+     * Creates a new scaling group.
+     * </p>
+     * 
+     * @param createKxScalingGroupRequest
+     * @return A Java Future containing the result of the CreateKxScalingGroup operation returned by the service.
+     * @sample AWSfinspaceAsync.CreateKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxScalingGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateKxScalingGroupResult> createKxScalingGroupAsync(CreateKxScalingGroupRequest createKxScalingGroupRequest);
+
+    /**
+     * <p>
+     * Creates a new scaling group.
+     * </p>
+     * 
+     * @param createKxScalingGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateKxScalingGroup operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.CreateKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxScalingGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateKxScalingGroupResult> createKxScalingGroupAsync(CreateKxScalingGroupRequest createKxScalingGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateKxScalingGroupRequest, CreateKxScalingGroupResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a user in FinSpace kdb environment with an associated IAM role.
      * </p>
      * 
@@ -221,6 +287,37 @@ public interface AWSfinspaceAsync extends AWSfinspace {
      */
     java.util.concurrent.Future<CreateKxUserResult> createKxUserAsync(CreateKxUserRequest createKxUserRequest,
             com.amazonaws.handlers.AsyncHandler<CreateKxUserRequest, CreateKxUserResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new volume with a specific amount of throughput and storage capacity.
+     * </p>
+     * 
+     * @param createKxVolumeRequest
+     * @return A Java Future containing the result of the CreateKxVolume operation returned by the service.
+     * @sample AWSfinspaceAsync.CreateKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateKxVolumeResult> createKxVolumeAsync(CreateKxVolumeRequest createKxVolumeRequest);
+
+    /**
+     * <p>
+     * Creates a new volume with a specific amount of throughput and storage capacity.
+     * </p>
+     * 
+     * @param createKxVolumeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateKxVolume operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.CreateKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateKxVolumeResult> createKxVolumeAsync(CreateKxVolumeRequest createKxVolumeRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateKxVolumeRequest, CreateKxVolumeResult> asyncHandler);
 
     /**
      * <p>
@@ -321,6 +418,37 @@ public interface AWSfinspaceAsync extends AWSfinspace {
 
     /**
      * <p>
+     * Deletes the specified dataview. Before deleting a dataview, make sure that it is not in use by any cluster.
+     * </p>
+     * 
+     * @param deleteKxDataviewRequest
+     * @return A Java Future containing the result of the DeleteKxDataview operation returned by the service.
+     * @sample AWSfinspaceAsync.DeleteKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteKxDataviewResult> deleteKxDataviewAsync(DeleteKxDataviewRequest deleteKxDataviewRequest);
+
+    /**
+     * <p>
+     * Deletes the specified dataview. Before deleting a dataview, make sure that it is not in use by any cluster.
+     * </p>
+     * 
+     * @param deleteKxDataviewRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteKxDataview operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.DeleteKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteKxDataviewResult> deleteKxDataviewAsync(DeleteKxDataviewRequest deleteKxDataviewRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteKxDataviewRequest, DeleteKxDataviewResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the kdb environment. This action is irreversible. Deleting a kdb environment will remove all the
      * associated data and any services running in it.
      * </p>
@@ -354,6 +482,39 @@ public interface AWSfinspaceAsync extends AWSfinspace {
 
     /**
      * <p>
+     * Deletes the specified scaling group. This action is irreversible. You cannot delete a scaling group until all the
+     * clusters running on it have been deleted.
+     * </p>
+     * 
+     * @param deleteKxScalingGroupRequest
+     * @return A Java Future containing the result of the DeleteKxScalingGroup operation returned by the service.
+     * @sample AWSfinspaceAsync.DeleteKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxScalingGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteKxScalingGroupResult> deleteKxScalingGroupAsync(DeleteKxScalingGroupRequest deleteKxScalingGroupRequest);
+
+    /**
+     * <p>
+     * Deletes the specified scaling group. This action is irreversible. You cannot delete a scaling group until all the
+     * clusters running on it have been deleted.
+     * </p>
+     * 
+     * @param deleteKxScalingGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteKxScalingGroup operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.DeleteKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxScalingGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteKxScalingGroupResult> deleteKxScalingGroupAsync(DeleteKxScalingGroupRequest deleteKxScalingGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteKxScalingGroupRequest, DeleteKxScalingGroupResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a user in the specified kdb environment.
      * </p>
      * 
@@ -382,6 +543,39 @@ public interface AWSfinspaceAsync extends AWSfinspace {
      */
     java.util.concurrent.Future<DeleteKxUserResult> deleteKxUserAsync(DeleteKxUserRequest deleteKxUserRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteKxUserRequest, DeleteKxUserResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a volume. You can only delete a volume if it's not attached to a cluster or a dataview. When a volume is
+     * deleted, any data on the volume is lost. This action is irreversible.
+     * </p>
+     * 
+     * @param deleteKxVolumeRequest
+     * @return A Java Future containing the result of the DeleteKxVolume operation returned by the service.
+     * @sample AWSfinspaceAsync.DeleteKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteKxVolumeResult> deleteKxVolumeAsync(DeleteKxVolumeRequest deleteKxVolumeRequest);
+
+    /**
+     * <p>
+     * Deletes a volume. You can only delete a volume if it's not attached to a cluster or a dataview. When a volume is
+     * deleted, any data on the volume is lost. This action is irreversible.
+     * </p>
+     * 
+     * @param deleteKxVolumeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteKxVolume operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.DeleteKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteKxVolumeResult> deleteKxVolumeAsync(DeleteKxVolumeRequest deleteKxVolumeRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteKxVolumeRequest, DeleteKxVolumeResult> asyncHandler);
 
     /**
      * <p>
@@ -544,6 +738,37 @@ public interface AWSfinspaceAsync extends AWSfinspace {
 
     /**
      * <p>
+     * Retrieves details of the dataview.
+     * </p>
+     * 
+     * @param getKxDataviewRequest
+     * @return A Java Future containing the result of the GetKxDataview operation returned by the service.
+     * @sample AWSfinspaceAsync.GetKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetKxDataviewResult> getKxDataviewAsync(GetKxDataviewRequest getKxDataviewRequest);
+
+    /**
+     * <p>
+     * Retrieves details of the dataview.
+     * </p>
+     * 
+     * @param getKxDataviewRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetKxDataview operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.GetKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetKxDataviewResult> getKxDataviewAsync(GetKxDataviewRequest getKxDataviewRequest,
+            com.amazonaws.handlers.AsyncHandler<GetKxDataviewRequest, GetKxDataviewResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves all the information for the specified kdb environment.
      * </p>
      * 
@@ -575,6 +800,37 @@ public interface AWSfinspaceAsync extends AWSfinspace {
 
     /**
      * <p>
+     * Retrieves details of a scaling group.
+     * </p>
+     * 
+     * @param getKxScalingGroupRequest
+     * @return A Java Future containing the result of the GetKxScalingGroup operation returned by the service.
+     * @sample AWSfinspaceAsync.GetKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxScalingGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetKxScalingGroupResult> getKxScalingGroupAsync(GetKxScalingGroupRequest getKxScalingGroupRequest);
+
+    /**
+     * <p>
+     * Retrieves details of a scaling group.
+     * </p>
+     * 
+     * @param getKxScalingGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetKxScalingGroup operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.GetKxScalingGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxScalingGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetKxScalingGroupResult> getKxScalingGroupAsync(GetKxScalingGroupRequest getKxScalingGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<GetKxScalingGroupRequest, GetKxScalingGroupResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves information about the specified kdb user.
      * </p>
      * 
@@ -603,6 +859,37 @@ public interface AWSfinspaceAsync extends AWSfinspace {
      */
     java.util.concurrent.Future<GetKxUserResult> getKxUserAsync(GetKxUserRequest getKxUserRequest,
             com.amazonaws.handlers.AsyncHandler<GetKxUserRequest, GetKxUserResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the information about the volume.
+     * </p>
+     * 
+     * @param getKxVolumeRequest
+     * @return A Java Future containing the result of the GetKxVolume operation returned by the service.
+     * @sample AWSfinspaceAsync.GetKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetKxVolumeResult> getKxVolumeAsync(GetKxVolumeRequest getKxVolumeRequest);
+
+    /**
+     * <p>
+     * Retrieves the information about the volume.
+     * </p>
+     * 
+     * @param getKxVolumeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetKxVolume operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.GetKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetKxVolumeResult> getKxVolumeAsync(GetKxVolumeRequest getKxVolumeRequest,
+            com.amazonaws.handlers.AsyncHandler<GetKxVolumeRequest, GetKxVolumeResult> asyncHandler);
 
     /**
      * <p>
@@ -763,6 +1050,37 @@ public interface AWSfinspaceAsync extends AWSfinspace {
 
     /**
      * <p>
+     * Returns a list of all the dataviews in the database.
+     * </p>
+     * 
+     * @param listKxDataviewsRequest
+     * @return A Java Future containing the result of the ListKxDataviews operation returned by the service.
+     * @sample AWSfinspaceAsync.ListKxDataviews
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxDataviews" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListKxDataviewsResult> listKxDataviewsAsync(ListKxDataviewsRequest listKxDataviewsRequest);
+
+    /**
+     * <p>
+     * Returns a list of all the dataviews in the database.
+     * </p>
+     * 
+     * @param listKxDataviewsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListKxDataviews operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.ListKxDataviews
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxDataviews" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListKxDataviewsResult> listKxDataviewsAsync(ListKxDataviewsRequest listKxDataviewsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListKxDataviewsRequest, ListKxDataviewsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of kdb environments created in an account.
      * </p>
      * 
@@ -794,6 +1112,37 @@ public interface AWSfinspaceAsync extends AWSfinspace {
 
     /**
      * <p>
+     * Returns a list of scaling groups in a kdb environment.
+     * </p>
+     * 
+     * @param listKxScalingGroupsRequest
+     * @return A Java Future containing the result of the ListKxScalingGroups operation returned by the service.
+     * @sample AWSfinspaceAsync.ListKxScalingGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxScalingGroups" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListKxScalingGroupsResult> listKxScalingGroupsAsync(ListKxScalingGroupsRequest listKxScalingGroupsRequest);
+
+    /**
+     * <p>
+     * Returns a list of scaling groups in a kdb environment.
+     * </p>
+     * 
+     * @param listKxScalingGroupsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListKxScalingGroups operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.ListKxScalingGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxScalingGroups" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListKxScalingGroupsResult> listKxScalingGroupsAsync(ListKxScalingGroupsRequest listKxScalingGroupsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListKxScalingGroupsRequest, ListKxScalingGroupsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists all the users in a kdb environment.
      * </p>
      * 
@@ -822,6 +1171,37 @@ public interface AWSfinspaceAsync extends AWSfinspace {
      */
     java.util.concurrent.Future<ListKxUsersResult> listKxUsersAsync(ListKxUsersRequest listKxUsersRequest,
             com.amazonaws.handlers.AsyncHandler<ListKxUsersRequest, ListKxUsersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all the volumes in a kdb environment.
+     * </p>
+     * 
+     * @param listKxVolumesRequest
+     * @return A Java Future containing the result of the ListKxVolumes operation returned by the service.
+     * @sample AWSfinspaceAsync.ListKxVolumes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxVolumes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListKxVolumesResult> listKxVolumesAsync(ListKxVolumesRequest listKxVolumesRequest);
+
+    /**
+     * <p>
+     * Lists all the volumes in a kdb environment.
+     * </p>
+     * 
+     * @param listKxVolumesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListKxVolumes operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.ListKxVolumes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListKxVolumes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListKxVolumesResult> listKxVolumesAsync(ListKxVolumesRequest listKxVolumesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListKxVolumesRequest, ListKxVolumesResult> asyncHandler);
 
     /**
      * <p>
@@ -1062,6 +1442,39 @@ public interface AWSfinspaceAsync extends AWSfinspace {
 
     /**
      * <p>
+     * Updates the specified dataview. The dataviews get automatically updated when any new changesets are ingested.
+     * Each update of the dataview creates a new version, including changeset details and cache configurations
+     * </p>
+     * 
+     * @param updateKxDataviewRequest
+     * @return A Java Future containing the result of the UpdateKxDataview operation returned by the service.
+     * @sample AWSfinspaceAsync.UpdateKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKxDataviewResult> updateKxDataviewAsync(UpdateKxDataviewRequest updateKxDataviewRequest);
+
+    /**
+     * <p>
+     * Updates the specified dataview. The dataviews get automatically updated when any new changesets are ingested.
+     * Each update of the dataview creates a new version, including changeset details and cache configurations
+     * </p>
+     * 
+     * @param updateKxDataviewRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateKxDataview operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.UpdateKxDataview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxDataview" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKxDataviewResult> updateKxDataviewAsync(UpdateKxDataviewRequest updateKxDataviewRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateKxDataviewRequest, UpdateKxDataviewResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates information for the given kdb environment.
      * </p>
      * 
@@ -1166,5 +1579,38 @@ public interface AWSfinspaceAsync extends AWSfinspace {
      */
     java.util.concurrent.Future<UpdateKxUserResult> updateKxUserAsync(UpdateKxUserRequest updateKxUserRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateKxUserRequest, UpdateKxUserResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the throughput or capacity of a volume. During the update process, the filesystem might be unavailable
+     * for a few minutes. You can retry any operations after the update is complete.
+     * </p>
+     * 
+     * @param updateKxVolumeRequest
+     * @return A Java Future containing the result of the UpdateKxVolume operation returned by the service.
+     * @sample AWSfinspaceAsync.UpdateKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKxVolumeResult> updateKxVolumeAsync(UpdateKxVolumeRequest updateKxVolumeRequest);
+
+    /**
+     * <p>
+     * Updates the throughput or capacity of a volume. During the update process, the filesystem might be unavailable
+     * for a few minutes. You can retry any operations after the update is complete.
+     * </p>
+     * 
+     * @param updateKxVolumeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateKxVolume operation returned by the service.
+     * @sample AWSfinspaceAsyncHandler.UpdateKxVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateKxVolume" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKxVolumeResult> updateKxVolumeAsync(UpdateKxVolumeRequest updateKxVolumeRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateKxVolumeRequest, UpdateKxVolumeResult> asyncHandler);
 
 }

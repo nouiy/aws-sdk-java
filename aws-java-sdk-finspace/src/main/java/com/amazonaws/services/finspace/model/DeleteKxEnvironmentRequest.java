@@ -31,6 +31,12 @@ public class DeleteKxEnvironmentRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String environmentId;
+    /**
+     * <p>
+     * A token that ensures idempotency. This token expires in 10 minutes.
+     * </p>
+     */
+    private String clientToken;
 
     /**
      * <p>
@@ -73,6 +79,46 @@ public class DeleteKxEnvironmentRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * A token that ensures idempotency. This token expires in 10 minutes.
+     * </p>
+     * 
+     * @param clientToken
+     *        A token that ensures idempotency. This token expires in 10 minutes.
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * A token that ensures idempotency. This token expires in 10 minutes.
+     * </p>
+     * 
+     * @return A token that ensures idempotency. This token expires in 10 minutes.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * A token that ensures idempotency. This token expires in 10 minutes.
+     * </p>
+     * 
+     * @param clientToken
+     *        A token that ensures idempotency. This token expires in 10 minutes.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteKxEnvironmentRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -85,7 +131,9 @@ public class DeleteKxEnvironmentRequest extends com.amazonaws.AmazonWebServiceRe
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getEnvironmentId() != null)
-            sb.append("EnvironmentId: ").append(getEnvironmentId());
+            sb.append("EnvironmentId: ").append(getEnvironmentId()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken());
         sb.append("}");
         return sb.toString();
     }
@@ -104,6 +152,10 @@ public class DeleteKxEnvironmentRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getEnvironmentId() != null && other.getEnvironmentId().equals(this.getEnvironmentId()) == false)
             return false;
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
+            return false;
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
         return true;
     }
 
@@ -113,6 +165,7 @@ public class DeleteKxEnvironmentRequest extends com.amazonaws.AmazonWebServiceRe
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getEnvironmentId() == null) ? 0 : getEnvironmentId().hashCode());
+        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         return hashCode;
     }
 

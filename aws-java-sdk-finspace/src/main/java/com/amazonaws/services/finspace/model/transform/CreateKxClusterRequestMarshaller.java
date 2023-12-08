@@ -40,6 +40,8 @@ public class CreateKxClusterRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clusterName").build();
     private static final MarshallingInfo<String> CLUSTERTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clusterType").build();
+    private static final MarshallingInfo<StructuredPojo> TICKERPLANTLOGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tickerplantLogConfiguration").build();
     private static final MarshallingInfo<List> DATABASES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("databases").build();
     private static final MarshallingInfo<List> CACHESTORAGECONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -70,6 +72,8 @@ public class CreateKxClusterRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("availabilityZoneId").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> SCALINGGROUPCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scalingGroupConfiguration").build();
 
     private static final CreateKxClusterRequestMarshaller instance = new CreateKxClusterRequestMarshaller();
 
@@ -91,6 +95,7 @@ public class CreateKxClusterRequestMarshaller {
             protocolMarshaller.marshall(createKxClusterRequest.getEnvironmentId(), ENVIRONMENTID_BINDING);
             protocolMarshaller.marshall(createKxClusterRequest.getClusterName(), CLUSTERNAME_BINDING);
             protocolMarshaller.marshall(createKxClusterRequest.getClusterType(), CLUSTERTYPE_BINDING);
+            protocolMarshaller.marshall(createKxClusterRequest.getTickerplantLogConfiguration(), TICKERPLANTLOGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createKxClusterRequest.getDatabases(), DATABASES_BINDING);
             protocolMarshaller.marshall(createKxClusterRequest.getCacheStorageConfigurations(), CACHESTORAGECONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(createKxClusterRequest.getAutoScalingConfiguration(), AUTOSCALINGCONFIGURATION_BINDING);
@@ -106,6 +111,7 @@ public class CreateKxClusterRequestMarshaller {
             protocolMarshaller.marshall(createKxClusterRequest.getAzMode(), AZMODE_BINDING);
             protocolMarshaller.marshall(createKxClusterRequest.getAvailabilityZoneId(), AVAILABILITYZONEID_BINDING);
             protocolMarshaller.marshall(createKxClusterRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createKxClusterRequest.getScalingGroupConfiguration(), SCALINGGROUPCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

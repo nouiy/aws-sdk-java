@@ -34,6 +34,10 @@ public class KxDatabaseConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cacheConfigurations").build();
     private static final MarshallingInfo<String> CHANGESETID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("changesetId").build();
+    private static final MarshallingInfo<String> DATAVIEWNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataviewName").build();
+    private static final MarshallingInfo<StructuredPojo> DATAVIEWCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataviewConfiguration").build();
 
     private static final KxDatabaseConfigurationMarshaller instance = new KxDatabaseConfigurationMarshaller();
 
@@ -54,6 +58,8 @@ public class KxDatabaseConfigurationMarshaller {
             protocolMarshaller.marshall(kxDatabaseConfiguration.getDatabaseName(), DATABASENAME_BINDING);
             protocolMarshaller.marshall(kxDatabaseConfiguration.getCacheConfigurations(), CACHECONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(kxDatabaseConfiguration.getChangesetId(), CHANGESETID_BINDING);
+            protocolMarshaller.marshall(kxDatabaseConfiguration.getDataviewName(), DATAVIEWNAME_BINDING);
+            protocolMarshaller.marshall(kxDatabaseConfiguration.getDataviewConfiguration(), DATAVIEWCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

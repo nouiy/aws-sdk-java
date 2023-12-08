@@ -122,6 +122,13 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      */
     private String clusterType;
@@ -137,6 +144,12 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String releaseLabel;
+    /**
+     * <p>
+     * A list of volumes attached to the cluster.
+     * </p>
+     */
+    private java.util.List<Volume> volumes;
     /**
      * <p>
      * Specifies a Q program that will be run at launch of a cluster. It is a relative path within <i>.zip</i> file that
@@ -696,6 +709,13 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -729,6 +749,14 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      *        greater access to system commands and enabling a fast reload of custom code. This cluster type can
      *        optionally mount databases including cache and savedown storage. For this cluster type, the node count is
      *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *        can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *        messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *        kdb process.
      *        </p>
      *        </li>
      * @see KxClusterType
@@ -772,6 +800,13 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return Specifies the type of KDB database that is being created. The following types are available: </p>
@@ -804,6 +839,14 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      *         greater access to system commands and enabling a fast reload of custom code. This cluster type can
      *         optionally mount databases including cache and savedown storage. For this cluster type, the node count is
      *         fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *         can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *         messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *         kdb process.
      *         </p>
      *         </li>
      * @see KxClusterType
@@ -847,6 +890,13 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -880,6 +930,14 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      *        greater access to system commands and enabling a fast reload of custom code. This cluster type can
      *        optionally mount databases including cache and savedown storage. For this cluster type, the node count is
      *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *        can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *        messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *        kdb process.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -925,6 +983,13 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      * support autoscaling and supports only <code>SINGLE</code> AZ mode.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It can
+     * publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist messages to log,
+     * which is readable by any RDB environment. It supports only single-node that is only one kdb process.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param clusterType
@@ -958,6 +1023,14 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      *        greater access to system commands and enabling a fast reload of custom code. This cluster type can
      *        optionally mount databases including cache and savedown storage. For this cluster type, the node count is
      *        fixed at 1. It does not support autoscaling and supports only <code>SINGLE</code> AZ mode.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Tickerplant – A tickerplant cluster allows you to subscribe to feed handlers based on IAM permissions. It
+     *        can publish to RDBs, other Tickerplants, and real-time subscribers (RTS). Tickerplants can persist
+     *        messages to log, which is readable by any RDB environment. It supports only single-node that is only one
+     *        kdb process.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1046,6 +1119,76 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
 
     public KxCluster withReleaseLabel(String releaseLabel) {
         setReleaseLabel(releaseLabel);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of volumes attached to the cluster.
+     * </p>
+     * 
+     * @return A list of volumes attached to the cluster.
+     */
+
+    public java.util.List<Volume> getVolumes() {
+        return volumes;
+    }
+
+    /**
+     * <p>
+     * A list of volumes attached to the cluster.
+     * </p>
+     * 
+     * @param volumes
+     *        A list of volumes attached to the cluster.
+     */
+
+    public void setVolumes(java.util.Collection<Volume> volumes) {
+        if (volumes == null) {
+            this.volumes = null;
+            return;
+        }
+
+        this.volumes = new java.util.ArrayList<Volume>(volumes);
+    }
+
+    /**
+     * <p>
+     * A list of volumes attached to the cluster.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setVolumes(java.util.Collection)} or {@link #withVolumes(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param volumes
+     *        A list of volumes attached to the cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KxCluster withVolumes(Volume... volumes) {
+        if (this.volumes == null) {
+            setVolumes(new java.util.ArrayList<Volume>(volumes.length));
+        }
+        for (Volume ele : volumes) {
+            this.volumes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of volumes attached to the cluster.
+     * </p>
+     * 
+     * @param volumes
+     *        A list of volumes attached to the cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KxCluster withVolumes(java.util.Collection<Volume> volumes) {
+        setVolumes(volumes);
         return this;
     }
 
@@ -1457,6 +1600,8 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
             sb.append("ClusterDescription: ").append(getClusterDescription()).append(",");
         if (getReleaseLabel() != null)
             sb.append("ReleaseLabel: ").append(getReleaseLabel()).append(",");
+        if (getVolumes() != null)
+            sb.append("Volumes: ").append(getVolumes()).append(",");
         if (getInitializationScript() != null)
             sb.append("InitializationScript: ").append(getInitializationScript()).append(",");
         if (getExecutionRole() != null)
@@ -1507,6 +1652,10 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getReleaseLabel() != null && other.getReleaseLabel().equals(this.getReleaseLabel()) == false)
             return false;
+        if (other.getVolumes() == null ^ this.getVolumes() == null)
+            return false;
+        if (other.getVolumes() != null && other.getVolumes().equals(this.getVolumes()) == false)
+            return false;
         if (other.getInitializationScript() == null ^ this.getInitializationScript() == null)
             return false;
         if (other.getInitializationScript() != null && other.getInitializationScript().equals(this.getInitializationScript()) == false)
@@ -1545,6 +1694,7 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getClusterType() == null) ? 0 : getClusterType().hashCode());
         hashCode = prime * hashCode + ((getClusterDescription() == null) ? 0 : getClusterDescription().hashCode());
         hashCode = prime * hashCode + ((getReleaseLabel() == null) ? 0 : getReleaseLabel().hashCode());
+        hashCode = prime * hashCode + ((getVolumes() == null) ? 0 : getVolumes().hashCode());
         hashCode = prime * hashCode + ((getInitializationScript() == null) ? 0 : getInitializationScript().hashCode());
         hashCode = prime * hashCode + ((getExecutionRole() == null) ? 0 : getExecutionRole().hashCode());
         hashCode = prime * hashCode + ((getAzMode() == null) ? 0 : getAzMode().hashCode());
