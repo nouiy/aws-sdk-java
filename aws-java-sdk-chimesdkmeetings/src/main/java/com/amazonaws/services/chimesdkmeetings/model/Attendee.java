@@ -77,6 +77,20 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * If you specify <code>MeetingFeatures:Video:MaxResolution:None</code> when you create a meeting, all API requests
+     * that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     * <code>AttendeeCapabilities:Video</code> will be rejected with <code>ValidationError 400</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>MeetingFeatures:Content:MaxResolution:None</code> when you create a meeting, all API
+     * requests that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     * <code>AttendeeCapabilities:Content</code> will be rejected with <code>ValidationError 400</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code> unless you
      * also set <code>video</code> capabilities to <code>SendReceive</code> or <code>Receive</code>. If you don't set
      * the <code>video</code> capability to receive, the response will contain an HTTP 400 Bad Request status code.
@@ -284,6 +298,20 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * If you specify <code>MeetingFeatures:Video:MaxResolution:None</code> when you create a meeting, all API requests
+     * that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     * <code>AttendeeCapabilities:Video</code> will be rejected with <code>ValidationError 400</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>MeetingFeatures:Content:MaxResolution:None</code> when you create a meeting, all API
+     * requests that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     * <code>AttendeeCapabilities:Content</code> will be rejected with <code>ValidationError 400</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code> unless you
      * also set <code>video</code> capabilities to <code>SendReceive</code> or <code>Receive</code>. If you don't set
      * the <code>video</code> capability to receive, the response will contain an HTTP 400 Bad Request status code.
@@ -319,6 +347,20 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      *        When using capabilities, be aware of these corner cases:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        If you specify <code>MeetingFeatures:Video:MaxResolution:None</code> when you create a meeting, all API
+     *        requests that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     *        <code>AttendeeCapabilities:Video</code> will be rejected with <code>ValidationError 400</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>MeetingFeatures:Content:MaxResolution:None</code> when you create a meeting, all API
+     *        requests that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     *        <code>AttendeeCapabilities:Content</code> will be rejected with <code>ValidationError 400</code>.
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code> unless
@@ -365,6 +407,20 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * If you specify <code>MeetingFeatures:Video:MaxResolution:None</code> when you create a meeting, all API requests
+     * that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     * <code>AttendeeCapabilities:Video</code> will be rejected with <code>ValidationError 400</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>MeetingFeatures:Content:MaxResolution:None</code> when you create a meeting, all API
+     * requests that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     * <code>AttendeeCapabilities:Content</code> will be rejected with <code>ValidationError 400</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code> unless you
      * also set <code>video</code> capabilities to <code>SendReceive</code> or <code>Receive</code>. If you don't set
      * the <code>video</code> capability to receive, the response will contain an HTTP 400 Bad Request status code.
@@ -399,6 +455,20 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      *         When using capabilities, be aware of these corner cases:
      *         </p>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         If you specify <code>MeetingFeatures:Video:MaxResolution:None</code> when you create a meeting, all API
+     *         requests that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     *         <code>AttendeeCapabilities:Video</code> will be rejected with <code>ValidationError 400</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify <code>MeetingFeatures:Content:MaxResolution:None</code> when you create a meeting, all API
+     *         requests that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     *         <code>AttendeeCapabilities:Content</code> will be rejected with <code>ValidationError 400</code>.
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code>
@@ -445,6 +515,20 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * If you specify <code>MeetingFeatures:Video:MaxResolution:None</code> when you create a meeting, all API requests
+     * that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     * <code>AttendeeCapabilities:Video</code> will be rejected with <code>ValidationError 400</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>MeetingFeatures:Content:MaxResolution:None</code> when you create a meeting, all API
+     * requests that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     * <code>AttendeeCapabilities:Content</code> will be rejected with <code>ValidationError 400</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code> unless you
      * also set <code>video</code> capabilities to <code>SendReceive</code> or <code>Receive</code>. If you don't set
      * the <code>video</code> capability to receive, the response will contain an HTTP 400 Bad Request status code.
@@ -480,6 +564,20 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      *        When using capabilities, be aware of these corner cases:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        If you specify <code>MeetingFeatures:Video:MaxResolution:None</code> when you create a meeting, all API
+     *        requests that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     *        <code>AttendeeCapabilities:Video</code> will be rejected with <code>ValidationError 400</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>MeetingFeatures:Content:MaxResolution:None</code> when you create a meeting, all API
+     *        requests that include <code>SendReceive</code>, <code>Send</code>, or <code>Receive</code> for
+     *        <code>AttendeeCapabilities:Content</code> will be rejected with <code>ValidationError 400</code>.
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code> unless

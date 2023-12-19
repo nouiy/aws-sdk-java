@@ -173,6 +173,8 @@ public enum RDSActions implements Action {
     DescribeDBProxyTargetGroups("rds:DescribeDBProxyTargetGroups"),
     /** Action for the DescribeDBProxyTargets operation. */
     DescribeDBProxyTargets("rds:DescribeDBProxyTargets"),
+    /** Action for the DescribeDBRecommendations operation. */
+    DescribeDBRecommendations("rds:DescribeDBRecommendations"),
     /** Action for the DescribeDBSecurityGroups operation. */
     DescribeDBSecurityGroups("rds:DescribeDBSecurityGroups"),
     /** Action for the DescribeDBSnapshotAttributes operation. */
@@ -251,6 +253,8 @@ public enum RDSActions implements Action {
     ModifyDBProxyEndpoint("rds:ModifyDBProxyEndpoint"),
     /** Action for the ModifyDBProxyTargetGroup operation. */
     ModifyDBProxyTargetGroup("rds:ModifyDBProxyTargetGroup"),
+    /** Action for the ModifyDBRecommendation operation. */
+    ModifyDBRecommendation("rds:ModifyDBRecommendation"),
     /** Action for the ModifyDBSnapshot operation. */
     ModifyDBSnapshot("rds:ModifyDBSnapshot"),
     /** Action for the ModifyDBSnapshotAttribute operation. */

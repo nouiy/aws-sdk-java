@@ -92,7 +92,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
     private String vocabularyName;
     /**
      * <p>
-     * The AWS Region in which to use Amazon Transcribe.
+     * The Amazon Web Services Region in which to use Amazon Transcribe.
      * </p>
      * <p>
      * If you don't specify a Region, then the <a
@@ -663,7 +663,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Region in which to use Amazon Transcribe.
+     * The Amazon Web Services Region in which to use Amazon Transcribe.
      * </p>
      * <p>
      * If you don't specify a Region, then the <a
@@ -679,7 +679,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param region
-     *        The AWS Region in which to use Amazon Transcribe.</p>
+     *        The Amazon Web Services Region in which to use Amazon Transcribe.</p>
      *        <p>
      *        If you don't specify a Region, then the <a
      *        href="https://docs.aws.amazon.com/chime-sdk/latest/APIReference/API_meeting-chime_CreateMeeting.html"
@@ -700,7 +700,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Region in which to use Amazon Transcribe.
+     * The Amazon Web Services Region in which to use Amazon Transcribe.
      * </p>
      * <p>
      * If you don't specify a Region, then the <a
@@ -715,7 +715,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      * transcription Region</a> in the <i>Amazon Chime SDK Developer Guide</i>.
      * </p>
      * 
-     * @return The AWS Region in which to use Amazon Transcribe.</p>
+     * @return The Amazon Web Services Region in which to use Amazon Transcribe.</p>
      *         <p>
      *         If you don't specify a Region, then the <a
      *         href="https://docs.aws.amazon.com/chime-sdk/latest/APIReference/API_meeting-chime_CreateMeeting.html"
@@ -736,7 +736,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Region in which to use Amazon Transcribe.
+     * The Amazon Web Services Region in which to use Amazon Transcribe.
      * </p>
      * <p>
      * If you don't specify a Region, then the <a
@@ -752,7 +752,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param region
-     *        The AWS Region in which to use Amazon Transcribe.</p>
+     *        The Amazon Web Services Region in which to use Amazon Transcribe.</p>
      *        <p>
      *        If you don't specify a Region, then the <a
      *        href="https://docs.aws.amazon.com/chime-sdk/latest/APIReference/API_meeting-chime_CreateMeeting.html"
@@ -775,7 +775,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Region in which to use Amazon Transcribe.
+     * The Amazon Web Services Region in which to use Amazon Transcribe.
      * </p>
      * <p>
      * If you don't specify a Region, then the <a
@@ -791,7 +791,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param region
-     *        The AWS Region in which to use Amazon Transcribe.</p>
+     *        The Amazon Web Services Region in which to use Amazon Transcribe.</p>
      *        <p>
      *        If you don't specify a Region, then the <a
      *        href="https://docs.aws.amazon.com/chime-sdk/latest/APIReference/API_meeting-chime_CreateMeeting.html"

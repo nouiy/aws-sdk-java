@@ -52,6 +52,18 @@ public class MeetingFeaturesConfigurationJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     meetingFeaturesConfiguration.setAudio(AudioFeaturesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Video", targetDepth)) {
+                    context.nextToken();
+                    meetingFeaturesConfiguration.setVideo(VideoFeaturesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Content", targetDepth)) {
+                    context.nextToken();
+                    meetingFeaturesConfiguration.setContent(ContentFeaturesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Attendee", targetDepth)) {
+                    context.nextToken();
+                    meetingFeaturesConfiguration.setAttendee(AttendeeFeaturesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

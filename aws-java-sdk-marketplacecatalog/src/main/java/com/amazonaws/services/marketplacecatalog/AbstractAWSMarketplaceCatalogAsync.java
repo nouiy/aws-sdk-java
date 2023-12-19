@@ -28,6 +28,19 @@ public class AbstractAWSMarketplaceCatalogAsync extends AbstractAWSMarketplaceCa
     }
 
     @Override
+    public java.util.concurrent.Future<BatchDescribeEntitiesResult> batchDescribeEntitiesAsync(BatchDescribeEntitiesRequest request) {
+
+        return batchDescribeEntitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDescribeEntitiesResult> batchDescribeEntitiesAsync(BatchDescribeEntitiesRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchDescribeEntitiesRequest, BatchDescribeEntitiesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelChangeSetResult> cancelChangeSetAsync(CancelChangeSetRequest request) {
 
         return cancelChangeSetAsync(request, null);

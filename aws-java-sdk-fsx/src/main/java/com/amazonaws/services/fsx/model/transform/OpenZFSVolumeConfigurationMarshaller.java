@@ -62,6 +62,8 @@ public class OpenZFSVolumeConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceSnapshotARN").build();
     private static final MarshallingInfo<String> DESTINATIONSNAPSHOT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DestinationSnapshot").build();
+    private static final MarshallingInfo<String> COPYSTRATEGY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CopyStrategy").build();
 
     private static final OpenZFSVolumeConfigurationMarshaller instance = new OpenZFSVolumeConfigurationMarshaller();
 
@@ -96,6 +98,7 @@ public class OpenZFSVolumeConfigurationMarshaller {
             protocolMarshaller.marshall(openZFSVolumeConfiguration.getDeleteIntermediateData(), DELETEINTERMEDIATEDATA_BINDING);
             protocolMarshaller.marshall(openZFSVolumeConfiguration.getSourceSnapshotARN(), SOURCESNAPSHOTARN_BINDING);
             protocolMarshaller.marshall(openZFSVolumeConfiguration.getDestinationSnapshot(), DESTINATIONSNAPSHOT_BINDING);
+            protocolMarshaller.marshall(openZFSVolumeConfiguration.getCopyStrategy(), COPYSTRATEGY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -202,7 +202,11 @@ public class IpamPool implements Serializable, Cloneable {
      * </p>
      */
     private String publicIpSource;
-
+    /**
+     * <p>
+     * The resource used to provision CIDRs to a resource planning pool.
+     * </p>
+     */
     private IpamPoolSourceResource sourceResource;
 
     /**
@@ -1586,7 +1590,12 @@ public class IpamPool implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The resource used to provision CIDRs to a resource planning pool.
+     * </p>
+     * 
      * @param sourceResource
+     *        The resource used to provision CIDRs to a resource planning pool.
      */
 
     public void setSourceResource(IpamPoolSourceResource sourceResource) {
@@ -1594,7 +1603,11 @@ public class IpamPool implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * The resource used to provision CIDRs to a resource planning pool.
+     * </p>
+     * 
+     * @return The resource used to provision CIDRs to a resource planning pool.
      */
 
     public IpamPoolSourceResource getSourceResource() {
@@ -1602,7 +1615,12 @@ public class IpamPool implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The resource used to provision CIDRs to a resource planning pool.
+     * </p>
+     * 
      * @param sourceResource
+     *        The resource used to provision CIDRs to a resource planning pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

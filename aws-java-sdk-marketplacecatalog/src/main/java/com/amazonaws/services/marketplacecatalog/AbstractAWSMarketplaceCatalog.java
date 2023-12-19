@@ -28,6 +28,11 @@ public class AbstractAWSMarketplaceCatalog implements AWSMarketplaceCatalog {
     }
 
     @Override
+    public BatchDescribeEntitiesResult batchDescribeEntities(BatchDescribeEntitiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CancelChangeSetResult cancelChangeSet(CancelChangeSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

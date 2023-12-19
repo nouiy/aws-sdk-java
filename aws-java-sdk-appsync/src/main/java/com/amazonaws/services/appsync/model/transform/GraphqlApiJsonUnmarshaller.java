@@ -130,6 +130,18 @@ public class GraphqlApiJsonUnmarshaller implements Unmarshaller<GraphqlApi, Json
                     context.nextToken();
                     graphqlApi.setOwnerContact(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("introspectionConfig", targetDepth)) {
+                    context.nextToken();
+                    graphqlApi.setIntrospectionConfig(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("queryDepthLimit", targetDepth)) {
+                    context.nextToken();
+                    graphqlApi.setQueryDepthLimit(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("resolverCountLimit", targetDepth)) {
+                    context.nextToken();
+                    graphqlApi.setResolverCountLimit(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

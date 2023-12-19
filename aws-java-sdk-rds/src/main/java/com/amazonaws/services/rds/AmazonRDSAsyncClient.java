@@ -2961,6 +2961,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeDBRecommendationsResult> describeDBRecommendationsAsync(DescribeDBRecommendationsRequest request) {
+
+        return describeDBRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDBRecommendationsResult> describeDBRecommendationsAsync(final DescribeDBRecommendationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDBRecommendationsRequest, DescribeDBRecommendationsResult> asyncHandler) {
+        final DescribeDBRecommendationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDBRecommendationsResult>() {
+            @Override
+            public DescribeDBRecommendationsResult call() throws Exception {
+                DescribeDBRecommendationsResult result = null;
+
+                try {
+                    result = executeDescribeDBRecommendations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDBSecurityGroupsResult> describeDBSecurityGroupsAsync(DescribeDBSecurityGroupsRequest request) {
 
         return describeDBSecurityGroupsAsync(request, null);
@@ -4522,6 +4555,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
 
                 try {
                     result = executeModifyDBProxyTargetGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyDBRecommendationResult> modifyDBRecommendationAsync(ModifyDBRecommendationRequest request) {
+
+        return modifyDBRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyDBRecommendationResult> modifyDBRecommendationAsync(final ModifyDBRecommendationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ModifyDBRecommendationRequest, ModifyDBRecommendationResult> asyncHandler) {
+        final ModifyDBRecommendationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ModifyDBRecommendationResult>() {
+            @Override
+            public ModifyDBRecommendationResult call() throws Exception {
+                ModifyDBRecommendationResult result = null;
+
+                try {
+                    result = executeModifyDBRecommendation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -3822,6 +3822,39 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
+     * Describes the recommendations to resolve the issues for your DB instances, DB clusters, and DB parameter groups.
+     * </p>
+     * 
+     * @param describeDBRecommendationsRequest
+     * @return A Java Future containing the result of the DescribeDBRecommendations operation returned by the service.
+     * @sample AmazonRDSAsync.DescribeDBRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBRecommendations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDBRecommendationsResult> describeDBRecommendationsAsync(
+            DescribeDBRecommendationsRequest describeDBRecommendationsRequest);
+
+    /**
+     * <p>
+     * Describes the recommendations to resolve the issues for your DB instances, DB clusters, and DB parameter groups.
+     * </p>
+     * 
+     * @param describeDBRecommendationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDBRecommendations operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.DescribeDBRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBRecommendations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDBRecommendationsResult> describeDBRecommendationsAsync(
+            DescribeDBRecommendationsRequest describeDBRecommendationsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDBRecommendationsRequest, DescribeDBRecommendationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of <code>DBSecurityGroup</code> descriptions. If a <code>DBSecurityGroupName</code> is specified,
      * the list will contain only the descriptions of the specified DB security group.
      * </p>
@@ -5971,6 +6004,37 @@ public interface AmazonRDSAsync extends AmazonRDS {
      */
     java.util.concurrent.Future<ModifyDBProxyTargetGroupResult> modifyDBProxyTargetGroupAsync(ModifyDBProxyTargetGroupRequest modifyDBProxyTargetGroupRequest,
             com.amazonaws.handlers.AsyncHandler<ModifyDBProxyTargetGroupRequest, ModifyDBProxyTargetGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the recommendation status and recommended action status for the specified recommendation.
+     * </p>
+     * 
+     * @param modifyDBRecommendationRequest
+     * @return A Java Future containing the result of the ModifyDBRecommendation operation returned by the service.
+     * @sample AmazonRDSAsync.ModifyDBRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBRecommendation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyDBRecommendationResult> modifyDBRecommendationAsync(ModifyDBRecommendationRequest modifyDBRecommendationRequest);
+
+    /**
+     * <p>
+     * Updates the recommendation status and recommended action status for the specified recommendation.
+     * </p>
+     * 
+     * @param modifyDBRecommendationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyDBRecommendation operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.ModifyDBRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBRecommendation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyDBRecommendationResult> modifyDBRecommendationAsync(ModifyDBRecommendationRequest modifyDBRecommendationRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyDBRecommendationRequest, ModifyDBRecommendationResult> asyncHandler);
 
     /**
      * <p>

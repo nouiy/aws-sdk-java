@@ -103,6 +103,10 @@ public class ProvisionByoipCidrRequestMarshaller implements Marshaller<Request<P
             request.addParameter("MultiRegion", StringUtils.fromBoolean(provisionByoipCidrRequest.getMultiRegion()));
         }
 
+        if (provisionByoipCidrRequest.getNetworkBorderGroup() != null) {
+            request.addParameter("NetworkBorderGroup", StringUtils.fromString(provisionByoipCidrRequest.getNetworkBorderGroup()));
+        }
+
         return request;
     }
 

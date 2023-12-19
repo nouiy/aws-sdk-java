@@ -82,6 +82,39 @@ public class AWSMarketplaceCatalogAsyncClient extends AWSMarketplaceCatalogClien
     }
 
     @Override
+    public java.util.concurrent.Future<BatchDescribeEntitiesResult> batchDescribeEntitiesAsync(BatchDescribeEntitiesRequest request) {
+
+        return batchDescribeEntitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDescribeEntitiesResult> batchDescribeEntitiesAsync(final BatchDescribeEntitiesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchDescribeEntitiesRequest, BatchDescribeEntitiesResult> asyncHandler) {
+        final BatchDescribeEntitiesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchDescribeEntitiesResult>() {
+            @Override
+            public BatchDescribeEntitiesResult call() throws Exception {
+                BatchDescribeEntitiesResult result = null;
+
+                try {
+                    result = executeBatchDescribeEntities(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelChangeSetResult> cancelChangeSetAsync(CancelChangeSetRequest request) {
 
         return cancelChangeSetAsync(request, null);

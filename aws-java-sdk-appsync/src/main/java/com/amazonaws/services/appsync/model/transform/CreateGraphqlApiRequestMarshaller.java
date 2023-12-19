@@ -55,6 +55,12 @@ public class CreateGraphqlApiRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("mergedApiExecutionRoleArn").build();
     private static final MarshallingInfo<String> OWNERCONTACT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ownerContact").build();
+    private static final MarshallingInfo<String> INTROSPECTIONCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("introspectionConfig").build();
+    private static final MarshallingInfo<Integer> QUERYDEPTHLIMIT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("queryDepthLimit").build();
+    private static final MarshallingInfo<Integer> RESOLVERCOUNTLIMIT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resolverCountLimit").build();
 
     private static final CreateGraphqlApiRequestMarshaller instance = new CreateGraphqlApiRequestMarshaller();
 
@@ -85,6 +91,9 @@ public class CreateGraphqlApiRequestMarshaller {
             protocolMarshaller.marshall(createGraphqlApiRequest.getApiType(), APITYPE_BINDING);
             protocolMarshaller.marshall(createGraphqlApiRequest.getMergedApiExecutionRoleArn(), MERGEDAPIEXECUTIONROLEARN_BINDING);
             protocolMarshaller.marshall(createGraphqlApiRequest.getOwnerContact(), OWNERCONTACT_BINDING);
+            protocolMarshaller.marshall(createGraphqlApiRequest.getIntrospectionConfig(), INTROSPECTIONCONFIG_BINDING);
+            protocolMarshaller.marshall(createGraphqlApiRequest.getQueryDepthLimit(), QUERYDEPTHLIMIT_BINDING);
+            protocolMarshaller.marshall(createGraphqlApiRequest.getResolverCountLimit(), RESOLVERCOUNTLIMIT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

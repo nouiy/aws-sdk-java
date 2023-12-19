@@ -67,6 +67,12 @@ public class GraphqlApiMarshaller {
             .marshallLocationName("owner").build();
     private static final MarshallingInfo<String> OWNERCONTACT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ownerContact").build();
+    private static final MarshallingInfo<String> INTROSPECTIONCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("introspectionConfig").build();
+    private static final MarshallingInfo<Integer> QUERYDEPTHLIMIT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("queryDepthLimit").build();
+    private static final MarshallingInfo<Integer> RESOLVERCOUNTLIMIT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resolverCountLimit").build();
 
     private static final GraphqlApiMarshaller instance = new GraphqlApiMarshaller();
 
@@ -103,6 +109,9 @@ public class GraphqlApiMarshaller {
             protocolMarshaller.marshall(graphqlApi.getMergedApiExecutionRoleArn(), MERGEDAPIEXECUTIONROLEARN_BINDING);
             protocolMarshaller.marshall(graphqlApi.getOwner(), OWNER_BINDING);
             protocolMarshaller.marshall(graphqlApi.getOwnerContact(), OWNERCONTACT_BINDING);
+            protocolMarshaller.marshall(graphqlApi.getIntrospectionConfig(), INTROSPECTIONCONFIG_BINDING);
+            protocolMarshaller.marshall(graphqlApi.getQueryDepthLimit(), QUERYDEPTHLIMIT_BINDING);
+            protocolMarshaller.marshall(graphqlApi.getResolverCountLimit(), RESOLVERCOUNTLIMIT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

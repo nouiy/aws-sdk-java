@@ -120,12 +120,25 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value
+     * for file systems with one HA pair.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * </p>
+     * </li>
+     * <li>
      * <p>
      * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
      * </p>
+     * </li>
+     * </ul>
      */
     private Integer throughputCapacityPerHAPair;
 
@@ -688,12 +701,25 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value
+     * for file systems with one HA pair.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * </p>
+     * </li>
+     * <li>
      * <p>
      * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param throughputCapacityPerHAPair
      *        Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
@@ -721,12 +747,24 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <p>
      *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *        </p>
+     *        <ul>
+     *        <li>
      *        <p>
      *        The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same
-     *        value.
+     *        value for file systems with one HA pair.
      *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *        </p>
+     *        </li>
+     *        <li>
      *        <p>
      *        The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     *        </p>
+     *        </li>
      */
 
     public void setThroughputCapacityPerHAPair(Integer throughputCapacityPerHAPair) {
@@ -759,12 +797,25 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value
+     * for file systems with one HA pair.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * </p>
+     * </li>
+     * <li>
      * <p>
      * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @return Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
      *         </p>
@@ -791,12 +842,24 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         <p>
      *         Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *         </p>
+     *         <ul>
+     *         <li>
      *         <p>
      *         The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the
-     *         same value.
+     *         same value for file systems with one HA pair.
      *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     *         <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *         </p>
+     *         </li>
+     *         <li>
      *         <p>
      *         The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     *         </p>
+     *         </li>
      */
 
     public Integer getThroughputCapacityPerHAPair() {
@@ -829,12 +892,25 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value
+     * for file systems with one HA pair.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * </p>
+     * </li>
+     * <li>
      * <p>
      * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param throughputCapacityPerHAPair
      *        Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
@@ -862,12 +938,24 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <p>
      *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *        </p>
+     *        <ul>
+     *        <li>
      *        <p>
      *        The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same
-     *        value.
+     *        value for file systems with one HA pair.
      *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *        </p>
+     *        </li>
+     *        <li>
      *        <p>
      *        The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

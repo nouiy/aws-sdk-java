@@ -6286,6 +6286,62 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Describes the recommendations to resolve the issues for your DB instances, DB clusters, and DB parameter groups.
+     * </p>
+     * 
+     * @param describeDBRecommendationsRequest
+     * @return Result of the DescribeDBRecommendations operation returned by the service.
+     * @sample AmazonRDS.DescribeDBRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBRecommendations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeDBRecommendationsResult describeDBRecommendations(DescribeDBRecommendationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDBRecommendations(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDBRecommendationsResult executeDescribeDBRecommendations(DescribeDBRecommendationsRequest describeDBRecommendationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDBRecommendationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDBRecommendationsRequest> request = null;
+        Response<DescribeDBRecommendationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDBRecommendationsRequestMarshaller().marshall(super.beforeMarshalling(describeDBRecommendationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDBRecommendations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeDBRecommendationsResult> responseHandler = new StaxResponseHandler<DescribeDBRecommendationsResult>(
+                    new DescribeDBRecommendationsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of <code>DBSecurityGroup</code> descriptions. If a <code>DBSecurityGroupName</code> is specified,
      * the list will contain only the descriptions of the specified DB security group.
      * </p>
@@ -9094,6 +9150,62 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
             StaxResponseHandler<ModifyDBProxyTargetGroupResult> responseHandler = new StaxResponseHandler<ModifyDBProxyTargetGroupResult>(
                     new ModifyDBProxyTargetGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the recommendation status and recommended action status for the specified recommendation.
+     * </p>
+     * 
+     * @param modifyDBRecommendationRequest
+     * @return Result of the ModifyDBRecommendation operation returned by the service.
+     * @sample AmazonRDS.ModifyDBRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBRecommendation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ModifyDBRecommendationResult modifyDBRecommendation(ModifyDBRecommendationRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyDBRecommendation(request);
+    }
+
+    @SdkInternalApi
+    final ModifyDBRecommendationResult executeModifyDBRecommendation(ModifyDBRecommendationRequest modifyDBRecommendationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyDBRecommendationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyDBRecommendationRequest> request = null;
+        Response<ModifyDBRecommendationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyDBRecommendationRequestMarshaller().marshall(super.beforeMarshalling(modifyDBRecommendationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyDBRecommendation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyDBRecommendationResult> responseHandler = new StaxResponseHandler<ModifyDBRecommendationResult>(
+                    new ModifyDBRecommendationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

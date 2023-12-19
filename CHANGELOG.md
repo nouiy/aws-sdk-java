@@ -1,3 +1,28 @@
+# __1.12.622__ __2023-12-19__
+## __AWS AppSync__
+  - ### Features
+    - This release adds additional configurations on GraphQL APIs for limits on query depth, resolver count, and introspection
+
+## __AWS Marketplace Catalog Service__
+  - ### Features
+    - AWS Marketplace now supports a new API, BatchDescribeEntities, which returns metadata and content for multiple entities.
+
+## __Amazon Chime SDK Meetings__
+  - ### Features
+    - Add meeting features to specify a maximum camera resolution, a maximum content sharing resolution, and a maximum number of attendees for a given meeting.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Provision BYOIPv4 address ranges and advertise them by specifying the network border groups option in Los Angeles, Phoenix and Dallas AWS Local Zones.
+
+## __Amazon FSx__
+  - ### Features
+    - Added support for FSx for OpenZFS on-demand data replication across AWS accounts and/or regions.Added the IncludeShared attribute for DescribeSnapshots.Added the CopyStrategy attribute for OpenZFSVolumeConfiguration.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - RDS - The release adds two new APIs: DescribeDBRecommendations and ModifyDBRecommendation
+
 # __1.12.621__ __2023-12-18__
 ## __Amazon Cognito Identity Provider__
   - ### Features

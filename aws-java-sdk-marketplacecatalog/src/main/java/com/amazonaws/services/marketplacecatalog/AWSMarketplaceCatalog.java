@@ -49,6 +49,38 @@ public interface AWSMarketplaceCatalog {
 
     /**
      * <p>
+     * Returns metadata and content for multiple entities.
+     * </p>
+     * 
+     * @param batchDescribeEntitiesRequest
+     * @return Result of the BatchDescribeEntities operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access is denied.</p>
+     *         <p>
+     *         HTTP status code: 403
+     * @throws InternalServiceException
+     *         There was an internal service exception.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 500
+     * @throws ThrottlingException
+     *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
+     * @throws ValidationException
+     *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
+     * @sample AWSMarketplaceCatalog.BatchDescribeEntities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/BatchDescribeEntities"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchDescribeEntitiesResult batchDescribeEntities(BatchDescribeEntitiesRequest batchDescribeEntitiesRequest);
+
+    /**
+     * <p>
      * Used to cancel an open change request. Must be sent before the status of the request changes to
      * <code>APPLYING</code>, the final stage of completing your change request. You can describe a change during the
      * 60-day request history retention period for API calls.

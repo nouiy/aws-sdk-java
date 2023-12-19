@@ -43,7 +43,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <code>us-east-2</code>, <code>us-west-1</code>, <code>us-west-2</code>.
      * </p>
      * <p>
-     * Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     * Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     * <code>us-gov-west-1</code>.
      * </p>
      */
     private String mediaRegion;
@@ -113,7 +114,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * You can only tag resources that are located in the specified AWS Region for the AWS account.
+     * You can only tag resources that are located in the specified Amazon Web Services Region for the Amazon Web
+     * Services account.
      * </p>
      * </li>
      * <li>
@@ -207,7 +209,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <code>us-east-2</code>, <code>us-west-1</code>, <code>us-west-2</code>.
      * </p>
      * <p>
-     * Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     * Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     * <code>us-gov-west-1</code>.
      * </p>
      * 
      * @param mediaRegion
@@ -220,7 +223,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <code>us-east-1</code>, <code>us-east-2</code>, <code>us-west-1</code>, <code>us-west-2</code>.
      *        </p>
      *        <p>
-     *        Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     *        Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     *        <code>us-gov-west-1</code>.
      */
 
     public void setMediaRegion(String mediaRegion) {
@@ -239,7 +243,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <code>us-east-2</code>, <code>us-west-1</code>, <code>us-west-2</code>.
      * </p>
      * <p>
-     * Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     * Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     * <code>us-gov-west-1</code>.
      * </p>
      * 
      * @return The Region in which to create the meeting.</p>
@@ -251,7 +256,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <code>us-east-1</code>, <code>us-east-2</code>, <code>us-west-1</code>, <code>us-west-2</code>.
      *         </p>
      *         <p>
-     *         Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     *         Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     *         <code>us-gov-west-1</code>.
      */
 
     public String getMediaRegion() {
@@ -270,7 +276,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <code>us-east-2</code>, <code>us-west-1</code>, <code>us-west-2</code>.
      * </p>
      * <p>
-     * Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     * Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     * <code>us-gov-west-1</code>.
      * </p>
      * 
      * @param mediaRegion
@@ -283,7 +290,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <code>us-east-1</code>, <code>us-east-2</code>, <code>us-west-1</code>, <code>us-west-2</code>.
      *        </p>
      *        <p>
-     *        Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     *        Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     *        <code>us-gov-west-1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -628,7 +636,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * You can only tag resources that are located in the specified AWS Region for the AWS account.
+     * You can only tag resources that are located in the specified Amazon Web Services Region for the Amazon Web
+     * Services account.
      * </p>
      * </li>
      * <li>
@@ -689,7 +698,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         </li>
      *         <li>
      *         <p>
-     *         You can only tag resources that are located in the specified AWS Region for the AWS account.
+     *         You can only tag resources that are located in the specified Amazon Web Services Region for the Amazon
+     *         Web Services account.
      *         </p>
      *         </li>
      *         <li>
@@ -756,7 +766,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * You can only tag resources that are located in the specified AWS Region for the AWS account.
+     * You can only tag resources that are located in the specified Amazon Web Services Region for the Amazon Web
+     * Services account.
      * </p>
      * </li>
      * <li>
@@ -818,7 +829,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </li>
      *        <li>
      *        <p>
-     *        You can only tag resources that are located in the specified AWS Region for the AWS account.
+     *        You can only tag resources that are located in the specified Amazon Web Services Region for the Amazon Web
+     *        Services account.
      *        </p>
      *        </li>
      *        <li>
@@ -890,7 +902,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * You can only tag resources that are located in the specified AWS Region for the AWS account.
+     * You can only tag resources that are located in the specified Amazon Web Services Region for the Amazon Web
+     * Services account.
      * </p>
      * </li>
      * <li>
@@ -957,7 +970,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </li>
      *        <li>
      *        <p>
-     *        You can only tag resources that are located in the specified AWS Region for the AWS account.
+     *        You can only tag resources that are located in the specified Amazon Web Services Region for the Amazon Web
+     *        Services account.
      *        </p>
      *        </li>
      *        <li>
@@ -1031,7 +1045,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * You can only tag resources that are located in the specified AWS Region for the AWS account.
+     * You can only tag resources that are located in the specified Amazon Web Services Region for the Amazon Web
+     * Services account.
      * </p>
      * </li>
      * <li>
@@ -1093,7 +1108,8 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </li>
      *        <li>
      *        <p>
-     *        You can only tag resources that are located in the specified AWS Region for the AWS account.
+     *        You can only tag resources that are located in the specified Amazon Web Services Region for the Amazon Web
+     *        Services account.
      *        </p>
      *        </li>
      *        <li>

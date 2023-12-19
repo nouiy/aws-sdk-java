@@ -48,6 +48,10 @@ public class AdvertiseByoipCidrRequestMarshaller implements Marshaller<Request<A
             request.addParameter("Asn", StringUtils.fromString(advertiseByoipCidrRequest.getAsn()));
         }
 
+        if (advertiseByoipCidrRequest.getNetworkBorderGroup() != null) {
+            request.addParameter("NetworkBorderGroup", StringUtils.fromString(advertiseByoipCidrRequest.getNetworkBorderGroup()));
+        }
+
         return request;
     }
 

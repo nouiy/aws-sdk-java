@@ -74,6 +74,11 @@ public class ByoipCidrStaxUnmarshaller implements Unmarshaller<ByoipCidr, StaxUn
                     byoipCidr.setState(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("networkBorderGroup", targetDepth)) {
+                    byoipCidr.setNetworkBorderGroup(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return byoipCidr;

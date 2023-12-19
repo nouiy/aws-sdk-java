@@ -121,6 +121,10 @@ public class OpenZFSVolumeConfigurationJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     openZFSVolumeConfiguration.setDestinationSnapshot(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CopyStrategy", targetDepth)) {
+                    context.nextToken();
+                    openZFSVolumeConfiguration.setCopyStrategy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

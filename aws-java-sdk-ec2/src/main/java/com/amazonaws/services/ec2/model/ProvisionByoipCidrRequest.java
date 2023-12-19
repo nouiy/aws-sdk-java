@@ -67,6 +67,40 @@ public class ProvisionByoipCidrRequest extends AmazonWebServiceRequest implement
      * </p>
      */
     private Boolean multiRegion;
+    /**
+     * <p>
+     * If you have <a href="https://docs.aws.amazon.com/local-zones/latest/ug/how-local-zones-work.html">Local Zones</a>
+     * enabled, you can choose a network border group for Local Zones when you provision and advertise a BYOIPv4 CIDR.
+     * Choose the network border group carefully as the EIP and the Amazon Web Services resource it is associated with
+     * must reside in the same network border group.
+     * </p>
+     * <p>
+     * You can provision BYOIP address ranges to and advertise them in the following Local Zone network border groups:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * us-east-1-dfw-2
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * us-west-2-lax-1
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * us-west-2-phx-2
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * You cannot provision or advertise BYOIPv6 address ranges in Local Zones at this time.
+     * </p>
+     * </note>
+     */
+    private String networkBorderGroup;
 
     /**
      * <p>
@@ -404,6 +438,214 @@ public class ProvisionByoipCidrRequest extends AmazonWebServiceRequest implement
     }
 
     /**
+     * <p>
+     * If you have <a href="https://docs.aws.amazon.com/local-zones/latest/ug/how-local-zones-work.html">Local Zones</a>
+     * enabled, you can choose a network border group for Local Zones when you provision and advertise a BYOIPv4 CIDR.
+     * Choose the network border group carefully as the EIP and the Amazon Web Services resource it is associated with
+     * must reside in the same network border group.
+     * </p>
+     * <p>
+     * You can provision BYOIP address ranges to and advertise them in the following Local Zone network border groups:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * us-east-1-dfw-2
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * us-west-2-lax-1
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * us-west-2-phx-2
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * You cannot provision or advertise BYOIPv6 address ranges in Local Zones at this time.
+     * </p>
+     * </note>
+     * 
+     * @param networkBorderGroup
+     *        If you have <a href="https://docs.aws.amazon.com/local-zones/latest/ug/how-local-zones-work.html">Local
+     *        Zones</a> enabled, you can choose a network border group for Local Zones when you provision and advertise
+     *        a BYOIPv4 CIDR. Choose the network border group carefully as the EIP and the Amazon Web Services resource
+     *        it is associated with must reside in the same network border group.</p>
+     *        <p>
+     *        You can provision BYOIP address ranges to and advertise them in the following Local Zone network border
+     *        groups:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        us-east-1-dfw-2
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        us-west-2-lax-1
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        us-west-2-phx-2
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        You cannot provision or advertise BYOIPv6 address ranges in Local Zones at this time.
+     *        </p>
+     */
+
+    public void setNetworkBorderGroup(String networkBorderGroup) {
+        this.networkBorderGroup = networkBorderGroup;
+    }
+
+    /**
+     * <p>
+     * If you have <a href="https://docs.aws.amazon.com/local-zones/latest/ug/how-local-zones-work.html">Local Zones</a>
+     * enabled, you can choose a network border group for Local Zones when you provision and advertise a BYOIPv4 CIDR.
+     * Choose the network border group carefully as the EIP and the Amazon Web Services resource it is associated with
+     * must reside in the same network border group.
+     * </p>
+     * <p>
+     * You can provision BYOIP address ranges to and advertise them in the following Local Zone network border groups:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * us-east-1-dfw-2
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * us-west-2-lax-1
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * us-west-2-phx-2
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * You cannot provision or advertise BYOIPv6 address ranges in Local Zones at this time.
+     * </p>
+     * </note>
+     * 
+     * @return If you have <a href="https://docs.aws.amazon.com/local-zones/latest/ug/how-local-zones-work.html">Local
+     *         Zones</a> enabled, you can choose a network border group for Local Zones when you provision and advertise
+     *         a BYOIPv4 CIDR. Choose the network border group carefully as the EIP and the Amazon Web Services resource
+     *         it is associated with must reside in the same network border group.</p>
+     *         <p>
+     *         You can provision BYOIP address ranges to and advertise them in the following Local Zone network border
+     *         groups:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         us-east-1-dfw-2
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         us-west-2-lax-1
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         us-west-2-phx-2
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         You cannot provision or advertise BYOIPv6 address ranges in Local Zones at this time.
+     *         </p>
+     */
+
+    public String getNetworkBorderGroup() {
+        return this.networkBorderGroup;
+    }
+
+    /**
+     * <p>
+     * If you have <a href="https://docs.aws.amazon.com/local-zones/latest/ug/how-local-zones-work.html">Local Zones</a>
+     * enabled, you can choose a network border group for Local Zones when you provision and advertise a BYOIPv4 CIDR.
+     * Choose the network border group carefully as the EIP and the Amazon Web Services resource it is associated with
+     * must reside in the same network border group.
+     * </p>
+     * <p>
+     * You can provision BYOIP address ranges to and advertise them in the following Local Zone network border groups:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * us-east-1-dfw-2
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * us-west-2-lax-1
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * us-west-2-phx-2
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * You cannot provision or advertise BYOIPv6 address ranges in Local Zones at this time.
+     * </p>
+     * </note>
+     * 
+     * @param networkBorderGroup
+     *        If you have <a href="https://docs.aws.amazon.com/local-zones/latest/ug/how-local-zones-work.html">Local
+     *        Zones</a> enabled, you can choose a network border group for Local Zones when you provision and advertise
+     *        a BYOIPv4 CIDR. Choose the network border group carefully as the EIP and the Amazon Web Services resource
+     *        it is associated with must reside in the same network border group.</p>
+     *        <p>
+     *        You can provision BYOIP address ranges to and advertise them in the following Local Zone network border
+     *        groups:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        us-east-1-dfw-2
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        us-west-2-lax-1
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        us-west-2-phx-2
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        You cannot provision or advertise BYOIPv6 address ranges in Local Zones at this time.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProvisionByoipCidrRequest withNetworkBorderGroup(String networkBorderGroup) {
+        setNetworkBorderGroup(networkBorderGroup);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -437,7 +679,9 @@ public class ProvisionByoipCidrRequest extends AmazonWebServiceRequest implement
         if (getPoolTagSpecifications() != null)
             sb.append("PoolTagSpecifications: ").append(getPoolTagSpecifications()).append(",");
         if (getMultiRegion() != null)
-            sb.append("MultiRegion: ").append(getMultiRegion());
+            sb.append("MultiRegion: ").append(getMultiRegion()).append(",");
+        if (getNetworkBorderGroup() != null)
+            sb.append("NetworkBorderGroup: ").append(getNetworkBorderGroup());
         sb.append("}");
         return sb.toString();
     }
@@ -476,6 +720,10 @@ public class ProvisionByoipCidrRequest extends AmazonWebServiceRequest implement
             return false;
         if (other.getMultiRegion() != null && other.getMultiRegion().equals(this.getMultiRegion()) == false)
             return false;
+        if (other.getNetworkBorderGroup() == null ^ this.getNetworkBorderGroup() == null)
+            return false;
+        if (other.getNetworkBorderGroup() != null && other.getNetworkBorderGroup().equals(this.getNetworkBorderGroup()) == false)
+            return false;
         return true;
     }
 
@@ -490,6 +738,7 @@ public class ProvisionByoipCidrRequest extends AmazonWebServiceRequest implement
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getPoolTagSpecifications() == null) ? 0 : getPoolTagSpecifications().hashCode());
         hashCode = prime * hashCode + ((getMultiRegion() == null) ? 0 : getMultiRegion().hashCode());
+        hashCode = prime * hashCode + ((getNetworkBorderGroup() == null) ? 0 : getNetworkBorderGroup().hashCode());
         return hashCode;
     }
 

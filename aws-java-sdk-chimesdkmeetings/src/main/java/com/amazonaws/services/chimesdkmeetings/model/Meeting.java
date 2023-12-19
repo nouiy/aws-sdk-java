@@ -63,7 +63,8 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
      * <code>us-west-2</code>.
      * </p>
      * <p>
-     * Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     * Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     * <code>us-gov-west-1</code>.
      * </p>
      */
     private String mediaRegion;
@@ -267,7 +268,8 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
      * <code>us-west-2</code>.
      * </p>
      * <p>
-     * Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     * Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     * <code>us-gov-west-1</code>.
      * </p>
      * 
      * @param mediaRegion
@@ -278,7 +280,8 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
      *        <code>eu-west-2</code>, <code>eu-west-3</code>, <code>sa-east-1</code>, <code>us-east-1</code>,
      *        <code>us-east-2</code>, <code>us-west-1</code>, <code>us-west-2</code>.</p>
      *        <p>
-     *        Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     *        Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     *        <code>us-gov-west-1</code>.
      */
 
     public void setMediaRegion(String mediaRegion) {
@@ -295,7 +298,8 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
      * <code>us-west-2</code>.
      * </p>
      * <p>
-     * Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     * Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     * <code>us-gov-west-1</code>.
      * </p>
      * 
      * @return The Region in which you create the meeting. Available values: <code>af-south-1</code>,
@@ -305,7 +309,8 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
      *         <code>eu-west-2</code>, <code>eu-west-3</code>, <code>sa-east-1</code>, <code>us-east-1</code>,
      *         <code>us-east-2</code>, <code>us-west-1</code>, <code>us-west-2</code>.</p>
      *         <p>
-     *         Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     *         Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     *         <code>us-gov-west-1</code>.
      */
 
     public String getMediaRegion() {
@@ -322,7 +327,8 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
      * <code>us-west-2</code>.
      * </p>
      * <p>
-     * Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     * Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     * <code>us-gov-west-1</code>.
      * </p>
      * 
      * @param mediaRegion
@@ -333,7 +339,8 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
      *        <code>eu-west-2</code>, <code>eu-west-3</code>, <code>sa-east-1</code>, <code>us-east-1</code>,
      *        <code>us-east-2</code>, <code>us-west-1</code>, <code>us-west-2</code>.</p>
      *        <p>
-     *        Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.
+     *        Available values in Amazon Web Services GovCloud (US) Regions: <code>us-gov-east-1</code>,
+     *        <code>us-gov-west-1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

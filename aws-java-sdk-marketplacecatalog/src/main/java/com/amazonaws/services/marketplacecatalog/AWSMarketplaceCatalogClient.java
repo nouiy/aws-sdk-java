@@ -158,6 +158,81 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Returns metadata and content for multiple entities.
+     * </p>
+     * 
+     * @param batchDescribeEntitiesRequest
+     * @return Result of the BatchDescribeEntities operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access is denied.</p>
+     *         <p>
+     *         HTTP status code: 403
+     * @throws InternalServiceException
+     *         There was an internal service exception.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 500
+     * @throws ThrottlingException
+     *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
+     * @throws ValidationException
+     *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
+     * @sample AWSMarketplaceCatalog.BatchDescribeEntities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/BatchDescribeEntities"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchDescribeEntitiesResult batchDescribeEntities(BatchDescribeEntitiesRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchDescribeEntities(request);
+    }
+
+    @SdkInternalApi
+    final BatchDescribeEntitiesResult executeBatchDescribeEntities(BatchDescribeEntitiesRequest batchDescribeEntitiesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchDescribeEntitiesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchDescribeEntitiesRequest> request = null;
+        Response<BatchDescribeEntitiesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchDescribeEntitiesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(batchDescribeEntitiesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Marketplace Catalog");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchDescribeEntities");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchDescribeEntitiesResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new BatchDescribeEntitiesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Used to cancel an open change request. Must be sent before the status of the request changes to
      * <code>APPLYING</code>, the final stage of completing your change request. You can describe a change during the
      * 60-day request history retention period for API calls.

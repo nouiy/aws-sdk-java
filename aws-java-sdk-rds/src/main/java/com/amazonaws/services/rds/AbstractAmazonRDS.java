@@ -449,6 +449,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public DescribeDBRecommendationsResult describeDBRecommendations(DescribeDBRecommendationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeDBSecurityGroupsResult describeDBSecurityGroups(DescribeDBSecurityGroupsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -700,6 +705,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public ModifyDBProxyTargetGroupResult modifyDBProxyTargetGroup(ModifyDBProxyTargetGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ModifyDBRecommendationResult modifyDBRecommendation(ModifyDBRecommendationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -2393,6 +2393,19 @@ public interface AmazonRDS {
 
     /**
      * <p>
+     * Describes the recommendations to resolve the issues for your DB instances, DB clusters, and DB parameter groups.
+     * </p>
+     * 
+     * @param describeDBRecommendationsRequest
+     * @return Result of the DescribeDBRecommendations operation returned by the service.
+     * @sample AmazonRDS.DescribeDBRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBRecommendations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeDBRecommendationsResult describeDBRecommendations(DescribeDBRecommendationsRequest describeDBRecommendationsRequest);
+
+    /**
+     * <p>
      * Returns a list of <code>DBSecurityGroup</code> descriptions. If a <code>DBSecurityGroupName</code> is specified,
      * the list will contain only the descriptions of the specified DB security group.
      * </p>
@@ -3558,6 +3571,19 @@ public interface AmazonRDS {
      *      API Documentation</a>
      */
     ModifyDBProxyTargetGroupResult modifyDBProxyTargetGroup(ModifyDBProxyTargetGroupRequest modifyDBProxyTargetGroupRequest);
+
+    /**
+     * <p>
+     * Updates the recommendation status and recommended action status for the specified recommendation.
+     * </p>
+     * 
+     * @param modifyDBRecommendationRequest
+     * @return Result of the ModifyDBRecommendation operation returned by the service.
+     * @sample AmazonRDS.ModifyDBRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBRecommendation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ModifyDBRecommendationResult modifyDBRecommendation(ModifyDBRecommendationRequest modifyDBRecommendationRequest);
 
     /**
      * <p>

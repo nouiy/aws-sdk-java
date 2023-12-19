@@ -33,9 +33,10 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String catalog;
     /**
      * <p>
-     * The type of entities to retrieve. Valid values are: <code>ServerProduct</code>, <code>AmiProduct</code>,
-     * <code>ContainerProduct</code>, <code>DataProduct</code>, <code>SaaSProduct</code>, <code>ProcurementPolicy</code>, <code>Experience</code>, <code>Audience</code>, <code>BrandingSettings</code>, <code>Offer</code>,
-     * <code>Seller</code>, <code>ResaleAuthorization</code>.
+     * The type of entities to retrieve. Valid values are: <code>AmiProduct</code>, <code>ContainerProduct</code>,
+     * <code>DataProduct</code>, <code>SaaSProduct</code>, <code>ProcurementPolicy</code>, <code>Experience</code>,
+     * <code>Audience</code>, <code>BrandingSettings</code>, <code>Offer</code>, <code>Seller</code>,
+     * <code>ResaleAuthorization</code>.
      * </p>
      */
     private String entityType;
@@ -132,16 +133,17 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The type of entities to retrieve. Valid values are: <code>ServerProduct</code>, <code>AmiProduct</code>,
-     * <code>ContainerProduct</code>, <code>DataProduct</code>, <code>SaaSProduct</code>, <code>ProcurementPolicy</code>, <code>Experience</code>, <code>Audience</code>, <code>BrandingSettings</code>, <code>Offer</code>,
-     * <code>Seller</code>, <code>ResaleAuthorization</code>.
+     * The type of entities to retrieve. Valid values are: <code>AmiProduct</code>, <code>ContainerProduct</code>,
+     * <code>DataProduct</code>, <code>SaaSProduct</code>, <code>ProcurementPolicy</code>, <code>Experience</code>,
+     * <code>Audience</code>, <code>BrandingSettings</code>, <code>Offer</code>, <code>Seller</code>,
+     * <code>ResaleAuthorization</code>.
      * </p>
      * 
      * @param entityType
-     *        The type of entities to retrieve. Valid values are: <code>ServerProduct</code>, <code>AmiProduct</code>,
-     *        <code>ContainerProduct</code>, <code>DataProduct</code>, <code>SaaSProduct</code>,
-     *        <code>ProcurementPolicy</code>, <code>Experience</code>, <code>Audience</code>,
-     *        <code>BrandingSettings</code>, <code>Offer</code>, <code>Seller</code>, <code>ResaleAuthorization</code>.
+     *        The type of entities to retrieve. Valid values are: <code>AmiProduct</code>, <code>ContainerProduct</code>
+     *        , <code>DataProduct</code>, <code>SaaSProduct</code>, <code>ProcurementPolicy</code>,
+     *        <code>Experience</code>, <code>Audience</code>, <code>BrandingSettings</code>, <code>Offer</code>,
+     *        <code>Seller</code>, <code>ResaleAuthorization</code>.
      */
 
     public void setEntityType(String entityType) {
@@ -150,12 +152,13 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The type of entities to retrieve. Valid values are: <code>ServerProduct</code>, <code>AmiProduct</code>,
-     * <code>ContainerProduct</code>, <code>DataProduct</code>, <code>SaaSProduct</code>, <code>ProcurementPolicy</code>, <code>Experience</code>, <code>Audience</code>, <code>BrandingSettings</code>, <code>Offer</code>,
-     * <code>Seller</code>, <code>ResaleAuthorization</code>.
+     * The type of entities to retrieve. Valid values are: <code>AmiProduct</code>, <code>ContainerProduct</code>,
+     * <code>DataProduct</code>, <code>SaaSProduct</code>, <code>ProcurementPolicy</code>, <code>Experience</code>,
+     * <code>Audience</code>, <code>BrandingSettings</code>, <code>Offer</code>, <code>Seller</code>,
+     * <code>ResaleAuthorization</code>.
      * </p>
      * 
-     * @return The type of entities to retrieve. Valid values are: <code>ServerProduct</code>, <code>AmiProduct</code>,
+     * @return The type of entities to retrieve. Valid values are: <code>AmiProduct</code>,
      *         <code>ContainerProduct</code>, <code>DataProduct</code>, <code>SaaSProduct</code>,
      *         <code>ProcurementPolicy</code>, <code>Experience</code>, <code>Audience</code>,
      *         <code>BrandingSettings</code>, <code>Offer</code>, <code>Seller</code>, <code>ResaleAuthorization</code>.
@@ -167,16 +170,17 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The type of entities to retrieve. Valid values are: <code>ServerProduct</code>, <code>AmiProduct</code>,
-     * <code>ContainerProduct</code>, <code>DataProduct</code>, <code>SaaSProduct</code>, <code>ProcurementPolicy</code>, <code>Experience</code>, <code>Audience</code>, <code>BrandingSettings</code>, <code>Offer</code>,
-     * <code>Seller</code>, <code>ResaleAuthorization</code>.
+     * The type of entities to retrieve. Valid values are: <code>AmiProduct</code>, <code>ContainerProduct</code>,
+     * <code>DataProduct</code>, <code>SaaSProduct</code>, <code>ProcurementPolicy</code>, <code>Experience</code>,
+     * <code>Audience</code>, <code>BrandingSettings</code>, <code>Offer</code>, <code>Seller</code>,
+     * <code>ResaleAuthorization</code>.
      * </p>
      * 
      * @param entityType
-     *        The type of entities to retrieve. Valid values are: <code>ServerProduct</code>, <code>AmiProduct</code>,
-     *        <code>ContainerProduct</code>, <code>DataProduct</code>, <code>SaaSProduct</code>,
-     *        <code>ProcurementPolicy</code>, <code>Experience</code>, <code>Audience</code>,
-     *        <code>BrandingSettings</code>, <code>Offer</code>, <code>Seller</code>, <code>ResaleAuthorization</code>.
+     *        The type of entities to retrieve. Valid values are: <code>AmiProduct</code>, <code>ContainerProduct</code>
+     *        , <code>DataProduct</code>, <code>SaaSProduct</code>, <code>ProcurementPolicy</code>,
+     *        <code>Experience</code>, <code>Audience</code>, <code>BrandingSettings</code>, <code>Offer</code>,
+     *        <code>Seller</code>, <code>ResaleAuthorization</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

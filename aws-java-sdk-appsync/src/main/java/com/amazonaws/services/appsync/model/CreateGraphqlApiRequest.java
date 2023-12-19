@@ -112,6 +112,41 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String ownerContact;
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to enable (<code>ENABLED</code>) or disable (<code>DISABLED</code>)
+     * introspection. If no value is provided, the introspection configuration will be set to <code>ENABLED</code> by
+     * default. This field will produce an error if the operation attempts to use the introspection feature while this
+     * field is disabled.
+     * </p>
+     * <p>
+     * For more information about introspection, see <a href="https://graphql.org/learn/introspection/">GraphQL
+     * introspection</a>.
+     * </p>
+     */
+    private String introspectionConfig;
+    /**
+     * <p>
+     * The maximum depth a query can have in a single request. Depth refers to the amount of nested levels allowed in
+     * the body of query. The default value is <code>0</code> (or unspecified), which indicates there's no depth limit.
+     * If you set a limit, it can be between <code>1</code> and <code>75</code> nested levels. This field will produce a
+     * limit error if the operation falls out of bounds.
+     * </p>
+     * <p>
+     * Note that fields can still be set to nullable or non-nullable. If a non-nullable field produces an error, the
+     * error will be thrown upwards to the first nullable field available.
+     * </p>
+     */
+    private Integer queryDepthLimit;
+    /**
+     * <p>
+     * The maximum number of resolvers that can be invoked in a single request. The default value is <code>0</code> (or
+     * unspecified), which will set the limit to <code>10000</code>. When specified, the limit value can be between
+     * <code>1</code> and <code>10000</code>. This field will produce a limit error if the operation falls out of
+     * bounds.
+     * </p>
+     */
+    private Integer resolverCountLimit;
 
     /**
      * <p>
@@ -821,6 +856,254 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Sets the value of the GraphQL API to enable (<code>ENABLED</code>) or disable (<code>DISABLED</code>)
+     * introspection. If no value is provided, the introspection configuration will be set to <code>ENABLED</code> by
+     * default. This field will produce an error if the operation attempts to use the introspection feature while this
+     * field is disabled.
+     * </p>
+     * <p>
+     * For more information about introspection, see <a href="https://graphql.org/learn/introspection/">GraphQL
+     * introspection</a>.
+     * </p>
+     * 
+     * @param introspectionConfig
+     *        Sets the value of the GraphQL API to enable (<code>ENABLED</code>) or disable (<code>DISABLED</code>)
+     *        introspection. If no value is provided, the introspection configuration will be set to
+     *        <code>ENABLED</code> by default. This field will produce an error if the operation attempts to use the
+     *        introspection feature while this field is disabled.</p>
+     *        <p>
+     *        For more information about introspection, see <a href="https://graphql.org/learn/introspection/">GraphQL
+     *        introspection</a>.
+     * @see GraphQLApiIntrospectionConfig
+     */
+
+    public void setIntrospectionConfig(String introspectionConfig) {
+        this.introspectionConfig = introspectionConfig;
+    }
+
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to enable (<code>ENABLED</code>) or disable (<code>DISABLED</code>)
+     * introspection. If no value is provided, the introspection configuration will be set to <code>ENABLED</code> by
+     * default. This field will produce an error if the operation attempts to use the introspection feature while this
+     * field is disabled.
+     * </p>
+     * <p>
+     * For more information about introspection, see <a href="https://graphql.org/learn/introspection/">GraphQL
+     * introspection</a>.
+     * </p>
+     * 
+     * @return Sets the value of the GraphQL API to enable (<code>ENABLED</code>) or disable (<code>DISABLED</code>)
+     *         introspection. If no value is provided, the introspection configuration will be set to
+     *         <code>ENABLED</code> by default. This field will produce an error if the operation attempts to use the
+     *         introspection feature while this field is disabled.</p>
+     *         <p>
+     *         For more information about introspection, see <a href="https://graphql.org/learn/introspection/">GraphQL
+     *         introspection</a>.
+     * @see GraphQLApiIntrospectionConfig
+     */
+
+    public String getIntrospectionConfig() {
+        return this.introspectionConfig;
+    }
+
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to enable (<code>ENABLED</code>) or disable (<code>DISABLED</code>)
+     * introspection. If no value is provided, the introspection configuration will be set to <code>ENABLED</code> by
+     * default. This field will produce an error if the operation attempts to use the introspection feature while this
+     * field is disabled.
+     * </p>
+     * <p>
+     * For more information about introspection, see <a href="https://graphql.org/learn/introspection/">GraphQL
+     * introspection</a>.
+     * </p>
+     * 
+     * @param introspectionConfig
+     *        Sets the value of the GraphQL API to enable (<code>ENABLED</code>) or disable (<code>DISABLED</code>)
+     *        introspection. If no value is provided, the introspection configuration will be set to
+     *        <code>ENABLED</code> by default. This field will produce an error if the operation attempts to use the
+     *        introspection feature while this field is disabled.</p>
+     *        <p>
+     *        For more information about introspection, see <a href="https://graphql.org/learn/introspection/">GraphQL
+     *        introspection</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see GraphQLApiIntrospectionConfig
+     */
+
+    public CreateGraphqlApiRequest withIntrospectionConfig(String introspectionConfig) {
+        setIntrospectionConfig(introspectionConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to enable (<code>ENABLED</code>) or disable (<code>DISABLED</code>)
+     * introspection. If no value is provided, the introspection configuration will be set to <code>ENABLED</code> by
+     * default. This field will produce an error if the operation attempts to use the introspection feature while this
+     * field is disabled.
+     * </p>
+     * <p>
+     * For more information about introspection, see <a href="https://graphql.org/learn/introspection/">GraphQL
+     * introspection</a>.
+     * </p>
+     * 
+     * @param introspectionConfig
+     *        Sets the value of the GraphQL API to enable (<code>ENABLED</code>) or disable (<code>DISABLED</code>)
+     *        introspection. If no value is provided, the introspection configuration will be set to
+     *        <code>ENABLED</code> by default. This field will produce an error if the operation attempts to use the
+     *        introspection feature while this field is disabled.</p>
+     *        <p>
+     *        For more information about introspection, see <a href="https://graphql.org/learn/introspection/">GraphQL
+     *        introspection</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see GraphQLApiIntrospectionConfig
+     */
+
+    public CreateGraphqlApiRequest withIntrospectionConfig(GraphQLApiIntrospectionConfig introspectionConfig) {
+        this.introspectionConfig = introspectionConfig.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The maximum depth a query can have in a single request. Depth refers to the amount of nested levels allowed in
+     * the body of query. The default value is <code>0</code> (or unspecified), which indicates there's no depth limit.
+     * If you set a limit, it can be between <code>1</code> and <code>75</code> nested levels. This field will produce a
+     * limit error if the operation falls out of bounds.
+     * </p>
+     * <p>
+     * Note that fields can still be set to nullable or non-nullable. If a non-nullable field produces an error, the
+     * error will be thrown upwards to the first nullable field available.
+     * </p>
+     * 
+     * @param queryDepthLimit
+     *        The maximum depth a query can have in a single request. Depth refers to the amount of nested levels
+     *        allowed in the body of query. The default value is <code>0</code> (or unspecified), which indicates
+     *        there's no depth limit. If you set a limit, it can be between <code>1</code> and <code>75</code> nested
+     *        levels. This field will produce a limit error if the operation falls out of bounds.</p>
+     *        <p>
+     *        Note that fields can still be set to nullable or non-nullable. If a non-nullable field produces an error,
+     *        the error will be thrown upwards to the first nullable field available.
+     */
+
+    public void setQueryDepthLimit(Integer queryDepthLimit) {
+        this.queryDepthLimit = queryDepthLimit;
+    }
+
+    /**
+     * <p>
+     * The maximum depth a query can have in a single request. Depth refers to the amount of nested levels allowed in
+     * the body of query. The default value is <code>0</code> (or unspecified), which indicates there's no depth limit.
+     * If you set a limit, it can be between <code>1</code> and <code>75</code> nested levels. This field will produce a
+     * limit error if the operation falls out of bounds.
+     * </p>
+     * <p>
+     * Note that fields can still be set to nullable or non-nullable. If a non-nullable field produces an error, the
+     * error will be thrown upwards to the first nullable field available.
+     * </p>
+     * 
+     * @return The maximum depth a query can have in a single request. Depth refers to the amount of nested levels
+     *         allowed in the body of query. The default value is <code>0</code> (or unspecified), which indicates
+     *         there's no depth limit. If you set a limit, it can be between <code>1</code> and <code>75</code> nested
+     *         levels. This field will produce a limit error if the operation falls out of bounds.</p>
+     *         <p>
+     *         Note that fields can still be set to nullable or non-nullable. If a non-nullable field produces an error,
+     *         the error will be thrown upwards to the first nullable field available.
+     */
+
+    public Integer getQueryDepthLimit() {
+        return this.queryDepthLimit;
+    }
+
+    /**
+     * <p>
+     * The maximum depth a query can have in a single request. Depth refers to the amount of nested levels allowed in
+     * the body of query. The default value is <code>0</code> (or unspecified), which indicates there's no depth limit.
+     * If you set a limit, it can be between <code>1</code> and <code>75</code> nested levels. This field will produce a
+     * limit error if the operation falls out of bounds.
+     * </p>
+     * <p>
+     * Note that fields can still be set to nullable or non-nullable. If a non-nullable field produces an error, the
+     * error will be thrown upwards to the first nullable field available.
+     * </p>
+     * 
+     * @param queryDepthLimit
+     *        The maximum depth a query can have in a single request. Depth refers to the amount of nested levels
+     *        allowed in the body of query. The default value is <code>0</code> (or unspecified), which indicates
+     *        there's no depth limit. If you set a limit, it can be between <code>1</code> and <code>75</code> nested
+     *        levels. This field will produce a limit error if the operation falls out of bounds.</p>
+     *        <p>
+     *        Note that fields can still be set to nullable or non-nullable. If a non-nullable field produces an error,
+     *        the error will be thrown upwards to the first nullable field available.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateGraphqlApiRequest withQueryDepthLimit(Integer queryDepthLimit) {
+        setQueryDepthLimit(queryDepthLimit);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The maximum number of resolvers that can be invoked in a single request. The default value is <code>0</code> (or
+     * unspecified), which will set the limit to <code>10000</code>. When specified, the limit value can be between
+     * <code>1</code> and <code>10000</code>. This field will produce a limit error if the operation falls out of
+     * bounds.
+     * </p>
+     * 
+     * @param resolverCountLimit
+     *        The maximum number of resolvers that can be invoked in a single request. The default value is
+     *        <code>0</code> (or unspecified), which will set the limit to <code>10000</code>. When specified, the limit
+     *        value can be between <code>1</code> and <code>10000</code>. This field will produce a limit error if the
+     *        operation falls out of bounds.
+     */
+
+    public void setResolverCountLimit(Integer resolverCountLimit) {
+        this.resolverCountLimit = resolverCountLimit;
+    }
+
+    /**
+     * <p>
+     * The maximum number of resolvers that can be invoked in a single request. The default value is <code>0</code> (or
+     * unspecified), which will set the limit to <code>10000</code>. When specified, the limit value can be between
+     * <code>1</code> and <code>10000</code>. This field will produce a limit error if the operation falls out of
+     * bounds.
+     * </p>
+     * 
+     * @return The maximum number of resolvers that can be invoked in a single request. The default value is
+     *         <code>0</code> (or unspecified), which will set the limit to <code>10000</code>. When specified, the
+     *         limit value can be between <code>1</code> and <code>10000</code>. This field will produce a limit error
+     *         if the operation falls out of bounds.
+     */
+
+    public Integer getResolverCountLimit() {
+        return this.resolverCountLimit;
+    }
+
+    /**
+     * <p>
+     * The maximum number of resolvers that can be invoked in a single request. The default value is <code>0</code> (or
+     * unspecified), which will set the limit to <code>10000</code>. When specified, the limit value can be between
+     * <code>1</code> and <code>10000</code>. This field will produce a limit error if the operation falls out of
+     * bounds.
+     * </p>
+     * 
+     * @param resolverCountLimit
+     *        The maximum number of resolvers that can be invoked in a single request. The default value is
+     *        <code>0</code> (or unspecified), which will set the limit to <code>10000</code>. When specified, the limit
+     *        value can be between <code>1</code> and <code>10000</code>. This field will produce a limit error if the
+     *        operation falls out of bounds.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateGraphqlApiRequest withResolverCountLimit(Integer resolverCountLimit) {
+        setResolverCountLimit(resolverCountLimit);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -857,7 +1140,13 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
         if (getMergedApiExecutionRoleArn() != null)
             sb.append("MergedApiExecutionRoleArn: ").append(getMergedApiExecutionRoleArn()).append(",");
         if (getOwnerContact() != null)
-            sb.append("OwnerContact: ").append(getOwnerContact());
+            sb.append("OwnerContact: ").append(getOwnerContact()).append(",");
+        if (getIntrospectionConfig() != null)
+            sb.append("IntrospectionConfig: ").append(getIntrospectionConfig()).append(",");
+        if (getQueryDepthLimit() != null)
+            sb.append("QueryDepthLimit: ").append(getQueryDepthLimit()).append(",");
+        if (getResolverCountLimit() != null)
+            sb.append("ResolverCountLimit: ").append(getResolverCountLimit());
         sb.append("}");
         return sb.toString();
     }
@@ -925,6 +1214,18 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getOwnerContact() != null && other.getOwnerContact().equals(this.getOwnerContact()) == false)
             return false;
+        if (other.getIntrospectionConfig() == null ^ this.getIntrospectionConfig() == null)
+            return false;
+        if (other.getIntrospectionConfig() != null && other.getIntrospectionConfig().equals(this.getIntrospectionConfig()) == false)
+            return false;
+        if (other.getQueryDepthLimit() == null ^ this.getQueryDepthLimit() == null)
+            return false;
+        if (other.getQueryDepthLimit() != null && other.getQueryDepthLimit().equals(this.getQueryDepthLimit()) == false)
+            return false;
+        if (other.getResolverCountLimit() == null ^ this.getResolverCountLimit() == null)
+            return false;
+        if (other.getResolverCountLimit() != null && other.getResolverCountLimit().equals(this.getResolverCountLimit()) == false)
+            return false;
         return true;
     }
 
@@ -946,6 +1247,9 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getApiType() == null) ? 0 : getApiType().hashCode());
         hashCode = prime * hashCode + ((getMergedApiExecutionRoleArn() == null) ? 0 : getMergedApiExecutionRoleArn().hashCode());
         hashCode = prime * hashCode + ((getOwnerContact() == null) ? 0 : getOwnerContact().hashCode());
+        hashCode = prime * hashCode + ((getIntrospectionConfig() == null) ? 0 : getIntrospectionConfig().hashCode());
+        hashCode = prime * hashCode + ((getQueryDepthLimit() == null) ? 0 : getQueryDepthLimit().hashCode());
+        hashCode = prime * hashCode + ((getResolverCountLimit() == null) ? 0 : getResolverCountLimit().hashCode());
         return hashCode;
     }
 
