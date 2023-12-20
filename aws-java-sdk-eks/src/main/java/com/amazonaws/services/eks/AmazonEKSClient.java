@@ -2225,6 +2225,72 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
 
     /**
      * <p>
+     * Returns details about an insight that you specify using its ID.
+     * </p>
+     * 
+     * @param describeInsightRequest
+     * @return Result of the DescribeInsight operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with
+     *         <code>ListClusters</code>. You can view your available managed node groups with
+     *         <code>ListNodegroups</code>. Amazon EKS clusters and node groups are Amazon Web Services Region specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.DescribeInsight
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeInsight" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeInsightResult describeInsight(DescribeInsightRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeInsight(request);
+    }
+
+    @SdkInternalApi
+    final DescribeInsightResult executeDescribeInsight(DescribeInsightRequest describeInsightRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeInsightRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeInsightRequest> request = null;
+        Response<DescribeInsightResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeInsightRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeInsightRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EKS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeInsight");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeInsightResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeInsightResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes a managed node group.
      * </p>
      * 
@@ -3118,6 +3184,73 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
             HttpResponseHandler<AmazonWebServiceResponse<ListIdentityProviderConfigsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListIdentityProviderConfigsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of all insights checked for against the specified cluster. You can filter which insights are
+     * returned by category, associated Kubernetes version, and status.
+     * </p>
+     * 
+     * @param listInsightsRequest
+     * @return Result of the ListInsights operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with
+     *         <code>ListClusters</code>. You can view your available managed node groups with
+     *         <code>ListNodegroups</code>. Amazon EKS clusters and node groups are Amazon Web Services Region specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.ListInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListInsights" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListInsightsResult listInsights(ListInsightsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListInsights(request);
+    }
+
+    @SdkInternalApi
+    final ListInsightsResult executeListInsights(ListInsightsRequest listInsightsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listInsightsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListInsightsRequest> request = null;
+        Response<ListInsightsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListInsightsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listInsightsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EKS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListInsights");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListInsightsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListInsightsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

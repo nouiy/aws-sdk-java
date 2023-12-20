@@ -41,6 +41,8 @@ public class CreateChannelRequestMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> TIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tier").build();
+    private static final MarshallingInfo<StructuredPojo> TIMESHIFTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TimeShiftConfiguration").build();
 
     private static final CreateChannelRequestMarshaller instance = new CreateChannelRequestMarshaller();
 
@@ -64,6 +66,7 @@ public class CreateChannelRequestMarshaller {
             protocolMarshaller.marshall(createChannelRequest.getPlaybackMode(), PLAYBACKMODE_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getTier(), TIER_BINDING);
+            protocolMarshaller.marshall(createChannelRequest.getTimeShiftConfiguration(), TIMESHIFTCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

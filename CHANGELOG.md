@@ -1,3 +1,32 @@
+# __1.12.623__ __2023-12-20__
+## __AWS MediaTailor__
+  - ### Features
+    - Adds the ability to configure time shifting on MediaTailor channels using the TimeShiftConfiguration field
+
+## __AWS SDK for Java__
+  - ### Features
+    - Adding support for ca-west-1 that is CA_Calgary region
+
+## __Amazon AppStream__
+  - ### Features
+    - This release introduces configurable clipboard, allowing admins to specify the maximum length of text that can be copied by the users from their device to the remote session and vice-versa.
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - Add support for cluster insights, new EKS capability that surfaces potentially upgrade impacting issues.
+
+## __Amazon GuardDuty__
+  - ### Features
+    - This release 1) introduces a new API: GetOrganizationStatistics , and 2) adds a new UsageStatisticType TOP_ACCOUNTS_BY_FEATURE for GetUsageStatistics API
+
+## __Amazon Managed Blockchain Query__
+  - ### Features
+    - Adding Confirmation Status and Execution Status to GetTransaction Response.
+
+## __Amazon Route 53__
+  - ### Features
+    - Amazon Route 53 now supports the Canada West (Calgary) Region (ca-west-1) for latency records, geoproximity records, and private DNS for Amazon VPCs in that region.
+
 # __1.12.622__ __2023-12-19__
 ## __AWS AppSync__
   - ### Features

@@ -1281,6 +1281,37 @@ public interface AmazonEKSAsync extends AmazonEKS {
 
     /**
      * <p>
+     * Returns details about an insight that you specify using its ID.
+     * </p>
+     * 
+     * @param describeInsightRequest
+     * @return A Java Future containing the result of the DescribeInsight operation returned by the service.
+     * @sample AmazonEKSAsync.DescribeInsight
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeInsight" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeInsightResult> describeInsightAsync(DescribeInsightRequest describeInsightRequest);
+
+    /**
+     * <p>
+     * Returns details about an insight that you specify using its ID.
+     * </p>
+     * 
+     * @param describeInsightRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeInsight operation returned by the service.
+     * @sample AmazonEKSAsyncHandler.DescribeInsight
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeInsight" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeInsightResult> describeInsightAsync(DescribeInsightRequest describeInsightRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeInsightRequest, DescribeInsightResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes a managed node group.
      * </p>
      * 
@@ -1729,6 +1760,39 @@ public interface AmazonEKSAsync extends AmazonEKS {
     java.util.concurrent.Future<ListIdentityProviderConfigsResult> listIdentityProviderConfigsAsync(
             ListIdentityProviderConfigsRequest listIdentityProviderConfigsRequest,
             com.amazonaws.handlers.AsyncHandler<ListIdentityProviderConfigsRequest, ListIdentityProviderConfigsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of all insights checked for against the specified cluster. You can filter which insights are
+     * returned by category, associated Kubernetes version, and status.
+     * </p>
+     * 
+     * @param listInsightsRequest
+     * @return A Java Future containing the result of the ListInsights operation returned by the service.
+     * @sample AmazonEKSAsync.ListInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListInsights" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListInsightsResult> listInsightsAsync(ListInsightsRequest listInsightsRequest);
+
+    /**
+     * <p>
+     * Returns a list of all insights checked for against the specified cluster. You can filter which insights are
+     * returned by category, associated Kubernetes version, and status.
+     * </p>
+     * 
+     * @param listInsightsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListInsights operation returned by the service.
+     * @sample AmazonEKSAsyncHandler.ListInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListInsights" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListInsightsResult> listInsightsAsync(ListInsightsRequest listInsightsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListInsightsRequest, ListInsightsResult> asyncHandler);
 
     /**
      * <p>

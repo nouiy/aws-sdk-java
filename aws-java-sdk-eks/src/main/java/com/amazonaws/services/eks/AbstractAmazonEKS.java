@@ -159,6 +159,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
     }
 
     @Override
+    public DescribeInsightResult describeInsight(DescribeInsightRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeNodegroupResult describeNodegroup(DescribeNodegroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -220,6 +225,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
 
     @Override
     public ListIdentityProviderConfigsResult listIdentityProviderConfigs(ListIdentityProviderConfigsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListInsightsResult listInsights(ListInsightsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

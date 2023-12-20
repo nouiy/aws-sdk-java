@@ -4311,6 +4311,53 @@
       },
       "wrapper" : false
     },
+    "ConfirmationStatus" : {
+      "c2jName" : "ConfirmationStatus",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : [ {
+        "name" : "FINAL",
+        "value" : "FINAL"
+      } ],
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.managedblockchainquery.enum.ConfirmationStatus",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.managedblockchainquery.enum",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "ConfirmationStatus",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "ConfirmationStatus",
+        "variableName" : "confirmationStatus",
+        "variableType" : "ConfirmationStatus",
+        "documentation" : null,
+        "simpleType" : "ConfirmationStatus",
+        "variableSetterType" : "ConfirmationStatus"
+      },
+      "wrapper" : false
+    },
     "ContractFilter" : {
       "c2jName" : "ContractFilter",
       "customization" : {
@@ -5605,6 +5652,56 @@
         "documentation" : null,
         "simpleType" : "ErrorType",
         "variableSetterType" : "ErrorType"
+      },
+      "wrapper" : false
+    },
+    "ExecutionStatus" : {
+      "c2jName" : "ExecutionStatus",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : [ {
+        "name" : "FAILED",
+        "value" : "FAILED"
+      }, {
+        "name" : "SUCCEEDED",
+        "value" : "SUCCEEDED"
+      } ],
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.managedblockchainquery.enum.ExecutionStatus",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.managedblockchainquery.enum",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "ExecutionStatus",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "ExecutionStatus",
+        "variableName" : "executionStatus",
+        "variableType" : "ExecutionStatus",
+        "documentation" : null,
+        "simpleType" : "ExecutionStatus",
+        "variableSetterType" : "ExecutionStatus"
       },
       "wrapper" : false
     },
@@ -13710,14 +13807,14 @@
         "name" : "ETHEREUM_MAINNET",
         "value" : "ETHEREUM_MAINNET"
       }, {
+        "name" : "ETHEREUM_SEPOLIA_TESTNET",
+        "value" : "ETHEREUM_SEPOLIA_TESTNET"
+      }, {
         "name" : "BITCOIN_MAINNET",
         "value" : "BITCOIN_MAINNET"
       }, {
         "name" : "BITCOIN_TESTNET",
         "value" : "BITCOIN_TESTNET"
-      }, {
-        "name" : "ETHEREUM_SEPOLIA_TESTNET",
-        "value" : "ETHEREUM_SEPOLIA_TESTNET"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.managedblockchainquery.enum.QueryNetwork",
@@ -17575,13 +17672,13 @@
       }, {
         "c2jName" : "status",
         "c2jShape" : "QueryTransactionStatus",
-        "deprecated" : false,
-        "documentation" : "<p>The status of the transaction.</p>",
+        "deprecated" : true,
+        "documentation" : "<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>",
         "endpointDiscoveryId" : false,
         "enumType" : "QueryTransactionStatus",
-        "fluentSetterDocumentation" : "/**<p>The status of the transaction.</p>\n@param status The status of the transaction.\n@return Returns a reference to this object so that method calls can be chained together.\n@see QueryTransactionStatus*/",
+        "fluentSetterDocumentation" : "/**<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>\n@param status The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul>\n@return Returns a reference to this object so that method calls can be chained together.\n@see QueryTransactionStatus*/",
         "fluentSetterMethodName" : "withStatus",
-        "getterDocumentation" : "/**<p>The status of the transaction.</p>\n@return The status of the transaction.\n@see QueryTransactionStatus*/",
+        "getterDocumentation" : "/**<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>\n@return The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul>\n@see QueryTransactionStatus*/",
         "getterMethodName" : "getStatus",
         "getterModel" : {
           "returnType" : "String",
@@ -17615,7 +17712,7 @@
         "marshallingType" : "STRING",
         "name" : "Status",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The status of the transaction.</p>\n@param status The status of the transaction.\n@see QueryTransactionStatus*/",
+        "setterDocumentation" : "/**<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>\n@param status The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul>\n@see QueryTransactionStatus*/",
         "setterMethodName" : "setStatus",
         "setterModel" : {
           "timestampFormat" : null,
@@ -17630,13 +17727,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The status of the transaction.</p>\n@param status The status of the transaction.\n@return Returns a reference to this object so that method calls can be chained together.\n@see QueryTransactionStatus*/",
+        "varargSetterDocumentation" : "/**<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>\n@param status The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul>\n@return Returns a reference to this object so that method calls can be chained together.\n@see QueryTransactionStatus*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "status",
           "variableType" : "String",
-          "documentation" : "<p>The status of the transaction.</p>",
+          "documentation" : "<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -18400,6 +18497,144 @@
           "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "confirmationStatus",
+        "c2jShape" : "ConfirmationStatus",
+        "deprecated" : false,
+        "documentation" : "<p>Specifies whether the transaction has reached Finality.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : "ConfirmationStatus",
+        "fluentSetterDocumentation" : "/**<p>Specifies whether the transaction has reached Finality.</p>\n@param confirmationStatus Specifies whether the transaction has reached Finality.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ConfirmationStatus*/",
+        "fluentSetterMethodName" : "withConfirmationStatus",
+        "getterDocumentation" : "/**<p>Specifies whether the transaction has reached Finality.</p>\n@return Specifies whether the transaction has reached Finality.\n@see ConfirmationStatus*/",
+        "getterMethodName" : "getConfirmationStatus",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "confirmationStatus",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "confirmationStatus",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "ConfirmationStatus",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Specifies whether the transaction has reached Finality.</p>\n@param confirmationStatus Specifies whether the transaction has reached Finality.\n@see ConfirmationStatus*/",
+        "setterMethodName" : "setConfirmationStatus",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "confirmationStatus",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Specifies whether the transaction has reached Finality.</p>\n@param confirmationStatus Specifies whether the transaction has reached Finality.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ConfirmationStatus*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "confirmationStatus",
+          "variableType" : "String",
+          "documentation" : "<p>Specifies whether the transaction has reached Finality.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "executionStatus",
+        "c2jShape" : "ExecutionStatus",
+        "deprecated" : false,
+        "documentation" : "<p>Identifies whether the transaction has succeeded or failed.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : "ExecutionStatus",
+        "fluentSetterDocumentation" : "/**<p>Identifies whether the transaction has succeeded or failed.</p>\n@param executionStatus Identifies whether the transaction has succeeded or failed.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ExecutionStatus*/",
+        "fluentSetterMethodName" : "withExecutionStatus",
+        "getterDocumentation" : "/**<p>Identifies whether the transaction has succeeded or failed.</p>\n@return Identifies whether the transaction has succeeded or failed.\n@see ExecutionStatus*/",
+        "getterMethodName" : "getExecutionStatus",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "executionStatus",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "executionStatus",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "ExecutionStatus",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Identifies whether the transaction has succeeded or failed.</p>\n@param executionStatus Identifies whether the transaction has succeeded or failed.\n@see ExecutionStatus*/",
+        "setterMethodName" : "setExecutionStatus",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "executionStatus",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Identifies whether the transaction has succeeded or failed.</p>\n@param executionStatus Identifies whether the transaction has succeeded or failed.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ExecutionStatus*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "executionStatus",
+          "variableType" : "String",
+          "documentation" : "<p>Identifies whether the transaction has succeeded or failed.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
       } ],
       "membersAsMap" : {
         "BlockHash" : {
@@ -18537,6 +18772,76 @@
             "variableName" : "blockNumber",
             "variableType" : "String",
             "documentation" : "<p>The block number in which the transaction is recorded.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "ConfirmationStatus" : {
+          "c2jName" : "confirmationStatus",
+          "c2jShape" : "ConfirmationStatus",
+          "deprecated" : false,
+          "documentation" : "<p>Specifies whether the transaction has reached Finality.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : "ConfirmationStatus",
+          "fluentSetterDocumentation" : "/**<p>Specifies whether the transaction has reached Finality.</p>\n@param confirmationStatus Specifies whether the transaction has reached Finality.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ConfirmationStatus*/",
+          "fluentSetterMethodName" : "withConfirmationStatus",
+          "getterDocumentation" : "/**<p>Specifies whether the transaction has reached Finality.</p>\n@return Specifies whether the transaction has reached Finality.\n@see ConfirmationStatus*/",
+          "getterMethodName" : "getConfirmationStatus",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "confirmationStatus",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "confirmationStatus",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "ConfirmationStatus",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>Specifies whether the transaction has reached Finality.</p>\n@param confirmationStatus Specifies whether the transaction has reached Finality.\n@see ConfirmationStatus*/",
+          "setterMethodName" : "setConfirmationStatus",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "confirmationStatus",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>Specifies whether the transaction has reached Finality.</p>\n@param confirmationStatus Specifies whether the transaction has reached Finality.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ConfirmationStatus*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "confirmationStatus",
+            "variableType" : "String",
+            "documentation" : "<p>Specifies whether the transaction has reached Finality.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -18747,6 +19052,76 @@
             "variableName" : "effectiveGasPrice",
             "variableType" : "String",
             "documentation" : "<p>The effective gas price.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "ExecutionStatus" : {
+          "c2jName" : "executionStatus",
+          "c2jShape" : "ExecutionStatus",
+          "deprecated" : false,
+          "documentation" : "<p>Identifies whether the transaction has succeeded or failed.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : "ExecutionStatus",
+          "fluentSetterDocumentation" : "/**<p>Identifies whether the transaction has succeeded or failed.</p>\n@param executionStatus Identifies whether the transaction has succeeded or failed.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ExecutionStatus*/",
+          "fluentSetterMethodName" : "withExecutionStatus",
+          "getterDocumentation" : "/**<p>Identifies whether the transaction has succeeded or failed.</p>\n@return Identifies whether the transaction has succeeded or failed.\n@see ExecutionStatus*/",
+          "getterMethodName" : "getExecutionStatus",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "executionStatus",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "executionStatus",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "ExecutionStatus",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>Identifies whether the transaction has succeeded or failed.</p>\n@param executionStatus Identifies whether the transaction has succeeded or failed.\n@see ExecutionStatus*/",
+          "setterMethodName" : "setExecutionStatus",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "executionStatus",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>Identifies whether the transaction has succeeded or failed.</p>\n@param executionStatus Identifies whether the transaction has succeeded or failed.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ExecutionStatus*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "executionStatus",
+            "variableType" : "String",
+            "documentation" : "<p>Identifies whether the transaction has succeeded or failed.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -19245,13 +19620,13 @@
         "Status" : {
           "c2jName" : "status",
           "c2jShape" : "QueryTransactionStatus",
-          "deprecated" : false,
-          "documentation" : "<p>The status of the transaction.</p>",
+          "deprecated" : true,
+          "documentation" : "<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>",
           "endpointDiscoveryId" : false,
           "enumType" : "QueryTransactionStatus",
-          "fluentSetterDocumentation" : "/**<p>The status of the transaction.</p>\n@param status The status of the transaction.\n@return Returns a reference to this object so that method calls can be chained together.\n@see QueryTransactionStatus*/",
+          "fluentSetterDocumentation" : "/**<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>\n@param status The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul>\n@return Returns a reference to this object so that method calls can be chained together.\n@see QueryTransactionStatus*/",
           "fluentSetterMethodName" : "withStatus",
-          "getterDocumentation" : "/**<p>The status of the transaction.</p>\n@return The status of the transaction.\n@see QueryTransactionStatus*/",
+          "getterDocumentation" : "/**<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>\n@return The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul>\n@see QueryTransactionStatus*/",
           "getterMethodName" : "getStatus",
           "getterModel" : {
             "returnType" : "String",
@@ -19285,7 +19660,7 @@
           "marshallingType" : "STRING",
           "name" : "Status",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The status of the transaction.</p>\n@param status The status of the transaction.\n@see QueryTransactionStatus*/",
+          "setterDocumentation" : "/**<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>\n@param status The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul>\n@see QueryTransactionStatus*/",
           "setterMethodName" : "setStatus",
           "setterModel" : {
             "timestampFormat" : null,
@@ -19300,13 +19675,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The status of the transaction.</p>\n@param status The status of the transaction.\n@return Returns a reference to this object so that method calls can be chained together.\n@see QueryTransactionStatus*/",
+          "varargSetterDocumentation" : "/**<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>\n@param status The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul>\n@return Returns a reference to this object so that method calls can be chained together.\n@see QueryTransactionStatus*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "status",
             "variableType" : "String",
-            "documentation" : "<p>The status of the transaction.</p>",
+            "documentation" : "<p>The status of the transaction.</p> <important> <p>This property is deprecated. You must use the <code>confirmationStatus</code> and the <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is <code>FINAL</code> or <code>FAILED</code>.</p> <ul> <li> <p>Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.</p> </li> <li> <p>Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.</p> </li> </ul> </important>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -19736,7 +20111,7 @@
       "packageName" : "com.amazonaws.services.managedblockchainquery.model",
       "requestSignerAware" : false,
       "requestSignerClassFqcn" : null,
-      "required" : [ "network", "transactionHash", "transactionTimestamp", "transactionIndex", "numberOfTransactions", "status", "to" ],
+      "required" : [ "network", "transactionHash", "transactionTimestamp", "transactionIndex", "numberOfTransactions", "to" ],
       "shapeName" : "Transaction",
       "signerAware" : false,
       "signerType" : null,

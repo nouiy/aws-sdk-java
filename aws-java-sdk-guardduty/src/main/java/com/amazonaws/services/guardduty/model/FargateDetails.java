@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about AWS Fargate details associated with an Amazon ECS cluster.
+ * Contains information about Amazon Web Services Fargate details associated with an Amazon ECS cluster.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/FargateDetails" target="_top">AWS API
@@ -30,7 +30,7 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Runtime coverage issues identified for the resource running on AWS Fargate.
+     * Runtime coverage issues identified for the resource running on Amazon Web Services Fargate.
      * </p>
      */
     private java.util.List<String> issues;
@@ -46,26 +46,25 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>MANUAL</code> indicates that you are responsible to deploy, update, and manage the GuardDuty security agent
-     * updates for this resource.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>DISABLED</code> indicates that the deployment of the GuardDuty security agent is disabled for this
      * resource.
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>MANUAL</code> status doesn't apply to the Amazon Web Services Fargate (Amazon ECS only) woprkloads.
+     * </p>
+     * </note>
      */
     private String managementType;
 
     /**
      * <p>
-     * Runtime coverage issues identified for the resource running on AWS Fargate.
+     * Runtime coverage issues identified for the resource running on Amazon Web Services Fargate.
      * </p>
      * 
-     * @return Runtime coverage issues identified for the resource running on AWS Fargate.
+     * @return Runtime coverage issues identified for the resource running on Amazon Web Services Fargate.
      */
 
     public java.util.List<String> getIssues() {
@@ -74,11 +73,11 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Runtime coverage issues identified for the resource running on AWS Fargate.
+     * Runtime coverage issues identified for the resource running on Amazon Web Services Fargate.
      * </p>
      * 
      * @param issues
-     *        Runtime coverage issues identified for the resource running on AWS Fargate.
+     *        Runtime coverage issues identified for the resource running on Amazon Web Services Fargate.
      */
 
     public void setIssues(java.util.Collection<String> issues) {
@@ -92,7 +91,7 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Runtime coverage issues identified for the resource running on AWS Fargate.
+     * Runtime coverage issues identified for the resource running on Amazon Web Services Fargate.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -101,7 +100,7 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param issues
-     *        Runtime coverage issues identified for the resource running on AWS Fargate.
+     *        Runtime coverage issues identified for the resource running on Amazon Web Services Fargate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -117,11 +116,11 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Runtime coverage issues identified for the resource running on AWS Fargate.
+     * Runtime coverage issues identified for the resource running on Amazon Web Services Fargate.
      * </p>
      * 
      * @param issues
-     *        Runtime coverage issues identified for the resource running on AWS Fargate.
+     *        Runtime coverage issues identified for the resource running on Amazon Web Services Fargate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,17 +141,16 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>MANUAL</code> indicates that you are responsible to deploy, update, and manage the GuardDuty security agent
-     * updates for this resource.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>DISABLED</code> indicates that the deployment of the GuardDuty security agent is disabled for this
      * resource.
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>MANUAL</code> status doesn't apply to the Amazon Web Services Fargate (Amazon ECS only) woprkloads.
+     * </p>
+     * </note>
      * 
      * @param managementType
      *        Indicates how the GuardDuty security agent is managed for this resource.</p>
@@ -164,16 +162,16 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MANUAL</code> indicates that you are responsible to deploy, update, and manage the GuardDuty
-     *        security agent updates for this resource.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>DISABLED</code> indicates that the deployment of the GuardDuty security agent is disabled for this
      *        resource.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The <code>MANUAL</code> status doesn't apply to the Amazon Web Services Fargate (Amazon ECS only)
+     *        woprkloads.
+     *        </p>
      * @see ManagementType
      */
 
@@ -193,17 +191,16 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>MANUAL</code> indicates that you are responsible to deploy, update, and manage the GuardDuty security agent
-     * updates for this resource.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>DISABLED</code> indicates that the deployment of the GuardDuty security agent is disabled for this
      * resource.
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>MANUAL</code> status doesn't apply to the Amazon Web Services Fargate (Amazon ECS only) woprkloads.
+     * </p>
+     * </note>
      * 
      * @return Indicates how the GuardDuty security agent is managed for this resource.</p>
      *         <ul>
@@ -214,16 +211,16 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>MANUAL</code> indicates that you are responsible to deploy, update, and manage the GuardDuty
-     *         security agent updates for this resource.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         <code>DISABLED</code> indicates that the deployment of the GuardDuty security agent is disabled for this
      *         resource.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         The <code>MANUAL</code> status doesn't apply to the Amazon Web Services Fargate (Amazon ECS only)
+     *         woprkloads.
+     *         </p>
      * @see ManagementType
      */
 
@@ -243,17 +240,16 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>MANUAL</code> indicates that you are responsible to deploy, update, and manage the GuardDuty security agent
-     * updates for this resource.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>DISABLED</code> indicates that the deployment of the GuardDuty security agent is disabled for this
      * resource.
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>MANUAL</code> status doesn't apply to the Amazon Web Services Fargate (Amazon ECS only) woprkloads.
+     * </p>
+     * </note>
      * 
      * @param managementType
      *        Indicates how the GuardDuty security agent is managed for this resource.</p>
@@ -265,16 +261,16 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MANUAL</code> indicates that you are responsible to deploy, update, and manage the GuardDuty
-     *        security agent updates for this resource.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>DISABLED</code> indicates that the deployment of the GuardDuty security agent is disabled for this
      *        resource.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The <code>MANUAL</code> status doesn't apply to the Amazon Web Services Fargate (Amazon ECS only)
+     *        woprkloads.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ManagementType
      */
@@ -296,17 +292,16 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>MANUAL</code> indicates that you are responsible to deploy, update, and manage the GuardDuty security agent
-     * updates for this resource.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>DISABLED</code> indicates that the deployment of the GuardDuty security agent is disabled for this
      * resource.
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>MANUAL</code> status doesn't apply to the Amazon Web Services Fargate (Amazon ECS only) woprkloads.
+     * </p>
+     * </note>
      * 
      * @param managementType
      *        Indicates how the GuardDuty security agent is managed for this resource.</p>
@@ -318,16 +313,16 @@ public class FargateDetails implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MANUAL</code> indicates that you are responsible to deploy, update, and manage the GuardDuty
-     *        security agent updates for this resource.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>DISABLED</code> indicates that the deployment of the GuardDuty security agent is disabled for this
      *        resource.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The <code>MANUAL</code> status doesn't apply to the Amazon Web Services Fargate (Amazon ECS only)
+     *        woprkloads.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ManagementType
      */

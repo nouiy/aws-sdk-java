@@ -54,6 +54,12 @@ public class UsageStatisticsJsonUnmarshaller implements Unmarshaller<UsageStatis
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("topAccountsByFeature", targetDepth)) {
+                    context.nextToken();
+                    usageStatistics.setTopAccountsByFeature(new ListUnmarshaller<UsageTopAccountsResult>(UsageTopAccountsResultJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("sumByDataSource", targetDepth)) {
                     context.nextToken();
                     usageStatistics.setSumByDataSource(new ListUnmarshaller<UsageDataSourceResult>(UsageDataSourceResultJsonUnmarshaller.getInstance())

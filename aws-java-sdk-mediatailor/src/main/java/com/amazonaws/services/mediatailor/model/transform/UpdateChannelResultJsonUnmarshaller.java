@@ -91,6 +91,10 @@ public class UpdateChannelResultJsonUnmarshaller implements Unmarshaller<UpdateC
                     context.nextToken();
                     updateChannelResult.setTier(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("TimeShiftConfiguration", targetDepth)) {
+                    context.nextToken();
+                    updateChannelResult.setTimeShiftConfiguration(TimeShiftConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

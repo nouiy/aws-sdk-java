@@ -30,6 +30,8 @@ public class UsageStatisticsMarshaller {
 
     private static final MarshallingInfo<List> SUMBYACCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("sumByAccount").build();
+    private static final MarshallingInfo<List> TOPACCOUNTSBYFEATURE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("topAccountsByFeature").build();
     private static final MarshallingInfo<List> SUMBYDATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sumByDataSource").build();
     private static final MarshallingInfo<List> SUMBYRESOURCE_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -56,6 +58,7 @@ public class UsageStatisticsMarshaller {
 
         try {
             protocolMarshaller.marshall(usageStatistics.getSumByAccount(), SUMBYACCOUNT_BINDING);
+            protocolMarshaller.marshall(usageStatistics.getTopAccountsByFeature(), TOPACCOUNTSBYFEATURE_BINDING);
             protocolMarshaller.marshall(usageStatistics.getSumByDataSource(), SUMBYDATASOURCE_BINDING);
             protocolMarshaller.marshall(usageStatistics.getSumByResource(), SUMBYRESOURCE_BINDING);
             protocolMarshaller.marshall(usageStatistics.getTopResources(), TOPRESOURCES_BINDING);

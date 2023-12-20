@@ -89,7 +89,29 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The status of the transaction.
      * </p>
+     * <important>
+     * <p>
+     * This property is deprecated. You must use the <code>confirmationStatus</code> and the
+     * <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is
+     * <code>FINAL</code> or <code>FAILED</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code>
+     * set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code>
+     * set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
      */
+    @Deprecated
     private String status;
     /**
      * <p>
@@ -159,6 +181,18 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String transactionId;
+    /**
+     * <p>
+     * Specifies whether the transaction has reached Finality.
+     * </p>
+     */
+    private String confirmationStatus;
+    /**
+     * <p>
+     * Identifies whether the transaction has succeeded or failed.
+     * </p>
+     */
+    private String executionStatus;
 
     /**
      * <p>
@@ -472,12 +506,54 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The status of the transaction.
      * </p>
+     * <important>
+     * <p>
+     * This property is deprecated. You must use the <code>confirmationStatus</code> and the
+     * <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is
+     * <code>FINAL</code> or <code>FAILED</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code>
+     * set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code>
+     * set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
      * 
      * @param status
-     *        The status of the transaction.
+     *        The status of the transaction.</p> <important>
+     *        <p>
+     *        This property is deprecated. You must use the <code>confirmationStatus</code> and the
+     *        <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is
+     *        <code>FINAL</code> or <code>FAILED</code>.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Transactions with a <code>status</code> of <code>FINAL</code> will now have the
+     *        <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to
+     *        <code>SUCCEEDED</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Transactions with a <code>status</code> of <code>FAILED</code> will now have the
+     *        <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to
+     *        <code>FAILED</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
      * @see QueryTransactionStatus
      */
-
+    @Deprecated
     public void setStatus(String status) {
         this.status = status;
     }
@@ -486,11 +562,53 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The status of the transaction.
      * </p>
+     * <important>
+     * <p>
+     * This property is deprecated. You must use the <code>confirmationStatus</code> and the
+     * <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is
+     * <code>FINAL</code> or <code>FAILED</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code>
+     * set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code>
+     * set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
      * 
-     * @return The status of the transaction.
+     * @return The status of the transaction.</p> <important>
+     *         <p>
+     *         This property is deprecated. You must use the <code>confirmationStatus</code> and the
+     *         <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is
+     *         <code>FINAL</code> or <code>FAILED</code>.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Transactions with a <code>status</code> of <code>FINAL</code> will now have the
+     *         <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to
+     *         <code>SUCCEEDED</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Transactions with a <code>status</code> of <code>FAILED</code> will now have the
+     *         <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to
+     *         <code>FAILED</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
      * @see QueryTransactionStatus
      */
-
+    @Deprecated
     public String getStatus() {
         return this.status;
     }
@@ -499,13 +617,55 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The status of the transaction.
      * </p>
+     * <important>
+     * <p>
+     * This property is deprecated. You must use the <code>confirmationStatus</code> and the
+     * <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is
+     * <code>FINAL</code> or <code>FAILED</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code>
+     * set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code>
+     * set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
      * 
      * @param status
-     *        The status of the transaction.
+     *        The status of the transaction.</p> <important>
+     *        <p>
+     *        This property is deprecated. You must use the <code>confirmationStatus</code> and the
+     *        <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is
+     *        <code>FINAL</code> or <code>FAILED</code>.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Transactions with a <code>status</code> of <code>FINAL</code> will now have the
+     *        <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to
+     *        <code>SUCCEEDED</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Transactions with a <code>status</code> of <code>FAILED</code> will now have the
+     *        <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to
+     *        <code>FAILED</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryTransactionStatus
      */
-
+    @Deprecated
     public Transaction withStatus(String status) {
         setStatus(status);
         return this;
@@ -515,13 +675,55 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The status of the transaction.
      * </p>
+     * <important>
+     * <p>
+     * This property is deprecated. You must use the <code>confirmationStatus</code> and the
+     * <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is
+     * <code>FINAL</code> or <code>FAILED</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Transactions with a <code>status</code> of <code>FINAL</code> will now have the <code>confirmationStatus</code>
+     * set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>SUCCEEDED</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Transactions with a <code>status</code> of <code>FAILED</code> will now have the <code>confirmationStatus</code>
+     * set to <code>FINAL</code> and the <code>executionStatus</code> set to <code>FAILED</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
      * 
      * @param status
-     *        The status of the transaction.
+     *        The status of the transaction.</p> <important>
+     *        <p>
+     *        This property is deprecated. You must use the <code>confirmationStatus</code> and the
+     *        <code>executionStatus</code> properties to determine if the <code>status</code> of the transaction is
+     *        <code>FINAL</code> or <code>FAILED</code>.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Transactions with a <code>status</code> of <code>FINAL</code> will now have the
+     *        <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to
+     *        <code>SUCCEEDED</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Transactions with a <code>status</code> of <code>FAILED</code> will now have the
+     *        <code>confirmationStatus</code> set to <code>FINAL</code> and the <code>executionStatus</code> set to
+     *        <code>FAILED</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryTransactionStatus
      */
-
+    @Deprecated
     public Transaction withStatus(QueryTransactionStatus status) {
         this.status = status.toString();
         return this;
@@ -980,6 +1182,124 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies whether the transaction has reached Finality.
+     * </p>
+     * 
+     * @param confirmationStatus
+     *        Specifies whether the transaction has reached Finality.
+     * @see ConfirmationStatus
+     */
+
+    public void setConfirmationStatus(String confirmationStatus) {
+        this.confirmationStatus = confirmationStatus;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the transaction has reached Finality.
+     * </p>
+     * 
+     * @return Specifies whether the transaction has reached Finality.
+     * @see ConfirmationStatus
+     */
+
+    public String getConfirmationStatus() {
+        return this.confirmationStatus;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the transaction has reached Finality.
+     * </p>
+     * 
+     * @param confirmationStatus
+     *        Specifies whether the transaction has reached Finality.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfirmationStatus
+     */
+
+    public Transaction withConfirmationStatus(String confirmationStatus) {
+        setConfirmationStatus(confirmationStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the transaction has reached Finality.
+     * </p>
+     * 
+     * @param confirmationStatus
+     *        Specifies whether the transaction has reached Finality.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfirmationStatus
+     */
+
+    public Transaction withConfirmationStatus(ConfirmationStatus confirmationStatus) {
+        this.confirmationStatus = confirmationStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Identifies whether the transaction has succeeded or failed.
+     * </p>
+     * 
+     * @param executionStatus
+     *        Identifies whether the transaction has succeeded or failed.
+     * @see ExecutionStatus
+     */
+
+    public void setExecutionStatus(String executionStatus) {
+        this.executionStatus = executionStatus;
+    }
+
+    /**
+     * <p>
+     * Identifies whether the transaction has succeeded or failed.
+     * </p>
+     * 
+     * @return Identifies whether the transaction has succeeded or failed.
+     * @see ExecutionStatus
+     */
+
+    public String getExecutionStatus() {
+        return this.executionStatus;
+    }
+
+    /**
+     * <p>
+     * Identifies whether the transaction has succeeded or failed.
+     * </p>
+     * 
+     * @param executionStatus
+     *        Identifies whether the transaction has succeeded or failed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionStatus
+     */
+
+    public Transaction withExecutionStatus(String executionStatus) {
+        setExecutionStatus(executionStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Identifies whether the transaction has succeeded or failed.
+     * </p>
+     * 
+     * @param executionStatus
+     *        Identifies whether the transaction has succeeded or failed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionStatus
+     */
+
+    public Transaction withExecutionStatus(ExecutionStatus executionStatus) {
+        this.executionStatus = executionStatus.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1028,7 +1348,11 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
         if (getTransactionFee() != null)
             sb.append("TransactionFee: ").append(getTransactionFee()).append(",");
         if (getTransactionId() != null)
-            sb.append("TransactionId: ").append(getTransactionId());
+            sb.append("TransactionId: ").append(getTransactionId()).append(",");
+        if (getConfirmationStatus() != null)
+            sb.append("ConfirmationStatus: ").append(getConfirmationStatus()).append(",");
+        if (getExecutionStatus() != null)
+            sb.append("ExecutionStatus: ").append(getExecutionStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -1119,6 +1443,14 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTransactionId() != null && other.getTransactionId().equals(this.getTransactionId()) == false)
             return false;
+        if (other.getConfirmationStatus() == null ^ this.getConfirmationStatus() == null)
+            return false;
+        if (other.getConfirmationStatus() != null && other.getConfirmationStatus().equals(this.getConfirmationStatus()) == false)
+            return false;
+        if (other.getExecutionStatus() == null ^ this.getExecutionStatus() == null)
+            return false;
+        if (other.getExecutionStatus() != null && other.getExecutionStatus().equals(this.getExecutionStatus()) == false)
+            return false;
         return true;
     }
 
@@ -1146,6 +1478,8 @@ public class Transaction implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSignatureS() == null) ? 0 : getSignatureS().hashCode());
         hashCode = prime * hashCode + ((getTransactionFee() == null) ? 0 : getTransactionFee().hashCode());
         hashCode = prime * hashCode + ((getTransactionId() == null) ? 0 : getTransactionId().hashCode());
+        hashCode = prime * hashCode + ((getConfirmationStatus() == null) ? 0 : getConfirmationStatus().hashCode());
+        hashCode = prime * hashCode + ((getExecutionStatus() == null) ? 0 : getExecutionStatus().hashCode());
         return hashCode;
     }
 

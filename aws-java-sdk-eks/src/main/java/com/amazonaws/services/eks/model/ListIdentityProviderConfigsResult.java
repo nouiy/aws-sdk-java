@@ -36,6 +36,12 @@ public class ListIdentityProviderConfigsResult extends com.amazonaws.AmazonWebSe
      * you can use this value to retrieve the next page of results. This value is <code>null</code> when there are no
      * more results to return.
      * </p>
+     * <note>
+     * <p>
+     * This token should be treated as an opaque identifier that is used only to retrieve the next items in a list and
+     * not for other programmatic purposes.
+     * </p>
+     * </note>
      */
     private String nextToken;
 
@@ -116,12 +122,22 @@ public class ListIdentityProviderConfigsResult extends com.amazonaws.AmazonWebSe
      * you can use this value to retrieve the next page of results. This value is <code>null</code> when there are no
      * more results to return.
      * </p>
+     * <note>
+     * <p>
+     * This token should be treated as an opaque identifier that is used only to retrieve the next items in a list and
+     * not for other programmatic purposes.
+     * </p>
+     * </note>
      * 
      * @param nextToken
      *        The <code>nextToken</code> value to include in a future <code>ListIdentityProviderConfigsResponse</code>
      *        request. When the results of a <code>ListIdentityProviderConfigsResponse</code> request exceed
      *        <code>maxResults</code>, you can use this value to retrieve the next page of results. This value is
-     *        <code>null</code> when there are no more results to return.
+     *        <code>null</code> when there are no more results to return.</p> <note>
+     *        <p>
+     *        This token should be treated as an opaque identifier that is used only to retrieve the next items in a
+     *        list and not for other programmatic purposes.
+     *        </p>
      */
 
     public void setNextToken(String nextToken) {
@@ -135,11 +151,21 @@ public class ListIdentityProviderConfigsResult extends com.amazonaws.AmazonWebSe
      * you can use this value to retrieve the next page of results. This value is <code>null</code> when there are no
      * more results to return.
      * </p>
+     * <note>
+     * <p>
+     * This token should be treated as an opaque identifier that is used only to retrieve the next items in a list and
+     * not for other programmatic purposes.
+     * </p>
+     * </note>
      * 
      * @return The <code>nextToken</code> value to include in a future <code>ListIdentityProviderConfigsResponse</code>
      *         request. When the results of a <code>ListIdentityProviderConfigsResponse</code> request exceed
      *         <code>maxResults</code>, you can use this value to retrieve the next page of results. This value is
-     *         <code>null</code> when there are no more results to return.
+     *         <code>null</code> when there are no more results to return.</p> <note>
+     *         <p>
+     *         This token should be treated as an opaque identifier that is used only to retrieve the next items in a
+     *         list and not for other programmatic purposes.
+     *         </p>
      */
 
     public String getNextToken() {
@@ -153,12 +179,22 @@ public class ListIdentityProviderConfigsResult extends com.amazonaws.AmazonWebSe
      * you can use this value to retrieve the next page of results. This value is <code>null</code> when there are no
      * more results to return.
      * </p>
+     * <note>
+     * <p>
+     * This token should be treated as an opaque identifier that is used only to retrieve the next items in a list and
+     * not for other programmatic purposes.
+     * </p>
+     * </note>
      * 
      * @param nextToken
      *        The <code>nextToken</code> value to include in a future <code>ListIdentityProviderConfigsResponse</code>
      *        request. When the results of a <code>ListIdentityProviderConfigsResponse</code> request exceed
      *        <code>maxResults</code>, you can use this value to retrieve the next page of results. This value is
-     *        <code>null</code> when there are no more results to return.
+     *        <code>null</code> when there are no more results to return.</p> <note>
+     *        <p>
+     *        This token should be treated as an opaque identifier that is used only to retrieve the next items in a
+     *        list and not for other programmatic purposes.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -534,6 +534,19 @@ public class AbstractAmazonGuardDutyAsync extends AbstractAmazonGuardDuty implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetOrganizationStatisticsResult> getOrganizationStatisticsAsync(GetOrganizationStatisticsRequest request) {
+
+        return getOrganizationStatisticsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetOrganizationStatisticsResult> getOrganizationStatisticsAsync(GetOrganizationStatisticsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetOrganizationStatisticsRequest, GetOrganizationStatisticsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetRemainingFreeTrialDaysResult> getRemainingFreeTrialDaysAsync(GetRemainingFreeTrialDaysRequest request) {
 
         return getRemainingFreeTrialDaysAsync(request, null);

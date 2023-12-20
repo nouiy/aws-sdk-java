@@ -948,6 +948,39 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeInsightResult> describeInsightAsync(DescribeInsightRequest request) {
+
+        return describeInsightAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeInsightResult> describeInsightAsync(final DescribeInsightRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeInsightRequest, DescribeInsightResult> asyncHandler) {
+        final DescribeInsightRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeInsightResult>() {
+            @Override
+            public DescribeInsightResult call() throws Exception {
+                DescribeInsightResult result = null;
+
+                try {
+                    result = executeDescribeInsight(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeNodegroupResult> describeNodegroupAsync(DescribeNodegroupRequest request) {
 
         return describeNodegroupAsync(request, null);
@@ -1364,6 +1397,39 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
 
                 try {
                     result = executeListIdentityProviderConfigs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListInsightsResult> listInsightsAsync(ListInsightsRequest request) {
+
+        return listInsightsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListInsightsResult> listInsightsAsync(final ListInsightsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListInsightsRequest, ListInsightsResult> asyncHandler) {
+        final ListInsightsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListInsightsResult>() {
+            @Override
+            public ListInsightsResult call() throws Exception {
+                ListInsightsResult result = null;
+
+                try {
+                    result = executeListInsights(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

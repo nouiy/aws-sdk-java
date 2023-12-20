@@ -544,6 +544,13 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
      * enable GuardDuty prior to being added as a member.
      * </p>
      * <p>
+     * When you use CreateMembers as an Organizations delegated administrator, GuardDuty applies your organization's
+     * auto-enable settings to the member accounts in this request, irrespective of the accounts being new or existing
+     * members. For more information about the existing auto-enable settings for your organization, see <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DescribeOrganizationConfiguration.html"
+     * >DescribeOrganizationConfiguration</a>.
+     * </p>
+     * <p>
      * If you are adding accounts by invitation, before using <a
      * href="https://docs.aws.amazon.com/guardduty/latest/APIReference/API_InviteMembers.html">InviteMembers</a>, use
      * <code>CreateMembers</code> after GuardDuty has been enabled in potential member accounts.
@@ -1889,7 +1896,7 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
      * <p>
      * Retrieves aggregated statistics for your account. If you are a GuardDuty administrator, you can retrieve the
      * statistics for all the resources associated with the active member accounts in your organization who have enabled
-     * EKS Runtime Monitoring and have the GuardDuty agent running on their EKS nodes.
+     * Runtime Monitoring and have the GuardDuty security agent running on their resources.
      * </p>
      * 
      * @param getCoverageStatisticsRequest
@@ -2560,6 +2567,72 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Retrieves how many active member accounts in your Amazon Web Services organization have each feature enabled
+     * within GuardDuty. Only a delegated GuardDuty administrator of an organization can run this API.
+     * </p>
+     * <p>
+     * When you create a new Amazon Web Services organization, it might take up to 24 hours to generate the statistics
+     * for the entire organization.
+     * </p>
+     * 
+     * @param getOrganizationStatisticsRequest
+     * @return Result of the GetOrganizationStatistics operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.GetOrganizationStatistics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetOrganizationStatistics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetOrganizationStatisticsResult getOrganizationStatistics(GetOrganizationStatisticsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetOrganizationStatistics(request);
+    }
+
+    @SdkInternalApi
+    final GetOrganizationStatisticsResult executeGetOrganizationStatistics(GetOrganizationStatisticsRequest getOrganizationStatisticsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getOrganizationStatisticsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetOrganizationStatisticsRequest> request = null;
+        Response<GetOrganizationStatisticsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetOrganizationStatisticsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getOrganizationStatisticsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "GuardDuty");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetOrganizationStatistics");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetOrganizationStatisticsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetOrganizationStatisticsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Provides the number of days left for each data source used in the free trial period.
      * </p>
      * 
@@ -2830,7 +2903,7 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
      * resources associated with the active member accounts in your organization.
      * </p>
      * <p>
-     * Make sure the accounts have EKS Runtime Monitoring enabled and GuardDuty agent running on their EKS nodes.
+     * Make sure the accounts have Runtime Monitoring enabled and GuardDuty agent running on their resources.
      * </p>
      * 
      * @param listCoverageRequest

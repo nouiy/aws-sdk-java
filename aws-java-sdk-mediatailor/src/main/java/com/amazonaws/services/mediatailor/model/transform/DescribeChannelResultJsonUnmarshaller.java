@@ -95,6 +95,10 @@ public class DescribeChannelResultJsonUnmarshaller implements Unmarshaller<Descr
                     context.nextToken();
                     describeChannelResult.setTier(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("TimeShiftConfiguration", targetDepth)) {
+                    context.nextToken();
+                    describeChannelResult.setTimeShiftConfiguration(TimeShiftConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

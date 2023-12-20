@@ -56,6 +56,10 @@ public class UserSettingJsonUnmarshaller implements Unmarshaller<UserSetting, Js
                     context.nextToken();
                     userSetting.setPermission(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("MaximumLength", targetDepth)) {
+                    context.nextToken();
+                    userSetting.setMaximumLength(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

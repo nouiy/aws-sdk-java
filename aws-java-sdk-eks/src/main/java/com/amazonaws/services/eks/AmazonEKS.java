@@ -984,6 +984,30 @@ public interface AmazonEKS {
 
     /**
      * <p>
+     * Returns details about an insight that you specify using its ID.
+     * </p>
+     * 
+     * @param describeInsightRequest
+     * @return Result of the DescribeInsight operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with
+     *         <code>ListClusters</code>. You can view your available managed node groups with
+     *         <code>ListNodegroups</code>. Amazon EKS clusters and node groups are Amazon Web Services Region specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.DescribeInsight
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeInsight" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeInsightResult describeInsight(DescribeInsightRequest describeInsightRequest);
+
+    /**
+     * <p>
      * Describes a managed node group.
      * </p>
      * 
@@ -1328,6 +1352,31 @@ public interface AmazonEKS {
      *      target="_top">AWS API Documentation</a>
      */
     ListIdentityProviderConfigsResult listIdentityProviderConfigs(ListIdentityProviderConfigsRequest listIdentityProviderConfigsRequest);
+
+    /**
+     * <p>
+     * Returns a list of all insights checked for against the specified cluster. You can filter which insights are
+     * returned by category, associated Kubernetes version, and status.
+     * </p>
+     * 
+     * @param listInsightsRequest
+     * @return Result of the ListInsights operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with
+     *         <code>ListClusters</code>. You can view your available managed node groups with
+     *         <code>ListNodegroups</code>. Amazon EKS clusters and node groups are Amazon Web Services Region specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.ListInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListInsights" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListInsightsResult listInsights(ListInsightsRequest listInsightsRequest);
 
     /**
      * <p>

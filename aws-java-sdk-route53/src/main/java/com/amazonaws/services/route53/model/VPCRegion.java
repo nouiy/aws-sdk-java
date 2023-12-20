@@ -53,7 +53,8 @@ public enum VPCRegion {
     EuSouth1("eu-south-1"),
     EuSouth2("eu-south-2"),
     ApSoutheast4("ap-southeast-4"),
-    IlCentral1("il-central-1");
+    IlCentral1("il-central-1"),
+    CaWest1("ca-west-1");
 
     private String value;
 

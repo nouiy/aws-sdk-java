@@ -378,6 +378,17 @@ public enum Region {
     IL_TelAviv("il-central-1"),
 
     /**
+     * The Canada West (Calgary) Region. This region uses Amazon S3 servers located in Canada West.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3.ca-west-1.amazonaws.com</code> on all requests to these buckets
+     * to reduce any latency experienced after the first hour of creating a
+     * bucket in this region.
+     * </p>
+     */
+    CA_Calgary("ca-west-1"),
+
+    /**
      * The Africa South (Cape Town) Region. This region uses Amazon S3 servers
      * located in Cape Town.
      */

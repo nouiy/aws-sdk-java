@@ -65,6 +65,10 @@ public class TransactionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("transactionFee").build();
     private static final MarshallingInfo<String> TRANSACTIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("transactionId").build();
+    private static final MarshallingInfo<String> CONFIRMATIONSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("confirmationStatus").build();
+    private static final MarshallingInfo<String> EXECUTIONSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("executionStatus").build();
 
     private static final TransactionMarshaller instance = new TransactionMarshaller();
 
@@ -101,6 +105,8 @@ public class TransactionMarshaller {
             protocolMarshaller.marshall(transaction.getSignatureS(), SIGNATURES_BINDING);
             protocolMarshaller.marshall(transaction.getTransactionFee(), TRANSACTIONFEE_BINDING);
             protocolMarshaller.marshall(transaction.getTransactionId(), TRANSACTIONID_BINDING);
+            protocolMarshaller.marshall(transaction.getConfirmationStatus(), CONFIRMATIONSTATUS_BINDING);
+            protocolMarshaller.marshall(transaction.getExecutionStatus(), EXECUTIONSTATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

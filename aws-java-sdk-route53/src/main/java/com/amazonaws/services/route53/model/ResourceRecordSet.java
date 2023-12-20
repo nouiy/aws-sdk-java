@@ -73,11 +73,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * </p>
      * </important></li>
      * </ul>
-     * <p>
-     * You can use the * wildcard as the leftmost label in a domain name, for example, <code>*.example.com</code>. You
-     * can't use an * for one of the middle labels, for example, <code>marketing.*.example.com</code>. In addition, the
-     * * must replace the entire label; for example, you can't specify <code>prod*.example.com</code>.
-     * </p>
      */
     private String name;
     /**
@@ -760,40 +755,32 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      *        You can't use the * wildcard for resource records sets that have a type of NS.
      *        </p>
      *        </important></li>
-     *        </ul>
-     *        <p>
-     *        You can use the * wildcard as the leftmost label in a domain name, for example, <code>*.example.com</code>
-     *        . You can't use an * for one of the middle labels, for example, <code>marketing.*.example.com</code>. In
-     *        addition, the * must replace the entire label; for example, you can't specify
-     *        <code>prod*.example.com</code>.
      * @param type
      *        The DNS record type. For information about different record types and how data is encoded for them, see <a
      *        href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html">Supported DNS
-     *        Resource Record Types</a> in the <i>Amazon Route 53 Developer Guide</i>.
-     *        </p>
+     *        Resource Record Types</a> in the <i>Amazon Route 53 Developer Guide</i>.</p>
      *        <p>
      *        Valid values for basic resource record sets: <code>A</code> | <code>AAAA</code> | <code>CAA</code> |
-     *        <code>CNAME</code> | <code>DS</code> |<code>MX</code> | <code>NAPTR</code> | <code>NS</code> |
-     *        <code>PTR</code> | <code>SOA</code> | <code>SPF</code> | <code>SRV</code> | <code>TXT</code>
+     *        <code>CNAME</code> | <code>DS</code> |<code>MX</code> | <code>NAPTR</code> | <code>NS</code> | <code>PTR
+     *        </code> | <code>SOA</code> | <code>SPF</code> | <code>SRV</code> | <code>TXT</code>
      *        </p>
      *        <p>
-     *        Values for weighted, latency, geolocation, and failover resource record sets: <code>A</code> |
-     *        <code>AAAA</code> | <code>CAA</code> | <code>CNAME</code> | <code>MX</code> | <code>NAPTR</code> |
-     *        <code>PTR</code> | <code>SPF</code> | <code>SRV</code> | <code>TXT</code>. When creating a group of
-     *        weighted, latency, geolocation, or failover resource record sets, specify the same value for all of the
-     *        resource record sets in the group.
+     *        Values for weighted, latency, geolocation, and failover resource record sets: <code>A</code> | <code>AAAA
+     *        </code> | <code>CAA</code> | <code>CNAME</code> | <code>MX</code> | <code>NAPTR</code> | <code>PTR</code>
+     *        | <code>SPF</code> | <code>SRV</code> | <code>TXT</code>. When creating a group of weighted, latency,
+     *        geolocation, or failover resource record sets, specify the same value for all of the resource record sets
+     *        in the group.
      *        </p>
      *        <p>
-     *        Valid values for multivalue answer resource record sets: <code>A</code> | <code>AAAA</code> |
-     *        <code>MX</code> | <code>NAPTR</code> | <code>PTR</code> | <code>SPF</code> | <code>SRV</code> |
-     *        <code>TXT</code>
+     *        Valid values for multivalue answer resource record sets: <code>A</code> | <code>AAAA</code> | <code>MX
+     *        </code> | <code>NAPTR</code> | <code>PTR</code> | <code>SPF</code> | <code>SRV</code> | <code>TXT</code>
      *        </p>
      *        <note>
      *        <p>
      *        SPF records were formerly used to verify the identity of the sender of email messages. However, we no
-     *        longer recommend that you create resource record sets for which the value of <code>Type</code> is
-     *        <code>SPF</code>. RFC 7208, <i>Sender Policy Framework (SPF) for Authorizing Use of Domains in Email,
-     *        Version 1</i>, has been updated to say,
+     *        longer recommend that you create resource record sets for which the value of <code>Type</code> is <code>
+     *        SPF</code>. RFC 7208, <i>Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version
+     *        1</i>, has been updated to say,
      *        "...[I]ts existence and mechanism defined in [RFC4408] have led to some interoperability issues. Accordingly, its use is no longer appropriate for SPF version 1; implementations are not to use it."
      *        In RFC 7208, see section 14.1, <a href="http://tools.ietf.org/html/rfc7208#section-14.1">The SPF DNS
      *        Record Type</a>.
@@ -905,40 +892,32 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      *        You can't use the * wildcard for resource records sets that have a type of NS.
      *        </p>
      *        </important></li>
-     *        </ul>
-     *        <p>
-     *        You can use the * wildcard as the leftmost label in a domain name, for example, <code>*.example.com</code>
-     *        . You can't use an * for one of the middle labels, for example, <code>marketing.*.example.com</code>. In
-     *        addition, the * must replace the entire label; for example, you can't specify
-     *        <code>prod*.example.com</code>.
      * @param type
      *        The DNS record type. For information about different record types and how data is encoded for them, see <a
      *        href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html">Supported DNS
-     *        Resource Record Types</a> in the <i>Amazon Route 53 Developer Guide</i>.
-     *        </p>
+     *        Resource Record Types</a> in the <i>Amazon Route 53 Developer Guide</i>.</p>
      *        <p>
      *        Valid values for basic resource record sets: <code>A</code> | <code>AAAA</code> | <code>CAA</code> |
-     *        <code>CNAME</code> | <code>DS</code> |<code>MX</code> | <code>NAPTR</code> | <code>NS</code> |
-     *        <code>PTR</code> | <code>SOA</code> | <code>SPF</code> | <code>SRV</code> | <code>TXT</code>
+     *        <code>CNAME</code> | <code>DS</code> |<code>MX</code> | <code>NAPTR</code> | <code>NS</code> | <code>PTR
+     *        </code> | <code>SOA</code> | <code>SPF</code> | <code>SRV</code> | <code>TXT</code>
      *        </p>
      *        <p>
-     *        Values for weighted, latency, geolocation, and failover resource record sets: <code>A</code> |
-     *        <code>AAAA</code> | <code>CAA</code> | <code>CNAME</code> | <code>MX</code> | <code>NAPTR</code> |
-     *        <code>PTR</code> | <code>SPF</code> | <code>SRV</code> | <code>TXT</code>. When creating a group of
-     *        weighted, latency, geolocation, or failover resource record sets, specify the same value for all of the
-     *        resource record sets in the group.
+     *        Values for weighted, latency, geolocation, and failover resource record sets: <code>A</code> | <code>AAAA
+     *        </code> | <code>CAA</code> | <code>CNAME</code> | <code>MX</code> | <code>NAPTR</code> | <code>PTR</code>
+     *        | <code>SPF</code> | <code>SRV</code> | <code>TXT</code>. When creating a group of weighted, latency,
+     *        geolocation, or failover resource record sets, specify the same value for all of the resource record sets
+     *        in the group.
      *        </p>
      *        <p>
-     *        Valid values for multivalue answer resource record sets: <code>A</code> | <code>AAAA</code> |
-     *        <code>MX</code> | <code>NAPTR</code> | <code>PTR</code> | <code>SPF</code> | <code>SRV</code> |
-     *        <code>TXT</code>
+     *        Valid values for multivalue answer resource record sets: <code>A</code> | <code>AAAA</code> | <code>MX
+     *        </code> | <code>NAPTR</code> | <code>PTR</code> | <code>SPF</code> | <code>SRV</code> | <code>TXT</code>
      *        </p>
      *        <note>
      *        <p>
      *        SPF records were formerly used to verify the identity of the sender of email messages. However, we no
-     *        longer recommend that you create resource record sets for which the value of <code>Type</code> is
-     *        <code>SPF</code>. RFC 7208, <i>Sender Policy Framework (SPF) for Authorizing Use of Domains in Email,
-     *        Version 1</i>, has been updated to say,
+     *        longer recommend that you create resource record sets for which the value of <code>Type</code> is <code>
+     *        SPF</code>. RFC 7208, <i>Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version
+     *        1</i>, has been updated to say,
      *        "...[I]ts existence and mechanism defined in [RFC4408] have led to some interoperability issues. Accordingly, its use is no longer appropriate for SPF version 1; implementations are not to use it."
      *        In RFC 7208, see section 14.1, <a href="http://tools.ietf.org/html/rfc7208#section-14.1">The SPF DNS
      *        Record Type</a>.
@@ -1048,11 +1027,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * </p>
      * </important></li>
      * </ul>
-     * <p>
-     * You can use the * wildcard as the leftmost label in a domain name, for example, <code>*.example.com</code>. You
-     * can't use an * for one of the middle labels, for example, <code>marketing.*.example.com</code>. In addition, the
-     * * must replace the entire label; for example, you can't specify <code>prod*.example.com</code>.
-     * </p>
      * 
      * @param name
      *        For <code>ChangeResourceRecordSets</code> requests, the name of the record that you want to create,
@@ -1099,12 +1073,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      *        You can't use the * wildcard for resource records sets that have a type of NS.
      *        </p>
      *        </important></li>
-     *        </ul>
-     *        <p>
-     *        You can use the * wildcard as the leftmost label in a domain name, for example, <code>*.example.com</code>
-     *        . You can't use an * for one of the middle labels, for example, <code>marketing.*.example.com</code>. In
-     *        addition, the * must replace the entire label; for example, you can't specify
-     *        <code>prod*.example.com</code>.
      */
 
     public void setName(String name) {
@@ -1158,11 +1126,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * </p>
      * </important></li>
      * </ul>
-     * <p>
-     * You can use the * wildcard as the leftmost label in a domain name, for example, <code>*.example.com</code>. You
-     * can't use an * for one of the middle labels, for example, <code>marketing.*.example.com</code>. In addition, the
-     * * must replace the entire label; for example, you can't specify <code>prod*.example.com</code>.
-     * </p>
      * 
      * @return For <code>ChangeResourceRecordSets</code> requests, the name of the record that you want to create,
      *         update, or delete. For <code>ListResourceRecordSets</code> responses, the name of a record in the
@@ -1208,12 +1171,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      *         You can't use the * wildcard for resource records sets that have a type of NS.
      *         </p>
      *         </important></li>
-     *         </ul>
-     *         <p>
-     *         You can use the * wildcard as the leftmost label in a domain name, for example,
-     *         <code>*.example.com</code>. You can't use an * for one of the middle labels, for example,
-     *         <code>marketing.*.example.com</code>. In addition, the * must replace the entire label; for example, you
-     *         can't specify <code>prod*.example.com</code>.
      */
 
     public String getName() {
@@ -1267,11 +1224,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * </p>
      * </important></li>
      * </ul>
-     * <p>
-     * You can use the * wildcard as the leftmost label in a domain name, for example, <code>*.example.com</code>. You
-     * can't use an * for one of the middle labels, for example, <code>marketing.*.example.com</code>. In addition, the
-     * * must replace the entire label; for example, you can't specify <code>prod*.example.com</code>.
-     * </p>
      * 
      * @param name
      *        For <code>ChangeResourceRecordSets</code> requests, the name of the record that you want to create,
@@ -1318,12 +1270,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      *        You can't use the * wildcard for resource records sets that have a type of NS.
      *        </p>
      *        </important></li>
-     *        </ul>
-     *        <p>
-     *        You can use the * wildcard as the leftmost label in a domain name, for example, <code>*.example.com</code>
-     *        . You can't use an * for one of the middle labels, for example, <code>marketing.*.example.com</code>. In
-     *        addition, the * must replace the entire label; for example, you can't specify
-     *        <code>prod*.example.com</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

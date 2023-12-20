@@ -21,7 +21,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <note>
  * <p>
  * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in preview
- * release) and is subject to change.
+ * release) and is subject to change. The use of this API is subject to Section 2 of the <a
+ * href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
  * </p>
  * </note>
  * <p>
@@ -77,8 +78,7 @@ public class CoverageEc2InstanceDetails implements Serializable, Cloneable, Stru
      * </ul>
      * <note>
      * <p>
-     * The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters that run on Amazon
-     * EC2 instances.
+     * The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters.
      * </p>
      * </note>
      */
@@ -263,8 +263,7 @@ public class CoverageEc2InstanceDetails implements Serializable, Cloneable, Stru
      * </ul>
      * <note>
      * <p>
-     * The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters that run on Amazon
-     * EC2 instances.
+     * The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters.
      * </p>
      * </note>
      * 
@@ -285,8 +284,7 @@ public class CoverageEc2InstanceDetails implements Serializable, Cloneable, Stru
      *        </ul>
      *        <note>
      *        <p>
-     *        The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters that run on
-     *        Amazon EC2 instances.
+     *        The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters.
      *        </p>
      * @see ManagementType
      */
@@ -314,8 +312,7 @@ public class CoverageEc2InstanceDetails implements Serializable, Cloneable, Stru
      * </ul>
      * <note>
      * <p>
-     * The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters that run on Amazon
-     * EC2 instances.
+     * The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters.
      * </p>
      * </note>
      * 
@@ -335,8 +332,7 @@ public class CoverageEc2InstanceDetails implements Serializable, Cloneable, Stru
      *         </ul>
      *         <note>
      *         <p>
-     *         The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters that run
-     *         on Amazon EC2 instances.
+     *         The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters.
      *         </p>
      * @see ManagementType
      */
@@ -364,8 +360,7 @@ public class CoverageEc2InstanceDetails implements Serializable, Cloneable, Stru
      * </ul>
      * <note>
      * <p>
-     * The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters that run on Amazon
-     * EC2 instances.
+     * The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters.
      * </p>
      * </note>
      * 
@@ -386,8 +381,7 @@ public class CoverageEc2InstanceDetails implements Serializable, Cloneable, Stru
      *        </ul>
      *        <note>
      *        <p>
-     *        The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters that run on
-     *        Amazon EC2 instances.
+     *        The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ManagementType
@@ -417,8 +411,7 @@ public class CoverageEc2InstanceDetails implements Serializable, Cloneable, Stru
      * </ul>
      * <note>
      * <p>
-     * The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters that run on Amazon
-     * EC2 instances.
+     * The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters.
      * </p>
      * </note>
      * 
@@ -439,8 +432,7 @@ public class CoverageEc2InstanceDetails implements Serializable, Cloneable, Stru
      *        </ul>
      *        <note>
      *        <p>
-     *        The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters that run on
-     *        Amazon EC2 instances.
+     *        The <code>DISABLED</code> status doesn't apply to Amazon EC2 instances and Amazon EKS clusters.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ManagementType

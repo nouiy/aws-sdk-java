@@ -86,6 +86,12 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      */
     private String tier;
+    /**
+     * <p>
+     * The time-shifted viewing configuration assigned to the channel.
+     * </p>
+     */
+    private TimeShiftConfiguration timeShiftConfiguration;
 
     /**
      * <p>
@@ -583,6 +589,46 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <p>
+     * The time-shifted viewing configuration assigned to the channel.
+     * </p>
+     * 
+     * @param timeShiftConfiguration
+     *        The time-shifted viewing configuration assigned to the channel.
+     */
+
+    public void setTimeShiftConfiguration(TimeShiftConfiguration timeShiftConfiguration) {
+        this.timeShiftConfiguration = timeShiftConfiguration;
+    }
+
+    /**
+     * <p>
+     * The time-shifted viewing configuration assigned to the channel.
+     * </p>
+     * 
+     * @return The time-shifted viewing configuration assigned to the channel.
+     */
+
+    public TimeShiftConfiguration getTimeShiftConfiguration() {
+        return this.timeShiftConfiguration;
+    }
+
+    /**
+     * <p>
+     * The time-shifted viewing configuration assigned to the channel.
+     * </p>
+     * 
+     * @param timeShiftConfiguration
+     *        The time-shifted viewing configuration assigned to the channel.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateChannelResult withTimeShiftConfiguration(TimeShiftConfiguration timeShiftConfiguration) {
+        setTimeShiftConfiguration(timeShiftConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -613,7 +659,9 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getTier() != null)
-            sb.append("Tier: ").append(getTier());
+            sb.append("Tier: ").append(getTier()).append(",");
+        if (getTimeShiftConfiguration() != null)
+            sb.append("TimeShiftConfiguration: ").append(getTimeShiftConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -668,6 +716,10 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
             return false;
         if (other.getTier() != null && other.getTier().equals(this.getTier()) == false)
             return false;
+        if (other.getTimeShiftConfiguration() == null ^ this.getTimeShiftConfiguration() == null)
+            return false;
+        if (other.getTimeShiftConfiguration() != null && other.getTimeShiftConfiguration().equals(this.getTimeShiftConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -686,6 +738,7 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
         hashCode = prime * hashCode + ((getPlaybackMode() == null) ? 0 : getPlaybackMode().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getTier() == null) ? 0 : getTier().hashCode());
+        hashCode = prime * hashCode + ((getTimeShiftConfiguration() == null) ? 0 : getTimeShiftConfiguration().hashCode());
         return hashCode;
     }
 

@@ -50,7 +50,8 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
      * <note>
      * <p>
      * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
-     * preview release) and is subject to change.
+     * preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
+     * href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
      * </p>
      * </note>
      * <p>
@@ -202,7 +203,8 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
      * <note>
      * <p>
      * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
-     * preview release) and is subject to change.
+     * preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
+     * href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
      * </p>
      * </note>
      * <p>
@@ -212,7 +214,8 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
      * @param ec2InstanceDetails
      *        <p>
      *        This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently
-     *        in preview release) and is subject to change.
+     *        in preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
+     *        href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
      *        </p>
      *        </note>
      *        <p>
@@ -227,7 +230,8 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
      * <note>
      * <p>
      * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
-     * preview release) and is subject to change.
+     * preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
+     * href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
      * </p>
      * </note>
      * <p>
@@ -236,7 +240,8 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
      * 
      * @return <p>
      *         This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently
-     *         in preview release) and is subject to change.
+     *         in preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
+     *         href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
      *         </p>
      *         </note>
      *         <p>
@@ -251,7 +256,8 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
      * <note>
      * <p>
      * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
-     * preview release) and is subject to change.
+     * preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
+     * href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
      * </p>
      * </note>
      * <p>
@@ -261,7 +267,8 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
      * @param ec2InstanceDetails
      *        <p>
      *        This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently
-     *        in preview release) and is subject to change.
+     *        in preview release) and is subject to change. The use of this API is subject to Section 2 of the <a
+     *        href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> ("Betas and Previews").
      *        </p>
      *        </note>
      *        <p>

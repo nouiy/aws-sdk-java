@@ -369,6 +369,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeInsightResult> describeInsightAsync(DescribeInsightRequest request) {
+
+        return describeInsightAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeInsightResult> describeInsightAsync(DescribeInsightRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeInsightRequest, DescribeInsightResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeNodegroupResult> describeNodegroupAsync(DescribeNodegroupRequest request) {
 
         return describeNodegroupAsync(request, null);
@@ -535,6 +548,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     @Override
     public java.util.concurrent.Future<ListIdentityProviderConfigsResult> listIdentityProviderConfigsAsync(ListIdentityProviderConfigsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListIdentityProviderConfigsRequest, ListIdentityProviderConfigsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListInsightsResult> listInsightsAsync(ListInsightsRequest request) {
+
+        return listInsightsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListInsightsResult> listInsightsAsync(ListInsightsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListInsightsRequest, ListInsightsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

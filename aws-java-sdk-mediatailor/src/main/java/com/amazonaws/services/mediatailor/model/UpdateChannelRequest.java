@@ -45,6 +45,12 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private java.util.List<RequestOutputItem> outputs;
+    /**
+     * <p>
+     * The time-shifted viewing configuration you want to associate to the channel.
+     * </p>
+     */
+    private TimeShiftConfiguration timeShiftConfiguration;
 
     /**
      * <p>
@@ -209,6 +215,46 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The time-shifted viewing configuration you want to associate to the channel.
+     * </p>
+     * 
+     * @param timeShiftConfiguration
+     *        The time-shifted viewing configuration you want to associate to the channel.
+     */
+
+    public void setTimeShiftConfiguration(TimeShiftConfiguration timeShiftConfiguration) {
+        this.timeShiftConfiguration = timeShiftConfiguration;
+    }
+
+    /**
+     * <p>
+     * The time-shifted viewing configuration you want to associate to the channel.
+     * </p>
+     * 
+     * @return The time-shifted viewing configuration you want to associate to the channel.
+     */
+
+    public TimeShiftConfiguration getTimeShiftConfiguration() {
+        return this.timeShiftConfiguration;
+    }
+
+    /**
+     * <p>
+     * The time-shifted viewing configuration you want to associate to the channel.
+     * </p>
+     * 
+     * @param timeShiftConfiguration
+     *        The time-shifted viewing configuration you want to associate to the channel.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateChannelRequest withTimeShiftConfiguration(TimeShiftConfiguration timeShiftConfiguration) {
+        setTimeShiftConfiguration(timeShiftConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -225,7 +271,9 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getFillerSlate() != null)
             sb.append("FillerSlate: ").append(getFillerSlate()).append(",");
         if (getOutputs() != null)
-            sb.append("Outputs: ").append(getOutputs());
+            sb.append("Outputs: ").append(getOutputs()).append(",");
+        if (getTimeShiftConfiguration() != null)
+            sb.append("TimeShiftConfiguration: ").append(getTimeShiftConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -252,6 +300,10 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getOutputs() != null && other.getOutputs().equals(this.getOutputs()) == false)
             return false;
+        if (other.getTimeShiftConfiguration() == null ^ this.getTimeShiftConfiguration() == null)
+            return false;
+        if (other.getTimeShiftConfiguration() != null && other.getTimeShiftConfiguration().equals(this.getTimeShiftConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -263,6 +315,7 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getChannelName() == null) ? 0 : getChannelName().hashCode());
         hashCode = prime * hashCode + ((getFillerSlate() == null) ? 0 : getFillerSlate().hashCode());
         hashCode = prime * hashCode + ((getOutputs() == null) ? 0 : getOutputs().hashCode());
+        hashCode = prime * hashCode + ((getTimeShiftConfiguration() == null) ? 0 : getTimeShiftConfiguration().hashCode());
         return hashCode;
     }
 
