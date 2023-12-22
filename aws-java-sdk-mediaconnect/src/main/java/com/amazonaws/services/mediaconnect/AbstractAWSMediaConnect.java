@@ -104,6 +104,11 @@ public class AbstractAWSMediaConnect implements AWSMediaConnect {
     }
 
     @Override
+    public DescribeFlowSourceMetadataResult describeFlowSourceMetadata(DescribeFlowSourceMetadataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeGatewayResult describeGateway(DescribeGatewayRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

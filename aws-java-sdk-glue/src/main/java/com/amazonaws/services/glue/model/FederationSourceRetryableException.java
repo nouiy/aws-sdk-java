@@ -15,7 +15,9 @@ package com.amazonaws.services.glue.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * A federation source failed, but the operation may be retried.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class FederationSourceRetryableException extends com.amazonaws.services.glue.model.AWSGlueException {

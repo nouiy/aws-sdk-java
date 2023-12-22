@@ -68,6 +68,20 @@ public class GetUnfilteredTableMetadataResultJsonUnmarshaller implements Unmarsh
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("QueryAuthorizationId", targetDepth)) {
+                    context.nextToken();
+                    getUnfilteredTableMetadataResult.setQueryAuthorizationId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ResourceArn", targetDepth)) {
+                    context.nextToken();
+                    getUnfilteredTableMetadataResult.setResourceArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Permissions", targetDepth)) {
+                    context.nextToken();
+                    getUnfilteredTableMetadataResult.setPermissions(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -1177,6 +1177,74 @@ public class AWSMediaConnectClient extends AmazonWebServiceClient implements AWS
     }
 
     /**
+     * Displays details of the flow's source stream. The response contains information about the contents of the stream
+     * and its programs.
+     * 
+     * @param describeFlowSourceMetadataRequest
+     * @return Result of the DescribeFlowSourceMetadata operation returned by the service.
+     * @throws BadRequestException
+     *         The request that you submitted is not valid.
+     * @throws InternalServerErrorException
+     *         AWS Elemental MediaConnect can't fulfill your request because it encountered an unexpected condition.
+     * @throws ForbiddenException
+     *         You don't have the required permissions to perform this operation.
+     * @throws NotFoundException
+     *         AWS Elemental MediaConnect did not find the resource that you specified in the request.
+     * @throws ServiceUnavailableException
+     *         AWS Elemental MediaConnect is currently unavailable. Try again later.
+     * @throws TooManyRequestsException
+     *         You have exceeded the service request rate limit for your AWS Elemental MediaConnect account.
+     * @sample AWSMediaConnect.DescribeFlowSourceMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/DescribeFlowSourceMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeFlowSourceMetadataResult describeFlowSourceMetadata(DescribeFlowSourceMetadataRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeFlowSourceMetadata(request);
+    }
+
+    @SdkInternalApi
+    final DescribeFlowSourceMetadataResult executeDescribeFlowSourceMetadata(DescribeFlowSourceMetadataRequest describeFlowSourceMetadataRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeFlowSourceMetadataRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeFlowSourceMetadataRequest> request = null;
+        Response<DescribeFlowSourceMetadataResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeFlowSourceMetadataRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeFlowSourceMetadataRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaConnect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeFlowSourceMetadata");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeFlowSourceMetadataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeFlowSourceMetadataResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * Displays the details of a gateway. The response includes the gateway ARN, name, and CIDR blocks, as well as
      * details about the networks.
      * 

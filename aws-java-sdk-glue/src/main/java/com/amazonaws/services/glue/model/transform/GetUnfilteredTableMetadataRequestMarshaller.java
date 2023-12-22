@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetUnfilteredTableMetadataRequestMarshaller {
 
+    private static final MarshallingInfo<String> REGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Region").build();
     private static final MarshallingInfo<String> CATALOGID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("CatalogId").build();
     private static final MarshallingInfo<String> DATABASENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -38,6 +40,12 @@ public class GetUnfilteredTableMetadataRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuditContext").build();
     private static final MarshallingInfo<List> SUPPORTEDPERMISSIONTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SupportedPermissionTypes").build();
+    private static final MarshallingInfo<StructuredPojo> SUPPORTEDDIALECT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SupportedDialect").build();
+    private static final MarshallingInfo<List> PERMISSIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Permissions").build();
+    private static final MarshallingInfo<StructuredPojo> QUERYSESSIONCONTEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QuerySessionContext").build();
 
     private static final GetUnfilteredTableMetadataRequestMarshaller instance = new GetUnfilteredTableMetadataRequestMarshaller();
 
@@ -55,11 +63,15 @@ public class GetUnfilteredTableMetadataRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getRegion(), REGION_BINDING);
             protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getCatalogId(), CATALOGID_BINDING);
             protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getDatabaseName(), DATABASENAME_BINDING);
             protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getAuditContext(), AUDITCONTEXT_BINDING);
             protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getSupportedPermissionTypes(), SUPPORTEDPERMISSIONTYPES_BINDING);
+            protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getSupportedDialect(), SUPPORTEDDIALECT_BINDING);
+            protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getPermissions(), PERMISSIONS_BINDING);
+            protocolMarshaller.marshall(getUnfilteredTableMetadataRequest.getQuerySessionContext(), QUERYSESSIONCONTEXT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

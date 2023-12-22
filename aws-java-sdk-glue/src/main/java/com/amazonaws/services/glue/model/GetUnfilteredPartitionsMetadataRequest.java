@@ -27,6 +27,12 @@ public class GetUnfilteredPartitionsMetadataRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
+     * Specified only if the base tables belong to a different Amazon Web Services Region.
+     * </p>
+     */
+    private String region;
+    /**
+     * <p>
      * The ID of the Data Catalog where the partitions in question reside. If none is provided, the AWS account ID is
      * used by default.
      * </p>
@@ -210,6 +216,53 @@ public class GetUnfilteredPartitionsMetadataRequest extends com.amazonaws.Amazon
      * </p>
      */
     private Integer maxResults;
+    /**
+     * <p>
+     * A structure used as a protocol between query engines and Lake Formation or Glue. Contains both a Lake Formation
+     * generated authorization identifier and information from the request's authorization context.
+     * </p>
+     */
+    private QuerySessionContext querySessionContext;
+
+    /**
+     * <p>
+     * Specified only if the base tables belong to a different Amazon Web Services Region.
+     * </p>
+     * 
+     * @param region
+     *        Specified only if the base tables belong to a different Amazon Web Services Region.
+     */
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    /**
+     * <p>
+     * Specified only if the base tables belong to a different Amazon Web Services Region.
+     * </p>
+     * 
+     * @return Specified only if the base tables belong to a different Amazon Web Services Region.
+     */
+
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
+     * <p>
+     * Specified only if the base tables belong to a different Amazon Web Services Region.
+     * </p>
+     * 
+     * @param region
+     *        Specified only if the base tables belong to a different Amazon Web Services Region.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetUnfilteredPartitionsMetadataRequest withRegion(String region) {
+        setRegion(region);
+        return this;
+    }
 
     /**
      * <p>
@@ -1416,6 +1469,52 @@ public class GetUnfilteredPartitionsMetadataRequest extends com.amazonaws.Amazon
     }
 
     /**
+     * <p>
+     * A structure used as a protocol between query engines and Lake Formation or Glue. Contains both a Lake Formation
+     * generated authorization identifier and information from the request's authorization context.
+     * </p>
+     * 
+     * @param querySessionContext
+     *        A structure used as a protocol between query engines and Lake Formation or Glue. Contains both a Lake
+     *        Formation generated authorization identifier and information from the request's authorization context.
+     */
+
+    public void setQuerySessionContext(QuerySessionContext querySessionContext) {
+        this.querySessionContext = querySessionContext;
+    }
+
+    /**
+     * <p>
+     * A structure used as a protocol between query engines and Lake Formation or Glue. Contains both a Lake Formation
+     * generated authorization identifier and information from the request's authorization context.
+     * </p>
+     * 
+     * @return A structure used as a protocol between query engines and Lake Formation or Glue. Contains both a Lake
+     *         Formation generated authorization identifier and information from the request's authorization context.
+     */
+
+    public QuerySessionContext getQuerySessionContext() {
+        return this.querySessionContext;
+    }
+
+    /**
+     * <p>
+     * A structure used as a protocol between query engines and Lake Formation or Glue. Contains both a Lake Formation
+     * generated authorization identifier and information from the request's authorization context.
+     * </p>
+     * 
+     * @param querySessionContext
+     *        A structure used as a protocol between query engines and Lake Formation or Glue. Contains both a Lake
+     *        Formation generated authorization identifier and information from the request's authorization context.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetUnfilteredPartitionsMetadataRequest withQuerySessionContext(QuerySessionContext querySessionContext) {
+        setQuerySessionContext(querySessionContext);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1427,6 +1526,8 @@ public class GetUnfilteredPartitionsMetadataRequest extends com.amazonaws.Amazon
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getRegion() != null)
+            sb.append("Region: ").append(getRegion()).append(",");
         if (getCatalogId() != null)
             sb.append("CatalogId: ").append(getCatalogId()).append(",");
         if (getDatabaseName() != null)
@@ -1444,7 +1545,9 @@ public class GetUnfilteredPartitionsMetadataRequest extends com.amazonaws.Amazon
         if (getSegment() != null)
             sb.append("Segment: ").append(getSegment()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getQuerySessionContext() != null)
+            sb.append("QuerySessionContext: ").append(getQuerySessionContext());
         sb.append("}");
         return sb.toString();
     }
@@ -1459,6 +1562,10 @@ public class GetUnfilteredPartitionsMetadataRequest extends com.amazonaws.Amazon
         if (obj instanceof GetUnfilteredPartitionsMetadataRequest == false)
             return false;
         GetUnfilteredPartitionsMetadataRequest other = (GetUnfilteredPartitionsMetadataRequest) obj;
+        if (other.getRegion() == null ^ this.getRegion() == null)
+            return false;
+        if (other.getRegion() != null && other.getRegion().equals(this.getRegion()) == false)
+            return false;
         if (other.getCatalogId() == null ^ this.getCatalogId() == null)
             return false;
         if (other.getCatalogId() != null && other.getCatalogId().equals(this.getCatalogId()) == false)
@@ -1495,6 +1602,10 @@ public class GetUnfilteredPartitionsMetadataRequest extends com.amazonaws.Amazon
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
+        if (other.getQuerySessionContext() == null ^ this.getQuerySessionContext() == null)
+            return false;
+        if (other.getQuerySessionContext() != null && other.getQuerySessionContext().equals(this.getQuerySessionContext()) == false)
+            return false;
         return true;
     }
 
@@ -1503,6 +1614,7 @@ public class GetUnfilteredPartitionsMetadataRequest extends com.amazonaws.Amazon
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
         hashCode = prime * hashCode + ((getCatalogId() == null) ? 0 : getCatalogId().hashCode());
         hashCode = prime * hashCode + ((getDatabaseName() == null) ? 0 : getDatabaseName().hashCode());
         hashCode = prime * hashCode + ((getTableName() == null) ? 0 : getTableName().hashCode());
@@ -1512,6 +1624,7 @@ public class GetUnfilteredPartitionsMetadataRequest extends com.amazonaws.Amazon
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getSegment() == null) ? 0 : getSegment().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getQuerySessionContext() == null) ? 0 : getQuerySessionContext().hashCode());
         return hashCode;
     }
 

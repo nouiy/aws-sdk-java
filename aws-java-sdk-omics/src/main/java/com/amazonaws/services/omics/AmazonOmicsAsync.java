@@ -1581,7 +1581,8 @@ public interface AmazonOmicsAsync extends AmazonOmics {
 
     /**
      * <p>
-     * Lists all multipart read set uploads and their statuses.
+     * Lists multipart read set uploads and for in progress uploads. Once the upload is completed, a read set is created
+     * and the upload will no longer be returned in the respone.
      * </p>
      * 
      * @param listMultipartReadSetUploadsRequest
@@ -1595,7 +1596,8 @@ public interface AmazonOmicsAsync extends AmazonOmics {
 
     /**
      * <p>
-     * Lists all multipart read set uploads and their statuses.
+     * Lists multipart read set uploads and for in progress uploads. Once the upload is completed, a read set is created
+     * and the upload will no longer be returned in the respone.
      * </p>
      * 
      * @param listMultipartReadSetUploadsRequest

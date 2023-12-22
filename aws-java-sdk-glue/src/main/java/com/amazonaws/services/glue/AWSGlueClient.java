@@ -965,6 +965,7 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      * @throws FederationSourceException
      *         A federation source failed.
      * @throws FederationSourceRetryableException
+     *         A federation source failed, but the operation may be retried.
      * @sample AWSGlue.BatchGetPartition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetPartition" target="_top">AWS API
      *      Documentation</a>
@@ -1784,6 +1785,9 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
     /**
      * <p>
      * Creates a connection definition in the Data Catalog.
+     * </p>
+     * <p>
+     * Connections used for creating federated resources require the IAM <code>glue:PassConnection</code> permission.
      * </p>
      * 
      * @param createConnectionRequest
@@ -7239,6 +7243,7 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      * @throws FederationSourceException
      *         A federation source failed.
      * @throws FederationSourceRetryableException
+     *         A federation source failed, but the operation may be retried.
      * @sample AWSGlue.GetPartition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetPartition" target="_top">AWS API
      *      Documentation</a>
@@ -7376,6 +7381,7 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      * @throws FederationSourceException
      *         A federation source failed.
      * @throws FederationSourceRetryableException
+     *         A federation source failed, but the operation may be retried.
      * @sample AWSGlue.GetPartitions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetPartitions" target="_top">AWS API
      *      Documentation</a>
@@ -8225,6 +8231,7 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      * @throws FederationSourceException
      *         A federation source failed.
      * @throws FederationSourceRetryableException
+     *         A federation source failed, but the operation may be retried.
      * @sample AWSGlue.GetTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTable" target="_top">AWS API
      *      Documentation</a>
@@ -8486,6 +8493,7 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      * @throws FederationSourceException
      *         A federation source failed.
      * @throws FederationSourceRetryableException
+     *         A federation source failed, but the operation may be retried.
      * @sample AWSGlue.GetTables
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTables" target="_top">AWS API
      *      Documentation</a>
@@ -8748,6 +8756,7 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      * @throws FederationSourceException
      *         A federation source failed.
      * @throws FederationSourceRetryableException
+     *         A federation source failed, but the operation may be retried.
      * @sample AWSGlue.GetUnfilteredPartitionMetadata
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredPartitionMetadata"
      *      target="_top">AWS API Documentation</a>
@@ -8823,6 +8832,7 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      * @throws FederationSourceException
      *         A federation source failed.
      * @throws FederationSourceRetryableException
+     *         A federation source failed, but the operation may be retried.
      * @sample AWSGlue.GetUnfilteredPartitionsMetadata
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredPartitionsMetadata"
      *      target="_top">AWS API Documentation</a>
@@ -8899,6 +8909,7 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      * @throws FederationSourceException
      *         A federation source failed.
      * @throws FederationSourceRetryableException
+     *         A federation source failed, but the operation may be retried.
      * @sample AWSGlue.GetUnfilteredTableMetadata
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUnfilteredTableMetadata"
      *      target="_top">AWS API Documentation</a>

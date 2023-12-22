@@ -853,6 +853,9 @@ public interface AWSGlueAsync extends AWSGlue {
      * <p>
      * Creates a connection definition in the Data Catalog.
      * </p>
+     * <p>
+     * Connections used for creating federated resources require the IAM <code>glue:PassConnection</code> permission.
+     * </p>
      * 
      * @param createConnectionRequest
      * @return A Java Future containing the result of the CreateConnection operation returned by the service.
@@ -865,6 +868,9 @@ public interface AWSGlueAsync extends AWSGlue {
     /**
      * <p>
      * Creates a connection definition in the Data Catalog.
+     * </p>
+     * <p>
+     * Connections used for creating federated resources require the IAM <code>glue:PassConnection</code> permission.
      * </p>
      * 
      * @param createConnectionRequest

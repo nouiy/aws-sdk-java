@@ -44,8 +44,8 @@ public class CreateLakeFormationIdentityCenterConfigurationRequest extends com.a
     private String instanceArn;
     /**
      * <p>
-     * A list of the account IDs of Amazon Web Services accounts of third-party applications that are allowed to to
-     * access data managed by Lake Formation.
+     * A list of the account IDs of Amazon Web Services accounts of third-party applications that are allowed to access
+     * data managed by Lake Formation.
      * </p>
      */
     private ExternalFilteringConfiguration externalFiltering;
@@ -156,13 +156,13 @@ public class CreateLakeFormationIdentityCenterConfigurationRequest extends com.a
 
     /**
      * <p>
-     * A list of the account IDs of Amazon Web Services accounts of third-party applications that are allowed to to
-     * access data managed by Lake Formation.
+     * A list of the account IDs of Amazon Web Services accounts of third-party applications that are allowed to access
+     * data managed by Lake Formation.
      * </p>
      * 
      * @param externalFiltering
      *        A list of the account IDs of Amazon Web Services accounts of third-party applications that are allowed to
-     *        to access data managed by Lake Formation.
+     *        access data managed by Lake Formation.
      */
 
     public void setExternalFiltering(ExternalFilteringConfiguration externalFiltering) {
@@ -171,12 +171,12 @@ public class CreateLakeFormationIdentityCenterConfigurationRequest extends com.a
 
     /**
      * <p>
-     * A list of the account IDs of Amazon Web Services accounts of third-party applications that are allowed to to
-     * access data managed by Lake Formation.
+     * A list of the account IDs of Amazon Web Services accounts of third-party applications that are allowed to access
+     * data managed by Lake Formation.
      * </p>
      * 
      * @return A list of the account IDs of Amazon Web Services accounts of third-party applications that are allowed to
-     *         to access data managed by Lake Formation.
+     *         access data managed by Lake Formation.
      */
 
     public ExternalFilteringConfiguration getExternalFiltering() {
@@ -185,13 +185,13 @@ public class CreateLakeFormationIdentityCenterConfigurationRequest extends com.a
 
     /**
      * <p>
-     * A list of the account IDs of Amazon Web Services accounts of third-party applications that are allowed to to
-     * access data managed by Lake Formation.
+     * A list of the account IDs of Amazon Web Services accounts of third-party applications that are allowed to access
+     * data managed by Lake Formation.
      * </p>
      * 
      * @param externalFiltering
      *        A list of the account IDs of Amazon Web Services accounts of third-party applications that are allowed to
-     *        to access data managed by Lake Formation.
+     *        access data managed by Lake Formation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

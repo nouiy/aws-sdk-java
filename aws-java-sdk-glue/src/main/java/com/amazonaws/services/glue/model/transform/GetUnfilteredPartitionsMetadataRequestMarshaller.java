@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetUnfilteredPartitionsMetadataRequestMarshaller {
 
+    private static final MarshallingInfo<String> REGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Region").build();
     private static final MarshallingInfo<String> CATALOGID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("CatalogId").build();
     private static final MarshallingInfo<String> DATABASENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -46,6 +48,8 @@ public class GetUnfilteredPartitionsMetadataRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Segment").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<StructuredPojo> QUERYSESSIONCONTEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QuerySessionContext").build();
 
     private static final GetUnfilteredPartitionsMetadataRequestMarshaller instance = new GetUnfilteredPartitionsMetadataRequestMarshaller();
 
@@ -63,6 +67,7 @@ public class GetUnfilteredPartitionsMetadataRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(getUnfilteredPartitionsMetadataRequest.getRegion(), REGION_BINDING);
             protocolMarshaller.marshall(getUnfilteredPartitionsMetadataRequest.getCatalogId(), CATALOGID_BINDING);
             protocolMarshaller.marshall(getUnfilteredPartitionsMetadataRequest.getDatabaseName(), DATABASENAME_BINDING);
             protocolMarshaller.marshall(getUnfilteredPartitionsMetadataRequest.getTableName(), TABLENAME_BINDING);
@@ -72,6 +77,7 @@ public class GetUnfilteredPartitionsMetadataRequestMarshaller {
             protocolMarshaller.marshall(getUnfilteredPartitionsMetadataRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(getUnfilteredPartitionsMetadataRequest.getSegment(), SEGMENT_BINDING);
             protocolMarshaller.marshall(getUnfilteredPartitionsMetadataRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(getUnfilteredPartitionsMetadataRequest.getQuerySessionContext(), QUERYSESSIONCONTEXT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

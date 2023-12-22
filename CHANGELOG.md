@@ -1,3 +1,36 @@
+# __1.12.625__ __2023-12-22__
+## __AWS Glue__
+  - ### Features
+    - This release adds additional configurations for Query Session Context on the following APIs: GetUnfilteredTableMetadata, GetUnfilteredPartitionMetadata, GetUnfilteredPartitionsMetadata.
+
+## __AWS Lake Formation__
+  - ### Features
+    - This release adds additional configurations on GetTemporaryGlueTableCredentials for Query Session Context.
+
+## __AWS MediaConnect__
+  - ### Features
+    - This release adds the DescribeSourceMetadata API. This API can be used to view the stream information of the flow's source.
+
+## __AWS Secrets Manager__
+  - ### Features
+    - Update endpoint rules and examples.
+
+## __Agents for Amazon Bedrock__
+  - ### Features
+    - Adding Claude 2.1 support to Bedrock Agents
+
+## __Amazon CloudWatch Network Monitor__
+  - ### Features
+    - CloudWatch Network Monitor is a new service within CloudWatch that will help network administrators and operators continuously monitor network performance metrics such as round-trip-time and packet loss between their AWS-hosted applications and their on-premises locations.
+
+## __Amazon Omics__
+  - ### Features
+    - Provides minor corrections and an updated description of APIs.
+
+## __Amazon Simple Storage Service__
+  - ### Features
+    - Added additional examples for some operations.
+
 # __1.12.624__ __2023-12-21__
 ## __AWS CodeCommit__
   - ### Features

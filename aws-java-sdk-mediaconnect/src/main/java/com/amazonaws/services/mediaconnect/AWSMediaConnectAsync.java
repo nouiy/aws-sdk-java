@@ -466,6 +466,37 @@ public interface AWSMediaConnectAsync extends AWSMediaConnect {
             com.amazonaws.handlers.AsyncHandler<DescribeFlowRequest, DescribeFlowResult> asyncHandler);
 
     /**
+     * Displays details of the flow's source stream. The response contains information about the contents of the stream
+     * and its programs.
+     * 
+     * @param describeFlowSourceMetadataRequest
+     * @return A Java Future containing the result of the DescribeFlowSourceMetadata operation returned by the service.
+     * @sample AWSMediaConnectAsync.DescribeFlowSourceMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/DescribeFlowSourceMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeFlowSourceMetadataResult> describeFlowSourceMetadataAsync(
+            DescribeFlowSourceMetadataRequest describeFlowSourceMetadataRequest);
+
+    /**
+     * Displays details of the flow's source stream. The response contains information about the contents of the stream
+     * and its programs.
+     * 
+     * @param describeFlowSourceMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeFlowSourceMetadata operation returned by the service.
+     * @sample AWSMediaConnectAsyncHandler.DescribeFlowSourceMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/DescribeFlowSourceMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeFlowSourceMetadataResult> describeFlowSourceMetadataAsync(
+            DescribeFlowSourceMetadataRequest describeFlowSourceMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeFlowSourceMetadataRequest, DescribeFlowSourceMetadataResult> asyncHandler);
+
+    /**
      * Displays the details of a gateway. The response includes the gateway ARN, name, and CIDR blocks, as well as
      * details about the networks.
      * 
