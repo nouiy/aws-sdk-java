@@ -1,3 +1,8 @@
+# __1.12.626__ __2023-12-26__
+## __AWS Identity and Access Management__
+  - ### Features
+    - Documentation updates for AWS Identity and Access Management (IAM).
+
 # __1.12.625__ __2023-12-22__
 ## __AWS Glue__
   - ### Features

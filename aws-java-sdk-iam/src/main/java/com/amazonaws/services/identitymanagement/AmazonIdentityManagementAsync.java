@@ -742,9 +742,9 @@ public interface AmazonIdentityManagementAsync extends AmazonIdentityManagement 
      * <p>
      * Amazon Web Services secures communication with some OIDC identity providers (IdPs) through our library of trusted
      * root certificate authorities (CAs) instead of using a certificate thumbprint to verify your IdP server
-     * certificate. These OIDC IdPs include Auth0, GitHub, Google, and those that use an Amazon S3 bucket to host a JSON
-     * Web Key Set (JWKS) endpoint. In these cases, your legacy thumbprint remains in your configuration, but is no
-     * longer used for validation.
+     * certificate. In these cases, your legacy thumbprint remains in your configuration, but is no longer used for
+     * validation. These OIDC IdPs include Auth0, GitHub, GitLab, Google, and those that use an Amazon S3 bucket to host
+     * a JSON Web Key Set (JWKS) endpoint.
      * </p>
      * </note> <note>
      * <p>
@@ -812,9 +812,9 @@ public interface AmazonIdentityManagementAsync extends AmazonIdentityManagement 
      * <p>
      * Amazon Web Services secures communication with some OIDC identity providers (IdPs) through our library of trusted
      * root certificate authorities (CAs) instead of using a certificate thumbprint to verify your IdP server
-     * certificate. These OIDC IdPs include Auth0, GitHub, Google, and those that use an Amazon S3 bucket to host a JSON
-     * Web Key Set (JWKS) endpoint. In these cases, your legacy thumbprint remains in your configuration, but is no
-     * longer used for validation.
+     * certificate. In these cases, your legacy thumbprint remains in your configuration, but is no longer used for
+     * validation. These OIDC IdPs include Auth0, GitHub, GitLab, Google, and those that use an Amazon S3 bucket to host
+     * a JSON Web Key Set (JWKS) endpoint.
      * </p>
      * </note> <note>
      * <p>
@@ -9372,9 +9372,9 @@ public interface AmazonIdentityManagementAsync extends AmazonIdentityManagement 
      * <p>
      * Amazon Web Services secures communication with some OIDC identity providers (IdPs) through our library of trusted
      * root certificate authorities (CAs) instead of using a certificate thumbprint to verify your IdP server
-     * certificate. These OIDC IdPs include Auth0, GitHub, Google, and those that use an Amazon S3 bucket to host a JSON
-     * Web Key Set (JWKS) endpoint. In these cases, your legacy thumbprint remains in your configuration, but is no
-     * longer used for validation.
+     * certificate. In these cases, your legacy thumbprint remains in your configuration, but is no longer used for
+     * validation. These OIDC IdPs include Auth0, GitHub, GitLab, Google, and those that use an Amazon S3 bucket to host
+     * a JSON Web Key Set (JWKS) endpoint.
      * </p>
      * </note> <note>
      * <p>
@@ -9412,9 +9412,9 @@ public interface AmazonIdentityManagementAsync extends AmazonIdentityManagement 
      * <p>
      * Amazon Web Services secures communication with some OIDC identity providers (IdPs) through our library of trusted
      * root certificate authorities (CAs) instead of using a certificate thumbprint to verify your IdP server
-     * certificate. These OIDC IdPs include Auth0, GitHub, Google, and those that use an Amazon S3 bucket to host a JSON
-     * Web Key Set (JWKS) endpoint. In these cases, your legacy thumbprint remains in your configuration, but is no
-     * longer used for validation.
+     * certificate. In these cases, your legacy thumbprint remains in your configuration, but is no longer used for
+     * validation. These OIDC IdPs include Auth0, GitHub, GitLab, Google, and those that use an Amazon S3 bucket to host
+     * a JSON Web Key Set (JWKS) endpoint.
      * </p>
      * </note> <note>
      * <p>
