@@ -132,7 +132,7 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "NoDataRetentionException",
-        "documentation" : "<p>A streaming session was requested for a stream that does not retain data (that is, has a <code>DataRetentionInHours</code> of 0). </p>",
+        "documentation" : "<p> <code>GetImages</code> was requested for a stream that does not retain data (that is, has a <code>DataRetentionInHours</code> of 0). </p>",
         "httpStatusCode" : 400
       } ],
       "hasBlobMemberAsPayload" : true,
@@ -189,7 +189,7 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "NoDataRetentionException",
-        "documentation" : "<p>A streaming session was requested for a stream that does not retain data (that is, has a <code>DataRetentionInHours</code> of 0). </p>",
+        "documentation" : "<p> <code>GetImages</code> was requested for a stream that does not retain data (that is, has a <code>DataRetentionInHours</code> of 0). </p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "MissingCodecPrivateDataException",
@@ -254,7 +254,7 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "NoDataRetentionException",
-        "documentation" : "<p>A streaming session was requested for a stream that does not retain data (that is, has a <code>DataRetentionInHours</code> of 0). </p>",
+        "documentation" : "<p> <code>GetImages</code> was requested for a stream that does not retain data (that is, has a <code>DataRetentionInHours</code> of 0). </p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "MissingCodecPrivateDataException",
@@ -292,7 +292,7 @@
       "asyncReturnType" : "GetImagesResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Retrieves a list of Images corresponding to each timestamp for a given time range, sampling interval, and image format configuration.</p>",
+      "documentation" : "<p>Retrieves a list of images corresponding to each timestamp for a given time range, sampling interval, and image format configuration.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -313,6 +313,10 @@
         "exceptionName" : "NotAuthorizedException",
         "documentation" : "<p>Status Code: 403, The caller is not authorized to perform an operation on the given stream, or the token has expired.</p>",
         "httpStatusCode" : 401
+      }, {
+        "exceptionName" : "NoDataRetentionException",
+        "documentation" : "<p> <code>GetImages</code> was requested for a stream that does not retain data (that is, has a <code>DataRetentionInHours</code> of 0). </p>",
+        "httpStatusCode" : 400
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -7274,12 +7278,12 @@
         "c2jName" : "SamplingInterval",
         "c2jShape" : "SamplingInterval",
         "deprecated" : false,
-        "documentation" : "<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>",
+        "documentation" : "<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withSamplingInterval",
-        "getterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>\n@return The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p>*/",
+        "getterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>\n@return The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available.*/",
         "getterMethodName" : "getSamplingInterval",
         "getterModel" : {
           "returnType" : "Integer",
@@ -7313,7 +7317,7 @@
         "marshallingType" : "INTEGER",
         "name" : "SamplingInterval",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p>*/",
+        "setterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available.*/",
         "setterMethodName" : "setSamplingInterval",
         "setterModel" : {
           "timestampFormat" : null,
@@ -7328,13 +7332,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "Integer",
           "variableName" : "samplingInterval",
           "variableType" : "Integer",
-          "documentation" : "<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>",
+          "documentation" : "<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>",
           "simpleType" : "Integer",
           "variableSetterType" : "Integer"
         },
@@ -8555,12 +8559,12 @@
           "c2jName" : "SamplingInterval",
           "c2jShape" : "SamplingInterval",
           "deprecated" : false,
-          "documentation" : "<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>",
+          "documentation" : "<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withSamplingInterval",
-          "getterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>\n@return The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p>*/",
+          "getterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>\n@return The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available.*/",
           "getterMethodName" : "getSamplingInterval",
           "getterModel" : {
             "returnType" : "Integer",
@@ -8594,7 +8598,7 @@
           "marshallingType" : "INTEGER",
           "name" : "SamplingInterval",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p>*/",
+          "setterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available.*/",
           "setterMethodName" : "setSamplingInterval",
           "setterModel" : {
             "timestampFormat" : null,
@@ -8609,13 +8613,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>\n@param samplingInterval The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "Integer",
             "variableName" : "samplingInterval",
             "variableType" : "Integer",
-            "documentation" : "<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream, with a default of 3000 ms. The minimum value that can be provided is 200 ms. If the timestamp range is less than the sampling interval, the Image from the <code>startTimestamp</code> will be returned if available. </p> <note> <p>The minimum value of 200 ms is a hard limit.</p> </note>",
+            "documentation" : "<p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 200 ms (5 images per second). If the timestamp range is less than the sampling interval, the image from the <code>startTimestamp</code> will be returned if available. </p>",
             "simpleType" : "Integer",
             "variableSetterType" : "Integer"
           },
@@ -12213,12 +12217,12 @@
         "c2jName" : "FragmentSelector",
         "c2jShape" : "FragmentSelector",
         "deprecated" : false,
-        "documentation" : "<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>",
+        "documentation" : "<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withFragmentSelector",
-        "getterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>\n@return Describes the timestamp range and timestamp origin for the range of fragments to return.*/",
+        "getterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>\n@return Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p>*/",
         "getterMethodName" : "getFragmentSelector",
         "getterModel" : {
           "returnType" : "FragmentSelector",
@@ -12252,7 +12256,7 @@
         "marshallingType" : "STRUCTURED",
         "name" : "FragmentSelector",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.*/",
+        "setterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p>*/",
         "setterMethodName" : "setFragmentSelector",
         "setterModel" : {
           "timestampFormat" : null,
@@ -12267,13 +12271,13 @@
         "shouldFullyQualify" : false,
         "simple" : false,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "FragmentSelector",
           "variableName" : "fragmentSelector",
           "variableType" : "FragmentSelector",
-          "documentation" : "<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>",
+          "documentation" : "<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>",
           "simpleType" : "FragmentSelector",
           "variableSetterType" : "FragmentSelector"
         },
@@ -12284,12 +12288,12 @@
           "c2jName" : "FragmentSelector",
           "c2jShape" : "FragmentSelector",
           "deprecated" : false,
-          "documentation" : "<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>",
+          "documentation" : "<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withFragmentSelector",
-          "getterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>\n@return Describes the timestamp range and timestamp origin for the range of fragments to return.*/",
+          "getterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>\n@return Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p>*/",
           "getterMethodName" : "getFragmentSelector",
           "getterModel" : {
             "returnType" : "FragmentSelector",
@@ -12323,7 +12327,7 @@
           "marshallingType" : "STRUCTURED",
           "name" : "FragmentSelector",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.*/",
+          "setterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p>*/",
           "setterMethodName" : "setFragmentSelector",
           "setterModel" : {
             "timestampFormat" : null,
@@ -12338,13 +12342,13 @@
           "shouldFullyQualify" : false,
           "simple" : false,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>\n@param fragmentSelector Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "FragmentSelector",
             "variableName" : "fragmentSelector",
             "variableType" : "FragmentSelector",
-            "documentation" : "<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p>",
+            "documentation" : "<p>Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note> <p>This is only required when the <code>NextToken</code> isn't passed in the API.</p> </note>",
             "simpleType" : "FragmentSelector",
             "variableSetterType" : "FragmentSelector"
           },
@@ -13191,7 +13195,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>A streaming session was requested for a stream that does not retain data (that is, has a <code>DataRetentionInHours</code> of 0). </p>",
+      "documentation" : "<p> <code>GetImages</code> was requested for a stream that does not retain data (that is, has a <code>DataRetentionInHours</code> of 0). </p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "NoDataRetentionException",

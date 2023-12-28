@@ -18996,6 +18996,9 @@
       }, {
         "name" : "GitLab",
         "value" : "GitLab"
+      }, {
+        "name" : "GitLabSelfManaged",
+        "value" : "GitLabSelfManaged"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.codestarconnections.enum.ProviderType",

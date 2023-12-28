@@ -241,7 +241,7 @@ public class AmazonKinesisVideoArchivedMediaClient extends AmazonWebServiceClien
      * @throws InvalidMediaFrameException
      *         One or more frames in the requested clip could not be parsed based on the specified codec.
      * @throws NoDataRetentionException
-     *         A streaming session was requested for a stream that does not retain data (that is, has a
+     *         <code>GetImages</code> was requested for a stream that does not retain data (that is, has a
      *         <code>DataRetentionInHours</code> of 0).
      * @sample AmazonKinesisVideoArchivedMedia.GetClip
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-archived-media-2017-09-30/GetClip"
@@ -499,7 +499,7 @@ public class AmazonKinesisVideoArchivedMediaClient extends AmazonWebServiceClien
      *         should be <code>V_MPEG/ISO/AVC</code> and, optionally, the codec ID for track 2 should be
      *         <code>A_AAC</code>.
      * @throws NoDataRetentionException
-     *         A streaming session was requested for a stream that does not retain data (that is, has a
+     *         <code>GetImages</code> was requested for a stream that does not retain data (that is, has a
      *         <code>DataRetentionInHours</code> of 0).
      * @throws MissingCodecPrivateDataException
      *         No codec private data was found in at least one of tracks of the video stream.
@@ -797,7 +797,7 @@ public class AmazonKinesisVideoArchivedMediaClient extends AmazonWebServiceClien
      *         should be <code>V_MPEG/ISO/AVC</code> and, optionally, the codec ID for track 2 should be
      *         <code>A_AAC</code>.
      * @throws NoDataRetentionException
-     *         A streaming session was requested for a stream that does not retain data (that is, has a
+     *         <code>GetImages</code> was requested for a stream that does not retain data (that is, has a
      *         <code>DataRetentionInHours</code> of 0).
      * @throws MissingCodecPrivateDataException
      *         No codec private data was found in at least one of tracks of the video stream.
@@ -856,7 +856,7 @@ public class AmazonKinesisVideoArchivedMediaClient extends AmazonWebServiceClien
 
     /**
      * <p>
-     * Retrieves a list of Images corresponding to each timestamp for a given time range, sampling interval, and image
+     * Retrieves a list of images corresponding to each timestamp for a given time range, sampling interval, and image
      * format configuration.
      * </p>
      * 
@@ -881,6 +881,9 @@ public class AmazonKinesisVideoArchivedMediaClient extends AmazonWebServiceClien
      * @throws NotAuthorizedException
      *         Status Code: 403, The caller is not authorized to perform an operation on the given stream, or the token
      *         has expired.
+     * @throws NoDataRetentionException
+     *         <code>GetImages</code> was requested for a stream that does not retain data (that is, has a
+     *         <code>DataRetentionInHours</code> of 0).
      * @sample AmazonKinesisVideoArchivedMedia.GetImages
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-archived-media-2017-09-30/GetImages"
      *      target="_top">AWS API Documentation</a>

@@ -63,6 +63,10 @@ public class DomainSettingsForUpdateJsonUnmarshaller implements Unmarshaller<Dom
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("DockerSettings", targetDepth)) {
+                    context.nextToken();
+                    domainSettingsForUpdate.setDockerSettings(DockerSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

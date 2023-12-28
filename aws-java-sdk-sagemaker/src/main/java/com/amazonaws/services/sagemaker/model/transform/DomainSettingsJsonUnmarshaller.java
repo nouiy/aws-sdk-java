@@ -62,6 +62,10 @@ public class DomainSettingsJsonUnmarshaller implements Unmarshaller<DomainSettin
                     context.nextToken();
                     domainSettings.setExecutionRoleIdentityConfig(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DockerSettings", targetDepth)) {
+                    context.nextToken();
+                    domainSettings.setDockerSettings(DockerSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

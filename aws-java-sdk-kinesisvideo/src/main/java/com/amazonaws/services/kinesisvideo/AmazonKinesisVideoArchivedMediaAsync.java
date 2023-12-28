@@ -997,7 +997,7 @@ public interface AmazonKinesisVideoArchivedMediaAsync extends AmazonKinesisVideo
 
     /**
      * <p>
-     * Retrieves a list of Images corresponding to each timestamp for a given time range, sampling interval, and image
+     * Retrieves a list of images corresponding to each timestamp for a given time range, sampling interval, and image
      * format configuration.
      * </p>
      * 
@@ -1011,7 +1011,7 @@ public interface AmazonKinesisVideoArchivedMediaAsync extends AmazonKinesisVideo
 
     /**
      * <p>
-     * Retrieves a list of Images corresponding to each timestamp for a given time range, sampling interval, and image
+     * Retrieves a list of images corresponding to each timestamp for a given time range, sampling interval, and image
      * format configuration.
      * </p>
      * 

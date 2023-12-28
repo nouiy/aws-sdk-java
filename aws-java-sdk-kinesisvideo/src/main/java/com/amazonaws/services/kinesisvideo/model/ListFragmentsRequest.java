@@ -58,6 +58,11 @@ public class ListFragmentsRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Describes the timestamp range and timestamp origin for the range of fragments to return.
      * </p>
+     * <note>
+     * <p>
+     * This is only required when the <code>NextToken</code> isn't passed in the API.
+     * </p>
+     * </note>
      */
     private FragmentSelector fragmentSelector;
 
@@ -255,9 +260,17 @@ public class ListFragmentsRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Describes the timestamp range and timestamp origin for the range of fragments to return.
      * </p>
+     * <note>
+     * <p>
+     * This is only required when the <code>NextToken</code> isn't passed in the API.
+     * </p>
+     * </note>
      * 
      * @param fragmentSelector
-     *        Describes the timestamp range and timestamp origin for the range of fragments to return.
+     *        Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note>
+     *        <p>
+     *        This is only required when the <code>NextToken</code> isn't passed in the API.
+     *        </p>
      */
 
     public void setFragmentSelector(FragmentSelector fragmentSelector) {
@@ -268,8 +281,16 @@ public class ListFragmentsRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Describes the timestamp range and timestamp origin for the range of fragments to return.
      * </p>
+     * <note>
+     * <p>
+     * This is only required when the <code>NextToken</code> isn't passed in the API.
+     * </p>
+     * </note>
      * 
-     * @return Describes the timestamp range and timestamp origin for the range of fragments to return.
+     * @return Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note>
+     *         <p>
+     *         This is only required when the <code>NextToken</code> isn't passed in the API.
+     *         </p>
      */
 
     public FragmentSelector getFragmentSelector() {
@@ -280,9 +301,17 @@ public class ListFragmentsRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Describes the timestamp range and timestamp origin for the range of fragments to return.
      * </p>
+     * <note>
+     * <p>
+     * This is only required when the <code>NextToken</code> isn't passed in the API.
+     * </p>
+     * </note>
      * 
      * @param fragmentSelector
-     *        Describes the timestamp range and timestamp origin for the range of fragments to return.
+     *        Describes the timestamp range and timestamp origin for the range of fragments to return.</p> <note>
+     *        <p>
+     *        This is only required when the <code>NextToken</code> isn't passed in the API.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -23,7 +23,8 @@ public enum ProviderType {
     Bitbucket("Bitbucket"),
     GitHub("GitHub"),
     GitHubEnterpriseServer("GitHubEnterpriseServer"),
-    GitLab("GitLab");
+    GitLab("GitLab"),
+    GitLabSelfManaged("GitLabSelfManaged");
 
     private String value;
 

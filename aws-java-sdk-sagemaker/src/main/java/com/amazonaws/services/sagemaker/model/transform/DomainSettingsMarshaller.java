@@ -34,6 +34,8 @@ public class DomainSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RStudioServerProDomainSettings").build();
     private static final MarshallingInfo<String> EXECUTIONROLEIDENTITYCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecutionRoleIdentityConfig").build();
+    private static final MarshallingInfo<StructuredPojo> DOCKERSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DockerSettings").build();
 
     private static final DomainSettingsMarshaller instance = new DomainSettingsMarshaller();
 
@@ -54,6 +56,7 @@ public class DomainSettingsMarshaller {
             protocolMarshaller.marshall(domainSettings.getSecurityGroupIds(), SECURITYGROUPIDS_BINDING);
             protocolMarshaller.marshall(domainSettings.getRStudioServerProDomainSettings(), RSTUDIOSERVERPRODOMAINSETTINGS_BINDING);
             protocolMarshaller.marshall(domainSettings.getExecutionRoleIdentityConfig(), EXECUTIONROLEIDENTITYCONFIG_BINDING);
+            protocolMarshaller.marshall(domainSettings.getDockerSettings(), DOCKERSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -51,6 +51,12 @@ public class DomainSettingsForUpdate implements Serializable, Cloneable, Structu
      * </p>
      */
     private java.util.List<String> securityGroupIds;
+    /**
+     * <p>
+     * A collection of settings that configure the domain's Docker interaction.
+     * </p>
+     */
+    private DockerSettings dockerSettings;
 
     /**
      * <p>
@@ -260,6 +266,46 @@ public class DomainSettingsForUpdate implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * A collection of settings that configure the domain's Docker interaction.
+     * </p>
+     * 
+     * @param dockerSettings
+     *        A collection of settings that configure the domain's Docker interaction.
+     */
+
+    public void setDockerSettings(DockerSettings dockerSettings) {
+        this.dockerSettings = dockerSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of settings that configure the domain's Docker interaction.
+     * </p>
+     * 
+     * @return A collection of settings that configure the domain's Docker interaction.
+     */
+
+    public DockerSettings getDockerSettings() {
+        return this.dockerSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of settings that configure the domain's Docker interaction.
+     * </p>
+     * 
+     * @param dockerSettings
+     *        A collection of settings that configure the domain's Docker interaction.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DomainSettingsForUpdate withDockerSettings(DockerSettings dockerSettings) {
+        setDockerSettings(dockerSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -276,7 +322,9 @@ public class DomainSettingsForUpdate implements Serializable, Cloneable, Structu
         if (getExecutionRoleIdentityConfig() != null)
             sb.append("ExecutionRoleIdentityConfig: ").append(getExecutionRoleIdentityConfig()).append(",");
         if (getSecurityGroupIds() != null)
-            sb.append("SecurityGroupIds: ").append(getSecurityGroupIds());
+            sb.append("SecurityGroupIds: ").append(getSecurityGroupIds()).append(",");
+        if (getDockerSettings() != null)
+            sb.append("DockerSettings: ").append(getDockerSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -304,6 +352,10 @@ public class DomainSettingsForUpdate implements Serializable, Cloneable, Structu
             return false;
         if (other.getSecurityGroupIds() != null && other.getSecurityGroupIds().equals(this.getSecurityGroupIds()) == false)
             return false;
+        if (other.getDockerSettings() == null ^ this.getDockerSettings() == null)
+            return false;
+        if (other.getDockerSettings() != null && other.getDockerSettings().equals(this.getDockerSettings()) == false)
+            return false;
         return true;
     }
 
@@ -315,6 +367,7 @@ public class DomainSettingsForUpdate implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getRStudioServerProDomainSettingsForUpdate() == null) ? 0 : getRStudioServerProDomainSettingsForUpdate().hashCode());
         hashCode = prime * hashCode + ((getExecutionRoleIdentityConfig() == null) ? 0 : getExecutionRoleIdentityConfig().hashCode());
         hashCode = prime * hashCode + ((getSecurityGroupIds() == null) ? 0 : getSecurityGroupIds().hashCode());
+        hashCode = prime * hashCode + ((getDockerSettings() == null) ? 0 : getDockerSettings().hashCode());
         return hashCode;
     }
 

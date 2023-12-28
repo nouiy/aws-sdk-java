@@ -1,3 +1,16 @@
+# __1.12.628__ __2023-12-28__
+## __AWS CodeStar connections__
+  - ### Features
+    - New integration with the GitLab self-managed provider type.
+
+## __Amazon Kinesis Video Streams Archived Media__
+  - ### Features
+    - NoDataRetentionException thrown when GetImages requested for a Stream that does not retain data (that is, has a DataRetentionInHours of 0).
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Amazon SageMaker Studio now supports Docker access from within app container
+
 # __1.12.627__ __2023-12-27__
 ## __Amazon EMR__
   - ### Features
