@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The criteria of searchable contact attributes.
+ * The search criteria based on user-defned contact attribute key and values to search on.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchableContactAttributesCriteria"
@@ -30,24 +30,24 @@ public class SearchableContactAttributesCriteria implements Serializable, Clonea
 
     /**
      * <p>
-     * The searchable contact attribute key
+     * The key containing a searchable user-defined contact attribute.
      * </p>
      */
     private String key;
     /**
      * <p>
-     * The array of contact attribute values used to filter search results.
+     * The list of values to search for within a user-defined contact attribute.
      * </p>
      */
     private java.util.List<String> values;
 
     /**
      * <p>
-     * The searchable contact attribute key
+     * The key containing a searchable user-defined contact attribute.
      * </p>
      * 
      * @param key
-     *        The searchable contact attribute key
+     *        The key containing a searchable user-defined contact attribute.
      */
 
     public void setKey(String key) {
@@ -56,10 +56,10 @@ public class SearchableContactAttributesCriteria implements Serializable, Clonea
 
     /**
      * <p>
-     * The searchable contact attribute key
+     * The key containing a searchable user-defined contact attribute.
      * </p>
      * 
-     * @return The searchable contact attribute key
+     * @return The key containing a searchable user-defined contact attribute.
      */
 
     public String getKey() {
@@ -68,11 +68,11 @@ public class SearchableContactAttributesCriteria implements Serializable, Clonea
 
     /**
      * <p>
-     * The searchable contact attribute key
+     * The key containing a searchable user-defined contact attribute.
      * </p>
      * 
      * @param key
-     *        The searchable contact attribute key
+     *        The key containing a searchable user-defined contact attribute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,10 +83,10 @@ public class SearchableContactAttributesCriteria implements Serializable, Clonea
 
     /**
      * <p>
-     * The array of contact attribute values used to filter search results.
+     * The list of values to search for within a user-defined contact attribute.
      * </p>
      * 
-     * @return The array of contact attribute values used to filter search results.
+     * @return The list of values to search for within a user-defined contact attribute.
      */
 
     public java.util.List<String> getValues() {
@@ -95,11 +95,11 @@ public class SearchableContactAttributesCriteria implements Serializable, Clonea
 
     /**
      * <p>
-     * The array of contact attribute values used to filter search results.
+     * The list of values to search for within a user-defined contact attribute.
      * </p>
      * 
      * @param values
-     *        The array of contact attribute values used to filter search results.
+     *        The list of values to search for within a user-defined contact attribute.
      */
 
     public void setValues(java.util.Collection<String> values) {
@@ -113,7 +113,7 @@ public class SearchableContactAttributesCriteria implements Serializable, Clonea
 
     /**
      * <p>
-     * The array of contact attribute values used to filter search results.
+     * The list of values to search for within a user-defined contact attribute.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -122,7 +122,7 @@ public class SearchableContactAttributesCriteria implements Serializable, Clonea
      * </p>
      * 
      * @param values
-     *        The array of contact attribute values used to filter search results.
+     *        The list of values to search for within a user-defined contact attribute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +138,11 @@ public class SearchableContactAttributesCriteria implements Serializable, Clonea
 
     /**
      * <p>
-     * The array of contact attribute values used to filter search results.
+     * The list of values to search for within a user-defined contact attribute.
      * </p>
      * 
      * @param values
-     *        The array of contact attribute values used to filter search results.
+     *        The list of values to search for within a user-defined contact attribute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

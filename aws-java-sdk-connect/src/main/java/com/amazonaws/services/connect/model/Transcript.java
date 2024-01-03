@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The transcript object used to search results.
+ * A structure that defines search criteria and matching logic to search for contacts by matching text with transcripts
+ * analyzed by Amazon Connect Contact Lens.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/Transcript" target="_top">AWS API
@@ -30,23 +31,23 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of transcript search criteria
+     * The list of search criteria based on Contact Lens conversational analytics transcript.
      * </p>
      */
     private java.util.List<TranscriptCriteria> criteria;
     /**
      * <p>
-     * The match type of multiple transcript criteira
+     * The match type combining search criteria using multiple transcript criteria.
      * </p>
      */
     private String matchType;
 
     /**
      * <p>
-     * The array of transcript search criteria
+     * The list of search criteria based on Contact Lens conversational analytics transcript.
      * </p>
      * 
-     * @return The array of transcript search criteria
+     * @return The list of search criteria based on Contact Lens conversational analytics transcript.
      */
 
     public java.util.List<TranscriptCriteria> getCriteria() {
@@ -55,11 +56,11 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of transcript search criteria
+     * The list of search criteria based on Contact Lens conversational analytics transcript.
      * </p>
      * 
      * @param criteria
-     *        The array of transcript search criteria
+     *        The list of search criteria based on Contact Lens conversational analytics transcript.
      */
 
     public void setCriteria(java.util.Collection<TranscriptCriteria> criteria) {
@@ -73,7 +74,7 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of transcript search criteria
+     * The list of search criteria based on Contact Lens conversational analytics transcript.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,7 +83,7 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param criteria
-     *        The array of transcript search criteria
+     *        The list of search criteria based on Contact Lens conversational analytics transcript.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +99,11 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of transcript search criteria
+     * The list of search criteria based on Contact Lens conversational analytics transcript.
      * </p>
      * 
      * @param criteria
-     *        The array of transcript search criteria
+     *        The list of search criteria based on Contact Lens conversational analytics transcript.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -113,11 +114,11 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The match type of multiple transcript criteira
+     * The match type combining search criteria using multiple transcript criteria.
      * </p>
      * 
      * @param matchType
-     *        The match type of multiple transcript criteira
+     *        The match type combining search criteria using multiple transcript criteria.
      * @see SearchContactsMatchType
      */
 
@@ -127,10 +128,10 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The match type of multiple transcript criteira
+     * The match type combining search criteria using multiple transcript criteria.
      * </p>
      * 
-     * @return The match type of multiple transcript criteira
+     * @return The match type combining search criteria using multiple transcript criteria.
      * @see SearchContactsMatchType
      */
 
@@ -140,11 +141,11 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The match type of multiple transcript criteira
+     * The match type combining search criteria using multiple transcript criteria.
      * </p>
      * 
      * @param matchType
-     *        The match type of multiple transcript criteira
+     *        The match type combining search criteria using multiple transcript criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SearchContactsMatchType
      */
@@ -156,11 +157,11 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The match type of multiple transcript criteira
+     * The match type combining search criteria using multiple transcript criteria.
      * </p>
      * 
      * @param matchType
-     *        The match type of multiple transcript criteira
+     *        The match type combining search criteria using multiple transcript criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SearchContactsMatchType
      */

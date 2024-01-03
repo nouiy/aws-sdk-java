@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -28,13 +28,13 @@ public class SearchContactsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The identifier of Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN) of the
-     * instance
+     * instance.
      * </p>
      */
     private String instanceId;
     /**
      * <p>
-     * Time range that you want to search results
+     * Time range that you want to search results.
      * </p>
      */
     private SearchContactsTimeRange timeRange;
@@ -59,7 +59,7 @@ public class SearchContactsRequest extends com.amazonaws.AmazonWebServiceRequest
     private String nextToken;
     /**
      * <p>
-     * Specifies a field to sort by and a sort order
+     * Specifies a field to sort by and a sort order.
      * </p>
      */
     private Sort sort;
@@ -67,12 +67,12 @@ public class SearchContactsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The identifier of Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN) of the
-     * instance
+     * instance.
      * </p>
      * 
      * @param instanceId
      *        The identifier of Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN)
-     *        of the instance
+     *        of the instance.
      */
 
     public void setInstanceId(String instanceId) {
@@ -82,11 +82,11 @@ public class SearchContactsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The identifier of Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN) of the
-     * instance
+     * instance.
      * </p>
      * 
      * @return The identifier of Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN)
-     *         of the instance
+     *         of the instance.
      */
 
     public String getInstanceId() {
@@ -96,12 +96,12 @@ public class SearchContactsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The identifier of Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN) of the
-     * instance
+     * instance.
      * </p>
      * 
      * @param instanceId
      *        The identifier of Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN)
-     *        of the instance
+     *        of the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,11 +112,11 @@ public class SearchContactsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Time range that you want to search results
+     * Time range that you want to search results.
      * </p>
      * 
      * @param timeRange
-     *        Time range that you want to search results
+     *        Time range that you want to search results.
      */
 
     public void setTimeRange(SearchContactsTimeRange timeRange) {
@@ -125,10 +125,10 @@ public class SearchContactsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Time range that you want to search results
+     * Time range that you want to search results.
      * </p>
      * 
-     * @return Time range that you want to search results
+     * @return Time range that you want to search results.
      */
 
     public SearchContactsTimeRange getTimeRange() {
@@ -137,11 +137,11 @@ public class SearchContactsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Time range that you want to search results
+     * Time range that you want to search results.
      * </p>
      * 
      * @param timeRange
-     *        Time range that you want to search results
+     *        Time range that you want to search results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -278,11 +278,11 @@ public class SearchContactsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies a field to sort by and a sort order
+     * Specifies a field to sort by and a sort order.
      * </p>
      * 
      * @param sort
-     *        Specifies a field to sort by and a sort order
+     *        Specifies a field to sort by and a sort order.
      */
 
     public void setSort(Sort sort) {
@@ -291,10 +291,10 @@ public class SearchContactsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies a field to sort by and a sort order
+     * Specifies a field to sort by and a sort order.
      * </p>
      * 
-     * @return Specifies a field to sort by and a sort order
+     * @return Specifies a field to sort by and a sort order.
      */
 
     public Sort getSort() {
@@ -303,11 +303,11 @@ public class SearchContactsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies a field to sort by and a sort order
+     * Specifies a field to sort by and a sort order.
      * </p>
      * 
      * @param sort
-     *        Specifies a field to sort by and a sort order
+     *        Specifies a field to sort by and a sort order.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

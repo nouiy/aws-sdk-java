@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -41,6 +41,8 @@ public class ColorCorrectorMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hdrToSdrToneMapper").build();
     private static final MarshallingInfo<Integer> HUE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("hue").build();
+    private static final MarshallingInfo<Integer> MAXLUMINANCE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxLuminance").build();
     private static final MarshallingInfo<String> SAMPLERANGECONVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sampleRangeConversion").build();
     private static final MarshallingInfo<Integer> SATURATION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -71,6 +73,7 @@ public class ColorCorrectorMarshaller {
             protocolMarshaller.marshall(colorCorrector.getHdr10Metadata(), HDR10METADATA_BINDING);
             protocolMarshaller.marshall(colorCorrector.getHdrToSdrToneMapper(), HDRTOSDRTONEMAPPER_BINDING);
             protocolMarshaller.marshall(colorCorrector.getHue(), HUE_BINDING);
+            protocolMarshaller.marshall(colorCorrector.getMaxLuminance(), MAXLUMINANCE_BINDING);
             protocolMarshaller.marshall(colorCorrector.getSampleRangeConversion(), SAMPLERANGECONVERSION_BINDING);
             protocolMarshaller.marshall(colorCorrector.getSaturation(), SATURATION_BINDING);
             protocolMarshaller.marshall(colorCorrector.getSdrReferenceWhiteLevel(), SDRREFERENCEWHITELEVEL_BINDING);

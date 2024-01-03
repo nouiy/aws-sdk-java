@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -15,7 +15,10 @@ package com.amazonaws.services.mediaconvert.model;
 import javax.annotation.Generated;
 
 /**
- * AAC Profile.
+ * Specify the AAC profile. For the widest player compatibility and where higher bitrates are acceptable: Keep the
+ * default profile, LC (AAC-LC) For improved audio performance at lower bitrates: Choose HEV1 or HEV2. HEV1 (AAC-HE v1)
+ * adds spectral band replication to improve speech audio at low bitrates. HEV2 (AAC-HE v2) adds parametric stereo,
+ * which optimizes for encoding stereo audio at very low bitrates.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum AacCodecProfile {

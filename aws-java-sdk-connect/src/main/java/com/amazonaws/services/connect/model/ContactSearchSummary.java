@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -30,7 +30,7 @@ public class ContactSearchSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the contact
+     * The Amazon Resource Name (ARN) of the contact.
      * </p>
      */
     private String arn;
@@ -78,11 +78,12 @@ public class ContactSearchSummary implements Serializable, Cloneable, Structured
     private ContactSearchSummaryAgentInfo agentInfo;
     /**
      * <p>
-     * The date and time this contact was initiated, in UTC time. For INBOUND, this is when the contact arrived. For
-     * OUTBOUND, this is when the agent began dialing. For CALLBACK, this is when the callback contact was created. For
-     * TRANSFER and QUEUE_TRANSFER, this is when the transfer was initiated. For API, this is when the request arrived.
-     * For EXTERNAL_OUTBOUND, this is when the agent started dialing the external participant. For MONITOR, this is when
-     * the supervisor started listening to a contact.
+     * The date and time this contact was initiated, in UTC time. For <code>INBOUND</code>, this is when the contact
+     * arrived. For <code>OUTBOUND</code>, this is when the agent began dialing. For <code>CALLBACK</code>, this is when
+     * the callback contact was created. For <code>TRANSFER</code> and <code>QUEUE_TRANSFER</code>, this is when the
+     * transfer was initiated. For API, this is when the request arrived. For <code>EXTERNAL_OUTBOUND</code>, this is
+     * when the agent started dialing the external participant. For <code>MONITOR</code>, this is when the supervisor
+     * started listening to a contact.
      * </p>
      */
     private java.util.Date initiationTimestamp;
@@ -101,11 +102,11 @@ public class ContactSearchSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the contact
+     * The Amazon Resource Name (ARN) of the contact.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the contact
+     *        The Amazon Resource Name (ARN) of the contact.
      */
 
     public void setArn(String arn) {
@@ -114,10 +115,10 @@ public class ContactSearchSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the contact
+     * The Amazon Resource Name (ARN) of the contact.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the contact
+     * @return The Amazon Resource Name (ARN) of the contact.
      */
 
     public String getArn() {
@@ -126,11 +127,11 @@ public class ContactSearchSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the contact
+     * The Amazon Resource Name (ARN) of the contact.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the contact
+     *        The Amazon Resource Name (ARN) of the contact.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -459,19 +460,21 @@ public class ContactSearchSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The date and time this contact was initiated, in UTC time. For INBOUND, this is when the contact arrived. For
-     * OUTBOUND, this is when the agent began dialing. For CALLBACK, this is when the callback contact was created. For
-     * TRANSFER and QUEUE_TRANSFER, this is when the transfer was initiated. For API, this is when the request arrived.
-     * For EXTERNAL_OUTBOUND, this is when the agent started dialing the external participant. For MONITOR, this is when
-     * the supervisor started listening to a contact.
+     * The date and time this contact was initiated, in UTC time. For <code>INBOUND</code>, this is when the contact
+     * arrived. For <code>OUTBOUND</code>, this is when the agent began dialing. For <code>CALLBACK</code>, this is when
+     * the callback contact was created. For <code>TRANSFER</code> and <code>QUEUE_TRANSFER</code>, this is when the
+     * transfer was initiated. For API, this is when the request arrived. For <code>EXTERNAL_OUTBOUND</code>, this is
+     * when the agent started dialing the external participant. For <code>MONITOR</code>, this is when the supervisor
+     * started listening to a contact.
      * </p>
      * 
      * @param initiationTimestamp
-     *        The date and time this contact was initiated, in UTC time. For INBOUND, this is when the contact arrived.
-     *        For OUTBOUND, this is when the agent began dialing. For CALLBACK, this is when the callback contact was
-     *        created. For TRANSFER and QUEUE_TRANSFER, this is when the transfer was initiated. For API, this is when
-     *        the request arrived. For EXTERNAL_OUTBOUND, this is when the agent started dialing the external
-     *        participant. For MONITOR, this is when the supervisor started listening to a contact.
+     *        The date and time this contact was initiated, in UTC time. For <code>INBOUND</code>, this is when the
+     *        contact arrived. For <code>OUTBOUND</code>, this is when the agent began dialing. For
+     *        <code>CALLBACK</code>, this is when the callback contact was created. For <code>TRANSFER</code> and
+     *        <code>QUEUE_TRANSFER</code>, this is when the transfer was initiated. For API, this is when the request
+     *        arrived. For <code>EXTERNAL_OUTBOUND</code>, this is when the agent started dialing the external
+     *        participant. For <code>MONITOR</code>, this is when the supervisor started listening to a contact.
      */
 
     public void setInitiationTimestamp(java.util.Date initiationTimestamp) {
@@ -480,18 +483,20 @@ public class ContactSearchSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The date and time this contact was initiated, in UTC time. For INBOUND, this is when the contact arrived. For
-     * OUTBOUND, this is when the agent began dialing. For CALLBACK, this is when the callback contact was created. For
-     * TRANSFER and QUEUE_TRANSFER, this is when the transfer was initiated. For API, this is when the request arrived.
-     * For EXTERNAL_OUTBOUND, this is when the agent started dialing the external participant. For MONITOR, this is when
-     * the supervisor started listening to a contact.
+     * The date and time this contact was initiated, in UTC time. For <code>INBOUND</code>, this is when the contact
+     * arrived. For <code>OUTBOUND</code>, this is when the agent began dialing. For <code>CALLBACK</code>, this is when
+     * the callback contact was created. For <code>TRANSFER</code> and <code>QUEUE_TRANSFER</code>, this is when the
+     * transfer was initiated. For API, this is when the request arrived. For <code>EXTERNAL_OUTBOUND</code>, this is
+     * when the agent started dialing the external participant. For <code>MONITOR</code>, this is when the supervisor
+     * started listening to a contact.
      * </p>
      * 
-     * @return The date and time this contact was initiated, in UTC time. For INBOUND, this is when the contact arrived.
-     *         For OUTBOUND, this is when the agent began dialing. For CALLBACK, this is when the callback contact was
-     *         created. For TRANSFER and QUEUE_TRANSFER, this is when the transfer was initiated. For API, this is when
-     *         the request arrived. For EXTERNAL_OUTBOUND, this is when the agent started dialing the external
-     *         participant. For MONITOR, this is when the supervisor started listening to a contact.
+     * @return The date and time this contact was initiated, in UTC time. For <code>INBOUND</code>, this is when the
+     *         contact arrived. For <code>OUTBOUND</code>, this is when the agent began dialing. For
+     *         <code>CALLBACK</code>, this is when the callback contact was created. For <code>TRANSFER</code> and
+     *         <code>QUEUE_TRANSFER</code>, this is when the transfer was initiated. For API, this is when the request
+     *         arrived. For <code>EXTERNAL_OUTBOUND</code>, this is when the agent started dialing the external
+     *         participant. For <code>MONITOR</code>, this is when the supervisor started listening to a contact.
      */
 
     public java.util.Date getInitiationTimestamp() {
@@ -500,19 +505,21 @@ public class ContactSearchSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The date and time this contact was initiated, in UTC time. For INBOUND, this is when the contact arrived. For
-     * OUTBOUND, this is when the agent began dialing. For CALLBACK, this is when the callback contact was created. For
-     * TRANSFER and QUEUE_TRANSFER, this is when the transfer was initiated. For API, this is when the request arrived.
-     * For EXTERNAL_OUTBOUND, this is when the agent started dialing the external participant. For MONITOR, this is when
-     * the supervisor started listening to a contact.
+     * The date and time this contact was initiated, in UTC time. For <code>INBOUND</code>, this is when the contact
+     * arrived. For <code>OUTBOUND</code>, this is when the agent began dialing. For <code>CALLBACK</code>, this is when
+     * the callback contact was created. For <code>TRANSFER</code> and <code>QUEUE_TRANSFER</code>, this is when the
+     * transfer was initiated. For API, this is when the request arrived. For <code>EXTERNAL_OUTBOUND</code>, this is
+     * when the agent started dialing the external participant. For <code>MONITOR</code>, this is when the supervisor
+     * started listening to a contact.
      * </p>
      * 
      * @param initiationTimestamp
-     *        The date and time this contact was initiated, in UTC time. For INBOUND, this is when the contact arrived.
-     *        For OUTBOUND, this is when the agent began dialing. For CALLBACK, this is when the callback contact was
-     *        created. For TRANSFER and QUEUE_TRANSFER, this is when the transfer was initiated. For API, this is when
-     *        the request arrived. For EXTERNAL_OUTBOUND, this is when the agent started dialing the external
-     *        participant. For MONITOR, this is when the supervisor started listening to a contact.
+     *        The date and time this contact was initiated, in UTC time. For <code>INBOUND</code>, this is when the
+     *        contact arrived. For <code>OUTBOUND</code>, this is when the agent began dialing. For
+     *        <code>CALLBACK</code>, this is when the callback contact was created. For <code>TRANSFER</code> and
+     *        <code>QUEUE_TRANSFER</code>, this is when the transfer was initiated. For API, this is when the request
+     *        arrived. For <code>EXTERNAL_OUTBOUND</code>, this is when the agent started dialing the external
+     *        participant. For <code>MONITOR</code>, this is when the supervisor started listening to a contact.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

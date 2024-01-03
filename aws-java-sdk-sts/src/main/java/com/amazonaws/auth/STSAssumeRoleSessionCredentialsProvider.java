@@ -1,5 +1,5 @@
 /*
- * Copyright 2011-2023 Amazon Technologies, Inc.
+ * Copyright 2011-2024 Amazon Technologies, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -86,6 +86,11 @@ public class STSAssumeRoleSessionCredentialsProvider implements AWSSessionCreden
      * Transitive tag keys for the assume role session
      */
     private final Collection<String> transitiveTagKeys;
+
+    /**
+     * Source Identity for the assume role session
+     */
+    private final String sourceIdentity;
 
     private final Callable<SessionCredentialsHolder> refreshCallable = new Callable<SessionCredentialsHolder>() {
         @Override
@@ -251,6 +256,7 @@ public class STSAssumeRoleSessionCredentialsProvider implements AWSSessionCreden
         this.scopeDownPolicy = builder.scopeDownPolicy;
         this.sessionTags = builder.sessionTags;
         this.transitiveTagKeys = builder.transitiveTagKeys;
+        this.sourceIdentity = builder.sourceIdentity;
     }
 
     /**
@@ -344,6 +350,9 @@ public class STSAssumeRoleSessionCredentialsProvider implements AWSSessionCreden
         if(transitiveTagKeys != null) {
             assumeRoleRequest = assumeRoleRequest.withTransitiveTagKeys(transitiveTagKeys);
         }
+        if (sourceIdentity != null) {
+            assumeRoleRequest = assumeRoleRequest.withSourceIdentity(sourceIdentity);
+        }
 
         AssumeRoleResult assumeRoleResult = securityTokenService.assumeRole(assumeRoleRequest);
         return new SessionCredentialsHolder(assumeRoleResult.getCredentials());
@@ -378,6 +387,7 @@ public class STSAssumeRoleSessionCredentialsProvider implements AWSSessionCreden
         private AWSSecurityTokenService sts;
         private Collection<Tag> sessionTags;
         private Collection<String> transitiveTagKeys;
+        private String sourceIdentity;
 
         private ExecutorService asyncRefreshExecutor;
 
@@ -506,6 +516,16 @@ public class STSAssumeRoleSessionCredentialsProvider implements AWSSessionCreden
                 return this;
             }
             this.transitiveTagKeys = Collections.unmodifiableCollection(new ArrayList<String>(transitiveTagKeys));
+            return this;
+        }
+
+        /**
+         * Set the source identity when creating a new assume role session
+         * @param  sourceIdentity a string represent an identity we want to pass to the assume role request.
+         * @return the itself for chained calls
+         */
+        public Builder withSourceIdentity(String sourceIdentity) {
+            this.sourceIdentity = sourceIdentity;
             return this;
         }
 

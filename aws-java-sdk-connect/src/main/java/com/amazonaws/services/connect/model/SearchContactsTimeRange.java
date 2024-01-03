@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure of time range that you want to search results
+ * A structure of time range that you want to search results.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchContactsTimeRange" target="_top">AWS
@@ -30,7 +30,7 @@ public class SearchContactsTimeRange implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The type of timestamp to search
+     * The type of timestamp to search.
      * </p>
      */
     private String type;
@@ -49,11 +49,11 @@ public class SearchContactsTimeRange implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The type of timestamp to search
+     * The type of timestamp to search.
      * </p>
      * 
      * @param type
-     *        The type of timestamp to search
+     *        The type of timestamp to search.
      * @see SearchContactsTimeRangeType
      */
 
@@ -63,10 +63,10 @@ public class SearchContactsTimeRange implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The type of timestamp to search
+     * The type of timestamp to search.
      * </p>
      * 
-     * @return The type of timestamp to search
+     * @return The type of timestamp to search.
      * @see SearchContactsTimeRangeType
      */
 
@@ -76,11 +76,11 @@ public class SearchContactsTimeRange implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The type of timestamp to search
+     * The type of timestamp to search.
      * </p>
      * 
      * @param type
-     *        The type of timestamp to search
+     *        The type of timestamp to search.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SearchContactsTimeRangeType
      */
@@ -92,11 +92,11 @@ public class SearchContactsTimeRange implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The type of timestamp to search
+     * The type of timestamp to search.
      * </p>
      * 
      * @param type
-     *        The type of timestamp to search
+     *        The type of timestamp to search.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SearchContactsTimeRangeType
      */

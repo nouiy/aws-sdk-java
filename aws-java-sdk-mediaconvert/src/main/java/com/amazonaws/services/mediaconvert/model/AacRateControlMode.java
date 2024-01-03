@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -15,7 +15,9 @@ package com.amazonaws.services.mediaconvert.model;
 import javax.annotation.Generated;
 
 /**
- * Rate Control Mode.
+ * Specify the AAC rate control mode. For a constant bitrate: Choose CBR. Your AAC output bitrate will be equal to the
+ * value that you choose for Bitrate. For a variable bitrate: Choose VBR. Your AAC output bitrate will vary according to
+ * your audio content and the value that you choose for Bitrate quality.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum AacRateControlMode {

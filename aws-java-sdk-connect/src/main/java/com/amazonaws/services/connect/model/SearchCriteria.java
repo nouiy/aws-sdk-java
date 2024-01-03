@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure of search criteria to be used to return contacts
+ * A structure of search criteria to be used to return contacts.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchCriteria" target="_top">AWS API
@@ -30,53 +30,65 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of agent ids
+     * The identifiers of agents who handled the contacts.
      * </p>
      */
     private java.util.List<String> agentIds;
     /**
      * <p>
-     * The agent hierarchy groups
+     * The agent hierarchy groups of the agent at the time of handling the contact.
      * </p>
      */
     private AgentHierarchyGroups agentHierarchyGroups;
     /**
      * <p>
-     * The array of channels
+     * The list of channels associated with contacts.
      * </p>
      */
     private java.util.List<String> channels;
     /**
      * <p>
-     * The ContactAnalysis object used in search criteria
+     * Search criteria based on analysis outputs from Amazon Connect Contact Lens.
      * </p>
      */
     private ContactAnalysis contactAnalysis;
     /**
      * <p>
-     * The array of initiaton methods
+     * The list of initiation methods associated with contacts.
      * </p>
      */
     private java.util.List<String> initiationMethods;
     /**
      * <p>
-     * The array of queue ids.
+     * The list of queue IDs associated with contacts.
      * </p>
      */
     private java.util.List<String> queueIds;
     /**
      * <p>
-     * The SearchableContactAttributes object used in search criteria
+     * The search criteria based on user-defined contact attributes that have been configured for contact search. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by customer
+     * contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
+     * <important>
+     * <p>
+     * To use <code>SearchableContactAttributes</code> in a search request, the <code>GetContactAttributes</code> action
+     * is required to perform an API request. For more information, see <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions-as-permissions"
+     * >https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions
+     * -as-permissions</a>Actions defined by Amazon Connect.
+     * </p>
+     * </important>
      */
     private SearchableContactAttributes searchableContactAttributes;
 
     /**
      * <p>
-     * The array of agent ids
+     * The identifiers of agents who handled the contacts.
      * </p>
      * 
-     * @return The array of agent ids
+     * @return The identifiers of agents who handled the contacts.
      */
 
     public java.util.List<String> getAgentIds() {
@@ -85,11 +97,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of agent ids
+     * The identifiers of agents who handled the contacts.
      * </p>
      * 
      * @param agentIds
-     *        The array of agent ids
+     *        The identifiers of agents who handled the contacts.
      */
 
     public void setAgentIds(java.util.Collection<String> agentIds) {
@@ -103,7 +115,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of agent ids
+     * The identifiers of agents who handled the contacts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -112,7 +124,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param agentIds
-     *        The array of agent ids
+     *        The identifiers of agents who handled the contacts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -128,11 +140,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of agent ids
+     * The identifiers of agents who handled the contacts.
      * </p>
      * 
      * @param agentIds
-     *        The array of agent ids
+     *        The identifiers of agents who handled the contacts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,11 +155,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The agent hierarchy groups
+     * The agent hierarchy groups of the agent at the time of handling the contact.
      * </p>
      * 
      * @param agentHierarchyGroups
-     *        The agent hierarchy groups
+     *        The agent hierarchy groups of the agent at the time of handling the contact.
      */
 
     public void setAgentHierarchyGroups(AgentHierarchyGroups agentHierarchyGroups) {
@@ -156,10 +168,10 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The agent hierarchy groups
+     * The agent hierarchy groups of the agent at the time of handling the contact.
      * </p>
      * 
-     * @return The agent hierarchy groups
+     * @return The agent hierarchy groups of the agent at the time of handling the contact.
      */
 
     public AgentHierarchyGroups getAgentHierarchyGroups() {
@@ -168,11 +180,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The agent hierarchy groups
+     * The agent hierarchy groups of the agent at the time of handling the contact.
      * </p>
      * 
      * @param agentHierarchyGroups
-     *        The agent hierarchy groups
+     *        The agent hierarchy groups of the agent at the time of handling the contact.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -183,10 +195,10 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of channels
+     * The list of channels associated with contacts.
      * </p>
      * 
-     * @return The array of channels
+     * @return The list of channels associated with contacts.
      * @see Channel
      */
 
@@ -196,11 +208,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of channels
+     * The list of channels associated with contacts.
      * </p>
      * 
      * @param channels
-     *        The array of channels
+     *        The list of channels associated with contacts.
      * @see Channel
      */
 
@@ -215,7 +227,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of channels
+     * The list of channels associated with contacts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -224,7 +236,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param channels
-     *        The array of channels
+     *        The list of channels associated with contacts.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Channel
      */
@@ -241,11 +253,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of channels
+     * The list of channels associated with contacts.
      * </p>
      * 
      * @param channels
-     *        The array of channels
+     *        The list of channels associated with contacts.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Channel
      */
@@ -257,11 +269,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of channels
+     * The list of channels associated with contacts.
      * </p>
      * 
      * @param channels
-     *        The array of channels
+     *        The list of channels associated with contacts.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Channel
      */
@@ -281,11 +293,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ContactAnalysis object used in search criteria
+     * Search criteria based on analysis outputs from Amazon Connect Contact Lens.
      * </p>
      * 
      * @param contactAnalysis
-     *        The ContactAnalysis object used in search criteria
+     *        Search criteria based on analysis outputs from Amazon Connect Contact Lens.
      */
 
     public void setContactAnalysis(ContactAnalysis contactAnalysis) {
@@ -294,10 +306,10 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ContactAnalysis object used in search criteria
+     * Search criteria based on analysis outputs from Amazon Connect Contact Lens.
      * </p>
      * 
-     * @return The ContactAnalysis object used in search criteria
+     * @return Search criteria based on analysis outputs from Amazon Connect Contact Lens.
      */
 
     public ContactAnalysis getContactAnalysis() {
@@ -306,11 +318,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ContactAnalysis object used in search criteria
+     * Search criteria based on analysis outputs from Amazon Connect Contact Lens.
      * </p>
      * 
      * @param contactAnalysis
-     *        The ContactAnalysis object used in search criteria
+     *        Search criteria based on analysis outputs from Amazon Connect Contact Lens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -321,10 +333,10 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of initiaton methods
+     * The list of initiation methods associated with contacts.
      * </p>
      * 
-     * @return The array of initiaton methods
+     * @return The list of initiation methods associated with contacts.
      * @see ContactInitiationMethod
      */
 
@@ -334,11 +346,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of initiaton methods
+     * The list of initiation methods associated with contacts.
      * </p>
      * 
      * @param initiationMethods
-     *        The array of initiaton methods
+     *        The list of initiation methods associated with contacts.
      * @see ContactInitiationMethod
      */
 
@@ -353,7 +365,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of initiaton methods
+     * The list of initiation methods associated with contacts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -362,7 +374,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param initiationMethods
-     *        The array of initiaton methods
+     *        The list of initiation methods associated with contacts.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContactInitiationMethod
      */
@@ -379,11 +391,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of initiaton methods
+     * The list of initiation methods associated with contacts.
      * </p>
      * 
      * @param initiationMethods
-     *        The array of initiaton methods
+     *        The list of initiation methods associated with contacts.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContactInitiationMethod
      */
@@ -395,11 +407,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of initiaton methods
+     * The list of initiation methods associated with contacts.
      * </p>
      * 
      * @param initiationMethods
-     *        The array of initiaton methods
+     *        The list of initiation methods associated with contacts.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContactInitiationMethod
      */
@@ -419,10 +431,10 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of queue ids.
+     * The list of queue IDs associated with contacts.
      * </p>
      * 
-     * @return The array of queue ids.
+     * @return The list of queue IDs associated with contacts.
      */
 
     public java.util.List<String> getQueueIds() {
@@ -431,11 +443,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of queue ids.
+     * The list of queue IDs associated with contacts.
      * </p>
      * 
      * @param queueIds
-     *        The array of queue ids.
+     *        The list of queue IDs associated with contacts.
      */
 
     public void setQueueIds(java.util.Collection<String> queueIds) {
@@ -449,7 +461,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of queue ids.
+     * The list of queue IDs associated with contacts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -458,7 +470,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param queueIds
-     *        The array of queue ids.
+     *        The list of queue IDs associated with contacts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -474,11 +486,11 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The array of queue ids.
+     * The list of queue IDs associated with contacts.
      * </p>
      * 
      * @param queueIds
-     *        The array of queue ids.
+     *        The list of queue IDs associated with contacts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -489,11 +501,33 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SearchableContactAttributes object used in search criteria
+     * The search criteria based on user-defined contact attributes that have been configured for contact search. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by customer
+     * contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
+     * <important>
+     * <p>
+     * To use <code>SearchableContactAttributes</code> in a search request, the <code>GetContactAttributes</code> action
+     * is required to perform an API request. For more information, see <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions-as-permissions"
+     * >https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions
+     * -as-permissions</a>Actions defined by Amazon Connect.
+     * </p>
+     * </important>
      * 
      * @param searchableContactAttributes
-     *        The SearchableContactAttributes object used in search criteria
+     *        The search criteria based on user-defined contact attributes that have been configured for contact search.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by
+     *        customer contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.</p> <important>
+     *        <p>
+     *        To use <code>SearchableContactAttributes</code> in a search request, the <code>GetContactAttributes</code>
+     *        action is required to perform an API request. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions-as-permissions"
+     *        >https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-
+     *        actions-as-permissions</a>Actions defined by Amazon Connect.
+     *        </p>
      */
 
     public void setSearchableContactAttributes(SearchableContactAttributes searchableContactAttributes) {
@@ -502,10 +536,33 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SearchableContactAttributes object used in search criteria
+     * The search criteria based on user-defined contact attributes that have been configured for contact search. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by customer
+     * contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
+     * <important>
+     * <p>
+     * To use <code>SearchableContactAttributes</code> in a search request, the <code>GetContactAttributes</code> action
+     * is required to perform an API request. For more information, see <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions-as-permissions"
+     * >https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions
+     * -as-permissions</a>Actions defined by Amazon Connect.
+     * </p>
+     * </important>
      * 
-     * @return The SearchableContactAttributes object used in search criteria
+     * @return The search criteria based on user-defined contact attributes that have been configured for contact
+     *         search. For more information, see <a
+     *         href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by
+     *         customer contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.</p> <important>
+     *         <p>
+     *         To use <code>SearchableContactAttributes</code> in a search request, the
+     *         <code>GetContactAttributes</code> action is required to perform an API request. For more information, see
+     *         <a href=
+     *         "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions-as-permissions"
+     *         >https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect
+     *         -actions-as-permissions</a>Actions defined by Amazon Connect.
+     *         </p>
      */
 
     public SearchableContactAttributes getSearchableContactAttributes() {
@@ -514,11 +571,33 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SearchableContactAttributes object used in search criteria
+     * The search criteria based on user-defined contact attributes that have been configured for contact search. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by customer
+     * contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
+     * <important>
+     * <p>
+     * To use <code>SearchableContactAttributes</code> in a search request, the <code>GetContactAttributes</code> action
+     * is required to perform an API request. For more information, see <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions-as-permissions"
+     * >https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions
+     * -as-permissions</a>Actions defined by Amazon Connect.
+     * </p>
+     * </important>
      * 
      * @param searchableContactAttributes
-     *        The SearchableContactAttributes object used in search criteria
+     *        The search criteria based on user-defined contact attributes that have been configured for contact search.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by
+     *        customer contact attributes</a> in the <i>Amazon Connect Administrator Guide</i>.</p> <important>
+     *        <p>
+     *        To use <code>SearchableContactAttributes</code> in a search request, the <code>GetContactAttributes</code>
+     *        action is required to perform an API request. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions-as-permissions"
+     *        >https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-
+     *        actions-as-permissions</a>Actions defined by Amazon Connect.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

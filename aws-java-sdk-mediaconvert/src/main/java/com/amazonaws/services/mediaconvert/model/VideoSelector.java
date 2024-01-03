@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -73,6 +73,11 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
      * https://docs.aws.amazon.com/console/mediaconvert/hdr.
      */
     private Hdr10Metadata hdr10Metadata;
+    /**
+     * Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001 nits.
+     * For example, enter 10000000 for 1000 nits.
+     */
+    private Integer maxLuminance;
     /**
      * Use this setting if your input has video and audio durations that don't align, and your output or player has
      * strict alignment requirements. Examples: Input audio track has a delayed start. Input video track ends before
@@ -549,6 +554,46 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001 nits.
+     * For example, enter 10000000 for 1000 nits.
+     * 
+     * @param maxLuminance
+     *        Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001
+     *        nits. For example, enter 10000000 for 1000 nits.
+     */
+
+    public void setMaxLuminance(Integer maxLuminance) {
+        this.maxLuminance = maxLuminance;
+    }
+
+    /**
+     * Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001 nits.
+     * For example, enter 10000000 for 1000 nits.
+     * 
+     * @return Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of
+     *         0.0001 nits. For example, enter 10000000 for 1000 nits.
+     */
+
+    public Integer getMaxLuminance() {
+        return this.maxLuminance;
+    }
+
+    /**
+     * Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001 nits.
+     * For example, enter 10000000 for 1000 nits.
+     * 
+     * @param maxLuminance
+     *        Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001
+     *        nits. For example, enter 10000000 for 1000 nits.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VideoSelector withMaxLuminance(Integer maxLuminance) {
+        setMaxLuminance(maxLuminance);
+        return this;
+    }
+
+    /**
      * Use this setting if your input has video and audio durations that don't align, and your output or player has
      * strict alignment requirements. Examples: Input audio track has a delayed start. Input video track ends before
      * audio ends. When you set Pad video to Black, MediaConvert generates black video frames so that output video and
@@ -933,6 +978,8 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
             sb.append("EmbeddedTimecodeOverride: ").append(getEmbeddedTimecodeOverride()).append(",");
         if (getHdr10Metadata() != null)
             sb.append("Hdr10Metadata: ").append(getHdr10Metadata()).append(",");
+        if (getMaxLuminance() != null)
+            sb.append("MaxLuminance: ").append(getMaxLuminance()).append(",");
         if (getPadVideo() != null)
             sb.append("PadVideo: ").append(getPadVideo()).append(",");
         if (getPid() != null)
@@ -977,6 +1024,10 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getHdr10Metadata() != null && other.getHdr10Metadata().equals(this.getHdr10Metadata()) == false)
             return false;
+        if (other.getMaxLuminance() == null ^ this.getMaxLuminance() == null)
+            return false;
+        if (other.getMaxLuminance() != null && other.getMaxLuminance().equals(this.getMaxLuminance()) == false)
+            return false;
         if (other.getPadVideo() == null ^ this.getPadVideo() == null)
             return false;
         if (other.getPadVideo() != null && other.getPadVideo().equals(this.getPadVideo()) == false)
@@ -1010,6 +1061,7 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getColorSpaceUsage() == null) ? 0 : getColorSpaceUsage().hashCode());
         hashCode = prime * hashCode + ((getEmbeddedTimecodeOverride() == null) ? 0 : getEmbeddedTimecodeOverride().hashCode());
         hashCode = prime * hashCode + ((getHdr10Metadata() == null) ? 0 : getHdr10Metadata().hashCode());
+        hashCode = prime * hashCode + ((getMaxLuminance() == null) ? 0 : getMaxLuminance().hashCode());
         hashCode = prime * hashCode + ((getPadVideo() == null) ? 0 : getPadVideo().hashCode());
         hashCode = prime * hashCode + ((getPid() == null) ? 0 : getPid().hashCode());
         hashCode = prime * hashCode + ((getProgramNumber() == null) ? 0 : getProgramNumber().hashCode());

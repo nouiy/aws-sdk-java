@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -22,7 +22,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * depending on the value that you choose for Video codec. For each codec enum that you choose, define the corresponding
  * settings object. The following lists the codec enum, settings object pairs. * AV1, Av1Settings * AVC_INTRA,
  * AvcIntraSettings * FRAME_CAPTURE, FrameCaptureSettings * H_264, H264Settings * H_265, H265Settings * MPEG2,
- * Mpeg2Settings * PRORES, ProresSettings * VC3, Vc3Settings * VP8, Vp8Settings * VP9, Vp9Settings * XAVC, XavcSettings
+ * Mpeg2Settings * PRORES, ProresSettings * UNCOMPRESSED, UncompressedSettings * VC3, Vc3Settings * VP8, Vp8Settings *
+ * VP9, Vp9Settings * XAVC, XavcSettings
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/VideoCodecSettings" target="_top">AWS
  *      API Documentation</a>
@@ -56,6 +57,8 @@ public class VideoCodecSettings implements Serializable, Cloneable, StructuredPo
     private Mpeg2Settings mpeg2Settings;
     /** Required when you set Codec to the value PRORES. */
     private ProresSettings proresSettings;
+    /** Required when you set Codec, under VideoDescription>CodecSettings to the value UNCOMPRESSED. */
+    private UncompressedSettings uncompressedSettings;
     /** Required when you set Codec to the value VC3 */
     private Vc3Settings vc3Settings;
     /** Required when you set Codec to the value VP8. */
@@ -397,6 +400,40 @@ public class VideoCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * Required when you set Codec, under VideoDescription>CodecSettings to the value UNCOMPRESSED.
+     * 
+     * @param uncompressedSettings
+     *        Required when you set Codec, under VideoDescription>CodecSettings to the value UNCOMPRESSED.
+     */
+
+    public void setUncompressedSettings(UncompressedSettings uncompressedSettings) {
+        this.uncompressedSettings = uncompressedSettings;
+    }
+
+    /**
+     * Required when you set Codec, under VideoDescription>CodecSettings to the value UNCOMPRESSED.
+     * 
+     * @return Required when you set Codec, under VideoDescription>CodecSettings to the value UNCOMPRESSED.
+     */
+
+    public UncompressedSettings getUncompressedSettings() {
+        return this.uncompressedSettings;
+    }
+
+    /**
+     * Required when you set Codec, under VideoDescription>CodecSettings to the value UNCOMPRESSED.
+     * 
+     * @param uncompressedSettings
+     *        Required when you set Codec, under VideoDescription>CodecSettings to the value UNCOMPRESSED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VideoCodecSettings withUncompressedSettings(UncompressedSettings uncompressedSettings) {
+        setUncompressedSettings(uncompressedSettings);
+        return this;
+    }
+
+    /**
      * Required when you set Codec to the value VC3
      * 
      * @param vc3Settings
@@ -560,6 +597,8 @@ public class VideoCodecSettings implements Serializable, Cloneable, StructuredPo
             sb.append("Mpeg2Settings: ").append(getMpeg2Settings()).append(",");
         if (getProresSettings() != null)
             sb.append("ProresSettings: ").append(getProresSettings()).append(",");
+        if (getUncompressedSettings() != null)
+            sb.append("UncompressedSettings: ").append(getUncompressedSettings()).append(",");
         if (getVc3Settings() != null)
             sb.append("Vc3Settings: ").append(getVc3Settings()).append(",");
         if (getVp8Settings() != null)
@@ -614,6 +653,10 @@ public class VideoCodecSettings implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getProresSettings() != null && other.getProresSettings().equals(this.getProresSettings()) == false)
             return false;
+        if (other.getUncompressedSettings() == null ^ this.getUncompressedSettings() == null)
+            return false;
+        if (other.getUncompressedSettings() != null && other.getUncompressedSettings().equals(this.getUncompressedSettings()) == false)
+            return false;
         if (other.getVc3Settings() == null ^ this.getVc3Settings() == null)
             return false;
         if (other.getVc3Settings() != null && other.getVc3Settings().equals(this.getVc3Settings()) == false)
@@ -646,6 +689,7 @@ public class VideoCodecSettings implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getH265Settings() == null) ? 0 : getH265Settings().hashCode());
         hashCode = prime * hashCode + ((getMpeg2Settings() == null) ? 0 : getMpeg2Settings().hashCode());
         hashCode = prime * hashCode + ((getProresSettings() == null) ? 0 : getProresSettings().hashCode());
+        hashCode = prime * hashCode + ((getUncompressedSettings() == null) ? 0 : getUncompressedSettings().hashCode());
         hashCode = prime * hashCode + ((getVc3Settings() == null) ? 0 : getVc3Settings().hashCode());
         hashCode = prime * hashCode + ((getVp8Settings() == null) ? 0 : getVp8Settings().hashCode());
         hashCode = prime * hashCode + ((getVp9Settings() == null) ? 0 : getVp9Settings().hashCode());

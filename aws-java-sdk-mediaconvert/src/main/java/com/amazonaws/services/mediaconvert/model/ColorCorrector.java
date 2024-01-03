@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -67,6 +67,11 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
     private String hdrToSdrToneMapper;
     /** Hue in degrees. */
     private Integer hue;
+    /**
+     * Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001 nits.
+     * For example, enter 10000000 for 1000 nits.
+     */
+    private Integer maxLuminance;
     /**
      * Specify how MediaConvert limits the color sample range for this output. To create a limited range output from a
      * full range input: Choose Limited range squeeze. For full range inputs, MediaConvert performs a linear offset to
@@ -519,6 +524,46 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001 nits.
+     * For example, enter 10000000 for 1000 nits.
+     * 
+     * @param maxLuminance
+     *        Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001
+     *        nits. For example, enter 10000000 for 1000 nits.
+     */
+
+    public void setMaxLuminance(Integer maxLuminance) {
+        this.maxLuminance = maxLuminance;
+    }
+
+    /**
+     * Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001 nits.
+     * For example, enter 10000000 for 1000 nits.
+     * 
+     * @return Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of
+     *         0.0001 nits. For example, enter 10000000 for 1000 nits.
+     */
+
+    public Integer getMaxLuminance() {
+        return this.maxLuminance;
+    }
+
+    /**
+     * Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001 nits.
+     * For example, enter 10000000 for 1000 nits.
+     * 
+     * @param maxLuminance
+     *        Specify the maximum mastering display luminance. Enter an integer from 0 to 2147483647, in units of 0.0001
+     *        nits. For example, enter 10000000 for 1000 nits.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ColorCorrector withMaxLuminance(Integer maxLuminance) {
+        setMaxLuminance(maxLuminance);
+        return this;
+    }
+
+    /**
      * Specify how MediaConvert limits the color sample range for this output. To create a limited range output from a
      * full range input: Choose Limited range squeeze. For full range inputs, MediaConvert performs a linear offset to
      * color samples equally across all pixels and frames. Color samples in 10-bit outputs are limited to 64 through 940,
@@ -769,6 +814,8 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
             sb.append("HdrToSdrToneMapper: ").append(getHdrToSdrToneMapper()).append(",");
         if (getHue() != null)
             sb.append("Hue: ").append(getHue()).append(",");
+        if (getMaxLuminance() != null)
+            sb.append("MaxLuminance: ").append(getMaxLuminance()).append(",");
         if (getSampleRangeConversion() != null)
             sb.append("SampleRangeConversion: ").append(getSampleRangeConversion()).append(",");
         if (getSaturation() != null)
@@ -817,6 +864,10 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getHue() != null && other.getHue().equals(this.getHue()) == false)
             return false;
+        if (other.getMaxLuminance() == null ^ this.getMaxLuminance() == null)
+            return false;
+        if (other.getMaxLuminance() != null && other.getMaxLuminance().equals(this.getMaxLuminance()) == false)
+            return false;
         if (other.getSampleRangeConversion() == null ^ this.getSampleRangeConversion() == null)
             return false;
         if (other.getSampleRangeConversion() != null && other.getSampleRangeConversion().equals(this.getSampleRangeConversion()) == false)
@@ -844,6 +895,7 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getHdr10Metadata() == null) ? 0 : getHdr10Metadata().hashCode());
         hashCode = prime * hashCode + ((getHdrToSdrToneMapper() == null) ? 0 : getHdrToSdrToneMapper().hashCode());
         hashCode = prime * hashCode + ((getHue() == null) ? 0 : getHue().hashCode());
+        hashCode = prime * hashCode + ((getMaxLuminance() == null) ? 0 : getMaxLuminance().hashCode());
         hashCode = prime * hashCode + ((getSampleRangeConversion() == null) ? 0 : getSampleRangeConversion().hashCode());
         hashCode = prime * hashCode + ((getSaturation() == null) ? 0 : getSaturation().hashCode());
         hashCode = prime * hashCode + ((getSdrReferenceWhiteLevel() == null) ? 0 : getSdrReferenceWhiteLevel().hashCode());

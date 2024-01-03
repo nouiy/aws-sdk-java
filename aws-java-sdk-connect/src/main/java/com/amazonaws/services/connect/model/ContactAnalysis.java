@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure that defines filters can be used to search within outputs analyzed by Amazon Connect Contact Lens in a
- * contact.
+ * A structure that defines search criteria for contacts using analysis outputs from Amazon Connect Contact Lens.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ContactAnalysis" target="_top">AWS API
@@ -31,21 +30,18 @@ public class ContactAnalysis implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A structure that defines filters can be used to search with text within an Amazon Connect Contact Lens analyzed
-     * transcript.
+     * Search criteria based on transcript analyzed by Amazon Connect Contact Lens.
      * </p>
      */
     private Transcript transcript;
 
     /**
      * <p>
-     * A structure that defines filters can be used to search with text within an Amazon Connect Contact Lens analyzed
-     * transcript.
+     * Search criteria based on transcript analyzed by Amazon Connect Contact Lens.
      * </p>
      * 
      * @param transcript
-     *        A structure that defines filters can be used to search with text within an Amazon Connect Contact Lens
-     *        analyzed transcript.
+     *        Search criteria based on transcript analyzed by Amazon Connect Contact Lens.
      */
 
     public void setTranscript(Transcript transcript) {
@@ -54,12 +50,10 @@ public class ContactAnalysis implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A structure that defines filters can be used to search with text within an Amazon Connect Contact Lens analyzed
-     * transcript.
+     * Search criteria based on transcript analyzed by Amazon Connect Contact Lens.
      * </p>
      * 
-     * @return A structure that defines filters can be used to search with text within an Amazon Connect Contact Lens
-     *         analyzed transcript.
+     * @return Search criteria based on transcript analyzed by Amazon Connect Contact Lens.
      */
 
     public Transcript getTranscript() {
@@ -68,13 +62,11 @@ public class ContactAnalysis implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A structure that defines filters can be used to search with text within an Amazon Connect Contact Lens analyzed
-     * transcript.
+     * Search criteria based on transcript analyzed by Amazon Connect Contact Lens.
      * </p>
      * 
      * @param transcript
-     *        A structure that defines filters can be used to search with text within an Amazon Connect Contact Lens
-     *        analyzed transcript.
+     *        Search criteria based on transcript analyzed by Amazon Connect Contact Lens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

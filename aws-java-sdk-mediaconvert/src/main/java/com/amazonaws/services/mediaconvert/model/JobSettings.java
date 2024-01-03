@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -33,6 +33,11 @@ public class JobSettings implements Serializable, Cloneable, StructuredPojo {
      * triggered ad avails.
      */
     private AvailBlanking availBlanking;
+    /**
+     * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can
+     * include up to 8 different 3D LUTs.
+     */
+    private java.util.List<ColorConversion3DLUTSetting> colorConversion3DLUTSettings;
     /** Settings for Event Signaling And Messaging (ESAM). If you don't do ad insertion, you can ignore these settings. */
     private EsamSettings esam;
     /**
@@ -172,6 +177,76 @@ public class JobSettings implements Serializable, Cloneable, StructuredPojo {
 
     public JobSettings withAvailBlanking(AvailBlanking availBlanking) {
         setAvailBlanking(availBlanking);
+        return this;
+    }
+
+    /**
+     * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can
+     * include up to 8 different 3D LUTs.
+     * 
+     * @return Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another.
+     *         You can include up to 8 different 3D LUTs.
+     */
+
+    public java.util.List<ColorConversion3DLUTSetting> getColorConversion3DLUTSettings() {
+        return colorConversion3DLUTSettings;
+    }
+
+    /**
+     * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can
+     * include up to 8 different 3D LUTs.
+     * 
+     * @param colorConversion3DLUTSettings
+     *        Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another.
+     *        You can include up to 8 different 3D LUTs.
+     */
+
+    public void setColorConversion3DLUTSettings(java.util.Collection<ColorConversion3DLUTSetting> colorConversion3DLUTSettings) {
+        if (colorConversion3DLUTSettings == null) {
+            this.colorConversion3DLUTSettings = null;
+            return;
+        }
+
+        this.colorConversion3DLUTSettings = new java.util.ArrayList<ColorConversion3DLUTSetting>(colorConversion3DLUTSettings);
+    }
+
+    /**
+     * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can
+     * include up to 8 different 3D LUTs.
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setColorConversion3DLUTSettings(java.util.Collection)} or
+     * {@link #withColorConversion3DLUTSettings(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param colorConversion3DLUTSettings
+     *        Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another.
+     *        You can include up to 8 different 3D LUTs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobSettings withColorConversion3DLUTSettings(ColorConversion3DLUTSetting... colorConversion3DLUTSettings) {
+        if (this.colorConversion3DLUTSettings == null) {
+            setColorConversion3DLUTSettings(new java.util.ArrayList<ColorConversion3DLUTSetting>(colorConversion3DLUTSettings.length));
+        }
+        for (ColorConversion3DLUTSetting ele : colorConversion3DLUTSettings) {
+            this.colorConversion3DLUTSettings.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can
+     * include up to 8 different 3D LUTs.
+     * 
+     * @param colorConversion3DLUTSettings
+     *        Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another.
+     *        You can include up to 8 different 3D LUTs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobSettings withColorConversion3DLUTSettings(java.util.Collection<ColorConversion3DLUTSetting> colorConversion3DLUTSettings) {
+        setColorConversion3DLUTSettings(colorConversion3DLUTSettings);
         return this;
     }
 
@@ -798,6 +873,8 @@ public class JobSettings implements Serializable, Cloneable, StructuredPojo {
             sb.append("AdAvailOffset: ").append(getAdAvailOffset()).append(",");
         if (getAvailBlanking() != null)
             sb.append("AvailBlanking: ").append(getAvailBlanking()).append(",");
+        if (getColorConversion3DLUTSettings() != null)
+            sb.append("ColorConversion3DLUTSettings: ").append(getColorConversion3DLUTSettings()).append(",");
         if (getEsam() != null)
             sb.append("Esam: ").append(getEsam()).append(",");
         if (getExtendedDataServices() != null)
@@ -841,6 +918,10 @@ public class JobSettings implements Serializable, Cloneable, StructuredPojo {
         if (other.getAvailBlanking() == null ^ this.getAvailBlanking() == null)
             return false;
         if (other.getAvailBlanking() != null && other.getAvailBlanking().equals(this.getAvailBlanking()) == false)
+            return false;
+        if (other.getColorConversion3DLUTSettings() == null ^ this.getColorConversion3DLUTSettings() == null)
+            return false;
+        if (other.getColorConversion3DLUTSettings() != null && other.getColorConversion3DLUTSettings().equals(this.getColorConversion3DLUTSettings()) == false)
             return false;
         if (other.getEsam() == null ^ this.getEsam() == null)
             return false;
@@ -896,6 +977,7 @@ public class JobSettings implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getAdAvailOffset() == null) ? 0 : getAdAvailOffset().hashCode());
         hashCode = prime * hashCode + ((getAvailBlanking() == null) ? 0 : getAvailBlanking().hashCode());
+        hashCode = prime * hashCode + ((getColorConversion3DLUTSettings() == null) ? 0 : getColorConversion3DLUTSettings().hashCode());
         hashCode = prime * hashCode + ((getEsam() == null) ? 0 : getEsam().hashCode());
         hashCode = prime * hashCode + ((getExtendedDataServices() == null) ? 0 : getExtendedDataServices().hashCode());
         hashCode = prime * hashCode + ((getFollowSource() == null) ? 0 : getFollowSource().hashCode());

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure that defines searchable contact attributes which can be used to filter search results.
+ * A structure that defines search criteria based on user-defined contact attributes that are configured for contact
+ * search.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchableContactAttributes"
@@ -30,23 +31,23 @@ public class SearchableContactAttributes implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The array of searhale contact attribute criteria
+     * The list of criteria based on user-defined contact attributes that are configured for contact search.
      * </p>
      */
     private java.util.List<SearchableContactAttributesCriteria> criteria;
     /**
      * <p>
-     * The match type of multiple searchable contact attributes criteria.
+     * The match type combining search criteria using multiple searchable contact attributes.
      * </p>
      */
     private String matchType;
 
     /**
      * <p>
-     * The array of searhale contact attribute criteria
+     * The list of criteria based on user-defined contact attributes that are configured for contact search.
      * </p>
      * 
-     * @return The array of searhale contact attribute criteria
+     * @return The list of criteria based on user-defined contact attributes that are configured for contact search.
      */
 
     public java.util.List<SearchableContactAttributesCriteria> getCriteria() {
@@ -55,11 +56,11 @@ public class SearchableContactAttributes implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The array of searhale contact attribute criteria
+     * The list of criteria based on user-defined contact attributes that are configured for contact search.
      * </p>
      * 
      * @param criteria
-     *        The array of searhale contact attribute criteria
+     *        The list of criteria based on user-defined contact attributes that are configured for contact search.
      */
 
     public void setCriteria(java.util.Collection<SearchableContactAttributesCriteria> criteria) {
@@ -73,7 +74,7 @@ public class SearchableContactAttributes implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The array of searhale contact attribute criteria
+     * The list of criteria based on user-defined contact attributes that are configured for contact search.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,7 +83,7 @@ public class SearchableContactAttributes implements Serializable, Cloneable, Str
      * </p>
      * 
      * @param criteria
-     *        The array of searhale contact attribute criteria
+     *        The list of criteria based on user-defined contact attributes that are configured for contact search.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +99,11 @@ public class SearchableContactAttributes implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The array of searhale contact attribute criteria
+     * The list of criteria based on user-defined contact attributes that are configured for contact search.
      * </p>
      * 
      * @param criteria
-     *        The array of searhale contact attribute criteria
+     *        The list of criteria based on user-defined contact attributes that are configured for contact search.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -113,11 +114,11 @@ public class SearchableContactAttributes implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The match type of multiple searchable contact attributes criteria.
+     * The match type combining search criteria using multiple searchable contact attributes.
      * </p>
      * 
      * @param matchType
-     *        The match type of multiple searchable contact attributes criteria.
+     *        The match type combining search criteria using multiple searchable contact attributes.
      * @see SearchContactsMatchType
      */
 
@@ -127,10 +128,10 @@ public class SearchableContactAttributes implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The match type of multiple searchable contact attributes criteria.
+     * The match type combining search criteria using multiple searchable contact attributes.
      * </p>
      * 
-     * @return The match type of multiple searchable contact attributes criteria.
+     * @return The match type combining search criteria using multiple searchable contact attributes.
      * @see SearchContactsMatchType
      */
 
@@ -140,11 +141,11 @@ public class SearchableContactAttributes implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The match type of multiple searchable contact attributes criteria.
+     * The match type combining search criteria using multiple searchable contact attributes.
      * </p>
      * 
      * @param matchType
-     *        The match type of multiple searchable contact attributes criteria.
+     *        The match type combining search criteria using multiple searchable contact attributes.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SearchContactsMatchType
      */
@@ -156,11 +157,11 @@ public class SearchableContactAttributes implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The match type of multiple searchable contact attributes criteria.
+     * The match type combining search criteria using multiple searchable contact attributes.
      * </p>
      * 
      * @param matchType
-     *        The match type of multiple searchable contact attributes criteria.
+     *        The match type combining search criteria using multiple searchable contact attributes.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SearchContactsMatchType
      */

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The transcript criteria used to search
+ * A structure that defines search criteria base on words or phrases, participants in the Contact Lens conversational
+ * analytics transcript.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/TranscriptCriteria" target="_top">AWS API
@@ -42,7 +43,7 @@ public class TranscriptCriteria implements Serializable, Cloneable, StructuredPo
     private java.util.List<String> searchText;
     /**
      * <p>
-     * The match type of search texts in a transcript criteria.
+     * The match type combining search criteria using multiple search texts in a transcript criteria.
      * </p>
      */
     private String matchType;
@@ -178,11 +179,11 @@ public class TranscriptCriteria implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The match type of search texts in a transcript criteria.
+     * The match type combining search criteria using multiple search texts in a transcript criteria.
      * </p>
      * 
      * @param matchType
-     *        The match type of search texts in a transcript criteria.
+     *        The match type combining search criteria using multiple search texts in a transcript criteria.
      * @see SearchContactsMatchType
      */
 
@@ -192,10 +193,10 @@ public class TranscriptCriteria implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The match type of search texts in a transcript criteria.
+     * The match type combining search criteria using multiple search texts in a transcript criteria.
      * </p>
      * 
-     * @return The match type of search texts in a transcript criteria.
+     * @return The match type combining search criteria using multiple search texts in a transcript criteria.
      * @see SearchContactsMatchType
      */
 
@@ -205,11 +206,11 @@ public class TranscriptCriteria implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The match type of search texts in a transcript criteria.
+     * The match type combining search criteria using multiple search texts in a transcript criteria.
      * </p>
      * 
      * @param matchType
-     *        The match type of search texts in a transcript criteria.
+     *        The match type combining search criteria using multiple search texts in a transcript criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SearchContactsMatchType
      */
@@ -221,11 +222,11 @@ public class TranscriptCriteria implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The match type of search texts in a transcript criteria.
+     * The match type combining search criteria using multiple search texts in a transcript criteria.
      * </p>
      * 
      * @param matchType
-     *        The match type of search texts in a transcript criteria.
+     *        The match type combining search criteria using multiple search texts in a transcript criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SearchContactsMatchType
      */
