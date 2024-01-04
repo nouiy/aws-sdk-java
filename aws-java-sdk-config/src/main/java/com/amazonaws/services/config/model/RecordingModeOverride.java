@@ -74,7 +74,8 @@ public class RecordingModeOverride implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     * Daily recording allows you to receive a configuration item (CI) representing the most recent state of your
+     * resources over the last 24-hour period, only if it’s different from the previous CI recorded.
      * </p>
      * </li>
      * </ul>
@@ -455,7 +456,8 @@ public class RecordingModeOverride implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     * Daily recording allows you to receive a configuration item (CI) representing the most recent state of your
+     * resources over the last 24-hour period, only if it’s different from the previous CI recorded.
      * </p>
      * </li>
      * </ul>
@@ -476,7 +478,8 @@ public class RecordingModeOverride implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     *        Daily recording allows you to receive a configuration item (CI) representing the most recent state of your
+     *        resources over the last 24-hour period, only if it’s different from the previous CI recorded.
      *        </p>
      *        </li>
      *        </ul>
@@ -504,7 +507,8 @@ public class RecordingModeOverride implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     * Daily recording allows you to receive a configuration item (CI) representing the most recent state of your
+     * resources over the last 24-hour period, only if it’s different from the previous CI recorded.
      * </p>
      * </li>
      * </ul>
@@ -524,7 +528,8 @@ public class RecordingModeOverride implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
-     *         Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     *         Daily recording allows you to receive a configuration item (CI) representing the most recent state of
+     *         your resources over the last 24-hour period, only if it’s different from the previous CI recorded.
      *         </p>
      *         </li>
      *         </ul>
@@ -552,7 +557,8 @@ public class RecordingModeOverride implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     * Daily recording allows you to receive a configuration item (CI) representing the most recent state of your
+     * resources over the last 24-hour period, only if it’s different from the previous CI recorded.
      * </p>
      * </li>
      * </ul>
@@ -573,7 +579,8 @@ public class RecordingModeOverride implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     *        Daily recording allows you to receive a configuration item (CI) representing the most recent state of your
+     *        resources over the last 24-hour period, only if it’s different from the previous CI recorded.
      *        </p>
      *        </li>
      *        </ul>
@@ -603,7 +610,8 @@ public class RecordingModeOverride implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     * Daily recording allows you to receive a configuration item (CI) representing the most recent state of your
+     * resources over the last 24-hour period, only if it’s different from the previous CI recorded.
      * </p>
      * </li>
      * </ul>
@@ -624,7 +632,8 @@ public class RecordingModeOverride implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     *        Daily recording allows you to receive a configuration item (CI) representing the most recent state of your
+     *        resources over the last 24-hour period, only if it’s different from the previous CI recorded.
      *        </p>
      *        </li>
      *        </ul>

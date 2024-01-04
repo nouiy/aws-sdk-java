@@ -1661,6 +1661,19 @@ public class AbstractAmazonLightsailAsync extends AbstractAmazonLightsail implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetSetupHistoryResult> getSetupHistoryAsync(GetSetupHistoryRequest request) {
+
+        return getSetupHistoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSetupHistoryResult> getSetupHistoryAsync(GetSetupHistoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSetupHistoryRequest, GetSetupHistoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetStaticIpResult> getStaticIpAsync(GetStaticIpRequest request) {
 
         return getStaticIpAsync(request, null);
@@ -1864,6 +1877,19 @@ public class AbstractAmazonLightsailAsync extends AbstractAmazonLightsail implem
     @Override
     public java.util.concurrent.Future<SetResourceAccessForBucketResult> setResourceAccessForBucketAsync(SetResourceAccessForBucketRequest request,
             com.amazonaws.handlers.AsyncHandler<SetResourceAccessForBucketRequest, SetResourceAccessForBucketResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<SetupInstanceHttpsResult> setupInstanceHttpsAsync(SetupInstanceHttpsRequest request) {
+
+        return setupInstanceHttpsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SetupInstanceHttpsResult> setupInstanceHttpsAsync(SetupInstanceHttpsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SetupInstanceHttpsRequest, SetupInstanceHttpsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

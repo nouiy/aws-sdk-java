@@ -36,8 +36,10 @@ public class DomainEndpointOptions implements Serializable, Cloneable, Structure
      * Specify the TLS security policy that needs to be applied to the HTTPS endpoint of Elasticsearch domain. <br/>
      * It can be one of the following values:
      * <ul>
-     * <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy which supports TLSv1.0 and higher.</li>
-     * <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy which supports only TLSv1.2</li>
+     * <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy that supports TLS version 1.0 to TLS version 1.2</li>
+     * <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy that supports only TLS version 1.2</li>
+     * <li><b>Policy-Min-TLS-1-2-PFS-2023-10: </b> TLS security policy that supports TLS version 1.2 to TLS version 1.3
+     * with perfect forward secrecy cipher suites</li>
      * </ul>
      * </p>
      */
@@ -118,8 +120,10 @@ public class DomainEndpointOptions implements Serializable, Cloneable, Structure
      * Specify the TLS security policy that needs to be applied to the HTTPS endpoint of Elasticsearch domain. <br/>
      * It can be one of the following values:
      * <ul>
-     * <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy which supports TLSv1.0 and higher.</li>
-     * <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy which supports only TLSv1.2</li>
+     * <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy that supports TLS version 1.0 to TLS version 1.2</li>
+     * <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy that supports only TLS version 1.2</li>
+     * <li><b>Policy-Min-TLS-1-2-PFS-2023-10: </b> TLS security policy that supports TLS version 1.2 to TLS version 1.3
+     * with perfect forward secrecy cipher suites</li>
      * </ul>
      * </p>
      * 
@@ -127,8 +131,11 @@ public class DomainEndpointOptions implements Serializable, Cloneable, Structure
      *        Specify the TLS security policy that needs to be applied to the HTTPS endpoint of Elasticsearch domain. <br/>
      *        It can be one of the following values:
      *        <ul>
-     *        <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy which supports TLSv1.0 and higher.</li>
-     *        <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy which supports only TLSv1.2</li>
+     *        <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy that supports TLS version 1.0 to TLS version
+     *        1.2</li>
+     *        <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy that supports only TLS version 1.2</li>
+     *        <li><b>Policy-Min-TLS-1-2-PFS-2023-10: </b> TLS security policy that supports TLS version 1.2 to TLS
+     *        version 1.3 with perfect forward secrecy cipher suites</li>
      *        </ul>
      * @see TLSSecurityPolicy
      */
@@ -142,16 +149,21 @@ public class DomainEndpointOptions implements Serializable, Cloneable, Structure
      * Specify the TLS security policy that needs to be applied to the HTTPS endpoint of Elasticsearch domain. <br/>
      * It can be one of the following values:
      * <ul>
-     * <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy which supports TLSv1.0 and higher.</li>
-     * <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy which supports only TLSv1.2</li>
+     * <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy that supports TLS version 1.0 to TLS version 1.2</li>
+     * <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy that supports only TLS version 1.2</li>
+     * <li><b>Policy-Min-TLS-1-2-PFS-2023-10: </b> TLS security policy that supports TLS version 1.2 to TLS version 1.3
+     * with perfect forward secrecy cipher suites</li>
      * </ul>
      * </p>
      * 
      * @return Specify the TLS security policy that needs to be applied to the HTTPS endpoint of Elasticsearch domain. <br/>
      *         It can be one of the following values:
      *         <ul>
-     *         <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy which supports TLSv1.0 and higher.</li>
-     *         <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy which supports only TLSv1.2</li>
+     *         <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy that supports TLS version 1.0 to TLS version
+     *         1.2</li>
+     *         <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy that supports only TLS version 1.2</li>
+     *         <li><b>Policy-Min-TLS-1-2-PFS-2023-10: </b> TLS security policy that supports TLS version 1.2 to TLS
+     *         version 1.3 with perfect forward secrecy cipher suites</li>
      *         </ul>
      * @see TLSSecurityPolicy
      */
@@ -165,8 +177,10 @@ public class DomainEndpointOptions implements Serializable, Cloneable, Structure
      * Specify the TLS security policy that needs to be applied to the HTTPS endpoint of Elasticsearch domain. <br/>
      * It can be one of the following values:
      * <ul>
-     * <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy which supports TLSv1.0 and higher.</li>
-     * <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy which supports only TLSv1.2</li>
+     * <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy that supports TLS version 1.0 to TLS version 1.2</li>
+     * <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy that supports only TLS version 1.2</li>
+     * <li><b>Policy-Min-TLS-1-2-PFS-2023-10: </b> TLS security policy that supports TLS version 1.2 to TLS version 1.3
+     * with perfect forward secrecy cipher suites</li>
      * </ul>
      * </p>
      * 
@@ -174,8 +188,11 @@ public class DomainEndpointOptions implements Serializable, Cloneable, Structure
      *        Specify the TLS security policy that needs to be applied to the HTTPS endpoint of Elasticsearch domain. <br/>
      *        It can be one of the following values:
      *        <ul>
-     *        <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy which supports TLSv1.0 and higher.</li>
-     *        <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy which supports only TLSv1.2</li>
+     *        <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy that supports TLS version 1.0 to TLS version
+     *        1.2</li>
+     *        <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy that supports only TLS version 1.2</li>
+     *        <li><b>Policy-Min-TLS-1-2-PFS-2023-10: </b> TLS security policy that supports TLS version 1.2 to TLS
+     *        version 1.3 with perfect forward secrecy cipher suites</li>
      *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TLSSecurityPolicy
@@ -191,8 +208,10 @@ public class DomainEndpointOptions implements Serializable, Cloneable, Structure
      * Specify the TLS security policy that needs to be applied to the HTTPS endpoint of Elasticsearch domain. <br/>
      * It can be one of the following values:
      * <ul>
-     * <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy which supports TLSv1.0 and higher.</li>
-     * <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy which supports only TLSv1.2</li>
+     * <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy that supports TLS version 1.0 to TLS version 1.2</li>
+     * <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy that supports only TLS version 1.2</li>
+     * <li><b>Policy-Min-TLS-1-2-PFS-2023-10: </b> TLS security policy that supports TLS version 1.2 to TLS version 1.3
+     * with perfect forward secrecy cipher suites</li>
      * </ul>
      * </p>
      * 
@@ -200,8 +219,11 @@ public class DomainEndpointOptions implements Serializable, Cloneable, Structure
      *        Specify the TLS security policy that needs to be applied to the HTTPS endpoint of Elasticsearch domain. <br/>
      *        It can be one of the following values:
      *        <ul>
-     *        <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy which supports TLSv1.0 and higher.</li>
-     *        <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy which supports only TLSv1.2</li>
+     *        <li><b>Policy-Min-TLS-1-0-2019-07: </b> TLS security policy that supports TLS version 1.0 to TLS version
+     *        1.2</li>
+     *        <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy that supports only TLS version 1.2</li>
+     *        <li><b>Policy-Min-TLS-1-2-PFS-2023-10: </b> TLS security policy that supports TLS version 1.2 to TLS
+     *        version 1.3 with perfect forward secrecy cipher suites</li>
      *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TLSSecurityPolicy

@@ -27,7 +27,7 @@ public class AttachDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The unique Lightsail disk name (e.g., <code>my-disk</code>).
+     * The unique Lightsail disk name (<code>my-disk</code>).
      * </p>
      */
     private String diskName;
@@ -39,7 +39,7 @@ public class AttachDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String instanceName;
     /**
      * <p>
-     * The disk path to expose to the instance (e.g., <code>/dev/xvdf</code>).
+     * The disk path to expose to the instance (<code>/dev/xvdf</code>).
      * </p>
      */
     private String diskPath;
@@ -58,11 +58,11 @@ public class AttachDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The unique Lightsail disk name (e.g., <code>my-disk</code>).
+     * The unique Lightsail disk name (<code>my-disk</code>).
      * </p>
      * 
      * @param diskName
-     *        The unique Lightsail disk name (e.g., <code>my-disk</code>).
+     *        The unique Lightsail disk name (<code>my-disk</code>).
      */
 
     public void setDiskName(String diskName) {
@@ -71,10 +71,10 @@ public class AttachDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The unique Lightsail disk name (e.g., <code>my-disk</code>).
+     * The unique Lightsail disk name (<code>my-disk</code>).
      * </p>
      * 
-     * @return The unique Lightsail disk name (e.g., <code>my-disk</code>).
+     * @return The unique Lightsail disk name (<code>my-disk</code>).
      */
 
     public String getDiskName() {
@@ -83,11 +83,11 @@ public class AttachDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The unique Lightsail disk name (e.g., <code>my-disk</code>).
+     * The unique Lightsail disk name (<code>my-disk</code>).
      * </p>
      * 
      * @param diskName
-     *        The unique Lightsail disk name (e.g., <code>my-disk</code>).
+     *        The unique Lightsail disk name (<code>my-disk</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +138,11 @@ public class AttachDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The disk path to expose to the instance (e.g., <code>/dev/xvdf</code>).
+     * The disk path to expose to the instance (<code>/dev/xvdf</code>).
      * </p>
      * 
      * @param diskPath
-     *        The disk path to expose to the instance (e.g., <code>/dev/xvdf</code>).
+     *        The disk path to expose to the instance (<code>/dev/xvdf</code>).
      */
 
     public void setDiskPath(String diskPath) {
@@ -151,10 +151,10 @@ public class AttachDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The disk path to expose to the instance (e.g., <code>/dev/xvdf</code>).
+     * The disk path to expose to the instance (<code>/dev/xvdf</code>).
      * </p>
      * 
-     * @return The disk path to expose to the instance (e.g., <code>/dev/xvdf</code>).
+     * @return The disk path to expose to the instance (<code>/dev/xvdf</code>).
      */
 
     public String getDiskPath() {
@@ -163,11 +163,11 @@ public class AttachDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The disk path to expose to the instance (e.g., <code>/dev/xvdf</code>).
+     * The disk path to expose to the instance (<code>/dev/xvdf</code>).
      * </p>
      * 
      * @param diskPath
-     *        The disk path to expose to the instance (e.g., <code>/dev/xvdf</code>).
+     *        The disk path to expose to the instance (<code>/dev/xvdf</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

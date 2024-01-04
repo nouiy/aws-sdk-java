@@ -4376,6 +4376,39 @@ public class AmazonLightsailAsyncClient extends AmazonLightsailClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetSetupHistoryResult> getSetupHistoryAsync(GetSetupHistoryRequest request) {
+
+        return getSetupHistoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSetupHistoryResult> getSetupHistoryAsync(final GetSetupHistoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSetupHistoryRequest, GetSetupHistoryResult> asyncHandler) {
+        final GetSetupHistoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSetupHistoryResult>() {
+            @Override
+            public GetSetupHistoryResult call() throws Exception {
+                GetSetupHistoryResult result = null;
+
+                try {
+                    result = executeGetSetupHistory(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetStaticIpResult> getStaticIpAsync(GetStaticIpRequest request) {
 
         return getStaticIpAsync(request, null);
@@ -4889,6 +4922,39 @@ public class AmazonLightsailAsyncClient extends AmazonLightsailClient implements
 
                 try {
                     result = executeSetResourceAccessForBucket(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SetupInstanceHttpsResult> setupInstanceHttpsAsync(SetupInstanceHttpsRequest request) {
+
+        return setupInstanceHttpsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SetupInstanceHttpsResult> setupInstanceHttpsAsync(final SetupInstanceHttpsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SetupInstanceHttpsRequest, SetupInstanceHttpsResult> asyncHandler) {
+        final SetupInstanceHttpsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SetupInstanceHttpsResult>() {
+            @Override
+            public SetupInstanceHttpsResult call() throws Exception {
+                SetupInstanceHttpsResult result = null;
+
+                try {
+                    result = executeSetupInstanceHttps(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

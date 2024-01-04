@@ -27,18 +27,18 @@ public class DeleteDiskSnapshotRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the disk snapshot you want to delete (e.g., <code>my-disk-snapshot</code>).
+     * The name of the disk snapshot you want to delete (<code>my-disk-snapshot</code>).
      * </p>
      */
     private String diskSnapshotName;
 
     /**
      * <p>
-     * The name of the disk snapshot you want to delete (e.g., <code>my-disk-snapshot</code>).
+     * The name of the disk snapshot you want to delete (<code>my-disk-snapshot</code>).
      * </p>
      * 
      * @param diskSnapshotName
-     *        The name of the disk snapshot you want to delete (e.g., <code>my-disk-snapshot</code>).
+     *        The name of the disk snapshot you want to delete (<code>my-disk-snapshot</code>).
      */
 
     public void setDiskSnapshotName(String diskSnapshotName) {
@@ -47,10 +47,10 @@ public class DeleteDiskSnapshotRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the disk snapshot you want to delete (e.g., <code>my-disk-snapshot</code>).
+     * The name of the disk snapshot you want to delete (<code>my-disk-snapshot</code>).
      * </p>
      * 
-     * @return The name of the disk snapshot you want to delete (e.g., <code>my-disk-snapshot</code>).
+     * @return The name of the disk snapshot you want to delete (<code>my-disk-snapshot</code>).
      */
 
     public String getDiskSnapshotName() {
@@ -59,11 +59,11 @@ public class DeleteDiskSnapshotRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the disk snapshot you want to delete (e.g., <code>my-disk-snapshot</code>).
+     * The name of the disk snapshot you want to delete (<code>my-disk-snapshot</code>).
      * </p>
      * 
      * @param diskSnapshotName
-     *        The name of the disk snapshot you want to delete (e.g., <code>my-disk-snapshot</code>).
+     *        The name of the disk snapshot you want to delete (<code>my-disk-snapshot</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

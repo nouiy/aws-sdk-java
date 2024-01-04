@@ -30,8 +30,8 @@ public class InstanceAccessDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * For SSH access, the public key to use when accessing your instance For OpenSSH clients (e.g., command line SSH),
-     * you should save this value to <code>tempkey-cert.pub</code>.
+     * For SSH access, the public key to use when accessing your instance For OpenSSH clients (command line SSH), you
+     * should save this value to <code>tempkey-cert.pub</code>.
      * </p>
      */
     private String certKey;
@@ -76,8 +76,8 @@ public class InstanceAccessDetails implements Serializable, Cloneable, Structure
     private PasswordData passwordData;
     /**
      * <p>
-     * For SSH access, the temporary private key. For OpenSSH clients (e.g., command line SSH), you should save this
-     * value to <code>tempkey</code>).
+     * For SSH access, the temporary private key. For OpenSSH clients (command line SSH), you should save this value to
+     * <code>tempkey</code>).
      * </p>
      */
     private String privateKey;
@@ -108,13 +108,13 @@ public class InstanceAccessDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * For SSH access, the public key to use when accessing your instance For OpenSSH clients (e.g., command line SSH),
-     * you should save this value to <code>tempkey-cert.pub</code>.
+     * For SSH access, the public key to use when accessing your instance For OpenSSH clients (command line SSH), you
+     * should save this value to <code>tempkey-cert.pub</code>.
      * </p>
      * 
      * @param certKey
-     *        For SSH access, the public key to use when accessing your instance For OpenSSH clients (e.g., command line
-     *        SSH), you should save this value to <code>tempkey-cert.pub</code>.
+     *        For SSH access, the public key to use when accessing your instance For OpenSSH clients (command line SSH),
+     *        you should save this value to <code>tempkey-cert.pub</code>.
      */
 
     public void setCertKey(String certKey) {
@@ -123,12 +123,12 @@ public class InstanceAccessDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * For SSH access, the public key to use when accessing your instance For OpenSSH clients (e.g., command line SSH),
-     * you should save this value to <code>tempkey-cert.pub</code>.
+     * For SSH access, the public key to use when accessing your instance For OpenSSH clients (command line SSH), you
+     * should save this value to <code>tempkey-cert.pub</code>.
      * </p>
      * 
-     * @return For SSH access, the public key to use when accessing your instance For OpenSSH clients (e.g., command
-     *         line SSH), you should save this value to <code>tempkey-cert.pub</code>.
+     * @return For SSH access, the public key to use when accessing your instance For OpenSSH clients (command line
+     *         SSH), you should save this value to <code>tempkey-cert.pub</code>.
      */
 
     public String getCertKey() {
@@ -137,13 +137,13 @@ public class InstanceAccessDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * For SSH access, the public key to use when accessing your instance For OpenSSH clients (e.g., command line SSH),
-     * you should save this value to <code>tempkey-cert.pub</code>.
+     * For SSH access, the public key to use when accessing your instance For OpenSSH clients (command line SSH), you
+     * should save this value to <code>tempkey-cert.pub</code>.
      * </p>
      * 
      * @param certKey
-     *        For SSH access, the public key to use when accessing your instance For OpenSSH clients (e.g., command line
-     *        SSH), you should save this value to <code>tempkey-cert.pub</code>.
+     *        For SSH access, the public key to use when accessing your instance For OpenSSH clients (command line SSH),
+     *        you should save this value to <code>tempkey-cert.pub</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -399,13 +399,13 @@ public class InstanceAccessDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * For SSH access, the temporary private key. For OpenSSH clients (e.g., command line SSH), you should save this
-     * value to <code>tempkey</code>).
+     * For SSH access, the temporary private key. For OpenSSH clients (command line SSH), you should save this value to
+     * <code>tempkey</code>).
      * </p>
      * 
      * @param privateKey
-     *        For SSH access, the temporary private key. For OpenSSH clients (e.g., command line SSH), you should save
-     *        this value to <code>tempkey</code>).
+     *        For SSH access, the temporary private key. For OpenSSH clients (command line SSH), you should save this
+     *        value to <code>tempkey</code>).
      */
 
     public void setPrivateKey(String privateKey) {
@@ -414,12 +414,12 @@ public class InstanceAccessDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * For SSH access, the temporary private key. For OpenSSH clients (e.g., command line SSH), you should save this
-     * value to <code>tempkey</code>).
+     * For SSH access, the temporary private key. For OpenSSH clients (command line SSH), you should save this value to
+     * <code>tempkey</code>).
      * </p>
      * 
-     * @return For SSH access, the temporary private key. For OpenSSH clients (e.g., command line SSH), you should save
-     *         this value to <code>tempkey</code>).
+     * @return For SSH access, the temporary private key. For OpenSSH clients (command line SSH), you should save this
+     *         value to <code>tempkey</code>).
      */
 
     public String getPrivateKey() {
@@ -428,13 +428,13 @@ public class InstanceAccessDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * For SSH access, the temporary private key. For OpenSSH clients (e.g., command line SSH), you should save this
-     * value to <code>tempkey</code>).
+     * For SSH access, the temporary private key. For OpenSSH clients (command line SSH), you should save this value to
+     * <code>tempkey</code>).
      * </p>
      * 
      * @param privateKey
-     *        For SSH access, the temporary private key. For OpenSSH clients (e.g., command line SSH), you should save
-     *        this value to <code>tempkey</code>).
+     *        For SSH access, the temporary private key. For OpenSSH clients (command line SSH), you should save this
+     *        value to <code>tempkey</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

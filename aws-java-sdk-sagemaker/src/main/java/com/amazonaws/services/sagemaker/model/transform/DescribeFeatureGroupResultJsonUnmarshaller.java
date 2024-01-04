@@ -86,6 +86,10 @@ public class DescribeFeatureGroupResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     describeFeatureGroupResult.setOfflineStoreConfig(OfflineStoreConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ThroughputConfig", targetDepth)) {
+                    context.nextToken();
+                    describeFeatureGroupResult.setThroughputConfig(ThroughputConfigDescriptionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("RoleArn", targetDepth)) {
                     context.nextToken();
                     describeFeatureGroupResult.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));

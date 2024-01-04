@@ -66,11 +66,17 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String endpoint;
-
+    /**
+     * <p>
+     * If <code>IPAddressType</code> to set to <code>dualstack</code>, a version 2 domain endpoint is provisioned. This
+     * endpoint functions like a normal endpoint, except that it works with both IPv4 and IPv6 IP addresses. Normal
+     * endpoints work only with IPv4 IP addresses.
+     * </p>
+     */
     private String endpointV2;
     /**
      * <p>
-     * The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints.. Example
+     * The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints. Example
      * <code>key, value</code>:
      * <code>'vpc','vpc-endpoint-h2dsd34efgyghrtguk5gt6j2foh4.us-east-1.es.amazonaws.com'</code>.
      * </p>
@@ -506,7 +512,16 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * If <code>IPAddressType</code> to set to <code>dualstack</code>, a version 2 domain endpoint is provisioned. This
+     * endpoint functions like a normal endpoint, except that it works with both IPv4 and IPv6 IP addresses. Normal
+     * endpoints work only with IPv4 IP addresses.
+     * </p>
+     * 
      * @param endpointV2
+     *        If <code>IPAddressType</code> to set to <code>dualstack</code>, a version 2 domain endpoint is
+     *        provisioned. This endpoint functions like a normal endpoint, except that it works with both IPv4 and IPv6
+     *        IP addresses. Normal endpoints work only with IPv4 IP addresses.
      */
 
     public void setEndpointV2(String endpointV2) {
@@ -514,7 +529,15 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * If <code>IPAddressType</code> to set to <code>dualstack</code>, a version 2 domain endpoint is provisioned. This
+     * endpoint functions like a normal endpoint, except that it works with both IPv4 and IPv6 IP addresses. Normal
+     * endpoints work only with IPv4 IP addresses.
+     * </p>
+     * 
+     * @return If <code>IPAddressType</code> to set to <code>dualstack</code>, a version 2 domain endpoint is
+     *         provisioned. This endpoint functions like a normal endpoint, except that it works with both IPv4 and IPv6
+     *         IP addresses. Normal endpoints work only with IPv4 IP addresses.
      */
 
     public String getEndpointV2() {
@@ -522,7 +545,16 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * If <code>IPAddressType</code> to set to <code>dualstack</code>, a version 2 domain endpoint is provisioned. This
+     * endpoint functions like a normal endpoint, except that it works with both IPv4 and IPv6 IP addresses. Normal
+     * endpoints work only with IPv4 IP addresses.
+     * </p>
+     * 
      * @param endpointV2
+     *        If <code>IPAddressType</code> to set to <code>dualstack</code>, a version 2 domain endpoint is
+     *        provisioned. This endpoint functions like a normal endpoint, except that it works with both IPv4 and IPv6
+     *        IP addresses. Normal endpoints work only with IPv4 IP addresses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -533,12 +565,12 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints.. Example
+     * The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints. Example
      * <code>key, value</code>:
      * <code>'vpc','vpc-endpoint-h2dsd34efgyghrtguk5gt6j2foh4.us-east-1.es.amazonaws.com'</code>.
      * </p>
      * 
-     * @return The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints.. Example
+     * @return The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints. Example
      *         <code>key, value</code>:
      *         <code>'vpc','vpc-endpoint-h2dsd34efgyghrtguk5gt6j2foh4.us-east-1.es.amazonaws.com'</code>.
      */
@@ -549,13 +581,13 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints.. Example
+     * The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints. Example
      * <code>key, value</code>:
      * <code>'vpc','vpc-endpoint-h2dsd34efgyghrtguk5gt6j2foh4.us-east-1.es.amazonaws.com'</code>.
      * </p>
      * 
      * @param endpoints
-     *        The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints.. Example
+     *        The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints. Example
      *        <code>key, value</code>:
      *        <code>'vpc','vpc-endpoint-h2dsd34efgyghrtguk5gt6j2foh4.us-east-1.es.amazonaws.com'</code>.
      */
@@ -566,13 +598,13 @@ public class DomainStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints.. Example
+     * The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints. Example
      * <code>key, value</code>:
      * <code>'vpc','vpc-endpoint-h2dsd34efgyghrtguk5gt6j2foh4.us-east-1.es.amazonaws.com'</code>.
      * </p>
      * 
      * @param endpoints
-     *        The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints.. Example
+     *        The key-value pair that exists if the OpenSearch Service domain uses VPC endpoints. Example
      *        <code>key, value</code>:
      *        <code>'vpc','vpc-endpoint-h2dsd34efgyghrtguk5gt6j2foh4.us-east-1.es.amazonaws.com'</code>.
      * @return Returns a reference to this object so that method calls can be chained together.

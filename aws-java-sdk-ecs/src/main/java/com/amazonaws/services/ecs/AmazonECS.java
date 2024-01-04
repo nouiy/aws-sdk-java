@@ -325,6 +325,9 @@ public interface AmazonECS {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS deployment
      * types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
+     * <p>
+     * You can create a maximum of 5 tasks sets for a deployment.
+     * </p>
      * 
      * @param createTaskSetRequest
      * @return Result of the CreateTaskSet operation returned by the service.

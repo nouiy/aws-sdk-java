@@ -30,26 +30,26 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The continent code (e.g., <code>NA</code>, meaning North America).
+     * The continent code (<code>NA</code>, meaning North America).
      * </p>
      */
     private String continentCode;
     /**
      * <p>
-     * The description of the Amazon Web Services Region (e.g.,
+     * The description of the Amazon Web Services Region (
      * <code>This region is recommended to serve users in the eastern United States and eastern Canada</code>).
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The display name (e.g., <code>Ohio</code>).
+     * The display name (<code>Ohio</code>).
      * </p>
      */
     private String displayName;
     /**
      * <p>
-     * The region name (e.g., <code>us-east-2</code>).
+     * The region name (<code>us-east-2</code>).
      * </p>
      */
     private String name;
@@ -68,11 +68,11 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The continent code (e.g., <code>NA</code>, meaning North America).
+     * The continent code (<code>NA</code>, meaning North America).
      * </p>
      * 
      * @param continentCode
-     *        The continent code (e.g., <code>NA</code>, meaning North America).
+     *        The continent code (<code>NA</code>, meaning North America).
      */
 
     public void setContinentCode(String continentCode) {
@@ -81,10 +81,10 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The continent code (e.g., <code>NA</code>, meaning North America).
+     * The continent code (<code>NA</code>, meaning North America).
      * </p>
      * 
-     * @return The continent code (e.g., <code>NA</code>, meaning North America).
+     * @return The continent code (<code>NA</code>, meaning North America).
      */
 
     public String getContinentCode() {
@@ -93,11 +93,11 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The continent code (e.g., <code>NA</code>, meaning North America).
+     * The continent code (<code>NA</code>, meaning North America).
      * </p>
      * 
      * @param continentCode
-     *        The continent code (e.g., <code>NA</code>, meaning North America).
+     *        The continent code (<code>NA</code>, meaning North America).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,12 +108,12 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the Amazon Web Services Region (e.g.,
+     * The description of the Amazon Web Services Region (
      * <code>This region is recommended to serve users in the eastern United States and eastern Canada</code>).
      * </p>
      * 
      * @param description
-     *        The description of the Amazon Web Services Region (e.g.,
+     *        The description of the Amazon Web Services Region (
      *        <code>This region is recommended to serve users in the eastern United States and eastern Canada</code>).
      */
 
@@ -123,11 +123,11 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the Amazon Web Services Region (e.g.,
+     * The description of the Amazon Web Services Region (
      * <code>This region is recommended to serve users in the eastern United States and eastern Canada</code>).
      * </p>
      * 
-     * @return The description of the Amazon Web Services Region (e.g.,
+     * @return The description of the Amazon Web Services Region (
      *         <code>This region is recommended to serve users in the eastern United States and eastern Canada</code>).
      */
 
@@ -137,12 +137,12 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the Amazon Web Services Region (e.g.,
+     * The description of the Amazon Web Services Region (
      * <code>This region is recommended to serve users in the eastern United States and eastern Canada</code>).
      * </p>
      * 
      * @param description
-     *        The description of the Amazon Web Services Region (e.g.,
+     *        The description of the Amazon Web Services Region (
      *        <code>This region is recommended to serve users in the eastern United States and eastern Canada</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -154,11 +154,11 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The display name (e.g., <code>Ohio</code>).
+     * The display name (<code>Ohio</code>).
      * </p>
      * 
      * @param displayName
-     *        The display name (e.g., <code>Ohio</code>).
+     *        The display name (<code>Ohio</code>).
      */
 
     public void setDisplayName(String displayName) {
@@ -167,10 +167,10 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The display name (e.g., <code>Ohio</code>).
+     * The display name (<code>Ohio</code>).
      * </p>
      * 
-     * @return The display name (e.g., <code>Ohio</code>).
+     * @return The display name (<code>Ohio</code>).
      */
 
     public String getDisplayName() {
@@ -179,11 +179,11 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The display name (e.g., <code>Ohio</code>).
+     * The display name (<code>Ohio</code>).
      * </p>
      * 
      * @param displayName
-     *        The display name (e.g., <code>Ohio</code>).
+     *        The display name (<code>Ohio</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,11 +194,11 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The region name (e.g., <code>us-east-2</code>).
+     * The region name (<code>us-east-2</code>).
      * </p>
      * 
      * @param name
-     *        The region name (e.g., <code>us-east-2</code>).
+     *        The region name (<code>us-east-2</code>).
      * @see RegionName
      */
 
@@ -208,10 +208,10 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The region name (e.g., <code>us-east-2</code>).
+     * The region name (<code>us-east-2</code>).
      * </p>
      * 
-     * @return The region name (e.g., <code>us-east-2</code>).
+     * @return The region name (<code>us-east-2</code>).
      * @see RegionName
      */
 
@@ -221,11 +221,11 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The region name (e.g., <code>us-east-2</code>).
+     * The region name (<code>us-east-2</code>).
      * </p>
      * 
      * @param name
-     *        The region name (e.g., <code>us-east-2</code>).
+     *        The region name (<code>us-east-2</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RegionName
      */
@@ -237,11 +237,11 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The region name (e.g., <code>us-east-2</code>).
+     * The region name (<code>us-east-2</code>).
      * </p>
      * 
      * @param name
-     *        The region name (e.g., <code>us-east-2</code>).
+     *        The region name (<code>us-east-2</code>).
      * @see RegionName
      */
 
@@ -251,11 +251,11 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The region name (e.g., <code>us-east-2</code>).
+     * The region name (<code>us-east-2</code>).
      * </p>
      * 
      * @param name
-     *        The region name (e.g., <code>us-east-2</code>).
+     *        The region name (<code>us-east-2</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RegionName
      */

@@ -30,7 +30,7 @@ public class AttachedDisk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The path of the disk (e.g., <code>/dev/xvdf</code>).
+     * The path of the disk (<code>/dev/xvdf</code>).
      * </p>
      */
     private String path;
@@ -43,11 +43,11 @@ public class AttachedDisk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The path of the disk (e.g., <code>/dev/xvdf</code>).
+     * The path of the disk (<code>/dev/xvdf</code>).
      * </p>
      * 
      * @param path
-     *        The path of the disk (e.g., <code>/dev/xvdf</code>).
+     *        The path of the disk (<code>/dev/xvdf</code>).
      */
 
     public void setPath(String path) {
@@ -56,10 +56,10 @@ public class AttachedDisk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The path of the disk (e.g., <code>/dev/xvdf</code>).
+     * The path of the disk (<code>/dev/xvdf</code>).
      * </p>
      * 
-     * @return The path of the disk (e.g., <code>/dev/xvdf</code>).
+     * @return The path of the disk (<code>/dev/xvdf</code>).
      */
 
     public String getPath() {
@@ -68,11 +68,11 @@ public class AttachedDisk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The path of the disk (e.g., <code>/dev/xvdf</code>).
+     * The path of the disk (<code>/dev/xvdf</code>).
      * </p>
      * 
      * @param path
-     *        The path of the disk (e.g., <code>/dev/xvdf</code>).
+     *        The path of the disk (<code>/dev/xvdf</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -43,11 +43,11 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
     private String availabilityZone;
     /**
      * <p>
-     * (Deprecated) The name for your custom image.
+     * (Discontinued) The name for your custom image.
      * </p>
      * <note>
      * <p>
-     * In releases prior to June 12, 2017, this parameter was ignored by the API. It is now deprecated.
+     * In releases prior to June 12, 2017, this parameter was ignored by the API. It is now discontinued.
      * </p>
      * </note>
      */
@@ -55,8 +55,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
     private String customImageName;
     /**
      * <p>
-     * The ID for a virtual private server image (e.g., <code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
-     * Use the <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
+     * The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>). Use the
+     * <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
      * </p>
      * <note>
      * <p>
@@ -70,7 +70,7 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (e.g., <code>micro_1_0</code>).
+     * pricing plan (<code>micro_1_0</code>).
      * </p>
      */
     private String bundleId;
@@ -262,18 +262,18 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * (Deprecated) The name for your custom image.
+     * (Discontinued) The name for your custom image.
      * </p>
      * <note>
      * <p>
-     * In releases prior to June 12, 2017, this parameter was ignored by the API. It is now deprecated.
+     * In releases prior to June 12, 2017, this parameter was ignored by the API. It is now discontinued.
      * </p>
      * </note>
      * 
      * @param customImageName
-     *        (Deprecated) The name for your custom image.</p> <note>
+     *        (Discontinued) The name for your custom image.</p> <note>
      *        <p>
-     *        In releases prior to June 12, 2017, this parameter was ignored by the API. It is now deprecated.
+     *        In releases prior to June 12, 2017, this parameter was ignored by the API. It is now discontinued.
      *        </p>
      */
     @Deprecated
@@ -283,17 +283,17 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * (Deprecated) The name for your custom image.
+     * (Discontinued) The name for your custom image.
      * </p>
      * <note>
      * <p>
-     * In releases prior to June 12, 2017, this parameter was ignored by the API. It is now deprecated.
+     * In releases prior to June 12, 2017, this parameter was ignored by the API. It is now discontinued.
      * </p>
      * </note>
      * 
-     * @return (Deprecated) The name for your custom image.</p> <note>
+     * @return (Discontinued) The name for your custom image.</p> <note>
      *         <p>
-     *         In releases prior to June 12, 2017, this parameter was ignored by the API. It is now deprecated.
+     *         In releases prior to June 12, 2017, this parameter was ignored by the API. It is now discontinued.
      *         </p>
      */
     @Deprecated
@@ -303,18 +303,18 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * (Deprecated) The name for your custom image.
+     * (Discontinued) The name for your custom image.
      * </p>
      * <note>
      * <p>
-     * In releases prior to June 12, 2017, this parameter was ignored by the API. It is now deprecated.
+     * In releases prior to June 12, 2017, this parameter was ignored by the API. It is now discontinued.
      * </p>
      * </note>
      * 
      * @param customImageName
-     *        (Deprecated) The name for your custom image.</p> <note>
+     *        (Discontinued) The name for your custom image.</p> <note>
      *        <p>
-     *        In releases prior to June 12, 2017, this parameter was ignored by the API. It is now deprecated.
+     *        In releases prior to June 12, 2017, this parameter was ignored by the API. It is now discontinued.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -326,8 +326,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for a virtual private server image (e.g., <code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
-     * Use the <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
+     * The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>). Use the
+     * <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
      * </p>
      * <note>
      * <p>
@@ -338,9 +338,9 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * 
      * @param blueprintId
-     *        The ID for a virtual private server image (e.g., <code>app_wordpress_4_4</code> or
-     *        <code>app_lamp_7_0</code>). Use the <code>get blueprints</code> operation to return a list of available
-     *        images (or <i>blueprints</i>).</p> <note>
+     *        The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     *        Use the <code>get blueprints</code> operation to return a list of available images (or
+     *        <i>blueprints</i>).</p> <note>
      *        <p>
      *        Use active blueprints when creating new instances. Inactive blueprints are listed to support customers
      *        with existing instances and are not necessarily available to create new instances. Blueprints are marked
@@ -354,8 +354,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for a virtual private server image (e.g., <code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
-     * Use the <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
+     * The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>). Use the
+     * <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
      * </p>
      * <note>
      * <p>
@@ -365,9 +365,9 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </note>
      * 
-     * @return The ID for a virtual private server image (e.g., <code>app_wordpress_4_4</code> or
-     *         <code>app_lamp_7_0</code>). Use the <code>get blueprints</code> operation to return a list of available
-     *         images (or <i>blueprints</i>).</p> <note>
+     * @return The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     *         Use the <code>get blueprints</code> operation to return a list of available images (or
+     *         <i>blueprints</i>).</p> <note>
      *         <p>
      *         Use active blueprints when creating new instances. Inactive blueprints are listed to support customers
      *         with existing instances and are not necessarily available to create new instances. Blueprints are marked
@@ -381,8 +381,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for a virtual private server image (e.g., <code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
-     * Use the <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
+     * The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>). Use the
+     * <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
      * </p>
      * <note>
      * <p>
@@ -393,9 +393,9 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * 
      * @param blueprintId
-     *        The ID for a virtual private server image (e.g., <code>app_wordpress_4_4</code> or
-     *        <code>app_lamp_7_0</code>). Use the <code>get blueprints</code> operation to return a list of available
-     *        images (or <i>blueprints</i>).</p> <note>
+     *        The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     *        Use the <code>get blueprints</code> operation to return a list of available images (or
+     *        <i>blueprints</i>).</p> <note>
      *        <p>
      *        Use active blueprints when creating new instances. Inactive blueprints are listed to support customers
      *        with existing instances and are not necessarily available to create new instances. Blueprints are marked
@@ -412,12 +412,12 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (e.g., <code>micro_1_0</code>).
+     * pricing plan (<code>micro_1_0</code>).
      * </p>
      * 
      * @param bundleId
      *        The bundle of specification information for your virtual private server (or <i>instance</i>), including
-     *        the pricing plan (e.g., <code>micro_1_0</code>).
+     *        the pricing plan (<code>micro_1_0</code>).
      */
 
     public void setBundleId(String bundleId) {
@@ -427,11 +427,11 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (e.g., <code>micro_1_0</code>).
+     * pricing plan (<code>micro_1_0</code>).
      * </p>
      * 
      * @return The bundle of specification information for your virtual private server (or <i>instance</i>), including
-     *         the pricing plan (e.g., <code>micro_1_0</code>).
+     *         the pricing plan (<code>micro_1_0</code>).
      */
 
     public String getBundleId() {
@@ -441,12 +441,12 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (e.g., <code>micro_1_0</code>).
+     * pricing plan (<code>micro_1_0</code>).
      * </p>
      * 
      * @param bundleId
      *        The bundle of specification information for your virtual private server (or <i>instance</i>), including
-     *        the pricing plan (e.g., <code>micro_1_0</code>).
+     *        the pricing plan (<code>micro_1_0</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

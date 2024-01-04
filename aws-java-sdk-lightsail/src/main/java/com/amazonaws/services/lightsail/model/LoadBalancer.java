@@ -30,7 +30,7 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the load balancer (e.g., <code>my-load-balancer</code>).
+     * The name of the load balancer (<code>my-load-balancer</code>).
      * </p>
      */
     private String name;
@@ -55,14 +55,14 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date createdAt;
     /**
      * <p>
-     * The AWS Region where your load balancer was created (e.g., <code>us-east-2a</code>). Lightsail automatically
-     * creates your load balancer across Availability Zones.
+     * The AWS Region where your load balancer was created (<code>us-east-2a</code>). Lightsail automatically creates
+     * your load balancer across Availability Zones.
      * </p>
      */
     private ResourceLocation location;
     /**
      * <p>
-     * The resource type (e.g., <code>LoadBalancer</code>.
+     * The resource type (<code>LoadBalancer</code>.
      * </p>
      */
     private String resourceType;
@@ -158,11 +158,11 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the load balancer (e.g., <code>my-load-balancer</code>).
+     * The name of the load balancer (<code>my-load-balancer</code>).
      * </p>
      * 
      * @param name
-     *        The name of the load balancer (e.g., <code>my-load-balancer</code>).
+     *        The name of the load balancer (<code>my-load-balancer</code>).
      */
 
     public void setName(String name) {
@@ -171,10 +171,10 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the load balancer (e.g., <code>my-load-balancer</code>).
+     * The name of the load balancer (<code>my-load-balancer</code>).
      * </p>
      * 
-     * @return The name of the load balancer (e.g., <code>my-load-balancer</code>).
+     * @return The name of the load balancer (<code>my-load-balancer</code>).
      */
 
     public String getName() {
@@ -183,11 +183,11 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the load balancer (e.g., <code>my-load-balancer</code>).
+     * The name of the load balancer (<code>my-load-balancer</code>).
      * </p>
      * 
      * @param name
-     *        The name of the load balancer (e.g., <code>my-load-balancer</code>).
+     *        The name of the load balancer (<code>my-load-balancer</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -324,13 +324,13 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region where your load balancer was created (e.g., <code>us-east-2a</code>). Lightsail automatically
-     * creates your load balancer across Availability Zones.
+     * The AWS Region where your load balancer was created (<code>us-east-2a</code>). Lightsail automatically creates
+     * your load balancer across Availability Zones.
      * </p>
      * 
      * @param location
-     *        The AWS Region where your load balancer was created (e.g., <code>us-east-2a</code>). Lightsail
-     *        automatically creates your load balancer across Availability Zones.
+     *        The AWS Region where your load balancer was created (<code>us-east-2a</code>). Lightsail automatically
+     *        creates your load balancer across Availability Zones.
      */
 
     public void setLocation(ResourceLocation location) {
@@ -339,12 +339,12 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region where your load balancer was created (e.g., <code>us-east-2a</code>). Lightsail automatically
-     * creates your load balancer across Availability Zones.
+     * The AWS Region where your load balancer was created (<code>us-east-2a</code>). Lightsail automatically creates
+     * your load balancer across Availability Zones.
      * </p>
      * 
-     * @return The AWS Region where your load balancer was created (e.g., <code>us-east-2a</code>). Lightsail
-     *         automatically creates your load balancer across Availability Zones.
+     * @return The AWS Region where your load balancer was created (<code>us-east-2a</code>). Lightsail automatically
+     *         creates your load balancer across Availability Zones.
      */
 
     public ResourceLocation getLocation() {
@@ -353,13 +353,13 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region where your load balancer was created (e.g., <code>us-east-2a</code>). Lightsail automatically
-     * creates your load balancer across Availability Zones.
+     * The AWS Region where your load balancer was created (<code>us-east-2a</code>). Lightsail automatically creates
+     * your load balancer across Availability Zones.
      * </p>
      * 
      * @param location
-     *        The AWS Region where your load balancer was created (e.g., <code>us-east-2a</code>). Lightsail
-     *        automatically creates your load balancer across Availability Zones.
+     *        The AWS Region where your load balancer was created (<code>us-east-2a</code>). Lightsail automatically
+     *        creates your load balancer across Availability Zones.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -370,11 +370,11 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource type (e.g., <code>LoadBalancer</code>.
+     * The resource type (<code>LoadBalancer</code>.
      * </p>
      * 
      * @param resourceType
-     *        The resource type (e.g., <code>LoadBalancer</code>.
+     *        The resource type (<code>LoadBalancer</code>.
      * @see ResourceType
      */
 
@@ -384,10 +384,10 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource type (e.g., <code>LoadBalancer</code>.
+     * The resource type (<code>LoadBalancer</code>.
      * </p>
      * 
-     * @return The resource type (e.g., <code>LoadBalancer</code>.
+     * @return The resource type (<code>LoadBalancer</code>.
      * @see ResourceType
      */
 
@@ -397,11 +397,11 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource type (e.g., <code>LoadBalancer</code>.
+     * The resource type (<code>LoadBalancer</code>.
      * </p>
      * 
      * @param resourceType
-     *        The resource type (e.g., <code>LoadBalancer</code>.
+     *        The resource type (<code>LoadBalancer</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -413,11 +413,11 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource type (e.g., <code>LoadBalancer</code>.
+     * The resource type (<code>LoadBalancer</code>.
      * </p>
      * 
      * @param resourceType
-     *        The resource type (e.g., <code>LoadBalancer</code>.
+     *        The resource type (<code>LoadBalancer</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */

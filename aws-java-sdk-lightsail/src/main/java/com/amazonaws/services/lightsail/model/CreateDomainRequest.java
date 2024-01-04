@@ -27,7 +27,7 @@ public class CreateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The domain name to manage (e.g., <code>example.com</code>).
+     * The domain name to manage (<code>example.com</code>).
      * </p>
      */
     private String domainName;
@@ -43,11 +43,11 @@ public class CreateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The domain name to manage (e.g., <code>example.com</code>).
+     * The domain name to manage (<code>example.com</code>).
      * </p>
      * 
      * @param domainName
-     *        The domain name to manage (e.g., <code>example.com</code>).
+     *        The domain name to manage (<code>example.com</code>).
      */
 
     public void setDomainName(String domainName) {
@@ -56,10 +56,10 @@ public class CreateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The domain name to manage (e.g., <code>example.com</code>).
+     * The domain name to manage (<code>example.com</code>).
      * </p>
      * 
-     * @return The domain name to manage (e.g., <code>example.com</code>).
+     * @return The domain name to manage (<code>example.com</code>).
      */
 
     public String getDomainName() {
@@ -68,11 +68,11 @@ public class CreateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The domain name to manage (e.g., <code>example.com</code>).
+     * The domain name to manage (<code>example.com</code>).
      * </p>
      * 
      * @param domainName
-     *        The domain name to manage (e.g., <code>example.com</code>).
+     *        The domain name to manage (<code>example.com</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

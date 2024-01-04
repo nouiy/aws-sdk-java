@@ -30,7 +30,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type of the bucket (for example, <code>Bucket</code>).
+     * The Lightsail resource type of the bucket.
      * </p>
      */
     private String resourceType;
@@ -171,11 +171,11 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type of the bucket (for example, <code>Bucket</code>).
+     * The Lightsail resource type of the bucket.
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type of the bucket (for example, <code>Bucket</code>).
+     *        The Lightsail resource type of the bucket.
      */
 
     public void setResourceType(String resourceType) {
@@ -184,10 +184,10 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type of the bucket (for example, <code>Bucket</code>).
+     * The Lightsail resource type of the bucket.
      * </p>
      * 
-     * @return The Lightsail resource type of the bucket (for example, <code>Bucket</code>).
+     * @return The Lightsail resource type of the bucket.
      */
 
     public String getResourceType() {
@@ -196,11 +196,11 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type of the bucket (for example, <code>Bucket</code>).
+     * The Lightsail resource type of the bucket.
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type of the bucket (for example, <code>Bucket</code>).
+     *        The Lightsail resource type of the bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

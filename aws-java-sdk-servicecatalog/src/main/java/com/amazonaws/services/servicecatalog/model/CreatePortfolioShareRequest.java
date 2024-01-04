@@ -73,8 +73,12 @@ public class CreatePortfolioShareRequest extends com.amazonaws.AmazonWebServiceR
     private Boolean shareTagOptions;
     /**
      * <p>
-     * Enables or disables <code>Principal</code> sharing when creating the portfolio share. If this flag is not
-     * provided, principal sharing is disabled.
+     * This parameter is only supported for portfolios with an <b>OrganizationalNode</b> Type of
+     * <code>ORGANIZATION</code> or <code>ORGANIZATIONAL_UNIT</code>.
+     * </p>
+     * <p>
+     * Enables or disables <code>Principal</code> sharing when creating the portfolio share. If you do <b>not</b>
+     * provide this flag, principal sharing is disabled.
      * </p>
      * <p>
      * When you enable Principal Name Sharing for a portfolio share, the share recipient account end users with a
@@ -394,8 +398,12 @@ public class CreatePortfolioShareRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Enables or disables <code>Principal</code> sharing when creating the portfolio share. If this flag is not
-     * provided, principal sharing is disabled.
+     * This parameter is only supported for portfolios with an <b>OrganizationalNode</b> Type of
+     * <code>ORGANIZATION</code> or <code>ORGANIZATIONAL_UNIT</code>.
+     * </p>
+     * <p>
+     * Enables or disables <code>Principal</code> sharing when creating the portfolio share. If you do <b>not</b>
+     * provide this flag, principal sharing is disabled.
      * </p>
      * <p>
      * When you enable Principal Name Sharing for a portfolio share, the share recipient account end users with a
@@ -405,8 +413,12 @@ public class CreatePortfolioShareRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param sharePrincipals
-     *        Enables or disables <code>Principal</code> sharing when creating the portfolio share. If this flag is not
-     *        provided, principal sharing is disabled. </p>
+     *        This parameter is only supported for portfolios with an <b>OrganizationalNode</b> Type of
+     *        <code>ORGANIZATION</code> or <code>ORGANIZATIONAL_UNIT</code>. </p>
+     *        <p>
+     *        Enables or disables <code>Principal</code> sharing when creating the portfolio share. If you do <b>not</b>
+     *        provide this flag, principal sharing is disabled.
+     *        </p>
      *        <p>
      *        When you enable Principal Name Sharing for a portfolio share, the share recipient account end users with a
      *        principal that matches any of the associated IAM patterns can provision products from the portfolio. Once
@@ -421,8 +433,12 @@ public class CreatePortfolioShareRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Enables or disables <code>Principal</code> sharing when creating the portfolio share. If this flag is not
-     * provided, principal sharing is disabled.
+     * This parameter is only supported for portfolios with an <b>OrganizationalNode</b> Type of
+     * <code>ORGANIZATION</code> or <code>ORGANIZATIONAL_UNIT</code>.
+     * </p>
+     * <p>
+     * Enables or disables <code>Principal</code> sharing when creating the portfolio share. If you do <b>not</b>
+     * provide this flag, principal sharing is disabled.
      * </p>
      * <p>
      * When you enable Principal Name Sharing for a portfolio share, the share recipient account end users with a
@@ -431,8 +447,12 @@ public class CreatePortfolioShareRequest extends com.amazonaws.AmazonWebServiceR
      * portfolio. You can create the principals in the recipient account before or after creating the share.
      * </p>
      * 
-     * @return Enables or disables <code>Principal</code> sharing when creating the portfolio share. If this flag is not
-     *         provided, principal sharing is disabled. </p>
+     * @return This parameter is only supported for portfolios with an <b>OrganizationalNode</b> Type of
+     *         <code>ORGANIZATION</code> or <code>ORGANIZATIONAL_UNIT</code>. </p>
+     *         <p>
+     *         Enables or disables <code>Principal</code> sharing when creating the portfolio share. If you do
+     *         <b>not</b> provide this flag, principal sharing is disabled.
+     *         </p>
      *         <p>
      *         When you enable Principal Name Sharing for a portfolio share, the share recipient account end users with
      *         a principal that matches any of the associated IAM patterns can provision products from the portfolio.
@@ -447,8 +467,12 @@ public class CreatePortfolioShareRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Enables or disables <code>Principal</code> sharing when creating the portfolio share. If this flag is not
-     * provided, principal sharing is disabled.
+     * This parameter is only supported for portfolios with an <b>OrganizationalNode</b> Type of
+     * <code>ORGANIZATION</code> or <code>ORGANIZATIONAL_UNIT</code>.
+     * </p>
+     * <p>
+     * Enables or disables <code>Principal</code> sharing when creating the portfolio share. If you do <b>not</b>
+     * provide this flag, principal sharing is disabled.
      * </p>
      * <p>
      * When you enable Principal Name Sharing for a portfolio share, the share recipient account end users with a
@@ -458,8 +482,12 @@ public class CreatePortfolioShareRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param sharePrincipals
-     *        Enables or disables <code>Principal</code> sharing when creating the portfolio share. If this flag is not
-     *        provided, principal sharing is disabled. </p>
+     *        This parameter is only supported for portfolios with an <b>OrganizationalNode</b> Type of
+     *        <code>ORGANIZATION</code> or <code>ORGANIZATIONAL_UNIT</code>. </p>
+     *        <p>
+     *        Enables or disables <code>Principal</code> sharing when creating the portfolio share. If you do <b>not</b>
+     *        provide this flag, principal sharing is disabled.
+     *        </p>
      *        <p>
      *        When you enable Principal Name Sharing for a portfolio share, the share recipient account end users with a
      *        principal that matches any of the associated IAM patterns can provision products from the portfolio. Once
@@ -476,8 +504,12 @@ public class CreatePortfolioShareRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Enables or disables <code>Principal</code> sharing when creating the portfolio share. If this flag is not
-     * provided, principal sharing is disabled.
+     * This parameter is only supported for portfolios with an <b>OrganizationalNode</b> Type of
+     * <code>ORGANIZATION</code> or <code>ORGANIZATIONAL_UNIT</code>.
+     * </p>
+     * <p>
+     * Enables or disables <code>Principal</code> sharing when creating the portfolio share. If you do <b>not</b>
+     * provide this flag, principal sharing is disabled.
      * </p>
      * <p>
      * When you enable Principal Name Sharing for a portfolio share, the share recipient account end users with a
@@ -486,8 +518,12 @@ public class CreatePortfolioShareRequest extends com.amazonaws.AmazonWebServiceR
      * portfolio. You can create the principals in the recipient account before or after creating the share.
      * </p>
      * 
-     * @return Enables or disables <code>Principal</code> sharing when creating the portfolio share. If this flag is not
-     *         provided, principal sharing is disabled. </p>
+     * @return This parameter is only supported for portfolios with an <b>OrganizationalNode</b> Type of
+     *         <code>ORGANIZATION</code> or <code>ORGANIZATIONAL_UNIT</code>. </p>
+     *         <p>
+     *         Enables or disables <code>Principal</code> sharing when creating the portfolio share. If you do
+     *         <b>not</b> provide this flag, principal sharing is disabled.
+     *         </p>
      *         <p>
      *         When you enable Principal Name Sharing for a portfolio share, the share recipient account end users with
      *         a principal that matches any of the associated IAM patterns can provision products from the portfolio.

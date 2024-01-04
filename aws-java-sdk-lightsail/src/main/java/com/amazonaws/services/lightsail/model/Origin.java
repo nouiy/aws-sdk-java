@@ -40,7 +40,7 @@ public class Origin implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The resource type of the origin resource (e.g., <i>Instance</i>).
+     * The resource type of the origin resource (<i>Instance</i>).
      * </p>
      */
     private String resourceType;
@@ -100,11 +100,11 @@ public class Origin implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource type of the origin resource (e.g., <i>Instance</i>).
+     * The resource type of the origin resource (<i>Instance</i>).
      * </p>
      * 
      * @param resourceType
-     *        The resource type of the origin resource (e.g., <i>Instance</i>).
+     *        The resource type of the origin resource (<i>Instance</i>).
      * @see ResourceType
      */
 
@@ -114,10 +114,10 @@ public class Origin implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource type of the origin resource (e.g., <i>Instance</i>).
+     * The resource type of the origin resource (<i>Instance</i>).
      * </p>
      * 
-     * @return The resource type of the origin resource (e.g., <i>Instance</i>).
+     * @return The resource type of the origin resource (<i>Instance</i>).
      * @see ResourceType
      */
 
@@ -127,11 +127,11 @@ public class Origin implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource type of the origin resource (e.g., <i>Instance</i>).
+     * The resource type of the origin resource (<i>Instance</i>).
      * </p>
      * 
      * @param resourceType
-     *        The resource type of the origin resource (e.g., <i>Instance</i>).
+     *        The resource type of the origin resource (<i>Instance</i>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -143,11 +143,11 @@ public class Origin implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resource type of the origin resource (e.g., <i>Instance</i>).
+     * The resource type of the origin resource (<i>Instance</i>).
      * </p>
      * 
      * @param resourceType
-     *        The resource type of the origin resource (e.g., <i>Instance</i>).
+     *        The resource type of the origin resource (<i>Instance</i>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */

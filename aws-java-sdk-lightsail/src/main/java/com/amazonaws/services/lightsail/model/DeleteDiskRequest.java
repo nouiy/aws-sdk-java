@@ -27,7 +27,7 @@ public class DeleteDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The unique name of the disk you want to delete (e.g., <code>my-disk</code>).
+     * The unique name of the disk you want to delete (<code>my-disk</code>).
      * </p>
      */
     private String diskName;
@@ -40,11 +40,11 @@ public class DeleteDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The unique name of the disk you want to delete (e.g., <code>my-disk</code>).
+     * The unique name of the disk you want to delete (<code>my-disk</code>).
      * </p>
      * 
      * @param diskName
-     *        The unique name of the disk you want to delete (e.g., <code>my-disk</code>).
+     *        The unique name of the disk you want to delete (<code>my-disk</code>).
      */
 
     public void setDiskName(String diskName) {
@@ -53,10 +53,10 @@ public class DeleteDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The unique name of the disk you want to delete (e.g., <code>my-disk</code>).
+     * The unique name of the disk you want to delete (<code>my-disk</code>).
      * </p>
      * 
-     * @return The unique name of the disk you want to delete (e.g., <code>my-disk</code>).
+     * @return The unique name of the disk you want to delete (<code>my-disk</code>).
      */
 
     public String getDiskName() {
@@ -65,11 +65,11 @@ public class DeleteDiskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The unique name of the disk you want to delete (e.g., <code>my-disk</code>).
+     * The unique name of the disk you want to delete (<code>my-disk</code>).
      * </p>
      * 
      * @param diskName
-     *        The unique name of the disk you want to delete (e.g., <code>my-disk</code>).
+     *        The unique name of the disk you want to delete (<code>my-disk</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

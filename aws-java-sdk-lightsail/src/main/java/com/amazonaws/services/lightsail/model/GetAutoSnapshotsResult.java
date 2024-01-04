@@ -31,7 +31,8 @@ public class GetAutoSnapshotsResult extends com.amazonaws.AmazonWebServiceResult
     private String resourceName;
     /**
      * <p>
-     * The resource type (e.g., <code>Instance</code> or <code>Disk</code>).
+     * The resource type of the automatic snapshot. The possible values are <code>Instance</code>, and <code>Disk</code>
+     * .
      * </p>
      */
     private String resourceType;
@@ -85,11 +86,13 @@ public class GetAutoSnapshotsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The resource type (e.g., <code>Instance</code> or <code>Disk</code>).
+     * The resource type of the automatic snapshot. The possible values are <code>Instance</code>, and <code>Disk</code>
+     * .
      * </p>
      * 
      * @param resourceType
-     *        The resource type (e.g., <code>Instance</code> or <code>Disk</code>).
+     *        The resource type of the automatic snapshot. The possible values are <code>Instance</code>, and
+     *        <code>Disk</code>.
      * @see ResourceType
      */
 
@@ -99,10 +102,12 @@ public class GetAutoSnapshotsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The resource type (e.g., <code>Instance</code> or <code>Disk</code>).
+     * The resource type of the automatic snapshot. The possible values are <code>Instance</code>, and <code>Disk</code>
+     * .
      * </p>
      * 
-     * @return The resource type (e.g., <code>Instance</code> or <code>Disk</code>).
+     * @return The resource type of the automatic snapshot. The possible values are <code>Instance</code>, and
+     *         <code>Disk</code>.
      * @see ResourceType
      */
 
@@ -112,11 +117,13 @@ public class GetAutoSnapshotsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The resource type (e.g., <code>Instance</code> or <code>Disk</code>).
+     * The resource type of the automatic snapshot. The possible values are <code>Instance</code>, and <code>Disk</code>
+     * .
      * </p>
      * 
      * @param resourceType
-     *        The resource type (e.g., <code>Instance</code> or <code>Disk</code>).
+     *        The resource type of the automatic snapshot. The possible values are <code>Instance</code>, and
+     *        <code>Disk</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -128,11 +135,13 @@ public class GetAutoSnapshotsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The resource type (e.g., <code>Instance</code> or <code>Disk</code>).
+     * The resource type of the automatic snapshot. The possible values are <code>Instance</code>, and <code>Disk</code>
+     * .
      * </p>
      * 
      * @param resourceType
-     *        The resource type (e.g., <code>Instance</code> or <code>Disk</code>).
+     *        The resource type of the automatic snapshot. The possible values are <code>Instance</code>, and
+     *        <code>Disk</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */

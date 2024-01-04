@@ -51,7 +51,9 @@ public class DomainConfig implements Serializable, Cloneable, StructuredPojo {
     private AccessPoliciesStatus accessPolicies;
     /**
      * <p>
-     * The type of IP addresses supported by the endpoint for the domain.
+     * Choose either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources across
+     * IPv4 and IPv6 address types, and is the recommended option. If you set your IP address type to dual stack, you
+     * can't change your address type later.
      * </p>
      */
     private IPAddressTypeStatus iPAddressType;
@@ -298,11 +300,15 @@ public class DomainConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of IP addresses supported by the endpoint for the domain.
+     * Choose either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources across
+     * IPv4 and IPv6 address types, and is the recommended option. If you set your IP address type to dual stack, you
+     * can't change your address type later.
      * </p>
      * 
      * @param iPAddressType
-     *        The type of IP addresses supported by the endpoint for the domain.
+     *        Choose either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources
+     *        across IPv4 and IPv6 address types, and is the recommended option. If you set your IP address type to dual
+     *        stack, you can't change your address type later.
      */
 
     public void setIPAddressType(IPAddressTypeStatus iPAddressType) {
@@ -311,10 +317,14 @@ public class DomainConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of IP addresses supported by the endpoint for the domain.
+     * Choose either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources across
+     * IPv4 and IPv6 address types, and is the recommended option. If you set your IP address type to dual stack, you
+     * can't change your address type later.
      * </p>
      * 
-     * @return The type of IP addresses supported by the endpoint for the domain.
+     * @return Choose either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources
+     *         across IPv4 and IPv6 address types, and is the recommended option. If you set your IP address type to
+     *         dual stack, you can't change your address type later.
      */
 
     public IPAddressTypeStatus getIPAddressType() {
@@ -323,11 +333,15 @@ public class DomainConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of IP addresses supported by the endpoint for the domain.
+     * Choose either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources across
+     * IPv4 and IPv6 address types, and is the recommended option. If you set your IP address type to dual stack, you
+     * can't change your address type later.
      * </p>
      * 
      * @param iPAddressType
-     *        The type of IP addresses supported by the endpoint for the domain.
+     *        Choose either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources
+     *        across IPv4 and IPv6 address types, and is the recommended option. If you set your IP address type to dual
+     *        stack, you can't change your address type later.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

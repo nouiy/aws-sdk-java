@@ -27,7 +27,7 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the load balancer that you want to modify (e.g., <code>my-load-balancer</code>.
+     * The name of the load balancer that you want to modify (<code>my-load-balancer</code>.
      * </p>
      */
     private String loadBalancerName;
@@ -91,11 +91,11 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the load balancer that you want to modify (e.g., <code>my-load-balancer</code>.
+     * The name of the load balancer that you want to modify (<code>my-load-balancer</code>.
      * </p>
      * 
      * @param loadBalancerName
-     *        The name of the load balancer that you want to modify (e.g., <code>my-load-balancer</code>.
+     *        The name of the load balancer that you want to modify (<code>my-load-balancer</code>.
      */
 
     public void setLoadBalancerName(String loadBalancerName) {
@@ -104,10 +104,10 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the load balancer that you want to modify (e.g., <code>my-load-balancer</code>.
+     * The name of the load balancer that you want to modify (<code>my-load-balancer</code>.
      * </p>
      * 
-     * @return The name of the load balancer that you want to modify (e.g., <code>my-load-balancer</code>.
+     * @return The name of the load balancer that you want to modify (<code>my-load-balancer</code>.
      */
 
     public String getLoadBalancerName() {
@@ -116,11 +116,11 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the load balancer that you want to modify (e.g., <code>my-load-balancer</code>.
+     * The name of the load balancer that you want to modify (<code>my-load-balancer</code>.
      * </p>
      * 
      * @param loadBalancerName
-     *        The name of the load balancer that you want to modify (e.g., <code>my-load-balancer</code>.
+     *        The name of the load balancer that you want to modify (<code>my-load-balancer</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -67,7 +67,7 @@ public class CreateInstancesFromSnapshotRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (e.g., <code>micro_1_0</code>).
+     * pricing plan (<code>micro_1_0</code>).
      * </p>
      */
     private String bundleId;
@@ -514,12 +514,12 @@ public class CreateInstancesFromSnapshotRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (e.g., <code>micro_1_0</code>).
+     * pricing plan (<code>micro_1_0</code>).
      * </p>
      * 
      * @param bundleId
      *        The bundle of specification information for your virtual private server (or <i>instance</i>), including
-     *        the pricing plan (e.g., <code>micro_1_0</code>).
+     *        the pricing plan (<code>micro_1_0</code>).
      */
 
     public void setBundleId(String bundleId) {
@@ -529,11 +529,11 @@ public class CreateInstancesFromSnapshotRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (e.g., <code>micro_1_0</code>).
+     * pricing plan (<code>micro_1_0</code>).
      * </p>
      * 
      * @return The bundle of specification information for your virtual private server (or <i>instance</i>), including
-     *         the pricing plan (e.g., <code>micro_1_0</code>).
+     *         the pricing plan (<code>micro_1_0</code>).
      */
 
     public String getBundleId() {
@@ -543,12 +543,12 @@ public class CreateInstancesFromSnapshotRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (e.g., <code>micro_1_0</code>).
+     * pricing plan (<code>micro_1_0</code>).
      * </p>
      * 
      * @param bundleId
      *        The bundle of specification information for your virtual private server (or <i>instance</i>), including
-     *        the pricing plan (e.g., <code>micro_1_0</code>).
+     *        the pricing plan (<code>micro_1_0</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -408,7 +408,25 @@ public enum ResourceType {
     AWSKafkaConnectConnector("AWS::KafkaConnect::Connector"),
     AWSLambdaCodeSigningConfig("AWS::Lambda::CodeSigningConfig"),
     AWSNetworkManagerConnectPeer("AWS::NetworkManager::ConnectPeer"),
-    AWSResourceExplorer2Index("AWS::ResourceExplorer2::Index");
+    AWSResourceExplorer2Index("AWS::ResourceExplorer2::Index"),
+    AWSAppStreamFleet("AWS::AppStream::Fleet"),
+    AWSCognitoUserPool("AWS::Cognito::UserPool"),
+    AWSCognitoUserPoolClient("AWS::Cognito::UserPoolClient"),
+    AWSCognitoUserPoolGroup("AWS::Cognito::UserPoolGroup"),
+    AWSEC2NetworkInsightsAccessScope("AWS::EC2::NetworkInsightsAccessScope"),
+    AWSEC2NetworkInsightsAnalysis("AWS::EC2::NetworkInsightsAnalysis"),
+    AWSGrafanaWorkspace("AWS::Grafana::Workspace"),
+    AWSGroundStationDataflowEndpointGroup("AWS::GroundStation::DataflowEndpointGroup"),
+    AWSImageBuilderImageRecipe("AWS::ImageBuilder::ImageRecipe"),
+    AWSKMSAlias("AWS::KMS::Alias"),
+    AWSM2Environment("AWS::M2::Environment"),
+    AWSQuickSightDataSource("AWS::QuickSight::DataSource"),
+    AWSQuickSightTemplate("AWS::QuickSight::Template"),
+    AWSQuickSightTheme("AWS::QuickSight::Theme"),
+    AWSRDSOptionGroup("AWS::RDS::OptionGroup"),
+    AWSRedshiftEndpointAccess("AWS::Redshift::EndpointAccess"),
+    AWSRoute53ResolverFirewallRuleGroup("AWS::Route53Resolver::FirewallRuleGroup"),
+    AWSSSMDocument("AWS::SSM::Document");
 
     private String value;
 

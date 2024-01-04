@@ -101,7 +101,8 @@ public enum OperationType {
     SetResourceAccessForBucket("SetResourceAccessForBucket"),
     UpdateInstanceMetadataOptions("UpdateInstanceMetadataOptions"),
     StartGUISession("StartGUISession"),
-    StopGUISession("StopGUISession");
+    StopGUISession("StopGUISession"),
+    SetupInstanceHttps("SetupInstanceHttps");
 
     private String value;
 

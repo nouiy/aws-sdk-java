@@ -43,7 +43,7 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * The name of the certificate (e.g., <code>my-certificate</code>).
+     * The name of the certificate (<code>my-certificate</code>).
      * </p>
      */
     private String name;
@@ -67,7 +67,7 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
     private String serialNumber;
     /**
      * <p>
-     * An array of strings that specify the alternate domains (e.g., <code>example2.com</code>) and subdomains (e.g.,
+     * An array of strings that specify the alternate domains (<code>example2.com</code>) and subdomains (
      * <code>blog.example.com</code>) of the certificate.
      * </p>
      */
@@ -271,11 +271,11 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the certificate (e.g., <code>my-certificate</code>).
+     * The name of the certificate (<code>my-certificate</code>).
      * </p>
      * 
      * @param name
-     *        The name of the certificate (e.g., <code>my-certificate</code>).
+     *        The name of the certificate (<code>my-certificate</code>).
      */
 
     public void setName(String name) {
@@ -284,10 +284,10 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the certificate (e.g., <code>my-certificate</code>).
+     * The name of the certificate (<code>my-certificate</code>).
      * </p>
      * 
-     * @return The name of the certificate (e.g., <code>my-certificate</code>).
+     * @return The name of the certificate (<code>my-certificate</code>).
      */
 
     public String getName() {
@@ -296,11 +296,11 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the certificate (e.g., <code>my-certificate</code>).
+     * The name of the certificate (<code>my-certificate</code>).
      * </p>
      * 
      * @param name
-     *        The name of the certificate (e.g., <code>my-certificate</code>).
+     *        The name of the certificate (<code>my-certificate</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -450,12 +450,12 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of strings that specify the alternate domains (e.g., <code>example2.com</code>) and subdomains (e.g.,
+     * An array of strings that specify the alternate domains (<code>example2.com</code>) and subdomains (
      * <code>blog.example.com</code>) of the certificate.
      * </p>
      * 
-     * @return An array of strings that specify the alternate domains (e.g., <code>example2.com</code>) and subdomains
-     *         (e.g., <code>blog.example.com</code>) of the certificate.
+     * @return An array of strings that specify the alternate domains (<code>example2.com</code>) and subdomains (
+     *         <code>blog.example.com</code>) of the certificate.
      */
 
     public java.util.List<String> getSubjectAlternativeNames() {
@@ -464,13 +464,13 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of strings that specify the alternate domains (e.g., <code>example2.com</code>) and subdomains (e.g.,
+     * An array of strings that specify the alternate domains (<code>example2.com</code>) and subdomains (
      * <code>blog.example.com</code>) of the certificate.
      * </p>
      * 
      * @param subjectAlternativeNames
-     *        An array of strings that specify the alternate domains (e.g., <code>example2.com</code>) and subdomains
-     *        (e.g., <code>blog.example.com</code>) of the certificate.
+     *        An array of strings that specify the alternate domains (<code>example2.com</code>) and subdomains (
+     *        <code>blog.example.com</code>) of the certificate.
      */
 
     public void setSubjectAlternativeNames(java.util.Collection<String> subjectAlternativeNames) {
@@ -484,7 +484,7 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of strings that specify the alternate domains (e.g., <code>example2.com</code>) and subdomains (e.g.,
+     * An array of strings that specify the alternate domains (<code>example2.com</code>) and subdomains (
      * <code>blog.example.com</code>) of the certificate.
      * </p>
      * <p>
@@ -494,8 +494,8 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param subjectAlternativeNames
-     *        An array of strings that specify the alternate domains (e.g., <code>example2.com</code>) and subdomains
-     *        (e.g., <code>blog.example.com</code>) of the certificate.
+     *        An array of strings that specify the alternate domains (<code>example2.com</code>) and subdomains (
+     *        <code>blog.example.com</code>) of the certificate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -511,13 +511,13 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of strings that specify the alternate domains (e.g., <code>example2.com</code>) and subdomains (e.g.,
+     * An array of strings that specify the alternate domains (<code>example2.com</code>) and subdomains (
      * <code>blog.example.com</code>) of the certificate.
      * </p>
      * 
      * @param subjectAlternativeNames
-     *        An array of strings that specify the alternate domains (e.g., <code>example2.com</code>) and subdomains
-     *        (e.g., <code>blog.example.com</code>) of the certificate.
+     *        An array of strings that specify the alternate domains (<code>example2.com</code>) and subdomains (
+     *        <code>blog.example.com</code>) of the certificate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

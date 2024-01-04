@@ -62,6 +62,13 @@ public class DisassociateServiceActionFromProvisioningArtifactRequest extends co
      * </ul>
      */
     private String acceptLanguage;
+    /**
+     * <p>
+     * A unique identifier that you provide to ensure idempotency. If multiple requests from the same Amazon Web
+     * Services account use the same idempotency token, the same response is returned for each repeated request.
+     * </p>
+     */
+    private String idempotencyToken;
 
     /**
      * <p>
@@ -293,6 +300,52 @@ public class DisassociateServiceActionFromProvisioningArtifactRequest extends co
     }
 
     /**
+     * <p>
+     * A unique identifier that you provide to ensure idempotency. If multiple requests from the same Amazon Web
+     * Services account use the same idempotency token, the same response is returned for each repeated request.
+     * </p>
+     * 
+     * @param idempotencyToken
+     *        A unique identifier that you provide to ensure idempotency. If multiple requests from the same Amazon Web
+     *        Services account use the same idempotency token, the same response is returned for each repeated request.
+     */
+
+    public void setIdempotencyToken(String idempotencyToken) {
+        this.idempotencyToken = idempotencyToken;
+    }
+
+    /**
+     * <p>
+     * A unique identifier that you provide to ensure idempotency. If multiple requests from the same Amazon Web
+     * Services account use the same idempotency token, the same response is returned for each repeated request.
+     * </p>
+     * 
+     * @return A unique identifier that you provide to ensure idempotency. If multiple requests from the same Amazon Web
+     *         Services account use the same idempotency token, the same response is returned for each repeated request.
+     */
+
+    public String getIdempotencyToken() {
+        return this.idempotencyToken;
+    }
+
+    /**
+     * <p>
+     * A unique identifier that you provide to ensure idempotency. If multiple requests from the same Amazon Web
+     * Services account use the same idempotency token, the same response is returned for each repeated request.
+     * </p>
+     * 
+     * @param idempotencyToken
+     *        A unique identifier that you provide to ensure idempotency. If multiple requests from the same Amazon Web
+     *        Services account use the same idempotency token, the same response is returned for each repeated request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DisassociateServiceActionFromProvisioningArtifactRequest withIdempotencyToken(String idempotencyToken) {
+        setIdempotencyToken(idempotencyToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -311,7 +364,9 @@ public class DisassociateServiceActionFromProvisioningArtifactRequest extends co
         if (getServiceActionId() != null)
             sb.append("ServiceActionId: ").append(getServiceActionId()).append(",");
         if (getAcceptLanguage() != null)
-            sb.append("AcceptLanguage: ").append(getAcceptLanguage());
+            sb.append("AcceptLanguage: ").append(getAcceptLanguage()).append(",");
+        if (getIdempotencyToken() != null)
+            sb.append("IdempotencyToken: ").append(getIdempotencyToken());
         sb.append("}");
         return sb.toString();
     }
@@ -342,6 +397,10 @@ public class DisassociateServiceActionFromProvisioningArtifactRequest extends co
             return false;
         if (other.getAcceptLanguage() != null && other.getAcceptLanguage().equals(this.getAcceptLanguage()) == false)
             return false;
+        if (other.getIdempotencyToken() == null ^ this.getIdempotencyToken() == null)
+            return false;
+        if (other.getIdempotencyToken() != null && other.getIdempotencyToken().equals(this.getIdempotencyToken()) == false)
+            return false;
         return true;
     }
 
@@ -354,6 +413,7 @@ public class DisassociateServiceActionFromProvisioningArtifactRequest extends co
         hashCode = prime * hashCode + ((getProvisioningArtifactId() == null) ? 0 : getProvisioningArtifactId().hashCode());
         hashCode = prime * hashCode + ((getServiceActionId() == null) ? 0 : getServiceActionId().hashCode());
         hashCode = prime * hashCode + ((getAcceptLanguage() == null) ? 0 : getAcceptLanguage().hashCode());
+        hashCode = prime * hashCode + ((getIdempotencyToken() == null) ? 0 : getIdempotencyToken().hashCode());
         return hashCode;
     }
 

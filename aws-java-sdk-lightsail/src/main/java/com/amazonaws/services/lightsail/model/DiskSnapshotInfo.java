@@ -30,18 +30,18 @@ public class DiskSnapshotInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The size of the disk in GB (e.g., <code>32</code>).
+     * The size of the disk in GB (<code>32</code>).
      * </p>
      */
     private Integer sizeInGb;
 
     /**
      * <p>
-     * The size of the disk in GB (e.g., <code>32</code>).
+     * The size of the disk in GB (<code>32</code>).
      * </p>
      * 
      * @param sizeInGb
-     *        The size of the disk in GB (e.g., <code>32</code>).
+     *        The size of the disk in GB (<code>32</code>).
      */
 
     public void setSizeInGb(Integer sizeInGb) {
@@ -50,10 +50,10 @@ public class DiskSnapshotInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The size of the disk in GB (e.g., <code>32</code>).
+     * The size of the disk in GB (<code>32</code>).
      * </p>
      * 
-     * @return The size of the disk in GB (e.g., <code>32</code>).
+     * @return The size of the disk in GB (<code>32</code>).
      */
 
     public Integer getSizeInGb() {
@@ -62,11 +62,11 @@ public class DiskSnapshotInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The size of the disk in GB (e.g., <code>32</code>).
+     * The size of the disk in GB (<code>32</code>).
      * </p>
      * 
      * @param sizeInGb
-     *        The size of the disk in GB (e.g., <code>32</code>).
+     *        The size of the disk in GB (<code>32</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

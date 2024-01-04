@@ -30,7 +30,7 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * The resource type.
      * </p>
      * <p>
-     * The possible values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
+     * The resource values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
      * </p>
      * <note>
      * <p>
@@ -62,7 +62,7 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * The resource type.
      * </p>
      * <p>
-     * The possible values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
+     * The resource values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
      * </p>
      * <note>
      * <p>
@@ -75,7 +75,7 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * @param resourceType
      *        The resource type.</p>
      *        <p>
-     *        The possible values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
+     *        The resource values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
      *        </p>
      *        <note>
      *        <p>
@@ -95,7 +95,7 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * The resource type.
      * </p>
      * <p>
-     * The possible values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
+     * The resource values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
      * </p>
      * <note>
      * <p>
@@ -107,7 +107,7 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return The resource type.</p>
      *         <p>
-     *         The possible values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
+     *         The resource values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
      *         </p>
      *         <note>
      *         <p>
@@ -127,7 +127,7 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * The resource type.
      * </p>
      * <p>
-     * The possible values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
+     * The resource values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
      * </p>
      * <note>
      * <p>
@@ -140,7 +140,7 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * @param resourceType
      *        The resource type.</p>
      *        <p>
-     *        The possible values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
+     *        The resource values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
      *        </p>
      *        <note>
      *        <p>
@@ -162,7 +162,7 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * The resource type.
      * </p>
      * <p>
-     * The possible values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
+     * The resource values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
      * </p>
      * <note>
      * <p>
@@ -175,7 +175,7 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * @param resourceType
      *        The resource type.</p>
      *        <p>
-     *        The possible values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
+     *        The resource values are <code>Distribution</code>, <code>Instance</code>, and <code>LoadBalancer</code>.
      *        </p>
      *        <note>
      *        <p>

@@ -42,8 +42,7 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The target IP address (e.g., <code>192.0.2.0</code>), or AWS name server (e.g.,
-     * <code>ns-111.awsdns-22.com.</code>).
+     * The target IP address (<code>192.0.2.0</code>), or AWS name server (<code>ns-111.awsdns-22.com.</code>).
      * </p>
      * <p>
      * For Lightsail load balancers, the value looks like
@@ -119,12 +118,12 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
     private String type;
     /**
      * <p>
-     * (Deprecated) The options for the domain entry.
+     * (Discontinued) The options for the domain entry.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 29, 2017, this parameter was not included in the API response. It is now
-     * deprecated.
+     * discontinued.
      * </p>
      * </note>
      */
@@ -213,8 +212,7 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The target IP address (e.g., <code>192.0.2.0</code>), or AWS name server (e.g.,
-     * <code>ns-111.awsdns-22.com.</code>).
+     * The target IP address (<code>192.0.2.0</code>), or AWS name server (<code>ns-111.awsdns-22.com.</code>).
      * </p>
      * <p>
      * For Lightsail load balancers, the value looks like
@@ -226,8 +224,8 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param target
-     *        The target IP address (e.g., <code>192.0.2.0</code>), or AWS name server (e.g.,
-     *        <code>ns-111.awsdns-22.com.</code>).</p>
+     *        The target IP address (<code>192.0.2.0</code>), or AWS name server (<code>ns-111.awsdns-22.com.</code>
+     *        ).</p>
      *        <p>
      *        For Lightsail load balancers, the value looks like
      *        <code>ab1234c56789c6b86aba6fb203d443bc-123456789.us-east-2.elb.amazonaws.com</code>. For Lightsail
@@ -244,8 +242,7 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The target IP address (e.g., <code>192.0.2.0</code>), or AWS name server (e.g.,
-     * <code>ns-111.awsdns-22.com.</code>).
+     * The target IP address (<code>192.0.2.0</code>), or AWS name server (<code>ns-111.awsdns-22.com.</code>).
      * </p>
      * <p>
      * For Lightsail load balancers, the value looks like
@@ -256,8 +253,8 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
      * distribution, or container service.
      * </p>
      * 
-     * @return The target IP address (e.g., <code>192.0.2.0</code>), or AWS name server (e.g.,
-     *         <code>ns-111.awsdns-22.com.</code>).</p>
+     * @return The target IP address (<code>192.0.2.0</code>), or AWS name server (<code>ns-111.awsdns-22.com.</code>
+     *         ).</p>
      *         <p>
      *         For Lightsail load balancers, the value looks like
      *         <code>ab1234c56789c6b86aba6fb203d443bc-123456789.us-east-2.elb.amazonaws.com</code>. For Lightsail
@@ -274,8 +271,7 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The target IP address (e.g., <code>192.0.2.0</code>), or AWS name server (e.g.,
-     * <code>ns-111.awsdns-22.com.</code>).
+     * The target IP address (<code>192.0.2.0</code>), or AWS name server (<code>ns-111.awsdns-22.com.</code>).
      * </p>
      * <p>
      * For Lightsail load balancers, the value looks like
@@ -287,8 +283,8 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param target
-     *        The target IP address (e.g., <code>192.0.2.0</code>), or AWS name server (e.g.,
-     *        <code>ns-111.awsdns-22.com.</code>).</p>
+     *        The target IP address (<code>192.0.2.0</code>), or AWS name server (<code>ns-111.awsdns-22.com.</code>
+     *        ).</p>
      *        <p>
      *        For Lightsail load balancers, the value looks like
      *        <code>ab1234c56789c6b86aba6fb203d443bc-123456789.us-east-2.elb.amazonaws.com</code>. For Lightsail
@@ -705,19 +701,19 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * (Deprecated) The options for the domain entry.
+     * (Discontinued) The options for the domain entry.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 29, 2017, this parameter was not included in the API response. It is now
-     * deprecated.
+     * discontinued.
      * </p>
      * </note>
      * 
-     * @return (Deprecated) The options for the domain entry.</p> <note>
+     * @return (Discontinued) The options for the domain entry.</p> <note>
      *         <p>
      *         In releases prior to November 29, 2017, this parameter was not included in the API response. It is now
-     *         deprecated.
+     *         discontinued.
      *         </p>
      */
     @Deprecated
@@ -727,20 +723,20 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * (Deprecated) The options for the domain entry.
+     * (Discontinued) The options for the domain entry.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 29, 2017, this parameter was not included in the API response. It is now
-     * deprecated.
+     * discontinued.
      * </p>
      * </note>
      * 
      * @param options
-     *        (Deprecated) The options for the domain entry.</p> <note>
+     *        (Discontinued) The options for the domain entry.</p> <note>
      *        <p>
      *        In releases prior to November 29, 2017, this parameter was not included in the API response. It is now
-     *        deprecated.
+     *        discontinued.
      *        </p>
      */
     @Deprecated
@@ -750,20 +746,20 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * (Deprecated) The options for the domain entry.
+     * (Discontinued) The options for the domain entry.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 29, 2017, this parameter was not included in the API response. It is now
-     * deprecated.
+     * discontinued.
      * </p>
      * </note>
      * 
      * @param options
-     *        (Deprecated) The options for the domain entry.</p> <note>
+     *        (Discontinued) The options for the domain entry.</p> <note>
      *        <p>
      *        In releases prior to November 29, 2017, this parameter was not included in the API response. It is now
-     *        deprecated.
+     *        discontinued.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

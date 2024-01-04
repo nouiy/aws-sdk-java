@@ -880,8 +880,8 @@ public interface AmazonLightsailAsync extends AmazonLightsail {
 
     /**
      * <p>
-     * Creates a block storage disk that can be attached to an Amazon Lightsail instance in the same Availability Zone
-     * (e.g., <code>us-east-2a</code>).
+     * Creates a block storage disk that can be attached to an Amazon Lightsail instance in the same Availability Zone (
+     * <code>us-east-2a</code>).
      * </p>
      * <p>
      * The <code>create disk</code> operation supports tag-based access control via request tags. For more information,
@@ -900,8 +900,8 @@ public interface AmazonLightsailAsync extends AmazonLightsail {
 
     /**
      * <p>
-     * Creates a block storage disk that can be attached to an Amazon Lightsail instance in the same Availability Zone
-     * (e.g., <code>us-east-2a</code>).
+     * Creates a block storage disk that can be attached to an Amazon Lightsail instance in the same Availability Zone (
+     * <code>us-east-2a</code>).
      * </p>
      * <p>
      * The <code>create disk</code> operation supports tag-based access control via request tags. For more information,
@@ -926,7 +926,7 @@ public interface AmazonLightsailAsync extends AmazonLightsail {
     /**
      * <p>
      * Creates a block storage disk from a manual or automatic snapshot of a disk. The resulting disk can be attached to
-     * an Amazon Lightsail instance in the same Availability Zone (e.g., <code>us-east-2a</code>).
+     * an Amazon Lightsail instance in the same Availability Zone (<code>us-east-2a</code>).
      * </p>
      * <p>
      * The <code>create disk from snapshot</code> operation supports tag-based access control via request tags and
@@ -947,7 +947,7 @@ public interface AmazonLightsailAsync extends AmazonLightsail {
     /**
      * <p>
      * Creates a block storage disk from a manual or automatic snapshot of a disk. The resulting disk can be attached to
-     * an Amazon Lightsail instance in the same Availability Zone (e.g., <code>us-east-2a</code>).
+     * an Amazon Lightsail instance in the same Availability Zone (<code>us-east-2a</code>).
      * </p>
      * <p>
      * The <code>create disk from snapshot</code> operation supports tag-based access control via request tags and
@@ -1094,7 +1094,7 @@ public interface AmazonLightsailAsync extends AmazonLightsail {
 
     /**
      * <p>
-     * Creates a domain resource for the specified domain (e.g., example.com).
+     * Creates a domain resource for the specified domain (example.com).
      * </p>
      * <p>
      * The <code>create domain</code> operation supports tag-based access control via request tags. For more
@@ -1113,7 +1113,7 @@ public interface AmazonLightsailAsync extends AmazonLightsail {
 
     /**
      * <p>
-     * Creates a domain resource for the specified domain (e.g., example.com).
+     * Creates a domain resource for the specified domain (example.com).
      * </p>
      * <p>
      * The <code>create domain</code> operation supports tag-based access control via request tags. For more
@@ -4799,7 +4799,7 @@ public interface AmazonLightsailAsync extends AmazonLightsail {
 
     /**
      * <p>
-     * Gets operations for a specific resource (e.g., an instance or a static IP).
+     * Gets operations for a specific resource (an instance or a static IP).
      * </p>
      * 
      * @param getOperationsForResourceRequest
@@ -4812,7 +4812,7 @@ public interface AmazonLightsailAsync extends AmazonLightsail {
 
     /**
      * <p>
-     * Gets operations for a specific resource (e.g., an instance or a static IP).
+     * Gets operations for a specific resource (an instance or a static IP).
      * </p>
      * 
      * @param getOperationsForResourceRequest
@@ -5316,6 +5316,39 @@ public interface AmazonLightsailAsync extends AmazonLightsail {
      */
     java.util.concurrent.Future<GetRelationalDatabasesResult> getRelationalDatabasesAsync(GetRelationalDatabasesRequest getRelationalDatabasesRequest,
             com.amazonaws.handlers.AsyncHandler<GetRelationalDatabasesRequest, GetRelationalDatabasesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns detailed information for five of the most recent <code>SetupInstanceHttps</code> requests that were ran
+     * on the target instance.
+     * </p>
+     * 
+     * @param getSetupHistoryRequest
+     * @return A Java Future containing the result of the GetSetupHistory operation returned by the service.
+     * @sample AmazonLightsailAsync.GetSetupHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetSetupHistory" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSetupHistoryResult> getSetupHistoryAsync(GetSetupHistoryRequest getSetupHistoryRequest);
+
+    /**
+     * <p>
+     * Returns detailed information for five of the most recent <code>SetupInstanceHttps</code> requests that were ran
+     * on the target instance.
+     * </p>
+     * 
+     * @param getSetupHistoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSetupHistory operation returned by the service.
+     * @sample AmazonLightsailAsyncHandler.GetSetupHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetSetupHistory" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSetupHistoryResult> getSetupHistoryAsync(GetSetupHistoryRequest getSetupHistoryRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSetupHistoryRequest, GetSetupHistoryResult> asyncHandler);
 
     /**
      * <p>
@@ -5984,6 +6017,47 @@ public interface AmazonLightsailAsync extends AmazonLightsail {
     java.util.concurrent.Future<SetResourceAccessForBucketResult> setResourceAccessForBucketAsync(
             SetResourceAccessForBucketRequest setResourceAccessForBucketRequest,
             com.amazonaws.handlers.AsyncHandler<SetResourceAccessForBucketRequest, SetResourceAccessForBucketResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates an SSL/TLS certificate that secures traffic for your website. After the certificate is created, it is
+     * installed on the specified Lightsail instance.
+     * </p>
+     * <p>
+     * If you provide more than one domain name in the request, at least one name must be less than or equal to 63
+     * characters in length.
+     * </p>
+     * 
+     * @param setupInstanceHttpsRequest
+     * @return A Java Future containing the result of the SetupInstanceHttps operation returned by the service.
+     * @sample AmazonLightsailAsync.SetupInstanceHttps
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/SetupInstanceHttps" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SetupInstanceHttpsResult> setupInstanceHttpsAsync(SetupInstanceHttpsRequest setupInstanceHttpsRequest);
+
+    /**
+     * <p>
+     * Creates an SSL/TLS certificate that secures traffic for your website. After the certificate is created, it is
+     * installed on the specified Lightsail instance.
+     * </p>
+     * <p>
+     * If you provide more than one domain name in the request, at least one name must be less than or equal to 63
+     * characters in length.
+     * </p>
+     * 
+     * @param setupInstanceHttpsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SetupInstanceHttps operation returned by the service.
+     * @sample AmazonLightsailAsyncHandler.SetupInstanceHttps
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/SetupInstanceHttps" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SetupInstanceHttpsResult> setupInstanceHttpsAsync(SetupInstanceHttpsRequest setupInstanceHttpsRequest,
+            com.amazonaws.handlers.AsyncHandler<SetupInstanceHttpsRequest, SetupInstanceHttpsResult> asyncHandler);
 
     /**
      * <p>

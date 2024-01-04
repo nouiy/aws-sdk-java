@@ -60,7 +60,7 @@ public class CloudFormationStackRecord implements Serializable, Cloneable, Struc
     private ResourceLocation location;
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>CloudFormationStackRecord</code>).
+     * The Lightsail resource type (<code>CloudFormationStackRecord</code>).
      * </p>
      */
     private String resourceType;
@@ -258,11 +258,11 @@ public class CloudFormationStackRecord implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>CloudFormationStackRecord</code>).
+     * The Lightsail resource type (<code>CloudFormationStackRecord</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>CloudFormationStackRecord</code>).
+     *        The Lightsail resource type (<code>CloudFormationStackRecord</code>).
      * @see ResourceType
      */
 
@@ -272,10 +272,10 @@ public class CloudFormationStackRecord implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>CloudFormationStackRecord</code>).
+     * The Lightsail resource type (<code>CloudFormationStackRecord</code>).
      * </p>
      * 
-     * @return The Lightsail resource type (e.g., <code>CloudFormationStackRecord</code>).
+     * @return The Lightsail resource type (<code>CloudFormationStackRecord</code>).
      * @see ResourceType
      */
 
@@ -285,11 +285,11 @@ public class CloudFormationStackRecord implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>CloudFormationStackRecord</code>).
+     * The Lightsail resource type (<code>CloudFormationStackRecord</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>CloudFormationStackRecord</code>).
+     *        The Lightsail resource type (<code>CloudFormationStackRecord</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -301,11 +301,11 @@ public class CloudFormationStackRecord implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>CloudFormationStackRecord</code>).
+     * The Lightsail resource type (<code>CloudFormationStackRecord</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>CloudFormationStackRecord</code>).
+     *        The Lightsail resource type (<code>CloudFormationStackRecord</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */

@@ -36,7 +36,7 @@ public class Domain implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the domain recordset (e.g.,
+     * The Amazon Resource Name (ARN) of the domain recordset (
      * <code>arn:aws:lightsail:global:123456789101:Domain/824cede0-abc7-4f84-8dbc-12345EXAMPLE</code>).
      * </p>
      */
@@ -129,12 +129,12 @@ public class Domain implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the domain recordset (e.g.,
+     * The Amazon Resource Name (ARN) of the domain recordset (
      * <code>arn:aws:lightsail:global:123456789101:Domain/824cede0-abc7-4f84-8dbc-12345EXAMPLE</code>).
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the domain recordset (e.g.,
+     *        The Amazon Resource Name (ARN) of the domain recordset (
      *        <code>arn:aws:lightsail:global:123456789101:Domain/824cede0-abc7-4f84-8dbc-12345EXAMPLE</code>).
      */
 
@@ -144,11 +144,11 @@ public class Domain implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the domain recordset (e.g.,
+     * The Amazon Resource Name (ARN) of the domain recordset (
      * <code>arn:aws:lightsail:global:123456789101:Domain/824cede0-abc7-4f84-8dbc-12345EXAMPLE</code>).
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the domain recordset (e.g.,
+     * @return The Amazon Resource Name (ARN) of the domain recordset (
      *         <code>arn:aws:lightsail:global:123456789101:Domain/824cede0-abc7-4f84-8dbc-12345EXAMPLE</code>).
      */
 
@@ -158,12 +158,12 @@ public class Domain implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the domain recordset (e.g.,
+     * The Amazon Resource Name (ARN) of the domain recordset (
      * <code>arn:aws:lightsail:global:123456789101:Domain/824cede0-abc7-4f84-8dbc-12345EXAMPLE</code>).
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the domain recordset (e.g.,
+     *        The Amazon Resource Name (ARN) of the domain recordset (
      *        <code>arn:aws:lightsail:global:123456789101:Domain/824cede0-abc7-4f84-8dbc-12345EXAMPLE</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */

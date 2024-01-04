@@ -783,8 +783,8 @@ public interface AmazonLightsail {
 
     /**
      * <p>
-     * Creates a block storage disk that can be attached to an Amazon Lightsail instance in the same Availability Zone
-     * (e.g., <code>us-east-2a</code>).
+     * Creates a block storage disk that can be attached to an Amazon Lightsail instance in the same Availability Zone (
+     * <code>us-east-2a</code>).
      * </p>
      * <p>
      * The <code>create disk</code> operation supports tag-based access control via request tags. For more information,
@@ -825,7 +825,7 @@ public interface AmazonLightsail {
     /**
      * <p>
      * Creates a block storage disk from a manual or automatic snapshot of a disk. The resulting disk can be attached to
-     * an Amazon Lightsail instance in the same Availability Zone (e.g., <code>us-east-2a</code>).
+     * an Amazon Lightsail instance in the same Availability Zone (<code>us-east-2a</code>).
      * </p>
      * <p>
      * The <code>create disk from snapshot</code> operation supports tag-based access control via request tags and
@@ -962,7 +962,7 @@ public interface AmazonLightsail {
 
     /**
      * <p>
-     * Creates a domain resource for the specified domain (e.g., example.com).
+     * Creates a domain resource for the specified domain (example.com).
      * </p>
      * <p>
      * The <code>create domain</code> operation supports tag-based access control via request tags. For more
@@ -4311,7 +4311,7 @@ public interface AmazonLightsail {
 
     /**
      * <p>
-     * Gets operations for a specific resource (e.g., an instance or a static IP).
+     * Gets operations for a specific resource (an instance or a static IP).
      * </p>
      * 
      * @param getOperationsForResourceRequest
@@ -4809,6 +4809,37 @@ public interface AmazonLightsail {
      *      target="_top">AWS API Documentation</a>
      */
     GetRelationalDatabasesResult getRelationalDatabases(GetRelationalDatabasesRequest getRelationalDatabasesRequest);
+
+    /**
+     * <p>
+     * Returns detailed information for five of the most recent <code>SetupInstanceHttps</code> requests that were ran
+     * on the target instance.
+     * </p>
+     * 
+     * @param getSetupHistoryRequest
+     * @return Result of the GetSetupHistory operation returned by the service.
+     * @throws AccessDeniedException
+     *         Lightsail throws this exception when the user cannot be authenticated or uses invalid credentials to
+     *         access a resource.
+     * @throws InvalidInputException
+     *         Lightsail throws this exception when user input does not conform to the validation rules of an input
+     *         field.</p> <note>
+     *         <p>
+     *         Domain and distribution APIs are only available in the N. Virginia (<code>us-east-1</code>) Amazon Web
+     *         Services Region. Please set your Amazon Web Services Region configuration to <code>us-east-1</code> to
+     *         create, view, or edit these resources.
+     *         </p>
+     * @throws NotFoundException
+     *         Lightsail throws this exception when it cannot find a resource.
+     * @throws ServiceException
+     *         A general service exception.
+     * @throws UnauthenticatedException
+     *         Lightsail throws this exception when the user has not been authenticated.
+     * @sample AmazonLightsail.GetSetupHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/GetSetupHistory" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetSetupHistoryResult getSetupHistory(GetSetupHistoryRequest getSetupHistoryRequest);
 
     /**
      * <p>
@@ -5422,6 +5453,41 @@ public interface AmazonLightsail {
      *      target="_top">AWS API Documentation</a>
      */
     SetResourceAccessForBucketResult setResourceAccessForBucket(SetResourceAccessForBucketRequest setResourceAccessForBucketRequest);
+
+    /**
+     * <p>
+     * Creates an SSL/TLS certificate that secures traffic for your website. After the certificate is created, it is
+     * installed on the specified Lightsail instance.
+     * </p>
+     * <p>
+     * If you provide more than one domain name in the request, at least one name must be less than or equal to 63
+     * characters in length.
+     * </p>
+     * 
+     * @param setupInstanceHttpsRequest
+     * @return Result of the SetupInstanceHttps operation returned by the service.
+     * @throws AccessDeniedException
+     *         Lightsail throws this exception when the user cannot be authenticated or uses invalid credentials to
+     *         access a resource.
+     * @throws InvalidInputException
+     *         Lightsail throws this exception when user input does not conform to the validation rules of an input
+     *         field.</p> <note>
+     *         <p>
+     *         Domain and distribution APIs are only available in the N. Virginia (<code>us-east-1</code>) Amazon Web
+     *         Services Region. Please set your Amazon Web Services Region configuration to <code>us-east-1</code> to
+     *         create, view, or edit these resources.
+     *         </p>
+     * @throws NotFoundException
+     *         Lightsail throws this exception when it cannot find a resource.
+     * @throws ServiceException
+     *         A general service exception.
+     * @throws UnauthenticatedException
+     *         Lightsail throws this exception when the user has not been authenticated.
+     * @sample AmazonLightsail.SetupInstanceHttps
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/SetupInstanceHttps" target="_top">AWS
+     *      API Documentation</a>
+     */
+    SetupInstanceHttpsResult setupInstanceHttps(SetupInstanceHttpsRequest setupInstanceHttpsRequest);
 
     /**
      * <p>

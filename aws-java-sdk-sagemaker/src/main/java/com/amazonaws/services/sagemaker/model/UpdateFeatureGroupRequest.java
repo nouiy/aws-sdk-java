@@ -46,6 +46,8 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      */
     private OnlineStoreConfigUpdate onlineStoreConfig;
 
+    private ThroughputConfigUpdate throughputConfig;
+
     /**
      * <p>
      * The name or Amazon Resource Name (ARN) of the feature group that you're updating.
@@ -213,6 +215,32 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * @param throughputConfig
+     */
+
+    public void setThroughputConfig(ThroughputConfigUpdate throughputConfig) {
+        this.throughputConfig = throughputConfig;
+    }
+
+    /**
+     * @return
+     */
+
+    public ThroughputConfigUpdate getThroughputConfig() {
+        return this.throughputConfig;
+    }
+
+    /**
+     * @param throughputConfig
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFeatureGroupRequest withThroughputConfig(ThroughputConfigUpdate throughputConfig) {
+        setThroughputConfig(throughputConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -229,7 +257,9 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
         if (getFeatureAdditions() != null)
             sb.append("FeatureAdditions: ").append(getFeatureAdditions()).append(",");
         if (getOnlineStoreConfig() != null)
-            sb.append("OnlineStoreConfig: ").append(getOnlineStoreConfig());
+            sb.append("OnlineStoreConfig: ").append(getOnlineStoreConfig()).append(",");
+        if (getThroughputConfig() != null)
+            sb.append("ThroughputConfig: ").append(getThroughputConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -256,6 +286,10 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getOnlineStoreConfig() != null && other.getOnlineStoreConfig().equals(this.getOnlineStoreConfig()) == false)
             return false;
+        if (other.getThroughputConfig() == null ^ this.getThroughputConfig() == null)
+            return false;
+        if (other.getThroughputConfig() != null && other.getThroughputConfig().equals(this.getThroughputConfig()) == false)
+            return false;
         return true;
     }
 
@@ -267,6 +301,7 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getFeatureGroupName() == null) ? 0 : getFeatureGroupName().hashCode());
         hashCode = prime * hashCode + ((getFeatureAdditions() == null) ? 0 : getFeatureAdditions().hashCode());
         hashCode = prime * hashCode + ((getOnlineStoreConfig() == null) ? 0 : getOnlineStoreConfig().hashCode());
+        hashCode = prime * hashCode + ((getThroughputConfig() == null) ? 0 : getThroughputConfig().hashCode());
         return hashCode;
     }
 

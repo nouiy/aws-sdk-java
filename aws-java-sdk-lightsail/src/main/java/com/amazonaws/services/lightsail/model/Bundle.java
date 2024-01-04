@@ -30,31 +30,31 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The price in US dollars (e.g., <code>5.0</code>) of the bundle.
+     * The price in US dollars (<code>5.0</code>) of the bundle.
      * </p>
      */
     private Float price;
     /**
      * <p>
-     * The number of vCPUs included in the bundle (e.g., <code>2</code>).
+     * The number of vCPUs included in the bundle (<code>2</code>).
      * </p>
      */
     private Integer cpuCount;
     /**
      * <p>
-     * The size of the SSD (e.g., <code>30</code>).
+     * The size of the SSD (<code>30</code>).
      * </p>
      */
     private Integer diskSizeInGb;
     /**
      * <p>
-     * The bundle ID (e.g., <code>micro_1_0</code>).
+     * The bundle ID (<code>micro_1_0</code>).
      * </p>
      */
     private String bundleId;
     /**
      * <p>
-     * The Amazon EC2 instance type (e.g., <code>t2.micro</code>).
+     * The Amazon EC2 instance type (<code>t2.micro</code>).
      * </p>
      */
     private String instanceType;
@@ -66,28 +66,28 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
     private Boolean isActive;
     /**
      * <p>
-     * A friendly name for the bundle (e.g., <code>Micro</code>).
+     * A friendly name for the bundle (<code>Micro</code>).
      * </p>
      */
     private String name;
     /**
      * <p>
-     * A numeric value that represents the power of the bundle (e.g., <code>500</code>). You can use the bundle's power
-     * value in conjunction with a blueprint's minimum power value to determine whether the blueprint will run on the
-     * bundle. For example, you need a bundle with a power value of 500 or more to create an instance that uses a
-     * blueprint with a minimum power value of 500.
+     * A numeric value that represents the power of the bundle (<code>500</code>). You can use the bundle's power value
+     * in conjunction with a blueprint's minimum power value to determine whether the blueprint will run on the bundle.
+     * For example, you need a bundle with a power value of 500 or more to create an instance that uses a blueprint with
+     * a minimum power value of 500.
      * </p>
      */
     private Integer power;
     /**
      * <p>
-     * The amount of RAM in GB (e.g., <code>2.0</code>).
+     * The amount of RAM in GB (<code>2.0</code>).
      * </p>
      */
     private Float ramSizeInGb;
     /**
      * <p>
-     * The data transfer rate per month in GB (e.g., <code>2000</code>).
+     * The data transfer rate per month in GB (<code>2000</code>).
      * </p>
      */
     private Integer transferPerMonthInGb;
@@ -113,11 +113,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The price in US dollars (e.g., <code>5.0</code>) of the bundle.
+     * The price in US dollars (<code>5.0</code>) of the bundle.
      * </p>
      * 
      * @param price
-     *        The price in US dollars (e.g., <code>5.0</code>) of the bundle.
+     *        The price in US dollars (<code>5.0</code>) of the bundle.
      */
 
     public void setPrice(Float price) {
@@ -126,10 +126,10 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The price in US dollars (e.g., <code>5.0</code>) of the bundle.
+     * The price in US dollars (<code>5.0</code>) of the bundle.
      * </p>
      * 
-     * @return The price in US dollars (e.g., <code>5.0</code>) of the bundle.
+     * @return The price in US dollars (<code>5.0</code>) of the bundle.
      */
 
     public Float getPrice() {
@@ -138,11 +138,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The price in US dollars (e.g., <code>5.0</code>) of the bundle.
+     * The price in US dollars (<code>5.0</code>) of the bundle.
      * </p>
      * 
      * @param price
-     *        The price in US dollars (e.g., <code>5.0</code>) of the bundle.
+     *        The price in US dollars (<code>5.0</code>) of the bundle.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -153,11 +153,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of vCPUs included in the bundle (e.g., <code>2</code>).
+     * The number of vCPUs included in the bundle (<code>2</code>).
      * </p>
      * 
      * @param cpuCount
-     *        The number of vCPUs included in the bundle (e.g., <code>2</code>).
+     *        The number of vCPUs included in the bundle (<code>2</code>).
      */
 
     public void setCpuCount(Integer cpuCount) {
@@ -166,10 +166,10 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of vCPUs included in the bundle (e.g., <code>2</code>).
+     * The number of vCPUs included in the bundle (<code>2</code>).
      * </p>
      * 
-     * @return The number of vCPUs included in the bundle (e.g., <code>2</code>).
+     * @return The number of vCPUs included in the bundle (<code>2</code>).
      */
 
     public Integer getCpuCount() {
@@ -178,11 +178,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of vCPUs included in the bundle (e.g., <code>2</code>).
+     * The number of vCPUs included in the bundle (<code>2</code>).
      * </p>
      * 
      * @param cpuCount
-     *        The number of vCPUs included in the bundle (e.g., <code>2</code>).
+     *        The number of vCPUs included in the bundle (<code>2</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -193,11 +193,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The size of the SSD (e.g., <code>30</code>).
+     * The size of the SSD (<code>30</code>).
      * </p>
      * 
      * @param diskSizeInGb
-     *        The size of the SSD (e.g., <code>30</code>).
+     *        The size of the SSD (<code>30</code>).
      */
 
     public void setDiskSizeInGb(Integer diskSizeInGb) {
@@ -206,10 +206,10 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The size of the SSD (e.g., <code>30</code>).
+     * The size of the SSD (<code>30</code>).
      * </p>
      * 
-     * @return The size of the SSD (e.g., <code>30</code>).
+     * @return The size of the SSD (<code>30</code>).
      */
 
     public Integer getDiskSizeInGb() {
@@ -218,11 +218,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The size of the SSD (e.g., <code>30</code>).
+     * The size of the SSD (<code>30</code>).
      * </p>
      * 
      * @param diskSizeInGb
-     *        The size of the SSD (e.g., <code>30</code>).
+     *        The size of the SSD (<code>30</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,11 +233,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle ID (e.g., <code>micro_1_0</code>).
+     * The bundle ID (<code>micro_1_0</code>).
      * </p>
      * 
      * @param bundleId
-     *        The bundle ID (e.g., <code>micro_1_0</code>).
+     *        The bundle ID (<code>micro_1_0</code>).
      */
 
     public void setBundleId(String bundleId) {
@@ -246,10 +246,10 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle ID (e.g., <code>micro_1_0</code>).
+     * The bundle ID (<code>micro_1_0</code>).
      * </p>
      * 
-     * @return The bundle ID (e.g., <code>micro_1_0</code>).
+     * @return The bundle ID (<code>micro_1_0</code>).
      */
 
     public String getBundleId() {
@@ -258,11 +258,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle ID (e.g., <code>micro_1_0</code>).
+     * The bundle ID (<code>micro_1_0</code>).
      * </p>
      * 
      * @param bundleId
-     *        The bundle ID (e.g., <code>micro_1_0</code>).
+     *        The bundle ID (<code>micro_1_0</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,11 +273,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon EC2 instance type (e.g., <code>t2.micro</code>).
+     * The Amazon EC2 instance type (<code>t2.micro</code>).
      * </p>
      * 
      * @param instanceType
-     *        The Amazon EC2 instance type (e.g., <code>t2.micro</code>).
+     *        The Amazon EC2 instance type (<code>t2.micro</code>).
      */
 
     public void setInstanceType(String instanceType) {
@@ -286,10 +286,10 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon EC2 instance type (e.g., <code>t2.micro</code>).
+     * The Amazon EC2 instance type (<code>t2.micro</code>).
      * </p>
      * 
-     * @return The Amazon EC2 instance type (e.g., <code>t2.micro</code>).
+     * @return The Amazon EC2 instance type (<code>t2.micro</code>).
      */
 
     public String getInstanceType() {
@@ -298,11 +298,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon EC2 instance type (e.g., <code>t2.micro</code>).
+     * The Amazon EC2 instance type (<code>t2.micro</code>).
      * </p>
      * 
      * @param instanceType
-     *        The Amazon EC2 instance type (e.g., <code>t2.micro</code>).
+     *        The Amazon EC2 instance type (<code>t2.micro</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -365,11 +365,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A friendly name for the bundle (e.g., <code>Micro</code>).
+     * A friendly name for the bundle (<code>Micro</code>).
      * </p>
      * 
      * @param name
-     *        A friendly name for the bundle (e.g., <code>Micro</code>).
+     *        A friendly name for the bundle (<code>Micro</code>).
      */
 
     public void setName(String name) {
@@ -378,10 +378,10 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A friendly name for the bundle (e.g., <code>Micro</code>).
+     * A friendly name for the bundle (<code>Micro</code>).
      * </p>
      * 
-     * @return A friendly name for the bundle (e.g., <code>Micro</code>).
+     * @return A friendly name for the bundle (<code>Micro</code>).
      */
 
     public String getName() {
@@ -390,11 +390,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A friendly name for the bundle (e.g., <code>Micro</code>).
+     * A friendly name for the bundle (<code>Micro</code>).
      * </p>
      * 
      * @param name
-     *        A friendly name for the bundle (e.g., <code>Micro</code>).
+     *        A friendly name for the bundle (<code>Micro</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -405,17 +405,17 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A numeric value that represents the power of the bundle (e.g., <code>500</code>). You can use the bundle's power
-     * value in conjunction with a blueprint's minimum power value to determine whether the blueprint will run on the
-     * bundle. For example, you need a bundle with a power value of 500 or more to create an instance that uses a
-     * blueprint with a minimum power value of 500.
+     * A numeric value that represents the power of the bundle (<code>500</code>). You can use the bundle's power value
+     * in conjunction with a blueprint's minimum power value to determine whether the blueprint will run on the bundle.
+     * For example, you need a bundle with a power value of 500 or more to create an instance that uses a blueprint with
+     * a minimum power value of 500.
      * </p>
      * 
      * @param power
-     *        A numeric value that represents the power of the bundle (e.g., <code>500</code>). You can use the bundle's
-     *        power value in conjunction with a blueprint's minimum power value to determine whether the blueprint will
-     *        run on the bundle. For example, you need a bundle with a power value of 500 or more to create an instance
-     *        that uses a blueprint with a minimum power value of 500.
+     *        A numeric value that represents the power of the bundle (<code>500</code>). You can use the bundle's power
+     *        value in conjunction with a blueprint's minimum power value to determine whether the blueprint will run on
+     *        the bundle. For example, you need a bundle with a power value of 500 or more to create an instance that
+     *        uses a blueprint with a minimum power value of 500.
      */
 
     public void setPower(Integer power) {
@@ -424,16 +424,16 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A numeric value that represents the power of the bundle (e.g., <code>500</code>). You can use the bundle's power
-     * value in conjunction with a blueprint's minimum power value to determine whether the blueprint will run on the
-     * bundle. For example, you need a bundle with a power value of 500 or more to create an instance that uses a
-     * blueprint with a minimum power value of 500.
+     * A numeric value that represents the power of the bundle (<code>500</code>). You can use the bundle's power value
+     * in conjunction with a blueprint's minimum power value to determine whether the blueprint will run on the bundle.
+     * For example, you need a bundle with a power value of 500 or more to create an instance that uses a blueprint with
+     * a minimum power value of 500.
      * </p>
      * 
-     * @return A numeric value that represents the power of the bundle (e.g., <code>500</code>). You can use the
-     *         bundle's power value in conjunction with a blueprint's minimum power value to determine whether the
-     *         blueprint will run on the bundle. For example, you need a bundle with a power value of 500 or more to
-     *         create an instance that uses a blueprint with a minimum power value of 500.
+     * @return A numeric value that represents the power of the bundle (<code>500</code>). You can use the bundle's
+     *         power value in conjunction with a blueprint's minimum power value to determine whether the blueprint will
+     *         run on the bundle. For example, you need a bundle with a power value of 500 or more to create an instance
+     *         that uses a blueprint with a minimum power value of 500.
      */
 
     public Integer getPower() {
@@ -442,17 +442,17 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A numeric value that represents the power of the bundle (e.g., <code>500</code>). You can use the bundle's power
-     * value in conjunction with a blueprint's minimum power value to determine whether the blueprint will run on the
-     * bundle. For example, you need a bundle with a power value of 500 or more to create an instance that uses a
-     * blueprint with a minimum power value of 500.
+     * A numeric value that represents the power of the bundle (<code>500</code>). You can use the bundle's power value
+     * in conjunction with a blueprint's minimum power value to determine whether the blueprint will run on the bundle.
+     * For example, you need a bundle with a power value of 500 or more to create an instance that uses a blueprint with
+     * a minimum power value of 500.
      * </p>
      * 
      * @param power
-     *        A numeric value that represents the power of the bundle (e.g., <code>500</code>). You can use the bundle's
-     *        power value in conjunction with a blueprint's minimum power value to determine whether the blueprint will
-     *        run on the bundle. For example, you need a bundle with a power value of 500 or more to create an instance
-     *        that uses a blueprint with a minimum power value of 500.
+     *        A numeric value that represents the power of the bundle (<code>500</code>). You can use the bundle's power
+     *        value in conjunction with a blueprint's minimum power value to determine whether the blueprint will run on
+     *        the bundle. For example, you need a bundle with a power value of 500 or more to create an instance that
+     *        uses a blueprint with a minimum power value of 500.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -463,11 +463,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The amount of RAM in GB (e.g., <code>2.0</code>).
+     * The amount of RAM in GB (<code>2.0</code>).
      * </p>
      * 
      * @param ramSizeInGb
-     *        The amount of RAM in GB (e.g., <code>2.0</code>).
+     *        The amount of RAM in GB (<code>2.0</code>).
      */
 
     public void setRamSizeInGb(Float ramSizeInGb) {
@@ -476,10 +476,10 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The amount of RAM in GB (e.g., <code>2.0</code>).
+     * The amount of RAM in GB (<code>2.0</code>).
      * </p>
      * 
-     * @return The amount of RAM in GB (e.g., <code>2.0</code>).
+     * @return The amount of RAM in GB (<code>2.0</code>).
      */
 
     public Float getRamSizeInGb() {
@@ -488,11 +488,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The amount of RAM in GB (e.g., <code>2.0</code>).
+     * The amount of RAM in GB (<code>2.0</code>).
      * </p>
      * 
      * @param ramSizeInGb
-     *        The amount of RAM in GB (e.g., <code>2.0</code>).
+     *        The amount of RAM in GB (<code>2.0</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -503,11 +503,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data transfer rate per month in GB (e.g., <code>2000</code>).
+     * The data transfer rate per month in GB (<code>2000</code>).
      * </p>
      * 
      * @param transferPerMonthInGb
-     *        The data transfer rate per month in GB (e.g., <code>2000</code>).
+     *        The data transfer rate per month in GB (<code>2000</code>).
      */
 
     public void setTransferPerMonthInGb(Integer transferPerMonthInGb) {
@@ -516,10 +516,10 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data transfer rate per month in GB (e.g., <code>2000</code>).
+     * The data transfer rate per month in GB (<code>2000</code>).
      * </p>
      * 
-     * @return The data transfer rate per month in GB (e.g., <code>2000</code>).
+     * @return The data transfer rate per month in GB (<code>2000</code>).
      */
 
     public Integer getTransferPerMonthInGb() {
@@ -528,11 +528,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data transfer rate per month in GB (e.g., <code>2000</code>).
+     * The data transfer rate per month in GB (<code>2000</code>).
      * </p>
      * 
      * @param transferPerMonthInGb
-     *        The data transfer rate per month in GB (e.g., <code>2000</code>).
+     *        The data transfer rate per month in GB (<code>2000</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -58,6 +58,16 @@ public class AutoScalingGroupProviderUpdate implements Serializable, Cloneable, 
      * </p>
      */
     private String managedTerminationProtection;
+    /**
+     * <p>
+     * The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
+     * manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity provider.
+     * </p>
+     * <p>
+     * The default is <code>ENABLED</code>.
+     * </p>
+     */
+    private String managedDraining;
 
     /**
      * <p>
@@ -299,6 +309,97 @@ public class AutoScalingGroupProviderUpdate implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
+     * manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity provider.
+     * </p>
+     * <p>
+     * The default is <code>ENABLED</code>.
+     * </p>
+     * 
+     * @param managedDraining
+     *        The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
+     *        manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity
+     *        provider.</p>
+     *        <p>
+     *        The default is <code>ENABLED</code>.
+     * @see ManagedDraining
+     */
+
+    public void setManagedDraining(String managedDraining) {
+        this.managedDraining = managedDraining;
+    }
+
+    /**
+     * <p>
+     * The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
+     * manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity provider.
+     * </p>
+     * <p>
+     * The default is <code>ENABLED</code>.
+     * </p>
+     * 
+     * @return The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon
+     *         ECS manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity
+     *         provider.</p>
+     *         <p>
+     *         The default is <code>ENABLED</code>.
+     * @see ManagedDraining
+     */
+
+    public String getManagedDraining() {
+        return this.managedDraining;
+    }
+
+    /**
+     * <p>
+     * The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
+     * manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity provider.
+     * </p>
+     * <p>
+     * The default is <code>ENABLED</code>.
+     * </p>
+     * 
+     * @param managedDraining
+     *        The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
+     *        manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity
+     *        provider.</p>
+     *        <p>
+     *        The default is <code>ENABLED</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ManagedDraining
+     */
+
+    public AutoScalingGroupProviderUpdate withManagedDraining(String managedDraining) {
+        setManagedDraining(managedDraining);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
+     * manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity provider.
+     * </p>
+     * <p>
+     * The default is <code>ENABLED</code>.
+     * </p>
+     * 
+     * @param managedDraining
+     *        The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
+     *        manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity
+     *        provider.</p>
+     *        <p>
+     *        The default is <code>ENABLED</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ManagedDraining
+     */
+
+    public AutoScalingGroupProviderUpdate withManagedDraining(ManagedDraining managedDraining) {
+        this.managedDraining = managedDraining.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -313,7 +414,9 @@ public class AutoScalingGroupProviderUpdate implements Serializable, Cloneable, 
         if (getManagedScaling() != null)
             sb.append("ManagedScaling: ").append(getManagedScaling()).append(",");
         if (getManagedTerminationProtection() != null)
-            sb.append("ManagedTerminationProtection: ").append(getManagedTerminationProtection());
+            sb.append("ManagedTerminationProtection: ").append(getManagedTerminationProtection()).append(",");
+        if (getManagedDraining() != null)
+            sb.append("ManagedDraining: ").append(getManagedDraining());
         sb.append("}");
         return sb.toString();
     }
@@ -336,6 +439,10 @@ public class AutoScalingGroupProviderUpdate implements Serializable, Cloneable, 
             return false;
         if (other.getManagedTerminationProtection() != null && other.getManagedTerminationProtection().equals(this.getManagedTerminationProtection()) == false)
             return false;
+        if (other.getManagedDraining() == null ^ this.getManagedDraining() == null)
+            return false;
+        if (other.getManagedDraining() != null && other.getManagedDraining().equals(this.getManagedDraining()) == false)
+            return false;
         return true;
     }
 
@@ -346,6 +453,7 @@ public class AutoScalingGroupProviderUpdate implements Serializable, Cloneable, 
 
         hashCode = prime * hashCode + ((getManagedScaling() == null) ? 0 : getManagedScaling().hashCode());
         hashCode = prime * hashCode + ((getManagedTerminationProtection() == null) ? 0 : getManagedTerminationProtection().hashCode());
+        hashCode = prime * hashCode + ((getManagedDraining() == null) ? 0 : getManagedDraining().hashCode());
         return hashCode;
     }
 

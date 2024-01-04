@@ -61,7 +61,7 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
     private ResourceLocation location;
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>Disk</code>).
+     * The Lightsail resource type (<code>Disk</code>).
      * </p>
      */
     private String resourceType;
@@ -123,12 +123,12 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
     private Boolean isAttached;
     /**
      * <p>
-     * (Deprecated) The attachment state of the disk.
+     * (Discontinued) The attachment state of the disk.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 14, 2017, this parameter returned <code>attached</code> for system disks in the API
-     * response. It is now deprecated, but still included in the response. Use <code>isAttached</code> instead.
+     * response. It is now discontinued, but still included in the response. Use <code>isAttached</code> instead.
      * </p>
      * </note>
      */
@@ -136,12 +136,12 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
     private String attachmentState;
     /**
      * <p>
-     * (Deprecated) The number of GB in use by the disk.
+     * (Discontinued) The number of GB in use by the disk.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 14, 2017, this parameter was not included in the API response. It is now
-     * deprecated.
+     * discontinued.
      * </p>
      * </note>
      */
@@ -370,11 +370,11 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>Disk</code>).
+     * The Lightsail resource type (<code>Disk</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>Disk</code>).
+     *        The Lightsail resource type (<code>Disk</code>).
      * @see ResourceType
      */
 
@@ -384,10 +384,10 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>Disk</code>).
+     * The Lightsail resource type (<code>Disk</code>).
      * </p>
      * 
-     * @return The Lightsail resource type (e.g., <code>Disk</code>).
+     * @return The Lightsail resource type (<code>Disk</code>).
      * @see ResourceType
      */
 
@@ -397,11 +397,11 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>Disk</code>).
+     * The Lightsail resource type (<code>Disk</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>Disk</code>).
+     *        The Lightsail resource type (<code>Disk</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -413,11 +413,11 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>Disk</code>).
+     * The Lightsail resource type (<code>Disk</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>Disk</code>).
+     *        The Lightsail resource type (<code>Disk</code>).
      * @see ResourceType
      */
 
@@ -427,11 +427,11 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>Disk</code>).
+     * The Lightsail resource type (<code>Disk</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>Disk</code>).
+     *        The Lightsail resource type (<code>Disk</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -936,20 +936,20 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * (Deprecated) The attachment state of the disk.
+     * (Discontinued) The attachment state of the disk.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 14, 2017, this parameter returned <code>attached</code> for system disks in the API
-     * response. It is now deprecated, but still included in the response. Use <code>isAttached</code> instead.
+     * response. It is now discontinued, but still included in the response. Use <code>isAttached</code> instead.
      * </p>
      * </note>
      * 
      * @param attachmentState
-     *        (Deprecated) The attachment state of the disk.</p> <note>
+     *        (Discontinued) The attachment state of the disk.</p> <note>
      *        <p>
      *        In releases prior to November 14, 2017, this parameter returned <code>attached</code> for system disks in
-     *        the API response. It is now deprecated, but still included in the response. Use <code>isAttached</code>
+     *        the API response. It is now discontinued, but still included in the response. Use <code>isAttached</code>
      *        instead.
      *        </p>
      */
@@ -960,19 +960,19 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * (Deprecated) The attachment state of the disk.
+     * (Discontinued) The attachment state of the disk.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 14, 2017, this parameter returned <code>attached</code> for system disks in the API
-     * response. It is now deprecated, but still included in the response. Use <code>isAttached</code> instead.
+     * response. It is now discontinued, but still included in the response. Use <code>isAttached</code> instead.
      * </p>
      * </note>
      * 
-     * @return (Deprecated) The attachment state of the disk.</p> <note>
+     * @return (Discontinued) The attachment state of the disk.</p> <note>
      *         <p>
      *         In releases prior to November 14, 2017, this parameter returned <code>attached</code> for system disks in
-     *         the API response. It is now deprecated, but still included in the response. Use <code>isAttached</code>
+     *         the API response. It is now discontinued, but still included in the response. Use <code>isAttached</code>
      *         instead.
      *         </p>
      */
@@ -983,20 +983,20 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * (Deprecated) The attachment state of the disk.
+     * (Discontinued) The attachment state of the disk.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 14, 2017, this parameter returned <code>attached</code> for system disks in the API
-     * response. It is now deprecated, but still included in the response. Use <code>isAttached</code> instead.
+     * response. It is now discontinued, but still included in the response. Use <code>isAttached</code> instead.
      * </p>
      * </note>
      * 
      * @param attachmentState
-     *        (Deprecated) The attachment state of the disk.</p> <note>
+     *        (Discontinued) The attachment state of the disk.</p> <note>
      *        <p>
      *        In releases prior to November 14, 2017, this parameter returned <code>attached</code> for system disks in
-     *        the API response. It is now deprecated, but still included in the response. Use <code>isAttached</code>
+     *        the API response. It is now discontinued, but still included in the response. Use <code>isAttached</code>
      *        instead.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1009,20 +1009,20 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * (Deprecated) The number of GB in use by the disk.
+     * (Discontinued) The number of GB in use by the disk.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 14, 2017, this parameter was not included in the API response. It is now
-     * deprecated.
+     * discontinued.
      * </p>
      * </note>
      * 
      * @param gbInUse
-     *        (Deprecated) The number of GB in use by the disk.</p> <note>
+     *        (Discontinued) The number of GB in use by the disk.</p> <note>
      *        <p>
      *        In releases prior to November 14, 2017, this parameter was not included in the API response. It is now
-     *        deprecated.
+     *        discontinued.
      *        </p>
      */
     @Deprecated
@@ -1032,19 +1032,19 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * (Deprecated) The number of GB in use by the disk.
+     * (Discontinued) The number of GB in use by the disk.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 14, 2017, this parameter was not included in the API response. It is now
-     * deprecated.
+     * discontinued.
      * </p>
      * </note>
      * 
-     * @return (Deprecated) The number of GB in use by the disk.</p> <note>
+     * @return (Discontinued) The number of GB in use by the disk.</p> <note>
      *         <p>
      *         In releases prior to November 14, 2017, this parameter was not included in the API response. It is now
-     *         deprecated.
+     *         discontinued.
      *         </p>
      */
     @Deprecated
@@ -1054,20 +1054,20 @@ public class Disk implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * (Deprecated) The number of GB in use by the disk.
+     * (Discontinued) The number of GB in use by the disk.
      * </p>
      * <note>
      * <p>
      * In releases prior to November 14, 2017, this parameter was not included in the API response. It is now
-     * deprecated.
+     * discontinued.
      * </p>
      * </note>
      * 
      * @param gbInUse
-     *        (Deprecated) The number of GB in use by the disk.</p> <note>
+     *        (Discontinued) The number of GB in use by the disk.</p> <note>
      *        <p>
      *        In releases prior to November 14, 2017, this parameter was not included in the API response. It is now
-     *        deprecated.
+     *        discontinued.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

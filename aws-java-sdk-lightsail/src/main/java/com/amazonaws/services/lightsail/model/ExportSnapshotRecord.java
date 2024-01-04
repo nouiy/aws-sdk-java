@@ -54,7 +54,7 @@ public class ExportSnapshotRecord implements Serializable, Cloneable, Structured
     private ResourceLocation location;
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * </p>
      */
     private String resourceType;
@@ -239,11 +239,11 @@ public class ExportSnapshotRecord implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     *        The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * @see ResourceType
      */
 
@@ -253,10 +253,10 @@ public class ExportSnapshotRecord implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * </p>
      * 
-     * @return The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * @return The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * @see ResourceType
      */
 
@@ -266,11 +266,11 @@ public class ExportSnapshotRecord implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     *        The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -282,11 +282,11 @@ public class ExportSnapshotRecord implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     *        The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */

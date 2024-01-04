@@ -68,7 +68,7 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
     private ResourceLocation location;
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>Distribution</code>).
+     * The Lightsail resource type (<code>Distribution</code>).
      * </p>
      */
     private String resourceType;
@@ -417,11 +417,11 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>Distribution</code>).
+     * The Lightsail resource type (<code>Distribution</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>Distribution</code>).
+     *        The Lightsail resource type (<code>Distribution</code>).
      * @see ResourceType
      */
 
@@ -431,10 +431,10 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>Distribution</code>).
+     * The Lightsail resource type (<code>Distribution</code>).
      * </p>
      * 
-     * @return The Lightsail resource type (e.g., <code>Distribution</code>).
+     * @return The Lightsail resource type (<code>Distribution</code>).
      * @see ResourceType
      */
 
@@ -444,11 +444,11 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>Distribution</code>).
+     * The Lightsail resource type (<code>Distribution</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>Distribution</code>).
+     *        The Lightsail resource type (<code>Distribution</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -460,11 +460,11 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>Distribution</code>).
+     * The Lightsail resource type (<code>Distribution</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>Distribution</code>).
+     *        The Lightsail resource type (<code>Distribution</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */

@@ -99,7 +99,7 @@ public class ContactMethod implements Serializable, Cloneable, StructuredPojo {
     private ResourceLocation location;
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ContactMethod</code>).
+     * The Lightsail resource type of the contact method.
      * </p>
      */
     private String resourceType;
@@ -602,11 +602,11 @@ public class ContactMethod implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ContactMethod</code>).
+     * The Lightsail resource type of the contact method.
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>ContactMethod</code>).
+     *        The Lightsail resource type of the contact method.
      * @see ResourceType
      */
 
@@ -616,10 +616,10 @@ public class ContactMethod implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ContactMethod</code>).
+     * The Lightsail resource type of the contact method.
      * </p>
      * 
-     * @return The Lightsail resource type (e.g., <code>ContactMethod</code>).
+     * @return The Lightsail resource type of the contact method.
      * @see ResourceType
      */
 
@@ -629,11 +629,11 @@ public class ContactMethod implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ContactMethod</code>).
+     * The Lightsail resource type of the contact method.
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>ContactMethod</code>).
+     *        The Lightsail resource type of the contact method.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -645,11 +645,11 @@ public class ContactMethod implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ContactMethod</code>).
+     * The Lightsail resource type of the contact method.
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>ContactMethod</code>).
+     *        The Lightsail resource type of the contact method.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */

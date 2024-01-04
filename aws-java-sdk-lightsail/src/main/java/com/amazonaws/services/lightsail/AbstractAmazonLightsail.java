@@ -653,6 +653,11 @@ public class AbstractAmazonLightsail implements AmazonLightsail {
     }
 
     @Override
+    public GetSetupHistoryResult getSetupHistory(GetSetupHistoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetStaticIpResult getStaticIp(GetStaticIpRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -729,6 +734,11 @@ public class AbstractAmazonLightsail implements AmazonLightsail {
 
     @Override
     public SetResourceAccessForBucketResult setResourceAccessForBucket(SetResourceAccessForBucketRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SetupInstanceHttpsResult setupInstanceHttps(SetupInstanceHttpsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

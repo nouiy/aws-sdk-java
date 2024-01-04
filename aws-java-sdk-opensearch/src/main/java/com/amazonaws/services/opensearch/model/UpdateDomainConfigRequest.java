@@ -106,7 +106,9 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
     private String accessPolicies;
     /**
      * <p>
-     * The type of IP addresses supported by the endpoint for the domain.
+     * Specify either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources across
+     * IPv4 and IPv6 address types, and is the recommended option. If your IP address type is currently set to dual
+     * stack, you can't change it.
      * </p>
      */
     private String iPAddressType;
@@ -727,11 +729,15 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The type of IP addresses supported by the endpoint for the domain.
+     * Specify either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources across
+     * IPv4 and IPv6 address types, and is the recommended option. If your IP address type is currently set to dual
+     * stack, you can't change it.
      * </p>
      * 
      * @param iPAddressType
-     *        The type of IP addresses supported by the endpoint for the domain.
+     *        Specify either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources
+     *        across IPv4 and IPv6 address types, and is the recommended option. If your IP address type is currently
+     *        set to dual stack, you can't change it.
      * @see IPAddressType
      */
 
@@ -741,10 +747,14 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The type of IP addresses supported by the endpoint for the domain.
+     * Specify either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources across
+     * IPv4 and IPv6 address types, and is the recommended option. If your IP address type is currently set to dual
+     * stack, you can't change it.
      * </p>
      * 
-     * @return The type of IP addresses supported by the endpoint for the domain.
+     * @return Specify either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain
+     *         resources across IPv4 and IPv6 address types, and is the recommended option. If your IP address type is
+     *         currently set to dual stack, you can't change it.
      * @see IPAddressType
      */
 
@@ -754,11 +764,15 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The type of IP addresses supported by the endpoint for the domain.
+     * Specify either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources across
+     * IPv4 and IPv6 address types, and is the recommended option. If your IP address type is currently set to dual
+     * stack, you can't change it.
      * </p>
      * 
      * @param iPAddressType
-     *        The type of IP addresses supported by the endpoint for the domain.
+     *        Specify either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources
+     *        across IPv4 and IPv6 address types, and is the recommended option. If your IP address type is currently
+     *        set to dual stack, you can't change it.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IPAddressType
      */
@@ -770,11 +784,15 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The type of IP addresses supported by the endpoint for the domain.
+     * Specify either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources across
+     * IPv4 and IPv6 address types, and is the recommended option. If your IP address type is currently set to dual
+     * stack, you can't change it.
      * </p>
      * 
      * @param iPAddressType
-     *        The type of IP addresses supported by the endpoint for the domain.
+     *        Specify either dual stack or IPv4 as your IP address type. Dual stack allows you to share domain resources
+     *        across IPv4 and IPv6 address types, and is the recommended option. If your IP address type is currently
+     *        set to dual stack, you can't change it.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IPAddressType
      */

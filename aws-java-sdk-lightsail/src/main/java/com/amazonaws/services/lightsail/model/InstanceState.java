@@ -36,7 +36,7 @@ public class InstanceState implements Serializable, Cloneable, StructuredPojo {
     private Integer code;
     /**
      * <p>
-     * The state of the instance (e.g., <code>running</code> or <code>pending</code>).
+     * The state of the instance (<code>running</code> or <code>pending</code>).
      * </p>
      */
     private String name;
@@ -83,11 +83,11 @@ public class InstanceState implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The state of the instance (e.g., <code>running</code> or <code>pending</code>).
+     * The state of the instance (<code>running</code> or <code>pending</code>).
      * </p>
      * 
      * @param name
-     *        The state of the instance (e.g., <code>running</code> or <code>pending</code>).
+     *        The state of the instance (<code>running</code> or <code>pending</code>).
      */
 
     public void setName(String name) {
@@ -96,10 +96,10 @@ public class InstanceState implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The state of the instance (e.g., <code>running</code> or <code>pending</code>).
+     * The state of the instance (<code>running</code> or <code>pending</code>).
      * </p>
      * 
-     * @return The state of the instance (e.g., <code>running</code> or <code>pending</code>).
+     * @return The state of the instance (<code>running</code> or <code>pending</code>).
      */
 
     public String getName() {
@@ -108,11 +108,11 @@ public class InstanceState implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The state of the instance (e.g., <code>running</code> or <code>pending</code>).
+     * The state of the instance (<code>running</code> or <code>pending</code>).
      * </p>
      * 
      * @param name
-     *        The state of the instance (e.g., <code>running</code> or <code>pending</code>).
+     *        The state of the instance (<code>running</code> or <code>pending</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

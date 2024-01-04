@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum TLSSecurityPolicy {
 
     PolicyMinTLS10201907("Policy-Min-TLS-1-0-2019-07"),
-    PolicyMinTLS12201907("Policy-Min-TLS-1-2-2019-07");
+    PolicyMinTLS12201907("Policy-Min-TLS-1-2-2019-07"),
+    PolicyMinTLS12PFS202310("Policy-Min-TLS-1-2-PFS-2023-10");
 
     private String value;
 

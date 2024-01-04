@@ -397,6 +397,9 @@ public interface AmazonECSAsync extends AmazonECS {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS deployment
      * types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
+     * <p>
+     * You can create a maximum of 5 tasks sets for a deployment.
+     * </p>
      * 
      * @param createTaskSetRequest
      * @return A Java Future containing the result of the CreateTaskSet operation returned by the service.
@@ -412,6 +415,9 @@ public interface AmazonECSAsync extends AmazonECS {
      * <code>EXTERNAL</code> deployment controller type. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS deployment
      * types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * You can create a maximum of 5 tasks sets for a deployment.
      * </p>
      * 
      * @param createTaskSetRequest

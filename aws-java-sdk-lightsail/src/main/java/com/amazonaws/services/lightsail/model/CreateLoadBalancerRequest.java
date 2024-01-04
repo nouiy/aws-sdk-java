@@ -40,7 +40,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The path you provided to perform the load balancer health check. If you didn't specify a health check path,
-     * Lightsail uses the root path of your website (e.g., <code>"/"</code>).
+     * Lightsail uses the root path of your website (<code>"/"</code>).
      * </p>
      * <p>
      * You may want to specify a custom health check path other than the root of your application if your home page
@@ -60,7 +60,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     private String certificateName;
     /**
      * <p>
-     * The domain name with which your certificate is associated (e.g., <code>example.com</code>).
+     * The domain name with which your certificate is associated (<code>example.com</code>).
      * </p>
      * <p>
      * If you specify <code>certificateDomainName</code>, then <code>certificateName</code> is required (and
@@ -70,7 +70,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     private String certificateDomainName;
     /**
      * <p>
-     * The optional alternative domains and subdomains to use with your SSL/TLS certificate (e.g.,
+     * The optional alternative domains and subdomains to use with your SSL/TLS certificate (
      * <code>www.example.com</code>, <code>example.com</code>, <code>m.example.com</code>, <code>blog.example.com</code>
      * ).
      * </p>
@@ -198,7 +198,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The path you provided to perform the load balancer health check. If you didn't specify a health check path,
-     * Lightsail uses the root path of your website (e.g., <code>"/"</code>).
+     * Lightsail uses the root path of your website (<code>"/"</code>).
      * </p>
      * <p>
      * You may want to specify a custom health check path other than the root of your application if your home page
@@ -207,7 +207,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param healthCheckPath
      *        The path you provided to perform the load balancer health check. If you didn't specify a health check
-     *        path, Lightsail uses the root path of your website (e.g., <code>"/"</code>).</p>
+     *        path, Lightsail uses the root path of your website (<code>"/"</code>).</p>
      *        <p>
      *        You may want to specify a custom health check path other than the root of your application if your home
      *        page loads slowly or has a lot of media or scripting on it.
@@ -220,7 +220,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The path you provided to perform the load balancer health check. If you didn't specify a health check path,
-     * Lightsail uses the root path of your website (e.g., <code>"/"</code>).
+     * Lightsail uses the root path of your website (<code>"/"</code>).
      * </p>
      * <p>
      * You may want to specify a custom health check path other than the root of your application if your home page
@@ -228,7 +228,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @return The path you provided to perform the load balancer health check. If you didn't specify a health check
-     *         path, Lightsail uses the root path of your website (e.g., <code>"/"</code>).</p>
+     *         path, Lightsail uses the root path of your website (<code>"/"</code>).</p>
      *         <p>
      *         You may want to specify a custom health check path other than the root of your application if your home
      *         page loads slowly or has a lot of media or scripting on it.
@@ -241,7 +241,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The path you provided to perform the load balancer health check. If you didn't specify a health check path,
-     * Lightsail uses the root path of your website (e.g., <code>"/"</code>).
+     * Lightsail uses the root path of your website (<code>"/"</code>).
      * </p>
      * <p>
      * You may want to specify a custom health check path other than the root of your application if your home page
@@ -250,7 +250,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param healthCheckPath
      *        The path you provided to perform the load balancer health check. If you didn't specify a health check
-     *        path, Lightsail uses the root path of your website (e.g., <code>"/"</code>).</p>
+     *        path, Lightsail uses the root path of your website (<code>"/"</code>).</p>
      *        <p>
      *        You may want to specify a custom health check path other than the root of your application if your home
      *        page loads slowly or has a lot of media or scripting on it.
@@ -325,7 +325,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The domain name with which your certificate is associated (e.g., <code>example.com</code>).
+     * The domain name with which your certificate is associated (<code>example.com</code>).
      * </p>
      * <p>
      * If you specify <code>certificateDomainName</code>, then <code>certificateName</code> is required (and
@@ -333,7 +333,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param certificateDomainName
-     *        The domain name with which your certificate is associated (e.g., <code>example.com</code>).</p>
+     *        The domain name with which your certificate is associated (<code>example.com</code>).</p>
      *        <p>
      *        If you specify <code>certificateDomainName</code>, then <code>certificateName</code> is required (and
      *        vice-versa).
@@ -345,14 +345,14 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The domain name with which your certificate is associated (e.g., <code>example.com</code>).
+     * The domain name with which your certificate is associated (<code>example.com</code>).
      * </p>
      * <p>
      * If you specify <code>certificateDomainName</code>, then <code>certificateName</code> is required (and
      * vice-versa).
      * </p>
      * 
-     * @return The domain name with which your certificate is associated (e.g., <code>example.com</code>).</p>
+     * @return The domain name with which your certificate is associated (<code>example.com</code>).</p>
      *         <p>
      *         If you specify <code>certificateDomainName</code>, then <code>certificateName</code> is required (and
      *         vice-versa).
@@ -364,7 +364,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The domain name with which your certificate is associated (e.g., <code>example.com</code>).
+     * The domain name with which your certificate is associated (<code>example.com</code>).
      * </p>
      * <p>
      * If you specify <code>certificateDomainName</code>, then <code>certificateName</code> is required (and
@@ -372,7 +372,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param certificateDomainName
-     *        The domain name with which your certificate is associated (e.g., <code>example.com</code>).</p>
+     *        The domain name with which your certificate is associated (<code>example.com</code>).</p>
      *        <p>
      *        If you specify <code>certificateDomainName</code>, then <code>certificateName</code> is required (and
      *        vice-versa).
@@ -386,12 +386,12 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The optional alternative domains and subdomains to use with your SSL/TLS certificate (e.g.,
+     * The optional alternative domains and subdomains to use with your SSL/TLS certificate (
      * <code>www.example.com</code>, <code>example.com</code>, <code>m.example.com</code>, <code>blog.example.com</code>
      * ).
      * </p>
      * 
-     * @return The optional alternative domains and subdomains to use with your SSL/TLS certificate (e.g.,
+     * @return The optional alternative domains and subdomains to use with your SSL/TLS certificate (
      *         <code>www.example.com</code>, <code>example.com</code>, <code>m.example.com</code>,
      *         <code>blog.example.com</code>).
      */
@@ -402,13 +402,13 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The optional alternative domains and subdomains to use with your SSL/TLS certificate (e.g.,
+     * The optional alternative domains and subdomains to use with your SSL/TLS certificate (
      * <code>www.example.com</code>, <code>example.com</code>, <code>m.example.com</code>, <code>blog.example.com</code>
      * ).
      * </p>
      * 
      * @param certificateAlternativeNames
-     *        The optional alternative domains and subdomains to use with your SSL/TLS certificate (e.g.,
+     *        The optional alternative domains and subdomains to use with your SSL/TLS certificate (
      *        <code>www.example.com</code>, <code>example.com</code>, <code>m.example.com</code>,
      *        <code>blog.example.com</code>).
      */
@@ -424,7 +424,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The optional alternative domains and subdomains to use with your SSL/TLS certificate (e.g.,
+     * The optional alternative domains and subdomains to use with your SSL/TLS certificate (
      * <code>www.example.com</code>, <code>example.com</code>, <code>m.example.com</code>, <code>blog.example.com</code>
      * ).
      * </p>
@@ -435,7 +435,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param certificateAlternativeNames
-     *        The optional alternative domains and subdomains to use with your SSL/TLS certificate (e.g.,
+     *        The optional alternative domains and subdomains to use with your SSL/TLS certificate (
      *        <code>www.example.com</code>, <code>example.com</code>, <code>m.example.com</code>,
      *        <code>blog.example.com</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -453,13 +453,13 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The optional alternative domains and subdomains to use with your SSL/TLS certificate (e.g.,
+     * The optional alternative domains and subdomains to use with your SSL/TLS certificate (
      * <code>www.example.com</code>, <code>example.com</code>, <code>m.example.com</code>, <code>blog.example.com</code>
      * ).
      * </p>
      * 
      * @param certificateAlternativeNames
-     *        The optional alternative domains and subdomains to use with your SSL/TLS certificate (e.g.,
+     *        The optional alternative domains and subdomains to use with your SSL/TLS certificate (
      *        <code>www.example.com</code>, <code>example.com</code>, <code>m.example.com</code>,
      *        <code>blog.example.com</code>).
      * @return Returns a reference to this object so that method calls can be chained together.

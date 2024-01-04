@@ -170,6 +170,8 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private OfflineStoreConfig offlineStoreConfig;
+
+    private ThroughputConfig throughputConfig;
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the <code>OfflineStore</code>
@@ -1126,6 +1128,32 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * @param throughputConfig
+     */
+
+    public void setThroughputConfig(ThroughputConfig throughputConfig) {
+        this.throughputConfig = throughputConfig;
+    }
+
+    /**
+     * @return
+     */
+
+    public ThroughputConfig getThroughputConfig() {
+        return this.throughputConfig;
+    }
+
+    /**
+     * @param throughputConfig
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFeatureGroupRequest withThroughputConfig(ThroughputConfig throughputConfig) {
+        setThroughputConfig(throughputConfig);
+        return this;
+    }
+
+    /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the <code>OfflineStore</code>
      * if an <code>OfflineStoreConfig</code> is provided.
@@ -1305,6 +1333,8 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
             sb.append("OnlineStoreConfig: ").append(getOnlineStoreConfig()).append(",");
         if (getOfflineStoreConfig() != null)
             sb.append("OfflineStoreConfig: ").append(getOfflineStoreConfig()).append(",");
+        if (getThroughputConfig() != null)
+            sb.append("ThroughputConfig: ").append(getThroughputConfig()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getDescription() != null)
@@ -1349,6 +1379,10 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getOfflineStoreConfig() != null && other.getOfflineStoreConfig().equals(this.getOfflineStoreConfig()) == false)
             return false;
+        if (other.getThroughputConfig() == null ^ this.getThroughputConfig() == null)
+            return false;
+        if (other.getThroughputConfig() != null && other.getThroughputConfig().equals(this.getThroughputConfig()) == false)
+            return false;
         if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
@@ -1375,6 +1409,7 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getFeatureDefinitions() == null) ? 0 : getFeatureDefinitions().hashCode());
         hashCode = prime * hashCode + ((getOnlineStoreConfig() == null) ? 0 : getOnlineStoreConfig().hashCode());
         hashCode = prime * hashCode + ((getOfflineStoreConfig() == null) ? 0 : getOfflineStoreConfig().hashCode());
+        hashCode = prime * hashCode + ((getThroughputConfig() == null) ? 0 : getThroughputConfig().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

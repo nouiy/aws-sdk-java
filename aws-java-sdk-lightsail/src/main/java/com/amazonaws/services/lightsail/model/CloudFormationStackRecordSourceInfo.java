@@ -30,7 +30,7 @@ public class CloudFormationStackRecordSourceInfo implements Serializable, Clonea
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * </p>
      */
     private String resourceType;
@@ -49,11 +49,11 @@ public class CloudFormationStackRecordSourceInfo implements Serializable, Clonea
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     *        The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * @see CloudFormationStackRecordSourceType
      */
 
@@ -63,10 +63,10 @@ public class CloudFormationStackRecordSourceInfo implements Serializable, Clonea
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * </p>
      * 
-     * @return The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * @return The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * @see CloudFormationStackRecordSourceType
      */
 
@@ -76,11 +76,11 @@ public class CloudFormationStackRecordSourceInfo implements Serializable, Clonea
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     *        The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CloudFormationStackRecordSourceType
      */
@@ -92,11 +92,11 @@ public class CloudFormationStackRecordSourceInfo implements Serializable, Clonea
 
     /**
      * <p>
-     * The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     * The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * </p>
      * 
      * @param resourceType
-     *        The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).
+     *        The Lightsail resource type (<code>ExportSnapshotRecord</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CloudFormationStackRecordSourceType
      */

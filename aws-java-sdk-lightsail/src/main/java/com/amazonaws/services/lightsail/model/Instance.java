@@ -30,13 +30,13 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name the user gave the instance (e.g., <code>Amazon_Linux-1GB-Ohio-1</code>).
+     * The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the instance (e.g.,
+     * The Amazon Resource Name (ARN) of the instance (
      * <code>arn:aws:lightsail:us-east-2:123456789101:Instance/244ad76f-8aad-4741-809f-12345EXAMPLE</code>).
      * </p>
      */
@@ -50,7 +50,7 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     private String supportCode;
     /**
      * <p>
-     * The timestamp when the instance was created (e.g., <code>1479734909.17</code>) in Unix time format.
+     * The timestamp when the instance was created (<code>1479734909.17</code>) in Unix time format.
      * </p>
      */
     private java.util.Date createdAt;
@@ -76,19 +76,19 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * The blueprint ID (e.g., <code>os_amlinux_2016_03</code>).
+     * The blueprint ID (<code>os_amlinux_2016_03</code>).
      * </p>
      */
     private String blueprintId;
     /**
      * <p>
-     * The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux</code>).
      * </p>
      */
     private String blueprintName;
     /**
      * <p>
-     * The bundle for the instance (e.g., <code>micro_1_0</code>).
+     * The bundle for the instance (<code>micro_1_0</code>).
      * </p>
      */
     private String bundleId;
@@ -145,19 +145,19 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     private InstanceNetworking networking;
     /**
      * <p>
-     * The status code and the state (e.g., <code>running</code>) for the instance.
+     * The status code and the state (<code>running</code>) for the instance.
      * </p>
      */
     private InstanceState state;
     /**
      * <p>
-     * The user name for connecting to the instance (e.g., <code>ec2-user</code>).
+     * The user name for connecting to the instance (<code>ec2-user</code>).
      * </p>
      */
     private String username;
     /**
      * <p>
-     * The name of the SSH key being used to connect to the instance (e.g., <code>LightsailDefaultKeyPair</code>).
+     * The name of the SSH key being used to connect to the instance (<code>LightsailDefaultKeyPair</code>).
      * </p>
      */
     private String sshKeyName;
@@ -170,11 +170,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name the user gave the instance (e.g., <code>Amazon_Linux-1GB-Ohio-1</code>).
+     * The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
      * </p>
      * 
      * @param name
-     *        The name the user gave the instance (e.g., <code>Amazon_Linux-1GB-Ohio-1</code>).
+     *        The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
      */
 
     public void setName(String name) {
@@ -183,10 +183,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name the user gave the instance (e.g., <code>Amazon_Linux-1GB-Ohio-1</code>).
+     * The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
      * </p>
      * 
-     * @return The name the user gave the instance (e.g., <code>Amazon_Linux-1GB-Ohio-1</code>).
+     * @return The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
      */
 
     public String getName() {
@@ -195,11 +195,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name the user gave the instance (e.g., <code>Amazon_Linux-1GB-Ohio-1</code>).
+     * The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
      * </p>
      * 
      * @param name
-     *        The name the user gave the instance (e.g., <code>Amazon_Linux-1GB-Ohio-1</code>).
+     *        The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -210,12 +210,12 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the instance (e.g.,
+     * The Amazon Resource Name (ARN) of the instance (
      * <code>arn:aws:lightsail:us-east-2:123456789101:Instance/244ad76f-8aad-4741-809f-12345EXAMPLE</code>).
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the instance (e.g.,
+     *        The Amazon Resource Name (ARN) of the instance (
      *        <code>arn:aws:lightsail:us-east-2:123456789101:Instance/244ad76f-8aad-4741-809f-12345EXAMPLE</code>).
      */
 
@@ -225,11 +225,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the instance (e.g.,
+     * The Amazon Resource Name (ARN) of the instance (
      * <code>arn:aws:lightsail:us-east-2:123456789101:Instance/244ad76f-8aad-4741-809f-12345EXAMPLE</code>).
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the instance (e.g.,
+     * @return The Amazon Resource Name (ARN) of the instance (
      *         <code>arn:aws:lightsail:us-east-2:123456789101:Instance/244ad76f-8aad-4741-809f-12345EXAMPLE</code>).
      */
 
@@ -239,12 +239,12 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the instance (e.g.,
+     * The Amazon Resource Name (ARN) of the instance (
      * <code>arn:aws:lightsail:us-east-2:123456789101:Instance/244ad76f-8aad-4741-809f-12345EXAMPLE</code>).
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the instance (e.g.,
+     *        The Amazon Resource Name (ARN) of the instance (
      *        <code>arn:aws:lightsail:us-east-2:123456789101:Instance/244ad76f-8aad-4741-809f-12345EXAMPLE</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -305,11 +305,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp when the instance was created (e.g., <code>1479734909.17</code>) in Unix time format.
+     * The timestamp when the instance was created (<code>1479734909.17</code>) in Unix time format.
      * </p>
      * 
      * @param createdAt
-     *        The timestamp when the instance was created (e.g., <code>1479734909.17</code>) in Unix time format.
+     *        The timestamp when the instance was created (<code>1479734909.17</code>) in Unix time format.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -318,10 +318,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp when the instance was created (e.g., <code>1479734909.17</code>) in Unix time format.
+     * The timestamp when the instance was created (<code>1479734909.17</code>) in Unix time format.
      * </p>
      * 
-     * @return The timestamp when the instance was created (e.g., <code>1479734909.17</code>) in Unix time format.
+     * @return The timestamp when the instance was created (<code>1479734909.17</code>) in Unix time format.
      */
 
     public java.util.Date getCreatedAt() {
@@ -330,11 +330,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp when the instance was created (e.g., <code>1479734909.17</code>) in Unix time format.
+     * The timestamp when the instance was created (<code>1479734909.17</code>) in Unix time format.
      * </p>
      * 
      * @param createdAt
-     *        The timestamp when the instance was created (e.g., <code>1479734909.17</code>) in Unix time format.
+     *        The timestamp when the instance was created (<code>1479734909.17</code>) in Unix time format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -544,11 +544,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The blueprint ID (e.g., <code>os_amlinux_2016_03</code>).
+     * The blueprint ID (<code>os_amlinux_2016_03</code>).
      * </p>
      * 
      * @param blueprintId
-     *        The blueprint ID (e.g., <code>os_amlinux_2016_03</code>).
+     *        The blueprint ID (<code>os_amlinux_2016_03</code>).
      */
 
     public void setBlueprintId(String blueprintId) {
@@ -557,10 +557,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The blueprint ID (e.g., <code>os_amlinux_2016_03</code>).
+     * The blueprint ID (<code>os_amlinux_2016_03</code>).
      * </p>
      * 
-     * @return The blueprint ID (e.g., <code>os_amlinux_2016_03</code>).
+     * @return The blueprint ID (<code>os_amlinux_2016_03</code>).
      */
 
     public String getBlueprintId() {
@@ -569,11 +569,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The blueprint ID (e.g., <code>os_amlinux_2016_03</code>).
+     * The blueprint ID (<code>os_amlinux_2016_03</code>).
      * </p>
      * 
      * @param blueprintId
-     *        The blueprint ID (e.g., <code>os_amlinux_2016_03</code>).
+     *        The blueprint ID (<code>os_amlinux_2016_03</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -584,11 +584,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux</code>).
      * </p>
      * 
      * @param blueprintName
-     *        The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     *        The friendly name of the blueprint (<code>Amazon Linux</code>).
      */
 
     public void setBlueprintName(String blueprintName) {
@@ -597,10 +597,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux</code>).
      * </p>
      * 
-     * @return The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     * @return The friendly name of the blueprint (<code>Amazon Linux</code>).
      */
 
     public String getBlueprintName() {
@@ -609,11 +609,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux</code>).
      * </p>
      * 
      * @param blueprintName
-     *        The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     *        The friendly name of the blueprint (<code>Amazon Linux</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -624,11 +624,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle for the instance (e.g., <code>micro_1_0</code>).
+     * The bundle for the instance (<code>micro_1_0</code>).
      * </p>
      * 
      * @param bundleId
-     *        The bundle for the instance (e.g., <code>micro_1_0</code>).
+     *        The bundle for the instance (<code>micro_1_0</code>).
      */
 
     public void setBundleId(String bundleId) {
@@ -637,10 +637,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle for the instance (e.g., <code>micro_1_0</code>).
+     * The bundle for the instance (<code>micro_1_0</code>).
      * </p>
      * 
-     * @return The bundle for the instance (e.g., <code>micro_1_0</code>).
+     * @return The bundle for the instance (<code>micro_1_0</code>).
      */
 
     public String getBundleId() {
@@ -649,11 +649,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle for the instance (e.g., <code>micro_1_0</code>).
+     * The bundle for the instance (<code>micro_1_0</code>).
      * </p>
      * 
      * @param bundleId
-     *        The bundle for the instance (e.g., <code>micro_1_0</code>).
+     *        The bundle for the instance (<code>micro_1_0</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1114,11 +1114,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status code and the state (e.g., <code>running</code>) for the instance.
+     * The status code and the state (<code>running</code>) for the instance.
      * </p>
      * 
      * @param state
-     *        The status code and the state (e.g., <code>running</code>) for the instance.
+     *        The status code and the state (<code>running</code>) for the instance.
      */
 
     public void setState(InstanceState state) {
@@ -1127,10 +1127,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status code and the state (e.g., <code>running</code>) for the instance.
+     * The status code and the state (<code>running</code>) for the instance.
      * </p>
      * 
-     * @return The status code and the state (e.g., <code>running</code>) for the instance.
+     * @return The status code and the state (<code>running</code>) for the instance.
      */
 
     public InstanceState getState() {
@@ -1139,11 +1139,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status code and the state (e.g., <code>running</code>) for the instance.
+     * The status code and the state (<code>running</code>) for the instance.
      * </p>
      * 
      * @param state
-     *        The status code and the state (e.g., <code>running</code>) for the instance.
+     *        The status code and the state (<code>running</code>) for the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1154,11 +1154,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The user name for connecting to the instance (e.g., <code>ec2-user</code>).
+     * The user name for connecting to the instance (<code>ec2-user</code>).
      * </p>
      * 
      * @param username
-     *        The user name for connecting to the instance (e.g., <code>ec2-user</code>).
+     *        The user name for connecting to the instance (<code>ec2-user</code>).
      */
 
     public void setUsername(String username) {
@@ -1167,10 +1167,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The user name for connecting to the instance (e.g., <code>ec2-user</code>).
+     * The user name for connecting to the instance (<code>ec2-user</code>).
      * </p>
      * 
-     * @return The user name for connecting to the instance (e.g., <code>ec2-user</code>).
+     * @return The user name for connecting to the instance (<code>ec2-user</code>).
      */
 
     public String getUsername() {
@@ -1179,11 +1179,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The user name for connecting to the instance (e.g., <code>ec2-user</code>).
+     * The user name for connecting to the instance (<code>ec2-user</code>).
      * </p>
      * 
      * @param username
-     *        The user name for connecting to the instance (e.g., <code>ec2-user</code>).
+     *        The user name for connecting to the instance (<code>ec2-user</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1194,12 +1194,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the SSH key being used to connect to the instance (e.g., <code>LightsailDefaultKeyPair</code>).
+     * The name of the SSH key being used to connect to the instance (<code>LightsailDefaultKeyPair</code>).
      * </p>
      * 
      * @param sshKeyName
-     *        The name of the SSH key being used to connect to the instance (e.g., <code>LightsailDefaultKeyPair</code>
-     *        ).
+     *        The name of the SSH key being used to connect to the instance (<code>LightsailDefaultKeyPair</code>).
      */
 
     public void setSshKeyName(String sshKeyName) {
@@ -1208,11 +1207,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the SSH key being used to connect to the instance (e.g., <code>LightsailDefaultKeyPair</code>).
+     * The name of the SSH key being used to connect to the instance (<code>LightsailDefaultKeyPair</code>).
      * </p>
      * 
-     * @return The name of the SSH key being used to connect to the instance (e.g., <code>LightsailDefaultKeyPair</code>
-     *         ).
+     * @return The name of the SSH key being used to connect to the instance (<code>LightsailDefaultKeyPair</code>).
      */
 
     public String getSshKeyName() {
@@ -1221,12 +1219,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the SSH key being used to connect to the instance (e.g., <code>LightsailDefaultKeyPair</code>).
+     * The name of the SSH key being used to connect to the instance (<code>LightsailDefaultKeyPair</code>).
      * </p>
      * 
      * @param sshKeyName
-     *        The name of the SSH key being used to connect to the instance (e.g., <code>LightsailDefaultKeyPair</code>
-     *        ).
+     *        The name of the SSH key being used to connect to the instance (<code>LightsailDefaultKeyPair</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

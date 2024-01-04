@@ -33,6 +33,8 @@ public class AutoScalingGroupProviderMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("managedScaling").build();
     private static final MarshallingInfo<String> MANAGEDTERMINATIONPROTECTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("managedTerminationProtection").build();
+    private static final MarshallingInfo<String> MANAGEDDRAINING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("managedDraining").build();
 
     private static final AutoScalingGroupProviderMarshaller instance = new AutoScalingGroupProviderMarshaller();
 
@@ -53,6 +55,7 @@ public class AutoScalingGroupProviderMarshaller {
             protocolMarshaller.marshall(autoScalingGroupProvider.getAutoScalingGroupArn(), AUTOSCALINGGROUPARN_BINDING);
             protocolMarshaller.marshall(autoScalingGroupProvider.getManagedScaling(), MANAGEDSCALING_BINDING);
             protocolMarshaller.marshall(autoScalingGroupProvider.getManagedTerminationProtection(), MANAGEDTERMINATIONPROTECTION_BINDING);
+            protocolMarshaller.marshall(autoScalingGroupProvider.getManagedDraining(), MANAGEDDRAINING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

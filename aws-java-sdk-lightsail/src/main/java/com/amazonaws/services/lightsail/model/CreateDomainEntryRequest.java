@@ -27,7 +27,7 @@ public class CreateDomainEntryRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The domain name (e.g., <code>example.com</code>) for which you want to create the domain entry.
+     * The domain name (<code>example.com</code>) for which you want to create the domain entry.
      * </p>
      */
     private String domainName;
@@ -40,11 +40,11 @@ public class CreateDomainEntryRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The domain name (e.g., <code>example.com</code>) for which you want to create the domain entry.
+     * The domain name (<code>example.com</code>) for which you want to create the domain entry.
      * </p>
      * 
      * @param domainName
-     *        The domain name (e.g., <code>example.com</code>) for which you want to create the domain entry.
+     *        The domain name (<code>example.com</code>) for which you want to create the domain entry.
      */
 
     public void setDomainName(String domainName) {
@@ -53,10 +53,10 @@ public class CreateDomainEntryRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The domain name (e.g., <code>example.com</code>) for which you want to create the domain entry.
+     * The domain name (<code>example.com</code>) for which you want to create the domain entry.
      * </p>
      * 
-     * @return The domain name (e.g., <code>example.com</code>) for which you want to create the domain entry.
+     * @return The domain name (<code>example.com</code>) for which you want to create the domain entry.
      */
 
     public String getDomainName() {
@@ -65,11 +65,11 @@ public class CreateDomainEntryRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The domain name (e.g., <code>example.com</code>) for which you want to create the domain entry.
+     * The domain name (<code>example.com</code>) for which you want to create the domain entry.
      * </p>
      * 
      * @param domainName
-     *        The domain name (e.g., <code>example.com</code>) for which you want to create the domain entry.
+     *        The domain name (<code>example.com</code>) for which you want to create the domain entry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

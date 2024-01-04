@@ -30,25 +30,25 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the virtual private server image (e.g., <code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     * The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
      * </p>
      */
     private String blueprintId;
     /**
      * <p>
-     * The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux</code>).
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The group name of the blueprint (e.g., <code>amazon-linux</code>).
+     * The group name of the blueprint (<code>amazon-linux</code>).
      * </p>
      */
     private String group;
     /**
      * <p>
-     * The type of the blueprint (e.g., <code>os</code> or <code>app</code>).
+     * The type of the blueprint (<code>os</code> or <code>app</code>).
      * </p>
      */
     private String type;
@@ -76,7 +76,7 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
     private Integer minPower;
     /**
      * <p>
-     * The version number of the operating system, application, or stack (e.g., <code>2016.03.0</code>).
+     * The version number of the operating system, application, or stack ( <code>2016.03.0</code>).
      * </p>
      */
     private String version;
@@ -118,12 +118,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the virtual private server image (e.g., <code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     * The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
      * </p>
      * 
      * @param blueprintId
-     *        The ID for the virtual private server image (e.g., <code>app_wordpress_4_4</code> or
-     *        <code>app_lamp_7_0</code>).
+     *        The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
      */
 
     public void setBlueprintId(String blueprintId) {
@@ -132,11 +131,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the virtual private server image (e.g., <code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     * The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
      * </p>
      * 
-     * @return The ID for the virtual private server image (e.g., <code>app_wordpress_4_4</code> or
-     *         <code>app_lamp_7_0</code>).
+     * @return The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>
+     *         ).
      */
 
     public String getBlueprintId() {
@@ -145,12 +144,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the virtual private server image (e.g., <code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     * The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
      * </p>
      * 
      * @param blueprintId
-     *        The ID for the virtual private server image (e.g., <code>app_wordpress_4_4</code> or
-     *        <code>app_lamp_7_0</code>).
+     *        The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -161,11 +159,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux</code>).
      * </p>
      * 
      * @param name
-     *        The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     *        The friendly name of the blueprint (<code>Amazon Linux</code>).
      */
 
     public void setName(String name) {
@@ -174,10 +172,10 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux</code>).
      * </p>
      * 
-     * @return The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     * @return The friendly name of the blueprint (<code>Amazon Linux</code>).
      */
 
     public String getName() {
@@ -186,11 +184,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux</code>).
      * </p>
      * 
      * @param name
-     *        The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).
+     *        The friendly name of the blueprint (<code>Amazon Linux</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -201,11 +199,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The group name of the blueprint (e.g., <code>amazon-linux</code>).
+     * The group name of the blueprint (<code>amazon-linux</code>).
      * </p>
      * 
      * @param group
-     *        The group name of the blueprint (e.g., <code>amazon-linux</code>).
+     *        The group name of the blueprint (<code>amazon-linux</code>).
      */
 
     public void setGroup(String group) {
@@ -214,10 +212,10 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The group name of the blueprint (e.g., <code>amazon-linux</code>).
+     * The group name of the blueprint (<code>amazon-linux</code>).
      * </p>
      * 
-     * @return The group name of the blueprint (e.g., <code>amazon-linux</code>).
+     * @return The group name of the blueprint (<code>amazon-linux</code>).
      */
 
     public String getGroup() {
@@ -226,11 +224,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The group name of the blueprint (e.g., <code>amazon-linux</code>).
+     * The group name of the blueprint (<code>amazon-linux</code>).
      * </p>
      * 
      * @param group
-     *        The group name of the blueprint (e.g., <code>amazon-linux</code>).
+     *        The group name of the blueprint (<code>amazon-linux</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -241,11 +239,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the blueprint (e.g., <code>os</code> or <code>app</code>).
+     * The type of the blueprint (<code>os</code> or <code>app</code>).
      * </p>
      * 
      * @param type
-     *        The type of the blueprint (e.g., <code>os</code> or <code>app</code>).
+     *        The type of the blueprint (<code>os</code> or <code>app</code>).
      * @see BlueprintType
      */
 
@@ -255,10 +253,10 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the blueprint (e.g., <code>os</code> or <code>app</code>).
+     * The type of the blueprint (<code>os</code> or <code>app</code>).
      * </p>
      * 
-     * @return The type of the blueprint (e.g., <code>os</code> or <code>app</code>).
+     * @return The type of the blueprint (<code>os</code> or <code>app</code>).
      * @see BlueprintType
      */
 
@@ -268,11 +266,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the blueprint (e.g., <code>os</code> or <code>app</code>).
+     * The type of the blueprint (<code>os</code> or <code>app</code>).
      * </p>
      * 
      * @param type
-     *        The type of the blueprint (e.g., <code>os</code> or <code>app</code>).
+     *        The type of the blueprint (<code>os</code> or <code>app</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BlueprintType
      */
@@ -284,11 +282,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the blueprint (e.g., <code>os</code> or <code>app</code>).
+     * The type of the blueprint (<code>os</code> or <code>app</code>).
      * </p>
      * 
      * @param type
-     *        The type of the blueprint (e.g., <code>os</code> or <code>app</code>).
+     *        The type of the blueprint (<code>os</code> or <code>app</code>).
      * @see BlueprintType
      */
 
@@ -298,11 +296,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the blueprint (e.g., <code>os</code> or <code>app</code>).
+     * The type of the blueprint (<code>os</code> or <code>app</code>).
      * </p>
      * 
      * @param type
-     *        The type of the blueprint (e.g., <code>os</code> or <code>app</code>).
+     *        The type of the blueprint (<code>os</code> or <code>app</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BlueprintType
      */
@@ -478,11 +476,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The version number of the operating system, application, or stack (e.g., <code>2016.03.0</code>).
+     * The version number of the operating system, application, or stack ( <code>2016.03.0</code>).
      * </p>
      * 
      * @param version
-     *        The version number of the operating system, application, or stack (e.g., <code>2016.03.0</code>).
+     *        The version number of the operating system, application, or stack ( <code>2016.03.0</code>).
      */
 
     public void setVersion(String version) {
@@ -491,10 +489,10 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The version number of the operating system, application, or stack (e.g., <code>2016.03.0</code>).
+     * The version number of the operating system, application, or stack ( <code>2016.03.0</code>).
      * </p>
      * 
-     * @return The version number of the operating system, application, or stack (e.g., <code>2016.03.0</code>).
+     * @return The version number of the operating system, application, or stack ( <code>2016.03.0</code>).
      */
 
     public String getVersion() {
@@ -503,11 +501,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The version number of the operating system, application, or stack (e.g., <code>2016.03.0</code>).
+     * The version number of the operating system, application, or stack ( <code>2016.03.0</code>).
      * </p>
      * 
      * @param version
-     *        The version number of the operating system, application, or stack (e.g., <code>2016.03.0</code>).
+     *        The version number of the operating system, application, or stack ( <code>2016.03.0</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
