@@ -1256,9 +1256,9 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
         if (getInitiationMethod() != null)
             sb.append("InitiationMethod: ").append(getInitiationMethod()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
+            sb.append("Name: ").append("***Sensitive Data Redacted***").append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getChannel() != null)
             sb.append("Channel: ").append(getChannel()).append(",");
         if (getQueueInfo() != null)

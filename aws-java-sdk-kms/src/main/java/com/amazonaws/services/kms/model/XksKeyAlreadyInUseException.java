@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was rejected because the (<code>XksKeyId</code>) is already associated with a KMS key in this external
- * key store. Each KMS key in an external key store must be associated with a different external key.
+ * The request was rejected because the (<code>XksKeyId</code>) is already associated with another KMS key in this
+ * external key store. Each KMS key in an external key store must be associated with a different external key.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -307,13 +307,13 @@ public class UserIdentityInfo implements Serializable, Cloneable, StructuredPojo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getFirstName() != null)
-            sb.append("FirstName: ").append(getFirstName()).append(",");
+            sb.append("FirstName: ").append("***Sensitive Data Redacted***").append(",");
         if (getLastName() != null)
-            sb.append("LastName: ").append(getLastName()).append(",");
+            sb.append("LastName: ").append("***Sensitive Data Redacted***").append(",");
         if (getEmail() != null)
-            sb.append("Email: ").append(getEmail()).append(",");
+            sb.append("Email: ").append("***Sensitive Data Redacted***").append(",");
         if (getSecondaryEmail() != null)
-            sb.append("SecondaryEmail: ").append(getSecondaryEmail()).append(",");
+            sb.append("SecondaryEmail: ").append("***Sensitive Data Redacted***").append(",");
         if (getMobile() != null)
             sb.append("Mobile: ").append(getMobile());
         sb.append("}");

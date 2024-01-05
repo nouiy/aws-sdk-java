@@ -860,13 +860,13 @@ public interface AWSKMS {
      *         Management Service Developer Guide</i>.
      * @throws XksProxyUriInUseException
      *         The request was rejected because the concatenation of the <code>XksProxyUriEndpoint</code> and
-     *         <code>XksProxyUriPath</code> is already associated with an external key store in the Amazon Web Services
-     *         account and Region. Each external key store in an account and Region must use a unique external key store
-     *         proxy API address.
+     *         <code>XksProxyUriPath</code> is already associated with another external key store in this Amazon Web
+     *         Services Region. Each external key store in a Region must use a unique external key store proxy API
+     *         address.
      * @throws XksProxyUriEndpointInUseException
-     *         The request was rejected because the concatenation of the <code>XksProxyUriEndpoint</code> is already
-     *         associated with an external key store in the Amazon Web Services account and Region. Each external key
-     *         store in an account and Region must use a unique external key store proxy address.
+     *         The request was rejected because the <code>XksProxyUriEndpoint</code> is already associated with another
+     *         external key store in this Amazon Web Services Region. To identify the cause, see the error message that
+     *         accompanies the exception.
      * @throws XksProxyUriUnreachableException
      *         KMS was unable to reach the specified <code>XksProxyUriPath</code>. The path must be reachable before you
      *         create the external key store or update its settings.
@@ -880,9 +880,9 @@ public interface AWSKMS {
      *         credentials. This can indicate an error in the credentials or in the identification of the external key
      *         store proxy.
      * @throws XksProxyVpcEndpointServiceInUseException
-     *         The request was rejected because the specified Amazon VPC endpoint service is already associated with an
-     *         external key store in the Amazon Web Services account and Region. Each external key store in an Amazon
-     *         Web Services account and Region must use a different Amazon VPC endpoint service.
+     *         The request was rejected because the specified Amazon VPC endpoint service is already associated with
+     *         another external key store in this Amazon Web Services Region. Each external key store in a Region must
+     *         use a different Amazon VPC endpoint service.
      * @throws XksProxyVpcEndpointServiceNotFoundException
      *         The request was rejected because KMS could not find the specified VPC endpoint service. Use
      *         <a>DescribeCustomKeyStores</a> to verify the VPC endpoint service name for the external key store. Also,
@@ -890,7 +890,8 @@ public interface AWSKMS {
      *         principal for the Region, such as <code>cks.kms.us-east-1.amazonaws.com</code>.
      * @throws XksProxyVpcEndpointServiceInvalidConfigurationException
      *         The request was rejected because the Amazon VPC endpoint service configuration does not fulfill the
-     *         requirements for an external key store proxy. For details, see the exception message and <a
+     *         requirements for an external key store. To identify the cause, see the error message that accompanies the
+     *         exception and <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/vpc-connectivity.html#xks-vpc-requirements"
      *         >review the requirements</a> for Amazon VPC endpoint service connectivity for an external key store.
      * @throws XksProxyInvalidResponseException
@@ -899,8 +900,8 @@ public interface AWSKMS {
      *         poorly constructed response, but it could also be a transient network issue. If you see this error
      *         repeatedly, report it to the proxy vendor.
      * @throws XksProxyInvalidConfigurationException
-     *         The request was rejected because the Amazon VPC endpoint service configuration does not fulfill the
-     *         requirements for an external key store proxy. For details, see the exception message.
+     *         The request was rejected because the external key store proxy is not configured correctly. To identify
+     *         the cause, see the error message that accompanies the exception.
      * @sample AWSKMS.CreateCustomKeyStore
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/CreateCustomKeyStore" target="_top">AWS API
      *      Documentation</a>
@@ -1391,9 +1392,9 @@ public interface AWSKMS {
      *         <p>
      *         The external key must be an AES-256 symmetric key that is enabled and performs encryption and decryption.
      * @throws XksKeyAlreadyInUseException
-     *         The request was rejected because the (<code>XksKeyId</code>) is already associated with a KMS key in this
-     *         external key store. Each KMS key in an external key store must be associated with a different external
-     *         key.
+     *         The request was rejected because the (<code>XksKeyId</code>) is already associated with another KMS key
+     *         in this external key store. Each KMS key in an external key store must be associated with a different
+     *         external key.
      * @throws XksKeyNotFoundException
      *         The request was rejected because the external key store proxy could not find the external key. This
      *         exception is thrown when the value of the <code>XksKeyId</code> parameter doesn't identify a key in the
@@ -6695,13 +6696,13 @@ public interface AWSKMS {
      *         Security Group</a> in the <i> <i>CloudHSM User Guide</i> </i>.
      * @throws XksProxyUriInUseException
      *         The request was rejected because the concatenation of the <code>XksProxyUriEndpoint</code> and
-     *         <code>XksProxyUriPath</code> is already associated with an external key store in the Amazon Web Services
-     *         account and Region. Each external key store in an account and Region must use a unique external key store
-     *         proxy API address.
+     *         <code>XksProxyUriPath</code> is already associated with another external key store in this Amazon Web
+     *         Services Region. Each external key store in a Region must use a unique external key store proxy API
+     *         address.
      * @throws XksProxyUriEndpointInUseException
-     *         The request was rejected because the concatenation of the <code>XksProxyUriEndpoint</code> is already
-     *         associated with an external key store in the Amazon Web Services account and Region. Each external key
-     *         store in an account and Region must use a unique external key store proxy address.
+     *         The request was rejected because the <code>XksProxyUriEndpoint</code> is already associated with another
+     *         external key store in this Amazon Web Services Region. To identify the cause, see the error message that
+     *         accompanies the exception.
      * @throws XksProxyUriUnreachableException
      *         KMS was unable to reach the specified <code>XksProxyUriPath</code>. The path must be reachable before you
      *         create the external key store or update its settings.
@@ -6715,9 +6716,9 @@ public interface AWSKMS {
      *         credentials. This can indicate an error in the credentials or in the identification of the external key
      *         store proxy.
      * @throws XksProxyVpcEndpointServiceInUseException
-     *         The request was rejected because the specified Amazon VPC endpoint service is already associated with an
-     *         external key store in the Amazon Web Services account and Region. Each external key store in an Amazon
-     *         Web Services account and Region must use a different Amazon VPC endpoint service.
+     *         The request was rejected because the specified Amazon VPC endpoint service is already associated with
+     *         another external key store in this Amazon Web Services Region. Each external key store in a Region must
+     *         use a different Amazon VPC endpoint service.
      * @throws XksProxyVpcEndpointServiceNotFoundException
      *         The request was rejected because KMS could not find the specified VPC endpoint service. Use
      *         <a>DescribeCustomKeyStores</a> to verify the VPC endpoint service name for the external key store. Also,
@@ -6725,7 +6726,8 @@ public interface AWSKMS {
      *         principal for the Region, such as <code>cks.kms.us-east-1.amazonaws.com</code>.
      * @throws XksProxyVpcEndpointServiceInvalidConfigurationException
      *         The request was rejected because the Amazon VPC endpoint service configuration does not fulfill the
-     *         requirements for an external key store proxy. For details, see the exception message and <a
+     *         requirements for an external key store. To identify the cause, see the error message that accompanies the
+     *         exception and <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/vpc-connectivity.html#xks-vpc-requirements"
      *         >review the requirements</a> for Amazon VPC endpoint service connectivity for an external key store.
      * @throws XksProxyInvalidResponseException
@@ -6734,8 +6736,8 @@ public interface AWSKMS {
      *         poorly constructed response, but it could also be a transient network issue. If you see this error
      *         repeatedly, report it to the proxy vendor.
      * @throws XksProxyInvalidConfigurationException
-     *         The request was rejected because the Amazon VPC endpoint service configuration does not fulfill the
-     *         requirements for an external key store proxy. For details, see the exception message.
+     *         The request was rejected because the external key store proxy is not configured correctly. To identify
+     *         the cause, see the error message that accompanies the exception.
      * @sample AWSKMS.UpdateCustomKeyStore
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/UpdateCustomKeyStore" target="_top">AWS API
      *      Documentation</a>

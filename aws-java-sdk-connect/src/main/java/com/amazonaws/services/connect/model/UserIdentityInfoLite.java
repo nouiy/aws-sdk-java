@@ -134,9 +134,9 @@ public class UserIdentityInfoLite implements Serializable, Cloneable, Structured
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getFirstName() != null)
-            sb.append("FirstName: ").append(getFirstName()).append(",");
+            sb.append("FirstName: ").append("***Sensitive Data Redacted***").append(",");
         if (getLastName() != null)
-            sb.append("LastName: ").append(getLastName());
+            sb.append("LastName: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

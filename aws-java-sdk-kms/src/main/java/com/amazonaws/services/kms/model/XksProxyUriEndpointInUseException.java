@@ -16,9 +16,9 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was rejected because the concatenation of the <code>XksProxyUriEndpoint</code> is already associated with
- * an external key store in the Amazon Web Services account and Region. Each external key store in an account and Region
- * must use a unique external key store proxy address.
+ * The request was rejected because the <code>XksProxyUriEndpoint</code> is already associated with another external key
+ * store in this Amazon Web Services Region. To identify the cause, see the error message that accompanies the
+ * exception.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

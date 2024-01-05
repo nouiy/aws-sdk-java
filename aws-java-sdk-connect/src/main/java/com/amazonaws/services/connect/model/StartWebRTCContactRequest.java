@@ -660,7 +660,7 @@ public class StartWebRTCContactRequest extends com.amazonaws.AmazonWebServiceReq
         if (getReferences() != null)
             sb.append("References: ").append(getReferences()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription());
+            sb.append("Description: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

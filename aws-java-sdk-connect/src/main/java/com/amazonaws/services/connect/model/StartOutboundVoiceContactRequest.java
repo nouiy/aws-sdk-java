@@ -963,9 +963,9 @@ public class StartOutboundVoiceContactRequest extends com.amazonaws.AmazonWebSer
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
+            sb.append("Name: ").append("***Sensitive Data Redacted***").append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getReferences() != null)
             sb.append("References: ").append(getReferences()).append(",");
         if (getRelatedContactId() != null)

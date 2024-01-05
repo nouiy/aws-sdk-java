@@ -879,11 +879,11 @@ public class StartTaskContactRequest extends com.amazonaws.AmazonWebServiceReque
         if (getAttributes() != null)
             sb.append("Attributes: ").append(getAttributes()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
+            sb.append("Name: ").append("***Sensitive Data Redacted***").append(",");
         if (getReferences() != null)
             sb.append("References: ").append(getReferences()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getScheduledTime() != null)
