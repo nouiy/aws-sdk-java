@@ -165,6 +165,12 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private RetryPolicy retryPolicy;
+    /**
+     * <p>
+     * Contains the GraphQL operation to be parsed and executed, if the event target is an AppSync API.
+     * </p>
+     */
+    private AppSyncParameters appSyncParameters;
 
     /**
      * <p>
@@ -993,6 +999,46 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains the GraphQL operation to be parsed and executed, if the event target is an AppSync API.
+     * </p>
+     * 
+     * @param appSyncParameters
+     *        Contains the GraphQL operation to be parsed and executed, if the event target is an AppSync API.
+     */
+
+    public void setAppSyncParameters(AppSyncParameters appSyncParameters) {
+        this.appSyncParameters = appSyncParameters;
+    }
+
+    /**
+     * <p>
+     * Contains the GraphQL operation to be parsed and executed, if the event target is an AppSync API.
+     * </p>
+     * 
+     * @return Contains the GraphQL operation to be parsed and executed, if the event target is an AppSync API.
+     */
+
+    public AppSyncParameters getAppSyncParameters() {
+        return this.appSyncParameters;
+    }
+
+    /**
+     * <p>
+     * Contains the GraphQL operation to be parsed and executed, if the event target is an AppSync API.
+     * </p>
+     * 
+     * @param appSyncParameters
+     *        Contains the GraphQL operation to be parsed and executed, if the event target is an AppSync API.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Target withAppSyncParameters(AppSyncParameters appSyncParameters) {
+        setAppSyncParameters(appSyncParameters);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1035,7 +1081,9 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
         if (getDeadLetterConfig() != null)
             sb.append("DeadLetterConfig: ").append(getDeadLetterConfig()).append(",");
         if (getRetryPolicy() != null)
-            sb.append("RetryPolicy: ").append(getRetryPolicy());
+            sb.append("RetryPolicy: ").append(getRetryPolicy()).append(",");
+        if (getAppSyncParameters() != null)
+            sb.append("AppSyncParameters: ").append(getAppSyncParameters());
         sb.append("}");
         return sb.toString();
     }
@@ -1114,6 +1162,10 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRetryPolicy() != null && other.getRetryPolicy().equals(this.getRetryPolicy()) == false)
             return false;
+        if (other.getAppSyncParameters() == null ^ this.getAppSyncParameters() == null)
+            return false;
+        if (other.getAppSyncParameters() != null && other.getAppSyncParameters().equals(this.getAppSyncParameters()) == false)
+            return false;
         return true;
     }
 
@@ -1138,6 +1190,7 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSageMakerPipelineParameters() == null) ? 0 : getSageMakerPipelineParameters().hashCode());
         hashCode = prime * hashCode + ((getDeadLetterConfig() == null) ? 0 : getDeadLetterConfig().hashCode());
         hashCode = prime * hashCode + ((getRetryPolicy() == null) ? 0 : getRetryPolicy().hashCode());
+        hashCode = prime * hashCode + ((getAppSyncParameters() == null) ? 0 : getAppSyncParameters().hashCode());
         return hashCode;
     }
 

@@ -69,9 +69,6 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
      * The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
      * manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity provider.
      * </p>
-     * <p>
-     * The default is <code>ENABLED</code>.
-     * </p>
      */
     private String managedDraining;
 
@@ -363,16 +360,11 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
      * The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
      * manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity provider.
      * </p>
-     * <p>
-     * The default is <code>ENABLED</code>.
-     * </p>
      * 
      * @param managedDraining
      *        The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
      *        manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity
-     *        provider.</p>
-     *        <p>
-     *        The default is <code>ENABLED</code>.
+     *        provider.
      * @see ManagedDraining
      */
 
@@ -385,15 +377,10 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
      * The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
      * manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity provider.
      * </p>
-     * <p>
-     * The default is <code>ENABLED</code>.
-     * </p>
      * 
      * @return The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon
      *         ECS manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity
-     *         provider.</p>
-     *         <p>
-     *         The default is <code>ENABLED</code>.
+     *         provider.
      * @see ManagedDraining
      */
 
@@ -406,16 +393,11 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
      * The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
      * manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity provider.
      * </p>
-     * <p>
-     * The default is <code>ENABLED</code>.
-     * </p>
      * 
      * @param managedDraining
      *        The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
      *        manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity
-     *        provider.</p>
-     *        <p>
-     *        The default is <code>ENABLED</code>.
+     *        provider.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ManagedDraining
      */
@@ -430,16 +412,11 @@ public class AutoScalingGroupProvider implements Serializable, Cloneable, Struct
      * The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
      * manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity provider.
      * </p>
-     * <p>
-     * The default is <code>ENABLED</code>.
-     * </p>
      * 
      * @param managedDraining
      *        The managed draining option for the Auto Scaling group capacity provider. When you enable this, Amazon ECS
      *        manages and gracefully drains the EC2 container instances that are in the Auto Scaling group capacity
-     *        provider.</p>
-     *        <p>
-     *        The default is <code>ENABLED</code>.
+     *        provider.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ManagedDraining
      */

@@ -54,6 +54,9 @@ public class EnableSnapshotBlockPublicAccessRequest extends AmazonWebServiceRequ
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <code>unblocked</code> is not a valid value for <b>EnableSnapshotBlockPublicAccess</b>.
+     * </p>
      */
     private String state;
 
@@ -85,6 +88,9 @@ public class EnableSnapshotBlockPublicAccessRequest extends AmazonWebServiceRequ
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <code>unblocked</code> is not a valid value for <b>EnableSnapshotBlockPublicAccess</b>.
+     * </p>
      * 
      * @param state
      *        The mode in which to enable block public access for snapshots for the Region. Specify one of the following
@@ -111,6 +117,9 @@ public class EnableSnapshotBlockPublicAccessRequest extends AmazonWebServiceRequ
      *        shared, remain publicly available.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        <code>unblocked</code> is not a valid value for <b>EnableSnapshotBlockPublicAccess</b>.
      * @see SnapshotBlockPublicAccessState
      */
 
@@ -146,6 +155,9 @@ public class EnableSnapshotBlockPublicAccessRequest extends AmazonWebServiceRequ
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <code>unblocked</code> is not a valid value for <b>EnableSnapshotBlockPublicAccess</b>.
+     * </p>
      * 
      * @return The mode in which to enable block public access for snapshots for the Region. Specify one of the
      *         following values:</p>
@@ -171,6 +183,9 @@ public class EnableSnapshotBlockPublicAccessRequest extends AmazonWebServiceRequ
      *         publicly shared, remain publicly available.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <p>
+     *         <code>unblocked</code> is not a valid value for <b>EnableSnapshotBlockPublicAccess</b>.
      * @see SnapshotBlockPublicAccessState
      */
 
@@ -206,6 +221,9 @@ public class EnableSnapshotBlockPublicAccessRequest extends AmazonWebServiceRequ
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <code>unblocked</code> is not a valid value for <b>EnableSnapshotBlockPublicAccess</b>.
+     * </p>
      * 
      * @param state
      *        The mode in which to enable block public access for snapshots for the Region. Specify one of the following
@@ -232,6 +250,9 @@ public class EnableSnapshotBlockPublicAccessRequest extends AmazonWebServiceRequ
      *        shared, remain publicly available.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        <code>unblocked</code> is not a valid value for <b>EnableSnapshotBlockPublicAccess</b>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SnapshotBlockPublicAccessState
      */
@@ -269,6 +290,9 @@ public class EnableSnapshotBlockPublicAccessRequest extends AmazonWebServiceRequ
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <code>unblocked</code> is not a valid value for <b>EnableSnapshotBlockPublicAccess</b>.
+     * </p>
      * 
      * @param state
      *        The mode in which to enable block public access for snapshots for the Region. Specify one of the following
@@ -295,6 +319,9 @@ public class EnableSnapshotBlockPublicAccessRequest extends AmazonWebServiceRequ
      *        shared, remain publicly available.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        <code>unblocked</code> is not a valid value for <b>EnableSnapshotBlockPublicAccess</b>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SnapshotBlockPublicAccessState
      */

@@ -646,14 +646,6 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      * default protocol for those bundles.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs and
-     * budget. For more information on switching running modes, see <a href=
-     * "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     * > Can I switch between hourly and monthly billing?</a>
-     * </p>
-     * </li>
      * </ul>
      * </note>
      * 
@@ -685,14 +677,6 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      * <p>
      * You don't need to specify the <code>PCOIP</code> protocol for Linux bundles because <code>WSP</code> is the
      * default protocol for those bundles.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs and
-     * budget. For more information on switching running modes, see <a href=
-     * "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     * > Can I switch between hourly and monthly billing?</a>
      * </p>
      * </li>
      * </ul>
@@ -2575,7 +2559,9 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      * Reboots the specified WorkSpaces.
      * </p>
      * <p>
-     * You cannot reboot a WorkSpace unless its state is <code>AVAILABLE</code> or <code>UNHEALTHY</code>.
+     * You cannot reboot a WorkSpace unless its state is <code>AVAILABLE</code>, <code>UNHEALTHY</code>, or
+     * <code>REBOOTING</code>. Reboot a WorkSpace in the <code>REBOOTING</code> state only if your WorkSpace has been
+     * stuck in the <code>REBOOTING</code> state for over 20 minutes.
      * </p>
      * <p>
      * This operation is asynchronous and returns before the WorkSpaces have rebooted.
@@ -2594,7 +2580,9 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      * Reboots the specified WorkSpaces.
      * </p>
      * <p>
-     * You cannot reboot a WorkSpace unless its state is <code>AVAILABLE</code> or <code>UNHEALTHY</code>.
+     * You cannot reboot a WorkSpace unless its state is <code>AVAILABLE</code>, <code>UNHEALTHY</code>, or
+     * <code>REBOOTING</code>. Reboot a WorkSpace in the <code>REBOOTING</code> state only if your WorkSpace has been
+     * stuck in the <code>REBOOTING</code> state for over 20 minutes.
      * </p>
      * <p>
      * This operation is asynchronous and returns before the WorkSpaces have rebooted.

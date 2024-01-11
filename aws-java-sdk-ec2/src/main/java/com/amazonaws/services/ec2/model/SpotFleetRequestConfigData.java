@@ -311,11 +311,11 @@ public class SpotFleetRequestConfigData implements Serializable, Cloneable {
     private String context;
     /**
      * <p>
-     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     * <code>InstanceRequirements</code> is specified.
+     * The unit for the target capacity. You can specify this parameter only when using attribute-based instance type
+     * selection.
      * </p>
      * <p>
-     * Default: <code>units</code> (translates to number of instances)
+     * Default: <code>units</code> (the number of instances)
      * </p>
      */
     private String targetCapacityUnitType;
@@ -2629,18 +2629,18 @@ public class SpotFleetRequestConfigData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     * <code>InstanceRequirements</code> is specified.
+     * The unit for the target capacity. You can specify this parameter only when using attribute-based instance type
+     * selection.
      * </p>
      * <p>
-     * Default: <code>units</code> (translates to number of instances)
+     * Default: <code>units</code> (the number of instances)
      * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     *        <code>InstanceRequirements</code> is specified.</p>
+     *        The unit for the target capacity. You can specify this parameter only when using attribute-based instance
+     *        type selection.</p>
      *        <p>
-     *        Default: <code>units</code> (translates to number of instances)
+     *        Default: <code>units</code> (the number of instances)
      * @see TargetCapacityUnitType
      */
 
@@ -2650,17 +2650,17 @@ public class SpotFleetRequestConfigData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     * <code>InstanceRequirements</code> is specified.
+     * The unit for the target capacity. You can specify this parameter only when using attribute-based instance type
+     * selection.
      * </p>
      * <p>
-     * Default: <code>units</code> (translates to number of instances)
+     * Default: <code>units</code> (the number of instances)
      * </p>
      * 
-     * @return The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     *         <code>InstanceRequirements</code> is specified.</p>
+     * @return The unit for the target capacity. You can specify this parameter only when using attribute-based instance
+     *         type selection.</p>
      *         <p>
-     *         Default: <code>units</code> (translates to number of instances)
+     *         Default: <code>units</code> (the number of instances)
      * @see TargetCapacityUnitType
      */
 
@@ -2670,18 +2670,18 @@ public class SpotFleetRequestConfigData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     * <code>InstanceRequirements</code> is specified.
+     * The unit for the target capacity. You can specify this parameter only when using attribute-based instance type
+     * selection.
      * </p>
      * <p>
-     * Default: <code>units</code> (translates to number of instances)
+     * Default: <code>units</code> (the number of instances)
      * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     *        <code>InstanceRequirements</code> is specified.</p>
+     *        The unit for the target capacity. You can specify this parameter only when using attribute-based instance
+     *        type selection.</p>
      *        <p>
-     *        Default: <code>units</code> (translates to number of instances)
+     *        Default: <code>units</code> (the number of instances)
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetCapacityUnitType
      */
@@ -2693,18 +2693,18 @@ public class SpotFleetRequestConfigData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     * <code>InstanceRequirements</code> is specified.
+     * The unit for the target capacity. You can specify this parameter only when using attribute-based instance type
+     * selection.
      * </p>
      * <p>
-     * Default: <code>units</code> (translates to number of instances)
+     * Default: <code>units</code> (the number of instances)
      * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     *        <code>InstanceRequirements</code> is specified.</p>
+     *        The unit for the target capacity. You can specify this parameter only when using attribute-based instance
+     *        type selection.</p>
      *        <p>
-     *        Default: <code>units</code> (translates to number of instances)
+     *        Default: <code>units</code> (the number of instances)
      * @see TargetCapacityUnitType
      */
 
@@ -2714,18 +2714,18 @@ public class SpotFleetRequestConfigData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     * <code>InstanceRequirements</code> is specified.
+     * The unit for the target capacity. You can specify this parameter only when using attribute-based instance type
+     * selection.
      * </p>
      * <p>
-     * Default: <code>units</code> (translates to number of instances)
+     * Default: <code>units</code> (the number of instances)
      * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     *        <code>InstanceRequirements</code> is specified.</p>
+     *        The unit for the target capacity. You can specify this parameter only when using attribute-based instance
+     *        type selection.</p>
      *        <p>
-     *        Default: <code>units</code> (translates to number of instances)
+     *        Default: <code>units</code> (the number of instances)
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetCapacityUnitType
      */

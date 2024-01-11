@@ -72,6 +72,16 @@ public class VolumeAttachmentStaxUnmarshaller implements Unmarshaller<VolumeAtta
                     volumeAttachment.setDeleteOnTermination(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("associatedResource", targetDepth)) {
+                    volumeAttachment.setAssociatedResource(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("instanceOwningService", targetDepth)) {
+                    volumeAttachment.setInstanceOwningService(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return volumeAttachment;

@@ -34,29 +34,28 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
     private String instanceId;
     /**
      * <p>
-     * IMDSv2 uses token-backed sessions. Set the use of HTTP tokens to <code>optional</code> (in other words, set the
-     * use of IMDSv2 to <code>optional</code>) or <code>required</code> (in other words, set the use of IMDSv2 to
-     * <code>required</code>).
+     * Indicates whether IMDSv2 is required.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>optional</code> - When IMDSv2 is optional, you can choose to retrieve instance metadata with or without a
-     * session token in your request. If you retrieve the IAM role credentials without a token, the IMDSv1 role
-     * credentials are returned. If you retrieve the IAM role credentials using a valid session token, the IMDSv2 role
-     * credentials are returned.
+     * <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your instance
+     * metadata retrieval requests. If you retrieve IAM role credentials without a session token, you receive the IMDSv1
+     * role credentials. If you retrieve IAM role credentials using a valid session token, you receive the IMDSv2 role
+     * credentials.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>required</code> - When IMDSv2 is required, you must send a session token with any instance metadata
-     * retrieval requests. In this state, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
+     * <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata retrieval
+     * requests. With this option, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
      * credentials are not available.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>optional</code>
+     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, the default is <code>required</code>.
      * </p>
      */
     private String httpTokens;
@@ -142,54 +141,52 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * IMDSv2 uses token-backed sessions. Set the use of HTTP tokens to <code>optional</code> (in other words, set the
-     * use of IMDSv2 to <code>optional</code>) or <code>required</code> (in other words, set the use of IMDSv2 to
-     * <code>required</code>).
+     * Indicates whether IMDSv2 is required.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>optional</code> - When IMDSv2 is optional, you can choose to retrieve instance metadata with or without a
-     * session token in your request. If you retrieve the IAM role credentials without a token, the IMDSv1 role
-     * credentials are returned. If you retrieve the IAM role credentials using a valid session token, the IMDSv2 role
-     * credentials are returned.
+     * <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your instance
+     * metadata retrieval requests. If you retrieve IAM role credentials without a session token, you receive the IMDSv1
+     * role credentials. If you retrieve IAM role credentials using a valid session token, you receive the IMDSv2 role
+     * credentials.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>required</code> - When IMDSv2 is required, you must send a session token with any instance metadata
-     * retrieval requests. In this state, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
+     * <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata retrieval
+     * requests. With this option, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
      * credentials are not available.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>optional</code>
+     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, the default is <code>required</code>.
      * </p>
      * 
      * @param httpTokens
-     *        IMDSv2 uses token-backed sessions. Set the use of HTTP tokens to <code>optional</code> (in other words,
-     *        set the use of IMDSv2 to <code>optional</code>) or <code>required</code> (in other words, set the use of
-     *        IMDSv2 to <code>required</code>).</p>
+     *        Indicates whether IMDSv2 is required.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>optional</code> - When IMDSv2 is optional, you can choose to retrieve instance metadata with or
-     *        without a session token in your request. If you retrieve the IAM role credentials without a token, the
-     *        IMDSv1 role credentials are returned. If you retrieve the IAM role credentials using a valid session
-     *        token, the IMDSv2 role credentials are returned.
+     *        <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your
+     *        instance metadata retrieval requests. If you retrieve IAM role credentials without a session token, you
+     *        receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a valid session token, you
+     *        receive the IMDSv2 role credentials.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>required</code> - When IMDSv2 is required, you must send a session token with any instance metadata
-     *        retrieval requests. In this state, retrieving the IAM role credentials always returns IMDSv2 credentials;
-     *        IMDSv1 credentials are not available.
+     *        <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata
+     *        retrieval requests. With this option, retrieving the IAM role credentials always returns IMDSv2
+     *        credentials; IMDSv1 credentials are not available.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: <code>optional</code>
+     *        Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code>, the default is <code>required</code>.
      * @see HttpTokensState
      */
 
@@ -199,53 +196,51 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * IMDSv2 uses token-backed sessions. Set the use of HTTP tokens to <code>optional</code> (in other words, set the
-     * use of IMDSv2 to <code>optional</code>) or <code>required</code> (in other words, set the use of IMDSv2 to
-     * <code>required</code>).
+     * Indicates whether IMDSv2 is required.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>optional</code> - When IMDSv2 is optional, you can choose to retrieve instance metadata with or without a
-     * session token in your request. If you retrieve the IAM role credentials without a token, the IMDSv1 role
-     * credentials are returned. If you retrieve the IAM role credentials using a valid session token, the IMDSv2 role
-     * credentials are returned.
+     * <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your instance
+     * metadata retrieval requests. If you retrieve IAM role credentials without a session token, you receive the IMDSv1
+     * role credentials. If you retrieve IAM role credentials using a valid session token, you receive the IMDSv2 role
+     * credentials.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>required</code> - When IMDSv2 is required, you must send a session token with any instance metadata
-     * retrieval requests. In this state, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
+     * <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata retrieval
+     * requests. With this option, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
      * credentials are not available.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>optional</code>
+     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, the default is <code>required</code>.
      * </p>
      * 
-     * @return IMDSv2 uses token-backed sessions. Set the use of HTTP tokens to <code>optional</code> (in other words,
-     *         set the use of IMDSv2 to <code>optional</code>) or <code>required</code> (in other words, set the use of
-     *         IMDSv2 to <code>required</code>).</p>
+     * @return Indicates whether IMDSv2 is required.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>optional</code> - When IMDSv2 is optional, you can choose to retrieve instance metadata with or
-     *         without a session token in your request. If you retrieve the IAM role credentials without a token, the
-     *         IMDSv1 role credentials are returned. If you retrieve the IAM role credentials using a valid session
-     *         token, the IMDSv2 role credentials are returned.
+     *         <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your
+     *         instance metadata retrieval requests. If you retrieve IAM role credentials without a session token, you
+     *         receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a valid session token,
+     *         you receive the IMDSv2 role credentials.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>required</code> - When IMDSv2 is required, you must send a session token with any instance metadata
-     *         retrieval requests. In this state, retrieving the IAM role credentials always returns IMDSv2 credentials;
-     *         IMDSv1 credentials are not available.
+     *         <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata
+     *         retrieval requests. With this option, retrieving the IAM role credentials always returns IMDSv2
+     *         credentials; IMDSv1 credentials are not available.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         Default: <code>optional</code>
+     *         Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *         <code>v2.0</code>, the default is <code>required</code>.
      * @see HttpTokensState
      */
 
@@ -255,54 +250,52 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * IMDSv2 uses token-backed sessions. Set the use of HTTP tokens to <code>optional</code> (in other words, set the
-     * use of IMDSv2 to <code>optional</code>) or <code>required</code> (in other words, set the use of IMDSv2 to
-     * <code>required</code>).
+     * Indicates whether IMDSv2 is required.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>optional</code> - When IMDSv2 is optional, you can choose to retrieve instance metadata with or without a
-     * session token in your request. If you retrieve the IAM role credentials without a token, the IMDSv1 role
-     * credentials are returned. If you retrieve the IAM role credentials using a valid session token, the IMDSv2 role
-     * credentials are returned.
+     * <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your instance
+     * metadata retrieval requests. If you retrieve IAM role credentials without a session token, you receive the IMDSv1
+     * role credentials. If you retrieve IAM role credentials using a valid session token, you receive the IMDSv2 role
+     * credentials.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>required</code> - When IMDSv2 is required, you must send a session token with any instance metadata
-     * retrieval requests. In this state, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
+     * <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata retrieval
+     * requests. With this option, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
      * credentials are not available.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>optional</code>
+     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, the default is <code>required</code>.
      * </p>
      * 
      * @param httpTokens
-     *        IMDSv2 uses token-backed sessions. Set the use of HTTP tokens to <code>optional</code> (in other words,
-     *        set the use of IMDSv2 to <code>optional</code>) or <code>required</code> (in other words, set the use of
-     *        IMDSv2 to <code>required</code>).</p>
+     *        Indicates whether IMDSv2 is required.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>optional</code> - When IMDSv2 is optional, you can choose to retrieve instance metadata with or
-     *        without a session token in your request. If you retrieve the IAM role credentials without a token, the
-     *        IMDSv1 role credentials are returned. If you retrieve the IAM role credentials using a valid session
-     *        token, the IMDSv2 role credentials are returned.
+     *        <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your
+     *        instance metadata retrieval requests. If you retrieve IAM role credentials without a session token, you
+     *        receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a valid session token, you
+     *        receive the IMDSv2 role credentials.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>required</code> - When IMDSv2 is required, you must send a session token with any instance metadata
-     *        retrieval requests. In this state, retrieving the IAM role credentials always returns IMDSv2 credentials;
-     *        IMDSv1 credentials are not available.
+     *        <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata
+     *        retrieval requests. With this option, retrieving the IAM role credentials always returns IMDSv2
+     *        credentials; IMDSv1 credentials are not available.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: <code>optional</code>
+     *        Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code>, the default is <code>required</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HttpTokensState
      */
@@ -314,54 +307,52 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * IMDSv2 uses token-backed sessions. Set the use of HTTP tokens to <code>optional</code> (in other words, set the
-     * use of IMDSv2 to <code>optional</code>) or <code>required</code> (in other words, set the use of IMDSv2 to
-     * <code>required</code>).
+     * Indicates whether IMDSv2 is required.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>optional</code> - When IMDSv2 is optional, you can choose to retrieve instance metadata with or without a
-     * session token in your request. If you retrieve the IAM role credentials without a token, the IMDSv1 role
-     * credentials are returned. If you retrieve the IAM role credentials using a valid session token, the IMDSv2 role
-     * credentials are returned.
+     * <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your instance
+     * metadata retrieval requests. If you retrieve IAM role credentials without a session token, you receive the IMDSv1
+     * role credentials. If you retrieve IAM role credentials using a valid session token, you receive the IMDSv2 role
+     * credentials.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>required</code> - When IMDSv2 is required, you must send a session token with any instance metadata
-     * retrieval requests. In this state, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
+     * <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata retrieval
+     * requests. With this option, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
      * credentials are not available.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>optional</code>
+     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, the default is <code>required</code>.
      * </p>
      * 
      * @param httpTokens
-     *        IMDSv2 uses token-backed sessions. Set the use of HTTP tokens to <code>optional</code> (in other words,
-     *        set the use of IMDSv2 to <code>optional</code>) or <code>required</code> (in other words, set the use of
-     *        IMDSv2 to <code>required</code>).</p>
+     *        Indicates whether IMDSv2 is required.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>optional</code> - When IMDSv2 is optional, you can choose to retrieve instance metadata with or
-     *        without a session token in your request. If you retrieve the IAM role credentials without a token, the
-     *        IMDSv1 role credentials are returned. If you retrieve the IAM role credentials using a valid session
-     *        token, the IMDSv2 role credentials are returned.
+     *        <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your
+     *        instance metadata retrieval requests. If you retrieve IAM role credentials without a session token, you
+     *        receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a valid session token, you
+     *        receive the IMDSv2 role credentials.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>required</code> - When IMDSv2 is required, you must send a session token with any instance metadata
-     *        retrieval requests. In this state, retrieving the IAM role credentials always returns IMDSv2 credentials;
-     *        IMDSv1 credentials are not available.
+     *        <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata
+     *        retrieval requests. With this option, retrieving the IAM role credentials always returns IMDSv2
+     *        credentials; IMDSv1 credentials are not available.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: <code>optional</code>
+     *        Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code>, the default is <code>required</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HttpTokensState
      */

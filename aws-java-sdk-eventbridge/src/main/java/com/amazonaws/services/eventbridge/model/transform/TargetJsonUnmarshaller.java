@@ -112,6 +112,10 @@ public class TargetJsonUnmarshaller implements Unmarshaller<Target, JsonUnmarsha
                     context.nextToken();
                     target.setRetryPolicy(RetryPolicyJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AppSyncParameters", targetDepth)) {
+                    context.nextToken();
+                    target.setAppSyncParameters(AppSyncParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

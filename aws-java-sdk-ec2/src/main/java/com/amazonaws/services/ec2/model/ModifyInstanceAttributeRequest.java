@@ -55,7 +55,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * <p>
      * Modifies the <code>DeleteOnTermination</code> attribute for volumes that are currently attached. The volume must
      * be owned by the caller. If no value is specified for <code>DeleteOnTermination</code>, the default is
-     * <code>true</code> and the volume is deleted when the instance is terminated.
+     * <code>true</code> and the volume is deleted when the instance is terminated. You can't modify the
+     * <code>DeleteOnTermination</code> attribute for volumes that are attached to Fargate tasks.
      * </p>
      * <p>
      * To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance.
@@ -470,7 +471,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * <p>
      * Modifies the <code>DeleteOnTermination</code> attribute for volumes that are currently attached. The volume must
      * be owned by the caller. If no value is specified for <code>DeleteOnTermination</code>, the default is
-     * <code>true</code> and the volume is deleted when the instance is terminated.
+     * <code>true</code> and the volume is deleted when the instance is terminated. You can't modify the
+     * <code>DeleteOnTermination</code> attribute for volumes that are attached to Fargate tasks.
      * </p>
      * <p>
      * To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance.
@@ -481,7 +483,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * 
      * @return Modifies the <code>DeleteOnTermination</code> attribute for volumes that are currently attached. The
      *         volume must be owned by the caller. If no value is specified for <code>DeleteOnTermination</code>, the
-     *         default is <code>true</code> and the volume is deleted when the instance is terminated.</p>
+     *         default is <code>true</code> and the volume is deleted when the instance is terminated. You can't modify
+     *         the <code>DeleteOnTermination</code> attribute for volumes that are attached to Fargate tasks.</p>
      *         <p>
      *         To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the
      *         instance. For more information, see <a href=
@@ -500,7 +503,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * <p>
      * Modifies the <code>DeleteOnTermination</code> attribute for volumes that are currently attached. The volume must
      * be owned by the caller. If no value is specified for <code>DeleteOnTermination</code>, the default is
-     * <code>true</code> and the volume is deleted when the instance is terminated.
+     * <code>true</code> and the volume is deleted when the instance is terminated. You can't modify the
+     * <code>DeleteOnTermination</code> attribute for volumes that are attached to Fargate tasks.
      * </p>
      * <p>
      * To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance.
@@ -512,7 +516,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * @param blockDeviceMappings
      *        Modifies the <code>DeleteOnTermination</code> attribute for volumes that are currently attached. The
      *        volume must be owned by the caller. If no value is specified for <code>DeleteOnTermination</code>, the
-     *        default is <code>true</code> and the volume is deleted when the instance is terminated.</p>
+     *        default is <code>true</code> and the volume is deleted when the instance is terminated. You can't modify
+     *        the <code>DeleteOnTermination</code> attribute for volumes that are attached to Fargate tasks.</p>
      *        <p>
      *        To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the
      *        instance. For more information, see <a href=
@@ -533,7 +538,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * <p>
      * Modifies the <code>DeleteOnTermination</code> attribute for volumes that are currently attached. The volume must
      * be owned by the caller. If no value is specified for <code>DeleteOnTermination</code>, the default is
-     * <code>true</code> and the volume is deleted when the instance is terminated.
+     * <code>true</code> and the volume is deleted when the instance is terminated. You can't modify the
+     * <code>DeleteOnTermination</code> attribute for volumes that are attached to Fargate tasks.
      * </p>
      * <p>
      * To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance.
@@ -550,7 +556,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * @param blockDeviceMappings
      *        Modifies the <code>DeleteOnTermination</code> attribute for volumes that are currently attached. The
      *        volume must be owned by the caller. If no value is specified for <code>DeleteOnTermination</code>, the
-     *        default is <code>true</code> and the volume is deleted when the instance is terminated.</p>
+     *        default is <code>true</code> and the volume is deleted when the instance is terminated. You can't modify
+     *        the <code>DeleteOnTermination</code> attribute for volumes that are attached to Fargate tasks.</p>
      *        <p>
      *        To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the
      *        instance. For more information, see <a href=
@@ -573,7 +580,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * <p>
      * Modifies the <code>DeleteOnTermination</code> attribute for volumes that are currently attached. The volume must
      * be owned by the caller. If no value is specified for <code>DeleteOnTermination</code>, the default is
-     * <code>true</code> and the volume is deleted when the instance is terminated.
+     * <code>true</code> and the volume is deleted when the instance is terminated. You can't modify the
+     * <code>DeleteOnTermination</code> attribute for volumes that are attached to Fargate tasks.
      * </p>
      * <p>
      * To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance.
@@ -585,7 +593,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * @param blockDeviceMappings
      *        Modifies the <code>DeleteOnTermination</code> attribute for volumes that are currently attached. The
      *        volume must be owned by the caller. If no value is specified for <code>DeleteOnTermination</code>, the
-     *        default is <code>true</code> and the volume is deleted when the instance is terminated.</p>
+     *        default is <code>true</code> and the volume is deleted when the instance is terminated. You can't modify
+     *        the <code>DeleteOnTermination</code> attribute for volumes that are attached to Fargate tasks.</p>
      *        <p>
      *        To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the
      *        instance. For more information, see <a href=

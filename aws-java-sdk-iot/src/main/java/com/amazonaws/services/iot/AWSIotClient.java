@@ -17562,6 +17562,8 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
      * @return Result of the UpdatePackage operation returned by the service.
      * @throws ThrottlingException
      *         The rate exceeds the limit.
+     * @throws ConflictException
+     *         A resource with the same name already exists.
      * @throws InternalServerException
      *         Internal error from the service that indicates an unexpected error or that the service is unavailable.
      * @throws ValidationException
@@ -17629,6 +17631,8 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
      * @return Result of the UpdatePackageConfiguration operation returned by the service.
      * @throws ThrottlingException
      *         The rate exceeds the limit.
+     * @throws ConflictException
+     *         A resource with the same name already exists.
      * @throws InternalServerException
      *         Internal error from the service that indicates an unexpected error or that the service is unavailable.
      * @throws ValidationException
@@ -17697,6 +17701,8 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
      * @return Result of the UpdatePackageVersion operation returned by the service.
      * @throws ThrottlingException
      *         The rate exceeds the limit.
+     * @throws ConflictException
+     *         A resource with the same name already exists.
      * @throws InternalServerException
      *         Internal error from the service that indicates an unexpected error or that the service is unavailable.
      * @throws ValidationException

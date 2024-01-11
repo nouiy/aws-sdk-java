@@ -405,6 +405,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private ServiceConnectConfiguration serviceConnectConfiguration;
+    /**
+     * <p>
+     * The configuration for a volume specified in the task definition as a volume that is configured at launch time.
+     * Currently, the only supported volume type is an Amazon EBS volume.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<ServiceVolumeConfiguration> volumeConfigurations;
 
     /**
      * <p>
@@ -3384,6 +3391,87 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The configuration for a volume specified in the task definition as a volume that is configured at launch time.
+     * Currently, the only supported volume type is an Amazon EBS volume.
+     * </p>
+     * 
+     * @return The configuration for a volume specified in the task definition as a volume that is configured at launch
+     *         time. Currently, the only supported volume type is an Amazon EBS volume.
+     */
+
+    public java.util.List<ServiceVolumeConfiguration> getVolumeConfigurations() {
+        if (volumeConfigurations == null) {
+            volumeConfigurations = new com.amazonaws.internal.SdkInternalList<ServiceVolumeConfiguration>();
+        }
+        return volumeConfigurations;
+    }
+
+    /**
+     * <p>
+     * The configuration for a volume specified in the task definition as a volume that is configured at launch time.
+     * Currently, the only supported volume type is an Amazon EBS volume.
+     * </p>
+     * 
+     * @param volumeConfigurations
+     *        The configuration for a volume specified in the task definition as a volume that is configured at launch
+     *        time. Currently, the only supported volume type is an Amazon EBS volume.
+     */
+
+    public void setVolumeConfigurations(java.util.Collection<ServiceVolumeConfiguration> volumeConfigurations) {
+        if (volumeConfigurations == null) {
+            this.volumeConfigurations = null;
+            return;
+        }
+
+        this.volumeConfigurations = new com.amazonaws.internal.SdkInternalList<ServiceVolumeConfiguration>(volumeConfigurations);
+    }
+
+    /**
+     * <p>
+     * The configuration for a volume specified in the task definition as a volume that is configured at launch time.
+     * Currently, the only supported volume type is an Amazon EBS volume.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setVolumeConfigurations(java.util.Collection)} or {@link #withVolumeConfigurations(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param volumeConfigurations
+     *        The configuration for a volume specified in the task definition as a volume that is configured at launch
+     *        time. Currently, the only supported volume type is an Amazon EBS volume.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateServiceRequest withVolumeConfigurations(ServiceVolumeConfiguration... volumeConfigurations) {
+        if (this.volumeConfigurations == null) {
+            setVolumeConfigurations(new com.amazonaws.internal.SdkInternalList<ServiceVolumeConfiguration>(volumeConfigurations.length));
+        }
+        for (ServiceVolumeConfiguration ele : volumeConfigurations) {
+            this.volumeConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration for a volume specified in the task definition as a volume that is configured at launch time.
+     * Currently, the only supported volume type is an Amazon EBS volume.
+     * </p>
+     * 
+     * @param volumeConfigurations
+     *        The configuration for a volume specified in the task definition as a volume that is configured at launch
+     *        time. Currently, the only supported volume type is an Amazon EBS volume.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateServiceRequest withVolumeConfigurations(java.util.Collection<ServiceVolumeConfiguration> volumeConfigurations) {
+        setVolumeConfigurations(volumeConfigurations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3440,7 +3528,9 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getEnableExecuteCommand() != null)
             sb.append("EnableExecuteCommand: ").append(getEnableExecuteCommand()).append(",");
         if (getServiceConnectConfiguration() != null)
-            sb.append("ServiceConnectConfiguration: ").append(getServiceConnectConfiguration());
+            sb.append("ServiceConnectConfiguration: ").append(getServiceConnectConfiguration()).append(",");
+        if (getVolumeConfigurations() != null)
+            sb.append("VolumeConfigurations: ").append(getVolumeConfigurations());
         sb.append("}");
         return sb.toString();
     }
@@ -3548,6 +3638,10 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getServiceConnectConfiguration() != null && other.getServiceConnectConfiguration().equals(this.getServiceConnectConfiguration()) == false)
             return false;
+        if (other.getVolumeConfigurations() == null ^ this.getVolumeConfigurations() == null)
+            return false;
+        if (other.getVolumeConfigurations() != null && other.getVolumeConfigurations().equals(this.getVolumeConfigurations()) == false)
+            return false;
         return true;
     }
 
@@ -3579,6 +3673,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getPropagateTags() == null) ? 0 : getPropagateTags().hashCode());
         hashCode = prime * hashCode + ((getEnableExecuteCommand() == null) ? 0 : getEnableExecuteCommand().hashCode());
         hashCode = prime * hashCode + ((getServiceConnectConfiguration() == null) ? 0 : getServiceConnectConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getVolumeConfigurations() == null) ? 0 : getVolumeConfigurations().hashCode());
         return hashCode;
     }
 

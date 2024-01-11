@@ -74,8 +74,8 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
     private RotationRulesType rotationRules;
     /**
      * <p>
-     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation,
-     * Secrets Manager returns null.
+     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation or
+     * rotation has been disabled, Secrets Manager returns null.
      * </p>
      */
     private java.util.Date lastRotatedDate;
@@ -106,8 +106,8 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
     private java.util.Date deletedDate;
     /**
      * <p>
-     * The next rotation is scheduled to occur on or before this date. If the secret isn't configured for rotation,
-     * Secrets Manager returns null.
+     * The next rotation is scheduled to occur on or before this date. If the secret isn't configured for rotation or
+     * rotation has been disabled, Secrets Manager returns null.
      * </p>
      */
     private java.util.Date nextRotationDate;
@@ -540,13 +540,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation,
-     * Secrets Manager returns null.
+     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation or
+     * rotation has been disabled, Secrets Manager returns null.
      * </p>
      * 
      * @param lastRotatedDate
      *        The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for
-     *        rotation, Secrets Manager returns null.
+     *        rotation or rotation has been disabled, Secrets Manager returns null.
      */
 
     public void setLastRotatedDate(java.util.Date lastRotatedDate) {
@@ -555,12 +555,12 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation,
-     * Secrets Manager returns null.
+     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation or
+     * rotation has been disabled, Secrets Manager returns null.
      * </p>
      * 
      * @return The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for
-     *         rotation, Secrets Manager returns null.
+     *         rotation or rotation has been disabled, Secrets Manager returns null.
      */
 
     public java.util.Date getLastRotatedDate() {
@@ -569,13 +569,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation,
-     * Secrets Manager returns null.
+     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation or
+     * rotation has been disabled, Secrets Manager returns null.
      * </p>
      * 
      * @param lastRotatedDate
      *        The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for
-     *        rotation, Secrets Manager returns null.
+     *        rotation or rotation has been disabled, Secrets Manager returns null.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -748,13 +748,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The next rotation is scheduled to occur on or before this date. If the secret isn't configured for rotation,
-     * Secrets Manager returns null.
+     * The next rotation is scheduled to occur on or before this date. If the secret isn't configured for rotation or
+     * rotation has been disabled, Secrets Manager returns null.
      * </p>
      * 
      * @param nextRotationDate
      *        The next rotation is scheduled to occur on or before this date. If the secret isn't configured for
-     *        rotation, Secrets Manager returns null.
+     *        rotation or rotation has been disabled, Secrets Manager returns null.
      */
 
     public void setNextRotationDate(java.util.Date nextRotationDate) {
@@ -763,12 +763,12 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The next rotation is scheduled to occur on or before this date. If the secret isn't configured for rotation,
-     * Secrets Manager returns null.
+     * The next rotation is scheduled to occur on or before this date. If the secret isn't configured for rotation or
+     * rotation has been disabled, Secrets Manager returns null.
      * </p>
      * 
      * @return The next rotation is scheduled to occur on or before this date. If the secret isn't configured for
-     *         rotation, Secrets Manager returns null.
+     *         rotation or rotation has been disabled, Secrets Manager returns null.
      */
 
     public java.util.Date getNextRotationDate() {
@@ -777,13 +777,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The next rotation is scheduled to occur on or before this date. If the secret isn't configured for rotation,
-     * Secrets Manager returns null.
+     * The next rotation is scheduled to occur on or before this date. If the secret isn't configured for rotation or
+     * rotation has been disabled, Secrets Manager returns null.
      * </p>
      * 
      * @param nextRotationDate
      *        The next rotation is scheduled to occur on or before this date. If the secret isn't configured for
-     *        rotation, Secrets Manager returns null.
+     *        rotation or rotation has been disabled, Secrets Manager returns null.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

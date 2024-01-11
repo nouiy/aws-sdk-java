@@ -59,6 +59,8 @@ public class TargetMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeadLetterConfig").build();
     private static final MarshallingInfo<StructuredPojo> RETRYPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RetryPolicy").build();
+    private static final MarshallingInfo<StructuredPojo> APPSYNCPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AppSyncParameters").build();
 
     private static final TargetMarshaller instance = new TargetMarshaller();
 
@@ -92,6 +94,7 @@ public class TargetMarshaller {
             protocolMarshaller.marshall(target.getSageMakerPipelineParameters(), SAGEMAKERPIPELINEPARAMETERS_BINDING);
             protocolMarshaller.marshall(target.getDeadLetterConfig(), DEADLETTERCONFIG_BINDING);
             protocolMarshaller.marshall(target.getRetryPolicy(), RETRYPOLICY_BINDING);
+            protocolMarshaller.marshall(target.getAppSyncParameters(), APPSYNCPARAMETERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

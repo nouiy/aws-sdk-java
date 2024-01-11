@@ -67,6 +67,8 @@ public class RunTaskRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<List> VOLUMECONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeConfigurations").build();
 
     private static final RunTaskRequestMarshaller instance = new RunTaskRequestMarshaller();
 
@@ -102,6 +104,7 @@ public class RunTaskRequestMarshaller {
             protocolMarshaller.marshall(runTaskRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(runTaskRequest.getTaskDefinition(), TASKDEFINITION_BINDING);
             protocolMarshaller.marshall(runTaskRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(runTaskRequest.getVolumeConfigurations(), VOLUMECONFIGURATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

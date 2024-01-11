@@ -35,23 +35,11 @@ public class WorkspaceProperties implements Serializable, Cloneable, StructuredP
      * Mode</a>.
      * </p>
      * <note>
-     * <ul>
-     * <li>
      * <p>
      * The <code>MANUAL</code> value is only supported by Amazon WorkSpaces Core. Contact your account team to be
      * allow-listed to use this value. For more information, see <a href="http://aws.amazon.com/workspaces/core/">Amazon
      * WorkSpaces Core</a>.
      * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs and
-     * budget. For more information on switching running modes, see <a href=
-     * "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     * > Can I switch between hourly and monthly billing?</a>
-     * </p>
-     * </li>
-     * </ul>
      * </note>
      */
     private String runningMode;
@@ -126,46 +114,22 @@ public class WorkspaceProperties implements Serializable, Cloneable, StructuredP
      * Mode</a>.
      * </p>
      * <note>
-     * <ul>
-     * <li>
      * <p>
      * The <code>MANUAL</code> value is only supported by Amazon WorkSpaces Core. Contact your account team to be
      * allow-listed to use this value. For more information, see <a href="http://aws.amazon.com/workspaces/core/">Amazon
      * WorkSpaces Core</a>.
      * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs and
-     * budget. For more information on switching running modes, see <a href=
-     * "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     * > Can I switch between hourly and monthly billing?</a>
-     * </p>
-     * </li>
-     * </ul>
      * </note>
      * 
      * @param runningMode
      *        The running mode. For more information, see <a
      *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html">Manage the WorkSpace
      *        Running Mode</a>.</p> <note>
-     *        <ul>
-     *        <li>
      *        <p>
      *        The <code>MANUAL</code> value is only supported by Amazon WorkSpaces Core. Contact your account team to be
      *        allow-listed to use this value. For more information, see <a
      *        href="http://aws.amazon.com/workspaces/core/">Amazon WorkSpaces Core</a>.
      *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs
-     *        and budget. For more information on switching running modes, see <a href=
-     *        "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     *        > Can I switch between hourly and monthly billing?</a>
-     *        </p>
-     *        </li>
-     *        </ul>
      * @see RunningMode
      */
 
@@ -180,45 +144,21 @@ public class WorkspaceProperties implements Serializable, Cloneable, StructuredP
      * Mode</a>.
      * </p>
      * <note>
-     * <ul>
-     * <li>
      * <p>
      * The <code>MANUAL</code> value is only supported by Amazon WorkSpaces Core. Contact your account team to be
      * allow-listed to use this value. For more information, see <a href="http://aws.amazon.com/workspaces/core/">Amazon
      * WorkSpaces Core</a>.
      * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs and
-     * budget. For more information on switching running modes, see <a href=
-     * "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     * > Can I switch between hourly and monthly billing?</a>
-     * </p>
-     * </li>
-     * </ul>
      * </note>
      * 
      * @return The running mode. For more information, see <a
      *         href="https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html">Manage the WorkSpace
      *         Running Mode</a>.</p> <note>
-     *         <ul>
-     *         <li>
      *         <p>
      *         The <code>MANUAL</code> value is only supported by Amazon WorkSpaces Core. Contact your account team to
      *         be allow-listed to use this value. For more information, see <a
      *         href="http://aws.amazon.com/workspaces/core/">Amazon WorkSpaces Core</a>.
      *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs
-     *         and budget. For more information on switching running modes, see <a href=
-     *         "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     *         > Can I switch between hourly and monthly billing?</a>
-     *         </p>
-     *         </li>
-     *         </ul>
      * @see RunningMode
      */
 
@@ -233,46 +173,22 @@ public class WorkspaceProperties implements Serializable, Cloneable, StructuredP
      * Mode</a>.
      * </p>
      * <note>
-     * <ul>
-     * <li>
      * <p>
      * The <code>MANUAL</code> value is only supported by Amazon WorkSpaces Core. Contact your account team to be
      * allow-listed to use this value. For more information, see <a href="http://aws.amazon.com/workspaces/core/">Amazon
      * WorkSpaces Core</a>.
      * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs and
-     * budget. For more information on switching running modes, see <a href=
-     * "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     * > Can I switch between hourly and monthly billing?</a>
-     * </p>
-     * </li>
-     * </ul>
      * </note>
      * 
      * @param runningMode
      *        The running mode. For more information, see <a
      *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html">Manage the WorkSpace
      *        Running Mode</a>.</p> <note>
-     *        <ul>
-     *        <li>
      *        <p>
      *        The <code>MANUAL</code> value is only supported by Amazon WorkSpaces Core. Contact your account team to be
      *        allow-listed to use this value. For more information, see <a
      *        href="http://aws.amazon.com/workspaces/core/">Amazon WorkSpaces Core</a>.
      *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs
-     *        and budget. For more information on switching running modes, see <a href=
-     *        "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     *        > Can I switch between hourly and monthly billing?</a>
-     *        </p>
-     *        </li>
-     *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RunningMode
      */
@@ -289,46 +205,22 @@ public class WorkspaceProperties implements Serializable, Cloneable, StructuredP
      * Mode</a>.
      * </p>
      * <note>
-     * <ul>
-     * <li>
      * <p>
      * The <code>MANUAL</code> value is only supported by Amazon WorkSpaces Core. Contact your account team to be
      * allow-listed to use this value. For more information, see <a href="http://aws.amazon.com/workspaces/core/">Amazon
      * WorkSpaces Core</a>.
      * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs and
-     * budget. For more information on switching running modes, see <a href=
-     * "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     * > Can I switch between hourly and monthly billing?</a>
-     * </p>
-     * </li>
-     * </ul>
      * </note>
      * 
      * @param runningMode
      *        The running mode. For more information, see <a
      *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html">Manage the WorkSpace
      *        Running Mode</a>.</p> <note>
-     *        <ul>
-     *        <li>
      *        <p>
      *        The <code>MANUAL</code> value is only supported by Amazon WorkSpaces Core. Contact your account team to be
      *        allow-listed to use this value. For more information, see <a
      *        href="http://aws.amazon.com/workspaces/core/">Amazon WorkSpaces Core</a>.
      *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs
-     *        and budget. For more information on switching running modes, see <a href=
-     *        "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     *        > Can I switch between hourly and monthly billing?</a>
-     *        </p>
-     *        </li>
-     *        </ul>
      * @see RunningMode
      */
 
@@ -343,46 +235,22 @@ public class WorkspaceProperties implements Serializable, Cloneable, StructuredP
      * Mode</a>.
      * </p>
      * <note>
-     * <ul>
-     * <li>
      * <p>
      * The <code>MANUAL</code> value is only supported by Amazon WorkSpaces Core. Contact your account team to be
      * allow-listed to use this value. For more information, see <a href="http://aws.amazon.com/workspaces/core/">Amazon
      * WorkSpaces Core</a>.
      * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs and
-     * budget. For more information on switching running modes, see <a href=
-     * "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     * > Can I switch between hourly and monthly billing?</a>
-     * </p>
-     * </li>
-     * </ul>
      * </note>
      * 
      * @param runningMode
      *        The running mode. For more information, see <a
      *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html">Manage the WorkSpace
      *        Running Mode</a>.</p> <note>
-     *        <ul>
-     *        <li>
      *        <p>
      *        The <code>MANUAL</code> value is only supported by Amazon WorkSpaces Core. Contact your account team to be
      *        allow-listed to use this value. For more information, see <a
      *        href="http://aws.amazon.com/workspaces/core/">Amazon WorkSpaces Core</a>.
      *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Ensure you review your running mode to ensure you are using a running mode that is optimal for your needs
-     *        and budget. For more information on switching running modes, see <a href=
-     *        "https://aws.amazon.com/workspaces/faqs/#:~:text=Q%3A%20Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%3F"
-     *        > Can I switch between hourly and monthly billing?</a>
-     *        </p>
-     *        </li>
-     *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RunningMode
      */

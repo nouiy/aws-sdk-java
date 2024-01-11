@@ -69,8 +69,8 @@ public class StateReason implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down using the <code>shutdown -h</code>
-     * command from the instance.
+     * <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down from the operating system of the
+     * instance.
      * </p>
      * </li>
      * <li>
@@ -185,8 +185,8 @@ public class StateReason implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down using the <code>shutdown -h</code>
-     * command from the instance.
+     * <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down from the operating system of the
+     * instance.
      * </p>
      * </li>
      * <li>
@@ -257,8 +257,8 @@ public class StateReason implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down using the
-     *        <code>shutdown -h</code> command from the instance.
+     *        <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down from the operating system of the
+     *        instance.
      *        </p>
      *        </li>
      *        <li>
@@ -335,8 +335,8 @@ public class StateReason implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down using the <code>shutdown -h</code>
-     * command from the instance.
+     * <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down from the operating system of the
+     * instance.
      * </p>
      * </li>
      * <li>
@@ -406,8 +406,8 @@ public class StateReason implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down using the
-     *         <code>shutdown -h</code> command from the instance.
+     *         <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down from the operating system of
+     *         the instance.
      *         </p>
      *         </li>
      *         <li>
@@ -484,8 +484,8 @@ public class StateReason implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down using the <code>shutdown -h</code>
-     * command from the instance.
+     * <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down from the operating system of the
+     * instance.
      * </p>
      * </li>
      * <li>
@@ -556,8 +556,8 @@ public class StateReason implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down using the
-     *        <code>shutdown -h</code> command from the instance.
+     *        <code>Client.InstanceInitiatedShutdown</code>: The instance was shut down from the operating system of the
+     *        instance.
      *        </p>
      *        </li>
      *        <li>

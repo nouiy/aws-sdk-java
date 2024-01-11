@@ -36,7 +36,8 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
     private String id;
     /**
      * <p>
-     * The type of the attachment, such as <code>ElasticNetworkInterface</code>.
+     * The type of the attachment, such as <code>ElasticNetworkInterface</code>, <code>Service Connect</code>, and
+     * <code>AmazonElasticBlockStorage</code>.
      * </p>
      */
     private String type;
@@ -50,8 +51,20 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
     private String status;
     /**
      * <p>
-     * Details of the attachment. For elastic network interfaces, this includes the network interface ID, the MAC
-     * address, the subnet ID, and the private IPv4 address.
+     * Details of the attachment.
+     * </p>
+     * <p>
+     * For elastic network interfaces, this includes the network interface ID, the MAC address, the subnet ID, and the
+     * private IPv4 address.
+     * </p>
+     * <p>
+     * For Service Connect services, this includes <code>portName</code>, <code>clientAliases</code>,
+     * <code>discoveryName</code>, and <code>ingressPortOverride</code>.
+     * </p>
+     * <p>
+     * For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
+     * <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
+     * <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and <code>volumeType</code>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<KeyValuePair> details;
@@ -98,11 +111,13 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the attachment, such as <code>ElasticNetworkInterface</code>.
+     * The type of the attachment, such as <code>ElasticNetworkInterface</code>, <code>Service Connect</code>, and
+     * <code>AmazonElasticBlockStorage</code>.
      * </p>
      * 
      * @param type
-     *        The type of the attachment, such as <code>ElasticNetworkInterface</code>.
+     *        The type of the attachment, such as <code>ElasticNetworkInterface</code>, <code>Service Connect</code>,
+     *        and <code>AmazonElasticBlockStorage</code>.
      */
 
     public void setType(String type) {
@@ -111,10 +126,12 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the attachment, such as <code>ElasticNetworkInterface</code>.
+     * The type of the attachment, such as <code>ElasticNetworkInterface</code>, <code>Service Connect</code>, and
+     * <code>AmazonElasticBlockStorage</code>.
      * </p>
      * 
-     * @return The type of the attachment, such as <code>ElasticNetworkInterface</code>.
+     * @return The type of the attachment, such as <code>ElasticNetworkInterface</code>, <code>Service Connect</code>,
+     *         and <code>AmazonElasticBlockStorage</code>.
      */
 
     public String getType() {
@@ -123,11 +140,13 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the attachment, such as <code>ElasticNetworkInterface</code>.
+     * The type of the attachment, such as <code>ElasticNetworkInterface</code>, <code>Service Connect</code>, and
+     * <code>AmazonElasticBlockStorage</code>.
      * </p>
      * 
      * @param type
-     *        The type of the attachment, such as <code>ElasticNetworkInterface</code>.
+     *        The type of the attachment, such as <code>ElasticNetworkInterface</code>, <code>Service Connect</code>,
+     *        and <code>AmazonElasticBlockStorage</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -190,12 +209,36 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Details of the attachment. For elastic network interfaces, this includes the network interface ID, the MAC
-     * address, the subnet ID, and the private IPv4 address.
+     * Details of the attachment.
+     * </p>
+     * <p>
+     * For elastic network interfaces, this includes the network interface ID, the MAC address, the subnet ID, and the
+     * private IPv4 address.
+     * </p>
+     * <p>
+     * For Service Connect services, this includes <code>portName</code>, <code>clientAliases</code>,
+     * <code>discoveryName</code>, and <code>ingressPortOverride</code>.
+     * </p>
+     * <p>
+     * For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
+     * <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
+     * <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and <code>volumeType</code>.
      * </p>
      * 
-     * @return Details of the attachment. For elastic network interfaces, this includes the network interface ID, the
-     *         MAC address, the subnet ID, and the private IPv4 address.
+     * @return Details of the attachment.</p>
+     *         <p>
+     *         For elastic network interfaces, this includes the network interface ID, the MAC address, the subnet ID,
+     *         and the private IPv4 address.
+     *         </p>
+     *         <p>
+     *         For Service Connect services, this includes <code>portName</code>, <code>clientAliases</code>,
+     *         <code>discoveryName</code>, and <code>ingressPortOverride</code>.
+     *         </p>
+     *         <p>
+     *         For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
+     *         <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
+     *         <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and
+     *         <code>volumeType</code>.
      */
 
     public java.util.List<KeyValuePair> getDetails() {
@@ -207,13 +250,37 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Details of the attachment. For elastic network interfaces, this includes the network interface ID, the MAC
-     * address, the subnet ID, and the private IPv4 address.
+     * Details of the attachment.
+     * </p>
+     * <p>
+     * For elastic network interfaces, this includes the network interface ID, the MAC address, the subnet ID, and the
+     * private IPv4 address.
+     * </p>
+     * <p>
+     * For Service Connect services, this includes <code>portName</code>, <code>clientAliases</code>,
+     * <code>discoveryName</code>, and <code>ingressPortOverride</code>.
+     * </p>
+     * <p>
+     * For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
+     * <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
+     * <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and <code>volumeType</code>.
      * </p>
      * 
      * @param details
-     *        Details of the attachment. For elastic network interfaces, this includes the network interface ID, the MAC
-     *        address, the subnet ID, and the private IPv4 address.
+     *        Details of the attachment.</p>
+     *        <p>
+     *        For elastic network interfaces, this includes the network interface ID, the MAC address, the subnet ID,
+     *        and the private IPv4 address.
+     *        </p>
+     *        <p>
+     *        For Service Connect services, this includes <code>portName</code>, <code>clientAliases</code>,
+     *        <code>discoveryName</code>, and <code>ingressPortOverride</code>.
+     *        </p>
+     *        <p>
+     *        For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
+     *        <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
+     *        <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and
+     *        <code>volumeType</code>.
      */
 
     public void setDetails(java.util.Collection<KeyValuePair> details) {
@@ -227,8 +294,20 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Details of the attachment. For elastic network interfaces, this includes the network interface ID, the MAC
-     * address, the subnet ID, and the private IPv4 address.
+     * Details of the attachment.
+     * </p>
+     * <p>
+     * For elastic network interfaces, this includes the network interface ID, the MAC address, the subnet ID, and the
+     * private IPv4 address.
+     * </p>
+     * <p>
+     * For Service Connect services, this includes <code>portName</code>, <code>clientAliases</code>,
+     * <code>discoveryName</code>, and <code>ingressPortOverride</code>.
+     * </p>
+     * <p>
+     * For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
+     * <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
+     * <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and <code>volumeType</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -237,8 +316,20 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param details
-     *        Details of the attachment. For elastic network interfaces, this includes the network interface ID, the MAC
-     *        address, the subnet ID, and the private IPv4 address.
+     *        Details of the attachment.</p>
+     *        <p>
+     *        For elastic network interfaces, this includes the network interface ID, the MAC address, the subnet ID,
+     *        and the private IPv4 address.
+     *        </p>
+     *        <p>
+     *        For Service Connect services, this includes <code>portName</code>, <code>clientAliases</code>,
+     *        <code>discoveryName</code>, and <code>ingressPortOverride</code>.
+     *        </p>
+     *        <p>
+     *        For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
+     *        <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
+     *        <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and
+     *        <code>volumeType</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -254,13 +345,37 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Details of the attachment. For elastic network interfaces, this includes the network interface ID, the MAC
-     * address, the subnet ID, and the private IPv4 address.
+     * Details of the attachment.
+     * </p>
+     * <p>
+     * For elastic network interfaces, this includes the network interface ID, the MAC address, the subnet ID, and the
+     * private IPv4 address.
+     * </p>
+     * <p>
+     * For Service Connect services, this includes <code>portName</code>, <code>clientAliases</code>,
+     * <code>discoveryName</code>, and <code>ingressPortOverride</code>.
+     * </p>
+     * <p>
+     * For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
+     * <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
+     * <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and <code>volumeType</code>.
      * </p>
      * 
      * @param details
-     *        Details of the attachment. For elastic network interfaces, this includes the network interface ID, the MAC
-     *        address, the subnet ID, and the private IPv4 address.
+     *        Details of the attachment.</p>
+     *        <p>
+     *        For elastic network interfaces, this includes the network interface ID, the MAC address, the subnet ID,
+     *        and the private IPv4 address.
+     *        </p>
+     *        <p>
+     *        For Service Connect services, this includes <code>portName</code>, <code>clientAliases</code>,
+     *        <code>discoveryName</code>, and <code>ingressPortOverride</code>.
+     *        </p>
+     *        <p>
+     *        For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
+     *        <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
+     *        <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and
+     *        <code>volumeType</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

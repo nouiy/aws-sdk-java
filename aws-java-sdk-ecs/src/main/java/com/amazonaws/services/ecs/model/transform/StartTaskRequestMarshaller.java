@@ -52,6 +52,8 @@ public class StartTaskRequestMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> TASKDEFINITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("taskDefinition").build();
+    private static final MarshallingInfo<List> VOLUMECONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeConfigurations").build();
 
     private static final StartTaskRequestMarshaller instance = new StartTaskRequestMarshaller();
 
@@ -81,6 +83,7 @@ public class StartTaskRequestMarshaller {
             protocolMarshaller.marshall(startTaskRequest.getStartedBy(), STARTEDBY_BINDING);
             protocolMarshaller.marshall(startTaskRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(startTaskRequest.getTaskDefinition(), TASKDEFINITION_BINDING);
+            protocolMarshaller.marshall(startTaskRequest.getVolumeConfigurations(), VOLUMECONFIGURATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

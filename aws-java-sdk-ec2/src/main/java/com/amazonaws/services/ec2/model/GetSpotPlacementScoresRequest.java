@@ -47,9 +47,6 @@ public class GetSpotPlacementScoresRequest extends AmazonWebServiceRequest imple
      * <p>
      * The unit for the target capacity.
      * </p>
-     * <p>
-     * Default: <code>units</code> (translates to number of instances)
-     * </p>
      */
     private String targetCapacityUnitType;
     /**
@@ -251,14 +248,9 @@ public class GetSpotPlacementScoresRequest extends AmazonWebServiceRequest imple
      * <p>
      * The unit for the target capacity.
      * </p>
-     * <p>
-     * Default: <code>units</code> (translates to number of instances)
-     * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity.</p>
-     *        <p>
-     *        Default: <code>units</code> (translates to number of instances)
+     *        The unit for the target capacity.
      * @see TargetCapacityUnitType
      */
 
@@ -270,13 +262,8 @@ public class GetSpotPlacementScoresRequest extends AmazonWebServiceRequest imple
      * <p>
      * The unit for the target capacity.
      * </p>
-     * <p>
-     * Default: <code>units</code> (translates to number of instances)
-     * </p>
      * 
-     * @return The unit for the target capacity.</p>
-     *         <p>
-     *         Default: <code>units</code> (translates to number of instances)
+     * @return The unit for the target capacity.
      * @see TargetCapacityUnitType
      */
 
@@ -288,14 +275,9 @@ public class GetSpotPlacementScoresRequest extends AmazonWebServiceRequest imple
      * <p>
      * The unit for the target capacity.
      * </p>
-     * <p>
-     * Default: <code>units</code> (translates to number of instances)
-     * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity.</p>
-     *        <p>
-     *        Default: <code>units</code> (translates to number of instances)
+     *        The unit for the target capacity.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetCapacityUnitType
      */
@@ -309,14 +291,9 @@ public class GetSpotPlacementScoresRequest extends AmazonWebServiceRequest imple
      * <p>
      * The unit for the target capacity.
      * </p>
-     * <p>
-     * Default: <code>units</code> (translates to number of instances)
-     * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity.</p>
-     *        <p>
-     *        Default: <code>units</code> (translates to number of instances)
+     *        The unit for the target capacity.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetCapacityUnitType
      */

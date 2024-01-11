@@ -91,7 +91,10 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The package version Amazon Resource Names (ARNs) that are installed on the device when the job successfully
-     * completes.
+     * completes. The package version must be in either the Published or Deprecated state when the job deploys. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/iot/latest/developerguide/preparing-to-use-software-package-catalog.html#package-version-lifecycle"
+     * >Package version lifecycle</a>.
      * </p>
      * <p>
      * <b>Note:</b>The following Length Constraints relates to a single ARN. Up to 25 package version ARNs are allowed.
@@ -657,14 +660,20 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The package version Amazon Resource Names (ARNs) that are installed on the device when the job successfully
-     * completes.
+     * completes. The package version must be in either the Published or Deprecated state when the job deploys. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/iot/latest/developerguide/preparing-to-use-software-package-catalog.html#package-version-lifecycle"
+     * >Package version lifecycle</a>.
      * </p>
      * <p>
      * <b>Note:</b>The following Length Constraints relates to a single ARN. Up to 25 package version ARNs are allowed.
      * </p>
      * 
      * @return The package version Amazon Resource Names (ARNs) that are installed on the device when the job
-     *         successfully completes. </p>
+     *         successfully completes. The package version must be in either the Published or Deprecated state when the
+     *         job deploys. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/iot/latest/developerguide/preparing-to-use-software-package-catalog.html#package-version-lifecycle"
+     *         >Package version lifecycle</a>.</p>
      *         <p>
      *         <b>Note:</b>The following Length Constraints relates to a single ARN. Up to 25 package version ARNs are
      *         allowed.
@@ -677,7 +686,10 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The package version Amazon Resource Names (ARNs) that are installed on the device when the job successfully
-     * completes.
+     * completes. The package version must be in either the Published or Deprecated state when the job deploys. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/iot/latest/developerguide/preparing-to-use-software-package-catalog.html#package-version-lifecycle"
+     * >Package version lifecycle</a>.
      * </p>
      * <p>
      * <b>Note:</b>The following Length Constraints relates to a single ARN. Up to 25 package version ARNs are allowed.
@@ -685,7 +697,10 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param destinationPackageVersions
      *        The package version Amazon Resource Names (ARNs) that are installed on the device when the job
-     *        successfully completes. </p>
+     *        successfully completes. The package version must be in either the Published or Deprecated state when the
+     *        job deploys. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/iot/latest/developerguide/preparing-to-use-software-package-catalog.html#package-version-lifecycle"
+     *        >Package version lifecycle</a>.</p>
      *        <p>
      *        <b>Note:</b>The following Length Constraints relates to a single ARN. Up to 25 package version ARNs are
      *        allowed.
@@ -703,7 +718,10 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The package version Amazon Resource Names (ARNs) that are installed on the device when the job successfully
-     * completes.
+     * completes. The package version must be in either the Published or Deprecated state when the job deploys. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/iot/latest/developerguide/preparing-to-use-software-package-catalog.html#package-version-lifecycle"
+     * >Package version lifecycle</a>.
      * </p>
      * <p>
      * <b>Note:</b>The following Length Constraints relates to a single ARN. Up to 25 package version ARNs are allowed.
@@ -716,7 +734,10 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param destinationPackageVersions
      *        The package version Amazon Resource Names (ARNs) that are installed on the device when the job
-     *        successfully completes. </p>
+     *        successfully completes. The package version must be in either the Published or Deprecated state when the
+     *        job deploys. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/iot/latest/developerguide/preparing-to-use-software-package-catalog.html#package-version-lifecycle"
+     *        >Package version lifecycle</a>.</p>
      *        <p>
      *        <b>Note:</b>The following Length Constraints relates to a single ARN. Up to 25 package version ARNs are
      *        allowed.
@@ -736,7 +757,10 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The package version Amazon Resource Names (ARNs) that are installed on the device when the job successfully
-     * completes.
+     * completes. The package version must be in either the Published or Deprecated state when the job deploys. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/iot/latest/developerguide/preparing-to-use-software-package-catalog.html#package-version-lifecycle"
+     * >Package version lifecycle</a>.
      * </p>
      * <p>
      * <b>Note:</b>The following Length Constraints relates to a single ARN. Up to 25 package version ARNs are allowed.
@@ -744,7 +768,10 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param destinationPackageVersions
      *        The package version Amazon Resource Names (ARNs) that are installed on the device when the job
-     *        successfully completes. </p>
+     *        successfully completes. The package version must be in either the Published or Deprecated state when the
+     *        job deploys. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/iot/latest/developerguide/preparing-to-use-software-package-catalog.html#package-version-lifecycle"
+     *        >Package version lifecycle</a>.</p>
      *        <p>
      *        <b>Note:</b>The following Length Constraints relates to a single ARN. Up to 25 package version ARNs are
      *        allowed.

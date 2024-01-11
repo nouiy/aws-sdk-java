@@ -62,6 +62,16 @@ public class EbsInstanceBlockDeviceStaxUnmarshaller implements Unmarshaller<EbsI
                     ebsInstanceBlockDevice.setVolumeId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("associatedResource", targetDepth)) {
+                    ebsInstanceBlockDevice.setAssociatedResource(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("volumeOwnerId", targetDepth)) {
+                    ebsInstanceBlockDevice.setVolumeOwnerId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return ebsInstanceBlockDevice;

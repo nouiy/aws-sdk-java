@@ -27,7 +27,7 @@ import javax.annotation.Generated;
  * parameter, or both parameters to ensure that your fleet cost does not exceed your budget. If you set a maximum price
  * per hour for the On-Demand Instances and Spot Instances in your request, EC2 Fleet will launch instances until it
  * reaches the maximum amount that you're willing to pay. When the maximum amount you're willing to pay is reached, the
- * fleet stops launching instances even if it hasn’t met the target capacity. The <code>MaxTotalPrice</code> parameters
+ * fleet stops launching instances even if it hasn't met the target capacity. The <code>MaxTotalPrice</code> parameters
  * are located in <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_OnDemandOptionsRequest">OnDemandOptionsRequest</a>
  * and <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotOptionsRequest">SpotOptionsRequest</a>.
@@ -41,7 +41,7 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The number of units to request, filled using <code>DefaultTargetCapacityType</code>.
+     * The number of units to request, filled using the default target capacity type.
      * </p>
      */
     private Integer totalTargetCapacity;
@@ -59,28 +59,28 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
     private Integer spotTargetCapacity;
     /**
      * <p>
-     * The default <code>TotalTargetCapacity</code>, which is either <code>Spot</code> or <code>On-Demand</code>.
+     * The default target capacity type.
      * </p>
      */
     private String defaultTargetCapacityType;
     /**
      * <p>
-     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     * <code>InstanceRequirements</code> is specified.
+     * The unit for the target capacity. You can specify this parameter only when using attributed-based instance type
+     * selection.
      * </p>
      * <p>
-     * Default: <code>units</code> (translates to number of instances)
+     * Default: <code>units</code> (the number of instances)
      * </p>
      */
     private String targetCapacityUnitType;
 
     /**
      * <p>
-     * The number of units to request, filled using <code>DefaultTargetCapacityType</code>.
+     * The number of units to request, filled using the default target capacity type.
      * </p>
      * 
      * @param totalTargetCapacity
-     *        The number of units to request, filled using <code>DefaultTargetCapacityType</code>.
+     *        The number of units to request, filled using the default target capacity type.
      */
 
     public void setTotalTargetCapacity(Integer totalTargetCapacity) {
@@ -89,10 +89,10 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The number of units to request, filled using <code>DefaultTargetCapacityType</code>.
+     * The number of units to request, filled using the default target capacity type.
      * </p>
      * 
-     * @return The number of units to request, filled using <code>DefaultTargetCapacityType</code>.
+     * @return The number of units to request, filled using the default target capacity type.
      */
 
     public Integer getTotalTargetCapacity() {
@@ -101,11 +101,11 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The number of units to request, filled using <code>DefaultTargetCapacityType</code>.
+     * The number of units to request, filled using the default target capacity type.
      * </p>
      * 
      * @param totalTargetCapacity
-     *        The number of units to request, filled using <code>DefaultTargetCapacityType</code>.
+     *        The number of units to request, filled using the default target capacity type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,11 +196,11 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The default <code>TotalTargetCapacity</code>, which is either <code>Spot</code> or <code>On-Demand</code>.
+     * The default target capacity type.
      * </p>
      * 
      * @param defaultTargetCapacityType
-     *        The default <code>TotalTargetCapacity</code>, which is either <code>Spot</code> or <code>On-Demand</code>.
+     *        The default target capacity type.
      * @see DefaultTargetCapacityType
      */
 
@@ -210,11 +210,10 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The default <code>TotalTargetCapacity</code>, which is either <code>Spot</code> or <code>On-Demand</code>.
+     * The default target capacity type.
      * </p>
      * 
-     * @return The default <code>TotalTargetCapacity</code>, which is either <code>Spot</code> or <code>On-Demand</code>
-     *         .
+     * @return The default target capacity type.
      * @see DefaultTargetCapacityType
      */
 
@@ -224,11 +223,11 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The default <code>TotalTargetCapacity</code>, which is either <code>Spot</code> or <code>On-Demand</code>.
+     * The default target capacity type.
      * </p>
      * 
      * @param defaultTargetCapacityType
-     *        The default <code>TotalTargetCapacity</code>, which is either <code>Spot</code> or <code>On-Demand</code>.
+     *        The default target capacity type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DefaultTargetCapacityType
      */
@@ -240,11 +239,11 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The default <code>TotalTargetCapacity</code>, which is either <code>Spot</code> or <code>On-Demand</code>.
+     * The default target capacity type.
      * </p>
      * 
      * @param defaultTargetCapacityType
-     *        The default <code>TotalTargetCapacity</code>, which is either <code>Spot</code> or <code>On-Demand</code>.
+     *        The default target capacity type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DefaultTargetCapacityType
      */
@@ -256,18 +255,18 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     * <code>InstanceRequirements</code> is specified.
+     * The unit for the target capacity. You can specify this parameter only when using attributed-based instance type
+     * selection.
      * </p>
      * <p>
-     * Default: <code>units</code> (translates to number of instances)
+     * Default: <code>units</code> (the number of instances)
      * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     *        <code>InstanceRequirements</code> is specified.</p>
+     *        The unit for the target capacity. You can specify this parameter only when using attributed-based instance
+     *        type selection.</p>
      *        <p>
-     *        Default: <code>units</code> (translates to number of instances)
+     *        Default: <code>units</code> (the number of instances)
      * @see TargetCapacityUnitType
      */
 
@@ -277,17 +276,17 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     * <code>InstanceRequirements</code> is specified.
+     * The unit for the target capacity. You can specify this parameter only when using attributed-based instance type
+     * selection.
      * </p>
      * <p>
-     * Default: <code>units</code> (translates to number of instances)
+     * Default: <code>units</code> (the number of instances)
      * </p>
      * 
-     * @return The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     *         <code>InstanceRequirements</code> is specified.</p>
+     * @return The unit for the target capacity. You can specify this parameter only when using attributed-based
+     *         instance type selection.</p>
      *         <p>
-     *         Default: <code>units</code> (translates to number of instances)
+     *         Default: <code>units</code> (the number of instances)
      * @see TargetCapacityUnitType
      */
 
@@ -297,18 +296,18 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     * <code>InstanceRequirements</code> is specified.
+     * The unit for the target capacity. You can specify this parameter only when using attributed-based instance type
+     * selection.
      * </p>
      * <p>
-     * Default: <code>units</code> (translates to number of instances)
+     * Default: <code>units</code> (the number of instances)
      * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     *        <code>InstanceRequirements</code> is specified.</p>
+     *        The unit for the target capacity. You can specify this parameter only when using attributed-based instance
+     *        type selection.</p>
      *        <p>
-     *        Default: <code>units</code> (translates to number of instances)
+     *        Default: <code>units</code> (the number of instances)
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetCapacityUnitType
      */
@@ -320,18 +319,18 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     * <code>InstanceRequirements</code> is specified.
+     * The unit for the target capacity. You can specify this parameter only when using attributed-based instance type
+     * selection.
      * </p>
      * <p>
-     * Default: <code>units</code> (translates to number of instances)
+     * Default: <code>units</code> (the number of instances)
      * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
-     *        <code>InstanceRequirements</code> is specified.</p>
+     *        The unit for the target capacity. You can specify this parameter only when using attributed-based instance
+     *        type selection.</p>
      *        <p>
-     *        Default: <code>units</code> (translates to number of instances)
+     *        Default: <code>units</code> (the number of instances)
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetCapacityUnitType
      */

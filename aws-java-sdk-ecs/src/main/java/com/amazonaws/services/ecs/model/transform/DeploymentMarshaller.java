@@ -64,6 +64,8 @@ public class DeploymentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceConnectConfiguration").build();
     private static final MarshallingInfo<List> SERVICECONNECTRESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceConnectResources").build();
+    private static final MarshallingInfo<List> VOLUMECONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeConfigurations").build();
 
     private static final DeploymentMarshaller instance = new DeploymentMarshaller();
 
@@ -99,6 +101,7 @@ public class DeploymentMarshaller {
             protocolMarshaller.marshall(deployment.getRolloutStateReason(), ROLLOUTSTATEREASON_BINDING);
             protocolMarshaller.marshall(deployment.getServiceConnectConfiguration(), SERVICECONNECTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(deployment.getServiceConnectResources(), SERVICECONNECTRESOURCES_BINDING);
+            protocolMarshaller.marshall(deployment.getVolumeConfigurations(), VOLUMECONFIGURATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

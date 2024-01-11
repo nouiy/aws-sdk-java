@@ -207,6 +207,13 @@ public interface AmazonECS {
      * balancing</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
+     * You can attach Amazon EBS volumes to Amazon ECS tasks by configuring the volume when creating or updating a
+     * service. <code>volumeConfigurations</code> is only supported for REPLICA service and not DAEMON service. For more
+     * infomation, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS
+     * volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
      * Tasks for services that don't use a load balancer are considered healthy if they're in the <code>RUNNING</code>
      * state. Tasks for services that use a load balancer are considered healthy if they're in the <code>RUNNING</code>
      * state and are reported as healthy by the load balancer.
@@ -1580,6 +1587,12 @@ public interface AmazonECS {
      * </p>
      * </note>
      * <p>
+     * You can attach Amazon EBS volumes to Amazon ECS tasks by configuring the volume when creating or updating a
+     * service. For more infomation, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS
+     * volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
      * The Amazon ECS API follows an eventual consistency model. This is because of the distributed nature of the system
      * supporting the API. This means that the result of an API command you run that affects your Amazon ECS resources
      * might not be immediately visible to all subsequent commands you run. Keep this in mind when you carry out an API
@@ -1673,6 +1686,12 @@ public interface AmazonECS {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html">Scheduling Tasks</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
+     * <p>
+     * You can attach Amazon EBS volumes to Amazon ECS tasks by configuring the volume when creating or updating a
+     * service. For more infomation, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS
+     * volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
      * 
      * @param startTaskRequest
      * @return Result of the StartTask operation returned by the service.
@@ -1687,6 +1706,8 @@ public interface AmazonECS {
      * @throws ClusterNotFoundException
      *         The specified cluster wasn't found. You can view your available clusters with <a>ListClusters</a>. Amazon
      *         ECS clusters are Region specific.
+     * @throws UnsupportedFeatureException
+     *         The specified task isn't supported in this Region.
      * @sample AmazonECS.StartTask
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/StartTask" target="_top">AWS API
      *      Documentation</a>
@@ -2102,6 +2123,17 @@ public interface AmazonECS {
      * these parameters, Amazon ECS starts new tasks with the new configuration.
      * </p>
      * <p>
+     * You can attach Amazon EBS volumes to Amazon ECS tasks by configuring the volume when starting or running a task,
+     * or when creating or updating a service. For more infomation, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS
+     * volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>. You can update your volume
+     * configurations and trigger a new deployment. <code>volumeConfigurations</code> is only supported for REPLICA
+     * service and not DAEMON service. If you leave <code>volumeConfigurations</code> <code>null</code>, it doesn't
+     * trigger a new deployment. For more infomation on volumes, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS
+     * volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
      * For services using the blue/green (<code>CODE_DEPLOY</code>) deployment controller, only the desired count,
      * deployment configuration, health check grace period, task placement constraints and strategies, enable ECS
      * managed tags option, and propagate tags can be updated using this API. If the network configuration, platform
@@ -2121,7 +2153,13 @@ public interface AmazonECS {
      * cluster that the service is running in and a new <code>desiredCount</code> parameter.
      * </p>
      * <p>
-     * If you have updated the Docker image of your application, you can create a new task definition with that image
+     * You can attach Amazon EBS volumes to Amazon ECS tasks by configuring the volume when starting or running a task,
+     * or when creating or updating a service. For more infomation, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS
+     * volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * If you have updated the container image of your application, you can create a new task definition with that image
      * and deploy it to your service. The service scheduler uses the minimum healthy percent and maximum percent
      * parameters (in the service's deployment configuration) to determine the deployment strategy.
      * </p>
@@ -2266,6 +2304,8 @@ public interface AmazonECS {
      *         You don't have authorization to perform the requested action.
      * @throws NamespaceNotFoundException
      *         The specified namespace wasn't found.
+     * @throws UnsupportedFeatureException
+     *         The specified task isn't supported in this Region.
      * @sample AmazonECS.UpdateService
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UpdateService" target="_top">AWS API
      *      Documentation</a>

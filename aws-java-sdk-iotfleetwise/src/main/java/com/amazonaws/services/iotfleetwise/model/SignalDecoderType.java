@@ -22,8 +22,7 @@ public enum SignalDecoderType {
 
     CAN_SIGNAL("CAN_SIGNAL"),
     OBD_SIGNAL("OBD_SIGNAL"),
-    MESSAGE_SIGNAL("MESSAGE_SIGNAL"),
-    CUSTOMER_DECODED_SIGNAL("CUSTOMER_DECODED_SIGNAL");
+    MESSAGE_SIGNAL("MESSAGE_SIGNAL");
 
     private String value;
 

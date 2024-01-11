@@ -126,6 +126,13 @@ public class DeploymentJsonUnmarshaller implements Unmarshaller<Deployment, Json
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("volumeConfigurations", targetDepth)) {
+                    context.nextToken();
+                    deployment.setVolumeConfigurations(new ListUnmarshaller<ServiceVolumeConfiguration>(ServiceVolumeConfigurationJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

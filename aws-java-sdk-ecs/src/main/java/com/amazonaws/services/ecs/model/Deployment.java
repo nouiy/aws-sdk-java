@@ -202,6 +202,16 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ServiceConnectServiceResource> serviceConnectResources;
+    /**
+     * <p>
+     * The details of the volume that was <code>configuredAtLaunch</code>. You can configure different settings like the
+     * size, throughput, volumeType, and ecryption in <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceManagedEBSVolumeConfiguration.html"
+     * >ServiceManagedEBSVolumeConfiguration</a>. The <code>name</code> of the volume must match the <code>name</code>
+     * from the task definition.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<ServiceVolumeConfiguration> volumeConfigurations;
 
     /**
      * <p>
@@ -1429,6 +1439,111 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The details of the volume that was <code>configuredAtLaunch</code>. You can configure different settings like the
+     * size, throughput, volumeType, and ecryption in <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceManagedEBSVolumeConfiguration.html"
+     * >ServiceManagedEBSVolumeConfiguration</a>. The <code>name</code> of the volume must match the <code>name</code>
+     * from the task definition.
+     * </p>
+     * 
+     * @return The details of the volume that was <code>configuredAtLaunch</code>. You can configure different settings
+     *         like the size, throughput, volumeType, and ecryption in <a href=
+     *         "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceManagedEBSVolumeConfiguration.html"
+     *         >ServiceManagedEBSVolumeConfiguration</a>. The <code>name</code> of the volume must match the
+     *         <code>name</code> from the task definition.
+     */
+
+    public java.util.List<ServiceVolumeConfiguration> getVolumeConfigurations() {
+        if (volumeConfigurations == null) {
+            volumeConfigurations = new com.amazonaws.internal.SdkInternalList<ServiceVolumeConfiguration>();
+        }
+        return volumeConfigurations;
+    }
+
+    /**
+     * <p>
+     * The details of the volume that was <code>configuredAtLaunch</code>. You can configure different settings like the
+     * size, throughput, volumeType, and ecryption in <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceManagedEBSVolumeConfiguration.html"
+     * >ServiceManagedEBSVolumeConfiguration</a>. The <code>name</code> of the volume must match the <code>name</code>
+     * from the task definition.
+     * </p>
+     * 
+     * @param volumeConfigurations
+     *        The details of the volume that was <code>configuredAtLaunch</code>. You can configure different settings
+     *        like the size, throughput, volumeType, and ecryption in <a href=
+     *        "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceManagedEBSVolumeConfiguration.html"
+     *        >ServiceManagedEBSVolumeConfiguration</a>. The <code>name</code> of the volume must match the
+     *        <code>name</code> from the task definition.
+     */
+
+    public void setVolumeConfigurations(java.util.Collection<ServiceVolumeConfiguration> volumeConfigurations) {
+        if (volumeConfigurations == null) {
+            this.volumeConfigurations = null;
+            return;
+        }
+
+        this.volumeConfigurations = new com.amazonaws.internal.SdkInternalList<ServiceVolumeConfiguration>(volumeConfigurations);
+    }
+
+    /**
+     * <p>
+     * The details of the volume that was <code>configuredAtLaunch</code>. You can configure different settings like the
+     * size, throughput, volumeType, and ecryption in <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceManagedEBSVolumeConfiguration.html"
+     * >ServiceManagedEBSVolumeConfiguration</a>. The <code>name</code> of the volume must match the <code>name</code>
+     * from the task definition.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setVolumeConfigurations(java.util.Collection)} or {@link #withVolumeConfigurations(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param volumeConfigurations
+     *        The details of the volume that was <code>configuredAtLaunch</code>. You can configure different settings
+     *        like the size, throughput, volumeType, and ecryption in <a href=
+     *        "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceManagedEBSVolumeConfiguration.html"
+     *        >ServiceManagedEBSVolumeConfiguration</a>. The <code>name</code> of the volume must match the
+     *        <code>name</code> from the task definition.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Deployment withVolumeConfigurations(ServiceVolumeConfiguration... volumeConfigurations) {
+        if (this.volumeConfigurations == null) {
+            setVolumeConfigurations(new com.amazonaws.internal.SdkInternalList<ServiceVolumeConfiguration>(volumeConfigurations.length));
+        }
+        for (ServiceVolumeConfiguration ele : volumeConfigurations) {
+            this.volumeConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The details of the volume that was <code>configuredAtLaunch</code>. You can configure different settings like the
+     * size, throughput, volumeType, and ecryption in <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceManagedEBSVolumeConfiguration.html"
+     * >ServiceManagedEBSVolumeConfiguration</a>. The <code>name</code> of the volume must match the <code>name</code>
+     * from the task definition.
+     * </p>
+     * 
+     * @param volumeConfigurations
+     *        The details of the volume that was <code>configuredAtLaunch</code>. You can configure different settings
+     *        like the size, throughput, volumeType, and ecryption in <a href=
+     *        "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceManagedEBSVolumeConfiguration.html"
+     *        >ServiceManagedEBSVolumeConfiguration</a>. The <code>name</code> of the volume must match the
+     *        <code>name</code> from the task definition.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Deployment withVolumeConfigurations(java.util.Collection<ServiceVolumeConfiguration> volumeConfigurations) {
+        setVolumeConfigurations(volumeConfigurations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1475,7 +1590,9 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
         if (getServiceConnectConfiguration() != null)
             sb.append("ServiceConnectConfiguration: ").append(getServiceConnectConfiguration()).append(",");
         if (getServiceConnectResources() != null)
-            sb.append("ServiceConnectResources: ").append(getServiceConnectResources());
+            sb.append("ServiceConnectResources: ").append(getServiceConnectResources()).append(",");
+        if (getVolumeConfigurations() != null)
+            sb.append("VolumeConfigurations: ").append(getVolumeConfigurations());
         sb.append("}");
         return sb.toString();
     }
@@ -1562,6 +1679,10 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getServiceConnectResources() != null && other.getServiceConnectResources().equals(this.getServiceConnectResources()) == false)
             return false;
+        if (other.getVolumeConfigurations() == null ^ this.getVolumeConfigurations() == null)
+            return false;
+        if (other.getVolumeConfigurations() != null && other.getVolumeConfigurations().equals(this.getVolumeConfigurations()) == false)
+            return false;
         return true;
     }
 
@@ -1588,6 +1709,7 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRolloutStateReason() == null) ? 0 : getRolloutStateReason().hashCode());
         hashCode = prime * hashCode + ((getServiceConnectConfiguration() == null) ? 0 : getServiceConnectConfiguration().hashCode());
         hashCode = prime * hashCode + ((getServiceConnectResources() == null) ? 0 : getServiceConnectResources().hashCode());
+        hashCode = prime * hashCode + ((getVolumeConfigurations() == null) ? 0 : getVolumeConfigurations().hashCode());
         return hashCode;
     }
 
