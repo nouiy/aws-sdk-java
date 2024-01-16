@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Parameter information for key material export from Amazon Web Services Payment Cryptography using TR-31 or TR-34 key
- * exchange method.
+ * Parameter information for key material export from Amazon Web Services Payment Cryptography using TR-31 or TR-34 or
+ * RSA wrap and unwrap key exchange method.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/payment-cryptography-2021-09-14/ExportKeyMaterial"
@@ -29,6 +29,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     * </p>
+     */
+    private ExportKeyCryptogram keyCryptogram;
     /**
      * <p>
      * Parameter information for key material export using symmetric TR-31 key exchange method.
@@ -41,6 +47,46 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private ExportTr34KeyBlock tr34KeyBlock;
+
+    /**
+     * <p>
+     * Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     * </p>
+     * 
+     * @param keyCryptogram
+     *        Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     */
+
+    public void setKeyCryptogram(ExportKeyCryptogram keyCryptogram) {
+        this.keyCryptogram = keyCryptogram;
+    }
+
+    /**
+     * <p>
+     * Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     * </p>
+     * 
+     * @return Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     */
+
+    public ExportKeyCryptogram getKeyCryptogram() {
+        return this.keyCryptogram;
+    }
+
+    /**
+     * <p>
+     * Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     * </p>
+     * 
+     * @param keyCryptogram
+     *        Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExportKeyMaterial withKeyCryptogram(ExportKeyCryptogram keyCryptogram) {
+        setKeyCryptogram(keyCryptogram);
+        return this;
+    }
 
     /**
      * <p>
@@ -134,6 +180,8 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getKeyCryptogram() != null)
+            sb.append("KeyCryptogram: ").append(getKeyCryptogram()).append(",");
         if (getTr31KeyBlock() != null)
             sb.append("Tr31KeyBlock: ").append(getTr31KeyBlock()).append(",");
         if (getTr34KeyBlock() != null)
@@ -152,6 +200,10 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
         if (obj instanceof ExportKeyMaterial == false)
             return false;
         ExportKeyMaterial other = (ExportKeyMaterial) obj;
+        if (other.getKeyCryptogram() == null ^ this.getKeyCryptogram() == null)
+            return false;
+        if (other.getKeyCryptogram() != null && other.getKeyCryptogram().equals(this.getKeyCryptogram()) == false)
+            return false;
         if (other.getTr31KeyBlock() == null ^ this.getTr31KeyBlock() == null)
             return false;
         if (other.getTr31KeyBlock() != null && other.getTr31KeyBlock().equals(this.getTr31KeyBlock()) == false)
@@ -168,6 +220,7 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getKeyCryptogram() == null) ? 0 : getKeyCryptogram().hashCode());
         hashCode = prime * hashCode + ((getTr31KeyBlock() == null) ? 0 : getTr31KeyBlock().hashCode());
         hashCode = prime * hashCode + ((getTr34KeyBlock() == null) ? 0 : getTr34KeyBlock().hashCode());
         return hashCode;

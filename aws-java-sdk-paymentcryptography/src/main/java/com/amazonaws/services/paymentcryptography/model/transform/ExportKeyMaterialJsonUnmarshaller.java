@@ -48,6 +48,10 @@ public class ExportKeyMaterialJsonUnmarshaller implements Unmarshaller<ExportKey
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("KeyCryptogram", targetDepth)) {
+                    context.nextToken();
+                    exportKeyMaterial.setKeyCryptogram(ExportKeyCryptogramJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Tr31KeyBlock", targetDepth)) {
                     context.nextToken();
                     exportKeyMaterial.setTr31KeyBlock(ExportTr31KeyBlockJsonUnmarshaller.getInstance().unmarshall(context));

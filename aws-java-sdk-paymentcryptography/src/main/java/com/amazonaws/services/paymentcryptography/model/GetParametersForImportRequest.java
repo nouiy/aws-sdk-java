@@ -28,7 +28,7 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The method to use for key material import. Import token is only required for TR-34 WrappedKeyBlock (
-     * <code>TR34_KEY_BLOCK</code>).
+     * <code>TR34_KEY_BLOCK</code>) and RSA WrappedKeyCryptogram (<code>KEY_CRYPTOGRAM</code>).
      * </p>
      * <p>
      * Import token is not required for TR-31, root public key cerificate or trusted public key certificate.
@@ -40,8 +40,9 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * The wrapping key algorithm to generate a wrapping key certificate. This certificate wraps the key under import.
      * </p>
      * <p>
-     * At this time, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the only allowed algorithms
-     * for TR-34 WrappedKeyBlock import.
+     * At this time, <code>RSA_2048</code> is the allowed algorithm for TR-34 WrappedKeyBlock import. Additionally,
+     * <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the allowed algorithms for RSA
+     * WrappedKeyCryptogram import.
      * </p>
      */
     private String wrappingKeyAlgorithm;
@@ -49,7 +50,7 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The method to use for key material import. Import token is only required for TR-34 WrappedKeyBlock (
-     * <code>TR34_KEY_BLOCK</code>).
+     * <code>TR34_KEY_BLOCK</code>) and RSA WrappedKeyCryptogram (<code>KEY_CRYPTOGRAM</code>).
      * </p>
      * <p>
      * Import token is not required for TR-31, root public key cerificate or trusted public key certificate.
@@ -57,7 +58,7 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * 
      * @param keyMaterialType
      *        The method to use for key material import. Import token is only required for TR-34 WrappedKeyBlock (
-     *        <code>TR34_KEY_BLOCK</code>).</p>
+     *        <code>TR34_KEY_BLOCK</code>) and RSA WrappedKeyCryptogram (<code>KEY_CRYPTOGRAM</code>).</p>
      *        <p>
      *        Import token is not required for TR-31, root public key cerificate or trusted public key certificate.
      * @see KeyMaterialType
@@ -70,14 +71,14 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The method to use for key material import. Import token is only required for TR-34 WrappedKeyBlock (
-     * <code>TR34_KEY_BLOCK</code>).
+     * <code>TR34_KEY_BLOCK</code>) and RSA WrappedKeyCryptogram (<code>KEY_CRYPTOGRAM</code>).
      * </p>
      * <p>
      * Import token is not required for TR-31, root public key cerificate or trusted public key certificate.
      * </p>
      * 
      * @return The method to use for key material import. Import token is only required for TR-34 WrappedKeyBlock (
-     *         <code>TR34_KEY_BLOCK</code>).</p>
+     *         <code>TR34_KEY_BLOCK</code>) and RSA WrappedKeyCryptogram (<code>KEY_CRYPTOGRAM</code>).</p>
      *         <p>
      *         Import token is not required for TR-31, root public key cerificate or trusted public key certificate.
      * @see KeyMaterialType
@@ -90,7 +91,7 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The method to use for key material import. Import token is only required for TR-34 WrappedKeyBlock (
-     * <code>TR34_KEY_BLOCK</code>).
+     * <code>TR34_KEY_BLOCK</code>) and RSA WrappedKeyCryptogram (<code>KEY_CRYPTOGRAM</code>).
      * </p>
      * <p>
      * Import token is not required for TR-31, root public key cerificate or trusted public key certificate.
@@ -98,7 +99,7 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * 
      * @param keyMaterialType
      *        The method to use for key material import. Import token is only required for TR-34 WrappedKeyBlock (
-     *        <code>TR34_KEY_BLOCK</code>).</p>
+     *        <code>TR34_KEY_BLOCK</code>) and RSA WrappedKeyCryptogram (<code>KEY_CRYPTOGRAM</code>).</p>
      *        <p>
      *        Import token is not required for TR-31, root public key cerificate or trusted public key certificate.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -113,7 +114,7 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The method to use for key material import. Import token is only required for TR-34 WrappedKeyBlock (
-     * <code>TR34_KEY_BLOCK</code>).
+     * <code>TR34_KEY_BLOCK</code>) and RSA WrappedKeyCryptogram (<code>KEY_CRYPTOGRAM</code>).
      * </p>
      * <p>
      * Import token is not required for TR-31, root public key cerificate or trusted public key certificate.
@@ -121,7 +122,7 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * 
      * @param keyMaterialType
      *        The method to use for key material import. Import token is only required for TR-34 WrappedKeyBlock (
-     *        <code>TR34_KEY_BLOCK</code>).</p>
+     *        <code>TR34_KEY_BLOCK</code>) and RSA WrappedKeyCryptogram (<code>KEY_CRYPTOGRAM</code>).</p>
      *        <p>
      *        Import token is not required for TR-31, root public key cerificate or trusted public key certificate.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -138,16 +139,18 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * The wrapping key algorithm to generate a wrapping key certificate. This certificate wraps the key under import.
      * </p>
      * <p>
-     * At this time, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the only allowed algorithms
-     * for TR-34 WrappedKeyBlock import.
+     * At this time, <code>RSA_2048</code> is the allowed algorithm for TR-34 WrappedKeyBlock import. Additionally,
+     * <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the allowed algorithms for RSA
+     * WrappedKeyCryptogram import.
      * </p>
      * 
      * @param wrappingKeyAlgorithm
      *        The wrapping key algorithm to generate a wrapping key certificate. This certificate wraps the key under
      *        import.</p>
      *        <p>
-     *        At this time, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the only allowed
-     *        algorithms for TR-34 WrappedKeyBlock import.
+     *        At this time, <code>RSA_2048</code> is the allowed algorithm for TR-34 WrappedKeyBlock import.
+     *        Additionally, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the allowed
+     *        algorithms for RSA WrappedKeyCryptogram import.
      * @see KeyAlgorithm
      */
 
@@ -160,15 +163,17 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * The wrapping key algorithm to generate a wrapping key certificate. This certificate wraps the key under import.
      * </p>
      * <p>
-     * At this time, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the only allowed algorithms
-     * for TR-34 WrappedKeyBlock import.
+     * At this time, <code>RSA_2048</code> is the allowed algorithm for TR-34 WrappedKeyBlock import. Additionally,
+     * <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the allowed algorithms for RSA
+     * WrappedKeyCryptogram import.
      * </p>
      * 
      * @return The wrapping key algorithm to generate a wrapping key certificate. This certificate wraps the key under
      *         import.</p>
      *         <p>
-     *         At this time, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the only allowed
-     *         algorithms for TR-34 WrappedKeyBlock import.
+     *         At this time, <code>RSA_2048</code> is the allowed algorithm for TR-34 WrappedKeyBlock import.
+     *         Additionally, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the allowed
+     *         algorithms for RSA WrappedKeyCryptogram import.
      * @see KeyAlgorithm
      */
 
@@ -181,16 +186,18 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * The wrapping key algorithm to generate a wrapping key certificate. This certificate wraps the key under import.
      * </p>
      * <p>
-     * At this time, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the only allowed algorithms
-     * for TR-34 WrappedKeyBlock import.
+     * At this time, <code>RSA_2048</code> is the allowed algorithm for TR-34 WrappedKeyBlock import. Additionally,
+     * <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the allowed algorithms for RSA
+     * WrappedKeyCryptogram import.
      * </p>
      * 
      * @param wrappingKeyAlgorithm
      *        The wrapping key algorithm to generate a wrapping key certificate. This certificate wraps the key under
      *        import.</p>
      *        <p>
-     *        At this time, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the only allowed
-     *        algorithms for TR-34 WrappedKeyBlock import.
+     *        At this time, <code>RSA_2048</code> is the allowed algorithm for TR-34 WrappedKeyBlock import.
+     *        Additionally, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the allowed
+     *        algorithms for RSA WrappedKeyCryptogram import.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyAlgorithm
      */
@@ -205,16 +212,18 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * The wrapping key algorithm to generate a wrapping key certificate. This certificate wraps the key under import.
      * </p>
      * <p>
-     * At this time, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the only allowed algorithms
-     * for TR-34 WrappedKeyBlock import.
+     * At this time, <code>RSA_2048</code> is the allowed algorithm for TR-34 WrappedKeyBlock import. Additionally,
+     * <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the allowed algorithms for RSA
+     * WrappedKeyCryptogram import.
      * </p>
      * 
      * @param wrappingKeyAlgorithm
      *        The wrapping key algorithm to generate a wrapping key certificate. This certificate wraps the key under
      *        import.</p>
      *        <p>
-     *        At this time, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the only allowed
-     *        algorithms for TR-34 WrappedKeyBlock import.
+     *        At this time, <code>RSA_2048</code> is the allowed algorithm for TR-34 WrappedKeyBlock import.
+     *        Additionally, <code>RSA_2048</code>, <code>RSA_3072</code>, <code>RSA_4096</code> are the allowed
+     *        algorithms for RSA WrappedKeyCryptogram import.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyAlgorithm
      */

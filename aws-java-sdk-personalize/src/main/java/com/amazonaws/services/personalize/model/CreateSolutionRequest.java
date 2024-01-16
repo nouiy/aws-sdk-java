@@ -47,7 +47,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * We don't recommend enabling automated machine learning. Instead, match your use case to the available Amazon
      * Personalize recipes. For more information, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use case.</a>
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     * recipe</a>.
      * </p>
      * </important>
      * <p>
@@ -64,7 +65,10 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
     private Boolean performAutoML;
     /**
      * <p>
-     * The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is false.
+     * The Amazon Resource Name (ARN) of the recipe to use for model training. This is required when
+     * <code>performAutoML</code> is false. For information about different Amazon Personalize recipes and their ARNs,
+     * see <a href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     * recipe</a>.
      * </p>
      */
     private String recipeArn;
@@ -238,7 +242,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * We don't recommend enabling automated machine learning. Instead, match your use case to the available Amazon
      * Personalize recipes. For more information, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use case.</a>
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     * recipe</a>.
      * </p>
      * </important>
      * <p>
@@ -256,8 +261,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <p>
      *        We don't recommend enabling automated machine learning. Instead, match your use case to the available
      *        Amazon Personalize recipes. For more information, see <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use
-     *        case.</a>
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     *        recipe</a>.
      *        </p>
      *        </important>
      *        <p>
@@ -280,7 +285,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * We don't recommend enabling automated machine learning. Instead, match your use case to the available Amazon
      * Personalize recipes. For more information, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use case.</a>
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     * recipe</a>.
      * </p>
      * </important>
      * <p>
@@ -297,8 +303,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * @return <p>
      *         We don't recommend enabling automated machine learning. Instead, match your use case to the available
      *         Amazon Personalize recipes. For more information, see <a
-     *         href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use
-     *         case.</a>
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     *         recipe</a>.
      *         </p>
      *         </important>
      *         <p>
@@ -321,7 +327,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * We don't recommend enabling automated machine learning. Instead, match your use case to the available Amazon
      * Personalize recipes. For more information, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use case.</a>
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     * recipe</a>.
      * </p>
      * </important>
      * <p>
@@ -339,8 +346,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <p>
      *        We don't recommend enabling automated machine learning. Instead, match your use case to the available
      *        Amazon Personalize recipes. For more information, see <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use
-     *        case.</a>
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     *        recipe</a>.
      *        </p>
      *        </important>
      *        <p>
@@ -365,7 +372,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * We don't recommend enabling automated machine learning. Instead, match your use case to the available Amazon
      * Personalize recipes. For more information, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use case.</a>
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     * recipe</a>.
      * </p>
      * </important>
      * <p>
@@ -382,8 +390,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * @return <p>
      *         We don't recommend enabling automated machine learning. Instead, match your use case to the available
      *         Amazon Personalize recipes. For more information, see <a
-     *         href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use
-     *         case.</a>
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     *         recipe</a>.
      *         </p>
      *         </important>
      *         <p>
@@ -403,12 +411,18 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is false.
+     * The Amazon Resource Name (ARN) of the recipe to use for model training. This is required when
+     * <code>performAutoML</code> is false. For information about different Amazon Personalize recipes and their ARNs,
+     * see <a href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     * recipe</a>.
      * </p>
      * 
      * @param recipeArn
-     *        The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is
-     *        false.
+     *        The Amazon Resource Name (ARN) of the recipe to use for model training. This is required when
+     *        <code>performAutoML</code> is false. For information about different Amazon Personalize recipes and their
+     *        ARNs, see <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     *        recipe</a>.
      */
 
     public void setRecipeArn(String recipeArn) {
@@ -417,11 +431,17 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is false.
+     * The Amazon Resource Name (ARN) of the recipe to use for model training. This is required when
+     * <code>performAutoML</code> is false. For information about different Amazon Personalize recipes and their ARNs,
+     * see <a href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     * recipe</a>.
      * </p>
      * 
-     * @return The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is
-     *         false.
+     * @return The Amazon Resource Name (ARN) of the recipe to use for model training. This is required when
+     *         <code>performAutoML</code> is false. For information about different Amazon Personalize recipes and their
+     *         ARNs, see <a
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     *         recipe</a>.
      */
 
     public String getRecipeArn() {
@@ -430,12 +450,18 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is false.
+     * The Amazon Resource Name (ARN) of the recipe to use for model training. This is required when
+     * <code>performAutoML</code> is false. For information about different Amazon Personalize recipes and their ARNs,
+     * see <a href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     * recipe</a>.
      * </p>
      * 
      * @param recipeArn
-     *        The ARN of the recipe to use for model training. This is required when <code>performAutoML</code> is
-     *        false.
+     *        The Amazon Resource Name (ARN) of the recipe to use for model training. This is required when
+     *        <code>performAutoML</code> is false. For information about different Amazon Personalize recipes and their
+     *        ARNs, see <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html">Choosing a
+     *        recipe</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

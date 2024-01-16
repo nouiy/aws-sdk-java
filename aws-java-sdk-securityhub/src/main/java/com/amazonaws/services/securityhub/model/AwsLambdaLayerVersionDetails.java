@@ -36,13 +36,20 @@ public class AwsLambdaLayerVersionDetails implements Serializable, Cloneable, St
     private Long version;
     /**
      * <p>
-     * The layer's compatible runtimes. Maximum number of five items.
+     * The layer's compatible <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">function
+     * runtimes</a>.
      * </p>
      * <p>
-     * Valid values: <code>nodejs10.x</code> | <code>nodejs12.x</code> | <code>java8</code> | <code>java11</code> |
-     * <code>python2.7</code> | <code>python3.6</code> | <code>python3.7</code> | <code>python3.8</code> |
-     * <code>dotnetcore1.0</code> | <code>dotnetcore2.1</code> | <code>go1.x</code> | <code>ruby2.5</code> |
-     * <code>provided</code>
+     * The following list includes deprecated runtimes. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy">Runtime
+     * deprecation policy</a> in the <i>Lambda Developer Guide</i>.
+     * </p>
+     * <p>
+     * Array Members: Maximum number of 5 items.
+     * </p>
+     * <p>
+     * Valid Values:
+     * <code>nodejs | nodejs4.3 | nodejs6.10 | nodejs8.10 | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | python3.9 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | dotnet6 | nodejs4.3-edge | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2 | nodejs18.x | python3.10 | java17 | ruby3.2 | python3.11 | nodejs20.x | provided.al2023 | python3.12 | java21</code>
      * </p>
      */
     private java.util.List<String> compatibleRuntimes;
@@ -100,21 +107,35 @@ public class AwsLambdaLayerVersionDetails implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The layer's compatible runtimes. Maximum number of five items.
+     * The layer's compatible <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">function
+     * runtimes</a>.
      * </p>
      * <p>
-     * Valid values: <code>nodejs10.x</code> | <code>nodejs12.x</code> | <code>java8</code> | <code>java11</code> |
-     * <code>python2.7</code> | <code>python3.6</code> | <code>python3.7</code> | <code>python3.8</code> |
-     * <code>dotnetcore1.0</code> | <code>dotnetcore2.1</code> | <code>go1.x</code> | <code>ruby2.5</code> |
-     * <code>provided</code>
+     * The following list includes deprecated runtimes. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy">Runtime
+     * deprecation policy</a> in the <i>Lambda Developer Guide</i>.
+     * </p>
+     * <p>
+     * Array Members: Maximum number of 5 items.
+     * </p>
+     * <p>
+     * Valid Values:
+     * <code>nodejs | nodejs4.3 | nodejs6.10 | nodejs8.10 | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | python3.9 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | dotnet6 | nodejs4.3-edge | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2 | nodejs18.x | python3.10 | java17 | ruby3.2 | python3.11 | nodejs20.x | provided.al2023 | python3.12 | java21</code>
      * </p>
      * 
-     * @return The layer's compatible runtimes. Maximum number of five items.</p>
+     * @return The layer's compatible <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">function runtimes</a>.</p>
      *         <p>
-     *         Valid values: <code>nodejs10.x</code> | <code>nodejs12.x</code> | <code>java8</code> |
-     *         <code>java11</code> | <code>python2.7</code> | <code>python3.6</code> | <code>python3.7</code> |
-     *         <code>python3.8</code> | <code>dotnetcore1.0</code> | <code>dotnetcore2.1</code> | <code>go1.x</code> |
-     *         <code>ruby2.5</code> | <code>provided</code>
+     *         The following list includes deprecated runtimes. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy">Runtime
+     *         deprecation policy</a> in the <i>Lambda Developer Guide</i>.
+     *         </p>
+     *         <p>
+     *         Array Members: Maximum number of 5 items.
+     *         </p>
+     *         <p>
+     *         Valid Values:
+     *         <code>nodejs | nodejs4.3 | nodejs6.10 | nodejs8.10 | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | python3.9 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | dotnet6 | nodejs4.3-edge | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2 | nodejs18.x | python3.10 | java17 | ruby3.2 | python3.11 | nodejs20.x | provided.al2023 | python3.12 | java21</code>
      */
 
     public java.util.List<String> getCompatibleRuntimes() {
@@ -123,22 +144,36 @@ public class AwsLambdaLayerVersionDetails implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The layer's compatible runtimes. Maximum number of five items.
+     * The layer's compatible <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">function
+     * runtimes</a>.
      * </p>
      * <p>
-     * Valid values: <code>nodejs10.x</code> | <code>nodejs12.x</code> | <code>java8</code> | <code>java11</code> |
-     * <code>python2.7</code> | <code>python3.6</code> | <code>python3.7</code> | <code>python3.8</code> |
-     * <code>dotnetcore1.0</code> | <code>dotnetcore2.1</code> | <code>go1.x</code> | <code>ruby2.5</code> |
-     * <code>provided</code>
+     * The following list includes deprecated runtimes. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy">Runtime
+     * deprecation policy</a> in the <i>Lambda Developer Guide</i>.
+     * </p>
+     * <p>
+     * Array Members: Maximum number of 5 items.
+     * </p>
+     * <p>
+     * Valid Values:
+     * <code>nodejs | nodejs4.3 | nodejs6.10 | nodejs8.10 | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | python3.9 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | dotnet6 | nodejs4.3-edge | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2 | nodejs18.x | python3.10 | java17 | ruby3.2 | python3.11 | nodejs20.x | provided.al2023 | python3.12 | java21</code>
      * </p>
      * 
      * @param compatibleRuntimes
-     *        The layer's compatible runtimes. Maximum number of five items.</p>
+     *        The layer's compatible <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">function runtimes</a>.</p>
      *        <p>
-     *        Valid values: <code>nodejs10.x</code> | <code>nodejs12.x</code> | <code>java8</code> | <code>java11</code>
-     *        | <code>python2.7</code> | <code>python3.6</code> | <code>python3.7</code> | <code>python3.8</code> |
-     *        <code>dotnetcore1.0</code> | <code>dotnetcore2.1</code> | <code>go1.x</code> | <code>ruby2.5</code> |
-     *        <code>provided</code>
+     *        The following list includes deprecated runtimes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy">Runtime
+     *        deprecation policy</a> in the <i>Lambda Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Array Members: Maximum number of 5 items.
+     *        </p>
+     *        <p>
+     *        Valid Values:
+     *        <code>nodejs | nodejs4.3 | nodejs6.10 | nodejs8.10 | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | python3.9 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | dotnet6 | nodejs4.3-edge | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2 | nodejs18.x | python3.10 | java17 | ruby3.2 | python3.11 | nodejs20.x | provided.al2023 | python3.12 | java21</code>
      */
 
     public void setCompatibleRuntimes(java.util.Collection<String> compatibleRuntimes) {
@@ -152,13 +187,20 @@ public class AwsLambdaLayerVersionDetails implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The layer's compatible runtimes. Maximum number of five items.
+     * The layer's compatible <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">function
+     * runtimes</a>.
      * </p>
      * <p>
-     * Valid values: <code>nodejs10.x</code> | <code>nodejs12.x</code> | <code>java8</code> | <code>java11</code> |
-     * <code>python2.7</code> | <code>python3.6</code> | <code>python3.7</code> | <code>python3.8</code> |
-     * <code>dotnetcore1.0</code> | <code>dotnetcore2.1</code> | <code>go1.x</code> | <code>ruby2.5</code> |
-     * <code>provided</code>
+     * The following list includes deprecated runtimes. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy">Runtime
+     * deprecation policy</a> in the <i>Lambda Developer Guide</i>.
+     * </p>
+     * <p>
+     * Array Members: Maximum number of 5 items.
+     * </p>
+     * <p>
+     * Valid Values:
+     * <code>nodejs | nodejs4.3 | nodejs6.10 | nodejs8.10 | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | python3.9 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | dotnet6 | nodejs4.3-edge | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2 | nodejs18.x | python3.10 | java17 | ruby3.2 | python3.11 | nodejs20.x | provided.al2023 | python3.12 | java21</code>
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -167,12 +209,19 @@ public class AwsLambdaLayerVersionDetails implements Serializable, Cloneable, St
      * </p>
      * 
      * @param compatibleRuntimes
-     *        The layer's compatible runtimes. Maximum number of five items.</p>
+     *        The layer's compatible <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">function runtimes</a>.</p>
      *        <p>
-     *        Valid values: <code>nodejs10.x</code> | <code>nodejs12.x</code> | <code>java8</code> | <code>java11</code>
-     *        | <code>python2.7</code> | <code>python3.6</code> | <code>python3.7</code> | <code>python3.8</code> |
-     *        <code>dotnetcore1.0</code> | <code>dotnetcore2.1</code> | <code>go1.x</code> | <code>ruby2.5</code> |
-     *        <code>provided</code>
+     *        The following list includes deprecated runtimes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy">Runtime
+     *        deprecation policy</a> in the <i>Lambda Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Array Members: Maximum number of 5 items.
+     *        </p>
+     *        <p>
+     *        Valid Values:
+     *        <code>nodejs | nodejs4.3 | nodejs6.10 | nodejs8.10 | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | python3.9 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | dotnet6 | nodejs4.3-edge | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2 | nodejs18.x | python3.10 | java17 | ruby3.2 | python3.11 | nodejs20.x | provided.al2023 | python3.12 | java21</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -188,22 +237,36 @@ public class AwsLambdaLayerVersionDetails implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The layer's compatible runtimes. Maximum number of five items.
+     * The layer's compatible <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">function
+     * runtimes</a>.
      * </p>
      * <p>
-     * Valid values: <code>nodejs10.x</code> | <code>nodejs12.x</code> | <code>java8</code> | <code>java11</code> |
-     * <code>python2.7</code> | <code>python3.6</code> | <code>python3.7</code> | <code>python3.8</code> |
-     * <code>dotnetcore1.0</code> | <code>dotnetcore2.1</code> | <code>go1.x</code> | <code>ruby2.5</code> |
-     * <code>provided</code>
+     * The following list includes deprecated runtimes. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy">Runtime
+     * deprecation policy</a> in the <i>Lambda Developer Guide</i>.
+     * </p>
+     * <p>
+     * Array Members: Maximum number of 5 items.
+     * </p>
+     * <p>
+     * Valid Values:
+     * <code>nodejs | nodejs4.3 | nodejs6.10 | nodejs8.10 | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | python3.9 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | dotnet6 | nodejs4.3-edge | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2 | nodejs18.x | python3.10 | java17 | ruby3.2 | python3.11 | nodejs20.x | provided.al2023 | python3.12 | java21</code>
      * </p>
      * 
      * @param compatibleRuntimes
-     *        The layer's compatible runtimes. Maximum number of five items.</p>
+     *        The layer's compatible <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">function runtimes</a>.</p>
      *        <p>
-     *        Valid values: <code>nodejs10.x</code> | <code>nodejs12.x</code> | <code>java8</code> | <code>java11</code>
-     *        | <code>python2.7</code> | <code>python3.6</code> | <code>python3.7</code> | <code>python3.8</code> |
-     *        <code>dotnetcore1.0</code> | <code>dotnetcore2.1</code> | <code>go1.x</code> | <code>ruby2.5</code> |
-     *        <code>provided</code>
+     *        The following list includes deprecated runtimes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy">Runtime
+     *        deprecation policy</a> in the <i>Lambda Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Array Members: Maximum number of 5 items.
+     *        </p>
+     *        <p>
+     *        Valid Values:
+     *        <code>nodejs | nodejs4.3 | nodejs6.10 | nodejs8.10 | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | java8 | java8.al2 | java11 | python2.7 | python3.6 | python3.7 | python3.8 | python3.9 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | dotnet6 | nodejs4.3-edge | go1.x | ruby2.5 | ruby2.7 | provided | provided.al2 | nodejs18.x | python3.10 | java17 | ruby3.2 | python3.11 | nodejs20.x | provided.al2023 | python3.12 | java21</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

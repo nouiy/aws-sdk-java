@@ -60,6 +60,10 @@ public class ModerationLabelJsonUnmarshaller implements Unmarshaller<ModerationL
                     context.nextToken();
                     moderationLabel.setParentName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("TaxonomyLevel", targetDepth)) {
+                    context.nextToken();
+                    moderationLabel.setTaxonomyLevel(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

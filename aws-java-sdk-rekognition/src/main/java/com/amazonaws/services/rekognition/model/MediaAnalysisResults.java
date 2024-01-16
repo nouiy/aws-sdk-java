@@ -26,6 +26,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class MediaAnalysisResults implements Serializable, Cloneable, StructuredPojo {
 
     private S3Object s3Object;
+    /**
+     * <p>
+     * Information about the model versions for the features selected in a given job.
+     * </p>
+     */
+    private MediaAnalysisModelVersions modelVersions;
 
     /**
      * @param s3Object
@@ -54,6 +60,46 @@ public class MediaAnalysisResults implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * Information about the model versions for the features selected in a given job.
+     * </p>
+     * 
+     * @param modelVersions
+     *        Information about the model versions for the features selected in a given job.
+     */
+
+    public void setModelVersions(MediaAnalysisModelVersions modelVersions) {
+        this.modelVersions = modelVersions;
+    }
+
+    /**
+     * <p>
+     * Information about the model versions for the features selected in a given job.
+     * </p>
+     * 
+     * @return Information about the model versions for the features selected in a given job.
+     */
+
+    public MediaAnalysisModelVersions getModelVersions() {
+        return this.modelVersions;
+    }
+
+    /**
+     * <p>
+     * Information about the model versions for the features selected in a given job.
+     * </p>
+     * 
+     * @param modelVersions
+     *        Information about the model versions for the features selected in a given job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MediaAnalysisResults withModelVersions(MediaAnalysisModelVersions modelVersions) {
+        setModelVersions(modelVersions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -66,7 +112,9 @@ public class MediaAnalysisResults implements Serializable, Cloneable, Structured
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getS3Object() != null)
-            sb.append("S3Object: ").append(getS3Object());
+            sb.append("S3Object: ").append(getS3Object()).append(",");
+        if (getModelVersions() != null)
+            sb.append("ModelVersions: ").append(getModelVersions());
         sb.append("}");
         return sb.toString();
     }
@@ -85,6 +133,10 @@ public class MediaAnalysisResults implements Serializable, Cloneable, Structured
             return false;
         if (other.getS3Object() != null && other.getS3Object().equals(this.getS3Object()) == false)
             return false;
+        if (other.getModelVersions() == null ^ this.getModelVersions() == null)
+            return false;
+        if (other.getModelVersions() != null && other.getModelVersions().equals(this.getModelVersions()) == false)
+            return false;
         return true;
     }
 
@@ -94,6 +146,7 @@ public class MediaAnalysisResults implements Serializable, Cloneable, Structured
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getS3Object() == null) ? 0 : getS3Object().hashCode());
+        hashCode = prime * hashCode + ((getModelVersions() == null) ? 0 : getModelVersions().hashCode());
         return hashCode;
     }
 

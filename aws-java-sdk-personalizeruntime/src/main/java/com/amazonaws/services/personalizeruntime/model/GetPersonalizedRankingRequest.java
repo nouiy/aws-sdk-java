@@ -87,8 +87,8 @@ public class GetPersonalizedRankingRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For information about enabling metadata for a campaign, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling metadata
-     * in recommendations for a campaign</a>.
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata">Enabling
+     * metadata in recommendations for a campaign</a>.
      * </p>
      */
     private java.util.Map<String, java.util.List<String>> metadataColumns;
@@ -536,8 +536,8 @@ public class GetPersonalizedRankingRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For information about enabling metadata for a campaign, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling metadata
-     * in recommendations for a campaign</a>.
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata">Enabling
+     * metadata in recommendations for a campaign</a>.
      * </p>
      * 
      * @return If you enabled metadata in recommendations when you created or updated the campaign, specify metadata
@@ -546,8 +546,8 @@ public class GetPersonalizedRankingRequest extends com.amazonaws.AmazonWebServic
      *         provide is 10.</p>
      *         <p>
      *         For information about enabling metadata for a campaign, see <a
-     *         href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling
-     *         metadata in recommendations for a campaign</a>.
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata"
+     *         >Enabling metadata in recommendations for a campaign</a>.
      */
 
     public java.util.Map<String, java.util.List<String>> getMetadataColumns() {
@@ -562,8 +562,8 @@ public class GetPersonalizedRankingRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For information about enabling metadata for a campaign, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling metadata
-     * in recommendations for a campaign</a>.
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata">Enabling
+     * metadata in recommendations for a campaign</a>.
      * </p>
      * 
      * @param metadataColumns
@@ -573,8 +573,8 @@ public class GetPersonalizedRankingRequest extends com.amazonaws.AmazonWebServic
      *        provide is 10.</p>
      *        <p>
      *        For information about enabling metadata for a campaign, see <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling
-     *        metadata in recommendations for a campaign</a>.
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata"
+     *        >Enabling metadata in recommendations for a campaign</a>.
      */
 
     public void setMetadataColumns(java.util.Map<String, java.util.List<String>> metadataColumns) {
@@ -589,8 +589,8 @@ public class GetPersonalizedRankingRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For information about enabling metadata for a campaign, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling metadata
-     * in recommendations for a campaign</a>.
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata">Enabling
+     * metadata in recommendations for a campaign</a>.
      * </p>
      * 
      * @param metadataColumns
@@ -600,8 +600,8 @@ public class GetPersonalizedRankingRequest extends com.amazonaws.AmazonWebServic
      *        provide is 10.</p>
      *        <p>
      *        For information about enabling metadata for a campaign, see <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling
-     *        metadata in recommendations for a campaign</a>.
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata"
+     *        >Enabling metadata in recommendations for a campaign</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

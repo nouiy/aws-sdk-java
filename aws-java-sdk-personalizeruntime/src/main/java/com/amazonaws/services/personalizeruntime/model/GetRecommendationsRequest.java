@@ -115,10 +115,11 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <p>
      * For information about enabling metadata for a campaign, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling metadata
-     * in recommendations for a campaign</a>. For information about enabling metadata for a recommender, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-recommender-return-metadata.html">Enabling
-     * metadata in recommendations for a recommender</a>.
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata">Enabling
+     * metadata in recommendations for a campaign</a>. For information about enabling metadata for a recommender, see <a
+     * href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/creating-recommenders.html#create-recommender-return-metadata"
+     * >Enabling metadata in recommendations for a recommender</a>.
      * </p>
      */
     private java.util.Map<String, java.util.List<String>> metadataColumns;
@@ -733,10 +734,11 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <p>
      * For information about enabling metadata for a campaign, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling metadata
-     * in recommendations for a campaign</a>. For information about enabling metadata for a recommender, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-recommender-return-metadata.html">Enabling
-     * metadata in recommendations for a recommender</a>.
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata">Enabling
+     * metadata in recommendations for a campaign</a>. For information about enabling metadata for a recommender, see <a
+     * href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/creating-recommenders.html#create-recommender-return-metadata"
+     * >Enabling metadata in recommendations for a recommender</a>.
      * </p>
      * 
      * @return If you enabled metadata in recommendations when you created or updated the campaign or recommender,
@@ -745,11 +747,11 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
      *         columns you can provide is 10.</p>
      *         <p>
      *         For information about enabling metadata for a campaign, see <a
-     *         href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling
-     *         metadata in recommendations for a campaign</a>. For information about enabling metadata for a
-     *         recommender, see <a
-     *         href="https://docs.aws.amazon.com/personalize/latest/dg/create-recommender-return-metadata.html">Enabling
-     *         metadata in recommendations for a recommender</a>.
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata"
+     *         >Enabling metadata in recommendations for a campaign</a>. For information about enabling metadata for a
+     *         recommender, see <a href=
+     *         "https://docs.aws.amazon.com/personalize/latest/dg/creating-recommenders.html#create-recommender-return-metadata"
+     *         >Enabling metadata in recommendations for a recommender</a>.
      */
 
     public java.util.Map<String, java.util.List<String>> getMetadataColumns() {
@@ -765,10 +767,11 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <p>
      * For information about enabling metadata for a campaign, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling metadata
-     * in recommendations for a campaign</a>. For information about enabling metadata for a recommender, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-recommender-return-metadata.html">Enabling
-     * metadata in recommendations for a recommender</a>.
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata">Enabling
+     * metadata in recommendations for a campaign</a>. For information about enabling metadata for a recommender, see <a
+     * href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/creating-recommenders.html#create-recommender-return-metadata"
+     * >Enabling metadata in recommendations for a recommender</a>.
      * </p>
      * 
      * @param metadataColumns
@@ -778,10 +781,11 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
      *        columns you can provide is 10.</p>
      *        <p>
      *        For information about enabling metadata for a campaign, see <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling
-     *        metadata in recommendations for a campaign</a>. For information about enabling metadata for a recommender,
-     *        see <a href="https://docs.aws.amazon.com/personalize/latest/dg/create-recommender-return-metadata.html">
-     *        Enabling metadata in recommendations for a recommender</a>.
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata"
+     *        >Enabling metadata in recommendations for a campaign</a>. For information about enabling metadata for a
+     *        recommender, see <a href=
+     *        "https://docs.aws.amazon.com/personalize/latest/dg/creating-recommenders.html#create-recommender-return-metadata"
+     *        >Enabling metadata in recommendations for a recommender</a>.
      */
 
     public void setMetadataColumns(java.util.Map<String, java.util.List<String>> metadataColumns) {
@@ -797,10 +801,11 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <p>
      * For information about enabling metadata for a campaign, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling metadata
-     * in recommendations for a campaign</a>. For information about enabling metadata for a recommender, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/create-recommender-return-metadata.html">Enabling
-     * metadata in recommendations for a recommender</a>.
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata">Enabling
+     * metadata in recommendations for a campaign</a>. For information about enabling metadata for a recommender, see <a
+     * href=
+     * "https://docs.aws.amazon.com/personalize/latest/dg/creating-recommenders.html#create-recommender-return-metadata"
+     * >Enabling metadata in recommendations for a recommender</a>.
      * </p>
      * 
      * @param metadataColumns
@@ -810,10 +815,11 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
      *        columns you can provide is 10.</p>
      *        <p>
      *        For information about enabling metadata for a campaign, see <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/create-campaign-return-metadata.html">Enabling
-     *        metadata in recommendations for a campaign</a>. For information about enabling metadata for a recommender,
-     *        see <a href="https://docs.aws.amazon.com/personalize/latest/dg/create-recommender-return-metadata.html">
-     *        Enabling metadata in recommendations for a recommender</a>.
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html#create-campaign-return-metadata"
+     *        >Enabling metadata in recommendations for a campaign</a>. For information about enabling metadata for a
+     *        recommender, see <a href=
+     *        "https://docs.aws.amazon.com/personalize/latest/dg/creating-recommenders.html#create-recommender-return-metadata"
+     *        >Enabling metadata in recommendations for a recommender</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

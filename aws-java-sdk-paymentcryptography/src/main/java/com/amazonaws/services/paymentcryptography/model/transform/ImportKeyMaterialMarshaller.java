@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ImportKeyMaterialMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> KEYCRYPTOGRAM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyCryptogram").build();
     private static final MarshallingInfo<StructuredPojo> ROOTCERTIFICATEPUBLICKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RootCertificatePublicKey").build();
     private static final MarshallingInfo<StructuredPojo> TR31KEYBLOCK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -52,6 +54,7 @@ public class ImportKeyMaterialMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(importKeyMaterial.getKeyCryptogram(), KEYCRYPTOGRAM_BINDING);
             protocolMarshaller.marshall(importKeyMaterial.getRootCertificatePublicKey(), ROOTCERTIFICATEPUBLICKEY_BINDING);
             protocolMarshaller.marshall(importKeyMaterial.getTr31KeyBlock(), TR31KEYBLOCK_BINDING);
             protocolMarshaller.marshall(importKeyMaterial.getTr34KeyBlock(), TR34KEYBLOCK_BINDING);

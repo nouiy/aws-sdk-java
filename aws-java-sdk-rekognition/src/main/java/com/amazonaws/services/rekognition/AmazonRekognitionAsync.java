@@ -118,12 +118,25 @@ import com.amazonaws.services.rekognition.model.*;
  * </li>
  * <li>
  * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetMediaAnalysisJob.html">GetMediaAnalysisJob
+ * </a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_IndexFaces.html">IndexFaces</a>
  * </p>
  * </li>
  * <li>
  * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListCollections.html">ListCollections</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListMediaAnalysisJob.html">
+ * ListMediaAnalysisJob</a>
  * </p>
  * </li>
  * <li>
@@ -162,6 +175,12 @@ import com.amazonaws.services.rekognition.model.*;
  * <p>
  * <a
  * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_SearchUsersByImage.html">SearchUsersByImage</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartMediaAnalysisJob.html">
+ * StartMediaAnalysisJob</a>
  * </p>
  * </li>
  * </ul>
@@ -1800,7 +1819,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * For each object that the model version detects on an image, the API returns a (<code>CustomLabel</code>) object
      * in an array (<code>CustomLabels</code>). Each <code>CustomLabel</code> object provides the label name (
      * <code>Name</code>), the level of confidence that the image contains the object (<code>Confidence</code>), and
-     * object location information, if it exists, for the label on the image (<code>Geometry</code>).
+     * object location information, if it exists, for the label on the image (<code>Geometry</code>). Note that for the
+     * <code>DetectCustomLabelsLabels</code> operation, <code>Polygons</code> are not returned in the
+     * <code>Geometry</code> section of the response.
      * </p>
      * <p>
      * To filter labels that are returned, specify a value for <code>MinConfidence</code>.
@@ -1854,7 +1875,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * For each object that the model version detects on an image, the API returns a (<code>CustomLabel</code>) object
      * in an array (<code>CustomLabels</code>). Each <code>CustomLabel</code> object provides the label name (
      * <code>Name</code>), the level of confidence that the image contains the object (<code>Confidence</code>), and
-     * object location information, if it exists, for the label on the image (<code>Geometry</code>).
+     * object location information, if it exists, for the label on the image (<code>Geometry</code>). Note that for the
+     * <code>DetectCustomLabelsLabels</code> operation, <code>Polygons</code> are not returned in the
+     * <code>Geometry</code> section of the response.
      * </p>
      * <p>
      * To filter labels that are returned, specify a value for <code>MinConfidence</code>.

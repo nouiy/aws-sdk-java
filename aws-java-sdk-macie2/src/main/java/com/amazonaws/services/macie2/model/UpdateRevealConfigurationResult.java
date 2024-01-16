@@ -32,7 +32,7 @@ public class UpdateRevealConfigurationResult extends com.amazonaws.AmazonWebServ
     private RevealConfiguration configuration;
     /**
      * <p>
-     * The access method and settings to use to retrieve the sensitive data.
+     * The access method and settings to use when retrieving the sensitive data.
      * </p>
      */
     private RetrievalConfiguration retrievalConfiguration;
@@ -85,11 +85,11 @@ public class UpdateRevealConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The access method and settings to use to retrieve the sensitive data.
+     * The access method and settings to use when retrieving the sensitive data.
      * </p>
      * 
      * @param retrievalConfiguration
-     *        The access method and settings to use to retrieve the sensitive data.
+     *        The access method and settings to use when retrieving the sensitive data.
      */
 
     public void setRetrievalConfiguration(RetrievalConfiguration retrievalConfiguration) {
@@ -98,10 +98,10 @@ public class UpdateRevealConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The access method and settings to use to retrieve the sensitive data.
+     * The access method and settings to use when retrieving the sensitive data.
      * </p>
      * 
-     * @return The access method and settings to use to retrieve the sensitive data.
+     * @return The access method and settings to use when retrieving the sensitive data.
      */
 
     public RetrievalConfiguration getRetrievalConfiguration() {
@@ -110,11 +110,11 @@ public class UpdateRevealConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The access method and settings to use to retrieve the sensitive data.
+     * The access method and settings to use when retrieving the sensitive data.
      * </p>
      * 
      * @param retrievalConfiguration
-     *        The access method and settings to use to retrieve the sensitive data.
+     *        The access method and settings to use when retrieving the sensitive data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

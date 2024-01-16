@@ -20,8 +20,8 @@ public class AssociateFacesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * An array of AssociatedFace objects containing FaceIDs that are successfully associated with the UserID is
-     * returned. Returned if the AssociateFaces action is successful.
+     * An array of AssociatedFace objects containing FaceIDs that have been successfully associated with the UserID.
+     * Returned if the AssociateFaces action is successful.
      * </p>
      */
     private java.util.List<AssociatedFace> associatedFaces;
@@ -41,12 +41,12 @@ public class AssociateFacesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * An array of AssociatedFace objects containing FaceIDs that are successfully associated with the UserID is
-     * returned. Returned if the AssociateFaces action is successful.
+     * An array of AssociatedFace objects containing FaceIDs that have been successfully associated with the UserID.
+     * Returned if the AssociateFaces action is successful.
      * </p>
      * 
-     * @return An array of AssociatedFace objects containing FaceIDs that are successfully associated with the UserID is
-     *         returned. Returned if the AssociateFaces action is successful.
+     * @return An array of AssociatedFace objects containing FaceIDs that have been successfully associated with the
+     *         UserID. Returned if the AssociateFaces action is successful.
      */
 
     public java.util.List<AssociatedFace> getAssociatedFaces() {
@@ -55,13 +55,13 @@ public class AssociateFacesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * An array of AssociatedFace objects containing FaceIDs that are successfully associated with the UserID is
-     * returned. Returned if the AssociateFaces action is successful.
+     * An array of AssociatedFace objects containing FaceIDs that have been successfully associated with the UserID.
+     * Returned if the AssociateFaces action is successful.
      * </p>
      * 
      * @param associatedFaces
-     *        An array of AssociatedFace objects containing FaceIDs that are successfully associated with the UserID is
-     *        returned. Returned if the AssociateFaces action is successful.
+     *        An array of AssociatedFace objects containing FaceIDs that have been successfully associated with the
+     *        UserID. Returned if the AssociateFaces action is successful.
      */
 
     public void setAssociatedFaces(java.util.Collection<AssociatedFace> associatedFaces) {
@@ -75,8 +75,8 @@ public class AssociateFacesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * An array of AssociatedFace objects containing FaceIDs that are successfully associated with the UserID is
-     * returned. Returned if the AssociateFaces action is successful.
+     * An array of AssociatedFace objects containing FaceIDs that have been successfully associated with the UserID.
+     * Returned if the AssociateFaces action is successful.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -85,8 +85,8 @@ public class AssociateFacesResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * 
      * @param associatedFaces
-     *        An array of AssociatedFace objects containing FaceIDs that are successfully associated with the UserID is
-     *        returned. Returned if the AssociateFaces action is successful.
+     *        An array of AssociatedFace objects containing FaceIDs that have been successfully associated with the
+     *        UserID. Returned if the AssociateFaces action is successful.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,13 +102,13 @@ public class AssociateFacesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * An array of AssociatedFace objects containing FaceIDs that are successfully associated with the UserID is
-     * returned. Returned if the AssociateFaces action is successful.
+     * An array of AssociatedFace objects containing FaceIDs that have been successfully associated with the UserID.
+     * Returned if the AssociateFaces action is successful.
      * </p>
      * 
      * @param associatedFaces
-     *        An array of AssociatedFace objects containing FaceIDs that are successfully associated with the UserID is
-     *        returned. Returned if the AssociateFaces action is successful.
+     *        An array of AssociatedFace objects containing FaceIDs that have been successfully associated with the
+     *        UserID. Returned if the AssociateFaces action is successful.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

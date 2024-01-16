@@ -31,22 +31,23 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that are encrypted with a customer-provided key. The objects use customer-provided
-     * server-side encryption (SSE-C).
+     * The total number of objects that are encrypted with customer-provided keys. The objects use server-side
+     * encryption with customer-provided keys (SSE-C).
      * </p>
      */
     private Long customerManaged;
     /**
      * <p>
-     * The total number of objects that are encrypted with an KMS key, either an Amazon Web Services managed key or a
-     * customer managed key. The objects use KMS encryption (SSE-KMS).
+     * The total number of objects that are encrypted with KMS keys, either Amazon Web Services managed keys or customer
+     * managed keys. The objects use dual-layer server-side encryption or server-side encryption with KMS keys (DSSE-KMS
+     * or SSE-KMS).
      * </p>
      */
     private Long kmsManaged;
     /**
      * <p>
-     * The total number of objects that are encrypted with an Amazon S3 managed key. The objects use Amazon S3 managed
-     * encryption (SSE-S3).
+     * The total number of objects that are encrypted with Amazon S3 managed keys. The objects use server-side
+     * encryption with Amazon S3 managed keys (SSE-S3).
      * </p>
      */
     private Long s3Managed;
@@ -66,13 +67,13 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that are encrypted with a customer-provided key. The objects use customer-provided
-     * server-side encryption (SSE-C).
+     * The total number of objects that are encrypted with customer-provided keys. The objects use server-side
+     * encryption with customer-provided keys (SSE-C).
      * </p>
      * 
      * @param customerManaged
-     *        The total number of objects that are encrypted with a customer-provided key. The objects use
-     *        customer-provided server-side encryption (SSE-C).
+     *        The total number of objects that are encrypted with customer-provided keys. The objects use server-side
+     *        encryption with customer-provided keys (SSE-C).
      */
 
     public void setCustomerManaged(Long customerManaged) {
@@ -81,12 +82,12 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that are encrypted with a customer-provided key. The objects use customer-provided
-     * server-side encryption (SSE-C).
+     * The total number of objects that are encrypted with customer-provided keys. The objects use server-side
+     * encryption with customer-provided keys (SSE-C).
      * </p>
      * 
-     * @return The total number of objects that are encrypted with a customer-provided key. The objects use
-     *         customer-provided server-side encryption (SSE-C).
+     * @return The total number of objects that are encrypted with customer-provided keys. The objects use server-side
+     *         encryption with customer-provided keys (SSE-C).
      */
 
     public Long getCustomerManaged() {
@@ -95,13 +96,13 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that are encrypted with a customer-provided key. The objects use customer-provided
-     * server-side encryption (SSE-C).
+     * The total number of objects that are encrypted with customer-provided keys. The objects use server-side
+     * encryption with customer-provided keys (SSE-C).
      * </p>
      * 
      * @param customerManaged
-     *        The total number of objects that are encrypted with a customer-provided key. The objects use
-     *        customer-provided server-side encryption (SSE-C).
+     *        The total number of objects that are encrypted with customer-provided keys. The objects use server-side
+     *        encryption with customer-provided keys (SSE-C).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,13 +113,15 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that are encrypted with an KMS key, either an Amazon Web Services managed key or a
-     * customer managed key. The objects use KMS encryption (SSE-KMS).
+     * The total number of objects that are encrypted with KMS keys, either Amazon Web Services managed keys or customer
+     * managed keys. The objects use dual-layer server-side encryption or server-side encryption with KMS keys (DSSE-KMS
+     * or SSE-KMS).
      * </p>
      * 
      * @param kmsManaged
-     *        The total number of objects that are encrypted with an KMS key, either an Amazon Web Services managed key
-     *        or a customer managed key. The objects use KMS encryption (SSE-KMS).
+     *        The total number of objects that are encrypted with KMS keys, either Amazon Web Services managed keys or
+     *        customer managed keys. The objects use dual-layer server-side encryption or server-side encryption with
+     *        KMS keys (DSSE-KMS or SSE-KMS).
      */
 
     public void setKmsManaged(Long kmsManaged) {
@@ -127,12 +130,14 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that are encrypted with an KMS key, either an Amazon Web Services managed key or a
-     * customer managed key. The objects use KMS encryption (SSE-KMS).
+     * The total number of objects that are encrypted with KMS keys, either Amazon Web Services managed keys or customer
+     * managed keys. The objects use dual-layer server-side encryption or server-side encryption with KMS keys (DSSE-KMS
+     * or SSE-KMS).
      * </p>
      * 
-     * @return The total number of objects that are encrypted with an KMS key, either an Amazon Web Services managed key
-     *         or a customer managed key. The objects use KMS encryption (SSE-KMS).
+     * @return The total number of objects that are encrypted with KMS keys, either Amazon Web Services managed keys or
+     *         customer managed keys. The objects use dual-layer server-side encryption or server-side encryption with
+     *         KMS keys (DSSE-KMS or SSE-KMS).
      */
 
     public Long getKmsManaged() {
@@ -141,13 +146,15 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that are encrypted with an KMS key, either an Amazon Web Services managed key or a
-     * customer managed key. The objects use KMS encryption (SSE-KMS).
+     * The total number of objects that are encrypted with KMS keys, either Amazon Web Services managed keys or customer
+     * managed keys. The objects use dual-layer server-side encryption or server-side encryption with KMS keys (DSSE-KMS
+     * or SSE-KMS).
      * </p>
      * 
      * @param kmsManaged
-     *        The total number of objects that are encrypted with an KMS key, either an Amazon Web Services managed key
-     *        or a customer managed key. The objects use KMS encryption (SSE-KMS).
+     *        The total number of objects that are encrypted with KMS keys, either Amazon Web Services managed keys or
+     *        customer managed keys. The objects use dual-layer server-side encryption or server-side encryption with
+     *        KMS keys (DSSE-KMS or SSE-KMS).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -158,13 +165,13 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that are encrypted with an Amazon S3 managed key. The objects use Amazon S3 managed
-     * encryption (SSE-S3).
+     * The total number of objects that are encrypted with Amazon S3 managed keys. The objects use server-side
+     * encryption with Amazon S3 managed keys (SSE-S3).
      * </p>
      * 
      * @param s3Managed
-     *        The total number of objects that are encrypted with an Amazon S3 managed key. The objects use Amazon S3
-     *        managed encryption (SSE-S3).
+     *        The total number of objects that are encrypted with Amazon S3 managed keys. The objects use server-side
+     *        encryption with Amazon S3 managed keys (SSE-S3).
      */
 
     public void setS3Managed(Long s3Managed) {
@@ -173,12 +180,12 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that are encrypted with an Amazon S3 managed key. The objects use Amazon S3 managed
-     * encryption (SSE-S3).
+     * The total number of objects that are encrypted with Amazon S3 managed keys. The objects use server-side
+     * encryption with Amazon S3 managed keys (SSE-S3).
      * </p>
      * 
-     * @return The total number of objects that are encrypted with an Amazon S3 managed key. The objects use Amazon S3
-     *         managed encryption (SSE-S3).
+     * @return The total number of objects that are encrypted with Amazon S3 managed keys. The objects use server-side
+     *         encryption with Amazon S3 managed keys (SSE-S3).
      */
 
     public Long getS3Managed() {
@@ -187,13 +194,13 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that are encrypted with an Amazon S3 managed key. The objects use Amazon S3 managed
-     * encryption (SSE-S3).
+     * The total number of objects that are encrypted with Amazon S3 managed keys. The objects use server-side
+     * encryption with Amazon S3 managed keys (SSE-S3).
      * </p>
      * 
      * @param s3Managed
-     *        The total number of objects that are encrypted with an Amazon S3 managed key. The objects use Amazon S3
-     *        managed encryption (SSE-S3).
+     *        The total number of objects that are encrypted with Amazon S3 managed keys. The objects use server-side
+     *        encryption with Amazon S3 managed keys (SSE-S3).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

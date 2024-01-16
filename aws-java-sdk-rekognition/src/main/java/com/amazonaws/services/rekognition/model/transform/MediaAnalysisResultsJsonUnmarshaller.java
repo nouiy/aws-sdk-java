@@ -52,6 +52,10 @@ public class MediaAnalysisResultsJsonUnmarshaller implements Unmarshaller<MediaA
                     context.nextToken();
                     mediaAnalysisResults.setS3Object(S3ObjectJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ModelVersions", targetDepth)) {
+                    context.nextToken();
+                    mediaAnalysisResults.setModelVersions(MediaAnalysisModelVersionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

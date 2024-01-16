@@ -33,9 +33,9 @@ public class BucketCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of buckets whose default encryption settings are configured to encrypt new objects with an
-     * Amazon Web Services managed KMS key or a customer managed KMS key. By default, these buckets encrypt new objects
-     * automatically using SSE-KMS encryption.
+     * The total number of buckets whose default encryption settings are configured to encrypt new objects with an KMS
+     * key, either an Amazon Web Services managed key or a customer managed key. By default, these buckets encrypt new
+     * objects automatically using DSSE-KMS or SSE-KMS encryption.
      * </p>
      */
     private Long kmsManaged;
@@ -63,17 +63,15 @@ public class BucketCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of buckets whose default encryption settings are configured to encrypt new objects with an
-     * Amazon Web Services managed KMS key or a customer managed KMS key. By default, these buckets encrypt new objects
-     * automatically using SSE-KMS encryption.
+     * The total number of buckets whose default encryption settings are configured to encrypt new objects with an KMS
+     * key, either an Amazon Web Services managed key or a customer managed key. By default, these buckets encrypt new
+     * objects automatically using DSSE-KMS or SSE-KMS encryption.
      * </p>
      * 
      * @param kmsManaged
-     *        <p>
      *        The total number of buckets whose default encryption settings are configured to encrypt new objects with
-     *        an Amazon Web Services managed KMS key or a customer managed KMS key. By default, these buckets encrypt
-     *        new objects automatically using SSE-KMS encryption.
-     *        </p>
+     *        an KMS key, either an Amazon Web Services managed key or a customer managed key. By default, these buckets
+     *        encrypt new objects automatically using DSSE-KMS or SSE-KMS encryption.
      */
 
     public void setKmsManaged(Long kmsManaged) {
@@ -82,16 +80,14 @@ public class BucketCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of buckets whose default encryption settings are configured to encrypt new objects with an
-     * Amazon Web Services managed KMS key or a customer managed KMS key. By default, these buckets encrypt new objects
-     * automatically using SSE-KMS encryption.
+     * The total number of buckets whose default encryption settings are configured to encrypt new objects with an KMS
+     * key, either an Amazon Web Services managed key or a customer managed key. By default, these buckets encrypt new
+     * objects automatically using DSSE-KMS or SSE-KMS encryption.
      * </p>
      * 
-     * @return <p>
-     *         The total number of buckets whose default encryption settings are configured to encrypt new objects with
-     *         an Amazon Web Services managed KMS key or a customer managed KMS key. By default, these buckets encrypt
-     *         new objects automatically using SSE-KMS encryption.
-     *         </p>
+     * @return The total number of buckets whose default encryption settings are configured to encrypt new objects with
+     *         an KMS key, either an Amazon Web Services managed key or a customer managed key. By default, these
+     *         buckets encrypt new objects automatically using DSSE-KMS or SSE-KMS encryption.
      */
 
     public Long getKmsManaged() {
@@ -100,17 +96,15 @@ public class BucketCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of buckets whose default encryption settings are configured to encrypt new objects with an
-     * Amazon Web Services managed KMS key or a customer managed KMS key. By default, these buckets encrypt new objects
-     * automatically using SSE-KMS encryption.
+     * The total number of buckets whose default encryption settings are configured to encrypt new objects with an KMS
+     * key, either an Amazon Web Services managed key or a customer managed key. By default, these buckets encrypt new
+     * objects automatically using DSSE-KMS or SSE-KMS encryption.
      * </p>
      * 
      * @param kmsManaged
-     *        <p>
      *        The total number of buckets whose default encryption settings are configured to encrypt new objects with
-     *        an Amazon Web Services managed KMS key or a customer managed KMS key. By default, these buckets encrypt
-     *        new objects automatically using SSE-KMS encryption.
-     *        </p>
+     *        an KMS key, either an Amazon Web Services managed key or a customer managed key. By default, these buckets
+     *        encrypt new objects automatically using DSSE-KMS or SSE-KMS encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

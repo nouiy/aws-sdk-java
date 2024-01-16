@@ -38,7 +38,7 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
     private java.util.Date parametersValidUntilTimestamp;
     /**
      * <p>
-     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
      * </p>
      */
     private String wrappingKeyAlgorithm;
@@ -148,11 +148,11 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
      * </p>
      * 
      * @param wrappingKeyAlgorithm
-     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
+     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
      * @see KeyAlgorithm
      */
 
@@ -162,10 +162,10 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
      * </p>
      * 
-     * @return The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
+     * @return The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
      * @see KeyAlgorithm
      */
 
@@ -175,11 +175,11 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
      * </p>
      * 
      * @param wrappingKeyAlgorithm
-     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
+     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyAlgorithm
      */
@@ -191,11 +191,11 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
      * </p>
      * 
      * @param wrappingKeyAlgorithm
-     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock.
+     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyAlgorithm
      */

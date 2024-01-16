@@ -32,20 +32,21 @@ public class RetrievalConfiguration implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The external ID to specify in the trust policy for the IAM role to assume when retrieving sensitive data from
-     * affected S3 objects (roleName). The trust policy must include an sts:ExternalId condition that requires this ID.
+     * affected S3 objects (roleName). This value is null if the value for retrievalMode is CALLER_CREDENTIALS.
      * </p>
      * <p>
      * This ID is a unique alphanumeric string that Amazon Macie generates automatically after you configure it to
-     * assume a role. This value is null if the value for retrievalMode is CALLER_CREDENTIALS.
+     * assume an IAM role. For a Macie administrator to retrieve sensitive data from an affected S3 object for a member
+     * account, the trust policy for the role in the member account must include an sts:ExternalId condition that
+     * requires this ID.
      * </p>
      */
     private String externalId;
     /**
      * <p>
-     * The access method that's used when retrieving sensitive data from affected S3 objects. Valid values are:
-     * ASSUME_ROLE, assume an IAM role that is in the affected Amazon Web Services account and delegates access to
-     * Amazon Macie (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the sensitive
-     * data.
+     * The access method that's used to retrieve sensitive data from affected S3 objects. Valid values are: ASSUME_ROLE,
+     * assume an IAM role that is in the affected Amazon Web Services account and delegates access to Amazon Macie
+     * (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the sensitive data.
      * </p>
      */
     private String retrievalMode;
@@ -61,20 +62,24 @@ public class RetrievalConfiguration implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The external ID to specify in the trust policy for the IAM role to assume when retrieving sensitive data from
-     * affected S3 objects (roleName). The trust policy must include an sts:ExternalId condition that requires this ID.
+     * affected S3 objects (roleName). This value is null if the value for retrievalMode is CALLER_CREDENTIALS.
      * </p>
      * <p>
      * This ID is a unique alphanumeric string that Amazon Macie generates automatically after you configure it to
-     * assume a role. This value is null if the value for retrievalMode is CALLER_CREDENTIALS.
+     * assume an IAM role. For a Macie administrator to retrieve sensitive data from an affected S3 object for a member
+     * account, the trust policy for the role in the member account must include an sts:ExternalId condition that
+     * requires this ID.
      * </p>
      * 
      * @param externalId
      *        The external ID to specify in the trust policy for the IAM role to assume when retrieving sensitive data
-     *        from affected S3 objects (roleName). The trust policy must include an sts:ExternalId condition that
-     *        requires this ID.</p>
+     *        from affected S3 objects (roleName). This value is null if the value for retrievalMode is
+     *        CALLER_CREDENTIALS.</p>
      *        <p>
      *        This ID is a unique alphanumeric string that Amazon Macie generates automatically after you configure it
-     *        to assume a role. This value is null if the value for retrievalMode is CALLER_CREDENTIALS.
+     *        to assume an IAM role. For a Macie administrator to retrieve sensitive data from an affected S3 object for
+     *        a member account, the trust policy for the role in the member account must include an sts:ExternalId
+     *        condition that requires this ID.
      */
 
     public void setExternalId(String externalId) {
@@ -84,19 +89,23 @@ public class RetrievalConfiguration implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The external ID to specify in the trust policy for the IAM role to assume when retrieving sensitive data from
-     * affected S3 objects (roleName). The trust policy must include an sts:ExternalId condition that requires this ID.
+     * affected S3 objects (roleName). This value is null if the value for retrievalMode is CALLER_CREDENTIALS.
      * </p>
      * <p>
      * This ID is a unique alphanumeric string that Amazon Macie generates automatically after you configure it to
-     * assume a role. This value is null if the value for retrievalMode is CALLER_CREDENTIALS.
+     * assume an IAM role. For a Macie administrator to retrieve sensitive data from an affected S3 object for a member
+     * account, the trust policy for the role in the member account must include an sts:ExternalId condition that
+     * requires this ID.
      * </p>
      * 
      * @return The external ID to specify in the trust policy for the IAM role to assume when retrieving sensitive data
-     *         from affected S3 objects (roleName). The trust policy must include an sts:ExternalId condition that
-     *         requires this ID.</p>
+     *         from affected S3 objects (roleName). This value is null if the value for retrievalMode is
+     *         CALLER_CREDENTIALS.</p>
      *         <p>
      *         This ID is a unique alphanumeric string that Amazon Macie generates automatically after you configure it
-     *         to assume a role. This value is null if the value for retrievalMode is CALLER_CREDENTIALS.
+     *         to assume an IAM role. For a Macie administrator to retrieve sensitive data from an affected S3 object
+     *         for a member account, the trust policy for the role in the member account must include an sts:ExternalId
+     *         condition that requires this ID.
      */
 
     public String getExternalId() {
@@ -106,20 +115,24 @@ public class RetrievalConfiguration implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The external ID to specify in the trust policy for the IAM role to assume when retrieving sensitive data from
-     * affected S3 objects (roleName). The trust policy must include an sts:ExternalId condition that requires this ID.
+     * affected S3 objects (roleName). This value is null if the value for retrievalMode is CALLER_CREDENTIALS.
      * </p>
      * <p>
      * This ID is a unique alphanumeric string that Amazon Macie generates automatically after you configure it to
-     * assume a role. This value is null if the value for retrievalMode is CALLER_CREDENTIALS.
+     * assume an IAM role. For a Macie administrator to retrieve sensitive data from an affected S3 object for a member
+     * account, the trust policy for the role in the member account must include an sts:ExternalId condition that
+     * requires this ID.
      * </p>
      * 
      * @param externalId
      *        The external ID to specify in the trust policy for the IAM role to assume when retrieving sensitive data
-     *        from affected S3 objects (roleName). The trust policy must include an sts:ExternalId condition that
-     *        requires this ID.</p>
+     *        from affected S3 objects (roleName). This value is null if the value for retrievalMode is
+     *        CALLER_CREDENTIALS.</p>
      *        <p>
      *        This ID is a unique alphanumeric string that Amazon Macie generates automatically after you configure it
-     *        to assume a role. This value is null if the value for retrievalMode is CALLER_CREDENTIALS.
+     *        to assume an IAM role. For a Macie administrator to retrieve sensitive data from an affected S3 object for
+     *        a member account, the trust policy for the role in the member account must include an sts:ExternalId
+     *        condition that requires this ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,14 +143,13 @@ public class RetrievalConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The access method that's used when retrieving sensitive data from affected S3 objects. Valid values are:
-     * ASSUME_ROLE, assume an IAM role that is in the affected Amazon Web Services account and delegates access to
-     * Amazon Macie (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the sensitive
-     * data.
+     * The access method that's used to retrieve sensitive data from affected S3 objects. Valid values are: ASSUME_ROLE,
+     * assume an IAM role that is in the affected Amazon Web Services account and delegates access to Amazon Macie
+     * (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the sensitive data.
      * </p>
      * 
      * @param retrievalMode
-     *        The access method that's used when retrieving sensitive data from affected S3 objects. Valid values are:
+     *        The access method that's used to retrieve sensitive data from affected S3 objects. Valid values are:
      *        ASSUME_ROLE, assume an IAM role that is in the affected Amazon Web Services account and delegates access
      *        to Amazon Macie (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the
      *        sensitive data.
@@ -150,13 +162,12 @@ public class RetrievalConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The access method that's used when retrieving sensitive data from affected S3 objects. Valid values are:
-     * ASSUME_ROLE, assume an IAM role that is in the affected Amazon Web Services account and delegates access to
-     * Amazon Macie (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the sensitive
-     * data.
+     * The access method that's used to retrieve sensitive data from affected S3 objects. Valid values are: ASSUME_ROLE,
+     * assume an IAM role that is in the affected Amazon Web Services account and delegates access to Amazon Macie
+     * (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the sensitive data.
      * </p>
      * 
-     * @return The access method that's used when retrieving sensitive data from affected S3 objects. Valid values are:
+     * @return The access method that's used to retrieve sensitive data from affected S3 objects. Valid values are:
      *         ASSUME_ROLE, assume an IAM role that is in the affected Amazon Web Services account and delegates access
      *         to Amazon Macie (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the
      *         sensitive data.
@@ -169,14 +180,13 @@ public class RetrievalConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The access method that's used when retrieving sensitive data from affected S3 objects. Valid values are:
-     * ASSUME_ROLE, assume an IAM role that is in the affected Amazon Web Services account and delegates access to
-     * Amazon Macie (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the sensitive
-     * data.
+     * The access method that's used to retrieve sensitive data from affected S3 objects. Valid values are: ASSUME_ROLE,
+     * assume an IAM role that is in the affected Amazon Web Services account and delegates access to Amazon Macie
+     * (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the sensitive data.
      * </p>
      * 
      * @param retrievalMode
-     *        The access method that's used when retrieving sensitive data from affected S3 objects. Valid values are:
+     *        The access method that's used to retrieve sensitive data from affected S3 objects. Valid values are:
      *        ASSUME_ROLE, assume an IAM role that is in the affected Amazon Web Services account and delegates access
      *        to Amazon Macie (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the
      *        sensitive data.
@@ -191,14 +201,13 @@ public class RetrievalConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The access method that's used when retrieving sensitive data from affected S3 objects. Valid values are:
-     * ASSUME_ROLE, assume an IAM role that is in the affected Amazon Web Services account and delegates access to
-     * Amazon Macie (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the sensitive
-     * data.
+     * The access method that's used to retrieve sensitive data from affected S3 objects. Valid values are: ASSUME_ROLE,
+     * assume an IAM role that is in the affected Amazon Web Services account and delegates access to Amazon Macie
+     * (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the sensitive data.
      * </p>
      * 
      * @param retrievalMode
-     *        The access method that's used when retrieving sensitive data from affected S3 objects. Valid values are:
+     *        The access method that's used to retrieve sensitive data from affected S3 objects. Valid values are:
      *        ASSUME_ROLE, assume an IAM role that is in the affected Amazon Web Services account and delegates access
      *        to Amazon Macie (roleName); and, CALLER_CREDENTIALS, use the credentials of the IAM user who requests the
      *        sensitive data.

@@ -33,6 +33,8 @@ public class ModerationLabelMarshaller {
             .marshallLocationName("Name").build();
     private static final MarshallingInfo<String> PARENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParentName").build();
+    private static final MarshallingInfo<Integer> TAXONOMYLEVEL_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TaxonomyLevel").build();
 
     private static final ModerationLabelMarshaller instance = new ModerationLabelMarshaller();
 
@@ -53,6 +55,7 @@ public class ModerationLabelMarshaller {
             protocolMarshaller.marshall(moderationLabel.getConfidence(), CONFIDENCE_BINDING);
             protocolMarshaller.marshall(moderationLabel.getName(), NAME_BINDING);
             protocolMarshaller.marshall(moderationLabel.getParentName(), PARENTNAME_BINDING);
+            protocolMarshaller.marshall(moderationLabel.getTaxonomyLevel(), TAXONOMYLEVEL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

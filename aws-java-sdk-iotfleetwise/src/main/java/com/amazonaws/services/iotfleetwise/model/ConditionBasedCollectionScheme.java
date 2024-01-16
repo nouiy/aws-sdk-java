@@ -31,7 +31,7 @@ public class ConditionBasedCollectionScheme implements Serializable, Cloneable, 
     /**
      * <p>
      * The logical expression used to recognize what data to collect. For example,
-     * <code>$variable.Vehicle.OutsideAirTemperature &gt;= 105.0</code>.
+     * <code>$variable.`Vehicle.OutsideAirTemperature` &gt;= 105.0</code>.
      * </p>
      */
     private String expression;
@@ -65,12 +65,12 @@ public class ConditionBasedCollectionScheme implements Serializable, Cloneable, 
     /**
      * <p>
      * The logical expression used to recognize what data to collect. For example,
-     * <code>$variable.Vehicle.OutsideAirTemperature &gt;= 105.0</code>.
+     * <code>$variable.`Vehicle.OutsideAirTemperature` &gt;= 105.0</code>.
      * </p>
      * 
      * @param expression
      *        The logical expression used to recognize what data to collect. For example,
-     *        <code>$variable.Vehicle.OutsideAirTemperature &gt;= 105.0</code>.
+     *        <code>$variable.`Vehicle.OutsideAirTemperature` &gt;= 105.0</code>.
      */
 
     public void setExpression(String expression) {
@@ -80,11 +80,11 @@ public class ConditionBasedCollectionScheme implements Serializable, Cloneable, 
     /**
      * <p>
      * The logical expression used to recognize what data to collect. For example,
-     * <code>$variable.Vehicle.OutsideAirTemperature &gt;= 105.0</code>.
+     * <code>$variable.`Vehicle.OutsideAirTemperature` &gt;= 105.0</code>.
      * </p>
      * 
      * @return The logical expression used to recognize what data to collect. For example,
-     *         <code>$variable.Vehicle.OutsideAirTemperature &gt;= 105.0</code>.
+     *         <code>$variable.`Vehicle.OutsideAirTemperature` &gt;= 105.0</code>.
      */
 
     public String getExpression() {
@@ -94,12 +94,12 @@ public class ConditionBasedCollectionScheme implements Serializable, Cloneable, 
     /**
      * <p>
      * The logical expression used to recognize what data to collect. For example,
-     * <code>$variable.Vehicle.OutsideAirTemperature &gt;= 105.0</code>.
+     * <code>$variable.`Vehicle.OutsideAirTemperature` &gt;= 105.0</code>.
      * </p>
      * 
      * @param expression
      *        The logical expression used to recognize what data to collect. For example,
-     *        <code>$variable.Vehicle.OutsideAirTemperature &gt;= 105.0</code>.
+     *        <code>$variable.`Vehicle.OutsideAirTemperature` &gt;= 105.0</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

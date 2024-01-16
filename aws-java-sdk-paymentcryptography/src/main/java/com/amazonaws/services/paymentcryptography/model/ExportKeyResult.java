@@ -25,18 +25,21 @@ public class ExportKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
+     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock. or a RSA
+     * WrappedKeyCryptogram.
      * </p>
      */
     private WrappedKey wrappedKey;
 
     /**
      * <p>
-     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
+     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock. or a RSA
+     * WrappedKeyCryptogram.
      * </p>
      * 
      * @param wrappedKey
-     *        The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
+     *        The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock. or a RSA
+     *        WrappedKeyCryptogram.
      */
 
     public void setWrappedKey(WrappedKey wrappedKey) {
@@ -45,10 +48,12 @@ public class ExportKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
+     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock. or a RSA
+     * WrappedKeyCryptogram.
      * </p>
      * 
-     * @return The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
+     * @return The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock. or a RSA
+     *         WrappedKeyCryptogram.
      */
 
     public WrappedKey getWrappedKey() {
@@ -57,11 +62,13 @@ public class ExportKeyResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
+     * The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock. or a RSA
+     * WrappedKeyCryptogram.
      * </p>
      * 
      * @param wrappedKey
-     *        The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock.
+     *        The key material under export as a TR-34 WrappedKeyBlock or a TR-31 WrappedKeyBlock. or a RSA
+     *        WrappedKeyCryptogram.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

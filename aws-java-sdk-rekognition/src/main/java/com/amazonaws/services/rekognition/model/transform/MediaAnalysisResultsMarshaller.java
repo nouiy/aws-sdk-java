@@ -29,6 +29,8 @@ public class MediaAnalysisResultsMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> S3OBJECT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3Object").build();
+    private static final MarshallingInfo<StructuredPojo> MODELVERSIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelVersions").build();
 
     private static final MediaAnalysisResultsMarshaller instance = new MediaAnalysisResultsMarshaller();
 
@@ -47,6 +49,7 @@ public class MediaAnalysisResultsMarshaller {
 
         try {
             protocolMarshaller.marshall(mediaAnalysisResults.getS3Object(), S3OBJECT_BINDING);
+            protocolMarshaller.marshall(mediaAnalysisResults.getModelVersions(), MODELVERSIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

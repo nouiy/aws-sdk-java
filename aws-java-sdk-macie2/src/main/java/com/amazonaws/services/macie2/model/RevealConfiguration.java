@@ -45,11 +45,18 @@ public class RevealConfiguration implements Serializable, Cloneable, StructuredP
     private String kmsKeyId;
     /**
      * <p>
-     * The status of the configuration for the Amazon Macie account. In a request, valid values are: ENABLED, enable the
-     * configuration for the account; and, DISABLED, disable the configuration for the account. In a response, possible
-     * values are: ENABLED, the configuration is currently enabled for the account; and, DISABLED, the configuration is
-     * currently disabled for the account.
+     * The status of the configuration for the Amazon Macie account. In a response, possible values are: ENABLED, the
+     * configuration is currently enabled for the account; and, DISABLED, the configuration is currently disabled for
+     * the account. In a request, valid values are: ENABLED, enable the configuration for the account; and, DISABLED,
+     * disable the configuration for the account.
      * </p>
+     * <important>
+     * <p>
+     * If you disable the configuration, you also permanently delete current settings that specify how to access
+     * affected S3 objects. If your current access method is ASSUME_ROLE, Macie also deletes the external ID and role
+     * name currently specified for the configuration. These settings can't be recovered after they're deleted.
+     * </p>
+     * </important>
      */
     private String status;
 
@@ -134,17 +141,30 @@ public class RevealConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the configuration for the Amazon Macie account. In a request, valid values are: ENABLED, enable the
-     * configuration for the account; and, DISABLED, disable the configuration for the account. In a response, possible
-     * values are: ENABLED, the configuration is currently enabled for the account; and, DISABLED, the configuration is
-     * currently disabled for the account.
+     * The status of the configuration for the Amazon Macie account. In a response, possible values are: ENABLED, the
+     * configuration is currently enabled for the account; and, DISABLED, the configuration is currently disabled for
+     * the account. In a request, valid values are: ENABLED, enable the configuration for the account; and, DISABLED,
+     * disable the configuration for the account.
      * </p>
+     * <important>
+     * <p>
+     * If you disable the configuration, you also permanently delete current settings that specify how to access
+     * affected S3 objects. If your current access method is ASSUME_ROLE, Macie also deletes the external ID and role
+     * name currently specified for the configuration. These settings can't be recovered after they're deleted.
+     * </p>
+     * </important>
      * 
      * @param status
-     *        The status of the configuration for the Amazon Macie account. In a request, valid values are: ENABLED,
-     *        enable the configuration for the account; and, DISABLED, disable the configuration for the account. In a
-     *        response, possible values are: ENABLED, the configuration is currently enabled for the account; and,
-     *        DISABLED, the configuration is currently disabled for the account.
+     *        The status of the configuration for the Amazon Macie account. In a response, possible values are: ENABLED,
+     *        the configuration is currently enabled for the account; and, DISABLED, the configuration is currently
+     *        disabled for the account. In a request, valid values are: ENABLED, enable the configuration for the
+     *        account; and, DISABLED, disable the configuration for the account.</p> <important>
+     *        <p>
+     *        If you disable the configuration, you also permanently delete current settings that specify how to access
+     *        affected S3 objects. If your current access method is ASSUME_ROLE, Macie also deletes the external ID and
+     *        role name currently specified for the configuration. These settings can't be recovered after they're
+     *        deleted.
+     *        </p>
      * @see RevealStatus
      */
 
@@ -154,16 +174,29 @@ public class RevealConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the configuration for the Amazon Macie account. In a request, valid values are: ENABLED, enable the
-     * configuration for the account; and, DISABLED, disable the configuration for the account. In a response, possible
-     * values are: ENABLED, the configuration is currently enabled for the account; and, DISABLED, the configuration is
-     * currently disabled for the account.
+     * The status of the configuration for the Amazon Macie account. In a response, possible values are: ENABLED, the
+     * configuration is currently enabled for the account; and, DISABLED, the configuration is currently disabled for
+     * the account. In a request, valid values are: ENABLED, enable the configuration for the account; and, DISABLED,
+     * disable the configuration for the account.
      * </p>
+     * <important>
+     * <p>
+     * If you disable the configuration, you also permanently delete current settings that specify how to access
+     * affected S3 objects. If your current access method is ASSUME_ROLE, Macie also deletes the external ID and role
+     * name currently specified for the configuration. These settings can't be recovered after they're deleted.
+     * </p>
+     * </important>
      * 
-     * @return The status of the configuration for the Amazon Macie account. In a request, valid values are: ENABLED,
-     *         enable the configuration for the account; and, DISABLED, disable the configuration for the account. In a
-     *         response, possible values are: ENABLED, the configuration is currently enabled for the account; and,
-     *         DISABLED, the configuration is currently disabled for the account.
+     * @return The status of the configuration for the Amazon Macie account. In a response, possible values are:
+     *         ENABLED, the configuration is currently enabled for the account; and, DISABLED, the configuration is
+     *         currently disabled for the account. In a request, valid values are: ENABLED, enable the configuration for
+     *         the account; and, DISABLED, disable the configuration for the account.</p> <important>
+     *         <p>
+     *         If you disable the configuration, you also permanently delete current settings that specify how to access
+     *         affected S3 objects. If your current access method is ASSUME_ROLE, Macie also deletes the external ID and
+     *         role name currently specified for the configuration. These settings can't be recovered after they're
+     *         deleted.
+     *         </p>
      * @see RevealStatus
      */
 
@@ -173,17 +206,30 @@ public class RevealConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the configuration for the Amazon Macie account. In a request, valid values are: ENABLED, enable the
-     * configuration for the account; and, DISABLED, disable the configuration for the account. In a response, possible
-     * values are: ENABLED, the configuration is currently enabled for the account; and, DISABLED, the configuration is
-     * currently disabled for the account.
+     * The status of the configuration for the Amazon Macie account. In a response, possible values are: ENABLED, the
+     * configuration is currently enabled for the account; and, DISABLED, the configuration is currently disabled for
+     * the account. In a request, valid values are: ENABLED, enable the configuration for the account; and, DISABLED,
+     * disable the configuration for the account.
      * </p>
+     * <important>
+     * <p>
+     * If you disable the configuration, you also permanently delete current settings that specify how to access
+     * affected S3 objects. If your current access method is ASSUME_ROLE, Macie also deletes the external ID and role
+     * name currently specified for the configuration. These settings can't be recovered after they're deleted.
+     * </p>
+     * </important>
      * 
      * @param status
-     *        The status of the configuration for the Amazon Macie account. In a request, valid values are: ENABLED,
-     *        enable the configuration for the account; and, DISABLED, disable the configuration for the account. In a
-     *        response, possible values are: ENABLED, the configuration is currently enabled for the account; and,
-     *        DISABLED, the configuration is currently disabled for the account.
+     *        The status of the configuration for the Amazon Macie account. In a response, possible values are: ENABLED,
+     *        the configuration is currently enabled for the account; and, DISABLED, the configuration is currently
+     *        disabled for the account. In a request, valid values are: ENABLED, enable the configuration for the
+     *        account; and, DISABLED, disable the configuration for the account.</p> <important>
+     *        <p>
+     *        If you disable the configuration, you also permanently delete current settings that specify how to access
+     *        affected S3 objects. If your current access method is ASSUME_ROLE, Macie also deletes the external ID and
+     *        role name currently specified for the configuration. These settings can't be recovered after they're
+     *        deleted.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RevealStatus
      */
@@ -195,17 +241,30 @@ public class RevealConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the configuration for the Amazon Macie account. In a request, valid values are: ENABLED, enable the
-     * configuration for the account; and, DISABLED, disable the configuration for the account. In a response, possible
-     * values are: ENABLED, the configuration is currently enabled for the account; and, DISABLED, the configuration is
-     * currently disabled for the account.
+     * The status of the configuration for the Amazon Macie account. In a response, possible values are: ENABLED, the
+     * configuration is currently enabled for the account; and, DISABLED, the configuration is currently disabled for
+     * the account. In a request, valid values are: ENABLED, enable the configuration for the account; and, DISABLED,
+     * disable the configuration for the account.
      * </p>
+     * <important>
+     * <p>
+     * If you disable the configuration, you also permanently delete current settings that specify how to access
+     * affected S3 objects. If your current access method is ASSUME_ROLE, Macie also deletes the external ID and role
+     * name currently specified for the configuration. These settings can't be recovered after they're deleted.
+     * </p>
+     * </important>
      * 
      * @param status
-     *        The status of the configuration for the Amazon Macie account. In a request, valid values are: ENABLED,
-     *        enable the configuration for the account; and, DISABLED, disable the configuration for the account. In a
-     *        response, possible values are: ENABLED, the configuration is currently enabled for the account; and,
-     *        DISABLED, the configuration is currently disabled for the account.
+     *        The status of the configuration for the Amazon Macie account. In a response, possible values are: ENABLED,
+     *        the configuration is currently enabled for the account; and, DISABLED, the configuration is currently
+     *        disabled for the account. In a request, valid values are: ENABLED, enable the configuration for the
+     *        account; and, DISABLED, disable the configuration for the account.</p> <important>
+     *        <p>
+     *        If you disable the configuration, you also permanently delete current settings that specify how to access
+     *        affected S3 objects. If your current access method is ASSUME_ROLE, Macie also deletes the external ID and
+     *        role name currently specified for the configuration. These settings can't be recovered after they're
+     *        deleted.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RevealStatus
      */

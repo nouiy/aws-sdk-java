@@ -24,9 +24,7 @@ public enum LogTargetType {
     THING_GROUP("THING_GROUP"),
     CLIENT_ID("CLIENT_ID"),
     SOURCE_IP("SOURCE_IP"),
-    PRINCIPAL_ID("PRINCIPAL_ID"),
-    EVENT_TYPE("EVENT_TYPE"),
-    DEVICE_DEFENDER("DEVICE_DEFENDER");
+    PRINCIPAL_ID("PRINCIPAL_ID");
 
     private String value;
 

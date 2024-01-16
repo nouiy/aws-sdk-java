@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.iotfleetwise.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -39,6 +41,8 @@ public class VehicleSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTMODIFICATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastModificationTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("attributes").build();
 
     private static final VehicleSummaryMarshaller instance = new VehicleSummaryMarshaller();
 
@@ -62,6 +66,7 @@ public class VehicleSummaryMarshaller {
             protocolMarshaller.marshall(vehicleSummary.getDecoderManifestArn(), DECODERMANIFESTARN_BINDING);
             protocolMarshaller.marshall(vehicleSummary.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(vehicleSummary.getLastModificationTime(), LASTMODIFICATIONTIME_BINDING);
+            protocolMarshaller.marshall(vehicleSummary.getAttributes(), ATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

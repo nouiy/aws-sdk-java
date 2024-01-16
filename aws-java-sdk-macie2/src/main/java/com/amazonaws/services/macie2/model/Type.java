@@ -22,7 +22,8 @@ public enum Type {
 
     NONE("NONE"),
     AES256("AES256"),
-    AwsKms("aws:kms");
+    AwsKms("aws:kms"),
+    AwsKmsDsse("aws:kms:dsse");
 
     private String value;
 
