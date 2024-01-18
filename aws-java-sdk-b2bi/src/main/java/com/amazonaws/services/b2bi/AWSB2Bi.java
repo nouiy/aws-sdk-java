@@ -499,6 +499,8 @@ public interface AWSB2Bi {
      * @throws ResourceNotFoundException
      *         Occurs when the requested resource does not exist, or cannot be found. In some cases, the resource exists
      *         in a region other than the region specified in the API call.
+     * @throws InternalServerException
+     *         This exception is thrown when an error occurs in the Amazon Web Services B2B Data Interchange service.
      * @sample AWSB2Bi.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/b2bi-2022-06-23/ListTagsForResource" target="_top">AWS API
      *      Documentation</a>
@@ -569,6 +571,8 @@ public interface AWSB2Bi {
      * @throws ResourceNotFoundException
      *         Occurs when the requested resource does not exist, or cannot be found. In some cases, the resource exists
      *         in a region other than the region specified in the API call.
+     * @throws InternalServerException
+     *         This exception is thrown when an error occurs in the Amazon Web Services B2B Data Interchange service.
      * @sample AWSB2Bi.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/b2bi-2022-06-23/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -603,7 +607,7 @@ public interface AWSB2Bi {
 
     /**
      * <p>
-     * Parses the input EDI (electronic data interchange) file.
+     * Parses the input EDI (electronic data interchange) file. The input file has a file size limit of 250 KB.
      * </p>
      * 
      * @param testParsingRequest
@@ -639,6 +643,8 @@ public interface AWSB2Bi {
      * @throws ResourceNotFoundException
      *         Occurs when the requested resource does not exist, or cannot be found. In some cases, the resource exists
      *         in a region other than the region specified in the API call.
+     * @throws InternalServerException
+     *         This exception is thrown when an error occurs in the Amazon Web Services B2B Data Interchange service.
      * @sample AWSB2Bi.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/b2bi-2022-06-23/UntagResource" target="_top">AWS API
      *      Documentation</a>

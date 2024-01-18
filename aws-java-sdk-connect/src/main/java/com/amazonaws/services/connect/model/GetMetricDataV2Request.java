@@ -197,7 +197,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>contact/segmentAttributes/connect:Subtype filter</code> key.
      * </p>
      * <p>
-     * ROUTING_STEP_EXPRESSION is a valid filter key with a filter value up to 3000 length.
+     * <code>ROUTING_STEP_EXPRESSION</code> is a valid filter key with a filter value up to 3000 length. This filter is
+     * case and order sensitive. JSON string fields must be sorted in ascending order and JSON array order should be
+     * kept as is.
      * </p>
      * </li>
      * </ul>
@@ -650,6 +652,18 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Feature is a valid filter but not a valid grouping.
      * </p>
      * </note></dd>
+     * <dt>CONTACTS_HANDLED_BY_CONNECTED_TO_AGENT</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Valid metric filter key: <code>INITIATION_METHOD</code>
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
      * <dd>
      * <p>
@@ -713,6 +727,15 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * </dd>
+     * <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -1694,7 +1717,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>contact/segmentAttributes/connect:Subtype filter</code> key.
      * </p>
      * <p>
-     * ROUTING_STEP_EXPRESSION is a valid filter key with a filter value up to 3000 length.
+     * <code>ROUTING_STEP_EXPRESSION</code> is a valid filter key with a filter value up to 3000 length. This filter is
+     * case and order sensitive. JSON string fields must be sorted in ascending order and JSON array order should be
+     * kept as is.
      * </p>
      * </li>
      * </ul>
@@ -1776,7 +1801,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <code>contact/segmentAttributes/connect:Subtype filter</code> key.
      *         </p>
      *         <p>
-     *         ROUTING_STEP_EXPRESSION is a valid filter key with a filter value up to 3000 length.
+     *         <code>ROUTING_STEP_EXPRESSION</code> is a valid filter key with a filter value up to 3000 length. This
+     *         filter is case and order sensitive. JSON string fields must be sorted in ascending order and JSON array
+     *         order should be kept as is.
      *         </p>
      *         </li>
      */
@@ -1865,7 +1892,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>contact/segmentAttributes/connect:Subtype filter</code> key.
      * </p>
      * <p>
-     * ROUTING_STEP_EXPRESSION is a valid filter key with a filter value up to 3000 length.
+     * <code>ROUTING_STEP_EXPRESSION</code> is a valid filter key with a filter value up to 3000 length. This filter is
+     * case and order sensitive. JSON string fields must be sorted in ascending order and JSON array order should be
+     * kept as is.
      * </p>
      * </li>
      * </ul>
@@ -1948,7 +1977,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <code>contact/segmentAttributes/connect:Subtype filter</code> key.
      *        </p>
      *        <p>
-     *        ROUTING_STEP_EXPRESSION is a valid filter key with a filter value up to 3000 length.
+     *        <code>ROUTING_STEP_EXPRESSION</code> is a valid filter key with a filter value up to 3000 length. This
+     *        filter is case and order sensitive. JSON string fields must be sorted in ascending order and JSON array
+     *        order should be kept as is.
      *        </p>
      *        </li>
      */
@@ -2042,7 +2073,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>contact/segmentAttributes/connect:Subtype filter</code> key.
      * </p>
      * <p>
-     * ROUTING_STEP_EXPRESSION is a valid filter key with a filter value up to 3000 length.
+     * <code>ROUTING_STEP_EXPRESSION</code> is a valid filter key with a filter value up to 3000 length. This filter is
+     * case and order sensitive. JSON string fields must be sorted in ascending order and JSON array order should be
+     * kept as is.
      * </p>
      * </li>
      * </ul>
@@ -2130,7 +2163,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <code>contact/segmentAttributes/connect:Subtype filter</code> key.
      *        </p>
      *        <p>
-     *        ROUTING_STEP_EXPRESSION is a valid filter key with a filter value up to 3000 length.
+     *        <code>ROUTING_STEP_EXPRESSION</code> is a valid filter key with a filter value up to 3000 length. This
+     *        filter is case and order sensitive. JSON string fields must be sorted in ascending order and JSON array
+     *        order should be kept as is.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2226,7 +2261,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <code>contact/segmentAttributes/connect:Subtype filter</code> key.
      * </p>
      * <p>
-     * ROUTING_STEP_EXPRESSION is a valid filter key with a filter value up to 3000 length.
+     * <code>ROUTING_STEP_EXPRESSION</code> is a valid filter key with a filter value up to 3000 length. This filter is
+     * case and order sensitive. JSON string fields must be sorted in ascending order and JSON array order should be
+     * kept as is.
      * </p>
      * </li>
      * </ul>
@@ -2309,7 +2346,9 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <code>contact/segmentAttributes/connect:Subtype filter</code> key.
      *        </p>
      *        <p>
-     *        ROUTING_STEP_EXPRESSION is a valid filter key with a filter value up to 3000 length.
+     *        <code>ROUTING_STEP_EXPRESSION</code> is a valid filter key with a filter value up to 3000 length. This
+     *        filter is case and order sensitive. JSON string fields must be sorted in ascending order and JSON array
+     *        order should be kept as is.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2911,6 +2950,18 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Feature is a valid filter but not a valid grouping.
      * </p>
      * </note></dd>
+     * <dt>CONTACTS_HANDLED_BY_CONNECTED_TO_AGENT</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Valid metric filter key: <code>INITIATION_METHOD</code>
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
      * <dd>
      * <p>
@@ -2974,6 +3025,15 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * </dd>
+     * <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -3724,6 +3784,19 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         Feature is a valid filter but not a valid grouping.
      *         </p>
      *         </note></dd>
+     *         <dt>CONTACTS_HANDLED_BY_CONNECTED_TO_AGENT</dt>
+     *         <dd>
+     *         <p>
+     *         Unit: Count
+     *         </p>
+     *         <p>
+     *         Valid metric filter key: <code>INITIATION_METHOD</code>
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
+     *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         </dd>
      *         <dt>CONTACTS_HOLD_ABANDONS</dt>
      *         <dd>
      *         <p>
@@ -3786,6 +3859,16 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
+     *         contact/segmentAttributes/connect:Subtype
+     *         </p>
+     *         </dd>
+     *         <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
+     *         <dd>
+     *         <p>
+     *         Unit: Count
+     *         </p>
+     *         <p>
+     *         Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *         contact/segmentAttributes/connect:Subtype
      *         </p>
      *         </dd>
@@ -4541,6 +4624,18 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Feature is a valid filter but not a valid grouping.
      * </p>
      * </note></dd>
+     * <dt>CONTACTS_HANDLED_BY_CONNECTED_TO_AGENT</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Valid metric filter key: <code>INITIATION_METHOD</code>
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
      * <dd>
      * <p>
@@ -4604,6 +4699,15 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * </dd>
+     * <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -5355,6 +5459,19 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Feature is a valid filter but not a valid grouping.
      *        </p>
      *        </note></dd>
+     *        <dt>CONTACTS_HANDLED_BY_CONNECTED_TO_AGENT</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Valid metric filter key: <code>INITIATION_METHOD</code>
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
+     *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        </dd>
      *        <dt>CONTACTS_HOLD_ABANDONS</dt>
      *        <dd>
      *        <p>
@@ -5417,6 +5534,16 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
+     *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        </dd>
+     *        <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
      *        </dd>
@@ -6177,6 +6304,18 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Feature is a valid filter but not a valid grouping.
      * </p>
      * </note></dd>
+     * <dt>CONTACTS_HANDLED_BY_CONNECTED_TO_AGENT</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Valid metric filter key: <code>INITIATION_METHOD</code>
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
      * <dd>
      * <p>
@@ -6240,6 +6379,15 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * </dd>
+     * <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -6996,6 +7144,19 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Feature is a valid filter but not a valid grouping.
      *        </p>
      *        </note></dd>
+     *        <dt>CONTACTS_HANDLED_BY_CONNECTED_TO_AGENT</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Valid metric filter key: <code>INITIATION_METHOD</code>
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
+     *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        </dd>
      *        <dt>CONTACTS_HOLD_ABANDONS</dt>
      *        <dd>
      *        <p>
@@ -7058,6 +7219,16 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
+     *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        </dd>
+     *        <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
      *        </dd>
@@ -7820,6 +7991,18 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * Feature is a valid filter but not a valid grouping.
      * </p>
      * </note></dd>
+     * <dt>CONTACTS_HANDLED_BY_CONNECTED_TO_AGENT</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Valid metric filter key: <code>INITIATION_METHOD</code>
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
+     * </p>
+     * </dd>
      * <dt>CONTACTS_HOLD_ABANDONS</dt>
      * <dd>
      * <p>
@@ -7883,6 +8066,15 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
      * contact/segmentAttributes/connect:Subtype
+     * </p>
+     * </dd>
+     * <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
+     * <dd>
+     * <p>
+     * Unit: Count
+     * </p>
+     * <p>
+     * Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype
      * </p>
      * </dd>
      * <dt>CONTACTS_RESOLVED_IN_X</dt>
@@ -8634,6 +8826,19 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        Feature is a valid filter but not a valid grouping.
      *        </p>
      *        </note></dd>
+     *        <dt>CONTACTS_HANDLED_BY_CONNECTED_TO_AGENT</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Valid metric filter key: <code>INITIATION_METHOD</code>
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
+     *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        </dd>
      *        <dt>CONTACTS_HOLD_ABANDONS</dt>
      *        <dd>
      *        <p>
@@ -8696,6 +8901,16 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
+     *        contact/segmentAttributes/connect:Subtype
+     *        </p>
+     *        </dd>
+     *        <dt>CONTACTS_QUEUED_BY_ENQUEUE</dt>
+     *        <dd>
+     *        <p>
+     *        Unit: Count
+     *        </p>
+     *        <p>
+     *        Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy,
      *        contact/segmentAttributes/connect:Subtype
      *        </p>
      *        </dd>

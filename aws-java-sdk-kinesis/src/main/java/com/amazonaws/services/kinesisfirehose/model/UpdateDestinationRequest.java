@@ -96,6 +96,12 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private AmazonOpenSearchServerlessDestinationUpdate amazonOpenSearchServerlessDestinationUpdate;
+    /**
+     * <p>
+     * Update to the Snowflake destination condiguration settings
+     * </p>
+     */
+    private SnowflakeDestinationUpdate snowflakeDestinationUpdate;
 
     /**
      * <p>
@@ -564,6 +570,46 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Update to the Snowflake destination condiguration settings
+     * </p>
+     * 
+     * @param snowflakeDestinationUpdate
+     *        Update to the Snowflake destination condiguration settings
+     */
+
+    public void setSnowflakeDestinationUpdate(SnowflakeDestinationUpdate snowflakeDestinationUpdate) {
+        this.snowflakeDestinationUpdate = snowflakeDestinationUpdate;
+    }
+
+    /**
+     * <p>
+     * Update to the Snowflake destination condiguration settings
+     * </p>
+     * 
+     * @return Update to the Snowflake destination condiguration settings
+     */
+
+    public SnowflakeDestinationUpdate getSnowflakeDestinationUpdate() {
+        return this.snowflakeDestinationUpdate;
+    }
+
+    /**
+     * <p>
+     * Update to the Snowflake destination condiguration settings
+     * </p>
+     * 
+     * @param snowflakeDestinationUpdate
+     *        Update to the Snowflake destination condiguration settings
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDestinationRequest withSnowflakeDestinationUpdate(SnowflakeDestinationUpdate snowflakeDestinationUpdate) {
+        setSnowflakeDestinationUpdate(snowflakeDestinationUpdate);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -596,7 +642,9 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getHttpEndpointDestinationUpdate() != null)
             sb.append("HttpEndpointDestinationUpdate: ").append(getHttpEndpointDestinationUpdate()).append(",");
         if (getAmazonOpenSearchServerlessDestinationUpdate() != null)
-            sb.append("AmazonOpenSearchServerlessDestinationUpdate: ").append(getAmazonOpenSearchServerlessDestinationUpdate());
+            sb.append("AmazonOpenSearchServerlessDestinationUpdate: ").append(getAmazonOpenSearchServerlessDestinationUpdate()).append(",");
+        if (getSnowflakeDestinationUpdate() != null)
+            sb.append("SnowflakeDestinationUpdate: ").append(getSnowflakeDestinationUpdate());
         sb.append("}");
         return sb.toString();
     }
@@ -660,6 +708,10 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (other.getAmazonOpenSearchServerlessDestinationUpdate() != null
                 && other.getAmazonOpenSearchServerlessDestinationUpdate().equals(this.getAmazonOpenSearchServerlessDestinationUpdate()) == false)
             return false;
+        if (other.getSnowflakeDestinationUpdate() == null ^ this.getSnowflakeDestinationUpdate() == null)
+            return false;
+        if (other.getSnowflakeDestinationUpdate() != null && other.getSnowflakeDestinationUpdate().equals(this.getSnowflakeDestinationUpdate()) == false)
+            return false;
         return true;
     }
 
@@ -680,6 +732,7 @@ public class UpdateDestinationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getHttpEndpointDestinationUpdate() == null) ? 0 : getHttpEndpointDestinationUpdate().hashCode());
         hashCode = prime * hashCode
                 + ((getAmazonOpenSearchServerlessDestinationUpdate() == null) ? 0 : getAmazonOpenSearchServerlessDestinationUpdate().hashCode());
+        hashCode = prime * hashCode + ((getSnowflakeDestinationUpdate() == null) ? 0 : getSnowflakeDestinationUpdate().hashCode());
         return hashCode;
     }
 

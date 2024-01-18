@@ -762,7 +762,7 @@ public interface AWSB2BiAsync extends AWSB2Bi {
 
     /**
      * <p>
-     * Parses the input EDI (electronic data interchange) file.
+     * Parses the input EDI (electronic data interchange) file. The input file has a file size limit of 250 KB.
      * </p>
      * 
      * @param testParsingRequest
@@ -775,7 +775,7 @@ public interface AWSB2BiAsync extends AWSB2Bi {
 
     /**
      * <p>
-     * Parses the input EDI (electronic data interchange) file.
+     * Parses the input EDI (electronic data interchange) file. The input file has a file size limit of 250 KB.
      * </p>
      * 
      * @param testParsingRequest

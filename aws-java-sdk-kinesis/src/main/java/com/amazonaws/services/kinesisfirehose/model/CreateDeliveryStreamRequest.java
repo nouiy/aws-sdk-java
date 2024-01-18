@@ -130,6 +130,12 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
     private AmazonOpenSearchServerlessDestinationConfiguration amazonOpenSearchServerlessDestinationConfiguration;
 
     private MSKSourceConfiguration mSKSourceConfiguration;
+    /**
+     * <p>
+     * Configure Snowflake destination
+     * </p>
+     */
+    private SnowflakeDestinationConfiguration snowflakeDestinationConfiguration;
 
     /**
      * <p>
@@ -916,6 +922,46 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Configure Snowflake destination
+     * </p>
+     * 
+     * @param snowflakeDestinationConfiguration
+     *        Configure Snowflake destination
+     */
+
+    public void setSnowflakeDestinationConfiguration(SnowflakeDestinationConfiguration snowflakeDestinationConfiguration) {
+        this.snowflakeDestinationConfiguration = snowflakeDestinationConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configure Snowflake destination
+     * </p>
+     * 
+     * @return Configure Snowflake destination
+     */
+
+    public SnowflakeDestinationConfiguration getSnowflakeDestinationConfiguration() {
+        return this.snowflakeDestinationConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configure Snowflake destination
+     * </p>
+     * 
+     * @param snowflakeDestinationConfiguration
+     *        Configure Snowflake destination
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDeliveryStreamRequest withSnowflakeDestinationConfiguration(SnowflakeDestinationConfiguration snowflakeDestinationConfiguration) {
+        setSnowflakeDestinationConfiguration(snowflakeDestinationConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -954,7 +1000,9 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
         if (getAmazonOpenSearchServerlessDestinationConfiguration() != null)
             sb.append("AmazonOpenSearchServerlessDestinationConfiguration: ").append(getAmazonOpenSearchServerlessDestinationConfiguration()).append(",");
         if (getMSKSourceConfiguration() != null)
-            sb.append("MSKSourceConfiguration: ").append(getMSKSourceConfiguration());
+            sb.append("MSKSourceConfiguration: ").append(getMSKSourceConfiguration()).append(",");
+        if (getSnowflakeDestinationConfiguration() != null)
+            sb.append("SnowflakeDestinationConfiguration: ").append(getSnowflakeDestinationConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1034,6 +1082,11 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getMSKSourceConfiguration() != null && other.getMSKSourceConfiguration().equals(this.getMSKSourceConfiguration()) == false)
             return false;
+        if (other.getSnowflakeDestinationConfiguration() == null ^ this.getSnowflakeDestinationConfiguration() == null)
+            return false;
+        if (other.getSnowflakeDestinationConfiguration() != null
+                && other.getSnowflakeDestinationConfiguration().equals(this.getSnowflakeDestinationConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1059,6 +1112,7 @@ public class CreateDeliveryStreamRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode
                 + ((getAmazonOpenSearchServerlessDestinationConfiguration() == null) ? 0 : getAmazonOpenSearchServerlessDestinationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getMSKSourceConfiguration() == null) ? 0 : getMSKSourceConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getSnowflakeDestinationConfiguration() == null) ? 0 : getSnowflakeDestinationConfiguration().hashCode());
         return hashCode;
     }
 

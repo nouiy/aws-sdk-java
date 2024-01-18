@@ -59,6 +59,8 @@ public class CreateDeliveryStreamRequestMarshaller {
             .marshallLocationName("AmazonOpenSearchServerlessDestinationConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> MSKSOURCECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MSKSourceConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> SNOWFLAKEDESTINATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SnowflakeDestinationConfiguration").build();
 
     private static final CreateDeliveryStreamRequestMarshaller instance = new CreateDeliveryStreamRequestMarshaller();
 
@@ -93,6 +95,7 @@ public class CreateDeliveryStreamRequestMarshaller {
             protocolMarshaller.marshall(createDeliveryStreamRequest.getAmazonOpenSearchServerlessDestinationConfiguration(),
                     AMAZONOPENSEARCHSERVERLESSDESTINATIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createDeliveryStreamRequest.getMSKSourceConfiguration(), MSKSOURCECONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createDeliveryStreamRequest.getSnowflakeDestinationConfiguration(), SNOWFLAKEDESTINATIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

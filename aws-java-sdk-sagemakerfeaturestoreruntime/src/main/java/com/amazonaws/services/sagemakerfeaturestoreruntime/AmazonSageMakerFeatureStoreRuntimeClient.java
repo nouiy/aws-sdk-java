@@ -245,8 +245,9 @@ public class AmazonSageMakerFeatureStoreRuntimeClient extends AmazonWebServiceCl
      * columns are set to <code>null</code> and the record is no longer retrievable by <code>GetRecord</code> or
      * <code>BatchGetRecord</code>. For <code>HardDelete</code>, the complete <code>Record</code> is removed from the
      * <code>OnlineStore</code>. In both cases, Feature Store appends the deleted record marker to the
-     * <code>OfflineStore</code> with feature values set to <code>null</code>, <code>is_deleted</code> value set to
-     * <code>True</code>, and <code>EventTime</code> set to the delete input <code>EventTime</code>.
+     * <code>OfflineStore</code>. The deleted record marker is a record with the same <code>RecordIdentifer</code> as
+     * the original, but with <code>is_deleted</code> value set to <code>True</code>, <code>EventTime</code> set to the
+     * delete input <code>EventTime</code>, and other feature values set to <code>null</code>.
      * </p>
      * <p>
      * Note that the <code>EventTime</code> specified in <code>DeleteRecord</code> should be set later than the
@@ -256,8 +257,8 @@ public class AmazonSageMakerFeatureStoreRuntimeClient extends AmazonWebServiceCl
      * <ul>
      * <li>
      * <p>
-     * For <code>SoftDelete</code>, the existing (undeleted) record remains in the <code>OnlineStore</code>, though the
-     * delete record marker is still written to the <code>OfflineStore</code>.
+     * For <code>SoftDelete</code>, the existing (not deleted) record remains in the <code>OnlineStore</code>, though
+     * the delete record marker is still written to the <code>OfflineStore</code>.
      * </p>
      * </li>
      * <li>
@@ -267,6 +268,15 @@ public class AmazonSageMakerFeatureStoreRuntimeClient extends AmazonWebServiceCl
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * When a record is deleted from the <code>OnlineStore</code>, the deleted record marker is appended to the
+     * <code>OfflineStore</code>. If you have the Iceberg table format enabled for your <code>OfflineStore</code>, you
+     * can remove all history of a record from the <code>OfflineStore</code> using Amazon Athena or Apache Spark. For
+     * information on how to hard delete a record from the <code>OfflineStore</code> with the Iceberg table format
+     * enabled, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/feature-store-delete-records-offline-store.html#feature-store-delete-records-offline-store"
+     * >Delete records from the offline store</a>.
+     * </p>
      * 
      * @param deleteRecordRequest
      * @return Result of the DeleteRecord operation returned by the service.

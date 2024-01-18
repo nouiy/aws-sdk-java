@@ -84,6 +84,11 @@ public class DestinationDescriptionJsonUnmarshaller implements Unmarshaller<Dest
                     destinationDescription.setHttpEndpointDestinationDescription(HttpEndpointDestinationDescriptionJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("SnowflakeDestinationDescription", targetDepth)) {
+                    context.nextToken();
+                    destinationDescription
+                            .setSnowflakeDestinationDescription(SnowflakeDestinationDescriptionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("AmazonOpenSearchServerlessDestinationDescription", targetDepth)) {
                     context.nextToken();
                     destinationDescription.setAmazonOpenSearchServerlessDestinationDescription(AmazonOpenSearchServerlessDestinationDescriptionJsonUnmarshaller

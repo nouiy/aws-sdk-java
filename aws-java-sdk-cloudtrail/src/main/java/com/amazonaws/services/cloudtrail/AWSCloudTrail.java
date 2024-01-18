@@ -881,10 +881,13 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
-     * Disables Lake query federation on the specified event data store. When you disable federation, CloudTrail removes
-     * the metadata associated with the federated event data store in the Glue Data Catalog and removes registration for
-     * the federation role ARN and event data store in Lake Formation. No CloudTrail Lake data is deleted when you
-     * disable federation.
+     * Disables Lake query federation on the specified event data store. When you disable federation, CloudTrail
+     * disables the integration with Glue, Lake Formation, and Amazon Athena. After disabling Lake query federation, you
+     * can no longer query your event data in Amazon Athena.
+     * </p>
+     * <p>
+     * No CloudTrail Lake data is deleted when you disable federation and you can continue to run queries in CloudTrail
+     * Lake.
      * </p>
      * 
      * @param disableFederationRequest
@@ -948,11 +951,12 @@ public interface AWSCloudTrail {
      * Catalog lets the Athena query engine know how to find, read, and process the data that you want to query.
      * </p>
      * <p>
-     * When you enable Lake query federation, CloudTrail creates a federated database named <code>aws:cloudtrail</code>
-     * (if the database doesn't already exist) and a federated table in the Glue Data Catalog. The event data store ID
-     * is used for the table name. CloudTrail registers the role ARN and event data store in <a
-     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/how-it-works.html">Lake Formation</a>, the service
-     * responsible for revoking or granting permissions to the federated resources in the Glue Data Catalog.
+     * When you enable Lake query federation, CloudTrail creates a managed database named <code>aws:cloudtrail</code>
+     * (if the database doesn't already exist) and a managed federated table in the Glue Data Catalog. The event data
+     * store ID is used for the table name. CloudTrail registers the role ARN and event data store in <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation-lake-formation.html">Lake
+     * Formation</a>, the service responsible for allowing fine-grained access control of the federated resources in the
+     * Glue Data Catalog.
      * </p>
      * <p>
      * For more information about Lake query federation, see <a
@@ -1555,6 +1559,55 @@ public interface AWSCloudTrail {
      *      Documentation</a>
      */
     ListImportsResult listImports(ListImportsRequest listImportsRequest);
+
+    /**
+     * <p>
+     * Returns Insights metrics data for trails that have enabled Insights. The request must include the
+     * <code>EventSource</code>, <code>EventName</code>, and <code>InsightType</code> parameters.
+     * </p>
+     * <p>
+     * If the <code>InsightType</code> is set to <code>ApiErrorRateInsight</code>, the request must also include the
+     * <code>ErrorCode</code> parameter.
+     * </p>
+     * <p>
+     * The following are the available time periods for <code>ListInsightsMetricData</code>. Each cutoff is inclusive.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Data points with a period of 60 seconds (1-minute) are available for 15 days.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Data points with a period of 300 seconds (5-minute) are available for 63 days.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Data points with a period of 3600 seconds (1 hour) are available for 90 days.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Access to the <code>ListInsightsMetricData</code> API operation is linked to the
+     * <code>cloudtrail:LookupEvents</code> action. To use this operation, you must have permissions to perform the
+     * <code>cloudtrail:LookupEvents</code> action.
+     * </p>
+     * 
+     * @param listInsightsMetricDataRequest
+     * @return Result of the ListInsightsMetricData operation returned by the service.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.ListInsightsMetricData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListInsightsMetricData"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListInsightsMetricDataResult listInsightsMetricData(ListInsightsMetricDataRequest listInsightsMetricDataRequest);
 
     /**
      * <p>
@@ -2873,14 +2926,15 @@ public interface AWSCloudTrail {
      * <code>TerminationProtection</code> is enabled.
      * </p>
      * <p>
-     * For event data stores for CloudTrail events, <code>AdvancedEventSelectors</code> includes or excludes management,
-     * data, or Insights events in your event data store. For more information about <code>AdvancedEventSelectors</code>
-     * , see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html">
+     * For event data stores for CloudTrail events, <code>AdvancedEventSelectors</code> includes or excludes management
+     * or data events in your event data store. For more information about <code>AdvancedEventSelectors</code>, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html">
      * AdvancedEventSelectors</a>.
      * </p>
      * <p>
-     * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
-     * <code>AdvancedEventSelectors</code> includes events of that type in your event data store.
+     * For event data stores for CloudTrail Insights events, Config configuration items, Audit Manager evidence, or
+     * non-Amazon Web Services events, <code>AdvancedEventSelectors</code> includes events of that type in your event
+     * data store.
      * </p>
      * 
      * @param updateEventDataStoreRequest

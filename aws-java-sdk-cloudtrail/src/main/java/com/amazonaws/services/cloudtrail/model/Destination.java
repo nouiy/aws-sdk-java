@@ -31,7 +31,7 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of destination for events arriving from a channel. For channels used for a CloudTrail Lake integration,
-     * the value is <code>EventDataStore</code>. For service-linked channels, the value is <code>AWS_SERVICE</code>.
+     * the value is <code>EVENT_DATA_STORE</code>. For service-linked channels, the value is <code>AWS_SERVICE</code>.
      * </p>
      */
     private String type;
@@ -46,12 +46,12 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of destination for events arriving from a channel. For channels used for a CloudTrail Lake integration,
-     * the value is <code>EventDataStore</code>. For service-linked channels, the value is <code>AWS_SERVICE</code>.
+     * the value is <code>EVENT_DATA_STORE</code>. For service-linked channels, the value is <code>AWS_SERVICE</code>.
      * </p>
      * 
      * @param type
      *        The type of destination for events arriving from a channel. For channels used for a CloudTrail Lake
-     *        integration, the value is <code>EventDataStore</code>. For service-linked channels, the value is
+     *        integration, the value is <code>EVENT_DATA_STORE</code>. For service-linked channels, the value is
      *        <code>AWS_SERVICE</code>.
      * @see DestinationType
      */
@@ -63,11 +63,11 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of destination for events arriving from a channel. For channels used for a CloudTrail Lake integration,
-     * the value is <code>EventDataStore</code>. For service-linked channels, the value is <code>AWS_SERVICE</code>.
+     * the value is <code>EVENT_DATA_STORE</code>. For service-linked channels, the value is <code>AWS_SERVICE</code>.
      * </p>
      * 
      * @return The type of destination for events arriving from a channel. For channels used for a CloudTrail Lake
-     *         integration, the value is <code>EventDataStore</code>. For service-linked channels, the value is
+     *         integration, the value is <code>EVENT_DATA_STORE</code>. For service-linked channels, the value is
      *         <code>AWS_SERVICE</code>.
      * @see DestinationType
      */
@@ -79,12 +79,12 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of destination for events arriving from a channel. For channels used for a CloudTrail Lake integration,
-     * the value is <code>EventDataStore</code>. For service-linked channels, the value is <code>AWS_SERVICE</code>.
+     * the value is <code>EVENT_DATA_STORE</code>. For service-linked channels, the value is <code>AWS_SERVICE</code>.
      * </p>
      * 
      * @param type
      *        The type of destination for events arriving from a channel. For channels used for a CloudTrail Lake
-     *        integration, the value is <code>EventDataStore</code>. For service-linked channels, the value is
+     *        integration, the value is <code>EVENT_DATA_STORE</code>. For service-linked channels, the value is
      *        <code>AWS_SERVICE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DestinationType
@@ -98,12 +98,12 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of destination for events arriving from a channel. For channels used for a CloudTrail Lake integration,
-     * the value is <code>EventDataStore</code>. For service-linked channels, the value is <code>AWS_SERVICE</code>.
+     * the value is <code>EVENT_DATA_STORE</code>. For service-linked channels, the value is <code>AWS_SERVICE</code>.
      * </p>
      * 
      * @param type
      *        The type of destination for events arriving from a channel. For channels used for a CloudTrail Lake
-     *        integration, the value is <code>EventDataStore</code>. For service-linked channels, the value is
+     *        integration, the value is <code>EVENT_DATA_STORE</code>. For service-linked channels, the value is
      *        <code>AWS_SERVICE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DestinationType

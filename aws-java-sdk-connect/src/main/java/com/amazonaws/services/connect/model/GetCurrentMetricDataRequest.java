@@ -65,7 +65,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * resource IDs and resource ARNs in the same request.
      * </p>
      * <p>
-     * When using <code>RoutingStepExpression</code>, you need to pass exactly one <code>QueueId</code>.
+     * When using the <code>RoutingStepExpression</code> filter, you need to pass exactly one <code>QueueId</code>. The
+     * filter is also case sensitive so when using the <code>RoutingStepExpression</code> filter, grouping by
+     * <code>ROUTING_STEP_EXPRESSION</code> is required.
      * </p>
      * <p>
      * Currently tagging is only supported on the resources that are passed in the filter.
@@ -398,7 +400,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * resource IDs and resource ARNs in the same request.
      * </p>
      * <p>
-     * When using <code>RoutingStepExpression</code>, you need to pass exactly one <code>QueueId</code>.
+     * When using the <code>RoutingStepExpression</code> filter, you need to pass exactly one <code>QueueId</code>. The
+     * filter is also case sensitive so when using the <code>RoutingStepExpression</code> filter, grouping by
+     * <code>ROUTING_STEP_EXPRESSION</code> is required.
      * </p>
      * <p>
      * Currently tagging is only supported on the resources that are passed in the filter.
@@ -434,7 +438,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *        both resource IDs and resource ARNs in the same request.
      *        </p>
      *        <p>
-     *        When using <code>RoutingStepExpression</code>, you need to pass exactly one <code>QueueId</code>.
+     *        When using the <code>RoutingStepExpression</code> filter, you need to pass exactly one
+     *        <code>QueueId</code>. The filter is also case sensitive so when using the
+     *        <code>RoutingStepExpression</code> filter, grouping by <code>ROUTING_STEP_EXPRESSION</code> is required.
      *        </p>
      *        <p>
      *        Currently tagging is only supported on the resources that are passed in the filter.
@@ -476,7 +482,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * resource IDs and resource ARNs in the same request.
      * </p>
      * <p>
-     * When using <code>RoutingStepExpression</code>, you need to pass exactly one <code>QueueId</code>.
+     * When using the <code>RoutingStepExpression</code> filter, you need to pass exactly one <code>QueueId</code>. The
+     * filter is also case sensitive so when using the <code>RoutingStepExpression</code> filter, grouping by
+     * <code>ROUTING_STEP_EXPRESSION</code> is required.
      * </p>
      * <p>
      * Currently tagging is only supported on the resources that are passed in the filter.
@@ -511,7 +519,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *         include both resource IDs and resource ARNs in the same request.
      *         </p>
      *         <p>
-     *         When using <code>RoutingStepExpression</code>, you need to pass exactly one <code>QueueId</code>.
+     *         When using the <code>RoutingStepExpression</code> filter, you need to pass exactly one
+     *         <code>QueueId</code>. The filter is also case sensitive so when using the
+     *         <code>RoutingStepExpression</code> filter, grouping by <code>ROUTING_STEP_EXPRESSION</code> is required.
      *         </p>
      *         <p>
      *         Currently tagging is only supported on the resources that are passed in the filter.
@@ -553,7 +563,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * resource IDs and resource ARNs in the same request.
      * </p>
      * <p>
-     * When using <code>RoutingStepExpression</code>, you need to pass exactly one <code>QueueId</code>.
+     * When using the <code>RoutingStepExpression</code> filter, you need to pass exactly one <code>QueueId</code>. The
+     * filter is also case sensitive so when using the <code>RoutingStepExpression</code> filter, grouping by
+     * <code>ROUTING_STEP_EXPRESSION</code> is required.
      * </p>
      * <p>
      * Currently tagging is only supported on the resources that are passed in the filter.
@@ -589,7 +601,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *        both resource IDs and resource ARNs in the same request.
      *        </p>
      *        <p>
-     *        When using <code>RoutingStepExpression</code>, you need to pass exactly one <code>QueueId</code>.
+     *        When using the <code>RoutingStepExpression</code> filter, you need to pass exactly one
+     *        <code>QueueId</code>. The filter is also case sensitive so when using the
+     *        <code>RoutingStepExpression</code> filter, grouping by <code>ROUTING_STEP_EXPRESSION</code> is required.
      *        </p>
      *        <p>
      *        Currently tagging is only supported on the resources that are passed in the filter.

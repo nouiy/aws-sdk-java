@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "ClientConstructors", "EnumSetterOverload", "ClientMutationMethods" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -962,6 +962,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>Occurs when the requested resource does not exist, or cannot be found. In some cases, the resource exists in a region other than the region specified in the API call.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>This exception is thrown when an error occurs in the Amazon Web Services B2B Data Interchange service.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1093,6 +1097,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>Occurs when the requested resource does not exist, or cannot be found. In some cases, the resource exists in a region other than the region specified in the API call.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>This exception is thrown when an error occurs in the Amazon Web Services B2B Data Interchange service.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1174,7 +1182,7 @@
       "asyncReturnType" : "TestParsingResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Parses the input EDI (electronic data interchange) file.</p>",
+      "documentation" : "<p>Parses the input EDI (electronic data interchange) file. The input file has a file size limit of 250 KB.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -1239,6 +1247,10 @@
       }, {
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>Occurs when the requested resource does not exist, or cannot be found. In some cases, the resource exists in a region other than the region specified in the API call.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>This exception is thrown when an error occurs in the Amazon Web Services B2B Data Interchange service.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -43957,7 +43969,677 @@
   },
   "clientConfigFactory" : "ClientConfigurationFactory",
   "examples" : {
-    "examples" : { },
+    "examples" : {
+      "CreateCapability" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "name" : "b2biexample",
+          "type" : "edi",
+          "configuration" : {
+            "edi" : {
+              "type" : {
+                "x12Details" : {
+                  "transactionSet" : "X12_110",
+                  "version" : "VERSION_4010"
+                }
+              },
+              "inputLocation" : {
+                "bucketName" : "test-bucket",
+                "key" : "input/"
+              },
+              "outputLocation" : {
+                "bucketName" : "test-bucket",
+                "key" : "output/"
+              },
+              "transformerId" : "tr-9a893cf536df4658b"
+            }
+          },
+          "instructionsDocuments" : [ {
+            "bucketName" : "test-bucket",
+            "key" : "instructiondoc.txt"
+          } ],
+          "clientToken" : "foo",
+          "tags" : [ {
+            "Key" : "capabilityKey1",
+            "Value" : "capabilityValue1"
+          } ]
+        },
+        "output" : {
+          "capabilityId" : "ca-963a8121e4fc4e348",
+          "capabilityArn" : "arn:aws:b2bi:us-west-2:123456789012:capability/ca-963a8121e4fc4e348",
+          "name" : "b2biexample",
+          "type" : "edi",
+          "configuration" : {
+            "edi" : {
+              "type" : {
+                "x12Details" : {
+                  "transactionSet" : "X12_110",
+                  "version" : "VERSION_4010"
+                }
+              },
+              "inputLocation" : {
+                "bucketName" : "test-bucket",
+                "key" : "input/"
+              },
+              "outputLocation" : {
+                "bucketName" : "test-bucket",
+                "key" : "output/"
+              },
+              "transformerId" : "tr-9a893cf536df4658b"
+            }
+          },
+          "instructionsDocuments" : [ {
+            "bucketName" : "test-bucket",
+            "key" : "instructiondoc.txt"
+          } ],
+          "createdAt" : "2023-11-01T21:51:05.504Z"
+        },
+        "title" : "Sample CreateCapability call"
+      } ],
+      "CreatePartnership" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "profileId" : "p-60fbc37c87f04fce9",
+          "name" : "b2bipartner",
+          "email" : "john@example.com",
+          "phone" : "5555555555",
+          "capabilities" : [ "ca-963a8121e4fc4e348" ],
+          "clientToken" : "foo",
+          "tags" : [ {
+            "Key" : "sampleKey1",
+            "Value" : "sampleValue1"
+          } ]
+        },
+        "output" : {
+          "profileId" : "p-60fbc37c87f04fce9",
+          "partnershipId" : "ps-219fa02f5b4242af8",
+          "partnershipArn" : "arn:aws:b2bi:us-west-2:123456789012:partnership/ps-60fbc37c87f04fce9",
+          "name" : "b2bipartner",
+          "email" : "john@example.com",
+          "phone" : "5555555555",
+          "capabilities" : [ "ca-963a8121e4fc4e348" ],
+          "tradingPartnerId" : "tp-2a17ca447f6f4a8a8",
+          "createdAt" : "2023-11-01T21:51:05.504Z"
+        },
+        "title" : "Sample CreatePartnership call"
+      } ],
+      "CreateProfile" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "name" : "Shipping Profile",
+          "email" : "john@example.com",
+          "phone" : "5555555555",
+          "businessName" : "John's Shipping",
+          "logging" : "ENABLED",
+          "clientToken" : "foo",
+          "tags" : [ {
+            "Key" : "sampleKey",
+            "Value" : "sampleValue"
+          } ]
+        },
+        "output" : {
+          "profileId" : "p-60fbc37c87f04fce9",
+          "profileArn" : "arn:aws:b2bi:us-west-2:123456789012:profile/p-60fbc37c87f04fce9",
+          "name" : "Shipping Profile",
+          "businessName" : "John's Trucking",
+          "phone" : "5555555555",
+          "email" : "john@example.com",
+          "logging" : "ENABLED",
+          "logGroupName" : "b2bi/p-60fbc37c87f04fce9-Logs",
+          "createdAt" : "2023-11-01T21:51:05.504Z"
+        },
+        "title" : "Sample CreateProfile call"
+      } ],
+      "CreateTransformer" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "name" : "transformJSON",
+          "fileFormat" : "JSON",
+          "mappingTemplate" : "{}",
+          "ediType" : {
+            "x12Details" : {
+              "transactionSet" : "X12_110",
+              "version" : "VERSION_4010"
+            }
+          },
+          "sampleDocument" : "s3://test-bucket/sampleDoc.txt",
+          "clientToken" : "foo",
+          "tags" : [ {
+            "Key" : "sampleKey",
+            "Value" : "sampleValue"
+          } ]
+        },
+        "output" : {
+          "transformerId" : "tr-974c129999f84d8c9",
+          "transformerArn" : "arn:aws:b2bi:us-west-2:123456789012:transformer/tr-974c129999f84d8c9",
+          "name" : "transformJSON",
+          "fileFormat" : "JSON",
+          "mappingTemplate" : "$",
+          "status" : "inactive",
+          "ediType" : {
+            "x12Details" : {
+              "transactionSet" : "X12_110",
+              "version" : "VERSION_4010"
+            }
+          },
+          "sampleDocument" : "s3://test-bucket/sampleDoc.txt",
+          "createdAt" : "2023-11-01T21:51:05.504Z"
+        },
+        "title" : "Sample CreateTransformer call"
+      } ],
+      "DeleteCapability" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "capabilityId" : "ca-963a8121e4fc4e348"
+        },
+        "output" : null,
+        "title" : "Sample DeleteCapabilty call"
+      } ],
+      "DeletePartnership" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "partnershipId" : "ps-219fa02f5b4242af8"
+        },
+        "output" : null,
+        "title" : "Sample DeletePartnership call"
+      } ],
+      "DeleteProfile" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "profileId" : "p-60fbc37c87f04fce9"
+        },
+        "output" : null,
+        "title" : "Sample DeleteProfile call"
+      } ],
+      "DeleteTransformer" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "transformerId" : "tr-974c129999f84d8c9"
+        },
+        "output" : null,
+        "title" : "Sample DeleteTransformer call"
+      } ],
+      "GetCapability" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "capabilityId" : "ca-963a8121e4fc4e348"
+        },
+        "output" : {
+          "capabilityId" : "ca-963a8121e4fc4e348",
+          "capabilityArn" : "arn:aws:b2bi:us-west-2:123456789012:capability/ca-963a8121e4fc4e348",
+          "name" : "b2biexample",
+          "type" : "edi",
+          "configuration" : {
+            "edi" : {
+              "type" : {
+                "x12Details" : {
+                  "transactionSet" : "X12_110",
+                  "version" : "VERSION_4010"
+                }
+              },
+              "inputLocation" : {
+                "bucketName" : "test-bucket",
+                "key" : "input/"
+              },
+              "outputLocation" : {
+                "bucketName" : "test-bucket",
+                "key" : "output/"
+              },
+              "transformerId" : "tr-9a893cf536df4658b"
+            }
+          },
+          "instructionsDocuments" : [ {
+            "bucketName" : "test-bucket",
+            "key" : "instructiondoc.txt"
+          } ],
+          "createdAt" : "2023-11-01T21:51:05.504Z",
+          "modifiedAt" : "2023-11-02T21:51:05.504Z"
+        },
+        "title" : "Sample GetCapabilty call"
+      } ],
+      "GetPartnership" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "partnershipId" : "ps-219fa02f5b4242af8"
+        },
+        "output" : {
+          "profileId" : "p-60fbc37c87f04fce9",
+          "partnershipId" : "ps-219fa02f5b4242af8",
+          "partnershipArn" : "arn:aws:b2bi:us-west-2:123456789012:partnership/ps-219fa02f5b4242af8",
+          "name" : "b2bipartner",
+          "email" : "john@example.com",
+          "phone" : "5555555555",
+          "capabilities" : [ "ca-963a8121e4fc4e348" ],
+          "tradingPartnerId" : "tp-2a17ca447f6f4a8a8",
+          "createdAt" : "2023-11-01T21:51:05.504Z",
+          "modifiedAt" : "2023-11-01T21:51:05.504Z"
+        },
+        "title" : "Sample GetPartnership call"
+      } ],
+      "GetProfile" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "profileId" : "p-60fbc37c87f04fce9"
+        },
+        "output" : {
+          "profileId" : "p-60fbc37c87f04fce9",
+          "profileArn" : "arn:aws:b2bi:us-west-2:123456789012:profile/p-60fbc37c87f04fce9",
+          "name" : "Shipping Profile",
+          "email" : "john@example.com",
+          "phone" : "5555555555",
+          "businessName" : "John's Trucking",
+          "logging" : "ENABLED",
+          "logGroupName" : "b2bi/p-60fbc37c87f04fce9-Logs",
+          "createdAt" : "2023-11-01T21:51:05.504Z"
+        },
+        "title" : "Sample GetProfile call"
+      } ],
+      "GetTransformer" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "transformerId" : "tr-974c129999f84d8c9"
+        },
+        "output" : {
+          "transformerId" : "tr-974c129999f84d8c9",
+          "transformerArn" : "arn:aws:b2bi:us-west-2:123456789012:transformer/tr-974c129999f84d8c9",
+          "name" : "transformJSON",
+          "fileFormat" : "JSON",
+          "mappingTemplate" : "$",
+          "status" : "inactive",
+          "ediType" : {
+            "x12Details" : {
+              "transactionSet" : "X12_110",
+              "version" : "VERSION_4010"
+            }
+          },
+          "sampleDocument" : "s3://test-bucket/sampleDoc.txt",
+          "createdAt" : "2023-11-01T21:51:05.504Z",
+          "modifiedAt" : "2023-11-01T21:51:05.504Z"
+        },
+        "title" : "Sample GetTransformer call"
+      } ],
+      "GetTransformerJob" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "transformerJobId" : "tj-vpYxfV7yQOqjMSYllEslLw",
+          "transformerId" : "tr-974c129999f84d8c9"
+        },
+        "output" : {
+          "status" : "succeeded",
+          "outputFiles" : [ {
+            "bucketName" : "gt-edi-test",
+            "key" : "output/sample-214.edi.2023-11-01T10:44:03.353Z.json"
+          } ],
+          "message" : "Transformed, writing output"
+        },
+        "title" : "Sample GetTransformerJob call"
+      } ],
+      "ListCapabilities" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "nextToken" : "foo",
+          "maxResults" : 50
+        },
+        "output" : {
+          "capabilities" : [ {
+            "capabilityId" : "ca-963a8121e4fc4e348",
+            "name" : "b2biexample",
+            "type" : "edi",
+            "createdAt" : "2023-11-01T21:51:05.504Z",
+            "modifiedAt" : "2023-11-01T21:51:05.504Z"
+          } ],
+          "nextToken" : "foo"
+        },
+        "title" : "Sample ListCapabilities call"
+      } ],
+      "ListPartnerships" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "profileId" : "p-60fbc37c87f04fce9",
+          "nextToken" : "foo",
+          "maxResults" : 50
+        },
+        "output" : {
+          "partnerships" : [ {
+            "profileId" : "p-60fbc37c87f04fce9",
+            "partnershipId" : "ps-219fa02f5b4242af8",
+            "name" : "b2bipartner",
+            "capabilities" : [ "ca-963a8121e4fc4e348" ],
+            "tradingPartnerId" : "tp-2a17ca447f6f4a8a8",
+            "createdAt" : "2023-11-01T21:51:05.504Z",
+            "modifiedAt" : "2023-11-01T21:51:05.504Z"
+          } ],
+          "nextToken" : "string"
+        },
+        "title" : "Sample ListPartnerships call"
+      } ],
+      "ListProfiles" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "nextToken" : "foo",
+          "maxResults" : 50
+        },
+        "output" : {
+          "profiles" : [ {
+            "profileId" : "p-60fbc37c87f04fce9",
+            "name" : "Shipping Profile",
+            "businessName" : "John's Trucking",
+            "logging" : "ENABLED",
+            "logGroupName" : "b2bi/p-60fbc37c87f04fce9-Logs",
+            "createdAt" : "2023-11-01T21:51:05.504Z"
+          } ],
+          "nextToken" : "foo"
+        },
+        "title" : "Sample ListProfiles call"
+      } ],
+      "ListTagsForResource" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "ResourceARN" : "arn:aws:b2bi:us-west-2:123456789012:profile/p-60fbc37c87f04fce9"
+        },
+        "output" : {
+          "Tags" : [ {
+            "Key" : "sampleKey",
+            "Value" : "SampleValue"
+          } ]
+        },
+        "title" : "Sample ListTagsForResources call"
+      } ],
+      "ListTransformers" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "nextToken" : "foo",
+          "maxResults" : 50
+        },
+        "output" : {
+          "transformers" : [ {
+            "transformerId" : "tr-974c129999f84d8c9",
+            "name" : "transformJSON",
+            "fileFormat" : "JSON",
+            "mappingTemplate" : "$",
+            "status" : "inactive",
+            "ediType" : {
+              "x12Details" : {
+                "transactionSet" : "X12_110",
+                "version" : "VERSION_4010"
+              }
+            },
+            "sampleDocument" : "s3://test-bucket/sampleDoc.txt",
+            "createdAt" : "2023-11-01T21:51:05.504Z",
+            "modifiedAt" : "2023-11-01T21:51:05.504Z"
+          } ],
+          "nextToken" : "foo"
+        },
+        "title" : "Sample ListTransformers call"
+      } ],
+      "StartTransformerJob" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "inputFile" : {
+            "bucketName" : "test-bucket",
+            "key" : "input/inputFile.txt"
+          },
+          "outputLocation" : {
+            "bucketName" : "test-bucket",
+            "key" : "output/"
+          },
+          "transformerId" : "tr-974c129999f84d8c9",
+          "clientToken" : "foo"
+        },
+        "output" : {
+          "transformerJobId" : "tj-vpYxfV7yQOqjMSYllEslLw"
+        },
+        "title" : "Sample StartTransformerJob call"
+      } ],
+      "TagResource" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "ResourceARN" : "arn:aws:b2bi:us-west-2:123456789012:profile/p-60fbc37c87f04fce9",
+          "Tags" : [ {
+            "Key" : "sampleKey",
+            "Value" : "SampleValue"
+          } ]
+        },
+        "output" : null,
+        "title" : "Sample TagResource call"
+      } ],
+      "TestMapping" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "inputFileContent" : "Sample file content",
+          "mappingTemplate" : "$",
+          "fileFormat" : "JSON"
+        },
+        "output" : {
+          "mappedFileContent" : "Sample file content"
+        },
+        "title" : "Sample TestMapping call"
+      } ],
+      "TestParsing" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "inputFile" : {
+            "bucketName" : "test-bucket",
+            "key" : "sampleFile.txt"
+          },
+          "fileFormat" : "JSON",
+          "ediType" : {
+            "x12Details" : {
+              "transactionSet" : "X12_110",
+              "version" : "VERSION_4010"
+            }
+          }
+        },
+        "output" : {
+          "parsedFileContent" : "Sample parsed file content"
+        },
+        "title" : "Sample TestParsing call"
+      } ],
+      "UntagResource" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "ResourceARN" : "arn:aws:b2bi:us-west-2:123456789012:profile/p-60fbc37c87f04fce9",
+          "TagKeys" : [ "sampleKey" ]
+        },
+        "output" : null,
+        "title" : "Sample UntagResource call"
+      } ],
+      "UpdateCapability" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "capabilityId" : "ca-963a8121e4fc4e348",
+          "name" : "b2biexample",
+          "configuration" : {
+            "edi" : {
+              "type" : {
+                "x12Details" : {
+                  "transactionSet" : "X12_110",
+                  "version" : "VERSION_4010"
+                }
+              },
+              "inputLocation" : {
+                "bucketName" : "test-bucket",
+                "key" : "input/"
+              },
+              "outputLocation" : {
+                "bucketName" : "test-bucket",
+                "key" : "output/"
+              },
+              "transformerId" : "tr-9a893cf536df4658b"
+            }
+          },
+          "instructionsDocuments" : [ {
+            "bucketName" : "test-bucket",
+            "key" : "instructiondoc.txt"
+          } ]
+        },
+        "output" : {
+          "capabilityId" : "ca-963a8121e4fc4e348",
+          "capabilityArn" : "arn:aws:b2bi:us-west-2:123456789012:capability/ca-963a8121e4fc4e348",
+          "name" : "b2biexample",
+          "type" : "edi",
+          "configuration" : {
+            "edi" : {
+              "type" : {
+                "x12Details" : {
+                  "transactionSet" : "X12_110",
+                  "version" : "VERSION_4010"
+                }
+              },
+              "inputLocation" : {
+                "bucketName" : "test-bucket",
+                "key" : "input/"
+              },
+              "outputLocation" : {
+                "bucketName" : "test-bucket",
+                "key" : "output/"
+              },
+              "transformerId" : "tr-9a893cf536df4658b"
+            }
+          },
+          "instructionsDocuments" : [ {
+            "bucketName" : "test-bucket",
+            "key" : "instructiondoc.txt"
+          } ],
+          "createdAt" : "2023-11-01T21:51:05.504Z",
+          "modifiedAt" : "2023-11-01T21:51:05.504Z"
+        },
+        "title" : "Sample UpdateCapability call"
+      } ],
+      "UpdatePartnership" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "partnershipId" : "ps-219fa02f5b4242af8",
+          "name" : "b2bipartner",
+          "capabilities" : [ "ca-963a8121e4fc4e348" ]
+        },
+        "output" : {
+          "profileId" : "p-60fbc37c87f04fce9",
+          "partnershipId" : "ps-219fa02f5b4242af8",
+          "partnershipArn" : "arn:aws:b2bi:us-west-2:123456789012:partnership/ps-60fbc37c87f04fce9",
+          "name" : "b2bipartner",
+          "email" : "john@example.com",
+          "phone" : "5555555555",
+          "capabilities" : [ "ca-963a8121e4fc4e348" ],
+          "tradingPartnerId" : "tp-2a17ca447f6f4a8a8",
+          "createdAt" : "2023-11-01T21:51:05.504Z",
+          "modifiedAt" : "2023-11-01T21:51:05.504Z"
+        },
+        "title" : "Sample UpdatePartnership call"
+      } ],
+      "UpdateProfile" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "profileId" : "p-60fbc37c87f04fce9",
+          "name" : "Shipping Profile",
+          "email" : "john@example.com",
+          "phone" : "5555555555",
+          "businessName" : "John's Shipping"
+        },
+        "output" : {
+          "profileId" : "p-60fbc37c87f04fce9",
+          "profileArn" : "arn:aws:b2bi:us-west-2:123456789012:profile/p-60fbc37c87f04fce9",
+          "name" : "Shipping Profile",
+          "email" : "john@example.com",
+          "phone" : "5555555555",
+          "businessName" : "John's Trucking",
+          "logging" : "ENABLED",
+          "logGroupName" : "b2bi/p-60fbc37c87f04fce9-Logs",
+          "createdAt" : "2023-11-01T21:51:05.504Z",
+          "modifiedAt" : "2023-11-02T21:51:05.504Z"
+        },
+        "title" : "Sample UpdateProfile call"
+      } ],
+      "UpdateTransformer" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "transformerId" : "tr-974c129999f84d8c9",
+          "name" : "transformJSON",
+          "fileFormat" : "JSON",
+          "mappingTemplate" : "{}",
+          "status" : "inactive",
+          "ediType" : {
+            "x12Details" : {
+              "transactionSet" : "X12_110",
+              "version" : "VERSION_4010"
+            }
+          },
+          "sampleDocument" : "s3://test-bucket/sampleDoc.txt"
+        },
+        "output" : {
+          "transformerId" : "tr-974c129999f84d8c9",
+          "transformerArn" : "arn:aws:b2bi:us-west-2:607686414464:transformer/tr-974c129999f84d8c9",
+          "name" : "transformJSON",
+          "fileFormat" : "JSON",
+          "mappingTemplate" : "$",
+          "status" : "inactive",
+          "ediType" : {
+            "x12Details" : {
+              "transactionSet" : "X12_110",
+              "version" : "VERSION_4010"
+            }
+          },
+          "sampleDocument" : "s3://test-bucket/sampleDoc.txt",
+          "createdAt" : "2023-11-01T21:51:05.504Z",
+          "modifiedAt" : "2023-11-01T21:51:05.504Z"
+        },
+        "title" : "Sample UpdateTransformer call"
+      } ]
+    },
     "version" : "1.0"
   },
   "exceptionUnmarshallerImpl" : null,

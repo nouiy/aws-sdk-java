@@ -30,18 +30,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for Config
-     * configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used only for
-     * selecting events as filtering is not supported.
+     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for CloudTrail
+     * Insights events, Config configuration items, Audit Manager evidence, or events outside of Amazon Web Services,
+     * the field is used only for selecting events as filtering is not supported.
      * </p>
      * <p>
-     * For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
-     * <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
-     * <code>resources.ARN</code>.
+     * For CloudTrail management events, supported fields include <code>readOnly</code>, <code>eventCategory</code>, and
+     * <code>eventSource</code>.
      * </p>
      * <p>
-     * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
-     * the only supported field is <code>eventCategory</code>.
+     * For CloudTrail data events, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     * <code>eventName</code>, <code>resources.type</code>, and <code>resources.ARN</code>.
+     * </p>
+     * <p>
+     * For event data stores for CloudTrail Insights events, Config configuration items, Audit Manager evidence, or
+     * events outside of Amazon Web Services, the only supported field is <code>eventCategory</code>.
      * </p>
      * <ul>
      * <li>
@@ -73,12 +76,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     * For CloudTrail management events, the value must be <code>Management</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CloudTrail Insights event records, the value must be <code>Insight</code>.
+     * For CloudTrail data events, the value must be <code>Data</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following are used only for event data stores:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For CloudTrail Insights events, the value must be <code>Insight</code>.
      * </p>
      * </li>
      * <li>
@@ -118,6 +131,31 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::S3::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::B2BI::Transformer</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Bedrock::AgentAlias</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Bedrock::KnowledgeBase</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Cassandra::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CloudFront::KeyValueStore</code>
      * </p>
      * </li>
      * <li>
@@ -172,6 +210,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::IoTTwinMaker::Entity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::IoTTwinMaker::Workspace</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::KendraRanking::ExecutionPlan</code>
      * </p>
      * </li>
@@ -197,7 +245,37 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::NeptuneGraph::Graph</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::Application</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::DataSource</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::Index</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::WebExperience</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::RDS::DBCluster</code>
      * </p>
      * </li>
      * <li>
@@ -217,12 +295,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ServiceDiscovery::Namespace </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ServiceDiscovery::Service</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SCN::Instance</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SNS::PlatformEndpoint</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SNS::Topic</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SQS::Queue</code>
      * </p>
      * </li>
      * <li>
@@ -243,6 +341,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ThinClient::Device</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ThinClient::Environment</code>
      * </p>
      * </li>
      * <li>
@@ -310,6 +418,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::B2BI::Transformer</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:b2bi:&lt;region&gt;:&lt;account_ID&gt;:transformer/&lt;transformer_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Bedrock::AgentAlias</code>, and the operator is set to <code>Equals</code>
+     * or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:agent-alias/&lt;agent_ID&gt;/&lt;alias_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Bedrock::KnowledgeBase</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:knowledge-base/&lt;knowledge_base_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Cassandra::Table</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cassandra:&lt;region&gt;:&lt;account_ID&gt;:/keyspace/&lt;keyspace_name&gt;/table/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::CloudFront::KeyValueStore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cloudfront:&lt;region&gt;:&lt;account_ID&gt;:key-value-store/&lt;KVS_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -386,7 +549,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -424,6 +587,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Entity</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;/entity/&lt;entity_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Workspace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator is set
      * to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -441,7 +626,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name&gt;/&lt;creation_time&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -479,6 +664,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::NeptuneGraph::Graph</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:neptune-graph:&lt;region&gt;:&lt;account_ID&gt;:graph/&lt;graph_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -486,6 +682,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::DataSource</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;/data-source/&lt;datasource_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::Index</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::WebExperience</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/web-experience/&lt;web_experience_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::RDS::DBCluster</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:rds:&lt;region&gt;:&lt;account_ID&gt;:cluster/&lt;cluster_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -523,6 +774,39 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::SCN::Instance</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:scn:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Namespace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:namespace/&lt;namespace_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Service</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:service/&lt;service_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -541,6 +825,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -592,6 +887,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ThinClient::Device</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:device/&lt;device_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ThinClient::Environment</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -678,18 +995,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for Config
-     * configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used only for
-     * selecting events as filtering is not supported.
+     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for CloudTrail
+     * Insights events, Config configuration items, Audit Manager evidence, or events outside of Amazon Web Services,
+     * the field is used only for selecting events as filtering is not supported.
      * </p>
      * <p>
-     * For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
-     * <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
-     * <code>resources.ARN</code>.
+     * For CloudTrail management events, supported fields include <code>readOnly</code>, <code>eventCategory</code>, and
+     * <code>eventSource</code>.
      * </p>
      * <p>
-     * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
-     * the only supported field is <code>eventCategory</code>.
+     * For CloudTrail data events, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     * <code>eventName</code>, <code>resources.type</code>, and <code>resources.ARN</code>.
+     * </p>
+     * <p>
+     * For event data stores for CloudTrail Insights events, Config configuration items, Audit Manager evidence, or
+     * events outside of Amazon Web Services, the only supported field is <code>eventCategory</code>.
      * </p>
      * <ul>
      * <li>
@@ -721,12 +1041,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     * For CloudTrail management events, the value must be <code>Management</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CloudTrail Insights event records, the value must be <code>Insight</code>.
+     * For CloudTrail data events, the value must be <code>Data</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following are used only for event data stores:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For CloudTrail Insights events, the value must be <code>Insight</code>.
      * </p>
      * </li>
      * <li>
@@ -766,6 +1096,31 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::S3::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::B2BI::Transformer</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Bedrock::AgentAlias</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Bedrock::KnowledgeBase</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Cassandra::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CloudFront::KeyValueStore</code>
      * </p>
      * </li>
      * <li>
@@ -820,6 +1175,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::IoTTwinMaker::Entity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::IoTTwinMaker::Workspace</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::KendraRanking::ExecutionPlan</code>
      * </p>
      * </li>
@@ -845,7 +1210,37 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::NeptuneGraph::Graph</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::Application</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::DataSource</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::Index</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::WebExperience</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::RDS::DBCluster</code>
      * </p>
      * </li>
      * <li>
@@ -865,12 +1260,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ServiceDiscovery::Namespace </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ServiceDiscovery::Service</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SCN::Instance</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SNS::PlatformEndpoint</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SNS::Topic</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SQS::Queue</code>
      * </p>
      * </li>
      * <li>
@@ -891,6 +1306,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ThinClient::Device</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ThinClient::Environment</code>
      * </p>
      * </li>
      * <li>
@@ -958,6 +1383,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::B2BI::Transformer</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:b2bi:&lt;region&gt;:&lt;account_ID&gt;:transformer/&lt;transformer_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Bedrock::AgentAlias</code>, and the operator is set to <code>Equals</code>
+     * or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:agent-alias/&lt;agent_ID&gt;/&lt;alias_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Bedrock::KnowledgeBase</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:knowledge-base/&lt;knowledge_base_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Cassandra::Table</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cassandra:&lt;region&gt;:&lt;account_ID&gt;:/keyspace/&lt;keyspace_name&gt;/table/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::CloudFront::KeyValueStore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cloudfront:&lt;region&gt;:&lt;account_ID&gt;:key-value-store/&lt;KVS_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1034,7 +1514,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1072,6 +1552,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Entity</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;/entity/&lt;entity_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Workspace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator is set
      * to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1089,7 +1591,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name&gt;/&lt;creation_time&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1127,6 +1629,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::NeptuneGraph::Graph</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:neptune-graph:&lt;region&gt;:&lt;account_ID&gt;:graph/&lt;graph_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1134,6 +1647,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::DataSource</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;/data-source/&lt;datasource_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::Index</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::WebExperience</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/web-experience/&lt;web_experience_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::RDS::DBCluster</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:rds:&lt;region&gt;:&lt;account_ID&gt;:cluster/&lt;cluster_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1171,6 +1739,39 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::SCN::Instance</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:scn:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Namespace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:namespace/&lt;namespace_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Service</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:service/&lt;service_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1189,6 +1790,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1244,6 +1856,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::ThinClient::Device</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:device/&lt;device_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ThinClient::Environment</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1281,16 +1915,19 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * 
      * @param field
      *        A field in a CloudTrail event record on which to filter events to be logged. For event data stores for
-     *        Config configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used
-     *        only for selecting events as filtering is not supported. </p>
+     *        CloudTrail Insights events, Config configuration items, Audit Manager evidence, or events outside of
+     *        Amazon Web Services, the field is used only for selecting events as filtering is not supported.</p>
      *        <p>
-     *        For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
-     *        <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
-     *        <code>resources.ARN</code>.
+     *        For CloudTrail management events, supported fields include <code>readOnly</code>,
+     *        <code>eventCategory</code>, and <code>eventSource</code>.
      *        </p>
      *        <p>
-     *        For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services
-     *        events, the only supported field is <code>eventCategory</code>.
+     *        For CloudTrail data events, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     *        <code>eventName</code>, <code>resources.type</code>, and <code>resources.ARN</code>.
+     *        </p>
+     *        <p>
+     *        For event data stores for CloudTrail Insights events, Config configuration items, Audit Manager evidence,
+     *        or events outside of Amazon Web Services, the only supported field is <code>eventCategory</code>.
      *        </p>
      *        <ul>
      *        <li>
@@ -1322,12 +1959,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     *        For CloudTrail management events, the value must be <code>Management</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For CloudTrail Insights event records, the value must be <code>Insight</code>.
+     *        For CloudTrail data events, the value must be <code>Data</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The following are used only for event data stores:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For CloudTrail Insights events, the value must be <code>Insight</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1367,6 +2014,31 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::S3::Object</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::B2BI::Transformer</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Bedrock::AgentAlias</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Bedrock::KnowledgeBase</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Cassandra::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CloudFront::KeyValueStore</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1421,6 +2093,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::IoTTwinMaker::Entity</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::IoTTwinMaker::Workspace</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::KendraRanking::ExecutionPlan</code>
      *        </p>
      *        </li>
@@ -1446,7 +2128,37 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::NeptuneGraph::Graph</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::PCAConnectorAD::Connector</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::QBusiness::Application</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::QBusiness::DataSource</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::QBusiness::Index</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::QBusiness::WebExperience</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::RDS::DBCluster</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1466,12 +2178,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::ServiceDiscovery::Namespace </code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ServiceDiscovery::Service</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SCN::Instance</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::SNS::PlatformEndpoint</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::SNS::Topic</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SQS::Queue</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1492,6 +2224,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ThinClient::Device</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ThinClient::Environment</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1559,6 +2301,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::B2BI::Transformer</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:b2bi:&lt;region&gt;:&lt;account_ID&gt;:transformer/&lt;transformer_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::Bedrock::AgentAlias</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:agent-alias/&lt;agent_ID&gt;/&lt;alias_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::Bedrock::KnowledgeBase</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:knowledge-base/&lt;knowledge_base_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::Cassandra::Table</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:cassandra:&lt;region&gt;:&lt;account_ID&gt;:/keyspace/&lt;keyspace_name&gt;/table/&lt;table_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::CloudFront::KeyValueStore</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:cloudfront:&lt;region&gt;:&lt;account_ID&gt;:key-value-store/&lt;KVS_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1635,7 +2432,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
+     *        <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1673,6 +2470,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Entity</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;/entity/&lt;entity_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Workspace</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator
      *        is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -1690,7 +2509,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     *        <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name&gt;/&lt;creation_time&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1728,6 +2547,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::NeptuneGraph::Graph</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:neptune-graph:&lt;region&gt;:&lt;account_ID&gt;:graph/&lt;graph_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is
      *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -1735,6 +2565,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::QBusiness::DataSource</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;/data-source/&lt;datasource_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::QBusiness::Index</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::QBusiness::WebExperience</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/web-experience/&lt;web_experience_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::RDS::DBCluster</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:rds:&lt;region&gt;:&lt;account_ID&gt;:cluster/&lt;cluster_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1772,6 +2657,39 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SCN::Instance</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:scn:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Namespace</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:namespace/&lt;namespace_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Service</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:service/&lt;service_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set
      *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -1790,6 +2708,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1845,6 +2774,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ThinClient::Device</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:device/&lt;device_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ThinClient::Environment</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -1886,18 +2837,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for Config
-     * configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used only for
-     * selecting events as filtering is not supported.
+     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for CloudTrail
+     * Insights events, Config configuration items, Audit Manager evidence, or events outside of Amazon Web Services,
+     * the field is used only for selecting events as filtering is not supported.
      * </p>
      * <p>
-     * For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
-     * <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
-     * <code>resources.ARN</code>.
+     * For CloudTrail management events, supported fields include <code>readOnly</code>, <code>eventCategory</code>, and
+     * <code>eventSource</code>.
      * </p>
      * <p>
-     * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
-     * the only supported field is <code>eventCategory</code>.
+     * For CloudTrail data events, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     * <code>eventName</code>, <code>resources.type</code>, and <code>resources.ARN</code>.
+     * </p>
+     * <p>
+     * For event data stores for CloudTrail Insights events, Config configuration items, Audit Manager evidence, or
+     * events outside of Amazon Web Services, the only supported field is <code>eventCategory</code>.
      * </p>
      * <ul>
      * <li>
@@ -1929,12 +2883,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     * For CloudTrail management events, the value must be <code>Management</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CloudTrail Insights event records, the value must be <code>Insight</code>.
+     * For CloudTrail data events, the value must be <code>Data</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following are used only for event data stores:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For CloudTrail Insights events, the value must be <code>Insight</code>.
      * </p>
      * </li>
      * <li>
@@ -1974,6 +2938,31 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::S3::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::B2BI::Transformer</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Bedrock::AgentAlias</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Bedrock::KnowledgeBase</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Cassandra::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CloudFront::KeyValueStore</code>
      * </p>
      * </li>
      * <li>
@@ -2028,6 +3017,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::IoTTwinMaker::Entity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::IoTTwinMaker::Workspace</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::KendraRanking::ExecutionPlan</code>
      * </p>
      * </li>
@@ -2053,7 +3052,37 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::NeptuneGraph::Graph</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::Application</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::DataSource</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::Index</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::WebExperience</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::RDS::DBCluster</code>
      * </p>
      * </li>
      * <li>
@@ -2073,12 +3102,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ServiceDiscovery::Namespace </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ServiceDiscovery::Service</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SCN::Instance</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SNS::PlatformEndpoint</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SNS::Topic</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SQS::Queue</code>
      * </p>
      * </li>
      * <li>
@@ -2099,6 +3148,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ThinClient::Device</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ThinClient::Environment</code>
      * </p>
      * </li>
      * <li>
@@ -2166,6 +3225,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::B2BI::Transformer</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:b2bi:&lt;region&gt;:&lt;account_ID&gt;:transformer/&lt;transformer_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Bedrock::AgentAlias</code>, and the operator is set to <code>Equals</code>
+     * or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:agent-alias/&lt;agent_ID&gt;/&lt;alias_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Bedrock::KnowledgeBase</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:knowledge-base/&lt;knowledge_base_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Cassandra::Table</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cassandra:&lt;region&gt;:&lt;account_ID&gt;:/keyspace/&lt;keyspace_name&gt;/table/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::CloudFront::KeyValueStore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cloudfront:&lt;region&gt;:&lt;account_ID&gt;:key-value-store/&lt;KVS_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2242,7 +3356,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2280,6 +3394,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Entity</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;/entity/&lt;entity_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Workspace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator is set
      * to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2297,7 +3433,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name&gt;/&lt;creation_time&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2335,6 +3471,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::NeptuneGraph::Graph</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:neptune-graph:&lt;region&gt;:&lt;account_ID&gt;:graph/&lt;graph_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2342,6 +3489,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::DataSource</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;/data-source/&lt;datasource_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::Index</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::WebExperience</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/web-experience/&lt;web_experience_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::RDS::DBCluster</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:rds:&lt;region&gt;:&lt;account_ID&gt;:cluster/&lt;cluster_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2379,6 +3581,39 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::SCN::Instance</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:scn:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Namespace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:namespace/&lt;namespace_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Service</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:service/&lt;service_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2397,6 +3632,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2452,6 +3698,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::ThinClient::Device</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:device/&lt;device_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ThinClient::Environment</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2488,16 +3756,19 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </ul>
      * 
      * @return A field in a CloudTrail event record on which to filter events to be logged. For event data stores for
-     *         Config configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used
-     *         only for selecting events as filtering is not supported. </p>
+     *         CloudTrail Insights events, Config configuration items, Audit Manager evidence, or events outside of
+     *         Amazon Web Services, the field is used only for selecting events as filtering is not supported.</p>
      *         <p>
-     *         For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
-     *         <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>,
-     *         and <code>resources.ARN</code>.
+     *         For CloudTrail management events, supported fields include <code>readOnly</code>,
+     *         <code>eventCategory</code>, and <code>eventSource</code>.
      *         </p>
      *         <p>
-     *         For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services
-     *         events, the only supported field is <code>eventCategory</code>.
+     *         For CloudTrail data events, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     *         <code>eventName</code>, <code>resources.type</code>, and <code>resources.ARN</code>.
+     *         </p>
+     *         <p>
+     *         For event data stores for CloudTrail Insights events, Config configuration items, Audit Manager evidence,
+     *         or events outside of Amazon Web Services, the only supported field is <code>eventCategory</code>.
      *         </p>
      *         <ul>
      *         <li>
@@ -2529,12 +3800,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     *         For CloudTrail management events, the value must be <code>Management</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For CloudTrail Insights event records, the value must be <code>Insight</code>.
+     *         For CloudTrail data events, the value must be <code>Data</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         The following are used only for event data stores:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For CloudTrail Insights events, the value must be <code>Insight</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -2574,6 +3855,31 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>AWS::S3::Object</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::B2BI::Transformer</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::Bedrock::AgentAlias</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::Bedrock::KnowledgeBase</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::Cassandra::Table</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::CloudFront::KeyValueStore</code>
      *         </p>
      *         </li>
      *         <li>
@@ -2628,6 +3934,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::IoTTwinMaker::Entity</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::IoTTwinMaker::Workspace</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::KendraRanking::ExecutionPlan</code>
      *         </p>
      *         </li>
@@ -2653,7 +3969,37 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::NeptuneGraph::Graph</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::PCAConnectorAD::Connector</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::QBusiness::Application</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::QBusiness::DataSource</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::QBusiness::Index</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::QBusiness::WebExperience</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::RDS::DBCluster</code>
      *         </p>
      *         </li>
      *         <li>
@@ -2673,12 +4019,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::ServiceDiscovery::Namespace </code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::ServiceDiscovery::Service</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SCN::Instance</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::SNS::PlatformEndpoint</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>AWS::SNS::Topic</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SQS::Queue</code>
      *         </p>
      *         </li>
      *         <li>
@@ -2699,6 +4065,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>AWS::SSMMessages::ControlChannel</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::ThinClient::Device</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::ThinClient::Environment</code>
      *         </p>
      *         </li>
      *         <li>
@@ -2766,6 +4142,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When resources.type equals <code>AWS::B2BI::Transformer</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:b2bi:&lt;region&gt;:&lt;account_ID&gt;:transformer/&lt;transformer_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When resources.type equals <code>AWS::Bedrock::AgentAlias</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:agent-alias/&lt;agent_ID&gt;/&lt;alias_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When resources.type equals <code>AWS::Bedrock::KnowledgeBase</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:knowledge-base/&lt;knowledge_base_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When resources.type equals <code>AWS::Cassandra::Table</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:cassandra:&lt;region&gt;:&lt;account_ID&gt;:/keyspace/&lt;keyspace_name&gt;/table/&lt;table_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When resources.type equals <code>AWS::CloudFront::KeyValueStore</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:cloudfront:&lt;region&gt;:&lt;account_ID&gt;:key-value-store/&lt;KVS_name&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -2842,7 +4273,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
+     *         <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_name&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -2880,6 +4311,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Entity</code>, and the operator is set
+     *         to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;/entity/&lt;entity_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Workspace</code>, and the operator is
+     *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator
      *         is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -2897,7 +4350,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     *         <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name&gt;/&lt;creation_time&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -2935,6 +4388,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::NeptuneGraph::Graph</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:neptune-graph:&lt;region&gt;:&lt;account_ID&gt;:graph/&lt;graph_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is
      *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -2942,6 +4406,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set
+     *         to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::QBusiness::DataSource</code>, and the operator is set
+     *         to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;/data-source/&lt;datasource_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::QBusiness::Index</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::QBusiness::WebExperience</code>, and the operator is
+     *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/web-experience/&lt;web_experience_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::RDS::DBCluster</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:rds:&lt;region&gt;:&lt;account_ID&gt;:cluster/&lt;cluster_name&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -2980,6 +4499,39 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::SCN::Instance</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:scn:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Namespace</code>, and the operator
+     *         is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:namespace/&lt;namespace_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Service</code>, and the operator is
+     *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:service/&lt;service_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set
      *         to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -2998,6 +4550,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -3053,6 +4616,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::ThinClient::Device</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:device/&lt;device_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::ThinClient::Environment</code>, and the operator is
+     *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set
      *         to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -3094,18 +4679,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for Config
-     * configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used only for
-     * selecting events as filtering is not supported.
+     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for CloudTrail
+     * Insights events, Config configuration items, Audit Manager evidence, or events outside of Amazon Web Services,
+     * the field is used only for selecting events as filtering is not supported.
      * </p>
      * <p>
-     * For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
-     * <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
-     * <code>resources.ARN</code>.
+     * For CloudTrail management events, supported fields include <code>readOnly</code>, <code>eventCategory</code>, and
+     * <code>eventSource</code>.
      * </p>
      * <p>
-     * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
-     * the only supported field is <code>eventCategory</code>.
+     * For CloudTrail data events, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     * <code>eventName</code>, <code>resources.type</code>, and <code>resources.ARN</code>.
+     * </p>
+     * <p>
+     * For event data stores for CloudTrail Insights events, Config configuration items, Audit Manager evidence, or
+     * events outside of Amazon Web Services, the only supported field is <code>eventCategory</code>.
      * </p>
      * <ul>
      * <li>
@@ -3137,12 +4725,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     * For CloudTrail management events, the value must be <code>Management</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CloudTrail Insights event records, the value must be <code>Insight</code>.
+     * For CloudTrail data events, the value must be <code>Data</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following are used only for event data stores:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For CloudTrail Insights events, the value must be <code>Insight</code>.
      * </p>
      * </li>
      * <li>
@@ -3182,6 +4780,31 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::S3::Object</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::B2BI::Transformer</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Bedrock::AgentAlias</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Bedrock::KnowledgeBase</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Cassandra::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CloudFront::KeyValueStore</code>
      * </p>
      * </li>
      * <li>
@@ -3236,6 +4859,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::IoTTwinMaker::Entity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::IoTTwinMaker::Workspace</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::KendraRanking::ExecutionPlan</code>
      * </p>
      * </li>
@@ -3261,7 +4894,37 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::NeptuneGraph::Graph</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::Application</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::DataSource</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::Index</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::QBusiness::WebExperience</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::RDS::DBCluster</code>
      * </p>
      * </li>
      * <li>
@@ -3281,12 +4944,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::ServiceDiscovery::Namespace </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ServiceDiscovery::Service</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SCN::Instance</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SNS::PlatformEndpoint</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SNS::Topic</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SQS::Queue</code>
      * </p>
      * </li>
      * <li>
@@ -3307,6 +4990,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ThinClient::Device</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ThinClient::Environment</code>
      * </p>
      * </li>
      * <li>
@@ -3374,6 +5067,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::B2BI::Transformer</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:b2bi:&lt;region&gt;:&lt;account_ID&gt;:transformer/&lt;transformer_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Bedrock::AgentAlias</code>, and the operator is set to <code>Equals</code>
+     * or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:agent-alias/&lt;agent_ID&gt;/&lt;alias_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Bedrock::KnowledgeBase</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:knowledge-base/&lt;knowledge_base_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::Cassandra::Table</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cassandra:&lt;region&gt;:&lt;account_ID&gt;:/keyspace/&lt;keyspace_name&gt;/table/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::CloudFront::KeyValueStore</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cloudfront:&lt;region&gt;:&lt;account_ID&gt;:key-value-store/&lt;KVS_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -3450,7 +5198,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -3488,6 +5236,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Entity</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;/entity/&lt;entity_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Workspace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator is set
      * to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -3505,7 +5275,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name&gt;/&lt;creation_time&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -3543,6 +5313,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::NeptuneGraph::Graph</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:neptune-graph:&lt;region&gt;:&lt;account_ID&gt;:graph/&lt;graph_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -3550,6 +5331,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::DataSource</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;/data-source/&lt;datasource_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::Index</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::QBusiness::WebExperience</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/web-experience/&lt;web_experience_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::RDS::DBCluster</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:rds:&lt;region&gt;:&lt;account_ID&gt;:cluster/&lt;cluster_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -3587,6 +5423,39 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::SCN::Instance</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:scn:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Namespace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:namespace/&lt;namespace_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Service</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:service/&lt;service_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -3605,6 +5474,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -3660,6 +5540,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::ThinClient::Device</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:device/&lt;device_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ThinClient::Environment</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -3697,16 +5599,19 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * 
      * @param field
      *        A field in a CloudTrail event record on which to filter events to be logged. For event data stores for
-     *        Config configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used
-     *        only for selecting events as filtering is not supported. </p>
+     *        CloudTrail Insights events, Config configuration items, Audit Manager evidence, or events outside of
+     *        Amazon Web Services, the field is used only for selecting events as filtering is not supported.</p>
      *        <p>
-     *        For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
-     *        <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
-     *        <code>resources.ARN</code>.
+     *        For CloudTrail management events, supported fields include <code>readOnly</code>,
+     *        <code>eventCategory</code>, and <code>eventSource</code>.
      *        </p>
      *        <p>
-     *        For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services
-     *        events, the only supported field is <code>eventCategory</code>.
+     *        For CloudTrail data events, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     *        <code>eventName</code>, <code>resources.type</code>, and <code>resources.ARN</code>.
+     *        </p>
+     *        <p>
+     *        For event data stores for CloudTrail Insights events, Config configuration items, Audit Manager evidence,
+     *        or events outside of Amazon Web Services, the only supported field is <code>eventCategory</code>.
      *        </p>
      *        <ul>
      *        <li>
@@ -3738,12 +5643,22 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     *        For CloudTrail management events, the value must be <code>Management</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For CloudTrail Insights event records, the value must be <code>Insight</code>.
+     *        For CloudTrail data events, the value must be <code>Data</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The following are used only for event data stores:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For CloudTrail Insights events, the value must be <code>Insight</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -3783,6 +5698,31 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::S3::Object</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::B2BI::Transformer</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Bedrock::AgentAlias</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Bedrock::KnowledgeBase</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Cassandra::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CloudFront::KeyValueStore</code>
      *        </p>
      *        </li>
      *        <li>
@@ -3837,6 +5777,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::IoTTwinMaker::Entity</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::IoTTwinMaker::Workspace</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::KendraRanking::ExecutionPlan</code>
      *        </p>
      *        </li>
@@ -3862,7 +5812,37 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::NeptuneGraph::Graph</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::PCAConnectorAD::Connector</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::QBusiness::Application</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::QBusiness::DataSource</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::QBusiness::Index</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::QBusiness::WebExperience</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::RDS::DBCluster</code>
      *        </p>
      *        </li>
      *        <li>
@@ -3882,12 +5862,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::ServiceDiscovery::Namespace </code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ServiceDiscovery::Service</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SCN::Instance</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::SNS::PlatformEndpoint</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::SNS::Topic</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SQS::Queue</code>
      *        </p>
      *        </li>
      *        <li>
@@ -3908,6 +5908,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ThinClient::Device</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ThinClient::Environment</code>
      *        </p>
      *        </li>
      *        <li>
@@ -3975,6 +5985,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::B2BI::Transformer</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:b2bi:&lt;region&gt;:&lt;account_ID&gt;:transformer/&lt;transformer_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::Bedrock::AgentAlias</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:agent-alias/&lt;agent_ID&gt;/&lt;alias_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::Bedrock::KnowledgeBase</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:knowledge-base/&lt;knowledge_base_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::Cassandra::Table</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:cassandra:&lt;region&gt;:&lt;account_ID&gt;:/keyspace/&lt;keyspace_name&gt;/table/&lt;table_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::CloudFront::KeyValueStore</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:cloudfront:&lt;region&gt;:&lt;account_ID&gt;:key-value-store/&lt;KVS_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -4051,7 +6116,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
+     *        <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -4089,6 +6154,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Entity</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;/entity/&lt;entity_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::IoTTwinMaker::Workspace</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator
      *        is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -4106,7 +6193,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     *        <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name&gt;/&lt;creation_time&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -4144,6 +6231,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::NeptuneGraph::Graph</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:neptune-graph:&lt;region&gt;:&lt;account_ID&gt;:graph/&lt;graph_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is
      *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -4151,6 +6249,61 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::QBusiness::Application</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::QBusiness::DataSource</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;/data-source/&lt;datasource_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::QBusiness::Index</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::QBusiness::WebExperience</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/web-experience/&lt;web_experience_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::RDS::DBCluster</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:rds:&lt;region&gt;:&lt;account_ID&gt;:cluster/&lt;cluster_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -4188,6 +6341,39 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SCN::Instance</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:scn:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Namespace</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:namespace/&lt;namespace_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ServiceDiscovery::Service</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:service/&lt;service_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set
      *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -4206,6 +6392,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SQS::Queue</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -4257,6 +6454,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ThinClient::Device</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:device/&lt;device_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ThinClient::Environment</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>

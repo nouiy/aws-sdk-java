@@ -1,3 +1,28 @@
+# __1.12.640__ __2024-01-18__
+## __AWS B2B Data Interchange__
+  - ### Features
+    - Increasing TestMapping inputFileContent file size limit to 5MB and adding file size limit 250KB for TestParsing input file. This release also includes exposing InternalServerException for Tag APIs.
+
+## __AWS CloudTrail__
+  - ### Features
+    - This release adds a new API ListInsightsMetricData to retrieve metric data from CloudTrail Insights.
+
+## __Amazon Connect Service__
+  - ### Features
+    - GetMetricDataV2 now supports 3 groupings
+
+## __Amazon Kinesis Firehose__
+  - ### Features
+    - Allow support for Snowflake as a Kinesis Data Firehose delivery destination.
+
+## __Amazon SageMaker Feature Store Runtime__
+  - ### Features
+    - Increase BatchGetRecord limits from 10 items to 100 items
+
+## __Elastic Disaster Recovery Service__
+  - ### Features
+    - Removed invalid and unnecessary default values.
+
 # __1.12.639__ __2024-01-17__
 ## __Amazon DynamoDB__
   - ### Features
@@ -15,6 +40,10 @@
 ## __AWS IoT FleetWise__
   - ### Features
     - Updated APIs: SignalNodeType query parameter has been added to ListSignalCatalogNodesRequest and ListVehiclesResponse has been extended with attributes field.
+
+## __AWS SDK for Java__
+  - ### Deprecations
+    - Remove support for ion-java
 
 ## __AWS SecurityHub__
   - ### Features

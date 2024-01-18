@@ -78,6 +78,12 @@ public class DestinationDescription implements Serializable, Cloneable, Structur
     private HttpEndpointDestinationDescription httpEndpointDestinationDescription;
     /**
      * <p>
+     * Optional description for the destination
+     * </p>
+     */
+    private SnowflakeDestinationDescription snowflakeDestinationDescription;
+    /**
+     * <p>
      * The destination in the Serverless offering for Amazon OpenSearch Service.
      * </p>
      */
@@ -406,6 +412,46 @@ public class DestinationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
+     * Optional description for the destination
+     * </p>
+     * 
+     * @param snowflakeDestinationDescription
+     *        Optional description for the destination
+     */
+
+    public void setSnowflakeDestinationDescription(SnowflakeDestinationDescription snowflakeDestinationDescription) {
+        this.snowflakeDestinationDescription = snowflakeDestinationDescription;
+    }
+
+    /**
+     * <p>
+     * Optional description for the destination
+     * </p>
+     * 
+     * @return Optional description for the destination
+     */
+
+    public SnowflakeDestinationDescription getSnowflakeDestinationDescription() {
+        return this.snowflakeDestinationDescription;
+    }
+
+    /**
+     * <p>
+     * Optional description for the destination
+     * </p>
+     * 
+     * @param snowflakeDestinationDescription
+     *        Optional description for the destination
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DestinationDescription withSnowflakeDestinationDescription(SnowflakeDestinationDescription snowflakeDestinationDescription) {
+        setSnowflakeDestinationDescription(snowflakeDestinationDescription);
+        return this;
+    }
+
+    /**
+     * <p>
      * The destination in the Serverless offering for Amazon OpenSearch Service.
      * </p>
      * 
@@ -474,6 +520,8 @@ public class DestinationDescription implements Serializable, Cloneable, Structur
             sb.append("SplunkDestinationDescription: ").append(getSplunkDestinationDescription()).append(",");
         if (getHttpEndpointDestinationDescription() != null)
             sb.append("HttpEndpointDestinationDescription: ").append(getHttpEndpointDestinationDescription()).append(",");
+        if (getSnowflakeDestinationDescription() != null)
+            sb.append("SnowflakeDestinationDescription: ").append(getSnowflakeDestinationDescription()).append(",");
         if (getAmazonOpenSearchServerlessDestinationDescription() != null)
             sb.append("AmazonOpenSearchServerlessDestinationDescription: ").append(getAmazonOpenSearchServerlessDestinationDescription());
         sb.append("}");
@@ -527,6 +575,11 @@ public class DestinationDescription implements Serializable, Cloneable, Structur
         if (other.getHttpEndpointDestinationDescription() != null
                 && other.getHttpEndpointDestinationDescription().equals(this.getHttpEndpointDestinationDescription()) == false)
             return false;
+        if (other.getSnowflakeDestinationDescription() == null ^ this.getSnowflakeDestinationDescription() == null)
+            return false;
+        if (other.getSnowflakeDestinationDescription() != null
+                && other.getSnowflakeDestinationDescription().equals(this.getSnowflakeDestinationDescription()) == false)
+            return false;
         if (other.getAmazonOpenSearchServerlessDestinationDescription() == null ^ this.getAmazonOpenSearchServerlessDestinationDescription() == null)
             return false;
         if (other.getAmazonOpenSearchServerlessDestinationDescription() != null
@@ -549,6 +602,7 @@ public class DestinationDescription implements Serializable, Cloneable, Structur
                 + ((getAmazonopensearchserviceDestinationDescription() == null) ? 0 : getAmazonopensearchserviceDestinationDescription().hashCode());
         hashCode = prime * hashCode + ((getSplunkDestinationDescription() == null) ? 0 : getSplunkDestinationDescription().hashCode());
         hashCode = prime * hashCode + ((getHttpEndpointDestinationDescription() == null) ? 0 : getHttpEndpointDestinationDescription().hashCode());
+        hashCode = prime * hashCode + ((getSnowflakeDestinationDescription() == null) ? 0 : getSnowflakeDestinationDescription().hashCode());
         hashCode = prime * hashCode
                 + ((getAmazonOpenSearchServerlessDestinationDescription() == null) ? 0 : getAmazonOpenSearchServerlessDestinationDescription().hashCode());
         return hashCode;

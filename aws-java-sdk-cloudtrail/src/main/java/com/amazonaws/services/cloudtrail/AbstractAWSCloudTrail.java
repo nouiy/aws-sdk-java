@@ -178,6 +178,11 @@ public class AbstractAWSCloudTrail implements AWSCloudTrail {
     }
 
     @Override
+    public ListInsightsMetricDataResult listInsightsMetricData(ListInsightsMetricDataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListPublicKeysResult listPublicKeys(ListPublicKeysRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
