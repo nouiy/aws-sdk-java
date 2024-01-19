@@ -397,6 +397,11 @@ public class AbstractAmazonDynamoDB implements AmazonDynamoDB {
     }
 
     @Override
+    public UpdateKinesisStreamingDestinationResult updateKinesisStreamingDestination(UpdateKinesisStreamingDestinationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateTableResult updateTable(UpdateTableRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

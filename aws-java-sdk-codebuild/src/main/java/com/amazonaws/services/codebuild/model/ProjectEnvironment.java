@@ -42,10 +42,9 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * The environment type <code>LINUX_CONTAINER</code> with compute type <code>build.general1.2xlarge</code> is
-     * available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU
-     * (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore),
-     * Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
+     * The environment type <code>LINUX_CONTAINER</code> is available only in regions US East (N. Virginia), US East
+     * (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia
+     * Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
      * </p>
      * </li>
      * <li>
@@ -74,6 +73,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>type</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
@@ -218,6 +222,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>computeType</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
@@ -225,6 +234,12 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String computeType;
+    /**
+     * <p>
+     * A ProjectFleet object to use for this build project.
+     * </p>
+     */
+    private ProjectFleet fleet;
     /**
      * <p>
      * A set of environment variables to make available to builds for this build project.
@@ -315,10 +330,9 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * The environment type <code>LINUX_CONTAINER</code> with compute type <code>build.general1.2xlarge</code> is
-     * available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU
-     * (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore),
-     * Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
+     * The environment type <code>LINUX_CONTAINER</code> is available only in regions US East (N. Virginia), US East
+     * (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia
+     * Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
      * </p>
      * </li>
      * <li>
@@ -347,6 +361,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>type</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
@@ -365,10 +384,10 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        The environment type <code>LINUX_CONTAINER</code> with compute type <code>build.general1.2xlarge</code> is
-     *        available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU
-     *        (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific
-     *        (Singapore), Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
+     *        The environment type <code>LINUX_CONTAINER</code> is available only in regions US East (N. Virginia), US
+     *        East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific
+     *        (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), China (Beijing), and China
+     *        (Ningxia).
      *        </p>
      *        </li>
      *        <li>
@@ -398,6 +417,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        If you're using compute fleets during project creation, <code>type</code> will be ignored.
+     *        </p>
+     *        </note>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
@@ -423,10 +447,9 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * The environment type <code>LINUX_CONTAINER</code> with compute type <code>build.general1.2xlarge</code> is
-     * available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU
-     * (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore),
-     * Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
+     * The environment type <code>LINUX_CONTAINER</code> is available only in regions US East (N. Virginia), US East
+     * (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia
+     * Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
      * </p>
      * </li>
      * <li>
@@ -455,6 +478,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>type</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
@@ -472,10 +500,10 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *         </li>
      *         <li>
      *         <p>
-     *         The environment type <code>LINUX_CONTAINER</code> with compute type <code>build.general1.2xlarge</code>
-     *         is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central),
-     *         EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific
-     *         (Singapore), Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
+     *         The environment type <code>LINUX_CONTAINER</code> is available only in regions US East (N. Virginia), US
+     *         East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific
+     *         (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), China (Beijing), and
+     *         China (Ningxia).
      *         </p>
      *         </li>
      *         <li>
@@ -505,6 +533,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *         </p>
      *         </li>
      *         </ul>
+     *         <note>
+     *         <p>
+     *         If you're using compute fleets during project creation, <code>type</code> will be ignored.
+     *         </p>
+     *         </note>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
@@ -530,10 +563,9 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * The environment type <code>LINUX_CONTAINER</code> with compute type <code>build.general1.2xlarge</code> is
-     * available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU
-     * (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore),
-     * Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
+     * The environment type <code>LINUX_CONTAINER</code> is available only in regions US East (N. Virginia), US East
+     * (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia
+     * Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
      * </p>
      * </li>
      * <li>
@@ -562,6 +594,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>type</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
@@ -580,10 +617,10 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        The environment type <code>LINUX_CONTAINER</code> with compute type <code>build.general1.2xlarge</code> is
-     *        available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU
-     *        (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific
-     *        (Singapore), Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
+     *        The environment type <code>LINUX_CONTAINER</code> is available only in regions US East (N. Virginia), US
+     *        East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific
+     *        (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), China (Beijing), and China
+     *        (Ningxia).
      *        </p>
      *        </li>
      *        <li>
@@ -613,6 +650,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        If you're using compute fleets during project creation, <code>type</code> will be ignored.
+     *        </p>
+     *        </note>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
@@ -640,10 +682,9 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * The environment type <code>LINUX_CONTAINER</code> with compute type <code>build.general1.2xlarge</code> is
-     * available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU
-     * (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore),
-     * Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
+     * The environment type <code>LINUX_CONTAINER</code> is available only in regions US East (N. Virginia), US East
+     * (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia
+     * Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
      * </p>
      * </li>
      * <li>
@@ -672,6 +713,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>type</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
@@ -690,10 +736,10 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        The environment type <code>LINUX_CONTAINER</code> with compute type <code>build.general1.2xlarge</code> is
-     *        available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU
-     *        (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific
-     *        (Singapore), Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
+     *        The environment type <code>LINUX_CONTAINER</code> is available only in regions US East (N. Virginia), US
+     *        East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific
+     *        (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), China (Beijing), and China
+     *        (Ningxia).
      *        </p>
      *        </li>
      *        <li>
@@ -723,6 +769,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        If you're using compute fleets during project creation, <code>type</code> will be ignored.
+     *        </p>
+     *        </note>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
@@ -748,10 +799,9 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * The environment type <code>LINUX_CONTAINER</code> with compute type <code>build.general1.2xlarge</code> is
-     * available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU
-     * (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore),
-     * Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
+     * The environment type <code>LINUX_CONTAINER</code> is available only in regions US East (N. Virginia), US East
+     * (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia
+     * Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
      * </p>
      * </li>
      * <li>
@@ -780,6 +830,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>type</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
@@ -798,10 +853,10 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        The environment type <code>LINUX_CONTAINER</code> with compute type <code>build.general1.2xlarge</code> is
-     *        available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU
-     *        (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific
-     *        (Singapore), Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
+     *        The environment type <code>LINUX_CONTAINER</code> is available only in regions US East (N. Virginia), US
+     *        East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific
+     *        (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), China (Beijing), and China
+     *        (Ningxia).
      *        </p>
      *        </li>
      *        <li>
@@ -831,6 +886,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        If you're using compute fleets during project creation, <code>type</code> will be ignored.
+     *        </p>
+     *        </note>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
@@ -1130,6 +1190,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>computeType</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
@@ -1242,6 +1307,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        If you're using compute fleets during project creation, <code>computeType</code> will be ignored.
+     *        </p>
+     *        </note>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
@@ -1361,6 +1431,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>computeType</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
@@ -1472,6 +1547,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *         </p>
      *         </li>
      *         </ul>
+     *         <note>
+     *         <p>
+     *         If you're using compute fleets during project creation, <code>computeType</code> will be ignored.
+     *         </p>
+     *         </note>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
@@ -1591,6 +1671,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>computeType</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
@@ -1703,6 +1788,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        If you're using compute fleets during project creation, <code>computeType</code> will be ignored.
+     *        </p>
+     *        </note>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
@@ -1824,6 +1914,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>computeType</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
@@ -1936,6 +2031,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        If you're using compute fleets during project creation, <code>computeType</code> will be ignored.
+     *        </p>
+     *        </note>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
@@ -2055,6 +2155,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * If you're using compute fleets during project creation, <code>computeType</code> will be ignored.
+     * </p>
+     * </note>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
@@ -2167,6 +2272,11 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        If you're using compute fleets during project creation, <code>computeType</code> will be ignored.
+     *        </p>
+     *        </note>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
@@ -2177,6 +2287,46 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
 
     public ProjectEnvironment withComputeType(ComputeType computeType) {
         this.computeType = computeType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * A ProjectFleet object to use for this build project.
+     * </p>
+     * 
+     * @param fleet
+     *        A ProjectFleet object to use for this build project.
+     */
+
+    public void setFleet(ProjectFleet fleet) {
+        this.fleet = fleet;
+    }
+
+    /**
+     * <p>
+     * A ProjectFleet object to use for this build project.
+     * </p>
+     * 
+     * @return A ProjectFleet object to use for this build project.
+     */
+
+    public ProjectFleet getFleet() {
+        return this.fleet;
+    }
+
+    /**
+     * <p>
+     * A ProjectFleet object to use for this build project.
+     * </p>
+     * 
+     * @param fleet
+     *        A ProjectFleet object to use for this build project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProjectEnvironment withFleet(ProjectFleet fleet) {
+        setFleet(fleet);
         return this;
     }
 
@@ -2852,6 +3002,8 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
             sb.append("Image: ").append(getImage()).append(",");
         if (getComputeType() != null)
             sb.append("ComputeType: ").append(getComputeType()).append(",");
+        if (getFleet() != null)
+            sb.append("Fleet: ").append(getFleet()).append(",");
         if (getEnvironmentVariables() != null)
             sb.append("EnvironmentVariables: ").append(getEnvironmentVariables()).append(",");
         if (getPrivilegedMode() != null)
@@ -2888,6 +3040,10 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getComputeType() != null && other.getComputeType().equals(this.getComputeType()) == false)
             return false;
+        if (other.getFleet() == null ^ this.getFleet() == null)
+            return false;
+        if (other.getFleet() != null && other.getFleet().equals(this.getFleet()) == false)
+            return false;
         if (other.getEnvironmentVariables() == null ^ this.getEnvironmentVariables() == null)
             return false;
         if (other.getEnvironmentVariables() != null && other.getEnvironmentVariables().equals(this.getEnvironmentVariables()) == false)
@@ -2919,6 +3075,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getImage() == null) ? 0 : getImage().hashCode());
         hashCode = prime * hashCode + ((getComputeType() == null) ? 0 : getComputeType().hashCode());
+        hashCode = prime * hashCode + ((getFleet() == null) ? 0 : getFleet().hashCode());
         hashCode = prime * hashCode + ((getEnvironmentVariables() == null) ? 0 : getEnvironmentVariables().hashCode());
         hashCode = prime * hashCode + ((getPrivilegedMode() == null) ? 0 : getPrivilegedMode().hashCode());
         hashCode = prime * hashCode + ((getCertificate() == null) ? 0 : getCertificate().hashCode());

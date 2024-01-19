@@ -39,7 +39,7 @@ public class ImportNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
     private String name;
     /**
      * <p>
-     * The notebook content to be imported.
+     * The notebook content to be imported. The payload must be in <code>ipynb</code> format.
      * </p>
      */
     private String payload;
@@ -49,6 +49,12 @@ public class ImportNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private String type;
+    /**
+     * <p>
+     * A URI that specifies the Amazon S3 location of a notebook file in <code>ipynb</code> format.
+     * </p>
+     */
+    private String notebookS3LocationUri;
     /**
      * <p>
      * A unique case-sensitive string used to ensure the request to import the notebook is idempotent (executes only
@@ -146,11 +152,11 @@ public class ImportNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The notebook content to be imported.
+     * The notebook content to be imported. The payload must be in <code>ipynb</code> format.
      * </p>
      * 
      * @param payload
-     *        The notebook content to be imported.
+     *        The notebook content to be imported. The payload must be in <code>ipynb</code> format.
      */
 
     public void setPayload(String payload) {
@@ -159,10 +165,10 @@ public class ImportNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The notebook content to be imported.
+     * The notebook content to be imported. The payload must be in <code>ipynb</code> format.
      * </p>
      * 
-     * @return The notebook content to be imported.
+     * @return The notebook content to be imported. The payload must be in <code>ipynb</code> format.
      */
 
     public String getPayload() {
@@ -171,11 +177,11 @@ public class ImportNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The notebook content to be imported.
+     * The notebook content to be imported. The payload must be in <code>ipynb</code> format.
      * </p>
      * 
      * @param payload
-     *        The notebook content to be imported.
+     *        The notebook content to be imported. The payload must be in <code>ipynb</code> format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -240,6 +246,46 @@ public class ImportNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
 
     public ImportNotebookRequest withType(NotebookType type) {
         this.type = type.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * A URI that specifies the Amazon S3 location of a notebook file in <code>ipynb</code> format.
+     * </p>
+     * 
+     * @param notebookS3LocationUri
+     *        A URI that specifies the Amazon S3 location of a notebook file in <code>ipynb</code> format.
+     */
+
+    public void setNotebookS3LocationUri(String notebookS3LocationUri) {
+        this.notebookS3LocationUri = notebookS3LocationUri;
+    }
+
+    /**
+     * <p>
+     * A URI that specifies the Amazon S3 location of a notebook file in <code>ipynb</code> format.
+     * </p>
+     * 
+     * @return A URI that specifies the Amazon S3 location of a notebook file in <code>ipynb</code> format.
+     */
+
+    public String getNotebookS3LocationUri() {
+        return this.notebookS3LocationUri;
+    }
+
+    /**
+     * <p>
+     * A URI that specifies the Amazon S3 location of a notebook file in <code>ipynb</code> format.
+     * </p>
+     * 
+     * @param notebookS3LocationUri
+     *        A URI that specifies the Amazon S3 location of a notebook file in <code>ipynb</code> format.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportNotebookRequest withNotebookS3LocationUri(String notebookS3LocationUri) {
+        setNotebookS3LocationUri(notebookS3LocationUri);
         return this;
     }
 
@@ -345,6 +391,8 @@ public class ImportNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
             sb.append("Payload: ").append(getPayload()).append(",");
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
+        if (getNotebookS3LocationUri() != null)
+            sb.append("NotebookS3LocationUri: ").append(getNotebookS3LocationUri()).append(",");
         if (getClientRequestToken() != null)
             sb.append("ClientRequestToken: ").append(getClientRequestToken());
         sb.append("}");
@@ -377,6 +425,10 @@ public class ImportNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
+        if (other.getNotebookS3LocationUri() == null ^ this.getNotebookS3LocationUri() == null)
+            return false;
+        if (other.getNotebookS3LocationUri() != null && other.getNotebookS3LocationUri().equals(this.getNotebookS3LocationUri()) == false)
+            return false;
         if (other.getClientRequestToken() == null ^ this.getClientRequestToken() == null)
             return false;
         if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
@@ -393,6 +445,7 @@ public class ImportNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getPayload() == null) ? 0 : getPayload().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getNotebookS3LocationUri() == null) ? 0 : getNotebookS3LocationUri().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         return hashCode;
     }

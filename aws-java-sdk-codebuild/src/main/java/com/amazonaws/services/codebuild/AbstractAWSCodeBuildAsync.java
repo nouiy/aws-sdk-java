@@ -67,6 +67,19 @@ public class AbstractAWSCodeBuildAsync extends AbstractAWSCodeBuild implements A
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetFleetsResult> batchGetFleetsAsync(BatchGetFleetsRequest request) {
+
+        return batchGetFleetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetFleetsResult> batchGetFleetsAsync(BatchGetFleetsRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetFleetsRequest, BatchGetFleetsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetProjectsResult> batchGetProjectsAsync(BatchGetProjectsRequest request) {
 
         return batchGetProjectsAsync(request, null);
@@ -101,6 +114,19 @@ public class AbstractAWSCodeBuildAsync extends AbstractAWSCodeBuild implements A
     @Override
     public java.util.concurrent.Future<BatchGetReportsResult> batchGetReportsAsync(BatchGetReportsRequest request,
             com.amazonaws.handlers.AsyncHandler<BatchGetReportsRequest, BatchGetReportsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest request) {
+
+        return createFleetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateFleetRequest, CreateFleetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -153,6 +179,19 @@ public class AbstractAWSCodeBuildAsync extends AbstractAWSCodeBuild implements A
     @Override
     public java.util.concurrent.Future<DeleteBuildBatchResult> deleteBuildBatchAsync(DeleteBuildBatchRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteBuildBatchRequest, DeleteBuildBatchResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(DeleteFleetRequest request) {
+
+        return deleteFleetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(DeleteFleetRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteFleetRequest, DeleteFleetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -379,6 +418,19 @@ public class AbstractAWSCodeBuildAsync extends AbstractAWSCodeBuild implements A
     }
 
     @Override
+    public java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(ListFleetsRequest request) {
+
+        return listFleetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(ListFleetsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListFleetsRequest, ListFleetsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListProjectsResult> listProjectsAsync(ListProjectsRequest request) {
 
         return listProjectsAsync(request, null);
@@ -556,6 +608,19 @@ public class AbstractAWSCodeBuildAsync extends AbstractAWSCodeBuild implements A
     @Override
     public java.util.concurrent.Future<StopBuildBatchResult> stopBuildBatchAsync(StopBuildBatchRequest request,
             com.amazonaws.handlers.AsyncHandler<StopBuildBatchRequest, StopBuildBatchResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFleetResult> updateFleetAsync(UpdateFleetRequest request) {
+
+        return updateFleetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFleetResult> updateFleetAsync(UpdateFleetRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateFleetRequest, UpdateFleetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

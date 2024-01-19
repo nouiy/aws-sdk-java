@@ -24,7 +24,8 @@ public enum DestinationStatus {
     ACTIVE("ACTIVE"),
     DISABLING("DISABLING"),
     DISABLED("DISABLED"),
-    ENABLE_FAILED("ENABLE_FAILED");
+    ENABLE_FAILED("ENABLE_FAILED"),
+    UPDATING("UPDATING");
 
     private String value;
 

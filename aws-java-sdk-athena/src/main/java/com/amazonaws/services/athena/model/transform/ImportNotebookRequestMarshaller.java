@@ -35,6 +35,8 @@ public class ImportNotebookRequestMarshaller {
             .marshallLocationName("Payload").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Type").build();
+    private static final MarshallingInfo<String> NOTEBOOKS3LOCATIONURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NotebookS3LocationUri").build();
     private static final MarshallingInfo<String> CLIENTREQUESTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientRequestToken").build();
 
@@ -58,6 +60,7 @@ public class ImportNotebookRequestMarshaller {
             protocolMarshaller.marshall(importNotebookRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(importNotebookRequest.getPayload(), PAYLOAD_BINDING);
             protocolMarshaller.marshall(importNotebookRequest.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(importNotebookRequest.getNotebookS3LocationUri(), NOTEBOOKS3LOCATIONURI_BINDING);
             protocolMarshaller.marshall(importNotebookRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

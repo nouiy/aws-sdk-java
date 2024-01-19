@@ -1178,6 +1178,21 @@ public class AbstractAmazonDynamoDBAsync extends AbstractAmazonDynamoDB implemen
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateKinesisStreamingDestinationResult> updateKinesisStreamingDestinationAsync(
+            UpdateKinesisStreamingDestinationRequest request) {
+
+        return updateKinesisStreamingDestinationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKinesisStreamingDestinationResult> updateKinesisStreamingDestinationAsync(
+            UpdateKinesisStreamingDestinationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateKinesisStreamingDestinationRequest, UpdateKinesisStreamingDestinationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateTableResult> updateTableAsync(UpdateTableRequest request) {
 
         return updateTableAsync(request, null);

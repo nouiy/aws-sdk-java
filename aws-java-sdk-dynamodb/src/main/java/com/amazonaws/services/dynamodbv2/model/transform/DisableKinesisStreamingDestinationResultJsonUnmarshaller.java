@@ -61,6 +61,11 @@ public class DisableKinesisStreamingDestinationResultJsonUnmarshaller implements
                     context.nextToken();
                     disableKinesisStreamingDestinationResult.setDestinationStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("EnableKinesisStreamingConfiguration", targetDepth)) {
+                    context.nextToken();
+                    disableKinesisStreamingDestinationResult.setEnableKinesisStreamingConfiguration(EnableKinesisStreamingConfigurationJsonUnmarshaller
+                            .getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

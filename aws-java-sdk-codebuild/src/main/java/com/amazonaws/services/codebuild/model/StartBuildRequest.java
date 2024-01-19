@@ -320,6 +320,12 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private Boolean debugSessionEnabled;
+    /**
+     * <p>
+     * A ProjectFleet object specified for this build that overrides the one defined in the build project.
+     * </p>
+     */
+    private ProjectFleet fleetOverride;
 
     /**
      * <p>
@@ -2523,6 +2529,46 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * A ProjectFleet object specified for this build that overrides the one defined in the build project.
+     * </p>
+     * 
+     * @param fleetOverride
+     *        A ProjectFleet object specified for this build that overrides the one defined in the build project.
+     */
+
+    public void setFleetOverride(ProjectFleet fleetOverride) {
+        this.fleetOverride = fleetOverride;
+    }
+
+    /**
+     * <p>
+     * A ProjectFleet object specified for this build that overrides the one defined in the build project.
+     * </p>
+     * 
+     * @return A ProjectFleet object specified for this build that overrides the one defined in the build project.
+     */
+
+    public ProjectFleet getFleetOverride() {
+        return this.fleetOverride;
+    }
+
+    /**
+     * <p>
+     * A ProjectFleet object specified for this build that overrides the one defined in the build project.
+     * </p>
+     * 
+     * @param fleetOverride
+     *        A ProjectFleet object specified for this build that overrides the one defined in the build project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartBuildRequest withFleetOverride(ProjectFleet fleetOverride) {
+        setFleetOverride(fleetOverride);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2595,7 +2641,9 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getImagePullCredentialsTypeOverride() != null)
             sb.append("ImagePullCredentialsTypeOverride: ").append(getImagePullCredentialsTypeOverride()).append(",");
         if (getDebugSessionEnabled() != null)
-            sb.append("DebugSessionEnabled: ").append(getDebugSessionEnabled());
+            sb.append("DebugSessionEnabled: ").append(getDebugSessionEnabled()).append(",");
+        if (getFleetOverride() != null)
+            sb.append("FleetOverride: ").append(getFleetOverride());
         sb.append("}");
         return sb.toString();
     }
@@ -2737,6 +2785,10 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getDebugSessionEnabled() != null && other.getDebugSessionEnabled().equals(this.getDebugSessionEnabled()) == false)
             return false;
+        if (other.getFleetOverride() == null ^ this.getFleetOverride() == null)
+            return false;
+        if (other.getFleetOverride() != null && other.getFleetOverride().equals(this.getFleetOverride()) == false)
+            return false;
         return true;
     }
 
@@ -2776,6 +2828,7 @@ public class StartBuildRequest extends com.amazonaws.AmazonWebServiceRequest imp
         hashCode = prime * hashCode + ((getRegistryCredentialOverride() == null) ? 0 : getRegistryCredentialOverride().hashCode());
         hashCode = prime * hashCode + ((getImagePullCredentialsTypeOverride() == null) ? 0 : getImagePullCredentialsTypeOverride().hashCode());
         hashCode = prime * hashCode + ((getDebugSessionEnabled() == null) ? 0 : getDebugSessionEnabled().hashCode());
+        hashCode = prime * hashCode + ((getFleetOverride() == null) ? 0 : getFleetOverride().hashCode());
         return hashCode;
     }
 

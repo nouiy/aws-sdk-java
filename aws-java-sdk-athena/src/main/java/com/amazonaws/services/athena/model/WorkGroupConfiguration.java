@@ -92,8 +92,9 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
     private String additionalConfiguration;
     /**
      * <p>
-     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
-     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and IAM Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and IAM Identity Center enabled workgroups.
+     * The property is required for IAM Identity Center enabled workgroups.
      * </p>
      */
     private String executionRole;
@@ -561,13 +562,15 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
-     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and IAM Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and IAM Identity Center enabled workgroups.
+     * The property is required for IAM Identity Center enabled workgroups.
      * </p>
      * 
      * @param executionRole
-     *        The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
-     *        workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
+     *        The ARN of the execution role used to access user resources for Spark sessions and IAM Identity Center
+     *        enabled workgroups. This property applies only to Spark enabled workgroups and IAM Identity Center enabled
+     *        workgroups. The property is required for IAM Identity Center enabled workgroups.
      */
 
     public void setExecutionRole(String executionRole) {
@@ -576,13 +579,14 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
-     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and IAM Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and IAM Identity Center enabled workgroups.
+     * The property is required for IAM Identity Center enabled workgroups.
      * </p>
      * 
-     * @return The ARN of the execution role used to access user resources for Spark sessions and Identity Center
-     *         enabled workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled
-     *         workgroups.
+     * @return The ARN of the execution role used to access user resources for Spark sessions and IAM Identity Center
+     *         enabled workgroups. This property applies only to Spark enabled workgroups and IAM Identity Center
+     *         enabled workgroups. The property is required for IAM Identity Center enabled workgroups.
      */
 
     public String getExecutionRole() {
@@ -591,13 +595,15 @@ public class WorkGroupConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
-     * workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
+     * The ARN of the execution role used to access user resources for Spark sessions and IAM Identity Center enabled
+     * workgroups. This property applies only to Spark enabled workgroups and IAM Identity Center enabled workgroups.
+     * The property is required for IAM Identity Center enabled workgroups.
      * </p>
      * 
      * @param executionRole
-     *        The ARN of the execution role used to access user resources for Spark sessions and Identity Center enabled
-     *        workgroups. This property applies only to Spark enabled workgroups and Identity Center enabled workgroups.
+     *        The ARN of the execution role used to access user resources for Spark sessions and IAM Identity Center
+     *        enabled workgroups. This property applies only to Spark enabled workgroups and IAM Identity Center enabled
+     *        workgroups. The property is required for IAM Identity Center enabled workgroups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

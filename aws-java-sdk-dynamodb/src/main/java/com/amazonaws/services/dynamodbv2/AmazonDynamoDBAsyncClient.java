@@ -2424,6 +2424,41 @@ public class AmazonDynamoDBAsyncClient extends AmazonDynamoDBClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateKinesisStreamingDestinationResult> updateKinesisStreamingDestinationAsync(
+            UpdateKinesisStreamingDestinationRequest request) {
+
+        return updateKinesisStreamingDestinationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateKinesisStreamingDestinationResult> updateKinesisStreamingDestinationAsync(
+            final UpdateKinesisStreamingDestinationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateKinesisStreamingDestinationRequest, UpdateKinesisStreamingDestinationResult> asyncHandler) {
+        final UpdateKinesisStreamingDestinationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateKinesisStreamingDestinationResult>() {
+            @Override
+            public UpdateKinesisStreamingDestinationResult call() throws Exception {
+                UpdateKinesisStreamingDestinationResult result = null;
+
+                try {
+                    result = executeUpdateKinesisStreamingDestination(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateTableResult> updateTableAsync(UpdateTableRequest request) {
 
         return updateTableAsync(request, null);

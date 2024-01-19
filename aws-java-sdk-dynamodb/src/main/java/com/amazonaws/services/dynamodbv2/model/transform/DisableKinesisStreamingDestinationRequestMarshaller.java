@@ -31,6 +31,8 @@ public class DisableKinesisStreamingDestinationRequestMarshaller {
             .marshallLocationName("TableName").build();
     private static final MarshallingInfo<String> STREAMARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("StreamArn").build();
+    private static final MarshallingInfo<StructuredPojo> ENABLEKINESISSTREAMINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnableKinesisStreamingConfiguration").build();
 
     private static final DisableKinesisStreamingDestinationRequestMarshaller instance = new DisableKinesisStreamingDestinationRequestMarshaller();
 
@@ -50,6 +52,8 @@ public class DisableKinesisStreamingDestinationRequestMarshaller {
         try {
             protocolMarshaller.marshall(disableKinesisStreamingDestinationRequest.getTableName(), TABLENAME_BINDING);
             protocolMarshaller.marshall(disableKinesisStreamingDestinationRequest.getStreamArn(), STREAMARN_BINDING);
+            protocolMarshaller.marshall(disableKinesisStreamingDestinationRequest.getEnableKinesisStreamingConfiguration(),
+                    ENABLEKINESISSTREAMINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

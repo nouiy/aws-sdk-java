@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents a PartiQL statment that uses parameters.
+ * Represents a PartiQL statement that uses parameters.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ParameterizedStatement" target="_top">AWS
@@ -30,7 +30,7 @@ public class ParameterizedStatement implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A PartiQL statment that uses parameters.
+     * A PartiQL statement that uses parameters.
      * </p>
      */
     private String statement;
@@ -54,11 +54,11 @@ public class ParameterizedStatement implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A PartiQL statment that uses parameters.
+     * A PartiQL statement that uses parameters.
      * </p>
      * 
      * @param statement
-     *        A PartiQL statment that uses parameters.
+     *        A PartiQL statement that uses parameters.
      */
 
     public void setStatement(String statement) {
@@ -67,10 +67,10 @@ public class ParameterizedStatement implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A PartiQL statment that uses parameters.
+     * A PartiQL statement that uses parameters.
      * </p>
      * 
-     * @return A PartiQL statment that uses parameters.
+     * @return A PartiQL statement that uses parameters.
      */
 
     public String getStatement() {
@@ -79,11 +79,11 @@ public class ParameterizedStatement implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A PartiQL statment that uses parameters.
+     * A PartiQL statement that uses parameters.
      * </p>
      * 
      * @param statement
-     *        A PartiQL statment that uses parameters.
+     *        A PartiQL statement that uses parameters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

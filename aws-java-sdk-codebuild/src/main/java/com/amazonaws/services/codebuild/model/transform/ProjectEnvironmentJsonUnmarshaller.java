@@ -60,6 +60,10 @@ public class ProjectEnvironmentJsonUnmarshaller implements Unmarshaller<ProjectE
                     context.nextToken();
                     projectEnvironment.setComputeType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("fleet", targetDepth)) {
+                    context.nextToken();
+                    projectEnvironment.setFleet(ProjectFleetJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("environmentVariables", targetDepth)) {
                     context.nextToken();
                     projectEnvironment.setEnvironmentVariables(new ListUnmarshaller<EnvironmentVariable>(EnvironmentVariableJsonUnmarshaller.getInstance())

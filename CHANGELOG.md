@@ -1,3 +1,20 @@
+# __1.12.641__ __2024-01-19__
+## __AWS CodeBuild__
+  - ### Features
+    - Release CodeBuild Reserved Capacity feature
+
+## __Amazon Athena__
+  - ### Features
+    - Introducing new NotebookS3LocationUri parameter to Athena ImportNotebook API. Payload is no longer required and either Payload or NotebookS3LocationUri needs to be provided (not both) for a successful ImportNotebook API call. If both are provided, an InvalidRequestException will be thrown.
+
+## __Amazon DynamoDB__
+  - ### Features
+    - This release adds support for including ApproximateCreationDateTimePrecision configurations in EnableKinesisStreamingDestination API, adds the same as an optional field in the response of DescribeKinesisStreamingDestination, and adds support for a new UpdateKinesisStreamingDestination API.
+
+## __Amazon Q Connect__
+  - ### Features
+    - Increased Quick Response name max length to 100
+
 # __1.12.640__ __2024-01-18__
 ## __AWS B2B Data Interchange__
   - ### Features
@@ -497,100 +514,16 @@
     - Updated note to ensure customers understand running modes.
 
 # __1.12.618__ __2023-12-13__
-## __Amazon CloudWatch Logs__
-  - ### Features
-    - This release introduces the StartLiveTail API to tail ingested logs in near real time.
-
-## __Amazon Location Service__
-  - ### Features
-    - This release 1)  adds sub-municipality field in Places API for searching and getting places information, and 2) allows optimizing route calculation based on expected arrival time.
-
-## __EC2 Image Builder__
-  - ### Features
-    - This release adds the Image Workflows feature to give more flexibility and control over the image building and testing process.
-
 ## __Elastic Disaster Recovery Service__
   - ### Features
     - Adding AgentVersion to SourceServer and RecoveryInstance structures
 
 # __1.12.617__ __2023-12-13__
-## __Amazon CloudWatch Logs__
-  - ### Features
-    - This release introduces the StartLiveTail API to tail ingested logs in near real time.
-
-## __Amazon Location Service__
-  - ### Features
-    - This release 1)  adds sub-municipality field in Places API for searching and getting places information, and 2) allows optimizing route calculation based on expected arrival time.
-
-## __EC2 Image Builder__
-  - ### Features
-    - This release adds the Image Workflows feature to give more flexibility and control over the image building and testing process.
-
 # __1.12.616__ __2023-12-13__
-## __Amazon CloudWatch Logs__
-  - ### Features
-    - This release introduces the StartLiveTail API to tail ingested logs in near real time.
-
-## __Amazon Location Service__
-  - ### Features
-    - This release 1)  adds sub-municipality field in Places API for searching and getting places information, and 2) allows optimizing route calculation based on expected arrival time.
-
-## __EC2 Image Builder__
-  - ### Features
-    - This release adds the Image Workflows feature to give more flexibility and control over the image building and testing process.
-
 # __1.12.615__ __2023-12-13__
-## __Amazon CloudWatch Logs__
-  - ### Features
-    - This release introduces the StartLiveTail API to tail ingested logs in near real time.
-
-## __Amazon Location Service__
-  - ### Features
-    - This release 1)  adds sub-municipality field in Places API for searching and getting places information, and 2) allows optimizing route calculation based on expected arrival time.
-
-## __EC2 Image Builder__
-  - ### Features
-    - This release adds the Image Workflows feature to give more flexibility and control over the image building and testing process.
-
 # __1.12.614__ __2023-12-12__
-## __Amazon CloudWatch Logs__
-  - ### Features
-    - This release introduces the StartLiveTail API to tail ingested logs in near real time.
-
-## __Amazon Location Service__
-  - ### Features
-    - This release 1)  adds sub-municipality field in Places API for searching and getting places information, and 2) allows optimizing route calculation based on expected arrival time.
-
-## __EC2 Image Builder__
-  - ### Features
-    - This release adds the Image Workflows feature to give more flexibility and control over the image building and testing process.
-
 # __1.12.613__ __2023-12-12__
-## __Amazon CloudWatch Logs__
-  - ### Features
-    - This release introduces the StartLiveTail API to tail ingested logs in near real time.
-
-## __Amazon Location Service__
-  - ### Features
-    - This release 1)  adds sub-municipality field in Places API for searching and getting places information, and 2) allows optimizing route calculation based on expected arrival time.
-
-## __EC2 Image Builder__
-  - ### Features
-    - This release adds the Image Workflows feature to give more flexibility and control over the image building and testing process.
-
 # __1.12.612__ __2023-12-12__
-## __Amazon CloudWatch Logs__
-  - ### Features
-    - This release introduces the StartLiveTail API to tail ingested logs in near real time.
-
-## __Amazon Location Service__
-  - ### Features
-    - This release 1)  adds sub-municipality field in Places API for searching and getting places information, and 2) allows optimizing route calculation based on expected arrival time.
-
-## __EC2 Image Builder__
-  - ### Features
-    - This release adds the Image Workflows feature to give more flexibility and control over the image building and testing process.
-
 # __1.12.611__ __2023-12-12__
 ## __Amazon CloudWatch Logs__
   - ### Features
@@ -1044,10 +977,6 @@
     - This release adds following support. 1. New APIs for metadata bulk operations. 2. Modify the component type API to support composite component types - nesting component types within one another. 3. New list APIs for components and properties. 4. Support the larger scope digital twin modeling.
 
 ## __Amazon CloudFront__
-  - ### Features
-    - This release adds support for CloudFront KeyValueStore, a globally managed key value datastore associated with CloudFront Functions.
-
-## __Amazon CloudFront KeyValueStore__
   - ### Features
     - This release adds support for CloudFront KeyValueStore, a globally managed key value datastore associated with CloudFront Functions.
 

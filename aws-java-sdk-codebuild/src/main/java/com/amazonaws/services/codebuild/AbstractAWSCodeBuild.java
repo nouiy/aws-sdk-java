@@ -53,6 +53,11 @@ public class AbstractAWSCodeBuild implements AWSCodeBuild {
     }
 
     @Override
+    public BatchGetFleetsResult batchGetFleets(BatchGetFleetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchGetProjectsResult batchGetProjects(BatchGetProjectsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -64,6 +69,11 @@ public class AbstractAWSCodeBuild implements AWSCodeBuild {
 
     @Override
     public BatchGetReportsResult batchGetReports(BatchGetReportsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateFleetResult createFleet(CreateFleetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -84,6 +94,11 @@ public class AbstractAWSCodeBuild implements AWSCodeBuild {
 
     @Override
     public DeleteBuildBatchResult deleteBuildBatch(DeleteBuildBatchRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteFleetResult deleteFleet(DeleteFleetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -173,6 +188,11 @@ public class AbstractAWSCodeBuild implements AWSCodeBuild {
     }
 
     @Override
+    public ListFleetsResult listFleets(ListFleetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListProjectsResult listProjects(ListProjectsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -239,6 +259,11 @@ public class AbstractAWSCodeBuild implements AWSCodeBuild {
 
     @Override
     public StopBuildBatchResult stopBuildBatch(StopBuildBatchRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateFleetResult updateFleet(UpdateFleetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

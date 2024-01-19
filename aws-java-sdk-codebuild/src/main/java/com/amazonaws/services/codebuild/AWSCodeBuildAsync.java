@@ -134,6 +134,37 @@ public interface AWSCodeBuildAsync extends AWSCodeBuild {
 
     /**
      * <p>
+     * Gets information about one or more compute fleets.
+     * </p>
+     * 
+     * @param batchGetFleetsRequest
+     * @return A Java Future containing the result of the BatchGetFleets operation returned by the service.
+     * @sample AWSCodeBuildAsync.BatchGetFleets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetFleets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetFleetsResult> batchGetFleetsAsync(BatchGetFleetsRequest batchGetFleetsRequest);
+
+    /**
+     * <p>
+     * Gets information about one or more compute fleets.
+     * </p>
+     * 
+     * @param batchGetFleetsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetFleets operation returned by the service.
+     * @sample AWSCodeBuildAsyncHandler.BatchGetFleets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetFleets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetFleetsResult> batchGetFleetsAsync(BatchGetFleetsRequest batchGetFleetsRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetFleetsRequest, BatchGetFleetsResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets information about one or more build projects.
      * </p>
      * 
@@ -224,6 +255,37 @@ public interface AWSCodeBuildAsync extends AWSCodeBuild {
      */
     java.util.concurrent.Future<BatchGetReportsResult> batchGetReportsAsync(BatchGetReportsRequest batchGetReportsRequest,
             com.amazonaws.handlers.AsyncHandler<BatchGetReportsRequest, BatchGetReportsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a compute fleet.
+     * </p>
+     * 
+     * @param createFleetRequest
+     * @return A Java Future containing the result of the CreateFleet operation returned by the service.
+     * @sample AWSCodeBuildAsync.CreateFleet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/CreateFleet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest createFleetRequest);
+
+    /**
+     * <p>
+     * Creates a compute fleet.
+     * </p>
+     * 
+     * @param createFleetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateFleet operation returned by the service.
+     * @sample AWSCodeBuildAsyncHandler.CreateFleet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/CreateFleet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest createFleetRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateFleetRequest, CreateFleetResult> asyncHandler);
 
     /**
      * <p>
@@ -372,6 +434,37 @@ public interface AWSCodeBuildAsync extends AWSCodeBuild {
      */
     java.util.concurrent.Future<DeleteBuildBatchResult> deleteBuildBatchAsync(DeleteBuildBatchRequest deleteBuildBatchRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteBuildBatchRequest, DeleteBuildBatchResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a compute fleet. When you delete a compute fleet, its builds are not deleted.
+     * </p>
+     * 
+     * @param deleteFleetRequest
+     * @return A Java Future containing the result of the DeleteFleet operation returned by the service.
+     * @sample AWSCodeBuildAsync.DeleteFleet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteFleet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(DeleteFleetRequest deleteFleetRequest);
+
+    /**
+     * <p>
+     * Deletes a compute fleet. When you delete a compute fleet, its builds are not deleted.
+     * </p>
+     * 
+     * @param deleteFleetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteFleet operation returned by the service.
+     * @sample AWSCodeBuildAsyncHandler.DeleteFleet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteFleet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(DeleteFleetRequest deleteFleetRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteFleetRequest, DeleteFleetResult> asyncHandler);
 
     /**
      * <p>
@@ -914,6 +1007,37 @@ public interface AWSCodeBuildAsync extends AWSCodeBuild {
 
     /**
      * <p>
+     * Gets a list of compute fleet names with each compute fleet name representing a single compute fleet.
+     * </p>
+     * 
+     * @param listFleetsRequest
+     * @return A Java Future containing the result of the ListFleets operation returned by the service.
+     * @sample AWSCodeBuildAsync.ListFleets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListFleets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(ListFleetsRequest listFleetsRequest);
+
+    /**
+     * <p>
+     * Gets a list of compute fleet names with each compute fleet name representing a single compute fleet.
+     * </p>
+     * 
+     * @param listFleetsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListFleets operation returned by the service.
+     * @sample AWSCodeBuildAsyncHandler.ListFleets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListFleets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(ListFleetsRequest listFleetsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListFleetsRequest, ListFleetsResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a list of build project names, with each build project name representing a single build project.
      * </p>
      * 
@@ -1347,6 +1471,37 @@ public interface AWSCodeBuildAsync extends AWSCodeBuild {
      */
     java.util.concurrent.Future<StopBuildBatchResult> stopBuildBatchAsync(StopBuildBatchRequest stopBuildBatchRequest,
             com.amazonaws.handlers.AsyncHandler<StopBuildBatchRequest, StopBuildBatchResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a compute fleet.
+     * </p>
+     * 
+     * @param updateFleetRequest
+     * @return A Java Future containing the result of the UpdateFleet operation returned by the service.
+     * @sample AWSCodeBuildAsync.UpdateFleet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/UpdateFleet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFleetResult> updateFleetAsync(UpdateFleetRequest updateFleetRequest);
+
+    /**
+     * <p>
+     * Updates a compute fleet.
+     * </p>
+     * 
+     * @param updateFleetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateFleet operation returned by the service.
+     * @sample AWSCodeBuildAsyncHandler.UpdateFleet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/UpdateFleet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFleetResult> updateFleetAsync(UpdateFleetRequest updateFleetRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateFleetRequest, UpdateFleetResult> asyncHandler);
 
     /**
      * <p>

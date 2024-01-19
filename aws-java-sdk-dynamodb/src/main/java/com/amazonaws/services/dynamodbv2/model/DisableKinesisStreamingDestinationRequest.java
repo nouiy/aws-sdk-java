@@ -37,6 +37,12 @@ public class DisableKinesisStreamingDestinationRequest extends com.amazonaws.Ama
      * </p>
      */
     private String streamArn;
+    /**
+     * <p>
+     * The source for the Kinesis streaming information that is being enabled.
+     * </p>
+     */
+    private EnableKinesisStreamingConfiguration enableKinesisStreamingConfiguration;
 
     /**
      * <p>
@@ -119,6 +125,47 @@ public class DisableKinesisStreamingDestinationRequest extends com.amazonaws.Ama
     }
 
     /**
+     * <p>
+     * The source for the Kinesis streaming information that is being enabled.
+     * </p>
+     * 
+     * @param enableKinesisStreamingConfiguration
+     *        The source for the Kinesis streaming information that is being enabled.
+     */
+
+    public void setEnableKinesisStreamingConfiguration(EnableKinesisStreamingConfiguration enableKinesisStreamingConfiguration) {
+        this.enableKinesisStreamingConfiguration = enableKinesisStreamingConfiguration;
+    }
+
+    /**
+     * <p>
+     * The source for the Kinesis streaming information that is being enabled.
+     * </p>
+     * 
+     * @return The source for the Kinesis streaming information that is being enabled.
+     */
+
+    public EnableKinesisStreamingConfiguration getEnableKinesisStreamingConfiguration() {
+        return this.enableKinesisStreamingConfiguration;
+    }
+
+    /**
+     * <p>
+     * The source for the Kinesis streaming information that is being enabled.
+     * </p>
+     * 
+     * @param enableKinesisStreamingConfiguration
+     *        The source for the Kinesis streaming information that is being enabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DisableKinesisStreamingDestinationRequest withEnableKinesisStreamingConfiguration(
+            EnableKinesisStreamingConfiguration enableKinesisStreamingConfiguration) {
+        setEnableKinesisStreamingConfiguration(enableKinesisStreamingConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +180,9 @@ public class DisableKinesisStreamingDestinationRequest extends com.amazonaws.Ama
         if (getTableName() != null)
             sb.append("TableName: ").append(getTableName()).append(",");
         if (getStreamArn() != null)
-            sb.append("StreamArn: ").append(getStreamArn());
+            sb.append("StreamArn: ").append(getStreamArn()).append(",");
+        if (getEnableKinesisStreamingConfiguration() != null)
+            sb.append("EnableKinesisStreamingConfiguration: ").append(getEnableKinesisStreamingConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +205,11 @@ public class DisableKinesisStreamingDestinationRequest extends com.amazonaws.Ama
             return false;
         if (other.getStreamArn() != null && other.getStreamArn().equals(this.getStreamArn()) == false)
             return false;
+        if (other.getEnableKinesisStreamingConfiguration() == null ^ this.getEnableKinesisStreamingConfiguration() == null)
+            return false;
+        if (other.getEnableKinesisStreamingConfiguration() != null
+                && other.getEnableKinesisStreamingConfiguration().equals(this.getEnableKinesisStreamingConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +220,7 @@ public class DisableKinesisStreamingDestinationRequest extends com.amazonaws.Ama
 
         hashCode = prime * hashCode + ((getTableName() == null) ? 0 : getTableName().hashCode());
         hashCode = prime * hashCode + ((getStreamArn() == null) ? 0 : getStreamArn().hashCode());
+        hashCode = prime * hashCode + ((getEnableKinesisStreamingConfiguration() == null) ? 0 : getEnableKinesisStreamingConfiguration().hashCode());
         return hashCode;
     }
 

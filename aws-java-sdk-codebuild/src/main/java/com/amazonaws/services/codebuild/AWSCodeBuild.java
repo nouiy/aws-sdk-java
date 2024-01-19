@@ -147,6 +147,21 @@ public interface AWSCodeBuild {
 
     /**
      * <p>
+     * Gets information about one or more compute fleets.
+     * </p>
+     * 
+     * @param batchGetFleetsRequest
+     * @return Result of the BatchGetFleets operation returned by the service.
+     * @throws InvalidInputException
+     *         The input value that was provided is not valid.
+     * @sample AWSCodeBuild.BatchGetFleets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetFleets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    BatchGetFleetsResult batchGetFleets(BatchGetFleetsRequest batchGetFleetsRequest);
+
+    /**
+     * <p>
      * Gets information about one or more build projects.
      * </p>
      * 
@@ -189,6 +204,26 @@ public interface AWSCodeBuild {
      *      Documentation</a>
      */
     BatchGetReportsResult batchGetReports(BatchGetReportsRequest batchGetReportsRequest);
+
+    /**
+     * <p>
+     * Creates a compute fleet.
+     * </p>
+     * 
+     * @param createFleetRequest
+     * @return Result of the CreateFleet operation returned by the service.
+     * @throws InvalidInputException
+     *         The input value that was provided is not valid.
+     * @throws ResourceAlreadyExistsException
+     *         The specified Amazon Web Services resource cannot be created, because an Amazon Web Services resource
+     *         with the same settings already exists.
+     * @throws AccountLimitExceededException
+     *         An Amazon Web Services service limit was exceeded for the calling Amazon Web Services account.
+     * @sample AWSCodeBuild.CreateFleet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/CreateFleet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateFleetResult createFleet(CreateFleetRequest createFleetRequest);
 
     /**
      * <p>
@@ -278,6 +313,21 @@ public interface AWSCodeBuild {
      *      Documentation</a>
      */
     DeleteBuildBatchResult deleteBuildBatch(DeleteBuildBatchRequest deleteBuildBatchRequest);
+
+    /**
+     * <p>
+     * Deletes a compute fleet. When you delete a compute fleet, its builds are not deleted.
+     * </p>
+     * 
+     * @param deleteFleetRequest
+     * @return Result of the DeleteFleet operation returned by the service.
+     * @throws InvalidInputException
+     *         The input value that was provided is not valid.
+     * @sample AWSCodeBuild.DeleteFleet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteFleet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteFleetResult deleteFleet(DeleteFleetRequest deleteFleetRequest);
 
     /**
      * <p>
@@ -560,6 +610,21 @@ public interface AWSCodeBuild {
 
     /**
      * <p>
+     * Gets a list of compute fleet names with each compute fleet name representing a single compute fleet.
+     * </p>
+     * 
+     * @param listFleetsRequest
+     * @return Result of the ListFleets operation returned by the service.
+     * @throws InvalidInputException
+     *         The input value that was provided is not valid.
+     * @sample AWSCodeBuild.ListFleets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListFleets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListFleetsResult listFleets(ListFleetsRequest listFleetsRequest);
+
+    /**
+     * <p>
      * Gets a list of build project names, with each build project name representing a single build project.
      * </p>
      * 
@@ -787,6 +852,25 @@ public interface AWSCodeBuild {
      *      Documentation</a>
      */
     StopBuildBatchResult stopBuildBatch(StopBuildBatchRequest stopBuildBatchRequest);
+
+    /**
+     * <p>
+     * Updates a compute fleet.
+     * </p>
+     * 
+     * @param updateFleetRequest
+     * @return Result of the UpdateFleet operation returned by the service.
+     * @throws InvalidInputException
+     *         The input value that was provided is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified Amazon Web Services resource cannot be found.
+     * @throws AccountLimitExceededException
+     *         An Amazon Web Services service limit was exceeded for the calling Amazon Web Services account.
+     * @sample AWSCodeBuild.UpdateFleet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/UpdateFleet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateFleetResult updateFleet(UpdateFleetRequest updateFleetRequest);
 
     /**
      * <p>

@@ -4053,6 +4053,41 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
+     * The command to update the Kinesis stream destination.
+     * </p>
+     * 
+     * @param updateKinesisStreamingDestinationRequest
+     * @return A Java Future containing the result of the UpdateKinesisStreamingDestination operation returned by the
+     *         service.
+     * @sample AmazonDynamoDBAsync.UpdateKinesisStreamingDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateKinesisStreamingDestination"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKinesisStreamingDestinationResult> updateKinesisStreamingDestinationAsync(
+            UpdateKinesisStreamingDestinationRequest updateKinesisStreamingDestinationRequest);
+
+    /**
+     * <p>
+     * The command to update the Kinesis stream destination.
+     * </p>
+     * 
+     * @param updateKinesisStreamingDestinationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateKinesisStreamingDestination operation returned by the
+     *         service.
+     * @sample AmazonDynamoDBAsyncHandler.UpdateKinesisStreamingDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateKinesisStreamingDestination"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateKinesisStreamingDestinationResult> updateKinesisStreamingDestinationAsync(
+            UpdateKinesisStreamingDestinationRequest updateKinesisStreamingDestinationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateKinesisStreamingDestinationRequest, UpdateKinesisStreamingDestinationResult> asyncHandler);
+
+    /**
+     * <p>
      * Modifies the provisioned throughput settings, global secondary indexes, or DynamoDB Streams settings for a given
      * table.
      * </p>

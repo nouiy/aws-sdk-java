@@ -125,6 +125,8 @@ public enum DynamoDBv2Actions implements Action {
     UpdateGlobalTableSettings("dynamodb:UpdateGlobalTableSettings"),
     /** Action for the UpdateItem operation. */
     UpdateItem("dynamodb:UpdateItem"),
+    /** Action for the UpdateKinesisStreamingDestination operation. */
+    UpdateKinesisStreamingDestination("dynamodb:UpdateKinesisStreamingDestination"),
     /** Action for the UpdateTable operation. */
     UpdateTable("dynamodb:UpdateTable"),
     /** Action for the UpdateTableReplicaAutoScaling operation. */
