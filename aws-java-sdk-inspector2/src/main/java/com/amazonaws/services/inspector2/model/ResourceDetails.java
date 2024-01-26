@@ -42,7 +42,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsEcrContainerImageDetails awsEcrContainerImage;
     /**
      * <p>
-     * A summary of the information about an AWS Lambda function affected by a finding.
+     * A summary of the information about an Amazon Web Services Lambda function affected by a finding.
      * </p>
      */
     private AwsLambdaFunctionDetails awsLambdaFunction;
@@ -129,11 +129,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A summary of the information about an AWS Lambda function affected by a finding.
+     * A summary of the information about an Amazon Web Services Lambda function affected by a finding.
      * </p>
      * 
      * @param awsLambdaFunction
-     *        A summary of the information about an AWS Lambda function affected by a finding.
+     *        A summary of the information about an Amazon Web Services Lambda function affected by a finding.
      */
 
     public void setAwsLambdaFunction(AwsLambdaFunctionDetails awsLambdaFunction) {
@@ -142,10 +142,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A summary of the information about an AWS Lambda function affected by a finding.
+     * A summary of the information about an Amazon Web Services Lambda function affected by a finding.
      * </p>
      * 
-     * @return A summary of the information about an AWS Lambda function affected by a finding.
+     * @return A summary of the information about an Amazon Web Services Lambda function affected by a finding.
      */
 
     public AwsLambdaFunctionDetails getAwsLambdaFunction() {
@@ -154,11 +154,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A summary of the information about an AWS Lambda function affected by a finding.
+     * A summary of the information about an Amazon Web Services Lambda function affected by a finding.
      * </p>
      * 
      * @param awsLambdaFunction
-     *        A summary of the information about an AWS Lambda function affected by a finding.
+     *        A summary of the information about an Amazon Web Services Lambda function affected by a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

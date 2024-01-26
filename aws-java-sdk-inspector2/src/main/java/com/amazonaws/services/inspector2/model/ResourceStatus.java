@@ -42,7 +42,7 @@ public class ResourceStatus implements Serializable, Cloneable, StructuredPojo {
     private String ecr;
     /**
      * <p>
-     * The status of Amazon Inspector scanning for AWS Lambda function.
+     * The status of Amazon Inspector scanning for Amazon Web Services Lambda function.
      * </p>
      */
     private String lambda;
@@ -173,11 +173,11 @@ public class ResourceStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of Amazon Inspector scanning for AWS Lambda function.
+     * The status of Amazon Inspector scanning for Amazon Web Services Lambda function.
      * </p>
      * 
      * @param lambda
-     *        The status of Amazon Inspector scanning for AWS Lambda function.
+     *        The status of Amazon Inspector scanning for Amazon Web Services Lambda function.
      * @see Status
      */
 
@@ -187,10 +187,10 @@ public class ResourceStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of Amazon Inspector scanning for AWS Lambda function.
+     * The status of Amazon Inspector scanning for Amazon Web Services Lambda function.
      * </p>
      * 
-     * @return The status of Amazon Inspector scanning for AWS Lambda function.
+     * @return The status of Amazon Inspector scanning for Amazon Web Services Lambda function.
      * @see Status
      */
 
@@ -200,11 +200,11 @@ public class ResourceStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of Amazon Inspector scanning for AWS Lambda function.
+     * The status of Amazon Inspector scanning for Amazon Web Services Lambda function.
      * </p>
      * 
      * @param lambda
-     *        The status of Amazon Inspector scanning for AWS Lambda function.
+     *        The status of Amazon Inspector scanning for Amazon Web Services Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */
@@ -216,11 +216,11 @@ public class ResourceStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of Amazon Inspector scanning for AWS Lambda function.
+     * The status of Amazon Inspector scanning for Amazon Web Services Lambda function.
      * </p>
      * 
      * @param lambda
-     *        The status of Amazon Inspector scanning for AWS Lambda function.
+     *        The status of Amazon Inspector scanning for Amazon Web Services Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */

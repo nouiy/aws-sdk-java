@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The VPC security groups and subnets that are attached to an AWS Lambda function. For more information, see <a
- * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
+ * The VPC security groups and subnets that are attached to an Amazon Web Services Lambda function. For more
+ * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/LambdaVpcConfig" target="_top">AWS API
@@ -31,8 +31,8 @@ public class LambdaVpcConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The VPC security groups and subnets that are attached to an AWS Lambda function. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
+     * The VPC security groups and subnets that are attached to an Amazon Web Services Lambda function. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
      * </p>
      */
     private java.util.List<String> securityGroupIds;
@@ -51,12 +51,13 @@ public class LambdaVpcConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The VPC security groups and subnets that are attached to an AWS Lambda function. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
+     * The VPC security groups and subnets that are attached to an Amazon Web Services Lambda function. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
      * </p>
      * 
-     * @return The VPC security groups and subnets that are attached to an AWS Lambda function. For more information,
-     *         see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
+     * @return The VPC security groups and subnets that are attached to an Amazon Web Services Lambda function. For more
+     *         information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC
+     *         Settings</a>.
      */
 
     public java.util.List<String> getSecurityGroupIds() {
@@ -65,13 +66,14 @@ public class LambdaVpcConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The VPC security groups and subnets that are attached to an AWS Lambda function. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
+     * The VPC security groups and subnets that are attached to an Amazon Web Services Lambda function. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
      * </p>
      * 
      * @param securityGroupIds
-     *        The VPC security groups and subnets that are attached to an AWS Lambda function. For more information, see
-     *        <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
+     *        The VPC security groups and subnets that are attached to an Amazon Web Services Lambda function. For more
+     *        information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC
+     *        Settings</a>.
      */
 
     public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
@@ -85,8 +87,8 @@ public class LambdaVpcConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The VPC security groups and subnets that are attached to an AWS Lambda function. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
+     * The VPC security groups and subnets that are attached to an Amazon Web Services Lambda function. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -95,8 +97,9 @@ public class LambdaVpcConfig implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param securityGroupIds
-     *        The VPC security groups and subnets that are attached to an AWS Lambda function. For more information, see
-     *        <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
+     *        The VPC security groups and subnets that are attached to an Amazon Web Services Lambda function. For more
+     *        information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC
+     *        Settings</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,13 +115,14 @@ public class LambdaVpcConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The VPC security groups and subnets that are attached to an AWS Lambda function. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
+     * The VPC security groups and subnets that are attached to an Amazon Web Services Lambda function. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
      * </p>
      * 
      * @param securityGroupIds
-     *        The VPC security groups and subnets that are attached to an AWS Lambda function. For more information, see
-     *        <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC Settings</a>.
+     *        The VPC security groups and subnets that are attached to an Amazon Web Services Lambda function. For more
+     *        information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC
+     *        Settings</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

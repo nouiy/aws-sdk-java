@@ -48,6 +48,10 @@ public class EcrContainerImageMetadataJsonUnmarshaller implements Unmarshaller<E
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("imagePulledAt", targetDepth)) {
+                    context.nextToken();
+                    ecrContainerImageMetadata.setImagePulledAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     ecrContainerImageMetadata.setTags(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

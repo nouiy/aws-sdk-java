@@ -62,7 +62,7 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
     private java.util.List<HyperParameterTrainingJobDefinition> trainingJobDefinitions;
     /**
      * <p>
-     * The status of the tuning job: InProgress, Completed, Failed, Stopping, or Stopped.
+     * The status of the tuning job.
      * </p>
      */
     private String hyperParameterTuningJobStatus;
@@ -426,11 +426,11 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The status of the tuning job: InProgress, Completed, Failed, Stopping, or Stopped.
+     * The status of the tuning job.
      * </p>
      * 
      * @param hyperParameterTuningJobStatus
-     *        The status of the tuning job: InProgress, Completed, Failed, Stopping, or Stopped.
+     *        The status of the tuning job.
      * @see HyperParameterTuningJobStatus
      */
 
@@ -440,10 +440,10 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The status of the tuning job: InProgress, Completed, Failed, Stopping, or Stopped.
+     * The status of the tuning job.
      * </p>
      * 
-     * @return The status of the tuning job: InProgress, Completed, Failed, Stopping, or Stopped.
+     * @return The status of the tuning job.
      * @see HyperParameterTuningJobStatus
      */
 
@@ -453,11 +453,11 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The status of the tuning job: InProgress, Completed, Failed, Stopping, or Stopped.
+     * The status of the tuning job.
      * </p>
      * 
      * @param hyperParameterTuningJobStatus
-     *        The status of the tuning job: InProgress, Completed, Failed, Stopping, or Stopped.
+     *        The status of the tuning job.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HyperParameterTuningJobStatus
      */
@@ -469,11 +469,11 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The status of the tuning job: InProgress, Completed, Failed, Stopping, or Stopped.
+     * The status of the tuning job.
      * </p>
      * 
      * @param hyperParameterTuningJobStatus
-     *        The status of the tuning job: InProgress, Completed, Failed, Stopping, or Stopped.
+     *        The status of the tuning job.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HyperParameterTuningJobStatus
      */

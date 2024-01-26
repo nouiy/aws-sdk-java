@@ -72,6 +72,12 @@ public class CoverageFilterCriteriaJsonUnmarshaller implements Unmarshaller<Cove
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("imagePulledAt", targetDepth)) {
+                    context.nextToken();
+                    coverageFilterCriteria.setImagePulledAt(new ListUnmarshaller<CoverageDateFilter>(CoverageDateFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("lambdaFunctionName", targetDepth)) {
                     context.nextToken();
                     coverageFilterCriteria.setLambdaFunctionName(new ListUnmarshaller<CoverageStringFilter>(CoverageStringFilterJsonUnmarshaller.getInstance())

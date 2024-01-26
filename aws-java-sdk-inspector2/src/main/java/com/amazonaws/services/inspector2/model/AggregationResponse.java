@@ -66,13 +66,13 @@ public class AggregationResponse implements Serializable, Cloneable, StructuredP
     private ImageLayerAggregationResponse imageLayerAggregation;
     /**
      * <p>
-     * An aggregation of findings by AWS Lambda function.
+     * An aggregation of findings by Amazon Web Services Lambda function.
      * </p>
      */
     private LambdaFunctionAggregationResponse lambdaFunctionAggregation;
     /**
      * <p>
-     * An aggregation of findings by AWS Lambda layer.
+     * An aggregation of findings by Amazon Web Services Lambda layer.
      * </p>
      */
     private LambdaLayerAggregationResponse lambdaLayerAggregation;
@@ -337,11 +337,11 @@ public class AggregationResponse implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An aggregation of findings by AWS Lambda function.
+     * An aggregation of findings by Amazon Web Services Lambda function.
      * </p>
      * 
      * @param lambdaFunctionAggregation
-     *        An aggregation of findings by AWS Lambda function.
+     *        An aggregation of findings by Amazon Web Services Lambda function.
      */
 
     public void setLambdaFunctionAggregation(LambdaFunctionAggregationResponse lambdaFunctionAggregation) {
@@ -350,10 +350,10 @@ public class AggregationResponse implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An aggregation of findings by AWS Lambda function.
+     * An aggregation of findings by Amazon Web Services Lambda function.
      * </p>
      * 
-     * @return An aggregation of findings by AWS Lambda function.
+     * @return An aggregation of findings by Amazon Web Services Lambda function.
      */
 
     public LambdaFunctionAggregationResponse getLambdaFunctionAggregation() {
@@ -362,11 +362,11 @@ public class AggregationResponse implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An aggregation of findings by AWS Lambda function.
+     * An aggregation of findings by Amazon Web Services Lambda function.
      * </p>
      * 
      * @param lambdaFunctionAggregation
-     *        An aggregation of findings by AWS Lambda function.
+     *        An aggregation of findings by Amazon Web Services Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -377,11 +377,11 @@ public class AggregationResponse implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An aggregation of findings by AWS Lambda layer.
+     * An aggregation of findings by Amazon Web Services Lambda layer.
      * </p>
      * 
      * @param lambdaLayerAggregation
-     *        An aggregation of findings by AWS Lambda layer.
+     *        An aggregation of findings by Amazon Web Services Lambda layer.
      */
 
     public void setLambdaLayerAggregation(LambdaLayerAggregationResponse lambdaLayerAggregation) {
@@ -390,10 +390,10 @@ public class AggregationResponse implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An aggregation of findings by AWS Lambda layer.
+     * An aggregation of findings by Amazon Web Services Lambda layer.
      * </p>
      * 
-     * @return An aggregation of findings by AWS Lambda layer.
+     * @return An aggregation of findings by Amazon Web Services Lambda layer.
      */
 
     public LambdaLayerAggregationResponse getLambdaLayerAggregation() {
@@ -402,11 +402,11 @@ public class AggregationResponse implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An aggregation of findings by AWS Lambda layer.
+     * An aggregation of findings by Amazon Web Services Lambda layer.
      * </p>
      * 
      * @param lambdaLayerAggregation
-     *        An aggregation of findings by AWS Lambda layer.
+     *        An aggregation of findings by Amazon Web Services Lambda layer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

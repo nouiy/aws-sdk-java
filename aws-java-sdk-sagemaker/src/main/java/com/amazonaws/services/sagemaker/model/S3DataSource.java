@@ -55,7 +55,7 @@ public class S3DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>
+     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>
      * </p>
      * </li>
      * <li>
@@ -295,7 +295,7 @@ public class S3DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>
+     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>
      * </p>
      * </li>
      * <li>
@@ -361,7 +361,7 @@ public class S3DataSource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>
+     *        A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>
      *        </p>
      *        </li>
      *        <li>
@@ -434,7 +434,7 @@ public class S3DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>
+     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>
      * </p>
      * </li>
      * <li>
@@ -499,7 +499,7 @@ public class S3DataSource implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>
+     *         A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>
      *         </p>
      *         </li>
      *         <li>
@@ -572,7 +572,7 @@ public class S3DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>
+     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>
      * </p>
      * </li>
      * <li>
@@ -638,7 +638,7 @@ public class S3DataSource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>
+     *        A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>
      *        </p>
      *        </li>
      *        <li>

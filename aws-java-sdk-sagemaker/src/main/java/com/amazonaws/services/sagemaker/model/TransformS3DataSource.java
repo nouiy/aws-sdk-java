@@ -53,7 +53,7 @@ public class TransformS3DataSource implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>.
+     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>.
      * </p>
      * </li>
      * <li>
@@ -257,7 +257,7 @@ public class TransformS3DataSource implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>.
+     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>.
      * </p>
      * </li>
      * <li>
@@ -314,7 +314,7 @@ public class TransformS3DataSource implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>.
+     *        A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -377,7 +377,7 @@ public class TransformS3DataSource implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>.
+     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>.
      * </p>
      * </li>
      * <li>
@@ -433,7 +433,7 @@ public class TransformS3DataSource implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>.
+     *         A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -496,7 +496,7 @@ public class TransformS3DataSource implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>.
+     * A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>.
      * </p>
      * </li>
      * <li>
@@ -553,7 +553,7 @@ public class TransformS3DataSource implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        A key name prefix might look like this: <code>s3://bucketname/exampleprefix</code>.
+     *        A key name prefix might look like this: <code>s3://bucketname/exampleprefix/</code>.
      *        </p>
      *        </li>
      *        <li>

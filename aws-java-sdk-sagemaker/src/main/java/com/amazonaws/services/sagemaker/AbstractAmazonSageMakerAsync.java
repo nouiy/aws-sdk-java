@@ -1117,6 +1117,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteHyperParameterTuningJobResult> deleteHyperParameterTuningJobAsync(DeleteHyperParameterTuningJobRequest request) {
+
+        return deleteHyperParameterTuningJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteHyperParameterTuningJobResult> deleteHyperParameterTuningJobAsync(DeleteHyperParameterTuningJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteHyperParameterTuningJobRequest, DeleteHyperParameterTuningJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteImageResult> deleteImageAsync(DeleteImageRequest request) {
 
         return deleteImageAsync(request, null);

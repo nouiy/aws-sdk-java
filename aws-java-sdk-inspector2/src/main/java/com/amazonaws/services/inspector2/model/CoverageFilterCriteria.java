@@ -54,19 +54,25 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
     private java.util.List<CoverageStringFilter> ecrRepositoryName;
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by function names.
+     * The date an image was last pulled at.
+     * </p>
+     */
+    private java.util.List<CoverageDateFilter> imagePulledAt;
+    /**
+     * <p>
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by function names.
      * </p>
      */
     private java.util.List<CoverageStringFilter> lambdaFunctionName;
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by runtime.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by runtime.
      * </p>
      */
     private java.util.List<CoverageStringFilter> lambdaFunctionRuntime;
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by tag.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by tag.
      * </p>
      */
     private java.util.List<CoverageMapFilter> lambdaFunctionTags;
@@ -394,10 +400,80 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by function names.
+     * The date an image was last pulled at.
      * </p>
      * 
-     * @return Returns coverage statistics for AWS Lambda functions filtered by function names.
+     * @return The date an image was last pulled at.
+     */
+
+    public java.util.List<CoverageDateFilter> getImagePulledAt() {
+        return imagePulledAt;
+    }
+
+    /**
+     * <p>
+     * The date an image was last pulled at.
+     * </p>
+     * 
+     * @param imagePulledAt
+     *        The date an image was last pulled at.
+     */
+
+    public void setImagePulledAt(java.util.Collection<CoverageDateFilter> imagePulledAt) {
+        if (imagePulledAt == null) {
+            this.imagePulledAt = null;
+            return;
+        }
+
+        this.imagePulledAt = new java.util.ArrayList<CoverageDateFilter>(imagePulledAt);
+    }
+
+    /**
+     * <p>
+     * The date an image was last pulled at.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setImagePulledAt(java.util.Collection)} or {@link #withImagePulledAt(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param imagePulledAt
+     *        The date an image was last pulled at.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CoverageFilterCriteria withImagePulledAt(CoverageDateFilter... imagePulledAt) {
+        if (this.imagePulledAt == null) {
+            setImagePulledAt(new java.util.ArrayList<CoverageDateFilter>(imagePulledAt.length));
+        }
+        for (CoverageDateFilter ele : imagePulledAt) {
+            this.imagePulledAt.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date an image was last pulled at.
+     * </p>
+     * 
+     * @param imagePulledAt
+     *        The date an image was last pulled at.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CoverageFilterCriteria withImagePulledAt(java.util.Collection<CoverageDateFilter> imagePulledAt) {
+        setImagePulledAt(imagePulledAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by function names.
+     * </p>
+     * 
+     * @return Returns coverage statistics for Amazon Web Services Lambda functions filtered by function names.
      */
 
     public java.util.List<CoverageStringFilter> getLambdaFunctionName() {
@@ -406,11 +482,11 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by function names.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by function names.
      * </p>
      * 
      * @param lambdaFunctionName
-     *        Returns coverage statistics for AWS Lambda functions filtered by function names.
+     *        Returns coverage statistics for Amazon Web Services Lambda functions filtered by function names.
      */
 
     public void setLambdaFunctionName(java.util.Collection<CoverageStringFilter> lambdaFunctionName) {
@@ -424,7 +500,7 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by function names.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by function names.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -433,7 +509,7 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param lambdaFunctionName
-     *        Returns coverage statistics for AWS Lambda functions filtered by function names.
+     *        Returns coverage statistics for Amazon Web Services Lambda functions filtered by function names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -449,11 +525,11 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by function names.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by function names.
      * </p>
      * 
      * @param lambdaFunctionName
-     *        Returns coverage statistics for AWS Lambda functions filtered by function names.
+     *        Returns coverage statistics for Amazon Web Services Lambda functions filtered by function names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -464,10 +540,10 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by runtime.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by runtime.
      * </p>
      * 
-     * @return Returns coverage statistics for AWS Lambda functions filtered by runtime.
+     * @return Returns coverage statistics for Amazon Web Services Lambda functions filtered by runtime.
      */
 
     public java.util.List<CoverageStringFilter> getLambdaFunctionRuntime() {
@@ -476,11 +552,11 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by runtime.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by runtime.
      * </p>
      * 
      * @param lambdaFunctionRuntime
-     *        Returns coverage statistics for AWS Lambda functions filtered by runtime.
+     *        Returns coverage statistics for Amazon Web Services Lambda functions filtered by runtime.
      */
 
     public void setLambdaFunctionRuntime(java.util.Collection<CoverageStringFilter> lambdaFunctionRuntime) {
@@ -494,7 +570,7 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by runtime.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by runtime.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -503,7 +579,7 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param lambdaFunctionRuntime
-     *        Returns coverage statistics for AWS Lambda functions filtered by runtime.
+     *        Returns coverage statistics for Amazon Web Services Lambda functions filtered by runtime.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -519,11 +595,11 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by runtime.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by runtime.
      * </p>
      * 
      * @param lambdaFunctionRuntime
-     *        Returns coverage statistics for AWS Lambda functions filtered by runtime.
+     *        Returns coverage statistics for Amazon Web Services Lambda functions filtered by runtime.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -534,10 +610,10 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by tag.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by tag.
      * </p>
      * 
-     * @return Returns coverage statistics for AWS Lambda functions filtered by tag.
+     * @return Returns coverage statistics for Amazon Web Services Lambda functions filtered by tag.
      */
 
     public java.util.List<CoverageMapFilter> getLambdaFunctionTags() {
@@ -546,11 +622,11 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by tag.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by tag.
      * </p>
      * 
      * @param lambdaFunctionTags
-     *        Returns coverage statistics for AWS Lambda functions filtered by tag.
+     *        Returns coverage statistics for Amazon Web Services Lambda functions filtered by tag.
      */
 
     public void setLambdaFunctionTags(java.util.Collection<CoverageMapFilter> lambdaFunctionTags) {
@@ -564,7 +640,7 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by tag.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by tag.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -573,7 +649,7 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param lambdaFunctionTags
-     *        Returns coverage statistics for AWS Lambda functions filtered by tag.
+     *        Returns coverage statistics for Amazon Web Services Lambda functions filtered by tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -589,11 +665,11 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Returns coverage statistics for AWS Lambda functions filtered by tag.
+     * Returns coverage statistics for Amazon Web Services Lambda functions filtered by tag.
      * </p>
      * 
      * @param lambdaFunctionTags
-     *        Returns coverage statistics for AWS Lambda functions filtered by tag.
+     *        Returns coverage statistics for Amazon Web Services Lambda functions filtered by tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1082,6 +1158,8 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
             sb.append("EcrImageTags: ").append(getEcrImageTags()).append(",");
         if (getEcrRepositoryName() != null)
             sb.append("EcrRepositoryName: ").append(getEcrRepositoryName()).append(",");
+        if (getImagePulledAt() != null)
+            sb.append("ImagePulledAt: ").append(getImagePulledAt()).append(",");
         if (getLambdaFunctionName() != null)
             sb.append("LambdaFunctionName: ").append(getLambdaFunctionName()).append(",");
         if (getLambdaFunctionRuntime() != null)
@@ -1129,6 +1207,10 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
         if (other.getEcrRepositoryName() == null ^ this.getEcrRepositoryName() == null)
             return false;
         if (other.getEcrRepositoryName() != null && other.getEcrRepositoryName().equals(this.getEcrRepositoryName()) == false)
+            return false;
+        if (other.getImagePulledAt() == null ^ this.getImagePulledAt() == null)
+            return false;
+        if (other.getImagePulledAt() != null && other.getImagePulledAt().equals(this.getImagePulledAt()) == false)
             return false;
         if (other.getLambdaFunctionName() == null ^ this.getLambdaFunctionName() == null)
             return false;
@@ -1178,6 +1260,7 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getEc2InstanceTags() == null) ? 0 : getEc2InstanceTags().hashCode());
         hashCode = prime * hashCode + ((getEcrImageTags() == null) ? 0 : getEcrImageTags().hashCode());
         hashCode = prime * hashCode + ((getEcrRepositoryName() == null) ? 0 : getEcrRepositoryName().hashCode());
+        hashCode = prime * hashCode + ((getImagePulledAt() == null) ? 0 : getImagePulledAt().hashCode());
         hashCode = prime * hashCode + ((getLambdaFunctionName() == null) ? 0 : getLambdaFunctionName().hashCode());
         hashCode = prime * hashCode + ((getLambdaFunctionRuntime() == null) ? 0 : getLambdaFunctionRuntime().hashCode());
         hashCode = prime * hashCode + ((getLambdaFunctionTags() == null) ? 0 : getLambdaFunctionTags().hashCode());

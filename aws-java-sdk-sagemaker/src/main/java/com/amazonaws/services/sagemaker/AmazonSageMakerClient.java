@@ -1320,8 +1320,8 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Creates a <code>Domain</code>. A domain consists of an associated Amazon Elastic File System (EFS) volume, a list
-     * of authorized users, and a variety of security, application, policy, and Amazon Virtual Private Cloud (VPC)
+     * Creates a <code>Domain</code>. A domain consists of an associated Amazon Elastic File System volume, a list of
+     * authorized users, and a variety of security, application, policy, and Amazon Virtual Private Cloud (VPC)
      * configurations. Users within a domain can share notebook files and other artifacts with each other.
      * </p>
      * <p>
@@ -1342,9 +1342,10 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <b>VPC configuration</b>
      * </p>
      * <p>
-     * All traffic between the domain and the EFS volume is through the specified VPC and subnets. For other traffic,
-     * you can specify the <code>AppNetworkAccessType</code> parameter. <code>AppNetworkAccessType</code> corresponds to
-     * the network access type that you choose when you onboard to the domain. The following options are available:
+     * All traffic between the domain and the Amazon EFS volume is through the specified VPC and subnets. For other
+     * traffic, you can specify the <code>AppNetworkAccessType</code> parameter. <code>AppNetworkAccessType</code>
+     * corresponds to the network access type that you choose when you onboard to the domain. The following options are
+     * available:
      * </p>
      * <ul>
      * <li>
@@ -5991,6 +5992,65 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteHumanTaskUiResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteHumanTaskUiResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a hyperparameter tuning job. The <code>DeleteHyperParameterTuningJob</code> API deletes only the tuning
+     * job entry that was created in SageMaker when you called the <code>CreateHyperParameterTuningJob</code> API. It
+     * does not delete training jobs, artifacts, or the IAM role that you specified when creating the model.
+     * </p>
+     * 
+     * @param deleteHyperParameterTuningJobRequest
+     * @return Result of the DeleteHyperParameterTuningJob operation returned by the service.
+     * @sample AmazonSageMaker.DeleteHyperParameterTuningJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteHyperParameterTuningJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteHyperParameterTuningJobResult deleteHyperParameterTuningJob(DeleteHyperParameterTuningJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteHyperParameterTuningJob(request);
+    }
+
+    @SdkInternalApi
+    final DeleteHyperParameterTuningJobResult executeDeleteHyperParameterTuningJob(DeleteHyperParameterTuningJobRequest deleteHyperParameterTuningJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteHyperParameterTuningJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteHyperParameterTuningJobRequest> request = null;
+        Response<DeleteHyperParameterTuningJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteHyperParameterTuningJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteHyperParameterTuningJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteHyperParameterTuningJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteHyperParameterTuningJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteHyperParameterTuningJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -18270,9 +18330,12 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Deploys the new <code>EndpointConfig</code> specified in the request, switches to using newly created endpoint,
-     * and then deletes resources provisioned for the endpoint using the previous <code>EndpointConfig</code> (there is
-     * no availability loss).
+     * Deploys the <code>EndpointConfig</code> specified in the request to a new fleet of instances. SageMaker shifts
+     * endpoint traffic to the new instances with the updated endpoint configuration and then deletes the old instances
+     * using the previous <code>EndpointConfig</code> (there is no availability loss). For more information about how to
+     * control the update and traffic shifting process, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/deployment-guardrails.html"> Update models in
+     * production</a>.
      * </p>
      * <p>
      * When SageMaker receives the request, it sets the endpoint status to <code>Updating</code>. After updating the

@@ -36,6 +36,8 @@ public class CoverageFilterCriteriaMarshaller {
             .marshallLocationName("ecrImageTags").build();
     private static final MarshallingInfo<List> ECRREPOSITORYNAME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ecrRepositoryName").build();
+    private static final MarshallingInfo<List> IMAGEPULLEDAT_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("imagePulledAt").build();
     private static final MarshallingInfo<List> LAMBDAFUNCTIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambdaFunctionName").build();
     private static final MarshallingInfo<List> LAMBDAFUNCTIONRUNTIME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -75,6 +77,7 @@ public class CoverageFilterCriteriaMarshaller {
             protocolMarshaller.marshall(coverageFilterCriteria.getEc2InstanceTags(), EC2INSTANCETAGS_BINDING);
             protocolMarshaller.marshall(coverageFilterCriteria.getEcrImageTags(), ECRIMAGETAGS_BINDING);
             protocolMarshaller.marshall(coverageFilterCriteria.getEcrRepositoryName(), ECRREPOSITORYNAME_BINDING);
+            protocolMarshaller.marshall(coverageFilterCriteria.getImagePulledAt(), IMAGEPULLEDAT_BINDING);
             protocolMarshaller.marshall(coverageFilterCriteria.getLambdaFunctionName(), LAMBDAFUNCTIONNAME_BINDING);
             protocolMarshaller.marshall(coverageFilterCriteria.getLambdaFunctionRuntime(), LAMBDAFUNCTIONRUNTIME_BINDING);
             protocolMarshaller.marshall(coverageFilterCriteria.getLambdaFunctionTags(), LAMBDAFUNCTIONTAGS_BINDING);

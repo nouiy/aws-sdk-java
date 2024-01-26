@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The details that define a findings aggregation based on an AWS Lambda function's layers.
+ * The details that define a findings aggregation based on an Amazon Web Services Lambda function's layers.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/LambdaLayerAggregation" target="_top">AWS
@@ -30,19 +30,19 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The names of the AWS Lambda functions associated with the layers.
+     * The names of the Amazon Web Services Lambda functions associated with the layers.
      * </p>
      */
     private java.util.List<StringFilter> functionNames;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * </p>
      */
     private java.util.List<StringFilter> layerArns;
     /**
      * <p>
-     * The resource IDs for the AWS Lambda function layers.
+     * The resource IDs for the Amazon Web Services Lambda function layers.
      * </p>
      */
     private java.util.List<StringFilter> resourceIds;
@@ -61,10 +61,10 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The names of the AWS Lambda functions associated with the layers.
+     * The names of the Amazon Web Services Lambda functions associated with the layers.
      * </p>
      * 
-     * @return The names of the AWS Lambda functions associated with the layers.
+     * @return The names of the Amazon Web Services Lambda functions associated with the layers.
      */
 
     public java.util.List<StringFilter> getFunctionNames() {
@@ -73,11 +73,11 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The names of the AWS Lambda functions associated with the layers.
+     * The names of the Amazon Web Services Lambda functions associated with the layers.
      * </p>
      * 
      * @param functionNames
-     *        The names of the AWS Lambda functions associated with the layers.
+     *        The names of the Amazon Web Services Lambda functions associated with the layers.
      */
 
     public void setFunctionNames(java.util.Collection<StringFilter> functionNames) {
@@ -91,7 +91,7 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The names of the AWS Lambda functions associated with the layers.
+     * The names of the Amazon Web Services Lambda functions associated with the layers.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -100,7 +100,7 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param functionNames
-     *        The names of the AWS Lambda functions associated with the layers.
+     *        The names of the Amazon Web Services Lambda functions associated with the layers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -116,11 +116,11 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The names of the AWS Lambda functions associated with the layers.
+     * The names of the Amazon Web Services Lambda functions associated with the layers.
      * </p>
      * 
      * @param functionNames
-     *        The names of the AWS Lambda functions associated with the layers.
+     *        The names of the Amazon Web Services Lambda functions associated with the layers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -131,10 +131,10 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     * @return The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      */
 
     public java.util.List<StringFilter> getLayerArns() {
@@ -143,11 +143,11 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * </p>
      * 
      * @param layerArns
-     *        The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      */
 
     public void setLayerArns(java.util.Collection<StringFilter> layerArns) {
@@ -161,7 +161,7 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -170,7 +170,7 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param layerArns
-     *        The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -186,11 +186,11 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * </p>
      * 
      * @param layerArns
-     *        The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -201,10 +201,10 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The resource IDs for the AWS Lambda function layers.
+     * The resource IDs for the Amazon Web Services Lambda function layers.
      * </p>
      * 
-     * @return The resource IDs for the AWS Lambda function layers.
+     * @return The resource IDs for the Amazon Web Services Lambda function layers.
      */
 
     public java.util.List<StringFilter> getResourceIds() {
@@ -213,11 +213,11 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The resource IDs for the AWS Lambda function layers.
+     * The resource IDs for the Amazon Web Services Lambda function layers.
      * </p>
      * 
      * @param resourceIds
-     *        The resource IDs for the AWS Lambda function layers.
+     *        The resource IDs for the Amazon Web Services Lambda function layers.
      */
 
     public void setResourceIds(java.util.Collection<StringFilter> resourceIds) {
@@ -231,7 +231,7 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The resource IDs for the AWS Lambda function layers.
+     * The resource IDs for the Amazon Web Services Lambda function layers.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -240,7 +240,7 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param resourceIds
-     *        The resource IDs for the AWS Lambda function layers.
+     *        The resource IDs for the Amazon Web Services Lambda function layers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -256,11 +256,11 @@ public class LambdaLayerAggregation implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The resource IDs for the AWS Lambda function layers.
+     * The resource IDs for the Amazon Web Services Lambda function layers.
      * </p>
      * 
      * @param resourceIds
-     *        The resource IDs for the AWS Lambda function layers.
+     *        The resource IDs for the Amazon Web Services Lambda function layers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

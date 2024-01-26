@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class EcrConfigurationMarshaller {
 
+    private static final MarshallingInfo<String> PULLDATERESCANDURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pullDateRescanDuration").build();
     private static final MarshallingInfo<String> RESCANDURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rescanDuration").build();
 
@@ -46,6 +48,7 @@ public class EcrConfigurationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(ecrConfiguration.getPullDateRescanDuration(), PULLDATERESCANDURATION_BINDING);
             protocolMarshaller.marshall(ecrConfiguration.getRescanDuration(), RESCANDURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

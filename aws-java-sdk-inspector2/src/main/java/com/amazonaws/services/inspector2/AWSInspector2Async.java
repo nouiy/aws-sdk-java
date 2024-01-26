@@ -1834,8 +1834,8 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
-     * Updates an encryption key. A <code>ResourceNotFoundException</code> means that an AWS owned key is being used for
-     * encryption.
+     * Updates an encryption key. A <code>ResourceNotFoundException</code> means that an Amazon Web Services owned key
+     * is being used for encryption.
      * </p>
      * 
      * @param updateEncryptionKeyRequest
@@ -1848,8 +1848,8 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
-     * Updates an encryption key. A <code>ResourceNotFoundException</code> means that an AWS owned key is being used for
-     * encryption.
+     * Updates an encryption key. A <code>ResourceNotFoundException</code> means that an Amazon Web Services owned key
+     * is being used for encryption.
      * </p>
      * 
      * @param updateEncryptionKeyRequest

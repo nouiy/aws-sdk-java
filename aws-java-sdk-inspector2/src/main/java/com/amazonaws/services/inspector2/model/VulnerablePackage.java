@@ -78,7 +78,7 @@ public class VulnerablePackage implements Serializable, Cloneable, StructuredPoj
     private String remediation;
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the AWS Lambda function affected by a finding.
+     * The Amazon Resource Number (ARN) of the Amazon Web Services Lambda function affected by a finding.
      * </p>
      */
     private String sourceLambdaLayerArn;
@@ -436,11 +436,11 @@ public class VulnerablePackage implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the AWS Lambda function affected by a finding.
+     * The Amazon Resource Number (ARN) of the Amazon Web Services Lambda function affected by a finding.
      * </p>
      * 
      * @param sourceLambdaLayerArn
-     *        The Amazon Resource Number (ARN) of the AWS Lambda function affected by a finding.
+     *        The Amazon Resource Number (ARN) of the Amazon Web Services Lambda function affected by a finding.
      */
 
     public void setSourceLambdaLayerArn(String sourceLambdaLayerArn) {
@@ -449,10 +449,10 @@ public class VulnerablePackage implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the AWS Lambda function affected by a finding.
+     * The Amazon Resource Number (ARN) of the Amazon Web Services Lambda function affected by a finding.
      * </p>
      * 
-     * @return The Amazon Resource Number (ARN) of the AWS Lambda function affected by a finding.
+     * @return The Amazon Resource Number (ARN) of the Amazon Web Services Lambda function affected by a finding.
      */
 
     public String getSourceLambdaLayerArn() {
@@ -461,11 +461,11 @@ public class VulnerablePackage implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the AWS Lambda function affected by a finding.
+     * The Amazon Resource Number (ARN) of the Amazon Web Services Lambda function affected by a finding.
      * </p>
      * 
      * @param sourceLambdaLayerArn
-     *        The Amazon Resource Number (ARN) of the AWS Lambda function affected by a finding.
+     *        The Amazon Resource Number (ARN) of the Amazon Web Services Lambda function affected by a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1,3 +1,16 @@
+# __1.12.646__ __2024-01-26__
+## __Amazon Connect Service__
+  - ### Features
+    - Update list and string length limits for predefined attributes.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Amazon SageMaker Automatic Model Tuning now provides an API to programmatically delete tuning jobs.
+
+## __Inspector2__
+  - ### Features
+    - This release adds ECR container image scanning based on their lastRecordedPullTime.
+
 # __1.12.645__ __2024-01-25__
 ## __AWS Certificate Manager Private Certificate Authority__
   - ### Features

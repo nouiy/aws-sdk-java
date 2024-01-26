@@ -3740,8 +3740,8 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
     /**
      * <p>
-     * Updates an encryption key. A <code>ResourceNotFoundException</code> means that an AWS owned key is being used for
-     * encryption.
+     * Updates an encryption key. A <code>ResourceNotFoundException</code> means that an Amazon Web Services owned key
+     * is being used for encryption.
      * </p>
      * 
      * @param updateEncryptionKeyRequest

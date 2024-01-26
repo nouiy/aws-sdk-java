@@ -48,7 +48,7 @@ public class ResourceScanMetadata implements Serializable, Cloneable, Structured
     private EcrRepositoryMetadata ecrRepository;
     /**
      * <p>
-     * An object that contains metadata details for an AWS Lambda function.
+     * An object that contains metadata details for an Amazon Web Services Lambda function.
      * </p>
      */
     private LambdaFunctionMetadata lambdaFunction;
@@ -175,11 +175,11 @@ public class ResourceScanMetadata implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An object that contains metadata details for an AWS Lambda function.
+     * An object that contains metadata details for an Amazon Web Services Lambda function.
      * </p>
      * 
      * @param lambdaFunction
-     *        An object that contains metadata details for an AWS Lambda function.
+     *        An object that contains metadata details for an Amazon Web Services Lambda function.
      */
 
     public void setLambdaFunction(LambdaFunctionMetadata lambdaFunction) {
@@ -188,10 +188,10 @@ public class ResourceScanMetadata implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An object that contains metadata details for an AWS Lambda function.
+     * An object that contains metadata details for an Amazon Web Services Lambda function.
      * </p>
      * 
-     * @return An object that contains metadata details for an AWS Lambda function.
+     * @return An object that contains metadata details for an Amazon Web Services Lambda function.
      */
 
     public LambdaFunctionMetadata getLambdaFunction() {
@@ -200,11 +200,11 @@ public class ResourceScanMetadata implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An object that contains metadata details for an AWS Lambda function.
+     * An object that contains metadata details for an Amazon Web Services Lambda function.
      * </p>
      * 
      * @param lambdaFunction
-     *        An object that contains metadata details for an AWS Lambda function.
+     *        An object that contains metadata details for an Amazon Web Services Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

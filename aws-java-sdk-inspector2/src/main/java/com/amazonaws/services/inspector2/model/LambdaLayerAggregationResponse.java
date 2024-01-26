@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A response that contains the results of an AWS Lambda function layer finding aggregation.
+ * A response that contains the results of an Amazon Web Services Lambda function layer finding aggregation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/LambdaLayerAggregationResponse"
@@ -30,25 +30,25 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The account ID of the AWS Lambda function layer.
+     * The account ID of the Amazon Web Services Lambda function layer.
      * </p>
      */
     private String accountId;
     /**
      * <p>
-     * The names of the AWS Lambda functions associated with the layers.
+     * The names of the Amazon Web Services Lambda functions associated with the layers.
      * </p>
      */
     private String functionName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * </p>
      */
     private String layerArn;
     /**
      * <p>
-     * The Resource ID of the AWS Lambda function layer.
+     * The Resource ID of the Amazon Web Services Lambda function layer.
      * </p>
      */
     private String resourceId;
@@ -57,11 +57,11 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The account ID of the AWS Lambda function layer.
+     * The account ID of the Amazon Web Services Lambda function layer.
      * </p>
      * 
      * @param accountId
-     *        The account ID of the AWS Lambda function layer.
+     *        The account ID of the Amazon Web Services Lambda function layer.
      */
 
     public void setAccountId(String accountId) {
@@ -70,10 +70,10 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The account ID of the AWS Lambda function layer.
+     * The account ID of the Amazon Web Services Lambda function layer.
      * </p>
      * 
-     * @return The account ID of the AWS Lambda function layer.
+     * @return The account ID of the Amazon Web Services Lambda function layer.
      */
 
     public String getAccountId() {
@@ -82,11 +82,11 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The account ID of the AWS Lambda function layer.
+     * The account ID of the Amazon Web Services Lambda function layer.
      * </p>
      * 
      * @param accountId
-     *        The account ID of the AWS Lambda function layer.
+     *        The account ID of the Amazon Web Services Lambda function layer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The names of the AWS Lambda functions associated with the layers.
+     * The names of the Amazon Web Services Lambda functions associated with the layers.
      * </p>
      * 
      * @param functionName
-     *        The names of the AWS Lambda functions associated with the layers.
+     *        The names of the Amazon Web Services Lambda functions associated with the layers.
      */
 
     public void setFunctionName(String functionName) {
@@ -110,10 +110,10 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The names of the AWS Lambda functions associated with the layers.
+     * The names of the Amazon Web Services Lambda functions associated with the layers.
      * </p>
      * 
-     * @return The names of the AWS Lambda functions associated with the layers.
+     * @return The names of the Amazon Web Services Lambda functions associated with the layers.
      */
 
     public String getFunctionName() {
@@ -122,11 +122,11 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The names of the AWS Lambda functions associated with the layers.
+     * The names of the Amazon Web Services Lambda functions associated with the layers.
      * </p>
      * 
      * @param functionName
-     *        The names of the AWS Lambda functions associated with the layers.
+     *        The names of the Amazon Web Services Lambda functions associated with the layers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -137,11 +137,11 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * </p>
      * 
      * @param layerArn
-     *        The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      */
 
     public void setLayerArn(String layerArn) {
@@ -150,10 +150,10 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     * @return The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      */
 
     public String getLayerArn() {
@@ -162,11 +162,11 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * </p>
      * 
      * @param layerArn
-     *        The Amazon Resource Name (ARN) of the AWS Lambda function layer.
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Lambda function layer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -177,11 +177,11 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Resource ID of the AWS Lambda function layer.
+     * The Resource ID of the Amazon Web Services Lambda function layer.
      * </p>
      * 
      * @param resourceId
-     *        The Resource ID of the AWS Lambda function layer.
+     *        The Resource ID of the Amazon Web Services Lambda function layer.
      */
 
     public void setResourceId(String resourceId) {
@@ -190,10 +190,10 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Resource ID of the AWS Lambda function layer.
+     * The Resource ID of the Amazon Web Services Lambda function layer.
      * </p>
      * 
-     * @return The Resource ID of the AWS Lambda function layer.
+     * @return The Resource ID of the Amazon Web Services Lambda function layer.
      */
 
     public String getResourceId() {
@@ -202,11 +202,11 @@ public class LambdaLayerAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Resource ID of the AWS Lambda function layer.
+     * The Resource ID of the Amazon Web Services Lambda function layer.
      * </p>
      * 
      * @param resourceId
-     *        The Resource ID of the AWS Lambda function layer.
+     *        The Resource ID of the Amazon Web Services Lambda function layer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

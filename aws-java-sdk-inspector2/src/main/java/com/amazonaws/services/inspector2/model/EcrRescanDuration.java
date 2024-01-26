@@ -22,7 +22,10 @@ public enum EcrRescanDuration {
 
     LIFETIME("LIFETIME"),
     DAYS_30("DAYS_30"),
-    DAYS_180("DAYS_180");
+    DAYS_180("DAYS_180"),
+    DAYS_14("DAYS_14"),
+    DAYS_60("DAYS_60"),
+    DAYS_90("DAYS_90");
 
     private String value;
 

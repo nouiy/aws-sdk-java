@@ -43,7 +43,7 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
     private String domainName;
     /**
      * <p>
-     * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
+     * The ID of the Amazon Elastic File System managed by this Domain.
      * </p>
      */
     private String homeEfsFileSystemId;
@@ -297,11 +297,11 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
+     * The ID of the Amazon Elastic File System managed by this Domain.
      * </p>
      * 
      * @param homeEfsFileSystemId
-     *        The ID of the Amazon Elastic File System (EFS) managed by this Domain.
+     *        The ID of the Amazon Elastic File System managed by this Domain.
      */
 
     public void setHomeEfsFileSystemId(String homeEfsFileSystemId) {
@@ -310,10 +310,10 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
+     * The ID of the Amazon Elastic File System managed by this Domain.
      * </p>
      * 
-     * @return The ID of the Amazon Elastic File System (EFS) managed by this Domain.
+     * @return The ID of the Amazon Elastic File System managed by this Domain.
      */
 
     public String getHomeEfsFileSystemId() {
@@ -322,11 +322,11 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
+     * The ID of the Amazon Elastic File System managed by this Domain.
      * </p>
      * 
      * @param homeEfsFileSystemId
-     *        The ID of the Amazon Elastic File System (EFS) managed by this Domain.
+     *        The ID of the Amazon Elastic File System managed by this Domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

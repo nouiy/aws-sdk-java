@@ -54,13 +54,13 @@ public class ResourceFilterCriteria implements Serializable, Cloneable, Structur
     private java.util.List<ResourceStringFilter> ecrRepositoryName;
     /**
      * <p>
-     * The AWS Lambda function name used as resource filter criteria.
+     * The Amazon Web Services Lambda function name used as resource filter criteria.
      * </p>
      */
     private java.util.List<ResourceStringFilter> lambdaFunctionName;
     /**
      * <p>
-     * The AWS Lambda function tags used as resource filter criteria.
+     * The Amazon Web Services Lambda function tags used as resource filter criteria.
      * </p>
      */
     private java.util.List<ResourceMapFilter> lambdaFunctionTags;
@@ -359,10 +359,10 @@ public class ResourceFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS Lambda function name used as resource filter criteria.
+     * The Amazon Web Services Lambda function name used as resource filter criteria.
      * </p>
      * 
-     * @return The AWS Lambda function name used as resource filter criteria.
+     * @return The Amazon Web Services Lambda function name used as resource filter criteria.
      */
 
     public java.util.List<ResourceStringFilter> getLambdaFunctionName() {
@@ -371,11 +371,11 @@ public class ResourceFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS Lambda function name used as resource filter criteria.
+     * The Amazon Web Services Lambda function name used as resource filter criteria.
      * </p>
      * 
      * @param lambdaFunctionName
-     *        The AWS Lambda function name used as resource filter criteria.
+     *        The Amazon Web Services Lambda function name used as resource filter criteria.
      */
 
     public void setLambdaFunctionName(java.util.Collection<ResourceStringFilter> lambdaFunctionName) {
@@ -389,7 +389,7 @@ public class ResourceFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS Lambda function name used as resource filter criteria.
+     * The Amazon Web Services Lambda function name used as resource filter criteria.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -398,7 +398,7 @@ public class ResourceFilterCriteria implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param lambdaFunctionName
-     *        The AWS Lambda function name used as resource filter criteria.
+     *        The Amazon Web Services Lambda function name used as resource filter criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -414,11 +414,11 @@ public class ResourceFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS Lambda function name used as resource filter criteria.
+     * The Amazon Web Services Lambda function name used as resource filter criteria.
      * </p>
      * 
      * @param lambdaFunctionName
-     *        The AWS Lambda function name used as resource filter criteria.
+     *        The Amazon Web Services Lambda function name used as resource filter criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -429,10 +429,10 @@ public class ResourceFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS Lambda function tags used as resource filter criteria.
+     * The Amazon Web Services Lambda function tags used as resource filter criteria.
      * </p>
      * 
-     * @return The AWS Lambda function tags used as resource filter criteria.
+     * @return The Amazon Web Services Lambda function tags used as resource filter criteria.
      */
 
     public java.util.List<ResourceMapFilter> getLambdaFunctionTags() {
@@ -441,11 +441,11 @@ public class ResourceFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS Lambda function tags used as resource filter criteria.
+     * The Amazon Web Services Lambda function tags used as resource filter criteria.
      * </p>
      * 
      * @param lambdaFunctionTags
-     *        The AWS Lambda function tags used as resource filter criteria.
+     *        The Amazon Web Services Lambda function tags used as resource filter criteria.
      */
 
     public void setLambdaFunctionTags(java.util.Collection<ResourceMapFilter> lambdaFunctionTags) {
@@ -459,7 +459,7 @@ public class ResourceFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS Lambda function tags used as resource filter criteria.
+     * The Amazon Web Services Lambda function tags used as resource filter criteria.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -468,7 +468,7 @@ public class ResourceFilterCriteria implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param lambdaFunctionTags
-     *        The AWS Lambda function tags used as resource filter criteria.
+     *        The Amazon Web Services Lambda function tags used as resource filter criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -484,11 +484,11 @@ public class ResourceFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS Lambda function tags used as resource filter criteria.
+     * The Amazon Web Services Lambda function tags used as resource filter criteria.
      * </p>
      * 
      * @param lambdaFunctionTags
-     *        The AWS Lambda function tags used as resource filter criteria.
+     *        The Amazon Web Services Lambda function tags used as resource filter criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

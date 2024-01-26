@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The details that define a findings aggregation based on AWS Lambda functions.
+ * The details that define a findings aggregation based on Amazon Web Services Lambda functions.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/LambdaFunctionAggregation"
@@ -30,7 +30,7 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS Lambda function names to include in the aggregation results.
+     * The Amazon Web Services Lambda function names to include in the aggregation results.
      * </p>
      */
     private java.util.List<StringFilter> functionNames;
@@ -48,7 +48,7 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
     private java.util.List<StringFilter> resourceIds;
     /**
      * <p>
-     * Returns findings aggregated by AWS Lambda function runtime environments.
+     * Returns findings aggregated by Amazon Web Services Lambda function runtime environments.
      * </p>
      */
     private java.util.List<StringFilter> runtimes;
@@ -67,10 +67,10 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS Lambda function names to include in the aggregation results.
+     * The Amazon Web Services Lambda function names to include in the aggregation results.
      * </p>
      * 
-     * @return The AWS Lambda function names to include in the aggregation results.
+     * @return The Amazon Web Services Lambda function names to include in the aggregation results.
      */
 
     public java.util.List<StringFilter> getFunctionNames() {
@@ -79,11 +79,11 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS Lambda function names to include in the aggregation results.
+     * The Amazon Web Services Lambda function names to include in the aggregation results.
      * </p>
      * 
      * @param functionNames
-     *        The AWS Lambda function names to include in the aggregation results.
+     *        The Amazon Web Services Lambda function names to include in the aggregation results.
      */
 
     public void setFunctionNames(java.util.Collection<StringFilter> functionNames) {
@@ -97,7 +97,7 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS Lambda function names to include in the aggregation results.
+     * The Amazon Web Services Lambda function names to include in the aggregation results.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -106,7 +106,7 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param functionNames
-     *        The AWS Lambda function names to include in the aggregation results.
+     *        The Amazon Web Services Lambda function names to include in the aggregation results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -122,11 +122,11 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS Lambda function names to include in the aggregation results.
+     * The Amazon Web Services Lambda function names to include in the aggregation results.
      * </p>
      * 
      * @param functionNames
-     *        The AWS Lambda function names to include in the aggregation results.
+     *        The Amazon Web Services Lambda function names to include in the aggregation results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -277,10 +277,10 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Returns findings aggregated by AWS Lambda function runtime environments.
+     * Returns findings aggregated by Amazon Web Services Lambda function runtime environments.
      * </p>
      * 
-     * @return Returns findings aggregated by AWS Lambda function runtime environments.
+     * @return Returns findings aggregated by Amazon Web Services Lambda function runtime environments.
      */
 
     public java.util.List<StringFilter> getRuntimes() {
@@ -289,11 +289,11 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Returns findings aggregated by AWS Lambda function runtime environments.
+     * Returns findings aggregated by Amazon Web Services Lambda function runtime environments.
      * </p>
      * 
      * @param runtimes
-     *        Returns findings aggregated by AWS Lambda function runtime environments.
+     *        Returns findings aggregated by Amazon Web Services Lambda function runtime environments.
      */
 
     public void setRuntimes(java.util.Collection<StringFilter> runtimes) {
@@ -307,7 +307,7 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Returns findings aggregated by AWS Lambda function runtime environments.
+     * Returns findings aggregated by Amazon Web Services Lambda function runtime environments.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -316,7 +316,7 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param runtimes
-     *        Returns findings aggregated by AWS Lambda function runtime environments.
+     *        Returns findings aggregated by Amazon Web Services Lambda function runtime environments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -332,11 +332,11 @@ public class LambdaFunctionAggregation implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Returns findings aggregated by AWS Lambda function runtime environments.
+     * Returns findings aggregated by Amazon Web Services Lambda function runtime environments.
      * </p>
      * 
      * @param runtimes
-     *        Returns findings aggregated by AWS Lambda function runtime environments.
+     *        Returns findings aggregated by Amazon Web Services Lambda function runtime environments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

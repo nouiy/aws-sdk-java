@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The AWS Lambda function metadata.
+ * The Amazon Web Services Lambda function metadata.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/LambdaFunctionMetadata" target="_top">AWS
@@ -36,19 +36,19 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
     private String functionName;
     /**
      * <p>
-     * The resource tags on an AWS Lambda function.
+     * The resource tags on an Amazon Web Services Lambda function.
      * </p>
      */
     private java.util.Map<String, String> functionTags;
     /**
      * <p>
-     * The layers for an AWS Lambda function. A Lambda function can have up to five layers.
+     * The layers for an Amazon Web Services Lambda function. A Lambda function can have up to five layers.
      * </p>
      */
     private java.util.List<String> layers;
     /**
      * <p>
-     * An AWS Lambda function's runtime.
+     * An Amazon Web Services Lambda function's runtime.
      * </p>
      */
     private String runtime;
@@ -95,10 +95,10 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The resource tags on an AWS Lambda function.
+     * The resource tags on an Amazon Web Services Lambda function.
      * </p>
      * 
-     * @return The resource tags on an AWS Lambda function.
+     * @return The resource tags on an Amazon Web Services Lambda function.
      */
 
     public java.util.Map<String, String> getFunctionTags() {
@@ -107,11 +107,11 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The resource tags on an AWS Lambda function.
+     * The resource tags on an Amazon Web Services Lambda function.
      * </p>
      * 
      * @param functionTags
-     *        The resource tags on an AWS Lambda function.
+     *        The resource tags on an Amazon Web Services Lambda function.
      */
 
     public void setFunctionTags(java.util.Map<String, String> functionTags) {
@@ -120,11 +120,11 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The resource tags on an AWS Lambda function.
+     * The resource tags on an Amazon Web Services Lambda function.
      * </p>
      * 
      * @param functionTags
-     *        The resource tags on an AWS Lambda function.
+     *        The resource tags on an Amazon Web Services Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -163,10 +163,10 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The layers for an AWS Lambda function. A Lambda function can have up to five layers.
+     * The layers for an Amazon Web Services Lambda function. A Lambda function can have up to five layers.
      * </p>
      * 
-     * @return The layers for an AWS Lambda function. A Lambda function can have up to five layers.
+     * @return The layers for an Amazon Web Services Lambda function. A Lambda function can have up to five layers.
      */
 
     public java.util.List<String> getLayers() {
@@ -175,11 +175,11 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The layers for an AWS Lambda function. A Lambda function can have up to five layers.
+     * The layers for an Amazon Web Services Lambda function. A Lambda function can have up to five layers.
      * </p>
      * 
      * @param layers
-     *        The layers for an AWS Lambda function. A Lambda function can have up to five layers.
+     *        The layers for an Amazon Web Services Lambda function. A Lambda function can have up to five layers.
      */
 
     public void setLayers(java.util.Collection<String> layers) {
@@ -193,7 +193,7 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The layers for an AWS Lambda function. A Lambda function can have up to five layers.
+     * The layers for an Amazon Web Services Lambda function. A Lambda function can have up to five layers.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -202,7 +202,7 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param layers
-     *        The layers for an AWS Lambda function. A Lambda function can have up to five layers.
+     *        The layers for an Amazon Web Services Lambda function. A Lambda function can have up to five layers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,11 +218,11 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The layers for an AWS Lambda function. A Lambda function can have up to five layers.
+     * The layers for an Amazon Web Services Lambda function. A Lambda function can have up to five layers.
      * </p>
      * 
      * @param layers
-     *        The layers for an AWS Lambda function. A Lambda function can have up to five layers.
+     *        The layers for an Amazon Web Services Lambda function. A Lambda function can have up to five layers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,11 +233,11 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An AWS Lambda function's runtime.
+     * An Amazon Web Services Lambda function's runtime.
      * </p>
      * 
      * @param runtime
-     *        An AWS Lambda function's runtime.
+     *        An Amazon Web Services Lambda function's runtime.
      * @see Runtime
      */
 
@@ -247,10 +247,10 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An AWS Lambda function's runtime.
+     * An Amazon Web Services Lambda function's runtime.
      * </p>
      * 
-     * @return An AWS Lambda function's runtime.
+     * @return An Amazon Web Services Lambda function's runtime.
      * @see Runtime
      */
 
@@ -260,11 +260,11 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An AWS Lambda function's runtime.
+     * An Amazon Web Services Lambda function's runtime.
      * </p>
      * 
      * @param runtime
-     *        An AWS Lambda function's runtime.
+     *        An Amazon Web Services Lambda function's runtime.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Runtime
      */
@@ -276,11 +276,11 @@ public class LambdaFunctionMetadata implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An AWS Lambda function's runtime.
+     * An Amazon Web Services Lambda function's runtime.
      * </p>
      * 
      * @param runtime
-     *        An AWS Lambda function's runtime.
+     *        An Amazon Web Services Lambda function's runtime.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Runtime
      */

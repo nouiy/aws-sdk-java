@@ -129,7 +129,7 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<NumberFilter> epssScore;
     /**
      * <p>
-     * Filters the list of AWS Lambda findings by the availability of exploits.
+     * Filters the list of Amazon Web Services Lambda findings by the availability of exploits.
      * </p>
      */
     private java.util.List<StringFilter> exploitAvailable;
@@ -173,20 +173,20 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<NumberFilter> inspectorScore;
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by execution role.
+     * Filters the list of Amazon Web Services Lambda functions by execution role.
      * </p>
      */
     private java.util.List<StringFilter> lambdaFunctionExecutionRoleArn;
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the date and time that a user last updated the configuration, in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
+     * Filters the list of Amazon Web Services Lambda functions by the date and time that a user last updated the
+     * configuration, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
      * </p>
      */
     private java.util.List<DateFilter> lambdaFunctionLastModifiedAt;
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the function's <a
+     * Filters the list of Amazon Web Services Lambda functions by the function's <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda function can
      * have up to five layers.
      * </p>
@@ -194,13 +194,13 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<StringFilter> lambdaFunctionLayers;
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the name of the function.
+     * Filters the list of Amazon Web Services Lambda functions by the name of the function.
      * </p>
      */
     private java.util.List<StringFilter> lambdaFunctionName;
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the runtime environment for the Lambda function.
+     * Filters the list of Amazon Web Services Lambda functions by the runtime environment for the Lambda function.
      * </p>
      */
     private java.util.List<StringFilter> lambdaFunctionRuntime;
@@ -1440,10 +1440,10 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda findings by the availability of exploits.
+     * Filters the list of Amazon Web Services Lambda findings by the availability of exploits.
      * </p>
      * 
-     * @return Filters the list of AWS Lambda findings by the availability of exploits.
+     * @return Filters the list of Amazon Web Services Lambda findings by the availability of exploits.
      */
 
     public java.util.List<StringFilter> getExploitAvailable() {
@@ -1452,11 +1452,11 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda findings by the availability of exploits.
+     * Filters the list of Amazon Web Services Lambda findings by the availability of exploits.
      * </p>
      * 
      * @param exploitAvailable
-     *        Filters the list of AWS Lambda findings by the availability of exploits.
+     *        Filters the list of Amazon Web Services Lambda findings by the availability of exploits.
      */
 
     public void setExploitAvailable(java.util.Collection<StringFilter> exploitAvailable) {
@@ -1470,7 +1470,7 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda findings by the availability of exploits.
+     * Filters the list of Amazon Web Services Lambda findings by the availability of exploits.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1479,7 +1479,7 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param exploitAvailable
-     *        Filters the list of AWS Lambda findings by the availability of exploits.
+     *        Filters the list of Amazon Web Services Lambda findings by the availability of exploits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1495,11 +1495,11 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda findings by the availability of exploits.
+     * Filters the list of Amazon Web Services Lambda findings by the availability of exploits.
      * </p>
      * 
      * @param exploitAvailable
-     *        Filters the list of AWS Lambda findings by the availability of exploits.
+     *        Filters the list of Amazon Web Services Lambda findings by the availability of exploits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1946,10 +1946,10 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by execution role.
+     * Filters the list of Amazon Web Services Lambda functions by execution role.
      * </p>
      * 
-     * @return Filters the list of AWS Lambda functions by execution role.
+     * @return Filters the list of Amazon Web Services Lambda functions by execution role.
      */
 
     public java.util.List<StringFilter> getLambdaFunctionExecutionRoleArn() {
@@ -1958,11 +1958,11 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by execution role.
+     * Filters the list of Amazon Web Services Lambda functions by execution role.
      * </p>
      * 
      * @param lambdaFunctionExecutionRoleArn
-     *        Filters the list of AWS Lambda functions by execution role.
+     *        Filters the list of Amazon Web Services Lambda functions by execution role.
      */
 
     public void setLambdaFunctionExecutionRoleArn(java.util.Collection<StringFilter> lambdaFunctionExecutionRoleArn) {
@@ -1976,7 +1976,7 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by execution role.
+     * Filters the list of Amazon Web Services Lambda functions by execution role.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1985,7 +1985,7 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param lambdaFunctionExecutionRoleArn
-     *        Filters the list of AWS Lambda functions by execution role.
+     *        Filters the list of Amazon Web Services Lambda functions by execution role.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2001,11 +2001,11 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by execution role.
+     * Filters the list of Amazon Web Services Lambda functions by execution role.
      * </p>
      * 
      * @param lambdaFunctionExecutionRoleArn
-     *        Filters the list of AWS Lambda functions by execution role.
+     *        Filters the list of Amazon Web Services Lambda functions by execution role.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2016,12 +2016,13 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the date and time that a user last updated the configuration, in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
+     * Filters the list of Amazon Web Services Lambda functions by the date and time that a user last updated the
+     * configuration, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
      * </p>
      * 
-     * @return Filters the list of AWS Lambda functions by the date and time that a user last updated the configuration,
-     *         in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
+     * @return Filters the list of Amazon Web Services Lambda functions by the date and time that a user last updated
+     *         the configuration, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601
+     *         format</a>
      */
 
     public java.util.List<DateFilter> getLambdaFunctionLastModifiedAt() {
@@ -2030,13 +2031,13 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the date and time that a user last updated the configuration, in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
+     * Filters the list of Amazon Web Services Lambda functions by the date and time that a user last updated the
+     * configuration, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
      * </p>
      * 
      * @param lambdaFunctionLastModifiedAt
-     *        Filters the list of AWS Lambda functions by the date and time that a user last updated the configuration,
-     *        in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
+     *        Filters the list of Amazon Web Services Lambda functions by the date and time that a user last updated the
+     *        configuration, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
      */
 
     public void setLambdaFunctionLastModifiedAt(java.util.Collection<DateFilter> lambdaFunctionLastModifiedAt) {
@@ -2050,8 +2051,8 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the date and time that a user last updated the configuration, in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
+     * Filters the list of Amazon Web Services Lambda functions by the date and time that a user last updated the
+     * configuration, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2060,8 +2061,8 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param lambdaFunctionLastModifiedAt
-     *        Filters the list of AWS Lambda functions by the date and time that a user last updated the configuration,
-     *        in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
+     *        Filters the list of Amazon Web Services Lambda functions by the date and time that a user last updated the
+     *        configuration, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2077,13 +2078,13 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the date and time that a user last updated the configuration, in <a
-     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
+     * Filters the list of Amazon Web Services Lambda functions by the date and time that a user last updated the
+     * configuration, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
      * </p>
      * 
      * @param lambdaFunctionLastModifiedAt
-     *        Filters the list of AWS Lambda functions by the date and time that a user last updated the configuration,
-     *        in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
+     *        Filters the list of Amazon Web Services Lambda functions by the date and time that a user last updated the
+     *        configuration, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2094,12 +2095,12 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the function's <a
+     * Filters the list of Amazon Web Services Lambda functions by the function's <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda function can
      * have up to five layers.
      * </p>
      * 
-     * @return Filters the list of AWS Lambda functions by the function's <a
+     * @return Filters the list of Amazon Web Services Lambda functions by the function's <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda
      *         function can have up to five layers.
      */
@@ -2110,13 +2111,13 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the function's <a
+     * Filters the list of Amazon Web Services Lambda functions by the function's <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda function can
      * have up to five layers.
      * </p>
      * 
      * @param lambdaFunctionLayers
-     *        Filters the list of AWS Lambda functions by the function's <a
+     *        Filters the list of Amazon Web Services Lambda functions by the function's <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda
      *        function can have up to five layers.
      */
@@ -2132,7 +2133,7 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the function's <a
+     * Filters the list of Amazon Web Services Lambda functions by the function's <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda function can
      * have up to five layers.
      * </p>
@@ -2143,7 +2144,7 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param lambdaFunctionLayers
-     *        Filters the list of AWS Lambda functions by the function's <a
+     *        Filters the list of Amazon Web Services Lambda functions by the function's <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda
      *        function can have up to five layers.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2161,13 +2162,13 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the function's <a
+     * Filters the list of Amazon Web Services Lambda functions by the function's <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda function can
      * have up to five layers.
      * </p>
      * 
      * @param lambdaFunctionLayers
-     *        Filters the list of AWS Lambda functions by the function's <a
+     *        Filters the list of Amazon Web Services Lambda functions by the function's <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda
      *        function can have up to five layers.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2180,10 +2181,10 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the name of the function.
+     * Filters the list of Amazon Web Services Lambda functions by the name of the function.
      * </p>
      * 
-     * @return Filters the list of AWS Lambda functions by the name of the function.
+     * @return Filters the list of Amazon Web Services Lambda functions by the name of the function.
      */
 
     public java.util.List<StringFilter> getLambdaFunctionName() {
@@ -2192,11 +2193,11 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the name of the function.
+     * Filters the list of Amazon Web Services Lambda functions by the name of the function.
      * </p>
      * 
      * @param lambdaFunctionName
-     *        Filters the list of AWS Lambda functions by the name of the function.
+     *        Filters the list of Amazon Web Services Lambda functions by the name of the function.
      */
 
     public void setLambdaFunctionName(java.util.Collection<StringFilter> lambdaFunctionName) {
@@ -2210,7 +2211,7 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the name of the function.
+     * Filters the list of Amazon Web Services Lambda functions by the name of the function.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2219,7 +2220,7 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param lambdaFunctionName
-     *        Filters the list of AWS Lambda functions by the name of the function.
+     *        Filters the list of Amazon Web Services Lambda functions by the name of the function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2235,11 +2236,11 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the name of the function.
+     * Filters the list of Amazon Web Services Lambda functions by the name of the function.
      * </p>
      * 
      * @param lambdaFunctionName
-     *        Filters the list of AWS Lambda functions by the name of the function.
+     *        Filters the list of Amazon Web Services Lambda functions by the name of the function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2250,10 +2251,11 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the runtime environment for the Lambda function.
+     * Filters the list of Amazon Web Services Lambda functions by the runtime environment for the Lambda function.
      * </p>
      * 
-     * @return Filters the list of AWS Lambda functions by the runtime environment for the Lambda function.
+     * @return Filters the list of Amazon Web Services Lambda functions by the runtime environment for the Lambda
+     *         function.
      */
 
     public java.util.List<StringFilter> getLambdaFunctionRuntime() {
@@ -2262,11 +2264,12 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the runtime environment for the Lambda function.
+     * Filters the list of Amazon Web Services Lambda functions by the runtime environment for the Lambda function.
      * </p>
      * 
      * @param lambdaFunctionRuntime
-     *        Filters the list of AWS Lambda functions by the runtime environment for the Lambda function.
+     *        Filters the list of Amazon Web Services Lambda functions by the runtime environment for the Lambda
+     *        function.
      */
 
     public void setLambdaFunctionRuntime(java.util.Collection<StringFilter> lambdaFunctionRuntime) {
@@ -2280,7 +2283,7 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the runtime environment for the Lambda function.
+     * Filters the list of Amazon Web Services Lambda functions by the runtime environment for the Lambda function.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2289,7 +2292,8 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param lambdaFunctionRuntime
-     *        Filters the list of AWS Lambda functions by the runtime environment for the Lambda function.
+     *        Filters the list of Amazon Web Services Lambda functions by the runtime environment for the Lambda
+     *        function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2305,11 +2309,12 @@ public class FilterCriteria implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters the list of AWS Lambda functions by the runtime environment for the Lambda function.
+     * Filters the list of Amazon Web Services Lambda functions by the runtime environment for the Lambda function.
      * </p>
      * 
      * @param lambdaFunctionRuntime
-     *        Filters the list of AWS Lambda functions by the runtime environment for the Lambda function.
+     *        Filters the list of Amazon Web Services Lambda functions by the runtime environment for the Lambda
+     *        function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

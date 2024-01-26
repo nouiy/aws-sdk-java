@@ -44,14 +44,14 @@ public class AutoEnable implements Serializable, Cloneable, StructuredPojo {
     private Boolean ecr;
     /**
      * <p>
-     * Represents whether AWS Lambda standard scans are automatically enabled for new members of your Amazon Inspector
-     * organization.
+     * Represents whether Amazon Web Services Lambda standard scans are automatically enabled for new members of your
+     * Amazon Inspector organization.
      * </p>
      */
     private Boolean lambda;
     /**
      * <p>
-     * Represents whether AWS Lambda code scans are automatically enabled for new members of your Amazon Inspector
+     * Represents whether Lambda code scans are automatically enabled for new members of your Amazon Inspector
      * organization.
      * 
      * <pre>
@@ -182,13 +182,13 @@ public class AutoEnable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents whether AWS Lambda standard scans are automatically enabled for new members of your Amazon Inspector
-     * organization.
+     * Represents whether Amazon Web Services Lambda standard scans are automatically enabled for new members of your
+     * Amazon Inspector organization.
      * </p>
      * 
      * @param lambda
-     *        Represents whether AWS Lambda standard scans are automatically enabled for new members of your Amazon
-     *        Inspector organization.
+     *        Represents whether Amazon Web Services Lambda standard scans are automatically enabled for new members of
+     *        your Amazon Inspector organization.
      */
 
     public void setLambda(Boolean lambda) {
@@ -197,12 +197,12 @@ public class AutoEnable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents whether AWS Lambda standard scans are automatically enabled for new members of your Amazon Inspector
-     * organization.
+     * Represents whether Amazon Web Services Lambda standard scans are automatically enabled for new members of your
+     * Amazon Inspector organization.
      * </p>
      * 
-     * @return Represents whether AWS Lambda standard scans are automatically enabled for new members of your Amazon
-     *         Inspector organization.
+     * @return Represents whether Amazon Web Services Lambda standard scans are automatically enabled for new members of
+     *         your Amazon Inspector organization.
      */
 
     public Boolean getLambda() {
@@ -211,13 +211,13 @@ public class AutoEnable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents whether AWS Lambda standard scans are automatically enabled for new members of your Amazon Inspector
-     * organization.
+     * Represents whether Amazon Web Services Lambda standard scans are automatically enabled for new members of your
+     * Amazon Inspector organization.
      * </p>
      * 
      * @param lambda
-     *        Represents whether AWS Lambda standard scans are automatically enabled for new members of your Amazon
-     *        Inspector organization.
+     *        Represents whether Amazon Web Services Lambda standard scans are automatically enabled for new members of
+     *        your Amazon Inspector organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -228,12 +228,12 @@ public class AutoEnable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents whether AWS Lambda standard scans are automatically enabled for new members of your Amazon Inspector
-     * organization.
+     * Represents whether Amazon Web Services Lambda standard scans are automatically enabled for new members of your
+     * Amazon Inspector organization.
      * </p>
      * 
-     * @return Represents whether AWS Lambda standard scans are automatically enabled for new members of your Amazon
-     *         Inspector organization.
+     * @return Represents whether Amazon Web Services Lambda standard scans are automatically enabled for new members of
+     *         your Amazon Inspector organization.
      */
 
     public Boolean isLambda() {
@@ -242,7 +242,7 @@ public class AutoEnable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents whether AWS Lambda code scans are automatically enabled for new members of your Amazon Inspector
+     * Represents whether Lambda code scans are automatically enabled for new members of your Amazon Inspector
      * organization.
      * 
      * <pre>
@@ -250,8 +250,8 @@ public class AutoEnable implements Serializable, Cloneable, StructuredPojo {
      * </pre>
      * 
      * @param lambdaCode
-     *        Represents whether AWS Lambda code scans are automatically enabled for new members of your Amazon
-     *        Inspector organization.
+     *        Represents whether Lambda code scans are automatically enabled for new members of your Amazon Inspector
+     *        organization.
      * 
      *        <pre>
      * 
@@ -264,15 +264,15 @@ public class AutoEnable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents whether AWS Lambda code scans are automatically enabled for new members of your Amazon Inspector
+     * Represents whether Lambda code scans are automatically enabled for new members of your Amazon Inspector
      * organization.
      * 
      * <pre>
      * <code> &lt;/p&gt; </code>
      * </pre>
      * 
-     * @return Represents whether AWS Lambda code scans are automatically enabled for new members of your Amazon
-     *         Inspector organization.
+     * @return Represents whether Lambda code scans are automatically enabled for new members of your Amazon Inspector
+     *         organization.
      * 
      *         <pre>
      * 
@@ -285,7 +285,7 @@ public class AutoEnable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents whether AWS Lambda code scans are automatically enabled for new members of your Amazon Inspector
+     * Represents whether Lambda code scans are automatically enabled for new members of your Amazon Inspector
      * organization.
      * 
      * <pre>
@@ -293,8 +293,8 @@ public class AutoEnable implements Serializable, Cloneable, StructuredPojo {
      * </pre>
      * 
      * @param lambdaCode
-     *        Represents whether AWS Lambda code scans are automatically enabled for new members of your Amazon
-     *        Inspector organization.
+     *        Represents whether Lambda code scans are automatically enabled for new members of your Amazon Inspector
+     *        organization.
      * 
      *        <pre>
      * 
@@ -309,15 +309,15 @@ public class AutoEnable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents whether AWS Lambda code scans are automatically enabled for new members of your Amazon Inspector
+     * Represents whether Lambda code scans are automatically enabled for new members of your Amazon Inspector
      * organization.
      * 
      * <pre>
      * <code> &lt;/p&gt; </code>
      * </pre>
      * 
-     * @return Represents whether AWS Lambda code scans are automatically enabled for new members of your Amazon
-     *         Inspector organization.
+     * @return Represents whether Lambda code scans are automatically enabled for new members of your Amazon Inspector
+     *         organization.
      * 
      *         <pre>
      * 

@@ -502,8 +502,8 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
-     * Creates a <code>Domain</code>. A domain consists of an associated Amazon Elastic File System (EFS) volume, a list
-     * of authorized users, and a variety of security, application, policy, and Amazon Virtual Private Cloud (VPC)
+     * Creates a <code>Domain</code>. A domain consists of an associated Amazon Elastic File System volume, a list of
+     * authorized users, and a variety of security, application, policy, and Amazon Virtual Private Cloud (VPC)
      * configurations. Users within a domain can share notebook files and other artifacts with each other.
      * </p>
      * <p>
@@ -524,9 +524,10 @@ public interface AmazonSageMaker {
      * <b>VPC configuration</b>
      * </p>
      * <p>
-     * All traffic between the domain and the EFS volume is through the specified VPC and subnets. For other traffic,
-     * you can specify the <code>AppNetworkAccessType</code> parameter. <code>AppNetworkAccessType</code> corresponds to
-     * the network access type that you choose when you onboard to the domain. The following options are available:
+     * All traffic between the domain and the Amazon EFS volume is through the specified VPC and subnets. For other
+     * traffic, you can specify the <code>AppNetworkAccessType</code> parameter. <code>AppNetworkAccessType</code>
+     * corresponds to the network access type that you choose when you onboard to the domain. The following options are
+     * available:
      * </p>
      * <ul>
      * <li>
@@ -2368,6 +2369,21 @@ public interface AmazonSageMaker {
      *      API Documentation</a>
      */
     DeleteHumanTaskUiResult deleteHumanTaskUi(DeleteHumanTaskUiRequest deleteHumanTaskUiRequest);
+
+    /**
+     * <p>
+     * Deletes a hyperparameter tuning job. The <code>DeleteHyperParameterTuningJob</code> API deletes only the tuning
+     * job entry that was created in SageMaker when you called the <code>CreateHyperParameterTuningJob</code> API. It
+     * does not delete training jobs, artifacts, or the IAM role that you specified when creating the model.
+     * </p>
+     * 
+     * @param deleteHyperParameterTuningJobRequest
+     * @return Result of the DeleteHyperParameterTuningJob operation returned by the service.
+     * @sample AmazonSageMaker.DeleteHyperParameterTuningJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteHyperParameterTuningJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteHyperParameterTuningJobResult deleteHyperParameterTuningJob(DeleteHyperParameterTuningJobRequest deleteHyperParameterTuningJobRequest);
 
     /**
      * <p>
@@ -5738,9 +5754,12 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
-     * Deploys the new <code>EndpointConfig</code> specified in the request, switches to using newly created endpoint,
-     * and then deletes resources provisioned for the endpoint using the previous <code>EndpointConfig</code> (there is
-     * no availability loss).
+     * Deploys the <code>EndpointConfig</code> specified in the request to a new fleet of instances. SageMaker shifts
+     * endpoint traffic to the new instances with the updated endpoint configuration and then deletes the old instances
+     * using the previous <code>EndpointConfig</code> (there is no availability loss). For more information about how to
+     * control the update and traffic shifting process, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/deployment-guardrails.html"> Update models in
+     * production</a>.
      * </p>
      * <p>
      * When SageMaker receives the request, it sets the endpoint status to <code>Updating</code>. After updating the

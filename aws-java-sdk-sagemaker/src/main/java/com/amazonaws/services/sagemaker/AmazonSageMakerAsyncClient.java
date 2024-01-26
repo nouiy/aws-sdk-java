@@ -2842,6 +2842,40 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteHyperParameterTuningJobResult> deleteHyperParameterTuningJobAsync(DeleteHyperParameterTuningJobRequest request) {
+
+        return deleteHyperParameterTuningJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteHyperParameterTuningJobResult> deleteHyperParameterTuningJobAsync(
+            final DeleteHyperParameterTuningJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteHyperParameterTuningJobRequest, DeleteHyperParameterTuningJobResult> asyncHandler) {
+        final DeleteHyperParameterTuningJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteHyperParameterTuningJobResult>() {
+            @Override
+            public DeleteHyperParameterTuningJobResult call() throws Exception {
+                DeleteHyperParameterTuningJobResult result = null;
+
+                try {
+                    result = executeDeleteHyperParameterTuningJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteImageResult> deleteImageAsync(DeleteImageRequest request) {
 
         return deleteImageAsync(request, null);

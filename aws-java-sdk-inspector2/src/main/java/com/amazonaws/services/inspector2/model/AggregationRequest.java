@@ -66,13 +66,13 @@ public class AggregationRequest implements Serializable, Cloneable, StructuredPo
     private ImageLayerAggregation imageLayerAggregation;
     /**
      * <p>
-     * Returns an object with findings aggregated by AWS Lambda function.
+     * Returns an object with findings aggregated by Amazon Web Services Lambda function.
      * </p>
      */
     private LambdaFunctionAggregation lambdaFunctionAggregation;
     /**
      * <p>
-     * Returns an object with findings aggregated by AWS Lambda layer.
+     * Returns an object with findings aggregated by Amazon Web Services Lambda layer.
      * </p>
      */
     private LambdaLayerAggregation lambdaLayerAggregation;
@@ -337,11 +337,11 @@ public class AggregationRequest implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Returns an object with findings aggregated by AWS Lambda function.
+     * Returns an object with findings aggregated by Amazon Web Services Lambda function.
      * </p>
      * 
      * @param lambdaFunctionAggregation
-     *        Returns an object with findings aggregated by AWS Lambda function.
+     *        Returns an object with findings aggregated by Amazon Web Services Lambda function.
      */
 
     public void setLambdaFunctionAggregation(LambdaFunctionAggregation lambdaFunctionAggregation) {
@@ -350,10 +350,10 @@ public class AggregationRequest implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Returns an object with findings aggregated by AWS Lambda function.
+     * Returns an object with findings aggregated by Amazon Web Services Lambda function.
      * </p>
      * 
-     * @return Returns an object with findings aggregated by AWS Lambda function.
+     * @return Returns an object with findings aggregated by Amazon Web Services Lambda function.
      */
 
     public LambdaFunctionAggregation getLambdaFunctionAggregation() {
@@ -362,11 +362,11 @@ public class AggregationRequest implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Returns an object with findings aggregated by AWS Lambda function.
+     * Returns an object with findings aggregated by Amazon Web Services Lambda function.
      * </p>
      * 
      * @param lambdaFunctionAggregation
-     *        Returns an object with findings aggregated by AWS Lambda function.
+     *        Returns an object with findings aggregated by Amazon Web Services Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -377,11 +377,11 @@ public class AggregationRequest implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Returns an object with findings aggregated by AWS Lambda layer.
+     * Returns an object with findings aggregated by Amazon Web Services Lambda layer.
      * </p>
      * 
      * @param lambdaLayerAggregation
-     *        Returns an object with findings aggregated by AWS Lambda layer.
+     *        Returns an object with findings aggregated by Amazon Web Services Lambda layer.
      */
 
     public void setLambdaLayerAggregation(LambdaLayerAggregation lambdaLayerAggregation) {
@@ -390,10 +390,10 @@ public class AggregationRequest implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Returns an object with findings aggregated by AWS Lambda layer.
+     * Returns an object with findings aggregated by Amazon Web Services Lambda layer.
      * </p>
      * 
-     * @return Returns an object with findings aggregated by AWS Lambda layer.
+     * @return Returns an object with findings aggregated by Amazon Web Services Lambda layer.
      */
 
     public LambdaLayerAggregation getLambdaLayerAggregation() {
@@ -402,11 +402,11 @@ public class AggregationRequest implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Returns an object with findings aggregated by AWS Lambda layer.
+     * Returns an object with findings aggregated by Amazon Web Services Lambda layer.
      * </p>
      * 
      * @param lambdaLayerAggregation
-     *        Returns an object with findings aggregated by AWS Lambda layer.
+     *        Returns an object with findings aggregated by Amazon Web Services Lambda layer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

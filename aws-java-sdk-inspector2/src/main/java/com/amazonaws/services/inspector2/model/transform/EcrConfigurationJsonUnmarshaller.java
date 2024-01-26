@@ -48,6 +48,10 @@ public class EcrConfigurationJsonUnmarshaller implements Unmarshaller<EcrConfigu
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("pullDateRescanDuration", targetDepth)) {
+                    context.nextToken();
+                    ecrConfiguration.setPullDateRescanDuration(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("rescanDuration", targetDepth)) {
                     context.nextToken();
                     ecrConfiguration.setRescanDuration(context.getUnmarshaller(String.class).unmarshall(context));

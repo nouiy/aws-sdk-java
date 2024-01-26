@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class EcrContainerImageMetadataMarshaller {
 
+    private static final MarshallingInfo<java.util.Date> IMAGEPULLEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("imagePulledAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -47,6 +49,7 @@ public class EcrContainerImageMetadataMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(ecrContainerImageMetadata.getImagePulledAt(), IMAGEPULLEDAT_BINDING);
             protocolMarshaller.marshall(ecrContainerImageMetadata.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

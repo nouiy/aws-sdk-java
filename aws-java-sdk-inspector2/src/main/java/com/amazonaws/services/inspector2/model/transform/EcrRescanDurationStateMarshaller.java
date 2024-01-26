@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class EcrRescanDurationStateMarshaller {
 
+    private static final MarshallingInfo<String> PULLDATERESCANDURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pullDateRescanDuration").build();
     private static final MarshallingInfo<String> RESCANDURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rescanDuration").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -50,6 +52,7 @@ public class EcrRescanDurationStateMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(ecrRescanDurationState.getPullDateRescanDuration(), PULLDATERESCANDURATION_BINDING);
             protocolMarshaller.marshall(ecrRescanDurationState.getRescanDuration(), RESCANDURATION_BINDING);
             protocolMarshaller.marshall(ecrRescanDurationState.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(ecrRescanDurationState.getUpdatedAt(), UPDATEDAT_BINDING);

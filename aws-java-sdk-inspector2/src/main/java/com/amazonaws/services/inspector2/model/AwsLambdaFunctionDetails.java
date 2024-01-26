@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A summary of information about the AWS Lambda function.
+ * A summary of information about the Amazon Web Services Lambda function.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/AwsLambdaFunctionDetails"
@@ -30,26 +30,26 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The instruction set architecture that the AWS Lambda function supports. Architecture is a string array with one
-     * of the valid values. The default architecture value is <code>x86_64</code>.
+     * The instruction set architecture that the Amazon Web Services Lambda function supports. Architecture is a string
+     * array with one of the valid values. The default architecture value is <code>x86_64</code>.
      * </p>
      */
     private java.util.List<String> architectures;
     /**
      * <p>
-     * The SHA256 hash of the AWS Lambda function's deployment package.
+     * The SHA256 hash of the Amazon Web Services Lambda function's deployment package.
      * </p>
      */
     private String codeSha256;
     /**
      * <p>
-     * The AWS Lambda function's execution role.
+     * The Amazon Web Services Lambda function's execution role.
      * </p>
      */
     private String executionRoleArn;
     /**
      * <p>
-     * The name of the AWS Lambda function.
+     * The name of the Amazon Web Services Lambda function.
      * </p>
      */
     private String functionName;
@@ -62,8 +62,9 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
     private java.util.Date lastModifiedAt;
     /**
      * <p>
-     * The AWS Lambda function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">
-     * layers</a>. A Lambda function can have up to five layers.
+     * The Amazon Web Services Lambda function's <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda function can
+     * have up to five layers.
      * </p>
      */
     private java.util.List<String> layers;
@@ -76,31 +77,31 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
     private String packageType;
     /**
      * <p>
-     * The runtime environment for the AWS Lambda function.
+     * The runtime environment for the Amazon Web Services Lambda function.
      * </p>
      */
     private String runtime;
     /**
      * <p>
-     * The version of the AWS Lambda function.
+     * The version of the Amazon Web Services Lambda function.
      * </p>
      */
     private String version;
     /**
      * <p>
-     * The AWS Lambda function's networking configuration.
+     * The Amazon Web Services Lambda function's networking configuration.
      * </p>
      */
     private LambdaVpcConfig vpcConfig;
 
     /**
      * <p>
-     * The instruction set architecture that the AWS Lambda function supports. Architecture is a string array with one
-     * of the valid values. The default architecture value is <code>x86_64</code>.
+     * The instruction set architecture that the Amazon Web Services Lambda function supports. Architecture is a string
+     * array with one of the valid values. The default architecture value is <code>x86_64</code>.
      * </p>
      * 
-     * @return The instruction set architecture that the AWS Lambda function supports. Architecture is a string array
-     *         with one of the valid values. The default architecture value is <code>x86_64</code>.
+     * @return The instruction set architecture that the Amazon Web Services Lambda function supports. Architecture is a
+     *         string array with one of the valid values. The default architecture value is <code>x86_64</code>.
      * @see Architecture
      */
 
@@ -110,13 +111,13 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The instruction set architecture that the AWS Lambda function supports. Architecture is a string array with one
-     * of the valid values. The default architecture value is <code>x86_64</code>.
+     * The instruction set architecture that the Amazon Web Services Lambda function supports. Architecture is a string
+     * array with one of the valid values. The default architecture value is <code>x86_64</code>.
      * </p>
      * 
      * @param architectures
-     *        The instruction set architecture that the AWS Lambda function supports. Architecture is a string array
-     *        with one of the valid values. The default architecture value is <code>x86_64</code>.
+     *        The instruction set architecture that the Amazon Web Services Lambda function supports. Architecture is a
+     *        string array with one of the valid values. The default architecture value is <code>x86_64</code>.
      * @see Architecture
      */
 
@@ -131,8 +132,8 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The instruction set architecture that the AWS Lambda function supports. Architecture is a string array with one
-     * of the valid values. The default architecture value is <code>x86_64</code>.
+     * The instruction set architecture that the Amazon Web Services Lambda function supports. Architecture is a string
+     * array with one of the valid values. The default architecture value is <code>x86_64</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -141,8 +142,8 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param architectures
-     *        The instruction set architecture that the AWS Lambda function supports. Architecture is a string array
-     *        with one of the valid values. The default architecture value is <code>x86_64</code>.
+     *        The instruction set architecture that the Amazon Web Services Lambda function supports. Architecture is a
+     *        string array with one of the valid values. The default architecture value is <code>x86_64</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Architecture
      */
@@ -159,13 +160,13 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The instruction set architecture that the AWS Lambda function supports. Architecture is a string array with one
-     * of the valid values. The default architecture value is <code>x86_64</code>.
+     * The instruction set architecture that the Amazon Web Services Lambda function supports. Architecture is a string
+     * array with one of the valid values. The default architecture value is <code>x86_64</code>.
      * </p>
      * 
      * @param architectures
-     *        The instruction set architecture that the AWS Lambda function supports. Architecture is a string array
-     *        with one of the valid values. The default architecture value is <code>x86_64</code>.
+     *        The instruction set architecture that the Amazon Web Services Lambda function supports. Architecture is a
+     *        string array with one of the valid values. The default architecture value is <code>x86_64</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Architecture
      */
@@ -177,13 +178,13 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The instruction set architecture that the AWS Lambda function supports. Architecture is a string array with one
-     * of the valid values. The default architecture value is <code>x86_64</code>.
+     * The instruction set architecture that the Amazon Web Services Lambda function supports. Architecture is a string
+     * array with one of the valid values. The default architecture value is <code>x86_64</code>.
      * </p>
      * 
      * @param architectures
-     *        The instruction set architecture that the AWS Lambda function supports. Architecture is a string array
-     *        with one of the valid values. The default architecture value is <code>x86_64</code>.
+     *        The instruction set architecture that the Amazon Web Services Lambda function supports. Architecture is a
+     *        string array with one of the valid values. The default architecture value is <code>x86_64</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Architecture
      */
@@ -203,11 +204,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The SHA256 hash of the AWS Lambda function's deployment package.
+     * The SHA256 hash of the Amazon Web Services Lambda function's deployment package.
      * </p>
      * 
      * @param codeSha256
-     *        The SHA256 hash of the AWS Lambda function's deployment package.
+     *        The SHA256 hash of the Amazon Web Services Lambda function's deployment package.
      */
 
     public void setCodeSha256(String codeSha256) {
@@ -216,10 +217,10 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The SHA256 hash of the AWS Lambda function's deployment package.
+     * The SHA256 hash of the Amazon Web Services Lambda function's deployment package.
      * </p>
      * 
-     * @return The SHA256 hash of the AWS Lambda function's deployment package.
+     * @return The SHA256 hash of the Amazon Web Services Lambda function's deployment package.
      */
 
     public String getCodeSha256() {
@@ -228,11 +229,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The SHA256 hash of the AWS Lambda function's deployment package.
+     * The SHA256 hash of the Amazon Web Services Lambda function's deployment package.
      * </p>
      * 
      * @param codeSha256
-     *        The SHA256 hash of the AWS Lambda function's deployment package.
+     *        The SHA256 hash of the Amazon Web Services Lambda function's deployment package.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -243,11 +244,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Lambda function's execution role.
+     * The Amazon Web Services Lambda function's execution role.
      * </p>
      * 
      * @param executionRoleArn
-     *        The AWS Lambda function's execution role.
+     *        The Amazon Web Services Lambda function's execution role.
      */
 
     public void setExecutionRoleArn(String executionRoleArn) {
@@ -256,10 +257,10 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Lambda function's execution role.
+     * The Amazon Web Services Lambda function's execution role.
      * </p>
      * 
-     * @return The AWS Lambda function's execution role.
+     * @return The Amazon Web Services Lambda function's execution role.
      */
 
     public String getExecutionRoleArn() {
@@ -268,11 +269,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Lambda function's execution role.
+     * The Amazon Web Services Lambda function's execution role.
      * </p>
      * 
      * @param executionRoleArn
-     *        The AWS Lambda function's execution role.
+     *        The Amazon Web Services Lambda function's execution role.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -283,11 +284,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The name of the AWS Lambda function.
+     * The name of the Amazon Web Services Lambda function.
      * </p>
      * 
      * @param functionName
-     *        The name of the AWS Lambda function.
+     *        The name of the Amazon Web Services Lambda function.
      */
 
     public void setFunctionName(String functionName) {
@@ -296,10 +297,10 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The name of the AWS Lambda function.
+     * The name of the Amazon Web Services Lambda function.
      * </p>
      * 
-     * @return The name of the AWS Lambda function.
+     * @return The name of the Amazon Web Services Lambda function.
      */
 
     public String getFunctionName() {
@@ -308,11 +309,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The name of the AWS Lambda function.
+     * The name of the Amazon Web Services Lambda function.
      * </p>
      * 
      * @param functionName
-     *        The name of the AWS Lambda function.
+     *        The name of the Amazon Web Services Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -369,11 +370,12 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Lambda function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">
-     * layers</a>. A Lambda function can have up to five layers.
+     * The Amazon Web Services Lambda function's <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda function can
+     * have up to five layers.
      * </p>
      * 
-     * @return The AWS Lambda function's <a
+     * @return The Amazon Web Services Lambda function's <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda
      *         function can have up to five layers.
      */
@@ -384,12 +386,13 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Lambda function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">
-     * layers</a>. A Lambda function can have up to five layers.
+     * The Amazon Web Services Lambda function's <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda function can
+     * have up to five layers.
      * </p>
      * 
      * @param layers
-     *        The AWS Lambda function's <a
+     *        The Amazon Web Services Lambda function's <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda
      *        function can have up to five layers.
      */
@@ -405,8 +408,9 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Lambda function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">
-     * layers</a>. A Lambda function can have up to five layers.
+     * The Amazon Web Services Lambda function's <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda function can
+     * have up to five layers.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -415,7 +419,7 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param layers
-     *        The AWS Lambda function's <a
+     *        The Amazon Web Services Lambda function's <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda
      *        function can have up to five layers.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -433,12 +437,13 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Lambda function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">
-     * layers</a>. A Lambda function can have up to five layers.
+     * The Amazon Web Services Lambda function's <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda function can
+     * have up to five layers.
      * </p>
      * 
      * @param layers
-     *        The AWS Lambda function's <a
+     *        The Amazon Web Services Lambda function's <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>. A Lambda
      *        function can have up to five layers.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -518,11 +523,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The runtime environment for the AWS Lambda function.
+     * The runtime environment for the Amazon Web Services Lambda function.
      * </p>
      * 
      * @param runtime
-     *        The runtime environment for the AWS Lambda function.
+     *        The runtime environment for the Amazon Web Services Lambda function.
      * @see Runtime
      */
 
@@ -532,10 +537,10 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The runtime environment for the AWS Lambda function.
+     * The runtime environment for the Amazon Web Services Lambda function.
      * </p>
      * 
-     * @return The runtime environment for the AWS Lambda function.
+     * @return The runtime environment for the Amazon Web Services Lambda function.
      * @see Runtime
      */
 
@@ -545,11 +550,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The runtime environment for the AWS Lambda function.
+     * The runtime environment for the Amazon Web Services Lambda function.
      * </p>
      * 
      * @param runtime
-     *        The runtime environment for the AWS Lambda function.
+     *        The runtime environment for the Amazon Web Services Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Runtime
      */
@@ -561,11 +566,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The runtime environment for the AWS Lambda function.
+     * The runtime environment for the Amazon Web Services Lambda function.
      * </p>
      * 
      * @param runtime
-     *        The runtime environment for the AWS Lambda function.
+     *        The runtime environment for the Amazon Web Services Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Runtime
      */
@@ -577,11 +582,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The version of the AWS Lambda function.
+     * The version of the Amazon Web Services Lambda function.
      * </p>
      * 
      * @param version
-     *        The version of the AWS Lambda function.
+     *        The version of the Amazon Web Services Lambda function.
      */
 
     public void setVersion(String version) {
@@ -590,10 +595,10 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The version of the AWS Lambda function.
+     * The version of the Amazon Web Services Lambda function.
      * </p>
      * 
-     * @return The version of the AWS Lambda function.
+     * @return The version of the Amazon Web Services Lambda function.
      */
 
     public String getVersion() {
@@ -602,11 +607,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The version of the AWS Lambda function.
+     * The version of the Amazon Web Services Lambda function.
      * </p>
      * 
      * @param version
-     *        The version of the AWS Lambda function.
+     *        The version of the Amazon Web Services Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -617,11 +622,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Lambda function's networking configuration.
+     * The Amazon Web Services Lambda function's networking configuration.
      * </p>
      * 
      * @param vpcConfig
-     *        The AWS Lambda function's networking configuration.
+     *        The Amazon Web Services Lambda function's networking configuration.
      */
 
     public void setVpcConfig(LambdaVpcConfig vpcConfig) {
@@ -630,10 +635,10 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Lambda function's networking configuration.
+     * The Amazon Web Services Lambda function's networking configuration.
      * </p>
      * 
-     * @return The AWS Lambda function's networking configuration.
+     * @return The Amazon Web Services Lambda function's networking configuration.
      */
 
     public LambdaVpcConfig getVpcConfig() {
@@ -642,11 +647,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Lambda function's networking configuration.
+     * The Amazon Web Services Lambda function's networking configuration.
      * </p>
      * 
      * @param vpcConfig
-     *        The AWS Lambda function's networking configuration.
+     *        The Amazon Web Services Lambda function's networking configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

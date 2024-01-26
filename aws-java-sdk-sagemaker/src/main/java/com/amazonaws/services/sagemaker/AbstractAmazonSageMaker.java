@@ -444,6 +444,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public DeleteHyperParameterTuningJobResult deleteHyperParameterTuningJob(DeleteHyperParameterTuningJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteImageResult deleteImage(DeleteImageRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

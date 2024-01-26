@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A response that contains the results of an AWS Lambda function finding aggregation.
+ * A response that contains the results of an Amazon Web Services Lambda function finding aggregation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/LambdaFunctionAggregationResponse"
@@ -30,13 +30,13 @@ public class LambdaFunctionAggregationResponse implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the AWS account that owns the AWS Lambda function.
+     * The ID of the Amazon Web Services account that owns the Amazon Web Services Lambda function.
      * </p>
      */
     private String accountId;
     /**
      * <p>
-     * The AWS Lambda function names included in the aggregation results.
+     * The Amazon Web Services Lambda function names included in the aggregation results.
      * </p>
      */
     private String functionName;
@@ -48,7 +48,7 @@ public class LambdaFunctionAggregationResponse implements Serializable, Cloneabl
     private java.util.Map<String, String> lambdaTags;
     /**
      * <p>
-     * The date that the AWS Lambda function included in the aggregation results was last changed.
+     * The date that the Amazon Web Services Lambda function included in the aggregation results was last changed.
      * </p>
      */
     private java.util.Date lastModifiedAt;
@@ -69,11 +69,11 @@ public class LambdaFunctionAggregationResponse implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the AWS account that owns the AWS Lambda function.
+     * The ID of the Amazon Web Services account that owns the Amazon Web Services Lambda function.
      * </p>
      * 
      * @param accountId
-     *        The ID of the AWS account that owns the AWS Lambda function.
+     *        The ID of the Amazon Web Services account that owns the Amazon Web Services Lambda function.
      */
 
     public void setAccountId(String accountId) {
@@ -82,10 +82,10 @@ public class LambdaFunctionAggregationResponse implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the AWS account that owns the AWS Lambda function.
+     * The ID of the Amazon Web Services account that owns the Amazon Web Services Lambda function.
      * </p>
      * 
-     * @return The ID of the AWS account that owns the AWS Lambda function.
+     * @return The ID of the Amazon Web Services account that owns the Amazon Web Services Lambda function.
      */
 
     public String getAccountId() {
@@ -94,11 +94,11 @@ public class LambdaFunctionAggregationResponse implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the AWS account that owns the AWS Lambda function.
+     * The ID of the Amazon Web Services account that owns the Amazon Web Services Lambda function.
      * </p>
      * 
      * @param accountId
-     *        The ID of the AWS account that owns the AWS Lambda function.
+     *        The ID of the Amazon Web Services account that owns the Amazon Web Services Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,11 +109,11 @@ public class LambdaFunctionAggregationResponse implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The AWS Lambda function names included in the aggregation results.
+     * The Amazon Web Services Lambda function names included in the aggregation results.
      * </p>
      * 
      * @param functionName
-     *        The AWS Lambda function names included in the aggregation results.
+     *        The Amazon Web Services Lambda function names included in the aggregation results.
      */
 
     public void setFunctionName(String functionName) {
@@ -122,10 +122,10 @@ public class LambdaFunctionAggregationResponse implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The AWS Lambda function names included in the aggregation results.
+     * The Amazon Web Services Lambda function names included in the aggregation results.
      * </p>
      * 
-     * @return The AWS Lambda function names included in the aggregation results.
+     * @return The Amazon Web Services Lambda function names included in the aggregation results.
      */
 
     public String getFunctionName() {
@@ -134,11 +134,11 @@ public class LambdaFunctionAggregationResponse implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The AWS Lambda function names included in the aggregation results.
+     * The Amazon Web Services Lambda function names included in the aggregation results.
      * </p>
      * 
      * @param functionName
-     *        The AWS Lambda function names included in the aggregation results.
+     *        The Amazon Web Services Lambda function names included in the aggregation results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -217,11 +217,12 @@ public class LambdaFunctionAggregationResponse implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The date that the AWS Lambda function included in the aggregation results was last changed.
+     * The date that the Amazon Web Services Lambda function included in the aggregation results was last changed.
      * </p>
      * 
      * @param lastModifiedAt
-     *        The date that the AWS Lambda function included in the aggregation results was last changed.
+     *        The date that the Amazon Web Services Lambda function included in the aggregation results was last
+     *        changed.
      */
 
     public void setLastModifiedAt(java.util.Date lastModifiedAt) {
@@ -230,10 +231,11 @@ public class LambdaFunctionAggregationResponse implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The date that the AWS Lambda function included in the aggregation results was last changed.
+     * The date that the Amazon Web Services Lambda function included in the aggregation results was last changed.
      * </p>
      * 
-     * @return The date that the AWS Lambda function included in the aggregation results was last changed.
+     * @return The date that the Amazon Web Services Lambda function included in the aggregation results was last
+     *         changed.
      */
 
     public java.util.Date getLastModifiedAt() {
@@ -242,11 +244,12 @@ public class LambdaFunctionAggregationResponse implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The date that the AWS Lambda function included in the aggregation results was last changed.
+     * The date that the Amazon Web Services Lambda function included in the aggregation results was last changed.
      * </p>
      * 
      * @param lastModifiedAt
-     *        The date that the AWS Lambda function included in the aggregation results was last changed.
+     *        The date that the Amazon Web Services Lambda function included in the aggregation results was last
+     *        changed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
