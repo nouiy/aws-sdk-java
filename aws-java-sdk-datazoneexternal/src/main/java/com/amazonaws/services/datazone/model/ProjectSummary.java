@@ -54,6 +54,12 @@ public class ProjectSummary implements Serializable, Cloneable, StructuredPojo {
     private String domainId;
     /**
      * <p>
+     * Reasons for failed project deletion
+     * </p>
+     */
+    private java.util.List<ProjectDeletionError> failureReasons;
+    /**
+     * <p>
      * The identifier of a project.
      * </p>
      */
@@ -64,6 +70,12 @@ public class ProjectSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * Status of the project
+     * </p>
+     */
+    private String projectStatus;
     /**
      * <p>
      * The timestamp of when the project was updated.
@@ -233,6 +245,76 @@ public class ProjectSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Reasons for failed project deletion
+     * </p>
+     * 
+     * @return Reasons for failed project deletion
+     */
+
+    public java.util.List<ProjectDeletionError> getFailureReasons() {
+        return failureReasons;
+    }
+
+    /**
+     * <p>
+     * Reasons for failed project deletion
+     * </p>
+     * 
+     * @param failureReasons
+     *        Reasons for failed project deletion
+     */
+
+    public void setFailureReasons(java.util.Collection<ProjectDeletionError> failureReasons) {
+        if (failureReasons == null) {
+            this.failureReasons = null;
+            return;
+        }
+
+        this.failureReasons = new java.util.ArrayList<ProjectDeletionError>(failureReasons);
+    }
+
+    /**
+     * <p>
+     * Reasons for failed project deletion
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setFailureReasons(java.util.Collection)} or {@link #withFailureReasons(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param failureReasons
+     *        Reasons for failed project deletion
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProjectSummary withFailureReasons(ProjectDeletionError... failureReasons) {
+        if (this.failureReasons == null) {
+            setFailureReasons(new java.util.ArrayList<ProjectDeletionError>(failureReasons.length));
+        }
+        for (ProjectDeletionError ele : failureReasons) {
+            this.failureReasons.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Reasons for failed project deletion
+     * </p>
+     * 
+     * @param failureReasons
+     *        Reasons for failed project deletion
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProjectSummary withFailureReasons(java.util.Collection<ProjectDeletionError> failureReasons) {
+        setFailureReasons(failureReasons);
+        return this;
+    }
+
+    /**
+     * <p>
      * The identifier of a project.
      * </p>
      * 
@@ -313,6 +395,65 @@ public class ProjectSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Status of the project
+     * </p>
+     * 
+     * @param projectStatus
+     *        Status of the project
+     * @see ProjectStatus
+     */
+
+    public void setProjectStatus(String projectStatus) {
+        this.projectStatus = projectStatus;
+    }
+
+    /**
+     * <p>
+     * Status of the project
+     * </p>
+     * 
+     * @return Status of the project
+     * @see ProjectStatus
+     */
+
+    public String getProjectStatus() {
+        return this.projectStatus;
+    }
+
+    /**
+     * <p>
+     * Status of the project
+     * </p>
+     * 
+     * @param projectStatus
+     *        Status of the project
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ProjectStatus
+     */
+
+    public ProjectSummary withProjectStatus(String projectStatus) {
+        setProjectStatus(projectStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Status of the project
+     * </p>
+     * 
+     * @param projectStatus
+     *        Status of the project
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ProjectStatus
+     */
+
+    public ProjectSummary withProjectStatus(ProjectStatus projectStatus) {
+        this.projectStatus = projectStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The timestamp of when the project was updated.
      * </p>
      * 
@@ -371,10 +512,14 @@ public class ProjectSummary implements Serializable, Cloneable, StructuredPojo {
             sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getDomainId() != null)
             sb.append("DomainId: ").append(getDomainId()).append(",");
+        if (getFailureReasons() != null)
+            sb.append("FailureReasons: ").append(getFailureReasons()).append(",");
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getName() != null)
             sb.append("Name: ").append("***Sensitive Data Redacted***").append(",");
+        if (getProjectStatus() != null)
+            sb.append("ProjectStatus: ").append(getProjectStatus()).append(",");
         if (getUpdatedAt() != null)
             sb.append("UpdatedAt: ").append(getUpdatedAt());
         sb.append("}");
@@ -407,6 +552,10 @@ public class ProjectSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDomainId() != null && other.getDomainId().equals(this.getDomainId()) == false)
             return false;
+        if (other.getFailureReasons() == null ^ this.getFailureReasons() == null)
+            return false;
+        if (other.getFailureReasons() != null && other.getFailureReasons().equals(this.getFailureReasons()) == false)
+            return false;
         if (other.getId() == null ^ this.getId() == null)
             return false;
         if (other.getId() != null && other.getId().equals(this.getId()) == false)
@@ -414,6 +563,10 @@ public class ProjectSummary implements Serializable, Cloneable, StructuredPojo {
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getProjectStatus() == null ^ this.getProjectStatus() == null)
+            return false;
+        if (other.getProjectStatus() != null && other.getProjectStatus().equals(this.getProjectStatus()) == false)
             return false;
         if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
             return false;
@@ -431,8 +584,10 @@ public class ProjectSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getDomainId() == null) ? 0 : getDomainId().hashCode());
+        hashCode = prime * hashCode + ((getFailureReasons() == null) ? 0 : getFailureReasons().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getProjectStatus() == null) ? 0 : getProjectStatus().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;
     }

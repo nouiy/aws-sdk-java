@@ -34,6 +34,8 @@ public class DeleteDomainRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<String> IDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("identifier").build();
+    private static final MarshallingInfo<Boolean> SKIPDELETIONCHECK_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("skipDeletionCheck").build();
 
     private static final DeleteDomainRequestMarshaller instance = new DeleteDomainRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class DeleteDomainRequestMarshaller {
         try {
             protocolMarshaller.marshall(deleteDomainRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(deleteDomainRequest.getIdentifier(), IDENTIFIER_BINDING);
+            protocolMarshaller.marshall(deleteDomainRequest.getSkipDeletionCheck(), SKIPDELETIONCHECK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

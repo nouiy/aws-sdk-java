@@ -37,6 +37,12 @@ public class DeleteDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private String identifier;
+    /**
+     * <p>
+     * Optional flag to delete all child entities within the domain
+     * </p>
+     */
+    private Boolean skipDeletionCheck;
 
     /**
      * <p>
@@ -119,6 +125,58 @@ public class DeleteDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Optional flag to delete all child entities within the domain
+     * </p>
+     * 
+     * @param skipDeletionCheck
+     *        Optional flag to delete all child entities within the domain
+     */
+
+    public void setSkipDeletionCheck(Boolean skipDeletionCheck) {
+        this.skipDeletionCheck = skipDeletionCheck;
+    }
+
+    /**
+     * <p>
+     * Optional flag to delete all child entities within the domain
+     * </p>
+     * 
+     * @return Optional flag to delete all child entities within the domain
+     */
+
+    public Boolean getSkipDeletionCheck() {
+        return this.skipDeletionCheck;
+    }
+
+    /**
+     * <p>
+     * Optional flag to delete all child entities within the domain
+     * </p>
+     * 
+     * @param skipDeletionCheck
+     *        Optional flag to delete all child entities within the domain
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteDomainRequest withSkipDeletionCheck(Boolean skipDeletionCheck) {
+        setSkipDeletionCheck(skipDeletionCheck);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Optional flag to delete all child entities within the domain
+     * </p>
+     * 
+     * @return Optional flag to delete all child entities within the domain
+     */
+
+    public Boolean isSkipDeletionCheck() {
+        return this.skipDeletionCheck;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +191,9 @@ public class DeleteDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getIdentifier() != null)
-            sb.append("Identifier: ").append(getIdentifier());
+            sb.append("Identifier: ").append(getIdentifier()).append(",");
+        if (getSkipDeletionCheck() != null)
+            sb.append("SkipDeletionCheck: ").append(getSkipDeletionCheck());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +216,10 @@ public class DeleteDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getIdentifier() != null && other.getIdentifier().equals(this.getIdentifier()) == false)
             return false;
+        if (other.getSkipDeletionCheck() == null ^ this.getSkipDeletionCheck() == null)
+            return false;
+        if (other.getSkipDeletionCheck() != null && other.getSkipDeletionCheck().equals(this.getSkipDeletionCheck()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +230,7 @@ public class DeleteDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getIdentifier() == null) ? 0 : getIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getSkipDeletionCheck() == null) ? 0 : getSkipDeletionCheck().hashCode());
         return hashCode;
     }
 

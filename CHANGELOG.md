@@ -1,3 +1,12 @@
+# __1.12.648__ __2024-01-30__
+## __Amazon DataZone__
+  - ### Features
+    - Add new skipDeletionCheck to DeleteDomain. Add new skipDeletionCheck to DeleteProject which also automatically deletes dependent objects
+
+## __Amazon Route 53__
+  - ### Features
+    - Update the SDKs for text changes in the APIs.
+
 # __1.12.647__ __2024-01-29__
 ## __Amazon Comprehend__
   - ### Features

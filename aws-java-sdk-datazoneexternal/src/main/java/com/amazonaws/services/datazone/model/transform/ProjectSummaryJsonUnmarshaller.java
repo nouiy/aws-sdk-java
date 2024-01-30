@@ -64,6 +64,12 @@ public class ProjectSummaryJsonUnmarshaller implements Unmarshaller<ProjectSumma
                     context.nextToken();
                     projectSummary.setDomainId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("failureReasons", targetDepth)) {
+                    context.nextToken();
+                    projectSummary.setFailureReasons(new ListUnmarshaller<ProjectDeletionError>(ProjectDeletionErrorJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("id", targetDepth)) {
                     context.nextToken();
                     projectSummary.setId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -71,6 +77,10 @@ public class ProjectSummaryJsonUnmarshaller implements Unmarshaller<ProjectSumma
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     projectSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("projectStatus", targetDepth)) {
+                    context.nextToken();
+                    projectSummary.setProjectStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("updatedAt", targetDepth)) {
                     context.nextToken();

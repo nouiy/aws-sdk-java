@@ -31,6 +31,8 @@ public class DeleteProjectRequestMarshaller {
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("domainIdentifier").build();
     private static final MarshallingInfo<String> IDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("identifier").build();
+    private static final MarshallingInfo<Boolean> SKIPDELETIONCHECK_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("skipDeletionCheck").build();
 
     private static final DeleteProjectRequestMarshaller instance = new DeleteProjectRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class DeleteProjectRequestMarshaller {
         try {
             protocolMarshaller.marshall(deleteProjectRequest.getDomainIdentifier(), DOMAINIDENTIFIER_BINDING);
             protocolMarshaller.marshall(deleteProjectRequest.getIdentifier(), IDENTIFIER_BINDING);
+            protocolMarshaller.marshall(deleteProjectRequest.getSkipDeletionCheck(), SKIPDELETIONCHECK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

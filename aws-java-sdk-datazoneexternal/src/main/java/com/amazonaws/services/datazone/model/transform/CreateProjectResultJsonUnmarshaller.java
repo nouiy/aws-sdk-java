@@ -64,6 +64,12 @@ public class CreateProjectResultJsonUnmarshaller implements Unmarshaller<CreateP
                     context.nextToken();
                     createProjectResult.setDomainId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("failureReasons", targetDepth)) {
+                    context.nextToken();
+                    createProjectResult.setFailureReasons(new ListUnmarshaller<ProjectDeletionError>(ProjectDeletionErrorJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("glossaryTerms", targetDepth)) {
                     context.nextToken();
                     createProjectResult.setGlossaryTerms(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
@@ -81,6 +87,10 @@ public class CreateProjectResultJsonUnmarshaller implements Unmarshaller<CreateP
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     createProjectResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("projectStatus", targetDepth)) {
+                    context.nextToken();
+                    createProjectResult.setProjectStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

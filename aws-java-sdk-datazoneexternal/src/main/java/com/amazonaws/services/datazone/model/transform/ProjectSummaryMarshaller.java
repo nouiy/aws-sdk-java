@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.datazone.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -35,10 +36,14 @@ public class ProjectSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> DOMAINID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("domainId").build();
+    private static final MarshallingInfo<List> FAILUREREASONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failureReasons").build();
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("id").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> PROJECTSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("projectStatus").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
 
@@ -62,8 +67,10 @@ public class ProjectSummaryMarshaller {
             protocolMarshaller.marshall(projectSummary.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(projectSummary.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(projectSummary.getDomainId(), DOMAINID_BINDING);
+            protocolMarshaller.marshall(projectSummary.getFailureReasons(), FAILUREREASONS_BINDING);
             protocolMarshaller.marshall(projectSummary.getId(), ID_BINDING);
             protocolMarshaller.marshall(projectSummary.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(projectSummary.getProjectStatus(), PROJECTSTATUS_BINDING);
             protocolMarshaller.marshall(projectSummary.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

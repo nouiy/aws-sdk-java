@@ -37,6 +37,12 @@ public class DeleteProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String identifier;
+    /**
+     * <p>
+     * Optional flag to asynchronously delete child entities within the project
+     * </p>
+     */
+    private Boolean skipDeletionCheck;
 
     /**
      * <p>
@@ -119,6 +125,58 @@ public class DeleteProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * Optional flag to asynchronously delete child entities within the project
+     * </p>
+     * 
+     * @param skipDeletionCheck
+     *        Optional flag to asynchronously delete child entities within the project
+     */
+
+    public void setSkipDeletionCheck(Boolean skipDeletionCheck) {
+        this.skipDeletionCheck = skipDeletionCheck;
+    }
+
+    /**
+     * <p>
+     * Optional flag to asynchronously delete child entities within the project
+     * </p>
+     * 
+     * @return Optional flag to asynchronously delete child entities within the project
+     */
+
+    public Boolean getSkipDeletionCheck() {
+        return this.skipDeletionCheck;
+    }
+
+    /**
+     * <p>
+     * Optional flag to asynchronously delete child entities within the project
+     * </p>
+     * 
+     * @param skipDeletionCheck
+     *        Optional flag to asynchronously delete child entities within the project
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteProjectRequest withSkipDeletionCheck(Boolean skipDeletionCheck) {
+        setSkipDeletionCheck(skipDeletionCheck);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Optional flag to asynchronously delete child entities within the project
+     * </p>
+     * 
+     * @return Optional flag to asynchronously delete child entities within the project
+     */
+
+    public Boolean isSkipDeletionCheck() {
+        return this.skipDeletionCheck;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +191,9 @@ public class DeleteProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getDomainIdentifier() != null)
             sb.append("DomainIdentifier: ").append(getDomainIdentifier()).append(",");
         if (getIdentifier() != null)
-            sb.append("Identifier: ").append(getIdentifier());
+            sb.append("Identifier: ").append(getIdentifier()).append(",");
+        if (getSkipDeletionCheck() != null)
+            sb.append("SkipDeletionCheck: ").append(getSkipDeletionCheck());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +216,10 @@ public class DeleteProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getIdentifier() != null && other.getIdentifier().equals(this.getIdentifier()) == false)
             return false;
+        if (other.getSkipDeletionCheck() == null ^ this.getSkipDeletionCheck() == null)
+            return false;
+        if (other.getSkipDeletionCheck() != null && other.getSkipDeletionCheck().equals(this.getSkipDeletionCheck()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +230,7 @@ public class DeleteProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
 
         hashCode = prime * hashCode + ((getDomainIdentifier() == null) ? 0 : getDomainIdentifier().hashCode());
         hashCode = prime * hashCode + ((getIdentifier() == null) ? 0 : getIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getSkipDeletionCheck() == null) ? 0 : getSkipDeletionCheck().hashCode());
         return hashCode;
     }
 
